@@ -1,0 +1,49 @@
+# PR #230 FH/LSZ Ready Chunk Response-Stability Diagnostic
+
+**Status:** bounded-support / FH-LSZ ready chunk response-stability diagnostic
+**Runner:** `scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py`
+**Certificate:** `outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json`
+
+## Result
+
+The current seed-controlled ready set has four L12 chunks.  Their same-source
+top response slopes are finite:
+
+```text
+chunk001: dE/ds = 1.4356354951944574
+chunk002: dE/ds = 6.629960999250584
+chunk003: dE/ds = 1.4159189031935757
+chunk004: dE/ds = 6.80363930805008
+```
+
+The partial set fails the diagnostic stability rule:
+
+```text
+n_chunks = 4
+relative_stdev = 0.7505257254941609
+spread_ratio = 4.805105216622656
+stability_rule = n >= 8, relative_stdev < 0.25, spread_ratio < 2
+stability_passed = false
+```
+
+The fitted slope uncertainties are also too large for production-grade
+response use at this stage.  This is expected for `4/63` L12 chunks and is a
+reason to keep collecting chunks, not a physics closure.
+
+## Claim Boundary
+
+This diagnostic does not authorize retained or proposed-retained wording.  It
+does not treat `dE/ds` as physical `dE/dh`, does not set `kappa_s = 1`, and
+does not use observed target values, `H_unit`, Ward authority, `alpha_LM`,
+plaquette, or `u0` as proof inputs.
+
+Even a stable production slope would still need the scalar LSZ pole derivative,
+model-class or pole-saturation control, FV/IR/zero-mode control, and
+canonical-Higgs source-pole identity before physical `y_t` closure.
+
+## Verification
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+```

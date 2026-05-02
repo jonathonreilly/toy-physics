@@ -15,6 +15,8 @@ even complete L12 would still need L16/L24, pole-derivative/model-class,
 FV/IR/zero-mode, and canonical-Higgs identity gates.  Highest retained-positive
 probability remains a true canonical-Higgs/source-pole identity theorem or a
 same-source W/Z response measurement that closes the sector-overlap premise.
+The first ready-set response diagnostic also fails production-grade stability,
+so finite `dE/ds` slopes from `4/63` chunks must remain scout/support only.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

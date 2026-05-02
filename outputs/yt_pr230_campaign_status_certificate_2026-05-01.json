@@ -35,6 +35,7 @@
     "fh_lsz_production_checkpoint_granularity": "open / FH-LSZ production checkpoint granularity gate blocks foreground launch",
     "fh_lsz_production_manifest": "bounded-support / joint FH-LSZ production manifest",
     "fh_lsz_production_postprocess_gate": "open / FH-LSZ production postprocess gate blocks manifest-as-evidence",
+    "fh_lsz_ready_chunk_response_stability": "bounded-support / FH-LSZ ready chunk response-stability diagnostic",
     "fh_lsz_ready_chunk_set_checkpoint": "bounded-support / FH-LSZ ready chunk-set production checkpoint",
     "fh_lsz_soft_continuum_threshold": "exact negative boundary / FH-LSZ soft-continuum threshold no-go",
     "fh_lsz_stieltjes_model_class": "exact negative boundary / FH-LSZ Stieltjes model-class obstruction",
@@ -99,7 +100,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 92,
+  "pass_count": 93,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

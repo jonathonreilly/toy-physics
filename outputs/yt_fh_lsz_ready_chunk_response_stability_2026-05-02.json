@@ -1,0 +1,91 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ ready chunk response-stability diagnostic",
+  "exact_next_action": "Continue seed-controlled chunks and rerun this diagnostic with a larger ready set; in parallel, continue the canonical-Higgs identity or same-source W/Z response route.",
+  "fail_count": 0,
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The ready set is partial and response stability is not passed; scalar LSZ/canonical-Higgs gates remain open.",
+  "ready_set_certificate": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
+  "response_rows": [
+    {
+      "chunk_index": 1,
+      "mass_fit_m_lat": 1.8559308994199455,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051001,
+      "slope_dE_ds_lat": 1.4356354951944574,
+      "slope_dE_ds_lat_err": 24.709859183295674,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
+    },
+    {
+      "chunk_index": 2,
+      "mass_fit_m_lat": 1.8526533790345638,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051002,
+      "slope_dE_ds_lat": 6.629960999250584,
+      "slope_dE_ds_lat_err": 13.3339880038919,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
+    },
+    {
+      "chunk_index": 3,
+      "mass_fit_m_lat": 1.8525512551741485,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk003_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051003,
+      "slope_dE_ds_lat": 1.4159189031935757,
+      "slope_dE_ds_lat_err": 24.706361382572076,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
+    },
+    {
+      "chunk_index": 4,
+      "mass_fit_m_lat": 1.8494999219801684,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk004_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051004,
+      "slope_dE_ds_lat": 6.80363930805008,
+      "slope_dE_ds_lat_err": 13.365226263164969,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
+    }
+  ],
+  "stability_summary": {
+    "max_slope": 6.80363930805008,
+    "min_slope": 1.4159189031935757,
+    "n_chunks": 4,
+    "relative_fit_error": 4.6739153670020785,
+    "relative_stdev": 0.7505257254941609,
+    "slope_mean": 4.071288676422174,
+    "slope_stdev": 3.0556068875679143,
+    "spread_ratio": 4.805105216622656,
+    "stability_acceptance_rule": "n>=8, relative_stdev<0.25, spread_ratio<2",
+    "stability_passed": false,
+    "typical_fit_error": 19.028858708231155
+  },
+  "strict_non_claims": [
+    "does not treat dE/ds as physical dE/dh",
+    "does not set kappa_s = 1",
+    "does not use observed top mass, observed y_t, H_unit, Ward authority, alpha_LM, plaquette, or u0",
+    "does not treat a partial L12 set as production closure"
+  ],
+  "verdict": "The current seed-controlled ready chunks expose same-source dE/ds, but the 4/63 partial set is not stable enough to use as production response evidence beyond bounded support.  The chunk slopes are finite but have large chunk-to-chunk spread.  Even a stable slope would still require scalar LSZ pole derivative, model-class/FV/IR control, and canonical-Higgs identity before physical y_t closure."
+}

@@ -40,6 +40,7 @@ plus same-source sector-overlap identity obstruction
 plus source-pole canonical-Higgs mixing obstruction
 plus chunk002 checkpoint replacement-ready support
 plus ready chunk-set production checkpoint
+plus ready chunk response-stability diagnostic
 **PR:** #230 draft branch
 
 ```yaml
@@ -69,6 +70,22 @@ This is useful production support but not retained or proposed-retained
 closure.  The missing gates remain combined L12, L16/L24 scaling, pole
 derivative/model-class or pole-saturation control, FV/IR/zero-mode control,
 and canonical-Higgs source-pole identity.
+
+FH/LSZ ready chunk response-stability diagnostic:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ ready chunk response-stability diagnostic
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The current `4/63` ready L12 chunks have finite same-source `dE/ds` slopes, but
+the response is not production-grade stable (`relative_stdev=0.7505`,
+`spread_ratio=4.8051`, `n=4`).  This does not close scalar source-to-Higgs
+normalization, scalar LSZ pole derivative, or canonical-Higgs identity.
 
 Allowed wording:
 

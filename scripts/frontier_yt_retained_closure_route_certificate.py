@@ -84,6 +84,7 @@ def main() -> int:
         "fh_lsz_chunk001_checkpoint": "outputs/yt_fh_lsz_chunk001_checkpoint_certificate_2026-05-02.json",
         "fh_lsz_chunk002_checkpoint": "outputs/yt_fh_lsz_chunk002_checkpoint_certificate_2026-05-02.json",
         "fh_lsz_ready_chunk_set_checkpoint": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
+        "fh_lsz_ready_chunk_response_stability": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
         "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
         "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
         "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
@@ -341,6 +342,15 @@ def main() -> int:
                 "expected_chunks", 1
             )
         )
+    )
+    ready_chunk_response_not_closure = (
+        "ready chunk response-stability diagnostic"
+        in certificates["fh_lsz_ready_chunk_response_stability"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_ready_chunk_response_stability"].get("proposal_allowed") is False
+        and certificates["fh_lsz_ready_chunk_response_stability"].get("stability_summary", {}).get(
+            "stability_passed"
+        )
+        is False
     )
     pole_fit_kinematics_not_closure = (
         "scalar-pole kinematics gate"
@@ -683,6 +693,11 @@ def main() -> int:
         "fh-lsz-ready-chunk-set-checkpoint-not-closure",
         ready_chunk_set_not_closure,
         certificates["fh_lsz_ready_chunk_set_checkpoint"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-ready-chunk-response-stability-not-closure",
+        ready_chunk_response_not_closure,
+        certificates["fh_lsz_ready_chunk_response_stability"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",

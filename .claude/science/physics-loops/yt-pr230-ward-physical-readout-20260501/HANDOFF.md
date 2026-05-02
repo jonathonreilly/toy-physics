@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 ready chunk response stability:
+
+- Added `scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py`,
+  `docs/YT_FH_LSZ_READY_CHUNK_RESPONSE_STABILITY_NOTE_2026-05-02.md`, and
+  `outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json`.
+- Current chunks001-004 have finite same-source `dE/ds` slopes, but the
+  partial set fails the diagnostic stability rule (`relative_stdev=0.7505`,
+  `spread_ratio=4.8051`, `n=4`; acceptance requires `n>=8`,
+  `relative_stdev<0.25`, `spread_ratio<2`).
+- Chunks005 and 006 were launched in Codex sessions `91457` and `55730`.
+
+Next exact action: poll chunks005-006.  When they finish, rerun the combiner,
+ready chunk-set certificate, and response-stability diagnostic.  In foreground,
+continue the canonical-Higgs/source-pole identity or same-source W/Z response
+route.  Do not use finite `dE/ds` slopes as physical `dE/dh` or retained
+evidence.
+
 Latest checkpoint, 2026-05-02 ready chunk-set production support:
 
 - Seed-controlled FH/LSZ chunks002 and 003 completed in the current Codex

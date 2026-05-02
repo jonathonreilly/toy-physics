@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-110-ready-chunk-set-production-checkpoint
-blocks_completed: 110
-active_route: "FH/LSZ ready chunk-set production support"
-active_hard_residual: "Chunks001-004 are now seed-controlled and combiner-ready, but the set is only 4/63 of L12 and still lacks combined L12, L16/L24, pole-derivative, model-class, FV/IR, and canonical-Higgs identity closure."
+current_phase: campaign-rerun-block-111-ready-chunk-response-stability
+blocks_completed: 111
+active_route: "FH/LSZ ready chunk response-stability diagnostic"
+active_hard_residual: "The current 4/63 seed-controlled L12 set has finite same-source dE/ds slopes, but the partial response is not production-grade stable and still lacks scalar LSZ/canonical-Higgs closure."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -536,6 +536,7 @@ claim_state_movement:
   - "proved a source-pole canonical-Higgs mixing obstruction: a same-source FH/LSZ pole readout can remain fixed while the canonical Higgs overlap cos(theta) varies, so physical y_t is not identified until the source pole is proved to be the canonical Higgs radial mode"
   - "updated the chunk002 checkpoint runner to handle both the current seed-invalid diagnostic and a future numba_gauge_seed_v1 replacement; current output now records 1/63 ready chunks with historical chunk002 still demoted"
   - "processed seed-controlled FH/LSZ chunks002-004 and reran the combiner: chunks001-004 are ready, the set is 4/63 L12 chunks, and the ready chunk-set checkpoint remains bounded production support only"
+  - "added a ready chunk response-stability diagnostic: chunks001-004 have finite dE/ds slopes but fail the partial-set stability rule, so they remain bounded support only"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -544,5 +545,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Continue toward positive closure: either launch/process further seed-controlled L12 chunks if compute budget permits, or pivot to the higher-probability analytic canonical-Higgs/source-pole identity or same-source W/Z response route. Do not claim retained/proposed-retained from the current 4/63 chunk set."
+next_exact_action: "Continue seed-controlled chunks005-006 in the background and rerun the combiner/ready-set/stability gates when they finish; in foreground, continue the canonical-Higgs/source-pole identity or same-source W/Z response route. Do not claim retained/proposed-retained from finite dE/ds slopes."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

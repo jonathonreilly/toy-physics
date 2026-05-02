@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## FH/LSZ ready chunk dE/ds slopes are not production-grade response evidence
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The current `4/63` ready L12 set has finite same-source `dE/ds` slopes, but
+the response is not stable enough for production readout: `relative_stdev =
+0.7505`, `spread_ratio = 4.8051`, with only four chunks.  This is a diagnostic
+boundary on using the partial set as response evidence.  It is not a no-go
+against the full FH/LSZ route or against future larger ready sets.
+
 ## FH/LSZ ready chunk-set support is not closure
 
 Runner:
