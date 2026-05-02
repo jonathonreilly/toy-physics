@@ -196,6 +196,9 @@ def main() -> int:
         "fh_lsz_autocorrelation_ess_gate": load(
             "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
         ),
+        "fh_lsz_target_timeseries_harness": load(
+            "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json"
+        ),
         "higgs_pole_identity_latest_blocker": load(
             "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json"
         ),
@@ -666,6 +669,12 @@ def main() -> int:
         statuses["fh_lsz_autocorrelation_ess_gate"],
     )
     report(
+        "fh-lsz-target-timeseries-harness-support-not-evidence",
+        "target time-series harness extension"
+        in str(statuses["fh_lsz_target_timeseries_harness"]),
+        statuses["fh_lsz_target_timeseries_harness"],
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         "latest Higgs-pole identity blocker certificate"
         in str(statuses["higgs_pole_identity_latest_blocker"]),
@@ -1031,6 +1040,9 @@ def main() -> int:
             "The autocorrelation/ESS gate also blocks counting current chunks "
             "as production evidence: plaquette autocorrelation is diagnostic, "
             "but target same-source dE/ds and C_ss(q) time series are absent.  "
+            "The target time-series harness extension removes that "
+            "instrumentation gap for future chunks, but its reduced smoke is "
+            "not production evidence or scalar LSZ normalization.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

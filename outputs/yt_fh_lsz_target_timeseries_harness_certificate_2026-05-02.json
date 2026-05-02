@@ -1,0 +1,45 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ target time-series harness extension",
+  "fail_count": 0,
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Instrumentation support is not a retained or proposed-retained closure certificate.",
+  "required_next_gate": "Rerun production chunks with the extended harness, then apply target-observable autocorrelation/ESS, finite-source-linearity, scalar-pole/FV/IR/model-class, and canonical-Higgs identity gates.",
+  "scalar_two_point_timeseries_summary": {
+    "mode_count": 2,
+    "mode_summaries": {
+      "0,0,0": {
+        "finite_real_gamma_rows": 3,
+        "rows": 3
+      },
+      "1,0,0": {
+        "finite_real_gamma_rows": 3,
+        "rows": 3
+      }
+    },
+    "present": true,
+    "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived",
+    "total_timeseries_rows": 6
+  },
+  "smoke_certificate": "outputs/yt_direct_lattice_correlator_target_timeseries_smoke_2026-05-02.json",
+  "source_timeseries_summary": {
+    "effective_energy_rows": 3,
+    "finite_slope_rows": 3,
+    "present": true,
+    "slope_rows": 3,
+    "source_radii": [
+      0.01
+    ],
+    "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization",
+    "target_timeseries_rule": "diagnostic per-configuration tau=1 effective-energy slopes for autocorrelation/ESS gates; not a physical dE/dh readout"
+  },
+  "strict_non_claims": [
+    "does not use reduced smoke output as production evidence",
+    "does not treat target time series as physical dE/dh",
+    "does not derive kappa_s",
+    "does not set kappa_s = 1",
+    "does not claim retained or proposed_retained y_t closure"
+  ],
+  "target_timeseries_harness_supported": true,
+  "verdict": "The direct lattice harness now serializes per-configuration same-source target time series for the source-response effective energy slopes and scalar two-point C_ss/Gamma_ss modes.  This removes the instrumentation blocker for future autocorrelation and ESS checks, but the reduced smoke output is not production evidence and it does not derive kappa_s or the canonical-Higgs source identity."
+}

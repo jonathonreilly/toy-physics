@@ -1,5 +1,29 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 FH/LSZ target time-series harness extension:
+
+- Extended `scripts/yt_direct_lattice_correlator_production.py` to serialize
+  per-configuration source-response effective-energy slopes and scalar
+  two-point `C_ss/Gamma_ss` target time series.
+- Added `scripts/frontier_yt_fh_lsz_target_timeseries_harness_certificate.py`,
+  `docs/YT_FH_LSZ_TARGET_TIMESERIES_HARNESS_NOTE_2026-05-02.md`,
+  `outputs/yt_direct_lattice_correlator_target_timeseries_smoke_2026-05-02.json`,
+  and `outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json`.
+- Result: future chunks can now emit the target time series needed by the
+  autocorrelation/ESS gate.  The reduced smoke is infrastructure support only:
+  it is not production evidence, not scalar LSZ normalization, and not
+  canonical-Higgs closure.
+- Retained-route gate is `PASS=85 FAIL=0`; campaign status is
+  `PASS=111 FAIL=0` over 115 certificates.
+- Chunks007-010 remain background production-support jobs until completed JSON
+  outputs appear.
+
+Next exact action: process chunks007-010 as they finish through combiner,
+ready-set, response-stability, autocorrelation/ESS, retained-route, and
+campaign gates; otherwise continue scalar-denominator / canonical-Higgs
+identity work.  Do not use target time-series harness smoke output as
+production evidence or retained/proposed-retained closure.
+
 Latest checkpoint, 2026-05-02 FH/LSZ autocorrelation/ESS gate:
 
 - Added `scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py`,

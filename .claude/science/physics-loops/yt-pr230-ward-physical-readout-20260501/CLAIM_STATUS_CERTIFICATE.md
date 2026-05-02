@@ -52,6 +52,7 @@ plus effective-mass plateau residue no-go
 plus finite source-shift derivative no-go
 plus FH/LSZ finite-source-linearity gate
 plus FH/LSZ autocorrelation ESS gate
+plus FH/LSZ target time-series harness extension
 **PR:** #230 draft branch
 
 ```yaml
@@ -64,6 +65,23 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+FH/LSZ target time-series harness extension:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ target time-series harness extension
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_harness_certificate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Future chunks can now emit per-configuration source-response and scalar
+two-point target time series for autocorrelation/ESS gates.  The reduced smoke
+is instrumentation support only and does not authorize production evidence,
+scalar LSZ normalization, canonical-Higgs identity, retained, or
+proposed-retained wording.
 
 FH/LSZ autocorrelation ESS gate:
 

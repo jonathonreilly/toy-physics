@@ -1112,6 +1112,46 @@ def fit_scalar_source_response(
         slope_err = float(math.sqrt(max(cov[0, 0], 0.0))) if cov.shape == (2, 2) else float("nan")
         fit_kind = "linear_dE_ds"
 
+    def effective_energy_tau1(corr: list[float]) -> float:
+        if len(corr) <= 2:
+            return float("nan")
+        c1 = float(corr[1])
+        c2 = float(corr[2])
+        if c1 <= 0.0 or c2 <= 0.0:
+            return float("nan")
+        return float(math.log(c1 / c2))
+
+    common_count = min((len(rows) for rows in source_measurements.values()), default=0)
+    source_keys = sorted(source_measurements)
+    nonzero_radii = sorted({round(abs(float(s)), 12) for s in source_keys if abs(float(s)) > 1.0e-15})
+    per_configuration_effective_energies = []
+    per_configuration_slopes = []
+    for cfg_index in range(common_count):
+        energies_by_shift = {}
+        for source_shift in source_keys:
+            rows = source_measurements[source_shift]
+            energy = effective_energy_tau1(rows[cfg_index])
+            energies_by_shift[f"{float(source_shift):.12g}"] = energy
+        per_configuration_effective_energies.append(
+            {
+                "configuration_index": cfg_index,
+                "effective_energy_tau1_by_source_shift": energies_by_shift,
+            }
+        )
+        for radius in nonzero_radii:
+            plus = energies_by_shift.get(f"{radius:.12g}")
+            minus = energies_by_shift.get(f"{-radius:.12g}")
+            if isinstance(plus, float) and isinstance(minus, float):
+                slope_value = float((plus - minus) / (2.0 * radius)) if math.isfinite(plus) and math.isfinite(minus) else float("nan")
+                per_configuration_slopes.append(
+                    {
+                        "configuration_index": cfg_index,
+                        "source_radius": float(radius),
+                        "slope_effective_energy_tau1": slope_value,
+                        "finite": math.isfinite(slope_value),
+                    }
+                )
+
     return {
         "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
         "base_bare_mass_lat": float(base_mass),
@@ -1120,6 +1160,12 @@ def fit_scalar_source_response(
         "slope_dE_ds_lat": slope,
         "slope_dE_ds_lat_err": slope_err,
         "fit_kind": fit_kind,
+        "target_timeseries_rule": (
+            "diagnostic per-configuration tau=1 effective-energy slopes for "
+            "autocorrelation/ESS gates; not a physical dE/dh readout"
+        ),
+        "per_configuration_effective_energies": per_configuration_effective_energies,
+        "per_configuration_slopes": per_configuration_slopes,
         "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization",
     }
 
@@ -1155,6 +1201,19 @@ def fit_scalar_two_point_lsz(
         real_err = float(np.std(real_values, ddof=1) / math.sqrt(len(real_values))) if len(real_values) > 1 else 0.0
         imag_err = float(np.std(imag_values, ddof=1) / math.sqrt(len(imag_values))) if len(imag_values) > 1 else 0.0
         gamma = 1.0 / c_mean if abs(c_mean) > 1.0e-30 else complex(float("nan"), float("nan"))
+        c_ss_timeseries = []
+        for cfg_index, row in enumerate(rows):
+            c_cfg = complex(float(row["C_ss_real"]), float(row["C_ss_imag"]))
+            gamma_cfg = 1.0 / c_cfg if abs(c_cfg) > 1.0e-30 else complex(float("nan"), float("nan"))
+            c_ss_timeseries.append(
+                {
+                    "configuration_index": cfg_index,
+                    "C_ss_real": float(c_cfg.real),
+                    "C_ss_imag": float(c_cfg.imag),
+                    "Gamma_ss_real": float(gamma_cfg.real),
+                    "Gamma_ss_imag": float(gamma_cfg.imag),
+                }
+            )
         nvec = tuple(int(x) for x in key.split(","))
         noise_subsample_stability = {
             "available": bool(half_delta_over_stderr),
@@ -1180,6 +1239,7 @@ def fit_scalar_two_point_lsz(
             "C_ss_imag_config_stderr": imag_err,
             "Gamma_ss_real": float(gamma.real),
             "Gamma_ss_imag": float(gamma.imag),
+            "C_ss_timeseries": c_ss_timeseries,
             "noise_subsample_stability": noise_subsample_stability,
         }
 

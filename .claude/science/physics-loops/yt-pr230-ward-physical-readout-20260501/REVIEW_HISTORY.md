@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Target Time-Series Harness Extension
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- production harness now serializes future target-observable time series for
+  source-response and scalar two-point autocorrelation/ESS gates;
+- the smoke run is reduced scope and is not production evidence;
+- instrumentation support does not derive `kappa_s`, scalar LSZ
+  normalization, or canonical-Higgs source-pole identity;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/yt_direct_lattice_correlator_production.py scripts/frontier_yt_fh_lsz_target_timeseries_harness_certificate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/yt_direct_lattice_correlator_production.py --volumes 2x4 --masses 0.45,0.75,1.05 --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0' --scalar-two-point-noises 2 --engine python --production-output-dir outputs/yt_direct_lattice_correlator_target_timeseries_smoke --seed 2026052101 --output outputs/yt_direct_lattice_correlator_target_timeseries_smoke_2026-05-02.json
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_harness_certificate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Autocorrelation ESS Gate
 
 Local review-loop disposition:

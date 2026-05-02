@@ -54,6 +54,13 @@ currently retain plaquette histories but not target same-source `dE/ds` or
 harness/postprocessor time-series extension a production-quality prerequisite,
 but it is still below scalar-denominator/canonical-Higgs identity work in
 retained-positive probability during foreground looping.
+The target time-series harness extension now removes that instrumentation
+blocker for future chunks.  It does not raise current chunks or reduced smoke
+output to production evidence, and it does not change the retained-positive
+ranking: the leading foreground route is still a true scalar-denominator /
+canonical-Higgs source-pole identity theorem, while completed future chunks
+must still pass target ESS, finite-source-linearity, pole/FV/IR/model-class,
+and canonical-Higgs gates.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

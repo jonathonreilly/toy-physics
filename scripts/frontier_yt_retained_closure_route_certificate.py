@@ -120,6 +120,7 @@ def main() -> int:
         "finite_source_shift_derivative_no_go": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
         "fh_lsz_finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
+        "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
@@ -648,6 +649,12 @@ def main() -> int:
         and certificates["fh_lsz_autocorrelation_ess_gate"].get("autocorrelation_ess_gate_passed")
         is False
     )
+    target_timeseries_harness_support_not_evidence = (
+        "target time-series harness extension"
+        in certificates["fh_lsz_target_timeseries_harness"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_target_timeseries_harness"].get("proposal_allowed") is False
+        and certificates["fh_lsz_target_timeseries_harness"].get("target_timeseries_harness_supported") is True
+    )
     higgs_pole_identity_latest_blocker_blocks = (
         "latest Higgs-pole identity blocker certificate"
         in certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", "")
@@ -1052,6 +1059,11 @@ def main() -> int:
         certificates["fh_lsz_autocorrelation_ess_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-target-timeseries-harness-support-not-evidence",
+        target_timeseries_harness_support_not_evidence,
+        certificates["fh_lsz_target_timeseries_harness"].get("actual_current_surface_status", ""),
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         higgs_pole_identity_latest_blocker_blocks,
         certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", ""),
@@ -1288,7 +1300,11 @@ def main() -> int:
             "eight-mode/x8 calibration.  The harness now emits "
             "noise-subsample stability diagnostics for future paired x8/x16 "
             "calibrations, but the current diagnostics are reduced-scope "
-            "instrumentation support only.  A paired x8/x16 calibration "
+            "instrumentation support only.  The harness also now serializes "
+            "per-configuration source-response and scalar two-point target "
+            "time series for future autocorrelation/ESS gates, but that is "
+            "instrumentation support, not production evidence or scalar LSZ "
+            "normalization.  A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "
             "gauge-VEV source-overlap no-go also blocks using the canonical "

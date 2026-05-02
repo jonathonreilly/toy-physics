@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Target time-series harness support is not production evidence
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_harness_certificate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+The production harness now serializes per-configuration same-source
+source-response slopes and scalar two-point `C_ss/Gamma_ss` rows for future
+autocorrelation/ESS gates.  This closes an instrumentation gap only.  The
+smoke run is reduced scope, does not derive `kappa_s`, does not identify the
+source pole with the canonical Higgs radial mode, and cannot be counted as
+production evidence or retained/proposed-retained closure.
+
 ## Target-observable autocorrelation/ESS gate is not passed
 
 Runner:

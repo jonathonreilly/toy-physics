@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=110 FAIL=0
+# SUMMARY: PASS=111 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -119,6 +119,7 @@ The certificate consumes the PR-local route certificates for:
 - finite source-shift derivative no-go.
 - finite-source-linearity gate.
 - autocorrelation/ESS gate.
+- FH/LSZ target time-series harness extension.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
 proposal.
@@ -188,6 +189,7 @@ the visible shortcut routes:
 | finite source-shift derivative no-go | one symmetric finite source radius can keep `E(-delta)`, `E(0)`, `E(+delta)`, and the finite slope fixed while changing `dE/ds|_0` |
 | finite-source-linearity gate | current chunks use one nonzero source radius; the three-radius calibration manifest is planning support only and not foreground evidence |
 | autocorrelation/ESS gate | plaquette histories are diagnostic, but target same-source `dE/ds` and `C_ss(q)` time series are absent, so target ESS is not certified |
+| FH/LSZ target time-series harness extension | future chunks now serialize per-configuration source-response and scalar two-point target time series, but the smoke is reduced-scope infrastructure support only |
 | reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
 | effective-potential Hessian source-overlap no-go | canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the PR #230 source operator direction |
 | scalar carrier/projector closure attempt | color-singlet support and unit taste-singlet algebra are available, but physical carrier authority, unit-projector crossing, kernel enhancement, fitted-kernel legitimacy, and `K'(pole)` remain blocked |
