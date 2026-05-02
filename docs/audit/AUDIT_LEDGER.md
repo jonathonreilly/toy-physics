@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:50:08.622178+00:00
+**Generated:** 2026-05-02T18:52:14.418079+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,24 +24,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 545 |
+| unaudited | 544 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 636 |
+| ~~audited_conditional~~ | 637 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 376 |
-| `audited_conditional` | 636 |
+| `audited_conditional` | 637 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 581 |
+| `unaudited` | 580 |
 
 | claim_type | count |
 |---|---:|
@@ -705,6 +705,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `edge_deletion_boundary_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `em_gravity_coexistence_2x2_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `emergent_lorentz_invariance_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `emergent_product_law_audit_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `equivalence_principle_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `evolving_network_prototype_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6233,6 +6234,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the primary runner reproduces only the single-seed qualitative geometry comparison, while the note also relies on hardened k=4 multi-seed and G-sweep claims that are not covered by registered classified checks. Why this blocks: the bounded claim's stronger operating-point language cannot be audited from the available runner output, and unclassified stdout is not an audit-grade PASS surface. Repair target: register the hardened v2/k=4 multi-seed runner or narrow the note to the current seed-42 output, and emit classified C PASS lines for the effective-dimension, peak-density, clustering, and retained operating-point checks. Claim boundary until fixed: the seed-42 runner supports a qualitative matter-vs-uniform geometry difference, not a closed retained growth rule or universal gravitational bridge.
 - **open / conditional deps cited:**
   - `scripts/frontier_emergent_geometry.py`
+- **auditor confidence:** high
+
+### `emergent_lorentz_invariance_note`
+
+- **Note:** [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](../../docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional structural-dispersion result for the cubic Z3 lattice: leading infrared dispersion is isotropic and the first anisotropic correction has the dimension-6 cubic-harmonic form; reported physical Lorentz-invariance precision follows only if exact CPT, exact/tree-level parity protection, and a ~ 1/M_Planck are supplied as bridge premises.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-pr291-emergent-lorentz-harvey-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The step from lattice dispersion/cubic harmonic structure to reported physical Lorentz-invariance precision depends on unregistered bridge inputs: exact CPT, parity protection forbidding dimension-5 LV, and the hierarchy-scale identification a ~ 1/M_Planck.  _(class `B`)_
+- **chain closes:** False — The internal dispersion and cubic-harmonic checks close on the runner output, but the physical interpretation does not close from this row alone because the symmetry and scale premises are assumed rather than registered as audit-clean dependencies.
+- **rationale:** Issue: the runner supports the bounded lattice-dispersion surface, including low-p isotropy, p^4 coefficients, dimension-6 leading correction, and l=4 cubic anisotropy, but the reported physical precision imports CPT exactness, parity protection, and a ~ 1/M_Planck. Why this blocks retained status: those bridge premises are not registered retained-grade dependencies for this row, and the runner asserts rather than constructs them. Repair target: add audit-clean dependency rows or a runner that constructs the CPT, parity-protection, and hierarchy-scale bridges. Claim boundary until fixed: cite this as a bounded conditional structural-dispersion theorem on the stated symmetry/scale surface, not as a standalone Lorentz-invariance theorem.
+- **open / conditional deps cited:**
+  - `exact CPT on the cubic Z3 lattice`
+  - `exact/tree-level parity protection forbidding odd-dimension Lorentz-violating operators`
+  - `hierarchy-scale identification a ~ 1/M_Planck`
 - **auditor confidence:** high
 
 ### `emergent_product_law_audit_2026-04-11`
