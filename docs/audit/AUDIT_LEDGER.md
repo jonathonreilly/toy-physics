@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:00:00.095130+00:00
+**Generated:** 2026-05-02T00:00:59.233452+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 328 |
+| `audited_clean` | 329 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 480 |
+| `unaudited` | 479 |
 
 | criticality | count |
 |---|---:|
@@ -395,6 +395,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `site_phase_cube_shift_intertwiner_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `sixth_family_complex_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `sixth_family_sheared_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
+| `sixth_family_sheared_fm_transfer_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -14445,6 +14446,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The sheared-shell sweep shows a narrow basin: exact zero and neutral controls remain clean where measured, but drift=0.50 has no passing rows and several mid-drift rows fail by sign-orientation flip, so the family does not widen into family-wide closure.  _(class `B`)_
 - **chain closes:** True — The current SIXTH_FAMILY_SHEARED_SWEEP.py output reports 12/21 passing rows, exact zero and neutral rows throughout, no drift=0.50 passes, and failures driven by plus/minus sign inversion rather than control leakage. This directly supports the note's bounded boundary language.
 - **rationale:** The note is a bounded boundary diagnosis and its material claims match the current sweep. It does not overclaim family-wide closure: it identifies the drift=0.50 sign-flip edge and preserves the narrower basin read. Residual risk is only that the ledger row has no primary runner attached; scripts/SIXTH_FAMILY_SHEARED_SWEEP.py is the matching evidence surface.
+- **auditor confidence:** high
+
+### `sixth_family_sheared_fm_transfer_note`
+
+- **Note:** [`SIXTH_FAMILY_SHEARED_FM_TRANSFER_NOTE.md`](../../docs/SIXTH_FAMILY_SHEARED_FM_TRANSFER_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the sixth-family sheared-shell rows that pass the exact zero/neutral/sign gate, the sweep reports mean weak-field exponent 0.999895 across drift coverage 0.0 through 0.3, so F~M-style transfer survives only on the basin rows.  _(class `B`)_
+- **chain closes:** True — The current SIXTH_FAMILY_SHEARED_SWEEP.py output reports 12/21 passing rows with drift coverage [0.0, 0.05, 0.1, 0.15, 0.2, 0.3] and mean exponent 0.999895. That is exactly the note's bounded weak-field transfer claim, with no family-wide closure implied.
+- **rationale:** The note's narrow weak-field transfer statement is current with the sweep output. It limits the claim to rows that already pass the exact gates and does not claim universal connectivity behavior. Residual risk is only the missing ledger runner attachment; the local sweep script is the direct evidence surface.
 - **auditor confidence:** high
 
 ### `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26`
