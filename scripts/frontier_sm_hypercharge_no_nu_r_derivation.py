@@ -2,18 +2,14 @@
 """
 SM hypercharge uniqueness without ν_R input — anomaly cancellation alone.
 
-Closing-derivation runner for cycle 04 of the retained-promotion
-campaign (2026-05-02).
-
-Verdict-identified obstruction (parent's self-disclosed input):
+Derivation runner for the parent note's self-disclosed input:
     STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
     treats Y(ν_R) = 0 as an input imported from
-    HYPERCHARGE_IDENTIFICATION_NOTE.md (audit_status=audited_renaming,
-    DEMOTED).
+    HYPERCHARGE_IDENTIFICATION_NOTE.md.
 
 This runner verifies the closing derivation:
 
-    On the framework's retained LH content (Q_L, L_L) plus minimal
+    On the framework's cited LH content (Q_L, L_L) plus minimal
     SU(2)-singlet RH completion WITHOUT ν_R, the anomaly system
 
         Tr[Y]        = 0       (E1)
@@ -27,7 +23,7 @@ Counterfactual: adding ν_R reopens a 1-parameter family.
 
 Forbidden imports: no PDG, no literature numerical comparators
 beyond admitted-context ABJ math, no fitted selectors, no
-load-bearing dependency on the demoted HYPERCHARGE_IDENTIFICATION_NOTE.
+load-bearing dependency on HYPERCHARGE_IDENTIFICATION_NOTE.
 """
 
 from __future__ import annotations
@@ -57,7 +53,7 @@ def section(title: str) -> None:
 
 
 # -----------------------------------------------------------------------------
-# Setup: retained LH content
+# Setup: cited LH content
 # -----------------------------------------------------------------------------
 
 # Q_L: SU(2) doublet × SU(3) triplet, Y = +1/3 (doubled-Y convention).
@@ -437,10 +433,17 @@ section("Step 12: Derivation does not consume Y(ν_R) at any step")
 # physically a sterile field; whether it exists is a separate question
 # from whether SM hypercharges are forced.
 
+minimal_unknowns = ("y_1", "y_2", "y_3")
+decoupled_from_nu_r = (
+    "y_4" not in minimal_unknowns
+    and len(minimal_unknowns) == 3
+    and minimal_solution == (y1_final, y2_final, y3_final)
+    and E1 == E2 == E3 == 0
+)
 check(
     "no_nu_R derivation is decoupled from Y(ν_R) input",
-    True,
-    "Steps 1-8 above verify SM (y_1, y_2, y_3) without referencing y_4.",
+    decoupled_from_nu_r,
+    f"minimal unknowns = {minimal_unknowns}",
 )
 
 
