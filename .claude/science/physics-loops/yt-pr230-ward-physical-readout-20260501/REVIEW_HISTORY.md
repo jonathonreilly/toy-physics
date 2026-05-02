@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Source-Pole Purity Cross-Correlator Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN GATE / SOURCE-ONLY PURITY BLOCKED
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- source-only `C_ss`, source response, and source inverse-propagator derivative
+  do not certify source-pole purity;
+- the witness keeps those source-only data fixed while changing the
+  source-Higgs overlap and therefore the canonical-Higgs identity premise;
+- current PR #230 harness/certificates lack `C_sH`, same-source W/Z response,
+  or a retained source-pole purity theorem;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - No Orthogonal Top Coupling
 
 Local review-loop disposition:

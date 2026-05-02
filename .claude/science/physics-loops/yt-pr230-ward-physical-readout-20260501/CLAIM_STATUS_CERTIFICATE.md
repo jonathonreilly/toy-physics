@@ -56,6 +56,7 @@ plus FH/LSZ target time-series harness extension
 plus FH/LSZ chunks007-008 ready-set processing
 plus FH/LSZ target time-series Higgs-identity no-go
 plus no-orthogonal-top-coupling selection-rule no-go
+plus source-pole purity cross-correlator gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -68,6 +69,23 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+Source-pole purity cross-correlator gate:
+
+```text
+actual_current_surface_status: open / source-pole purity cross-correlator gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+Source-only `C_ss`, source response, and source inverse-propagator derivative
+remain source-coordinate data.  They can stay fixed while the source-Higgs
+overlap changes.  A `C_sH` cross-correlator, same-source W/Z response, or
+retained source-pole purity theorem is required before the measured source
+pole can be identified with the canonical Higgs radial mode.
 
 No-orthogonal-top-coupling selection-rule no-go:
 

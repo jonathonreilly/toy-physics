@@ -1,5 +1,23 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 source-pole purity cross-correlator gate:
+
+- Added `scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py`,
+  `docs/YT_SOURCE_POLE_PURITY_CROSS_CORRELATOR_GATE_NOTE_2026-05-02.md`,
+  and `outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json`.
+- Result: source-only `C_ss`, source response, and source inverse-propagator
+  derivative do not certify source-pole purity.  A witness keeps those
+  source-only data fixed while changing the source-Higgs overlap.
+- Retained-route gate is `PASS=88 FAIL=0`; campaign status is
+  `PASS=114 FAIL=0` over 118 certificates.
+- Chunks009-010 remain running in the background unless completed outputs
+  appear.
+
+Next exact action: process chunks009-010 if they finish; otherwise attack
+sector-overlap equality or a same-source W/Z response/purity-theorem route.
+Do not treat source-only pole data as canonical-Higgs identity or retained /
+proposed-retained closure.
+
 Latest checkpoint, 2026-05-02 no-orthogonal-top-coupling selection-rule no-go:
 
 - Added `scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py`,

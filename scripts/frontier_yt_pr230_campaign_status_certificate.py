@@ -169,6 +169,9 @@ def main() -> int:
         "source_pole_canonical_higgs_mixing": load(
             "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
         ),
+        "source_pole_purity_cross_correlator": load(
+            "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json"
+        ),
         "fh_gauge_response_mixed_scalar": load(
             "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json"
         ),
@@ -621,6 +624,12 @@ def main() -> int:
         statuses["source_pole_canonical_higgs_mixing"],
     )
     report(
+        "source-pole-purity-cross-correlator-gate-blocks",
+        "source-pole purity cross-correlator gate not passed"
+        in str(statuses["source_pole_purity_cross_correlator"]),
+        statuses["source_pole_purity_cross_correlator"],
+    )
+    report(
         "fh-gauge-response-mixed-scalar-blocks",
         "FH gauge-response mixed-scalar obstruction"
         in str(statuses["fh_gauge_response_mixed_scalar"]),
@@ -1068,7 +1077,11 @@ def main() -> int:
             "scalar.  The no-orthogonal-top-coupling selection-rule no-go "
             "blocks setting that orthogonal coupling to zero from current "
             "charges: an orthogonal neutral scalar with the same listed labels "
-            "has the same allowed top-bilinear coupling.  "
+            "has the same allowed top-bilinear coupling.  The source-pole "
+            "purity cross-correlator gate blocks source-only purity as well: "
+            "C_ss and source response can stay fixed while the source-Higgs "
+            "overlap changes unless C_sH, W/Z response, or a retained purity "
+            "theorem is supplied.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

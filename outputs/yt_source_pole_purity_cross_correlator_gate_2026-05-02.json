@@ -1,0 +1,48 @@
+{
+  "actual_current_surface_status": "open / source-pole purity cross-correlator gate not passed",
+  "current_harness_has_cross_observable": false,
+  "exact_next_action": "Add or derive a source-Higgs cross-correlator/purity theorem, or implement an independent canonical-Higgs response observable such as same-source W/Z mass slopes.",
+  "fail_count": 0,
+  "parents": {
+    "fh_gauge_mass_response_manifest": "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json",
+    "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+    "no_orthogonal_top_coupling_selection_rule": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
+    "target_timeseries_higgs_identity": "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No cross-correlator, W/Z response, or retained source-pole purity theorem exists.",
+  "source_pole_purity_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat C_ss as source-pole purity",
+    "does not set kappa_s = 1",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "Source-only pole data can determine C_ss and a same-source response, but not the overlap of the source pole with the canonical Higgs radial mode.  The witness keeps the source-only data fixed while changing the canonical-Higgs overlap; a C_sH cross-correlator, same-source W/Z response, or retained source-pole purity theorem would distinguish the cases.  The current QCD top harness and certificates do not provide such an observable.",
+  "witness": {
+    "checks": {
+      "canonical_overlap_differs": true,
+      "cross_correlator_distinguishes_models": true,
+      "purity_requires_cross_data_or_theorem": true,
+      "source_only_data_equal": true
+    },
+    "model_A_pure": {
+      "C_sH_pole_cross_residue": 1.0,
+      "purity": "pure canonical Higgs",
+      "source_pole_higgs_overlap": 1.0
+    },
+    "model_B_mixed": {
+      "C_sH_pole_cross_residue": 0.6,
+      "purity": "mixed with orthogonal scalar",
+      "source_pole_higgs_overlap": 0.6
+    },
+    "shared_source_only_data": {
+      "C_ss_pole_residue": 1.0,
+      "source_inverse_propagator_derivative": 2.5,
+      "source_response": 1.0
+    }
+  }
+}

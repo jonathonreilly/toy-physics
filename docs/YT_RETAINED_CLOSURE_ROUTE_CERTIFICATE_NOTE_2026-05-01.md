@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=87 FAIL=0
+# SUMMARY: PASS=88 FAIL=0
 ```
 
 The runner verifies:
@@ -75,6 +75,7 @@ The runner verifies:
 | pole-fit mode/noise budget is production evidence | no |
 | same-source sector-overlap identity is derived | no |
 | source pole is certified as canonical Higgs radial mode | no |
+| source-only pole data prove source-pole purity | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -171,6 +172,11 @@ orthogonal coupling to zero from the current charge labels.  A neutral
 orthogonal scalar with the same listed substrate/gauge labels has the same
 allowed top-bilinear coupling unless a new retained distinguishing theorem is
 supplied.
+The source-pole purity cross-correlator gate then blocks the adjacent
+source-only purity shortcut.  `C_ss`, the same source response, and the source
+inverse-propagator derivative can stay fixed while the source-Higgs overlap
+changes.  A `C_sH` pole cross-correlator, a same-source W/Z response, or a
+retained source-pole purity theorem is still required.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

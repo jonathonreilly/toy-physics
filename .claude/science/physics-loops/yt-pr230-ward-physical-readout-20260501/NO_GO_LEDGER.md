@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Source-only pole data do not prove source-pole purity
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+The source-only scalar pole residue `C_ss`, the same source response, and the
+source inverse-propagator derivative can remain fixed while the overlap of the
+source pole with the canonical Higgs radial mode changes.  Current PR #230
+certificates and the QCD top harness do not supply a `C_sH` cross-correlator,
+same-source W/Z mass response, or retained source-pole purity theorem.
+Therefore source-only pole data cannot be promoted to canonical-Higgs identity
+or retained/proposed-retained closure.
+
 ## Current charges do not prove no orthogonal top coupling
 
 Runner:

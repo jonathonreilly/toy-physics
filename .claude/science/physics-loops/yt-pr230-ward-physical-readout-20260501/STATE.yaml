@@ -13,11 +13,20 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-134-no-orthogonal-top-coupling-selection-rule
-blocks_completed: 134
-active_route: "No-orthogonal-top-coupling selection rule"
-active_hard_residual: "Current listed substrate/gauge charges do not distinguish the canonical Higgs radial scalar from an orthogonal neutral scalar with the same labels. Any current selection rule that allows h tbar t also allows chi tbar t, so no-orthogonal-top-coupling remains unproved."
+current_phase: campaign-rerun-block-135-source-pole-purity-cross-correlator-gate
+blocks_completed: 135
+active_route: "Source-pole purity cross-correlator gate"
+active_hard_residual: "Source-only C_ss, source response, and source inverse-propagator derivative do not identify the source pole with the canonical Higgs radial mode. A C_sH pole cross-correlator, same-source W/Z response, or retained source-pole purity theorem is still required."
 files_touched:
+  - "scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py"
+  - "docs/YT_SOURCE_POLE_PURITY_CROSS_CORRELATOR_GATE_NOTE_2026-05-02.md"
+  - "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - "scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py"
   - "docs/YT_NO_ORTHOGONAL_TOP_COUPLING_SELECTION_RULE_NO_GO_NOTE_2026-05-02.md"
   - "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json"
@@ -470,6 +479,7 @@ open_imports:
   - "common tadpole/dressing proof without alpha_LM or plaquette dependence"
   - "same-source sector-overlap identity k_top = k_gauge for gauge-normalized FH response"
   - "source-pole identity excluding orthogonal scalar admixture from the canonical Higgs radial mode"
+  - "source-Higgs pole cross-correlator C_sH, same-source W/Z response, or retained source-pole purity theorem"
 no_go_routes_inherited:
   - "direct production lattice correlator: production compute not complete"
   - "top mass cutoff substrate pin: bounded obstruction"
@@ -595,6 +605,7 @@ claim_state_movement:
   - "proved a reflection-positivity LSZ shortcut no-go: OS positivity gives a positive spectral measure, but reflection-positive pole-plus-continuum families can preserve finite same-source shell rows while moving the scalar pole residue"
   - "processed seed-controlled FH/LSZ chunks005-006: the combiner now reports ready chunk indices [1,2,3,4,5,6], i.e. 6/63 L12 chunks; the ready-set runner now accepts dynamic indices and response stability still fails"
   - "proved an effective-potential Hessian/source-overlap no-go: canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the source operator direction or source-pole identity"
+  - "proved source-only pole data do not certify source-pole purity; C_ss and source response can stay fixed while the C_sH/source-Higgs overlap changes"
   - "proved a finite source-shift derivative no-go: one symmetric finite source radius can keep E(-delta), E(0), E(+delta), and the finite slope fixed while changing the zero-source Feynman-Hellmann derivative"
   - "added an FH/LSZ finite-source-linearity gate: current chunks fail because they have one source radius; a three-radius calibration command is recorded but is not foreground evidence"
   - "added an FH/LSZ autocorrelation/ESS gate: current chunks have diagnostic plaquette histories but no per-configuration same-source dE/ds or C_ss(q) target time series, so target ESS is not certified"
@@ -610,5 +621,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Process chunks009-010 if any finish through combiner, ready-set, response-stability, autocorrelation/ESS, retained-route, and campaign gates; otherwise attack source-pole purity, same-source sector-overlap equality, or same-source W/Z response directly. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 8/63 L12 chunks, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Process chunks009-010 if any finish through combiner, ready-set, response-stability, autocorrelation/ESS, retained-route, and campaign gates; otherwise attack sector-overlap equality or same-source W/Z response/purity-theorem implementation directly. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, source-only pole purity, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 8/63 L12 chunks, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

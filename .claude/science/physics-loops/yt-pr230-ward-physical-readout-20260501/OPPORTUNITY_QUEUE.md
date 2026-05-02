@@ -72,6 +72,11 @@ identity premises on the current surface.  Without a new charge/representation
 theorem, the higher-probability analytic routes are now source-pole purity,
 sector-overlap equality, or a same-source W/Z response observable rather than
 another source-only statistic.
+The source-pole purity cross-correlator gate now blocks source-only purity as
+well.  `C_ss`, source response, and the source inverse-propagator derivative
+can stay fixed while the source-Higgs overlap changes, so the remaining
+positive routes are a real `C_sH` cross-correlator/purity theorem,
+sector-overlap equality, or an implemented same-source W/Z response observable.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
