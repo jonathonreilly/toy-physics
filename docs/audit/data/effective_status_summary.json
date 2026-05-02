@@ -7,7 +7,7 @@
     "open_gate": 106,
     "positive_theorem": 865
   },
-  "computed_at": "2026-05-02T19:07:15.684384+00:00",
+  "computed_at": "2026-05-02T19:10:38.026153+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -37,7 +37,7 @@
     "audited_decoration": 3,
     "audited_failed": 1,
     "audited_numerical_match": 24,
-    "audited_renaming": 17,
+    "audited_renaming": 18,
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
     "meta": 36,
     "open_gate": 7,
@@ -45,7 +45,7 @@
     "retained_bounded": 177,
     "retained_no_go": 95,
     "retained_pending_chain": 2,
-    "unaudited": 545
+    "unaudited": 544
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
