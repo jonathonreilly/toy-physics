@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:33:33.839594+00:00
+**Generated:** 2026-05-02T17:34:59.413636+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,9 +19,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 140 |
+| **retained** | 139 |
 | **retained_no_go** | 94 |
-| **retained_bounded** | 175 |
+| **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
 | unaudited | 525 |
@@ -44,12 +44,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 517 |
+| `bounded_theorem` | 518 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 153 |
 | `open_gate` | 107 |
-| `positive_theorem` | 868 |
+| `positive_theorem` | 867 |
 
 | criticality | count |
 |---|---:|
@@ -230,7 +230,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_v6_nearfield_comparator_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_weak_connectivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
-| `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
+| `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -7287,15 +7287,15 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite Wilson source-surface identity: d_beta C_n(p1,...,pn; beta)=sum_r C_{n+1}(p1,...,pn,r; beta), with no claimed beta=6 hierarchy closure.
 - **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-judge-20260430-phase-a-connected-hierarchy`  (codex-current; independence=judicial_review)
-- **load-bearing step:** The uniform source shift gives d/d beta = sum_r d/dJ_r, hence d_beta C_n = sum_r C_(n+1).  _(class `A`)_
-- **chain closes:** True — The point of contention was class A versus C. The source and runner establish an exact source-derivative identity over shifted variables; that is algebraic closure of the connected-hierarchy theorem, not a first-principles numerical compute, so the first auditor's A/clean reading holds over the second auditor's C classification.
-- **rationale:** The point of contention was class A versus C. The source and runner establish an exact source-derivative identity over shifted variables; that is algebraic closure of the connected-hierarchy theorem, not a first-principles numerical compute, so the first auditor's A/clean reading holds over the second auditor's C classification.
-- **auditor confidence:** judicial
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-hooke-connected-hierarchy-20260502`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because beta enters as one common source on every plaquette, d/d beta = sum_r d/d J_r on the source-shifted finite Wilson surface.  _(class `A`)_
+- **chain closes:** True — The finite-volume partition function depends on beta and J only through y_p=beta+J_p, so finite source derivatives commute to give the connected-cumulant hierarchy; the note explicitly leaves nonperturbative beta=6 closure open.
+- **rationale:** The scoped theorem is an exact finite-source algebraic identity for connected plaquette cumulants on the finite Wilson source surface. The runner checks the source-derivative hierarchy and the exact onset coefficients, while the note explicitly excludes nonperturbative hierarchy closure and analytic P(6) closure. No physical readout, comparator tuning, or support-class promotion is used inside this bounded scope.
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_constant_lift_obstruction_note`
 
