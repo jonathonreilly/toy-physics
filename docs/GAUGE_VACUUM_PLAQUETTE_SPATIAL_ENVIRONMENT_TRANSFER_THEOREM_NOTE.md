@@ -1,10 +1,23 @@
 # Gauge-Vacuum Plaquette Spatial Environment Transfer Theorem
 
 **Date:** 2026-04-17
-**Status:** exact spatial-environment structural transfer theorem on the
-accepted Wilson `3 spatial + 1 derived-time` surface; the script is a finite
-class-sector witness, while the fully constructive matrix-element packet now
-passes through the explicit tensor-transfer theorem
+**Type:** positive_theorem
+**Claim scope:** the structural existence of one positive self-adjoint
+spatial transfer operator `S_beta^env` on the gauge-invariant boundary
+Hilbert space of one orthogonal-direction slice of the unmarked spatial
+Wilson environment, plus the boundary-amplitude realization formula
+`z_(p,q)^env(beta) = <chi_(p,q), (S_beta^env)^(L_perp-1) eta_beta>` and
+its dependency on the explicit upstream `tensor_transfer_theorem`
+authority. The **explicit `beta = 6` matrix elements** of `S_beta^env`,
+equivalently the **explicit Perron / boundary data of `S_6^env`**, are
+**out of scope** here. The script is a finite class-sector witness only.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+The current audit verdict is `audited_conditional` and audit-lane
+ratification is required before any retained-grade status applies. The
+verdict identifies the upstream `tensor_transfer_theorem` authority as
+the unratified one-hop dependency.
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`
 
 ## Question
@@ -187,3 +200,37 @@ python3 scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py
 Expected summary:
 
 - `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+
+## Out of scope (admitted-context to this note)
+
+The following items are explicitly **NOT** load-bearing claims of this
+note. They depend on separate authority rows / open derivations and
+enter only as admitted-context. Per the audit verdict on this row,
+items (1)-(2) below are the **specific** unclosed dependencies the
+audit lane identifies:
+
+1. **Tensor-transfer theorem upstream.** The fully constructive
+   matrix-element packet for `S_beta^env` passes through
+   [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md),
+   which is itself currently `audited_conditional`. This note imports
+   that authority as a structural one-hop dep and does not derive its
+   matrix-element content here.
+
+2. **Explicit `beta = 6` Perron / boundary data.** The matrix elements
+   of `S_6^env` on the marked class-function sector — equivalently the
+   `beta = 6` Perron eigenvector / boundary state of the spatial
+   transfer operator — are **not** derived in this note. They remain
+   the audit lane's identified open object for the framework-point
+   plaquette target.
+
+3. **Reference Perron solves at structural `rho` hypotheses.** Any
+   numerical Perron solves cited in cross-referenced support notes
+   under `rho = 1` or `rho = delta_{(p,q),(0,0)}` are
+   audit-comparator readouts under explicit structural input
+   hypotheses, not load-bearing physical claims of this note.
+
+The in-scope content of this note is the **structural existence** of
+the spatial transfer operator `S_beta^env` and the **boundary-amplitude
+realization formula** for `Z_beta^env`, conditional on the upstream
+tensor-transfer theorem authority. Theorems 1, 2, 3 plus Corollary 1
+are the in-scope content.
