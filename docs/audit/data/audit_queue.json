@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 27,
-    "high": 217,
+    "high": 216,
     "leaf": 174,
     "medium": 175
   },
-  "generated_at": "2026-05-02T21:37:34.965600+00:00",
+  "generated_at": "2026-05-02T21:40:59.507228+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -996,27 +996,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_rigidity_theorem.py",
       "transitive_descendants": 37
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "teleportation_acceptance_suite_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 5,
-      "effective_status": "unaudited",
-      "load_bearing_score": 7.709,
-      "note_path": "docs/TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_teleportation_acceptance_suite.py",
-      "transitive_descendants": 36
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -15572,6 +15551,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 116,
-  "total_pending": 593
+  "ready_count": 115,
+  "total_pending": 592
 }

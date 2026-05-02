@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:37:35.225999+00:00
+**Generated:** 2026-05-02T21:40:59.770990+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 2 |
-| unaudited | 554 |
+| unaudited | 553 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 634 |
+| ~~audited_conditional~~ | 635 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 381 |
-| `audited_conditional` | 634 |
+| `audited_conditional` | 635 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 21 |
-| `unaudited` | 590 |
+| `unaudited` | 589 |
 
 | claim_type | count |
 |---|---:|
@@ -1060,6 +1060,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `symmetry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `teleportation_acceptance_suite_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -15840,6 +15841,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `bounded_gauge_only_taste_scalar_split_model`
   - `bounded_scalar_only_thermal_cubic_estimate`
+- **auditor confidence:** high
+
+### `teleportation_acceptance_suite_note`
+
+- **Note:** [`TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md`](../../docs/TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded orchestration harness result: the suite runs selected child teleportation artifacts and reports PASS/FAIL/SKIP for their preselected gates; no physical teleportation, hardware, readout, preparation, or nature-grade closure is established.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-teleportation-acceptance-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** PASS means only that the bounded harness and the selected child gates passed.  _(class `B`)_
+- **chain closes:** False — The harness-level statement closes only as a wrapper over named child scripts and their emitted gates. It does not close a bounded teleportation theorem because the acceptance gates are imported from preselected child artifacts, and strict-lane output still reports selector/scaling/hardware/nature-grade closure as conditional or on HOLD.
+- **rationale:** Issue: the runner does not independently derive teleportation acceptance criteria; it executes a curated list of child scripts with fixed arguments, parses their PASS/FAIL gates, and summarizes selected metrics. Why this blocks: a PASS is therefore a certificate aggregation over preselected probes, not a theorem that native preparation, durable records, taste-only hardware readout, Bell apparatus dynamics, scaling, or selector closure follows from retained inputs. Repair target: provide a retained theorem and runner that constructs the acceptance criteria and physical bridges directly, with selector/scaling/hardware gates proved rather than accepted as child-script premises. Claim boundary until fixed: the note may claim only bounded telemetry that the current selected harness probes passed and that no matter/object/FTL or hardware closure is established.
 - **auditor confidence:** high
 
 ### `teleportation_conclusion_boundary_note`
