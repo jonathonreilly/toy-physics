@@ -1,0 +1,1 @@
+# Cycle 11 cert: Pattern C source-note tightening on YUKAWA_COLOR_PROJECTION_THEOREM. Adds Type/Claim scope headers + Out-of-scope section flagging physical-Higgs-Z identification as separate. Algebraic content unchanged. Target row td=297.
