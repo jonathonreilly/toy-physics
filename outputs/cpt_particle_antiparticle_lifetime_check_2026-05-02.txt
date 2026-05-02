@@ -8,8 +8,8 @@ Setup:
   CPT = swap(p ↔ a) ∘ complex conjugation
 
 ------------------------------------------------------------------------
-TEST 1: particle and antiparticle blocks have identical
-        complex eigenvalue spectrum
+TEST 1: particle and antiparticle blocks have CPT-conjugate
+        spectra with equal energies and width magnitudes
 ------------------------------------------------------------------------
   particle eigs:     [np.complex128(-0.5509-0.1379j), np.complex128(1.421-0.1718j)]
   antiparticle eigs: [np.complex128(-0.5509+0.1379j), np.complex128(1.421+0.1718j)]
@@ -48,7 +48,7 @@ TEST 4: negative control — non-CPT-symmetric H_eff has DIFFERENT widths
 ========================================================================
 SUMMARY
 ========================================================================
-  Test 1 (identical complex spectra):           PASS
+  Test 1 (CPT-conjugate spectra):               PASS
   Test 2 (width equality Γ_p = Γ_a):            PASS
   Test 3 (5-trial universality):                PASS
   Test 4 (negative control without CPT):        PASS

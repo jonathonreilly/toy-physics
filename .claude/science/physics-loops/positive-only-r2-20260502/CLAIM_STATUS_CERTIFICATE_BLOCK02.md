@@ -11,7 +11,7 @@
 ## Strict-bar gate
 
 - claim_type: positive_theorem ✓
-- single load-bearing dep at retained-grade on live ledger ✓ (`cpt_exact_note` is at `effective_status: retained`)
+- single load-bearing dependency named ✓ (`cpt_exact_note`)
 - zero admitted physics inputs ✓ (resonance pole convention + CPT operator action are structural)
 - runner produces classifiable PASS lines ✓ (4/4 PASS including negative control)
 
@@ -19,19 +19,21 @@
 
 ```yaml
 claim_type_author_hint: positive_theorem
-claim_scope: "Γ_antiparticle = Γ_particle (and hence τ equal) for every unstable species in the retained matter content."
+claim_scope: "Γ_antiparticle = Γ_particle (and hence τ equal) for every unstable species in the cited matter content."
 admitted_context_inputs:
   - resonance pole convention
   - CPT operator action on resonance states
   - antiunitary conjugation preserves resonance pole structure
 upstream_dependencies:
-  - cpt_exact_note (effective_status: retained)
+  - cpt_exact_note
 runner_classified_passes: 4 PASS at machine precision (identical |Im(E)|, width equality, 5-trial universality, negative control without CPT shows split widths)
+source_sets_audit_outcome: false
 ```
 
-## Expected `effective_status` after audit
+## Review-loop status authority
 
-If Codex returns clean + positive_theorem → `effective_status = retained`.
+This block proposes a `positive_theorem` claim type and leaves all row
+outcome decisions to the independent audit lane.
 
 ## Implementation note
 

@@ -1,12 +1,13 @@
-"""Particle/antiparticle lifetime equality from retained CPT.
+"""Particle/antiparticle lifetime equality from cited CPT.
 
 Verifies (L1)-(L3) of CPT_PARTICLE_ANTIPARTICLE_LIFETIME_EQUALITY_THEOREM_-
 NOTE_2026-05-02.md on a small CPT-symmetric non-Hermitian effective
 Hamiltonian representing resonances.
 
 Tests:
-  T1: CPT-symmetric H_eff has identical complex eigenvalue spectrum
-      across particle and antiparticle blocks.
+  T1: CPT-symmetric H_eff has CPT-conjugate spectra with equal real
+      energies and equal width magnitudes across particle and antiparticle
+      blocks.
   T2: imaginary parts (decay widths) are identical across blocks.
   T3: 5 random CPT-symmetric H_eff all show identical widths.
   T4: negative control: non-CPT-symmetric H_eff shows differing widths.
@@ -51,8 +52,8 @@ def main() -> None:
 
     # ----- Test 1: identical complex spectra -----
     print("-" * 72)
-    print("TEST 1: particle and antiparticle blocks have identical")
-    print("        complex eigenvalue spectrum")
+    print("TEST 1: particle and antiparticle blocks have CPT-conjugate")
+    print("        spectra with equal energies and width magnitudes")
     print("-" * 72)
     eigs_p = np.sort_complex(np.linalg.eigvals(H_p))
     eigs_a = np.sort_complex(np.linalg.eigvals(H_a))
@@ -130,7 +131,7 @@ def main() -> None:
     print("=" * 72)
     print("SUMMARY")
     print("=" * 72)
-    print(f"  Test 1 (identical complex spectra):           {'PASS' if t1_ok else 'FAIL'}")
+    print(f"  Test 1 (CPT-conjugate spectra):               {'PASS' if t1_ok else 'FAIL'}")
     print(f"  Test 2 (width equality Γ_p = Γ_a):            {'PASS' if t2_ok else 'FAIL'}")
     print(f"  Test 3 (5-trial universality):                {'PASS' if t3_ok else 'FAIL'}")
     print(f"  Test 4 (negative control without CPT):        {'PASS' if t4_ok else 'FAIL'}")
