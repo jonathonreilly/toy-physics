@@ -28,6 +28,7 @@ Current read:
 
 from __future__ import annotations
 
+import argparse
 import cmath
 import math
 import os
@@ -59,6 +60,14 @@ MAX_ITERS = 6
 TOL = 1e-10
 REP_EPSILON = 0.05
 REP_SOURCE = 0.004
+
+# Quick-mode subsets for the audit window (runner_timeout_sec=60).
+# The full sweep above is ~93s on the reference laptop; quick mode
+# reproduces the same qualitative structure (exact eps=0 reduction +
+# nonzero-coupling non-convergence + step-local Born) in <30s.
+QUICK_SOURCE_STRENGTHS = (0.004,)
+QUICK_EPSILONS = (0.0, 0.05, 0.2)
+QUICK_SKIP_END_TO_END_BORN = True
 
 
 def _source_cluster_nodes(lat: m.Lattice3D) -> list[int]:
@@ -312,7 +321,35 @@ def _fit_power(xs: list[float], ys: list[float]) -> float | None:
     return sxy / sxx
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Poisson self-gravity loop v3. By default runs the full sweep "
+            "(~93s on reference hardware). Use --quick for a reduced subset "
+            "that fits inside the audit-loop runner_timeout_sec=60 budget "
+            "while preserving the exact eps=0 identity check, one nonzero "
+            "coupling row, and the step-local Born check."
+        )
+    )
+    parser.add_argument(
+        "--quick",
+        action="store_true",
+        help=(
+            "Run the audit-window quick subset: source_strengths=("
+            f"{QUICK_SOURCE_STRENGTHS[0]}), epsilons={QUICK_EPSILONS}, skip "
+            "end-to-end Born mask sweep. Should complete in <30s."
+        ),
+    )
+    args = parser.parse_args(argv)
+
+    quick = bool(args.quick)
+    if quick:
+        eff_source_strengths = QUICK_SOURCE_STRENGTHS
+        eff_epsilons = QUICK_EPSILONS
+    else:
+        eff_source_strengths = SOURCE_STRENGTHS
+        eff_epsilons = EPSILONS
+
     lat = m.Lattice3D.build(NL_PHYS, PW, H)
     launch_nodes = [lat.nmap[(0, 0, 0)]]
     source_patch_nodes = _source_cluster_nodes(lat)
@@ -328,12 +365,12 @@ def main() -> None:
         lat,
         source_patch_nodes,
         [1.0 / len(source_patch_nodes)] * len(source_patch_nodes),
-        max(SOURCE_STRENGTHS) * max(EPSILONS),
+        max(eff_source_strengths) * max(eff_epsilons),
     )
     gain = FIELD_TARGET_MAX / _field_abs_max(ref_raw) if _field_abs_max(ref_raw) > 1e-30 else 1.0
 
     print("=" * 104)
-    print("POISSON SELF-GRAVITY LOOP V3")
+    print("POISSON SELF-GRAVITY LOOP V3" + ("  [--quick]" if quick else ""))
     print("  exact h=0.25 lattice, amplitude-sourced backreaction loop, matched null + Born audit")
     print("  tested observables: detector centroid shift and detector-line phase ramp")
     print("=" * 104)
@@ -342,14 +379,16 @@ def main() -> None:
     print(f"source patch nodes={source_patch_nodes}")
     print(f"born triplet={born_nodes}")
     print(f"kernel=exp(-mu r)/(r+eps), mu={FIELD_MU:.2f}, eps={FIELD_EPS:.2f}")
-    print(f"source strengths={SOURCE_STRENGTHS}")
-    print(f"backreaction couplings={EPSILONS}")
+    print(f"source strengths={eff_source_strengths}")
+    print(f"backreaction couplings={eff_epsilons}")
     print(f"field gain={gain:.6e}, relax={RELAX:.2f}, max_iters={MAX_ITERS}")
+    if quick:
+        print("MODE: --quick (audit-window subset; full sweep available without --quick)")
     print()
 
     # Exact identity reduction / matched null control.
     null_field, _, null_conv, null_iters, null_resid, null_amps = _run_loop(
-        lat, launch_nodes, source_patch_nodes, max(SOURCE_STRENGTHS), 0.0, gain
+        lat, launch_nodes, source_patch_nodes, max(eff_source_strengths), 0.0, gain
     )
     zero_delta = _centroid_z(null_amps, lat) - z_free
     zero_escape = _detector_prob(null_amps, lat) / p_free if p_free > 1e-30 else math.nan
@@ -372,7 +411,7 @@ def main() -> None:
     print("-" * 92)
 
     summary: dict[float, dict[str, float]] = {}
-    for epsilon in EPSILONS:
+    for epsilon in eff_epsilons:
         deltas: list[float] = []
         phase_slopes: list[float] = []
         phase_spans: list[float] = []
@@ -381,7 +420,7 @@ def main() -> None:
         n_conv = 0
         max_resid = 0.0
 
-        for s in SOURCE_STRENGTHS:
+        for s in eff_source_strengths:
             coupled_field, weights, converged, iters, residual, coupled_amps = _run_loop(
                 lat, launch_nodes, source_patch_nodes, s, epsilon, gain
             )
@@ -420,8 +459,8 @@ def main() -> None:
         print(
             f"  eps={epsilon:.2f} summary: mean delta={mean_delta:+.6e} "
             f"mean phase slope={mean_slope:+.4e} mean span={mean_span:+.4e} "
-            f"mean escape={mean_escape:.3f} toward={toward}/{len(SOURCE_STRENGTHS)} "
-            f"resid={max_resid:.3e} converged={n_conv}/{len(SOURCE_STRENGTHS)}"
+            f"mean escape={mean_escape:.3f} toward={toward}/{len(eff_source_strengths)} "
+            f"resid={max_resid:.3e} converged={n_conv}/{len(eff_source_strengths)}"
         )
 
     print()
@@ -433,24 +472,29 @@ def main() -> None:
     )
     step_born = _born_i3(audit_field, lat, born_nodes)
 
-    end_probs: dict[int, float] = {}
-    for mask in range(1, 8):
-        open_nodes = [born_nodes[i] for i in range(3) if mask & (1 << i)]
-        field, _, converged, iters, resid, amps = _run_loop(
-            lat, open_nodes, open_nodes, REP_SOURCE, REP_EPSILON, gain
-        )
-        end_probs[mask] = _detector_prob(amps, lat)
+    if quick and QUICK_SKIP_END_TO_END_BORN:
+        end_born = math.nan
+        end_to_end_skipped = True
+    else:
+        end_probs: dict[int, float] = {}
+        for mask in range(1, 8):
+            open_nodes = [born_nodes[i] for i in range(3) if mask & (1 << i)]
+            field, _, converged, iters, resid, amps = _run_loop(
+                lat, open_nodes, open_nodes, REP_SOURCE, REP_EPSILON, gain
+            )
+            end_probs[mask] = _detector_prob(amps, lat)
 
-    a, b, c = born_nodes
-    pa = end_probs[1]
-    pb = end_probs[2]
-    pc = end_probs[4]
-    pab = end_probs[3]
-    pac = end_probs[5]
-    pbc = end_probs[6]
-    pabc = end_probs[7]
-    i3 = pabc - pab - pac - pbc + pa + pb + pc
-    end_born = abs(i3) / pabc if pabc > 1e-30 else math.nan
+        a, b, c = born_nodes
+        pa = end_probs[1]
+        pb = end_probs[2]
+        pc = end_probs[4]
+        pab = end_probs[3]
+        pac = end_probs[5]
+        pbc = end_probs[6]
+        pabc = end_probs[7]
+        i3 = pabc - pab - pac - pbc + pa + pb + pc
+        end_born = abs(i3) / pabc if pabc > 1e-30 else math.nan
+        end_to_end_skipped = False
 
     audit_null_field, _, _, _, _, audit_null_amps = _run_loop(
         lat, born_nodes, born_nodes, REP_SOURCE, 0.0, gain
@@ -459,7 +503,10 @@ def main() -> None:
     audit_null_escape = _detector_prob(audit_null_amps, lat) / p_free if p_free > 1e-30 else math.nan
 
     print(f"  step-local Born:    {step_born:.3e}")
-    print(f"  end-to-end Born:    {end_born:.3e}")
+    if end_to_end_skipped:
+        print("  end-to-end Born:    SKIPPED (quick mode; see full sweep without --quick)")
+    else:
+        print(f"  end-to-end Born:    {end_born:.3e}")
     print(f"  coupled centroid:   {_centroid_z(audit_amps, lat) - z_free:+.6e}")
     print(f"  null centroid:      {audit_null_delta:+.6e}")
     print(f"  coupled escape:     {_detector_prob(audit_amps, lat) / p_free if p_free > 1e-30 else math.nan:.6f}")
@@ -476,11 +523,14 @@ def main() -> None:
         print(f"  best mean phase slope:     {best['slope']:+.4e}")
         print(f"  best mean phase span:      {best['span']:+.4e}")
         print(f"  best mean escape ratio:    {best['escape']:.3f}")
-        print(f"  best TOWARD rows:          {int(best['toward'])}/{len(SOURCE_STRENGTHS)}")
+        print(f"  best TOWARD rows:          {int(best['toward'])}/{len(eff_source_strengths)}")
     print(f"  exact zero-epsilon reduction shift: {zero_delta:+.3e}")
     print(f"  zero-epsilon phase slope/span: {phase_null_slope:+.4e} / {phase_null_span:+.4e}")
     print("  strict read: no retained positive survives the exact reduction and Born controls")
     print("  this lane remains a bounded no-go on the retained audit row")
+    if quick:
+        print("  quick mode: full sweep was deliberately reduced to fit the audit window;")
+        print("              run without --quick to reproduce the full 4 epsilons x 3 strengths sweep.")
 
 
 if __name__ == "__main__":
