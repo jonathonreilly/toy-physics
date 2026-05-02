@@ -3229,6 +3229,10 @@
       "to": "dm_neutrino_ckm_texture_transfer_no_go_note_2026-04-15"
     },
     {
+      "from": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
+      "to": "dm_neutrino_weak_vector_theorem_note_2026-04-15"
+    },
+    {
       "from": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
       "to": "dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16"
     },
@@ -19957,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:13:02.468858+00:00",
+  "generated_at": "2026-05-02T19:19:40.408158+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25656,11 +25660,13 @@
     },
     "dm_neutrino_dirac_bridge_theorem_note_2026-04-15": {
       "claim_id": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "8170f17dfef71d61fe4fb686fa349338b2b5cfe2c12612dd1159be66825609f5",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "dm_neutrino_weak_vector_theorem_note_2026-04-15"
+      ],
+      "note_hash": "6e117d47f2f4b7b4ccbc0d2121fcb824dd399eeb7b52f7d17e4ca2b8967d9514",
       "path": "docs/DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_dirac_bridge_theorem.py",
       "title": "DM Neutrino Dirac Bridge Theorem Note"
@@ -45455,7 +45461,6 @@
     "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15",
     "dm_neutrino_cascade_geometry_note_2026-04-14",
     "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-    "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
     "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16",
     "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
     "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
@@ -46376,21 +46381,21 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 10,
       "meta": 1,
-      "none": 1750,
-      "positive_theorem": 24
+      "none": 1749,
+      "positive_theorem": 25
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 510,
       "meta": 1,
       "no_go": 106,
-      "none": 443,
+      "none": 442,
       "open_gate": 109,
-      "positive_theorem": 616
+      "positive_theorem": 617
     },
-    "edge_count": 4989,
-    "leaf_count": 755,
+    "edge_count": 4990,
+    "leaf_count": 754,
     "node_count": 1785,
-    "root_count": 1216,
+    "root_count": 1215,
     "runners_with_path": 1352
   }
 }

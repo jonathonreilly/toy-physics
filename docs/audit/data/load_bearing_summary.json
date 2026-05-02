@@ -1,9 +1,9 @@
 {
-  "computed_at": "2026-05-02T19:13:06.952197+00:00",
+  "computed_at": "2026-05-02T19:19:44.656430+00:00",
   "criticality_counts": {
     "critical": 44,
-    "high": 388,
-    "leaf": 890,
+    "high": 389,
+    "leaf": 889,
     "medium": 463
   },
   "flagship_signal_used": false,
