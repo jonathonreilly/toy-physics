@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:18:39.512660+00:00
+**Generated:** 2026-05-02T01:20:10.790015+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 357 |
+| `audited_clean` | 358 |
 | `audited_conditional` | 666 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 435 |
+| `unaudited` | 434 |
 
 | criticality | count |
 |---|---:|
@@ -434,6 +434,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_source_map_eta_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `third_grown_family_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `third_grown_family_complex_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `third_grown_family_complex_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -15754,6 +15755,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The third-family sign basin is real, but the complex-action branch is seed-selective and drift-sensitive; the exact gamma=0 baseline is fine, but the TOWARD -> AWAY crossover is not robust.  _(class `C`)_
 - **chain closes:** True — The registered runner exits successfully and its safe read matches the note's boundary conclusion: the anchor gamma=0/Born/F~M controls pass, the anchor TOWARD@0.1 -> AWAY@0.5 crossover is false, and the candidate does not retain the complex-action companion cleanly.
 - **rationale:** The load-bearing negative boundary survives the current runner: the exact-control anchor is valid, weak-field scaling remains linear, and the complex-action companion fails the robust crossover test. The representative table in the note is stale relative to the current aggregate runner output, but the stale values do not change the boundary verdict.
+- **auditor confidence:** high
+
+### `third_grown_family_complex_note`
+
+- **Note:** [`THIRD_GROWN_FAMILY_COMPLEX_NOTE.md`](../../docs/THIRD_GROWN_FAMILY_COMPLEX_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The third-family sign basin is real, but the complex-action branch is much more selective and does not promote into a retained complex-action basin.  _(class `C`)_
+- **chain closes:** True — The registered complex runner exits successfully and reports that the anchor controls pass while the TOWARD@0.1 -> AWAY@0.5 crossover fails, so the complex-action companion is diagnosed as a boundary rather than a retained basin.
+- **rationale:** The bounded negative claim is supported by the current runner and the archived diagnostic read: gamma=0/Born/F~M controls survive, but the seed-consistent crossover does not. The note does not overclaim a retained complex companion; it correctly labels the result as a diagnosed boundary.
 - **auditor confidence:** high
 
 ### `third_grown_family_sign_note`
