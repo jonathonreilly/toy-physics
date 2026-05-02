@@ -56,5 +56,3 @@ That is the best triple-stack purity floor in the tested range, but it remains a
 The run output was captured in:
 
 - [`logs/2026-04-02-triple-stack-collapse-scaling.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-02-triple-stack-collapse-scaling.txt)
-- [`logs/2026-05-02-triple-stack-collapse-scaling.txt`](../logs/2026-05-02-triple-stack-collapse-scaling.txt)
-

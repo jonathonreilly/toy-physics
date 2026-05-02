@@ -4,7 +4,6 @@
 The diagonal-stripe seventh-family scout is highly selective.
 
 Runner: [`scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py`](../scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py)
-Frozen log: [`logs/2026-05-02-seventh-family-diagonal-sweep.txt`](../logs/2026-05-02-seventh-family-diagonal-sweep.txt)
 
 Exact-gate result:
 - exact zero-source baseline survives on every tested row

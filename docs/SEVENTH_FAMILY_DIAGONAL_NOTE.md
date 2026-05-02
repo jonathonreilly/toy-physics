@@ -5,7 +5,6 @@ This note freezes the seventh-family diagonal-stripe scout as a seed-selective
 boundary on the no-restore grown slice.
 
 Runner: [`scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py`](../scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py)
-Frozen log: [`logs/2026-05-02-seventh-family-diagonal-sweep.txt`](../logs/2026-05-02-seventh-family-diagonal-sweep.txt)
 
 Construction:
 - non-shell diagonal stripes in the `y/z` plane

@@ -15,7 +15,6 @@ Valley-linear action `S = L(1-f)`, `1/L^2` kernel.
 Bounded harness:
 
 - [`scripts/structureless_dag_gravity_harness.py`](../scripts/structureless_dag_gravity_harness.py)
-- Frozen log: [`logs/2026-05-02-structureless-dag-gravity-harness.txt`](../logs/2026-05-02-structureless-dag-gravity-harness.txt)
 - Sizes covered by the current harness: `n = 200` and `n = 500`. The harness
   intentionally does **not** include the older unstable `n = 1000` pocket;
   see "Honest scope" below.
