@@ -19993,7 +19993,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:14:39.994770+00:00",
+  "generated_at": "2026-05-02T21:16:32.954869+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21341,8 +21341,8 @@
     },
     "angular_kernel_underdetermination_no_go_note": {
       "claim_id": "angular_kernel_underdetermination_no_go_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
       "claim_type_seed_hint": "no_go",
       "deps": [
         "lorentz_boost_covariance_2d_theorem_note",
@@ -21350,7 +21350,7 @@
         "architecture_note_directional_measure",
         "emergent_lorentz_invariance_note"
       ],
-      "note_hash": "12745be990afbeaa7b0b551e999fb779d5cc7073fbf571648140af7cb97fe4a2",
+      "note_hash": "1291cf7fb80cdcd43ad3be6a82f33d125d6ddd115c8d3714dbe2e5bbda782059",
       "path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
       "runner_path": "scripts/frontier_angular_kernel_underdetermination_nogo.py",
       "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)"
@@ -46553,7 +46553,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 12,
       "meta": 1,
-      "none": 1741,
+      "no_go": 1,
+      "none": 1740,
       "positive_theorem": 42
     },
     "claim_type_seed_hint_counts": {

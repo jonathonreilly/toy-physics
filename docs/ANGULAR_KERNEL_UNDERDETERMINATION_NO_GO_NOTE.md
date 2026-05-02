@@ -1,15 +1,53 @@
 # Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)
 
-**Date:** 2026-04-25
-**Status:** bounded no-go on the directional-path-measure kernel +
-retained routing clarification/support note for the boost-covariance program
+**Date:** 2026-04-25 (audit-ready hygiene: 2026-05-02)
+**Type:** no_go
+**Claim type:** no_go
+**Claim scope:** Two-part statement on the directional-path-measure
+construction (`ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`):
+(1) Negative result (bounded no-go): the angular kernel `w(theta)` of
+the directional path-measure walk is structurally underdetermined by the
+four currently retained primitives — Cl(3) trace structure, action
+extremization on Z^3, causal-cone kinematics (forward-only edges,
+theta in [0, pi/2]), and leading-order continuum-limit SO(3) isotropy.
+The runner exhibits seven distinct kernels (`uniform`, `cos`, `cos^2`,
+three Gaussian widths `exp(-c theta^2)` for `c ∈ {0.4, 0.8, 1.6}`, and
+`linear_falloff`) all of which satisfy primitives 1-4 but produce
+measurably distinct transverse-step moments `<r_perp^2>` and `<r_perp^4>`,
+hence measurably distinct higher-derivative continuum behaviour. The
+empirical `beta = 0.8` choice (gravity-card lead candidate) sits in the
+middle of this family with no first-principles selection rule. The
+no-go is conditional on the four primitives being all the constraints;
+closing positively would require adopting one of three candidate
+additional axioms (higher-order isotropy, action-Lagrangian principle,
+or direct observable matching), none currently retained.
+(2) Positive result (retained routing clarification / Phase 4
+decoupling): the boost-covariance program (Phase 4, the retained
+LORENTZ_BOOST_COVARIANCE_2D and 3PLUS1D theorems) lives entirely on the
+fixed staggered/Laplacian Hamiltonian construction, which has zero
+angular-kernel freedom. The empirical `beta = 0.8` of the directional-
+measure walk does NOT enter Phase 4 anywhere. The two constructions are
+on distinct claim surfaces.
+**Status:** branch-local bounded no-go on the directional-path-measure
+angular kernel + decoupling theorem for the boost-covariance lane;
+runner passing PASS=64/64; classified PASS surface dominant_class=C.
+Audit ready. On clean audit: target effective_status = retained_no_go
+(the no-go is decisive: the runner exhibits 7 concrete kernels passing
+primitives 1-4 with measurably different moments, so the kernel is
+structurally underdetermined on the retained primitive surface).
 **Runner:** `scripts/frontier_angular_kernel_underdetermination_nogo.py`
-(PASS=64, FAIL=0)
-**Companions:**
-[LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),
-[LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md),
-[ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md),
-[EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+(PASS=64, FAIL=0; classified runner counts dominant_class=C; the 64
+checks span 10 parts including kernel azimuthal symmetry, forward-causal
+nonnegativity, distinct moments, Cl(3) trace blindness, action saddle-
+point independence, cone-kinematics-equivalent kernel diversity,
+leading-order isotropy automaticity, the staggered/Laplacian zero-
+kernel-freedom lemma, the Phase-4 decoupling proof, and the combined
+no-go statement)
+**Companions / load-bearing inputs:**
+[LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md) (Phase-4 decoupling target — 1+1d theorem),
+[LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md) (Phase-4 decoupling target — 3+1d theorem),
+[ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md) (defines the directional path measure and lists kernel derivation as open work),
+[EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md) (proves the dispersion theorem on staggered/Laplacian — input for the decoupling theorem)
 
 ## Purpose
 
@@ -184,6 +222,23 @@ Safe wording:
 Unsafe wording:
 
 > The angular kernel `exp(-0.8 theta^2)` is derived from first principles.
+
+## Honest claim-status
+
+```yaml
+actual_current_surface_status: support
+conditional_surface_status: bounded no-go on the directional-path-measure angular kernel + decoupling theorem for the boost-covariance lane
+hypothetical_axiom_status: closing positively would require one of three candidate additional axioms (higher-order isotropy axiom, action-Lagrangian principle, direct observable matching) — none currently retained
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Branch-local bounded no-go + decoupling theorem. The no-go is decisive on the retained primitive surface (the runner exhibits 7 concrete kernels passing primitives 1-4 with measurably different transverse-step moments). The decoupling theorem is on the staggered/Laplacian carrier where there is no angular-kernel freedom by construction. Awaiting independent audit per AUDIT_AGENT_PROMPT_TEMPLATE."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+target_effective_status_on_clean_audit: retained_no_go
+target_effective_status_on_clean_audit_reason: "The no-go is structurally decisive: 7 kernels in 7 distinct moment-classes all pass the four retained primitives, so no derivation of w(theta) from those primitives alone can succeed. Closing the no-go positively would require adopting an additional axiom — that is the audit-ratified scope. Auditor is asked to ratify retained_no_go (negative result) rather than retained or retained_bounded (positive results)."
+audit_independence_required: cross_family_or_fresh_context
+runner_class_dominant: C
+```
 
 ## Verification
 
