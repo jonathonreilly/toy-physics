@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T15:48:23.966591+00:00
+**Generated:** 2026-05-02T15:55:11.321342+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -44,12 +44,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 505 |
+| `bounded_theorem` | 506 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 150 |
 | `open_gate` | 105 |
-| `positive_theorem` | 876 |
+| `positive_theorem` | 875 |
 
 | criticality | count |
 |---|---:|
@@ -765,7 +765,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `generation_axiom_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7901,14 +7901,14 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 ### `generation_axiom_boundary_note`
 
 - **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Accepted Hilbert/locality/information-surface boundary claim for hw=1 triplet species semantics, plus the older reduced-stack witness that substrate physicality remained explicit there.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:2026-05-01-generation_axiom_boundary_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note claims that the physical-lattice premise is no longer the live boundary for the retained hw=1 triplet's physical-species semantics, and that only a reduced-stack substrate witness remains once the accepted Hilbert/locality/information surface is used.  _(class `B`)_
-- **chain closes:** False — The runner verifies the finite-dimensional hw=1 translation/projector/algebra facts, but the decisive physical-semantics and substrate-boundary bridge is imported as accepted Hilbert-surface or physical-lattice-necessity context rather than derived by this no-dependency note.
-- **rationale:** Issue: the exact hw=1 observable algebra and no-proper-quotient checks close, but the load-bearing move from exact observable separation to physical-species semantics, and the claim that substrate physicality is no longer a live boundary on the accepted one-axiom surface, rely on external accepted-Hilbert/physical-lattice-necessity inputs that are not dependencies of this row. Why this blocks: the runner marks those bridge steps as LOGICAL or assumption-enumeration checks, often with hard-coded True conditions, so it verifies consistency of the boundary framing after the semantic premises are accepted rather than deriving those premises from this note alone. Repair target: wire the accepted Hilbert/locality/information and physical-lattice-necessity authorities as explicit retained dependencies, or narrow this row to the exact reduced-stack algebra/witness statement without the physical-species/substrate closure language. Claim boundary until fixed: the local finite-dimensional statements remain supported: the hw=1 translation characters are distinct, the retained observable algebra generated on H_hw=1 is full M_3(C) with scalar commutant, and the older reduced-stack witness still leaves the substrate premise explicit.
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-generation-boundary-mencius-aquinas`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Exact observable separation plus no-proper-quotient closure plus accepted Hilbert semantics already force the retained hw=1 triplet to be physically distinct species sectors of the accepted theory.  _(class `B`)_
+- **chain closes:** False — The local runner supports the reduced-stack witness and local M_3(C) observable-algebra construction, but the physical-species conclusion imports accepted Hilbert semantics and no-proper-quotient closure that are not retained-grade inputs for this row.
+- **rationale:** Issue: the central boundary statement depends on accepted Hilbert/no-proper-quotient semantics and the separate physical-lattice necessity lane, not just the supplied local M_3(C) construction. Why this blocks: exact observable separation on H_hw=1 does not by itself establish the physical-identification bridge from sectors to physically distinct species, and the named semantic/substrate authorities are not retained-grade here. Repair target: supply retained-grade Hilbert-generation and no-proper-quotient authority, or inline the semantic theorem deriving physical-species status from the exact observable algebra. Claim boundary until fixed: usable as a reduced-stack witness and local observable-algebra construction, but conditional as a retained physical-species boundary theorem.
 - **open / conditional deps cited:**
   - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
   - `SINGLE_AXIOM_HILBERT_NOTE.md`

@@ -1,13 +1,13 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 505,
+    "bounded_theorem": 506,
     "decoration": 5,
     "meta": 35,
     "no_go": 150,
     "open_gate": 105,
-    "positive_theorem": 876
+    "positive_theorem": 875
   },
-  "computed_at": "2026-05-02T15:48:23.562052+00:00",
+  "computed_at": "2026-05-02T15:55:10.940469+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
