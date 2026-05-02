@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:10:49.565814+00:00
+**Generated:** 2026-05-02T00:11:49.614430+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 333 |
+| `audited_clean` | 334 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 474 |
+| `unaudited` | 473 |
 
 | criticality | count |
 |---|---:|
@@ -400,6 +400,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_driven_field_recovery_h025_pocket_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_driven_field_recovery_sweep_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_exact_green_pocket_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_exact_green_scaling_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -14538,6 +14539,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The source-resolved Green pocket preserves exact zero-source reduction, TOWARD sign, near-linear mass scaling, and nontrivial mean |green/inst| = 1.235 on the declared small exact lattice.  _(class `C`)_
 - **chain closes:** True — The primary runner recomputes the frozen table, zero-source check, fitted exponents, and mean ratio exactly for the declared lattice, source cluster, kernel, and calibration target. The source note keeps the result bounded as a feasibility pocket rather than promoting it to a full self-consistent field theory.
 - **rationale:** The current runner output matches all frozen numerical readouts: zero-source dynamic shift is 0, the four Green-kernel deflections and ratios match, max |f| scales from 2.5e-03 through 2.0e-02, and the fitted Green-kernel F~M exponent is 1.00. The claim is explicitly bounded by the small exact lattice, boundary-clipped source pattern, and linear source-resolved architecture. Residual risk remains size transfer and self-consistency, both acknowledged by the note.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_scaling_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_SCALING_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_SCALING_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The source-resolved Green field remains a bounded weak-field pocket on the larger exact lattice, preserving zero-source reduction, TOWARD sign, near-linear F~M, and mean |green/inst| = 1.111.  _(class `C`)_
+- **chain closes:** True — The runner recomputes the note's larger-family replay exactly for the declared lattice, source cluster, kernel, source ladder, and calibration gain. The note keeps the result bounded as exact-lattice size-transfer evidence and does not claim a full self-consistent field theory.
+- **rationale:** The current runner output matches the frozen table: zero-source shift is 0, the Green-kernel deflections and ratios match, max |f| scales from 2.5e-03 to 2.0e-02, and both fitted exponents are 1.01. This closes the bounded size-transfer claim for the declared source-resolved linear Green architecture. Residual risk is still generated-geometry transfer, robustness, and self-consistency, which the note identifies as outside this claim.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_architecture_bridge_note`
