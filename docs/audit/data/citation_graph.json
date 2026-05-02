@@ -8505,6 +8505,10 @@
       "to": "z2_hw1_mass_matrix_parametrization_note"
     },
     {
+      "from": "u1_fermion_number_conservation_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
       "from": "unified_program_note",
       "to": "mirror_chokepoint_note"
     },
@@ -19973,7 +19977,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:36:50.597771+00:00",
+  "generated_at": "2026-05-02T19:40:01.793707+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42156,6 +42160,19 @@
       "runner_path": "scripts/frontier_two_sign_comparison.py",
       "title": "Two-Sign Comparison Note"
     },
+    "u1_fermion_number_conservation_theorem_note_2026-05-02": {
+      "claim_id": "u1_fermion_number_conservation_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "007912e193e28d7f8386814a956883c5cd0e619d02aa24794cfdc22af3acf4de",
+      "path": "docs/U1_FERMION_NUMBER_CONSERVATION_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/u1_fermion_number_conservation_check.py",
+      "title": "U(1) Fermion-Number Conservation from Cited Lattice Noether N2"
+    },
     "unification_basin_failure_note": {
       "claim_id": "unification_basin_failure_note",
       "claim_type_author_hint": null,
@@ -46445,7 +46462,7 @@
       "bounded_theorem": 10,
       "meta": 1,
       "none": 1749,
-      "positive_theorem": 29
+      "positive_theorem": 30
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 510,
@@ -46453,12 +46470,12 @@
       "no_go": 106,
       "none": 442,
       "open_gate": 109,
-      "positive_theorem": 621
+      "positive_theorem": 622
     },
-    "edge_count": 4993,
-    "leaf_count": 756,
-    "node_count": 1789,
+    "edge_count": 4994,
+    "leaf_count": 757,
+    "node_count": 1790,
     "root_count": 1216,
-    "runners_with_path": 1356
+    "runners_with_path": 1357
   }
 }

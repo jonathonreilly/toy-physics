@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T19:36:54.025275+00:00",
+  "generated_at": "2026-05-02T19:40:05.342854+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14796,6 +14796,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_two_sign_comparison.py"
+    },
+    "u1_fermion_number_conservation_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/u1_fermion_number_conservation_check.py"
     },
     "unification_basin_failure_note": {
       "assert_count": 0,
@@ -35291,6 +35303,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/u1_fermion_number_conservation_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "u1_fermion_number_conservation_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/universal_gr_positive_background_local_closure.py": {
       "assert_count": 2,
       "claims": [
@@ -35809,12 +35836,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 155,
-      "C": 511,
+      "C": 512,
       "D": 198,
       "none": 411
     },
-    "runners_classified": 1284,
-    "runners_with_C": 613,
+    "runners_classified": 1285,
+    "runners_with_C": 614,
     "runners_with_D": 312
   }
 }

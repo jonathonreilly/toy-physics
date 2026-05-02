@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T19:36:54.742769+00:00
+**Generated:** 2026-05-02T19:40:06.594979+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 141 |
+| **retained** | 140 |
 | **retained_no_go** | 95 |
 | **retained_bounded** | 177 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 551 |
+| unaudited | 553 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 376 |
+| `audited_clean` | 375 |
 | `audited_conditional` | 634 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 587 |
+| `unaudited` | 589 |
 
 | claim_type | count |
 |---|---:|
@@ -51,12 +51,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `no_go` | 155 |
 | `open_gate` | 106 |
 | `positive_theorem` | 869 |
+| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 44 |
 | `high` | 388 |
-| `medium` | 434 |
+| `medium` | 435 |
 | `leaf` | 824 |
 
 - **Retained pending chain closure:** 2
@@ -64,8 +65,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1284
-- runners with (C) first-principles compute hits: 613
+- runners classified: 1285
+- runners with (C) first-principles compute hits: 614
 - runners with (D) external comparator hits: 312
 - decoration candidates (no C, no D): 106
 
@@ -117,7 +118,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | D | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
-| `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `background_independence_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1857,19 +1857,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Yes. The note gives a self-contained structural proof on the stated A_min objects, and the registered runner completed successfully on the load-bearing algebraic checks.
 - **rationale:** The load-bearing theorem is structural rather than a tuned numerical match: support — branch-local theorem note on A_min; runner passing; audit-pending.. The registered runner completed successfully and its classified PASS surface is {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'total_pass': 0}. Residual risk is limited to the support/branch-local scope stated by the note; this does not promote the row beyond its author-declared tier.
 - **auditor confidence:** medium
-
-### `axiom_first_lattice_noether_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Axiom-First Lattice Noether's Theorem on Cl(3) ⊗ Z^3: the stated finite-lattice/Cl(3) theorem is proved on the listed A_min objects and checked by the registered runner.  _(class `C`)_
-- **chain closes:** True — Yes. The note gives a self-contained structural proof on the stated A_min objects, and the registered runner completed successfully on the load-bearing algebraic checks.
-- **rationale:** The load-bearing theorem is structural rather than a tuned numerical match: support — branch-local theorem note on A_min; runner passing; audit-pending.. The registered runner completed successfully and its classified PASS surface is {'A': 0, 'B': 0, 'C': 2, 'D': 0, 'total_pass': 2}. Residual risk is limited to the support/branch-local scope stated by the note; this does not promote the row beyond its author-declared tier.
-- **auditor confidence:** high
 
 ### `axiom_reduction_note`
 
