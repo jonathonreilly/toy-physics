@@ -452,3 +452,18 @@ Adds a unit-projector pole-threshold obstruction:
   theorem deriving the pole and `K'(x_pole)`, or production same-source FH/LSZ
   pole data, remains required.
 ```
+
+Latest scalar-kernel enhancement import-audit checkpoint text for PR #230:
+
+```text
+Adds a scalar-kernel enhancement import audit:
+- checks HS/RPA contact coupling, scalar ladder input formulae, same-1PI, and
+  Ward/Feshbach response identities for the unit-projector pole multiplier;
+- validator passes `PASS=7 FAIL=0`; retained-route gate reports
+  `PASS=32 FAIL=0`; campaign status now consumes 62 route certificates and
+  reports `PASS=58 FAIL=0`;
+- no current retained/audit-clean authority derives the extra
+  scalar-channel enhancement or `K'(x_pole)`;
+- still no retained/proposed-retained closure: a new interacting kernel theorem
+  or production same-source FH/LSZ pole data remains required.
+```

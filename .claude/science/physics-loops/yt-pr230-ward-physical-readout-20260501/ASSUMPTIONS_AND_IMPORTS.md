@@ -396,6 +396,16 @@ Any route that forces a unit-projector finite pole must derive this additional
 scalar-channel enhancement from retained dynamics.  It cannot be fitted or
 declared as a hidden normalization.
 
+Scalar-kernel enhancement import audit:
+
+```text
+closing_candidates = []
+```
+
+HS/RPA, reusable ladder formulae, same-1PI, and Ward/Feshbach response surfaces
+do not derive the multiplier required by the unit-projector finite ladder or
+the derivative `K'(x_pole)`.
+
 Source-reparametrization gauge boundary:
 
 ```text

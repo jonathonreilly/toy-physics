@@ -374,4 +374,7 @@ coordinate and no current retained authority identifies the physical scalar
 carrier or derives `K'(x_pole)`.  The unit-projector pole-threshold block then
 shows the normalized finite ladder has no crossing at retained scout strength:
 the best row has `lambda_max=0.442298920672` and would need an underived
-scalar-kernel multiplier `2.26091440260` to reach `lambda_max=1`.
+scalar-kernel multiplier `2.26091440260` to reach `lambda_max=1`.  The
+scalar-kernel enhancement audit checks HS/RPA contact coupling, ladder input
+formulae, same-1PI, and Ward/Feshbach response identities; none supplies that
+multiplier or `K'(x_pole)` on the retained current surface.

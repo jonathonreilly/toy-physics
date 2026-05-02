@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=31 FAIL=0
+# SUMMARY: PASS=32 FAIL=0
 ```
 
 The runner verifies:
@@ -49,6 +49,7 @@ The runner verifies:
 | normalized taste-singlet source keeps finite crossings | no |
 | unit taste-singlet algebra fixes the physical scalar carrier and pole derivative | no |
 | unit-projector finite ladder crosses at retained kernel strength | no |
+| hidden scalar-kernel enhancement authority exists | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
@@ -129,6 +130,9 @@ physical scalar carrier or derive `K'(x_pole)`.
 With that unit projector, the finite ladder has no crossing at the retained
 scout kernel strength; the best row would require an underived scalar-channel
 kernel multiplier of `2.26091440260`.
+The scalar-kernel enhancement import audit checks HS/RPA, ladder formulae,
+same-1PI, and Ward/Feshbach surfaces and finds no retained authority for that
+factor.
 
 ### Route 3: New Selector Theorem
 

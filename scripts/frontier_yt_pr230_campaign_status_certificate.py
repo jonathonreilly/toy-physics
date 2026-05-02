@@ -101,6 +101,9 @@ def main() -> int:
         "unit_projector_pole_threshold": load(
             "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json"
         ),
+        "scalar_kernel_enhancement_import": load(
+            "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json"
+        ),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -378,6 +381,11 @@ def main() -> int:
         statuses["unit_projector_pole_threshold"],
     )
     report(
+        "scalar-kernel-enhancement-import-audit-not-closure",
+        "scalar-kernel enhancement import audit" in str(statuses["scalar_kernel_enhancement_import"]),
+        statuses["scalar_kernel_enhancement_import"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -525,7 +533,8 @@ def main() -> int:
             "projector is only algebra until a physical scalar carrier and "
             "pole derivative theorem are derived.  With that unit projector, "
             "the finite ladder would need an underived scalar-kernel "
-            "enhancement to cross.  They do not supply the "
+            "enhancement to cross, and no current retained import supplies it.  "
+            "They do not supply the "
             "interacting scalar pole/LSZ "
             "theorem."
         ),

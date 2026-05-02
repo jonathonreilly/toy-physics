@@ -1,0 +1,58 @@
+{
+  "actual_current_surface_status": "exact negative boundary / scalar-kernel enhancement import audit",
+  "candidates": [
+    {
+      "candidate": "HS/RPA contact coupling",
+      "certificate": "outputs/yt_hs_rpa_pole_condition_attempt_2026-05-01.json",
+      "chain_closes": false,
+      "status": "exact negative boundary / HS-RPA contact route open only with new kernel theorem",
+      "why_not": "A local contact G is not in A_min, and gauge-exchange-to-contact collapse is scale dependent."
+    },
+    {
+      "candidate": "scalar ladder input audit",
+      "certificate": "outputs/yt_scalar_ladder_kernel_input_audit_2026-05-01.json",
+      "chain_closes": false,
+      "status": "exact-support / input audit",
+      "why_not": "Reusable formulae exist, but exact scalar-channel kernel, projector, IR/volume limit, crossing, and residue remain listed as missing."
+    },
+    {
+      "candidate": "same-1PI four-fermion coefficient",
+      "certificate": "outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json",
+      "chain_closes": false,
+      "status": "exact negative boundary / same-1PI not PR230 closure",
+      "why_not": "A four-fermion coefficient fixes y^2 D_phi, not the scalar pole normalization or a pole-generating kernel multiplier."
+    },
+    {
+      "candidate": "Ward/gauge/Feshbach response identities",
+      "certificate": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
+      "chain_closes": false,
+      "status": "exact negative boundary / scalar kernel Ward-identity obstruction",
+      "why_not": "The pole condition fixes K(x_pole), but K'(x_pole), common dressing, and kernel enhancement remain open."
+    }
+  ],
+  "fail_count": 0,
+  "parent_certificates": {
+    "hs_rpa_contact": "outputs/yt_hs_rpa_pole_condition_attempt_2026-05-01.json",
+    "ladder_input_audit": "outputs/yt_scalar_ladder_kernel_input_audit_2026-05-01.json",
+    "same_1pi_boundary": "outputs/yt_same_1pi_scalar_pole_boundary_2026-05-01.json",
+    "scalar_kernel_ward_identity": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
+    "unit_projector_threshold": "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json"
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No current retained candidate derives the scalar-kernel enhancement or pole derivative required by the unit-projector threshold.",
+  "remaining_blockers": [
+    "derive the interacting scalar-channel kernel enhancement from retained Wilson-staggered dynamics",
+    "derive the physical scalar taste/projector carrier and continuum limit",
+    "derive K'(x_pole) and the same-source scalar LSZ residue",
+    "or measure the pole derivative in production same-source FH/LSZ data"
+  ],
+  "required_kernel_multiplier_min": 2.2609144025966956,
+  "strict_non_claims": [
+    "not retained or proposed_retained top-Yukawa closure",
+    "does not add or fit a scalar contact coupling G",
+    "does not set kappa_s = 1",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "The current PR #230 surface has no retained/audit-clean authority for the extra scalar-channel kernel enhancement required after unit taste projection.  HS/RPA contact coupling, reusable ladder formulae, same-1PI four-fermion coefficients, and Ward/Feshbach response identities all leave the pole-generating kernel enhancement or K'(x_pole) open.  The multiplier needed to force a finite unit-projector crossing therefore cannot be imported as a proof input."
+}

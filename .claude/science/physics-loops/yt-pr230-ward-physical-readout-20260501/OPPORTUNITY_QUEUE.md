@@ -150,8 +150,9 @@ probability.
    attempt derives the unit singlet algebra but not the physical carrier or
    `K'(x_pole)`.  With that unit projector, the finite ladder has no crossing
    at retained scout strength and would need an underived scalar-kernel
-   multiplier.  The retained task is therefore a new taste/scalar-carrier plus
-   continuum/projector and interacting-kernel theorem for the
+   multiplier.  The scalar-kernel enhancement audit finds no hidden current
+   authority for that factor.  The retained task is therefore a new
+   taste/scalar-carrier plus continuum/projector and interacting-kernel theorem for the
    interacting color-singlet pole and LSZ derivative, not another finite
    crossing witness.
    The refreshed retained-closure route certificate folds these blockers into

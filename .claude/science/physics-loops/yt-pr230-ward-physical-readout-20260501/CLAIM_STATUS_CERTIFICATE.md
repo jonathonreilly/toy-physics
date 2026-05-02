@@ -31,6 +31,7 @@ plus same-source scalar two-point LSZ measurement primitive
 plus taste-singlet ladder normalization boundary
 plus scalar taste-projector normalization theorem attempt
 plus unit-projector pole-threshold obstruction
+plus scalar-kernel enhancement import audit
 **PR:** #230 draft branch
 
 ```yaml
@@ -112,6 +113,8 @@ Allowed wording:
   remain open;
 - exact negative boundary for forcing a unit-projector finite pole without a
   derived scalar-kernel enhancement;
+- exact negative boundary that current HS/RPA, ladder-input, same-1PI, and
+  Ward/Feshbach surfaces do not hide that scalar-kernel enhancement;
 - bounded-support scalar-source response harness extension: the production
   harness now emits `dE/ds`, but physical `dE/dh` still requires production
   data and derived `kappa_s`;

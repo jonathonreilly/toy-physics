@@ -70,6 +70,7 @@ def main() -> int:
         "taste_singlet_ladder_normalization": "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json",
         "scalar_taste_projector_normalization_attempt": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
         "unit_projector_pole_threshold": "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json",
+        "scalar_kernel_enhancement_import": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -209,6 +210,15 @@ def main() -> int:
         )
         > 2.0
     )
+    scalar_kernel_enhancement_import_blocks_hidden_authority = (
+        "scalar-kernel enhancement import audit"
+        in certificates["scalar_kernel_enhancement_import"].get("actual_current_surface_status", "")
+        and certificates["scalar_kernel_enhancement_import"].get("proposal_allowed") is False
+        and not any(
+            candidate.get("chain_closes")
+            for candidate in certificates["scalar_kernel_enhancement_import"].get("candidates", [])
+        )
+    )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
         and certificates["cl3_source_unit"].get("proposal_allowed") is False
@@ -342,6 +352,11 @@ def main() -> int:
         certificates["unit_projector_pole_threshold"].get("actual_current_surface_status", ""),
     )
     report(
+        "scalar-kernel-enhancement-import-audit-blocks-hidden-authority",
+        scalar_kernel_enhancement_import_blocks_hidden_authority,
+        certificates["scalar_kernel_enhancement_import"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -430,7 +445,8 @@ def main() -> int:
             "does not identify the physical scalar carrier or K'(x_pole).  At "
             "unit-projector normalization the finite ladder has no crossing; "
             "forcing one would require an underived scalar-kernel multiplier "
-            "larger than two.  The "
+            "larger than two, and the kernel-enhancement import audit finds no "
+            "hidden retained authority for that factor.  The "
             "actual interacting scalar pole derivative theorem and production "
             "evidence remain open.  "
             "These cannot be assumed."

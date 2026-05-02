@@ -1447,3 +1447,30 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 With the unit taste projector, no finite ladder witness crosses at the retained
 scout kernel strength.  The best row needs an extra scalar-kernel multiplier
 `2.26091440260`, which is not derived by the current surface.
+
+## Review-Loop Backpressure - Scalar-Kernel Enhancement Import Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_scalar_kernel_enhancement_import_audit.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_scalar_kernel_enhancement_import_audit.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The audit finds no hidden retained/audit-clean authority for the extra
+scalar-kernel enhancement required by the unit-projector threshold.  HS/RPA,
+ladder formulae, same-1PI, and Ward/Feshbach surfaces all leave the
+pole-generating kernel or `K'(x_pole)` open.

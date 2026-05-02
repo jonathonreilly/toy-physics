@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=57 FAIL=0
+# SUMMARY: PASS=58 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -81,6 +81,7 @@ The certificate consumes the PR-local route certificates for:
 - taste-singlet ladder normalization boundary;
 - scalar taste-projector normalization theorem attempt;
 - unit-projector pole-threshold obstruction;
+- scalar-kernel enhancement import audit;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -150,6 +151,7 @@ the visible shortcut routes:
 | taste-singlet ladder normalization boundary | normalized taste-singlet source weighting rescales the finite witnesses by `1/16` and removes every crossing |
 | scalar taste-projector normalization theorem attempt | unit taste-singlet algebra exists, but the physical scalar carrier and interacting pole derivative remain open |
 | unit-projector pole-threshold obstruction | after unit projection, the best finite row needs an underived kernel multiplier `2.26091440260` to cross |
+| scalar-kernel enhancement import audit | no current HS/RPA, ladder-input, same-1PI, or Ward/Feshbach surface derives that multiplier |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |
@@ -160,7 +162,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
-| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, and manifest blocks; still no proposed-retained authorization |
+| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, and manifest blocks; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

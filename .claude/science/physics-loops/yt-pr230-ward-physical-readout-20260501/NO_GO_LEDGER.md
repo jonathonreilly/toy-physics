@@ -879,6 +879,19 @@ finite pole would require a scalar-kernel multiplier `2.26091440260`.  No
 current retained premise derives that enhancement; fitting it to force a pole
 would be a new scalar-channel normalization/selector import.
 
+Scalar-kernel enhancement hidden-import route is blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_kernel_enhancement_import_audit.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The strongest current candidates do not supply the required multiplier:
+HS/RPA needs an extra contact `G` or kernel theorem; the ladder input audit
+lists the exact scalar-channel kernel, projector, limit, crossing, and residue
+as missing; same-1PI fixes only `y^2 D_phi`; and Ward/Feshbach identities do
+not fix `K'(x_pole)` or common dressing.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate
