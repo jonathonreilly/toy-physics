@@ -1,0 +1,176 @@
+# Block-Gaussian Schur Marginalization Narrow Theorem
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the standalone linear-algebra identity that, for any
+real symmetric positive-definite block matrix `K = [[A, B], [B^T, C]]`
+with `C` invertible (and positive-definite under the PD assumption on
+`K`), and any source `J = (eta, xi)`, the exact marginalization of the
+quadratic form `Q(q_U, q_F) = (1/2) (q_U, q_F) K (q_U, q_F)^T - J^T (q_U, q_F)^T`
+over `q_F` produces the effective quadratic form on `q_U` with
+`K_eff = A - B C^{-1} B^T` (Schur complement) and
+`J_eff = eta - B C^{-1} xi`. This is purely a fact of linear algebra; no
+YT / Cl(3) / Grassmann / coarse-graining framework input is consumed.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+Audit-lane ratification is required before any retained-grade status applies.
+**Runner:** [`scripts/frontier_block_gaussian_schur_narrow.py`](./../scripts/frontier_block_gaussian_schur_narrow.py)
+**Authority role:** Pattern A narrow rescope of the load-bearing class-(C)
+algebraic core of [`YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE`](YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md).
+
+## Statement
+
+Let `K = [[A, B], [B^T, C]]` be a real symmetric positive-definite block
+matrix with `A: n × n`, `B: n × m`, `C: m × m`, `C` invertible. Let
+`J = (eta, xi)^T` with `eta ∈ R^n`, `xi ∈ R^m`. Define the quadratic form
+
+```text
+Q(q_U, q_F)  =  (1/2) (q_U, q_F) K (q_U, q_F)^T  -  J^T (q_U, q_F)^T.   (1)
+```
+
+**Conclusion (T1) (Schur marginalization formula).** Completing the square
+in `q_F` at fixed `q_U` gives the unique critical point
+
+```text
+q_F^*(q_U)  =  C^{-1} (xi - B^T q_U).                                    (2)
+```
+
+Substituting back yields
+
+```text
+Q(q_U, q_F^*)  =  (1/2) q_U^T K_eff q_U  -  J_eff^T q_U  +  const,       (3)
+```
+
+with
+
+```text
+K_eff  =  A  -  B C^{-1} B^T   (Schur complement),
+J_eff  =  eta  -  B C^{-1} xi.                                            (4)
+```
+
+**Conclusion (T2) (symmetry and positivity).** `K_eff` is symmetric:
+`K_eff = K_eff^T`. Moreover, when `K` is positive-definite, so is `K_eff`.
+
+**Conclusion (T3) (block-determinant identity).**
+
+```text
+det(K)  =  det(C) * det(K_eff).                                          (5)
+```
+
+**Conclusion (T4) (associativity of sequential marginalization).** Splitting
+`q_F = (q_{F1}, q_{F2})` and marginalizing first over `q_{F2}` then `q_{F1}`
+gives the same `K_eff` as marginalizing over the whole `q_F` at once.
+
+## Proof
+
+`(T1)` Standard completing-the-square. The `q_F`-dependent part of `Q` is
+
+```text
+(1/2) q_F^T C q_F  +  q_F^T (B^T q_U - xi),
+```
+
+whose stationary point is `q_F^* = C^{-1} (xi - B^T q_U)`. Substituting:
+
+```text
+(1/2) q_F^*^T C q_F^*  +  q_F^*^T (B^T q_U - xi)
+  =  -(1/2) (xi - B^T q_U)^T C^{-1} (xi - B^T q_U).
+```
+
+Adding the `q_U`-quadratic and `q_U`-linear parts and collecting the
+quadratic-in-`q_U` Hessian yields `K_eff = A - B C^{-1} B^T`; the linear
+part has coefficient `J_eff = eta - B C^{-1} xi`.
+
+`(T2)` Symmetry: `(B C^{-1} B^T)^T = (B^T)^T (C^{-1})^T B^T = B C^{-1} B^T`
+(using `C^T = C` and `(C^{-1})^T = (C^T)^{-1} = C^{-1}`). Hence `K_eff` is
+symmetric.
+
+Positive-definiteness: if `K` is PD, then for any nonzero `q_U`, choose
+`q_F = q_F^*(q_U)` (the partial minimizer); since `K` is PD, the quadratic
+`Q(q_U, q_F^*) > 0` whenever `(q_U, q_F^*) ≠ 0`. In particular, taking
+`q_U ≠ 0` gives `Q(q_U, q_F^*) = (1/2) q_U^T K_eff q_U + const > 0` for
+the sourceless case (`J = 0`); subtracting the constant gives
+`q_U^T K_eff q_U > 0`, so `K_eff` is PD.
+
+`(T3)` Standard block-determinant formula via the Schur factorization
+
+```text
+K  =  [[I, B C^{-1}], [0, I]]  *  [[K_eff, 0], [0, C]]  *  [[I, 0], [C^{-1} B^T, I]].
+```
+
+Taking determinants gives `det(K) = 1 * det(K_eff) det(C) * 1 = det(C) det(K_eff)`.
+
+`(T4)` Schur-complement is associative (well known: marginalization of a
+multivariate Gaussian over disjoint blocks gives the same result regardless
+of order). Skipped as classical. ∎
+
+## What this claims
+
+- `(T1)`-`(T4)` for any real symmetric PD block matrix and source.
+
+## What this does NOT claim
+
+- Does **not** identify `(A, B, C)` with any specific YT / Cl(3) / Grassmann
+  / forced-UV-window / coarse-graining structure. The narrow theorem
+  treats the block matrix as abstract real symmetric PD.
+- Does **not** consume the upstream forced-UV-class / local affine selector
+  / higher-order / nonlocal / endpoint-shift bridge-stack inputs that the
+  parent imports.
+- Does **not** consume any PDG observed value, literature numerical
+  comparator, fitted selector, or admitted unit convention.
+
+## Relation to the parent YT exact coarse-grained bridge operator note
+
+[`YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE`](YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md)
+applies the abstract block-Gaussian Schur marginalization to the YT bridge
+framework, identifying `(A, B, C)` with the Cl(3) / Z^3 / Grassmann
+finite-partition coarse/fine block decomposition on the forced UV
+window. Per the audit verdict on the parent row, the upstream YT
+bridge-stack inputs (forced UV class, local affine selector, higher-order
+/ nonlocal budgets, endpoint-shift budget) are admitted-context.
+
+This narrow theorem isolates the underlying linear algebra from the YT
+framework. The Schur-marginalization formulas can be ratified
+independently of any YT / Cl(3) authority.
+
+## Cited dependencies
+
+None. This narrow note has zero ledger dependencies because it states
+only elementary linear algebra on real symmetric PD block matrices.
+
+## Forbidden imports check
+
+- No PDG observed values consumed.
+- No literature numerical comparators consumed.
+- No fitted selectors consumed.
+- No admitted unit conventions load-bearing on retention.
+- No same-surface family arguments.
+
+## Validation
+
+Primary runner: [`scripts/frontier_block_gaussian_schur_narrow.py`](./../scripts/frontier_block_gaussian_schur_narrow.py)
+verifies (PASS=11/0):
+
+1. Concrete `(2+1)`-block instance with rational `A, B, C`: `K_eff` matches
+   the expected `[[14/5, 3/5], [3/5, 6/5]]` exact.
+2. `K_eff = K_eff^T` symmetric.
+3. `det(K_eff) > 0` and `Tr(K_eff) > 0` (PD at concrete instance).
+4. `det(K) > 0` (whole block PD at concrete instance).
+5. **Block-determinant identity:** `det(K) = det(C) * det(K_eff)` exact.
+6. `J_eff` formula at concrete instance.
+7. **Completing-the-square identity:** symbolic verification via
+   substitution `q_F = q_F^*(q_U)` matches `(1/2) q_U^T K_eff q_U - J_eff^T q_U`
+   up to a `q_U`-independent constant.
+8. **Parametric verification:** symbolic `K_eff` formula and
+   `det(K) = det(C) det(K_eff)` over abstract `(a_11, a_12, a_22, b_1, b_2, c)`.
+9. Parent row class-C check.
+
+## Cross-references
+
+- [`YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE`](YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md) —
+  parent bundled note that applies this Schur marginalization to the YT
+  bridge framework on the forced UV window.
+- [`SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02`](SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md) —
+  sister Pattern A narrow theorem (cycle 3) covering a different aspect
+  of Schur algebra: the U-conjugation covariance of the Schur complement
+  on block-diagonal-conjugate matrices.
