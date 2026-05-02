@@ -733,3 +733,10 @@ certificate.  It must not be used as a rank-one neutral-scalar theorem, a
 no-orthogonal-top-coupling theorem, a same-surface `O_H/C_sH/C_HH` row, or a
 W/Z response row.  Retained/proposed-retained wording still requires a full
 rank/identity certificate on the current surface.
+
+2026-05-02 FH/LSZ chunk011 target-timeseries checkpoint:
+
+Target time-series presence in one chunk is not production evidence and not a
+canonical-Higgs identity.  It must not be used as target ESS for chunks that do
+not carry target time series, as response stability, as pole/FV/IR/model-class
+control, or as retained/proposed-retained `y_t` support.

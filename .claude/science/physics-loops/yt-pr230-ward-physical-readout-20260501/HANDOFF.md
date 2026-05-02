@@ -1505,3 +1505,38 @@ authorized.
 Next exact action: poll chunk011.  If complete, process it.  If not, implement
 one independent non-source response row or derive the rank-one/no-orthogonal
 theorem; otherwise continue seed-controlled FH/LSZ production.
+
+Block 151 processed FH/LSZ chunk011 target-timeseries output:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk011_target_timeseries_checkpoint.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=103 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=129 FAIL=0
+```
+
+Result: chunk011 is production-phase, seed-controlled, and carries the new
+target time series.  The ready set is now 11/63 L12 chunks and 176/1000 saved
+configurations.  Response stability still fails, and target ESS is not
+certified for the whole ready set because chunks001-010 lack target time
+series.  No retained/proposed-retained wording is authorized.
+
+Next exact action: continue target-timeseries chunks or replace older chunks
+if a same-ready-set target ESS certificate is required; otherwise pivot to
+actual non-source identity rows/theorems.

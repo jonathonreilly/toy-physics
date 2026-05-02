@@ -169,6 +169,16 @@ def main() -> int:
     ]
     rows = [chunk_row(index) for index in ready_indices]
     target_series_complete = bool(rows) and all(row["target_timeseries_complete"] for row in rows)
+    target_complete_indices = [
+        int(row["chunk_index"])
+        for row in rows
+        if row.get("target_timeseries_complete") is True
+    ]
+    target_incomplete_indices = [
+        int(row["chunk_index"])
+        for row in rows
+        if row.get("target_timeseries_complete") is not True
+    ]
     plaquette_ess_values = [
         float(row["plaquette_tau_int"].get("ess_initial_positive"))
         for row in rows
@@ -197,14 +207,18 @@ def main() -> int:
         f"min_plaquette_ess={min_plaquette_ess}",
     )
     report(
-        "target-timeseries-missing",
+        "target-timeseries-partial-not-complete",
         not target_series_complete,
-        f"complete={target_series_complete}",
+        (
+            f"complete={target_series_complete}, "
+            f"complete_indices={target_complete_indices}, "
+            f"incomplete_indices={target_incomplete_indices}"
+        ),
     )
     report(
         "target-ess-not-available",
         not target_ess_available,
-        "current outputs aggregate dE/ds and C_ss(q) fits without target observable time series",
+        "not every ready chunk has target observable time series",
     )
     report(
         "autocorrelation-ess-gate-not-passed",
@@ -223,18 +237,27 @@ def main() -> int:
         "actual_current_surface_status": "open / FH-LSZ autocorrelation ESS gate not passed",
         "verdict": (
             "The current ready chunks include plaquette histories, so a "
-            "diagnostic plaquette autocorrelation can be estimated.  They do "
-            "not expose per-configuration target time series for same-source "
-            "dE/ds or C_ss(q)/Gamma_ss(q), so the load-bearing FH/LSZ target "
-            "effective sample size cannot be certified.  Current chunks remain "
+            "diagnostic plaquette autocorrelation can be estimated.  Chunk011 "
+            "now exposes per-configuration target time series for same-source "
+            "dE/ds and C_ss(q)/Gamma_ss(q), but the older ready chunks do not.  "
+            "The load-bearing FH/LSZ target effective sample size therefore "
+            "cannot be certified for the ready set.  Current chunks remain "
             "bounded support only until target-observable blocking/bootstrap "
-            "data or an equivalent autocorrelation certificate is available."
+            "data or an equivalent autocorrelation certificate is available "
+            "for the production set."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Target-observable autocorrelation and effective sample size are not certified.",
         "autocorrelation_ess_gate_passed": autocorrelation_gate_passed,
         "ready_chunk_indices": ready_indices,
         "ready_count_reaches_threshold": ready_count_reaches_threshold,
+        "target_timeseries_summary": {
+            "complete_for_all_ready_chunks": target_series_complete,
+            "complete_indices": target_complete_indices,
+            "incomplete_indices": target_incomplete_indices,
+            "complete_count": len(target_complete_indices),
+            "ready_count": len(rows),
+        },
         "chunk_rows": rows,
         "gate_requirements": {
             "minimum_ready_chunks_for_gate": MIN_READY_CHUNKS_FOR_GATE,
@@ -252,9 +275,9 @@ def main() -> int:
             "does not set kappa_s = 1",
         ],
         "exact_next_action": (
-            "Extend the production harness or postprocessor to retain "
-            "per-configuration same-source dE/ds and C_ss(q) target time "
-            "series, or emit a predeclared blocking/bootstrap ESS certificate; "
+            "Continue future chunks with target time-series serialization, "
+            "rerun or replace older chunks if target ESS is required for the "
+            "ready set, or emit a predeclared blocking/bootstrap certificate; "
             "then rerun this gate before using chunked FH/LSZ output as "
             "production evidence."
         ),

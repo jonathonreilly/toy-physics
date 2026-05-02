@@ -3366,3 +3366,20 @@ has rank one; a two-component neutral top-coupling vector has a null direction
 until a rank-one theorem, no-orthogonal-coupling theorem, `O_H/C_sH/C_HH`
 row, or W/Z response row is supplied.  No retained or proposed-retained
 wording is allowed.
+
+## 2026-05-02 - Block 151 FH/LSZ Chunk011 Target-Timeseries Processing
+
+Review stance: production-output checkpoint / claim firewall.
+
+- Added chunk011 production output and artifact.
+- Updated chunk combiner, ready-set, response-stability, and autocorrelation
+  ESS certificates.
+- Added `scripts/frontier_yt_fh_lsz_chunk011_target_timeseries_checkpoint.py`.
+- Added `docs/YT_FH_LSZ_CHUNK011_TARGET_TIMESERIES_CHECKPOINT_NOTE_2026-05-02.md`.
+- Added `outputs/yt_fh_lsz_chunk011_target_timeseries_checkpoint_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: bounded production support.  Chunk011 is seed-controlled and has
+target time series, raising the ready set to 11/63 L12 chunks.  The ready set
+still lacks target ESS and response stability, and no canonical-Higgs identity
+is supplied.  No retained or proposed-retained wording is allowed.

@@ -85,6 +85,7 @@ def main() -> int:
         "fh_lsz_chunk002_checkpoint": "outputs/yt_fh_lsz_chunk002_checkpoint_certificate_2026-05-02.json",
         "fh_lsz_ready_chunk_set_checkpoint": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
         "fh_lsz_ready_chunk_response_stability": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
+        "fh_lsz_chunk011_target_timeseries": "outputs/yt_fh_lsz_chunk011_target_timeseries_checkpoint_2026-05-02.json",
         "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
         "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
         "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
@@ -385,6 +386,16 @@ def main() -> int:
         and certificates["fh_lsz_ready_chunk_response_stability"].get("stability_summary", {}).get(
             "stability_passed"
         )
+        is False
+    )
+    chunk011_target_timeseries_not_closure = (
+        "chunk011 target-timeseries production checkpoint"
+        in certificates["fh_lsz_chunk011_target_timeseries"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_chunk011_target_timeseries"].get("proposal_allowed") is False
+        and certificates["fh_lsz_chunk011_target_timeseries"]
+        .get("chunk_summary", {})
+        .get("target_timeseries_summary", {})
+        .get("complete_for_all_ready_chunks")
         is False
     )
     pole_fit_kinematics_not_closure = (
@@ -1062,6 +1073,11 @@ def main() -> int:
         "fh-lsz-ready-chunk-response-stability-not-closure",
         ready_chunk_response_not_closure,
         certificates["fh_lsz_ready_chunk_response_stability"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-chunk011-target-timeseries-not-closure",
+        chunk011_target_timeseries_not_closure,
+        certificates["fh_lsz_chunk011_target_timeseries"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",

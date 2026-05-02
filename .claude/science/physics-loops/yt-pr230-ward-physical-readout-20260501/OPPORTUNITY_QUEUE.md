@@ -517,3 +517,12 @@ no-orthogonal-coupling theorem, or an independent non-source response row.
 Highest-priority positive work is therefore actual `O_H/C_sH/C_HH` Gram-purity
 rows, actual W/Z response rows with identity certificates, or production chunk
 processing while those identity rows remain absent.
+
+FH/LSZ chunk011 update: chunk011 completed with target time-series rows and
+raises the seed-controlled ready set to 11/63 L12 chunks.  This improves
+production infrastructure, but it does not change claim status: response
+stability still fails, chunks001-010 lack target time series, target ESS is
+not certified for the whole ready set, and canonical-Higgs identity remains
+open.  Future production chunks should keep target time-series serialization;
+older chunks may need replacement if a same-ready-set target ESS certificate is
+required.

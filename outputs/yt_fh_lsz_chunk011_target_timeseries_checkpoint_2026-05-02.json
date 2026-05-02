@@ -1,0 +1,61 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ chunk011 target-timeseries production checkpoint",
+  "autocorrelation_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
+  "chunk_artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk011/L12xT24/ensemble_measurement.json",
+  "chunk_output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk011_2026-05-01.json",
+  "chunk_summary": {
+    "expected_chunks": 63,
+    "phase": "production",
+    "ready_chunks": 11,
+    "scalar_lsz_target_timeseries_modes": [
+      "0,0,0",
+      "0,0,1",
+      "0,1,0",
+      "1,0,0"
+    ],
+    "seed": 2026051011,
+    "seed_control_version": "numba_gauge_seed_v1",
+    "seed_independence_valid": true,
+    "slope_dE_ds_lat": 1.4274485932311824,
+    "slope_dE_ds_lat_err": 25.05546876805939,
+    "source_higgs_guard": {},
+    "source_response_target_series_count": 16,
+    "target_timeseries_summary": {
+      "complete_count": 1,
+      "complete_for_all_ready_chunks": false,
+      "complete_indices": [
+        11
+      ],
+      "incomplete_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "ready_count": 11
+    },
+    "wz_response_guard": {}
+  },
+  "combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+  "exact_next_action": "Continue future chunks with target time-series serialization or replace older chunks if a same-ready-set target ESS certificate is needed; do not use chunk011 as physical y_t evidence.",
+  "fail_count": 0,
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "11/63 L12 chunks is partial support; target ESS, response stability, pole/FV/IR/model-class, and Higgs identity gates remain open.",
+  "ready_set": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
+  "strict_non_claims": [
+    "does not use chunk011 as retained evidence",
+    "does not treat 11/63 L12 chunks as combined L12 evidence",
+    "does not set kappa_s = 1",
+    "does not treat target time series as canonical-Higgs identity",
+    "does not treat absent or pre-guard source-Higgs/WZ rows as evidence",
+    "does not use H_unit, Ward authority, observed target values, alpha_LM, plaquette, or u0 as proof input"
+  ],
+  "verdict": "L12_T24 chunk011 completed with production-phase metadata, numba_gauge_seed_v1 seed control, same-source dE/ds, same-source C_ss(q) rows, and per-configuration target time series for both source response and scalar LSZ modes.  The combiner counts 11/63 L12 chunks ready.  The global target ESS gate remains open because chunks001-010 predate the target-timeseries extension."
+}

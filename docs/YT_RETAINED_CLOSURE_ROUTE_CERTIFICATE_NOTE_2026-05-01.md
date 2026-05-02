@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=102 FAIL=0
+# SUMMARY: PASS=103 FAIL=0
 ```
 
 The runner verifies:
@@ -59,6 +59,7 @@ The runner verifies:
 | single finite source-shift radius certifies the zero-source FH derivative | no |
 | finite-source-linearity gate is passed for current FH chunks | no |
 | autocorrelation/ESS gate is passed for target FH/LSZ observables | no |
+| chunk011 target time series make the ready set production evidence | no |
 | target time-series harness extension is production evidence | no |
 | target time series identify the canonical Higgs radial mode | no |
 | current selection rules forbid orthogonal top-coupled scalars | no |

@@ -1966,3 +1966,18 @@ of the top-coupling vector can vary while all source-only rows stay fixed.
 Do not use a rank-one source-response matrix as a rank-one neutral-scalar
 theorem, no-orthogonal-top-coupling theorem, `C_sH/C_HH` row, or W/Z response
 row.
+
+Chunk011 target time series are not production closure:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk011_target_timeseries_checkpoint.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+Chunk011 proves the target time-series harness can emit per-configuration
+source-response and scalar-LSZ rows in production phase, but it is only one
+chunk in an 11/63 ready L12 set.  Chunks001-010 lack those target series, the
+ready-set target ESS gate remains open, response stability still fails, and no
+canonical-Higgs identity is supplied.  Do not treat chunk011, target
+time-series presence, plaquette ESS, or 11/63 L12 support as retained/proposed
+retained evidence.

@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=128 FAIL=0
+# SUMMARY: PASS=129 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -123,6 +123,7 @@ The certificate consumes the PR-local route certificates for:
 - finite source-shift derivative no-go.
 - finite-source-linearity gate.
 - autocorrelation/ESS gate.
+- chunk011 target-timeseries checkpoint.
 - FH/LSZ target time-series harness extension.
 - FH/LSZ target time-series Higgs-identity no-go.
 - no-orthogonal-top-coupling selection-rule no-go.
@@ -207,7 +208,8 @@ the visible shortcut routes:
 | effective-mass plateau residue no-go | identical finite-window effective masses can coexist with different ground/source-pole residues |
 | finite source-shift derivative no-go | one symmetric finite source radius can keep `E(-delta)`, `E(0)`, `E(+delta)`, and the finite slope fixed while changing `dE/ds|_0` |
 | finite-source-linearity gate | current chunks use one nonzero source radius; the three-radius calibration manifest is planning support only and not foreground evidence |
-| autocorrelation/ESS gate | eight ready chunks reach the count threshold and plaquette histories are diagnostic, but target same-source `dE/ds` and `C_ss(q)` time series are absent from current chunks, so target ESS is not certified |
+| autocorrelation/ESS gate | chunk011 has target time series, but chunks001-010 do not, so target ESS is not certified for the ready set |
+| chunk011 target time series | bounded support for future ESS processing; not production evidence or Higgs identity |
 | FH/LSZ target time-series harness extension | future chunks now serialize per-configuration source-response and scalar two-point target time series, but the smoke is reduced-scope infrastructure support only |
 | FH/LSZ target time-series Higgs-identity no-go | even perfect source-coordinate target statistics do not identify the source pole with the canonical Higgs radial mode |
 | no-orthogonal-top-coupling selection-rule no-go | current listed substrate/gauge charges do not allow `h tbar t` while forbidding an orthogonal neutral `chi tbar t` coupling with the same labels |
@@ -392,3 +394,10 @@ response matrix has rank one, so a two-component neutral top-coupling vector
 has a null direction until a rank-one theorem, same-surface `O_H/C_sH/C_HH`
 row, or W/Z response row with identity certificates is supplied.  No
 retained/proposed-retained wording is authorized.
+
+Latest chunk011 target-timeseries checkpoint: campaign status now includes
+`scripts/frontier_yt_fh_lsz_chunk011_target_timeseries_checkpoint.py` and
+reports `PASS=129 FAIL=0` over 133 certificates.  The ready L12 set is now
+`11/63` chunks and `176/1000` saved configurations.  Chunk011 has target time
+series, but the whole ready set still lacks target ESS and response stability;
+no retained/proposed-retained wording is authorized.

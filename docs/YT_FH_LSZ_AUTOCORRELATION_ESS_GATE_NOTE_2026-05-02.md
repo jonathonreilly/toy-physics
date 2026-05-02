@@ -23,13 +23,14 @@ The gate requires:
 - scalar LSZ, FV/IR/model-class, finite-source-linearity, and
   canonical-Higgs identity gates after target ESS is accepted.
 
-After chunks009-010 completed, the ready set is
-`[1,2,3,4,5,6,7,8,9,10]`, so it remains above the eight-chunk count threshold
-used by this gate.  The blocker is unchanged and sharper with more data: the
-current chunks expose plaquette histories, so a diagnostic plaquette
-autocorrelation can be estimated with minimum plaquette ESS about `952.96`,
-but they still do not expose the target time series needed for load-bearing
-FH/LSZ ESS.  Plaquette ESS is not a substitute for target-observable ESS.
+After chunk011 completed, the ready set is
+`[1,2,3,4,5,6,7,8,9,10,11]`, so it remains above the eight-chunk count
+threshold used by this gate.  The blocker is now partial target-series
+coverage: chunk011 exposes per-configuration target time series for
+same-source `dE/ds` and `C_ss(q)/Gamma_ss(q)`, but chunks001-010 predate that
+harness extension.  The whole ready set therefore still lacks a
+target-observable ESS certificate.  Plaquette ESS is not a substitute for
+target-observable ESS.
 
 ## Claim Firewall
 
@@ -40,7 +41,7 @@ mass, observed `y_t`, `alpha_LM`, plaquette, or `u0` as proof authority.
 
 ## Next Action
 
-Extend the production harness or postprocessor to retain per-configuration
-same-source `dE/ds` and `C_ss(q)` target time series, or emit a predeclared
-blocking/bootstrap ESS certificate.  Rerun this gate before using chunked
-FH/LSZ output as production evidence.
+Continue future chunks with target time-series serialization, replace older
+chunks if a same-ready-set target ESS certificate is required, or emit a
+predeclared blocking/bootstrap ESS certificate.  Rerun this gate before using
+chunked FH/LSZ output as production evidence.
