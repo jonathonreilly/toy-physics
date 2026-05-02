@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 30,
-    "high": 230,
+    "high": 229,
     "leaf": 163,
     "medium": 172
   },
-  "generated_at": "2026-05-02T19:49:12.637953+00:00",
+  "generated_at": "2026-05-02T19:52:50.473519+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -918,30 +918,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_yt_explicit_systematic_budget.py",
       "transitive_descendants": 174
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "graph_first_su3_integration_note",
-        "left_handed_charge_matching_note"
-      ],
-      "direct_in_degree": 13,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.577,
-      "note_path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 134
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -15615,6 +15591,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 118,
-  "total_pending": 595
+  "ready_count": 117,
+  "total_pending": 594
 }
