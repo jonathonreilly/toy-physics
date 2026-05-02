@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:36:36.542273+00:00
+**Generated:** 2026-05-02T22:37:58.911813+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 535 |
+| unaudited | 534 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 645 |
+| ~~audited_conditional~~ | 646 |
 | ~~audited_failed~~ | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 386 |
-| `audited_conditional` | 645 |
+| `audited_conditional` | 646 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 47 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 571 |
+| `unaudited` | 570 |
 
 | claim_type | count |
 |---|---:|
@@ -523,6 +523,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audited_symmetry_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1897,6 +1898,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `ASSUMPTION_DERIVATION_LEDGER.md`
   - `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
   - `AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`
+- **auditor confidence:** high
+
+### `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_COLEMAN_MERMIN_WAGNER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_COLEMAN_MERMIN_WAGNER_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Conditional lattice Coleman-Mermin-Wagner dimensional-threshold theorem: the runner verifies the lattice Goldstone IR integral diverges for d<=2 and is finite for d>=3; the stronger claim that A_min's d=3 is uniquely forced by long-range-force plus continuous-SSB requirements remains conditional on Axiom Reduction D9 and standard short-range/Bogoliubov hypotheses.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** From Axiom Reduction D9 and MW1/MW2, d>=3 is required for both the long-range-force condition and continuous SSB, making d=3 the unique minimal A_min substrate dimension.  _(class `B`)_
+- **chain closes:** False — The runner closes the IR-integral scaling exhibit, but the advertised d=3 minimality imports Axiom Reduction D9, which is currently conditional, and assumes the usual locality/short-range/Bogoliubov conditions for the Hamiltonian class. The proof does not establish those hypotheses for every canonical Hamiltonian it names.
+- **rationale:** Issue: the d<=2/d>=3 IR-integral computation passes, but the row promotes that exhibit into a substrate-forcing theorem by importing the conditional Axiom Reduction D9 long-range-force condition and unproved short-range/Bogoliubov hypotheses. Why this blocks: the ledger cannot retain d_s=3 uniqueness or electroweak/Higgs compatibility from an IR-sum runner alone. Repair target: retain the D9 kernel-stability premise and state/prove the Hamiltonian locality and susceptibility assumptions needed for the Coleman-Mermin-Wagner argument on A_min. Claim boundary until fixed: the finite-lattice IR integral has the expected divergence/convergence threshold, but the substrate-forcing conclusion is conditional.
+- **open / conditional deps cited:**
+  - `AXIOM_REDUCTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `axiom_first_cpt_theorem_stretch_note_2026-04-29`
