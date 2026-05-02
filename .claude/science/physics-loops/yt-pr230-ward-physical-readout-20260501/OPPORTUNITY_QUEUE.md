@@ -124,8 +124,9 @@ probability.
   budget identifies an eight-mode/eight-noise foreground option.  The variance
   gate now rejects current x8 use as evidence because the reduced smoke is not
   a same-source production calibration and chunk001 is absent or four-mode/x16.
-  A paired x8/x16 calibration with noise-subsample diagnostics is required
-  before using that launch class.  The same-source
+  The harness now emits the required noise-subsample diagnostics, so a paired
+  x8/x16 calibration chunk can be specified next; the diagnostic smokes
+  themselves remain reduced-scope.  The same-source
   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
   pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic

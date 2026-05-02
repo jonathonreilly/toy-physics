@@ -99,7 +99,7 @@
         1.0
       ],
       "r0_over_a": 5.37,
-      "runtime_seconds": 0.020175933837890625,
+      "runtime_seconds": 0.022118091583251953,
       "scalar_source_response_analysis": {
         "energy_fits": [],
         "slope_dE_ds_lat": NaN,
@@ -139,6 +139,14 @@
               0,
               0
             ],
+            "noise_subsample_stability": {
+              "C_ss_real_half_delta_over_stderr_max": 2.0,
+              "C_ss_real_noise_stderr_max": 0.001807469173357265,
+              "C_ss_real_noise_stderr_mean": 0.001807469173357265,
+              "available": true,
+              "configuration_count": 1,
+              "noise_vectors_per_configuration": 2
+            },
             "p_hat_sq": 0.0
           },
           "1,0,0": {
@@ -154,8 +162,22 @@
               0,
               0
             ],
+            "noise_subsample_stability": {
+              "C_ss_real_half_delta_over_stderr_max": 2.0,
+              "C_ss_real_noise_stderr_max": 0.00027304056411228683,
+              "C_ss_real_noise_stderr_mean": 0.00027304056411228683,
+              "available": true,
+              "configuration_count": 1,
+              "noise_vectors_per_configuration": 2
+            },
             "p_hat_sq": 2.9999999999999996
           }
+        },
+        "noise_subsample_stability": {
+          "C_ss_real_half_delta_over_stderr_max": 2.0,
+          "available": true,
+          "mode_count": 2,
+          "strict_limit": "Noise subsample stability is an estimator diagnostic only; it is not production evidence or scalar LSZ normalization without same-source production statistics and pole/FV/IR control."
         },
         "physical_higgs_normalization": "not_derived",
         "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
@@ -172,10 +194,40 @@
   "metadata": {
     "action": "Cl3Z3_SU3_Wilson_staggered",
     "authority": "staggered_top_correlator_mass_extraction",
-    "created_utc": "2026-05-01T23:13:25Z",
+    "created_utc": "2026-05-02T03:39:52Z",
     "evidence_scope": "reduced run is infrastructure evidence only",
     "g_bare": 1.0,
     "phase": "reduced_scope",
+    "run_control": {
+      "engine": "python",
+      "masses": [
+        0.75
+      ],
+      "measurement_separation_sweeps": 0,
+      "measurement_sweeps": 1,
+      "momentum_modes": [],
+      "overrelaxation_sweeps": 1,
+      "pilot_targets": false,
+      "production_output_dir": "/Users/jonBridger/Documents/New project 2/outputs/yt_direct_lattice_correlator_production",
+      "production_targets": false,
+      "scalar_source_shifts": [],
+      "scalar_two_point_modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "scalar_two_point_noises": 2,
+      "seed": 20260430,
+      "thermalization_sweeps": 0,
+      "volumes": "3x6"
+    },
     "running_bridge": "reduced_scope run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
     "scalar_source_response": {
       "enabled": false,

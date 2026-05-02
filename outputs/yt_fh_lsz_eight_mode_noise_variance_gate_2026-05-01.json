@@ -92,8 +92,7 @@
         "noise_vectors_per_configuration=2, expected 8",
         "missing eight-mode rows ['1,1,0', '1,1,1', '2,0,0', '2,1,0', '2,1,1', '2,2,0']",
         "configuration_count_min=1, expected >= 16",
-        "no positive configuration stderr for C_ss_real",
-        "no noise_subsample_stability field"
+        "no positive configuration stderr for C_ss_real"
       ],
       "mode_count": 2,
       "mode_keys": [

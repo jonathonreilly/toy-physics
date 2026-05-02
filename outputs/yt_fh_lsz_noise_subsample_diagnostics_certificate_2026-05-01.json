@@ -1,0 +1,49 @@
+{
+  "acceptance_requirements": [
+    "run diagnostics on production same-source scalar-LSZ chunks",
+    "compare paired eight-mode x8 and x16 outputs on the same saved configuration stream",
+    "require stable C_ss(q), Gamma_ss(q), and pole-derivative fits before accepting x8",
+    "keep reduced smoke outputs as instrumentation evidence only"
+  ],
+  "actual_current_surface_status": "bounded-support / FH-LSZ noise-subsample diagnostics harness",
+  "diagnostic_surfaces": [
+    {
+      "exists": true,
+      "max_half_delta_over_stderr": 2.0,
+      "mode_count": 2,
+      "mode_level_available_count": 2,
+      "name": "scalar_two_point_smoke",
+      "noise_vectors_per_configuration": 2,
+      "path": "outputs/yt_direct_lattice_correlator_scalar_two_point_lsz_smoke_2026-05-01.json",
+      "phase": "reduced_scope",
+      "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived",
+      "top_level_available": true
+    },
+    {
+      "exists": true,
+      "max_half_delta_over_stderr": 2.0,
+      "mode_count": 2,
+      "mode_level_available_count": 2,
+      "name": "joint_fh_lsz_smoke",
+      "noise_vectors_per_configuration": 2,
+      "path": "outputs/yt_direct_lattice_correlator_fh_lsz_joint_smoke_2026-05-01.json",
+      "phase": "reduced_scope",
+      "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived",
+      "top_level_available": true
+    }
+  ],
+  "exact_next_action": "Use the new noise_subsample_stability fields in a paired eight-mode x8/x16 calibration chunk, or keep the x16 noise plan and schedule outside the 12-hour foreground window.",
+  "fail_count": 0,
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Noise diagnostics are harness plumbing, not production pole data or scalar LSZ normalization.",
+  "strict_non_claims": [
+    "not production evidence",
+    "not a kappa_s derivation",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0 as proof input"
+  ],
+  "verdict": "The production harness now emits noise_subsample_stability fields for same-source scalar two-point rows and top-level scalar-LSZ analysis.  This supplies the diagnostic surface needed by a future paired x8/x16 variance calibration.  The current smoke outputs are still reduced-scope two-noise, two-mode, one-configuration runs, so they are instrumentation support only and do not justify lowering the production noise budget."
+}

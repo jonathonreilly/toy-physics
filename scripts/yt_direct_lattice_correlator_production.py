@@ -808,6 +808,32 @@ def stochastic_scalar_two_point(
         values = np.asarray(accum[key], dtype=np.complex128)
         mean = complex(np.mean(values)) if values.size else complex(float("nan"), float("nan"))
         stderr = float(np.std(values.real, ddof=1) / math.sqrt(values.size)) if values.size > 1 else 0.0
+        noise_stability: dict[str, Any] = {
+            "available": False,
+            "reason": "fewer than two noise vectors",
+        }
+        if values.size >= 2:
+            split = values.size // 2
+            first_half = values[:split]
+            second_half = values[split:]
+            first_mean = complex(np.mean(first_half))
+            second_mean = complex(np.mean(second_half))
+            delta = first_mean - second_mean
+            denom = stderr if stderr > 0.0 else float("nan")
+            noise_stability = {
+                "available": True,
+                "first_half_noise_vectors": int(first_half.size),
+                "second_half_noise_vectors": int(second_half.size),
+                "C_ss_real_first_half": float(first_mean.real),
+                "C_ss_real_second_half": float(second_mean.real),
+                "C_ss_real_half_delta": float(delta.real),
+                "C_ss_real_half_delta_over_stderr": (
+                    float(abs(delta.real) / denom) if math.isfinite(denom) else float("nan")
+                ),
+                "C_ss_imag_first_half": float(first_mean.imag),
+                "C_ss_imag_second_half": float(second_mean.imag),
+                "C_ss_imag_half_delta": float(delta.imag),
+            }
         gamma = 1.0 / mean if abs(mean) > 1.0e-30 else complex(float("nan"), float("nan"))
         mode_rows[key] = {
             "momentum_mode": list(mode),
@@ -818,6 +844,7 @@ def stochastic_scalar_two_point(
             "C_ss_real_noise_stderr": stderr,
             "Gamma_ss_real": float(gamma.real),
             "Gamma_ss_imag": float(gamma.imag),
+            "noise_subsample_stability": noise_stability,
         }
     return {
         "mass": mass,
@@ -1107,11 +1134,42 @@ def fit_scalar_two_point_lsz(
             continue
         real_values = np.asarray([float(row["C_ss_real"]) for row in rows], dtype=float)
         imag_values = np.asarray([float(row["C_ss_imag"]) for row in rows], dtype=float)
+        noise_stderr_values = [
+            float(row.get("C_ss_real_noise_stderr", float("nan")))
+            for row in rows
+            if math.isfinite(float(row.get("C_ss_real_noise_stderr", float("nan"))))
+        ]
+        noise_counts = [
+            int(row.get("noise_vectors", 0))
+            for row in rows
+            if int(row.get("noise_vectors", 0)) > 0
+        ]
+        half_delta_over_stderr = [
+            float(row.get("noise_subsample_stability", {}).get("C_ss_real_half_delta_over_stderr", float("nan")))
+            for row in rows
+            if math.isfinite(
+                float(row.get("noise_subsample_stability", {}).get("C_ss_real_half_delta_over_stderr", float("nan")))
+            )
+        ]
         c_mean = complex(float(np.mean(real_values)), float(np.mean(imag_values)))
         real_err = float(np.std(real_values, ddof=1) / math.sqrt(len(real_values))) if len(real_values) > 1 else 0.0
         imag_err = float(np.std(imag_values, ddof=1) / math.sqrt(len(imag_values))) if len(imag_values) > 1 else 0.0
         gamma = 1.0 / c_mean if abs(c_mean) > 1.0e-30 else complex(float("nan"), float("nan"))
         nvec = tuple(int(x) for x in key.split(","))
+        noise_subsample_stability = {
+            "available": bool(half_delta_over_stderr),
+            "configuration_count": len(rows),
+            "noise_vectors_per_configuration": int(min(noise_counts)) if noise_counts else 0,
+            "C_ss_real_noise_stderr_mean": (
+                float(np.mean(noise_stderr_values)) if noise_stderr_values else float("nan")
+            ),
+            "C_ss_real_noise_stderr_max": (
+                float(np.max(noise_stderr_values)) if noise_stderr_values else float("nan")
+            ),
+            "C_ss_real_half_delta_over_stderr_max": (
+                float(np.max(half_delta_over_stderr)) if half_delta_over_stderr else float("nan")
+            ),
+        }
         mode_rows[key] = {
             "momentum_mode": list(nvec),
             "p_hat_sq": spatial_p_hat_sq(nvec, spatial_l),
@@ -1122,6 +1180,7 @@ def fit_scalar_two_point_lsz(
             "C_ss_imag_config_stderr": imag_err,
             "Gamma_ss_real": float(gamma.real),
             "Gamma_ss_imag": float(gamma.imag),
+            "noise_subsample_stability": noise_subsample_stability,
         }
 
     sorted_rows = sorted(mode_rows.values(), key=lambda row: (float(row["p_hat_sq"]), row["momentum_mode"]))
@@ -1146,12 +1205,36 @@ def fit_scalar_two_point_lsz(
                 "finite_residue_proxy": 1.0 / abs(derivative) if abs(derivative) > 1.0e-30 else float("nan"),
             }
 
+    stability_rows = [
+        row.get("noise_subsample_stability", {})
+        for row in mode_rows.values()
+        if row.get("noise_subsample_stability", {}).get("available") is True
+    ]
+    stability_ratios = [
+        float(row.get("C_ss_real_half_delta_over_stderr_max", float("nan")))
+        for row in stability_rows
+        if math.isfinite(float(row.get("C_ss_real_half_delta_over_stderr_max", float("nan"))))
+    ]
+    noise_subsample_stability = {
+        "available": bool(stability_rows),
+        "mode_count": len(stability_rows),
+        "C_ss_real_half_delta_over_stderr_max": (
+            float(max(stability_ratios)) if stability_ratios else float("nan")
+        ),
+        "strict_limit": (
+            "Noise subsample stability is an estimator diagnostic only; it is "
+            "not production evidence or scalar LSZ normalization without "
+            "same-source production statistics and pole/FV/IR control."
+        ),
+    }
+
     return {
         "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
         "measurement_object": "C_ss(q)=Tr[S V_q S V_-q], Gamma_ss(q)=1/C_ss(q)",
         "estimator": "Z2 stochastic trace estimator; production evidence requires saved ensembles and controlled statistics",
         "physical_higgs_normalization": "not_derived",
         "mode_rows": mode_rows,
+        "noise_subsample_stability": noise_subsample_stability,
         "finite_difference_residue_proxy": finite_difference,
         "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived",
     }

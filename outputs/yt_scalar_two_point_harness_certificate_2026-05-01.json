@@ -36,6 +36,14 @@
               0,
               0
             ],
+            "noise_subsample_stability": {
+              "C_ss_real_half_delta_over_stderr_max": 2.0,
+              "C_ss_real_noise_stderr_max": 0.001807469173357265,
+              "C_ss_real_noise_stderr_mean": 0.001807469173357265,
+              "available": true,
+              "configuration_count": 1,
+              "noise_vectors_per_configuration": 2
+            },
             "p_hat_sq": 0.0
           },
           "1,0,0": {
@@ -51,8 +59,22 @@
               0,
               0
             ],
+            "noise_subsample_stability": {
+              "C_ss_real_half_delta_over_stderr_max": 2.0,
+              "C_ss_real_noise_stderr_max": 0.00027304056411228683,
+              "C_ss_real_noise_stderr_mean": 0.00027304056411228683,
+              "available": true,
+              "configuration_count": 1,
+              "noise_vectors_per_configuration": 2
+            },
             "p_hat_sq": 2.9999999999999996
           }
+        },
+        "noise_subsample_stability": {
+          "C_ss_real_half_delta_over_stderr_max": 2.0,
+          "available": true,
+          "mode_count": 2,
+          "strict_limit": "Noise subsample stability is an estimator diagnostic only; it is not production evidence or scalar LSZ normalization without same-source production statistics and pole/FV/IR control."
         },
         "physical_higgs_normalization": "not_derived",
         "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",

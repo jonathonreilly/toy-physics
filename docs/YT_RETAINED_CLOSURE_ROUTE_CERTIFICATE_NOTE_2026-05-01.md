@@ -110,6 +110,9 @@ The eight-mode noise variance gate now rejects the current evidence surface:
 the reduced smoke has the wrong phase, volume, modes, noises, and statistics,
 and the current chunk surface is absent or four-mode/x16 rather than an
 eight-mode/x8 calibration.
+The harness now emits noise-subsample stability diagnostics needed by a future
+paired x8/x16 calibration, but the current diagnostic smokes remain
+reduced-scope instrumentation support only.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

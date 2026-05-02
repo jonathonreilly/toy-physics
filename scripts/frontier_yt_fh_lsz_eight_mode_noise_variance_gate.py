@@ -102,6 +102,7 @@ def candidate_from_output(name: str, path: Path) -> dict[str, Any]:
     ensemble = selected_ensemble(data)
     scalar_meta = scalar_lsz_metadata(data)
     rows = scalar_lsz_rows(data)
+    analysis = selected_ensemble(data).get("scalar_two_point_lsz_analysis", {})
     mode_keys = set(rows)
     config_counts = [
         int(row.get("configuration_count", 0))
@@ -128,7 +129,11 @@ def candidate_from_output(name: str, path: Path) -> dict[str, Any]:
         for row in rows.values()
     ):
         issues.append("no positive configuration stderr for C_ss_real")
-    if "noise_subsample_stability" not in ensemble and "noise_subsample_stability" not in scalar_meta:
+    if (
+        "noise_subsample_stability" not in ensemble
+        and "noise_subsample_stability" not in scalar_meta
+        and not (isinstance(analysis, dict) and "noise_subsample_stability" in analysis)
+    ):
         issues.append("no noise_subsample_stability field")
 
     return {

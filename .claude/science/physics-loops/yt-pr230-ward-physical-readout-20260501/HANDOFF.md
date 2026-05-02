@@ -429,8 +429,13 @@ smoke output is wrong phase, wrong volume, two modes, two noises, and one
 configuration.  Chunk001 is absent until completion and, by construction, is
 four-mode/x16 rather than an eight-mode/x8 calibration.
 
+The production harness now emits `noise_subsample_stability` diagnostics in
+the scalar-LSZ analysis and each mode row.  The scalar-only and joint smokes
+were rerun to validate the field shape.  This is instrumentation support for a
+future paired x8/x16 calibration, not a production variance result.
+
 Next exact action: keep chunk001 running under the non-evidence combiner gate.
 If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
-If it remains running, either design a same-source x8/x16 calibration with
-noise-subsample diagnostics or pivot back to analytic scalar denominator and
+If it remains running, either design a same-source x8/x16 calibration chunk
+using the new diagnostics or pivot back to analytic scalar denominator and
 residue work.

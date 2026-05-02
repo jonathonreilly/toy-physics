@@ -724,3 +724,23 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The eight-mode/eight-noise option remains launch planning only.  The current
 surface has no same-source production x8/x16 variance calibration or theorem,
 and authorizes no retained or proposed-retained wording.
+
+FH/LSZ noise-subsample diagnostics checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ noise-subsample diagnostics harness
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_noise_subsample_diagnostics_certificate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=41 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=67 FAIL=0
+```
+
+The harness diagnostic fields are bounded instrumentation support for a future
+calibration.  They authorize no retained/proposed-retained wording.

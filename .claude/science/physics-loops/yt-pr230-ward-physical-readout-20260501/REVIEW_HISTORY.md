@@ -1742,3 +1742,29 @@ The gate blocks the eight-mode/eight-noise foreground shortcut as evidence.
 The x8 option raises scalar-LSZ noise-only stderr by `sqrt(2)` versus x16, and
 the current repo has no same-source production variance calibration or theorem.
 It authorizes no retained/proposed-retained wording.
+
+## Review-Loop Backpressure - FH/LSZ Noise-Subsample Diagnostics
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / HARNESS PLUMBING ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/yt_direct_lattice_correlator_production.py scripts/frontier_yt_fh_lsz_noise_subsample_diagnostics_certificate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_noise_subsample_diagnostics_certificate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The scalar-LSZ harness now emits split-noise stability diagnostics.  This is
+future calibration plumbing only; the rerun smokes are reduced-scope and do not
+authorize retained/proposed-retained wording.

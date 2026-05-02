@@ -1029,6 +1029,18 @@ smoke is wrong phase, wrong volume, two modes, two noises, and one
 configuration; chunk001 is absent until completion and is four-mode/x16 rather
 than the needed eight-mode/x8 calibration.
 
+FH/LSZ noise-subsample diagnostics are not variance evidence:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_noise_subsample_diagnostics_certificate.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The harness now emits split-noise diagnostic fields, but the current smokes
+are reduced-scope two-mode/two-noise instrumentation runs.  They do not pass
+the x8 variance gate and cannot be used as production evidence or scalar LSZ
+normalization.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

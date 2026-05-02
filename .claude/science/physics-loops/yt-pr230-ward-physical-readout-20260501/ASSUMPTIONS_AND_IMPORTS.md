@@ -492,6 +492,9 @@ The variance gate keeps that trade closed on the current surface: the reduced
 smoke and the running four-mode/x16 chunk cannot be imported as an x8
 same-source production variance calibration, and `sqrt(2)` stochastic-error
 inflation cannot be waived without a measured calibration or theorem.
+The new `noise_subsample_stability` fields are diagnostics only.  They may
+support a future paired production calibration, but reduced smoke diagnostics
+are still forbidden as proof input for physical `y_t`.
 
 Positive-closure candidates left after the assumption exercise:
 

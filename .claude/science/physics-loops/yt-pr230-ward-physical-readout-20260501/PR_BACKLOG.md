@@ -642,3 +642,18 @@ Adds an FH/LSZ eight-mode noise variance gate:
 - still no retained/proposed-retained closure: this is launch control only,
   not production pole data or a scalar LSZ/canonical-Higgs theorem.
 ```
+
+Latest FH/LSZ noise-subsample diagnostics checkpoint text for PR #230:
+
+```text
+Adds scalar-LSZ noise-subsample diagnostics to the production harness:
+- each scalar two-point mode row and top-level LSZ analysis now emits
+  `noise_subsample_stability` fields for split-noise stability checks;
+- scalar-only and joint FH/LSZ smokes were rerun and validate the diagnostic
+  shape, but remain reduced-scope two-mode/two-noise instrumentation outputs;
+- diagnostics validator passes `PASS=9 FAIL=0`; retained-route gate reports
+  `PASS=41 FAIL=0`; campaign status consumes 71 certificates and reports
+  `PASS=67 FAIL=0`;
+- still no retained/proposed-retained closure: diagnostics are future
+  calibration plumbing, not production pole data or scalar LSZ normalization.
+```

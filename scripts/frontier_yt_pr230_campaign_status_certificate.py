@@ -87,6 +87,9 @@ def main() -> int:
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
         ),
+        "fh_lsz_noise_subsample_diagnostics": load(
+            "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json"
+        ),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -324,6 +327,12 @@ def main() -> int:
         "eight-mode noise variance gate" in str(statuses["fh_lsz_eight_mode_noise_variance"])
         or "open" in str(statuses["fh_lsz_eight_mode_noise_variance"]),
         statuses["fh_lsz_eight_mode_noise_variance"],
+    )
+    report(
+        "fh-lsz-noise-subsample-diagnostics-not-closure",
+        "noise-subsample diagnostics" in str(statuses["fh_lsz_noise_subsample_diagnostics"])
+        or "bounded-support" in str(statuses["fh_lsz_noise_subsample_diagnostics"]),
+        statuses["fh_lsz_noise_subsample_diagnostics"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
@@ -602,7 +611,10 @@ def main() -> int:
             "variance gate now rejects the current evidence surface: the "
             "reduced smoke is wrong phase/modes/noises/statistics and the "
             "foreground chunk is absent or four-mode/x16, not an x8 "
-            "calibration.  "
+            "calibration.  The harness now emits noise-subsample stability "
+            "diagnostics for future paired x8/x16 calibrations, but the "
+            "current diagnostic smokes are still reduced-scope instrumentation "
+            "support only.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "
