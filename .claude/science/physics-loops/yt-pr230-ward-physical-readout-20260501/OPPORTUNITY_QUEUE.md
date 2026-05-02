@@ -142,7 +142,9 @@ probability.
   pole while changing the residue, so positivity alone is not the missing
   model-class certificate.  The pole-saturation threshold gate now supplies an
   executable acceptance rule: the positive-Stieltjes residue interval must be
-  tight before a finite-shell pole derivative can be load-bearing.
+  tight before a finite-shell pole derivative can be load-bearing.  The
+  threshold-authority import audit finds no hidden current artifact that
+  supplies the threshold or scalar-denominator premise.
   Chunk001 and chunk002 are now complete and combiner-ready, which validates
   the chunk-local protocol but does not change claim status: this is `2/63` of L12 and still
   lacks L16/L24 scaling, pole/model-class, and FV/IR gates.
@@ -212,7 +214,8 @@ probability.
    still leaves the pole residue underidentified; the remaining positive move
    must be pole saturation, continuum-threshold control, or a microscopic
    scalar denominator theorem.  The threshold gate makes this a concrete
-   residue-interval check and currently fails open/blocking.
+   residue-interval check and currently fails open/blocking.  The import audit
+   confirms the missing premise is not already present elsewhere in the repo.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

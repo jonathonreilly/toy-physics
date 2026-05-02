@@ -89,6 +89,7 @@ def main() -> int:
         "fh_lsz_pole_fit_model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
         "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
+        "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -363,6 +364,11 @@ def main() -> int:
         and certificates["fh_lsz_pole_saturation_threshold_gate"].get("pole_saturation_threshold_gate_passed")
         is False
     )
+    threshold_authority_audit_blocks = (
+        "threshold-authority import audit"
+        in certificates["fh_lsz_threshold_authority_audit"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_threshold_authority_audit"].get("proposal_allowed") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -604,6 +610,11 @@ def main() -> int:
         certificates["fh_lsz_pole_saturation_threshold_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-threshold-authority-audit-blocks-hidden-import",
+        threshold_authority_audit_blocks,
+        certificates["fh_lsz_threshold_authority_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -741,7 +752,8 @@ def main() -> int:
             "next acceptance condition explicit: a future finite-shell fit "
             "needs a tight positive-Stieltjes residue interval certified by "
             "pole-saturation, continuum-threshold control, or a scalar "
-            "denominator theorem.  "
+            "denominator theorem.  The threshold-authority audit finds no "
+            "hidden current artifact that supplies that premise.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "

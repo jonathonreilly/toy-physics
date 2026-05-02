@@ -98,6 +98,17 @@ residue interval has zero lower bound and broad upper bound.  A finite-shell
 fit cannot be load-bearing until a pole-saturation, continuum-threshold, or
 scalar-denominator certificate makes that interval tight.
 
+No hidden threshold authority is present:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_threshold_authority_import_audit.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The threshold certificate, scalar denominator theorem certificate, and
+combined L12 production output are absent.  The missing premise cannot be
+imported silently.
+
 `R_conn = 8/9` does not by itself derive the scalar pole residue:
 
 ```text

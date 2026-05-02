@@ -220,7 +220,8 @@ exists.  Positive Stieltjes/spectral form alone also does not close the
 model-class gate because positive continuum freedom can preserve finite shell
 values and the pole while changing the residue.  The pole-saturation threshold
 gate now converts that requirement into a concrete residue-interval check, and
-the current interval is not tight.  If the eight-mode/x8
+the current interval is not tight.  The threshold-authority import audit finds
+no hidden current artifact that supplies the missing premise.  If the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not
 close PR #230.

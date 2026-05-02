@@ -979,3 +979,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The gate expresses pole-residue acceptance as a positive-Stieltjes LP interval.
 The current interval has zero lower bound and is not tight.  No
 retained/proposed-retained wording is authorized.
+
+FH/LSZ threshold-authority import audit checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / FH-LSZ threshold-authority import audit
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_threshold_authority_import_audit.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=53 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=79 FAIL=0
+```
+
+The threshold certificate, scalar denominator theorem certificate, and
+combined L12 output are absent.  No retained/proposed-retained wording is
+authorized.

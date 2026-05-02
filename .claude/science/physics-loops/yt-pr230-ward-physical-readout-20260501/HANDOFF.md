@@ -482,7 +482,12 @@ after the positive-Stieltjes residue interval is tight.  On the current
 surface, the interval has zero lower bound, so a pole-saturation theorem,
 continuum-threshold certificate, production acceptance certificate, or
 microscopic scalar denominator theorem is still required.
+The threshold-authority import audit checks whether that premise is already
+available somewhere else in the current PR surface.  It is not: no
+pole-saturation/continuum-threshold certificate, scalar denominator theorem
+certificate, or combined L12 production output is present.
 
 Next exact action: keep chunk003 running under the non-evidence combiner gate.
-In parallel, derive a scalar denominator/pole-saturation theorem or a
-continuum-threshold certificate that passes the residue-interval gate.
+In parallel, attack the scalar denominator/pole-saturation theorem directly or
+produce a real continuum-threshold certificate that passes the residue-interval
+gate.

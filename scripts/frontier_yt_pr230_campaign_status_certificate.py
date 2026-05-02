@@ -105,6 +105,9 @@ def main() -> int:
         "fh_lsz_pole_saturation_threshold_gate": load(
             "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
         ),
+        "fh_lsz_threshold_authority_audit": load(
+            "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -395,6 +398,11 @@ def main() -> int:
         "fh-lsz-pole-saturation-threshold-gate-blocks",
         "pole-saturation threshold gate" in str(statuses["fh_lsz_pole_saturation_threshold_gate"]),
         statuses["fh_lsz_pole_saturation_threshold_gate"],
+    )
+    report(
+        "fh-lsz-threshold-authority-audit-blocks-hidden-import",
+        "threshold-authority import audit" in str(statuses["fh_lsz_threshold_authority_audit"]),
+        statuses["fh_lsz_threshold_authority_audit"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -716,7 +724,8 @@ def main() -> int:
             "next repair into an executable condition: finite-shell pole fits "
             "remain blocked until the allowed positive-Stieltjes residue "
             "interval is made tight by pole-saturation, continuum-threshold "
-            "control, or a scalar denominator theorem.  "
+            "control, or a scalar denominator theorem.  The threshold-authority "
+            "audit finds no hidden current artifact that supplies that premise.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

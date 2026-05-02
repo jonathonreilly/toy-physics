@@ -827,3 +827,18 @@ Adds an FH/LSZ pole-saturation threshold gate:
   continuum-threshold certificate, production acceptance certificate, or
   microscopic scalar denominator theorem must make the interval tight.
 ```
+
+Latest FH/LSZ threshold-authority import audit checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ threshold-authority import audit:
+- checks whether the pole-saturation/continuum-threshold/scalar-denominator
+  premise required by the residue-interval gate already exists on the current
+  PR #230 surface;
+- finds no threshold certificate, no scalar denominator theorem certificate,
+  and no combined L12 production output;
+- runner passes `PASS=8 FAIL=0`; retained-route gate reports `PASS=53 FAIL=0`;
+  campaign status consumes 83 certificates and reports `PASS=79 FAIL=0`;
+- still no retained/proposed-retained closure: the missing threshold or
+  scalar-denominator premise cannot be imported silently.
+```
