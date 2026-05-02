@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:55:30.021864+00:00
+**Generated:** 2026-05-02T01:58:46.860939+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 366 |
+| `audited_clean` | 367 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 421 |
+| `unaudited` | 420 |
 
 | criticality | count |
 |---|---:|
@@ -444,6 +444,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_canonical_projector_connection_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `universal_gr_complement_canonical_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `universal_gr_constraint_action_stationarity_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
+| `universal_gr_lambda_bypass_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -16148,6 +16149,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md`
 - **auditor confidence:** high
+
+### `universal_gr_lambda_bypass_note`
+
+- **Note:** [`UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md`](../../docs/UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-gpt5-fresh-f161`  (codex-current; independence=fresh_context)
+- **load-bearing step:** S_GR^bypass[h] := 1/2 * D^2 W[g_*](Pi_A1 h, Pi_A1 h) is lambda-free and never introduces L_lambda, so the direct universal A1-candidate bypasses lambda rather than choosing it.  _(class `A`)_
+- **chain closes:** True — The chain closes for the limited support-level claim: the candidate action is syntactically lambda-free, and the note explicitly does not claim full GR closure.
+- **rationale:** The clean result applies only to the bounded claim that the direct universal A1-anchored candidate avoids the phase-lift L_lambda family. The note discloses the remaining complement-frame and curvature-localization obstruction instead of using it as hidden closure. The current-checkout runner passes all 9 checks after redirecting its hardcoded external root, so the remaining risk is runner hygiene rather than the local lambda-bypass claim.
+- **auditor confidence:** medium
 
 ### `universal_gr_lorentzian_global_atlas_closure_note`
 
