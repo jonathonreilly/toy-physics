@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 126,
+    "leaf": 125,
     "medium": 130
   },
-  "generated_at": "2026-05-02T00:33:55.542966+00:00",
+  "generated_at": "2026-05-02T00:36:43.168495+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "spectral_closure_2026-04-09",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SPECTRAL_CLOSURE_2026-04-09.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_spectral_on_lattice.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "spectral_symmetry_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12501,6 +12484,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 46,
-  "total_pending": 457
+  "ready_count": 45,
+  "total_pending": 456
 }

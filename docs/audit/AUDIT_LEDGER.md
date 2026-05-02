@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:33:55.764207+00:00
+**Generated:** 2026-05-02T00:36:43.377554+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 346 |
+| `audited_clean` | 347 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 457 |
+| `unaudited` | 456 |
 
 | criticality | count |
 |---|---:|
@@ -414,6 +414,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_propagating_generated_transfer_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_radical_geometry_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_support_localization_split_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `spectral_closure_2026-04-09` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14907,6 +14908,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
 - **auditor confidence:** high
+
+### `spectral_closure_2026-04-09`
+
+- **Note:** [`SPECTRAL_CLOSURE_2026-04-09.md`](../../docs/SPECTRAL_CLOSURE_2026-04-09.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Broadband attraction does not survive under any source-defined spectral control; detector-equalization is a post-hoc artifact rather than a physical source spectrum.  _(class `C`)_
+- **chain closes:** True — The primary retained-lattice runner and the explicitly named spectral-control runners compute the raw, Lorentzian, detector-equalized, and source-side weighting cases. Their current outputs support the bounded conclusion that broad/flat source-defined spectra remain AWAY and only detector-output reweighting flips selected comparisons.
+- **rationale:** The note is clean as a bounded negative for broadband attraction under the tested source-defined spectral controls. The current artifacts reproduce the stated pattern: raw broad/flat spectra are AWAY, source-coupled and source-equalized controls do not rescue broadband TOWARD, and detector-equalized TOWARD behavior is explicitly framed as an output-dependent diagnostic rather than a source model. Residual risk is that this does not rule out a later physical k-selection mechanism, but the note lists that as open work.
+- **auditor confidence:** medium
 
 ### `staggered_backreaction_capture_closure_note`
 
