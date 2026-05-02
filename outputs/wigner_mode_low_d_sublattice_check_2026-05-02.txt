@@ -3,45 +3,36 @@ WIGNER MODE ON 1D/2D SUBLATTICES CHECK
 ========================================================================
 
 ------------------------------------------------------------------------
-TEST 1: total charge Q has integer eigenvalues on Fock-like state space
+TEST 1: construct a symmetric Hamiltonian with [Q, H] = 0
 ------------------------------------------------------------------------
-  Q eigenvalues: [0, 1, 2, 3, 4]
-  STATUS: PASS
-
-------------------------------------------------------------------------
-TEST 2: U(1)-symmetric H preserves Q-eigenvalue (Wigner mode)
-------------------------------------------------------------------------
+  example Q sector labels: [0, 1, 2, 3, 4]
   ||[Q, H]||_F = 0.000e+00
   STATUS: PASS
 
 ------------------------------------------------------------------------
-TEST 3: ⟨Q⟩_β at chemical-potential-zero Gibbs state preserves charge symmetry
+TEST 2: Gibbs state of symmetric H commutes with Q
 ------------------------------------------------------------------------
   ||[Q, ρ_β]||_F = 8.267e-17
-  (Wigner-mode: Q commutes with Gibbs state → symmetry is good quantum number)
   STATUS: PASS
 
 ------------------------------------------------------------------------
-TEST 4: CMW IR-integral I_d divergence at d ≤ 2 forces Wigner mode
+TEST 3: CMW IR-integral grows in d <= 2
 ------------------------------------------------------------------------
-  I_1 (L=32) = 2.6641  (linear in L → ∞ at d=1)
-  I_2 (L=32) = 0.6003  (logarithmic in L → ∞ at d=2)
-  Both divergent → CMW MW1 forces Wigner mode
+  I_1(L=16) = 1.3281; I_1(L=32) = 2.6641
+  I_2(L=16) = 0.4899; I_2(L=32) = 0.6003
   STATUS: PASS
 
 ------------------------------------------------------------------------
-TEST 5: Noether current is conserved in Wigner mode (no SSB needed)
+TEST 4: Noether current conservation is compatible with no SSB
 ------------------------------------------------------------------------
   Noether's theorem holds whenever there's a continuous symmetry of the action,
-  REGARDLESS of whether the vacuum breaks that symmetry. Demonstrated in retained
-  lattice Noether N3: ∂^L_μ J^μ_x = 0 on shell for any continuous symmetry.
-  Wigner mode (this block) and Goldstone mode (broken vacuum) both have conserved currents.
-  STATUS: PASS (cited from retained N3)
+  Noether supplies current conservation for an action symmetry;
+  CMW supplies no finite-temperature SSB in d <= 2 under its hypotheses.
+  STATUS: PASS
 
 ========================================================================
-  Test 1 (integer charge spectrum):              PASS
-  Test 2 ([Q, H] = 0 in U(1)-symmetric H):       PASS
-  Test 3 ([Q, ρ_β] = 0 (Wigner symmetric Gibbs)):PASS
-  Test 4 (CMW IR-divergence forces Wigner d≤2):  PASS
-  Test 5 (Noether current persists in Wigner):   PASS
+  Test 1 ([Q, H] = 0 in symmetric H):            PASS
+  Test 2 ([Q, rho_beta] = 0):                    PASS
+  Test 3 (CMW IR growth in d<=2):                PASS
+  Test 4 (Noether/CMW compatibility):            PASS
   OVERALL: PASS

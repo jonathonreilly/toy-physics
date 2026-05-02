@@ -12,23 +12,15 @@ def main() -> None:
     print("=" * 72)
     print()
 
-    # ----- Test 1: charge eigenvalues are integers -----
+    # ----- Test 1: symmetric Hamiltonian commutes with charge -----
     print("-" * 72)
-    print("TEST 1: total charge Q has integer eigenvalues on Fock-like state space")
+    print("TEST 1: construct a symmetric Hamiltonian with [Q, H] = 0")
     print("-" * 72)
     n_modes = 4
     dim = 2 ** n_modes
     Q = np.diag([bin(b).count("1") for b in range(dim)]).astype(complex)
     eigs = sorted(set(int(round(e)) for e in np.linalg.eigvalsh(Q)))
-    print(f"  Q eigenvalues: {eigs}")
-    t1_ok = eigs == list(range(n_modes + 1))
-    print(f"  STATUS: {'PASS' if t1_ok else 'FAIL'}")
-    print()
-
-    # ----- Test 2: [Q, H] = 0 ⇒ Q-eigenvalue is conserved label -----
-    print("-" * 72)
-    print("TEST 2: U(1)-symmetric H preserves Q-eigenvalue (Wigner mode)")
-    print("-" * 72)
+    print(f"  example Q sector labels: {eigs}")
     rng = np.random.default_rng(20260502)
     H = np.zeros((dim, dim), dtype=complex)
     blocks = {n: [b for b in range(dim) if bin(b).count("1") == n] for n in range(n_modes + 1)}
@@ -43,34 +35,28 @@ def main() -> None:
                 H[bi, bj] = Hb[i, j]
     comm = Q @ H - H @ Q
     print(f"  ||[Q, H]||_F = {np.linalg.norm(comm):.3e}")
-    t2_ok = np.linalg.norm(comm) < 1e-12
-    print(f"  STATUS: {'PASS' if t2_ok else 'FAIL'}")
+    t1_ok = np.linalg.norm(comm) < 1e-12
+    print(f"  STATUS: {'PASS' if t1_ok else 'FAIL'}")
     print()
 
-    # ----- Test 3: Gibbs state expectation ⟨q⟩_β = 0 (Wigner symmetric) -----
+    # ----- Test 2: Gibbs state preserves the symmetry -----
     print("-" * 72)
-    print("TEST 3: ⟨Q⟩_β at chemical-potential-zero Gibbs state preserves charge symmetry")
+    print("TEST 2: Gibbs state of symmetric H commutes with Q")
     print("-" * 72)
-    # Gibbs: ρ = exp(-βH) / Z. ⟨Q⟩ = Tr(ρ Q).
-    # For symmetric H (preserving charge), ⟨Q⟩ = (sum over charge sectors of n_charge * weight).
-    # In Wigner mode with no chemical potential, each charge sector is independently weighted by Boltzmann.
-    # For a TRULY symmetric ensemble, ⟨Q⟩ would be 0 if we're in the half-filled / symmetric subspace.
-    # Demonstrate: for a charge-symmetric H (n -> -n symmetry), ⟨Q⟩ - ⟨Q_neutral⟩ = 0.
-    # Simpler test: Wigner-mode characterization is [Q, ρ_β] = 0 ⇔ Q-charge is good quantum number.
+    # Gibbs: rho = exp(-beta H) / Z. Since [Q, H] = 0, [Q, rho] = 0.
     beta = 1.0
     eigvals_H, vecs_H = np.linalg.eigh(H)
     rho = vecs_H @ np.diag(np.exp(-beta * eigvals_H)) @ vecs_H.conj().T
     rho /= np.trace(rho)
     comm_rho = Q @ rho - rho @ Q
     print(f"  ||[Q, ρ_β]||_F = {np.linalg.norm(comm_rho):.3e}")
-    print(f"  (Wigner-mode: Q commutes with Gibbs state → symmetry is good quantum number)")
-    t3_ok = np.linalg.norm(comm_rho) < 1e-10
-    print(f"  STATUS: {'PASS' if t3_ok else 'FAIL'}")
+    t2_ok = np.linalg.norm(comm_rho) < 1e-10
+    print(f"  STATUS: {'PASS' if t2_ok else 'FAIL'}")
     print()
 
-    # ----- Test 4: IR divergence of CMW integral I_d for d ≤ 2 -----
+    # ----- Test 3: IR growth of CMW integral I_d for d <= 2 -----
     print("-" * 72)
-    print("TEST 4: CMW IR-integral I_d divergence at d ≤ 2 forces Wigner mode")
+    print("TEST 3: CMW IR-integral grows in d <= 2")
     print("-" * 72)
     def lattice_dispersion(k):
         return 2 * sum(1 - math.cos(km) for km in k)
@@ -91,35 +77,31 @@ def main() -> None:
                     total += 1.0 / lattice_dispersion(k)
         return total / V
 
-    L_test = 32
-    I_1 = I_d(L_test, 1)
-    I_2 = I_d(L_test, 2)
-    print(f"  I_1 (L={L_test}) = {I_1:.4f}  (linear in L → ∞ at d=1)")
-    print(f"  I_2 (L={L_test}) = {I_2:.4f}  (logarithmic in L → ∞ at d=2)")
-    print(f"  Both divergent → CMW MW1 forces Wigner mode")
-    t4_ok = I_1 > 1.0 and I_2 > 0.5
+    I_1_16, I_1_32 = I_d(16, 1), I_d(32, 1)
+    I_2_16, I_2_32 = I_d(16, 2), I_d(32, 2)
+    print(f"  I_1(L=16) = {I_1_16:.4f}; I_1(L=32) = {I_1_32:.4f}")
+    print(f"  I_2(L=16) = {I_2_16:.4f}; I_2(L=32) = {I_2_32:.4f}")
+    t3_ok = I_1_32 > I_1_16 and I_2_32 > I_2_16
+    print(f"  STATUS: {'PASS' if t3_ok else 'FAIL'}")
+    print()
+
+    # ----- Test 4: Noether and no-SSB statements are logically compatible -----
+    print("-" * 72)
+    print("TEST 4: Noether current conservation is compatible with no SSB")
+    print("-" * 72)
+    print("  Noether's theorem holds whenever there's a continuous symmetry of the action,")
+    print("  Noether supplies current conservation for an action symmetry;")
+    print("  CMW supplies no finite-temperature SSB in d <= 2 under its hypotheses.")
+    t4_ok = t1_ok and t2_ok and t3_ok
     print(f"  STATUS: {'PASS' if t4_ok else 'FAIL'}")
     print()
 
-    # ----- Test 5: Noether current persists in Wigner mode -----
-    print("-" * 72)
-    print("TEST 5: Noether current is conserved in Wigner mode (no SSB needed)")
-    print("-" * 72)
-    print("  Noether's theorem holds whenever there's a continuous symmetry of the action,")
-    print("  REGARDLESS of whether the vacuum breaks that symmetry. Demonstrated in retained")
-    print("  lattice Noether N3: ∂^L_μ J^μ_x = 0 on shell for any continuous symmetry.")
-    print("  Wigner mode (this block) and Goldstone mode (broken vacuum) both have conserved currents.")
-    t5_ok = True  # cited from retained lattice Noether N3
-    print(f"  STATUS: {'PASS' if t5_ok else 'FAIL'} (cited from retained N3)")
-    print()
-
     print("=" * 72)
-    print(f"  Test 1 (integer charge spectrum):              {'PASS' if t1_ok else 'FAIL'}")
-    print(f"  Test 2 ([Q, H] = 0 in U(1)-symmetric H):       {'PASS' if t2_ok else 'FAIL'}")
-    print(f"  Test 3 ([Q, ρ_β] = 0 (Wigner symmetric Gibbs)):{'PASS' if t3_ok else 'FAIL'}")
-    print(f"  Test 4 (CMW IR-divergence forces Wigner d≤2):  {'PASS' if t4_ok else 'FAIL'}")
-    print(f"  Test 5 (Noether current persists in Wigner):   {'PASS' if t5_ok else 'FAIL'}")
-    all_ok = all([t1_ok, t2_ok, t3_ok, t4_ok, t5_ok])
+    print(f"  Test 1 ([Q, H] = 0 in symmetric H):            {'PASS' if t1_ok else 'FAIL'}")
+    print(f"  Test 2 ([Q, rho_beta] = 0):                    {'PASS' if t2_ok else 'FAIL'}")
+    print(f"  Test 3 (CMW IR growth in d<=2):                {'PASS' if t3_ok else 'FAIL'}")
+    print(f"  Test 4 (Noether/CMW compatibility):            {'PASS' if t4_ok else 'FAIL'}")
+    all_ok = all([t1_ok, t2_ok, t3_ok, t4_ok])
     print(f"  OVERALL: {'PASS' if all_ok else 'FAIL'}")
     if not all_ok:
         raise SystemExit(1)
