@@ -1476,3 +1476,31 @@ The audit finds no hidden retained/audit-clean authority for the extra
 scalar-kernel enhancement required by the unit-projector threshold.  HS/RPA,
 ladder formulae, same-1PI, and Ward/Feshbach surfaces all leave the
 pole-generating kernel or `K'(x_pole)` open.
+
+## Review-Loop Backpressure - FH/LSZ Production Postprocess Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN ACCEPTANCE GATE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_production_postprocess_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The gate prevents the production manifest, reduced smoke output, or partial
+raw output from being treated as physical `y_t` evidence.  It requires
+production-phase output, same-source `dE_top/ds`, same-source `Gamma_ss(q)`,
+an isolated scalar-pole derivative, FV/IR/zero-mode control, and a passing
+retained-proposal certificate.

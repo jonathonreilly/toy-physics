@@ -481,3 +481,19 @@ Fixes the joint FH/LSZ production manifest preflight:
 - still no retained/proposed-retained closure: the manifest is launch planning,
   not production measurements, pole fits, or scalar LSZ evidence.
 ```
+
+Latest FH/LSZ production-postprocess gate checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ production postprocess gate:
+- validates the production manifest as a launch surface, not evidence;
+- requires production-phase outputs, same-source `dE/ds`, same-source
+  `Gamma_ss(q)`, isolated scalar-pole `dGamma_ss/dp^2`, FV/IR/zero-mode
+  control, no forbidden normalization imports, and a retained-proposal
+  certificate before physical `y_t` wording;
+- validator passes `PASS=9 FAIL=0`; retained-route gate reports
+  `PASS=33 FAIL=0`; campaign status now consumes 63 route certificates and
+  reports `PASS=59 FAIL=0`;
+- still no retained/proposed-retained closure: the expected production outputs
+  and pole-fit certificate are absent.
+```

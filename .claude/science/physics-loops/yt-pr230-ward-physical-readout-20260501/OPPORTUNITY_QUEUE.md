@@ -102,8 +102,12 @@ probability.
    modest four-momentum, sixteen-noise scalar-LSZ plan projects to about
    `3630` single-worker hours, so foreground closure requires a theorem or a
    scheduled production job.  A production-targeted, resumable manifest with
-   exact launch commands now exists, but it is not evidence.  The same-source invariant-readout theorem now
-   gives the exact response formula; the remaining blocker is production
+   exact launch commands now exists, but it is not evidence.  The postprocess
+   gate now requires production-phase output, same-source `dE/ds`,
+   same-source `Gamma_ss(q)`, isolated-pole `dGamma_ss/dp^2`, FV/IR/zero-mode
+   control, and retained-proposal certification before this route can make a
+   physical `y_t` claim.  The same-source invariant-readout theorem now gives
+   the exact response formula; the remaining blocker is production
    pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs

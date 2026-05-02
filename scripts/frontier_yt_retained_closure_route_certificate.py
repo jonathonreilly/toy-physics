@@ -73,6 +73,7 @@ def main() -> int:
         "scalar_kernel_enhancement_import": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
+        "fh_lsz_production_postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
     }
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
@@ -227,6 +228,11 @@ def main() -> int:
         "production manifest" in certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_production_manifest"].get("proposal_allowed") is False
     )
+    production_postprocess_gate_not_ready = (
+        "postprocess gate" in certificates["fh_lsz_production_postprocess_gate"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_production_postprocess_gate"].get("proposal_allowed") is False
+        and certificates["fh_lsz_production_postprocess_gate"].get("retained_proposal_gate_ready") is False
+    )
     joint_resource_multiday = (
         float(certificates["joint_resource_projection"].get("projection", {}).get("joint_mass_scaled_hours", 0.0)) > 1000.0
         and certificates["joint_resource_projection"].get("proposal_allowed") is False
@@ -367,6 +373,11 @@ def main() -> int:
         certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-production-postprocess-gate-not-ready",
+        production_postprocess_gate_not_ready,
+        certificates["fh_lsz_production_postprocess_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "joint-fh-lsz-resource-is-multiday",
         joint_resource_multiday,
         f"hours={certificates['joint_resource_projection'].get('projection', {}).get('joint_mass_scaled_hours')}",
@@ -390,7 +401,7 @@ def main() -> int:
                 "pass a retained-proposal gate"
             ),
             "why_shortest": "It bypasses Ward/H_unit and scalar-pole analytic normalization.",
-            "current_blocker": "existing certificates are reduced-scope/pilot or manifests; the joint route projects to multi-day single-worker compute",
+            "current_blocker": "existing certificates are reduced-scope/pilot or manifests; the postprocess gate has no production outputs, pole fit, or FV/IR/zero-mode control, and the joint route projects to multi-day single-worker compute",
         },
         {
             "route": "analytic_scalar_residue",
@@ -447,8 +458,11 @@ def main() -> int:
             "forcing one would require an underived scalar-kernel multiplier "
             "larger than two, and the kernel-enhancement import audit finds no "
             "hidden retained authority for that factor.  The "
-            "actual interacting scalar pole derivative theorem and production "
-            "evidence remain open.  "
+            "FH/LSZ production manifest is now guarded by an explicit "
+            "postprocess acceptance gate: the production outputs, same-source "
+            "dE/ds and Gamma_ss(q) data, isolated-pole inverse derivative, and "
+            "FV/IR/zero-mode control are still absent.  The actual interacting "
+            "scalar pole derivative theorem and production evidence remain open.  "
             "These cannot be assumed."
         ),
         "proposal_allowed": False,
@@ -459,8 +473,9 @@ def main() -> int:
         "exact_next_action": (
             "Do not run more small pilot MC for closure.  Either run the strict "
             "production physical-response manifest and follow it with pole/LSZ "
-            "and matching analysis, or derive the microscopic interacting scalar "
-            "denominator/residue theorem from the retained action."
+            "and matching analysis through the FH/LSZ postprocess gate, or derive "
+            "the microscopic interacting scalar denominator/residue theorem from "
+            "the retained action."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

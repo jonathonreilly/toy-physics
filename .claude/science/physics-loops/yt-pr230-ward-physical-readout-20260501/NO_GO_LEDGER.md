@@ -893,6 +893,20 @@ lists the exact scalar-channel kernel, projector, limit, crossing, and residue
 as missing; same-1PI fixes only `y^2 D_phi`; and Ward/Feshbach identities do
 not fix `K'(x_pole)` or common dressing.
 
+FH/LSZ production manifest-as-evidence route is blocked:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_production_postprocess_gate.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The three-volume manifest is a valid launch surface, but the expected
+production outputs are absent.  Even a future raw production bundle is not
+physical `y_t` evidence until it passes the explicit postprocess gate:
+production phase, common-ensemble `dE_top/ds`, same-source `Gamma_ss(q)`,
+isolated-pole `dGamma_ss/dp^2`, FV/IR/zero-mode control, no forbidden
+normalization imports, and retained-proposal certification.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

@@ -32,6 +32,7 @@ plus taste-singlet ladder normalization boundary
 plus scalar taste-projector normalization theorem attempt
 plus unit-projector pole-threshold obstruction
 plus scalar-kernel enhancement import audit
+plus FH/LSZ production postprocess gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -115,6 +116,10 @@ Allowed wording:
   derived scalar-kernel enhancement;
 - exact negative boundary that current HS/RPA, ladder-input, same-1PI, and
   Ward/Feshbach surfaces do not hide that scalar-kernel enhancement;
+- open FH/LSZ production postprocess gate: production phase, same-source
+  `dE/ds`, same-source `Gamma_ss(q)`, isolated-pole derivative,
+  FV/IR/zero-mode control, and retained-proposal certification are required
+  before a physical `y_t` claim;
 - bounded-support scalar-source response harness extension: the production
   harness now emits `dE/ds`, but physical `dE/dh` still requires production
   data and derived `kappa_s`;

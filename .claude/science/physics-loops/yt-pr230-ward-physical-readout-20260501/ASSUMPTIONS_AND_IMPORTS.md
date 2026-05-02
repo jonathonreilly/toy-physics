@@ -447,6 +447,12 @@ Forbidden in A_min =
   kappa_s = 1 unless derived by scalar LSZ/canonical normalization
 ```
 
+The FH/LSZ postprocess gate enforces the same firewall for future production
+outputs: a manifest, reduced smoke file, partial production output, or finite
+residue proxy is not physical `y_t` evidence unless the same-source scalar pole
+derivative and FV/IR/zero-mode limit are derived or measured without importing
+the forbidden normalizations above.
+
 Positive-closure candidates left after the assumption exercise:
 
 1. production/statistics with momentum modes plus a derived heavy matching

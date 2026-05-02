@@ -244,6 +244,9 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_kernel_enhancement_import_audit.py`
 - `outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json`
 - `docs/YT_SCALAR_KERNEL_ENHANCEMENT_IMPORT_AUDIT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_fh_lsz_production_postprocess_gate.py`
+- `outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json`
+- `docs/YT_FH_LSZ_PRODUCTION_POSTPROCESS_GATE_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
@@ -325,7 +328,10 @@ Next artifact:
   unit projection the finite ladder has no crossing at retained scout strength
   and the best row would need an underived scalar-kernel multiplier; current
   HS/RPA, ladder-input, same-1PI, and Ward/Feshbach surfaces do not supply that
-  multiplier
+  multiplier; the FH/LSZ production postprocess gate now blocks the manifest
+  and any partial output from counting as evidence until production phase,
+  same-source `dE/ds`, same-source `Gamma_ss(q)`, isolated-pole derivative,
+  FV/IR/zero-mode control, and retained-proposal certification are present
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

@@ -52,6 +52,7 @@ The runner verifies:
 | hidden scalar-kernel enhancement authority exists | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
+| joint FH/LSZ production postprocess gate is ready | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -71,12 +72,15 @@ scripts/frontier_yt_direct_lattice_correlator.py
 ```
 
 This route bypasses the Ward/H-unit definition trap.  The joint manifest now
-gives exact launch commands, but it is not evidence until the production run,
-pole/LSZ analysis, finite-volume/IR control, and audit gate complete.
+gives exact launch commands, and the postprocess gate now states the exact
+acceptance boundary.  It is not evidence until the production run, pole/LSZ
+analysis, finite-volume/IR control, and retained-proposal audit gate complete.
 
 Current blocker: existing certificates are reduced-scope, pilot, or planning
-manifests.  The joint FH/LSZ route projects to about `3630.28` single-worker
-hours before pole-fit and autocorrelation tuning.
+manifests.  The new postprocess gate confirms the three production outputs are
+absent and no isolated-pole `dGamma_ss/dp^2` certificate exists.  The joint
+FH/LSZ route projects to about `3630.28` single-worker hours before pole-fit
+and autocorrelation tuning.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
@@ -150,7 +154,7 @@ open / retained closure not yet reached
 ```
 
 No route currently satisfies retained-proposal conditions.  The next useful
-action is either running the strict production physical-response manifest and
-then fitting pole/LSZ data, or deriving a real scalar two-point
-residue/common-dressing theorem.  More small pilot MC runs do not close PR
-#230.
+action is either launching/scheduling the strict production physical-response
+manifest and then passing the postprocess pole/LSZ gate, or deriving a real
+scalar two-point residue/common-dressing theorem.  More small pilot MC runs do
+not close PR #230.

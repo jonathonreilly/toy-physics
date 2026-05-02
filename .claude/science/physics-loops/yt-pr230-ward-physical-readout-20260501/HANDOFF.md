@@ -236,9 +236,14 @@ What changed:
   production-targeted, resumable commands for the production route.  It is a
   launch surface only: no production output, pole fit, or retained proposal
   certificate exists.
+- The FH/LSZ production postprocess gate now blocks manifest or partial-output
+  evidence claims.  It requires production-phase output, same-source
+  `dE/ds`, same-source `Gamma_ss(q)`, an isolated scalar-pole derivative,
+  FV/IR/zero-mode control, and a retained-proposal certificate before any
+  physical `y_t` wording is allowed.
 - The retained-closure route certificate has been refreshed against the new
-  source-unit, derivative-limit, and production-manifest blocks.  It still
-  reports `proposal_allowed=false`; the remaining positive routes are
+  source-unit, derivative-limit, production-manifest, and postprocess-gate
+  blocks.  It still reports `proposal_allowed=false`; the remaining positive routes are
   production evidence or a scalar pole/common-dressing theorem.
 - The scalar ladder residue-envelope obstruction normalizes away pole-location
   ambiguity by tuning each finite ladder to its own pole.  Even then, the

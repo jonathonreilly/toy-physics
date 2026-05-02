@@ -1,0 +1,121 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ production postprocess gate blocks manifest-as-evidence",
+  "exact_next_action": "Either launch/schedule the manifest and then run this gate on the completed production files plus a pole-fit certificate, or pivot to a new analytic scalar denominator/residue theorem.",
+  "expected_scalar_modes": [
+    "0,0,0",
+    "0,0,1",
+    "0,1,0",
+    "1,0,0"
+  ],
+  "expected_source_shifts": [
+    -0.01,
+    0.0,
+    0.01
+  ],
+  "fail_count": 0,
+  "manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
+  "minimum_scalar_two_point_noises": 16,
+  "pass_count": 9,
+  "postprocess_requirements": [
+    {
+      "reason": "each expected production JSON must be present before evidence is considered",
+      "requirement": "all_manifest_outputs_exist",
+      "satisfied_now": false
+    },
+    {
+      "reason": "reduced_scope and pilot outputs are scout evidence only",
+      "requirement": "all_outputs_mark_phase_production",
+      "satisfied_now": false
+    },
+    {
+      "reason": "the accepted observable is dE_top/ds from symmetric source shifts on the same ensembles",
+      "requirement": "common_ensemble_correlated_dE_ds_fit",
+      "satisfied_now": false
+    },
+    {
+      "reason": "Gamma_ss(q) must be measured for the same additive source with sufficient noise vectors",
+      "requirement": "same_source_scalar_two_point_lsz_modes",
+      "satisfied_now": false
+    },
+    {
+      "reason": "no production pole-fit certificate derives dGamma_ss/dp^2 at an isolated scalar pole",
+      "requirement": "isolated_scalar_pole_and_inverse_derivative_fit",
+      "satisfied_now": false
+    },
+    {
+      "reason": "no current production postprocess proves the FV/IR/zero-mode limiting order for the pole derivative",
+      "requirement": "finite_volume_ir_zero_mode_limit_control",
+      "satisfied_now": false
+    },
+    {
+      "reason": "this gate only accepts same-source LSZ residue measurement and forbids kappa_s=1, H_unit, yt_ward_identity, observed y_t/top mass, c2=1, and Z_match=1 as proof selectors",
+      "requirement": "no_forbidden_normalization_imports",
+      "satisfied_now": true
+    },
+    {
+      "reason": "the retained-proposal certificate has not been run on production pole data and currently remains false",
+      "requirement": "retained_proposal_certificate_passes",
+      "satisfied_now": false
+    }
+  ],
+  "production_output_audits": [
+    {
+      "exists": false,
+      "issues": [
+        "production output absent"
+      ],
+      "label": "L12_T24",
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_2026-05-01.json",
+      "phase": null,
+      "production_phase": false,
+      "retained_evidence_ready": false,
+      "scalar_lsz_ready": false,
+      "source_response_ready": false,
+      "volume": "12x24"
+    },
+    {
+      "exists": false,
+      "issues": [
+        "production output absent"
+      ],
+      "label": "L16_T32",
+      "path": "outputs/yt_pr230_fh_lsz_production_L16_T32_2026-05-01.json",
+      "phase": null,
+      "production_phase": false,
+      "retained_evidence_ready": false,
+      "scalar_lsz_ready": false,
+      "source_response_ready": false,
+      "volume": "16x32"
+    },
+    {
+      "exists": false,
+      "issues": [
+        "production output absent"
+      ],
+      "label": "L24_T48",
+      "path": "outputs/yt_pr230_fh_lsz_production_L24_T48_2026-05-01.json",
+      "phase": null,
+      "production_phase": false,
+      "retained_evidence_ready": false,
+      "scalar_lsz_ready": false,
+      "source_response_ready": false,
+      "volume": "24x48"
+    }
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No production FH/LSZ output and pole-derivative postprocess certificate currently satisfy the acceptance gate.",
+  "raw_production_bundle_ready": false,
+  "retained_proposal_gate_ready": false,
+  "strict_non_claims": [
+    "not production evidence",
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not set c2 or Z_match to one",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0 as proof input",
+    "does not treat reduced cold pilots as production evidence"
+  ],
+  "verdict": "The joint FH/LSZ production manifest is a valid launch surface but not evidence.  The expected production files are absent or incomplete, and even complete raw production files would still need a same-source scalar pole fit, dGamma_ss/dp^2 at the pole, finite-volume/IR/zero-mode control, and a retained-proposal certificate before physical y_t wording is allowed."
+}
