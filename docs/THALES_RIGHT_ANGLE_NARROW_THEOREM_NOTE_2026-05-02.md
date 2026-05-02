@@ -1,0 +1,141 @@
+# Thales Right-Angle Narrow Theorem
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the standalone Euclidean / arctan-algebra identity that any
+point on the upper half of the Thales circle on diameter `[0, 1]` sees that
+diameter under a right angle. This is purely a fact of elementary plane
+geometry; no CKM-specific value, no atlas/Wolfenstein input, no PDG/literature
+data is involved in this note's claim.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+Audit-lane ratification is required before any retained-grade status applies.
+**Runner:** [`scripts/frontier_thales_right_angle_narrow.py`](./../scripts/frontier_thales_right_angle_narrow.py)
+**Authority role:** Pattern A narrow rescope of the load-bearing geometric core
+of [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md).
+
+## Statement
+
+Let `(rho, eta)` be any pair of real numbers satisfying
+
+```text
+0 < rho < 1,
+eta > 0,
+eta^2 = rho * (1 - rho).
+```
+
+That is, `(rho, eta)` lies on the upper half of the Thales circle whose
+diameter is the segment from `(0, 0)` to `(1, 0)` in the Euclidean plane.
+
+**Conclusion.** The triangle with vertices `(0, 0)`, `(1, 0)`, `(rho, eta)`
+has a **right angle at the vertex `(rho, eta)`**, i.e. the two edges meeting
+at `(rho, eta)` are orthogonal in the Euclidean plane.
+
+Equivalently:
+
+```text
+arctan(eta / rho) + arctan(eta / (1 - rho))  =  pi / 2.
+```
+
+## Proof
+
+Let `v_1 = (0, 0) - (rho, eta) = (-rho, -eta)` and
+`v_2 = (1, 0) - (rho, eta) = (1 - rho, -eta)`. Their Euclidean dot product is
+
+```text
+v_1 . v_2  =  (-rho)(1 - rho) + (-eta)(-eta)
+           =  - rho (1 - rho) + eta^2.
+```
+
+By hypothesis `eta^2 = rho (1 - rho)`, hence `v_1 . v_2 = 0`. Two non-zero
+vectors are orthogonal iff their Euclidean dot product is zero, so the angle
+at `(rho, eta)` is exactly `pi / 2`. ∎
+
+The arctan-sum form follows from `tan(a) tan(b) = eta^2 / (rho (1 - rho)) = 1`
+under the same hypothesis, hence `a + b = pi / 2` for `a, b ∈ (0, pi / 2)`.
+
+## What this claims
+
+- The geometric implication: Thales hypothesis ⟹ right angle at the upper
+  vertex.
+- Equivalent arctan-sum identity: `arctan(eta/rho) + arctan(eta/(1-rho)) = pi/2`
+  for any `(rho, eta)` on the upper half of the Thales circle.
+
+## What this does NOT claim
+
+- Does **not** derive `rho = 1/6` or `eta = sqrt(5)/6`. Those are the
+  retained CKM atlas/Wolfenstein parameters carried by separate authority
+  notes (specifically by [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)),
+  whose audit status is decided by the audit lane on those rows.
+- Does **not** claim any physical CKM unitarity-triangle right-angle
+  conclusion. The identity is purely geometric on the abstract pair
+  `(rho, eta)`.
+- Does **not** consume any PDG observed value, literature numerical
+  comparator, fitted selector, or admitted unit convention.
+
+## Relation to the parent CKM atlas right-angle note
+
+[`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md) bundles two
+distinct facts:
+
+1. The **CKM-specific** atlas/Wolfenstein values `(rho, eta) = (1/6, sqrt(5)/6)`.
+2. The **purely geometric** implication that those values sit on the Thales
+   circle and therefore see the diameter under a right angle.
+
+The audit-lane verdict on that parent row is `audited_conditional` because
+the supply of the CKM-specific values depends on the unratified
+[`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) authority.
+
+This narrow theorem isolates fact (2) from fact (1). The hypothesis
+`eta^2 = rho (1 - rho)` is **stated** rather than imported. Whether any
+specific `(rho, eta)` pair lies on the Thales circle is a separate
+question that this note does not adjudicate; the implication "on the
+Thales circle ⇒ right angle at the upper vertex" holds unconditionally.
+
+In particular, IF the audit lane later ratifies the CKM atlas/Wolfenstein
+values at retained-grade, this narrow theorem can be cited to immediately
+conclude the right-angle geometry on the rescaled atlas triangle without
+having to re-prove the implication. The two facts can be ratified
+independently.
+
+## Cited dependencies
+
+None. This note has zero ledger dependencies because it states only
+elementary Euclidean / arctan-algebra content. The hypothesis
+`eta^2 = rho (1 - rho)` is a premise of the implication, not a ledger
+import.
+
+## Forbidden imports check
+
+- No PDG observed values consumed.
+- No literature numerical comparators consumed.
+- No fitted selectors consumed.
+- No admitted unit conventions load-bearing on retention.
+- No same-surface family arguments.
+
+## Validation
+
+Primary runner: [`scripts/frontier_thales_right_angle_narrow.py`](./../scripts/frontier_thales_right_angle_narrow.py)
+verifies (PASS=18/0):
+
+1. Symbolic dot-product reduction: at vertex `(rho, eta)`, the edge-dot
+   product equals `eta^2 - rho(1 - rho)`, which is zero exactly under the
+   Thales hypothesis.
+2. Symbolic arctan-product form: `tan(a) * tan(b) = eta^2 / (rho(1 - rho))`
+   reduces to `1` under the Thales hypothesis.
+3. Concrete instances on the Thales circle (CKM atlas point, midpoint,
+   two further rational points): each verified for both the Thales
+   hypothesis and the right-angle conclusion at exact / 50-digit
+   precision.
+4. Independence: a non-CKM-specific instance `(rho, eta) = (7/13, sqrt(42)/13)`
+   confirms the identity holds for any Thales-circle point, with no
+   special CKM input.
+
+## Cross-references
+
+- [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md) — parent
+  bundled note that supplies the CKM atlas-specific `(rho, eta)` values.
+- [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) — upstream
+  authority for the CKM atlas `(rho, eta)` values; not consumed by this
+  narrow note.
