@@ -60,6 +60,7 @@ def main() -> int:
         "scalar_kernel_ward_identity": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
         "scalar_zero_mode_limit_order": "outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json",
         "zero_mode_prescription_import": "outputs/yt_zero_mode_prescription_import_audit_2026-05-01.json",
+        "flat_toron_denominator": "outputs/yt_flat_toron_scalar_denominator_obstruction_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -133,6 +134,10 @@ def main() -> int:
     zero_mode_import_audit_blocks_hidden_authority = (
         "zero-mode prescription import audit" in certificates["zero_mode_prescription_import"].get("actual_current_surface_status", "")
         and certificates["zero_mode_prescription_import"].get("proposal_allowed") is False
+    )
+    flat_toron_blocks_trivial_selection = (
+        "flat toron scalar-denominator obstruction" in certificates["flat_toron_denominator"].get("actual_current_surface_status", "")
+        and certificates["flat_toron_denominator"].get("proposal_allowed") is False
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -215,6 +220,11 @@ def main() -> int:
         certificates["zero_mode_prescription_import"].get("actual_current_surface_status", ""),
     )
     report(
+        "flat-toron-sectors-block-trivial-zero-mode-selection",
+        flat_toron_blocks_trivial_selection,
+        certificates["flat_toron_denominator"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -285,7 +295,8 @@ def main() -> int:
             "interacting scalar denominator, zero-mode/IR limiting order, pole "
             "residue envelope, Ward/gauge kernel derivative gap, exact zero-mode "
             "limit-order prescription, absence of a hidden zero-mode import, "
-            "and common dressing.  These cannot be assumed."
+            "flat-toron sector selection, and common dressing.  These cannot be "
+            "assumed."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",

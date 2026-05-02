@@ -1180,3 +1180,29 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The audit finds no hidden current-surface authority for the scalar
 zero-mode/IR/finite-volume prescription.  It is a no-hidden-import check, not
 closure.
+
+## Review-Loop Backpressure - Flat-Toron Scalar-Denominator Obstruction
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_flat_toron_scalar_denominator_obstruction.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_flat_toron_scalar_denominator_obstruction.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The flat-toron obstruction shows trivial zero-mode sector selection is not
+derived by the compact plaquette action.  It does not authorize retained or
+proposed-retained wording.

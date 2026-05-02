@@ -723,6 +723,20 @@ not a PR #230 scalar zero-mode theorem; continuum identification warns about
 alternative gauge fixings; the production manifest requires zero-mode control;
 and scalar ladder certificates keep `proposal_allowed=false`.
 
+Flat toron scalar-denominator shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_flat_toron_scalar_denominator_obstruction.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+Constant commuting Cartan links have zero plaquette action but distinct
+Polyakov phases.  In the finite scalar-source bubble proxy, those phases shift
+charged fermion momenta and change the inverse scalar-denominator proxy by
+`1.05244x` on the scan.  Therefore the compact action does not by itself select
+the trivial gauge zero mode; a toron/zero-mode prescription remains
+load-bearing.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

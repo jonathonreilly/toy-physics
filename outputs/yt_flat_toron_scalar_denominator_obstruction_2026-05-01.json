@@ -1,0 +1,94 @@
+{
+  "actual_current_surface_status": "exact negative boundary / flat toron scalar-denominator obstruction",
+  "fail_count": 0,
+  "parameters": {
+    "color_phases": "diag(exp(i theta), exp(-i theta), 1)",
+    "grid_size_4d": 8,
+    "mass": 0.5,
+    "theta_values": [
+      0.0,
+      0.04908738521234052,
+      0.09817477042468103,
+      0.19634954084936207,
+      0.39269908169872414
+    ]
+  },
+  "parent_certificate": "outputs/yt_zero_mode_prescription_import_audit_2026-05-01.json",
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Flat gauge zero-mode sectors are action-degenerate but change scalar denominator proxies.",
+  "required_next_theorem": [
+    "derive whether flat Cartan toron sectors are fixed, averaged, or suppressed in the scalar-channel denominator",
+    "derive the associated gauge-fixing and zero-mode prescription",
+    "prove the scalar pole and inverse-propagator derivative in that selected sector or average",
+    "or measure the pole derivative in production with the prescription explicitly fixed"
+  ],
+  "scan": [
+    {
+      "grid_size_4d": 8,
+      "inverse_scalar_bubble_proxy": 2.8151916174311062,
+      "mass": 0.5,
+      "normalized_polyakov_trace_imag": 0.0,
+      "normalized_polyakov_trace_real": 1.0,
+      "plaquette_action_density": 0.0,
+      "scalar_bubble_proxy": 0.3552156072816497,
+      "theta": 0.0
+    },
+    {
+      "grid_size_4d": 8,
+      "inverse_scalar_bubble_proxy": 2.8212451843066666,
+      "mass": 0.5,
+      "normalized_polyakov_trace_imag": 0.0,
+      "normalized_polyakov_trace_real": 0.9492530216741911,
+      "plaquette_action_density": 0.0,
+      "scalar_bubble_proxy": 0.3544534184985253,
+      "theta": 0.04908738521234052
+    },
+    {
+      "grid_size_4d": 8,
+      "inverse_scalar_bubble_proxy": 2.8382857299063557,
+      "mass": 0.5,
+      "normalized_polyakov_trace_imag": 0.0,
+      "normalized_polyakov_trace_real": 0.8047378541243649,
+      "plaquette_action_density": 0.0,
+      "scalar_bubble_proxy": 0.3523253453530886,
+      "theta": 0.09817477042468103
+    },
+    {
+      "grid_size_4d": 8,
+      "inverse_scalar_bubble_proxy": 2.8918905954054672,
+      "mass": 0.5,
+      "normalized_polyakov_trace_imag": 0.0,
+      "normalized_polyakov_trace_real": 0.33333333333333337,
+      "plaquette_action_density": 0.0,
+      "scalar_bubble_proxy": 0.34579454754919303,
+      "theta": 0.19634954084936207
+    },
+    {
+      "grid_size_4d": 8,
+      "inverse_scalar_bubble_proxy": 2.962826004219128,
+      "mass": 0.5,
+      "normalized_polyakov_trace_imag": 0.0,
+      "normalized_polyakov_trace_real": -0.3333333333333333,
+      "plaquette_action_density": 0.0,
+      "scalar_bubble_proxy": 0.3375156011780572,
+      "theta": 0.39269908169872414
+    }
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "verdict": "Constant commuting SU(3) Cartan links have zero plaquette action but distinct Polyakov phases.  In the scalar-source bubble proxy they shift charged fermion momenta and change the inverse scalar-denominator readout.  Therefore the compact lattice action does not by itself select the trivial gauge zero mode used by a finite ladder denominator.  PR #230 still needs a retained gauge-fixing/toron/zero-mode prescription or production pole data with that prescription fixed.",
+  "witnesses": {
+    "inverse_scalar_bubble_spread": 1.052442038358561,
+    "max_plaquette_action_density": 0.0,
+    "max_polyakov_deviation_from_trivial": 1.3333333333333333,
+    "max_relative_scalar_bubble_shift_from_trivial": 0.04982890881131306,
+    "scalar_bubble_spread": 1.052442038358561
+  }
+}

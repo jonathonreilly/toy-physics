@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=21 FAIL=0
+# SUMMARY: PASS=22 FAIL=0
 ```
 
 The runner verifies:
@@ -39,6 +39,7 @@ The runner verifies:
 | Ward/gauge identities fix `K'(x_pole)` | no |
 | zero-mode / IR / finite-volume limiting order is selected | no |
 | hidden repo authority supplies zero-mode prescription | no |
+| compact action selects trivial flat toron sector | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
@@ -93,6 +94,9 @@ not a numerical nuisance: retaining the gauge zero mode adds a positive
 scalar denominators until a prescription is derived.  The import audit checks
 the strongest current PT, continuum-identification, manifest, and scalar
 ladder surfaces and finds no hidden authority that selects that prescription.
+The flat-toron check further shows constant commuting gauge zero modes have
+zero plaquette action but change scalar-denominator proxies, so selecting the
+trivial sector is itself a theorem/prescription.
 
 ### Route 3: New Selector Theorem
 

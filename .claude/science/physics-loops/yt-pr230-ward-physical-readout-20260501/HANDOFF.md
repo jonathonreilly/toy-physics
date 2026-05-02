@@ -333,4 +333,6 @@ limit first, volume first, or a box-scaled regulator path gives different
 scalar denominators unless a prescription is derived.  The zero-mode
 prescription import audit checks the strongest current PT,
 continuum-identification, manifest, and scalar-ladder surfaces; none supplies
-that prescription.
+that prescription.  The flat-toron block shows why trivial-sector selection is
+not automatic: constant commuting Cartan links have zero plaquette action but
+change scalar denominator proxies through Polyakov phases.

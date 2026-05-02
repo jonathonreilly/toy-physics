@@ -289,3 +289,18 @@ Adds a zero-mode prescription import audit:
 - still no retained/proposed-retained closure: a new prescription theorem or
   production same-source pole data is required.
 ```
+
+Latest flat-toron scalar-denominator checkpoint text for PR #230:
+
+```text
+Adds a flat-toron scalar-denominator obstruction:
+- constant commuting Cartan links have zero plaquette action but distinct
+  Polyakov phases;
+- validator passes `PASS=7 FAIL=0`; retained-route gate reports
+  `PASS=22 FAIL=0`; campaign status now consumes 52 route certificates and
+  reports `PASS=48 FAIL=0`;
+- scalar bubble and inverse-denominator proxies change across those flat
+  sectors, so the compact action does not select the trivial zero mode;
+- still no retained/proposed-retained closure: the toron/zero-mode sector
+  prescription or production pole data remains load-bearing.
+```

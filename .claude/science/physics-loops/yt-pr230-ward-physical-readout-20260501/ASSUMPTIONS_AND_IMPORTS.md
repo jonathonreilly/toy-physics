@@ -282,6 +282,17 @@ note warns about alternative gauge fixings, and the production manifest
 requires finite-volume/IR/zero-mode control.  None can be used as the missing
 PR #230 scalar denominator prescription.
 
+Flat toron sector boundary:
+
+```text
+constant commuting Cartan links: plaquette action = 0
+scalar bubble / inverse denominator proxy changes with Polyakov phase
+```
+
+The compact action does not select the trivial toron sector.  A route that
+uses the trivial zero mode, removes the zero mode, or averages torons must
+derive that prescription before using the scalar denominator as LSZ input.
+
 Source-reparametrization gauge boundary:
 
 ```text

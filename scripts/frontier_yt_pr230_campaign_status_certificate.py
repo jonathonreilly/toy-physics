@@ -81,6 +81,7 @@ def main() -> int:
         "scalar_kernel_ward_identity": load("outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json"),
         "scalar_zero_mode_limit_order": load("outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json"),
         "zero_mode_prescription_import": load("outputs/yt_zero_mode_prescription_import_audit_2026-05-01.json"),
+        "flat_toron_denominator": load("outputs/yt_flat_toron_scalar_denominator_obstruction_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -295,6 +296,12 @@ def main() -> int:
         "zero-mode prescription import audit" in str(statuses["zero_mode_prescription_import"])
         or "exact negative boundary" in str(statuses["zero_mode_prescription_import"]),
         statuses["zero_mode_prescription_import"],
+    )
+    report(
+        "flat-toron-sectors-change-scalar-denominator",
+        "flat toron scalar-denominator obstruction" in str(statuses["flat_toron_denominator"])
+        or "exact negative boundary" in str(statuses["flat_toron_denominator"]),
+        statuses["flat_toron_denominator"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",
