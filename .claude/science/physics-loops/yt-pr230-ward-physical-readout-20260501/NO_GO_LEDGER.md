@@ -51,6 +51,17 @@ python3 scripts/frontier_yt_fh_lsz_pole_fit_model_class_gate.py
 The current gate is open/blocking because no production pole fit and no
 model-class certificate are present.
 
+Chunk001 production checkpoint:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Chunk001 is production-phase and combiner-ready, but it is only `1/63` of L12.
+No combined L12 summary, L16/L24 scaling, pole derivative, model-class
+certificate, or FV/IR/zero-mode control exists.  It is bounded support only.
+
 `R_conn = 8/9` does not by itself derive the scalar pole residue:
 
 ```text

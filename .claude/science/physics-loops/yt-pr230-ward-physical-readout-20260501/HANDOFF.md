@@ -467,8 +467,13 @@ The FH/LSZ pole-fit model-class gate now makes that rule executable.  It
 blocks finite-shell pole fits unless a model-class, analytic-continuation,
 pole-saturation, continuum, or microscopic scalar-denominator certificate is
 present.
+Chunk001 of the L12_T24 FH/LSZ production manifest has completed.  It is
+production-phase and combiner-ready, with same-source `dE/ds` and four-mode
+same-source scalar-LSZ rows.  The combiner remains blocking because only
+`1/63` L12 chunks are ready, and L16/L24 plus pole/model-class/FV/IR gates are
+still open.
 
-Next exact action: keep chunk001 running under the non-evidence combiner gate.
-If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
-If it remains running, continue analytic scalar denominator/model-class work or
-schedule the paired x8/x16 calibration if compute is available.
+Next exact action: launch or schedule chunk002 with the same chunk-local
+production protocol, while keeping the combiner/model-class gates blocking any
+retained claim.  Continue analytic scalar denominator/model-class work in
+parallel if compute is unavailable.

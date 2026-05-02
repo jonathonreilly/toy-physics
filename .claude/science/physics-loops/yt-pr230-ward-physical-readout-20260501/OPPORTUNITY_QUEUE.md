@@ -137,6 +137,9 @@ probability.
   `dGamma_ss/dp^2`.  The model-class gate now makes that boundary executable
   and blocks finite-shell pole fits until a model-class, pole-saturation,
   continuum, or scalar-denominator certificate exists.
+  Chunk001 is now complete and combiner-ready, which validates the chunk-local
+  protocol but does not change claim status: it is `1/63` of L12 and still
+  lacks L16/L24 scaling, pole/model-class, and FV/IR gates.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

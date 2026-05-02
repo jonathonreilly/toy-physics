@@ -765,3 +765,18 @@ Adds an FH/LSZ pole-fit model-class gate:
 - still no retained/proposed-retained closure: no production fit and no
   model-class certificate are present.
 ```
+
+Latest FH/LSZ chunk001 production checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ chunk001 production checkpoint:
+- chunk001 completed with production-phase metadata, same-source dE/ds, and
+  four-mode/x16 same-source scalar C_ss(q) rows;
+- the chunk combiner now sees present=1 ready=1 expected=63 and remains
+  blocking because no combined L12 summary exists;
+- runner passes `PASS=10 FAIL=0`; retained-route gate reports `PASS=49 FAIL=0`;
+  campaign status consumes 79 certificates and reports `PASS=75 FAIL=0`;
+- still no retained/proposed-retained closure: L12 needs 62 more chunks, then
+  L16/L24 scaling, pole/model-class gates, FV/IR control, and retained-proposal
+  certification.
+```

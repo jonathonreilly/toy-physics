@@ -890,3 +890,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 Finite-shell pole fits remain blocked as retained evidence unless a
 model-class, analytic-continuation, pole-saturation, continuum, or scalar
 denominator certificate excludes shell-vanishing derivative deformations.
+
+FH/LSZ chunk001 production checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ chunk001 production checkpoint
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=49 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=75 FAIL=0
+```
+
+One L12 production chunk is present and combiner-ready.  It is still partial
+bounded support only: no combined L12, L16/L24 scaling, pole derivative,
+model-class certificate, FV/IR control, or retained proposal gate is present.

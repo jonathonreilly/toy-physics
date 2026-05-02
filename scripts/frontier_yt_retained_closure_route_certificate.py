@@ -81,6 +81,7 @@ def main() -> int:
         "fh_lsz_production_checkpoint_granularity": "outputs/yt_fh_lsz_production_checkpoint_granularity_gate_2026-05-01.json",
         "fh_lsz_chunked_production_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
         "fh_lsz_chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+        "fh_lsz_chunk001_checkpoint": "outputs/yt_fh_lsz_chunk001_checkpoint_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
         "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
         "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
@@ -298,7 +299,14 @@ def main() -> int:
         "chunk combiner gate"
         in certificates["fh_lsz_chunk_combiner_gate"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_chunk_combiner_gate"].get("proposal_allowed") is False
-        and certificates["fh_lsz_chunk_combiner_gate"].get("chunk_summary", {}).get("ready_chunks") == 0
+        and int(certificates["fh_lsz_chunk_combiner_gate"].get("chunk_summary", {}).get("ready_chunks", 0))
+        < int(certificates["fh_lsz_chunk_combiner_gate"].get("chunk_summary", {}).get("expected_chunks", 1))
+    )
+    chunk001_checkpoint_not_closure = (
+        "chunk001 production checkpoint"
+        in certificates["fh_lsz_chunk001_checkpoint"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_chunk001_checkpoint"].get("proposal_allowed") is False
+        and certificates["fh_lsz_chunk001_checkpoint"].get("chunk_summary", {}).get("combiner_ready_chunks") == 1
     )
     pole_fit_kinematics_not_closure = (
         "scalar-pole kinematics gate"
@@ -529,6 +537,11 @@ def main() -> int:
         certificates["fh_lsz_chunk_combiner_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-chunk001-checkpoint-not-closure",
+        chunk001_checkpoint_not_closure,
+        certificates["fh_lsz_chunk001_checkpoint"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-kinematics-not-closure",
         pole_fit_kinematics_not_closure,
         certificates["fh_lsz_pole_fit_kinematics"].get("actual_current_surface_status", ""),
@@ -662,7 +675,9 @@ def main() -> int:
             "but it is not production evidence and does not cover L16/L24.  "
             "The chunk combiner gate now rejects absent or partial chunks and "
             "requires production metadata plus run-control provenance before "
-            "even an L12 combined summary can be constructed.  Chunk launch "
+            "even an L12 combined summary can be constructed.  Chunk001 has "
+            "now completed and is combiner-ready, but it is only one of 63 L12 "
+            "chunks and no combined L12 summary exists.  Chunk launch "
             "commands now isolate per-volume artifacts in chunk-local output "
             "directories and use per-chunk resume.  "
             "The scalar pole-fit kinematics gate also shows the current four "
@@ -712,7 +727,9 @@ def main() -> int:
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action.  Before treating any finite-shell pole fit as "
+            "the retained action.  Continue chunked production with chunk002 "
+            "or scheduler handoff; do not treat chunk001 as retained evidence.  "
+            "Before treating any finite-shell pole fit as "
             "load-bearing, add a model-class/analytic-continuation gate or a "
             "theorem excluding shell-vanishing derivative deformations.  If "
             "using the eight-mode/eight-noise foreground "

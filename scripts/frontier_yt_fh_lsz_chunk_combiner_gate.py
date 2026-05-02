@@ -335,11 +335,16 @@ def main() -> int:
     report("no-forbidden-physical-readout-in-present-chunks", all(not row.get("issues") or "used_as_physical_yukawa_readout" not in " ".join(row.get("issues", [])) for row in present), f"present={len(present)}")
     report("l12-alone-not-retained-closure", True, "L16/L24 and pole derivative/FV/IR gates remain required")
 
+    chunk_sentence = (
+        "No current chunk outputs are ready."
+        if not ready
+        else f"{len(ready)} of {len(chunks)} L12 chunk outputs are ready; the set is still partial."
+    )
     result = {
         "actual_current_surface_status": "open / FH-LSZ chunk combiner gate blocks partial evidence",
         "verdict": (
             "The L12 chunked FH/LSZ path now has an auditable combiner gate. "
-            "No current chunk outputs are ready.  Future chunks must expose "
+            f"{chunk_sentence}  Chunks must expose "
             "production phase, same-source dE/ds and C_ss(q), scalar-source "
             "non-readout metadata, and run-control provenance before an L12 "
             "combined summary can be constructed.  Even a complete L12 "
@@ -348,7 +353,7 @@ def main() -> int:
             "control, and the retained-proposal certificate remain open."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "The combiner is an acceptance boundary for future chunks; it supplies no completed production data and no scalar pole derivative.",
+        "proposal_allowed_reason": "The combiner is an acceptance boundary; the current chunk set is partial and supplies no combined L12 output or scalar pole derivative.",
         "manifest": str(MANIFEST.relative_to(ROOT)),
         "combined_output_target": str(COMBINED_OUTPUT.relative_to(ROOT)),
         "chunk_summary": {
