@@ -95,6 +95,9 @@ def main() -> int:
         "taste_singlet_ladder_normalization": load(
             "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json"
         ),
+        "scalar_taste_projector_normalization_attempt": load(
+            "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json"
+        ),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -360,6 +363,12 @@ def main() -> int:
         statuses["taste_singlet_ladder_normalization"],
     )
     report(
+        "scalar-taste-projector-normalization-attempt-still-open",
+        "scalar taste-projector normalization theorem attempt blocked"
+        in str(statuses["scalar_taste_projector_normalization_attempt"]),
+        statuses["scalar_taste_projector_normalization_attempt"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -503,7 +512,9 @@ def main() -> int:
             "corners.  Normalized taste-singlet source weighting over the 16 "
             "corners rescales the finite witnesses by 1/16 and also removes "
             "every crossing.  Thus the finite ladder witnesses rely on an "
-            "unfixed taste/projector normalization and do not supply the "
+            "unfixed taste/projector normalization; the unit taste-singlet "
+            "projector is only algebra until a physical scalar carrier and "
+            "pole derivative theorem are derived.  They do not supply the "
             "interacting scalar pole/LSZ "
             "theorem."
         ),

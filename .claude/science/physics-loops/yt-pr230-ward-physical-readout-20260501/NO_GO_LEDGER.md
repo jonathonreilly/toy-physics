@@ -849,6 +849,23 @@ unnormalized taste multiplicity is therefore load-bearing and cannot be used
 as scalar pole/LSZ evidence without a retained scalar taste/projector
 normalization theorem.
 
+Scalar taste/projector normalization theorem attempt is blocked at the
+physical-carrier step:
+
+```text
+python3 scripts/frontier_yt_scalar_taste_projector_normalization_attempt.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The unit taste singlet over the 16 corners is algebraically available, with
+`O_singlet=(1/sqrt(16)) sum_t O_t` and norm squared `1`.  The unnormalized
+local corner sum has norm squared `16`.  This algebra explains the `1/16`
+ladder rescaling, but it does not identify the physical scalar carrier:
+`s O_local = (sqrt(16) s) O_singlet`, so the source-coordinate normalization
+and canonical Higgs metric still require an LSZ/pole theorem or production
+same-source pole data.  The current taste-carrier audit also still supplies no
+retained authority for non-origin corners as the physical scalar carrier.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

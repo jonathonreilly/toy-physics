@@ -420,3 +420,19 @@ Adds a taste-singlet ladder normalization boundary:
   normalization, continuum pole derivative, or production FH/LSZ pole data
   remains required.
 ```
+
+Latest scalar taste-projector normalization-attempt checkpoint text for PR #230:
+
+```text
+Adds a scalar taste-projector normalization theorem attempt:
+- derives the unit taste-singlet projector algebra over the 16 BZ corners,
+  `O_singlet=(1/sqrt(16)) sum_t O_t`;
+- validator passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=30 FAIL=0`; campaign status now consumes 60 route certificates and
+  reports `PASS=56 FAIL=0`;
+- the unnormalized local corner sum has norm squared `16`, and the source term
+  can absorb this factor as `s O_local = (sqrt(16) s) O_singlet`;
+- still no retained/proposed-retained closure: the physical scalar carrier,
+  source-to-Higgs normalization, and interacting pole derivative `K'(x_pole)`
+  remain open, or must be measured in production same-source FH/LSZ data.
+```

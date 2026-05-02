@@ -68,6 +68,7 @@ def main() -> int:
         "taste_corner_ladder_pole_obstruction": "outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json",
         "taste_carrier_import_audit": "outputs/yt_taste_carrier_import_audit_2026-05-01.json",
         "taste_singlet_ladder_normalization": "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json",
+        "scalar_taste_projector_normalization_attempt": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -184,6 +185,17 @@ def main() -> int:
             )
         )
         < 1.0
+    )
+    scalar_taste_projector_attempt_blocked = (
+        "scalar taste-projector normalization theorem attempt blocked"
+        in certificates["scalar_taste_projector_normalization_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["scalar_taste_projector_normalization_attempt"].get("proposal_allowed") is False
+        and certificates["scalar_taste_projector_normalization_attempt"].get("taste_space", {}).get(
+            "corner_count"
+        )
+        == 16
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -306,6 +318,13 @@ def main() -> int:
         certificates["taste_singlet_ladder_normalization"].get("actual_current_surface_status", ""),
     )
     report(
+        "scalar-taste-projector-normalization-attempt-blocked",
+        scalar_taste_projector_attempt_blocked,
+        certificates["scalar_taste_projector_normalization_attempt"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -388,7 +407,10 @@ def main() -> int:
             "that admits those corners as the physical scalar carrier.  A "
             "normalized taste-singlet source over the 16 corners also rescales "
             "the finite ladder eigenvalues by 1/16 and removes every finite "
-            "crossing, so unnormalized taste multiplicity is load-bearing.  The "
+            "crossing, so unnormalized taste multiplicity is load-bearing.  A "
+            "unit taste singlet can be constructed algebraically, but the "
+            "source functional still permits source-coordinate rescaling and "
+            "does not identify the physical scalar carrier or K'(x_pole).  The "
             "actual interacting scalar pole derivative theorem and production "
             "evidence remain open.  "
             "These cannot be assumed."

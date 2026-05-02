@@ -373,6 +373,18 @@ witness drops below `lambda_max = 1`.  Therefore any scalar-pole route must
 derive which taste/projector normalization is physical; it cannot use the
 unnormalized 16-corner multiplicity as a hidden proof input.
 
+Scalar taste/projector normalization attempt:
+
+```text
+O_singlet = (1/sqrt(16)) sum_t O_t
+s O_local = (sqrt(16) s) O_singlet
+```
+
+The unit projector algebra is allowed support, but it does not fix the
+canonical scalar source coordinate, physical taste carrier, or pole derivative.
+Those remain imports unless derived from the source functional plus interacting
+LSZ pole, or measured in same-source production data.
+
 Source-reparametrization gauge boundary:
 
 ```text

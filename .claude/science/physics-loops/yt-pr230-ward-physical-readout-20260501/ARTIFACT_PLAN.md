@@ -235,6 +235,9 @@ Completed in block 1:
 - `scripts/frontier_yt_taste_singlet_ladder_normalization_boundary.py`
 - `outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json`
 - `docs/YT_TASTE_SINGLET_LADDER_NORMALIZATION_BOUNDARY_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_taste_projector_normalization_attempt.py`
+- `outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json`
+- `docs/YT_SCALAR_TASTE_PROJECTOR_NORMALIZATION_ATTEMPT_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
@@ -309,7 +312,9 @@ Next artifact:
   taste-carrier import audit finds no current retained authority admitting
   those corners as the physical scalar carrier; normalized taste-singlet
   source weighting divides the same finite witnesses by 16 and removes every
-  crossing, so the unnormalized taste multiplicity is load-bearing
+  crossing, so the unnormalized taste multiplicity is load-bearing; the unit
+  taste-singlet projector can be constructed algebraically, but that does not
+  identify the physical scalar carrier or interacting pole derivative
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

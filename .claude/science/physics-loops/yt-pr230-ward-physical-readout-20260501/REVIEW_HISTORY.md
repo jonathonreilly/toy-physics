@@ -1393,3 +1393,31 @@ corners divides every finite zero-mode-removed ladder crossing witness by
 `16` and removes all crossings.  The unnormalized taste multiplicity is
 load-bearing, so a retained scalar taste/projector theorem or production
 same-source pole data remains required.
+
+## Review-Loop Backpressure - Scalar Taste-Projector Normalization Attempt
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_scalar_taste_projector_normalization_attempt.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_scalar_taste_projector_normalization_attempt.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The attempt derives the unit taste-singlet projector algebra over the 16 BZ
+corners, but this remains exact support only.  The source coordinate can absorb
+the same normalization factor, and no current retained authority identifies
+the physical scalar carrier or derives the interacting pole derivative
+`K'(x_pole)`.

@@ -366,4 +366,9 @@ taste-singlet normalization boundary then checks the constructive singlet
 normalization: applying normalized source weight over the 16 BZ corners divides
 each finite witness by `16` and removes every crossing.  The live blocker is
 therefore a retained scalar taste/projector normalization theorem plus the
-interacting pole derivative, or production same-source FH/LSZ pole data.
+interacting pole derivative, or production same-source FH/LSZ pole data.  The
+scalar taste/projector theorem attempt now separates the algebraic and
+physical parts: the unit taste singlet `O_singlet=(1/sqrt(16)) sum_t O_t` is
+available, but the source term can absorb the same factor into the source
+coordinate and no current retained authority identifies the physical scalar
+carrier or derives `K'(x_pole)`.
