@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:58:46.860939+00:00
+**Generated:** 2026-05-02T02:05:40.313512+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 367 |
+| `audited_clean` | 368 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 420 |
+| `unaudited` | 419 |
 
 | criticality | count |
 |---|---:|
@@ -446,6 +446,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_constraint_action_stationarity_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_lambda_bypass_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
+| `valley_linear_asymptotic_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_equation_gravity_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -16502,6 +16503,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `valley_linear_action_note -> scripts/valley_linear_same_harness_compare.py (registered runner exceeds audit-loop wall-time budget)`
 - **auditor confidence:** medium
+
+### `valley_linear_asymptotic_bridge_note`
+
+- **Note:** [`VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`](../../docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The ordered 3D valley-linear lane gives a near-Newtonian finite-lattice replay, but the asymptotic bridge is still slice-dependent and not an exact universal -1.00 theorem.  _(class `C`)_
+- **chain closes:** True — The source note is bounded to a finite-lattice replay and explicitly does not claim an exact continuum law. The registered runner reproduced the note's three-slice table, including TOWARD persistence, Born-clean controls, F~M=1.00, and the moving far-tail exponent.
+- **rationale:** The current run reproduced the frozen/current-main replay values: coarse anchor TOWARD 7/9 with far tail -1.47, core retained TOWARD 9/9 with far tail -1.12, and wide replay TOWARD 9/9 with far tail -1.00. The claim is deliberately bounded to near-Newtonian finite-lattice behavior and states that the far-tail exponent remains slice-dependent. Residual risk is the long runtime of the registered runner, not a mismatch in the bounded numerical claim.
+- **auditor confidence:** high
 
 ### `valley_linear_continuum_synthesis_note`
 
