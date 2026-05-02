@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:43:57.359445+00:00
+**Generated:** 2026-05-02T01:46:28.389835+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 364 |
+| `audited_clean` | 365 |
 | `audited_conditional` | 667 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 425 |
+| `unaudited` | 424 |
 
 | criticality | count |
 |---|---:|
@@ -442,6 +442,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_block_ident_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_block_normalization_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_canonical_projector_connection_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
+| `universal_gr_complement_canonical_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -16033,6 +16034,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md`
 - **auditor confidence:** high
+
+### `universal_gr_complement_canonical_note`
+
+- **Note:** [`UNIVERSAL_GR_COMPLEMENT_CANONICAL_NOTE.md`](../../docs/UNIVERSAL_GR_COMPLEMENT_CANONICAL_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-gpt5-current-restricted-f161`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The current atlas does not canonically split E \oplus T1; it only fixes the invariant A1 core and the complement orbit.  _(class `A`)_
+- **chain closes:** True — For the bounded claim actually made, the algebraic checks support a canonical rank-2 Pi_A1 core, SO(3) closure on the complement, invariant A1 block data, and nontrivial orbit-valued complement response. This closes only as a current-atlas obstruction, not as an absolute no-go theorem against future added invariants.
+- **rationale:** The note is correctly framed as bounded: it does not claim a canonical complement section, and its strongest statement is the negative orbit-canonical obstruction. The runner passes the relevant algebraic invariance/orbit checks, but five text-presence checks use a hardcoded external ROOT and were treated only as ancillary input verification, not as authority over this checkout. No hidden physical comparator, tuned numerical match, or definition-as-derivation is load-bearing.
+- **auditor confidence:** medium
 
 ### `universal_gr_discrete_global_closure_note`
 
