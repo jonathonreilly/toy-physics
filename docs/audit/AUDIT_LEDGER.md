@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:20:31.424870+00:00
+**Generated:** 2026-05-02T00:21:49.878044+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 338 |
+| `audited_clean` | 339 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 466 |
+| `unaudited` | 465 |
 
 | criticality | count |
 |---|---:|
@@ -406,6 +406,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_family_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_new_family_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_new_family_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_generated_support_recovery_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14675,6 +14676,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md`
   - `SOURCE_RESOLVED_GENERATED_FAMILY_PROBE_NOTE.md`
   - `SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_generated_support_recovery_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The kNN-floor connectivity tweak broadens detector support and moves the aggregated centroid sign from AWAY to TOWARD, but the detector distribution remains localized enough that this is only partial recovery.  _(class `C`)_
+- **chain closes:** True — The runner reproduces the note's zero-source checks, detector support table, and sign counts for the declared compact generated family and kNN-floor tweak. The note keeps the claim bounded and does not promote it to generated-family transfer closure.
+- **rationale:** The current runner output matches all frozen values: baseline shift -4.357340e-02 with N_eff 2.77, support fraction 0.311, peak share 0.234, and 1/4 TOWARD; kNN floor shift +3.850909e-01 with N_eff 6.00, support fraction 0.458, peak share 0.439, and 3/4 TOWARD. The note's limitation is explicit: support and sign improve, but localization remains strong. Residual risk is limited to the single source strength and compact generated-family tweak under test.
 - **auditor confidence:** high
 
 ### `source_resolved_propagating_green_pocket_note`

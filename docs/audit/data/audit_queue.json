@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 135,
+    "leaf": 134,
     "medium": 130
   },
-  "generated_at": "2026-05-02T00:20:31.190350+00:00",
+  "generated_at": "2026-05-02T00:21:49.646383+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_generated_support_recovery_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/source_resolved_generated_support_recovery.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "source_resolved_generated_wavefield_bridge_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12654,6 +12637,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 55,
-  "total_pending": 466
+  "ready_count": 54,
+  "total_pending": 465
 }
