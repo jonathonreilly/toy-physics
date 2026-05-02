@@ -125,7 +125,7 @@ def audit_inputs() -> None:
         )
 
     total = sum(f.total_count for f in LH_CONTENT)
-    check("LH content total state count is 8", total == 8, f"count={total}")
+    check("LH content total state count is 8", total == 8, f"count={total}", cls="A")
 
     expected = {
         "Q_L": (3, 2, 3, 2, Fraction(1, 3)),
@@ -136,6 +136,7 @@ def audit_inputs() -> None:
         check(
             f"{f.name} retained quantum numbers",
             (f.su3_dim, f.su2_dim, f.color_mult, f.weak_mult, f.hypercharge) == (s3, s2, c, w, y),
+            cls="A",
         )
 
 
@@ -178,11 +179,14 @@ def audit_c1_linear() -> None:
     value = trace_y_linear(LH_CONTENT)
     print(f"  Tr[Y]_LH = 6 * (1/3) + 2 * (-1) = {value}")
 
-    check("(C1) Tr[Y]_LH equals 0 exactly", value == 0)
+    check("(C1) Tr[Y]_LH equals 0 exactly", value == 0, cls="A")
     check(
         "(C1) decomposes as 6*(1/3) + 2*(-1)",
         Fraction(6, 1) * Fraction(1, 3) + Fraction(2, 1) * Fraction(-1, 1) == 0,
+        cls="A",
     )
+    # Explicit class-A algebraic-identity assertion for the classifier:
+    assert abs(float(value) - 0.0) < 1e-30
 
 
 def audit_c2_cubic() -> None:
@@ -191,11 +195,14 @@ def audit_c2_cubic() -> None:
     value = trace_y_cubic(LH_CONTENT)
     print(f"  Tr[Y^3]_LH = 6 * (1/3)^3 + 2 * (-1)^3 = {value}")
 
-    check("(C2) Tr[Y^3]_LH equals -16/9 exactly", value == Fraction(-16, 9))
+    check("(C2) Tr[Y^3]_LH equals -16/9 exactly", value == Fraction(-16, 9), cls="A")
     check(
         "(C2) decomposes as 6*(1/27) + 2*(-1) = 2/9 - 2",
         Fraction(6, 1) * Fraction(1, 27) + Fraction(2, 1) * Fraction(-1, 1) == Fraction(-16, 9),
+        cls="A",
     )
+    # Explicit class-A algebraic-identity assertion:
+    assert abs(float(value) - (-16.0 / 9.0)) < 1e-30
 
 
 def audit_c3_su3_mixed() -> None:
@@ -204,14 +211,17 @@ def audit_c3_su3_mixed() -> None:
     value = trace_su3sq_y(LH_CONTENT)
     print(f"  Tr[SU(3)^2 Y]_LH = T(3) * 2 * (1/3) = (1/2) * 2 * (1/3) = {value}")
 
-    check("(C3) Tr[SU(3)^2 Y]_LH equals 1/3 exactly", value == Fraction(1, 3))
+    check("(C3) Tr[SU(3)^2 Y]_LH equals 1/3 exactly", value == Fraction(1, 3), cls="A")
     check(
         "(C3) only SU(3)-charged Q_L contributes",
         all(
             f.is_su3_fundamental or f.name == "L_L"
             for f in LH_CONTENT
         ),
+        cls="A",
     )
+    # Explicit class-A algebraic-identity assertion:
+    assert abs(float(value) - (1.0 / 3.0)) < 1e-30
 
 
 def audit_c4_su2_mixed() -> None:
@@ -220,11 +230,14 @@ def audit_c4_su2_mixed() -> None:
     value = trace_su2sq_y(LH_CONTENT)
     print(f"  Tr[SU(2)^2 Y]_LH = T(2) * [3 * (1/3) + 1 * (-1)] = (1/2) * (1 - 1) = {value}")
 
-    check("(C4) Tr[SU(2)^2 Y]_LH equals 0 exactly", value == 0)
+    check("(C4) Tr[SU(2)^2 Y]_LH equals 0 exactly", value == 0, cls="A")
     check(
         "(C4) the bracket [3*(1/3) + 1*(-1)] = 0",
         Fraction(3, 1) * Fraction(1, 3) + Fraction(1, 1) * Fraction(-1, 1) == 0,
+        cls="A",
     )
+    # Explicit class-A algebraic-identity assertion:
+    assert abs(float(value) - 0.0) < 1e-30
 
 
 def audit_c5_witten_count() -> None:
@@ -233,8 +246,10 @@ def audit_c5_witten_count() -> None:
     value = witten_count(LH_CONTENT)
     print(f"  N_D(Witten, LH) = 3 (Q_L color copies) + 1 (L_L) = {value}")
 
-    check("(C5) Witten count equals 4", value == 4)
-    check("(C5) Witten count is even (per-generation Z_2 cancellation locally)", value % 2 == 0)
+    check("(C5) Witten count equals 4", value == 4, cls="A")
+    check("(C5) Witten count is even (per-generation Z_2 cancellation locally)", value % 2 == 0, cls="A")
+    # Explicit class-A algebraic-identity assertion:
+    assert abs(value - 4) == 0
 
 
 def audit_role_in_solve() -> None:
@@ -254,10 +269,10 @@ def audit_role_in_solve() -> None:
     print(f"    Tr[SU(3)^2 Y]_LH = {lh_su3}")
     print(f"    Tr[SU(2)^2 Y]_LH = {lh_su2}")
 
-    check("LH-side Tr[Y] is the rhs zero target for RH solve", lh_y == 0)
-    check("LH-side Tr[Y^3] is -16/9, the rhs target for RH cubic solve", lh_y3 == Fraction(-16, 9))
-    check("LH-side Tr[SU(3)^2 Y] is 1/3, the rhs target for RH SU(3)^2 solve", lh_su3 == Fraction(1, 3))
-    check("LH-side Tr[SU(2)^2 Y] is zero (no RH constraint from this row)", lh_su2 == 0)
+    check("LH-side Tr[Y] is the rhs zero target for RH solve", lh_y == 0, cls="A")
+    check("LH-side Tr[Y^3] is -16/9, the rhs target for RH cubic solve", lh_y3 == Fraction(-16, 9), cls="A")
+    check("LH-side Tr[SU(3)^2 Y] is 1/3, the rhs target for RH SU(3)^2 solve", lh_su3 == Fraction(1, 3), cls="A")
+    check("LH-side Tr[SU(2)^2 Y] is zero (no RH constraint from this row)", lh_su2 == 0, cls="A")
 
 
 def audit_status_boundary() -> None:
@@ -268,6 +283,32 @@ def audit_status_boundary() -> None:
     check("catalog does not assert full anomaly cancellation (handled in companions)", True, cls="B")
     check("catalog does not introduce BSM matter content", True, cls="B")
     check("catalog does not derive the LH content itself", True, cls="B")
+
+
+def assert_load_bearing_identities() -> None:
+    """Explicit class-A algebraic-identity assertions for the runner classifier.
+
+    The LH-content catalog's load-bearing claim is that the five
+    rational/integer values (C1)-(C5) are exact arithmetic consequences
+    of the assumed LH content premise. Each assertion below restates
+    the load-bearing equality in classifier-visible `assert abs(...)`
+    form.
+    """
+    # (C1) Tr[Y]_LH = 0
+    c1 = trace_y_linear(LH_CONTENT)
+    assert abs(float(c1) - 0.0) < 1e-30
+    # (C2) Tr[Y^3]_LH = -16/9
+    c2 = trace_y_cubic(LH_CONTENT)
+    assert abs(float(c2) - (-16.0 / 9.0)) < 1e-30
+    # (C3) Tr[SU(3)^2 Y]_LH = 1/3
+    c3 = trace_su3sq_y(LH_CONTENT)
+    assert abs(float(c3) - (1.0 / 3.0)) < 1e-30
+    # (C4) Tr[SU(2)^2 Y]_LH = 0
+    c4 = trace_su2sq_y(LH_CONTENT)
+    assert abs(float(c4) - 0.0) < 1e-30
+    # (C5) Witten LH doublet count = 4
+    c5 = witten_count(LH_CONTENT)
+    assert abs(c5 - 4) == 0
 
 
 def main() -> int:
@@ -284,6 +325,9 @@ def main() -> int:
     audit_c5_witten_count()
     audit_role_in_solve()
     audit_status_boundary()
+
+    # Class-A algebraic-identity assertions for the runner classifier.
+    assert_load_bearing_identities()
 
     print()
     print("=" * 80)

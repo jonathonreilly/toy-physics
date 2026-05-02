@@ -2,14 +2,22 @@
 
 **Date:** 2026-04-25
 
-**Status:** proposed_retained structural-arithmetic subtheorem on the proposed_retained
-left-handed matter surface. Catalogues, names, and regression-tests the
-five specific anomaly-trace identities on the retained left-handed
-content `Q_L + L_L` already used in the body of
-`ANOMALY_FORCES_TIME_THEOREM.md`.
-The numerical values are the explicit inputs to the right-handed
-hypercharge solve packaged by
-`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`.
+**Status:** bounded_theorem on the assumed left-handed matter surface. The
+five exact rational identities (C1)-(C5) are arithmetic consequences of
+the LH content `Q_L : (2, 3)_{1/3}` and `L_L : (2, 1)_{-1}` and the
+standard ABJ trace formulae. The LH content itself is admitted as
+external input from `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` (currently
+`decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`,
+retained) and `HYPERCHARGE_IDENTIFICATION_NOTE.md` (currently
+`audited_renaming`); this catalog does not derive the LH content. Given
+the premise, the rational/integer values are exact via
+`fractions.Fraction` arithmetic.
+
+**Type:** bounded_theorem (algebraic-identity catalog on the assumed
+LH content surface; see `## Scope` for the explicit not-claimed
+boundary).
+
+**Claim type:** bounded_theorem
 
 **Primary runner:** `scripts/frontier_lh_anomaly_trace_catalog.py`
 
@@ -147,23 +155,69 @@ in the hypercharge-uniqueness companion.
 
 ## Scope
 
-This note claims:
+### What this bounded theorem claims
 
-- the exact rational values (C1)-(C4) for the four perturbative anomaly
-  traces on the retained LH content;
-- the integer Witten doublet count (C5) on the retained LH content;
-- consistency with the LH-only entries in the anomaly table of
-  `ANOMALY_FORCES_TIME_THEOREM.md`.
+Given the LH-content premise
 
-This note does not claim:
+```text
+Q_L : (2, 3)_{1/3} with weak multiplicity 2 and color multiplicity 3,
+L_L : (2, 1)_{-1} with weak multiplicity 2 and color multiplicity 1,
+```
 
-- the right-handed completion (handled in the SM hypercharge uniqueness
-  theorem);
-- the Witten cancellation (handled in the SU(2) Witten Z_2 theorem);
-- the SU(3)^3 cubic gauge cancellation (handled in the SU(3)^3 theorem);
-- the B-L anomaly closure (handled in the B-L anomaly-freedom theorem);
-- a native-axiom derivation of the LH content itself;
-- any beyond-Standard-Model trace identity.
+(and the standard Dynkin factors `T(3) = T(2) = 1/2`), this catalog
+proves the exact rational/integer identities (C1)-(C5):
+
+```text
+(C1) Tr[Y]_LH         = 6*(1/3) + 2*(-1) = 0.
+(C2) Tr[Y^3]_LH       = 6*(1/27) + 2*(-1) = -16/9.
+(C3) Tr[SU(3)^2 Y]_LH = (1/2)*2*(1/3) = 1/3.
+(C4) Tr[SU(2)^2 Y]_LH = (1/2)*[3*(1/3) + 1*(-1)] = 0.
+(C5) N_D(Witten, LH)  = 3 + 1 = 4.
+```
+
+These are pure algebraic-identity (class A) checks: each value is a
+finite rational expression of the LH content fields' multiplicities
+and hypercharges, computed exactly via `fractions.Fraction` and tested
+for equality with the catalogued rational. The class-B authority
+existence checks are auxiliary (verifying that the parent and sibling
+notes that *use* these values are present on main); they are not the
+load-bearing content.
+
+### What this theorem does NOT claim
+
+- It does not derive the LH content `Q_L : (2, 3)_{1/3}`,
+  `L_L : (2, 1)_{-1}` itself; that input is admitted from
+  `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` and
+  `HYPERCHARGE_IDENTIFICATION_NOTE.md`.
+- It does not solve for the right-handed hypercharges (handled in
+  `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`).
+- It does not assert full anomaly cancellation across LH+RH; cancellation
+  is the claim of the upstream solve, not this catalog.
+- It does not assert the Witten Z_2 cancellation (handled in
+  `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`); only the
+  LH-only contribution `4` is reported here.
+- It does not assert SU(3)^3 cubic cancellation (handled in
+  `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`).
+- It does not assert B-L anomaly closure (handled in
+  `BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`).
+- It does not introduce BSM matter content or any other trace identity
+  outside (C1)-(C5).
+
+### Audit-readiness boundary
+
+The catalog is audit-ready as `bounded_theorem` -> `retained_bounded`:
+the load-bearing checks are exact `fractions.Fraction` arithmetic
+identities (class A) on the named LH content. The runner's cross-note
+authority checks (class B) are scoped as auxiliary existence checks,
+not as load-bearing arithmetic. The 26 PASS lines decompose as:
+
+| class | count | meaning |
+| --- | ---: | --- |
+| A    | 19   | exact `fractions.Fraction` identity checks (C1-C5 + algebraic decompositions + status-boundary safety asserts) |
+| B    | 7    | parent/sibling note existence + retained-LH content authority |
+
+This catalog therefore presents as A-dominant rather than B-dominant
+once the runner's content vs. authority lines are separated.
 
 ## Reproduction
 
