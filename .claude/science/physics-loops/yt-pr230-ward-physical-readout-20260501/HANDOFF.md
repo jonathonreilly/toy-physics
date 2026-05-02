@@ -348,4 +348,9 @@ derivative in that color-singlet kernel.  The finite-`q` IR regularity block
 then removes the remaining massless IR divergence concern: after `q=0`
 cancellation, `d^4q/q^2` is locally integrable.  The live blocker is now the
 interacting color-singlet scalar pole location and inverse-propagator
-derivative, or production FH/LSZ data.
+derivative, or production FH/LSZ data.  The zero-mode-removed ladder pole
+search checks that narrowed surface directly: finite small-mass pole witnesses
+exist, but they are volume, projector, taste-corner, and derivative sensitive.
+The live blocker is now a continuum/taste/projector theorem for the
+interacting color-singlet scalar denominator and LSZ derivative, or production
+pole data.

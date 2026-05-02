@@ -1285,3 +1285,30 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The theorem removes the finite-`q` massless IR divergence concern after
 color-singlet `q=0` cancellation.  It does not derive the scalar pole
 derivative or production evidence.
+
+## Review-Loop Backpressure - Color-Singlet Zero-Mode-Removed Ladder Pole Search
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT, NOT CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_color_singlet_zero_mode_removed_ladder_pole_search.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_color_singlet_zero_mode_removed_ladder_pole_search.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The search finds finite small-mass `lambda_max >= 1` witnesses after
+color-singlet `q=0` removal, but the witnesses are volume, projector,
+taste-corner, and derivative sensitive.  They do not authorize retained or
+proposed-retained wording.

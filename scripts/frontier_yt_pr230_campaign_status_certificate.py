@@ -85,6 +85,9 @@ def main() -> int:
         "flat_toron_washout": load("outputs/yt_flat_toron_thermodynamic_washout_2026-05-01.json"),
         "color_singlet_zero_mode": load("outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json"),
         "color_singlet_finite_q_ir": load("outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json"),
+        "color_singlet_zero_mode_removed_ladder_pole_search": load(
+            "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json"
+        ),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -325,6 +328,13 @@ def main() -> int:
         statuses["color_singlet_finite_q_ir"],
     )
     report(
+        "color-singlet-zero-mode-removed-ladder-pole-search-not-closure",
+        "zero-mode-removed ladder pole search"
+        in str(statuses["color_singlet_zero_mode_removed_ladder_pole_search"])
+        or "bounded-support" in str(statuses["color_singlet_zero_mode_removed_ladder_pole_search"]),
+        statuses["color_singlet_zero_mode_removed_ladder_pole_search"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -459,7 +469,11 @@ def main() -> int:
             "pole-tuned finite ladder residue envelope also fails to select a "
             "unique LSZ input across current zero-mode, projector, and volume "
             "choices.  Existing Ward/gauge/Feshbach surfaces also do not fix "
-            "the scalar kernel derivative K'(x_pole)."
+            "the scalar kernel derivative K'(x_pole).  After color-singlet "
+            "q=0 cancellation and finite-q IR regularity, zero-mode-removed "
+            "finite ladder pole witnesses still remain volume, projector, "
+            "taste-corner, and derivative sensitive, so they do not supply the "
+            "interacting scalar pole/LSZ theorem."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

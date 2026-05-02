@@ -64,6 +64,7 @@ def main() -> int:
         "flat_toron_washout": "outputs/yt_flat_toron_thermodynamic_washout_2026-05-01.json",
         "color_singlet_zero_mode": "outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json",
         "color_singlet_finite_q_ir": "outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json",
+        "color_singlet_zero_mode_removed_ladder_pole_search": "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -153,6 +154,11 @@ def main() -> int:
     color_singlet_finite_q_ir_not_closure = (
         "color-singlet finite-q IR regularity" in certificates["color_singlet_finite_q_ir"].get("actual_current_surface_status", "")
         and certificates["color_singlet_finite_q_ir"].get("proposal_allowed") is False
+    )
+    color_singlet_ladder_pole_search_not_closure = (
+        "zero-mode-removed ladder pole search"
+        in certificates["color_singlet_zero_mode_removed_ladder_pole_search"].get("actual_current_surface_status", "")
+        and certificates["color_singlet_zero_mode_removed_ladder_pole_search"].get("proposal_allowed") is False
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -255,6 +261,11 @@ def main() -> int:
         certificates["color_singlet_finite_q_ir"].get("actual_current_surface_status", ""),
     )
     report(
+        "color-singlet-zero-mode-removed-ladder-pole-search-not-closure",
+        color_singlet_ladder_pole_search_not_closure,
+        certificates["color_singlet_zero_mode_removed_ladder_pole_search"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -329,8 +340,11 @@ def main() -> int:
             "out for the local massive bubble in the thermodynamic limit, and "
             "the exact q=0 gauge mode cancels in a color singlet when self and "
             "exchange terms are included.  The remaining finite-q kernel is "
-            "IR-regular in four dimensions.  The actual interacting scalar "
-            "pole derivative theorem and production evidence remain open.  "
+            "IR-regular in four dimensions.  Zero-mode-removed finite ladder "
+            "pole witnesses exist at small mass, but they are volume, "
+            "projector, taste-corner, and derivative sensitive.  The actual "
+            "interacting scalar pole derivative theorem and production "
+            "evidence remain open.  "
             "These cannot be assumed."
         ),
         "proposal_allowed": False,

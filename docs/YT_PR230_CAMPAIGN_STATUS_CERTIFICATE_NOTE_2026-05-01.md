@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=51 FAIL=0
+# SUMMARY: PASS=52 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -75,6 +75,7 @@ The certificate consumes the PR-local route certificates for:
 - flat toron thermodynamic washout support;
 - color-singlet gauge-zero-mode cancellation;
 - color-singlet finite-`q` IR regularity;
+- color-singlet zero-mode-removed ladder pole search;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -138,6 +139,7 @@ the visible shortcut routes:
 | flat toron thermodynamic washout | fixed-holonomy flat-sector dependence washes out for the local massive bubble, but pole/IR LSZ remains open |
 | color-singlet gauge-zero-mode cancellation | exact `q=0` gauge mode cancels in the singlet after self and exchange pieces are included; finite-`q` pole derivative remains open |
 | color-singlet finite-`q` IR regularity | after q=0 cancellation, the remaining massless kernel is locally integrable in four dimensions; pole derivative remains open |
+| color-singlet zero-mode-removed ladder pole search | finite small-mass crossings exist, but they are volume, projector, taste-corner, and derivative sensitive |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |
@@ -148,7 +150,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
-| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, and manifest blocks; still no proposed-retained authorization |
+| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, and manifest blocks; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

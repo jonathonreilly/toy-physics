@@ -782,6 +782,25 @@ stable large-volume sequence in the scan.  This does not derive the full
 interacting scalar denominator, pole location, LSZ derivative, or production
 evidence.
 
+Zero-mode-removed finite ladder pole witnesses are constructive but not
+closure:
+
+```text
+python3 scripts/frontier_yt_color_singlet_zero_mode_removed_ladder_pole_search.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+After color-singlet `q=0` removal and finite-`q` IR regularity, the finite
+Wilson-exchange ladder has four small-mass `lambda_max >= 1` witnesses.  They
+are not stable: local `m=0.30` crosses at `N=4` but not at `N=3,5,6`;
+`N=6,m=0.20` crosses for the local projector but not for the normalized
+point-split projector; every crossing row sits on even grids with 16
+`sin(p)=0` taste corners; and the crossing residue-proxy spread is `5.15346x`.
+Therefore a finite zero-mode-removed ladder pole witness is not the retained
+scalar pole/LSZ theorem.  The route still needs continuum/taste/projector
+control plus the interacting inverse-propagator derivative, or production
+same-source pole data.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

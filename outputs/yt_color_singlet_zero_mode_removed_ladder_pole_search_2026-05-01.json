@@ -1,0 +1,587 @@
+{
+  "actual_current_surface_status": "bounded-support / color-singlet zero-mode-removed ladder pole search",
+  "crossing_derivatives": [
+    {
+      "d_lambda_dp_hat_sq": -3.4720818051227598,
+      "grid_size_4d": 4,
+      "lambda_p0": 7.07678273074989,
+      "lambda_p1": 0.1326191205043716,
+      "mass": 0.2,
+      "p_hat_sq_step": 1.9999999999999996,
+      "projector": "local",
+      "residue_factor_proxy_if_crossing": 0.28801164722691314
+    },
+    {
+      "d_lambda_dp_hat_sq": -1.3759839126304725,
+      "grid_size_4d": 6,
+      "lambda_p0": 1.4874430813906838,
+      "lambda_p1": 0.1114591687602115,
+      "mass": 0.2,
+      "p_hat_sq_step": 0.9999999999999998,
+      "projector": "local",
+      "residue_factor_proxy_if_crossing": 0.7267526828044792
+    },
+    {
+      "d_lambda_dp_hat_sq": -0.6737383229352497,
+      "grid_size_4d": 4,
+      "lambda_p0": 1.4633677924905846,
+      "lambda_p1": 0.11589114662008533,
+      "mass": 0.3,
+      "p_hat_sq_step": 1.9999999999999996,
+      "projector": "local",
+      "residue_factor_proxy_if_crossing": 1.4842557799641538
+    },
+    {
+      "d_lambda_dp_hat_sq": -1.1730196205088197,
+      "grid_size_4d": 4,
+      "lambda_p0": 2.391296312492168,
+      "lambda_p1": 0.04525707147452902,
+      "mass": 0.2,
+      "p_hat_sq_step": 1.9999999999999996,
+      "projector": "point_split_zero_momentum_normalized",
+      "residue_factor_proxy_if_crossing": 0.8525006594230972
+    }
+  ],
+  "crossing_rows": [
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 7.07678273074989,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 1.4874430813906838,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 1.4633677924905846,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 2.391296312492168,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    }
+  ],
+  "fail_count": 0,
+  "parameters": {
+    "color_factor": 1.3333333333333333,
+    "ir_mu_sq": 0.0,
+    "masses": [
+      0.2,
+      0.3,
+      0.35,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "projectors": [
+      "local",
+      "point_split_zero_momentum_normalized"
+    ],
+    "sizes": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "zero_mode_policy": "q=0 removed by color-singlet total-color-charge cancellation"
+  },
+  "parent_certificate": "outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json",
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite zero-mode-removed ladder pole witnesses are volume, projector, taste-corner, and derivative sensitive; no retained interacting pole/LSZ theorem is derived.",
+  "remaining_blockers": [
+    "derive the continuum/taste projection that removes finite corner aliasing from the scalar denominator",
+    "derive the scalar source/projector normalization for the interacting color-singlet kernel",
+    "derive or measure the isolated scalar pole location and d lambda_max / d p^2 or d Gamma_ss / d p^2",
+    "supply production FH/LSZ pole data if the theorem route does not close"
+  ],
+  "scan": [
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.586516015819981,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 7.07678273074989,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.23969890605814861,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 1.4874430813906838,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.26614269652735667,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 1.4633677924905846,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.12684290715196167,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.36552126246699623,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.1981912355659718,
+      "mass": 0.35,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.8234725303872243,
+      "mass": 0.35,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.10341619200270068,
+      "mass": 0.35,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.2320443023086923,
+      "mass": 0.35,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.1020622644232555,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.24163333034454612,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.0686412600258478,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.09926131808595921,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.0492842053450469,
+      "mass": 0.75,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.07562521523477772,
+      "mass": 0.75,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.04244637018185256,
+      "mass": 0.75,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.047931699778523004,
+      "mass": 0.75,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.02881608739296383,
+      "mass": 1.0,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.03691285421422762,
+      "mass": 1.0,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.02748110164976767,
+      "mass": 1.0,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.029001517825483436,
+      "mass": 1.0,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "local",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.44207040941826176,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 2.391296312492168,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": true,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.1707780829097072,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.5098639846797832,
+      "mass": 0.2,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.19432920359719677,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.4973283421723847,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.07988774868872121,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.1288015729728933,
+      "mass": 0.3,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.14176178939691947,
+      "mass": 0.35,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.28104744016929817,
+      "mass": 0.35,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.06052084375451135,
+      "mass": 0.35,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.08248561980891703,
+      "mass": 0.35,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.06755445910093077,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.08338193764648555,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.032715615419175406,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.035033934338476014,
+      "mass": 0.5,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.02801248773598739,
+      "mass": 0.75,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.025915408948205414,
+      "mass": 0.75,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.016485364139265622,
+      "mass": 0.75,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.016161269411470953,
+      "mass": 0.75,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 3,
+      "lambda_max": 0.014291174781384464,
+      "mass": 1.0,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 4,
+      "lambda_max": 0.01235593819468558,
+      "mass": 1.0,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 5,
+      "lambda_max": 0.009688917993896113,
+      "mass": 1.0,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 1,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    },
+    {
+      "grid_size_4d": 6,
+      "lambda_max": 0.00947688848925279,
+      "mass": 1.0,
+      "pole_condition_lambda_ge_1": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16,
+      "zero_mode": "removed by color singlet q=0 cancellation"
+    }
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "verdict": "After color-singlet q=0 cancellation and finite-q IR regularity, the zero-mode-removed finite Wilson-exchange ladder does have constructive finite lambda_max >= 1 witnesses at small mass.  Those witnesses are not a retained scalar pole: they are not stable under finite volume, source projector, or taste-corner aliasing, and their finite-difference derivative/residue proxies are not universal.  The route therefore remains open until a continuum/taste/projector theorem derives the interacting color-singlet scalar pole and inverse-propagator derivative, or production FH/LSZ pole data measure them.",
+  "witnesses": {
+    "crossing_residue_proxy_spread": 5.153457487761829,
+    "crossing_sizes": [
+      4,
+      6
+    ],
+    "crossing_taste_corner_counts": [
+      16
+    ],
+    "local_m0.20_volume_sequence": {
+      "N3": 0.586516015819981,
+      "N4": 7.07678273074989,
+      "N5": 0.23969890605814861,
+      "N6": 1.4874430813906838
+    },
+    "local_m0.30_volume_sequence": {
+      "N3": 0.26614269652735667,
+      "N4": 1.4633677924905846,
+      "N5": 0.12684290715196167,
+      "N6": 0.36552126246699623
+    },
+    "odd_low_mass_max_lambda": 0.586516015819981,
+    "projector_witness": {
+      "N6_m0.20_local": 1.4874430813906838,
+      "N6_m0.20_point_split_normalized": 0.5098639846797832
+    }
+  }
+}

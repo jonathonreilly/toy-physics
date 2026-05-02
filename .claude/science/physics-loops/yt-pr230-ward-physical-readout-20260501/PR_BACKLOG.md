@@ -353,3 +353,20 @@ Adds color-singlet finite-q IR regularity support:
   location, inverse-propagator derivative, finite-`N_c` residue, and
   production FH/LSZ evidence remain open.
 ```
+
+Latest color-singlet zero-mode-removed ladder pole-search checkpoint text for
+PR #230:
+
+```text
+Adds a color-singlet zero-mode-removed ladder pole-search block:
+- after q=0 cancellation and finite-q IR regularity, scans the finite
+  zero-mode-removed Wilson-exchange ladder at `mu_IR^2=0`;
+- validator passes `PASS=9 FAIL=0`; retained-route gate reports
+  `PASS=26 FAIL=0`; campaign status now consumes 56 route certificates and
+  reports `PASS=52 FAIL=0`;
+- four small-mass finite `lambda_max >= 1` witnesses exist, but they are
+  volume, projector, taste-corner, and derivative sensitive;
+- still no retained/proposed-retained closure: a continuum/taste/projector
+  theorem for the interacting scalar pole and LSZ derivative, or production
+  FH/LSZ pole data, remains required.
+```

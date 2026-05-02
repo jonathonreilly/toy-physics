@@ -328,6 +328,19 @@ locally integrable in four dimensions.  This removes the finite-`q` IR
 divergence concern but still does not derive the interacting scalar pole or
 inverse-propagator derivative.
 
+Zero-mode-removed finite ladder pole-search boundary:
+
+```text
+q=0 removed, mu_IR^2 = 0
+finite lambda_max >= 1 witnesses exist at small mass
+crossings depend on volume parity, taste corners, source projector, and derivative proxy
+```
+
+These finite witnesses are not production evidence and not a continuum scalar
+pole theorem.  They cannot be used as `kappa_s`, a canonical-Higgs LSZ
+normalization, or retained top-Yukawa closure unless the continuum/taste/
+projector limit and inverse-propagator derivative are derived or measured.
+
 Source-reparametrization gauge boundary:
 
 ```text

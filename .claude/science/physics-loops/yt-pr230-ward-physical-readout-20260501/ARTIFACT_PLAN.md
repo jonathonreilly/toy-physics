@@ -35,6 +35,9 @@ Completed in block 1:
 - `scripts/frontier_yt_color_singlet_finite_q_ir_regular.py`
 - `outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json`
 - `docs/YT_COLOR_SINGLET_FINITE_Q_IR_REGULAR_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_color_singlet_zero_mode_removed_ladder_pole_search.py`
+- `outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json`
+- `docs/YT_COLOR_SINGLET_ZERO_MODE_REMOVED_LADDER_POLE_SEARCH_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
@@ -289,9 +292,11 @@ Next artifact:
   zero-mode cancellation removes the q=0 gauge divergence but leaves finite-q
   IR and pole derivative control open; finite-q IR regularity removes the
   massless IR divergence concern, leaving the interacting pole derivative as
-  the active analytic blocker
+  the active analytic blocker; the zero-mode-removed finite ladder pole search
+  finds small-mass finite crossing witnesses, but they are volume, projector,
+  taste-corner, and derivative sensitive, so they are not closure evidence
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,
-interacting denominator, pole-residue, zero-mode/IR limiting order, and
+interacting denominator, pole-residue, continuum/taste/projector limit, and
 finite-`N_c=3` continuum bound that the Ward route still lacks.

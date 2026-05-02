@@ -138,6 +138,11 @@ probability.
    limit.  The color-singlet cancellation further justifies a q=0-removed
    singlet kernel, and finite-`q` regularity removes the remaining massless IR
    divergence concern, but neither gives the interacting pole derivative.
+   The zero-mode-removed ladder pole search finds finite small-mass crossings,
+   but they are volume, projector, taste-corner, and derivative sensitive.
+   The retained task is therefore a continuum/taste/projector theorem for the
+   interacting color-singlet pole and LSZ derivative, not another finite
+   crossing witness.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is
