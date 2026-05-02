@@ -167,3 +167,45 @@ Test 6 (100-sample random sweep, 0 violations):     PASS
 
 OVERALL: PASS
 ```
+
+## Block 06 — Stefan-Boltzmann from KMS + framework photon spectrum
+
+### Branch-local self-review (2026-05-01)
+
+- **theorem note:** [docs/AXIOM_FIRST_STEFAN_BOLTZMANN_THEOREM_NOTE_2026-05-01.md](../../../../docs/AXIOM_FIRST_STEFAN_BOLTZMANN_THEOREM_NOTE_2026-05-01.md)
+- **runner:** [scripts/axiom_first_stefan_boltzmann_check.py](../../../../scripts/axiom_first_stefan_boltzmann_check.py)
+- **log:** [outputs/axiom_first_stefan_boltzmann_check_2026-05-01.txt](../../../../outputs/axiom_first_stefan_boltzmann_check_2026-05-01.txt)
+
+#### Findings
+
+- **F1 (resolved during write):** `np.trapz` removed in newer numpy;
+  switched to `np.trapezoid`.
+- **F2 (no-issue):** Planck distribution from KMS Gibbs trace verified
+  at <1e-15.
+- **F3 (no-issue):** numerical Planck spectrum integral matches
+  (π²/15)T⁴ at <1e-4 (limited by integration grid).
+- **F4 (no-issue):** ζ(4) = π⁴/90 verified at <1e-6.
+- **F5 (no-issue):** Wien displacement constant 2.821 verified at <1e-5.
+- **F6 (no-issue):** Stefan-Boltzmann constant in SI matches CODATA
+  2018 5.670374419 × 10⁻⁸ at <1e-9.
+
+#### Disposition
+
+- **disposition:** pass.
+- **proposal-allowed:** false (per CLAIM_STATUS_CERTIFICATE_BLOCK06.md).
+- **branch action:** commit, push, open stacked PR (base = Block 01 KMS).
+- **integration action:** record in HANDOFF.md as the framework's
+  first numerical thermodynamic prediction.
+
+#### Runner results summary (2026-05-01)
+
+```text
+Test 1 (Planck dist from KMS Gibbs trace):    PASS  max diff 1.78e-15
+Test 2 (u(T) = (pi^2/15) T^4 numerical):      PASS  max rel resid <1e-4
+Test 3 (T^4 scaling u/T^4 = const):           PASS  CV <1e-4
+Test 4 (zeta(4) = pi^4/90):                   PASS
+Test 5 (Wien displacement law):               PASS
+Test 6 (sigma_SB in SI = CODATA 2018):        PASS  rel diff 1.87e-9
+
+OVERALL: PASS
+```
