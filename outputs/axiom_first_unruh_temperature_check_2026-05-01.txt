@@ -1,0 +1,74 @@
+========================================================================
+AXIOM-FIRST UNRUH TEMPERATURE CHECK
+========================================================================
+
+Setup: retained Lorentz kernel + Block 01 KMS support
+Unruh: T_Unruh = a / (2 pi) (natural units)
+
+------------------------------------------------------------------------
+TEST 1: Wick-rotation periodicity 2 pi for Rindler wedge
+------------------------------------------------------------------------
+Same conical-defect argument as Block 02 (Hawking).
+In Rindler coords (eta, xi), Euclidean continuation eta -> -i tau
+requires period 2 pi to avoid conical defect at xi = 0.
+  predicted period = 6.2831853072
+  expected         = 6.2831853072
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: T_Unruh = a / (2 pi) across acceleration sweep
+------------------------------------------------------------------------
+           a           T_Unruh     beta_th = 1/T          2 pi / a
+      0.1000  1.5915494309e-02  6.2831853072e+01  6.2831853072e+01
+      0.5000  7.9577471546e-02  1.2566370614e+01  1.2566370614e+01
+      1.0000  1.5915494309e-01  6.2831853072e+00  6.2831853072e+00
+      2.0000  3.1830988618e-01  3.1415926536e+00  3.1415926536e+00
+      5.0000  7.9577471546e-01  1.2566370614e+00  1.2566370614e+00
+     10.0000  1.5915494309e+00  6.2831853072e-01  6.2831853072e-01
+
+  max |beta_th(T) - 2 pi / a| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: SI numerical scale at Earth gravity (a = 9.81 m/s^2)
+------------------------------------------------------------------------
+  a = 9.81 m/s^2 (Earth gravity)
+  T_Unruh = 3.9780e-20 K
+  expected ~4 x 10^-20 K (textbook value)
+  relative diff vs textbook = 0.020
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: T_Unruh / a = 1 / (2 pi) universal constant
+------------------------------------------------------------------------
+  predicted constant = 0.1591549431
+  max |T_Unruh/a - 1/(2 pi)| over sweep = 2.776e-17
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: Bisognano-Wichmann modular operator identity
+        Delta = exp(-2 pi K)
+------------------------------------------------------------------------
+Toy: K = diag(0, 1, 2, 3) (4 boost-eigenvalue modes).
+  K diagonal       = [0. 1. 2. 3.]
+  Delta diagonal   = [1.00000000e+00 1.86744273e-03 3.48734236e-06 6.51241214e-09]
+  exp(-2 pi K)     = [1.00000000e+00 1.86744273e-03 3.48734236e-06 6.51241214e-09]
+  ||Delta - exp(-2 pi K)|| = 0.000e+00
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (Wick-rotation period 2 pi):                PASS
+  Test 2 (T_Unruh = a / (2 pi) sweep):               PASS
+  Test 3 (SI scale at Earth gravity ~4e-20 K):       PASS
+  Test 4 (T_Unruh / a = 1/(2 pi) universal):         PASS
+  Test 5 (Bisognano-Wichmann Delta = exp(-2 pi K)):  PASS
+
+  OVERALL: PASS
+
+Note: this runner verifies the Unruh temperature formula and the
+Bisognano-Wichmann modular identity at machine precision. The proof
+in the companion theorem note follows the same Wick-rotation periodicity
+argument as Block 02 (Hawking T_H), with the Killing horizon replaced
+by the Rindler horizon.

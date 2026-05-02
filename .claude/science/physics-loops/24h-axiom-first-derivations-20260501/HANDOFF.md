@@ -13,18 +13,18 @@ BH 1/4 carrier).
 
 | Block | Slug | Status | Branch | PR |
 |---|---|---|---|---|
-| 01 | KMS condition from RP | support theorem, runner PASS, branch pushed, PR pending | physics-loop/24h-axiom-first-block01-kms-20260501 | pending |
-| 02 | Hawking T_H = κ/(2π) | queued (depends on Block 01) | — | — |
-| 03 | Bekenstein bound | queued | — | — |
-| 04 | Microcausality theorem | queued | — | — |
-| 05 | First law of BH mechanics | queued (depends on Block 02) | — | — |
-| 06 | Stefan-Boltzmann | queued (depends on Block 01) | — | — |
-| 07 | Unruh temperature | queued (depends on Block 01) | — | — |
-| 08 | Reeh-Schlieder | queued | — | — |
-| 09 | GSL | queued (depends on Blocks 01, 02) | — | — |
-| 10 | Birkhoff vacuum-spherical | queued | — | — |
-| 11 | Bisognano-Wichmann | queued | — | — |
-| 12 | Tomita-Takesaki | queued | — | — |
+| 01 | KMS | support, PR open | block01-kms | #257 |
+| 02 | Hawking T_H | support, PR open (stacked on #257) | block02-hawking | #259 |
+| 03 | Bekenstein bound | support, PR open | block03-bekenstein | #261 |
+| 04 | Microcausality | support, PR open | block04-microcausality | #263 |
+| 05 | First law of BH mechanics | support, PR open (stacked on #259) | block05-firstlaw | #265 |
+| 06 | Stefan-Boltzmann | support, PR open (stacked on #257) | block06-stefanboltzmann | #266 |
+| 07 | Reeh-Schlieder cyclicity | support, PR open | block07-reehschlieder | #269 |
+| 08 | Unruh temperature | support, branch ready (stacked on #257) | block08-unruh | pending |
+| 09 | GSL | queued (depends on Blocks 01, 02, 05) | — | — |
+| 10 | Birkhoff vacuum-spherical | queued (independent) | — | — |
+| 11 | Bisognano-Wichmann | mostly subsumed by Block 08 (U4) | — | — |
+| 12 | Tomita-Takesaki | queued (uses Block 07 cyclic-and-separating) | — | — |
 
 ## Proposed repo weaving (deferred to integration)
 
@@ -45,7 +45,14 @@ If/when Block 01 is integrated:
   Corollaries section (C5: KMS condition holds for the Gibbs state on
   the periodic-time block).
 
+If/when Block 08 is integrated:
+
+- Add Unruh note as a corollary of Block 01 KMS + retained Lorentz
+  kernel.
+- Cross-reference in Block 02 (Hawking) as the parallel-structure
+  derivation.
+
 ## Next exact action
 
-Open Block 01 review PR; pivot to Block 02 (Hawking T_H = κ/(2π)) on a
-new branch from origin/main.
+Open Block 08 stacked PR (base = Block 01 KMS); pivot to Block 09
+(GSL) stacked on Block 05.
