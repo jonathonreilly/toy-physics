@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:03:27.992645+00:00
+**Generated:** 2026-05-02T01:04:59.000490+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 152 |
-| support | 125 |
+| support | 124 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 965 |
+| ~~audited_conditional~~ | 966 |
 | ~~audited_failed~~ | 98 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 355 |
-| `audited_conditional` | 665 |
+| `audited_conditional` | 666 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 438 |
+| `unaudited` | 437 |
 
 | criticality | count |
 |---|---:|
@@ -1049,6 +1049,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `synthesis_note_3d` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `tensor_network_connection_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `three_generation_observable_theorem_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -15646,6 +15647,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Same scalar Schur data across scalar/vector/tensor/mixed probes but independent G_0i and traceless G_ij channels force at least one shift-like and one traceless-shear boundary coordinate beyond the scalar trace; the mixed probe is locally additive in those two channels.  _(class `C`)_
 - **chain closes:** True — The runner verifies scalar-action invariance, independent vector and traceless-shear channels, and bounded local additivity on both O_h and finite-rank families. The note leaves the microscopic source-to-channel map and tensor kernel open, so the clean audit is only for localizing the minimal missing tensor data.
 - **rationale:** The support claim closes at its stated boundary: scalar Schur data cannot distinguish the tensor sectors, two non-scalar coordinates are required on the tested families, and mixed perturbations are locally additive in those channels. The runner exits 0 with seven checks and the note does not claim to derive K_tensor, eta, extension beyond the audited class, or full nonlinear GR. Residual risk is exactly the open microscopic source-to-channel law and tensor boundary kernel.
+- **auditor confidence:** high
+
+### `tensor_network_connection_note`
+
+- **Note:** [`TENSOR_NETWORK_CONNECTION_NOTE.md`](../../docs/TENSOR_NETWORK_CONNECTION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** The path-sum propagator on a layered graph is formally an MPO, and gravity modifies the singular-value spectrum of the transfer matrices, reducing effective bond dimension near sources.  _(class `C`)_
+- **chain closes:** False — The registered runner reproduces the four computational gates, but the note's broader bridge to AdS/CFT, Ryu-Takayanagi, and holographic-principle language is interpretive and not derived by the runner.
+- **rationale:** Issue: the formal MPO decomposition and singular-spectrum diagnostics are reproducible, but the note promotes those diagnostics into an AdS/CFT / Ryu-Takayanagi / holographic-principle connection without a retained theorem mapping the computed quantities to that physical interpretation. Why this blocks: the runner shows area-law-like and entropy-suppression numerics, and even reports that S vs g fits better than S vs 1/g, so the RT naming remains analogy rather than derivation. Repair target: either narrow the note to the audited tensor-network diagnostics or add a theorem/runner that derives the claimed holographic/RT correspondence from retained primitives. Claim boundary until fixed: clean computational support for MPO structure and gravity-induced singular-value changes, conditional interpretation as holographic physics.
 - **auditor confidence:** high
 
 ### `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22`
