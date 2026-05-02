@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:27:35.853374+00:00
+**Generated:** 2026-05-02T23:29:27.589611+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 141 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 195 |
+| **retained_bounded** | 196 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 516 |
+| unaudited | 515 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -37,22 +37,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 398 |
+| `audited_clean` | 399 |
 | `audited_conditional` | 649 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 553 |
+| `unaudited` | 552 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 532 |
+| `bounded_theorem` | 533 |
 | `decoration` | 8 |
 | `meta` | 37 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
-| `positive_theorem` | 868 |
+| `positive_theorem` | 867 |
 
 | criticality | count |
 |---|---:|
@@ -271,6 +271,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | D | - |
 | `hadron_lane1_confinement_to_mass_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -8758,6 +8759,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
   - `QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md`
   - `MINIMAL_AXIOMS_2026-04-11.md`
+- **auditor confidence:** high
+
+### `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`HALF_PLANE_CHART_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/HALF_PLANE_CHART_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Standalone elementary real-algebra inverse-chart theorem for abstract c > 0; no physical interpretation, no specific c value, and no DM-neutrino bridge is asserted.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-half-plane-chart-equivalence-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** On H_c, setting s = q - c + delta gives s >= 0, so r = sqrt(s^2 + 1/4) is >= 1/2 and sqrt(r^2 - 1/4) = sqrt(s^2) = s; conversely r >= 1/2 makes sqrt(r^2 - 1/4) >= 0, giving q >= c - delta.  _(class `A`)_
+- **chain closes:** True — The image, inverse, and boundary claims close directly from real arithmetic, nonnegativity of square roots, and the half-plane condition s >= 0. No external dependencies or parent theorem are needed.
+- **rationale:** The source theorem is independently proved as a bounded algebraic identity. The runner stdout supports the symbolic inverse and boundary checks, but the generated classifier collapses retained checks to B/D context-heavy items; those framework-instance and parent-row context checks are not load-bearing. The discrepancy does not undermine the source proof because the algebra closes without importing the parent DM-neutrino construction.
 - **auditor confidence:** high
 
 ### `hard_geometry_gravity_window_note`
