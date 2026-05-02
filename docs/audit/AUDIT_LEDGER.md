@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T20:13:11.637770+00:00
+**Generated:** 2026-05-02T20:14:56.960052+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 140 |
+| **retained** | 141 |
 | **retained_no_go** | 96 |
 | **retained_bounded** | 184 |
 | _retained_pending_chain_ | 2 |
-| unaudited | 555 |
+| unaudited | 554 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 376 |
+| `audited_clean` | 377 |
 | `audited_conditional` | 633 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 591 |
+| `unaudited` | 590 |
 
 | claim_type | count |
 |---|---:|
@@ -133,6 +133,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `cpt_exact_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -3299,6 +3300,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The previous missing-runner rationale is stale because scripts/coupled_field_generated_family_probe.py is now registered. The row still returns a conditional audit because the live runner emits zero classified A/B/C/D PASS lines, leaving the load-bearing no-go checks outside the audit-loop classifier. The safe boundary remains the note's bounded generated-family diagnostic, not a promoted field-sector theorem.
 - **open / conditional deps cited:**
   - `runner_output_missing_classified_a_b_c_d_pass_lines:scripts/coupled_field_generated_family_probe.py`
+- **auditor confidence:** high
+
+### `cpt_exact_note`
+
+- **Note:** [`CPT_EXACT_NOTE.md`](../../docs/CPT_EXACT_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact CPT invariance of the free staggered Cl(3) Hamiltonian on even periodic Z^3 lattices, plus vanishing CPT-odd Hermitian-Hamiltonian SME sector under the retained bridge lift.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-pr291-cpt-exact-singer-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** CPT * H * (CPT)^{-1} = C * P * H * P * C = C * (-H) * C = -(-H) = H, with the Hermitian Hamiltonian and SME-zero lift supplied by the bridge theorem.  _(class `A`)_
+- **chain closes:** True — The source note proves the D-level C/P/T algebra by exact matrix identities and the one-hop bridge is stated as audited_clean/effective retained for the Hermitian H=iD and SME-zero lift. No unaudited or open dependency is needed for the scoped free-Hamiltonian theorem.
+- **rationale:** The load-bearing step is an algebraic closure: C and P each flip the staggered hopping operator, T is handled through the retained Hermitian bridge, and the combined antiunitary representative preserves H. The source-note runner reran locally with PASS=53 and FAIL=0, checking only internal exact identities and finite-lattice/taste-space consistency, with no external comparator or tuned input. Residual risk is wording scope: the clean verdict applies to the free Hermitian Hamiltonian-sector SME-zero statement, not to interacting or continuum SME sectors beyond the stated assumptions.
 - **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
