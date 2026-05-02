@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Pattern B audit-companion runner for
 `dm_neutrino_dirac_bridge_theorem_note_2026-04-15`
-(claim_type=positive_theorem, audit_status=audited_conditional, td=115,
-load_bearing_step_class=C).
+(claim_type=positive_theorem, load_bearing_step_class=C).
 
 The parent's load-bearing step bundles two distinct components:
 
@@ -17,20 +16,20 @@ The parent's load-bearing step bundles two distinct components:
     - M(phi) at axis vector e_i equals Gamma_i.
 
 (b) The selector V_sel = 32 sum_{i<j} phi_i^2 phi_j^2 has minima at the
-    axis vectors -- this is a calculus-of-variations claim that the
-    audit verdict identifies as depending on the unaudited weak-axis
-    branch convention. Out of scope of this companion.
+    axis vectors -- this is a calculus-of-variations claim depending on
+    upstream source support and the weak-axis branch convention. Out of
+    scope of this companion.
 
 This Pattern B companion verifies the in-scope algebraic content (a) at
 sympy `Rational` exact precision via the standard 4x4 Euclidean Cl(4)
 Dirac realization. It does NOT address the upstream Higgs family,
-selector, 3+1 chirality operator, or weak-axis convention -- the audit
-verdict identifies those as requiring separate retained dependencies.
+selector, 3+1 chirality operator, or weak-axis convention; those remain
+separate upstream requirements.
 
 Companion role: not a new claim row; not a new source note. Provides
 audit-friendly evidence that the parent's load-bearing class-(C)
 algebraic content holds at exact precision. Does not modify the
-parent's audit_status; that decision belongs to the audit lane.
+parent's audit outcome; that decision belongs to the audit lane.
 """
 
 from pathlib import Path
@@ -216,7 +215,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('dm_neutrino_dirac_bridge_theorem_note_2026-04-15', {})
 print(f"\n  dm_neutrino_dirac_bridge_theorem_note_2026-04-15 current ledger state:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 
@@ -251,12 +249,12 @@ print("""
       derivation;
     - weak-axis branch convention.
 
-  Those four items are the verdict-identified upstream gaps that require
-  separate retained dependencies. This companion only certifies the
-  algebraic content of the bridge theorem at exact precision.
+  Those four items remain upstream requirements outside this companion.
+  This companion only certifies the algebraic content of the bridge theorem
+  at exact precision.
 
-  This audit-companion does NOT introduce a new claim row, a new source
-  note, or any modification of the parent's audit_status.
+  This companion does NOT introduce a new claim row, a new source note, or
+  any modification of the parent's audit outcome.
 """)
 
 

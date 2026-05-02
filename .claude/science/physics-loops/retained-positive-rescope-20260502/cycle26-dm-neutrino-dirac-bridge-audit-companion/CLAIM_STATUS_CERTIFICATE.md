@@ -2,7 +2,7 @@
 
 **Block:** physics-loop/dm-neutrino-dirac-bridge-audit-companion-block26-20260502
 **Runner:** scripts/audit_companion_dm_neutrino_dirac_bridge_exact.py (PASS=29/0)
-**Target row:** dm_neutrino_dirac_bridge_theorem_note_2026-04-15 (claim_type=positive_theorem, audit_status=audited_conditional, td=115, load_bearing_step_class=C)
+**Target row:** dm_neutrino_dirac_bridge_theorem_note_2026-04-15 (claim_type=positive_theorem, load_bearing_step_class=C)
 
 ## Block type
 
@@ -23,8 +23,8 @@ The parent's load-bearing step bundles two distinct components:
 (b) **Selector minima and upstream framework structure** (out-of-scope):
     `V_sel = 32 sum_{i<j} phi_i^2 phi_j^2` minima at axis vectors;
     Higgs family upstream; 3+1 chirality operator framework derivation;
-    weak-axis branch convention. The audit verdict identifies these as
-    requiring separate retained dependencies.
+    weak-axis branch convention. These remain outside this companion and
+    require separate source support before any status change can be decided.
 
 The companion verifies (a) at exact precision via the standard 4x4
 Euclidean Cl(4) Dirac realization.
@@ -32,13 +32,13 @@ Euclidean Cl(4) Dirac realization.
 ## Claim-Type Certificate (Pattern B)
 
 ```yaml
-target_claim_type: meta  # audit-companion runner; not a claim row
+artifact_type: meta_companion  # audit-companion runner; not a claim row
 proposed_load_bearing_step_class: C
 introduces_new_claim_row: false
 introduces_new_source_note: false
-modifies_parent_audit_status: false  # audit-lane decides
-audit_required_before_effective_retained: true  # parent row only; companion is meta
-bare_retained_allowed: false
+modifies_parent_status: false
+status_authority: independent_audit_lane
+source_sets_audit_outcome: false
 ```
 
 ## 7-criteria check (adapted for Pattern B)
@@ -74,11 +74,9 @@ bare_retained_allowed: false
 ## Audit-graph effect
 
 This companion is **meta** — it does not move the parent row by itself.
-The parent's `audited_conditional` verdict identifies four upstream gaps:
-
-> Repair target: add retained dependencies or an integrated derivation
-> for the Higgs family, selector, 3+1 chirality operator, and weak-axis
-> convention before the Gamma_1 selection step.
+The parent row still has four upstream requirements outside this companion:
+the Higgs family, selector, 3+1 chirality operator, and weak-axis convention
+before the Gamma_1 selection step.
 
 None of those four items are addressed by this companion. The companion
 only verifies the algebraic content of the bridge theorem at exact
@@ -90,7 +88,7 @@ verdict on the local-algebra portion of the row.
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the companion checks.
 - No same-surface family arguments.
 
 The companion is pure symbolic linear algebra on the standard 4x4
@@ -104,4 +102,4 @@ A standalone audit-companion runner that complements the existing primary
 runner by providing exact symbolic verification of the bridge theorem's
 algebraic content. The block proposes nothing about any retained-status
 change; the audit lane is the authority for that, and the four
-verdict-identified upstream gaps are not addressed here.
+upstream requirements listed above are not addressed here.
