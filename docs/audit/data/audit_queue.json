@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 102,
+    "leaf": 101,
     "medium": 130
   },
-  "generated_at": "2026-05-02T01:23:10.880447+00:00",
+  "generated_at": "2026-05-02T01:24:42.025750+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "two_body_mutual_attraction_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "two_field_retarded_family_closure_note_2026-04-10",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12093,6 +12076,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 22,
-  "total_pending": 433
+  "ready_count": 21,
+  "total_pending": 432
 }

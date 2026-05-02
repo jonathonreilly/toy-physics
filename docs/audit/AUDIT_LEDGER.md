@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:23:11.259437+00:00
+**Generated:** 2026-05-02T01:24:42.304266+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 151 |
-| support | 124 |
+| support | 123 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 966 |
-| ~~audited_failed~~ | 99 |
+| ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 358 |
 | `audited_conditional` | 666 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 70 |
+| `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 433 |
+| `unaudited` | 432 |
 
 | criticality | count |
 |---|---:|
@@ -1192,6 +1192,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triple_stack_collapse_scaling_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | C | - |
+| `two_body_mutual_attraction_note_2026-04-11` | support | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
@@ -15853,6 +15854,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The strongest retained quantitative result is LN + |y| + collapse at N=25 with purity = 0.6887 and at N=100 with purity = 0.8819, with all four modes fitting decays in 1 - purity.  _(class `C`)_
 - **chain closes:** False — The current registered runner preserves the qualitative no-asymptotic-escape conclusion, but its quantitative table and fits no longer match the note: N=25 LN+|y|+collapse is 0.7075, collapse is 0.9302, and the collapse/triple-stack power-law coefficients differ from the note.
 - **rationale:** Issue: the note's quoted quantitative table and scaling coefficients are stale relative to the current runner, including the headline N=25 triple-stack purity and the collapse/triple-stack power-law fits. Why this blocks: the note is a bounded numerical result, so the exact reported finite-N floor and fit parameters are load-bearing, even though the qualitative conclusion that collapse is only a bounded helper still survives. Repair target: refresh the note from the current runner output, update the finite-N purity table and fit coefficients, and explicitly preserve the surviving qualitative boundary. Claim boundary until fixed: safe to say the current runner still shows LN+|y|+collapse as a bounded finite-N helper with negative alpha, but not safe to cite the note's frozen numerical values.
+- **auditor confidence:** high
+
+### `two_body_mutual_attraction_note_2026-04-11`
+
+- **Note:** [`TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md`](../../docs/TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** The two-body lane is still open, with only a narrow positive periodic/massless partner-kick window and no broad or screened mutual-attraction closure.  _(class `B`)_
+- **chain closes:** False — The note is scientifically cautious, but it has no registered runner and the main scripts it names for the Hartree, acceleration, partner-kick, and size-scan surfaces are not present under those names in the current repo.
+- **rationale:** Issue: the note's numerical support and named artifact chain cannot be reproduced from the current row because the ledger has no runner and the listed frontier_two_body_mutual_attraction / two_orbital / acceleration / partner-kick scripts are absent under those paths. Why this blocks: even a cautious open-lane support note needs reproducible artifacts for the reported residuals, kick counts, size scan, and Wilson successor failure. Repair target: restore or relink the exact scripts/logs, or rewrite the note to cite the current available two-body runners and audited successor notes. Claim boundary until fixed: safe as a historical exploratory memo saying the two-body lane remains unresolved; not safe as audited support for the detailed numerical window or follow-up claims.
 - **auditor confidence:** high
 
 ### `two_sign_comparison_note_2026-04-10`
