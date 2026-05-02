@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:35:14.121375+00:00
+**Generated:** 2026-05-02T21:37:35.225999+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 2 |
-| unaudited | 555 |
+| unaudited | 554 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 20 |
+| ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 634 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 20 |
-| `unaudited` | 591 |
+| `audited_renaming` | 21 |
+| `unaudited` | 590 |
 
 | claim_type | count |
 |---|---:|
@@ -1205,6 +1205,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
+| `monopole_derived_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | E | - |
 | `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
@@ -11274,6 +11275,19 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`
   - `LATTICE_NN_CONTINUUM_NOTE.md`
   - `LATTICE_SYNTHESIS_GUARD_NOTE.md`
+- **auditor confidence:** high
+
+### `monopole_derived_note`
+
+- **Note:** [`MONOPOLE_DERIVED_NOTE.md`](../../docs/MONOPOLE_DERIVED_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Claim that compact lattice U(1) on Z3 derives integer monopole charge, physical Dirac quantization e*g=2*pi, M_mono about 1.43 M_Pl, and overclosure/inflation requirement with no dependencies.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-monopole-derived-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The physical charge is g = 2*pi/e, giving e*g = 2*pi -- the Dirac condition.  _(class `F`)_
+- **chain closes:** False — The compact lattice integer charge check closes, but the map from lattice winding/plaquette phase to physical magnetic charge g and electric coupling e is introduced as the readout. The mass and overclosure claims also import the Planck-scale pin, Wilson action, one-loop alpha_EM(M_Pl), FRW cosmology, and Kibble production rather than closing from no dependencies.
+- **rationale:** Issue: the runner sets g_dirac = 2*pi/e and then checks e*g = 2*pi, while the note identifies the lattice winding integer with physical magnetic charge by readout. Why this blocks: integer compact-lattice cube charge is not yet a derivation of the physical carrier, units, source law, Gaussian/SI normalization, boundary sector, or measured magnetic charge. Repair target: prove the lattice-to-physical U(1) charge map, source law, flux normalization, Planck-scale unit map, and action normalization from retained inputs, and make the runner compute the physical charge/mass rather than selecting them. Claim boundary until fixed: the note may state that compact U(1) lattice plaquette wrapping gives integer lattice charges and that, under the chosen physical readout plus package pins, the downstream formula gives M_mono about 1.43 M_Pl and severe overclosure.
 - **auditor confidence:** high
 
 ### `moonshot_other_testables_note`
