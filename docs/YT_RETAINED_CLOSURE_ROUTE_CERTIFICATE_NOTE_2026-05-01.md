@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=83 FAIL=0
+# SUMMARY: PASS=84 FAIL=0
 ```
 
 The runner verifies:
@@ -58,6 +58,7 @@ The runner verifies:
 | finite effective-mass plateau window fixes the source-pole residue | no |
 | single finite source-shift radius certifies the zero-source FH derivative | no |
 | finite-source-linearity gate is passed for current FH chunks | no |
+| autocorrelation/ESS gate is passed for target FH/LSZ observables | no |
 | BRST/ST/Nielsen identities fix the source pole as canonical Higgs | no |
 | finite Cl(3)/Z3 automorphism/orbit data fix continuous LSZ source overlap | no |
 | same-source pole-data sufficiency gate is passed | no |
@@ -149,6 +150,10 @@ The finite-source-linearity gate now makes that repair executable.  It does
 not pass on the current chunks because they use one nonzero radius; the
 three-radius calibration manifest is planning support only and projects beyond
 the foreground campaign window.
+The autocorrelation/ESS gate blocks another production shortcut.  Current
+chunks expose plaquette histories, but not per-configuration same-source
+`dE/ds` or `C_ss(q)` target time series, so target-observable effective sample
+size cannot be certified.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

@@ -1,0 +1,180 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ autocorrelation ESS gate not passed",
+  "autocorrelation_ess_gate_passed": false,
+  "chunk_rows": [
+    {
+      "chunk_index": 1,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 966.2537980936311,
+        "n": 1000,
+        "rho_first_lags": [
+          0.01746239030208653,
+          -0.0016357624892256867
+        ],
+        "tau_int_initial_positive": 0.5174623903020865,
+        "window_lag": 2
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 2,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 961.2938390644864,
+        "n": 1000,
+        "rho_first_lags": [
+          0.01995862484889805,
+          0.0001737006496100623,
+          -0.0009950427948900813
+        ],
+        "tau_int_initial_positive": 0.5201323254985082,
+        "window_lag": 3
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 3,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk003_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 952.9604308126748,
+        "n": 1000,
+        "rho_first_lags": [
+          0.021289448062979294,
+          0.000819227027495935,
+          0.002572081668339197,
+          -0.0027716617053151166
+        ],
+        "tau_int_initial_positive": 0.5246807567588144,
+        "window_lag": 4
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 4,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk004_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 964.4479503041537,
+        "n": 1000,
+        "rho_first_lags": [
+          0.018431295169757184,
+          -0.000859521070443429
+        ],
+        "tau_int_initial_positive": 0.5184312951697572,
+        "window_lag": 2
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 5,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk005_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 960.7602639703708,
+        "n": 1000,
+        "rho_first_lags": [
+          0.016731696922995188,
+          0.0015389538898346218,
+          0.0010675449432042219,
+          0.0010829943686853968,
+          -0.0014866428690396983
+        ],
+        "tau_int_initial_positive": 0.5204211901247194,
+        "window_lag": 5
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 6,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk006_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 963.8141702523338,
+        "n": 1000,
+        "rho_first_lags": [
+          0.018034856106753715,
+          0.0007373464943931185,
+          -0.0006442935665176369
+        ],
+        "tau_int_initial_positive": 0.5187722026011469,
+        "window_lag": 3
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
+    }
+  ],
+  "exact_next_action": "Extend the production harness or postprocessor to retain per-configuration same-source dE/ds and C_ss(q) target time series, or emit a predeclared blocking/bootstrap ESS certificate; then rerun this gate before using chunked FH/LSZ output as production evidence.",
+  "fail_count": 0,
+  "gate_requirements": {
+    "acceptable_alternative": "predeclared blocking/bootstrap certificate emitted by the production harness",
+    "minimum_ready_chunks_for_gate": 8,
+    "minimum_target_ess_per_volume": 200.0,
+    "required_target_timeseries": [
+      "per-configuration dE/ds or source-response energy samples",
+      "per-configuration C_ss(q) or Gamma_ss(q) samples for accepted modes"
+    ]
+  },
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Target-observable autocorrelation and effective sample size are not certified.",
+  "ready_chunk_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "strict_non_claims": [
+    "does not treat plaquette ESS as target FH/LSZ ESS",
+    "does not treat current chunks as production evidence",
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1"
+  ],
+  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  They do not expose per-configuration target time series for same-source dE/ds or C_ss(q)/Gamma_ss(q), so the load-bearing FH/LSZ target effective sample size cannot be certified.  Current chunks remain bounded support only until target-observable blocking/bootstrap data or an equivalent autocorrelation certificate is available."
+}

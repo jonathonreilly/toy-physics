@@ -51,6 +51,7 @@ plus short-distance/OPE LSZ shortcut no-go
 plus effective-mass plateau residue no-go
 plus finite source-shift derivative no-go
 plus FH/LSZ finite-source-linearity gate
+plus FH/LSZ autocorrelation ESS gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -63,6 +64,22 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+FH/LSZ autocorrelation ESS gate:
+
+```text
+actual_current_surface_status: open / FH-LSZ autocorrelation ESS gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Current ready chunks expose plaquette histories but not the per-configuration
+same-source `dE/ds` or `C_ss(q)` target time series needed for load-bearing
+effective sample size.  Plaquette ESS is diagnostic only and does not authorize
+production evidence or retained/proposed-retained closure.
 
 FH/LSZ finite-source-linearity gate:
 

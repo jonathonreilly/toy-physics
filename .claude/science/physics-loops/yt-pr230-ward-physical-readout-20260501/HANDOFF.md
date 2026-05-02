@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 FH/LSZ autocorrelation/ESS gate:
+
+- Added `scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py`,
+  `docs/YT_FH_LSZ_AUTOCORRELATION_ESS_GATE_NOTE_2026-05-02.md`, and
+  `outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json`.
+- Result: current ready chunks have plaquette histories and a diagnostic
+  plaquette ESS estimate, but they do not expose per-configuration
+  same-source `dE/ds` or `C_ss(q)` target time series.  Target-observable ESS
+  is therefore not certified.
+- Retained-route gate is `PASS=84 FAIL=0`; campaign status is
+  `PASS=110 FAIL=0` over 114 certificates.
+- Chunks007-008 remain running; chunks009-010 remain running with no completed
+  JSON output visible.
+
+Next exact action: process chunks007-010 as they finish through combiner,
+ready-set, response-stability, autocorrelation/ESS, retained-route, and
+campaign gates; otherwise continue scalar-denominator / canonical-Higgs
+identity work.  Do not use plaquette ESS as target FH/LSZ ESS.
+
 Latest checkpoint, 2026-05-02 FH/LSZ finite-source-linearity gate:
 
 - Added `scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py`,

@@ -193,6 +193,9 @@ def main() -> int:
         "fh_lsz_finite_source_linearity_gate": load(
             "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json"
         ),
+        "fh_lsz_autocorrelation_ess_gate": load(
+            "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
+        ),
         "higgs_pole_identity_latest_blocker": load(
             "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json"
         ),
@@ -657,6 +660,12 @@ def main() -> int:
         statuses["fh_lsz_finite_source_linearity_gate"],
     )
     report(
+        "fh-lsz-autocorrelation-ess-gate-blocks",
+        "autocorrelation ESS gate not passed"
+        in str(statuses["fh_lsz_autocorrelation_ess_gate"]),
+        statuses["fh_lsz_autocorrelation_ess_gate"],
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         "latest Higgs-pole identity blocker certificate"
         in str(statuses["higgs_pole_identity_latest_blocker"]),
@@ -1019,6 +1028,9 @@ def main() -> int:
             "The finite-source-linearity gate records the constructive repair "
             "but does not pass it: current chunks have one source radius, and "
             "the three-radius calibration manifest is not foreground evidence.  "
+            "The autocorrelation/ESS gate also blocks counting current chunks "
+            "as production evidence: plaquette autocorrelation is diagnostic, "
+            "but target same-source dE/ds and C_ss(q) time series are absent.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

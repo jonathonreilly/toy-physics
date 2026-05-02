@@ -119,6 +119,7 @@ def main() -> int:
         "effective_mass_plateau_residue_no_go": "outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json",
         "finite_source_shift_derivative_no_go": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
         "fh_lsz_finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
+        "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
@@ -640,6 +641,13 @@ def main() -> int:
         )
         is False
     )
+    autocorrelation_ess_gate_blocks = (
+        "autocorrelation ESS gate not passed"
+        in certificates["fh_lsz_autocorrelation_ess_gate"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_autocorrelation_ess_gate"].get("proposal_allowed") is False
+        and certificates["fh_lsz_autocorrelation_ess_gate"].get("autocorrelation_ess_gate_passed")
+        is False
+    )
     higgs_pole_identity_latest_blocker_blocks = (
         "latest Higgs-pole identity blocker certificate"
         in certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", "")
@@ -1039,6 +1047,11 @@ def main() -> int:
         certificates["fh_lsz_finite_source_linearity_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-autocorrelation-ess-gate-blocks",
+        autocorrelation_ess_gate_blocks,
+        certificates["fh_lsz_autocorrelation_ess_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         higgs_pole_identity_latest_blocker_blocks,
         certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", ""),
@@ -1221,6 +1234,10 @@ def main() -> int:
             "acceptance condition: current chunks still have one nonzero "
             "source radius, while a three-radius calibration is planning "
             "support only and projects beyond the foreground window.  "
+            "The autocorrelation/ESS gate blocks another production shortcut: "
+            "plaquette histories exist, but the current chunk outputs do not "
+            "retain per-configuration same-source dE/ds or C_ss(q) target "
+            "time series, so target ESS cannot be certified.  "
             "The effective-potential Hessian/source-overlap no-go blocks the "
             "radial-curvature repair: canonical VEV, W/Z masses, and scalar "
             "Hessian eigenvalues do not fix the source operator direction.  "
@@ -1311,6 +1328,9 @@ def main() -> int:
             "slopes as FH derivatives, add multiple source radii or a retained "
             "analytic response-bound theorem; the current finite-source-"
             "linearity gate is not passed."
+            " Before treating chunked FH/LSZ as production evidence, also "
+            "emit target-observable autocorrelation/ESS or blocking/bootstrap "
+            "certificates."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Autocorrelation ESS Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN ACCEPTANCE GATE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- plaquette histories are available and can support diagnostics, but plaquette
+  ESS is not target FH/LSZ ESS;
+- current chunk outputs do not retain per-configuration same-source `dE/ds`
+  or `C_ss(q)` target time series;
+- production evidence requires target-observable autocorrelation/ESS or a
+  predeclared blocking/bootstrap certificate;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Finite-Source-Linearity Gate
 
 Local review-loop disposition:

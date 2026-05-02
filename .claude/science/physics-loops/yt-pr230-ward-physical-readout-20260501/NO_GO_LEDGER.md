@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## Target-observable autocorrelation/ESS gate is not passed
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Current ready chunks include plaquette histories, so plaquette
+autocorrelation is available as a diagnostic.  They do not expose
+per-configuration same-source `dE/ds` or `C_ss(q)` target time series, so the
+load-bearing FH/LSZ effective sample size cannot be certified.  Plaquette ESS
+does not substitute for target-observable ESS.
+
 ## Finite-source-linearity gate is not passed
 
 Runner:

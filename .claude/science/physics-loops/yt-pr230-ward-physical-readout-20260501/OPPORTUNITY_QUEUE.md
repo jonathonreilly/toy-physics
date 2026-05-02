@@ -48,6 +48,12 @@ L12 calibration chunk, so it is not a foreground closure path.  Unless a
 scheduler is available, the higher retained-positive route remains a direct
 scalar-denominator/canonical-Higgs identity theorem while existing chunks
 continue in the background.
+The autocorrelation/ESS gate also exists and is not passed.  Finished chunks
+currently retain plaquette histories but not target same-source `dE/ds` or
+`C_ss(q)` time series, so target ESS cannot be certified.  This makes a
+harness/postprocessor time-series extension a production-quality prerequisite,
+but it is still below scalar-denominator/canonical-Higgs identity work in
+retained-positive probability during foreground looping.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
@@ -133,9 +139,12 @@ continue in the background.
    fits, and a same-source scalar two-point LSZ/canonical-normalization
    measurement for `kappa_s`.  The single-radius finite source slope remains
    diagnostic until a finite-source-linearity gate, multi-radius source
-   response, or retained response-bound theorem certifies the zero-source
-   derivative.  The finite-source-linearity gate is now executable but not
-   passed; the recorded three-radius calibration is planning support only.  The same-source two-point object is now
+  response, or retained response-bound theorem certifies the zero-source
+  derivative.  The finite-source-linearity gate is now executable but not
+  passed; the recorded three-radius calibration is planning support only.  The
+  current chunk outputs also need target-observable time series or a
+  blocking/bootstrap ESS certificate before the response slope can count as
+  production evidence.  The same-source two-point object is now
    executable as `C_ss(q)=Tr[S V_q S V_-q]`; closure still requires a
    controlled pole/continuum limit and canonical residue.  A finite-mode
    Bethe-Salpeter interpolation cannot supply that residue by itself.  The
