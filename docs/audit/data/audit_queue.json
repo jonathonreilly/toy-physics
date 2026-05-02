@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 27,
     "high": 218,
-    "leaf": 173,
+    "leaf": 174,
     "medium": 175
   },
-  "generated_at": "2026-05-02T21:34:19.361289+00:00",
+  "generated_at": "2026-05-02T21:35:13.779597+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -15172,6 +15172,31 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "sm_hypercharge_uniqueness_without_nu_r_input_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "left_handed_charge_matching_note",
+        "one_generation_matter_closure_note",
+        "anomaly_forces_time_theorem"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/SM_HYPERCHARGE_UNIQUENESS_WITHOUT_NU_R_INPUT_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_sm_hypercharge_no_nu_r_derivation.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "teleportation_preparation_readout_probe_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -15569,5 +15594,5 @@
     }
   ],
   "ready_count": 117,
-  "total_pending": 593
+  "total_pending": 594
 }

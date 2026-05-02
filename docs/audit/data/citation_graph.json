@@ -8269,6 +8269,18 @@
       "to": "full_y_squared_trace_su5_gut_note_2026-05-02"
     },
     {
+      "from": "sm_hypercharge_uniqueness_without_nu_r_input_theorem_note_2026-05-02",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "sm_hypercharge_uniqueness_without_nu_r_input_theorem_note_2026-05-02",
+      "to": "one_generation_matter_closure_note"
+    },
+    {
+      "from": "sm_hypercharge_uniqueness_without_nu_r_input_theorem_note_2026-05-02",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
       "from": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
       "to": "cpt_exact_note"
     },
@@ -20021,7 +20033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:34:14.557732+00:00",
+  "generated_at": "2026-05-02T21:35:09.420403+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40674,6 +40686,21 @@
       "runner_path": null,
       "title": "Sixth Family Sheared Basin"
     },
+    "sm_hypercharge_uniqueness_without_nu_r_input_theorem_note_2026-05-02": {
+      "claim_id": "sm_hypercharge_uniqueness_without_nu_r_input_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "left_handed_charge_matching_note",
+        "one_generation_matter_closure_note",
+        "anomaly_forces_time_theorem"
+      ],
+      "note_hash": "c1e76dbf27aab8f6acb495c76fb8bbd103ca330408d4a5e72eed0878132f2d6d",
+      "path": "docs/SM_HYPERCHARGE_UNIQUENESS_WITHOUT_NU_R_INPUT_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_sm_hypercharge_no_nu_r_derivation.py",
+      "title": "SM Hypercharge Uniqueness Without \u03bd_R Input \u2014 Anomaly Cancellation Alone"
+    },
     "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26": {
       "claim_id": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
       "claim_type_author_hint": null,
@@ -46638,7 +46665,7 @@
       "meta": 1,
       "no_go": 1,
       "none": 1742,
-      "positive_theorem": 44
+      "positive_theorem": 45
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 512,
@@ -46646,12 +46673,12 @@
       "no_go": 107,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 631
+      "positive_theorem": 632
     },
-    "edge_count": 5005,
-    "leaf_count": 766,
-    "node_count": 1800,
+    "edge_count": 5008,
+    "leaf_count": 767,
+    "node_count": 1801,
     "root_count": 1217,
-    "runners_with_path": 1368
+    "runners_with_path": 1369
   }
 }
