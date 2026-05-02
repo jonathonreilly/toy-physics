@@ -4773,6 +4773,14 @@
       "to": "global_coherence_off_scaffold_note"
     },
     {
+      "from": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
       "from": "graph_first_selector_derivation_note",
       "to": "graph_first_su3_integration_note"
     },
@@ -19989,7 +19997,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T16:42:28.999106+00:00",
+  "generated_at": "2026-05-02T16:47:07.529236+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29152,6 +29160,20 @@
       "path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
       "runner_path": "scripts/global_coherence_predictor.py",
       "title": "Global Free-Beam Coherence Predictor \u2014 Modest Revival"
+    },
+    "gluon_tree_level_masslessness_theorem_note_2026-05-02": {
+      "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "1c43bd220fb99e1fdaf9c1cf8b02cb7607214b5fc782e736155d1393ff1ac0ea",
+      "path": "docs/GLUON_TREE_LEVEL_MASSLESSNESS_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/gluon_tree_level_massless_check.py",
+      "title": "Tree-Level Gluon Masslessness from Retained SU(3) Gauge Invariance"
     },
     "gr_class_expansion_finite_rank_target_note": {
       "claim_id": "gr_class_expansion_finite_rank_target_note",
@@ -46320,19 +46342,19 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 6,
       "none": 1764,
-      "positive_theorem": 7
+      "positive_theorem": 8
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 507,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 609
+      "positive_theorem": 610
     },
-    "edge_count": 4997,
-    "leaf_count": 749,
-    "node_count": 1777,
+    "edge_count": 4999,
+    "leaf_count": 750,
+    "node_count": 1778,
     "root_count": 1213,
-    "runners_with_path": 1339
+    "runners_with_path": 1340
   }
 }

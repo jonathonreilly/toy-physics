@@ -1,7 +1,7 @@
 # Tree-Level Gluon Masslessness from Retained SU(3) Gauge Invariance
 
 **Date:** 2026-05-02
-**Type:** positive_theorem
+**Type:** positive_theorem (proposed; audit-lane to ratify)
 **Claim scope:** at the tree level on the framework's retained SU(3) gauge action surface, no Lorentz-invariant Hermitian gauge-singlet quadratic-in-A_μ^a operator exists that is also SU(3) gauge-invariant; therefore the only quadratic-in-A operator allowed by retained SU(3) gauge invariance is the kinetic term -(1/4) F^a_μν F^{aμν}, and the gluon propagator pole is at p² = 0 (massless).
 **Status:** awaiting independent audit. Under scope-aware classification (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `positive-only-retained-20260502`
@@ -12,8 +12,8 @@
 
 ## Cited authorities (one hop)
 
-- [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) — `effective_status: retained_bounded` (the SU(2) and structural SU(3) parts; the bounded-only piece is the abelian hypercharge-like surface, which this note does not depend on).
-- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — `effective_status: retained_bounded`. Provides the canonical structural SU(3) on the graph-first selected-axis surface.
+- [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) — current ledger effective status `retained_bounded` (the SU(2) and structural SU(3) parts; the bounded-only piece is the abelian hypercharge-like surface, which this note does not depend on).
+- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — current ledger effective status `retained_bounded`. Provides the canonical structural SU(3) on the graph-first selected-axis surface.
 
 Both deps are in the chain-clean set `{retained, retained_no_go, retained_bounded}` per the propagation rule.
 
@@ -216,10 +216,14 @@ admitted_context_inputs:
   - antisymmetry of f^{abc} (Lie algebra structure)
   - standard Lorentz-scalar enumeration of quadratic-in-A operators
 upstream_dependencies:
-  - native_gauge_closure_note (retained_bounded)
-  - graph_first_su3_integration_note (retained_bounded)
+  - native_gauge_closure_note
+  - graph_first_su3_integration_note
 audit_required_before_effective_retained: true
 ```
+
+These are author-side hints only. The independent audit lane sets the audit
+verdict, and the pipeline computes any retained-family effective status after
+that verdict and dependency closure.
 
 **Not in scope.**
 

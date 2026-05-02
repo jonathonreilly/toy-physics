@@ -52,11 +52,10 @@ def structure_constants() -> np.ndarray:
             comm = Ts[a] @ Ts[b] - Ts[b] @ Ts[a]
             # comm should equal 2i sum_c f^{abc} T_c
             for c in range(8):
-                # tr(T_a T_b) = (1/2) delta_{ab}, so f^{abc} = (1/i) tr(comm * T_c)
-                f[a, b, c] = float((1.0 / (1j * 2)) * np.trace(comm @ Ts[c])).real * 2
-                # Actually: comm = 2i f T, so tr(comm T_c) = 2i f^{abc} tr(T T_c) = 2i f^{abc} (1/2) = i f^{abc}.
+                # tr(comm T_c) = 2i f^{abc} tr(T_c T_c) = i f^{abc}.
                 # Therefore f^{abc} = -i tr(comm T_c).
-                f[a, b, c] = float(-1j * np.trace(comm @ Ts[c])).real
+                f_value = -1j * np.trace(comm @ Ts[c])
+                f[a, b, c] = float(np.real_if_close(f_value).real)
     return f
 
 

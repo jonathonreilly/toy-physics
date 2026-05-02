@@ -17,7 +17,7 @@ positive_theorem-retained-only pre-screen:
   unconditional statement on the retained SU(3) gauge action surface)
 - every load-bearing dep at retained-grade on live ledger ✓ (both
   `native_gauge_closure_note` and `graph_first_su3_integration_note`
-  are at `effective_status: retained_bounded`, which is in the
+  currently have ledger effective status `retained_bounded`, which is in the
   chain-clean set `{retained, retained_no_go, retained_bounded}`)
 - zero admitted physics inputs ✓ (admitted-context items are pure
   structural/mathematical: SU(3) gauge transformation law,
@@ -38,27 +38,21 @@ admitted_context_inputs:
   - elementary integration by parts
   - inverse-of-quadratic-form propagator identity
 upstream_dependencies:
-  - native_gauge_closure_note (effective_status: retained_bounded)
-  - graph_first_su3_integration_note (effective_status: retained_bounded)
+  - native_gauge_closure_note
+  - graph_first_su3_integration_note
 runner_classified_passes: 4 PASS at machine precision (mass-term gauge-variation residual nonzero; f^{abc} F^a F^b = 0 confirms F² invariance; propagator pole at p² = 0; SU(3) non-abelian)
 ```
 
-## Expected `effective_status` after audit
+## Audit-pending disposition
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-positive_theorem`:
-
-- chain_clean check: both deps in {retained, retained_no_go, retained_bounded}
-  → chain_clean = True
-- claim_type = positive_theorem → `effective_status = retained`
-
-Block 01 is the first new derivation in the strict-bar campaign and
-the first that should propagate cleanly to **`retained`** under the
-new framework.
+This certificate does not assign an audit verdict or an effective status. If an
+independent audit ratifies the theorem and the dependency chain remains clean,
+the audit pipeline is expected to compute the retained-family status from those
+inputs.
 
 ## Dependency chain status snapshot (2026-05-02 live ledger)
 
-| Dep | Today's `effective_status` | Affects propagation? |
+| Dep | Today's effective status | Affects propagation? |
 |---|---|---|
 | `native_gauge_closure_note` | `retained_bounded` | clean (in chain-clean set) |
 | `graph_first_su3_integration_note` | `retained_bounded` | clean (in chain-clean set) |
@@ -81,8 +75,7 @@ What an auditor needs to evaluate this note:
    `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`).
 3. The new audit prompt template.
 
-The auditor's `claim_type` and `audit_status` together with the
-already-clean dep chain determine `effective_status`. Expected outcome:
-`retained` (not `retained_bounded` — the bounded scope on the upstream
-deps is about the U(1) hypercharge factor, which this note does not
-depend on).
+The auditor's classification and verdict together with the already-clean dep
+chain determine the eventual effective status. The intended scientific scope is
+not bounded by the upstream U(1) hypercharge caveat because this note depends
+only on the structural SU(3) surface.

@@ -3,14 +3,18 @@
 **Date:** 2026-05-02
 **Slug:** `positive-only-retained-20260502`
 **Mode:** campaign
-**Strict bar:** every block must qualify as `claim_type = positive_theorem` and route to `effective_status = retained` under the scope-aware classification framework adopted 2026-05-02 (PR #291).
+**Strict bar:** every block must qualify as a proposed `positive_theorem`; any
+retained-family status is assigned only by the independent audit lane and the
+scope-aware pipeline adopted 2026-05-02 (PR #291).
 
 ## Strict acceptance criteria
 
 A candidate target survives pre-screening only if all four hold:
 
 1. The proof has a single positive load-bearing statement (no narrow bounded scope).
-2. Every load-bearing dependency is at `effective_status ∈ {retained, retained_no_go, retained_bounded}` on the **live audit ledger today**, not "Codex audited_clean awaiting framework-adoption sweep".
+2. Every load-bearing dependency is already in the retained-grade family
+   `{retained, retained_no_go, retained_bounded}` on the **live audit ledger
+   today**, not merely waiting on a framework-adoption sweep.
 3. No load-bearing admitted-context **physics** input (Killing horizons, NEC, Wald-Noether admission, Bisognano-Wichmann admission, Bardeen-Carter-Hawking integrability, etc.). Pure mathematical admissions (Γ-function identities, group theory, basic linear algebra, complex analysis) are allowed.
 4. The runner has classifiable PASS lines that demonstrate the positive_theorem at the structural level (class C first-principles compute, not just A algebraic identities or G numerical matches).
 

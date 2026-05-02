@@ -1,7 +1,3 @@
-/Users/jonBridger/Toy Physics/.claude/worktrees/exciting-darwin-656d7c/scripts/gluon_tree_level_massless_check.py:56: ComplexWarning: Casting complex values to real discards the imaginary part
-  f[a, b, c] = float((1.0 / (1j * 2)) * np.trace(comm @ Ts[c])).real * 2
-/Users/jonBridger/Toy Physics/.claude/worktrees/exciting-darwin-656d7c/scripts/gluon_tree_level_massless_check.py:59: ComplexWarning: Casting complex values to real discards the imaginary part
-  f[a, b, c] = float(-1j * np.trace(comm @ Ts[c])).real
 ========================================================================
 GLUON TREE-LEVEL MASSLESSNESS CHECK
 ========================================================================
