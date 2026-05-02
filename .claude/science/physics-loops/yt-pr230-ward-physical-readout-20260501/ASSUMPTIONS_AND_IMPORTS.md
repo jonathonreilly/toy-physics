@@ -26,6 +26,7 @@
 | Scalar-channel contact coupling `G` | HS/RPA pole condition | not in `A_min` | forbidden unless derived from Wilson gauge ladder |
 | Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |
 | IR / finite-volume kernel limit | needed for ladder eigenvalue crossing | not yet fixed | open import |
+| Reflection positivity / OS reconstruction | possible scalar spectral shortcut | exact negative boundary for PR230 LSZ closure | allowed as positivity support only; does not derive pole saturation, source residue, or canonical-Higgs identity |
 | Full-staggered PT formula layer | supplies `D_psi`, `D_gluon`, scalar/gauge kinematics | exact support only | formulas reusable; old alpha/plaquette/H_unit surfaces forbidden |
 | EW/Higgs canonical doublet notes | structural guardrails | proposed/unaudited or conditional parents | may not be used as PR230 source-normalization closure |
 
@@ -258,6 +259,19 @@ proposal_allowed = false
 The refreshed gate includes the current source-unit and production-manifest
 blocks.  It remains forbidden to promote PR #230 until that certificate is
 changed by production evidence or a new theorem.
+
+Reflection positivity boundary:
+
+```text
+M_ij = C(t_i + t_j) >= 0
+```
+
+For a positive spectral measure, OS reflection matrices are positive
+semidefinite.  This is not enough for the PR #230 scalar LSZ bridge: positive
+reflection-positive pole-plus-continuum families can keep the finite
+same-source shell values fixed while changing the pole residue.  A route that
+uses OS positivity as `kappa_s`, pole saturation, or canonical-Higgs identity
+is importing the missing scalar-denominator theorem.
 
 Scalar zero-mode limit-order boundary:
 

@@ -132,6 +132,9 @@ def main() -> int:
         "fh_lsz_soft_continuum_threshold": load(
             "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json"
         ),
+        "reflection_positivity_lsz_shortcut": load(
+            "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -507,6 +510,12 @@ def main() -> int:
         "fh-lsz-soft-continuum-threshold-no-go-blocks-ir-shortcut",
         "soft-continuum threshold no-go" in str(statuses["fh_lsz_soft_continuum_threshold"]),
         statuses["fh_lsz_soft_continuum_threshold"],
+    )
+    report(
+        "reflection-positivity-not-scalar-lsz-closure",
+        "reflection positivity not scalar LSZ closure"
+        in str(statuses["reflection_positivity_lsz_shortcut"]),
+        statuses["reflection_positivity_lsz_shortcut"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",
@@ -921,6 +930,10 @@ def main() -> int:
             "color-singlet q=0 cancellation plus finite-q IR regularity as the "
             "missing threshold premise: local integrability does not exclude "
             "positive continuum spectral weight arbitrarily close to the pole.  "
+            "The reflection-positivity shortcut no-go also blocks the broader "
+            "OS positivity repair: reflection-positive positive-measure "
+            "families can keep the finite shell rows fixed while changing the "
+            "same-source pole residue.  "
             "The scalar carrier/projector closure attempt confirms that the "
             "taste/projector side remains open as well: color-singlet support "
             "and unit taste-singlet algebra do not identify the physical "

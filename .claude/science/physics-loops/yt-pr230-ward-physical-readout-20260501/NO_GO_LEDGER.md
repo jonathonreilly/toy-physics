@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Reflection positivity / OS reconstruction is not scalar LSZ closure
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_reflection_positivity_lsz_shortcut_no_go.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+Reflection positivity gives positive spectral measures, but positive spectral
+measures still do not identify the scalar pole residue.  The runner realizes
+the same positive pole-plus-continuum family as reflection-positive Euclidean
+time correlators and verifies positive OS reflection matrices while the finite
+same-source shell rows remain fixed and the pole residue varies.  This blocks
+using OS positivity as the pole-saturation, source residue, or
+canonical-Higgs identity premise.
+
 ## FH gauge-normalized response does not exclude mixed top-coupled scalars
 
 Runner:

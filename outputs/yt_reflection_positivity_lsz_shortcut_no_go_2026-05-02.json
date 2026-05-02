@@ -1,0 +1,73 @@
+{
+  "actual_current_surface_status": "exact negative boundary / reflection positivity not scalar LSZ closure",
+  "exact_next_action": "Continue seed-controlled production chunks when they finish, or derive a microscopic scalar-denominator/canonical-Higgs identity theorem stronger than positive spectral reconstruction.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "higgs_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
+    "stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Reflection positivity gives spectral positivity, which still underidentifies the same-source scalar pole residue.",
+  "reflection_positive_family": {
+    "all_reflection_matrices_positive": true,
+    "all_spectral_weights_positive": true,
+    "inverse_derivative_span_factor": 8.0,
+    "pole_m2": 0.25,
+    "relative_y_proxy_span_factor": 2.82842712474619,
+    "rows": [
+      {
+        "condition_number_proxy": 1.8904844777746706e+301,
+        "dGamma_dp2_at_pole_proxy": 4.0,
+        "min_continuum_weight": 0.0,
+        "min_reflection_matrix_eigenvalue": -2.791930244889394e-16,
+        "pole_residue": 0.25,
+        "relative_y_proxy_for_fixed_dE_ds": 2.0,
+        "success": true
+      },
+      {
+        "condition_number_proxy": 1.8903661553368885e+301,
+        "dGamma_dp2_at_pole_proxy": 2.0,
+        "min_continuum_weight": 0.0,
+        "min_reflection_matrix_eigenvalue": -4.913863918416485e-16,
+        "pole_residue": 0.5,
+        "relative_y_proxy_for_fixed_dE_ds": 1.4142135623730951,
+        "success": true
+      },
+      {
+        "condition_number_proxy": 1.8901295216206524e+301,
+        "dGamma_dp2_at_pole_proxy": 1.0,
+        "min_continuum_weight": 0.0,
+        "min_reflection_matrix_eigenvalue": -4.569228441088197e-16,
+        "pole_residue": 1.0,
+        "relative_y_proxy_for_fixed_dE_ds": 1.0,
+        "success": true
+      },
+      {
+        "condition_number_proxy": 1.889656298842106e+301,
+        "dGamma_dp2_at_pole_proxy": 0.5,
+        "min_continuum_weight": 0.0,
+        "min_reflection_matrix_eigenvalue": -6.17721230637542e-16,
+        "pole_residue": 2.0,
+        "relative_y_proxy_for_fixed_dE_ds": 0.7071067811865476,
+        "success": true
+      }
+    ],
+    "times": [
+      0.25,
+      0.5,
+      1.0,
+      1.5,
+      2.5,
+      4.0
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not infer pole saturation from OS positivity",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "Reflection positivity / OS reconstruction does not supply the missing PR #230 scalar LSZ normalization.  It promotes Euclidean two-point functions to positive spectral measures, but the existing positive pole-plus-continuum family is itself reflection-positive and still preserves the finite same-source shell values while changing the pole residue and inverse propagator derivative.  Therefore reflection positivity cannot replace the needed pole-saturation/threshold, microscopic scalar denominator, production continuum, or canonical-Higgs identity certificate."
+}

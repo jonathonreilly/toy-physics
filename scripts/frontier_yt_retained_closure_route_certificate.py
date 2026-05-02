@@ -98,6 +98,7 @@ def main() -> int:
         "fh_lsz_uniform_gap_self_certification": "outputs/yt_fh_lsz_uniform_gap_self_certification_no_go_2026-05-02.json",
         "scalar_denominator_theorem_closure": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
         "fh_lsz_soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+        "reflection_positivity_lsz_shortcut": "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -448,6 +449,21 @@ def main() -> int:
         in certificates["fh_lsz_soft_continuum_threshold"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_soft_continuum_threshold"].get("proposal_allowed") is False
         and certificates["fh_lsz_soft_continuum_threshold"].get("uniform_threshold_gap_certified") is False
+    )
+    reflection_positivity_shortcut_blocks = (
+        "reflection positivity not scalar LSZ closure"
+        in certificates["reflection_positivity_lsz_shortcut"].get("actual_current_surface_status", "")
+        and certificates["reflection_positivity_lsz_shortcut"].get("proposal_allowed") is False
+        and certificates["reflection_positivity_lsz_shortcut"]
+        .get("reflection_positive_family", {})
+        .get("all_reflection_matrices_positive")
+        is True
+        and float(
+            certificates["reflection_positivity_lsz_shortcut"]
+            .get("reflection_positive_family", {})
+            .get("inverse_derivative_span_factor", 0.0)
+        )
+        >= 8.0
     )
     scalar_carrier_projector_closure_blocked = (
         "scalar carrier-projector closure attempt blocked"
@@ -815,6 +831,11 @@ def main() -> int:
         certificates["fh_lsz_soft_continuum_threshold"].get("actual_current_surface_status", ""),
     )
     report(
+        "reflection-positivity-not-scalar-lsz-closure",
+        reflection_positivity_shortcut_blocks,
+        certificates["reflection_positivity_lsz_shortcut"].get("actual_current_surface_status", ""),
+    )
+    report(
         "scalar-carrier-projector-closure-attempt-blocked",
         scalar_carrier_projector_closure_blocked,
         certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", ""),
@@ -1037,6 +1058,10 @@ def main() -> int:
             "color-singlet q=0 cancellation plus finite-q IR regularity into "
             "that threshold premise: IR integrability is compatible with "
             "positive continuum spectral weight arbitrarily close to the pole.  "
+            "The reflection-positivity shortcut no-go blocks the broader OS "
+            "positivity repair too: a reflection-positive positive-measure "
+            "family can preserve the same finite shell rows while moving the "
+            "same-source pole residue.  "
             "The scalar carrier/projector closure attempt confirms the "
             "remaining taste/carrier side is also open: unit taste algebra and "
             "color-singlet support do not admit non-origin corners, preserve "

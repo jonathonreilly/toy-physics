@@ -2661,3 +2661,17 @@ Review stance: physical-response design / claim firewall.
 Disposition: bounded support.  The manifest records a concrete future W/Z
 mass-response observable and schema, but the harness and identity certificates
 are absent.  No retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 120 Reflection-Positivity LSZ Shortcut No-Go
+
+Review stance: analytic shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_reflection_positivity_lsz_shortcut_no_go.py`.
+- Added `docs/YT_REFLECTION_POSITIVITY_LSZ_SHORTCUT_NO_GO_NOTE_2026-05-02.md`.
+- Added `outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  OS positivity gives a positive
+spectral measure but not pole saturation, source-pole residue, or
+canonical-Higgs identity.  No retained or proposed-retained wording is
+allowed.

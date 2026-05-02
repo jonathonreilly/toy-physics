@@ -172,6 +172,7 @@ the visible shortcut routes:
 | joint Feynman-Hellmann / scalar-LSZ uniform-gap self-certification no-go | finite shell rows cannot certify the continuum gap; a gapped positive model's shell values are also fit by a near-pole positive continuum model with zero residue lower bound |
 | scalar denominator theorem closure attempt | current support identifies pole and derivative targets plus singlet zero-mode cancellation/finite-q regularity, but zero-mode prescription, physical scalar carrier/projector, `K'(pole)`, model class, threshold, and seed-controlled production remain open |
 | joint Feynman-Hellmann / scalar-LSZ soft-continuum threshold no-go | color-singlet q=0 cancellation and finite-q IR regularity do not certify a positive threshold gap; locally integrable soft continuum weight can start arbitrarily close to the pole |
+| reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
 | scalar carrier/projector closure attempt | color-singlet support and unit taste-singlet algebra are available, but physical carrier authority, unit-projector crossing, kernel enhancement, fitted-kernel legitimacy, and `K'(pole)` remain blocked |
 | `K'(pole)` closure attempt | determinant/eigen-derivative gates and finite derivative scouts name the object, but limiting order, residue envelope, Ward/Feshbach non-identification, carrier/projector, fitted-kernel, and threshold blockers remain |
 | FH/LSZ canonical-Higgs pole identity gate | same-source invariance cancels source scaling, but it does not certify that the measured source pole is the canonical Higgs radial mode used by `v`; production pole derivative and source-to-Higgs identity remain open |
@@ -271,3 +272,7 @@ certificates.  No retained/proposed-retained wording is authorized.
 Latest W/Z response manifest checkpoint: campaign status now includes the
 same-source gauge-mass response manifest and reports `PASS=100 FAIL=0` over
 104 certificates.  No retained/proposed-retained wording is authorized.
+
+Latest reflection-positivity checkpoint: campaign status now includes the
+reflection-positivity LSZ shortcut no-go and reports `PASS=101 FAIL=0` over
+105 certificates.  No retained/proposed-retained wording is authorized.

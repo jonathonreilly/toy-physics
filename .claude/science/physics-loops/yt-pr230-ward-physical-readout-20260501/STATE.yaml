@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-119-fh-gauge-mass-response-manifest
-blocks_completed: 119
-active_route: "same-source W/Z gauge-mass response manifest"
-active_hard_residual: "The W/Z response ratio gives a concrete kappa_s-canceling observable, but the production harness has no W/Z mass-response path and the sector-overlap/Higgs-pole identity gates remain blocking."
+current_phase: campaign-rerun-block-120-reflection-positivity-lsz-shortcut-no-go
+blocks_completed: 120
+active_route: "reflection positivity / OS scalar LSZ shortcut stress test"
+active_hard_residual: "Reflection positivity gives positive spectral measures, but the tested reflection-positive family still preserves finite same-source shell data while varying the scalar pole residue; pole saturation, microscopic denominator, production continuum control, and canonical-Higgs identity remain blocking."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -382,6 +382,9 @@ files_touched:
   - "scripts/frontier_yt_fh_gauge_mass_response_observable_gap.py"
   - "docs/YT_FH_GAUGE_MASS_RESPONSE_OBSERVABLE_GAP_NOTE_2026-05-02.md"
   - "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json"
+  - "scripts/frontier_yt_reflection_positivity_lsz_shortcut_no_go.py"
+  - "docs/YT_REFLECTION_POSITIVITY_LSZ_SHORTCUT_NO_GO_NOTE_2026-05-02.md"
+  - "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json"
   - "scripts/frontier_yt_retained_closure_route_certificate.py"
   - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
   - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
@@ -541,6 +544,7 @@ claim_state_movement:
   - "added the latest Higgs-pole identity blocker certificate: a fixed same-source pole readout can coexist with different physical canonical-Higgs Yukawas unless source-pole purity, no-orthogonal-top-coupling/sector-overlap, source residue, and D'(pole) are derived or measured"
   - "audited the confinement/mass-gap threshold shortcut: qualitative substrate mass-gap language is not a uniform same-source scalar LSZ continuum threshold and cannot replace the scalar denominator/threshold theorem"
   - "added a same-source W/Z gauge-mass response manifest: it specifies the production observable and minimum schema for a kappa_s-canceling ratio, while confirming the current QCD top harness has no W/Z response path and the route is not evidence"
+  - "proved a reflection-positivity LSZ shortcut no-go: OS positivity gives a positive spectral measure, but reflection-positive pole-plus-continuum families can preserve finite same-source shell rows while moving the scalar pole residue"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -549,5 +553,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll seed-controlled chunks005-006. If either has finished, rerun the combiner, dynamic ready-set checkpoint, response-stability diagnostic, retained-route gate, and campaign gate; otherwise continue scalar-denominator/threshold theorem work or wait for production pole-residue data. Do not treat the W/Z response manifest as evidence until a real W/Z harness and identity certificates exist."
+next_exact_action: "Poll seed-controlled chunks005-006. If either has finished, rerun the combiner, dynamic ready-set checkpoint, response-stability diagnostic, retained-route gate, and campaign gate; otherwise continue scalar-denominator/canonical-Higgs theorem work or wait for production pole-residue data. Do not treat reflection positivity, W/Z response manifests, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

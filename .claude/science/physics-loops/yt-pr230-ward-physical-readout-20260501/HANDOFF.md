@@ -864,3 +864,27 @@ sector-overlap and Higgs-pole identity gates remain blocking.
 Next exact action: poll chunks005-006.  If neither has finished, continue
 scalar-denominator/threshold work or implement a real W/Z response harness;
 do not treat the manifest as retained/proposed-retained support.
+
+Block 120 added the reflection-positivity LSZ shortcut no-go:
+
+```text
+python3 scripts/frontier_yt_reflection_positivity_lsz_shortcut_no_go.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=75 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=101 FAIL=0
+```
+
+Result: OS/reflection positivity is not the missing scalar LSZ theorem.  The
+positive pole-plus-continuum family can be represented by reflection-positive
+Euclidean time correlators with positive OS matrices while preserving finite
+same-source shell rows and moving the pole residue.
+
+Next exact action: poll chunks005-006.  If either completed, process through
+the combiner/ready-set/stability gates.  Otherwise continue with a genuinely
+microscopic scalar-denominator/canonical-Higgs identity theorem or wait for
+production pole-residue data; do not use reflection positivity as pole
+saturation or `kappa_s` closure.

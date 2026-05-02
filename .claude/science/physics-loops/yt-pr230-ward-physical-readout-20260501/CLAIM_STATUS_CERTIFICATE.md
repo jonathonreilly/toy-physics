@@ -42,6 +42,7 @@ plus chunk002 checkpoint replacement-ready support
 plus ready chunk-set production checkpoint
 plus ready chunk response-stability diagnostic
 plus FH gauge-response mixed-scalar obstruction
+plus reflection-positivity LSZ shortcut no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -1445,3 +1446,20 @@ The manifest records a possible future kappa_s-canceling observable, but no
 W/Z response harness, production response certificate, sector-overlap identity,
 or Higgs-pole identity certificate exists.  No retained or `proposed_retained`
 wording is authorized.
+
+Reflection-positivity LSZ shortcut checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / reflection positivity not scalar LSZ closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_reflection_positivity_lsz_shortcut_no_go.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+OS positivity supplies positive spectral reconstruction, not scalar pole
+saturation.  The tested positive-measure family is reflection-positive and
+keeps finite same-source shell rows fixed while varying the pole residue.
+This does not authorize `kappa_s = 1`, source-pole residue, canonical-Higgs
+identity, retained closure, or `proposed_retained` wording.

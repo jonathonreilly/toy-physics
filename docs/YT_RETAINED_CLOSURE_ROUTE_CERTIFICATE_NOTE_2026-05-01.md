@@ -239,7 +239,10 @@ scalar carrier/projector, `K'(pole)`, model class, threshold, and
 seed-controlled production.  The soft-continuum threshold no-go also blocks
 promoting color-singlet q=0 cancellation plus finite-q IR regularity into that
 threshold premise: IR integrability does not exclude positive continuum
-spectral weight arbitrarily close to the pole.  The scalar carrier/projector
+spectral weight arbitrarily close to the pole.  The reflection-positivity
+LSZ shortcut no-go blocks the broader OS positivity repair as well: positive
+reflection-positive spectral families can preserve finite same-source shell
+rows while moving the pole residue.  The scalar carrier/projector
 closure attempt confirms that the taste/projector side is still open:
 color-singlet support and unit taste-singlet algebra do not admit the physical
 carrier, preserve unit-projector finite crossings, or derive `K'(pole)`.  The
@@ -308,3 +311,10 @@ response observable that could cancel `kappa_s`, but it is not evidence.  The
 current harness has top `dE/ds` support only; no W/Z response path or identity
 certificate exists.  The retained-route certificate is refreshed at
 `PASS=74 FAIL=0` and still authorizes no retained/proposed-retained wording.
+
+The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
+OS positivity gives a positive spectral representation, but the positive
+pole-plus-continuum family can be realized by reflection-positive Euclidean
+time correlators while finite same-source shell rows stay fixed and the pole
+residue changes.  The retained-route certificate is refreshed at
+`PASS=75 FAIL=0` and still authorizes no retained/proposed-retained wording.

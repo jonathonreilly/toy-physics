@@ -269,7 +269,10 @@ canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.
    The soft-continuum threshold no-go also blocks upgrading q=0 cancellation
    and finite-q IR regularity into the threshold premise: local integrability
    does not exclude positive continuum spectral weight arbitrarily close to
-   the pole.
+   the pole.  The reflection-positivity shortcut no-go also blocks using OS
+   reconstruction as the missing theorem: the positive spectral family can be
+   realized by reflection-positive Euclidean time correlators while the pole
+   residue remains underidentified.
    The scalar carrier/projector closure attempt also blocks the taste/projector
    shortcut.  Color-singlet support and unit taste-singlet algebra do not
    derive physical carrier authority, preserve unit-projector crossings, or
