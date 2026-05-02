@@ -7,12 +7,13 @@ Verifies the uniqueness claim in
 
 Exact rational arithmetic: the three right-handed-sector-constraining
 anomaly-cancellation equations plus the neutral-singlet identification
-Y(ν_R) = 0, on the retained LH content
+Y(ν_R) = 0, on the stated LH content
 Q_L + L_L and SU(2)-singlet RH completion, uniquely fix the RH hypercharges
 to the Standard Model values up to the u_R ↔ d_R relabelling removed by the
-electric-charge convention.
+electric-charge convention. This runner verifies the exact conditional
+arithmetic; it does not certify audit-retained status.
 
-Authorities (all retained on main):
+Inputs and audit boundaries:
   - ANOMALY_FORCES_TIME_THEOREM.md  (anomaly traces, existence of RH completion)
   - LEFT_HANDED_CHARGE_MATCHING_NOTE.md  (LH content)
   - HYPERCHARGE_IDENTIFICATION_NOTE.md    (Y(ν_R) = 0)
@@ -50,7 +51,7 @@ def banner(title: str) -> None:
 
 
 # --------------------------------------------------------------------------
-# Structural inputs (retained on main)
+# Structural inputs for the conditional check
 # --------------------------------------------------------------------------
 
 # LH content (all Left-handed per ANOMALY_FORCES_TIME_THEOREM Step 1):
@@ -75,16 +76,16 @@ MULT_NR = 1
 
 
 # --------------------------------------------------------------------------
-# Part 0: verify LH-only anomaly traces match retained note values
+# Part 0: verify LH-only anomaly traces match scoped note values
 # --------------------------------------------------------------------------
 
 def part0_lh_only_traces() -> None:
-    banner("Part 0: LH-only anomaly traces (retained from ANOMALY_FORCES_TIME)")
+    banner("Part 0: LH-only anomaly traces (scoped from ANOMALY_FORCES_TIME)")
 
     # Tr[Y]_LH (chirality sign +):
     tr_Y_lh = MULT_QL * Y_QL + MULT_LL * Y_LL
     check(
-        "Tr[Y]_LH = 0 (consistent with retained)",
+        "Tr[Y]_LH = 0 (consistent with scoped inputs)",
         tr_Y_lh == 0,
         f"= {MULT_QL}*(1/3) + {MULT_LL}*(-1) = {tr_Y_lh}",
     )
@@ -92,7 +93,7 @@ def part0_lh_only_traces() -> None:
     # Tr[Y^3]_LH:
     tr_Y3_lh = MULT_QL * Y_QL ** 3 + MULT_LL * Y_LL ** 3
     check(
-        "Tr[Y^3]_LH = -16/9 (matches retained ANOMALY_FORCES_TIME Step 1)",
+        "Tr[Y^3]_LH = -16/9 (matches scoped ANOMALY_FORCES_TIME Step 1)",
         tr_Y3_lh == Fraction(-16, 9),
         f"= {MULT_QL}*(1/3)^3 + {MULT_LL}*(-1)^3 = {tr_Y3_lh}",
     )
@@ -106,7 +107,7 @@ def part0_lh_only_traces() -> None:
         f"2*(1/3) = {su3_y_lh_coefficient}",
     )
 
-    # Tr[SU(2)^2 Y] is already zero on the retained LH doublet surface:
+    # Tr[SU(2)^2 Y] is already zero on the stated LH doublet surface:
     # 3 color copies of Q_L plus one lepton doublet.
     su2_y_lh = 3 * Y_QL + Y_LL
     check(
@@ -310,7 +311,7 @@ def part4_electric_charge_selection() -> None:
 def part5_electric_charge_spectrum() -> None:
     banner("Part 5: electric-charge spectrum {0, ±1/3, ±2/3, ±1}")
 
-    # The retained notes use doubled hypercharge Y = 2(Q - T_3):
+    # These notes use doubled hypercharge Y = 2(Q - T_3):
     # doublets use Q = T_3 + Y/2, and SU(2) singlets use Q = Y/2.
     charges = {
         "u_L": Fraction(1, 2) + Y_QL / 2,
@@ -373,11 +374,11 @@ def part5_electric_charge_spectrum() -> None:
 # --------------------------------------------------------------------------
 
 def part6_summary() -> None:
-    banner("Part 6: summary - SM hypercharge uniqueness retained")
+    banner("Part 6: summary - conditional SM hypercharge uniqueness")
 
     print("  STRUCTURAL CLOSURE:")
     print()
-    print("    Given retained inputs:")
+    print("    Given stated inputs:")
     print("      - LH content Q_L (Y=1/3) + L_L (Y=-1)")
     print("      - SU(2)-singlet RH completion (anomaly-cancelling)")
     print("      - Tr[Y] = 0, Tr[Y^3] = 0, Tr[SU(3)^2 Y] = 0")
@@ -394,11 +395,12 @@ def part6_summary() -> None:
     print("    Denominators forced to: {1, 3}")
     print()
     print("  WHAT THIS CLOSES:")
-    print("    - RH hypercharge uniqueness packaged as standalone retained theorem")
-    print("    - Electric-charge quantization of one SM generation")
+    print("    - RH hypercharge uniqueness as conditional exact-support arithmetic")
+    print("    - Electric-charge quantization under the stated branch/readout inputs")
     print("    - Structural reason for fractional 1/3 (from Y_QL = 1/3 via quark color)")
     print()
     print("  WHAT THIS DOES NOT CLAIM:")
+    print("    - Audit-retained status for this note or one-generation matter closure")
     print("    - Cross-generation uniqueness")
     print("    - Native-axiom derivation of Y(nu_R) = 0 (treated as input)")
     print("    - Alternative gauge groups")

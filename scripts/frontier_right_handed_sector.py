@@ -50,7 +50,8 @@ FIVE ANALYSES:
     gauge structure. The right-handed sector provides 8 additional Weyl
     fermion states. Their SU(2)_weak quantum numbers are zero by the
     chirality of weak interactions. Their SU(3)_c x U(1)_Y charges
-    are UNIQUELY fixed by anomaly cancellation to be:
+    are fixed by anomaly cancellation plus the neutral-singlet branch
+    convention to be:
       u_R = (1,3)_{+4/3}, d_R = (1,3)_{-2/3},
       e_R = (1,1)_{-2}, nu_R = (1,1)_{0}.
 
@@ -515,7 +516,8 @@ def part5_right_handed_charges(G5_4D, gammas_4D, P_L, P_R, taste_mats):
     #    They are SU(2)_weak SINGLETS by the chirality of weak interactions.
     #    Their SU(3) x U(1) quantum numbers are:
     #    (a) Constrained by the taste SU(4): 4 = 3 + 1 gives colour triplets + singlets.
-    #    (b) UNIQUELY fixed by anomaly cancellation to:
+    #    (b) fixed by anomaly cancellation plus the neutral-singlet branch
+    #        convention to:
     #        u_R = (1,3)_{+4/3}, d_R = (1,3)_{-2/3},
     #        e_R = (1,1)_{-2}, nu_R = (1,1)_{0}.
 
@@ -610,13 +612,13 @@ def part5_right_handed_charges(G5_4D, gammas_4D, P_L, P_R, taste_mats):
     print("  Their U(1)_Y hypercharges: NOT the same as the left sector!")
     print()
     print("  The taste algebra fixes the SU(3) structure but NOT the U(1)_Y charges.")
-    print("  The hypercharges of right-handed fermions are uniquely determined by")
-    print("  quantum consistency (anomaly cancellation).")
+    print("  The hypercharges of right-handed fermions are fixed once the")
+    print("  anomaly equations and neutral-singlet branch convention are supplied.")
     print()
     print("  From frontier_chiral_completion.py (32/32 PASS):")
     print("    Given C^8_L = (2,3)_{+1/3} + (2,1)_{-1},")
     print("    the perturbative hypercharge anomaly equations plus the")
-    print("    neutral-singlet branch convention UNIQUELY fix:")
+    print("    neutral-singlet branch convention select:")
     print("      u_R = (1, 3)_{+4/3}    [3 states]")
     print("      d_R = (1, 3)_{-2/3}    [3 states]")
     print("      e_R = (1, 1)_{-2}      [1 state]")
@@ -743,7 +745,7 @@ def main():
     print("     The lattice provides 8_L + 8_R = 16 Weyl fermion states.")
     print("     SU(2)_weak acts only on C^8_L (chirality of weak interaction).")
     print("     SU(3)_c is the same on both sectors (from taste algebra).")
-    print("     U(1)_Y hypercharges of C^8_R are UNIQUELY fixed by the")
+    print("     U(1)_Y hypercharges of C^8_R are fixed by the")
     print("     perturbative hypercharge anomaly equations plus the neutral-singlet")
     print("     branch convention to give the SM right-handed content:")
     print("       u_R = (1,3)_{+4/3},  d_R = (1,3)_{-2/3}")
@@ -755,7 +757,7 @@ def main():
     print("  doubles the taste space to C^16. The right-handed sector is")
     print("  the other chirality projection. Its SU(2) charge is zero by")
     print("  the chiral nature of weak interactions. Its hypercharges are")
-    print("  uniquely determined by the perturbative anomaly equations plus the")
+    print("  fixed by the perturbative anomaly equations plus the")
     print("  neutral-singlet branch convention.")
 
     return FAIL_COUNT

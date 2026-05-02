@@ -1,0 +1,46 @@
+loop: hypercharge-anomaly-audit-repair
+branch: physics-loop/hypercharge-anomaly-audit-repair-block01-20260502
+base: origin/main
+mode: run
+runtime_requested: 3h
+max_cycles: 1
+cycle_count: 1
+target: best-honest-status
+active_route: demote_source_and_runner_boundaries
+actual_current_surface_status: demotion
+target_claim_type: bounded_theorem
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+files_touched:
+  - docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md
+  - docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md
+  - scripts/frontier_right_handed_sector.py
+  - scripts/frontier_anomaly_forces_time.py
+  - scripts/frontier_sm_hypercharge_uniqueness.py
+  - docs/audit/AUDIT_LEDGER.md
+  - docs/audit/AUDIT_QUEUE.md
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/audit_queue.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/runner_classification.json
+  - docs/audit/data/load_bearing_summary.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/cycle_inventory.json
+  - docs/audit/data/reaudit_candidates.json
+open_imports:
+  - neutral_singlet_branch_Y_nu_R_equals_0
+  - electric_charge_readout_Q_equals_T3_plus_Y_over_2
+  - elementary_charge_unit_Q_e_equals_minus_1
+  - sm_definition_matter_labels
+review_disposition: pass_with_bounded_claims
+checks:
+  frontier_right_handed_sector: "PASS=61 FAIL=0"
+  frontier_anomaly_forces_time: "86 computed PASS, 2 assertion, 0 FAIL"
+  frontier_sm_hypercharge_uniqueness: "PASS=30 FAIL=0"
+  frontier_lhcm_y_normalization: "PASS=49 FAIL=0"
+  audit_pipeline: complete
+  audit_lint_strict: "OK no errors; 50 legacy warnings"
+  py_compile_changed_scripts: pass
+  git_diff_check: pass
+next_exact_action: "Run independent audit worker on one_generation_matter_closure_note."
+stop_condition: "max cycle complete; coherent PR-ready block"

@@ -1,12 +1,36 @@
 {
   "by_criticality": {
-    "critical": 28,
+    "critical": 29,
     "high": 228,
     "leaf": 166,
     "medium": 172
   },
-  "generated_at": "2026-05-02T20:24:25.650975+00:00",
+  "generated_at": "2026-05-02T20:38:35.329863+00:00",
   "queue": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "one_generation_matter_closure_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "left_handed_charge_matching_note",
+        "anomaly_forces_time_theorem"
+      ],
+      "direct_in_degree": 26,
+      "effective_status": "unaudited",
+      "load_bearing_score": 21.022,
+      "note_path": "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_right_handed_sector.py",
+      "transitive_descendants": 259
+    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audited_renaming",
@@ -148,17 +172,17 @@
       "blocker": null,
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
-        "anomaly_forces_time_theorem",
-        "one_generation_matter_closure_note",
         "left_handed_charge_matching_note",
+        "anomaly_forces_time_theorem",
         "hypercharge_identification_note",
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "one_generation_matter_closure_note",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "three_generation_structure_note"
@@ -15588,6 +15612,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 121,
-  "total_pending": 594
+  "ready_count": 122,
+  "total_pending": 595
 }

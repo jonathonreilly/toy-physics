@@ -8258,15 +8258,11 @@
     },
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-      "to": "anomaly_forces_time_theorem"
-    },
-    {
-      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-      "to": "one_generation_matter_closure_note"
-    },
-    {
-      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+      "to": "anomaly_forces_time_theorem"
     },
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
@@ -8275,6 +8271,10 @@
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+      "to": "one_generation_matter_closure_note"
     },
     {
       "from": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
@@ -19985,7 +19985,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:24:20.817208+00:00",
+  "generated_at": "2026-05-02T20:38:32.282789+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -34792,14 +34792,14 @@
     },
     "one_generation_matter_closure_note": {
       "claim_id": "one_generation_matter_closure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem proposal; independent audit lane sets the",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "left_handed_charge_matching_note",
         "anomaly_forces_time_theorem"
       ],
-      "note_hash": "e1fc5ac663fcb33118881c0e58accdba8c660c7b18b17266c8f0e590bae58f77",
+      "note_hash": "f598c25d92d150c453f5e0d9d10182ba4a901cabfc12138f5fc5481f748d165a",
       "path": "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_right_handed_sector.py",
       "title": "One-Generation Matter Closure Note"
@@ -41184,20 +41184,20 @@
     },
     "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24": {
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem proposal; independent audit lane sets the",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "anomaly_forces_time_theorem",
-        "one_generation_matter_closure_note",
         "left_handed_charge_matching_note",
+        "anomaly_forces_time_theorem",
         "hypercharge_identification_note",
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "one_generation_matter_closure_note",
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
         "three_generation_structure_note"
       ],
-      "note_hash": "0c3173fe82e96691468c149212a0345483797b20cbb007b01a3e1540aed00ad4",
+      "note_hash": "3d64c03bc024a6dffe8a82924fd8121838e0afe0f3e4e59f30c975caaa981b01",
       "path": "docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_sm_hypercharge_uniqueness.py",
       "title": "Standard Model Hypercharge Uniqueness from Anomaly Cancellation"
@@ -46505,18 +46505,18 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 11,
+      "bounded_theorem": 13,
       "meta": 1,
-      "none": 1747,
+      "none": 1745,
       "positive_theorem": 34
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 511,
+      "bounded_theorem": 513,
       "meta": 1,
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 626
+      "positive_theorem": 624
     },
     "edge_count": 4996,
     "leaf_count": 760,

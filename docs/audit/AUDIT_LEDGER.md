@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T20:24:25.986425+00:00
+**Generated:** 2026-05-02T20:38:35.516990+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 96 |
 | **retained_bounded** | 184 |
 | _retained_pending_chain_ | 2 |
-| unaudited | 554 |
+| unaudited | 555 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 633 |
+| ~~audited_conditional~~ | 632 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -36,21 +36,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 377 |
-| `audited_conditional` | 633 |
+| `audited_conditional` | 632 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 590 |
+| `unaudited` | 591 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 526 |
+| `bounded_theorem` | 527 |
 | `decoration` | 7 |
 | `meta` | 36 |
 | `no_go` | 156 |
 | `open_gate` | 99 |
-| `positive_theorem` | 870 |
+| `positive_theorem` | 869 |
 
 | criticality | count |
 |---|---:|
@@ -85,7 +85,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 8 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
 | 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
 | 10 | `native_gauge_closure_note` | bounded_theorem | critical | 257 | 22.51 | `audited_clean` | **retained_bounded** |
-| 11 | `one_generation_matter_closure_note` | bounded_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `one_generation_matter_closure_note` | bounded_theorem | critical | 259 | 21.02 | `unaudited` | unaudited |
 | 12 | `three_generation_structure_note` | positive_theorem | critical | 248 | 20.96 | `audited_clean` | **retained** |
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `left_handed_charge_matching_note` | decoration | critical | 264 | 20.55 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
@@ -95,7 +95,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 130 | 19.03 | `audited_clean` | **retained** |
 | 19 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 125 | 16.98 | `audited_clean` | **retained** |
-| 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
+| 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | bounded_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
 | 22 | `s3_taste_cube_decomposition_note` | positive_theorem | high | 125 | 16.48 | `audited_clean` | **retained** |
 | 23 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
 | 24 | `plaquette_self_consistency_note` | bounded_theorem | critical | 244 | 16.44 | `unaudited` | unaudited |
@@ -930,7 +930,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `observable_principle_from_axiom_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `oh_schur_boundary_action_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `one_generation_matter_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_inertial_response_readiness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11824,22 +11823,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `H_inf_over_H_0_ratio_matter_content_bridge_open`
   - `Planck_2018_H0_OmegaLambda_OmegaM_observational_comparators_external`
   - `radiation_fraction_Omega_r_observational_input_not_derived`
-- **auditor confidence:** high
-
-### `one_generation_matter_closure_note`
-
-- **Note:** [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](../../docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Conditional one-generation right-handed matter completion using the retained LH eigenvalue ratio, the bounded anomaly-forced 3+1 theorem inputs, and the neutral-singlet branch convention to select u_R=(1,3)_{+4/3}, d_R=(1,3)_{-2/3}, e_R=(1,1)_{-2}, nu_R=(1,1)_0; independent SM hypercharge/electric-charge identification is not audited here.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-agent-sagan-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Anomaly-forced time supplies the chirality structure and single-clock 3+1 closure, and anomaly cancellation then fixes the right-handed singlet completion on the Standard Model branch.  _(class `B`)_
-- **chain closes:** False — The anomaly arithmetic and 4D chirality checks close only after importing the bounded anomaly-forced-time admissions and imposing the neutral-singlet branch convention. The one-hop LH authority explicitly leaves SM hypercharge and electric-charge identification out of scope, so the full Standard Model matter-closure claim is not clean from the provided authorities alone.
-- **rationale:** Issue: the source claims full one-generation Standard Model closure, but the right-handed charge table is selected by a neutral-singlet branch convention and the physical SM hypercharge/electric-charge bridge is not supplied by the LH authority. Why this blocks: anomaly equations plus chirality constraints give a consistent branch, but do not by themselves prove that the chosen neutral singlet and SM charge readout are forced. Repair target: add or cite a retained theorem deriving the neutral-singlet branch selection and the SM hypercharge/electric-charge identification from retained framework inputs, with a runner that fails without those bridges. Claim boundary until fixed: the safe result is a bounded conditional completion on the stated anomaly-forced-time admissions and branch convention.
-- **open / conditional deps cited:**
-  - `ANOMALY_FORCES_TIME_THEOREM.md`
-  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
 - **auditor confidence:** high
 
 ### `one_parameter_reduced_shell_law_note`

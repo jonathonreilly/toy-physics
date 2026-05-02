@@ -712,7 +712,7 @@ def step5_complete_chain():
     print("  => chirality => even d_total => d_t odd")
     print("  => single-clock codim-1 evolution excludes d_t > 1 => 3+1D")
     print()
-    print("  The temporal direction is DERIVED, not assumed.")
+    print("  The temporal direction is conditionally derived under the named bridge premises.")
     print("  " + "=" * 60)
 
 

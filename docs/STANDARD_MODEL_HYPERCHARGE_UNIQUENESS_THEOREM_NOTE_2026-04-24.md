@@ -1,7 +1,15 @@
 # Standard Model Hypercharge Uniqueness from Anomaly Cancellation
 
 **Date:** 2026-04-24
-**Status:** **proposed_retained standalone structural-uniqueness theorem** on `main`. Extracts and packages as its own theorem the uniqueness claim that is *used but not separately proposed_retained* in [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) Step 2 and implicitly carried by [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md). The proposed_retained anomaly-forces-time theorem explicitly states: *"The time theorem only needs the existence of an SU(2)-singlet opposite-chirality completion; it does not rely on uniqueness from anomaly arithmetic alone."* This note closes the conditional uniqueness statement as a standalone proposed_retained row; it does not rederive the proposed_retained left-handed surface, the singlet right-handed completion requirement, or the neutral-singlet input.
+**Status:** conditional / exact-support theorem; audit ledger current row is
+`audit_status=unaudited`, `effective_status=unaudited`. This note verifies
+the exact anomaly-arithmetic uniqueness of the right-handed hypercharges under
+the stated inputs. It does not certify retained-grade status because the
+left-handed SM labelling, neutral-singlet branch, and electric-charge readout
+are load-bearing inputs whose audit boundaries remain narrower than the
+headline Standard Model closure.
+**Claim type:** bounded_theorem proposal; independent audit lane sets the
+actual `claim_type`, `audit_status`, and pipeline-derived `effective_status`.
 **Primary runner:** `scripts/frontier_sm_hypercharge_uniqueness.py`
 
 ---
@@ -10,18 +18,18 @@
 
 **Theorem (SM hypercharge uniqueness from anomaly cancellation).** Given:
 
-1. the retained left-handed content
+1. the left-handed content surface
    `Q_L : (2, 3)_{+1/3}` (quark doublet, 3 colors) and
    `L_L : (2, 1)_{-1}` (lepton doublet)
    ([`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md));
-2. the retained requirement of an anomaly-cancelling right-handed
+2. the anomaly-forced requirement of an anomaly-cancelling right-handed
    SU(2)-singlet completion
    `u_R : (1, 3)_{y_1}, d_R : (1, 3)_{y_2}, e_R : (1, 1)_{y_3}, ν_R : (1, 1)_{y_4}`
    ([`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) Step 2);
 3. vanishing of the three right-handed-sector-constraining anomaly traces
    `Tr[Y] = 0`, `Tr[Y³] = 0`, `Tr[SU(3)² Y] = 0`
    for the full (LH + RH) content (the mixed `SU(2)²Y` trace is already zero
-   on the retained left-handed doublet surface and adds no singlet-RH
+   on the stated left-handed doublet surface and adds no singlet-RH
    constraint);
 4. the neutral-singlet identification `y_4 ≡ Y(ν_R) = 0`
    ([`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md));
@@ -36,20 +44,20 @@ y_1 = +4/3,  y_2 = −2/3,  y_3 = −2,  y_4 = 0.                 (★)
 
 These are the exact Standard Model hypercharges. Equivalently, the complete electric-charge spectrum of one generation is forced to the rational set `{0, ±1/3, ±2/3, ±1}`, with denominators exactly `{1, 3}`.
 
-## 1. Retained inputs
+## 1. Inputs and audit classes
 
 | Ingredient | Reference |
 |------------|-----------|
-| left-handed Q_L, L_L content | [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) |
-| SU(2)-singlet right-handed completion | [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) Step 2 |
-| anomaly-cancellation as a quantum-consistency requirement | same, Step 1 (Adler–Bell–Jackiw) |
-| neutral-singlet identification `Y(ν_R) = 0` | [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) |
-| electric-charge convention `Q = T_3 + Y/2` in the doubled-hypercharge convention used by the retained notes | standard SM bookkeeping |
+| left-handed Q_L, L_L content/eigenvalue surface | [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md); current audit row is `audited_decoration` boxed under the narrow ratio theorem |
+| SU(2)-singlet right-handed completion requirement | [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) Step 2; bounded conditional bridge |
+| anomaly-cancellation as a quantum-consistency requirement | same, Step 1 (Adler-Bell-Jackiw bridge) |
+| neutral-singlet identification `Y(ν_R) = 0` | [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md); current audit row is `audited_renaming` |
+| electric-charge convention `Q = T_3 + Y/2` in the doubled-hypercharge convention used by these notes | standard SM bookkeeping / readout convention |
 
 No observed charge, mass, or cross-section is used.
 
 Throughout this note, `Y` is the doubled Standard Model hypercharge used by
-the retained anomaly notes: `Q = T_3 + Y/2`, and for `SU(2)` singlets
+the anomaly notes: `Q = T_3 + Y/2`, and for `SU(2)` singlets
 `Q = Y/2`.
 
 ## 2. Derivation
@@ -160,7 +168,9 @@ The electric-charge spectrum in one generation is therefore
 Q ∈ { 0, ±1/3, ±2/3, ±1 }                                       (★★)
 ```
 
-with denominators exactly `{1, 3}`, i.e. the retained inputs force quark fractional charge in units of `1/3` and the unit lepton charge `±1`. No continuous family, no additional branch survives.
+with denominators exactly `{1, 3}`, i.e. the stated inputs force quark
+fractional charge in units of `1/3` and the unit lepton charge `±1`. No
+continuous family, no additional branch survives under those inputs.
 
 ## 3. Structural observations
 
@@ -169,20 +179,22 @@ with denominators exactly `{1, 3}`, i.e. the retained inputs force quark fractio
 - **Denominators `{1, 3}` are structural.** The `1/3` appears because the LH quark hypercharge `1/3` enters (A2) directly; it is not a fit.
 - **The u_R ↔ d_R residual relabelling is the only discrete ambiguity.** Any proposed extension of this theorem (e.g. to fourth-generation species or to different left-handed content) must rebuild the entire anomaly system.
 
-## 4. Relationship to adjacent retained rows
+## 4. Relationship to adjacent audit rows
 
-| Row | Status before | Status after |
-|-----|---------------|--------------|
-| LH content `Q_L + L_L` | retained ([`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md)) | unchanged |
-| anomaly-forced `3+1` | retained ([`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)) | unchanged |
-| existence of anomaly-cancelling RH completion | retained (ditto, Step 2) | unchanged |
-| one-generation closure at SM hypercharges | retained ([`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md)) | unchanged |
-| **RH hypercharges uniqueness at SM values** | *(not separately packaged; used but not retained as standalone)* | **retained structural uniqueness theorem (this note)** |
-| electric-charge quantization `Q ∈ {0, ±1/3, ±2/3, ±1}` | implicit | **retained structural corollary** |
+| Row | Current audit boundary | Role here |
+|-----|------------------------|-----------|
+| LH content `Q_L + L_L` | [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) is `audited_decoration`; SM hypercharge identification is out of scope | input |
+| anomaly-forced `3+1` | [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md) is bounded/conditional on named bridge premises | input |
+| existence of anomaly-cancelling RH completion | same Step 2; not a proof of uniqueness by itself | input |
+| one-generation closure at SM hypercharges | [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) is re-queued as `unaudited` after its boundary edit; prior audit was conditional | downstream consumer |
+| **RH hypercharges uniqueness at SM values** | this note is an unaudited exact-support proposal under the stated inputs | checked result |
+| electric-charge quantization `Q ∈ {0, ±1/3, ±2/3, ±1}` | conditional corollary under `Q = T_3 + Y/2` and branch/readout conventions | checked result |
 
-The uniqueness claim was previously a load-bearing but unlabelled step inside the time theorem and the one-generation closure note. This note packages it as a named retained row so that:
+The uniqueness claim was previously a load-bearing but unlabelled step inside
+the time theorem and the one-generation closure note. This note packages the
+exact arithmetic as a named support surface so that:
 
-1. The electric-charge quantization statement has an explicit retained authority.
+1. The electric-charge quantization statement has an explicit support authority.
 2. Future extensions (e.g. fourth-generation searches, dark-sector hypercharge proposals, any extension to the LH content) can cite this note as the base uniqueness statement they must modify.
 3. Reviewer-facing claim structure now separates *existence* (time theorem) from *uniqueness* (this note).
 
@@ -198,16 +210,16 @@ The uniqueness claim was previously a load-bearing but unlabelled step inside th
 
 - Uniqueness across generations (each generation independently satisfies the same anomaly system; inter-generational labelling ambiguities — e.g. the PMNS mixing — are separate).
 - A native-axiom derivation of `Y(ν_R) = 0`; the neutral-singlet identification is treated here as an input (see [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md)).
-- Uniqueness of the gauge group itself; assumed to be `SU(2) × SU(3) × U(1)_Y` from the retained Cl(3) chain ([`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md), [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)).
-- Extension to beyond-SM hypercharge assignments (fourth generation, mirror fermions, etc.); this theorem explicitly uses the retained three-generation structure's one-generation template.
+- Uniqueness of the gauge group itself; assumed to be `SU(2) × SU(3) × U(1)_Y` from the graph-first gauge chain ([`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md), [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)).
+- Extension to beyond-SM hypercharge assignments (fourth generation, mirror fermions, etc.); this theorem explicitly uses the three-generation structure's one-generation template.
 
 ## 6. Falsifiability
 
-Indirect, via the retained structural inputs:
+Indirect, via the stated structural inputs:
 
 - Any detection of a fermion with electric charge **outside** `{0, ±1/3, ±2/3, ±1}` (e.g. `±2/3 + ε` with `ε ≠ 0`) falsifies `(★★)`, hence the theorem.
 - Any detection of a fundamental non-SU(2)-singlet right-handed fermion violates input (2), hence breaks the derivation.
-- A validated chiral matter sector with the same retained left-handed surface and neutral singlet but different singlet-RH hypercharges would falsify the uniqueness theorem. A sector with different left-handed content, different gauge group, or additional mirror/vectorlike matter would instead be outside this theorem's hypotheses.
+- A validated chiral matter sector with the same stated left-handed surface and neutral singlet but different singlet-RH hypercharges would falsify the uniqueness theorem. A sector with different left-handed content, different gauge group, or additional mirror/vectorlike matter would instead be outside this theorem's hypotheses.
 
 The theorem passes current data: all SM fermions have the hypercharges listed in `(★)`, to within experimental precision, and no `ΔQ` deviation is observed.
 
@@ -233,6 +245,6 @@ The runner:
 - [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) — LH content
 - [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) — `Y(ν_R) = 0` pin
 - `HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md` — named `Tr[Y^2]` / GUT-normalization arithmetic on the same one-generation content
-- [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) — wider closure whose hypercharge step is now retained standalone
+- [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) — wider closure that consumes this conditional exact-support hypercharge step
 - [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md) — why the same template applies per generation
 - Adler 1969, Bell–Jackiw 1969 — original ABJ anomaly
