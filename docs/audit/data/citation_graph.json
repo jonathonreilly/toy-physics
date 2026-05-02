@@ -20001,7 +20001,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:44:04.983293+00:00",
+  "generated_at": "2026-05-02T20:48:28.168554+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21930,7 +21930,7 @@
         "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "9804a6700eb9e1d768b5964e8b84bf25ea7aaee62d3bdd1c689f9f40720dfb56",
+      "note_hash": "b510e2a7ccdc7f0c5ae7070498c6ece4974e33fb0a5fc96b2e347cec3066c07e",
       "path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
       "runner_path": "scripts/axiom_first_microcausality_check.py",
       "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min"
@@ -21954,11 +21954,11 @@
     },
     "axiom_first_reflection_positivity_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d5e0c27fcb2697459a61091181ec8cb122e0e4a24f4e05190fc46b8c102839bb",
+      "note_hash": "0c6c488fb7552b88b0f60e023ffc2ca8925fd6a39a05581ca41831b0615cd9c5",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -46563,8 +46563,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
       "meta": 1,
-      "none": 1746,
-      "positive_theorem": 38
+      "none": 1745,
+      "positive_theorem": 39
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,

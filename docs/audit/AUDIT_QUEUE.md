@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T20:44:10.139574+00:00
+**Generated:** 2026-05-02T20:48:31.222486+00:00
 **Total pending:** 595
 **Ready (all deps already at retained-grade or metadata tiers):** 120
 
