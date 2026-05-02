@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-02T17:57:28.241475+00:00",
+  "computed_at": "2026-05-02T18:54:39.794161+00:00",
   "criticality_counts": {
     "critical": 44,
     "high": 389,
-    "leaf": 884,
+    "leaf": 889,
     "medium": 462
   },
   "flagship_signal_used": false,
-  "node_count": 1779,
+  "node_count": 1784,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -20,8 +20,8 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 30.464,
-      "transitive_descendants": 352
+      "load_bearing_score": 31.968,
+      "transitive_descendants": 353
     },
     {
       "claim_id": "alpha_s_derived_note",
@@ -74,8 +74,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 22.006,
-      "transitive_descendants": 256
+      "load_bearing_score": 22.511,
+      "transitive_descendants": 257
     },
     {
       "claim_id": "one_generation_matter_closure_note",
@@ -144,16 +144,16 @@
       "transitive_descendants": 244
     },
     {
+      "claim_id": "graph_first_selector_derivation_note",
+      "criticality": "critical",
+      "load_bearing_score": 16.397,
+      "transitive_descendants": 336
+    },
+    {
       "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
       "criticality": "critical",
       "load_bearing_score": 15.544,
       "transitive_descendants": 131
-    },
-    {
-      "claim_id": "graph_first_selector_derivation_note",
-      "criticality": "critical",
-      "load_bearing_score": 15.392,
-      "transitive_descendants": 335
     },
     {
       "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
