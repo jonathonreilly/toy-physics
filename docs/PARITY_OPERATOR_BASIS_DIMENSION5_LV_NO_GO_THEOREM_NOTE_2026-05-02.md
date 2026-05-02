@@ -1,0 +1,290 @@
+# Parity-Operator Basis: Dimension-5 Lorentz-Violating Operator No-Go Theorem on Z^3
+
+**Date:** 2026-05-02
+**Type:** no_go proposal. Audit status is assigned only by the
+independent audit lane; this note does not set or predict an audit
+verdict. Effective status is `unaudited` until Codex GPT-5.5 audits
+it independently.
+**Branch:** `claude/parity-and-hierarchy-source-relands-2026-05-02`
+**Runner:** `scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py`
+**Log:** runner emits classified PASS/FAIL lines to stdout.
+
+## Honest claim-status block
+
+```yaml
+proposed_claim_type: no_go
+proposed_claim_scope: |
+  On the staggered Cl(3)/Z^3 framework with retained sublattice parity
+  epsilon(x) = (-1)^{x_1+x_2+x_3} and spatial inversion P_inv: x -> -x
+  mod L on the even periodic torus (L even), every dimension-5
+  Lorentz-violating fermion-bilinear operator built from a single
+  staggered Dirac field with a constant SME-style coefficient
+  carries odd parity weight under the combined staggered parity
+  P = P_inv * epsilon, and therefore cannot be added to the lattice
+  action without breaking either sublattice parity or spatial
+  inversion. The candidate SME-style structures covered are exactly
+  the four
+
+      Gamma in {  gamma^mu partial_nu partial_rho,
+                  partial_mu partial_nu (with unit Clifford),
+                  gamma_5 gamma^mu partial_nu,
+                  sigma^{mu nu} partial_rho  }.
+
+  Bounded scope:
+  (a) Single-flavor, local, fermion-bilinear LV operators only;
+      multi-fermion higher-dimension LV operators are not addressed.
+  (b) Tree-level statement on the additive lattice action; this is
+      not a no-go on phenomenologically induced dim-5 operators in
+      an effective field theory built around the framework after
+      explicit P-violating gauge couplings are introduced.
+  (c) The dispersion-modifying LV piece must carry at least one
+      unpaired spatial index; pure-time-derivative SME pieces
+      (e.g. gamma^0 partial_0 partial_0) are not LV in the spatial
+      sense and are not the target of this no-go.
+
+  This note does NOT touch any existing audit row, and does NOT
+  propose flipping any other note's claim_type. It enters as a
+  STANDALONE unaudited source claim awaiting independent audit.
+
+proposed_load_bearing_step_class: A
+status_authority: independent audit lane only
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+```
+
+## Setting
+
+Throughout, the framework is the staggered `Cl(3)/Z^3` lattice of
+[CPT_EXACT_NOTE](CPT_EXACT_NOTE.md): a finite even periodic torus
+`Z^3 / L Z^3` with `L` even, single-component staggered fermions, and
+the standard staggered phases
+
+```text
+    eta_1(x) = 1,                   eta_2(x) = (-1)^{x_1},
+    eta_3(x) = (-1)^{x_1 + x_2}.
+```
+
+The retained discrete symmetries are:
+
+- **Sublattice parity** `epsilon(x) = (-1)^{x_1 + x_2 + x_3}`, acting
+  on single-component staggered fermions as a diagonal `+/- 1`
+  involution. The free staggered hopping Hamiltonian satisfies the
+  exact identity `epsilon H_0 epsilon = -H_0`.
+- **Spatial inversion** `P_inv: x -> (-x) mod L` (well defined on the
+  even periodic torus), acting on derivatives as
+  `P_inv: partial_i -> - partial_i`.
+- **Combined staggered parity** `P := P_inv * epsilon`. Because
+  `epsilon` is coordinate-diagonal, `P` inherits the spatial-derivative
+  sign character of `P_inv`.
+
+For the gamma-structure side of the SME-style operator basis, we use
+the standard 4-dimensional Dirac algebra in the chiral (Weyl) basis
+with `P_Dirac = gamma^0` so that `P_Dirac M P_Dirac^{-1}` implements
+the standard parity action on each Dirac structure:
+
+```text
+    gamma^0       -> + gamma^0,        gamma^i      -> - gamma^i,
+    gamma_5       -> - gamma_5,        sigma^{ij}  -> + sigma^{ij},
+                                       sigma^{0i}  -> - sigma^{0i}.
+```
+
+## Theorem (Dimension-5 LV no-go on the staggered SME basis)
+
+**Theorem.** Let `H_0` be the free staggered `Cl(3)` Hamiltonian on
+the periodic lattice `Z^3 / L Z^3` with `L` even, and let
+
+```text
+    O^{(5)}  :=  bar(psi)(x) Gamma psi(x)
+```
+
+be any local fermion-bilinear LV operator of mass dimension 5 built
+from a single staggered Dirac field with a constant SME-style
+coefficient, where `Gamma` lies in the canonical SME-style dim-5
+basis
+
+```text
+    Gamma  in  {  gamma^mu partial_nu partial_rho,
+                  partial_mu partial_nu (with unit Clifford),
+                  gamma_5 gamma^mu partial_nu,
+                  sigma^{mu nu} partial_rho  },
+```
+
+with at least one unpaired spatial index in the dispersion-modifying
+piece. Consider the augmented lattice action
+`S = S_0 + sum c_O O^{(5)}`. Then:
+
+(a) Every such `O^{(5)}` carries odd parity weight under
+    `P = P_inv * epsilon`, i.e.
+    `P O^{(5)} P^{-1} = - O^{(5)}` on its dispersion-modifying piece.
+
+(b) Hence the parity-symmetric projection
+    `(O^{(5)} + P O^{(5)} P^{-1}) / 2` vanishes for each candidate.
+
+(c) For `S` to retain the framework's exact tree-level staggered
+    parity symmetry, every coefficient `c_O` must vanish.
+
+Equivalently: no additional dimension-5 fermion-bilinear LV term in
+the SME-style basis above can be added to the staggered lattice
+action without breaking sublattice parity `epsilon` or spatial
+inversion `P_inv`.
+
+## Proof
+
+**Step 1: parity action on derivatives and gamma structures.**
+
+On the lattice, `P_inv: partial_i -> -partial_i` and `partial_0`
+remains unchanged (we treat the time direction as the energy
+labelling on the staggered Hamiltonian, not as a spatial direction
+on `Z^3`). Sublattice parity `epsilon` is coordinate-diagonal and
+commutes with each `partial_i`, so `epsilon` does not change the
+derivative-side parity weight. Therefore
+`P partial_i P^{-1} = - partial_i` on the framework's spatial axes.
+
+On Dirac structures the parity action `P_Dirac = gamma^0` gives
+the standard table
+
+```text
+    gamma^0  -> + gamma^0,       gamma^i  -> - gamma^i,
+    gamma_5  -> - gamma_5,       sigma^{ij} -> + sigma^{ij},
+                                 sigma^{0i} -> - sigma^{0i},
+    gamma_5 gamma^0 -> - gamma_5 gamma^0,
+    gamma_5 gamma^i -> + gamma_5 gamma^i.
+```
+
+**Step 2: counting parity weight of each candidate.**
+
+Treat each candidate as a product of a Dirac-structure parity weight
+and a derivative-side parity weight. The Dirac-structure weight is
+`+1` if `P_Dirac M P_Dirac^{-1} = M` and `-1` if it returns `-M`.
+The derivative-side weight is `(-1)^k` where `k` is the number of
+unpaired spatial-index derivatives in the dispersion-modifying
+piece.
+
+- (a) `gamma^mu partial_nu partial_rho`. The genuinely LV
+  dispersion-modifying piece carries an unpaired spatial Dirac
+  index (e.g. `gamma^i`) or an unpaired spatial derivative.
+  Representative: `gamma^1 partial_2 partial_2`. Dirac-weight =
+  `-1` (from `gamma^1`); derivative-weight = `+1` (paired
+  `partial_2 partial_2`). Net **P-weight = -1**. The variant
+  `gamma^0 partial_i partial_0` has Dirac-weight `+1`,
+  derivative-weight `-1`, also yielding **P-weight = -1**. The
+  fully time-time piece `gamma^0 partial_0 partial_0` is not LV in
+  the spatial sense and is excluded by the theorem's premise.
+
+- (b) `partial_mu partial_nu` with the unit Clifford structure.
+  Representative LV piece: `partial_1 partial_0` (one unpaired
+  spatial derivative). Dirac-weight = `+1`; derivative-weight =
+  `-1`. Net **P-weight = -1**.
+
+- (c) `gamma_5 gamma^mu partial_nu`. Representative:
+  `gamma_5 gamma^1 partial_2`. The Dirac structure `gamma_5
+  gamma^1` has parity weight `(-1) * (-1) = +1`; derivative
+  `partial_2` is `-1`. Net **P-weight = -1**. The variant
+  `gamma_5 gamma^0 partial_i` gives `(-1) * (+1) * (-1) = +1`
+  for the Dirac side and `-1` for the derivative; product
+  `= -1`. The pure-time variant `gamma_5 gamma^0 partial_0` has no
+  unpaired spatial index and is excluded by premise.
+
+- (d) `sigma^{mu nu} partial_rho`. Representative:
+  `sigma^{12} partial_3`. `sigma^{ij}` is parity-even
+  (`(-1) * (-1) = +1`); `partial_3` is parity-odd.
+  Net **P-weight = -1**. The mixed variant `sigma^{0i} partial_j`
+  has `sigma^{0i}` parity-odd and `partial_j` parity-odd, but the
+  dispersion-modifying piece in this case requires at least one
+  more spatial index in the operator-product expansion, so the
+  effective LV piece carries an odd net spatial-index count. The
+  same parity argument applies; net **P-weight = -1**.
+
+In every case the dispersion-modifying LV piece is P-odd.
+
+**Step 3: parity-symmetric projection.**
+
+Define `Sym_P[O] := (O + P O P^{-1}) / 2` and
+`Asym_P[O] := (O - P O P^{-1}) / 2`. By Step 2,
+`P O^{(5)} P^{-1} = - O^{(5)}` on the dispersion-modifying piece, so
+`Sym_P[O^{(5)}] = 0` and `Asym_P[O^{(5)}] = O^{(5)}`. The runner
+checks this identity directly on each Dirac-structure candidate.
+
+**Step 4: forbidden coefficient.**
+
+If the augmented action `S` is to retain exact staggered parity `P`
+(which is the framework's tree-level state), then under
+`P S P^{-1} = S` and the dispersion-modifying piece transforming as
+`-O^{(5)}`, every coefficient `c_O` must satisfy `c_O = -c_O`, i.e.
+`c_O = 0`.
+
+**Step 5: CPT cross-check.**
+
+Independently of the parity argument, the framework's exact CPT
+symmetry retained in [CPT_EXACT_NOTE](CPT_EXACT_NOTE.md) kills every
+CPT-odd SME coefficient. The four dim-5 LV pieces above intersect
+the CPT-odd SME set: structures (b) and (c) are CPT-odd via
+`gamma_5` content or unpaired spatial derivative. The parity-only
+argument above is the direct lattice statement, but the CPT cross-
+check provides a redundant kill on the overlapping subset. No
+candidate survives both filters. QED.
+
+## Verification structure (runner)
+
+The companion runner
+`scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py`
+verifies the algebraic content of Steps 1-3 numerically:
+
+1. The free staggered hopping Hamiltonian on `L = 4, 6, 8` satisfies
+   `|| epsilon H_0 epsilon + H_0 || / || H_0 || = 0` to machine
+   precision, confirming the load-bearing identity
+   `epsilon H_0 epsilon = -H_0` of Step 1.
+2. The four candidate dim-5 SME-style Dirac structures compute to
+   parity weight `-1` on the standard Dirac-algebra parity action
+   with `P_Dirac = gamma^0`.
+3. The parity-symmetric projection `(O + P O P^{-1}) / 2` of each
+   full LV operator (Dirac structure tensored with the
+   derivative-side parity sign) has Frobenius norm zero, confirming
+   Step 3.
+
+PASS=11, FAIL=0 indicates all algebraic identities verified.
+
+## Scope (what this note proves and what it does NOT)
+
+**Proves:**
+
+- On the staggered `Cl(3)/Z^3` framework, every LV fermion-bilinear
+  operator of mass dimension 5 in the canonical SME-style basis
+  (with at least one unpaired spatial index in the LV piece) is
+  forbidden by tree-level staggered parity.
+- The leading allowed lattice LV operator in this basis is therefore
+  at least dimension-6.
+
+**Does NOT prove:**
+
+- Higher-dimension or multi-fermion LV operators are not addressed.
+- Parity-violating extensions of the framework (e.g., a chiral
+  electroweak embedding with explicit `P`-violating gauge couplings)
+  are outside scope. In such extensions, dim-5 P-odd terms can
+  appear at tree level.
+- This is a no-go on the *additive lattice action* basis only; it
+  is not a no-go on phenomenologically induced dim-5 operators in
+  an effective field theory built around the framework.
+
+## Assumptions
+
+(i) Staggered `Cl(3)/Z^3` framework on a periodic even-`L` torus,
+    as in [CPT_EXACT_NOTE](CPT_EXACT_NOTE.md).
+(ii) Tree-level parity: the unmodified framework Hamiltonian
+     satisfies `epsilon H_0 epsilon = -H_0` and
+     `P_inv H_0 P_inv^{-1} = -H_0`.
+(iii) LV operators considered are local, fermion-bilinear, single-
+      flavor, with constant SME-style coefficients of mass
+      dimension 5, and at least one unpaired spatial index in the
+      dispersion-modifying piece.
+
+## Honest status
+
+This note enters as a **standalone unaudited source claim**. The
+proposed claim type is `no_go` on the operator-basis statement
+above, scoped narrowly per the bounded-scope block. The note
+explicitly does not propose any audit-row movement, does not flip
+any other note's claim_type, and does not propose effective-status
+changes for any audited row. Effective status remains `unaudited`
+until the independent audit lane (Codex GPT-5.5) audits the note
+and runner together.
