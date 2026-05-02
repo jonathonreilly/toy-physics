@@ -1,27 +1,41 @@
 # Three-Generation Matter Structure Note
 
 **Date:** 2026-04-15
-**Status:** proposed_retained
+**Type:** positive_theorem
+**Claim scope:** the local algebraic/spectral content of the three-generation
+matter structure on the physical-lattice surface — specifically items (1)-(4)
+in the in-scope list below. The two semantic-bridge items (5) "physical
+species sectors of the accepted theory via observable separation + Hilbert
+semantics" and (6) "substrate-level physical-lattice reading on accepted
+one-axiom Hilbert/locality/information surface" are explicitly **out of
+scope** here and live in separate authority notes (admitted-context to this
+note). Per the audit-lane verdict, items (5)-(6) depend on
+`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` and
+`PHYSICAL_LATTICE_NECESSITY_NOTE.md`, which are themselves not yet
+retained-grade.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+The current audit verdict is `audited_conditional` and audit-lane
+ratification is required before any retained-grade status applies.
 **Scripts:** `scripts/frontier_generation_fermi_point.py`, `scripts/frontier_generation_rooting_undefined.py`, `scripts/frontier_generation_axiom_boundary.py`, `scripts/frontier_three_generation_observable_theorem.py`
-**Authority role:** canonical main-branch note for the retained three-generation matter-structure row
+**Authority role:** canonical main-branch note for the three-generation matter-structure row
 
-## Safe statement
+## Safe statement (in-scope)
 
-The framework retains a three-generation matter structure on the physical-lattice surface:
+The framework's local algebraic/spectral content of three-generation matter
+structure on the physical-lattice surface is:
 
-- the exact corner/orbit algebra gives `8 = 1 + 1 + 3 + 3`
-- the three `hw=1` species are the lightest nonzero-mass species on `Z^3`
-- rooting is not a well-defined operation in Hamiltonian `Cl(3)` on `Z^3`
-- the retained `hw=1` triplet carries an exact irreducible retained generation
-  algebra, so no proper exact quotient survives on that surface
-- exact observable-sector semantics on the accepted Hilbert surface already
-  force the retained `hw=1` triplet to be physically distinct species
-  structure within the accepted theory
-- on the accepted one-axiom Hilbert/locality/information surface, the
-  substrate-level physical-lattice reading is also derived rather than carried
-  as a separate live premise
+1. the exact corner/orbit algebra gives `8 = 1 + 1 + 3 + 3`;
+2. the three `hw=1` species are the lightest nonzero-mass species on `Z^3`;
+3. rooting is not a well-defined operation in Hamiltonian `Cl(3)` on `Z^3`;
+4. the retained `hw=1` triplet carries an exact irreducible algebra
+   `M_3(C)`, so no proper exact quotient survives on that surface.
 
-This is the safe retained statement used in the current paper package.
+These four items are the in-scope load-bearing content of this note. They
+are runner-verified by `frontier_generation_fermi_point.py`,
+`frontier_generation_rooting_undefined.py`, and the local algebraic part of
+`frontier_three_generation_observable_theorem.py`.
 
 ## Canonical derivation stack
 
@@ -51,24 +65,55 @@ This is the safe retained statement used in the current paper package.
    one-axiom Hilbert/locality/information surface it goes further and derives
    the substrate-level physical-lattice reading itself.
 
-## Boundary
+## Out of scope (admitted-context to this note)
 
-The retained statement is structural, not maximal:
+The following stronger semantic-bridge claims are explicitly **NOT** part
+of this note's load-bearing claim. They depend on separate authority rows
+that the audit lane has not yet ratified, and per the verdict on this
+row they enter only as admitted-context:
 
-- retained: physical three-generation structure in the framework
-- retained: no-proper-quotient theorem on the retained `hw=1` generation surface
-- retained: public physical-lattice / no-rooting boundary for the
-  triplet sectors
-- not retained: a first-principles `1+1+1` mass hierarchy
-- not retained: a pure-spatial chiral-regulator theorem divorced from the
-  anomaly-forced time step
+- **Physical species bridge.** "Exact observable-sector semantics on the
+  accepted Hilbert surface already force the retained `hw=1` triplet to
+  be physically distinct species sectors of the accepted theory." This
+  conclusion depends on
+  `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` (currently
+  `audited_conditional`) and is the load-bearing content of that
+  separate row, not of this one.
+- **Substrate-level physical-lattice reading.** "On the accepted one-axiom
+  Hilbert/locality/information surface, the substrate-level
+  physical-lattice reading is also derived rather than carried as a
+  separate live premise." This conclusion depends on
+  `PHYSICAL_LATTICE_NECESSITY_NOTE.md` (currently `audited_conditional`)
+  and is the load-bearing content of that separate row, not of this
+  one.
 
-The remaining open work now belongs to:
+Whether either of those two upstream rows is retained-grade is decided by
+the audit lane on those rows, not by this note. Downstream lanes that
+need the species-bridge or substrate-bridge conclusions must cite the
+separate authority notes directly.
+
+## Boundary (in-scope only)
+
+The in-scope statement is structural, not maximal:
+
+- in-scope: local three-generation algebraic/spectral structure (items
+  (1)-(4) above);
+- in-scope: no-rooting of `Cl(3)` on `Z^3` (Hamiltonian level);
+- in-scope: no-proper-quotient on the local algebra `M_3(C)` carried by
+  `hw=1` triplet;
+- not in-scope: first-principles `1+1+1` mass hierarchy;
+- not in-scope: pure-spatial chiral-regulator theorem divorced from the
+  anomaly-forced time step;
+- not in-scope: physical species bridge (out-of-scope; see above);
+- not in-scope: substrate-level physical-lattice reading (out-of-scope;
+  see above).
+
+The remaining open work belongs to:
 
 - stronger theorem packaging of the one-axiom substrate-necessity result if we
-  ever want to move it from support theorem to public theorem box
-- generation hierarchy / flavor structure
-- full chirality / mass-spectrum tasks beyond the retained generation surface
+  ever want to move it from support theorem to public theorem box;
+- generation hierarchy / flavor structure;
+- full chirality / mass-spectrum tasks beyond the local generation algebra.
 
 For the clean public chirality / anti-rooting boundary, see
 `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`.
