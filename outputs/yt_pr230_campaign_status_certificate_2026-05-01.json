@@ -90,6 +90,7 @@
     "scalar_taste_projector_normalization_attempt": "exact negative boundary / scalar taste-projector normalization theorem attempt blocked",
     "scalar_two_point_harness": "bounded-support / scalar two-point production-harness extension",
     "scalar_zero_mode_limit_order": "exact negative boundary / scalar zero-mode limit-order theorem",
+    "source_overlap_sum_rule_no_go": "exact negative boundary / source-overlap spectral sum-rule no-go",
     "source_pole_canonical_higgs_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
     "source_reparametrization": "exact negative boundary / source reparametrization gauge",
     "source_to_higgs_lsz": "open / source-to-Higgs LSZ closure attempt blocked",
@@ -103,7 +104,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 96,
+  "pass_count": 97,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

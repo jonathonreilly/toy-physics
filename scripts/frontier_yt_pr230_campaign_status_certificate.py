@@ -157,6 +157,9 @@ def main() -> int:
         "d17_source_pole_identity_closure": load(
             "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json"
         ),
+        "source_overlap_sum_rule_no_go": load(
+            "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -544,6 +547,12 @@ def main() -> int:
         "D17 source-pole identity closure attempt blocked"
         in str(statuses["d17_source_pole_identity_closure"]),
         statuses["d17_source_pole_identity_closure"],
+    )
+    report(
+        "source-overlap-sum-rule-no-go-blocks",
+        "source-overlap spectral sum-rule no-go"
+        in str(statuses["source_overlap_sum_rule_no_go"]),
+        statuses["source_overlap_sum_rule_no_go"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

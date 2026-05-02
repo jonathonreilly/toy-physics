@@ -48,7 +48,7 @@
   ],
   "exact_next_action": "Do not run more small pilot MC for closure.  Either run the strict production physical-response manifest and follow it with pole/LSZ and matching analysis through the FH/LSZ postprocess gate, or derive the microscopic interacting scalar denominator/residue theorem from the retained action, including the canonical-Higgs pole identity, a source-pole mixing exclusion, a same-source sector-overlap identity, or a same-source gauge-mass response observable.  Continue chunked production only with seed-controlled replacement chunks or scheduler handoff; do not treat historical chunk001/chunk002 as independent evidence.  Before treating any finite-shell pole fit as load-bearing, add a model-class/analytic-continuation gate or a theorem excluding shell-vanishing derivative deformations.  If using the eight-mode/eight-noise foreground option, first add a same-source x8/x16 variance calibration with noise-subsample diagnostics.",
   "fail_count": 0,
-  "pass_count": 70,
+  "pass_count": 71,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",
   "required_certificates": {
@@ -113,6 +113,7 @@
     "scalar_source_contact_term_scheme": "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json",
     "scalar_taste_projector_normalization_attempt": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
     "scalar_zero_mode_limit_order": "outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json",
+    "source_overlap_sum_rule_no_go": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
     "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
     "taste_carrier_import_audit": "outputs/yt_taste_carrier_import_audit_2026-05-01.json",
     "taste_corner_ladder_pole_obstruction": "outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json",

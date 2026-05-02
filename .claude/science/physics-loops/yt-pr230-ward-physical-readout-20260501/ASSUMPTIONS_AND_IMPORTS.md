@@ -567,3 +567,10 @@ as a source-pole LSZ normalization theorem.  The source operator overlap
 `<0|O_s|h>`, source two-point pole residue, inverse-propagator derivative
 `D'(pole)`, and canonical-Higgs identity remain open unless separately derived
 or measured.
+
+2026-05-02 spectral sum-rule audit:
+
+Finite positive spectral or moment sum rules for `C_ss` may be used as support
+or diagnostics only.  They must not be used to infer pole saturation, the
+source-pole residue, or the source overlap without a separate microscopic
+denominator/threshold theorem or production pole-residue measurement.

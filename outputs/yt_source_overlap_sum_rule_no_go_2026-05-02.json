@@ -1,0 +1,143 @@
+{
+  "actual_current_surface_status": "exact negative boundary / source-overlap spectral sum-rule no-go",
+  "exact_next_action": "Move to a microscopic scalar denominator / threshold theorem, or wait for seed-controlled production data and apply the pole-fit model-class/FV/IR/Higgs-identity gates.",
+  "fail_count": 0,
+  "moment_family": {
+    "checks": {
+      "all_models_positive": true,
+      "max_abs_moment_residual": 1.4210854715202004e-14,
+      "pole_residue_span_factor": 10.0,
+      "y_proxy_span_factor": 3.16227766016838
+    },
+    "continuum_support_x": [
+      0.27,
+      0.32,
+      0.45,
+      0.7,
+      1.0,
+      1.5,
+      2.5,
+      4.0
+    ],
+    "models": [
+      {
+        "continuum_weights": [
+          9.887627886846444,
+          0.0,
+          0.0,
+          0.0,
+          6.0126666666666635,
+          0.0,
+          0.8607653213751867,
+          1.0389401251117072
+        ],
+        "max_abs_moment_residual": 0.0,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 0.2,
+        "relative_y_proxy_for_fixed_dE_ds": 2.23606797749979,
+        "source_overlap_z_s": 0.4472135954999579,
+        "success": true
+      },
+      {
+        "continuum_weights": [
+          9.574976939483708,
+          0.0,
+          0.0,
+          0.0,
+          6.0280776255707735,
+          0.0,
+          0.8574020926756347,
+          1.039543342269884
+        ],
+        "max_abs_moment_residual": 1.7763568394002505e-15,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 0.5,
+        "relative_y_proxy_for_fixed_dE_ds": 1.414213562373095,
+        "source_overlap_z_s": 0.7071067811865476,
+        "success": true
+      },
+      {
+        "continuum_weights": [
+          9.053892027212482,
+          0.0,
+          0.0,
+          0.0,
+          6.053762557077623,
+          0.0,
+          0.8517967115097153,
+          1.040548704200179
+        ],
+        "max_abs_moment_residual": 0.0,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 1.0,
+        "relative_y_proxy_for_fixed_dE_ds": 1.0,
+        "source_overlap_z_s": 1.0,
+        "success": true
+      },
+      {
+        "continuum_weights": [
+          8.532807114941258,
+          0.0,
+          0.0,
+          0.0,
+          6.079447488584471,
+          0.0,
+          0.8461913303437968,
+          1.0415540661304736
+        ],
+        "max_abs_moment_residual": 1.4210854715202004e-14,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 1.5,
+        "relative_y_proxy_for_fixed_dE_ds": 0.8164965809277261,
+        "source_overlap_z_s": 1.224744871391589,
+        "success": true
+      },
+      {
+        "continuum_weights": [
+          8.011722202670036,
+          0.0,
+          0.0,
+          0.0,
+          6.10513242009132,
+          0.0,
+          0.8405859491778774,
+          1.0425594280607686
+        ],
+        "max_abs_moment_residual": 3.552713678800501e-15,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 2.0,
+        "relative_y_proxy_for_fixed_dE_ds": 0.7071067811865475,
+        "source_overlap_z_s": 1.4142135623730951,
+        "success": true
+      }
+    ],
+    "moment_count": 4,
+    "pole_location_x": 0.25,
+    "target_moments": [
+      18.0,
+      15.04,
+      28.7488,
+      86.15203600000001
+    ]
+  },
+  "parent_certificates": {
+    "d17_source_pole_identity": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
+    "finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
+    "pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
+    "same_source_two_point": "outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json",
+    "scalar_contact_scheme": "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json",
+    "scalar_renorm_overlap": "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json",
+    "stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite spectral sum rules leave the source-pole residue underdetermined.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1",
+    "does not infer pole saturation from finite spectral moments"
+  ],
+  "verdict": "Finite positive spectral/moment sum rules for the same-source scalar two-point function do not fix the source-pole residue.  A positive pole-plus-continuum family can keep the first four moments exactly fixed while changing the pole residue by a factor of ten.  Therefore moment or curvature sum rules cannot replace a microscopic scalar denominator theorem, pole-saturation/threshold certificate, or production pole-residue measurement."
+}

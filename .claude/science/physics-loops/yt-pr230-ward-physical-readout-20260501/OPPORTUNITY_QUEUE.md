@@ -318,3 +318,8 @@ D17 identity update: direct promotion from D17 carrier uniqueness to
 source-pole identity is now blocked.  The analytic queue should target the
 scalar denominator/source-overlap theorem (`D'(pole)` and source residue) or a
 production pole-residue route, not another carrier-only uniqueness argument.
+
+Spectral sum-rule update: finite positive moment/sum-rule routes are now
+blocked as source-overlap closure.  The remaining analytic target is a stronger
+microscopic scalar-denominator/threshold theorem, not another finite-moment
+positivity construction.

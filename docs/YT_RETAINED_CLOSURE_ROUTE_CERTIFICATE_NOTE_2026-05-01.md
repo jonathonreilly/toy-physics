@@ -281,3 +281,9 @@ statement, but it does not fix source operator overlap, source two-point pole
 residue, inverse-propagator derivative, or the canonical kinetic metric used
 by `v`.  The retained-route certificate is refreshed at `PASS=70 FAIL=0` and
 still authorizes no retained/proposed-retained wording.
+
+The source-overlap spectral sum-rule no-go closes the finite-moment shortcut.
+Positive pole-plus-continuum spectral measures can keep the first four
+same-source moments fixed while changing pole residue by a factor of ten.
+The retained-route certificate is refreshed at `PASS=71 FAIL=0` and still
+authorizes no retained/proposed-retained wording.

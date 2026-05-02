@@ -107,6 +107,7 @@ def main() -> int:
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
         "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
         "d17_source_pole_identity_closure": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
+        "source_overlap_sum_rule_no_go": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -502,6 +503,11 @@ def main() -> int:
         and certificates["d17_source_pole_identity_closure"].get("proposal_allowed") is False
         and certificates["d17_source_pole_identity_closure"].get("theorem_closed") is False
     )
+    source_overlap_sum_rule_no_go_blocks = (
+        "source-overlap spectral sum-rule no-go"
+        in certificates["source_overlap_sum_rule_no_go"].get("actual_current_surface_status", "")
+        and certificates["source_overlap_sum_rule_no_go"].get("proposal_allowed") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -831,6 +837,11 @@ def main() -> int:
         "d17-source-pole-identity-closure-blocked",
         d17_source_pole_identity_closure_blocked,
         certificates["d17_source_pole_identity_closure"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "source-overlap-sum-rule-no-go-blocks",
+        source_overlap_sum_rule_no_go_blocks,
+        certificates["source_overlap_sum_rule_no_go"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

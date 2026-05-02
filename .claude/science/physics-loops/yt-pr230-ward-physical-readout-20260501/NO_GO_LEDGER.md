@@ -1439,3 +1439,16 @@ canonical kinetic metric.  A single-carrier residue family keeps D17 facts
 fixed while changing `Z_s`, `Res C_ss`, and `dE/ds`.  Therefore D17 cannot be
 used to set `kappa_s = 1` or identify the measured source pole with canonical
 `h` without a separate LSZ/source-overlap theorem.
+
+Finite spectral/moment sum rules do not fix source-pole residue:
+
+```text
+python3 scripts/frontier_yt_source_overlap_sum_rule_no_go.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+Positive pole-plus-continuum spectral measures can keep the first four moments
+of the same-source scalar two-point function exactly fixed while changing the
+pole residue by a factor of ten.  Therefore finite moment or curvature
+sum-rules cannot replace a scalar denominator theorem, pole-saturation
+threshold certificate, or production pole-residue measurement.

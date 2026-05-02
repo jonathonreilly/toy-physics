@@ -2606,3 +2606,17 @@ Review stance: analytic theorem attempt / claim firewall.
 Disposition: open / blocked.  D17 carrier uniqueness and no-retained-2HDM
 support do not derive the LSZ source overlap or canonical-Higgs pole identity.
 No retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 116 Source-Overlap Spectral Sum-Rule No-Go
+
+Review stance: analytic shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_source_overlap_sum_rule_no_go.py`.
+- Added `docs/YT_SOURCE_OVERLAP_SPECTRAL_SUM_RULE_NO_GO_NOTE_2026-05-02.md`.
+- Added `outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  Finite positive spectral/moment sum
+rules can keep moments fixed while changing the pole residue, so they cannot
+replace a scalar denominator theorem or production pole-residue measurement.
+No retained or proposed-retained wording is allowed.
