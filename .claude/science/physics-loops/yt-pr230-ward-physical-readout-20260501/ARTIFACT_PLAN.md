@@ -178,6 +178,9 @@ Completed in block 1:
 - `scripts/frontier_yt_cl3_source_unit_normalization_no_go.py`
 - `outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json`
 - `docs/YT_CL3_SOURCE_UNIT_NORMALIZATION_NO_GO_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_fh_lsz_production_manifest.py`
+- `outputs/yt_fh_lsz_production_manifest_2026-05-01.json`
+- `docs/YT_FH_LSZ_PRODUCTION_MANIFEST_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -223,7 +226,8 @@ Next artifact:
   prescription-sensitive magnitude and no retained limit theorem; the
   derivative limiting-order obstruction proves the zero-mode/IR prescription
   changes the derivative and pole crossing; the Cl(3)/Z3 source-unit no-go
-  proves substrate unit conventions do not derive `kappa_s`
+  proves substrate unit conventions do not derive `kappa_s`; the joint FH/LSZ
+  production manifest gives exact commands but no evidence
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

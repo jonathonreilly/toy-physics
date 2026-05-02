@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-41-cl3-source-unit-normalization-no-go
-blocks_completed: 55
-active_route: "Cl(3)/Z3 source-unit normalization no-go"
-active_hard_residual: "substrate unit/source conventions fix the additive source coordinate but not the canonical Higgs field metric; retained closure still needs scalar pole/kinetic normalization or production pole-derivative data"
+current_phase: campaign-rerun-block-42-fh-lsz-production-manifest
+blocks_completed: 56
+active_route: "joint Feynman-Hellmann / scalar-LSZ production manifest"
+active_hard_residual: "exact launch commands now exist, but retained closure still needs production output, correlated dE/ds, scalar pole derivative, and finite-volume/IR control"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -195,6 +195,9 @@ files_touched:
   - "scripts/frontier_yt_cl3_source_unit_normalization_no_go.py"
   - "docs/YT_CL3_SOURCE_UNIT_NORMALIZATION_NO_GO_NOTE_2026-05-01.md"
   - "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json"
+  - "scripts/frontier_yt_fh_lsz_production_manifest.py"
+  - "docs/YT_FH_LSZ_PRODUCTION_MANIFEST_NOTE_2026-05-01.md"
+  - "outputs/yt_fh_lsz_production_manifest_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -271,6 +274,7 @@ claim_state_movement:
   - "computed a finite Wilson-exchange scalar ladder total-momentum derivative scout; d lambda/dp^2 is finite and negative on the scan but its magnitude is strongly prescription sensitive, so no retained limit or kappa_s closure is authorized"
   - "proved the scalar ladder derivative limiting-order obstruction: keeping versus removing the gauge zero mode changes the IR behavior of d lambda/dp^2 and the pole crossing, so the derivative is not retained LSZ input without a limiting theorem"
   - "proved the Cl(3)/Z3 source-unit normalization no-go: unit lattice/Clifford/source conventions define the source coordinate s but do not derive the canonical Higgs metric or kappa_s"
+  - "created a resumable joint FH/LSZ production manifest with exact three-volume launch commands; this is planning support only and not production evidence"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

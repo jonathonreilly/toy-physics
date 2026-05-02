@@ -232,6 +232,9 @@ What changed:
   and the additive source coefficient define the source coordinate `s`, not
   the canonical Higgs field metric.  `kappa_s=1` remains forbidden without a
   pole/kinetic theorem.
+- The joint FH/LSZ production manifest now gives exact three-volume commands
+  for the production route.  It is a launch surface only: no production output,
+  pole fit, or retained proposal certificate exists.
 
 The scientific result is narrower than closure:
 
@@ -302,3 +305,5 @@ scalar LSZ normalization.
 The source-unit no-go makes the parallel functional point explicit: Cl(3)/Z3
 unit conventions alone do not turn the additive source coordinate into the
 canonical Higgs field.
+The production-manifest block makes the empirical route resumable; running it
+is a multi-day compute action, not a foreground proof.

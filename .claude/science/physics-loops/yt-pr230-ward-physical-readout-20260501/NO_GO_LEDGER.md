@@ -639,6 +639,18 @@ changing `dE/dh` and canonical curvature.  Therefore `kappa_s=1` remains an
 import unless derived by scalar pole/kinetic normalization or measured by
 same-source LSZ data.
 
+Joint FH/LSZ production manifest is not evidence:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_production_manifest.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The manifest records exact launch commands for the strict three-volume
+physical-response route, but it does not run those commands, produce
+correlators, fit `dE/ds`, fit `Gamma_ss(q)`, or derive a scalar pole
+derivative.  It cannot authorize retained or proposed-retained wording.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

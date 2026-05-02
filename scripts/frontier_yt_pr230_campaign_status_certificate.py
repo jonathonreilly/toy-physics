@@ -71,6 +71,7 @@ def main() -> int:
         "scalar_two_point_harness": load("outputs/yt_scalar_two_point_harness_certificate_2026-05-01.json"),
         "fh_lsz_joint_harness": load("outputs/yt_fh_lsz_joint_harness_certificate_2026-05-01.json"),
         "fh_lsz_joint_resource": load("outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json"),
+        "fh_lsz_production_manifest": load("outputs/yt_fh_lsz_production_manifest_2026-05-01.json"),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -231,6 +232,12 @@ def main() -> int:
         statuses["fh_lsz_joint_resource"],
     )
     report(
+        "fh-lsz-production-manifest-not-evidence",
+        "production manifest" in str(statuses["fh_lsz_production_manifest"])
+        or "bounded-support" in str(statuses["fh_lsz_production_manifest"]),
+        statuses["fh_lsz_production_manifest"],
+    )
+    report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
         "invariant readout formula" in str(statuses["fh_lsz_invariant_readout"])
         or "exact-support" in str(statuses["fh_lsz_invariant_readout"]),
@@ -383,7 +390,9 @@ def main() -> int:
             "makes the derivative grow and changes the pole-test crossing, "
             "while removing it gives a different stable surface.  The Cl(3)/Z3 "
             "source unit fixes the additive source coordinate but not the "
-            "canonical Higgs field normalization."
+            "canonical Higgs field normalization.  The joint FH/LSZ production "
+            "path now has exact launch commands, but the manifest is not "
+            "production evidence."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

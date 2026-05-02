@@ -1,0 +1,65 @@
+{
+  "actual_current_surface_status": "bounded-support / joint FH-LSZ production manifest",
+  "commands": [
+    {
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --scalar-source-shifts -0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050101 --output outputs/yt_pr230_fh_lsz_production_L12_T24_2026-05-01.json",
+      "expected_certificate_status": "production evidence only after successful run, fit, pole/LSZ analysis, and audit",
+      "label": "L12_T24",
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_2026-05-01.json",
+      "seed": 2026050101,
+      "volume": "12x24"
+    },
+    {
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 16x32 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --scalar-source-shifts -0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050102 --output outputs/yt_pr230_fh_lsz_production_L16_T32_2026-05-01.json",
+      "expected_certificate_status": "production evidence only after successful run, fit, pole/LSZ analysis, and audit",
+      "label": "L16_T32",
+      "output": "outputs/yt_pr230_fh_lsz_production_L16_T32_2026-05-01.json",
+      "seed": 2026050102,
+      "volume": "16x32"
+    },
+    {
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 24x48 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --scalar-source-shifts -0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050103 --output outputs/yt_pr230_fh_lsz_production_L24_T48_2026-05-01.json",
+      "expected_certificate_status": "production evidence only after successful run, fit, pole/LSZ analysis, and audit",
+      "label": "L24_T48",
+      "output": "outputs/yt_pr230_fh_lsz_production_L24_T48_2026-05-01.json",
+      "seed": 2026050103,
+      "volume": "24x48"
+    }
+  ],
+  "fail_count": 0,
+  "manifest_only": true,
+  "parent_certificates": [
+    "outputs/yt_fh_production_protocol_certificate_2026-05-01.json",
+    "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
+    "outputs/yt_fh_lsz_joint_harness_certificate_2026-05-01.json"
+  ],
+  "pass_count": 8,
+  "postprocess_requirements": [
+    "verify every production certificate has no reduced-scope/cold-pilot phase flag",
+    "fit E_top(s) with common-ensemble correlated finite differences",
+    "fit same-source Gamma_ss(q) and derive dGamma_ss/dp^2 at an isolated pole",
+    "apply finite-volume, IR, and zero-mode limiting theorem or include it in the production analysis",
+    "only then run a retained-proposal certificate; do not update CLAIMS_TABLE directly"
+  ],
+  "production_parameters": {
+    "engine": "numba",
+    "masses": "0.45,0.75,1.05",
+    "measurement_separation_sweeps": 20,
+    "projected_joint_mass_scaled_hours": 3630.28062941697,
+    "saved_configurations": 1000,
+    "scalar_source_shifts": "-0.01,0.0,0.01",
+    "scalar_two_point_modes": "0,0,0;1,0,0;0,1,0;0,0,1",
+    "scalar_two_point_noises": 16,
+    "thermalization_sweeps": 1000
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A command manifest is not production evidence and does not derive kappa_s.",
+  "strict_non_claims": [
+    "not production evidence",
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed top mass or observed y_t"
+  ],
+  "verdict": "The joint FH/LSZ production route now has exact launch commands for the three strict volumes, including common-ensemble scalar source shifts and same-source scalar two-point modes.  This is a resumable production manifest only.  It supplies no measurements, no pole derivative, and no retained closure."
+}

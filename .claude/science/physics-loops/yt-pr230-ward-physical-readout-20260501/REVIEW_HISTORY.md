@@ -1023,3 +1023,28 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The source-unit no-go blocks the last direct substrate-unit shortcut:
 Cl(3)/Z3 unit conventions define the source coordinate and insertion, not the
 canonical Higgs field metric or `kappa_s`.
+
+## Review-Loop Backpressure — Joint FH/LSZ Production Manifest
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_production_manifest.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_production_manifest.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The manifest is useful production planning only.  It does not supply
+production measurements, scalar pole control, or a retained-proposal
+certificate.

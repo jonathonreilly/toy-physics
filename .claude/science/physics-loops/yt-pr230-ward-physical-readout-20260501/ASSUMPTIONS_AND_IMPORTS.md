@@ -211,6 +211,16 @@ Unit lattice spacing, unit Clifford generator norms, and `g_bare=1` do not fix
 the canonical Higgs field metric.  Setting `kappa_s=1` from the substrate source
 unit remains forbidden.
 
+Joint FH/LSZ production manifest boundary:
+
+```text
+exact launch commands != production evidence
+```
+
+The manifest is allowed as planning support only.  The load-bearing inputs
+remain production certificates, correlated response fits, scalar pole
+derivative, and finite-volume/IR/zero-mode control.
+
 Source-reparametrization gauge boundary:
 
 ```text

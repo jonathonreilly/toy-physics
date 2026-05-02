@@ -200,3 +200,18 @@ Adds a Cl(3)/Z3 source-unit normalization no-go:
   conventions and still needs scalar pole/kinetic normalization or production
   LSZ data.
 ```
+
+Latest joint FH/LSZ production-manifest checkpoint text for PR #230:
+
+```text
+Adds a joint Feynman-Hellmann / scalar-LSZ production manifest:
+- exact three-volume launch commands now exist for `12x24`, `16x32`, and
+  `24x48` with common-ensemble source shifts and same-source scalar two-point
+  modes;
+- validator passes `PASS=8 FAIL=0`; campaign status now consumes 46 route
+  certificates and reports `PASS=42 FAIL=0`;
+- projected joint cost remains about `3630.28` single-worker hours before
+  pole-fit and autocorrelation tuning;
+- still no retained closure: this is launch planning, not production evidence,
+  and `kappa_s`/pole-derivative control remains open.
+```
