@@ -811,3 +811,19 @@ Adds an FH/LSZ chunk002 production checkpoint:
   L16/L24 scaling, pole/model-class gates, FV/IR control, and retained-proposal
   certification.
 ```
+
+Latest FH/LSZ pole-saturation threshold gate checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ pole-saturation threshold gate:
+- expresses finite-shell pole-residue acceptance as a positive-Stieltjes LP
+  interval under a candidate continuum threshold;
+- on the current finite-shell surface, the allowed residue interval has zero
+  lower bound and broad upper bound, so positivity/threshold language alone is
+  not scalar LSZ normalization;
+- runner passes `PASS=7 FAIL=0`; retained-route gate reports `PASS=52 FAIL=0`;
+  campaign status consumes 82 certificates and reports `PASS=78 FAIL=0`;
+- still no retained/proposed-retained closure: a pole-saturation theorem,
+  continuum-threshold certificate, production acceptance certificate, or
+  microscopic scalar denominator theorem must make the interval tight.
+```

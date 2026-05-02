@@ -1,0 +1,86 @@
+{
+  "acceptance_rule": {
+    "current_result": "not passed",
+    "required_certificate": "outputs/yt_fh_lsz_pole_saturation_threshold_certificate_2026-05-02.json",
+    "required_interval": "positive lower bound and relative_width_over_lower <= 0.02"
+  },
+  "actual_current_surface_status": "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
+  "exact_next_action": "Either derive a microscopic scalar denominator/pole-saturation theorem, or obtain production data plus a continuum-threshold certificate that makes the LP residue interval tight.",
+  "fail_count": 0,
+  "gate_scan": {
+    "pole_p_hat_sq": -0.25,
+    "shells_p_hat_sq": [
+      0.0,
+      0.26794919243112264,
+      0.5358983848622453,
+      1.0
+    ],
+    "target_c_shell_values": [
+      35.73902486402486,
+      20.643357608263933,
+      14.930197712628198,
+      10.324968775664036
+    ],
+    "threshold_rows": [
+      {
+        "continuum_grid_size": 10,
+        "continuum_threshold_m2": 0.251,
+        "feasible": true,
+        "lower_bound_is_zero": true,
+        "relative_width_over_lower": null,
+        "residue_max": 4.897911833495893,
+        "residue_min": 0.0,
+        "y_proxy_span_factor": null
+      },
+      {
+        "continuum_grid_size": 10,
+        "continuum_threshold_m2": 0.26,
+        "feasible": true,
+        "lower_bound_is_zero": true,
+        "relative_width_over_lower": null,
+        "residue_max": 4.897911833495893,
+        "residue_min": 0.0,
+        "y_proxy_span_factor": null
+      },
+      {
+        "continuum_grid_size": 8,
+        "continuum_threshold_m2": 0.3,
+        "feasible": true,
+        "lower_bound_is_zero": false,
+        "relative_width_over_lower": 1.1017647690216836,
+        "residue_max": 4.897911833495893,
+        "residue_min": 2.3303805952441303,
+        "y_proxy_span_factor": 1.449746449908288
+      },
+      {
+        "continuum_grid_size": 6,
+        "continuum_threshold_m2": 0.5,
+        "feasible": false,
+        "max_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)",
+        "min_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)"
+      },
+      {
+        "continuum_grid_size": 5,
+        "continuum_threshold_m2": 1.0,
+        "feasible": false,
+        "max_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)",
+        "min_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)"
+      }
+    ]
+  },
+  "parent_certificates": {
+    "model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+    "stieltjes_obstruction": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json"
+  },
+  "pass_count": 7,
+  "pole_saturation_threshold_gate_passed": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No pole-saturation/continuum-threshold certificate makes the pole residue interval tight.",
+  "strict_non_claims": [
+    "does not claim a physical scalar pole residue",
+    "does not set kappa_s = 1",
+    "does not use observed top mass or observed y_t",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The finite-shell FH/LSZ residue problem can be written as a linear positive-Stieltjes feasibility interval for the pole residue.  On the current finite-shell surface, a continuum threshold arbitrarily near the pole leaves the pole residue interval with zero lower bound and a broad upper bound.  A future finite-shell pole fit therefore needs a certified pole-saturation, continuum-threshold, or microscopic scalar-denominator input that makes this interval tight before dGamma_ss/dp^2 can be load-bearing."
+}

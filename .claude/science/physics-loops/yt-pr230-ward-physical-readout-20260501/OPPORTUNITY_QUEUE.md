@@ -140,7 +140,9 @@ probability.
   positivity obstruction now closes the first natural repair: positive
   pole-plus-continuum representations can still agree on finite shells and the
   pole while changing the residue, so positivity alone is not the missing
-  model-class certificate.
+  model-class certificate.  The pole-saturation threshold gate now supplies an
+  executable acceptance rule: the positive-Stieltjes residue interval must be
+  tight before a finite-shell pole derivative can be load-bearing.
   Chunk001 and chunk002 are now complete and combiner-ready, which validates
   the chunk-local protocol but does not change claim status: this is `2/63` of L12 and still
   lacks L16/L24 scaling, pole/model-class, and FV/IR gates.
@@ -209,7 +211,8 @@ probability.
    obstruction strengthens that gate by showing positive spectral form alone
    still leaves the pole residue underidentified; the remaining positive move
    must be pole saturation, continuum-threshold control, or a microscopic
-   scalar denominator theorem.
+   scalar denominator theorem.  The threshold gate makes this a concrete
+   residue-interval check and currently fails open/blocking.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

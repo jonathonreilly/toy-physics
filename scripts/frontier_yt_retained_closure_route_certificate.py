@@ -88,6 +88,7 @@ def main() -> int:
         "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
         "fh_lsz_pole_fit_model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
         "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
+        "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -355,6 +356,13 @@ def main() -> int:
         )
         >= 8.0
     )
+    pole_saturation_threshold_gate_blocks = (
+        "pole-saturation threshold gate"
+        in certificates["fh_lsz_pole_saturation_threshold_gate"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_pole_saturation_threshold_gate"].get("proposal_allowed") is False
+        and certificates["fh_lsz_pole_saturation_threshold_gate"].get("pole_saturation_threshold_gate_passed")
+        is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -591,6 +599,11 @@ def main() -> int:
         certificates["fh_lsz_stieltjes_model_class"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-pole-saturation-threshold-gate-blocks",
+        pole_saturation_threshold_gate_blocks,
+        certificates["fh_lsz_pole_saturation_threshold_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -724,7 +737,11 @@ def main() -> int:
             "certificate excludes those deformations.  Positive Stieltjes "
             "spectral form by itself is not enough: positive continuum models "
             "can keep the same finite shell rows and pole while changing the "
-            "pole residue.  "
+            "pole residue.  The pole-saturation threshold gate now makes the "
+            "next acceptance condition explicit: a future finite-shell fit "
+            "needs a tight positive-Stieltjes residue interval certified by "
+            "pole-saturation, continuum-threshold control, or a scalar "
+            "denominator theorem.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "

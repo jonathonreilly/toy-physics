@@ -86,6 +86,18 @@ location while changing the pole residue, so a stronger pole-saturation,
 continuum-threshold, production-continuum, or scalar-denominator theorem is
 still required.
 
+The pole-saturation threshold gate is open/blocking:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_pole_saturation_threshold_gate.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+For the current finite-shell positive-Stieltjes surface, the allowed pole
+residue interval has zero lower bound and broad upper bound.  A finite-shell
+fit cannot be load-bearing until a pole-saturation, continuum-threshold, or
+scalar-denominator certificate makes that interval tight.
+
 `R_conn = 8/9` does not by itself derive the scalar pole residue:
 
 ```text

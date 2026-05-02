@@ -102,6 +102,9 @@ def main() -> int:
         "fh_lsz_stieltjes_model_class": load(
             "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json"
         ),
+        "fh_lsz_pole_saturation_threshold_gate": load(
+            "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -387,6 +390,11 @@ def main() -> int:
         "fh-lsz-stieltjes-model-class-not-enough",
         "Stieltjes model-class obstruction" in str(statuses["fh_lsz_stieltjes_model_class"]),
         statuses["fh_lsz_stieltjes_model_class"],
+    )
+    report(
+        "fh-lsz-pole-saturation-threshold-gate-blocks",
+        "pole-saturation threshold gate" in str(statuses["fh_lsz_pole_saturation_threshold_gate"]),
+        statuses["fh_lsz_pole_saturation_threshold_gate"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -704,7 +712,11 @@ def main() -> int:
             "certificate is present.  The Stieltjes model-class obstruction "
             "also shows positivity alone is not that certificate: positive "
             "continuum models can preserve finite shell rows and the pole while "
-            "moving the residue.  "
+            "moving the residue.  The pole-saturation threshold gate turns the "
+            "next repair into an executable condition: finite-shell pole fits "
+            "remain blocked until the allowed positive-Stieltjes residue "
+            "interval is made tight by pole-saturation, continuum-threshold "
+            "control, or a scalar denominator theorem.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

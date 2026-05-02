@@ -476,7 +476,13 @@ completed.  They are production-phase and combiner-ready, with same-source
 `dE/ds` and four-mode same-source scalar-LSZ rows.  The combiner remains
 blocking because only `2/63` L12 chunks are ready, and L16/L24 plus
 pole/model-class/FV/IR gates are still open.
+The pole-saturation threshold gate turns the next positivity repair into a
+checkable condition: finite-shell same-source rows can only become LSZ evidence
+after the positive-Stieltjes residue interval is tight.  On the current
+surface, the interval has zero lower bound, so a pole-saturation theorem,
+continuum-threshold certificate, production acceptance certificate, or
+microscopic scalar denominator theorem is still required.
 
-Next exact action: launch or schedule chunk003 under the non-evidence combiner
-gate.  In parallel, strengthen the model-class gate toward pole-saturation /
-continuum-threshold evidence or continue the scalar denominator theorem.
+Next exact action: keep chunk003 running under the non-evidence combiner gate.
+In parallel, derive a scalar denominator/pole-saturation theorem or a
+continuum-threshold certificate that passes the residue-interval gate.
