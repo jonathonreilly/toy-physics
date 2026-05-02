@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T02:41:31.073691+00:00
+**Generated:** 2026-05-02T02:43:10.280702+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 150 |
-| support | 121 |
+| support | 120 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
-| ~~audited_numerical_match~~ | 26 |
+| ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 969 |
 | ~~audited_failed~~ | 100 |
@@ -37,9 +37,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
-| `audited_numerical_match` | 23 |
+| `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 413 |
+| `unaudited` | 412 |
 
 | criticality | count |
 |---|---:|
@@ -1235,6 +1235,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_operator_closure_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_bridge_uv_class_uniqueness_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `yt_constructive_uv_bridge_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `yt_ew_coupling_bridge_note` | support | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | D | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_interacting_bridge_locality_note` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `cl3_taste_generation_theorem` | support | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -17325,6 +17326,21 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `circular dependency: yt_ew_color_projection_theorem <-> rconn_derived_note <-> ew_current_matching_ozi_suppression_theorem_note_2026-04-27`
   - `missing direct EW-current matching coefficient computation`
 - **auditor confidence:** 0.94
+
+### `yt_ew_coupling_bridge_note`
+
+- **Note:** [`YT_EW_COUPLING_BRIDGE_NOTE.md`](../../docs/YT_EW_COUPLING_BRIDGE_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The old EW-coupling support scan narrows the y_t import surface and closes the sin^2(theta_W) gap only after scanning an effective taste_weight, with best match taste_weight=0.390.  _(class `D`)_
+- **chain closes:** False — The registered runner reproduces its support-scan numbers, but its decisive sin^2(theta_W) closure is obtained by choosing the scanned taste_weight that best matches the observed value; the script itself says taste_weight=0.390 still requires a physical derivation from taste-gauge coupling structure.
+- **rationale:** Issue: the live support runner closes the electroweak-angle gap by scanning an effective taste_weight and selecting the best numerical match to observed sin^2(theta_W), while the source note is explicitly superseded and warns against using the old import table for promotion decisions. Why this blocks: the row can support a bounded historical sensitivity/narrowing story, but it does not derive the taste-threshold weight or the current EW bridge authority from retained premises. Repair target: replace this superseded support note with the current complete-chain authority or add a derivation/runner that computes the taste-gauge coupling weight without fitting to sin^2(theta_W). Claim boundary until fixed: safe to cite as historical support that the old EW imports were narrowed and numerically stress-tested, not as a clean derivation of the electroweak coupling bridge.
+- **open / conditional deps cited:**
+  - `taste_weight_physical_derivation_missing`
+  - `source_note_superseded_by_complete_prediction_chain`
+- **auditor confidence:** high
 
 ### `yt_exact_coarse_grained_bridge_operator_note`
 
