@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:00:34.081197+00:00
+**Generated:** 2026-05-02T22:05:55.335029+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 140 |
-| **retained_no_go** | 97 |
+| **retained_no_go** | 98 |
 | **retained_bounded** | 188 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 547 |
+| unaudited | 546 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 384 |
+| `audited_clean` | 385 |
 | `audited_conditional` | 637 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 583 |
+| `unaudited` | 582 |
 
 | claim_type | count |
 |---|---:|
@@ -402,6 +402,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_trace_tensor_no_go_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `self_consistency_structured_null_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `self_gravity_backreaction_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh | C | - |
 | `self_gravity_born_hardening_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `self_gravity_entropy_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `self_gravity_failure_diagnosis` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
@@ -14418,6 +14419,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On the corrected 10x10 periodic staggered torus, iterative backreaction is distinguished from matched static structured nulls, with the cleanest surviving separation in width contraction.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the note's SelfConsist, StaticInit, ShiftedNull, and PhaseNull sign-margin, width-ratio, boundary-alpha, and sigma-separation values; the source keeps the conclusion fixed-surface and non-universal.
 - **rationale:** The bounded structured-null claim closes against scripts/frontier_self_consistency_test.py. Current output matches SelfConsist sign margin +30, width 0.3554, alpha 0.145434; StaticInit +40, 0.3563, 0.159548; ShiftedNull +11, 0.4847, 0.134795; PhaseNull +21.4+/-31.1, 0.4012+/-0.0186, 0.131728+/-0.011976; and the stated width/alpha separations. The note explicitly limits the result to a fixed 10x10 periodic surface and does not claim architecture-wide closure. Plot generation failed locally due missing matplotlib, but the numerical runner output needed for the audit completed.
+- **auditor confidence:** high
+
+### `self_gravity_backreaction_closure_note`
+
+- **Note:** [`SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md`](../../docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go for the registered exact-lattice Poisson-like self-gravity/backreaction lane with h=0.25, W=3, L=6, fixed launch/source/Born nodes, Yukawa-like kernel, source strengths 0.002/0.004/0.008, couplings 0/0.05/0.2/0.5, and the stated strict exact-reduction plus Born controls; not a physical, continuum, or general self-gravity no-go.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `fresh-self-gravity-nogo-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The note and runner show exact epsilon=0 identity on the same loop machinery, while all nonzero epsilon/source rows with finite effects fail strict nonlinear convergence and the retained Born audit row is not end-to-end Born-clean.  _(class `C`)_
+- **chain closes:** True — The chain closes as a bounded no-go on the stated exact-lattice family: zero-epsilon reduction is exact, matched-null controls are present, nonzero rows are not promoted because convergence fails under the strict tolerance, and the end-to-end Born audit is not machine-clean. No bridge to a physical continuum self-gravity law is claimed or needed for this scoped negative result.
+- **rationale:** Clean only as a bounded no-go. The exact epsilon=0 reduction survives, nonzero rows show finite effects but fail strict convergence, and the Born audit is only step-local clean while end-to-end Born is nonzero. The full runner output matches the source note's safe read and exits cleanly. Residual risk: this does not exclude other self-gravity mechanisms, other lattices, broader parameter sweeps, continuum limits, or future versions that satisfy the listed convergence and Born controls.
 - **auditor confidence:** high
 
 ### `self_gravity_born_hardening_note`
