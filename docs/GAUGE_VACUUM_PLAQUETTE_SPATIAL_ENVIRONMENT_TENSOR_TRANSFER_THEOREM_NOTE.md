@@ -11,14 +11,9 @@ construction at `beta = 6`** (the explicit Perron solve, the convergence /
 positivity proof beyond truncated support, and the named-tensor-word check
 beyond one example) is **out of scope** here. The script is a finite
 truncated support packet only.
-**Status:** audit pending. Under the scope-aware classification framework,
-`effective_status` is computed by the audit pipeline from `audit_status` +
-`claim_type` + dependency chain; no author-side tier is asserted in source.
-The current audit verdict is `audited_conditional`. The verdict identifies
-the gap from local Wilson ingredients + `SU(3)` recurrence primitives to
-the actual full spatial-environment tensor-transfer operator as
-"asserted by Peter-Weyl / Haar language but not constructed or checked
-beyond a finite truncated support packet and one tensor word".
+**Status:** independent audit required. Under the scope-aware classification
+framework, ratified status is computed by the audit pipeline from audit lane
+data and the dependency chain; no author-side tier is asserted in source.
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py`
 
 ## Question
@@ -207,16 +202,12 @@ Expected summary:
 
 The following items are explicitly **NOT** load-bearing claims of this
 note. They depend on separate authority rows / open derivations / open
-construction work and enter only as admitted-context. Per the audit
-verdict on this row, items (1)-(2) below are the **specific** unclosed
-gaps the audit lane identifies as preventing retained-grade status:
+construction work and enter only as admitted-context:
 
 1. **Full untruncated tensor-transfer operator at `beta = 6`.** The
    exact untruncated construction (positivity, convergence, full
    support beyond `NMAX = 4`, full Bessel-mode sum beyond
-   `MODE_MAX = 80`) is asserted by Peter-Weyl / Haar language but not
-   constructed or checked here. The audit verdict identifies this as
-   the principal load-bearing gap.
+   `MODE_MAX = 80`) is not constructed or checked here.
 
 2. **`beta = 6` tensor-transfer Perron solve.** The explicit `beta = 6`
    matrix elements, Perron state, and boundary coefficients
