@@ -3,7 +3,7 @@
 **Block:** physics-loop/cyclic-projector-compression-narrow-block28-20260502
 **Note:** docs/CYCLIC_PROJECTOR_COMPRESSION_NARROW_THEOREM_NOTE_2026-05-02.md
 **Runner:** scripts/frontier_cyclic_projector_compression_narrow.py (PASS=26/0)
-**Parent row carved from:** koide_dweh_cyclic_compression_note_2026-04-18 (claim_type=positive_theorem, audit_status=unaudited, td=77)
+**Parent row carved from:** koide_dweh_cyclic_compression_note_2026-04-18 (claim_type=positive_theorem)
 
 ## Block type
 
@@ -24,7 +24,7 @@ authority is consumed.
 ## Claim-Type Certificate
 
 ```yaml
-target_claim_type: positive_theorem
+proposed_claim_type: positive_theorem
 proposed_claim_scope: |
   Pure cyclic-group invariant theory: the cyclic averaging operator on
   Herm(3) is the orthogonal projector onto its 3-dim cyclic-invariant
@@ -32,18 +32,18 @@ proposed_claim_scope: |
   basis-level / generic compression formulas. No DM/Koide/physical
   Hermitian-source-law framing.
 proposed_load_bearing_step_class: A
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+status_authority: independent_audit_lane
+source_sets_audit_outcome: false
 ```
 
 ## 7-criteria check
 
 | # | Criterion | Pass? |
 |---|---|---|
-| 1 | target_claim_type named | YES (`positive_theorem`) |
+| 1 | proposed_claim_type named | YES (`positive_theorem`) |
 | 2 | No open imports for the claimed target | YES (zero ledger deps; the 3-cycle `C` is defined explicitly, not imported) |
 | 3 | No load-bearing observed/fitted/admitted | YES (purely linear algebra / cyclic-group representation theory; no PDG / literature / fitted / admitted-convention input) |
-| 4 | Every dep retained-grade | YES (vacuously — zero deps) |
+| 4 | Every dep accounted for | YES (vacuously — zero deps) |
 | 5 | Runner verifies the algebraic identity at exact precision | YES (sympy `Matrix`, `Rational`, exact symbolic checks for `C^3 = I`, Hermiticity of B_0/B_1/B_2, idempotency on five test matrices, image-inclusion, full basis-level action on 9 generators of Herm(3), generic-Hermitian compression formula) |
 | 6 | Review-loop disposition | proposed pass as audit-pending narrow theorem; independent audit pending |
 | 7 | PR body says independent audit required | YES |
@@ -77,7 +77,7 @@ since it has zero ledger dependencies.
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 ## Audit-graph effect

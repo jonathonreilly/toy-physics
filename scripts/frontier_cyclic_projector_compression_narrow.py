@@ -36,10 +36,10 @@ response" is claimed.
 
 Companion role: this is a Pattern A new narrow claim row carving out the
 load-bearing class-(A) algebraic core of
-`koide_dweh_cyclic_compression_note_2026-04-18` (claim_type=positive_theorem,
-audit_status=unaudited, td=77). The narrow theorem isolates the cyclic-projector
-compression on Herm(3) from any DM/Koide-specific framing, so it can be
-audit-ratified independently.
+`koide_dweh_cyclic_compression_note_2026-04-18` (claim_type=positive_theorem).
+The narrow theorem isolates the cyclic-projector
+compression on Herm(3) from any DM/Koide-specific framing so it can be
+reviewed independently.
 """
 
 from pathlib import Path
@@ -238,7 +238,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('koide_dweh_cyclic_compression_note_2026-04-18', {})
 print(f"\n  Parent row state on origin/main:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 print(f"    deps: {parent.get('deps')}")
@@ -276,8 +275,8 @@ print("""
     Koide-side, or physical-Hermitian-source-law input.
 
   This narrow theorem isolates the cyclic-projector compression algebra
-  from any DM/Koide-specific framing, so it can be audit-ratified
-  independently of the parent's downstream context.
+  from any DM/Koide-specific framing so it can be reviewed independently
+  of the parent's downstream context.
 """)
 
 
