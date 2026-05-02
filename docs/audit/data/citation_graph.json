@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:54:36.258811+00:00",
+  "generated_at": "2026-05-02T18:58:56.652351+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28707,16 +28707,16 @@
     },
     "gauge_vacuum_plaquette_bridge_support_note": {
       "claim_id": "gauge_vacuum_plaquette_bridge_support_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "no_go",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (bridge-support stack)",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "gauge_scalar_temporal_completion_theorem_note",
         "scalar_3plus1_temporal_ratio_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
       ],
-      "note_hash": "937a69d024b5ba8a0b372bdb96f740805994c422ee81f966752c249cd8332e26",
+      "note_hash": "4bb4612cdd000f0bdd93b85ffdddb1249a0859e83fedc3d4ac58c923e952ff25",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "title": "Gauge-Vacuum Plaquette Scalar-Bridge Support"
@@ -46369,16 +46369,16 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 10,
       "meta": 1,
-      "none": 1751,
-      "positive_theorem": 22
+      "none": 1750,
+      "positive_theorem": 23
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 510,
       "meta": 1,
-      "no_go": 106,
+      "no_go": 105,
       "none": 443,
       "open_gate": 109,
-      "positive_theorem": 615
+      "positive_theorem": 616
     },
     "edge_count": 4990,
     "leaf_count": 754,
