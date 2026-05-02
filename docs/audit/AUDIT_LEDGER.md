@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T02:05:40.313512+00:00
+**Generated:** 2026-05-02T02:07:03.184021+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 368 |
+| `audited_clean` | 369 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 419 |
+| `unaudited` | 418 |
 
 | criticality | count |
 |---|---:|
@@ -447,6 +447,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lambda_bypass_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `valley_linear_asymptotic_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `valley_linear_mirror_transfer_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_equation_gravity_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -16535,6 +16536,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md_unknown_unaudited`
   - `asymptotic_bridge_slice_dependence_open`
   - `4D_tail_law_transfer_norm_Gate_B_and_UV_completion_open`
+- **auditor confidence:** high
+
+### `valley_linear_mirror_transfer_note`
+
+- **Note:** [`VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md`](../../docs/VALLEY_LINEAR_MIRROR_TRANSFER_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Valley-linear improves the random-DAG family relative to spent-delay, but spent-delay still has the edge on the mirror family, so the result is a transfer diagnostic rather than a unification theorem.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the random and mirror DAG comparison and reproduces the note's four-row table exactly. The source note remains bounded and explicitly denies a universal action-replacement theorem.
+- **rationale:** The current output matches the frozen replay: random spent-delay 11/36 with mean -0.770064, random valley-linear 18/36 with +0.000155, mirror spent-delay 24/36 with +0.545083, and mirror valley-linear 23/36 with +0.036664. The note's safe read is exactly the runner's conclusion: branch-specific transfer, not a unification theorem. Residual risk is limited to the finite generator/seed scope declared in the note.
 - **auditor confidence:** high
 
 ### `valley_linear_wide_tail_note`
