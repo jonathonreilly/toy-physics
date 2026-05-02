@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:59:21.358218+00:00
+**Generated:** 2026-05-02T23:02:07.639414+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 98 |
 | **retained_bounded** | 191 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 7 |
-| unaudited | 526 |
+| open_gate | 8 |
+| unaudited | 525 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 392 |
+| `audited_clean` | 393 |
 | `audited_conditional` | 647 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 562 |
+| `unaudited` | 561 |
 
 | claim_type | count |
 |---|---:|
@@ -457,6 +457,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
+| `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -16276,6 +16277,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** After tracing cells and spectator taste bits while keeping the last KS taste bit per species, the audited Poisson/CHSH ground states yield deterministic two-qubit logical resources with Bell overlap above 0.90 and high standard teleportation fidelity.  _(class `B`)_
 - **chain closes:** True — Within the stated small-surface numerical scope, the runner sanity-checks the teleportation convention, constructs the traced logical two-qubit resource, and reports Bell overlap, CHSH, negativity, and teleportation fidelity above the note's threshold for both Poisson cases. The note explicitly leaves generalization, preparation/readout, and parameter sensitivity outside this scoped claim.
 - **rationale:** The proper retained object is not an open gate but a bounded numerical theorem over the specified small surfaces and extraction rule. The current runner output matches the note's reported values and separates deterministic traced extraction from postselected diagnostic branches. No one-hop cited authorities are present, and the remaining limitations are future hardening tasks rather than missing premises for the scoped result.
+- **auditor confidence:** high
+
+### `teleportation_taste_readout_operator_model_note`
+
+- **Note:** [`TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md`](../../docs/TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Finite-dimensional operator audit of which native and axis-built taste readout, Bell-measurement, and correction operators factor as O_logical tensor I_env for the retained last KS taste bit.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-teleportation-taste-readout-operator-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Cells and spectator tastes can be ignored only when every preparation, readout, Bell-measurement, and correction operator factors as O_logical tensor I_env, or an equivalent environment-blind/heralded apparatus model is supplied.  _(class `B`)_
+- **chain closes:** True — The note closes as an operator-model gate: the runner classifies the audited operators and identifies that native sublattice Z in 2D/3D leaks spectator taste information. No external cited authority is needed for this scoped static audit.
+- **rationale:** The scoped claim is not a teleportation promotion theorem but a clean operational gate on ignoring cells and spectator tastes. The runner directly supports the key distinctions: axis logical Z/X and axis-built projectors pass, while native sublattice Z and native-Z Bell/stabilizer constructions fail in 2D/3D. The result is citeable as a blocker requiring either factorized logical operators, environment-blind apparatus, bounded branch variation, or explicit heralding.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md`
 - **auditor confidence:** high
 
 ### `tensor_block_closure_test_note`
