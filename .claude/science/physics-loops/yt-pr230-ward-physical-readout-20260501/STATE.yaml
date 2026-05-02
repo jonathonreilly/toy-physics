@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-105-gauge-mass-response-observable-gap
-blocks_completed: 105
-active_route: "Feynman-Hellmann gauge-mass response observable gap"
-active_hard_residual: "Seed-controlled replacement chunks001/002/003 are running; the gauge-normalized response route still lacks a same-source W/Z mass-response observable, and the current production harness is QCD top-only rather than an electroweak gauge-mass response harness"
+current_phase: campaign-rerun-block-106-seed-controlled-chunk001-checkpoint
+blocks_completed: 106
+active_route: "Seed-controlled FH/LSZ chunk001 production checkpoint"
+active_hard_residual: "Replacement chunk001 is seed-controlled and combiner-ready, but only 1/63 L12 chunks are ready; chunk002/chunk003 replacements are still running and no combined L12, L16/L24, pole-derivative, FV/IR, model-class, or canonical-Higgs identity gate has passed"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -512,6 +512,7 @@ claim_state_movement:
   - "added an FH/LSZ canonical-Higgs pole identity gate: same-source invariance avoids kappa_s=1 but does not identify the measured source pole with the canonical Higgs radial mode used by v; production pole derivative and source-to-Higgs identity remain open"
   - "added an FH gauge-normalized response route: a same-source ratio (dE_top/ds)/(dM_W/ds) cancels kappa_s if the source moves the same canonical Higgs radial mode, but the W/Z response observable and Higgs-identity certificate are absent"
   - "added an FH gauge-mass response observable-gap gate: the current harness supplies top dE/ds support but no W/Z mass-response path; EW gauge-mass algebra starts after canonical H is supplied"
+  - "processed seed-controlled replacement chunk001: combiner now counts chunk001 as 1 ready chunk out of 63 L12 chunks, while historical chunk002 remains seed-invalid and no combined L12 evidence exists"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -520,5 +521,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll seed-controlled replacement chunks001/002/003; if a replacement chunk completes, rerun chunk combiner/checkpoint/retained/campaign gates, otherwise either implement a genuine same-source W/Z mass-response harness or continue the scalar-denominator/Higgs-pole-identity theorem route."
+next_exact_action: "Poll seed-controlled replacement chunk002/chunk003; if a replacement chunk completes, rerun chunk combiner/checkpoint/retained/campaign gates, otherwise continue the scalar-denominator/Higgs-pole-identity theorem route or implement a genuine same-source W/Z mass-response harness."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

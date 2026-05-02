@@ -14,7 +14,7 @@
     "feynman_hellmann": "bounded-support / Feynman-Hellmann source-response route",
     "fh_gauge_mass_response_observable_gap": "open / FH gauge-mass response observable gap",
     "fh_gauge_normalized_response": "bounded-support / FH gauge-normalized response route",
-    "fh_lsz_chunk001_checkpoint": "bounded-support / FH-LSZ chunk001 production checkpoint seed-invalid diagnostic",
+    "fh_lsz_chunk001_checkpoint": "bounded-support / FH-LSZ chunk001 seed-controlled production checkpoint",
     "fh_lsz_chunk002_checkpoint": "bounded-support / FH-LSZ chunk002 production checkpoint seed-invalid diagnostic",
     "fh_lsz_chunk_combiner_gate": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
     "fh_lsz_chunked_production_manifest": "bounded-support / FH-LSZ chunked production manifest",

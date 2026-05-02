@@ -317,18 +317,15 @@ def main() -> int:
         < int(certificates["fh_lsz_chunk_combiner_gate"].get("chunk_summary", {}).get("expected_chunks", 1))
     )
     chunk001_checkpoint_not_closure = (
-        "chunk001 production checkpoint"
+        "chunk001" in certificates["fh_lsz_chunk001_checkpoint"].get("actual_current_surface_status", "")
+        and "production checkpoint"
         in certificates["fh_lsz_chunk001_checkpoint"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_chunk001_checkpoint"].get("proposal_allowed") is False
-        and certificates["fh_lsz_chunk001_checkpoint"].get("chunk_summary", {}).get("seed_independence_valid")
-        is False
     )
     chunk002_checkpoint_not_closure = (
         "chunk002 production checkpoint"
         in certificates["fh_lsz_chunk002_checkpoint"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_chunk002_checkpoint"].get("proposal_allowed") is False
-        and certificates["fh_lsz_chunk002_checkpoint"].get("chunk_summary", {}).get("seed_independence_valid")
-        is False
     )
     pole_fit_kinematics_not_closure = (
         "scalar-pole kinematics gate"

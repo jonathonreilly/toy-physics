@@ -6,11 +6,12 @@ Closed by
 `docs/YT_FH_LSZ_NUMBA_SEED_INDEPENDENCE_AUDIT_NOTE_2026-05-02.md` and
 `scripts/frontier_yt_fh_lsz_numba_seed_independence_audit.py`.
 
-Chunk001 and chunk002 have different metadata seeds, but identical
-gauge-evolution signatures and no `numba_gauge_seed_v1` marker.  They cannot
-count toward L12 combination until rerun under the patched harness or excluded.
-This is an evidence-quality no-go for the historical chunks, not a no-go
-against the FH/LSZ route itself.
+Historical chunk001 and chunk002 had different metadata seeds, identical
+gauge-evolution signatures, and no `numba_gauge_seed_v1` marker.  Replacement
+chunk001 has now been rerun under the patched harness and is combiner-ready;
+historical chunk002 remains seed-invalid until its replacement completes.  This
+is an evidence-quality no-go for historical chunks, not a no-go against the
+FH/LSZ route itself.
 
 ## Finite shell rows do not self-certify a uniform continuum gap
 
@@ -79,11 +80,11 @@ Chunk001 production checkpoint:
 
 ```text
 python3 scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py
-# SUMMARY: PASS=10 FAIL=0
+# SUMMARY: PASS=11 FAIL=0
 ```
 
-Chunk001 is production-phase and combiner-ready, but it is only `1/63` of L12.
-No combined L12 summary, L16/L24 scaling, pole derivative, model-class
+Replacement chunk001 is production-phase, seed-controlled, and combiner-ready,
+but it is only `1/63` of L12.  No combined L12 summary, L16/L24 scaling, pole derivative, model-class
 certificate, or FV/IR/zero-mode control exists.  It is bounded support only.
 
 Chunk002 production checkpoint:
@@ -93,8 +94,8 @@ python3 scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py
 # SUMMARY: PASS=10 FAIL=0
 ```
 
-Chunk002 is also production-phase and combiner-ready, bringing the present set
-to `2/63` of L12.  No combined L12 summary, L16/L24 scaling, pole derivative,
+Historical chunk002 is production-phase but seed-invalid until its replacement
+completes.  The present ready set remains `1/63` of L12.  No combined L12 summary, L16/L24 scaling, pole derivative,
 model-class certificate, or FV/IR/zero-mode control exists.  It remains
 bounded support only.
 

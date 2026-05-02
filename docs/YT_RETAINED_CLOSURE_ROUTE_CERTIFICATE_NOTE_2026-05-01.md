@@ -213,13 +213,12 @@ scalar two-point residue/common-dressing theorem.  A finite-shell
 analytic-continuation gate is also required before any Euclidean
 `Gamma_ss(p^2)` pole fit can be load-bearing: finite shell rows can share the
 same sampled values and pole while changing `dGamma_ss/dp^2`.  The executable
-model-class gate now enforces that boundary and remains open.  Historical
-chunk001 and chunk002 have completed as production-format diagnostics, but the
-numba seed-independence audit demotes them from independent L12 evidence:
-their metadata seeds differ while their gauge-evolution signatures match, and
-they lack the `numba_gauge_seed_v1` marker.  They must be rerun under the
-patched harness or excluded before L12 combination.  No combined L12, L16/L24,
-pole-derivative, model-class, or FV/IR certificate exists.  Positive
+model-class gate now enforces that boundary and remains open.  Replacement
+chunk001 has completed under `numba_gauge_seed_v1` and is the first ready
+chunk in the combiner.  Historical chunk002 remains seed-invalid until its
+replacement completes.  The current set is still only `1/63` ready L12 chunks,
+with no combined L12, L16/L24, pole-derivative, model-class, or FV/IR
+certificate.  Positive
 Stieltjes/spectral form alone also does not close the
 model-class gate because positive continuum freedom can preserve finite shell
 values and the pole while changing the residue.  The pole-saturation threshold

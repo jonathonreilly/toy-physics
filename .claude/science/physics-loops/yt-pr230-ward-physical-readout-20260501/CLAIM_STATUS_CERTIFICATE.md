@@ -894,23 +894,24 @@ denominator certificate excludes shell-vanishing derivative deformations.
 FH/LSZ chunk001 production checkpoint:
 
 ```text
-actual_current_surface_status: bounded-support / FH-LSZ chunk001 production checkpoint
+actual_current_surface_status: bounded-support / FH-LSZ chunk001 seed-controlled production checkpoint
 proposal_allowed: false
 bare_retained_allowed: false
 
 python3 scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py
-# SUMMARY: PASS=10 FAIL=0
+# SUMMARY: PASS=11 FAIL=0
 
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=49 FAIL=0
+# SUMMARY: PASS=63 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=75 FAIL=0
+# SUMMARY: PASS=89 FAIL=0
 ```
 
-One L12 production chunk is present and combiner-ready.  It is still partial
-bounded support only: no combined L12, L16/L24 scaling, pole derivative,
-model-class certificate, FV/IR control, or retained proposal gate is present.
+Replacement chunk001 is production-phase, seed-controlled, and combiner-ready.
+It is still partial bounded support only: the current ready set is `1/63` of
+L12, with no combined L12, L16/L24 scaling, pole derivative, model-class
+certificate, FV/IR control, or retained proposal gate.
 
 FH/LSZ Stieltjes model-class obstruction checkpoint:
 

@@ -607,3 +607,16 @@ Next exact action: poll seed-controlled replacement chunks001/002/003.  If no
 replacement chunk completes, either implement a genuine same-source W/Z
 mass-response harness or return to the scalar-denominator/Higgs-pole identity
 theorem route.
+
+Replacement FH/LSZ chunk001 has completed under `numba_gauge_seed_v1`.
+The combiner now reports `present_chunks=2`, `ready_chunks=1`, and
+`expected_chunks=63`: replacement chunk001 is ready, historical chunk002 is
+still seed-invalid, and chunks003-063 are absent or running.  The chunk001
+checkpoint is bounded production support only because no combined L12 output,
+L16/L24 scaling, isolated pole derivative, model-class, FV/IR, or
+canonical-Higgs identity certificate exists.
+
+Next exact action: poll seed-controlled replacement chunk002/chunk003.  If a
+replacement output completes, rerun the combiner, the relevant chunk checkpoint
+certificate, retained-route gate, and campaign gate; otherwise continue the
+highest-ranked scalar-denominator/Higgs-pole identity route.

@@ -385,7 +385,8 @@ def main() -> int:
     )
     report(
         "fh-lsz-chunk001-checkpoint-not-closure",
-        "chunk001 production checkpoint" in str(statuses["fh_lsz_chunk001_checkpoint"]),
+        "chunk001" in str(statuses["fh_lsz_chunk001_checkpoint"])
+        and "production checkpoint" in str(statuses["fh_lsz_chunk001_checkpoint"]),
         statuses["fh_lsz_chunk001_checkpoint"],
     )
     report(

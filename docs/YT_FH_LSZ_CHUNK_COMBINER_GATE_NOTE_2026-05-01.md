@@ -32,8 +32,8 @@ The current status is:
 
 ```text
 expected chunks: 63
-present chunks: historical chunk001/chunk002 exist, but fail the seed-independence gate
-ready chunks: 0
+present chunks: chunk001 replacement plus historical chunk002
+ready chunks: 1
 ```
 
 The production harness now records `metadata.run_control`, so future chunk
@@ -41,11 +41,10 @@ certificates expose the seed and command settings needed by the combiner.
 The combiner also verifies the manifest reconstructs `63` unique artifact
 directories.
 
-After the numba seed audit, historical chunk001/chunk002 are no longer counted
-as ready L12 evidence.  They lack the `numba_gauge_seed_v1` marker and share a
-duplicate gauge-evolution signature across distinct metadata seeds.  Future
-chunks must be rerun under the patched harness before they can count toward
-combination.
+After the chunk001 replacement, chunk001 is ready under the
+`numba_gauge_seed_v1` seed-control policy.  Historical chunk002 still lacks the
+marker and is not counted as ready.  Future chunks must be run under the
+patched harness before they can count toward combination.
 
 ## Claim Boundary
 

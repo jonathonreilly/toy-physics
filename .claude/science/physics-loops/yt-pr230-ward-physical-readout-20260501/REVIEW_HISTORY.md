@@ -2360,3 +2360,31 @@ The current production harness supplies top-side scalar source response but no
 same-source W/Z mass response.  The EW gauge-mass theorem is algebra after
 canonical `H` is supplied, not a measurement of `dM_W/ds`.  No retained/
 proposed-retained wording is authorized.
+
+## Review-Loop Backpressure - Seed-Controlled FH/LSZ Chunk001
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / PARTIAL L12 ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+Replacement chunk001 is now seed-controlled and combiner-ready, but it is only
+`1/63` of L12.  The combined L12, L16/L24, pole derivative, model-class,
+FV/IR, and canonical-Higgs identity gates remain open.  No retained/
+proposed-retained wording is authorized.
