@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=127 FAIL=0
+# SUMMARY: PASS=128 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -117,6 +117,7 @@ The certificate consumes the PR-local route certificates for:
 - Cl(3)/Z3 automorphism source-identity no-go.
 - same-source pole-data sufficiency gate.
 - complete source-spectrum identity no-go.
+- neutral scalar top-coupling tomography gate.
 - short-distance/OPE LSZ shortcut no-go.
 - effective-mass plateau residue no-go.
 - finite source-shift derivative no-go.
@@ -167,6 +168,7 @@ the visible shortcut routes:
 | finite Cl(3)/Z3 automorphism/orbit data | discrete substrate facts do not fix continuous LSZ overlap, `D'(pole)`, or pole residue |
 | same-source pole-data sufficiency | positive route identified, but production/model-class/FV/IR/Higgs-identity gates remain open |
 | complete source-only spectrum | full `C_ss(p)` plus `dE_top/ds` still leaves canonical `y_t` variable through orthogonal neutral top coupling |
+| neutral scalar top-coupling tomography | current response matrix has rank one; an independent non-source row or rank-one theorem is required |
 | source-reparametrization gauge | source-only analytic routes need canonical scalar normalization |
 | canonical scalar normalization import audit | existing EW/Higgs notes assume or structure canonical `H`, not derive source `kappa_s` |
 | source-to-Higgs LSZ closure attempt | no allowed current-surface premise fixes `kappa_s` |
@@ -382,3 +384,11 @@ Latest complete source-spectrum checkpoint: campaign status now includes
 same-source `dE_top/ds` is not canonical-Higgs closure because an orthogonal
 neutral top coupling can keep those rows fixed while changing canonical `y_t`.
 No retained/proposed-retained wording is authorized.
+
+Latest neutral scalar tomography checkpoint: campaign status now includes
+`scripts/frontier_yt_neutral_scalar_top_coupling_tomography_gate.py` and
+reports `PASS=128 FAIL=0` over 132 certificates.  The current source-only
+response matrix has rank one, so a two-component neutral top-coupling vector
+has a null direction until a rank-one theorem, same-surface `O_H/C_sH/C_HH`
+row, or W/Z response row with identity certificates is supplied.  No
+retained/proposed-retained wording is authorized.

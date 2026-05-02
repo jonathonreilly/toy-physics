@@ -1951,3 +1951,18 @@ A two-scalar witness keeps `C_ss(p)` and `dE_top/ds` fixed while varying
 canonical `y_t` by a factor greater than four through finite positive
 orthogonal top couplings.  Do not treat complete source-only spectrum data as
 `O_H`, `C_sH`, `C_HH`, W/Z response, or a Higgs-pole identity certificate.
+
+Rank-one source response is not neutral top-coupling tomography:
+
+```text
+python3 scripts/frontier_yt_neutral_scalar_top_coupling_tomography_gate.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+The source-only FH/LSZ surface supplies one source-overlap row and one
+same-source top response equation.  In a two-component neutral scalar sector
+that rank-one matrix has a null direction, so the canonical-Higgs component
+of the top-coupling vector can vary while all source-only rows stay fixed.
+Do not use a rank-one source-response matrix as a rank-one neutral-scalar
+theorem, no-orthogonal-top-coupling theorem, `C_sH/C_HH` row, or W/Z response
+row.

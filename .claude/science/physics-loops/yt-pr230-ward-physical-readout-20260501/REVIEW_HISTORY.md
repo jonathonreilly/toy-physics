@@ -3351,3 +3351,18 @@ Disposition: exact negative boundary.  Complete same-source `C_ss(p)` data and
 same-source `dE_top/ds` can stay fixed while canonical-Higgs `y_t` varies
 through a finite orthogonal neutral top coupling.  No retained or
 proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 150 Neutral Scalar Top-Coupling Tomography Gate
+
+Review stance: linear rank gate / claim firewall.
+
+- Added `scripts/frontier_yt_neutral_scalar_top_coupling_tomography_gate.py`.
+- Added `docs/YT_NEUTRAL_SCALAR_TOP_COUPLING_TOMOGRAPHY_GATE_NOTE_2026-05-02.md`.
+- Added `outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: open gate, not passed.  The current source-only response matrix
+has rank one; a two-component neutral top-coupling vector has a null direction
+until a rank-one theorem, no-orthogonal-coupling theorem, `O_H/C_sH/C_HH`
+row, or W/Z response row is supplied.  No retained or proposed-retained
+wording is allowed.

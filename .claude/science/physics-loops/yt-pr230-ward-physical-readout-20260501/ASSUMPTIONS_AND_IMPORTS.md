@@ -725,3 +725,11 @@ source-only observables.  They must not be used as a canonical-Higgs identity,
 `O_H`, `C_sH`, `C_HH`, W/Z response, or no-orthogonal-top-coupling theorem.
 Any route using complete source-spectrum data still needs non-source-only
 identity input before retained/proposed-retained wording is allowed.
+
+2026-05-02 neutral scalar top-coupling tomography gate:
+
+A rank-one source-only response matrix is not a top-coupling tomography
+certificate.  It must not be used as a rank-one neutral-scalar theorem, a
+no-orthogonal-top-coupling theorem, a same-surface `O_H/C_sH/C_HH` row, or a
+W/Z response row.  Retained/proposed-retained wording still requires a full
+rank/identity certificate on the current surface.

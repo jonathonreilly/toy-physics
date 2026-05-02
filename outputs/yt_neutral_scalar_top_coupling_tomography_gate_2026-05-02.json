@@ -1,0 +1,111 @@
+{
+  "actual_current_surface_status": "open / neutral scalar top-coupling tomography gate not passed",
+  "exact_next_action": "Add an independent non-source response row: same-surface O_H/C_sH/C_HH Gram-purity data, W/Z response with sector-overlap identity certificates, or a rank-one/no-orthogonal-coupling theorem.",
+  "fail_count": 0,
+  "gate_passed": false,
+  "parent_certificates": {
+    "complete_source_spectrum_identity": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
+    "neutral_scalar_dynamical_rank_one": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "neutral_scalar_rank_one_purity": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "same_source_wz_response": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_harness_absence": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
+    "wz_response_harness_absence": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The response matrix has rank one on the current surface; the canonical-Higgs top-coupling component is not determined.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not set cos(theta) = 1",
+    "does not set orthogonal scalar top coupling to zero",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "tomography_witness": {
+    "checks": {
+      "canonical_higgs_y_span_factor": 4.473684210526312,
+      "current_rank_insufficient": true,
+      "hypothetical_wz_or_ch_row_would_close_rank": true,
+      "null_direction_annihilates_source_row": true,
+      "orthogonal_couplings_finite_positive": true,
+      "same_source_response_identical": true
+    },
+    "current_response_matrix_rank": 1,
+    "hypothetical_rank_repairs": [
+      {
+        "current_surface_present": false,
+        "repair": "canonical-Higgs row from O_H/C_sH/C_HH purity",
+        "response_matrix_rank_if_present": 2
+      },
+      {
+        "current_surface_present": false,
+        "repair": "independent W/Z response row with sector-overlap identity",
+        "response_matrix_rank_if_present": 2
+      },
+      {
+        "current_surface_present": false,
+        "effective_required_rank_if_derived": 1,
+        "repair": "rank-one neutral-scalar theorem"
+      }
+    ],
+    "neutral_scalar_basis": [
+      "h_canonical",
+      "chi_orthogonal"
+    ],
+    "null_direction": [
+      0.6,
+      -0.8
+    ],
+    "required_rank_for_two_component_top_coupling": 2,
+    "rows": [
+      {
+        "canonical_higgs_y_t": 0.19000000000000017,
+        "coupling_vector_basis_h_chi": [
+          0.19000000000000017,
+          1.08
+        ],
+        "lambda": -0.75,
+        "orthogonal_scalar_top_coupling": 1.08,
+        "source_response": 0.8000000000000002
+      },
+      {
+        "canonical_higgs_y_t": 0.4900000000000001,
+        "coupling_vector_basis_h_chi": [
+          0.4900000000000001,
+          0.6799999999999999
+        ],
+        "lambda": -0.25,
+        "orthogonal_scalar_top_coupling": 0.6799999999999999,
+        "source_response": 0.8
+      },
+      {
+        "canonical_higgs_y_t": 0.7300000000000001,
+        "coupling_vector_basis_h_chi": [
+          0.7300000000000001,
+          0.36
+        ],
+        "lambda": 0.15,
+        "orthogonal_scalar_top_coupling": 0.36,
+        "source_response": 0.8
+      },
+      {
+        "canonical_higgs_y_t": 0.8500000000000001,
+        "coupling_vector_basis_h_chi": [
+          0.8500000000000001,
+          0.2
+        ],
+        "lambda": 0.35,
+        "orthogonal_scalar_top_coupling": 0.2,
+        "source_response": 0.8000000000000002
+      }
+    ],
+    "source_overlap_row_from_complete_C_ss": [
+      0.8,
+      0.6
+    ]
+  },
+  "verdict": "Complete source-spectrum data provide a source-overlap row, and dE_top/ds supplies one scalar response equation.  For a two-component neutral scalar sector this leaves a null direction in the top-coupling vector, so the canonical-Higgs component can vary while all source-only rows stay fixed.  Closure needs a rank-one neutral-scalar theorem, a no-orthogonal-top-coupling theorem, same-surface O_H/C_sH/C_HH data, or an independent W/Z response row with identity certificates."
+}

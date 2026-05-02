@@ -509,3 +509,11 @@ identity information: same-surface `O_H`/`C_sH`/`C_HH` Gram-purity rows, real
 W/Z response rows with sector-overlap and canonical-Higgs certificates, or a
 theorem forbidding orthogonal neutral top couplings.  Do not spend another
 foreground block on source-only spectral completeness as a Higgs identity.
+
+Neutral scalar top-coupling tomography update: the exact acceptance condition
+is now a rank gate.  A source-only row has rank one; a two-component neutral
+top-coupling vector needs either a rank-one neutral-scalar theorem, a
+no-orthogonal-coupling theorem, or an independent non-source response row.
+Highest-priority positive work is therefore actual `O_H/C_sH/C_HH` Gram-purity
+rows, actual W/Z response rows with identity certificates, or production chunk
+processing while those identity rows remain absent.

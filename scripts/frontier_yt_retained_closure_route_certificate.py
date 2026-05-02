@@ -104,6 +104,7 @@ def main() -> int:
         "cl3_automorphism_source_identity": "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json",
         "same_source_pole_data_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
+        "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -571,6 +572,17 @@ def main() -> int:
             .get("canonical_higgs_y_span_factor", 0.0)
         )
         > 4.0
+    )
+    neutral_scalar_top_coupling_tomography_gate_blocks = (
+        "neutral scalar top-coupling tomography gate not passed"
+        in certificates["neutral_scalar_top_coupling_tomography_gate"].get("actual_current_surface_status", "")
+        and certificates["neutral_scalar_top_coupling_tomography_gate"].get("proposal_allowed") is False
+        and certificates["neutral_scalar_top_coupling_tomography_gate"].get("gate_passed") is False
+        and certificates["neutral_scalar_top_coupling_tomography_gate"]
+        .get("tomography_witness", {})
+        .get("checks", {})
+        .get("current_rank_insufficient")
+        is True
     )
     scalar_carrier_projector_closure_blocked = (
         "scalar carrier-projector closure attempt blocked"
@@ -1149,6 +1161,11 @@ def main() -> int:
         certificates["complete_source_spectrum_identity_no_go"].get("actual_current_surface_status", ""),
     )
     report(
+        "neutral-scalar-top-coupling-tomography-gate-blocks",
+        neutral_scalar_top_coupling_tomography_gate_blocks,
+        certificates["neutral_scalar_top_coupling_tomography_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "scalar-carrier-projector-closure-attempt-blocked",
         scalar_carrier_projector_closure_blocked,
         certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", ""),
@@ -1519,6 +1536,11 @@ def main() -> int:
             "boundary: even full source-only C_ss(p) pole masses/residues plus "
             "dE_top/ds can be held fixed while the canonical-Higgs y_t varies "
             "through a finite orthogonal scalar top coupling.  "
+            "The neutral-scalar top-coupling tomography gate gives the linear "
+            "algebra acceptance rule: the current source-only response matrix "
+            "has rank one, so a two-component neutral top-coupling vector has "
+            "a null direction unless a rank-one theorem, O_H/C_sH/C_HH row, "
+            "or independent W/Z response row is supplied.  "
             "The scalar carrier/projector closure attempt confirms the "
             "remaining taste/carrier side is also open: unit taste algebra and "
             "color-singlet support do not admit non-origin corners, preserve "

@@ -150,6 +150,9 @@ def main() -> int:
         "complete_source_spectrum_identity_no_go": load(
             "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json"
         ),
+        "neutral_scalar_top_coupling_tomography_gate": load(
+            "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -624,6 +627,12 @@ def main() -> int:
         "complete source spectrum not canonical-Higgs closure"
         in str(statuses["complete_source_spectrum_identity_no_go"]),
         statuses["complete_source_spectrum_identity_no_go"],
+    )
+    report(
+        "neutral-scalar-top-coupling-tomography-gate-blocks",
+        "neutral scalar top-coupling tomography gate not passed"
+        in str(statuses["neutral_scalar_top_coupling_tomography_gate"]),
+        statuses["neutral_scalar_top_coupling_tomography_gate"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

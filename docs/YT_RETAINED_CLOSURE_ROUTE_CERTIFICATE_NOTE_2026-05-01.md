@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=101 FAIL=0
+# SUMMARY: PASS=102 FAIL=0
 ```
 
 The runner verifies:
@@ -66,6 +66,7 @@ The runner verifies:
 | finite Cl(3)/Z3 automorphism/orbit data fix continuous LSZ source overlap | no |
 | same-source pole-data sufficiency gate is passed | no |
 | complete source-only `C_ss(p)` plus `dE_top/ds` fixes canonical-Higgs `y_t` | no |
+| neutral scalar top-coupling tomography rank gate is passed | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ production postprocess gate is ready | no |
 | current FH/LSZ resume support makes 12h foreground production launch safe | no |
