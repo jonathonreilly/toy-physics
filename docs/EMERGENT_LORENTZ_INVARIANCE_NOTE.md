@@ -49,13 +49,16 @@ Verified numerically:
 ### Step 2: CPT + P protection
 
 The Cl(3)/Z³ framework has:
-- Exact CPT (CPT_EXACT_NOTE, PASS=53 FAIL=0)
-- Exact P at tree level (P: x → −x on even Z³)
+- Exact CPT, retained: see [CPT_EXACT_NOTE](CPT_EXACT_NOTE.md) (PASS=53 FAIL=0).
+- Exact P at tree level (P: x → −x on even Z³); see
+  [PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02](PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md)
+  for the explicit dim-5 LV no-go on the staggered sublattice-parity basis.
 
 These symmetries forbid:
-- Dimension-3 LV operators (mass-like, CPT-odd)
-- Dimension-5 LV operators (P-odd, CPT-odd)
-- All CPT-odd SME coefficients (a_μ, b_μ, etc.)
+- Dimension-3 LV operators (mass-like, CPT-odd) — by CPT.
+- Dimension-5 LV operators (P-odd, CPT-odd) — by either CPT or P alone; the
+  parity-basis no-go above carries this in the lattice basis directly.
+- All CPT-odd SME coefficients (a_μ, b_μ, etc.) — by CPT.
 
 The leading allowed LV operator is dimension-6 (CPT-even, P-even).
 This is the weakest possible lattice-induced Lorentz-violating correction on
@@ -63,7 +66,11 @@ the current symmetry surface.
 
 ### Step 3: Planck suppression
 
-Setting a = ℓ_Planck = 1/M_Planck:
+Setting a = ℓ_Planck = 1/M_Planck (see
+[HIERARCHY_SCALE_A_EQUALS_PLANCK_LENGTH_THEOREM_NOTE_2026-05-02](HIERARCHY_SCALE_A_EQUALS_PLANCK_LENGTH_THEOREM_NOTE_2026-05-02.md)
+for the structural identification on the conditional Planck-completion
+carrier surface, which inherits its premise from
+[PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24](PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)):
 
     |δE²/E²| ≈ (1/5)(E/M_Planck)²
 
@@ -222,3 +229,28 @@ Promoting from bounded conditional to retained would require:
    identification `a ~ 1/M_Planck`.
 4. A runner that constructs or verifies those bridges rather than
    evaluating the assumed surface.
+
+## Registered bridge dependencies (2026-05-02 update)
+
+The three IF-conditions are now explicitly registered as one-hop
+dependencies via in-text markdown links so the citation graph picks
+them up. The current bridge state:
+
+1. **Exact CPT** — registered to [CPT_EXACT_NOTE](CPT_EXACT_NOTE.md),
+   already retained (`positive_theorem`, `effective_status: retained`).
+   Status of bridge dep: **registered, retained-grade**.
+2. **Tree-level parity protection against odd-dimension LV operators**
+   — registered to
+   [PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02](PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md).
+   Status: **registered, audit-pending no-go theorem with passing runner**.
+3. **Hierarchy-scale identification `a = ℓ_Planck`** — registered to
+   [HIERARCHY_SCALE_A_EQUALS_PLANCK_LENGTH_THEOREM_NOTE_2026-05-02](HIERARCHY_SCALE_A_EQUALS_PLANCK_LENGTH_THEOREM_NOTE_2026-05-02.md),
+   itself a bounded theorem inheriting the
+   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24](PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)
+   carrier-identification premise. Status: **registered, bounded conditional
+   pending audit on identification step**.
+
+This update is a graph-registration fix only. It does not change the
+underlying physics or any numerical claim. It does mean a hostile auditor
+can now follow each IF-condition to a registered note rather than to a
+plain-text reference.
