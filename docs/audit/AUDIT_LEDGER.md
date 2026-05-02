@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T16:44:59.776806+00:00
+**Generated:** 2026-05-02T16:49:14.173984+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 509 |
+| unaudited | 510 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -40,7 +40,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 544 |
+| `unaudited` | 545 |
 
 | claim_type | count |
 |---|---:|
@@ -49,22 +49,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 35 |
 | `no_go` | 152 |
 | `open_gate` | 105 |
-| `positive_theorem` | 871 |
+| `positive_theorem` | 872 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 96 |
 | `high` | 340 |
 | `medium` | 427 |
-| `leaf` | 815 |
+| `leaf` | 816 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1268
-- runners with (C) first-principles compute hits: 607
+- runners classified: 1269
+- runners with (C) first-principles compute hits: 608
 - runners with (D) external comparator hits: 306
 - decoration candidates (no C, no D): 104
 
@@ -75,7 +75,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `alpha_s_derived_note` | bounded_theorem | critical | 289 | 29.68 | `unaudited` | unaudited |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 364 | 29.01 | `audited_clean` | **retained_bounded** |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 365 | 29.52 | `audited_clean` | **retained_bounded** |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 118 | 28.89 | `unaudited` | unaudited |
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 294 | 27.70 | `audited_renaming` | ~~audited_renaming~~ |
@@ -89,8 +89,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `left_handed_charge_matching_note` | bounded_theorem | critical | 304 | 20.75 | `audited_renaming` | ~~audited_renaming~~ |
 | 15 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `anomaly_forces_time_theorem` | positive_theorem | critical | 299 | 19.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `native_gauge_closure_note` | bounded_theorem | critical | 358 | 18.99 | `audited_clean` | **retained_bounded** |
+| 16 | `native_gauge_closure_note` | bounded_theorem | critical | 359 | 19.49 | `audited_clean` | **retained_bounded** |
+| 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 299 | 19.23 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `rconn_derived_note` | bounded_theorem | critical | 296 | 16.71 | `unaudited` | unaudited |
 | 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 294 | 16.70 | `unaudited` | unaudited |

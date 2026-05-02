@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 79,
     "high": 203,
-    "leaf": 129,
+    "leaf": 130,
     "medium": 161
   },
-  "generated_at": "2026-05-02T16:44:59.297546+00:00",
+  "generated_at": "2026-05-02T16:49:13.872375+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -12018,6 +12018,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/GLUON_TREE_LEVEL_MASSLESSNESS_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/gluon_tree_level_massless_check.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15142,6 +15166,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 91,
-  "total_pending": 572
+  "ready_count": 92,
+  "total_pending": 573
 }
