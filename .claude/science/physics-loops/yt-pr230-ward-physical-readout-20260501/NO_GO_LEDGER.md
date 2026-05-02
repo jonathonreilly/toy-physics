@@ -1079,6 +1079,18 @@ pole mass, VEV, and canonical Yukawa while changing `dE/ds` and `Res C_ss`.
 Only the same-source pole-residue combination
 `dE/ds / sqrt(Res C_ss)` removes that freedom.
 
+Source contact-term curvature schemes are not LSZ normalization:
+
+```text
+python3 scripts/frontier_yt_scalar_source_contact_term_scheme_boundary.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Local source contact terms can enforce identical low-momentum conventions
+`C_ss(0)` and `C_ss'(0)` while the isolated pole residue changes.  Therefore a
+contact-renormalized source-curvature convention cannot replace measuring or
+deriving `Res C_ss` for the source used in `dE/ds`.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

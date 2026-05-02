@@ -806,3 +806,23 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 Canonical `Z_h=1` does not identify the Cl(3)/Z3 scalar source operator with
 the canonical Higgs field.  The same-source pole residue or a retained overlap
 theorem remains required.  No retained/proposed-retained wording is authorized.
+
+Scalar source contact-term scheme checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / scalar source contact-term scheme boundary
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_scalar_source_contact_term_scheme_boundary.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=45 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=71 FAIL=0
+```
+
+Contact-renormalized source curvature does not fix the isolated same-source
+pole residue.  No retained/proposed-retained wording is authorized.

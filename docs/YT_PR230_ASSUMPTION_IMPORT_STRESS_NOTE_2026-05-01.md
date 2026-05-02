@@ -26,7 +26,7 @@ route, matching obstruction, and source-overlap renormalization boundary.
 
 ```text
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
-# SUMMARY: PASS=9 FAIL=0
+# SUMMARY: PASS=10 FAIL=0
 ```
 
 The refreshed `A_min` allows only:
@@ -51,6 +51,8 @@ The stress test explicitly forbids:
 - `kappa_s = 1` unless derived by scalar LSZ/canonical normalization.
 - canonical `Z_h = 1` as a substitute for the source operator overlap
   `<0|O_s|h>`.
+- source contact counterterms or contact-renormalized `C_ss(0)` / `C_ss'(0)`
+  as substitutes for the isolated pole residue.
 
 ## Consequence
 

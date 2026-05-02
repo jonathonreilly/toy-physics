@@ -75,6 +75,7 @@ def main() -> int:
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "gauge_vev_source_overlap": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
         "scalar_renormalization_condition_overlap": "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json",
+        "scalar_source_contact_term_scheme": "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "fh_lsz_production_postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
         "fh_lsz_production_checkpoint_granularity": "outputs/yt_fh_lsz_production_checkpoint_granularity_gate_2026-05-01.json",
@@ -255,6 +256,11 @@ def main() -> int:
         "renormalization-condition source-overlap no-go"
         in certificates["scalar_renormalization_condition_overlap"].get("actual_current_surface_status", "")
         and certificates["scalar_renormalization_condition_overlap"].get("proposal_allowed") is False
+    )
+    scalar_source_contact_term_scheme_not_lsz = (
+        "source contact-term scheme boundary"
+        in certificates["scalar_source_contact_term_scheme"].get("actual_current_surface_status", "")
+        and certificates["scalar_source_contact_term_scheme"].get("proposal_allowed") is False
     )
     production_manifest_not_evidence = (
         "production manifest" in certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", "")
@@ -467,6 +473,11 @@ def main() -> int:
         certificates["scalar_renormalization_condition_overlap"].get("actual_current_surface_status", ""),
     )
     report(
+        "source-contact-term-scheme-does-not-fix-pole-residue",
+        scalar_source_contact_term_scheme_not_lsz,
+        certificates["scalar_source_contact_term_scheme"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-production-manifest-not-evidence",
         production_manifest_not_evidence,
         certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", ""),
@@ -633,6 +644,9 @@ def main() -> int:
             "source with the canonical Higgs field.  Canonical kinetic "
             "renormalization is likewise insufficient: Z_h=1 fixes the Higgs "
             "field residue, not the source-operator overlap <0|O_s|h>.  "
+            "Source contact-term renormalization is also only a scheme "
+            "choice: it can fix C_ss(0) and C_ss'(0) while leaving the pole "
+            "residue and source overlap different.  "
             "The actual interacting "
             "scalar pole derivative theorem and production evidence remain open.  "
             "These cannot be assumed."

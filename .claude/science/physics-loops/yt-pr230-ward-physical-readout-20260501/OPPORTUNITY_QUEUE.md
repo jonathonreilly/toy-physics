@@ -141,7 +141,9 @@ probability.
    using electroweak `v` or gauge-boson masses to identify `s` with canonical
    `h`; the scalar renormalization-condition source-overlap no-go also blocks
    using canonical `Z_h=1` as a substitute for the source operator matrix
-   element `<0|O_s|h>`.  That still requires source overlap or pole residue.  The invariant-readout
+   element `<0|O_s|h>`.  The source contact-term scheme boundary also blocks
+   using contact-renormalized low-momentum `C_ss(0)` / `C_ss'(0)` conventions
+   as the LSZ bridge.  That still requires source overlap or pole residue.  The invariant-readout
    theorem reduces this to proving or measuring the same-source scalar pole
    residue; it does not license `kappa_s = 1`.  The scalar pole determinant
    gate further reduces the analytic object to the interacting denominator

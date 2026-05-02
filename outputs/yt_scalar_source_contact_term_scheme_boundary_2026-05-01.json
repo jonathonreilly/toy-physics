@@ -1,0 +1,70 @@
+{
+  "actual_current_surface_status": "exact negative boundary / scalar source contact-term scheme boundary",
+  "contact_scheme": {
+    "C0_target": 1.0,
+    "C1_target": -0.25,
+    "model_form": "C(x)=Z/(x+m_H^2)+a+b*x"
+  },
+  "exact_next_action": "Use an isolated same-source pole-residue fit/theorem; do not use contact-renormalized C_ss(0) or C_ss'(0) as the source-to-Higgs normalization.",
+  "fail_count": 0,
+  "models": [
+    {
+      "C0_after_contact": 1.0,
+      "C1_after_contact": -0.25,
+      "contact_a": 0.75,
+      "contact_b": 0.0,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 0.282842712474619,
+      "pole_mass_squared": 1.0,
+      "pole_residue": 0.25,
+      "same_source_pole_residue_readout": 0.565685424949238,
+      "source_overlap_sqrt_residue": 0.5,
+      "wrong_readout_using_contact_C0": 0.282842712474619
+    },
+    {
+      "C0_after_contact": 1.0,
+      "C1_after_contact": -0.25,
+      "contact_a": 0.0,
+      "contact_b": 0.75,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 0.565685424949238,
+      "pole_mass_squared": 1.0,
+      "pole_residue": 1.0,
+      "same_source_pole_residue_readout": 0.565685424949238,
+      "source_overlap_sqrt_residue": 1.0,
+      "wrong_readout_using_contact_C0": 0.565685424949238
+    },
+    {
+      "C0_after_contact": 1.0,
+      "C1_after_contact": -0.25,
+      "contact_a": -3.0,
+      "contact_b": 3.75,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 1.131370849898476,
+      "pole_mass_squared": 1.0,
+      "pole_residue": 4.0,
+      "same_source_pole_residue_readout": 0.565685424949238,
+      "source_overlap_sqrt_residue": 2.0,
+      "wrong_readout_using_contact_C0": 1.131370849898476
+    }
+  ],
+  "parent_certificates": {
+    "bs_kernel_residue_degeneracy": "outputs/yt_scalar_bs_kernel_residue_degeneracy_2026-05-01.json",
+    "fh_lsz_invariant_readout": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
+    "renormalization_condition_overlap": "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json",
+    "scalar_spectral_saturation": "outputs/yt_scalar_spectral_saturation_no_go_2026-05-01.json"
+  },
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Contact-renormalized low-q source curvature is a scheme choice and does not derive Res C_ss.",
+  "strict_non_claims": [
+    "does not add a source contact counterterm to A_min",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0 as proof input",
+    "does not treat reduced pilots as production evidence"
+  ],
+  "verdict": "A local source contact term can enforce the same low-momentum source-curvature convention C_ss(0), C_ss'(0) for different isolated pole residues.  The contact-normalized curvature surface therefore does not determine the source overlap or kappa_s.  The same-source pole-residue readout remains invariant only when the actual pole residue Res C_ss is included.  PR #230 cannot replace the scalar LSZ pole measurement with a source-curvature renormalization convention."
+}

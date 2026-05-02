@@ -449,6 +449,11 @@ residue but not the source operator matrix element `<0|O_s|h>`.  The same
 canonical Higgs sector can support different source responses unless the
 same-source pole residue is measured or derived.
 
+The scalar source contact-term scheme boundary closes the low-momentum
+curvature-renormalization shortcut.  Source contact terms can enforce the same
+`C_ss(0)` and `C_ss'(0)` convention for different pole residues, so
+contact-normalized curvature is not a source-to-Higgs normalization.
+
 Next exact action: keep chunk001 running under the non-evidence combiner gate.
 If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
 If it remains running, continue analytic scalar denominator/residue work or

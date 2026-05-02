@@ -68,6 +68,9 @@ def main() -> int:
         "scalar_renormalization_condition_overlap": load(
             "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json"
         ),
+        "scalar_source_contact_term_scheme": load(
+            "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json"
+        ),
         "scalar_source_response_harness": load("outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"),
         "fh_production_protocol": load("outputs/yt_fh_production_protocol_certificate_2026-05-01.json"),
         "same_source_scalar_two_point": load("outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json"),
@@ -256,6 +259,11 @@ def main() -> int:
         "renormalization-condition source-overlap no-go"
         in str(statuses["scalar_renormalization_condition_overlap"]),
         statuses["scalar_renormalization_condition_overlap"],
+    )
+    report(
+        "source-contact-term-scheme-does-not-fix-pole-residue",
+        "source contact-term scheme boundary" in str(statuses["scalar_source_contact_term_scheme"]),
+        statuses["scalar_source_contact_term_scheme"],
     )
     report(
         "scalar-source-response-harness-needs-kappa",
@@ -599,7 +607,9 @@ def main() -> int:
             "masses to identify the substrate source with canonical h.  The "
             "canonical kinetic renormalization condition also does not close "
             "the bridge: Z_h=1 fixes the h-field residue, not the source "
-            "operator overlap <0|O_s|h>.  This advances the Feynman-Hellmann "
+            "operator overlap <0|O_s|h>.  Source contact-term conventions do "
+            "not close it either: C_ss(0) and C_ss'(0) can be fixed while the "
+            "isolated pole residue changes.  This advances the Feynman-Hellmann "
             "measurement route but still does not convert to physical dE/dh "
             "without kappa_s.  Remaining "
             "closure requires production evidence or a genuinely new scalar "

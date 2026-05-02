@@ -53,6 +53,9 @@ def main() -> int:
         "scalar_renormalization_condition_overlap": load(
             "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json"
         ),
+        "source_contact_term_scheme": load(
+            "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json"
+        ),
     }
 
     required_terms = [
@@ -64,6 +67,7 @@ def main() -> int:
         "Z_match = 1 unless derived",
         "kappa_s = 1 unless derived",
         "source operator overlap",
+        "Source contact counterterms",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -98,6 +102,12 @@ def main() -> int:
         in str(certificates["scalar_renormalization_condition_overlap"].get("actual_current_surface_status")),
         certificates["scalar_renormalization_condition_overlap"].get("actual_current_surface_status"),
     )
+    report(
+        "source-contact-terms-not-pole-residue",
+        "source contact-term scheme boundary"
+        in str(certificates["source_contact_term_scheme"].get("actual_current_surface_status")),
+        certificates["source_contact_term_scheme"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -107,7 +117,8 @@ def main() -> int:
             "reduced cold pilots, undetermined c2, undetermined Z_match, and "
             "kappa_s = 1 are forbidden as proof shortcuts unless the relevant "
             "normalization or matching theorem is derived.  Canonical Z_h=1 "
-            "does not derive the source operator overlap <0|O_s|h>.  No current route "
+            "does not derive the source operator overlap <0|O_s|h>, and source "
+            "contact-term schemes do not derive the isolated pole residue.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

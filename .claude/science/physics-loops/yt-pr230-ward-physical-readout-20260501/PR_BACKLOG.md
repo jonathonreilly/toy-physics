@@ -704,3 +704,19 @@ Adds a scalar renormalization-condition source-overlap no-go:
   normalization does not replace scalar LSZ residue or same-source production
   pole data.
 ```
+
+Latest scalar source contact-term scheme checkpoint text for PR #230:
+
+```text
+Adds a scalar source contact-term scheme boundary:
+- uses C(x)=Z/(x+m_H^2)+a+b*x and chooses local source contact terms a,b so
+  that pole residues Z={0.25,1,4} share the same low-q C(0)=1 and C'(0)=-0.25
+  convention;
+- shows contact-normalized readouts vary while the same-source pole-residue
+  readout dE/ds/sqrt(Res C_ss) stays fixed;
+- runner passes `PASS=10 FAIL=0`; retained-route gate reports
+  `PASS=45 FAIL=0`; campaign status consumes 75 certificates and reports
+  `PASS=71 FAIL=0`;
+- still no retained/proposed-retained closure: source contact-term schemes do
+  not replace scalar LSZ residue or same-source production pole data.
+```

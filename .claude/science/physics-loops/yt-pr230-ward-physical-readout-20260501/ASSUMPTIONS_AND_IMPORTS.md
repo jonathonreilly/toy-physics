@@ -505,6 +505,10 @@ The canonical Higgs kinetic renormalization condition is likewise not an
 assumption license for `kappa_s=1`.  `Z_h=1` fixes the h-field residue, not the
 source operator overlap `<0|O_s|h>`; that overlap must come from same-source
 pole residue data or a retained source-overlap theorem.
+Source contact counterterms are not an assumption license either.  A
+contact-renormalized convention for `C_ss(0)` or `C_ss'(0)` may be useful for a
+scheme definition, but it is forbidden as a proof selector for `kappa_s` unless
+the isolated same-source pole residue is also derived or measured.
 
 Positive-closure candidates left after the assumption exercise:
 
