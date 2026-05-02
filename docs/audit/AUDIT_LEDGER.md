@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:23:30.488871+00:00
+**Generated:** 2026-05-02T17:26:12.015405+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,9 +19,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 142 |
+| **retained** | 141 |
 | **retained_no_go** | 93 |
-| **retained_bounded** | 174 |
+| **retained_bounded** | 175 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
 | unaudited | 518 |
@@ -44,13 +44,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 515 |
+| `bounded_theorem` | 517 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 152 |
 | `open_gate` | 107 |
 | `positive_theorem` | 868 |
-| `unset` | 2 |
 
 | criticality | count |
 |---|---:|
@@ -247,7 +246,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
-| `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
+| `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
@@ -7738,15 +7737,15 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 ### `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite Wilson L_s^3 x L_t operator-level realization: X=(chi_(1,0)+chi_(0,1))/6 acts as the SU(3) character-recurrence operator J and finite plaquette observables are spectral moments of J in the induced transfer state; beta=6 Perron/thermal identification and canonical P(6) are excluded.
 - **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-judge-20260430-phase-a-transfer-character`  (codex-current; independence=judicial_review)
-- **load-bearing step:** The plaquette source X=(chi_(1,0)+chi_(0,1))/6 obeys the six-neighbor SU(3) dominant-weight character recurrence, giving an explicit self-adjoint recurrence operator J.  _(class `A`)_
-- **chain closes:** True — Both auditors found the verdict clean, but disagreed on class. The runner verifies exact character identities and operator algebra; it is not producing a new numerical result from first principles, so the first auditor's A classification holds over the second's C classification.
-- **rationale:** Both auditors found the verdict clean, but disagreed on class. The runner verifies exact character identities and operator algebra; it is not producing a new numerical result from first principles, so the first auditor's A classification holds over the second's C classification.
-- **auditor confidence:** judicial
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-restricted-popper-transfer-character-20260502`  (codex-current; independence=fresh_context)
+- **load-bearing step:** <f(X_p)>_(beta,L_s,L_t)=Tr[T_(L_s,beta)^(L_t) f(A_p)]/Tr[T_(L_s,beta)^(L_t)], with A_p identified with the character-recurrence multiplication operator J.  _(class `A`)_
+- **chain closes:** True — The note gives the finite transfer-kernel factorization and the SU(3) tensor-product recurrence needed to identify the local plaquette source with J. The open beta=6 transfer-state/Perron data are explicitly outside scope.
+- **rationale:** The scoped theorem is exact operator algebra on a finite Wilson source surface, not a numerical beta=6 plaquette prediction. The runner supports the character identity, recurrence, self-adjointness, slice counting, and scoped operator realization with THEOREM PASS=7 SUPPORT=2 FAIL=0. No support-class promotion is needed because the audited object is a bounded exact theorem with the remaining state-identification gap excluded.
+- **auditor confidence:** medium
 
 ### `generated_geometry_synthesis_note`
 
