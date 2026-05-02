@@ -528,3 +528,15 @@ Next exact action: poll seed-controlled replacement chunk001.  If it completes,
 rerun the chunk combiner, chunk001 checkpoint certificate, retained-route gate,
 and campaign gate.  If it is still running, continue analytic work on the
 physical scalar carrier/projector, `K'(pole)`, or uniform threshold theorem.
+
+The FH/LSZ soft-continuum threshold no-go now blocks the most direct remaining
+threshold shortcut.  Color-singlet q=0 cancellation and finite-q IR regularity
+remain useful support, but local integrability does not imply a positive
+continuum gap.  A zero-mode-removed soft continuum band can start arbitrarily
+close to the pole with finite shell contributions, so the pole-saturation
+threshold premise still needs a microscopic scalar-denominator theorem or
+production acceptance certificate.
+
+Next exact action: poll seed-controlled replacement chunk001.  If it is still
+running, attack the physical scalar carrier/projector or `K'(pole)` directly;
+do not treat finite-q IR regularity as threshold closure.

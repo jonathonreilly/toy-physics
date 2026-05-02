@@ -1247,3 +1247,15 @@ denominator/LSZ theorem.  The remaining blockers are zero-mode/flat-sector
 prescription, physical scalar taste/projector carrier, `K'(pole)`,
 finite-shell model class, pole-saturation/uniform-gap control, and
 seed-controlled production pole data.
+
+Finite-q IR regularity does not certify a threshold gap:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_soft_continuum_threshold_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The zero-mode-removed color-singlet kernel can be locally integrable while a
+positive soft continuum band begins arbitrarily close to the scalar pole.
+Therefore q=0 cancellation plus finite-q regularity is support, not the
+uniform threshold or pole-saturation premise needed by the FH/LSZ residue gate.

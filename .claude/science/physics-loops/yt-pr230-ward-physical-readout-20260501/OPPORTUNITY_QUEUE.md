@@ -236,6 +236,10 @@ probability.
    directly.  It found useful support but not closure: zero-mode prescription,
    physical scalar carrier/projector, `K'(pole)`, model class, threshold, and
    seed-controlled production still block a retained scalar LSZ residue.
+   The soft-continuum threshold no-go also blocks upgrading q=0 cancellation
+   and finite-q IR regularity into the threshold premise: local integrability
+   does not exclude positive continuum spectral weight arbitrarily close to
+   the pole.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

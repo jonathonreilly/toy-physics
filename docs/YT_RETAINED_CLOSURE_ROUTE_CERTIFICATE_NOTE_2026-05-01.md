@@ -235,7 +235,10 @@ values can be reproduced by a near-pole positive continuum model with zero pole
 residue lower bound.  The scalar-denominator theorem closure attempt then
 checks the full dependency stack and remains blocked on zero-mode prescription,
 scalar carrier/projector, `K'(pole)`, model class, threshold, and
-seed-controlled production.  If the eight-mode/x8
+seed-controlled production.  The soft-continuum threshold no-go also blocks
+promoting color-singlet q=0 cancellation plus finite-q IR regularity into that
+threshold premise: IR integrability does not exclude positive continuum
+spectral weight arbitrarily close to the pole.  If the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not
 close PR #230.

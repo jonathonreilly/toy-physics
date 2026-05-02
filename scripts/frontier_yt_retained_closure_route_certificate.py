@@ -94,6 +94,7 @@ def main() -> int:
         "fh_lsz_numba_seed_independence": "outputs/yt_fh_lsz_numba_seed_independence_audit_2026-05-02.json",
         "fh_lsz_uniform_gap_self_certification": "outputs/yt_fh_lsz_uniform_gap_self_certification_no_go_2026-05-02.json",
         "scalar_denominator_theorem_closure": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+        "fh_lsz_soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -402,6 +403,12 @@ def main() -> int:
         and certificates["scalar_denominator_theorem_closure"].get("proposal_allowed") is False
         and certificates["scalar_denominator_theorem_closure"].get("theorem_closed") is False
     )
+    soft_continuum_threshold_blocks = (
+        "soft-continuum threshold no-go"
+        in certificates["fh_lsz_soft_continuum_threshold"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_soft_continuum_threshold"].get("proposal_allowed") is False
+        and certificates["fh_lsz_soft_continuum_threshold"].get("uniform_threshold_gap_certified") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -668,6 +675,11 @@ def main() -> int:
         certificates["scalar_denominator_theorem_closure"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-soft-continuum-threshold-no-go-blocks-ir-shortcut",
+        soft_continuum_threshold_blocks,
+        certificates["fh_lsz_soft_continuum_threshold"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -821,6 +833,10 @@ def main() -> int:
             "dependency stack and still finds open blockers: zero-mode/flat "
             "sector prescription, scalar taste/projector carrier, K'(pole), "
             "model class, uniform threshold, and seed-controlled production.  "
+            "The soft-continuum threshold no-go also blocks promoting "
+            "color-singlet q=0 cancellation plus finite-q IR regularity into "
+            "that threshold premise: IR integrability is compatible with "
+            "positive continuum spectral weight arbitrarily close to the pole.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "

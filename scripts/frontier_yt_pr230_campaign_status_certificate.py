@@ -120,6 +120,9 @@ def main() -> int:
         "scalar_denominator_theorem_closure": load(
             "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json"
         ),
+        "fh_lsz_soft_continuum_threshold": load(
+            "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -435,6 +438,11 @@ def main() -> int:
         "scalar-denominator-theorem-closure-attempt-blocked",
         "scalar denominator theorem closure attempt blocked" in str(statuses["scalar_denominator_theorem_closure"]),
         statuses["scalar_denominator_theorem_closure"],
+    )
+    report(
+        "fh-lsz-soft-continuum-threshold-no-go-blocks-ir-shortcut",
+        "soft-continuum threshold no-go" in str(statuses["fh_lsz_soft_continuum_threshold"]),
+        statuses["fh_lsz_soft_continuum_threshold"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -772,7 +780,10 @@ def main() -> int:
             "denominator closure attempt checks the whole theorem stack and "
             "still finds the zero-mode prescription, scalar carrier/projector, "
             "K'(pole), model class, threshold, and seed-controlled production "
-            "open.  "
+            "open.  The soft-continuum threshold no-go also blocks using "
+            "color-singlet q=0 cancellation plus finite-q IR regularity as the "
+            "missing threshold premise: local integrability does not exclude "
+            "positive continuum spectral weight arbitrarily close to the pole.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "
