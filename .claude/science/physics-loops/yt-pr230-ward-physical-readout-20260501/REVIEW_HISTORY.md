@@ -2137,3 +2137,30 @@ Historical chunk001/chunk002 have distinct metadata seeds, identical
 gauge-evolution signatures, and no `numba_gauge_seed_v1` marker.  The harness
 and combiner now enforce seed-control metadata.  No retained/proposed-retained
 wording is authorized.
+
+## Review-Loop Backpressure - FH/LSZ Uniform-Gap Self-Certification No-Go
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_uniform_gap_self_certification_no_go.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_uniform_gap_self_certification_no_go.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+Finite shell rows do not certify the uniform continuum gap: the gapped
+generator's shell values can be reproduced by a near-pole positive continuum
+model with zero pole-residue lower bound.  No retained/proposed-retained
+wording is authorized.

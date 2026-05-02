@@ -227,6 +227,11 @@ probability.
    The finite-volume obstruction now narrows the positive theorem target to a
    uniform spectral-gap/scalar-denominator result or actual production
    postprocess evidence.
+   The uniform-gap self-certification no-go then closes finite shell rows as a
+   source of that gap premise: even a gapped generator can be matched by a
+   near-pole positive continuum with zero pole-residue lower bound.  The
+   remaining analytic route is a microscopic scalar denominator/threshold
+   theorem, not another finite-shell interpolation.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

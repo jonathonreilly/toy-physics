@@ -229,7 +229,10 @@ no hidden current artifact that supplies the missing premise.  The finite-volume
 pole-saturation obstruction also blocks using finite-L discreteness as a
 uniform continuum-gap theorem.  The combiner gate now also rejects chunks
 without auditable numba gauge seeding or with duplicate gauge signatures across
-distinct metadata seeds.  If the eight-mode/x8
+distinct metadata seeds.  The uniform-gap self-certification no-go also blocks
+inferring that theorem from finite shell rows: a gapped positive model's shell
+values can be reproduced by a near-pole positive continuum model with zero pole
+residue lower bound.  If the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not
 close PR #230.

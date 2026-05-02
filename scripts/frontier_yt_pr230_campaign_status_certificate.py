@@ -114,6 +114,9 @@ def main() -> int:
         "fh_lsz_numba_seed_independence": load(
             "outputs/yt_fh_lsz_numba_seed_independence_audit_2026-05-02.json"
         ),
+        "fh_lsz_uniform_gap_self_certification": load(
+            "outputs/yt_fh_lsz_uniform_gap_self_certification_no_go_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -419,6 +422,11 @@ def main() -> int:
         "fh-lsz-numba-seed-independence-blocks-historical-chunks",
         "numba seed-independence audit" in str(statuses["fh_lsz_numba_seed_independence"]),
         statuses["fh_lsz_numba_seed_independence"],
+    )
+    report(
+        "fh-lsz-uniform-gap-self-certification-blocks",
+        "uniform-gap self-certification no-go" in str(statuses["fh_lsz_uniform_gap_self_certification"]),
+        statuses["fh_lsz_uniform_gap_self_certification"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -749,7 +757,10 @@ def main() -> int:
             "The finite-volume pole-saturation obstruction also blocks using "
             "finite-L discreteness as a substitute for a uniform gap.  "
             "The numba seed-independence audit closes the adjacent production "
-            "quality gap before further chunk evidence is counted.  "
+            "quality gap before further chunk evidence is counted.  The "
+            "uniform-gap self-certification no-go closes the matching analytic "
+            "shortcut: finite shell rows do not prove a continuum threshold, "
+            "even when a gapped model could have generated them.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

@@ -1052,3 +1052,23 @@ have distinct metadata seeds, identical gauge-evolution signatures, and no
 `numba_gauge_seed_v1` marker.  No retained/proposed-retained wording is
 authorized; rerun replacement chunks under the patched harness before counting
 them toward L12 combination.
+
+FH/LSZ uniform-gap self-certification no-go checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / FH-LSZ uniform-gap self-certification no-go
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_uniform_gap_self_certification_no_go.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=56 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=82 FAIL=0
+```
+
+Finite shell rows do not prove the uniform continuum gap needed by the
+pole-saturation gate.  No retained/proposed-retained wording is authorized.

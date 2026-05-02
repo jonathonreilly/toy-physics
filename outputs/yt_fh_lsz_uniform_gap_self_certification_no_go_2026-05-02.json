@@ -1,0 +1,104 @@
+{
+  "actual_current_surface_status": "exact negative boundary / FH-LSZ uniform-gap self-certification no-go",
+  "exact_next_action": "Attack the microscopic scalar denominator theorem directly, or continue seed-controlled production chunks toward a postprocess that supplies an independent threshold/gap certificate.",
+  "fail_count": 0,
+  "gap_certification_scan": {
+    "gapped_generator": {
+      "continuum_threshold_m2": 1.0,
+      "continuum_weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "pole_residue": 1.0,
+      "target_shell_values": [
+        5.302083333333333,
+        3.036667972995252,
+        2.2397772440582058,
+        1.6016339869281047
+      ]
+    },
+    "interval_rows": [
+      {
+        "continuum_grid": [
+          0.251,
+          0.26,
+          0.3,
+          0.4,
+          0.7,
+          1.0,
+          1.5,
+          2.0,
+          4.0,
+          8.0,
+          16.0
+        ],
+        "continuum_threshold_m2": 0.251,
+        "feasible": true,
+        "fit_class": "near_pole_ungapped",
+        "lower_bound_is_zero": true,
+        "residue_max": 1.002183616530896,
+        "residue_min": 0.0
+      },
+      {
+        "continuum_grid": [
+          0.5,
+          0.7,
+          1.0,
+          1.5,
+          2.0,
+          4.0,
+          8.0,
+          16.0
+        ],
+        "continuum_threshold_m2": 0.5,
+        "feasible": true,
+        "fit_class": "moderately_gapped",
+        "lower_bound_is_zero": false,
+        "residue_max": 1.002183616530896,
+        "residue_min": 0.9787268194506087
+      },
+      {
+        "continuum_grid": [
+          1.0,
+          1.5,
+          2.0,
+          4.0,
+          8.0,
+          16.0
+        ],
+        "continuum_threshold_m2": 1.0,
+        "feasible": true,
+        "fit_class": "true_gapped_support",
+        "lower_bound_is_zero": false,
+        "residue_max": 1.002183616530896,
+        "residue_min": 0.9985293392306719
+      }
+    ],
+    "pole_p_hat_sq": -0.25,
+    "shells_p_hat_sq": [
+      0.0,
+      0.26794919243112264,
+      0.5358983848622453,
+      1.0
+    ]
+  },
+  "parent_certificates": {
+    "finite_volume_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+    "seed_independence_audit": "outputs/yt_fh_lsz_numba_seed_independence_audit_2026-05-02.json",
+    "threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite shell rows do not certify the uniform gap or pole-saturation premise.",
+  "strict_non_claims": [
+    "does not infer a continuum threshold from finite shell rows",
+    "does not set kappa_s = 1",
+    "does not use observed top mass or observed y_t",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "Finite same-source Euclidean shell rows cannot self-certify the uniform continuum gap needed by the pole-saturation gate.  A dataset generated from a deliberately gapped positive Stieltjes model is exactly reproducible by a near-pole positive continuum model, and the allowed pole-residue interval then has zero lower bound.  Therefore the uniform gap must come from an independent scalar-denominator theorem, continuum-threshold certificate, or production acceptance analysis; it cannot be inferred from the finite shell rows alone."
+}
