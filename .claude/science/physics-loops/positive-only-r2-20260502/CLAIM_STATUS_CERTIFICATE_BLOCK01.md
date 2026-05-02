@@ -1,7 +1,7 @@
 # Claim Status Certificate — R2 Block 01 (Lattice momentum conservation)
 
 **Date:** 2026-05-02
-**Block:** R2-01 — Lattice total momentum conservation from retained Noether
+**Block:** R2-01 — Lattice total momentum conservation from cited Noether
 **Slug:** `positive-only-r2-20260502`
 **Branch:** `physics-loop/positive-only-r2-block01-momentum-conservation-20260502`
 **Note:** [docs/LATTICE_TOTAL_MOMENTUM_CONSERVATION_THEOREM_NOTE_2026-05-02.md](../../../../docs/LATTICE_TOTAL_MOMENTUM_CONSERVATION_THEOREM_NOTE_2026-05-02.md)
@@ -11,7 +11,7 @@
 ## Strict-bar gate
 
 - claim_type: positive_theorem ✓
-- single load-bearing dep at retained-grade on live ledger ✓ (`axiom_first_lattice_noether_theorem_note_2026-04-29` is at `effective_status: retained`)
+- single load-bearing dependency named ✓ (`axiom_first_lattice_noether_theorem_note_2026-04-29`)
 - zero admitted physics inputs ✓ (discrete divergence theorem and on-shell condition are pure math/structural)
 - runner produces classifiable PASS lines ✓ (5/5 PASS at machine precision)
 
@@ -24,12 +24,12 @@ admitted_context_inputs:
   - discrete divergence theorem on the periodic lattice (pure combinatorics)
   - on-shell condition (structural)
 upstream_dependencies:
-  - axiom_first_lattice_noether_theorem_note_2026-04-29 (effective_status: retained)
+  - axiom_first_lattice_noether_theorem_note_2026-04-29
 runner_classified_passes: 5 PASS at machine precision
+source_sets_audit_outcome: false
 ```
 
-## Expected `effective_status` after audit
+## Review-loop status authority
 
-If Codex returns `audit_status = audited_clean` and `claim_type = positive_theorem`:
-- chain_clean: dep at `retained` → True
-- → `effective_status = retained`
+This block proposes a `positive_theorem` claim type and leaves all row
+outcome decisions to the independent audit lane.
