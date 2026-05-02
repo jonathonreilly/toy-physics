@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T14:48:11.643623+00:00
-**Total pending:** 575
-**Ready (all deps already at retained-grade or metadata tiers):** 114
+**Generated:** 2026-05-02T14:52:10.855769+00:00
+**Total pending:** 576
+**Ready (all deps already at retained-grade or metadata tiers):** 115
 
 By criticality:
 - `critical`: 91
 - `high`: 201
 - `medium`: 146
-- `leaf`: 137
+- `leaf`: 138
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -55,7 +55,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 37 | `higgs_from_lattice_note` | bounded_theorem | claim_type_backfill_reaudit | critical | 280 | 8.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
 | 38 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | critical | 279 | 11.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_qfp_insensitivity.py` |
 | 39 | `yt_explicit_systematic_budget_note` | positive_theorem | claim_type_backfill_reaudit | critical | 279 | 10.13 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_explicit_systematic_budget.py` |
-| 40 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | - | unaudited | critical | 55 | 13.81 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_source_unit_normalization_support_theorem.py` |
+| 40 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | unaudited | critical | 55 | 13.81 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_source_unit_normalization_support_theorem.py` |
 | 41 | `confinement_string_tension_note` | positive_theorem | claim_type_backfill_reaudit | critical | 53 | 13.26 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_confinement_string_tension.py` |
 | 42 | `three_generation_observable_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 328 | 22.36 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_three_generation_observable_theorem.py` |
 | 43 | `three_generation_structure_note` | positive_theorem | claim_type_backfill_reaudit | critical | 290 | 21.18 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_fermi_point.py` |

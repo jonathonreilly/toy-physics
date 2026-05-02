@@ -33,9 +33,9 @@ bare_retained_allowed: false
 | # | Criterion | Pass? | Notes |
 |---|---|---|---|
 | 1 | Certificate names target_claim_type | YES | `positive_theorem` |
-| 2 | No open imports for the claimed target | YES | both cited authorities (graph_first_su3, graph_first_selector) are `effective_status: retained` |
-| 3 | No load-bearing observed/fitted/admitted-convention/literature inputs | YES | load-bearing step is `6α + 2β = 0 ⇒ β = −3α`, pure algebra over retained graph-first multiplicities |
-| 4 | Every dep retained-grade | YES | both deps `retained` |
+| 2 | No open imports for the claimed target | YES | both cited authorities (graph_first_su3, graph_first_selector) are retained-grade (`effective_status: retained_bounded`) |
+| 3 | No load-bearing observed/fitted/admitted-convention/literature inputs | YES | load-bearing step is `6α + 2β = 0 ⇒ β = −3α`, pure algebra over retained-grade graph-first multiplicities |
+| 4 | Every dep retained-grade | YES | both deps `retained_bounded` |
 | 5 | Runner checks dep classes | YES | runner verifies retained-grade of both deps via ledger lookup, plus class (A) algebraic closure at exact `Fraction` precision |
 | 6 | Review-loop disposition `pass` | branch-local `pass` | independent audit lane to ratify |
 | 7 | PR body says independent audit required | YES | Audit-lane disposition section says "subject to fresh-context audit-lane verdict" |
@@ -45,8 +45,9 @@ bare_retained_allowed: false
 That the audit lane open a new claim row for this narrow theorem, with:
 - `claim_type = positive_theorem`
 - `claim_scope = "exact eigenvalue ratio 1:(-3) on Sym²:Anti² of the LH-doublet sector"`
-- `audit_status = audited_clean` (subject to fresh-context audit verdict)
-- `effective_status = retained` (because both cited authorities are retained)
+- `audit_status` set only by the independent fresh-context audit verdict
+- `effective_status` derived by the pipeline after audit ratification and
+  dependency closure
 
 This does **not** propose to change LHCM's existing audit row. LHCM remains
 `audited_conditional` because LHCM's source note still claims the SM-Y

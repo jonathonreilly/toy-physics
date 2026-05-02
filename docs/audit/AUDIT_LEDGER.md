@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T14:48:11.910660+00:00
+**Generated:** 2026-05-02T14:52:11.108499+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 500 |
+| unaudited | 501 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -40,33 +40,32 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 16 |
-| `unaudited` | 535 |
+| `unaudited` | 536 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 500 |
+| `bounded_theorem` | 505 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 149 |
 | `open_gate` | 105 |
-| `positive_theorem` | 873 |
-| `unset` | 8 |
+| `positive_theorem` | 877 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 94 |
 | `high` | 340 |
 | `medium` | 413 |
-| `leaf` | 828 |
+| `leaf` | 829 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1265
+- runners classified: 1266
 - runners with (C) first-principles compute hits: 607
-- runners with (D) external comparator hits: 304
+- runners with (D) external comparator hits: 305
 - decoration candidates (no C, no D): 103
 
 ## Top 25 by load-bearing score (topology only)
@@ -78,8 +77,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 1 | `alpha_s_derived_note` | bounded_theorem | critical | 278 | 29.62 | `unaudited` | unaudited |
 | 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `unaudited` | unaudited |
 | 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 28.87 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 283 | 27.65 | `audited_renaming` | ~~audited_renaming~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 343 | 27.43 | `audited_clean` | **retained_bounded** |
+| 4 | `graph_first_su3_integration_note` | bounded_theorem | critical | 344 | 27.93 | `audited_clean` | **retained_bounded** |
+| 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 283 | 27.65 | `audited_renaming` | ~~audited_renaming~~ |
 | 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 314 | 27.30 | `audited_conditional` | ~~audited_conditional~~ |
 | 7 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 281 | 24.14 | `unaudited` | unaudited |
 | 8 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 23.70 | `audited_conditional` | ~~audited_conditional~~ |

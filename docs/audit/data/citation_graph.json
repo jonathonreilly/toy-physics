@@ -5457,6 +5457,14 @@
       "to": "one_generation_matter_closure_note"
     },
     {
+      "from": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "to": "graph_first_selector_derivation_note"
+    },
+    {
       "from": "localized_source_response_sweep_note",
       "to": "mesoscopic_surrogate_backreaction_note"
     },
@@ -19585,7 +19593,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T14:48:07.768227+00:00",
+  "generated_at": "2026-05-02T14:52:07.242620+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32097,6 +32105,20 @@
       "path": "docs/LH_DOUBLET_SU2_SQUARED_HYPERCHARGE_ANOMALY_CANCELLATION_NOTE_2026-05-01.md",
       "runner_path": "scripts/frontier_lh_doublet_su2_squared_hypercharge_anomaly.py",
       "title": "Left-Handed Doublet `SU(2)\u00b2 \u00d7 U(1)_Y` Anomaly Cancellation From Graph-First Eigenvalues"
+    },
+    "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": {
+      "claim_id": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "graph_first_selector_derivation_note"
+      ],
+      "note_hash": "6d668257b19a642d1f57e22c34f878f4a533c0fe36325f110c20451b348282b5",
+      "path": "docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py",
+      "title": "LH-Doublet Traceless Abelian Eigenvalue Ratio (Narrow Theorem)"
     },
     "lhcm_matter_assignment_from_su3_representation_note_2026-05-02": {
       "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
@@ -45779,19 +45801,19 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 5,
       "none": 1764,
-      "positive_theorem": 5
+      "positive_theorem": 6
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 506,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 607
+      "positive_theorem": 608
     },
-    "edge_count": 4896,
-    "leaf_count": 770,
-    "node_count": 1774,
+    "edge_count": 4898,
+    "leaf_count": 771,
+    "node_count": 1775,
     "root_count": 1234,
-    "runners_with_path": 1336
+    "runners_with_path": 1337
   }
 }

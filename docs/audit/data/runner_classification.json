@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T14:48:10.979761+00:00",
+  "generated_at": "2026-05-02T14:52:10.361224+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -9156,6 +9156,18 @@
       "decoration_candidate": true,
       "dominant_class": "A",
       "runner": "scripts/frontier_lh_doublet_su2_squared_hypercharge_anomaly.py"
+    },
+    "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py"
     },
     "lhcm_matter_assignment_from_su3_representation_note_2026-05-02": {
       "assert_count": 1,
@@ -25922,6 +25934,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_lh_doublet_traceless_abelian_ratio.py": {
+      "assert_count": 1,
+      "claims": [
+        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_lhcm_matter_assignment.py": {
       "assert_count": 1,
       "claims": [
@@ -35282,13 +35309,13 @@
     "decoration_candidates": 103,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 145,
+      "B": 146,
       "C": 507,
       "D": 195,
       "none": 409
     },
-    "runners_classified": 1265,
+    "runners_classified": 1266,
     "runners_with_C": 607,
-    "runners_with_D": 304
+    "runners_with_D": 305
   }
 }

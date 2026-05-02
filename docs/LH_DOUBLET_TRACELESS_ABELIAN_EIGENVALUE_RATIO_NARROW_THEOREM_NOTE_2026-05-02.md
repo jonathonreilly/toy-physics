@@ -30,8 +30,8 @@ chain.
 
 | Authority | Effective status | Role |
 |---|---|---|
-| `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md` | retained | supplies the 6-dim Sym² and 2-dim Anti² sub-decomposition on the LH-doublet sector |
-| `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md` | retained | supplies the canonical axis selection upstream |
+| [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | retained_bounded | supplies the 6-dim Sym² and 2-dim Anti² sub-decomposition on the LH-doublet sector |
+| [`GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md) | retained_bounded | supplies the canonical axis selection upstream |
 
 No other authorities are cited as load-bearing.
 
@@ -43,11 +43,11 @@ No other authorities are cited as load-bearing.
 ⇒ eigenvalue ratio on Sym² : Anti²  =  α : (−3α)  =  1 : (−3).
 ```
 
-The 6 and 2 multiplicities come from the retained graph-first integration
+The 6 and 2 multiplicities come from the retained-grade graph-first integration
 note's Sym² (3 axes × 2 weak-doublet states = 6 states) and Anti² (1 axis
 × 2 weak-doublet states = 2 states) decomposition.
 
-This is class (A) — algebraic identity check on retained inputs. The
+This is class (A) — algebraic identity check on retained-grade inputs. The
 conclusion follows from the cited authorities without appeal to anything
 else; no new symbol is defined, no external value is read in, no
 phenomenological match is performed.
@@ -73,7 +73,8 @@ Verifies (at exact rational precision via Python `Fraction`):
 ## What this note closes
 
 The narrow ratio theorem `1 : (−3)` on Sym² : Anti² as a structural
-algebraic consequence of the retained graph-first commutant decomposition.
+algebraic consequence of the retained-grade graph-first commutant
+decomposition.
 
 ## What this note does NOT close
 
@@ -93,21 +94,21 @@ proposed_claim_scope: |
   exact eigenvalue ratio 1:(-3) on Sym²:Anti² of the LH-doublet sector under
   the graph-first selected-axis commutant decomposition; no specific eigenvalues,
   no SM hypercharge identification, no charge-formula claim.
-target_audit_status: audited_clean (subject to fresh-context audit-lane verdict)
+audit_status_authority: independent audit lane only
 proposed_load_bearing_step_class: A
 audit_required_before_effective_retained: true
 ```
 
-If the audit lane ratifies, `effective_status = retained` because both
-cited authorities are retained-grade and the load-bearing step is a clean
-class (A) algebraic closure.
+If the audit lane ratifies a clean theorem verdict, the pipeline can derive
+`effective_status = retained` because both cited authorities are
+retained-grade and the load-bearing step is a class (A) algebraic closure.
 
 ## Cross-references
 
 - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` — parent (currently `audit_status:
   audited_conditional`); this narrow note carves out the audit's named
   safe scope as a standalone claim row.
-- `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md` — retained primitive supplying
+- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — retained-grade primitive supplying
   the commutant decomposition.
 - `HYPERCHARGE_IDENTIFICATION_NOTE.md` (currently `audited_renaming`) —
   carries the SM-Y identification step that is **out of scope** here.

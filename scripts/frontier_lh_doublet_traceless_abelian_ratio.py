@@ -6,7 +6,7 @@ Claim scope: on the graph-first commutant gl(3) ⊕ gl(1) of
 traceless U(1) direction has eigenvalue ratio 1:(-3) on Sym²(C²) : Anti²(C²)
 (6-state : 2-state) sub-decompositions.
 
-Load-bearing step is class (A) algebraic closure on retained inputs:
+Load-bearing step is class (A) algebraic closure on retained-grade inputs:
   6α + 2β = 0  ⇒  β = -3α  ⇒  ratio α:β = 1:(-3).
 
 This runner does NOT verify specific eigenvalues +1/3, -1 (those require
@@ -75,15 +75,16 @@ for f in forbidden_in_scope:
 # ============================================================================
 section("Part 2: structural multiplicities sum to LH-doublet space dimension 8")
 # ============================================================================
-# From graph_first_su3 retained: Sym² (6-state) ⊕ Anti² (2-state) on
+# From graph_first_su3 retained-grade structure: Sym² (6-state) ⊕ Anti²
+# (2-state) on
 # (SU(2)-doublet ⊗ 4-point-base) = 2 × 4 = 8 LH-doublet states.
 n_sym = 6  # 3 Sym²-axes × 2 weak-doublet states
 n_anti = 2  # 1 Anti²-axis × 2 weak-doublet states
 n_total = 8
 
-check("dim Sym²-multiplicity (graph_first_su3 retained) = 6",
+check("dim Sym²-multiplicity (graph_first_su3 retained-grade) = 6",
       n_sym == 6, detail=f"6 = 3 axes × 2 weak-doublet states")
-check("dim Anti²-multiplicity (graph_first_su3 retained) = 2",
+check("dim Anti²-multiplicity (graph_first_su3 retained-grade) = 2",
       n_anti == 2, detail=f"2 = 1 axis × 2 weak-doublet states")
 check("Sym² + Anti² = 8 (LH-doublet space)",
       n_sym + n_anti == n_total,
@@ -94,7 +95,7 @@ section("Part 3: tracelessness forces ratio β/α = −3 uniquely")
 # ============================================================================
 # The unique traceless abelian generator has eigenvalues α on Sym² and β on Anti².
 # Tracelessness over the LH-doublet sector: 6α + 2β = 0.
-# This is class (A) algebraic closure on retained graph-first multiplicities.
+# This is class (A) algebraic closure on retained-grade graph-first multiplicities.
 
 # Verify ratio for arbitrary α:
 test_alphas = [Fraction(1), Fraction(2), Fraction(-5), Fraction(7, 11),
@@ -147,20 +148,21 @@ check("at α = +1/3 (an admitted SM-Y normalization), eigenvalues = (+1/3, −1)
 # ============================================================================
 section("Part 5: cited authorities are retained-grade")
 # ============================================================================
-# Read the audit ledger and verify both cited authorities are retained.
+# Read the audit ledger and verify both cited authorities are retained-grade.
 import json
 LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 ledger_data = json.loads(LEDGER.read_text())
 ledger_rows = ledger_data['rows']
 
-cited = {
-    "graph_first_su3_integration_note": "retained",
-    "graph_first_selector_derivation_note": "retained",
-}
-for cid, expected_es in cited.items():
+retained_grades = {"retained", "retained_bounded", "retained_no_go"}
+cited = [
+    "graph_first_su3_integration_note",
+    "graph_first_selector_derivation_note",
+]
+for cid in cited:
     actual_es = ledger_rows.get(cid, {}).get("effective_status")
-    check(f"{cid} effective_status = {expected_es!r}",
-          actual_es == expected_es,
+    check(f"{cid} effective_status is retained-grade",
+          actual_es in retained_grades,
           detail=f"observed = {actual_es!r}")
 
 print(f"\n{'='*88}\n  TOTAL: PASS={PASS}, FAIL={FAIL}\n{'='*88}")

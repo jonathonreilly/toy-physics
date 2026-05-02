@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-02T14:48:11.122891+00:00",
+  "computed_at": "2026-05-02T14:52:10.491012+00:00",
   "criticality_counts": {
     "critical": 94,
     "high": 341,
-    "leaf": 897,
+    "leaf": 898,
     "medium": 442
   },
   "flagship_signal_used": false,
-  "node_count": 1774,
+  "node_count": 1775,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -36,16 +36,16 @@
       "transitive_descendants": 116
     },
     {
+      "claim_id": "graph_first_su3_integration_note",
+      "criticality": "critical",
+      "load_bearing_score": 27.93,
+      "transitive_descendants": 344
+    },
+    {
       "claim_id": "yt_ward_identity_derivation_theorem",
       "criticality": "critical",
       "load_bearing_score": 27.65,
       "transitive_descendants": 283
-    },
-    {
-      "claim_id": "graph_first_su3_integration_note",
-      "criticality": "critical",
-      "load_bearing_score": 27.426,
-      "transitive_descendants": 343
     },
     {
       "claim_id": "observable_principle_from_axiom_note",

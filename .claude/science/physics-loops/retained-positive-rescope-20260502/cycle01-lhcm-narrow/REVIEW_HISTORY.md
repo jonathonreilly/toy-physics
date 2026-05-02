@@ -7,7 +7,8 @@
 
 - Goal: under the new scope-aware audit framework (origin/main commit
   011e433c2), carve out the safe eigenvalue-ratio scope of LHCM as a
-  standalone claim row that can land `audited_clean → retained` directly.
+  standalone claim row that can become retained only after independent audit
+  ratification and pipeline derivation.
 - Method: identified the audit's previously-named "claim boundary until
   fixed" (`the selected-axis surface has a structural 3+1 split with a
   traceless abelian direction whose normalized eigenvalues have the
