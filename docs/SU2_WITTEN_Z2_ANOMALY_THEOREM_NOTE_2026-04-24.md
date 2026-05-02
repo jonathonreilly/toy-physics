@@ -2,8 +2,20 @@
 
 Date: 2026-04-24
 
-Status: proposed_retained structural-anomaly theorem on the accepted matter/gauge
-surface.
+**Status:** bounded_theorem on the retained gauge surface, conditional on the
+assumed one-generation matter-content premise (Q_L/L_L weak-doublet
+multiplicities and RH-singlet completion). The matter-content premise is an
+admitted external input from `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` and
+`HYPERCHARGE_IDENTIFICATION_NOTE.md`; this theorem does not derive that
+content. Given the premise, the Witten Z_2 parity arithmetic is exact.
+
+**Type:** bounded_theorem (Witten Z_2 parity arithmetic on the assumed
+one-generation matter table; see `## Scope` for the explicit
+not-claimed boundary).
+
+**Claim type:** bounded_theorem
+
+**Primary runner:** `scripts/frontier_su2_witten_z2_anomaly.py`
 
 ## Statement
 
@@ -143,20 +155,62 @@ doublets.
 
 ## Scope
 
-This theorem covers the Witten global anomaly for fundamental `SU(2)` Weyl
-doublets on the retained matter content.
+### What this bounded theorem claims
 
-It does not reprove the perturbative anomaly equations in
-`ANOMALY_FORCES_TIME_THEOREM.md`.
+Given the one-generation matter-content premise
 
-It does not replace the SM hypercharge uniqueness theorem or the `B-L`
-anomaly-freedom theorem.
+```text
+Q_L : 3 color copies of one SU(2) Weyl doublet,
+L_L : 1 lepton SU(2) Weyl doublet,
+all right-handed fields are SU(2) singlets,
+```
 
-It does not classify possible higher-isospin `SU(2)` representations outside
-the retained content.
+and given the standard Witten Z_2 obstruction on `pi_4(SU(2)) = Z_2`,
+this theorem proves the exact integer-arithmetic statement
 
-It does not claim that `B-L` is gauged, that new weak-doublet matter exists, or
-that `N_c = 3` is derived here.
+```text
+N_D(per generation) = N_c + 1 = 4
+N_D(total, three generations) = 12
+parity(N_D, total) = 0
+=> Witten Z_2 cancels.
+```
+
+The theorem is a structural arithmetic / parity identity *given* the
+matter-content premise. The runner verifies the parity arithmetic on
+the named matter table and the extension/parity boundaries.
+
+### What this theorem does NOT claim
+
+- It does not derive the one-generation Q_L/L_L SU(2) Weyl-doublet
+  content. That input is admitted from
+  `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` (currently
+  `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`,
+  retained), and the right-handed singlet completion is admitted from
+  `ONE_GENERATION_MATTER_CLOSURE_NOTE.md` /
+  `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
+  (currently `audited_conditional` / `unaudited`). The closing
+  derivation of the matter content is pursued in a separate physics-loop
+  block (`physics-loop/su2-witten-doublet-count-derivation-2026-05-02`,
+  PR #383), which, if it lands at retained-grade, would lift the
+  conditional and could re-audit this row to positive_theorem.
+- It does not reprove the perturbative anomaly equations in
+  `ANOMALY_FORCES_TIME_THEOREM.md`.
+- It does not replace the SM hypercharge uniqueness theorem or the
+  `B-L` anomaly-freedom theorem.
+- It does not classify possible higher-isospin `SU(2)` representations
+  outside the retained content.
+- It does not claim that `B-L` is gauged, that new weak-doublet matter
+  exists, or that `N_c = 3` is derived here.
+
+### Audit-readiness boundary
+
+The audit verdict on this row (`audited_conditional` per Codex
+2026-05-02) explicitly identifies the matter-content premise as the
+conditional surface. By narrowing the claim type from
+`positive_theorem` to `bounded_theorem` (with the matter-content
+premise made explicit as admitted external input), the bounded scope
+matches what the runner actually verifies and is audit-ready as
+`bounded_theorem` -> `retained_bounded`.
 
 ## Reproduction
 
