@@ -2,8 +2,21 @@
 
 Date: 2026-04-24
 
-Status: proposed_retained structural-anomaly theorem on the accepted one-generation
-matter/gauge surface.
+**Status:** bounded_theorem on the retained graph-first SU(3) gauge surface,
+conditional on the assumed one-generation color-matter completion (Q_L
+SU(3) fundamental at weak multiplicity 2, plus u_R^c and d_R^c as SU(3)
+anti-fundamentals). The matter-content premise is an admitted external
+input; this theorem does not derive the right-handed anti-triplet
+completion. Given the premise, the cubic-index sum
+`+2 - 1 - 1 = 0` is exact.
+
+**Type:** bounded_theorem (cubic SU(3) gauge anomaly arithmetic on the
+assumed one-generation color matter table; see `## Scope` for the
+explicit not-claimed boundary).
+
+**Claim type:** bounded_theorem
+
+**Primary runner:** `scripts/frontier_su3_cubic_anomaly_cancellation.py`
 
 ## Statement
 
@@ -127,25 +140,63 @@ Thus any extension with chiral color charge must preserve
 
 ## Scope
 
-This theorem proves that the retained one-generation color-charged fermion
-content cancels the pure `SU(3)^3` cubic gauge anomaly.
+### What this bounded theorem claims
 
-It provides an independent colored-sector witness for the need to balance the
-left-handed quark doublet with the two retained colored anti-fundamentals
-`u_R^c` and `d_R^c`.
+Given the one-generation color-matter premise
 
-It does not prove the full right-handed lepton sector; leptons are color
-singlets and are invisible to `SU(3)^3`.
+```text
+Q_L : SU(3) fundamental, weak multiplicity 2,
+u_R^c : SU(3) anti-fundamental, weak multiplicity 1,
+d_R^c : SU(3) anti-fundamental, weak multiplicity 1,
+all leptonic and color-singlet fields contribute zero,
+```
 
-It does not derive `N_c = 3`; that input comes from the graph-first color
-lane.
+and given the standard SU(3) cubic anomaly indices
+`A(3) = +1, A(3bar) = -1`, this theorem proves the exact rational
+identity
 
-It does not claim the retained completion is the only possible
-`SU(3)^3`-anomaly-free completion, since vectorlike and other balanced
-extensions can also cancel this anomaly.
+```text
+sum_i m_i A(R_i) = 2 (+1) + 1 (-1) + 1 (-1) = 0.
+```
 
-It does not replace the perturbative hypercharge anomaly equations, the
-Witten `SU(2)` anomaly theorem, or the `B-L` anomaly-freedom theorem.
+The theorem is a structural cubic-index arithmetic identity *given*
+the matter-content premise. The runner verifies the cubic-index sum on
+the named matter table and the extension boundaries.
+
+### What this theorem does NOT claim
+
+- It does not derive the right-handed anti-triplet completion
+  `u_R^c, d_R^c in 3bar`. That input is admitted from
+  `ONE_GENERATION_MATTER_CLOSURE_NOTE.md` (currently
+  `audited_conditional`) and
+  `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
+  (currently `unaudited`). The closing derivation of the
+  anti-fundamental completion is pursued in a separate physics-loop
+  block (`physics-loop/su3-anomaly-forced-3bar-completion-derivation-2026-05-02`,
+  PR #382), which, if it lands at retained-grade, would lift the
+  conditional and could re-audit this row to positive_theorem.
+- It does not prove the full right-handed lepton sector; leptons are
+  color singlets and are invisible to `SU(3)^3`.
+- It does not derive `N_c = 3`; that input comes from the graph-first
+  color lane.
+- It does not claim the retained completion is the only possible
+  `SU(3)^3`-anomaly-free completion, since vectorlike and other
+  balanced extensions can also cancel this anomaly.
+- It does not replace the perturbative hypercharge anomaly equations,
+  the Witten `SU(2)` anomaly theorem, or the `B-L` anomaly-freedom
+  theorem.
+
+### Audit-readiness boundary
+
+The audit verdict on this row (`audited_conditional` per Codex
+2026-05-02) explicitly identifies the right-handed matter completion
+as the conditional surface and prescribes the boundary:
+"if the stated one-generation SU(3) representations are assumed, the
+standard cubic-index arithmetic cancels exactly." By narrowing the
+claim type from `positive_theorem` to `bounded_theorem` (with the
+matter-content premise made explicit), the bounded scope matches what
+the runner actually verifies and is audit-ready as
+`bounded_theorem` -> `retained_bounded`.
 
 ## Reproduction
 
