@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:18:01.850318+00:00
+**Generated:** 2026-05-02T00:19:08.830504+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 337 |
+| `audited_clean` | 338 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 468 |
+| `unaudited` | 467 |
 
 | criticality | count |
 |---|---:|
@@ -405,6 +405,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_discriminator_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_family_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_new_family_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_generated_new_family_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14633,6 +14634,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The split-shell generated family widens detector support relative to the compact bridge and modestly improves the wavefield fit, but it still does not restore a clean weak-field linear class.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the note's aggregate table and geometry deltas for the bridge and split-shell families over seeds 0..3. The note explicitly keeps the result as a bounded bridge reopening rather than a generated-family closure theorem.
 - **rationale:** The current runner output matches the frozen result: zero-source shifts are 0, bridge/static is 9/16 with F~M=-0.316 and N_eff=5.31, bridge/wavefield is 6/16 with F~M=0.098 and N_eff=5.14, split/static is 9/16 with F~M=0.304 and N_eff=8.38, and split/wavefield is 8/16 with F~M=0.381 and N_eff=8.30. The derived geometry deltas also match. The claim boundary is correctly bounded: the new geometry is a real support-widening bridge, not weak-field closure.
+- **auditor confidence:** high
+
+### `source_resolved_generated_new_family_v2_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The split-shell fixed-weight wavefield improves the weak-field-law fit relative to the self-consistent wavefield, reaching F~M = 0.500, but remains far from generated-family closure.  _(class `C`)_
+- **chain closes:** True — The runner reproduces all six aggregate rows and the law comparison in the source note. The note explicitly frames the result as a bounded partial improvement rather than a closure theorem.
+- **rationale:** The current runner output matches the frozen table: bridge modes give 7/16, 6/16, and 5/16 TOWARD with F~M values 0.058, 0.098, and 0.230; split-shell modes give 8/16 for all three with F~M values 0.424, 0.381, and 0.500. The LAW COMPARISON also matches and supports the note's bounded read that fixed weights help the law but do not recover a near-linear class. Residual risk is limited to the chosen split-shell family and mode definitions.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
