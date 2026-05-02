@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T19:54:37.095518+00:00",
+  "generated_at": "2026-05-02T19:57:52.764636+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -2220,6 +2220,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/cpt_particle_antiparticle_mass_equality_check.py"
+    },
+    "cpt_squared_is_identity_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cpt_squared_is_identity_check.py"
     },
     "critical_exponents_topology_note_2026-04-10": {
       "assert_count": 0,
@@ -17963,6 +17975,21 @@
         "A": 0,
         "B": 0,
         "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cpt_squared_is_identity_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "cpt_squared_is_identity_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
         "D": 0
       },
       "decoration_candidate": false,
@@ -35863,12 +35890,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 155,
-      "C": 513,
+      "C": 514,
       "D": 198,
       "none": 411
     },
-    "runners_classified": 1286,
-    "runners_with_C": 615,
+    "runners_classified": 1287,
+    "runners_with_C": 616,
     "runners_with_D": 312
   }
 }
