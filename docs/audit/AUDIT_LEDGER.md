@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:56:01.426677+00:00
+**Generated:** 2026-05-02T23:59:06.453260+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 199 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 505 |
+| unaudited | 504 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 25 |
+| ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 652 |
 | ~~audited_failed~~ | 4 |
@@ -42,9 +42,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 652 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
-| `audited_numerical_match` | 25 |
+| `audited_numerical_match` | 26 |
 | `audited_renaming` | 21 |
-| `unaudited` | 544 |
+| `unaudited` | 543 |
 
 | claim_type | count |
 |---|---:|
@@ -1233,6 +1233,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `source_resolved_exact_green_h025_pocket_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-agent | D | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -15433,6 +15434,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The minimal source-driven field architecture has a real weak-field recovery pocket, with TOWARD surviving and the dynamic mass exponent staying near linear only while stronger calibrations drift away from linear scaling.  _(class `C`)_
 - **chain closes:** True — The two cited runners recompute the broad calibration sweep and the conservative pocket replay values stated in the note. The note does not promote this to a self-consistent strong-field theorem and explicitly keeps the calibration-sensitive boundary.
 - **rationale:** The frozen broad sweep matches the current sweep runner for all seven target maxima, including the F~M drift from 0.997 at target 0.001 to 0.642 at target 0.080. The conservative pocket replay also matches: zero-source shift is exactly zero, dynamic F~M is 0.96, all four rows are TOWARD, and the mean dynamic/instantaneous ratio is 1.304. Residual risk is the declared calibration sensitivity, but the source note states that as the claim boundary rather than hiding it.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_h025_pocket_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A fixed finite h=0.25 lattice computation with a boundary-clipped 4-node source cluster and calibrated Green-like kernel reports zero-source reduction, positive deflections, linear scaling, and nontrivial amplitudes for s in {0.001,0.002,0.004,0.008}.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Gibbs-019deb20-b5ae-7a62-82c0-61942ab09c43`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** For the fixed h=0.25, W=3, L=6 source-resolved Green setup, calibrated gain gives zero-source shift 0, TOWARD deflections for all four source strengths, F~M exponents 1.00, and mean |green/inst| ratio 1.329.  _(class `D`)_
+- **chain closes:** False — The runner output supports the frozen numerical readout, but the gain is calibrated to hit the amplitude cap and the runner has no explicit PASS/FAIL assertion wrapper for the claimed gates.
+- **rationale:** Issue: the pocket's nontrivial amplitude is obtained with an explicitly calibrated gain, and the source-resolved linear architecture makes the scaling result largely structural. Why this blocks: this supports a frozen numerical match for one finite setup, not an independently derived Green-field theorem. Repair target: add explicit assertions for zero-source identity, sign, scaling tolerances, and amplitude gates, and separate tuned calibration from independently predicted observables. Claim boundary until fixed: cite only as a calibrated bounded h=0.25 numerical pocket for this exact lattice/source/kernel choice.
+- **open / conditional deps cited:**
+  - `scripts/source_resolved_exact_green_h025_pocket.py`
 - **auditor confidence:** high
 
 ### `source_resolved_exact_green_pocket_note`
