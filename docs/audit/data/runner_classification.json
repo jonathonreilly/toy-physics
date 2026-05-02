@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T16:49:13.385539+00:00",
+  "generated_at": "2026-05-02T16:53:49.654559+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -10524,6 +10524,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/packet_memory.py"
+    },
+    "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/pauli_exclusion_check.py"
     },
     "periodic_2d_wraparound_fix_note_2026-04-11": {
       "assert_count": 0,
@@ -33412,6 +33424,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/pauli_exclusion_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/persistent_inertial_object_probe.py": {
       "assert_count": 0,
       "claims": [
@@ -35391,12 +35418,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 148,
-      "C": 508,
+      "C": 509,
       "D": 195,
       "none": 409
     },
-    "runners_classified": 1269,
-    "runners_with_C": 608,
+    "runners_classified": 1270,
+    "runners_with_C": 609,
     "runners_with_D": 306
   }
 }
