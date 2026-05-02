@@ -355,7 +355,8 @@ Next artifact:
   negative source-shift CLI form is fixed to
   `--scalar-source-shifts=-0.01,0.0,0.01`; the pole-fit kinematics gate shows
   the current four modes provide only one nonzero shell and cannot by
-  themselves supply the isolated-pole derivative
+  themselves supply the isolated-pole derivative; the mode/noise budget gives
+  an eight-mode/eight-noise foreground option but leaves a variance gate open
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

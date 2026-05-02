@@ -682,3 +682,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 The current scalar-LSZ mode set is finite-difference support only.  It
 authorizes no retained or proposed-retained wording.
+
+FH/LSZ pole-fit mode/noise budget checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ pole-fit mode-noise budget
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=39 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=65 FAIL=0
+```
+
+The eight-mode/eight-noise option is planning support only.  It authorizes no
+retained or proposed-retained wording without a variance gate and production
+pole data.

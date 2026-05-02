@@ -120,7 +120,9 @@ probability.
   CLI form is also fixed with equals syntax, so the next L12 chunk launch is
   syntactically executable.  The pole-fit kinematics gate shows the current
   four scalar modes have only one nonzero shell, so future closure needs a
-  richer pole-fit manifest/gate or an analytic pole theorem.  The same-source
+  richer pole-fit manifest/gate or an analytic pole theorem.  The mode/noise
+  budget identifies an eight-mode/eight-noise foreground option, but it needs
+  a variance gate before production use.  The same-source
   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
   pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic

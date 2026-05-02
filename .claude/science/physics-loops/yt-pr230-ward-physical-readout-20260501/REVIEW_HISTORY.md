@@ -1689,3 +1689,29 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The gate blocks a future completed four-mode chunk set from being treated as
 the scalar pole derivative.  The current modes give only one nonzero momentum
 shell and remain finite-difference support.
+
+## Review-Loop Backpressure - FH/LSZ Pole-Fit Mode/Noise Budget
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / PLANNING ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The budget identifies a possible eight-mode/eight-noise foreground launch
+class, but flags that it needs a variance gate and production data.  It
+authorizes no retained/proposed-retained wording.

@@ -1003,6 +1003,18 @@ a finite positive-momentum secant.  They cannot locate an isolated scalar pole
 or determine `dGamma_ss/dp^2` at the pole without richer kinematics or an
 imported model.
 
+FH/LSZ eight-mode/sixteen-noise foreground shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Eight pole-fit modes with sixteen noises are estimated at `21.45` hours for an
+L12 16-configuration chunk, above the 12-hour foreground window.  Eight modes
+with eight noises fit the current estimate, but that lower-noise option needs a
+variance gate before it can be launched as production-facing pole-fit data.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

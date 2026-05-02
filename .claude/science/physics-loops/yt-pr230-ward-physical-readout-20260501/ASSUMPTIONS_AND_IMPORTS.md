@@ -485,6 +485,9 @@ The pole-fit kinematics gate extends that boundary: a finite secant from the
 current one nonzero momentum shell is not a scalar pole derivative unless the
 route supplies richer kinematics, analytic continuation control, or a retained
 theorem.
+The eight-mode/eight-noise budget is also not an assumption license.  Lowering
+the noise count is a launch-planning trade that requires a variance gate before
+it can be used as production-facing pole-fit evidence.
 
 Positive-closure candidates left after the assumption exercise:
 

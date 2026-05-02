@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=64 FAIL=0
+# SUMMARY: PASS=65 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -67,6 +67,7 @@ The certificate consumes the PR-local route certificates for:
 - joint Feynman-Hellmann / scalar-LSZ chunked production manifest;
 - joint Feynman-Hellmann / scalar-LSZ chunk combiner gate;
 - joint Feynman-Hellmann / scalar-LSZ pole-fit kinematics gate;
+- joint Feynman-Hellmann / scalar-LSZ pole-fit mode/noise budget;
 - Feynman-Hellmann / scalar-LSZ invariant readout theorem;
 - scalar pole determinant gate;
 - scalar ladder eigen-derivative gate;
@@ -143,6 +144,7 @@ the visible shortcut routes:
 | joint Feynman-Hellmann / scalar-LSZ chunked production manifest | L12 can be chunked into 63 production-targeted 16-measurement chunks estimated at `11.3186` hours each, with chunk-local artifact dirs and per-chunk resume; this is launch planning only and does not cover L16/L24 |
 | joint Feynman-Hellmann / scalar-LSZ chunk combiner gate | requires all 63 L12 chunks to be production phase with run-control provenance, unique chunk artifact dirs, and same-source FH/LSZ observables; zero chunks are present, so it is an acceptance gate only |
 | joint Feynman-Hellmann / scalar-LSZ pole-fit kinematics gate | current four modes provide only one nonzero momentum shell, enough for a finite-difference secant but not an isolated-pole derivative |
+| joint Feynman-Hellmann / scalar-LSZ pole-fit mode/noise budget | eight modes with eight noises fit the current L12 chunk estimate and give pole-fit kinematics, but this is planning only until a variance gate and production data exist |
 | Feynman-Hellmann / scalar-LSZ invariant readout | exact formula avoids `kappa_s = 1` shortcut, but still needs same-source production pole data |
 | scalar pole determinant gate | exact denominator condition identifies `K(x)` and `K'(pole)` as load-bearing open inputs |
 | scalar ladder eigen-derivative gate | finite `lambda_max=1` crossing is not enough; `d lambda/dp^2` and momentum-dependent kernel remain open |
@@ -174,7 +176,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
-| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, postprocess-gate block, checkpoint-granularity block, chunked-manifest block, chunk-combiner gate, and pole-fit kinematics gate; still no proposed-retained authorization |
+| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, postprocess-gate block, checkpoint-granularity block, chunked-manifest block, chunk-combiner gate, pole-fit kinematics gate, and pole-fit mode/noise budget; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

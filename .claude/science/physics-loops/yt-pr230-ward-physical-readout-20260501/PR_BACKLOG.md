@@ -607,3 +607,19 @@ Adds an FH/LSZ scalar-pole kinematics gate:
 - still no retained/proposed-retained closure: four-mode chunks are finite
   positive-momentum secant support, not an isolated scalar-pole derivative.
 ```
+
+Latest FH/LSZ pole-fit mode/noise budget checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ pole-fit mode/noise budget:
+- eight modes with sixteen noises are pole-fit kinematics ready but estimate
+  to `21.45` hours for an L12 chunk;
+- eight modes with eight noises keep the current `11.3186` hour foreground
+  estimate and give enough momentum shells;
+- validator passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=39 FAIL=0`; campaign status consumes 69 certificates and reports
+  `PASS=65 FAIL=0`;
+- still no retained/proposed-retained closure: this is launch planning only
+  until a variance gate, production data, FV/IR control, and retained-proposal
+  audit exist.
+```

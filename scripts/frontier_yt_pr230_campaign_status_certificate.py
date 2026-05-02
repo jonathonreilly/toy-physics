@@ -83,6 +83,7 @@ def main() -> int:
         ),
         "fh_lsz_chunk_combiner_gate": load("outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"),
         "fh_lsz_pole_fit_kinematics": load("outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"),
+        "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -308,6 +309,12 @@ def main() -> int:
         "scalar-pole kinematics gate" in str(statuses["fh_lsz_pole_fit_kinematics"])
         or "open" in str(statuses["fh_lsz_pole_fit_kinematics"]),
         statuses["fh_lsz_pole_fit_kinematics"],
+    )
+    report(
+        "fh-lsz-pole-fit-mode-budget-not-closure",
+        "pole-fit mode-noise budget" in str(statuses["fh_lsz_pole_fit_mode_budget"])
+        or "bounded-support" in str(statuses["fh_lsz_pole_fit_mode_budget"]),
+        statuses["fh_lsz_pole_fit_mode_budget"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
@@ -580,6 +587,9 @@ def main() -> int:
             "The pole-fit kinematics gate shows the current scalar modes give "
             "only one nonzero momentum shell, so four-mode chunk completion is "
             "not by itself an isolated-pole derivative.  "
+            "The mode/noise budget gives a possible eight-mode/eight-noise "
+            "foreground launch option, but it is only planning support until "
+            "a variance gate and production data exist.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

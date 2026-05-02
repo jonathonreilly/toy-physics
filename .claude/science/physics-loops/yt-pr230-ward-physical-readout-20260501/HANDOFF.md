@@ -416,3 +416,7 @@ Chunk001 has been relaunched as non-evidence.  In parallel, the FH/LSZ pole-fit
 kinematics gate shows the current scalar modes provide only one nonzero
 momentum shell; they are not sufficient to determine an isolated scalar-pole
 inverse derivative without richer pole-fit kinematics or a theorem.
+The pole-fit mode/noise budget gives a concrete next production design:
+eight modes with eight noises keep the current L12 foreground estimate while
+adding enough shells for pole-fit kinematics.  It is still planning support
+and needs a variance gate before launch.
