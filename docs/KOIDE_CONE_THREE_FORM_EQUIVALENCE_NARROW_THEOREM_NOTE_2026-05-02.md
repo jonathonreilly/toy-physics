@@ -1,0 +1,166 @@
+# Koide-Cone Three-Form Equivalence Narrow Theorem
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the standalone polynomial-algebra equivalence on abstract
+real triples `(u, v, w) ∈ R^3` between three different forms of the Koide
+cone — the orbit-slot quadratic, the cyclic basis-change quadratic under
+the explicit linear map `r0 = u + v + w`, `r1 = 2u - v - w`,
+`r2 = sqrt(3)(v - w)`, and the standard ratio form
+`(u^2 + v^2 + w^2)/(u + v + w)^2 = 2/3` (when `u + v + w != 0`). This is
+purely a fact of polynomial algebra over `R^3`; no Koide / charged-lepton
+mass / `sqrt(m)` physical identification is consumed.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+Audit-lane ratification is required before any retained-grade status applies.
+**Runner:** [`scripts/frontier_koide_cone_three_form_equivalence_narrow.py`](./../scripts/frontier_koide_cone_three_form_equivalence_narrow.py)
+**Authority role:** Pattern A narrow rescope of the load-bearing class-(A)
+algebraic core of [`KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18`](KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md).
+
+## Statement
+
+Let `(u, v, w)` be any abstract real triple, and define the linear
+basis-change
+
+```text
+r0  =  u + v + w,
+r1  =  2 u - v - w,
+r2  =  sqrt(3) (v - w).                                                  (1)
+```
+
+**Conclusion (T1) (algebraic identity).** For all `(u, v, w) ∈ R^3`,
+
+```text
+2 r0^2 - r1^2 - r2^2  =  2 [4(uv + uw + vw) - (u^2 + v^2 + w^2)].         (2)
+```
+
+**Conclusion (T2) (three-form equivalence on the cone).** The following four
+conditions are pairwise equivalent:
+
+```text
+(F_orbit)    4 (uv + uw + vw) - (u^2 + v^2 + w^2)  =  0;                  (3)
+(F_cyclic)   2 r0^2                            =  r1^2 + r2^2;            (4)
+(F_ratio')   3 (u^2 + v^2 + w^2)               =  2 (u + v + w)^2;        (5)
+(F_ratio)    (u^2 + v^2 + w^2) / (u + v + w)^2 =  2/3
+             provided u + v + w ≠ 0.                                      (6)
+```
+
+**Conclusion (T3) (cone is non-empty).** For example, `(u, v, w) = (1, 1, 4 + 3 sqrt(2))`
+exactly satisfies `(F_orbit)`. The uniform triple `(u, v, w) = (1, 1, 1)`
+does **not**: at the uniform triple, `(F_orbit) = 9 ≠ 0` and the ratio
+form gives `1/3`, not `2/3`.
+
+## Proof
+
+`(T1)` Direct expansion. Since `r2 = sqrt(3)(v - w)`,
+
+```text
+r0^2 = u^2 + v^2 + w^2 + 2(uv + uw + vw),
+r1^2 = 4u^2 + v^2 + w^2 - 4uv - 4uw + 2vw,
+r2^2 = 3(v - w)^2 = 3v^2 - 6vw + 3w^2.
+```
+
+Hence
+
+```text
+r1^2 + r2^2  =  4u^2 + 4v^2 + 4w^2 - 4uv - 4uw - 4vw,
+2 r0^2       =  2u^2 + 2v^2 + 2w^2 + 4(uv + uw + vw).
+```
+
+Subtracting:
+
+```text
+2 r0^2 - r1^2 - r2^2
+  =  2u^2 + 2v^2 + 2w^2 + 4(uv + uw + vw)
+   - 4u^2 - 4v^2 - 4w^2 + 4(uv + uw + vw)
+  =  -2(u^2 + v^2 + w^2) + 8(uv + uw + vw)
+  =  2 [4(uv + uw + vw) - (u^2 + v^2 + w^2)].
+```
+
+`(T2)` From `(T1)`, `(F_orbit)` and `(F_cyclic)` are proportional, so they
+have the same zero set.
+
+For `(F_ratio')`: expand `(u + v + w)^2 = u^2 + v^2 + w^2 + 2(uv + uw + vw)`,
+so
+
+```text
+3(u^2 + v^2 + w^2) - 2(u + v + w)^2
+  =  3(u^2 + v^2 + w^2) - 2(u^2 + v^2 + w^2) - 4(uv + uw + vw)
+  =  (u^2 + v^2 + w^2) - 4(uv + uw + vw)
+  =  -F_orbit.
+```
+
+So `F_orbit = 0` iff `F_ratio' = 0`.
+
+`(F_ratio)` is `(F_ratio')` divided by `(u + v + w)^2`, valid when the
+denominator is nonzero.
+
+`(T3)` By direct verification: the runner checks `F_orbit(1, 1, 4 + 3 sqrt(2)) = 0`
+exactly and `F_orbit(1, 1, 1) = 9 ≠ 0` (the uniform triple is off the cone).
+∎
+
+## What this claims
+
+- `(T1)`: the symbolic algebraic identity `(2)` for all `(u, v, w) ∈ R^3`.
+- `(T2)`: the four-fold equivalence on the cone.
+- `(T3)`: the cone is non-trivial (at least one explicit point satisfies it).
+
+## What this does NOT claim
+
+- Does **not** identify `(u, v, w)` with any specific physical
+  charged-lepton mass amplitudes or `sqrt(m_e), sqrt(m_mu), sqrt(m_tau)`.
+- Does **not** consume the upstream Gamma-orbit-return law that produces
+  the orbit-slot triple `(u, v, w)`.
+- Does **not** consume the upstream cyclic basis identity
+  `(u, v, w) → (r0, r1, r2)` derivation; the linear map enters as an
+  explicit definition.
+- Does **not** consume any PDG observed value, literature numerical
+  comparator, fitted selector, or admitted unit convention.
+
+## Relation to the parent Koide gamma-orbit selector bridge note
+
+[`KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18`](KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md)
+applies this three-form equivalence to the physical Gamma/orbit-return
+context, identifying `(u, v, w)` with charged-lepton sqrt-mass amplitudes
+and reading the orbit-slot cone as the standard Koide equation. Per the
+audit verdict on the parent row, the Gamma/orbit-return law that supplies
+`(u, v, w)` and the selector law enforcing the cone are admitted-context
+inputs from unratified upstream authorities.
+
+This narrow theorem isolates the underlying polynomial-algebra
+equivalence from the physical Koide / charged-lepton framing. The
+three-form equivalence can be ratified independently of any Gamma-orbit
+or charged-lepton authority.
+
+## Cited dependencies
+
+None. This narrow note has zero ledger dependencies because it states
+only elementary polynomial algebra on abstract `(u, v, w) ∈ R^3`.
+
+## Forbidden imports check
+
+- No PDG observed values consumed.
+- No literature numerical comparators consumed.
+- No fitted selectors consumed.
+- No admitted unit conventions load-bearing on retention.
+- No same-surface family arguments.
+
+## Validation
+
+Primary runner: [`scripts/frontier_koide_cone_three_form_equivalence_narrow.py`](./../scripts/frontier_koide_cone_three_form_equivalence_narrow.py)
+verifies (PASS=11/0):
+
+1. Symbolic identity `(2)` exact.
+2. `F_cyclic / F_orbit = 2` symbolic (proportionality).
+3. `F_ratio' = -F_orbit` symbolic (equivalence with the standard ratio form).
+4. Concrete instance `(1, 1, 4 + 3 sqrt(2))` satisfies the cone exactly.
+5. Concrete instance `(1, 1, 4 - 3 sqrt(2))` also exact (other branch).
+6. Uniform triple `(1, 1, 1)` is off the cone: `F_orbit = 9`, ratio = `1/3`.
+7. Parent row class-A check.
+
+## Cross-references
+
+- [`KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18`](KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md) —
+  parent bundled note that applies this three-form equivalence to the
+  physical Gamma/orbit-return charged-lepton context.
