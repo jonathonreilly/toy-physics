@@ -1,13 +1,31 @@
 # A² Closure Below W2 via Retained Quark-Doublet Identification Source Theorem
 
 **Date:** 2026-04-25
+**Type:** positive_theorem
+**Claim scope:** the algebraic source-identification step (S1) deriving
+`N_pair = 2` and `N_color = 3` from the **identification** of the
+retained `Q_L : (2, 3)_{+1/3}` representation with the SU(2)_L doublet
+× SU(3)_c triplet count, and the immediate consequence `A^2 = N_pair / N_color = 2/3`.
+The **upstream supply** of (i) the retained matter content
+`Q_L : (2, 3)_{+1/3}, u_R : (1, 3)_{+4/3}, d_R : (1, 3)_{-2/3}` from
+`LEFT_HANDED_CHARGE_MATCHING_NOTE.md` and `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`,
+(ii) the SU(2)_L / SU(3)_c gauge structures from `MINIMAL_AXIOMS_2026-04-11.md`,
+and (iii) the W2 retention surface itself (this note positions itself
+"below W2"), are all explicitly **out of scope** here and live in
+separate authority notes (admitted-context to this note).
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+The current ledger state is `unaudited` and audit-lane ratification is
+required before any retained-grade status applies. The audit lane has
+not yet ratified this row's seven cited upstreams as a coherent retained
+chain; the "proposed_retained CKM × Cl(3) closure" claim is an
+author-side proposal pending audit-lane review of those upstreams.
 
-**Status:** proposed_retained CKM × Cl(3) closure theorem on proposed_retained-tier authorities.
-
-This note CLOSES `A² = N_pair/N_color = 2/3` BELOW W2 via a single
-**Identification Source Theorem (S1)** that derives BOTH `N_pair = 2` and
-`N_color = 3` from a SINGLE retained matter-content source on current `main`:
-the retained left-handed quark representation
+This note proposes that `A² = N_pair/N_color = 2/3` is DERIVED BELOW W2
+via a single **Identification Source Theorem (S1)** that derives BOTH
+`N_pair = 2` and `N_color = 3` from a SINGLE retained matter-content
+source on current `main`: the retained left-handed quark representation
 `Q_L : (2,3)_{+1/3}` (LEFT_HANDED_CHARGE_MATCHING_NOTE, "retained corollary")
 together with the retained right-handed quark representations
 `u_R : (1,3)_{+4/3}`, `d_R : (1,3)_{-2/3}` (ONE_GENERATION_MATTER_CLOSURE_NOTE,
@@ -531,3 +549,46 @@ The runner:
 - CL3_SM_EMBEDDING_THEOREM (support-tier; explicitly "not part of the
   accepted minimal-input stack").
 - Any unmerged branches.
+
+## Out of scope (admitted-context to this note)
+
+The following items are explicitly **NOT** load-bearing claims of this
+note. They depend on separate authority rows and enter only as
+admitted-context. The audit-lane ratification of those upstreams is
+required before this note can claim retained-grade status as a coherent
+chain:
+
+1. **Retained matter content `Q_L : (2, 3)_{+1/3}, u_R : (1, 3)_{+4/3}, d_R : (1, 3)_{-2/3}`.**
+   Supplied by [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
+   (retained corollary) and [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
+   (retained). This note does not derive the matter content; it
+   consumes the representation literals as input.
+
+2. **SU(2)_L / SU(3)_c gauge structures.** Supplied by
+   [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+   (retained framework primitives + current consequences "exact native
+   SU(2)" + "graph-first structural SU(3)").
+
+3. **The W2 retention surface itself.** This note positions its claim
+   "below W2" — i.e., it claims to derive `A² = 2/3` from S1 rather
+   than asserting it from the W2 (Wolfenstein-A) retention authority.
+   The W2 surface itself remains an admitted-context structural input.
+
+4. **Y_quantum-closure aspects (S5 bridge).** The claimed YT-EW closure
+   identifying `g_2², g_Y²` with `1/(d+1), 1/(d+2)` from
+   [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md)
+   is a separate retained-tier authority used only for S5 consistency,
+   not load-bearing on the S1 source identification.
+
+5. **Cross-row consistency cite to CKM_MAGNITUDES_STRUCTURAL_COUNTS.**
+   That row's `N_pair = 2`, `N_color = 3` retained values agree with
+   S1, but cycle 19's narrow-rescope (`CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02`)
+   shows the structural-counts algebra is itself a Pattern A narrow theorem
+   audit-pending; the broader retained chain is therefore audit-pending
+   end-to-end.
+
+The **in-scope content** of this note is the algebraic Identification
+Source Theorem (S1) itself: given the retained matter-content
+representations, the dimensions of those representations dictate
+`N_pair = dim_SU2(Q_L) = 2` and `N_color = dim_SU3(Q_L) = 3`, and
+therefore `A² = N_pair / N_color = 2/3` follows by direct ratio.
