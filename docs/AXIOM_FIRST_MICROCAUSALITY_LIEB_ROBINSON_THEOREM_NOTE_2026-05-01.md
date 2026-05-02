@@ -2,11 +2,13 @@
 
 **Date:** 2026-05-01
 **Type:** positive_theorem
-**Claim scope:** equal-time strict locality [O_x, O_y] = 0 for x ≠ y on Cl(3) tensor structure (M1); Lieb-Robinson lightcone bound ‖[α_t(O_x), O_y]‖ ≤ 2‖O_x‖‖O_y‖exp(-d + v_LR|t|) with v_LR = 2erJ on framework's finite-range Hamiltonian (M2); continuum spacelike microcausality in the smooth-limit Lorentz regime (M3).
-**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline from `audit_status` + `claim_type` + dependency chain.
-**Loop:** `24h-axiom-first-derivations-20260501`
+**Claim type:** positive_theorem
+**Claim scope:** equal-time strict locality [O_x, O_y] = 0 for x ≠ y on the Cl(3) tensor structure of A1 (M1); Lieb-Robinson lightcone bound ‖[α_t(O_x), O_y]‖ ≤ 2‖O_x‖‖O_y‖exp(-d(x,y) + v_LR|t|) with v_LR = 2erJ on the framework's finite-range Hamiltonian H = sum_z h_z reconstructed from RP (M2); continuum spacelike microcausality in the framework's emergent-Lorentz limit (M3). The proof is the standard Lieb–Robinson 1972 / Nachtergaele–Sims 2010 lattice estimate adapted to the framework's specific finite-range hopping range r = max(r_h, r_g) = 1 set by A3 (staggered-Dirac NN hopping) and A4 (Wilson plaquette gauge action). No fitted, observed, or PDG inputs.
+**Status:** support — branch-local theorem note on `A_min` + retained RP transfer matrix + retained spectrum-condition; runner passing on 1D toy chain (4/4 tests pass); audit-ready (independent audit pending; chain closure requires upstream RP and spectrum-condition rows to be retained-grade first).
+**Load-bearing step class:** C — first-principles compute on the framework's finite-range Hamiltonian; the runner builds H = sum_z h_z explicitly, evolves α_t(O), and compares ‖[α_t(O_x), O_y]‖ to the Lieb–Robinson exponential bound on a 1D L=8 chain (Tests T1–T4).
+**Loop:** `24h-axiom-first-derivations-20260501` (resubmitted under `3plus1d-native-closure-2026-05-02` Iter 2)
 **Cycle:** 4 (Block 04; independent of Blocks 01-03)
-**Branch:** `physics-loop/24h-axiom-first-block04-microcausality-20260501`
+**Branch:** `physics-loop/24h-axiom-first-block04-microcausality-20260501` (current branch: `claude/axiom-first-rp-microcausality-elevate-2026-05-02`)
 **Runner:** `scripts/axiom_first_microcausality_check.py`
 **Log:** `outputs/axiom_first_microcausality_check_2026-05-01.txt`
 
