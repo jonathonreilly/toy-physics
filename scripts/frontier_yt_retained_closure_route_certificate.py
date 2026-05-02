@@ -58,6 +58,7 @@ def main() -> int:
         "scalar_ladder_derivative_limit": "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json",
         "scalar_ladder_residue_envelope": "outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json",
         "scalar_kernel_ward_identity": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
+        "scalar_zero_mode_limit_order": "outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -123,6 +124,10 @@ def main() -> int:
     ward_identity_does_not_fix_kernel = (
         "Ward-identity obstruction" in certificates["scalar_kernel_ward_identity"].get("actual_current_surface_status", "")
         and certificates["scalar_kernel_ward_identity"].get("proposal_allowed") is False
+    )
+    zero_mode_limit_order_blocks_denominator = (
+        "zero-mode limit-order theorem" in certificates["scalar_zero_mode_limit_order"].get("actual_current_surface_status", "")
+        and certificates["scalar_zero_mode_limit_order"].get("proposal_allowed") is False
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -195,6 +200,11 @@ def main() -> int:
         certificates["scalar_kernel_ward_identity"].get("actual_current_surface_status", ""),
     )
     report(
+        "scalar-zero-mode-limit-order-not-selected",
+        zero_mode_limit_order_blocks_denominator,
+        certificates["scalar_zero_mode_limit_order"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -238,7 +248,7 @@ def main() -> int:
                 "re-run the Ward physical-readout repair audit"
             ),
             "why_shortest": "It directly repairs the audit's physical-readout objection.",
-            "current_blocker": "source scaling and Feshbach projection are controlled, but the interacting scalar denominator/residue and common dressing are still not derived",
+            "current_blocker": "source scaling and Feshbach projection are controlled, but the interacting scalar denominator/residue, zero-mode/IR/finite-volume limiting prescription, and common dressing are still not derived",
         },
         {
             "route": "new_selector_or_axiom",
@@ -263,8 +273,9 @@ def main() -> int:
             "and substrate source units are not the hard blockers.  The hard "
             "blockers are production pole/matching evidence or the microscopic "
             "interacting scalar denominator, zero-mode/IR limiting order, pole "
-            "residue envelope, Ward/gauge kernel derivative gap, and common "
-            "dressing.  These cannot be assumed."
+            "residue envelope, Ward/gauge kernel derivative gap, exact zero-mode "
+            "limit-order prescription, and common dressing.  These cannot be "
+            "assumed."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",

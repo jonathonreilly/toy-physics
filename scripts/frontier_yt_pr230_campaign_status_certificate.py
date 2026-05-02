@@ -79,6 +79,7 @@ def main() -> int:
         "scalar_ladder_derivative_limit": load("outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json"),
         "scalar_ladder_residue_envelope": load("outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json"),
         "scalar_kernel_ward_identity": load("outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json"),
+        "scalar_zero_mode_limit_order": load("outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -281,6 +282,12 @@ def main() -> int:
         "Ward-identity obstruction" in str(statuses["scalar_kernel_ward_identity"])
         or "exact negative boundary" in str(statuses["scalar_kernel_ward_identity"]),
         statuses["scalar_kernel_ward_identity"],
+    )
+    report(
+        "scalar-zero-mode-limit-order-needs-prescription",
+        "zero-mode limit-order theorem" in str(statuses["scalar_zero_mode_limit_order"])
+        or "exact negative boundary" in str(statuses["scalar_zero_mode_limit_order"]),
+        statuses["scalar_zero_mode_limit_order"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",

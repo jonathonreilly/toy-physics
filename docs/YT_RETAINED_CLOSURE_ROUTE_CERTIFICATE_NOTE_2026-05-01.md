@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=19 FAIL=0
+# SUMMARY: PASS=20 FAIL=0
 ```
 
 The runner verifies:
@@ -37,6 +37,7 @@ The runner verifies:
 | scalar ladder derivative limiting order is derived | no |
 | scalar ladder pole-tuned residue envelope is an LSZ bound | no |
 | Ward/gauge identities fix `K'(x_pole)` | no |
+| zero-mode / IR / finite-volume limiting order is selected | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
@@ -85,7 +86,10 @@ denominator, zero-mode/IR limiting order, pole residue, or scalar/gauge
 equality.  The pole-tuned finite-ladder residue envelope remains
 zero-mode/projector/volume dependent, so it is not a scalar-LSZ bound either.
 The current Ward/gauge/Feshbach surfaces likewise do not determine
-`K'(x_pole)`.
+`K'(x_pole)`.  The exact zero-mode theorem now shows why this is
+not a numerical nuisance: retaining the gauge zero mode adds a positive
+`1/(V mu_IR^2)` diagonal term, so different IR/volume paths give different
+scalar denominators until a prescription is derived.
 
 ### Route 3: New Selector Theorem
 

@@ -1,0 +1,163 @@
+{
+  "actual_current_surface_status": "exact negative boundary / scalar zero-mode limit-order theorem",
+  "exact_decomposition_witness": {
+    "grid_size_4d": 3,
+    "ir_mu_sq": 0.1,
+    "mass": 0.5,
+    "max_diag_error": 4.440892098500626e-16,
+    "max_offdiag_abs": 0.0,
+    "projector": "local"
+  },
+  "fail_count": 0,
+  "fixed_volume_zero_mode": [
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.2,
+      "zero_mode_max_diagonal": 0.41666666666666663
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.1,
+      "zero_mode_max_diagonal": 0.8333333333333333
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.05,
+      "zero_mode_max_diagonal": 1.6666666666666665
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.02,
+      "zero_mode_max_diagonal": 4.166666666666666
+    },
+    {
+      "grid_size_4d": 4,
+      "ir_mu_sq": 0.01,
+      "zero_mode_max_diagonal": 8.333333333333332
+    }
+  ],
+  "parent_certificates": {
+    "derivative_limit": "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json",
+    "kernel_ward": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
+    "residue_envelope": "outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json"
+  },
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The zero-mode/IR/finite-volume limiting prescription is a load-bearing open premise for the interacting scalar denominator.",
+  "required_next_theorem": [
+    "derive the gauge fixing and zero-mode prescription for the scalar-channel kernel",
+    "derive the finite-volume and IR limiting order before using the scalar denominator",
+    "prove convergence of the pole location and inverse-propagator derivative in that selected limit",
+    "or measure the same-source scalar pole derivative on production ensembles with the prescription fixed"
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "verdict": "In the current finite Wilson-exchange scalar ladder, retaining the gauge zero mode adds an exact positive diagonal term proportional to 1/(V mu_IR^2).  Therefore the scalar-channel denominator has path-dependent IR/finite-volume behavior: mu_IR -> 0 at fixed volume diverges, volume -> infinity at fixed mu_IR removes the zero-mode contribution, and box-scaled regulators can leave a finite or growing zero-mode term.  The current surface has no retained rule selecting one path, so the scalar LSZ derivative and FH/LSZ readout remain open.",
+  "volume_ir_paths": {
+    "fixed_mu2_0_10": [
+      {
+        "grid_size_4d": 4.0,
+        "ir_mu_sq": 0.1,
+        "zero_mode_max_diagonal": 0.8333333333333333
+      },
+      {
+        "grid_size_4d": 5.0,
+        "ir_mu_sq": 0.1,
+        "zero_mode_max_diagonal": 0.3413333333333333
+      },
+      {
+        "grid_size_4d": 6.0,
+        "ir_mu_sq": 0.1,
+        "zero_mode_max_diagonal": 0.1646090534979424
+      },
+      {
+        "grid_size_4d": 8.0,
+        "ir_mu_sq": 0.1,
+        "zero_mode_max_diagonal": 0.05208333333333333
+      }
+    ],
+    "mu2_scaled_as_N_minus_2": [
+      {
+        "grid_size_4d": 4.0,
+        "ir_mu_sq": 0.1,
+        "zero_mode_max_diagonal": 0.8333333333333333
+      },
+      {
+        "grid_size_4d": 5.0,
+        "ir_mu_sq": 0.06400000000000002,
+        "zero_mode_max_diagonal": 0.5333333333333332
+      },
+      {
+        "grid_size_4d": 6.0,
+        "ir_mu_sq": 0.044444444444444446,
+        "zero_mode_max_diagonal": 0.37037037037037035
+      },
+      {
+        "grid_size_4d": 8.0,
+        "ir_mu_sq": 0.025,
+        "zero_mode_max_diagonal": 0.20833333333333331
+      }
+    ],
+    "mu2_scaled_as_N_minus_4": [
+      {
+        "grid_size_4d": 4.0,
+        "ir_mu_sq": 0.1,
+        "zero_mode_max_diagonal": 0.8333333333333333
+      },
+      {
+        "grid_size_4d": 5.0,
+        "ir_mu_sq": 0.04096000000000001,
+        "zero_mode_max_diagonal": 0.8333333333333331
+      },
+      {
+        "grid_size_4d": 6.0,
+        "ir_mu_sq": 0.019753086419753083,
+        "zero_mode_max_diagonal": 0.8333333333333335
+      },
+      {
+        "grid_size_4d": 8.0,
+        "ir_mu_sq": 0.00625,
+        "zero_mode_max_diagonal": 0.8333333333333333
+      }
+    ],
+    "mu2_scaled_as_N_minus_6": [
+      {
+        "grid_size_4d": 4.0,
+        "ir_mu_sq": 0.1,
+        "zero_mode_max_diagonal": 0.8333333333333333
+      },
+      {
+        "grid_size_4d": 5.0,
+        "ir_mu_sq": 0.026214400000000013,
+        "zero_mode_max_diagonal": 1.3020833333333326
+      },
+      {
+        "grid_size_4d": 6.0,
+        "ir_mu_sq": 0.008779149519890258,
+        "zero_mode_max_diagonal": 1.8750000000000004
+      },
+      {
+        "grid_size_4d": 8.0,
+        "ir_mu_sq": 0.0015625,
+        "zero_mode_max_diagonal": 3.333333333333333
+      }
+    ]
+  },
+  "witnesses": {
+    "N_minus_4_path_spread": 1.0000000000000004,
+    "N_minus_6_path_N8_over_N4_ratio": 4.0,
+    "fixed_mu_N4_over_N8_zero_mode_ratio": 16.0,
+    "fixed_volume_ir_power_slope": -0.9999999999999999,
+    "included_low_mu_lambda": 8.513297144135617,
+    "included_over_removed_low_mu": 35.302553635949536,
+    "mu2_times_zero_mode_diagonal_spread": 1.0,
+    "removed_low_mu_lambda": 0.24115244556887516,
+    "zero_mode_lower_bound_low_mu": 8.333333333333332
+  }
+}

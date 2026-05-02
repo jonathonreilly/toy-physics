@@ -45,6 +45,7 @@
     "scalar_pole_determinant_gate": "exact-support / scalar pole determinant gate",
     "scalar_source_response_harness": "bounded-support / scalar source response harness extension",
     "scalar_two_point_harness": "bounded-support / scalar two-point production-harness extension",
+    "scalar_zero_mode_limit_order": "exact negative boundary / scalar zero-mode limit-order theorem",
     "source_reparametrization": "exact negative boundary / source reparametrization gauge",
     "source_to_higgs_lsz": "open / source-to-Higgs LSZ closure attempt blocked",
     "source_two_point": "exact-support / open bridge",
@@ -52,7 +53,7 @@
     "static_mass": "exact negative boundary / static mass matching obstruction"
   },
   "fail_count": 0,
-  "pass_count": 45,
+  "pass_count": 46,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

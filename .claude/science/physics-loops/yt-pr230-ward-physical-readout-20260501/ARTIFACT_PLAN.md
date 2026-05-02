@@ -32,6 +32,12 @@ Completed in block 1:
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py`
+- `outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json`
+- `docs/YT_SCALAR_ZERO_MODE_LIMIT_ORDER_THEOREM_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_retained_closure_route_certificate.py`
+- `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
+- `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_scalar_ladder_residue_envelope_obstruction.py`
 - `outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json`
 - `docs/YT_SCALAR_LADDER_RESIDUE_ENVELOPE_OBSTRUCTION_NOTE_2026-05-01.md`
@@ -241,7 +247,9 @@ Next artifact:
   retained wording; the pole-tuned finite-ladder residue envelope remains
   zero-mode/projector/volume dependent, so the next positive move must be a
   real interacting denominator/limit theorem or production pole data; current
-  Ward/gauge/Feshbach surfaces do not fix `K'(x_pole)` or common dressing
+  Ward/gauge/Feshbach surfaces do not fix `K'(x_pole)` or common dressing; the
+  scalar zero-mode theorem shows the limit prescription itself is exact
+  load-bearing data, since the zero-mode term scales as `1/(V mu_IR^2)`
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

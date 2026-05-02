@@ -258,3 +258,19 @@ Adds a scalar-kernel Ward-identity obstruction:
 - still no retained/proposed-retained closure: the interacting scalar
   denominator derivative or production pole data remains load-bearing.
 ```
+
+Latest scalar zero-mode limit-order checkpoint text for PR #230:
+
+```text
+Adds a scalar zero-mode limit-order theorem:
+- proves the retained gauge zero mode adds an exact positive diagonal ladder
+  term `(4/3) w_i/(V mu_IR^2)`;
+- validator passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=20 FAIL=0`; campaign status now consumes 50 route certificates and
+  reports `PASS=46 FAIL=0`;
+- fixed-volume IR, volume-first, and box-scaled regulator paths give different
+  scalar denominator behavior;
+- still no retained/proposed-retained closure: the gauge-fixing, zero-mode,
+  IR, and finite-volume prescription or production pole data remains
+  load-bearing.
+```

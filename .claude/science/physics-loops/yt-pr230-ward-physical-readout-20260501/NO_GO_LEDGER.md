@@ -686,13 +686,29 @@ Retained-closure route certificate remains open after refresh:
 
 ```text
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=19 FAIL=0
+# SUMMARY: PASS=20 FAIL=0
 ```
 
 The refreshed gate includes same-source invariant readout, scalar ladder
 derivative limiting-order, scalar ladder residue-envelope, Cl(3)/Z3
-source-unit, scalar-kernel Ward-identity, production-manifest, and joint
-resource blocks.  It still authorizes no proposed-retained wording.
+source-unit, scalar-kernel Ward-identity, scalar zero-mode limit-order,
+production-manifest, and joint resource blocks.  It still authorizes no
+proposed-retained wording.
+
+Scalar zero-mode limit-order shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The retained gauge zero mode contributes an exact positive diagonal term
+`(4/3) w_i/(V mu_IR^2)` to the finite Wilson-exchange scalar ladder.  At fixed
+volume it diverges as `1/mu_IR^2`; at fixed regulator it vanishes as
+`1/N^4`; and box-scaled regulators can leave a finite or growing contribution.
+Therefore the scalar denominator and LSZ derivative remain path-dependent
+until a retained gauge-fixing, zero-mode, IR, and finite-volume prescription is
+derived or production pole data fixes the prescription.
 
 ## Inherited No-Gos And Boundaries
 

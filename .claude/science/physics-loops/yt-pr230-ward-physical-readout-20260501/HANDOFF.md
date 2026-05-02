@@ -326,4 +326,8 @@ or proposed-retained wording is allowed until production or theorem evidence
 changes that certificate.  The residue-envelope block says the next analytic
 move must be the actual interacting denominator/zero-mode/IR/finite-volume
 limit theorem, not another finite ladder witness.  The Ward-kernel block says
-the old Ward/Feshbach surfaces cannot substitute for that theorem.
+the old Ward/Feshbach surfaces cannot substitute for that theorem.  The
+zero-mode limit-order block makes the limiting theorem concrete: retaining the
+gauge zero mode adds an exact `1/(V mu_IR^2)` diagonal term, so taking the IR
+limit first, volume first, or a box-scaled regulator path gives different
+scalar denominators unless a prescription is derived.

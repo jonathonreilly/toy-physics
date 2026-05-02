@@ -1127,3 +1127,30 @@ The Ward-kernel obstruction shows that the old Ward, gauge-response, and
 Feshbach-response surfaces do not determine `K'(x_pole)` or common
 scalar/gauge dressing.  They are not a substitute for the interacting scalar
 denominator theorem.
+
+## Review-Loop Backpressure - Scalar Zero-Mode Limit-Order Theorem
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The theorem isolates the exact zero-mode term in the finite scalar ladder:
+`(4/3) w_i/(V mu_IR^2)`.  This proves the IR/volume path is a load-bearing
+denominator premise.  It does not authorize retained or proposed-retained
+wording.

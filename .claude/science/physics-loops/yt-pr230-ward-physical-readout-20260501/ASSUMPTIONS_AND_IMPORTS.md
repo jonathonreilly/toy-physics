@@ -259,6 +259,18 @@ The refreshed gate includes the current source-unit and production-manifest
 blocks.  It remains forbidden to promote PR #230 until that certificate is
 changed by production evidence or a new theorem.
 
+Scalar zero-mode limit-order boundary:
+
+```text
+Delta M_zero-mode = (4/3) w_i / (V mu_IR^2)
+```
+
+Retaining the gauge zero mode adds an exact positive diagonal term to the
+finite scalar ladder.  Taking `mu_IR -> 0` first, taking volume first, or
+box-scaling the regulator selects different scalar denominators.  The
+zero-mode/IR/finite-volume prescription is therefore a load-bearing premise,
+not a numerical detail.
+
 Source-reparametrization gauge boundary:
 
 ```text

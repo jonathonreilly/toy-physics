@@ -59,7 +59,10 @@ probability.
    envelope across zero-mode, projector, and volume choices, so another finite
    witness is lower value than a true limit theorem.  Current Ward/gauge and
    Feshbach response surfaces also do not determine `K'(x_pole)` or common
-   scalar/gauge dressing.
+   scalar/gauge dressing.  The exact zero-mode limit-order theorem now shows
+   the retained zero mode contributes `1/(V mu_IR^2)`, so the remaining
+   analytic move is a gauge-fixing/IR/finite-volume prescription theorem, not
+   another unselected regulator path.
 4. **Feynman-Hellmann scalar-response route.** Energy slopes with respect to a
    uniform scalar source bypass the absolute heavy rest-mass ambiguity.  This
    is a promising alternate measurement design, but it still requires
@@ -114,7 +117,8 @@ probability.
    to its own pole, the LSZ residue proxy is not a current-surface invariant.
    The scalar-kernel Ward-identity obstruction confirms that Ward/Feshbach
    response identities are not a replacement for the missing denominator
-   derivative theorem.
+   derivative theorem.  The scalar zero-mode limit-order theorem confirms that
+   the zero-mode prescription itself is load-bearing for the denominator.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

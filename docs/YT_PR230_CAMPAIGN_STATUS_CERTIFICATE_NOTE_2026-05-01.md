@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=45 FAIL=0
+# SUMMARY: PASS=46 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -69,6 +69,7 @@ The certificate consumes the PR-local route certificates for:
 - scalar ladder derivative limiting-order obstruction;
 - scalar ladder residue-envelope obstruction;
 - scalar kernel Ward-identity obstruction;
+- scalar zero-mode limit-order theorem;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -126,6 +127,7 @@ the visible shortcut routes:
 | scalar ladder derivative limiting-order obstruction | zero-mode and IR limiting order change the derivative and pole crossing, so the finite derivative is not yet LSZ input |
 | scalar ladder residue-envelope obstruction | even after tuning each finite ladder to its own pole, the residue proxy is not single-valued across zero-mode, projector, and volume choices |
 | scalar kernel Ward-identity obstruction | existing Ward/gauge/Feshbach surfaces do not fix `K'(x_pole)` or common scalar/gauge dressing |
+| scalar zero-mode limit-order theorem | the retained zero mode contributes `1/(V mu_IR^2)`, so IR and volume limits are path-dependent until a prescription is derived |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |
@@ -136,7 +138,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
-| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, and manifest blocks; still no proposed-retained authorization |
+| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, and manifest blocks; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

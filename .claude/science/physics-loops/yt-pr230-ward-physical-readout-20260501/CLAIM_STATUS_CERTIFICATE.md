@@ -421,3 +421,20 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=45 FAIL=0
 ```
+
+Scalar zero-mode limit-order checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / scalar zero-mode limit-order theorem
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=20 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=46 FAIL=0
+```
