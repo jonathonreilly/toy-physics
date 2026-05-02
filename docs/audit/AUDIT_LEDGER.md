@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T20:30:33.717242+00:00
+**Generated:** 2026-05-02T20:33:52.818509+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 141 |
 | **retained_no_go** | 96 |
-| **retained_bounded** | 184 |
+| **retained_bounded** | 185 |
 | _retained_pending_chain_ | 2 |
-| unaudited | 554 |
+| unaudited | 553 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -35,22 +35,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 377 |
+| `audited_clean` | 378 |
 | `audited_conditional` | 634 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 590 |
+| `unaudited` | 589 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 526 |
+| `bounded_theorem` | 527 |
 | `decoration` | 7 |
 | `meta` | 36 |
 | `no_go` | 156 |
 | `open_gate` | 99 |
-| `positive_theorem` | 871 |
+| `positive_theorem` | 870 |
 
 | criticality | count |
 |---|---:|
@@ -191,6 +191,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_matching_obstruction_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `dm_neutrino_weak_vector_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | D | - |
 | `dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -5546,6 +5547,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_neutrino_weak_vector_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact algebraic weak-vector representation theorem for the direct local chiral bridge family Y_i, including su(2) covariance, spin-1 Casimir, trace orthogonality, and the boundary that covariance does not determine physical normalization or second-order suppression.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-zeno-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The chiral bridge family Y_i = P_R Gamma_i P_L obeys [B_a, Y_b] = i eps_{abc} Y_c and carries the spin-1 adjoint Casimir, while covariance is homogeneous and does not fix absolute normalization.  _(class `A`)_
+- **chain closes:** True — The stated representation identities follow as algebraic checks on the constructed Gamma, B, chirality projector, and bridge operators, and the runner verifies those identities with zero failures. The claim closes only in the bounded representation-theorem scope because the note explicitly excludes base-normalization and second-order suppression closure.
+- **rationale:** Within the scoped theorem, the load-bearing step is a genuine algebraic closure rather than a definition, renaming, tuned numerical match, or external comparator. The runner checks exact su(2) closure, vector covariance, Casimir identities, trace orthogonality, chirality compatibility, and rescaling invariance, all as class A algebraic identities. This is not full physical neutrino-coupling closure; the clean verdict applies only to the bounded representation-content theorem.
+- **auditor confidence:** high
 
 ### `dm_neutrino_yukawa_cascade_candidate_note_2026-04-14`
 

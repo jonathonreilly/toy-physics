@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T20:30:33.380278+00:00
-**Total pending:** 594
+**Generated:** 2026-05-02T20:33:52.526828+00:00
+**Total pending:** 593
 **Ready (all deps already at retained-grade or metadata tiers):** 121
 
 By criticality:
 - `critical`: 27
-- `high`: 228
+- `high`: 227
 - `medium`: 172
 - `leaf`: 167
 
@@ -49,7 +49,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 31 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
 | 32 | `yt_explicit_systematic_budget_note` | positive_theorem | claim_type_backfill_reaudit | high | 174 | 8.95 | Y | fresh_context_or_stronger | `scripts/frontier_yt_explicit_systematic_budget.py` |
 | 33 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 119 | 13.41 | Y | fresh_context_or_stronger | - |
-| 34 | `dm_neutrino_weak_vector_theorem_note_2026-04-15` | positive_theorem | unaudited | high | 116 | 7.37 | Y | fresh_context_or_stronger | - |
+| 34 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | positive_theorem | unaudited | high | 115 | 10.86 | Y | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_dirac_bridge_theorem.py` |
 | 35 | `pmns_selector_unique_amplitude_slot_note` | decoration | claim_type_backfill_reaudit | high | 112 | 9.32 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_unique_amplitude_slot.py` |
 | 36 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | high | 112 | 8.82 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_derivation.py` |
 | 37 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | unaudited | high | 77 | 8.79 | Y | fresh_context_or_stronger | `scripts/frontier_koide_dweh_cyclic_compression.py` |
