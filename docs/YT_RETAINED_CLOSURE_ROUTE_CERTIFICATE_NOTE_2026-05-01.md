@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=32 FAIL=0
+# SUMMARY: PASS=37 FAIL=0
 ```
 
 The runner verifies:
@@ -56,6 +56,7 @@ The runner verifies:
 | joint FH/LSZ production postprocess gate is ready | no |
 | current FH/LSZ resume support makes 12h foreground production launch safe | no |
 | chunked L12 production manifest is complete production evidence | no |
+| chunk-combiner gate has complete ready L12 chunks | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -90,6 +91,10 @@ would not create a safely checkpointed production certificate.
 The chunked manifest provides an L12 scheduling route with 63 production-targeted
 chunks of 16 saved configurations, estimated at `11.3186` hours each, but it
 is launch planning only and leaves L16/L24 and pole postprocessing open.
+The chunk-combiner gate now requires all 63 L12 chunks to be production phase
+with seed/command run-control provenance, same-source `dE/ds`, and same-source
+`C_ss(q)` before L12 combination.  It currently finds zero present chunks, and
+L12-only remains non-retained even when complete.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

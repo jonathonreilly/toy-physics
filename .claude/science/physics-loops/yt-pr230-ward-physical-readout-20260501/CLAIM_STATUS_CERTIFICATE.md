@@ -605,3 +605,24 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=54 FAIL=0
 ```
+
+FH/LSZ chunk-combiner gate checkpoint:
+
+```text
+actual_current_surface_status: open / FH-LSZ chunk combiner gate blocks partial evidence
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=37 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=63 FAIL=0
+```
+
+No retained or proposed-retained wording is authorized.  The chunk combiner
+finds no present L12 chunks and remains an acceptance gate for future
+production data, not evidence.

@@ -397,3 +397,11 @@ The fitted-kernel residue selector no-go closes the next possible shortcut:
 choosing `g_eff = 1/lambda_unit` to force a finite pole imports the missing
 scalar normalization, and the resulting residue proxy remains finite-row
 dependent.
+
+The FH/LSZ chunk-combiner gate now closes the procedural gap left by the L12
+chunk manifest.  Future L12 chunks must expose `metadata.run_control` seed and
+command provenance, production phase, same-source `dE/ds`, and same-source
+`C_ss(q)` before the branch can construct even an L12 combined summary.  The
+current gate finds `0` present / `0` ready chunks.  L12-only remains
+non-retained because L16/L24 scaling, isolated scalar-pole inverse derivative,
+FV/IR/zero-mode control, and retained-proposal certification are still open.

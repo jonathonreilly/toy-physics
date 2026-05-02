@@ -77,6 +77,7 @@ def main() -> int:
         "fh_lsz_production_postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
         "fh_lsz_production_checkpoint_granularity": "outputs/yt_fh_lsz_production_checkpoint_granularity_gate_2026-05-01.json",
         "fh_lsz_chunked_production_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
+        "fh_lsz_chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
     }
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
@@ -267,6 +268,12 @@ def main() -> int:
         )
         < 12.0
     )
+    chunk_combiner_not_evidence = (
+        "chunk combiner gate"
+        in certificates["fh_lsz_chunk_combiner_gate"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_chunk_combiner_gate"].get("proposal_allowed") is False
+        and certificates["fh_lsz_chunk_combiner_gate"].get("chunk_summary", {}).get("ready_chunks") == 0
+    )
     joint_resource_multiday = (
         float(certificates["joint_resource_projection"].get("projection", {}).get("joint_mass_scaled_hours", 0.0)) > 1000.0
         and certificates["joint_resource_projection"].get("proposal_allowed") is False
@@ -427,6 +434,11 @@ def main() -> int:
         certificates["fh_lsz_chunked_production_manifest"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-chunk-combiner-gate-not-evidence",
+        chunk_combiner_not_evidence,
+        certificates["fh_lsz_chunk_combiner_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "joint-fh-lsz-resource-is-multiday",
         joint_resource_multiday,
         f"hours={certificates['joint_resource_projection'].get('projection', {}).get('joint_mass_scaled_hours')}",
@@ -518,6 +530,9 @@ def main() -> int:
             "the smallest joint shard exceeds the foreground campaign window.  "
             "A chunked L12 launch manifest is available as scheduling support, "
             "but it is not production evidence and does not cover L16/L24.  "
+            "The chunk combiner gate now rejects absent or partial chunks and "
+            "requires production metadata plus run-control provenance before "
+            "even an L12 combined summary can be constructed.  "
             "The actual interacting "
             "scalar pole derivative theorem and production evidence remain open.  "
             "These cannot be assumed."

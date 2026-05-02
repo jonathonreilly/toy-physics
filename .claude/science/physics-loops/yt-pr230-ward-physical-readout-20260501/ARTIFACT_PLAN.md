@@ -347,7 +347,10 @@ Next artifact:
   blocked until chunk-level checkpointing or an external scheduler can finish
   at least the `180.069` hour smallest joint shard
   (a chunked L12 manifest now supplies foreground-sized launch planning, but
-  it remains non-evidence and larger volumes are still open)
+  it remains non-evidence and larger volumes are still open); the chunk
+  combiner gate now requires all 63 L12 outputs to be production phase with
+  run-control provenance before constructing even an L12 combined summary, and
+  currently finds zero ready chunks
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

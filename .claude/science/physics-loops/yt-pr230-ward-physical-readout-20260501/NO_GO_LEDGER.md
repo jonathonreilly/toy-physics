@@ -947,6 +947,20 @@ configurations, with a conservative estimate of `11.3186` hours per chunk.
 This is not production evidence, does not cover L16/L24, and still requires a
 multi-chain combination plus scalar-pole postprocess certificate.
 
+FH/LSZ chunk combiner gate blocks partial evidence:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The L12 route now has an acceptance gate, not evidence.  The gate reconstructs
+63 expected chunks, requires production-phase metadata, same-source `dE/ds`,
+same-source `C_ss(q)`, and `metadata.run_control` seed/command provenance, and
+finds `0` present / `0` ready chunks.  Even a future complete L12 combination
+would still be non-retained without L16/L24, isolated scalar-pole derivative,
+FV/IR/zero-mode control, and retained-proposal certification.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

@@ -81,6 +81,7 @@ def main() -> int:
         "fh_lsz_chunked_production_manifest": load(
             "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json"
         ),
+        "fh_lsz_chunk_combiner_gate": load("outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -294,6 +295,12 @@ def main() -> int:
         "chunked production manifest" in str(statuses["fh_lsz_chunked_production_manifest"])
         or "bounded-support" in str(statuses["fh_lsz_chunked_production_manifest"]),
         statuses["fh_lsz_chunked_production_manifest"],
+    )
+    report(
+        "fh-lsz-chunk-combiner-gate-not-evidence",
+        "chunk combiner gate" in str(statuses["fh_lsz_chunk_combiner_gate"])
+        or "open" in str(statuses["fh_lsz_chunk_combiner_gate"]),
+        statuses["fh_lsz_chunk_combiner_gate"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
@@ -559,6 +566,8 @@ def main() -> int:
             "checkpointed production evidence.  A chunked L12 production "
             "manifest gives foreground-sized launch commands, but it remains "
             "planning support and does not cover L16/L24 or the pole postprocess.  "
+            "The chunk combiner gate now blocks absent or partial chunks and "
+            "requires run-control provenance before L12 combination.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

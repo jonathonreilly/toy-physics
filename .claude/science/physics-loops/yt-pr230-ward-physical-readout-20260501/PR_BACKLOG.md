@@ -546,3 +546,20 @@ Adds an FH/LSZ chunked production manifest:
   planning only, L16/L24 still need scheduler/checkpoint support, and no
   scalar pole postprocess certificate exists.
 ```
+
+Latest FH/LSZ chunk-combiner gate checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ chunk combiner gate:
+- adds `metadata.run_control` provenance to future production-harness
+  certificates, including seed and command settings;
+- reconstructs the 63 expected L12 chunk outputs and requires production
+  phase, same-source `dE/ds`, same-source `C_ss(q)`, and run-control
+  provenance before L12 combination;
+- validator passes `PASS=7 FAIL=0`; retained-route gate reports
+  `PASS=37 FAIL=0`; campaign status now consumes 67 route certificates and
+  reports `PASS=63 FAIL=0`;
+- still no retained/proposed-retained closure: zero chunks are present, L12
+  alone is not closure, and L16/L24 plus isolated-pole/FV/IR postprocess remain
+  open.
+```

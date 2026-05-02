@@ -105,15 +105,18 @@ probability.
    exact launch commands now exists, but it is not evidence.  The postprocess
    gate now requires production-phase output, same-source `dE/ds`,
    same-source `Gamma_ss(q)`, isolated-pole `dGamma_ss/dp^2`, FV/IR/zero-mode
-   control, and retained-proposal certification before this route can make a
-   physical `y_t` claim.  The checkpoint-granularity gate shows current
-   `--resume` is only whole-volume resume; the smallest shard is projected at
-   `180.069` hours, so a foreground launch needs chunk-level checkpointing or
-   an external scheduler.  A chunked L12 manifest now gives 63 foreground-sized
-   production-targeted launch commands, but this remains planning support and
-   does not cover L16/L24 or pole postprocessing.  The same-source
-   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
-   pole/derivative control, not setting `kappa_s`.
+  control, and retained-proposal certification before this route can make a
+  physical `y_t` claim.  The checkpoint-granularity gate shows current
+  `--resume` is only whole-volume resume; the smallest shard is projected at
+  `180.069` hours, so a foreground launch needs chunk-level checkpointing or
+  an external scheduler.  A chunked L12 manifest now gives 63 foreground-sized
+  production-targeted launch commands, but this remains planning support and
+  does not cover L16/L24 or pole postprocessing.  The chunk combiner gate now
+  closes the next procedural gap: future L12 chunks must be production phase,
+  seed/command-auditable, and same-source FH/LSZ complete before L12
+  combination; the current ready chunk count is zero.  The same-source
+  invariant-readout theorem now gives the exact response formula; the remaining blocker is production
+  pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

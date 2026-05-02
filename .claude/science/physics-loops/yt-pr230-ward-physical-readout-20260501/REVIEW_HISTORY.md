@@ -1584,3 +1584,30 @@ The manifest makes L12 foreground scheduling possible as 63
 production-targeted chunks of 16 configurations, estimated at `11.3186` hours
 each.  It is not evidence and does not solve L16/L24 or scalar pole
 postprocessing.
+
+## Review-Loop Backpressure - FH/LSZ Chunk Combiner Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN ACCEPTANCE GATE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py scripts/yt_direct_lattice_correlator_production.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The gate requires all 63 L12 chunks to be production phase with same-source
+FH/LSZ measurements and run-control seed/command provenance before L12
+combination.  It finds zero present chunks and authorizes no retained or
+proposed-retained wording.

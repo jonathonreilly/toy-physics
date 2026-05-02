@@ -472,6 +472,12 @@ L12 chunk is still only a production-targeted launch command until it completes
 and is combined with enough independent chunks by a postprocess certificate.
 It cannot be used as a reduced-pilot substitute for production evidence.
 
+The chunk-combiner gate adds a provenance requirement to the same firewall.
+Future L12 chunks must record `metadata.run_control` with seed and command
+settings, and must pass production-phase same-source FH/LSZ checks before
+combination.  Missing, partial, or L12-only chunk sets are forbidden as proof
+selectors for physical `y_t`.
+
 Positive-closure candidates left after the assumption exercise:
 
 1. production/statistics with momentum modes plus a derived heavy matching
