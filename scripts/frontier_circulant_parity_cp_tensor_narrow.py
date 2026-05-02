@@ -37,7 +37,7 @@ import sys
 
 try:
     import sympy
-    from sympy import Rational, simplify, symbols, Matrix, eye, zeros, I as sym_I, im, re
+    from sympy import Rational, symbols, Matrix, eye, zeros, I as sym_I, im, re
 except ImportError:
     print("FAIL: sympy required for exact algebra")
     sys.exit(1)
@@ -87,11 +87,11 @@ check("P_{23}^2 = I exact (involution)",
       P23 * P23 == I3)
 
 # Residual-Z_2 swap: P_{23} S P_{23} = S^2
-swap_S = simplify(P23 * S * P23 - S2)
+swap_S = sympy.simplify(P23 * S * P23 - S2)
 check("P_{23} S P_{23} = S^2 exact (Z_2 swap)",
       swap_S == zeros(3, 3))
 
-swap_S2 = simplify(P23 * S2 * P23 - S)
+swap_S2 = sympy.simplify(P23 * S2 * P23 - S)
 check("P_{23} S^2 P_{23} = S exact (inverse direction)",
       swap_S2 == zeros(3, 3))
 
@@ -99,22 +99,22 @@ check("P_{23} S^2 P_{23} = S exact (inverse direction)",
 # ----------------------------------------------------------------------------
 section("Part 2: I and (S + S^2) are Z_2-even; (S - S^2) is Z_2-odd up to factor i")
 # ----------------------------------------------------------------------------
-even_basis_I = simplify(P23 * I3 * P23 - I3)
+even_basis_I = sympy.simplify(P23 * I3 * P23 - I3)
 check("P_{23} I P_{23} = I exact (I is Z_2-even)",
       even_basis_I == zeros(3, 3))
 
-even_basis_sum = simplify(P23 * (S + S2) * P23 - (S + S2))
+even_basis_sum = sympy.simplify(P23 * (S + S2) * P23 - (S + S2))
 check("P_{23} (S + S^2) P_{23} = (S + S^2) exact (Z_2-even)",
       even_basis_sum == zeros(3, 3))
 
 # Z_2-odd basis: i(S - S^2). Under P_23: P_23 (S - S^2) P_23 = (S^2 - S) = -(S - S^2),
 # and Hermitian "i" is itself fixed (a scalar), so i(S - S^2) -> -i(S - S^2).
-odd_basis_diff = simplify(P23 * (S - S2) * P23 - (-(S - S2)))
+odd_basis_diff = sympy.simplify(P23 * (S - S2) * P23 - (-(S - S2)))
 check("P_{23} (S - S^2) P_{23} = -(S - S^2) exact (sign-flip)",
       odd_basis_diff == zeros(3, 3))
 
 # P_{23} [i(S - S^2)] P_{23} = -i(S - S^2)
-odd_basis = simplify(P23 * (sym_I * (S - S2)) * P23 - (-sym_I * (S - S2)))
+odd_basis = sympy.simplify(P23 * (sym_I * (S - S2)) * P23 - (-sym_I * (S - S2)))
 check("P_{23} [i(S - S^2)] P_{23} = -i(S - S^2) exact (Z_2-odd)",
       odd_basis == zeros(3, 3))
 
@@ -128,13 +128,13 @@ K = d * I3 + c_even * (S + S2) + sym_I * c_odd * (S - S2)
 # K is Hermitian
 K_dagger = K.H
 check("K is Hermitian (K = K^dagger)",
-      simplify(K - K_dagger) == zeros(3, 3))
+      sympy.simplify(K - K_dagger) == zeros(3, 3))
 
 # Parity transform: P_{23} K P_{23}
-K_parity = simplify(P23 * K * P23)
+K_parity = sympy.simplify(P23 * K * P23)
 expected_parity = d * I3 + c_even * (S + S2) - sym_I * c_odd * (S - S2)
 check("P_{23} K P_{23} = d I + c_even(S+S^2) - i c_odd(S-S^2) (parity sends c_odd -> -c_odd)",
-      simplify(K_parity - expected_parity) == zeros(3, 3))
+      sympy.simplify(K_parity - expected_parity) == zeros(3, 3))
 
 
 # ----------------------------------------------------------------------------
@@ -144,13 +144,13 @@ section("Part 4: CP-tensor formula Im[(K_01)^2] = 2 c_even c_odd")
 K_01 = K[0, 1]
 print(f"\n  K[0, 1] = {K_01}")
 
-K_01_squared = simplify(K_01**2)
+K_01_squared = sympy.simplify(K_01**2)
 print(f"  K[0, 1]^2 = {K_01_squared}")
 
-K_01_squared_imag = simplify(im(K_01_squared))
+K_01_squared_imag = sympy.simplify(im(K_01_squared))
 expected_cp_tensor = 2 * c_even * c_odd
 check("Im[(K_01)^2] = 2 c_even c_odd exact",
-      simplify(K_01_squared_imag - expected_cp_tensor) == 0,
+      sympy.simplify(K_01_squared_imag - expected_cp_tensor) == 0,
       detail=f"Im[K_01^2] = {K_01_squared_imag}")
 
 
@@ -159,7 +159,7 @@ section("Part 5: vanishing of Im[(K_01)^2] at c_odd = 0")
 # ----------------------------------------------------------------------------
 K_even_only = K.subs(c_odd, 0)
 K01_even = K_even_only[0, 1]
-K01_even_squared_imag = simplify(im(K01_even**2))
+K01_even_squared_imag = sympy.simplify(im(K01_even**2))
 check("c_odd = 0 forces Im[(K_01)^2] = 0 exact",
       K01_even_squared_imag == 0,
       detail=f"Im[K_01^2] at c_odd = 0 = {K01_even_squared_imag}")
@@ -171,10 +171,10 @@ section("Part 6: nonzero scalar at concrete instance (d, c_even, c_odd) = (1, 1/
 sub = {d: Rational(1), c_even: Rational(1, 3), c_odd: Rational(1, 5)}
 K_concrete = K.subs(sub)
 K01_concrete = K_concrete[0, 1]
-K01_concrete_squared_imag = simplify(im(K01_concrete**2))
+K01_concrete_squared_imag = sympy.simplify(im(K01_concrete**2))
 expected_cp_concrete = 2 * Rational(1, 3) * Rational(1, 5)  # = 2/15
 check("Im[(K_01)^2] = 2 c_even c_odd = 2/15 at (1, 1/3, 1/5)",
-      simplify(K01_concrete_squared_imag - expected_cp_concrete) == 0,
+      sympy.simplify(K01_concrete_squared_imag - expected_cp_concrete) == 0,
       detail=f"Im[K_01^2] = {K01_concrete_squared_imag}, expected = {expected_cp_concrete}")
 
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T20:14:55.951909+00:00",
+  "generated_at": "2026-05-02T20:21:04.233544+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -1368,6 +1368,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_chronology_operational_no_past_signaling.py"
+    },
+    "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 15,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_circulant_parity_cp_tensor_narrow.py"
     },
     "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25": {
       "assert_count": 1,
@@ -19185,6 +19197,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_circulant_parity_cp_tensor_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 15,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_ckm_a_squared_below_w2_y_quantum_closure.py": {
       "assert_count": 1,
       "claims": [
@@ -35913,15 +35940,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 106,
+    "decoration_candidates": 107,
     "dominant_class_distribution": {
-      "A": 9,
+      "A": 10,
       "B": 155,
       "C": 515,
       "D": 198,
       "none": 411
     },
-    "runners_classified": 1288,
+    "runners_classified": 1289,
     "runners_with_C": 617,
     "runners_with_D": 312
   }
