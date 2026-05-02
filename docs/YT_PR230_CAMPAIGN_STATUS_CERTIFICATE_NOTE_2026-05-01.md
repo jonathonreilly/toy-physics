@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=65 FAIL=0
+# SUMMARY: PASS=70 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -55,6 +55,7 @@ The certificate consumes the PR-local route certificates for:
 - source-to-Higgs LSZ closure attempt;
 - Cl(3)/Z3 source-unit normalization no-go;
 - gauge-VEV source-overlap no-go;
+- scalar renormalization-condition source-overlap no-go;
 - scalar-source response harness extension;
 - Feynman-Hellmann production protocol certificate;
 - same-source scalar two-point LSZ measurement primitive;
@@ -136,6 +137,7 @@ the visible shortcut routes:
 | source-to-Higgs LSZ closure attempt | no allowed current-surface premise fixes `kappa_s` |
 | Cl(3)/Z3 source-unit normalization | unit substrate/source conventions fix `s`, not the canonical Higgs field metric |
 | gauge-VEV source-overlap no-go | canonical `v` and gauge-boson masses fix an already identified Higgs metric, not the source overlap `h = kappa_s s` |
+| scalar renormalization-condition source-overlap no-go | canonical `Z_h = 1` fixes the Higgs field residue, not the source operator matrix element `<0|O_s|h>` |
 | scalar-source response harness extension | production harness now emits `dE/ds`, but not physical `dE/dh` without `kappa_s` |
 | Feynman-Hellmann production protocol | common-ensemble symmetric source shifts and correlated `dE/ds` fits are specified; `kappa_s` remains required |
 | same-source scalar two-point LSZ measurement | `C_ss(q)` / `Gamma_ss(q)` object is executable, but no controlled pole/continuum limit fixes `kappa_s` |
@@ -184,7 +186,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
-| retained-closure route certificate | refreshed gate includes new source-unit, gauge-VEV source-overlap no-go, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, postprocess-gate block, checkpoint-granularity block, chunked-manifest block, chunk-combiner gate, pole-fit kinematics gate, pole-fit mode/noise budget, eight-mode noise variance gate, noise-subsample diagnostics harness, and variance calibration manifest; still no proposed-retained authorization |
+| retained-closure route certificate | refreshed gate includes new source-unit, gauge-VEV source-overlap no-go, scalar renormalization-condition source-overlap no-go, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, postprocess-gate block, checkpoint-granularity block, chunked-manifest block, chunk-combiner gate, pole-fit kinematics gate, pole-fit mode/noise budget, eight-mode noise variance gate, noise-subsample diagnostics harness, and variance calibration manifest; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

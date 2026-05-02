@@ -20,13 +20,13 @@ bare_retained_allowed: false
 
 This note records the refreshed assumptions exercise for the PR #230 rerun.
 The prior assumptions ledger existed, but it had not yet absorbed the kinetic
-route and matching obstruction.
+route, matching obstruction, and source-overlap renormalization boundary.
 
 ## Result
 
 ```text
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
-# SUMMARY: PASS=8 FAIL=0
+# SUMMARY: PASS=9 FAIL=0
 ```
 
 The refreshed `A_min` allows only:
@@ -49,6 +49,8 @@ The stress test explicitly forbids:
 - `c2 = 1` unless derived from the action in the same route;
 - `Z_match = 1` unless derived as a matching theorem.
 - `kappa_s = 1` unless derived by scalar LSZ/canonical normalization.
+- canonical `Z_h = 1` as a substitute for the source operator overlap
+  `<0|O_s|h>`.
 
 ## Consequence
 

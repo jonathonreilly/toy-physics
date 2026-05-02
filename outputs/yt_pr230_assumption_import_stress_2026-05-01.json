@@ -5,11 +5,12 @@
     "kinetic_matching": "exact negative boundary / heavy kinetic matching obstruction",
     "momentum_pilot": "bounded-support / momentum pilot scaling",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
-    "scalar_ir": "exact negative boundary / scalar ladder IR zero-mode obstruction"
+    "scalar_ir": "exact negative boundary / scalar ladder IR zero-mode obstruction",
+    "scalar_renormalization_condition_overlap": "exact negative boundary / scalar renormalization-condition source-overlap no-go"
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 8,
+  "pass_count": 9,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [
@@ -20,5 +21,5 @@
     "does not use yt_ward_identity as y_t authority",
     "does not set kappa_s to one without scalar LSZ/canonical normalization"
   ],
-  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
+  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  Canonical Z_h=1 does not derive the source operator overlap <0|O_s|h>.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
 }

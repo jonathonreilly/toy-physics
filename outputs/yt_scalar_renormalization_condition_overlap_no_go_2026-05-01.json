@@ -1,0 +1,63 @@
+{
+  "actual_current_surface_status": "exact negative boundary / scalar renormalization-condition source-overlap no-go",
+  "countermodels": [
+    {
+      "C_ss_pole_residue": 0.25,
+      "canonical_h_residue": 1.0,
+      "canonical_y_h": 0.8,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 0.282842712474619,
+      "pole_mass_squared": 0.36,
+      "same_source_invariant_readout": 0.565685424949238,
+      "source_overlap_z_s": 0.5,
+      "v_canonical": 1.0,
+      "wrong_dE_dh_if_overlap_ignored": 0.282842712474619
+    },
+    {
+      "C_ss_pole_residue": 1.0,
+      "canonical_h_residue": 1.0,
+      "canonical_y_h": 0.8,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 0.565685424949238,
+      "pole_mass_squared": 0.36,
+      "same_source_invariant_readout": 0.565685424949238,
+      "source_overlap_z_s": 1.0,
+      "v_canonical": 1.0,
+      "wrong_dE_dh_if_overlap_ignored": 0.565685424949238
+    },
+    {
+      "C_ss_pole_residue": 4.0,
+      "canonical_h_residue": 1.0,
+      "canonical_y_h": 0.8,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 1.131370849898476,
+      "pole_mass_squared": 0.36,
+      "same_source_invariant_readout": 0.565685424949238,
+      "source_overlap_z_s": 2.0,
+      "v_canonical": 1.0,
+      "wrong_dE_dh_if_overlap_ignored": 1.131370849898476
+    }
+  ],
+  "exact_next_action": "Measure or derive the same-source scalar pole residue/overlap; canonical Higgs kinetic normalization alone is only one side of the LSZ bridge.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+    "fh_lsz_invariant_readout": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
+    "gauge_vev_source_overlap": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
+    "source_reparametrization": "outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Canonical Z_h=1 does not derive the source operator overlap z_s or kappa_s.",
+  "strict_non_claims": [
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0 as proof input",
+    "does not set c2 or Z_match to one",
+    "does not treat reduced pilots as production evidence"
+  ],
+  "verdict": "The canonical Higgs kinetic renormalization condition fixes the normalization of an already-identified h field, represented here by unit h-h pole residue.  It does not fix the operator overlap z_s=<0|O_s|h> of the Cl(3)/Z3 additive scalar source.  Countermodels can share Z_h=1, the Higgs pole mass, v, and the canonical h Yukawa while changing dE/ds and the source pole residue C_ss.  The physical readout is recovered only by the same-source invariant combination dE/ds divided by sqrt(Res C_ss), or equivalently by a derived source-overlap theorem.  Therefore a kinetic renormalization condition cannot replace the scalar LSZ/source-pole measurement."
+}

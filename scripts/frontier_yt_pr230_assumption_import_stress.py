@@ -50,6 +50,9 @@ def main() -> int:
         "momentum_pilot": load("outputs/yt_momentum_pilot_scaling_certificate_2026-05-01.json"),
         "scalar_ir": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "projector_norm": load("outputs/yt_scalar_ladder_projector_normalization_obstruction_2026-05-01.json"),
+        "scalar_renormalization_condition_overlap": load(
+            "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json"
+        ),
     }
 
     required_terms = [
@@ -60,6 +63,7 @@ def main() -> int:
         "c2 = 1 unless derived",
         "Z_match = 1 unless derived",
         "kappa_s = 1 unless derived",
+        "source operator overlap",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -88,6 +92,12 @@ def main() -> int:
         and "projector" in str(certificates["projector_norm"].get("actual_current_surface_status")),
         "IR/zero-mode and projector normalization obstructions loaded",
     )
+    report(
+        "canonical-kinetic-normalization-not-source-overlap",
+        "renormalization-condition source-overlap no-go"
+        in str(certificates["scalar_renormalization_condition_overlap"].get("actual_current_surface_status")),
+        certificates["scalar_renormalization_condition_overlap"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -96,7 +106,8 @@ def main() -> int:
             "yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, "
             "reduced cold pilots, undetermined c2, undetermined Z_match, and "
             "kappa_s = 1 are forbidden as proof shortcuts unless the relevant "
-            "normalization or matching theorem is derived.  No current route "
+            "normalization or matching theorem is derived.  Canonical Z_h=1 "
+            "does not derive the source operator overlap <0|O_s|h>.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

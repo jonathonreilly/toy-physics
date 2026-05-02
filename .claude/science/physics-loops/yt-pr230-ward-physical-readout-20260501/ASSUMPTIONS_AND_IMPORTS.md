@@ -501,6 +501,10 @@ metadata can test the lower-noise route.
 The canonical electroweak VEV and gauge-boson masses are not an assumption
 license for `kappa_s=1`.  They normalize canonical `h` after it is identified;
 they do not identify the Cl(3)/Z3 source coordinate `s` with that field.
+The canonical Higgs kinetic renormalization condition is likewise not an
+assumption license for `kappa_s=1`.  `Z_h=1` fixes the h-field residue, not the
+source operator overlap `<0|O_s|h>`; that overlap must come from same-source
+pole residue data or a retained source-overlap theorem.
 
 Positive-closure candidates left after the assumption exercise:
 

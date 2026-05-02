@@ -443,6 +443,12 @@ The gauge-VEV source-overlap no-go now closes the shortcut of using electroweak
 an already identified canonical Higgs field; they do not derive the overlap
 `h = kappa_s s` for the Cl(3)/Z3 scalar source.
 
+The scalar renormalization-condition source-overlap no-go closes the adjacent
+kinetic-normalization shortcut.  Canonical `Z_h=1` fixes the `h`-field pole
+residue but not the source operator matrix element `<0|O_s|h>`.  The same
+canonical Higgs sector can support different source responses unless the
+same-source pole residue is measured or derived.
+
 Next exact action: keep chunk001 running under the non-evidence combiner gate.
 If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
 If it remains running, continue analytic scalar denominator/residue work or

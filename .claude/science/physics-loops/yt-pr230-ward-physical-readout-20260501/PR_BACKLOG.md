@@ -686,3 +686,21 @@ Adds a gauge-VEV source-overlap no-go:
 - still no retained/proposed-retained closure: electroweak `v` and gauge
   masses do not replace scalar LSZ residue or same-source production pole data.
 ```
+
+Latest scalar renormalization-condition source-overlap checkpoint text for PR #230:
+
+```text
+Adds a scalar renormalization-condition source-overlap no-go:
+- constructs countermodels with identical canonical Higgs `Z_h=1`, pole mass,
+  `v`, and canonical `y_h`, but different source operator overlap
+  `<0|O_s|h>`;
+- shows `dE/ds` changes unless the same-source pole residue `Res C_ss` is
+  measured or derived; the invariant readout `dE/ds / sqrt(Res C_ss)` stays
+  fixed only when that residue is included;
+- runner passes `PASS=11 FAIL=0`; retained-route gate reports
+  `PASS=44 FAIL=0`; campaign status consumes 74 certificates and reports
+  `PASS=70 FAIL=0`;
+- still no retained/proposed-retained closure: canonical kinetic
+  normalization does not replace scalar LSZ residue or same-source production
+  pole data.
+```

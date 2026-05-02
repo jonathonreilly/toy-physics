@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=39 FAIL=0
+# SUMMARY: PASS=44 FAIL=0
 ```
 
 The runner verifies:
@@ -52,6 +52,7 @@ The runner verifies:
 | hidden scalar-kernel enhancement authority exists | no |
 | fitted scalar-kernel multiplier derives a retained LSZ residue | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
+| canonical Higgs kinetic renormalization fixes the source overlap | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ production postprocess gate is ready | no |
 | current FH/LSZ resume support makes 12h foreground production launch safe | no |
@@ -118,6 +119,9 @@ controls, but no completed calibration output exists.
 The gauge-VEV source-overlap no-go blocks another analytic shortcut: canonical
 `v` and gauge-boson masses fix the metric of an already identified Higgs field,
 not the overlap between the substrate source `s` and canonical `h`.
+The scalar renormalization-condition source-overlap no-go blocks the remaining
+kinetic-normalization shortcut: `Z_h=1` fixes the canonical Higgs field
+residue, not the source operator matrix element `<0|O_s|h>`.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

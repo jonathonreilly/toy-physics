@@ -1065,6 +1065,20 @@ overlap `h = kappa_s s`; countermodels keep the gauge sector fixed while
 changing `dE/ds` and the `dE/dh` readout that would follow from setting
 `kappa_s=1`.
 
+Canonical kinetic renormalization does not fix source overlap:
+
+```text
+python3 scripts/frontier_yt_scalar_renormalization_condition_overlap_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+The canonical Higgs condition `Z_h=1` fixes the residue of an already
+identified `h` field.  It does not fix the Cl(3)/Z3 source operator matrix
+element `<0|O_s|h>`.  Countermodels share the same canonical Higgs residue,
+pole mass, VEV, and canonical Yukawa while changing `dE/ds` and `Res C_ss`.
+Only the same-source pole-residue combination
+`dE/ds / sqrt(Res C_ss)` removes that freedom.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

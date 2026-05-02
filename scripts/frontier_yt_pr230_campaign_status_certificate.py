@@ -65,6 +65,9 @@ def main() -> int:
         "source_to_higgs_lsz": load("outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"),
         "cl3_source_unit": load("outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json"),
         "gauge_vev_source_overlap": load("outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json"),
+        "scalar_renormalization_condition_overlap": load(
+            "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json"
+        ),
         "scalar_source_response_harness": load("outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"),
         "fh_production_protocol": load("outputs/yt_fh_production_protocol_certificate_2026-05-01.json"),
         "same_source_scalar_two_point": load("outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json"),
@@ -247,6 +250,12 @@ def main() -> int:
         "gauge-VEV source-overlap no-go" in str(statuses["gauge_vev_source_overlap"])
         or "exact negative boundary" in str(statuses["gauge_vev_source_overlap"]),
         statuses["gauge_vev_source_overlap"],
+    )
+    report(
+        "canonical-kinetic-renormalization-does-not-fix-source-overlap",
+        "renormalization-condition source-overlap no-go"
+        in str(statuses["scalar_renormalization_condition_overlap"]),
+        statuses["scalar_renormalization_condition_overlap"],
     )
     report(
         "scalar-source-response-harness-needs-kappa",
@@ -587,9 +596,12 @@ def main() -> int:
             "premise that fixes kappa_s.  The harness now supports explicit "
             "uniform scalar-source shifts and emits dE/ds response analysis, "
             "and the gauge-VEV source-overlap no-go blocks using v or gauge "
-            "masses to identify the substrate source with canonical h.  "
-            "which advances the Feynman-Hellmann measurement route but still "
-            "does not convert to physical dE/dh without kappa_s.  Remaining "
+            "masses to identify the substrate source with canonical h.  The "
+            "canonical kinetic renormalization condition also does not close "
+            "the bridge: Z_h=1 fixes the h-field residue, not the source "
+            "operator overlap <0|O_s|h>.  This advances the Feynman-Hellmann "
+            "measurement route but still does not convert to physical dE/dh "
+            "without kappa_s.  Remaining "
             "closure requires production evidence or a genuinely new scalar "
             "LSZ/heavy-matching theorem.  The production Feynman-Hellmann "
             "protocol is now specified: common-ensemble symmetric source "
