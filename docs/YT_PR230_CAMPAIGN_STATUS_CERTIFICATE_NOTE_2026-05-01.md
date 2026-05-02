@@ -415,3 +415,10 @@ Latest generic chunk target-timeseries checkpoint: campaign status now includes
 chunk011 target-series check and is ready for chunk012 after the combiner,
 ready-set, response-stability, and autocorrelation/ESS gates are refreshed.
 No retained/proposed-retained wording is authorized.
+
+Latest chunk012 target-timeseries checkpoint: campaign status now includes the
+chunk012 generic checkpoint and reports `PASS=131 FAIL=0` over 135
+certificates.  The ready L12 set is `12/63` chunks and `192/1000` saved
+configurations.  Chunks011-012 have target time series, but chunks001-010 do
+not; response stability still fails and no retained/proposed-retained wording
+is authorized.

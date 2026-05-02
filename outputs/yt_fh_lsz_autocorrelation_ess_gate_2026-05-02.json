@@ -265,6 +265,31 @@
         "source_response_target_timeseries": true
       },
       "target_timeseries_complete": true
+    },
+    {
+      "chunk_index": 12,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk012_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 958.8127509228149,
+        "n": 1000,
+        "rho_first_lags": [
+          0.01897318087115234,
+          0.0023128674138313604,
+          0.0001922064824587523,
+          -0.00022662160093724285
+        ],
+        "tau_int_initial_positive": 0.5214782547674425,
+        "window_lag": 4
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
+      },
+      "target_timeseries_complete": true
     }
   ],
   "exact_next_action": "Continue future chunks with target time-series serialization, rerun or replace older chunks if target ESS is required for the ready set, or emit a predeclared blocking/bootstrap certificate; then rerun this gate before using chunked FH/LSZ output as production evidence.",
@@ -292,7 +317,8 @@
     8,
     9,
     10,
-    11
+    11,
+    12
   ],
   "ready_count_reaches_threshold": true,
   "strict_non_claims": [
@@ -302,10 +328,11 @@
     "does not set kappa_s = 1"
   ],
   "target_timeseries_summary": {
-    "complete_count": 1,
+    "complete_count": 2,
     "complete_for_all_ready_chunks": false,
     "complete_indices": [
-      11
+      11,
+      12
     ],
     "incomplete_indices": [
       1,
@@ -319,7 +346,7 @@
       9,
       10
     ],
-    "ready_count": 11
+    "ready_count": 12
   },
   "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Chunk011 now exposes per-configuration target time series for same-source dE/ds and C_ss(q)/Gamma_ss(q), but the older ready chunks do not.  The load-bearing FH/LSZ target effective sample size therefore cannot be certified for the ready set.  Current chunks remain bounded support only until target-observable blocking/bootstrap data or an equivalent autocorrelation certificate is available for the production set."
 }

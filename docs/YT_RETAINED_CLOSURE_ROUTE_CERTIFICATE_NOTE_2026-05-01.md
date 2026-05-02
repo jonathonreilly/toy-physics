@@ -480,6 +480,12 @@ reuses the chunk011 target-series acceptance checks for any completed
 runner.  The retained-route certificate is refreshed at `PASS=104 FAIL=0` and
 still authorizes no retained/proposed-retained wording.
 
+Chunk012 is now processed through that generic runner.  The ready set is
+`12/63` L12 chunks with `192/1000` saved configurations.  Response stability
+still fails, target ESS is not available for the whole ready set, and the
+retained-route certificate is refreshed at `PASS=105 FAIL=0` with no
+retained/proposed-retained authorization.
+
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive
 pole-plus-continuum family can be realized by reflection-positive Euclidean

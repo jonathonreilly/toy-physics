@@ -2013,3 +2013,15 @@ time series.  It cannot certify target ESS for the whole ready set, response
 stability, combined L12, L16/L24 scaling, scalar-pole derivative/model-class
 control, FV/IR control, or canonical-Higgs identity.  Do not treat a generic
 chunk checkpoint as retained/proposed-retained evidence.
+
+Chunk012 target time series are not production closure:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 12
+# SUMMARY: PASS=14 FAIL=0
+```
+
+Chunk012 is the second target-timeseries chunk, but the ready set is still only
+12/63 L12 chunks.  Response stability fails, chunks001-010 still lack target
+series, and no scalar-pole/canonical-Higgs identity gate is closed.  Do not
+use chunk012 or 12/63 L12 support as retained/proposed-retained evidence.

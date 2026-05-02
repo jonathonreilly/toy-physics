@@ -1592,3 +1592,38 @@ is authorized.
 Next exact action: let chunk012 continue.  If it completes, refresh the
 combiner, ready-set, response-stability, autocorrelation/ESS, then run the
 generic checkpoint with `--chunk-index 12`.
+
+Block 154 processed FH/LSZ chunk012 target-timeseries output:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 12
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=105 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=131 FAIL=0
+```
+
+Result: chunk012 is production-phase, seed-controlled, and carries target time
+series.  The ready set is now 12/63 L12 chunks and 192/1000 saved
+configurations.  Response stability still fails and target ESS remains blocked
+because chunks001-010 lack target time series.  No retained/proposed-retained
+wording is authorized.
+
+Next exact action: continue target-timeseries chunks, replace older chunks if
+a same-ready-set target ESS certificate is required, or pivot to actual
+non-source identity rows/theorems.

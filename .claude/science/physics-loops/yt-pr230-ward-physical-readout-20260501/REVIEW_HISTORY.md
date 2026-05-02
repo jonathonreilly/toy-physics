@@ -3412,3 +3412,18 @@ Review stance: production-processing support / claim firewall.
 Disposition: bounded production support.  The reusable runner validates
 chunk011 target-series rows and is ready for chunk012 processing, but one
 chunk or a partial L12 ready set is not retained/proposed-retained evidence.
+
+## 2026-05-02 - Block 154 FH/LSZ Chunk012 Target-Timeseries Processing
+
+Review stance: production-output checkpoint / claim firewall.
+
+- Added chunk012 production output and artifact.
+- Added `docs/YT_FH_LSZ_CHUNK012_TARGET_TIMESERIES_CHECKPOINT_NOTE_2026-05-02.md`.
+- Added `outputs/yt_fh_lsz_chunk012_target_timeseries_generic_checkpoint_2026-05-02.json`.
+- Updated chunk combiner, ready-set, response-stability, autocorrelation/ESS,
+  retained-route, and campaign certificates.
+
+Disposition: bounded production support.  Chunk012 is seed-controlled and has
+target time series, raising the ready set to 12/63 L12 chunks.  The ready set
+still lacks target ESS and response stability, and no canonical-Higgs identity
+is supplied.  No retained or proposed-retained wording is allowed.

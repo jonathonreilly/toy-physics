@@ -2081,3 +2081,25 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The reusable checkpoint is support for processing future chunks.  It is not a
 target ESS certificate, not response stability, not full L12/L16/L24
 production, and not canonical-Higgs closure.
+
+FH/LSZ chunk012 target-timeseries checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ chunk012 generic target-timeseries checkpoint
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 12
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=105 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=131 FAIL=0
+```
+
+Chunk012 raises the ready set to 12/63 L12 chunks and 192/1000 saved
+configurations.  This is not retained or `proposed_retained` evidence because
+target ESS, response stability, scalar-pole control, and canonical-Higgs
+identity remain open.

@@ -543,3 +543,11 @@ then run `scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py
 --chunk-index 12`.  This reduces processing friction but does not raise
 partial L12 chunks to evidence; identity/pole/FV/IR gates remain the closure
 bottleneck.
+
+FH/LSZ chunk012 update: chunk012 completed and the ready set is now 12/63 L12
+chunks with 192/1000 saved configurations.  Chunks011-012 have target time
+series, but chunks001-010 do not.  Response stability still fails
+(`relative_stdev=0.9004518435028103`, `spread_ratio=5.476535332624479`), so
+the live production path is still support only.  Next useful production moves:
+continue new target-series chunks, or replace older chunks if a same-ready-set
+target ESS certificate is required.
