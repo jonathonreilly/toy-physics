@@ -95,6 +95,11 @@ audit surfaces are `claim_type` / `audit_status` / `effective_status` only.
 `audited_clean` verdict, it retains according to its ledger `claim_type` and
 dependency closure; old source-note prose neither grants nor blocks retained
 status.
+Legacy critical rows whose confirmed clean cross-confirmation predates
+`claim_type` may clear `claim_type_backfill_reaudit` with a restricted-input
+audit that writes the scoped `claim_type`; missing `claim_type` fields in the
+old confirmation summaries are migration debt, not a cross-confirmation
+disagreement.
 
 ## The hard rules
 
