@@ -1,5 +1,26 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 FH/LSZ chunks007-008 processing:
+
+- Background chunks007-008 completed and were processed through the existing
+  chunk combiner, dynamic ready-set checkpoint, response-stability diagnostic,
+  autocorrelation/ESS gate, retained-route gate, and campaign status gate.
+- Result: ready chunk indices are now `[1, 2, 3, 4, 5, 6, 7, 8]`, i.e.
+  `8/63` L12 chunks and `128/1000` target saved configurations.
+- Response stability still fails:
+  `relative_stdev=0.9032548233465779`, `spread_ratio=5.476535332624479`.
+- The ESS gate now records that the eight-chunk count threshold is reached,
+  but target time series are still missing from these pre-extension chunk
+  outputs, so target ESS is not certified.
+- Retained-route gate remains `PASS=85 FAIL=0`; campaign status remains
+  `PASS=111 FAIL=0` over 115 certificates.
+- Chunks009-010 remain running in the background.
+
+Next exact action: process chunks009-010 if they finish; otherwise continue
+the scalar-denominator / canonical-Higgs identity route.  Do not use the
+`8/63` L12 chunk set, plaquette ESS, or finite source slopes as
+retained/proposed-retained evidence.
+
 Latest checkpoint, 2026-05-02 FH/LSZ target time-series harness extension:
 
 - Extended `scripts/yt_direct_lattice_correlator_production.py` to serialize

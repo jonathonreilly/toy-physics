@@ -10,14 +10,14 @@ The ready-set checkpoint is now dynamic: it derives `ready_chunk_indices` from
 the combiner gate rather than hardcoding a fixed chunk range.  It also accepts
 non-contiguous ready sets, because chunk completion order need not be
 sequential.  At this checkpoint the seed-controlled `L12_T24` FH/LSZ ready set
-contains chunks001-006:
+contains chunks001-008:
 
 ```text
-ready_chunk_indices = [1, 2, 3, 4, 5, 6]
-present_chunks = 6
-ready_chunks = 6
+ready_chunk_indices = [1, 2, 3, 4, 5, 6, 7, 8]
+present_chunks = 8
+ready_chunks = 8
 expected_chunks = 63
-available_saved_configurations = 96
+available_saved_configurations = 128
 target_saved_configurations = 1000
 ```
 

@@ -23,9 +23,11 @@ The gate requires:
 - scalar LSZ, FV/IR/model-class, finite-source-linearity, and
   canonical-Higgs identity gates after target ESS is accepted.
 
-The current ready chunks expose plaquette histories, so a diagnostic plaquette
-autocorrelation can be estimated.  They do not expose the target time series
-needed for load-bearing FH/LSZ ESS.  Plaquette ESS is not a substitute for
+After chunks007-008 completed, the ready set reaches the eight-chunk count
+threshold used by this gate.  The blocker is now sharper: the current chunks
+expose plaquette histories, so a diagnostic plaquette autocorrelation can be
+estimated, but they still do not expose the target time series needed for
+load-bearing FH/LSZ ESS.  Plaquette ESS is not a substitute for
 target-observable ESS.
 
 ## Claim Firewall

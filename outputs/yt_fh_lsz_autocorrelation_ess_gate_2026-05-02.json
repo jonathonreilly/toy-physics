@@ -146,6 +146,52 @@
         "source_response_target_timeseries": false
       },
       "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 7,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk007_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 963.8583869206698,
+        "n": 1000,
+        "rho_first_lags": [
+          0.01874840410674601,
+          -0.0018638679961149626
+        ],
+        "tau_int_initial_positive": 0.518748404106746,
+        "window_lag": 2
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 8,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk008_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 959.6448633740957,
+        "n": 1000,
+        "rho_first_lags": [
+          0.02102607858703906,
+          -0.00110691916333709
+        ],
+        "tau_int_initial_positive": 0.5210260785870391,
+        "window_lag": 2
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
     }
   ],
   "exact_next_action": "Extend the production harness or postprocessor to retain per-configuration same-source dE/ds and C_ss(q) target time series, or emit a predeclared blocking/bootstrap ESS certificate; then rerun this gate before using chunked FH/LSZ output as production evidence.",
@@ -168,8 +214,11 @@
     3,
     4,
     5,
-    6
+    6,
+    7,
+    8
   ],
+  "ready_count_reaches_threshold": true,
   "strict_non_claims": [
     "does not treat plaquette ESS as target FH/LSZ ESS",
     "does not treat current chunks as production evidence",

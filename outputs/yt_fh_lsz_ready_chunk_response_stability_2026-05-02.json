@@ -96,20 +96,50 @@
         0.0,
         0.01
       ]
+    },
+    {
+      "chunk_index": 7,
+      "mass_fit_m_lat": 1.8468360872029734,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk007_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051007,
+      "slope_dE_ds_lat": 1.4279585199127138,
+      "slope_dE_ds_lat_err": 24.342121294550754,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
+    },
+    {
+      "chunk_index": 8,
+      "mass_fit_m_lat": 1.8484118473961644,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk008_2026-05-01.json",
+      "phase": "production",
+      "ready": true,
+      "seed": 2026051008,
+      "slope_dE_ds_lat": 1.4358688402488398,
+      "slope_dE_ds_lat_err": 24.603203841209027,
+      "source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ]
     }
   ],
   "stability_summary": {
     "max_slope": 6.80363930805008,
     "min_slope": 1.2423254657958398,
-    "n_chunks": 6,
-    "relative_fit_error": 5.316526773686292,
-    "relative_stdev": 0.8727054943583518,
-    "slope_mean": 3.1592802558002706,
-    "slope_stdev": 2.757121237454755,
+    "n_chunks": 8,
+    "relative_fit_error": 6.8619194982690805,
+    "relative_stdev": 0.9032548233465779,
+    "slope_mean": 2.7274386118703973,
+    "slope_stdev": 2.4635720815536315,
     "spread_ratio": 5.476535332624479,
     "stability_acceptance_rule": "n>=8, relative_stdev<0.25, spread_ratio<2",
     "stability_passed": false,
-    "typical_fit_error": 16.796398065540615
+    "typical_fit_error": 18.715464191125434
   },
   "strict_non_claims": [
     "does not treat dE/ds as physical dE/dh",
@@ -117,5 +147,5 @@
     "does not use observed top mass, observed y_t, H_unit, Ward authority, alpha_LM, plaquette, or u0",
     "does not treat a partial L12 set as production closure"
   ],
-  "verdict": "The current seed-controlled ready chunks expose same-source dE/ds, but the 6/63 partial set is not stable enough to use as production response evidence beyond bounded support.  The chunk slopes are finite but have large chunk-to-chunk spread.  Even a stable slope would still require scalar LSZ pole derivative, model-class/FV/IR control, and canonical-Higgs identity before physical y_t closure."
+  "verdict": "The current seed-controlled ready chunks expose same-source dE/ds, but the 8/63 partial set is not stable enough to use as production response evidence beyond bounded support.  The chunk slopes are finite but have large chunk-to-chunk spread.  Even a stable slope would still require scalar LSZ pole derivative, model-class/FV/IR control, and canonical-Higgs identity before physical y_t closure."
 }

@@ -6,8 +6,8 @@
 
 ## Result
 
-The current seed-controlled ready set has six L12 chunks
-`[1, 2, 3, 4, 5, 6]`.  Their same-source top response slopes are finite:
+The current seed-controlled ready set has eight L12 chunks
+`[1, 2, 3, 4, 5, 6, 7, 8]`.  Their same-source top response slopes are finite:
 
 ```text
 chunk001: dE/ds = 1.4356354951944574
@@ -16,20 +16,22 @@ chunk003: dE/ds = 1.4159189031935757
 chunk004: dE/ds = 6.80363930805008
 chunk005: dE/ds = 1.4282013633170878
 chunk006: dE/ds = 1.2423254657958398
+chunk007: dE/ds = 1.4279585199127138
+chunk008: dE/ds = 1.4358688402488398
 ```
 
 The partial set fails the diagnostic stability rule:
 
 ```text
-n_chunks = 6
-relative_stdev = 0.8727054943583518
+n_chunks = 8
+relative_stdev = 0.9032548233465779
 spread_ratio = 5.476535332624479
 stability_rule = n >= 8, relative_stdev < 0.25, spread_ratio < 2
 stability_passed = false
 ```
 
 The fitted slope uncertainties are also too large for production-grade
-response use at this stage.  This is expected for `6/63` L12 chunks and is a
+response use at this stage.  This is expected for `8/63` L12 chunks and is a
 reason to keep collecting chunks, not a physics closure.
 
 ## Claim Boundary

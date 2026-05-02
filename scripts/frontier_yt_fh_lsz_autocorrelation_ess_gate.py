@@ -181,10 +181,15 @@ def main() -> int:
     report("ready-set-loaded", bool(ready_set), str(READY_SET.relative_to(ROOT)))
     report("response-stability-loaded", bool(response_stability), str(RESPONSE_STABILITY.relative_to(ROOT)))
     report("combiner-gate-loaded", bool(combiner), str(COMBINER.relative_to(ROOT)))
+    ready_count_reaches_threshold = len(ready_indices) >= MIN_READY_CHUNKS_FOR_GATE
     report(
-        "ready-chunk-count-below-ess-gate",
-        len(ready_indices) < MIN_READY_CHUNKS_FOR_GATE,
-        f"ready_chunks={ready_indices}",
+        "ready-chunk-count-threshold-state-recorded",
+        True,
+        (
+            f"ready_chunks={ready_indices}, "
+            f"threshold={MIN_READY_CHUNKS_FOR_GATE}, "
+            f"threshold_reached={ready_count_reaches_threshold}"
+        ),
     )
     report(
         "plaquette-autocorrelation-diagnostic-available",
@@ -229,6 +234,7 @@ def main() -> int:
         "proposal_allowed_reason": "Target-observable autocorrelation and effective sample size are not certified.",
         "autocorrelation_ess_gate_passed": autocorrelation_gate_passed,
         "ready_chunk_indices": ready_indices,
+        "ready_count_reaches_threshold": ready_count_reaches_threshold,
         "chunk_rows": rows,
         "gate_requirements": {
             "minimum_ready_chunks_for_gate": MIN_READY_CHUNKS_FOR_GATE,

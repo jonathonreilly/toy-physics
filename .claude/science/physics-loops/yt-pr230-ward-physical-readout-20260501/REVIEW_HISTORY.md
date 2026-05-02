@@ -1,5 +1,39 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Chunks007-008 Processing
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- chunks007-008 are seed-controlled and combiner-ready, raising the ready set
+  to `[1, 2, 3, 4, 5, 6, 7, 8]` or `8/63` L12 chunks;
+- response stability still fails at `relative_stdev=0.9032548233465779` and
+  `spread_ratio=5.476535332624479`;
+- the eight-chunk ESS count threshold is reached, but target time series are
+  missing from these pre-extension outputs, so target ESS is not certified;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Target Time-Series Harness Extension
 
 Local review-loop disposition:

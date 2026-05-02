@@ -188,7 +188,7 @@ the visible shortcut routes:
 | effective-mass plateau residue no-go | identical finite-window effective masses can coexist with different ground/source-pole residues |
 | finite source-shift derivative no-go | one symmetric finite source radius can keep `E(-delta)`, `E(0)`, `E(+delta)`, and the finite slope fixed while changing `dE/ds|_0` |
 | finite-source-linearity gate | current chunks use one nonzero source radius; the three-radius calibration manifest is planning support only and not foreground evidence |
-| autocorrelation/ESS gate | plaquette histories are diagnostic, but target same-source `dE/ds` and `C_ss(q)` time series are absent, so target ESS is not certified |
+| autocorrelation/ESS gate | eight ready chunks reach the count threshold and plaquette histories are diagnostic, but target same-source `dE/ds` and `C_ss(q)` time series are absent from current chunks, so target ESS is not certified |
 | FH/LSZ target time-series harness extension | future chunks now serialize per-configuration source-response and scalar two-point target time series, but the smoke is reduced-scope infrastructure support only |
 | reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
 | effective-potential Hessian source-overlap no-go | canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the PR #230 source operator direction |
@@ -296,10 +296,11 @@ Latest reflection-positivity checkpoint: campaign status now includes the
 reflection-positivity LSZ shortcut no-go and reports `PASS=101 FAIL=0` over
 105 certificates.  No retained/proposed-retained wording is authorized.
 
-Latest chunks005-006 ready-set checkpoint: campaign status now includes
-seed-controlled chunks005-006 through the existing combiner/ready-set
-certificates.  The ready set is `[1, 2, 3, 4, 5, 6]`, or `6/63` L12 chunks; response stability
-still fails and no retained/proposed-retained wording is authorized.
+Latest chunks007-008 ready-set checkpoint: campaign status now includes
+seed-controlled chunks007-008 through the existing combiner/ready-set
+certificates.  The ready set is `[1, 2, 3, 4, 5, 6, 7, 8]`, or `8/63` L12
+chunks; response stability still fails and no retained/proposed-retained
+wording is authorized.
 
 Latest effective-potential Hessian checkpoint: campaign status now includes
 the Hessian/source-overlap no-go and reports `PASS=102 FAIL=0` over 106
