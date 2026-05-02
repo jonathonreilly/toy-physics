@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:31:40.302296+00:00
+**Generated:** 2026-05-02T22:33:15.504258+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 538 |
+| unaudited | 537 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 644 |
-| ~~audited_failed~~ | 1 |
+| ~~audited_failed~~ | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 386 |
 | `audited_conditional` | 644 |
 | `audited_decoration` | 7 |
-| `audited_failed` | 45 |
+| `audited_failed` | 46 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 574 |
+| `unaudited` | 573 |
 
 | claim_type | count |
 |---|---:|
@@ -1145,6 +1145,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
@@ -1864,6 +1865,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Attempted per-site uniqueness theorem asserting every faithful irreducible finite-dimensional complex Cl(3) representation is exactly the Pauli 2-dimensional representation and that all finite-dimensional representations decompose into Pauli copies.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Working over the complexification of Cl(3), the relations generate dimension 4 over C and the Pauli map gives an isomorphism Cl(3) tensor_R C ~= M_2(C).  _(class `A`)_
+- **chain closes:** False — The load-bearing algebra statement is wrong: real Cl(3) has real dimension 8, so its complexification has complex dimension 8, and the odd complex Clifford algebra has two 2-dimensional irreducible sectors rather than the single simple M_2(C) algebra asserted here. The runner only checks Pauli-generated examples and does not test the missing second sector or the false dimension/isomorphism step.
+- **rationale:** Issue: Step 1 misidentifies the complexified Clifford algebra as M_2(C) by claiming the complex dimension is 4; this is the theorem's load-bearing uniqueness step. Why this blocks: U2's uniqueness up to unitary equivalence to Pauli, and U3's decomposition into only Pauli copies, do not follow from the stated algebra and omit the odd-Clifford sector/orientation distinction. Repair target: restate the theorem with the correct real-versus-complex Clifford algebra, central volume-element sector/orientation choice, and prove the exact representation category needed for the per-site dimension claim; update the runner to test non-Pauli orientation/conjugate sectors rather than only unitary conjugates of Pauli. Claim boundary until fixed: Pauli matrices satisfy the defining relations and Pauli direct sums provide even-dimensional examples, but the advertised uniqueness theorem is not retained.
 - **auditor confidence:** high
 
 ### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
