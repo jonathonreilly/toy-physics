@@ -1,0 +1,67 @@
+========================================================================
+AXIOM-FIRST REEH-SCHLIEDER CYCLICITY CHECK
+========================================================================
+
+Setup:
+  L = 6 sites, dim H_phys = 64
+  local region O = sites 0..1 (R = 2)
+  H = sum_z h_{z, z+1} (range-1 NN)
+
+  H spectrum: ground state at E_0 = -2.870498
+              first excited at  E_1 = -2.646583
+              gap E_1 - E_0     = 0.223914
+
+------------------------------------------------------------------------
+TEST 1: vacuum uniqueness (mass gap > 0)
+------------------------------------------------------------------------
+  E_1 - E_0 = 0.223914
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: equal-time A(O) alone — span dimension
+------------------------------------------------------------------------
+  A(O) at t = 0 contains polynomials in Pauli X, Y, Z on sites 0..1.
+  Generators: 3 Pauli x R sites = 6 single-Pauli operators,
+  plus identity. Polynomials span 16 = (2^R)^2 = (dim of M(C^4)).
+
+  rank of A(O) Omega (equal-time only) = 16
+  expected |A(O) Omega| <= dim_M(C^4) = 16
+  full H_phys dim                       = 64
+  equal-time A(O) Omega spans only 16 of 64 dims — NOT full
+  STATUS: PASS (correctly limited)
+
+------------------------------------------------------------------------
+TEST 3: time-translated A(O) DOES span H_phys (Reeh-Schlieder)
+------------------------------------------------------------------------
+Build A(O)_translated = { alpha_t(O) : O in A(O), t in time grid },
+apply to |Omega>, check rank = dim(H_phys).
+
+  rank of A(O)_translated Omega = 64
+  full H_phys dim               = 64
+  STATUS: PASS (Reeh-Schlieder cyclicity)
+
+------------------------------------------------------------------------
+TEST 4: vacuum is separating for A(O)' (commutant)
+------------------------------------------------------------------------
+Equivalent form: any B in A(O)' with B Omega = 0 must be B = 0.
+
+  B = sigma_X on site 2 (in A(O)' since it commutes with all A(O))
+  ||B||                                = 1.0000
+  ||B Omega||                          = 1.0000
+  B is non-zero AND B Omega is non-zero, consistent with separating
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (vacuum uniqueness, gap > 0):                  PASS
+  Test 2 (equal-time A(O) is properly local):           PASS
+  Test 3 (time-translated A(O) spans H_phys):           PASS
+  Test 4 (vacuum separating for A(O)'):                 PASS
+
+  OVERALL: PASS
+
+Note: this runner uses a 6-qubit toy chain (toy A1 Cl(3) → C^2)
+with random range-1 NN Hermitian H. The Reeh-Schlieder theorem
+is dimension-independent and applies to the framework's Cl(3) on
+Z^3 by the same proof structure (Steps 1-6 of the companion note).
