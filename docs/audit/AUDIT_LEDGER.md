@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T16:01:01.077819+00:00
+**Generated:** 2026-05-02T16:04:04.946281+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -44,12 +44,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 506 |
+| `bounded_theorem` | 507 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 151 |
 | `open_gate` | 105 |
-| `positive_theorem` | 874 |
+| `positive_theorem` | 873 |
 
 | criticality | count |
 |---|---:|
@@ -1232,7 +1232,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
-| `hypercharge_identification_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
+| `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | E | - |
@@ -9253,15 +9253,15 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 ### `hypercharge_identification_note`
 
 - **Note:** [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](../../docs/HYPERCHARGE_IDENTIFICATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within End(C^8)=(C^2)^3 with SU(2)_weak on factor 1 and SWAP_23 on factors 2,3, restricted to the left-handed doublet surface.
 - **audit_status:** ~~audited_renaming~~
 - **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-context-20260430-hypercharge-restricted-audit`  (codex-current; independence=fresh_context)
-- **load-bearing step:** With conventional normalization a = 1/3, the note identifies C^2 x Sym^2(C^2) as the left-handed quark doublet with Y=+1/3 and C^2 x Anti^2(C^2) as the left-handed lepton doublet with Y=-1.  _(class `F`)_
-- **chain closes:** False — The note closes the traceless commutant ratio b = -3a inside the assumed setup, but the SM sector readout and hypercharge normalization are introduced as an identification rather than derived from the provided inputs.
-- **rationale:** Issue: The load-bearing move identifies abstract commutant eigenspaces and a conventionally normalized U(1) generator with Standard Model quark/lepton doublets and hypercharge. Why this blocks: The algebra establishes a unique traceless 1:-3 direction, but it does not derive the physical carrier/readout map or the normalization from the restricted inputs. Repair target: Provide a retained theorem deriving the weak carrier, sector-to-SM-state map, and Q = T3 + Y/2 normalization from independent primitives, plus a runner that constructs rather than assumes the map. Claim boundary until fixed: The note may say that, under the stated sector identification and conventional normalization, the unique traceless commutant U(1) has the left-handed SM hypercharge pattern.
-- **auditor confidence:** 0.9
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-hypercharge-planck`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The unique traceless U(1) direction in the commutant su(3)+u(1) of {SU(2)_weak, SWAP_23} is identified with Standard Model hypercharge on the left-handed doublet surface.  _(class `F`)_
+- **chain closes:** True — The algebraic chain closes for the bounded structural statement: the commutant, traceless U(1) direction, eigenvalue multiplicities, and induced electric charges are checked within the stated C^8 surface. It does not close as a first-principles derivation of physical hypercharge or the full anomaly-canceling Standard Model spectrum, which the note explicitly excludes.
+- **rationale:** Issue: the load-bearing physical step is an identification of the unique traceless commutant generator with Standard Model hypercharge rather than a derivation of hypercharge from independent physical principles. Why this blocks: the runner verifies the internal algebra and numerical pattern on the left-handed doublet surface, but the bridge from that generator to the physical SM U(1)_Y remains label/pattern matching. Repair target: keep the claim explicitly as structural identification, or add independent assumptions deriving the SM gauge embedding, normalization, and full chiral spectrum. Claim boundary until fixed: bounded structural identification within the stated End(C^8) left-handed doublet setup, excluding anomaly cancellation and GUT/full-spectrum normalization.
+- **auditor confidence:** high
 
 ### `i3_zero_exact_theorem_note`
 

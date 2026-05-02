@@ -1,33 +1,12 @@
 {
   "by_criticality": {
-    "critical": 83,
+    "critical": 82,
     "high": 201,
     "leaf": 138,
     "medium": 146
   },
-  "generated_at": "2026-05-02T16:01:00.857774+00:00",
+  "generated_at": "2026-05-02T16:04:04.640722+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_renaming",
-      "blocker": null,
-      "claim_id": "hypercharge_identification_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "confirmed",
-      "deps": [],
-      "direct_in_degree": 9,
-      "effective_status": "audited_renaming",
-      "load_bearing_score": 12.714,
-      "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
-      "queue_reason": "claim_type_backfill_reaudit",
-      "ready": true,
-      "runner_path": "scripts/frontier_hypercharge_identification.py",
-      "transitive_descendants": 296
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -14939,6 +14918,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 108,
-  "total_pending": 568
+  "ready_count": 107,
+  "total_pending": 567
 }
