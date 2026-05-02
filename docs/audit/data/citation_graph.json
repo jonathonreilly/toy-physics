@@ -285,6 +285,26 @@
       "to": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
     },
     {
+      "from": "audit_acceleration_foundational_bundle_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "audit_acceleration_foundational_bundle_2026-05-02",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "audit_acceleration_foundational_bundle_2026-05-02",
+      "to": "axiom_first_spectrum_condition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "audit_acceleration_foundational_bundle_2026-05-02",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "audit_acceleration_foundational_bundle_2026-05-02",
+      "to": "axiom_first_spin_statistics_theorem_note_2026-04-29"
+    },
+    {
       "from": "audit_backlog_campaign_progress_synthesis_2026-05-02",
       "to": "left_handed_charge_matching_note"
     },
@@ -19981,7 +20001,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:05:05.321343+00:00",
+  "generated_at": "2026-05-02T20:35:56.263707+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21665,6 +21685,23 @@
       "path": "docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_atomic_rydberg_dependency_firewall.py",
       "title": "Atomic Rydberg Dependency Firewall"
+    },
+    "audit_acceleration_foundational_bundle_2026-05-02": {
+      "claim_id": "audit_acceleration_foundational_bundle_2026-05-02",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta (audit-acceleration request, not a science claim)",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_spin_statistics_theorem_note_2026-04-29"
+      ],
+      "note_hash": "d037a3aa312fdde2000b0acd9a64059d1b4adc2fe3d752ed74cc2a47095baf78",
+      "path": "docs/AUDIT_ACCELERATION_FOUNDATIONAL_BUNDLE_2026-05-02.md",
+      "runner_path": null,
+      "title": "Audit-Acceleration Manifest: Foundational Axiom-First Bundle"
     },
     "audit_backlog_campaign_progress_synthesis_2026-05-02": {
       "claim_id": "audit_backlog_campaign_progress_synthesis_2026-05-02",
@@ -46477,21 +46514,21 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
-      "meta": 1,
+      "meta": 2,
       "none": 1747,
       "positive_theorem": 32
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
-      "meta": 1,
+      "meta": 2,
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
       "positive_theorem": 624
     },
-    "edge_count": 4995,
-    "leaf_count": 758,
-    "node_count": 1791,
+    "edge_count": 5000,
+    "leaf_count": 759,
+    "node_count": 1792,
     "root_count": 1216,
     "runners_with_path": 1359
   }
