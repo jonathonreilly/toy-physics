@@ -64,6 +64,7 @@ def main() -> int:
         "canonical_scalar_import": load("outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json"),
         "source_to_higgs_lsz": load("outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"),
         "cl3_source_unit": load("outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json"),
+        "gauge_vev_source_overlap": load("outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json"),
         "scalar_source_response_harness": load("outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"),
         "fh_production_protocol": load("outputs/yt_fh_production_protocol_certificate_2026-05-01.json"),
         "same_source_scalar_two_point": load("outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json"),
@@ -240,6 +241,12 @@ def main() -> int:
         "Cl3 source-unit" in str(statuses["cl3_source_unit"])
         or "source-unit normalization no-go" in str(statuses["cl3_source_unit"]),
         statuses["cl3_source_unit"],
+    )
+    report(
+        "gauge-vev-source-overlap-does-not-fix-kappa",
+        "gauge-VEV source-overlap no-go" in str(statuses["gauge_vev_source_overlap"])
+        or "exact negative boundary" in str(statuses["gauge_vev_source_overlap"]),
+        statuses["gauge_vev_source_overlap"],
     )
     report(
         "scalar-source-response-harness-needs-kappa",
@@ -579,6 +586,8 @@ def main() -> int:
             "The explicit source-to-Higgs LSZ closure attempt finds no allowed "
             "premise that fixes kappa_s.  The harness now supports explicit "
             "uniform scalar-source shifts and emits dE/ds response analysis, "
+            "and the gauge-VEV source-overlap no-go blocks using v or gauge "
+            "masses to identify the substrate source with canonical h.  "
             "which advances the Feynman-Hellmann measurement route but still "
             "does not convert to physical dE/dh without kappa_s.  Remaining "
             "closure requires production evidence or a genuinely new scalar "

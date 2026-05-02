@@ -1052,6 +1052,19 @@ The x8/x16 command pair fixes matched controls for a future calibration, but
 no calibration output is present.  A manifest cannot pass the variance gate or
 replace production pole data.
 
+Gauge-VEV source-overlap shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_gauge_vev_source_overlap_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Canonical electroweak `v` and gauge-boson masses fix the metric of a canonical
+Higgs field after that field is identified.  They do not derive the source
+overlap `h = kappa_s s`; countermodels keep the gauge sector fixed while
+changing `dE/ds` and the `dE/dh` readout that would follow from setting
+`kappa_s=1`.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

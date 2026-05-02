@@ -498,6 +498,9 @@ are still forbidden as proof input for physical `y_t`.
 The paired x8/x16 calibration manifest is also not an assumption license: only
 completed production-phase calibration outputs with matching run-control
 metadata can test the lower-noise route.
+The canonical electroweak VEV and gauge-boson masses are not an assumption
+license for `kappa_s=1`.  They normalize canonical `h` after it is identified;
+they do not identify the Cl(3)/Z3 source coordinate `s` with that field.
 
 Positive-closure candidates left after the assumption exercise:
 

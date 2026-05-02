@@ -438,7 +438,12 @@ commands with matched seed, source shifts, eight scalar-LSZ modes, and separate
 artifact directories.  This is still launch planning; no calibration output is
 present.
 
+The gauge-VEV source-overlap no-go now closes the shortcut of using electroweak
+`v` or gauge-boson masses to set `kappa_s=1`.  Those surfaces fix the metric of
+an already identified canonical Higgs field; they do not derive the overlap
+`h = kappa_s s` for the Cl(3)/Z3 scalar source.
+
 Next exact action: keep chunk001 running under the non-evidence combiner gate.
 If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
-If it remains running, either run/schedule the paired x8/x16 calibration or
-pivot back to analytic scalar denominator and residue work.
+If it remains running, continue analytic scalar denominator/residue work or
+schedule the paired x8/x16 calibration if compute is available.

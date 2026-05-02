@@ -73,6 +73,7 @@ def main() -> int:
         "scalar_kernel_enhancement_import": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
         "fitted_kernel_residue_selector": "outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
+        "gauge_vev_source_overlap": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "fh_lsz_production_postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
         "fh_lsz_production_checkpoint_granularity": "outputs/yt_fh_lsz_production_checkpoint_granularity_gate_2026-05-01.json",
@@ -243,6 +244,11 @@ def main() -> int:
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
         and certificates["cl3_source_unit"].get("proposal_allowed") is False
+    )
+    gauge_vev_source_overlap_blocks_kappa = (
+        "gauge-VEV source-overlap no-go"
+        in certificates["gauge_vev_source_overlap"].get("actual_current_surface_status", "")
+        and certificates["gauge_vev_source_overlap"].get("proposal_allowed") is False
     )
     production_manifest_not_evidence = (
         "production manifest" in certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", "")
@@ -445,6 +451,11 @@ def main() -> int:
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
     )
     report(
+        "gauge-vev-source-overlap-does-not-fix-kappa",
+        gauge_vev_source_overlap_blocks_kappa,
+        certificates["gauge_vev_source_overlap"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-production-manifest-not-evidence",
         production_manifest_not_evidence,
         certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", ""),
@@ -605,7 +616,10 @@ def main() -> int:
             "calibrations, but the current diagnostics are reduced-scope "
             "instrumentation support only.  A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
-            "completed same-source production variance evidence.  "
+            "completed same-source production variance evidence.  The "
+            "gauge-VEV source-overlap no-go also blocks using the canonical "
+            "electroweak VEV or gauge-boson masses to identify the Cl(3)/Z3 "
+            "source with the canonical Higgs field.  "
             "The actual interacting "
             "scalar pole derivative theorem and production evidence remain open.  "
             "These cannot be assumed."

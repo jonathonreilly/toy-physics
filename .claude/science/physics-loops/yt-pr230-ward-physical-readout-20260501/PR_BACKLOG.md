@@ -672,3 +672,17 @@ Adds a paired x8/x16 FH/LSZ variance calibration manifest:
   no completed calibration, pole derivative, FV/IR control, or retained gate
   exists.
 ```
+
+Latest gauge-VEV source-overlap checkpoint text for PR #230:
+
+```text
+Adds a gauge-VEV source-overlap no-go:
+- constructs countermodels with identical canonical `v`, gauge coupling, and
+  `m_W`, but different `h = kappa_s s` source overlap;
+- shows setting `kappa_s=1` changes the inferred physical `dE/dh`;
+- runner passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=43 FAIL=0`; campaign status consumes 73 certificates and reports
+  `PASS=69 FAIL=0`;
+- still no retained/proposed-retained closure: electroweak `v` and gauge
+  masses do not replace scalar LSZ residue or same-source production pole data.
+```

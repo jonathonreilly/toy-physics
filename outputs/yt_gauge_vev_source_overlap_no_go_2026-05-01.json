@@ -1,0 +1,57 @@
+{
+  "actual_current_surface_status": "exact negative boundary / gauge-VEV source-overlap no-go",
+  "countermodels": [
+    {
+      "canonical_y_h": 0.8,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 0.282842712474619,
+      "g_ew": 1.0,
+      "kappa_s": 0.5,
+      "m_top_from_canonical_h": 0.565685424949238,
+      "m_w": 0.5,
+      "v_canonical": 1.0,
+      "wrong_dE_dh_if_kappa_s_set_to_one": 0.282842712474619
+    },
+    {
+      "canonical_y_h": 0.8,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 0.565685424949238,
+      "g_ew": 1.0,
+      "kappa_s": 1.0,
+      "m_top_from_canonical_h": 0.565685424949238,
+      "m_w": 0.5,
+      "v_canonical": 1.0,
+      "wrong_dE_dh_if_kappa_s_set_to_one": 0.565685424949238
+    },
+    {
+      "canonical_y_h": 0.8,
+      "dE_dh": 0.565685424949238,
+      "dE_ds": 1.131370849898476,
+      "g_ew": 1.0,
+      "kappa_s": 2.0,
+      "m_top_from_canonical_h": 0.565685424949238,
+      "m_w": 0.5,
+      "v_canonical": 1.0,
+      "wrong_dE_dh_if_kappa_s_set_to_one": 1.131370849898476
+    }
+  ],
+  "exact_next_action": "Use a same-source scalar pole residue measurement/theorem to fix kappa_s, or continue the production FH/LSZ route; do not identify the substrate source with the canonical Higgs field from v alone.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+    "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Gauge-sector canonical normalization does not derive the source-to-Higgs overlap kappa_s.",
+  "strict_non_claims": [
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0 as proof input",
+    "does not set c2 or Z_match to one"
+  ],
+  "verdict": "The canonical electroweak VEV and gauge-boson mass normalization fix the metric of an already-identified canonical Higgs field h.  They do not fix the overlap h = kappa_s s between that field and the additive Cl(3)/Z3 scalar source s.  Countermodels with the same v, gauge coupling, and m_W but different kappa_s give different dE/ds and would produce different physical dE/dh if kappa_s were set to one.  Therefore the VEV/gauge-mass surface cannot replace a scalar LSZ residue or same-source production pole measurement."
+}

@@ -363,7 +363,8 @@ Next artifact:
   emits noise-subsample diagnostics needed by future paired x8/x16 calibration,
   but the rerun smokes remain reduced-scope instrumentation support; the
   paired calibration manifest fixes matched x8/x16 commands but no calibration
-  output is present
+  output is present; the gauge-VEV source-overlap no-go blocks using
+  electroweak `v` or gauge-boson masses to set `kappa_s=1`
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

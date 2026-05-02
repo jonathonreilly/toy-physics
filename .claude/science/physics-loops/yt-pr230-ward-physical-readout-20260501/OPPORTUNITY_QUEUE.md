@@ -137,7 +137,9 @@ probability.
    current-surface premise that fixes `kappa_s`, so this remains a genuinely
    new-theorem target rather than a packaging task.  The Cl(3)/Z3 source-unit
    no-go confirms that unit lattice/source conventions fix `s` but not the
-   canonical Higgs metric.  The invariant-readout
+   canonical Higgs metric.  The gauge-VEV source-overlap no-go also blocks
+   using electroweak `v` or gauge-boson masses to identify `s` with canonical
+   `h`; that still requires source overlap or pole residue.  The invariant-readout
    theorem reduces this to proving or measuring the same-source scalar pole
    residue; it does not license `kappa_s = 1`.  The scalar pole determinant
    gate further reduces the analytic object to the interacting denominator

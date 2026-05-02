@@ -115,6 +115,9 @@ paired x8/x16 calibration, but the current diagnostic smokes remain
 reduced-scope instrumentation support only.
 The paired x8/x16 variance calibration manifest now fixes matched launch
 controls, but no completed calibration output exists.
+The gauge-VEV source-overlap no-go blocks another analytic shortcut: canonical
+`v` and gauge-boson masses fix the metric of an already identified Higgs field,
+not the overlap between the substrate source `s` and canonical `h`.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

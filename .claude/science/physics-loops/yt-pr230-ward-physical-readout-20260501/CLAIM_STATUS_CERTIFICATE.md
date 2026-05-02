@@ -765,3 +765,23 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The paired x8/x16 commands are launch planning only.  They authorize no
 retained/proposed-retained wording until completed production outputs pass the
 variance, pole, FV/IR, and retained-proposal gates.
+
+Gauge-VEV source-overlap checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / gauge-VEV source-overlap no-go
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_gauge_vev_source_overlap_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=43 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=69 FAIL=0
+```
+
+Canonical `v` and gauge masses do not identify the substrate source with the
+canonical Higgs field.  No retained/proposed-retained wording is authorized.
