@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 27,
-    "high": 226,
+    "high": 225,
     "leaf": 168,
     "medium": 173
   },
-  "generated_at": "2026-05-02T20:40:17.170757+00:00",
+  "generated_at": "2026-05-02T20:42:11.237524+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -912,27 +912,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
       "transitive_descendants": 112
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_dweh_cyclic_compression_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 5,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.785,
-      "note_path": "docs/KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_dweh_cyclic_compression.py",
-      "transitive_descendants": 77
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -11920,6 +11899,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/KOIDE_CYCLIC_WILSON_3_RESPONSE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_koide_cyclic_wilson_3_response_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -14485,29 +14487,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_dweh_cyclic_compression_note_2026-04-18"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/KOIDE_CYCLIC_WILSON_3_RESPONSE_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_koide_cyclic_wilson_3_response_narrow.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_delta_dimensionless_closure_via_v8_theorem_note_2026-04-29",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15589,5 +15568,5 @@
     }
   ],
   "ready_count": 120,
-  "total_pending": 594
+  "total_pending": 593
 }

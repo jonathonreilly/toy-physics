@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T20:40:17.533696+00:00
+**Generated:** 2026-05-02T20:42:11.533330+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 140 |
+| **retained** | 141 |
 | **retained_no_go** | 96 |
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
-| unaudited | 555 |
+| unaudited | 554 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 378 |
+| `audited_clean` | 379 |
 | `audited_conditional` | 633 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 591 |
+| `unaudited` | 590 |
 
 | claim_type | count |
 |---|---:|
@@ -275,6 +275,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
+| `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `koide_hostile_review_guard_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
@@ -9398,6 +9399,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_koide_pointed_origin_exhaustion_theorem.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_hostile_review_guard.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py_not_registered_runner_dependency`
+- **auditor confidence:** high
+
+### `koide_dweh_cyclic_compression_note_2026-04-18`
+
+- **Note:** [`KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`](../../docs/KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For any Hermitian charged block H_e on Herm(3), the cyclic average P_cyc(H_e) lies in span_R{B0,B1,B2} and is exactly reconstructed from the three cyclic responses r0,r1,r2; this audit does not ratify a microscopic source law, Koide selector principle, or charged-lepton readout primitive.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-harvey-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** H_cyc = (r0/3) B0 + (r1/6) B1 + (r2/6) B2, with r0=dW_e^H(B0), r1=dW_e^H(B1), and r2=dW_e^H(B2), reconstructs the cyclic average P_cyc(H_e).  _(class `A`)_
+- **chain closes:** True — The scoped theorem is finite-dimensional linear algebra: averaging by the cyclic group projects Herm(3) onto the cyclic invariant subspace, and the trace-pairing formulas recover the three coordinates. The observed-witness statements are not needed for the compression theorem and are excluded from the retained scope.
+- **rationale:** The load-bearing compression and response reconstruction close as exact algebraic identities over the stated Hermitian basis and cyclic projector. The two D-class checks only show that the observed charged-lepton amplitude comparator lies in the compressed sector and that a Koide selector expression is numerically satisfied; they do not supply or need to supply the microscopic Wilson/lattice law, selector principle, or final readout. Because the claim_scope is restricted to the compression theorem, the open downstream physics does not block this audit.
 - **auditor confidence:** high
 
 ### `koide_eigenvalue_q23_surface_theorem_note_2026-04-20`
