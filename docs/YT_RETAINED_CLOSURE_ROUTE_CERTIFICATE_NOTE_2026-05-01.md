@@ -296,3 +296,9 @@ canonical-Higgs Yukawa varies, so the route still needs a real Higgs-pole
 identity theorem or production pole data with an independent identity
 certificate.  The retained-route certificate is refreshed at `PASS=72 FAIL=0`
 and still authorizes no retained/proposed-retained wording.
+
+The confinement-gap threshold import audit closes another scalar-denominator
+shortcut.  Generic substrate confinement or mass-gap statements are qualitative
+sector constraints, not a same-source scalar continuum-threshold theorem and
+not a pole-residue bound.  The retained-route certificate is refreshed at
+`PASS=73 FAIL=0` and still authorizes no retained/proposed-retained wording.

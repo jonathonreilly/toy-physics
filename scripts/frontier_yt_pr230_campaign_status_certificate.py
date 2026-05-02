@@ -114,6 +114,9 @@ def main() -> int:
         "fh_lsz_threshold_authority_audit": load(
             "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json"
         ),
+        "confinement_gap_threshold_import": load(
+            "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json"
+        ),
         "fh_lsz_finite_volume_pole_saturation": load(
             "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json"
         ),
@@ -470,6 +473,12 @@ def main() -> int:
         "fh-lsz-threshold-authority-audit-blocks-hidden-import",
         "threshold-authority import audit" in str(statuses["fh_lsz_threshold_authority_audit"]),
         statuses["fh_lsz_threshold_authority_audit"],
+    )
+    report(
+        "confinement-gap-threshold-import-blocks",
+        "confinement gap not scalar LSZ threshold"
+        in str(statuses["confinement_gap_threshold_import"]),
+        statuses["confinement_gap_threshold_import"],
     )
     report(
         "fh-lsz-finite-volume-pole-saturation-blocks",

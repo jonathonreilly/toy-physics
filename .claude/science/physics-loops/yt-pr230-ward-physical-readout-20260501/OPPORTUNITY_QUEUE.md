@@ -331,3 +331,9 @@ denominator, and `K'(pole)` checks.  The highest-ranked positive actions are
 therefore unchanged: process seed-controlled chunks005-006 if they finish, or
 derive a genuinely new scalar-denominator/Higgs-pole identity theorem.  Do not
 spend foreground cycles on another carrier-only or finite-moment shortcut.
+
+Confinement-gap threshold update: generic mass-gap or confinement language is
+now explicitly blocked as the FH/LSZ threshold premise.  The next scalar
+denominator work must derive a same-source scalar spectral threshold or pole
+residue directly; broad colored-sector gap statements should be treated as
+non-load-bearing support only.

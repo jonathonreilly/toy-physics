@@ -820,3 +820,25 @@ Next exact action: poll chunks005-006.  If either completed, process through
 the combiner/ready-set/stability gates.  Otherwise continue the
 scalar-denominator/threshold theorem route or wait for production pole-residue
 data; do not treat the consolidated Higgs-pole blocker as closure.
+
+Block 118 completed the confinement-gap threshold import audit:
+
+```text
+python3 scripts/frontier_yt_confinement_gap_threshold_import_audit.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=73 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=99 FAIL=0
+```
+
+Result: qualitative confinement or mass-gap language on the substrate does
+not supply the same-source scalar continuum threshold required by the FH/LSZ
+pole-residue gate.  A colored-sector mass gap can remain fixed while the
+same-source color-singlet scalar continuum threshold approaches the pole.
+
+Next exact action: poll chunks005-006.  If neither has finished, continue
+scalar-denominator/threshold theorem work or wait for production pole-residue
+data; do not import generic confinement-gap language as scalar LSZ closure.

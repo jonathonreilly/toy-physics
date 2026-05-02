@@ -1467,3 +1467,16 @@ source-pole top coupling fixed while changing physical canonical-Higgs `y_t`
 by `0.5`.  Do not claim retained/proposed-retained closure until a genuine
 Higgs-pole identity theorem or accepted production pole data supplies those
 premises.
+
+Confinement gap is not the scalar LSZ threshold:
+
+```text
+python3 scripts/frontier_yt_confinement_gap_threshold_import_audit.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+Qualitative confinement/mass-gap statements constrain sectors and spectral
+patterns, but they do not derive a uniform same-source scalar continuum gap
+above the Higgs pole.  A colored confinement gap can stay fixed while the
+color-singlet scalar continuum starts arbitrarily close to the pole, so this
+route cannot supply pole saturation or a source-pole residue bound.

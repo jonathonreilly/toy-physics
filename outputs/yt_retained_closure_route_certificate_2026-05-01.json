@@ -48,7 +48,7 @@
   ],
   "exact_next_action": "Do not run more small pilot MC for closure.  Either run the strict production physical-response manifest and follow it with pole/LSZ and matching analysis through the FH/LSZ postprocess gate, or derive the microscopic interacting scalar denominator/residue theorem from the retained action, including the canonical-Higgs pole identity, a source-pole mixing exclusion, a same-source sector-overlap identity, or a same-source gauge-mass response observable.  Continue chunked production only with seed-controlled replacement chunks or scheduler handoff; do not treat historical chunk001/chunk002 as independent evidence.  Before treating any finite-shell pole fit as load-bearing, add a model-class/analytic-continuation gate or a theorem excluding shell-vanishing derivative deformations.  If using the eight-mode/eight-noise foreground option, first add a same-source x8/x16 variance calibration with noise-subsample diagnostics.",
   "fail_count": 0,
-  "pass_count": 72,
+  "pass_count": 73,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",
   "required_certificates": {
@@ -57,6 +57,7 @@
     "color_singlet_finite_q_ir": "outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json",
     "color_singlet_zero_mode": "outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json",
     "color_singlet_zero_mode_removed_ladder_pole_search": "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json",
+    "confinement_gap_threshold_import": "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json",
     "d17_source_pole_identity_closure": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
     "direct_cutoff_obstruction": "outputs/yt_top_mass_cutoff_obstruction_2026-05-01.json",
     "feshbach_response_boundary": "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json",

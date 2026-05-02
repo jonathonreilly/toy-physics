@@ -1,0 +1,57 @@
+{
+  "actual_current_surface_status": "exact negative boundary / confinement gap not scalar LSZ threshold",
+  "exact_next_action": "Continue seed-controlled production chunks or derive a genuine same-source scalar denominator/threshold theorem; do not use generic confinement-gap language as the FH/LSZ threshold premise.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "finite_volume": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+    "higgs_pole_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "scalar_denominator": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "soft_continuum": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+    "threshold_authority": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
+    "uniform_gap": "outputs/yt_fh_lsz_uniform_gap_self_certification_no_go_2026-05-02.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No current-surface confinement/mass-gap statement derives the same-source scalar spectral threshold or pole residue.",
+  "sector_gap_witness": {
+    "checks": {
+      "confinement_gap_fixed": true,
+      "gap_ratio_span": 100000.00000000001,
+      "scalar_threshold_gap_can_approach_zero": true
+    },
+    "interpretation": "A qualitative colored-sector confinement gap is not the same as a uniform lower bound on same-source color-singlet scalar spectral weight above the isolated Higgs pole.",
+    "rows": [
+      {
+        "colored_confinement_gap": 1.0,
+        "confinement_gap_unchanged": 1.0,
+        "same_source_scalar_continuum_start_x": 0.35,
+        "same_source_scalar_threshold_gap": 0.1,
+        "scalar_pole_x": 0.25
+      },
+      {
+        "colored_confinement_gap": 1.0,
+        "confinement_gap_unchanged": 1.0,
+        "same_source_scalar_continuum_start_x": 0.251,
+        "same_source_scalar_threshold_gap": 0.001,
+        "scalar_pole_x": 0.25
+      },
+      {
+        "colored_confinement_gap": 1.0,
+        "confinement_gap_unchanged": 1.0,
+        "same_source_scalar_continuum_start_x": 0.250001,
+        "same_source_scalar_threshold_gap": 1e-06,
+        "scalar_pole_x": 0.25
+      }
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not infer scalar pole saturation from confinement",
+    "does not use observed top mass, observed y_t, observed hadron masses, alpha_LM, plaquette, or u0",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit or yt_ward_identity as authority"
+  ],
+  "substrate_note": "docs/YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md",
+  "threshold_closed": false,
+  "verdict": "Qualitative confinement or mass-gap statements on the Cl(3)/Z^3 substrate do not supply the uniform same-source scalar continuum threshold required by the FH/LSZ pole-residue gate.  The substrate note itself limits topology/anomaly arguments to qualitative spectrum and representation constraints, not numerical Yukawa or scalar-pole normalization.  The existing threshold-authority, uniform-gap, soft-continuum, finite-volume, scalar-denominator, and Higgs-pole identity gates all remain blocking."
+}

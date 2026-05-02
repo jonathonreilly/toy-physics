@@ -1402,3 +1402,24 @@ readout, D17 carrier uniqueness, no-retained-2HDM support, and finite moments
 do not prove canonical-Higgs pole identity, no-orthogonal top coupling,
 sector-overlap equality, source residue, or `D'(pole)`.  No retained or
 `proposed_retained` wording is authorized.
+
+Confinement-gap threshold import-audit checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / confinement gap not scalar LSZ threshold
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_confinement_gap_threshold_import_audit.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=73 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=99 FAIL=0
+```
+
+Generic confinement or mass-gap language is not the same-source scalar
+continuum-threshold premise.  It does not authorize pole saturation, source
+residue, or retained/proposed-retained wording.

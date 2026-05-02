@@ -2634,3 +2634,17 @@ Disposition: open / blocker certificate.  The current D17/no-2HDM/source
 overlap stack still does not identify the measured source pole as canonical
 Higgs.  Same source-pole top readout can be fixed while physical canonical
 Higgs `y_t` varies.  No retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 118 Confinement-Gap Threshold Import Audit
+
+Review stance: threshold shortcut audit / claim firewall.
+
+- Added `scripts/frontier_yt_confinement_gap_threshold_import_audit.py`.
+- Added `docs/YT_CONFINEMENT_GAP_THRESHOLD_IMPORT_AUDIT_NOTE_2026-05-02.md`.
+- Added `outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  Qualitative confinement or mass-gap
+statements cannot be imported as the uniform same-source scalar threshold
+needed for pole saturation.  No retained or proposed-retained wording is
+allowed.

@@ -166,6 +166,7 @@ the visible shortcut routes:
 | joint Feynman-Hellmann / scalar-LSZ Stieltjes model-class obstruction | positive spectral/Stieltjes form alone does not fix the finite-shell ambiguity; positive continuum models can keep shell values and pole while changing residue |
 | joint Feynman-Hellmann / scalar-LSZ pole-saturation threshold gate | positive-Stieltjes pole-residue acceptance is now an LP interval gate; the current interval has zero lower bound and remains open/blocking |
 | joint Feynman-Hellmann / scalar-LSZ threshold-authority import audit | no current threshold certificate, scalar denominator theorem certificate, or combined L12 output supplies the premise required by the residue-interval gate |
+| confinement-gap threshold import audit | qualitative substrate confinement/mass-gap language does not provide the same-source scalar LSZ continuum threshold or pole residue |
 | joint Feynman-Hellmann / scalar-LSZ finite-volume pole-saturation obstruction | finite-L discreteness is not a uniform pole-saturation theorem; near-pole continuum levels with gaps closing like `1/L^2` keep the residue lower bound at zero |
 | joint Feynman-Hellmann / scalar-LSZ numba seed-independence audit | historical chunk002 still lacks `numba_gauge_seed_v1`; replacement chunk001 now passes the seed-control gate and is the only ready chunk |
 | joint Feynman-Hellmann / scalar-LSZ uniform-gap self-certification no-go | finite shell rows cannot certify the continuum gap; a gapped positive model's shell values are also fit by a near-pole positive continuum model with zero residue lower bound |
@@ -260,4 +261,8 @@ certificates.  No retained/proposed-retained wording is authorized.
 
 Latest Higgs-pole identity blocker checkpoint: campaign status now includes
 the consolidated blocker certificate and reports `PASS=98 FAIL=0` over 102
+certificates.  No retained/proposed-retained wording is authorized.
+
+Latest confinement-gap threshold checkpoint: campaign status now includes the
+confinement/mass-gap import audit and reports `PASS=99 FAIL=0` over 103
 certificates.  No retained/proposed-retained wording is authorized.

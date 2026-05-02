@@ -92,6 +92,7 @@ def main() -> int:
         "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
+        "confinement_gap_threshold_import": "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json",
         "fh_lsz_finite_volume_pole_saturation": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
         "fh_lsz_numba_seed_independence": "outputs/yt_fh_lsz_numba_seed_independence_audit_2026-05-02.json",
         "fh_lsz_uniform_gap_self_certification": "outputs/yt_fh_lsz_uniform_gap_self_certification_no_go_2026-05-02.json",
@@ -407,6 +408,12 @@ def main() -> int:
         "threshold-authority import audit"
         in certificates["fh_lsz_threshold_authority_audit"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_threshold_authority_audit"].get("proposal_allowed") is False
+    )
+    confinement_gap_threshold_import_blocks = (
+        "confinement gap not scalar LSZ threshold"
+        in certificates["confinement_gap_threshold_import"].get("actual_current_surface_status", "")
+        and certificates["confinement_gap_threshold_import"].get("proposal_allowed") is False
+        and certificates["confinement_gap_threshold_import"].get("threshold_closed") is False
     )
     finite_volume_pole_saturation_blocks = (
         "finite-volume pole-saturation obstruction"
@@ -769,6 +776,11 @@ def main() -> int:
         "fh-lsz-threshold-authority-audit-blocks-hidden-import",
         threshold_authority_audit_blocks,
         certificates["fh_lsz_threshold_authority_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "confinement-gap-threshold-import-blocks",
+        confinement_gap_threshold_import_blocks,
+        certificates["confinement_gap_threshold_import"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-finite-volume-pole-saturation-blocks",

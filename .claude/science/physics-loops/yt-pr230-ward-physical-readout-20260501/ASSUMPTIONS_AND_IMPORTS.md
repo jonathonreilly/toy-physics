@@ -583,3 +583,10 @@ coupling to zero, and do not equate top-sector and gauge-sector source
 overlaps unless the current route derives or measures that identity.  A fixed
 same-source pole readout is not physical `y_t` until source-pole purity,
 source residue, and `D'(pole)` are independently certified.
+
+2026-05-02 confinement-gap threshold import audit:
+
+Qualitative confinement/mass-gap language is support for broad sector
+structure only.  It must not be used as a uniform same-source scalar continuum
+threshold, pole-saturation certificate, or pole-residue bound unless a
+current-surface scalar denominator theorem supplies that exact bridge.

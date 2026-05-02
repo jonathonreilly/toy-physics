@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-117-higgs-pole-identity-latest-blocker
-blocks_completed: 117
-active_route: "latest Higgs-pole identity blocker consolidation"
-active_hard_residual: "D17 carrier uniqueness, no-retained-2HDM support, finite source-overlap moments, and same-source response labels still do not prove source-pole purity, no-orthogonal top coupling, sector-overlap identity, source residue, or D'(pole)."
+current_phase: campaign-rerun-block-118-confinement-gap-threshold-import-audit
+blocks_completed: 118
+active_route: "confinement/mass-gap threshold import audit"
+active_hard_residual: "Qualitative confinement or mass-gap statements do not supply the same-source scalar continuum threshold, pole saturation, source residue, or D'(pole) required by the FH/LSZ gate."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -539,6 +539,7 @@ claim_state_movement:
   - "added a ready chunk response-stability diagnostic: chunks001-004 have finite dE/ds slopes but fail the partial-set stability rule, so they remain bounded support only"
   - "proved a mixed-scalar obstruction for the gauge-response bypass: the same top/W response slopes and source-pole overlap can leave the physical canonical-Higgs Yukawa underdetermined if an orthogonal scalar also couples to the top"
   - "added the latest Higgs-pole identity blocker certificate: a fixed same-source pole readout can coexist with different physical canonical-Higgs Yukawas unless source-pole purity, no-orthogonal-top-coupling/sector-overlap, source residue, and D'(pole) are derived or measured"
+  - "audited the confinement/mass-gap threshold shortcut: qualitative substrate mass-gap language is not a uniform same-source scalar LSZ continuum threshold and cannot replace the scalar denominator/threshold theorem"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -547,5 +548,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll seed-controlled chunks005-006. If either has finished, rerun the combiner, dynamic ready-set checkpoint, response-stability diagnostic, retained-route gate, and campaign gate; otherwise continue scalar-denominator/threshold theorem work or wait for production pole-residue data. Do not claim retained/proposed-retained from the consolidated Higgs-pole identity blocker."
+next_exact_action: "Poll seed-controlled chunks005-006. If either has finished, rerun the combiner, dynamic ready-set checkpoint, response-stability diagnostic, retained-route gate, and campaign gate; otherwise continue scalar-denominator/threshold theorem work or wait for production pole-residue data. Do not import generic confinement-gap language as the scalar LSZ threshold premise."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."
