@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:16:08.103095+00:00
+**Generated:** 2026-05-02T21:18:46.542025+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 1 |
-| unaudited | 557 |
+| unaudited | 556 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 632 |
+| ~~audited_conditional~~ | 633 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 632 |
+| `audited_conditional` | 633 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 593 |
+| `unaudited` | 592 |
 
 | claim_type | count |
 |---|---:|
@@ -573,6 +573,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complete_prediction_chain_2026_04_15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | E | - |
 | `composite_source_additivity_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `connectivity_family_v2_elliptical_duplicate_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3037,6 +3038,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `HIGGS_MASS_FROM_AXIOM_NOTE.md`
   - `HIGGS_MASS_DERIVED_NOTE.md`
   - `ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `complex_action_note`
+
+- **Note:** [`COMPLEX_ACTION_NOTE.md`](../../docs/COMPLEX_ACTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A bounded one-parameter complex-kernel construction where S = L(1-f) + i*gamma*L*f; gamma=0 reproduces the real-action propagator, linearity keeps the three-slit I3 cancellation near machine precision, and positive gamma produces absorption-biased escape and centroid shifts in the specified lattice setup.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-complex-action-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** S = L(1-f) + i * gamma * L * f, interpreted as a single complex action whose imaginary part supplies horizon-like absorption.  _(class `E`)_
+- **chain closes:** False — The bounded computational facts close only after accepting the ansatz S = L(1-f) + i*gamma*L*f, the field f=s/r, the chosen lattice/readout, and gamma as external premises. The physical bridge to action, phase, measure, signature, units, and horizon readout does not close from the note alone.
+- **rationale:** Issue: the load-bearing step is the introduced equation S = L(1-f) + i*gamma*L*f, plus the interpretation that its imaginary term represents horizon/absorption physics; gamma is free and the horizon readout is imposed through the kernel rather than derived. Why this blocks: the runner checks constructed examples of that ansatz, including gamma sweeps, I3 cancellation, reduction at gamma=0, and mass-strength scaling, but it does not compute the hard bridge from Cl(3)/Z3, a physical action principle, a phase/measure map, or a horizon observable such as a photon sphere, Schwarzschild radius, Hawking spectrum, or causal boundary. Repair target: derive gamma or the imaginary action term from retained primitives and add a runner that constructs a horizon-specific observable rather than labeling absorption-biased centroid/escape behavior as horizon-like after the fact. Claim boundary until fixed: the note may claim a conditional numerical model of an imposed complex action with linear Born cancellation and absorption-biased detector behavior in the listed setup, not a gravity-horizon unification theorem.
 - **auditor confidence:** high
 
 ### `composite_source_additivity_2d_note`
