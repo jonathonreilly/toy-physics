@@ -73,10 +73,11 @@ The remaining open work now belongs to:
 For the clean public chirality / anti-rooting boundary, see
 `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`.
 For the exact retained-generation algebra theorem, see
-[THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md).
+`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+(cross-reference, not a load-bearing upstream dep — this note's claim is
+established inline; the standalone packaging exists for reuse).
 For the exact no-same-stack / no-same-surface regulator reinterpretation
-closure, see
-[PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md).
+closure, see `PHYSICAL_LATTICE_NECESSITY_NOTE.md` (cross-reference).
 
 ## Validation
 

@@ -133,18 +133,6 @@
       "to": "emergent_lorentz_invariance_note"
     },
     {
-      "from": "anomaly_forces_time_theorem",
-      "to": "su2_witten_z2_anomaly_theorem_note_2026-04-24"
-    },
-    {
-      "from": "anomaly_forces_time_theorem",
-      "to": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
-    },
-    {
-      "from": "anomaly_forces_time_theorem",
-      "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
-    },
-    {
       "from": "antigravity_sign_selector_boundary_note",
       "to": "frontier_extension_lane_opening_note_2026-04-25"
     },
@@ -8451,14 +8439,6 @@
     {
       "from": "three_generation_observable_theorem_note",
       "to": "generation_axiom_boundary_note"
-    },
-    {
-      "from": "three_generation_structure_note",
-      "to": "three_generation_observable_theorem_note"
-    },
-    {
-      "from": "three_generation_structure_note",
-      "to": "physical_lattice_necessity_note"
     },
     {
       "from": "unified_program_note",
@@ -19917,7 +19897,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T16:43:36.306057+00:00",
+  "generated_at": "2026-05-02T17:07:56.690552+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21284,12 +21264,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [
-        "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-        "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
-      ],
-      "note_hash": "a2619b7cd9a73cc4e5b4c486d62c001cd90ed84490411e9b5af56a26a233e4e9",
+      "deps": [],
+      "note_hash": "c147743d4cd9e87b710b496712fe587e8c143c64efee94345485f1c43233ea76",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
       "runner_path": null,
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
@@ -41895,11 +41871,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "three_generation_observable_theorem_note",
-        "physical_lattice_necessity_note"
-      ],
-      "note_hash": "308ca6f60e4a77379eb283a4d36c898085ec9b96931e574aa7cb19c577b1b3fe",
+      "deps": [],
+      "note_hash": "4d4cbba029fac84e829c79c7619006c3926b548341c52348d0bcbf1b428f9644",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
@@ -45093,6 +45066,7 @@
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
+    "anomaly_forces_time_theorem",
     "architecture_note_directional_measure",
     "architecture_options",
     "architecture_portability_sweep_note",
@@ -46077,6 +46051,7 @@
     "third_grown_family_complex_boundary_note",
     "third_grown_family_complex_note",
     "third_grown_family_sign_note",
+    "three_generation_structure_note",
     "triple_stack_collapse_scaling_note",
     "two_body_mutual_attraction_note_2026-04-11",
     "two_field_retarded_family_closure_note_2026-04-10",
@@ -46227,10 +46202,10 @@
       "open_gate": 110,
       "positive_theorem": 609
     },
-    "edge_count": 4979,
+    "edge_count": 4974,
     "leaf_count": 748,
     "node_count": 1776,
-    "root_count": 1213,
+    "root_count": 1215,
     "runners_with_path": 1338
   }
 }
