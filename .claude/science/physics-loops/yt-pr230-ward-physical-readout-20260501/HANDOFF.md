@@ -412,3 +412,7 @@ The first chunk launch also exposed a pure CLI preflight bug: negative scalar
 source shifts must be passed with equals syntax.  The production and chunk
 manifest emitters now use `--scalar-source-shifts=-0.01,0.0,0.01`, so the next
 exact action can relaunch chunk001 under the non-evidence combiner gate.
+Chunk001 has been relaunched as non-evidence.  In parallel, the FH/LSZ pole-fit
+kinematics gate shows the current scalar modes provide only one nonzero
+momentum shell; they are not sufficient to determine an isolated scalar-pole
+inverse derivative without richer pole-fit kinematics or a theorem.

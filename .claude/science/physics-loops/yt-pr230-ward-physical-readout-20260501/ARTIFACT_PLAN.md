@@ -353,7 +353,9 @@ Next artifact:
   currently finds zero ready chunks; the chunk launch commands now isolate
   each chunk's per-volume artifact directory and use per-chunk resume; the
   negative source-shift CLI form is fixed to
-  `--scalar-source-shifts=-0.01,0.0,0.01`
+  `--scalar-source-shifts=-0.01,0.0,0.01`; the pole-fit kinematics gate shows
+  the current four modes provide only one nonzero shell and cannot by
+  themselves supply the isolated-pole derivative
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

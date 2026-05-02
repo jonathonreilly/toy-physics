@@ -118,7 +118,9 @@ probability.
   use chunk-local artifact directories plus per-chunk resume, so artifact
   collision is no longer the next launch blocker.  The negative scalar-source
   CLI form is also fixed with equals syntax, so the next L12 chunk launch is
-  syntactically executable.  The same-source
+  syntactically executable.  The pole-fit kinematics gate shows the current
+  four scalar modes have only one nonzero shell, so future closure needs a
+  richer pole-fit manifest/gate or an analytic pole theorem.  The same-source
   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
   pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic

@@ -82,6 +82,7 @@ def main() -> int:
             "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json"
         ),
         "fh_lsz_chunk_combiner_gate": load("outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"),
+        "fh_lsz_pole_fit_kinematics": load("outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -301,6 +302,12 @@ def main() -> int:
         "chunk combiner gate" in str(statuses["fh_lsz_chunk_combiner_gate"])
         or "open" in str(statuses["fh_lsz_chunk_combiner_gate"]),
         statuses["fh_lsz_chunk_combiner_gate"],
+    )
+    report(
+        "fh-lsz-pole-fit-kinematics-not-closure",
+        "scalar-pole kinematics gate" in str(statuses["fh_lsz_pole_fit_kinematics"])
+        or "open" in str(statuses["fh_lsz_pole_fit_kinematics"]),
+        statuses["fh_lsz_pole_fit_kinematics"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
@@ -570,6 +577,9 @@ def main() -> int:
             "requires run-control provenance before L12 combination; the "
             "chunk commands now use chunk-local artifact directories and "
             "per-chunk resume to avoid cross-chunk artifact collisions.  "
+            "The pole-fit kinematics gate shows the current scalar modes give "
+            "only one nonzero momentum shell, so four-mode chunk completion is "
+            "not by itself an isolated-pole derivative.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

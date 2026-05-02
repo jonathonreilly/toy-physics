@@ -1,0 +1,233 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ scalar-pole kinematics gate blocks four-mode manifest as pole-fit evidence",
+  "chunk_analyses": [
+    {
+      "distinct_p_hat_sq_shells": [
+        0.0,
+        0.267949192431
+      ],
+      "distinct_shell_count": 2,
+      "has_zero_shell": true,
+      "mode_count": 4,
+      "modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "nonzero_shell_count": 1,
+      "pole_fit_kinematics_ready": false,
+      "spatial_l": 12
+    },
+    {
+      "distinct_p_hat_sq_shells": [
+        0.0,
+        0.267949192431
+      ],
+      "distinct_shell_count": 2,
+      "has_zero_shell": true,
+      "mode_count": 4,
+      "modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "nonzero_shell_count": 1,
+      "pole_fit_kinematics_ready": false,
+      "spatial_l": 12
+    },
+    {
+      "distinct_p_hat_sq_shells": [
+        0.0,
+        0.267949192431
+      ],
+      "distinct_shell_count": 2,
+      "has_zero_shell": true,
+      "mode_count": 4,
+      "modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "nonzero_shell_count": 1,
+      "pole_fit_kinematics_ready": false,
+      "spatial_l": 12
+    }
+  ],
+  "chunk_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
+  "fail_count": 0,
+  "minimum_pole_fit_requirements": {
+    "distinct_p_hat_sq_shells": 4,
+    "nonzero_shells": 3,
+    "plus": [
+      "isolated scalar pole or controlled analytic continuation class",
+      "finite-volume/IR/zero-mode limiting control",
+      "same-source provenance matching the FH response source",
+      "no fitted selector, kappa_s=1, H_unit, observed target, alpha/plaquette/u0, c2=1, or Z_match=1 proof input"
+    ]
+  },
+  "pass_count": 7,
+  "production_analyses": [
+    {
+      "distinct_p_hat_sq_shells": [
+        0.0,
+        0.267949192431
+      ],
+      "distinct_shell_count": 2,
+      "has_zero_shell": true,
+      "mode_count": 4,
+      "modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "nonzero_shell_count": 1,
+      "pole_fit_kinematics_ready": false,
+      "spatial_l": 12
+    },
+    {
+      "distinct_p_hat_sq_shells": [
+        0.0,
+        0.152240934977
+      ],
+      "distinct_shell_count": 2,
+      "has_zero_shell": true,
+      "mode_count": 4,
+      "modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "nonzero_shell_count": 1,
+      "pole_fit_kinematics_ready": false,
+      "spatial_l": 16
+    },
+    {
+      "distinct_p_hat_sq_shells": [
+        0.0,
+        0.068148347422
+      ],
+      "distinct_shell_count": 2,
+      "has_zero_shell": true,
+      "mode_count": 4,
+      "modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "nonzero_shell_count": 1,
+      "pole_fit_kinematics_ready": false,
+      "spatial_l": 24
+    }
+  ],
+  "production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current four-mode scalar-LSZ kinematics are finite-difference support only, not an isolated-pole derivative.",
+  "strict_non_claims": [
+    "does not reject the chunks as measurement support",
+    "does not treat four-mode finite differences as a pole derivative",
+    "does not claim retained or proposed_retained closure"
+  ],
+  "verdict": "The current FH/LSZ production and chunk manifests measure the scalar two-point object at q=0 plus three axis-equivalent one-step spatial modes.  On each volume this is only two distinct p_hat^2 shells, with one nonzero shell.  That can form a finite positive-momentum secant, but it cannot locate an isolated scalar pole, determine dGamma_ss/dp^2 at that pole, or bound continuum remainders without importing a model.  Completed chunks therefore still need a richer pole-fit postprocess or a theorem before they can contribute to a retained y_t proposal."
+}

@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-66-fh-lsz-negative-shift-cli-preflight
-blocks_completed: 80
-active_route: "FH/LSZ production command syntax preflight"
-active_hard_residual: "Scalar-source shift commands now use equals syntax for negative values; no chunks are present and L16/L24 plus isolated-pole/FV/IR postprocess remain open"
+current_phase: campaign-rerun-block-67-fh-lsz-pole-fit-kinematics-gate
+blocks_completed: 81
+active_route: "FH/LSZ scalar-pole kinematics gate"
+active_hard_residual: "Chunk001 is running as non-evidence; current four-mode scalar-LSZ kinematics have only one nonzero shell and cannot supply an isolated-pole derivative without richer pole-fit data or a theorem"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -396,6 +396,7 @@ claim_state_movement:
   - "added an FH/LSZ chunk combiner gate and run-control provenance metadata: all 63 L12 chunks must be production-phase, seed/command-auditable, same-source dE/ds plus C_ss(q) outputs before L12 combination; zero chunks are present now and L12-only remains non-retained"
   - "fixed the FH/LSZ chunk launch preflight: each L12 command now uses a chunk-local production-output-dir and --resume, and the combiner gate verifies 63 unique artifact directories before accepting future chunk outputs"
   - "fixed FH/LSZ production and chunk manifest command syntax: negative scalar-source shifts are now emitted as --scalar-source-shifts=-0.01,0.0,0.01 so argparse accepts the first production chunk launch"
+  - "added an FH/LSZ pole-fit kinematics gate: the current four scalar modes provide one nonzero p_hat^2 shell, so completed chunks remain finite-difference support rather than isolated-pole dGamma/dp^2 evidence"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -404,5 +405,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Relaunch the first L12 chunk only as non-evidence under the combiner gate, then continue analytic scalar denominator/residue work while it runs; if launch fails again, checkpoint the concrete preflight blocker."
+next_exact_action: "Keep chunk001 running as non-evidence under the combiner gate; next add a richer pole-fit manifest/gate or continue analytic scalar denominator/residue work while the chunk runs."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

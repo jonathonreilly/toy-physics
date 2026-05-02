@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=37 FAIL=0
+# SUMMARY: PASS=38 FAIL=0
 ```
 
 The runner verifies:
@@ -57,6 +57,7 @@ The runner verifies:
 | current FH/LSZ resume support makes 12h foreground production launch safe | no |
 | chunked L12 production manifest is complete production evidence | no |
 | chunk-combiner gate has complete ready L12 chunks | no |
+| four-mode scalar-LSZ kinematics determine the isolated pole derivative | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -97,6 +98,10 @@ with seed/command run-control provenance, same-source `dE/ds`, and same-source
 L12-only remains non-retained even when complete.  Chunk commands now use
 chunk-local production artifact directories plus per-chunk resume, so
 per-volume artifacts cannot collide across independent chunks.
+The scalar-pole kinematics gate adds that the current four scalar modes contain
+only one nonzero `p_hat^2` shell.  Completed four-mode chunks are therefore
+finite-difference support, not the isolated-pole `dGamma_ss/dp^2` needed for
+retained closure.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

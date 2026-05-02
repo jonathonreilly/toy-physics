@@ -594,3 +594,16 @@ Fixes FH/LSZ production command syntax:
 - still no retained/proposed-retained closure: this only makes the next
   non-evidence chunk launch syntactically executable.
 ```
+
+Latest FH/LSZ pole-fit kinematics checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ scalar-pole kinematics gate:
+- parses the production and chunk manifest scalar-LSZ modes;
+- verifies the current mode set has only one nonzero `p_hat^2` shell;
+- validator passes `PASS=7 FAIL=0`; retained-route gate reports
+  `PASS=38 FAIL=0`; campaign status now consumes 68 certificates and reports
+  `PASS=64 FAIL=0`;
+- still no retained/proposed-retained closure: four-mode chunks are finite
+  positive-momentum secant support, not an isolated scalar-pole derivative.
+```

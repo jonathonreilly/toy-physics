@@ -481,6 +481,10 @@ The chunk manifest now also requires chunk-local artifact directories, so
 reusing or overwriting per-volume artifacts is not an allowed provenance path.
 The negative source-shift CLI fix is syntactic only; it does not upgrade a
 manifest, partial chunk, or L12-only output into physical `y_t` evidence.
+The pole-fit kinematics gate extends that boundary: a finite secant from the
+current one nonzero momentum shell is not a scalar pole derivative unless the
+route supplies richer kinematics, analytic continuation control, or a retained
+theorem.
 
 Positive-closure candidates left after the assumption exercise:
 

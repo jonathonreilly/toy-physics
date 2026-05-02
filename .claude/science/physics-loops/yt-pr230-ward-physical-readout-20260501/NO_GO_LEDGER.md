@@ -990,6 +990,19 @@ The first chunk launch failed before compute because `--scalar-source-shifts
 -0.01,0.0,0.01` lets `argparse` treat the negative value as an option.  Both
 FH/LSZ manifest emitters now use `--scalar-source-shifts=-0.01,0.0,0.01`.
 
+FH/LSZ four-mode scalar-pole fit shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_pole_fit_kinematics_gate.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The current scalar-LSZ modes are `0,0,0` plus three axis-equivalent one-step
+spatial modes.  They give one nonzero `p_hat^2` shell, so they can support only
+a finite positive-momentum secant.  They cannot locate an isolated scalar pole
+or determine `dGamma_ss/dp^2` at the pole without richer kinematics or an
+imported model.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

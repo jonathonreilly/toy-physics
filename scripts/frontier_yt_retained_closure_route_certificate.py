@@ -78,6 +78,7 @@ def main() -> int:
         "fh_lsz_production_checkpoint_granularity": "outputs/yt_fh_lsz_production_checkpoint_granularity_gate_2026-05-01.json",
         "fh_lsz_chunked_production_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
         "fh_lsz_chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+        "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
     }
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
@@ -274,6 +275,11 @@ def main() -> int:
         and certificates["fh_lsz_chunk_combiner_gate"].get("proposal_allowed") is False
         and certificates["fh_lsz_chunk_combiner_gate"].get("chunk_summary", {}).get("ready_chunks") == 0
     )
+    pole_fit_kinematics_not_closure = (
+        "scalar-pole kinematics gate"
+        in certificates["fh_lsz_pole_fit_kinematics"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_pole_fit_kinematics"].get("proposal_allowed") is False
+    )
     joint_resource_multiday = (
         float(certificates["joint_resource_projection"].get("projection", {}).get("joint_mass_scaled_hours", 0.0)) > 1000.0
         and certificates["joint_resource_projection"].get("proposal_allowed") is False
@@ -439,6 +445,11 @@ def main() -> int:
         certificates["fh_lsz_chunk_combiner_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-pole-fit-kinematics-not-closure",
+        pole_fit_kinematics_not_closure,
+        certificates["fh_lsz_pole_fit_kinematics"].get("actual_current_surface_status", ""),
+    )
+    report(
         "joint-fh-lsz-resource-is-multiday",
         joint_resource_multiday,
         f"hours={certificates['joint_resource_projection'].get('projection', {}).get('joint_mass_scaled_hours')}",
@@ -535,6 +546,9 @@ def main() -> int:
             "even an L12 combined summary can be constructed.  Chunk launch "
             "commands now isolate per-volume artifacts in chunk-local output "
             "directories and use per-chunk resume.  "
+            "The scalar pole-fit kinematics gate also shows the current four "
+            "modes give only one nonzero p_hat^2 shell, so a completed chunk "
+            "set would still need richer pole-fit kinematics or a theorem.  "
             "The actual interacting "
             "scalar pole derivative theorem and production evidence remain open.  "
             "These cannot be assumed."
