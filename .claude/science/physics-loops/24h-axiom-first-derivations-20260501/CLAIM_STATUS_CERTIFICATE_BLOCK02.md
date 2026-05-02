@@ -1,6 +1,6 @@
 # Claim Status Certificate — Block 02 (Hawking temperature)
 
-**Date:** 2026-05-01
+**Date:** 2026-05-01 (originally) / 2026-05-02 (reframed under scope-aware classification)
 **Block:** 02 — Hawking T_H = κ/(2π) from Wick-rotated Killing horizon + KMS
 **Slug:** `24h-axiom-first-derivations-20260501`
 **Branch:** `physics-loop/24h-axiom-first-block02-hawking-20260501`
@@ -9,74 +9,59 @@
 **Runner:** [scripts/axiom_first_hawking_temperature_check.py](../../../../scripts/axiom_first_hawking_temperature_check.py)
 **Log:** [outputs/axiom_first_hawking_temperature_check_2026-05-01.txt](../../../../outputs/axiom_first_hawking_temperature_check_2026-05-01.txt)
 
-## Status fields
+## Framework
+
+Reframed under scope-aware classification (audit-lane proposal #291).
+
+## Author classification (non-authoritative hint to auditor)
 
 ```yaml
-actual_current_surface_status: support
-conditional_surface_status: derived support theorem on retained framework GR + retained BH 1/4 carrier (admitted Wald-Noether) + Block 01 KMS support
-hypothetical_axiom_status: null
-admitted_observation_status: null
-proposal_allowed: false
-proposal_allowed_reason: "Inherits upstream support classification: depends on Block 01 KMS support theorem which is itself audit-pending support (depends on retained-but-audit-pending RP and spectrum-condition support notes). Per physics-loop SKILL retained-proposal certificate item 4, a chain of support cannot promote to proposed_retained until all dependencies are ratified retained on the current authority surface. Note also: Killing-horizon and Wick-rotation-regularity vocabulary is admitted-context input (same as upstream Wald-Noether composition); not a new admission, but counts toward audit-required."
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+claim_type_author_hint: bounded_theorem
+claim_scope: "For any non-degenerate Killing horizon of surface gravity κ on the framework's retained discrete GR action surface, the regular Wick-rotated Euclidean continuation has period β_th = 2π/κ; equivalently the asymptotic state is Hartle-Hawking-Israel Gibbs at T_H = κ/(2π) (H1)-(H4). Conditional on admitted-context Killing-vector / surface-gravity / Wick-rotation-regularity vocabulary already paid for by the retained Wald-Noether composition."
+admitted_context_inputs:
+  - surface gravity κ definition (already admitted by upstream BH 1/4)
+  - Wick-rotation regularity at the bolt (already admitted by upstream BH 1/4)
+  - asymptotic-time identification (standard stationary GR)
+upstream_dependencies:
+  - block_01_kms_condition (this PR's stacked base)
+  - bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29 (audited_conditional today)
+  - universal_gr_discrete_global_closure_note (retained)
+  - universal_qg_canonical_textbook_geometric_action_equivalence_note (retained)
+runner_classified_passes: 6 PASS at machine precision (Wick-rotation periodicity, Schwarzschild benchmark, first-law differential, Rindler preview)
 ```
 
-## Dependency classes
+## Why bounded_theorem
 
-| Dep | Class | Source |
-|---|---|---|
-| A1-A4 | A_min axiom (inherited via Block 01) | `docs/MINIMAL_AXIOMS_2026-04-11.md` |
-| Framework GR action surface | retained | `docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md` and family |
-| Canonical Einstein-Hilbert equivalence | retained | `docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md` |
-| BH 1/4 carrier composition | retained (with admitted Wald formula) | `docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md` |
-| Block 01 KMS support theorem | support, audit-pending | `docs/AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md` (this PR base) |
-| Surface gravity κ definition | admitted-context | standard differential geometry; same admission as Wald-Noether composition |
-| Wick-rotation regularity at the bolt | admitted-context | standard Hawking-Gibbons argument; same admission as Wald-Noether composition |
-| Asymptotic-time identification | admitted-context | standard stationary GR |
+The Killing-horizon / Wick-rotation-regularity vocabulary is admitted-
+context — it's the same admission already paid for by the retained Wald-
+Noether composition, but it's load-bearing for the claim. `bounded_theorem`
+honestly captures this. The bound becomes the canonical `claim_scope`.
 
-## Open imports
+## Expected `effective_status` after audit
 
-The Killing-horizon vocabulary (κ definition, Wick-rotation regularity)
-is the same admitted-context input already paid for by the retained
-BH 1/4 carrier composition. No new imports.
+If Codex returns `audit_status = audited_clean` and `claim_type =
+bounded_theorem`:
+
+- **Path A** (Block 01 promotes to retained AND BH 1/4 promotes to
+  retained_bounded): `effective_status = retained_bounded`.
+- **Path B** (any upstream still pending): `effective_status =
+  proposed_retained` (transient).
+
+## Dependency chain status snapshot (2026-05-02)
+
+| Dep | Today's `effective_status` |
+|---|---|
+| Block 01 KMS | proposed_retained (pending RP + spectrum cond) |
+| BH 1/4 carrier | audited_conditional (gating) |
+| Framework GR action | retained |
 
 ## Review-loop disposition
 
-- branch-local self-review: `pass` (theorem note matches runner output;
-  Wick-rotation regularity argument matches Step 2 algebra; Schwarzschild
-  benchmark T_H = 1/(8 π G M) recovered exactly).
-- formal `/review-loop` execution: deferred to integration-time.
+- branch-local self-review: `pass` (6/6 tests; Schwarzschild T_H = 1/(8πGM)
+  recovered exactly).
+- formal Codex audit: pending under new prompt template.
 
-## Status conclusion
+## Audit hand-off
 
-This block is a **derived support theorem** on the framework's retained
-GR action surface plus Block 01 KMS support. It is suitable for future
-integration into the package's gravitational thermodynamics surface as a
-support-grade theorem.
-
-It is **not** suitable for `proposed_retained` / `proposed_promoted`
-status until:
-
-1. Upstream RP and spectrum-condition support notes are ratified retained.
-2. Block 01 KMS support is ratified retained.
-3. Independent audit of Steps 1–4 of the proof.
-
-The PR title and body should use `support` (or `support theorem`) and
-make explicit that bare `retained` / `promoted` is not allowed.
-
-## Audit hand-off requirement
-
-If a later integration / review process wants to promote this note to
-`proposed_retained`, it needs:
-
-1. The full upstream chain (RP + spectrum cond + Block 01 KMS) ratified
-   retained on the current authority surface.
-2. Independent audit of the theorem note's Steps 1–4.
-3. Independent verification of the runner's 6-test pass on a clean
-   environment.
-4. Optional: independent Bogoliubov-coefficient derivation of T_H
-   (Hawking 1975 original method) on the framework's QFT-on-curved-
-   spacetime surface as a cross-check.
-
-Until then this note remains `support` per the controlled vocabulary.
+Block 02 opens the BH thermodynamics chain. Successful clean audit unlocks
+Block 05 (first law) and Block 10 (GSL).

@@ -1,8 +1,9 @@
 # Axiom-First Hawking Temperature from Wick-Rotated Killing Horizon + KMS
 
 **Date:** 2026-05-01
-**Status:** support — branch-local derivation note on retained framework GR + retained BH 1/4 carrier (admitted Wald-Noether) + Block 01 KMS support theorem; runner passing; audit-pending.
-Honest status: the theorem chain is rigorous on the retained surface plus the upstream chain, but the upstream KMS note is itself support (not retained), so this note is `support`. `proposal_allowed: false` per Block 01 certificate inheritance.
+**Type:** bounded_theorem
+**Claim scope:** for any non-degenerate Killing horizon of surface gravity κ on the framework's retained discrete GR action surface, the regular Wick-rotated Euclidean continuation has period β_th = 2π/κ; equivalently the asymptotic state is Hartle-Hawking-Israel Gibbs at T_H = κ/(2π) (H1)-(H4). Conditional on admitted-context Killing-vector / surface-gravity / Wick-rotation-regularity vocabulary already paid for by the retained Wald-Noether composition.
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 1 (Block 02; stacked on Block 01)
 **Branch:** `physics-loop/24h-axiom-first-block02-hawking-20260501`
