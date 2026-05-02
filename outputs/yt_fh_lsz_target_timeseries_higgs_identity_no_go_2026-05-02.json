@@ -1,0 +1,54 @@
+{
+  "actual_current_surface_status": "exact negative boundary / FH-LSZ target time series not canonical-Higgs identity",
+  "exact_next_action": "Close one of the missing identity premises: source-pole purity, no orthogonal top coupling, same-source sector-overlap equality, or an independent canonical-Higgs response observable such as same-source W/Z mass slopes.",
+  "fail_count": 0,
+  "parents": {
+    "autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
+    "invariant_readout": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
+    "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
+    "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A source-pole purity theorem, no-orthogonal-top-coupling theorem, same-source sector-overlap identity, or independent canonical-Higgs response observable remains required.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat target time series as physical dE/dh",
+    "does not set kappa_s = 1",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0",
+    "does not assume no orthogonal top-coupled scalar"
+  ],
+  "target_timeseries_higgs_identity_gate_passed": false,
+  "verdict": "Per-configuration same-source target time series can support autocorrelation/ESS for dE/ds and C_ss/Gamma_ss, but their infinite-statistics limit is still a source-coordinate limit.  The witness keeps the same source response, same source inverse propagator derivative, and same source-rescaling-invariant FH/LSZ readout while changing the canonical-Higgs Yukawa by rotating the source pole into an orthogonal top-coupled scalar.  Therefore target time series do not by themselves derive kappa_s or identify the source pole with the canonical Higgs radial mode.",
+  "witness": {
+    "checks": {
+      "canonical_higgs_yukawa_differs": true,
+      "dGamma_dp2_equal_by_construction": true,
+      "orthogonal_top_coupling_required_in_mixed_witness": true,
+      "same_source_invariant_equal_by_construction": true,
+      "same_source_response_equal": true
+    },
+    "model_A_pure_canonical_higgs": {
+      "canonical_higgs_yukawa": 1.0,
+      "orthogonal_scalar_yukawa": 0.0,
+      "same_source_response": 1.0,
+      "source_operator": "O_s = h",
+      "theta": 0.0
+    },
+    "model_B_mixed_source_pole": {
+      "canonical_higgs_yukawa": 0.8,
+      "orthogonal_scalar_yukawa": 0.614213562373095,
+      "same_source_response": 1.0,
+      "source_operator": "O_s = cos(theta) h + sin(theta) chi",
+      "theta": 0.7853981633974483
+    },
+    "shared_same_source_observables": {
+      "dGamma_ss_dp2_at_pole": 2.5,
+      "same_source_invariant": 1.5811388300841898,
+      "same_source_residue_proxy": 0.4,
+      "source_response_limit": 1.0,
+      "target_timeseries_limit": "All per-configuration dE/ds and C_ss/Gamma_ss samples may converge to these same source-coordinate limits."
+    }
+  }
+}

@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=85 FAIL=0
+# SUMMARY: PASS=86 FAIL=0
 ```
 
 The runner verifies:
@@ -60,6 +60,7 @@ The runner verifies:
 | finite-source-linearity gate is passed for current FH chunks | no |
 | autocorrelation/ESS gate is passed for target FH/LSZ observables | no |
 | target time-series harness extension is production evidence | no |
+| target time series identify the canonical Higgs radial mode | no |
 | BRST/ST/Nielsen identities fix the source pole as canonical Higgs | no |
 | finite Cl(3)/Z3 automorphism/orbit data fix continuous LSZ source overlap | no |
 | same-source pole-data sufficiency gate is passed | no |
@@ -159,6 +160,11 @@ The target time-series harness extension removes that instrumentation gap for
 future chunks by serializing per-configuration source-response and scalar
 two-point rows.  Its reduced smoke is infrastructure support only; it is not
 production evidence, scalar LSZ normalization, or canonical-Higgs closure.
+The target-time-series Higgs-identity no-go shows that even perfect
+same-source target statistics would still be source-coordinate data: the same
+`dE/ds`, `dGamma_ss/dp^2`, and invariant readout can coexist with different
+canonical-Higgs Yukawa couplings if the source pole mixes with an orthogonal
+top-coupled scalar.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

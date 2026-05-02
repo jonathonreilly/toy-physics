@@ -199,6 +199,9 @@ def main() -> int:
         "fh_lsz_target_timeseries_harness": load(
             "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json"
         ),
+        "fh_lsz_target_timeseries_higgs_identity_no_go": load(
+            "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json"
+        ),
         "higgs_pole_identity_latest_blocker": load(
             "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json"
         ),
@@ -675,6 +678,12 @@ def main() -> int:
         statuses["fh_lsz_target_timeseries_harness"],
     )
     report(
+        "fh-lsz-target-timeseries-higgs-identity-no-go-blocks",
+        "target time series not canonical-Higgs identity"
+        in str(statuses["fh_lsz_target_timeseries_higgs_identity_no_go"]),
+        statuses["fh_lsz_target_timeseries_higgs_identity_no_go"],
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         "latest Higgs-pole identity blocker certificate"
         in str(statuses["higgs_pole_identity_latest_blocker"]),
@@ -1043,6 +1052,11 @@ def main() -> int:
             "The target time-series harness extension removes that "
             "instrumentation gap for future chunks, but its reduced smoke is "
             "not production evidence or scalar LSZ normalization.  "
+            "The target-time-series Higgs-identity no-go then blocks treating "
+            "even perfect same-source target statistics as canonical-Higgs "
+            "identity: the source-coordinate limits can stay fixed while the "
+            "canonical-Higgs Yukawa changes through an orthogonal top-coupled "
+            "scalar.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

@@ -61,6 +61,12 @@ ranking: the leading foreground route is still a true scalar-denominator /
 canonical-Higgs source-pole identity theorem, while completed future chunks
 must still pass target ESS, finite-source-linearity, pole/FV/IR/model-class,
 and canonical-Higgs gates.
+The target-time-series Higgs-identity no-go narrows the analytic target: even
+perfect same-source target statistics do not identify the canonical Higgs if an
+orthogonal top-coupled scalar can mix into the measured source pole.  The next
+analytic attempts should therefore attack one of the identity premises
+directly: source-pole purity, no orthogonal top coupling, same-source
+sector-overlap equality, or an independent same-source W/Z response observable.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

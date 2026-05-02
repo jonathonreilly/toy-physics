@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=111 FAIL=0
+# SUMMARY: PASS=112 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -120,6 +120,7 @@ The certificate consumes the PR-local route certificates for:
 - finite-source-linearity gate.
 - autocorrelation/ESS gate.
 - FH/LSZ target time-series harness extension.
+- FH/LSZ target time-series Higgs-identity no-go.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
 proposal.
@@ -190,6 +191,7 @@ the visible shortcut routes:
 | finite-source-linearity gate | current chunks use one nonzero source radius; the three-radius calibration manifest is planning support only and not foreground evidence |
 | autocorrelation/ESS gate | eight ready chunks reach the count threshold and plaquette histories are diagnostic, but target same-source `dE/ds` and `C_ss(q)` time series are absent from current chunks, so target ESS is not certified |
 | FH/LSZ target time-series harness extension | future chunks now serialize per-configuration source-response and scalar two-point target time series, but the smoke is reduced-scope infrastructure support only |
+| FH/LSZ target time-series Higgs-identity no-go | even perfect source-coordinate target statistics do not identify the source pole with the canonical Higgs radial mode |
 | reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
 | effective-potential Hessian source-overlap no-go | canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the PR #230 source operator direction |
 | scalar carrier/projector closure attempt | color-singlet support and unit taste-singlet algebra are available, but physical carrier authority, unit-projector crossing, kernel enhancement, fitted-kernel legitimacy, and `K'(pole)` remain blocked |
@@ -239,7 +241,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
-| retained-closure route certificate | refreshed gate includes new source-unit, gauge-VEV source-overlap no-go, scalar renormalization-condition source-overlap no-go, scalar source contact-term scheme boundary, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, postprocess-gate block, checkpoint-granularity block, chunked-manifest block, chunk-combiner gate, chunk001/chunk002 checkpoints, pole-fit kinematics gate, pole-fit postprocessor scaffold, finite-shell identifiability no-go, pole-fit model-class gate, Stieltjes model-class obstruction, pole-saturation threshold gate, threshold-authority import audit, finite-volume pole-saturation obstruction, numba seed-independence audit, uniform-gap self-certification no-go, Higgs-pole identity gate, gauge-normalized response route, gauge-mass observable gap, source-shift derivative no-go, finite-source-linearity gate, autocorrelation/ESS gate, pole-fit mode/noise budget, eight-mode noise variance gate, noise-subsample diagnostics harness, and variance calibration manifest; still no proposed-retained authorization |
+| retained-closure route certificate | refreshed gate includes new source-unit, gauge-VEV source-overlap no-go, scalar renormalization-condition source-overlap no-go, scalar source contact-term scheme boundary, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, postprocess-gate block, checkpoint-granularity block, chunked-manifest block, chunk-combiner gate, chunk001/chunk002 checkpoints, pole-fit kinematics gate, pole-fit postprocessor scaffold, finite-shell identifiability no-go, pole-fit model-class gate, Stieltjes model-class obstruction, pole-saturation threshold gate, threshold-authority import audit, finite-volume pole-saturation obstruction, numba seed-independence audit, uniform-gap self-certification no-go, Higgs-pole identity gate, gauge-normalized response route, gauge-mass observable gap, source-shift derivative no-go, finite-source-linearity gate, autocorrelation/ESS gate, target time-series support and Higgs-identity no-go, pole-fit mode/noise budget, eight-mode noise variance gate, noise-subsample diagnostics harness, and variance calibration manifest; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

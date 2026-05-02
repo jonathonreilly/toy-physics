@@ -54,6 +54,7 @@ plus FH/LSZ finite-source-linearity gate
 plus FH/LSZ autocorrelation ESS gate
 plus FH/LSZ target time-series harness extension
 plus FH/LSZ chunks007-008 ready-set processing
+plus FH/LSZ target time-series Higgs-identity no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -66,6 +67,22 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+FH/LSZ target time-series Higgs-identity no-go:
+
+```text
+actual_current_surface_status: exact negative boundary / FH-LSZ target time series not canonical-Higgs identity
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_higgs_identity_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+Same-source target time series remain source-coordinate data.  The same
+`dE/ds`, `dGamma_ss/dp^2`, and invariant readout can coexist with different
+canonical-Higgs Yukawa couplings when the source pole mixes with an orthogonal
+top-coupled scalar.  No retained or proposed-retained closure is authorized.
 
 FH/LSZ chunks007-008 ready-set processing:
 

@@ -121,6 +121,7 @@ def main() -> int:
         "fh_lsz_finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
+        "fh_lsz_target_timeseries_higgs_identity_no_go": "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
@@ -655,6 +656,17 @@ def main() -> int:
         and certificates["fh_lsz_target_timeseries_harness"].get("proposal_allowed") is False
         and certificates["fh_lsz_target_timeseries_harness"].get("target_timeseries_harness_supported") is True
     )
+    target_timeseries_higgs_identity_no_go_blocks = (
+        "target time series not canonical-Higgs identity"
+        in certificates["fh_lsz_target_timeseries_higgs_identity_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_target_timeseries_higgs_identity_no_go"].get("proposal_allowed") is False
+        and certificates["fh_lsz_target_timeseries_higgs_identity_no_go"].get(
+            "target_timeseries_higgs_identity_gate_passed"
+        )
+        is False
+    )
     higgs_pole_identity_latest_blocker_blocks = (
         "latest Higgs-pole identity blocker certificate"
         in certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", "")
@@ -1064,6 +1076,11 @@ def main() -> int:
         certificates["fh_lsz_target_timeseries_harness"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-target-timeseries-higgs-identity-no-go-blocks",
+        target_timeseries_higgs_identity_no_go_blocks,
+        certificates["fh_lsz_target_timeseries_higgs_identity_no_go"].get("actual_current_surface_status", ""),
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         higgs_pole_identity_latest_blocker_blocks,
         certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", ""),
@@ -1304,7 +1321,12 @@ def main() -> int:
             "per-configuration source-response and scalar two-point target "
             "time series for future autocorrelation/ESS gates, but that is "
             "instrumentation support, not production evidence or scalar LSZ "
-            "normalization.  A paired x8/x16 calibration "
+            "normalization.  The target-time-series Higgs-identity no-go "
+            "then shows that even perfect same-source target time series "
+            "remain source-coordinate data unless source-pole purity, "
+            "no-orthogonal-top-coupling, sector-overlap equality, or an "
+            "independent canonical-Higgs response observable is supplied.  "
+            "A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "
             "gauge-VEV source-overlap no-go also blocks using the canonical "

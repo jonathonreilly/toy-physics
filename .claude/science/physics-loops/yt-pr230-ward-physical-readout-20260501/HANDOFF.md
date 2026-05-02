@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 FH/LSZ target time-series Higgs-identity no-go:
+
+- Added `scripts/frontier_yt_fh_lsz_target_timeseries_higgs_identity_no_go.py`,
+  `docs/YT_FH_LSZ_TARGET_TIMESERIES_HIGGS_IDENTITY_NO_GO_NOTE_2026-05-02.md`,
+  and `outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json`.
+- Result: even perfect same-source target time series for `dE/ds` and
+  `C_ss/Gamma_ss` remain source-coordinate data.  A mixed source pole
+  `O_s=cos(theta)h+sin(theta)chi` can preserve the same source response,
+  same `dGamma_ss/dp^2`, and same invariant readout while changing the
+  canonical-Higgs Yukawa if the orthogonal scalar also couples to the top.
+- Retained-route gate is `PASS=86 FAIL=0`; campaign status is
+  `PASS=112 FAIL=0` over 116 certificates.
+- Chunks009-010 remain running in the background.
+
+Next exact action: process chunks009-010 if they finish; otherwise attack one
+of the remaining canonical-Higgs identity premises directly: source-pole
+purity, no orthogonal top coupling, same-source sector-overlap equality, or a
+same-source W/Z response observable.
+
 Latest checkpoint, 2026-05-02 FH/LSZ chunks007-008 processing:
 
 - Background chunks007-008 completed and were processed through the existing

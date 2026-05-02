@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Perfect target time series are not a canonical-Higgs identity
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_higgs_identity_no_go.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+Per-configuration same-source target time series can certify statistics for
+the source coordinate, but they do not identify the source pole with the
+canonical Higgs radial mode.  The runner keeps `dE/ds`, `dGamma_ss/dp^2`, and
+the same-source invariant readout fixed while changing the canonical-Higgs
+Yukawa through a mixed source pole and an orthogonal top-coupled scalar.  A
+source-pole purity theorem, no-orthogonal-top-coupling theorem, sector-overlap
+identity, or independent canonical-Higgs response observable remains required.
+
 ## Eight ready L12 chunks are still not production closure
 
 Runners:
