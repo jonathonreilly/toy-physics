@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:56:36.631835+00:00
+**Generated:** 2026-05-02T22:59:21.358218+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 190 |
+| **retained_bounded** | 191 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 527 |
+| unaudited | 526 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,21 +36,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 391 |
+| `audited_clean` | 392 |
 | `audited_conditional` | 647 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 563 |
+| `unaudited` | 562 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 527 |
+| `bounded_theorem` | 528 |
 | `decoration` | 7 |
 | `meta` | 36 |
 | `no_go` | 157 |
-| `open_gate` | 101 |
+| `open_gate` | 100 |
 | `positive_theorem` | 874 |
 
 | criticality | count |
@@ -456,6 +456,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
+| `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -16262,6 +16263,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** If any factor is missing, the lane remains a planning or conditional artifact even when a small-surface fidelity number is excellent.  _(class `A`)_
 - **chain closes:** True — The chain closes as an open gate, not as a retained teleportation theorem. The note explicitly requires retained-factor closure, Bell-frame calibration, native resource genesis, causal record delivery, exhaustive branch accounting, and no-transfer accounting, then lists unresolved blockers.
 - **rationale:** The note does not claim matter, mass, charge, energy, object transport, FTL signaling, or unconditional native teleportation closure. The runner checks that planning-level finite evidence is internally consistent while explicitly holding resource genesis and nature-grade closure open, so it is not being used as a proof of a closed teleportation theorem. The positive theorem language is scoped by assumptions and by the final status statement; residual risk is that future citations must preserve this open-gate boundary.
+- **auditor confidence:** high
+
+### `teleportation_resource_from_poisson_note`
+
+- **Note:** [`TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md`](../../docs/TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the audited small default cases, 1D N=8 and 2D 4x4 at mass 0 and G=1000, the Poisson/CHSH ground-state extraction yields a deterministic encoded two-qubit Bell-like resource suitable for ideal standard quantum state teleportation diagnostics.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-teleportation-resource-poisson-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** After tracing cells and spectator taste bits while keeping the last KS taste bit per species, the audited Poisson/CHSH ground states yield deterministic two-qubit logical resources with Bell overlap above 0.90 and high standard teleportation fidelity.  _(class `B`)_
+- **chain closes:** True — Within the stated small-surface numerical scope, the runner sanity-checks the teleportation convention, constructs the traced logical two-qubit resource, and reports Bell overlap, CHSH, negativity, and teleportation fidelity above the note's threshold for both Poisson cases. The note explicitly leaves generalization, preparation/readout, and parameter sensitivity outside this scoped claim.
+- **rationale:** The proper retained object is not an open gate but a bounded numerical theorem over the specified small surfaces and extraction rule. The current runner output matches the note's reported values and separates deterministic traced extraction from postselected diagnostic branches. No one-hop cited authorities are present, and the remaining limitations are future hardening tasks rather than missing premises for the scoped result.
 - **auditor confidence:** high
 
 ### `tensor_block_closure_test_note`
