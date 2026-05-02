@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:15:44.932317+00:00
+**Generated:** 2026-05-02T00:16:52.263161+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 335 |
+| `audited_clean` | 336 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 470 |
+| `unaudited` | 469 |
 
 | criticality | count |
 |---|---:|
@@ -403,6 +403,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_exact_green_scaling_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_discriminator_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_generated_family_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14607,6 +14608,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The support-rescue static Green variant beats the wavefield bridge on both sign count and detector effective support, giving delta_TOWARD = -3, delta_N_eff = -0.18, and a geometry-limited bottleneck label.  _(class `C`)_
 - **chain closes:** True — The runner recomputes the exact summary stated in the note over seeds 0..3 and the retained source ladder. The note keeps the result bounded as a discriminator rather than claiming generated-family closure.
 - **rationale:** The current runner output matches the frozen note: both variants have zero-source shift 0, support rescue gives 9/16 TOWARD with N_eff 5.31, wavefield gives 6/16 with N_eff 5.14, and the derived discriminator is delta_TOWARD=-3, delta_N_eff=-0.18, bottleneck=geometry-limited. The claim boundary is narrow and explicit: this is a generated-family bottleneck discriminator, not a closure theorem. Residual risk is limited to the chosen compact family, seeds, kNN-floor bridge, and two bridge variants.
+- **auditor confidence:** high
+
+### `source_resolved_generated_family_probe_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_FAMILY_PROBE_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_FAMILY_PROBE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the compact generated DAG family, exact zero-source reduction and nontrivial Green amplitude survive, but the Green-kernel readout is AWAY rather than TOWARD and its F~M exponent is 0.40 rather than near-linear.  _(class `C`)_
+- **chain closes:** True — The runner reproduces the note's zero-source checks, four averaged shift rows, sign-survival counts, and fitted exponents for the declared generated family. The note frames the result as a bounded transfer no-go, not as a positive weak-field closure.
+- **rationale:** The current runner output matches the frozen readout: all zero-source shifts are 0, the mean instantaneous and Green shifts match the table, sign survival is 3/4 for each source strength, and the fitted exponents are 0.43 and 0.40. The SAFE READ correctly separates sign survival against the instantaneous comparator from actual TOWARD closure, where the Green means are 0/4 TOWARD and therefore fail the weak-field lane. Residual risk is limited to the compact generated family and chosen source-resolved Green architecture, which are the declared scope.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
