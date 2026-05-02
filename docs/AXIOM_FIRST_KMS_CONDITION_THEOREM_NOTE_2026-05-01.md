@@ -1,7 +1,9 @@
 # Axiom-First KMS Condition for the Reconstructed Gibbs State
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on A_min; runner passing; audit-pending. Honest status: derived support theorem from retained RP + retained spectrum condition. Not retained / promoted on the actual current surface; audit required before any retained-tier promotion.
+**Type:** positive_theorem
+**Claim scope:** the finite-temperature Gibbs state on the RP-reconstructed transfer-matrix Hilbert space H_phys satisfies the KMS condition (K1)-(K4) at inverse temperature β_th = L_τ·a_τ; equivalently, the periodic-Euclidean path integral on (Z/L_τ Z) × Z^3 equals the trace of T^{L_τ} and the strip identity F(t + iβ_th) = G(t) holds for all bounded operators.
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 1 (Block 1)
 **Branch:** `physics-loop/24h-axiom-first-block01-kms-20260501`

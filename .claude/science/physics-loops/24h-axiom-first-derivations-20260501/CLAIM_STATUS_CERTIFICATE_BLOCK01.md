@@ -1,6 +1,6 @@
 # Claim Status Certificate — Block 01 (KMS condition)
 
-**Date:** 2026-05-01
+**Date:** 2026-05-01 (originally) / 2026-05-02 (reframed under scope-aware classification)
 **Block:** 01 — KMS condition from RP + spectrum condition
 **Slug:** `24h-axiom-first-derivations-20260501`
 **Branch:** `physics-loop/24h-axiom-first-block01-kms-20260501`
@@ -8,73 +8,58 @@
 **Runner:** [scripts/axiom_first_kms_condition_check.py](../../../../scripts/axiom_first_kms_condition_check.py)
 **Log:** [outputs/axiom_first_kms_condition_check_2026-05-01.txt](../../../../outputs/axiom_first_kms_condition_check_2026-05-01.txt)
 
-## Status fields
+## Framework
+
+Reframed under the scope-aware classification framework adopted 2026-05-02
+(audit-lane proposal #291). Pipeline-derived `effective_status`.
+
+## Author classification (non-authoritative hint to auditor)
 
 ```yaml
-actual_current_surface_status: support
-conditional_surface_status: derived support theorem on A_min + retained RP + retained spectrum condition
-hypothetical_axiom_status: null
-admitted_observation_status: null
-proposal_allowed: false
-proposal_allowed_reason: "Depends on retained-RP and retained-spectrum-condition support notes that are themselves audit-pending support claims (per `docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md` line 4: 'support — branch-local theorem note on A_min; runner passing; audit-pending'). Per the physics-loop SKILL retained-proposal certificate item 4 ('Every dependency is retained, a retained corollary, or explicitly allowed exact support on the current authority surface'), proposed_retained / proposed_promoted is not allowed until those upstream support notes are ratified to retained on the current authority surface."
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+claim_type_author_hint: positive_theorem
+claim_scope: "Finite-temperature Gibbs state on the RP-reconstructed transfer-matrix Hilbert space H_phys satisfies KMS conditions (K1)-(K4) at inverse temperature β_th = L_τ·a_τ; periodic-Euclidean path integral on (Z/L_τ Z) × Z^3 equals tr T^{L_τ}; strip identity F(t + iβ_th) = G(t) holds for all bounded operators on the finite-dim H_phys."
+admitted_context_inputs:
+  - Wick rotation convention (already paid for by RP reconstruction)
+  - cyclic-trace identity (basic linear algebra)
+upstream_dependencies:
+  - axiom_first_reflection_positivity_theorem_note_2026-04-29 (Codex audited_clean cross_family; awaiting framework-adoption sweep to lift effective_status from support to retained)
+  - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional — needs RP citation registered as ledger dep)
+  - minimal_axioms_2026-04-11 (retained: A1-A4)
+runner_classified_passes: 5 PASS at <1e-10 precision (KMS strip identity, strip continuity, equilibrium uniqueness, path-integral correspondence, detailed-balance at z = iβ_th)
 ```
 
-## Dependency classes
+## Expected `effective_status` after audit
 
-| Dep | Class | Source |
-|---|---|---|
-| A1 (Cl(3) local algebra) | A_min axiom | `docs/MINIMAL_AXIOMS_2026-04-11.md` |
-| A2 (Z^3 substrate) | A_min axiom | `docs/MINIMAL_AXIOMS_2026-04-11.md` |
-| A3 (finite Grassmann staggered Dirac) | A_min axiom | `docs/MINIMAL_AXIOMS_2026-04-11.md` |
-| A4 (canonical normalization) | A_min axiom | `docs/MINIMAL_AXIOMS_2026-04-11.md` |
-| RP transfer matrix (R3) | retained support, audit-pending | `docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md` |
-| Spectrum condition (SC1, SC2) | retained support, audit-pending | `docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md` |
-| Wick rotation convention | admitted-context input | already paid for by RP reconstruction |
-| Cyclic-trace identity | basic linear algebra | not an import |
+If Codex returns `audit_status = audited_clean` and `claim_type =
+positive_theorem`:
 
-## Open imports
+- **Path A** (RP + spectrum cond reach retained): `effective_status =
+  retained` immediately. The spectrum-condition `audited_conditional` is a
+  mechanical fix (register RP as a one-hop ledger dep, re-audit).
+- **Path B** (chain still partial): `effective_status = proposed_retained`
+  (transient; auto-resolves on next pipeline run when chain clears).
 
-None beyond the explicit admitted-context list above. The Wick-rotation
-convention is the same one already paid for by the upstream RP note.
+## Dependency chain status snapshot (2026-05-02)
+
+| Dep | Today's `effective_status` (post adoption) |
+|---|---|
+| RP | support (Codex audited_clean; framework-adoption sweep promotes) |
+| Spectrum cond | audited_conditional (RP dep registration repair pending) |
+| A_min (A1-A4) | retained |
+
+The spectrum-condition fix is the load-bearing repair. Once that lands,
+Block 01 promotes immediately and unlocks downstream Blocks 02 (Hawking),
+06 (Stefan-Boltzmann), 08 (Unruh), 10 (GSL).
 
 ## Review-loop disposition
 
-- branch-local self-review: `pass` (theorem note matches runner output;
-  KMS direction explicitly verified by runner Test 1 on a generic
-  finite-dim H >= 0; detailed-balance corollary at z = i β_th cross-checks
-  the same identity at the strip endpoint).
-- formal `/review-loop` execution: deferred to integration-time per the
-  campaign mode (block-local self-review in REVIEW_HISTORY.md).
+- branch-local self-review: `pass` (5/5 tests at machine precision; KMS
+  direction F(t+iβ) = G(t) explicitly verified).
+- formal Codex audit: pending under new prompt template
+  ([`PROPOSED_AUDIT_AGENT_PROMPT_TEMPLATE.md`](../../../../docs/audit/proposals/scope-aware-classification-20260502/PROPOSED_AUDIT_AGENT_PROMPT_TEMPLATE.md)).
 
-## Status conclusion
+## Audit hand-off
 
-This block is a **derived support theorem** on `A_min` plus the retained
-axiom-first foundations (RP + spectrum condition). It is suitable for
-future integration into the package's thermal-state language as a
-support-grade theorem.
-
-It is **not** suitable for `proposed_retained` / `proposed_promoted`
-status until the upstream RP and spectrum-condition support notes are
-ratified to retained / proposed_retained on the current authority surface.
-
-The PR title and body should use `support` (or `support theorem`) and
-make explicit that bare `retained` / `promoted` is not allowed.
-
-## Audit hand-off requirement
-
-If a later integration / review process wants to promote this note to
-`proposed_retained`, it needs:
-
-1. The upstream RP note (`docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`)
-   ratified to retained / proposed_retained on the current authority
-   surface.
-2. The upstream spectrum condition note (`docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`)
-   ratified to retained / proposed_retained on the current authority
-   surface.
-3. Independent audit of the theorem note's Steps 1–5.
-4. Independent verification of the runner's 5-test pass on a clean
-   environment.
-
-Until then this note remains `support` per the controlled vocabulary.
+Block 01 is the root of the thermal-physics chain. Auditor should evaluate
+under the new prompt template. Successful clean audit + clean upstream
+chain unlocks Blocks 02, 06, 08, 10 for promotion.
