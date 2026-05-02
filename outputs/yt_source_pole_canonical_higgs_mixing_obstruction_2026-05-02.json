@@ -1,0 +1,69 @@
+{
+  "actual_current_surface_status": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
+  "exact_next_action": "Derive or measure the source-pole-to-canonical-Higgs identity cos(theta)=1, or continue seed-controlled FH/LSZ production plus a pole-identity acceptance gate; a same-source pole residue alone is not enough.",
+  "fail_count": 0,
+  "mixing_family": [
+    {
+      "canonical_higgs_overlap_cos_theta": 1.0,
+      "canonical_y_t_if_top_couples_only_to_h": 0.93,
+      "g2": 0.65,
+      "orthogonal_scalar_overlap_sin_theta": 0.0,
+      "same_source_fh_lsz_y_readout": 0.93,
+      "source_pole_residue": 1.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "theta_rad": 0.0
+    },
+    {
+      "canonical_higgs_overlap_cos_theta": 0.9393727128473789,
+      "canonical_y_t_if_top_couples_only_to_h": 0.9900223705466505,
+      "g2": 0.65,
+      "orthogonal_scalar_overlap_sin_theta": 0.34289780745545134,
+      "same_source_fh_lsz_y_readout": 0.93,
+      "source_pole_residue": 1.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "theta_rad": 0.35
+    },
+    {
+      "canonical_higgs_overlap_cos_theta": 0.7648421872844885,
+      "canonical_y_t_if_top_couples_only_to_h": 1.2159371115522422,
+      "g2": 0.65,
+      "orthogonal_scalar_overlap_sin_theta": 0.644217687237691,
+      "same_source_fh_lsz_y_readout": 0.93,
+      "source_pole_residue": 1.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "theta_rad": 0.7
+    }
+  ],
+  "parent_certificates": {
+    "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+    "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "fh_lsz_invariant_readout": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
+    "gauge_vev_source_overlap": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
+    "kprime": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "same_source_scalar_two_point": "outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json",
+    "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "scalar_denominator": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The source scalar pole is not certified as the canonical Higgs radial mode.",
+  "required_identity": [
+    "prove the source pole has unit overlap with the canonical Higgs radial mode",
+    "exclude or measure orthogonal scalar admixture in the source pole",
+    "derive the same identity from the Cl(3)/Z3 source functional or a production response certificate",
+    "combine it with the isolated-pole derivative D'(pole) without forbidden normalization imports"
+  ],
+  "source_pole_canonical_identity_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set cos(theta) = 1",
+    "does not set kappa_s = 1",
+    "does not use static v, observed top mass, observed y_t, or observed W/Z masses as proof selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "A same-source FH/LSZ measurement can determine the top coupling to the scalar pole created by the substrate source.  It still does not prove that this source pole is the canonical Higgs radial mode whose VEV defines v.  In a two-scalar mixing family, the source pole residue and same-source y readout can be held fixed while the canonical Higgs overlap cos(theta) changes; the canonical y_t then changes as y_source/cos(theta).  Therefore the current route needs a source-pole-to-canonical-Higgs identity theorem, an equivalent sector-overlap measurement, or direct production evidence with a certified pole identity."
+}

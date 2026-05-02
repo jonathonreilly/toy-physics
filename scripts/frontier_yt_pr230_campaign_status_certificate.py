@@ -139,6 +139,9 @@ def main() -> int:
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
+        "source_pole_canonical_higgs_mixing": load(
+            "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -491,6 +494,12 @@ def main() -> int:
         "same-source sector-overlap identity obstruction"
         in str(statuses["same_source_sector_overlap_identity"]),
         statuses["same_source_sector_overlap_identity"],
+    )
+    report(
+        "source-pole-canonical-higgs-mixing-blocks",
+        "source-pole canonical-Higgs mixing obstruction"
+        in str(statuses["source_pole_canonical_higgs_mixing"]),
+        statuses["source_pole_canonical_higgs_mixing"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -856,7 +865,11 @@ def main() -> int:
             "nearby shortcut in the gauge-normalized response route: common "
             "source-coordinate scaling cancels, but the ratio is physical y_t "
             "only after k_top/k_gauge is derived or measured.  A same-source "
-            "label alone is not that theorem.  "
+            "label alone is not that theorem.  The source-pole/canonical-Higgs "
+            "mixing obstruction now blocks the adjacent pole-identity shortcut: "
+            "a same-source pole readout is the top coupling to the source pole, "
+            "not physical y_t, unless the source pole is proved to be the "
+            "canonical Higgs radial mode with no orthogonal scalar admixture.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

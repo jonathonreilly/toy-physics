@@ -101,6 +101,7 @@ def main() -> int:
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+        "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -448,6 +449,13 @@ def main() -> int:
         and certificates["same_source_sector_overlap_identity"].get("proposal_allowed") is False
         and certificates["same_source_sector_overlap_identity"].get("sector_overlap_identity_gate_passed") is False
     )
+    source_pole_canonical_higgs_mixing_blocks = (
+        "source-pole canonical-Higgs mixing obstruction"
+        in certificates["source_pole_canonical_higgs_mixing"].get("actual_current_surface_status", "")
+        and certificates["source_pole_canonical_higgs_mixing"].get("proposal_allowed") is False
+        and certificates["source_pole_canonical_higgs_mixing"].get("source_pole_canonical_identity_gate_passed")
+        is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -749,6 +757,11 @@ def main() -> int:
         certificates["same_source_sector_overlap_identity"].get("actual_current_surface_status", ""),
     )
     report(
+        "source-pole-canonical-higgs-mixing-blocks",
+        source_pole_canonical_higgs_mixing_blocks,
+        certificates["source_pole_canonical_higgs_mixing"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -927,7 +940,11 @@ def main() -> int:
             "identity obstruction further blocks treating a common source label "
             "as proof that the top and gauge responses have equal canonical-Higgs "
             "overlap; without k_top = k_gauge, the gauge-normalized ratio reads "
-            "y_t times k_top/k_gauge.  "
+            "y_t times k_top/k_gauge.  The source-pole/canonical-Higgs mixing "
+            "obstruction also blocks treating a completed same-source pole "
+            "residue as physical y_t unless the source pole has unit overlap "
+            "with the canonical Higgs radial mode; otherwise the readout is "
+            "y_t times cos(theta).  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "
@@ -963,8 +980,9 @@ def main() -> int:
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
             "the retained action, including the canonical-Higgs pole identity, "
-            "a same-source sector-overlap identity, or a same-source gauge-mass "
-            "response observable.  Continue chunked production only with "
+            "a source-pole mixing exclusion, a same-source sector-overlap "
+            "identity, or a same-source gauge-mass response observable.  "
+            "Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "
             "Before treating any finite-shell pole fit as "

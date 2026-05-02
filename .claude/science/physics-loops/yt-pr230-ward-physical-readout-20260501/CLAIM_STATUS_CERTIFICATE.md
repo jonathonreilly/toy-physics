@@ -37,6 +37,7 @@ plus fitted scalar-kernel residue selector no-go
 plus FH/LSZ production checkpoint granularity gate
 plus FH/LSZ chunked production manifest
 plus same-source sector-overlap identity obstruction
+plus source-pole canonical-Higgs mixing obstruction
 **PR:** #230 draft branch
 
 ```yaml
@@ -146,6 +147,9 @@ Allowed wording:
   proof that top and gauge responses have equal canonical-Higgs overlap; the
   gauge-normalized FH ratio still needs `k_top = k_gauge` derived or directly
   measured;
+- exact negative boundary for treating a same-source scalar pole readout as
+  physical `y_t` before the source pole is proved to be the canonical Higgs
+  radial mode with no orthogonal scalar admixture;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:

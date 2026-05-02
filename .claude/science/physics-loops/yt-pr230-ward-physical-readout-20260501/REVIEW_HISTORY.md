@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Source-Pole Mixing Block
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- the runner assumes a same-source pole readout is available and then varies
+  only the canonical-Higgs overlap `cos(theta)`, so it targets the identity
+  after source-rescaling and pole-residue support;
+- static electroweak `v` is not used as a proof selector for the source pole;
+- `cos(theta)=1`, `kappa_s=1`, observed target values, `H_unit`, Ward
+  authority, alpha/plaquette/u0, `c2=1`, and `Z_match=1` remain forbidden;
+- the result is an obstruction certificate only and does not authorize
+  retained or proposed-retained wording.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_pole_canonical_higgs_mixing_obstruction.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_source_pole_canonical_higgs_mixing_obstruction.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Same-Source Sector-Overlap Block
 
 Local review-loop disposition:

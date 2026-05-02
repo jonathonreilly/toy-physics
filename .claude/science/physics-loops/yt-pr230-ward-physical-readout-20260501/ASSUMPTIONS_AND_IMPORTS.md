@@ -526,6 +526,17 @@ physical-response certificate.  Static `v`, observed W/Z masses, and the EW
 gauge-mass theorem after canonical `H` is supplied are not proof selectors for
 that equality.
 
+A completed same-source pole residue is not by itself an assumption license
+for the canonical Higgs identity.  If
+
+```text
+|source pole> = cos(theta) |h_canonical> + sin(theta) |chi_orthogonal>
+```
+
+then the FH/LSZ source-pole readout is a coupling to the source pole.  It is
+physical `y_t` only after `cos(theta)=1` is derived or directly measured, or an
+equivalent theorem excludes orthogonal scalar admixture.
+
 Positive-closure candidates left after the assumption exercise:
 
 1. production/statistics with momentum modes plus a derived heavy matching

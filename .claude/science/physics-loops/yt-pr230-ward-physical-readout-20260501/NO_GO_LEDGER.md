@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## Same-source pole residue is not automatically the canonical Higgs radial mode
+
+Closed by
+`docs/YT_SOURCE_POLE_CANONICAL_HIGGS_MIXING_OBSTRUCTION_NOTE_2026-05-02.md`
+and
+`scripts/frontier_yt_source_pole_canonical_higgs_mixing_obstruction.py`.
+
+A same-source FH/LSZ readout determines the top coupling to the scalar pole
+created by the substrate source.  It becomes physical `y_t` only after that
+source pole is identified with the canonical Higgs radial mode used by `v`.
+The two-scalar mixing family keeps the source pole residue and same-source
+readout fixed while varying the canonical overlap `cos(theta)`, so physical
+`y_t` remains underdetermined unless `cos(theta)=1` is derived or directly
+measured.
+
 ## Same source coordinate is not a sector-overlap identity
 
 Closed by

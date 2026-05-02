@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=90 FAIL=0
+# SUMMARY: PASS=91 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -78,6 +78,7 @@ The certificate consumes the PR-local route certificates for:
 - FH gauge-normalized response route;
 - FH gauge-mass response observable gap;
 - same-source sector-overlap identity obstruction;
+- source-pole canonical-Higgs mixing obstruction;
 - Feynman-Hellmann / scalar-LSZ invariant readout theorem;
 - scalar pole determinant gate;
 - scalar ladder eigen-derivative gate;
@@ -176,6 +177,7 @@ the visible shortcut routes:
 | FH gauge-normalized response route | same-source `(dE_top/ds)/(dM_W/ds)` would cancel `kappa_s`, but no W/Z mass-response harness or production certificate exists and the Higgs-identity gate remains open |
 | FH gauge-mass response observable gap | the current production harness is QCD top-only and has no `dM_W/ds` or `dM_Z/ds` path; EW gauge-mass algebra starts after canonical `H` is supplied |
 | same-source sector-overlap identity obstruction | a shared source coordinate cancels common rescaling but does not prove `k_top = k_gauge`; the gauge-normalized ratio reads `y_t * k_top/k_gauge` until that identity is derived or directly measured |
+| source-pole canonical-Higgs mixing obstruction | a completed same-source pole readout is a coupling to the source-created scalar pole; it is physical `y_t` only if that pole is proved to be the canonical Higgs radial mode with no orthogonal scalar admixture |
 | joint Feynman-Hellmann / scalar-LSZ pole-fit mode/noise budget | eight modes with eight noises fit the current L12 chunk estimate and give pole-fit kinematics, but this is planning only until a variance gate and production data exist |
 | joint Feynman-Hellmann / scalar-LSZ eight-mode noise variance gate | x8 lowers solve cost but raises stochastic stderr by `sqrt(2)` versus x16; current reduced smoke and four-mode/x16 chunk surfaces do not provide same-source production variance calibration |
 | joint Feynman-Hellmann / scalar-LSZ noise-subsample diagnostics harness | scalar two-point outputs now emit split-noise stability diagnostics needed by future x8/x16 calibration, but the current smokes are reduced-scope instrumentation support only |

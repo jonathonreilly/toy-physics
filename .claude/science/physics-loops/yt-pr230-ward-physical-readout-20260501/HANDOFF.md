@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 source-pole/canonical-Higgs mixing:
+
+- Added
+  `scripts/frontier_yt_source_pole_canonical_higgs_mixing_obstruction.py`,
+  `docs/YT_SOURCE_POLE_CANONICAL_HIGGS_MIXING_OBSTRUCTION_NOTE_2026-05-02.md`,
+  and
+  `outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json`.
+- Result: exact negative boundary.  Same-source FH/LSZ can read out the top
+  coupling to the source-created scalar pole, but this is physical `y_t` only
+  if the source pole is proved to be the canonical Higgs radial mode
+  (`cos(theta)=1`) with no orthogonal scalar admixture.
+- Retained gate refreshed to `PASS=65 FAIL=0`; campaign gate refreshed to
+  `PASS=91 FAIL=0` over 95 certificates.  No retained or proposed-retained
+  wording is authorized.
+- Replacement FH/LSZ chunk002 is running in session `74882`; replacement
+  chunk003 is running in session `30296`.
+
 Latest checkpoint, 2026-05-02 same-source sector-overlap identity:
 
 - Added `scripts/frontier_yt_same_source_sector_overlap_identity_obstruction.py`,

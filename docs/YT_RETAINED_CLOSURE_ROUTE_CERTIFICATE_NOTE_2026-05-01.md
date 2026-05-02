@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=64 FAIL=0
+# SUMMARY: PASS=65 FAIL=0
 ```
 
 The runner verifies:
@@ -63,6 +63,7 @@ The runner verifies:
 | pole-fit postprocessor has combined production input | no |
 | pole-fit mode/noise budget is production evidence | no |
 | same-source sector-overlap identity is derived | no |
+| source pole is certified as canonical Higgs radial mode | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -258,6 +259,9 @@ produce `dM_W/ds` or `dM_Z/ds`.  The same-source sector-overlap identity
 obstruction also blocks treating a common source coordinate as proof that
 `k_top = k_gauge`; without that theorem or a direct measurement, the
 gauge-normalized ratio reads `y_t * k_top/k_gauge`.  If
+the source-pole FH/LSZ readout is used instead, the pole itself must be proved
+to be the canonical Higgs radial mode; a mixed source pole would read out
+`y_t * cos(theta)` rather than `y_t`.  If
 the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not

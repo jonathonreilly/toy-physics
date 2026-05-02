@@ -168,7 +168,10 @@ probability.
   `dM_W/ds` or `dM_Z/ds` path.  The same-source sector-overlap identity
   obstruction further shows that even a shared source coordinate is
   insufficient: the ratio reads `y_t * k_top/k_gauge` until `k_top = k_gauge`
-  is derived or directly measured.
+  is derived or directly measured.  The source-pole mixing obstruction tightens
+  the canonical-Higgs side: even a completed same-source pole residue is only a
+  coupling to the source-created pole unless that pole is proved to be the
+  canonical Higgs radial mode with no orthogonal scalar admixture.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the
