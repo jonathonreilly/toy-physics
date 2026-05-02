@@ -1,0 +1,22 @@
+{
+  "actual_current_surface_status": "bounded-support / WZ response harness absence guard",
+  "exact_next_action": "Implement actual W/Z response observables with identity certificates, implement same-surface O_H/C_sH/C_HH rows, derive a source-Higgs identity theorem, or process FH/LSZ chunks.",
+  "fail_count": 0,
+  "guard_fields": {
+    "enabled_false": true,
+    "required_objects_named": true,
+    "used_as_physical_yukawa_readout_false": true,
+    "wz_mass_response": true
+  },
+  "harness_file": "scripts/yt_direct_lattice_correlator_production.py",
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The guard marks missing W/Z evidence; it is not evidence.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not implement W/Z correlator mass fits or source-response slopes",
+    "does not treat static EW algebra as dM_W/ds",
+    "does not use observed W/Z masses, observed y_t, H_unit, yt_ward_identity, alpha_LM, plaquette, u0, or reduced pilots as proof selectors"
+  ],
+  "verdict": "The production certificate now explicitly records that W/Z mass response is absent from the QCD top-correlator harness.  This is a claim firewall only; it supplies no W/Z mass fits, dM_W/ds, dM_Z/ds, covariance, sector-overlap identity, canonical-Higgs identity, or retained closure."
+}

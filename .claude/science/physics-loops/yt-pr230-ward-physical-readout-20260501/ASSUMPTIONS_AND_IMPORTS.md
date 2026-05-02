@@ -710,3 +710,10 @@ The production certificate's `source_higgs_cross_correlator` guard is claim
 hygiene only.  It marks `O_H`, `C_sH`, and `C_HH` rows absent unless actually
 implemented.  It must not be used as source-Higgs evidence, Gram purity,
 canonical-Higgs normalization, or retained/proposed-retained support.
+
+2026-05-02 W/Z response harness absence guard:
+
+The production certificate's `wz_mass_response` guard is claim hygiene only.
+It marks W/Z response rows absent unless actually implemented.  It must not be
+used as W/Z response evidence, gauge-normalized closure, sector-overlap
+identity, canonical-Higgs identity, or retained/proposed-retained support.

@@ -1955,3 +1955,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The guard records missing `O_H`, `C_sH`, and `C_HH` rows in future production
 certificates.  It is not evidence and does not authorize retained or
 `proposed_retained` wording.
+
+W/Z response harness absence guard checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / WZ response harness absence guard
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_wz_response_harness_absence_guard.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=100 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=126 FAIL=0
+```
+
+The guard records missing W/Z response rows in future production certificates.
+It is not evidence and does not authorize retained or `proposed_retained`
+wording.

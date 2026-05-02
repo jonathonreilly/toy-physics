@@ -1789,6 +1789,22 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                     "canonical-Higgs normalization evidence."
                 ),
             },
+            "wz_mass_response": {
+                "enabled": False,
+                "implementation_status": "absent_guarded",
+                "required_measurement_objects": [
+                    "same-source W/Z correlator mass fits",
+                    "fitted dM_W/ds or dM_Z/ds under the same scalar source",
+                    "covariance with dE_top/ds",
+                    "sector-overlap and canonical-Higgs identity certificates",
+                ],
+                "used_as_physical_yukawa_readout": False,
+                "strict_limit": (
+                    "This QCD top-correlator harness does not measure W/Z mass "
+                    "response.  Static EW algebra or absent W/Z slopes must not "
+                    "be used as dM_W/ds evidence."
+                ),
+            },
             "evidence_scope": evidence_scope,
             "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             "run_control": {

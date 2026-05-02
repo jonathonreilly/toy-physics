@@ -1434,3 +1434,26 @@ Next exact action: poll chunk011.  If complete, process it.  If not, implement
 actual same-surface `O_H`/`C_sH`/`C_HH` rows, W/Z response with identity
 certificates, a stronger source-Higgs identity theorem, or continued
 seed-controlled FH/LSZ production.
+
+Block 148 added the W/Z response harness absence guard:
+
+```text
+python3 scripts/frontier_yt_wz_response_harness_absence_guard.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=100 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=126 FAIL=0
+```
+
+Result: future production certificates now explicitly record that W/Z
+mass-response rows are absent unless implemented.  This is an instrumentation
+firewall only; it is not W/Z response evidence and authorizes no
+retained/proposed-retained wording.
+
+Next exact action: poll chunk011.  If complete, process it.  If not, implement
+actual W/Z response rows with identity certificates, same-surface
+`O_H`/`C_sH`/`C_HH` rows, a stronger source-Higgs identity theorem, or
+continued seed-controlled FH/LSZ production.

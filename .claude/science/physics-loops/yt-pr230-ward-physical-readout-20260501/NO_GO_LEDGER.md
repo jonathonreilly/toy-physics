@@ -1923,3 +1923,16 @@ route as absent unless implemented.  This prevents future source-only `C_ss`
 or source-response outputs from being mistaken for Gram-purity data, but it
 does not provide `O_H`, `C_sH`, `C_HH`, pole residues, covariance, or
 canonical-Higgs closure.
+
+W/Z response harness absence guard is not evidence:
+
+```text
+python3 scripts/frontier_yt_wz_response_harness_absence_guard.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The production certificate now explicitly marks W/Z mass response as absent
+unless implemented.  This prevents the QCD top harness, static EW algebra, or
+absent W/Z slopes from being mistaken for `dM_W/ds` evidence, but it does not
+provide W/Z correlator fits, source slopes, covariance, sector-overlap, or
+canonical-Higgs identity.

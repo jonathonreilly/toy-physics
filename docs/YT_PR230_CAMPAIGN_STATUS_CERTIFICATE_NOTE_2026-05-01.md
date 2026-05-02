@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=125 FAIL=0
+# SUMMARY: PASS=126 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -78,6 +78,7 @@ The certificate consumes the PR-local route certificates for:
 - FH gauge-normalized response route;
 - FH gauge-mass response observable gap;
 - same-source W/Z response certificate gate;
+- W/Z response harness absence guard;
 - same-source sector-overlap identity obstruction;
 - source-pole canonical-Higgs mixing obstruction;
 - Feynman-Hellmann / scalar-LSZ invariant readout theorem;
@@ -227,6 +228,7 @@ the visible shortcut routes:
 | FH gauge-mass response observable gap | the current production harness is QCD top-only and has no `dM_W/ds` or `dM_Z/ds` path; EW gauge-mass algebra starts after canonical `H` is supplied |
 | same-source W/Z gauge-mass response manifest | concrete production observable and minimum schema are recorded, but the W/Z response harness and identity certificates are absent |
 | same-source W/Z response certificate gate | future W/Z evidence must contain production W/Z mass fits, fitted `dM_W/ds` or `dM_Z/ds`, covariance, and sector-overlap/canonical-Higgs identity certificates; static EW algebra and slope-only schemas are rejected |
+| W/Z response harness absence guard | future production certificates now explicitly mark W/Z response rows absent; guard is not evidence |
 | same-source sector-overlap identity obstruction | a shared source coordinate cancels common rescaling but does not prove `k_top = k_gauge`; the gauge-normalized ratio reads `y_t * k_top/k_gauge` until that identity is derived or directly measured |
 | source-pole canonical-Higgs mixing obstruction | a completed same-source pole readout is a coupling to the source-created scalar pole; it is physical `y_t` only if that pole is proved to be the canonical Higgs radial mode with no orthogonal scalar admixture |
 | no-orthogonal-top-coupling import audit | no-retained-2HDM/no-second-scalar authority is support only; it does not derive LSZ source-pole purity or zero top coupling for an orthogonal response component |

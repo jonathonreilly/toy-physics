@@ -166,6 +166,9 @@ def main() -> int:
         "same_source_wz_response_certificate_gate": load(
             "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
         ),
+        "wz_response_harness_absence_guard": load(
+            "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
+        ),
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
@@ -649,6 +652,12 @@ def main() -> int:
         "same-source WZ response certificate gate not passed"
         in str(statuses["same_source_wz_response_certificate_gate"]),
         statuses["same_source_wz_response_certificate_gate"],
+    )
+    report(
+        "wz-response-harness-absence-guard-not-evidence",
+        "WZ response harness absence guard"
+        in str(statuses["wz_response_harness_absence_guard"]),
+        statuses["wz_response_harness_absence_guard"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",
@@ -1219,7 +1228,9 @@ def main() -> int:
             "label alone is not that theorem.  The W/Z response certificate "
             "gate now defines the future acceptance schema and rejects static "
             "EW algebra or slope-only W/Z outputs without production mass fits "
-            "and identity certificates.  The source-pole/canonical-Higgs "
+            "and identity certificates.  The W/Z harness absence guard now "
+            "records missing W/Z response rows directly in future production "
+            "certificates; that guard is not evidence.  The source-pole/canonical-Higgs "
             "mixing obstruction now blocks the adjacent pole-identity shortcut: "
             "a same-source pole readout is the top coupling to the source pole, "
             "not physical y_t, unless the source pole is proved to be the "

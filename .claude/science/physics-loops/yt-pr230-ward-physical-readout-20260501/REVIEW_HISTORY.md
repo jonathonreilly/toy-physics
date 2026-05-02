@@ -3323,3 +3323,17 @@ Review stance: instrumentation guard / claim firewall.
 Disposition: bounded support.  Future production certificates explicitly mark
 `O_H` / `C_sH` / `C_HH` rows absent unless implemented.  This is not evidence
 and no retained/proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 148 W/Z Response Harness Absence Guard
+
+Review stance: instrumentation guard / claim firewall.
+
+- Updated `scripts/yt_direct_lattice_correlator_production.py`.
+- Added `scripts/frontier_yt_wz_response_harness_absence_guard.py`.
+- Added `docs/YT_WZ_RESPONSE_HARNESS_ABSENCE_GUARD_NOTE_2026-05-02.md`.
+- Added `outputs/yt_wz_response_harness_absence_guard_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: bounded support.  Future production certificates explicitly mark
+W/Z response rows absent unless implemented.  This is not evidence and no
+retained/proposed-retained wording is allowed.

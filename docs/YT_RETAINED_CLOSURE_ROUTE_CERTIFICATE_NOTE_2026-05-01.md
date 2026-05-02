@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=99 FAIL=0
+# SUMMARY: PASS=100 FAIL=0
 ```
 
 The runner verifies:
@@ -74,6 +74,7 @@ The runner verifies:
 | pole-fit postprocessor has combined production input | no |
 | pole-fit mode/noise budget is production evidence | no |
 | same-source W/Z response certificate gate is passed | no |
+| W/Z response harness absence guard is evidence | no |
 | same-source sector-overlap identity is derived | no |
 | source pole is certified as canonical Higgs radial mode | no |
 | source-only pole data prove source-pole purity | no |
@@ -421,6 +422,10 @@ source, fitted `dM_W/ds` or `dM_Z/ds`, covariance with the top slope, and
 sector-overlap plus canonical-Higgs identity certificates.  Current static EW
 algebra and slope-only schemas are rejected, so no retained/proposed-retained
 wording is authorized.
+The W/Z response harness absence guard now records the same boundary in future
+production certificates: this QCD top harness has no W/Z mass-response rows.
+The guard is not evidence; it only blocks static EW algebra or absent W/Z
+slopes from being mistaken for `dM_W/ds`.
 
 The neutral-scalar rank-one purity gate makes the direct purity-theorem route
 explicit.  A rank-one neutral scalar response theorem would exclude orthogonal
@@ -451,6 +456,12 @@ The source-Higgs harness absence guard is bounded support only.  It adds an
 explicit `source_higgs_cross_correlator` guard block to production
 certificates, with `enabled: false` and required `O_H` / `C_sH` / `C_HH`
 objects named.  It is not `C_sH` evidence or canonical-Higgs closure.
+
+The W/Z response harness absence guard is also bounded support only.  It adds
+an explicit `wz_mass_response` guard block to production certificates, with
+`enabled: false` and required W/Z mass fits, slopes, covariance, and identity
+certificates named.  It is not W/Z response evidence or gauge-normalized
+closure.
 
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive

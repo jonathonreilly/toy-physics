@@ -495,3 +495,9 @@ explicitly mark the `O_H` / `C_sH` / `C_HH` route absent.  This is useful for
 claim hygiene only.  It does not reduce the proof gap; the next positive work
 is actual same-surface `O_H`/`C_sH`/`C_HH` rows, W/Z response with identity
 certificates, chunk011 processing, or a source-Higgs identity theorem.
+
+W/Z response harness absence-guard update: future production certificates now
+explicitly mark W/Z mass response absent.  This is claim hygiene only.  It
+does not reduce the proof gap; the next positive work is actual W/Z response
+rows with identity certificates, same-surface `O_H`/`C_sH`/`C_HH`, chunk011
+processing, or a source-Higgs identity theorem.
