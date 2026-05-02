@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T19:19:44.533166+00:00",
+  "generated_at": "2026-05-02T19:23:44.957439+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -9072,6 +9072,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/lattice_symmetry_unification_decision.py"
+    },
+    "lattice_total_momentum_conservation_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/lattice_total_momentum_conservation_check.py"
     },
     "lattice_weak_field_mass_scaling_note": {
       "assert_count": 0,
@@ -32999,6 +33011,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/lattice_total_momentum_conservation_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "lattice_total_momentum_conservation_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/lattice_weak_field_mass_scaling.py": {
       "assert_count": 0,
       "claims": [
@@ -35701,12 +35728,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 154,
-      "C": 509,
+      "C": 510,
       "D": 198,
       "none": 410
     },
-    "runners_classified": 1280,
-    "runners_with_C": 611,
+    "runners_classified": 1281,
+    "runners_with_C": 612,
     "runners_with_D": 312
   }
 }

@@ -5677,6 +5677,10 @@
       "to": "yt_ew_color_projection_theorem"
     },
     {
+      "from": "lattice_total_momentum_conservation_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
       "from": "left_handed_charge_matching_note",
       "to": "graph_first_selector_derivation_note"
     },
@@ -19961,7 +19965,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:19:40.408158+00:00",
+  "generated_at": "2026-05-02T19:23:40.216525+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32456,6 +32460,19 @@
       "path": "docs/LATTICE_SYNTHESIS_GUARD_NOTE.md",
       "runner_path": null,
       "title": "Lattice Synthesis Guard Note"
+    },
+    "lattice_total_momentum_conservation_theorem_note_2026-05-02": {
+      "claim_id": "lattice_total_momentum_conservation_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "5bef9915c435817f41dd6c9801ba8339e77012f17fbf052b0a150b9503109a63",
+      "path": "docs/LATTICE_TOTAL_MOMENTUM_CONSERVATION_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/lattice_total_momentum_conservation_check.py",
+      "title": "Lattice Total Momentum Conservation from Retained Lattice Noether"
     },
     "lattice_weak_field_mass_scaling_note": {
       "claim_id": "lattice_weak_field_mass_scaling_note",
@@ -46382,7 +46399,7 @@
       "bounded_theorem": 10,
       "meta": 1,
       "none": 1749,
-      "positive_theorem": 25
+      "positive_theorem": 26
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 510,
@@ -46390,12 +46407,12 @@
       "no_go": 106,
       "none": 442,
       "open_gate": 109,
-      "positive_theorem": 617
+      "positive_theorem": 618
     },
-    "edge_count": 4990,
+    "edge_count": 4991,
     "leaf_count": 754,
-    "node_count": 1785,
+    "node_count": 1786,
     "root_count": 1215,
-    "runners_with_path": 1352
+    "runners_with_path": 1353
   }
 }
