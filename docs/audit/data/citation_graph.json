@@ -2905,6 +2905,10 @@
       "to": "cpt_exact_note"
     },
     {
+      "from": "cpt_squared_is_identity_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
       "from": "cross_lane_dependency_map_note_2026-04-30",
       "to": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
     },
@@ -19977,7 +19981,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:54:32.208533+00:00",
+  "generated_at": "2026-05-02T19:59:20.409480+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24289,6 +24293,19 @@
       "path": "docs/CPT_PARTICLE_ANTIPARTICLE_MASS_EQUALITY_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/cpt_particle_antiparticle_mass_equality_check.py",
       "title": "Particle/Antiparticle Mass Equality from Retained CPT"
+    },
+    "cpt_squared_is_identity_theorem_note_2026-05-02": {
+      "claim_id": "cpt_squared_is_identity_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "note_hash": "beee6682c23ef51ca92defe19432b080774f4ab7256cf698c2e0cd2acc72d7c0",
+      "path": "docs/CPT_SQUARED_IS_IDENTITY_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cpt_squared_is_identity_check.py",
+      "title": "(CPT)\u00b2 = Identity on the Framework's CPT Structure"
     },
     "cross_family_universality_note": {
       "claim_id": "cross_family_universality_note",
@@ -46462,7 +46479,7 @@
       "bounded_theorem": 11,
       "meta": 1,
       "none": 1747,
-      "positive_theorem": 31
+      "positive_theorem": 32
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
@@ -46470,12 +46487,12 @@
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 623
+      "positive_theorem": 624
     },
-    "edge_count": 4994,
-    "leaf_count": 757,
-    "node_count": 1790,
+    "edge_count": 4995,
+    "leaf_count": 758,
+    "node_count": 1791,
     "root_count": 1216,
-    "runners_with_path": 1358
+    "runners_with_path": 1359
   }
 }

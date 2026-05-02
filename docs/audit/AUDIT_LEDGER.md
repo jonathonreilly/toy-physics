@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T19:57:46.049807+00:00
+**Generated:** 2026-05-02T19:59:25.334526+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 141 |
+| **retained** | 140 |
 | **retained_no_go** | 95 |
 | **retained_bounded** | 177 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 552 |
+| unaudited | 554 |
 | audit_in_progress | 1 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
@@ -37,13 +37,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 376 |
+| `audited_clean` | 375 |
 | `audited_conditional` | 633 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 588 |
+| `unaudited` | 590 |
 
 | claim_type | count |
 |---|---:|
@@ -53,21 +53,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `no_go` | 155 |
 | `open_gate` | 106 |
 | `positive_theorem` | 869 |
+| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 44 |
-| `high` | 388 |
+| `critical` | 45 |
+| `high` | 387 |
 | `medium` | 435 |
-| `leaf` | 824 |
+| `leaf` | 825 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 83
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1286
-- runners with (C) first-principles compute hits: 615
+- runners classified: 1287
+- runners with (C) first-principles compute hits: 616
 - runners with (D) external comparator hits: 312
 - decoration candidates (no C, no D): 106
 
@@ -136,7 +137,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
-| `cpt_exact_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -3298,19 +3298,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The previous missing-runner rationale is stale because scripts/coupled_field_generated_family_probe.py is now registered. The row still returns a conditional audit because the live runner emits zero classified A/B/C/D PASS lines, leaving the load-bearing no-go checks outside the audit-loop classifier. The safe boundary remains the note's bounded generated-family diagnostic, not a promoted field-sector theorem.
 - **open / conditional deps cited:**
   - `runner_output_missing_classified_a_b_c_d_pass_lines:scripts/coupled_field_generated_family_probe.py`
-- **auditor confidence:** high
-
-### `cpt_exact_note`
-
-- **Note:** [`CPT_EXACT_NOTE.md`](../../docs/CPT_EXACT_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop:2026-05-01-cpt_exact_note-reraudit-after-bridge`  (codex-current; independence=fresh_context)
-- **load-bearing step:** For the free staggered Cl(3) Hamiltonian on even periodic Z^3 lattices, the D-level C/P identities plus the audited Hermitian lift H=iD give an antiunitary CPT representative preserving H, so the CPT-odd Hamiltonian/SME sector vanishes on that substrate.  _(class `A`)_
-- **chain closes:** True — The D-level runner verifies the exact C, P, CP, CPT identities and zero CPT-odd sector on even finite lattices; the now-clean bridge proves the antiunitary Hermitian lift by showing the naive CP K action flips H while the physical Theta_H=P K representative preserves H=iD.
-- **rationale:** Clean after bridge audit: the prior conditional blocker was the unaudited Hermitian-Hamiltonian/SME bridge, and that dependency is now audited_clean. The source claim is scoped to the free staggered Hamiltonian on even periodic lattices, with interactions, CKM-sector CP violation, and continuum CPT relation explicitly left outside the theorem. The D-level CPT runner gives PASS=53/FAIL=0 for the staggered identities, finite-lattice CPT preservation, Cl(3) automorphism checks, and zero CPT-odd SME sector; the bridge runner gives PASS=10/FAIL=0 and closes the antiunitary i -> -i step for H=iD. Within that stated boundary, the chain closes without a hidden physical-Hamiltonian premise.
 - **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
