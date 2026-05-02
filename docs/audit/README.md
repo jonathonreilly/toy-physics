@@ -91,6 +91,10 @@ Generated audit data must not contain legacy source-status authority fields.
 The graph builder may use old source-note status prose as a one-way migration
 hint when seeding `claim_type`, but the ledger, queue, prompt, and rendered
 audit surfaces are `claim_type` / `audit_status` / `effective_status` only.
+`support` is not a claim class. Once a legacy support-labeled note has an
+`audited_clean` verdict, it retains according to its ledger `claim_type` and
+dependency closure; old source-note prose neither grants nor blocks retained
+status.
 
 ## The hard rules
 
