@@ -138,8 +138,9 @@ should be read as proposed until the audit ledger marks them clean.
   [docs/publication/ci3_z3/REPRODUCE.md](docs/publication/ci3_z3/REPRODUCE.md)
 - quantitative derivations and supporting theorem notes:
   [docs/START_HERE.md](docs/START_HERE.md)
-- accepted frontier-lane planning note:
-  [docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md)
+- accepted frontier-lane planning note and parked teleportation boundary:
+  [docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md),
+  [docs/TELEPORTATION_CONCLUSION_BOUNDARY_NOTE.md](docs/TELEPORTATION_CONCLUSION_BOUNDARY_NOTE.md)
 - active working-lanes tracker:
   [docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md](docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md)
 - accepted critical open science lanes:
@@ -160,8 +161,9 @@ should be read as proposed until the audit ledger marks them clean.
 - cosmology and companion phenomenology
 - Planck-scale absolute-scale lane and derivation program
 - active working-lanes tracking for open/support/planning issues
-- frontier extension planning: teleportation, chronology protection, and
-  signed gravitational response
+- frontier extension planning: teleportation (parked as conditional
+  state-teleportation planning with nature-grade closure on hold), chronology
+  protection, and signed gravitational response
 - critical open science lanes: charged-lepton masses, hadron masses, atomic
   scales, quark masses, neutrino quantitative closure, and Hubble constant
   closure
