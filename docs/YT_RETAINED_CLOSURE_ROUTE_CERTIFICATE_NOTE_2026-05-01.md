@@ -238,7 +238,11 @@ scalar carrier/projector, `K'(pole)`, model class, threshold, and
 seed-controlled production.  The soft-continuum threshold no-go also blocks
 promoting color-singlet q=0 cancellation plus finite-q IR regularity into that
 threshold premise: IR integrability does not exclude positive continuum
-spectral weight arbitrarily close to the pole.  If the eight-mode/x8
+spectral weight arbitrarily close to the pole.  The scalar carrier/projector
+closure attempt confirms that the taste/projector side is still open:
+color-singlet support and unit taste-singlet algebra do not admit the physical
+carrier, preserve unit-projector finite crossings, or derive `K'(pole)`.  If
+the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not
 close PR #230.

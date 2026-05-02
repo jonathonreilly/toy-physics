@@ -1,0 +1,87 @@
+{
+  "actual_current_surface_status": "open / scalar carrier-projector closure attempt blocked",
+  "blocker_rows": [
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_taste_carrier_import_audit_2026-05-01.json",
+      "premise": "non-origin taste corners are admitted as the physical scalar carrier"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json",
+      "premise": "normalized taste-singlet projector preserves finite crossings"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
+      "premise": "physical scalar carrier/source projector is fixed by current source functional"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json",
+      "premise": "unit-projector finite ladder crosses without underived kernel multiplier"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
+      "premise": "scalar-kernel enhancement or K'(pole) is derived"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json",
+      "premise": "fitted multiplier is a physical selector rather than an import"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json; outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+      "premise": "threshold/denominator stack supplies the remaining carrier-independent LSZ premise"
+    }
+  ],
+  "blocking_count": 7,
+  "exact_next_action": "Either derive the physical scalar carrier/projector and K'(pole) from retained dynamics, or continue seed-controlled FH/LSZ production toward a direct same-source pole derivative.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "color_singlet_finite_q_ir": "outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json",
+    "color_singlet_zero_mode": "outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json",
+    "fitted_kernel_selector": "outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json",
+    "kernel_enhancement_import": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
+    "scalar_denominator_closure": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+    "taste_carrier_import": "outputs/yt_taste_carrier_import_audit_2026-05-01.json",
+    "taste_corner_obstruction": "outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json",
+    "taste_projector_attempt": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
+    "taste_singlet_normalization": "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json",
+    "unit_projector_threshold": "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json",
+    "zero_mode_removed_ladder": "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Physical scalar carrier/projector and K'(pole) remain open imports; finite witnesses are not retained LSZ residue evidence.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not count non-origin taste corners without retained authority",
+    "does not fit a scalar-kernel multiplier as a proof input",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "support_count": 3,
+  "support_rows": [
+    {
+      "available": true,
+      "certificate": "outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json",
+      "premise": "color-singlet q=0 cancellation"
+    },
+    {
+      "available": true,
+      "certificate": "outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json",
+      "premise": "finite-q IR regularity"
+    },
+    {
+      "available": true,
+      "certificate": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
+      "premise": "unit taste-singlet algebra"
+    }
+  ],
+  "theorem_closed": false,
+  "verdict": "The current PR #230 artifacts do not identify a physical scalar carrier/projector strongly enough for retained FH/LSZ closure.  Color-singlet zero-mode cancellation, finite-q IR regularity, and unit taste-singlet algebra are support.  The route remains blocked because non-origin taste corners lack authority as the physical carrier, normalized taste-singlet weighting removes finite crossings, unit-projector finite ladders need an underived kernel multiplier, fitted multipliers import the missing normalization, and the scalar denominator/threshold stack remains open."
+}

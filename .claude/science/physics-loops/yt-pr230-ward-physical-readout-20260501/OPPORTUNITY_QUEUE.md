@@ -240,6 +240,10 @@ probability.
    and finite-q IR regularity into the threshold premise: local integrability
    does not exclude positive continuum spectral weight arbitrarily close to
    the pole.
+   The scalar carrier/projector closure attempt also blocks the taste/projector
+   shortcut.  Color-singlet support and unit taste-singlet algebra do not
+   derive physical carrier authority, preserve unit-projector crossings, or
+   derive `K'(pole)`.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

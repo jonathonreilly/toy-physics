@@ -123,6 +123,9 @@ def main() -> int:
         "fh_lsz_soft_continuum_threshold": load(
             "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json"
         ),
+        "scalar_carrier_projector_closure": load(
+            "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -443,6 +446,11 @@ def main() -> int:
         "fh-lsz-soft-continuum-threshold-no-go-blocks-ir-shortcut",
         "soft-continuum threshold no-go" in str(statuses["fh_lsz_soft_continuum_threshold"]),
         statuses["fh_lsz_soft_continuum_threshold"],
+    )
+    report(
+        "scalar-carrier-projector-closure-attempt-blocked",
+        "scalar carrier-projector closure attempt blocked" in str(statuses["scalar_carrier_projector_closure"]),
+        statuses["scalar_carrier_projector_closure"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -784,6 +792,11 @@ def main() -> int:
             "color-singlet q=0 cancellation plus finite-q IR regularity as the "
             "missing threshold premise: local integrability does not exclude "
             "positive continuum spectral weight arbitrarily close to the pole.  "
+            "The scalar carrier/projector closure attempt confirms that the "
+            "taste/projector side remains open as well: color-singlet support "
+            "and unit taste-singlet algebra do not identify the physical "
+            "carrier, preserve finite crossings under unit normalization, or "
+            "derive K'(pole).  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

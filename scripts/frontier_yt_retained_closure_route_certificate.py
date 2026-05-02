@@ -95,6 +95,7 @@ def main() -> int:
         "fh_lsz_uniform_gap_self_certification": "outputs/yt_fh_lsz_uniform_gap_self_certification_no_go_2026-05-02.json",
         "scalar_denominator_theorem_closure": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
         "fh_lsz_soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+        "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -409,6 +410,12 @@ def main() -> int:
         and certificates["fh_lsz_soft_continuum_threshold"].get("proposal_allowed") is False
         and certificates["fh_lsz_soft_continuum_threshold"].get("uniform_threshold_gap_certified") is False
     )
+    scalar_carrier_projector_closure_blocked = (
+        "scalar carrier-projector closure attempt blocked"
+        in certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", "")
+        and certificates["scalar_carrier_projector_closure"].get("proposal_allowed") is False
+        and certificates["scalar_carrier_projector_closure"].get("theorem_closed") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -680,6 +687,11 @@ def main() -> int:
         certificates["fh_lsz_soft_continuum_threshold"].get("actual_current_surface_status", ""),
     )
     report(
+        "scalar-carrier-projector-closure-attempt-blocked",
+        scalar_carrier_projector_closure_blocked,
+        certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -837,6 +849,10 @@ def main() -> int:
             "color-singlet q=0 cancellation plus finite-q IR regularity into "
             "that threshold premise: IR integrability is compatible with "
             "positive continuum spectral weight arbitrarily close to the pole.  "
+            "The scalar carrier/projector closure attempt confirms the "
+            "remaining taste/carrier side is also open: unit taste algebra and "
+            "color-singlet support do not admit non-origin corners, preserve "
+            "unit-projector crossings, or derive K'(pole).  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "

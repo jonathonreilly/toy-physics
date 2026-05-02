@@ -540,3 +540,15 @@ production acceptance certificate.
 Next exact action: poll seed-controlled replacement chunk001.  If it is still
 running, attack the physical scalar carrier/projector or `K'(pole)` directly;
 do not treat finite-q IR regularity as threshold closure.
+
+The scalar carrier/projector closure attempt now blocks the adjacent
+taste/projector shortcut.  Color-singlet q=0 cancellation, finite-q IR
+regularity, and unit taste-singlet algebra are support, but they do not admit
+non-origin taste corners as the physical scalar carrier, preserve finite
+crossings after unit normalization, derive the scalar-kernel enhancement, or
+legitimize fitting that enhancement.  The carrier/projector premise remains
+open with `K'(pole)`.
+
+Next exact action: poll seed-controlled replacement chunk001.  If it is still
+running, attack `K'(pole)` directly or continue preparing seed-controlled
+production; do not count carrier/projector support as scalar LSZ closure.

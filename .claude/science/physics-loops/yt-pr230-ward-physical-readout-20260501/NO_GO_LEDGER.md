@@ -1259,3 +1259,16 @@ The zero-mode-removed color-singlet kernel can be locally integrable while a
 positive soft continuum band begins arbitrarily close to the scalar pole.
 Therefore q=0 cancellation plus finite-q regularity is support, not the
 uniform threshold or pole-saturation premise needed by the FH/LSZ residue gate.
+
+Scalar carrier/projector closure attempt remains blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_carrier_projector_closure_attempt.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+Color-singlet cancellation, finite-q regularity, and unit taste-singlet algebra
+are support only.  Non-origin taste corners lack retained physical-carrier
+authority; normalized taste-singlet projection removes finite crossings; the
+unit projector needs an underived kernel multiplier; fitting that multiplier
+imports the missing normalization; and `K'(pole)` remains open.
