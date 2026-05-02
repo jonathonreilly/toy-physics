@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:24:42.304266+00:00
+**Generated:** 2026-05-02T01:28:05.547192+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 358 |
+| `audited_clean` | 359 |
 | `audited_conditional` | 666 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 432 |
+| `unaudited` | 431 |
 
 | criticality | count |
 |---|---:|
@@ -435,6 +435,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `third_grown_family_complex_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `third_grown_family_complex_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `two_field_retarded_family_closure_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -15866,6 +15867,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The two-body lane is still open, with only a narrow positive periodic/massless partner-kick window and no broad or screened mutual-attraction closure.  _(class `B`)_
 - **chain closes:** False — The note is scientifically cautious, but it has no registered runner and the main scripts it names for the Hartree, acceleration, partner-kick, and size-scan surfaces are not present under those names in the current repo.
 - **rationale:** Issue: the note's numerical support and named artifact chain cannot be reproduced from the current row because the ledger has no runner and the listed frontier_two_body_mutual_attraction / two_orbital / acceleration / partner-kick scripts are absent under those paths. Why this blocks: even a cautious open-lane support note needs reproducible artifacts for the reported residuals, kick counts, size scan, and Wilson successor failure. Repair target: restore or relink the exact scripts/logs, or rewrite the note to cite the current available two-body runners and audited successor notes. Claim boundary until fixed: safe as a historical exploratory memo saying the two-body lane remains unresolved; not safe as audited support for the detailed numerical window or follow-up claims.
+- **auditor confidence:** high
+
+### `two_field_retarded_family_closure_note_2026-04-10`
+
+- **Note:** [`TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md`](../../docs/TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The family-closure loop preserves the retarded battery on the cycle-bearing families and extends the same operating-point closure to the layered DAG-derived control (8/9, with gauge structurally N/A).  _(class `C`)_
+- **chain closes:** True — The source note states a bounded graph-battery diagnostic rather than a retained attraction theorem, and the registered runner recomputes the force, stability, norm, family-closure, gauge, and gap rows from the stated retarded/hybrid law. The note's measurement caveat keeps the irregular sign rows at the field-profile diagnostic level, which matches what the runner checks.
+- **rationale:** The current runner output matches the note's battery table: the three cycle-bearing families score 9/9 and the layered DAG-derived control scores 8/9 only because native gauge is structurally unavailable without a cycle. The load-bearing claim is bounded to a family-conditioned closure diagnostic, and the note explicitly avoids using the irregular force rows as proof that attraction is dynamically chosen. Residual risk is that this remains a conditioned sibling harness rather than a single retained canonical theorem.
 - **auditor confidence:** high
 
 ### `two_sign_comparison_note_2026-04-10`
