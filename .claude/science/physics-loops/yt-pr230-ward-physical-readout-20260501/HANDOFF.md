@@ -408,3 +408,7 @@ FV/IR/zero-mode control, and retained-proposal certification are still open.
 The chunk launch commands have also been tightened: each command now uses a
 chunk-local `--production-output-dir` and `--resume`, so future
 `ensemble_measurement.json` artifacts cannot collide across chunks.
+The first chunk launch also exposed a pure CLI preflight bug: negative scalar
+source shifts must be passed with equals syntax.  The production and chunk
+manifest emitters now use `--scalar-source-shifts=-0.01,0.0,0.01`, so the next
+exact action can relaunch chunk001 under the non-evidence combiner gate.

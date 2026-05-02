@@ -579,3 +579,18 @@ Tightens the FH/LSZ L12 chunk launch preflight:
 - still no retained/proposed-retained closure: zero chunks are present, and
   production pole/FV/IR plus L16/L24 remain open.
 ```
+
+Latest FH/LSZ negative scalar-source CLI preflight checkpoint text for PR #230:
+
+```text
+Fixes FH/LSZ production command syntax:
+- first chunk launch failed immediately because `--scalar-source-shifts
+  -0.01,0.0,0.01` is parsed as a missing argument by `argparse`;
+- production and chunk manifest emitters now use
+  `--scalar-source-shifts=-0.01,0.0,0.01`;
+- production manifest remains `PASS=9 FAIL=0`, chunked manifest remains
+  `PASS=10 FAIL=0`, postprocess gate remains `PASS=9 FAIL=0`, combiner gate
+  remains `PASS=8 FAIL=0`;
+- still no retained/proposed-retained closure: this only makes the next
+  non-evidence chunk launch syntactically executable.
+```

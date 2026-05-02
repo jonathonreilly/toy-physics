@@ -24,7 +24,7 @@ chunks needed for 1000 saved configurations: 63
 The commands still use production-targeted FH/LSZ observables:
 
 ```text
---scalar-source-shifts -0.01,0.0,0.01
+--scalar-source-shifts=-0.01,0.0,0.01
 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1'
 --scalar-two-point-noises 16
 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunkNNN

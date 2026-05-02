@@ -479,6 +479,8 @@ combination.  Missing, partial, or L12-only chunk sets are forbidden as proof
 selectors for physical `y_t`.
 The chunk manifest now also requires chunk-local artifact directories, so
 reusing or overwriting per-volume artifacts is not an allowed provenance path.
+The negative source-shift CLI fix is syntactic only; it does not upgrade a
+manifest, partial chunk, or L12-only output into physical `y_t` evidence.
 
 Positive-closure candidates left after the assumption exercise:
 

@@ -25,8 +25,8 @@ certificate, and joint resource projection into exact production commands for:
 - `16x32`;
 - `24x48`.
 
-Each command includes masses `0.45,0.75,1.05`, scalar source shifts
-`-0.01,0.0,0.01`, same-source scalar two-point modes
+Each command includes masses `0.45,0.75,1.05`, scalar source shifts emitted as
+`--scalar-source-shifts=-0.01,0.0,0.01`, same-source scalar two-point modes
 `0,0,0;1,0,0;0,1,0;0,0,1`, 16 scalar two-point noise vectors, 1000
 thermalization sweeps, 1000 saved configurations, separation 20,
 `--production-targets`, and `--resume`.

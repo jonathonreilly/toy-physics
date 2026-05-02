@@ -2,7 +2,7 @@
   "actual_current_surface_status": "bounded-support / joint FH-LSZ production manifest",
   "commands": [
     {
-      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --production-targets --resume --scalar-source-shifts -0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050101 --output outputs/yt_pr230_fh_lsz_production_L12_T24_2026-05-01.json",
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --production-targets --resume --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050101 --output outputs/yt_pr230_fh_lsz_production_L12_T24_2026-05-01.json",
       "expected_certificate_status": "production evidence only after successful run, fit, pole/LSZ analysis, and audit",
       "label": "L12_T24",
       "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_2026-05-01.json",
@@ -10,7 +10,7 @@
       "volume": "12x24"
     },
     {
-      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 16x32 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --production-targets --resume --scalar-source-shifts -0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050102 --output outputs/yt_pr230_fh_lsz_production_L16_T32_2026-05-01.json",
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 16x32 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --production-targets --resume --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050102 --output outputs/yt_pr230_fh_lsz_production_L16_T32_2026-05-01.json",
       "expected_certificate_status": "production evidence only after successful run, fit, pole/LSZ analysis, and audit",
       "label": "L16_T32",
       "output": "outputs/yt_pr230_fh_lsz_production_L16_T32_2026-05-01.json",
@@ -18,7 +18,7 @@
       "volume": "16x32"
     },
     {
-      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 24x48 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --production-targets --resume --scalar-source-shifts -0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050103 --output outputs/yt_pr230_fh_lsz_production_L24_T48_2026-05-01.json",
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 24x48 --masses 0.45,0.75,1.05 --therm 1000 --measurements 1000 --separation 20 --engine numba --production-targets --resume --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --seed 2026050103 --output outputs/yt_pr230_fh_lsz_production_L24_T48_2026-05-01.json",
       "expected_certificate_status": "production evidence only after successful run, fit, pole/LSZ analysis, and audit",
       "label": "L24_T48",
       "output": "outputs/yt_pr230_fh_lsz_production_L24_T48_2026-05-01.json",

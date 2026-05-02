@@ -644,3 +644,21 @@ python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
 The command-isolation update changes launch provenance only.  It prevents
 cross-chunk per-volume artifact collisions, but it supplies no production data
 and authorizes no retained/proposed-retained wording.
+
+FH/LSZ negative scalar-source CLI preflight checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / joint FH-LSZ production manifest
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_production_manifest.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunked_production_manifest.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+The equals-syntax fix only makes future production commands parse correctly.
+It supplies no completed production chunk and authorizes no retained or
+proposed-retained wording.

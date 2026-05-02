@@ -976,6 +976,20 @@ Chunk commands now include a chunk-local `--production-output-dir` plus
 chunk cannot be accepted by overwriting or reusing another chunk's completed
 per-volume artifact.
 
+FH/LSZ negative scalar-source CLI preflight blocker fixed:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_production_manifest.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunked_production_manifest.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+The first chunk launch failed before compute because `--scalar-source-shifts
+-0.01,0.0,0.01` lets `argparse` treat the negative value as an option.  Both
+FH/LSZ manifest emitters now use `--scalar-source-shifts=-0.01,0.0,0.01`.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate
