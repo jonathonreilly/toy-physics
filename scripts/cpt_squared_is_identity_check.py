@@ -1,4 +1,4 @@
-"""(CPT)² = I check on framework retained CPT structure."""
+"""(CPT)² = I check on the framework CPT structure."""
 from __future__ import annotations
 
 import numpy as np
