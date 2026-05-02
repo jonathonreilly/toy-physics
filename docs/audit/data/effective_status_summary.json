@@ -1,25 +1,14 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 511,
+    "bounded_theorem": 516,
     "decoration": 5,
-    "meta": 35,
-    "no_go": 152,
+    "meta": 36,
+    "no_go": 155,
     "open_gate": 107,
-    "positive_theorem": 872
+    "positive_theorem": 862
   },
-  "computed_at": "2026-05-02T17:06:13.641589+00:00",
+  "computed_at": "2026-05-02T18:07:11.500595+00:00",
   "cycle_examples": [
-    [
-      "alpha_s_derived_note",
-      "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
-      "minimal_axioms_2026-04-11"
-    ],
-    [
-      "alpha_s_derived_note",
-      "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
-      "minimal_axioms_2026-04-11",
-      "yt_zero_import_authority_note"
-    ],
     [
       "lorentz_boost_covariance_2d_theorem_note",
       "lorentz_boost_covariance_3plus1d_theorem_note"
@@ -31,22 +20,31 @@
     [
       "publication.ci3_z3.quantitative_summary_table",
       "publication.ci3_z3.publication_matrix"
+    ],
+    [
+      "publication.ci3_z3.claims_table",
+      "publication.ci3_z3.derivation_validation_map",
+      "publication.ci3_z3.derivation_atlas"
+    ],
+    [
+      "publication.ci3_z3.derivation_validation_map",
+      "publication.ci3_z3.derivation_atlas"
     ]
   ],
-  "cycles_detected": 85,
+  "cycles_detected": 83,
   "effective_status_counts": {
-    "audited_conditional": 644,
+    "audited_conditional": 636,
     "audited_decoration": 3,
-    "audited_failed": 26,
+    "audited_failed": 1,
     "audited_numerical_match": 24,
-    "audited_renaming": 18,
-    "meta": 35,
+    "audited_renaming": 17,
+    "meta": 36,
     "open_gate": 8,
-    "retained": 143,
-    "retained_bounded": 171,
-    "retained_no_go": 93,
+    "retained": 139,
+    "retained_bounded": 176,
+    "retained_no_go": 95,
     "retained_pending_chain": 2,
-    "unaudited": 515
+    "unaudited": 544
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

@@ -20,9 +20,9 @@ The strongest retained purity floor is the triple stack at small `N`:
 
 - `N = 25`
   - linear: `purity = 0.9472`
-  - collapse: `0.8890`
+  - collapse: `0.9302`
   - `LN + |y|`: `0.7160`
-  - `LN + |y| + collapse`: `0.6887`
+  - `LN + |y| + collapse`: `0.7075`
 
 So the triple stack gives the lowest purity at the smallest `N` tested, but the gain is still bounded.
 
@@ -31,9 +31,9 @@ So the triple stack gives the lowest purity at the smallest `N` tested, but the 
 Power-law fits for `(1 - purity)`:
 
 - linear: `1.432e+00 * N^-0.911`, `R^2 = 0.628`
-- collapse: `2.394e+00 * N^-0.918`, `R^2 = 0.942`
+- collapse: `1.095e+00 * N^-0.803`, `R^2 = 0.864`
 - `LN + |y|`: `4.277e+00 * N^-0.805`, `R^2 = 0.769`
-- `LN + |y| + collapse`: `4.432e+00 * N^-0.796`, `R^2 = 0.802`
+- `LN + |y| + collapse`: `3.638e+00 * N^-0.754`, `R^2 = 0.788`
 
 Interpretation:
 
@@ -46,8 +46,8 @@ Interpretation:
 
 The strongest retained quantitative result from this pilot is:
 
-- `LN + |y| + collapse` at `N = 25`: `purity = 0.6887`
-- `LN + |y| + collapse` at `N = 100`: `purity = 0.8819`
+- `LN + |y| + collapse` at `N = 25`: `purity = 0.7075`
+- `LN + |y| + collapse` at `N = 100`: `purity = 0.8835`
 
 That is the best triple-stack purity floor in the tested range, but it remains a finite-`N` gain rather than an asymptotic reversal.
 
@@ -56,4 +56,3 @@ That is the best triple-stack purity floor in the tested range, but it remains a
 The run output was captured in:
 
 - [`logs/2026-04-02-triple-stack-collapse-scaling.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-02-triple-stack-collapse-scaling.txt)
-
