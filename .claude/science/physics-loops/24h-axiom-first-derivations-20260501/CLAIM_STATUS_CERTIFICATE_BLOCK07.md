@@ -1,6 +1,6 @@
 # Claim Status Certificate — Block 07 (Reeh-Schlieder cyclicity)
 
-**Date:** 2026-05-01
+**Date:** 2026-05-01 (originally) / 2026-05-02 (reframed under scope-aware classification)
 **Block:** 07 — Reeh-Schlieder cyclicity on A_min
 **Slug:** `24h-axiom-first-derivations-20260501`
 **Branch:** `physics-loop/24h-axiom-first-block07-reehschlieder-20260501`
@@ -9,55 +9,54 @@
 **Runner:** [scripts/axiom_first_reeh_schlieder_check.py](../../../../scripts/axiom_first_reeh_schlieder_check.py)
 **Log:** [outputs/axiom_first_reeh_schlieder_check_2026-05-01.txt](../../../../outputs/axiom_first_reeh_schlieder_check_2026-05-01.txt)
 
-## Status fields
+## Framework
+
+Reframed under the scope-aware classification framework adopted 2026-05-02
+(audit-lane proposal #291). Pipeline-derived `effective_status`.
+
+## Author classification (non-authoritative hint to auditor)
 
 ```yaml
-actual_current_surface_status: support
-conditional_surface_status: derived support theorem on A_min + retained RP + spectrum condition + cluster decomposition + Block 04 microcausality
-hypothetical_axiom_status: null
-admitted_observation_status: null
-proposal_allowed: false
-proposal_allowed_reason: "Depends on retained-but-audit-pending RP, spectrum-condition, and cluster-decomposition support notes plus Block 04 microcausality (audit-pending). Per physics-loop SKILL retained-proposal certificate item 4."
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+claim_type_author_hint: positive_theorem
+claim_scope: "For any nonempty open lattice region O ⊂ Λ, the local operator algebra A(O) acts cyclically on the RP-reconstructed vacuum |Ω⟩; equivalently, the vacuum is separating for A(O)' (R1, R2). Continuum-limit form follows by analytic continuation in time via spectrum condition + edge-of-the-wedge."
+admitted_context_inputs:
+  - edge-of-the-wedge / Schwarz reflection (basic complex analysis)
+upstream_dependencies:
+  - axiom_first_reflection_positivity_theorem_note_2026-04-29 (Codex audited_clean cross_family)
+  - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional — RP dep registration repair pending)
+  - axiom_first_cluster_decomposition_theorem_note_2026-04-29 (Codex audited_clean cross_family)
+  - block_04_microcausality_lieb_robinson (sibling block on PR #263)
+runner_classified_passes: 4 PASS (rank of time-translated A(O)|Ω⟩ = 64 = full dim H_phys exactly)
 ```
 
-## Dependency classes
+## Expected `effective_status` after audit
 
-| Dep | Class | Source |
-|---|---|---|
-| RP transfer matrix and H_phys | retained support, audit-pending | AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29 |
-| Spectrum condition (H ≥ 0) | retained support, audit-pending | AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29 |
-| Cluster decomposition (vacuum unique) | retained support, audit-pending | AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29 |
-| Block 04 microcausality (Lieb-Robinson) | support, audit-pending | (sibling block, on independent PR #263) |
-| Edge-of-the-wedge / Schwarz reflection | admitted-context, basic complex analysis | not a physics import |
+If Codex returns `audit_status = audited_clean` and `claim_type =
+positive_theorem`:
 
-## Open imports
+- **Path A** (full upstream chain reaches retained including Block 04):
+  `effective_status = retained` immediately on next pipeline run.
+- **Path B** (any upstream still in audited_conditional / audit-pending):
+  `effective_status = proposed_retained` (transient; auto-resolves).
 
-Edge-of-the-wedge / Schwarz reflection is admitted-context (basic
-complex analysis). No new physics admissions.
+## Dependency chain status snapshot (2026-05-02)
+
+| Dep | Today's `effective_status` (post adoption) |
+|---|---|
+| RP | support (Codex audited_clean; awaiting framework-adoption sweep) |
+| Spectrum cond | audited_conditional (RP dep registration repair pending) |
+| Cluster decomp | support (Codex audited_clean; awaiting sweep) |
+| Block 04 microcausality | proposed_retained (sibling, pending) |
 
 ## Review-loop disposition
 
-- branch-local self-review: `pass` (rank of time-translated A(O)|Ω⟩
-  matches full dim H_phys exactly: 64/64).
-- formal `/review-loop`: deferred.
+- branch-local self-review: `pass` (4/4 tests; A(O)|Ω⟩ rank exactly 64).
+- formal Codex audit: pending under new prompt template.
 
-## Status conclusion
+## Audit hand-off
 
-This block is a **derived support theorem** that completes the
-framework's Wightman-axiom-style local-algebra structure together
-with the retained CPT, spin-statistics, cluster decomposition,
-microcausality, and spectrum condition.
-
-Together with these, the framework now has all the ingredients of an
-axiomatic local quantum field theory at the lattice level.
-
-It is **not** suitable for `proposed_retained` until upstream chain
-is fully ratified retained.
-
-## Audit hand-off requirement
-
-- Upstream RP, spectrum cond, cluster decomp ratified retained.
-- Independent audit of Steps 1–6 of the proof.
-- Independent verification of the 4-test runner pass.
+This block completes the Wightman-axiom-style local-algebra package
+together with retained CPT, spin-statistics, cluster decomposition,
+microcausality (Block 04), and spectrum condition. Auditor should evaluate
+under the new prompt template
+([`PROPOSED_AUDIT_AGENT_PROMPT_TEMPLATE.md`](../../../../docs/audit/proposals/scope-aware-classification-20260502/PROPOSED_AUDIT_AGENT_PROMPT_TEMPLATE.md)).

@@ -1,7 +1,9 @@
 # Axiom-First Reeh-Schlieder Cyclicity on A_min
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on A_min plus retained RP + spectrum condition + cluster decomposition; runner passing; audit-pending. `proposal_allowed: false`.
+**Type:** positive_theorem
+**Claim scope:** for any nonempty open lattice region O ⊂ Λ, the local operator algebra A(O) acts cyclically on the RP-reconstructed vacuum |Ω⟩; equivalently, the vacuum is separating for the commutant A(O)' (R1, R2). Continuum-limit form follows by standard analytic continuation in time via spectrum condition + edge-of-the-wedge.
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 7 (Block 07; independent of Blocks 01-06)
 **Branch:** `physics-loop/24h-axiom-first-block07-reehschlieder-20260501`
