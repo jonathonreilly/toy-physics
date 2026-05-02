@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:19:42.359091+00:00
+**Generated:** 2026-05-02T17:21:06.594713+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,9 +19,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 143 |
+| **retained** | 142 |
 | **retained_no_go** | 93 |
-| **retained_bounded** | 173 |
+| **retained_bounded** | 174 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
 | unaudited | 516 |
@@ -44,12 +44,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 515 |
+| `bounded_theorem` | 516 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 152 |
 | `open_gate` | 107 |
-| `positive_theorem` | 870 |
+| `positive_theorem` | 869 |
 
 | criticality | count |
 |---|---:|
@@ -388,7 +388,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `s3_taste_cube_decomposition_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
-| `scalar_3plus1_temporal_ratio_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `scalar_trace_tensor_no_go_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -14344,15 +14344,15 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 ### `scalar_3plus1_temporal_ratio_note`
 
 - **Note:** [`SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`](../../docs/SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given the scoped minimal 3+1 APBC scalar kernel K_sc(omega)=3+sin^2(omega) and A(L_t)=(1/(2L_t)) sum_omega 1/(3+sin^2 omega), the endpoints A_2=1/8, A_inf=1/(4sqrt(3)), and ratio A_inf/A_2=2/sqrt(3) close exactly; observable-level fourth-root insertion is not promoted.
 - **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-second-20260430-scalar-3plus1-drain2`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The associated intensive scalar coefficient is A(L_t) = (1 / (2 L_t)) sum_omega 1 / (3 + sin^2 omega), with endpoints A_2 = 1 / 8 and A_inf = 1 / (4 sqrt(3)), hence A_inf / A_2 = 2 / sqrt(3).  _(class `A`)_
-- **chain closes:** True — The scalar endpoint ratio follows by direct algebra/calculus from the stated kernel K_sc(omega) = 3 + sin^2(omega) and the stated APBC temporal average. The note explicitly keeps the fourth-root observable insertion at support level, so the clean closure is only for the scalar bridge endpoint ratio.
-- **rationale:** The load-bearing claim is the exact scalar ratio A_inf / A_2 = 2 / sqrt(3), not an observable-level plaquette insertion. Given the stated minimal 3+1 APBC scalar kernel and coefficient definition, the endpoints and ratio close as exact mathematics, and the runner's current output is numerically consistent with the note. The source note correctly marks the dimension-4 fourth-root observable insertion as only a support corollary, avoiding the missing physical-observable bridge.
-- **auditor confidence:** medium
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-scalar3p1-helmholtz-20260502`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Therefore A_inf / A_2 = 2 / sqrt(3).  _(class `A`)_
+- **chain closes:** True — The endpoint ratio follows by exact algebra from the scoped coefficient definition and endpoint evaluations; the note explicitly excludes the physical plaquette/readout insertion from theorem status.
+- **rationale:** The audited claim is bounded to the minimal 3+1 APBC scalar bridge and does not claim an observable-level completion. Within that scope, the finite endpoint, infinite endpoint, and ratio are exact scalar/algebraic consequences, and the runner confirms the current numerics. No dependency, comparator, tuned scale, or support-class promotion is needed.
+- **auditor confidence:** high
 
 ### `scalar_kg_rerun_note_2026-04-10`
 
