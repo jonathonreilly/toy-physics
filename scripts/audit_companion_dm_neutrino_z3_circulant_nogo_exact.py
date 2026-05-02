@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Pattern B audit-companion runner for
 `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15`
-(claim_type=no_go, audit_status=audited_conditional, td=144,
-load_bearing_step_class=A).
+(claim_type=no_go, load_bearing_step_class=A).
 
 The parent's load-bearing step is the algebraic identity that any exact
 Z_3-covariant circulant kernel
@@ -24,8 +23,8 @@ symbolic precision via:
 
 Companion role: not a new claim row; not a new source note. Provides
 audit-friendly evidence that the parent's load-bearing class-(A) algebra
-holds at exact precision. Does not modify the parent row's audit_status;
-that decision belongs to the audit lane.
+holds at exact precision. Does not modify the parent row's status; that
+decision belongs to the independent audit lane.
 """
 
 from pathlib import Path
@@ -244,8 +243,6 @@ parent_id = "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15"
 parent = rows.get(parent_id, {})
 print(f"\n  {parent_id} current ledger state:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
-print(f"    effective_status: {parent.get('effective_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 
@@ -278,10 +275,9 @@ print("""
     (A) — algebraic identity / linear algebra on Z_3-covariant circulants
     and real-symmetric blocks. No external observed/fitted/literature input.
 
-  This audit-companion does NOT introduce a new claim row, a new source
-  note, or any modification of the parent's audit_status. The parent
-  remains audited_conditional pending audit-lane review of the upstream
-  source/orientation authorities the verdict identifies.
+  This companion does NOT introduce a new claim row, a new source note,
+  or any modification of the parent row's status. Independent audit
+  remains responsible for any later parent-row disposition.
 """)
 
 

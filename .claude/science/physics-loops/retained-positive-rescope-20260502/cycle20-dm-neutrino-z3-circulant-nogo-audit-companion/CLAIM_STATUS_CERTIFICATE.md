@@ -2,7 +2,7 @@
 
 **Block:** physics-loop/dm-neutrino-z3-circulant-no-go-audit-companion-block20-20260502
 **Runner:** scripts/audit_companion_dm_neutrino_z3_circulant_nogo_exact.py (PASS=14/0)
-**Target row:** dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15 (claim_type=no_go, audit_status=audited_conditional, td=144, load_bearing_step_class=A)
+**Target row:** dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15 (claim_type=no_go, load_bearing_step_class=A)
 
 ## Block type
 
@@ -27,13 +27,12 @@ symbolic precision via sympy.
 ## Claim-Type Certificate (Pattern B)
 
 ```yaml
-target_claim_type: meta  # audit-companion runner; not a claim row
+proposed_artifact_type: meta  # audit-companion runner; not a claim row
 proposed_load_bearing_step_class: A
 introduces_new_claim_row: false
 introduces_new_source_note: false
-modifies_parent_audit_status: false  # audit-lane decides
-audit_required_before_effective_retained: true  # parent row only; companion is meta
-bare_retained_allowed: false
+modifies_parent_status: false
+status_authority: independent_audit_lane
 ```
 
 ## 7-criteria check (adapted for Pattern B)
@@ -45,8 +44,8 @@ bare_retained_allowed: false
 | 3 | No load-bearing observed/fitted/admitted in the companion | YES (purely symbolic linear algebra; no PDG/literature/fitted/admitted-convention input) |
 | 4 | Parent row's deps unchanged by this block | YES (does not modify ledger row state; only adds runner artifact) |
 | 5 | Runner verifies parent's load-bearing step at exact precision | YES (sympy `Matrix`, `exp`, `cos`, `pi` symbolic reductions) |
-| 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; audit-lane decides whether the parent row's `audited_conditional` verdict can be tightened |
-| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert any retained-status promotion) |
+| 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; independent audit decides any parent-row disposition |
+| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert any status promotion) |
 
 ## What the companion verifies
 
@@ -68,19 +67,15 @@ bare_retained_allowed: false
 ## Audit-graph effect
 
 This companion is **meta** — it does not move the parent row by itself.
-The parent row currently sits at `audited_conditional`; the audit verdict
-identifies remaining gaps in the upstream source/orientation authorities,
-not in the local algebraic argument. The companion's role is to give the
-audit lane focused exact-precision evidence that the local class-(A)
-algebra is symbolically rigorous, useful when revisiting the conditional
-verdict.
+The companion's role is to give the audit lane focused exact-precision
+evidence that the local class-(A) algebra is symbolically rigorous.
 
 ## Forbidden imports check
 
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 The companion is pure symbolic linear algebra on the Z_3 cyclic shift
@@ -91,5 +86,5 @@ and the explicit real-symmetric block form of M_R.
 A standalone audit-companion runner that complements the existing primary
 runner by providing exact symbolic verification of the no_go's load-bearing
 real-spectrum / real-symmetric-mass-basis algebra. The block proposes
-nothing about any retained-status change; the audit lane is the authority
+nothing about any parent-row status change; the audit lane is the authority
 for that.
