@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:51:49.768377+00:00
+**Generated:** 2026-05-02T00:53:29.876787+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 154 |
+| bounded | 153 |
 | support | 127 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 964 |
-| ~~audited_failed~~ | 95 |
+| ~~audited_failed~~ | 96 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 352 |
 | `audited_conditional` | 664 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 66 |
+| `audited_failed` | 67 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 445 |
+| `unaudited` | 444 |
 
 | criticality | count |
 |---|---:|
@@ -1177,6 +1177,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_layered_backreaction_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_layered_loop_threshold_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `structured_mirror_joint_validation_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -15435,6 +15436,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/structured_mirror_bornsafe_scan.py`
 - **auditor confidence:** medium
+
+### `structured_mirror_joint_validation_note`
+
+- **Note:** [`STRUCTURED_MIRROR_JOINT_VALIDATION_NOTE.md`](../../docs/STRUCTURED_MIRROR_JOINT_VALIDATION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** The default saved run reports bounded observables for N=25,30,40, including positive gravity, nontrivial purity/decoherence, non-Born-clean residuals, and k=0 numerically zero.  _(class `B`)_
+- **chain closes:** False — The note's table matches the archived log, but the primary runner path is a zero-byte script and currently produces no executable validation or PASS surface.
+- **rationale:** Issue: the load-bearing bounded validation is backed only by a saved log while the named primary runner is empty and cannot reproduce the reported observables. Why this blocks: an audit-clean or conditional bounded validation needs a current executable computation, not just a historical table, because stale or unreproducible numerics cannot be distinguished from a live validator. Repair target: restore the joint-validation script or replace the runner path with an executable reproducer that prints the reported metrics from the structured mirror geometry and linear propagator. Claim boundary until fixed: the archived log may be cited as a historical exploratory run, but the active claim should not be treated as an audited bounded validator.
+- **auditor confidence:** high
 
 ### `structured_mirror_reconciliation_note`
 
