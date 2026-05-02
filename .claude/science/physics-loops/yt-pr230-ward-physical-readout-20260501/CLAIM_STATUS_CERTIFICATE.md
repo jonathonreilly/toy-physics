@@ -55,6 +55,7 @@ plus FH/LSZ autocorrelation ESS gate
 plus FH/LSZ target time-series harness extension
 plus FH/LSZ chunks007-008 ready-set processing
 plus FH/LSZ target time-series Higgs-identity no-go
+plus no-orthogonal-top-coupling selection-rule no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -67,6 +68,21 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+No-orthogonal-top-coupling selection-rule no-go:
+
+```text
+actual_current_surface_status: exact negative boundary / no-orthogonal-top-coupling selection rule not derived
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Current listed substrate/gauge charges do not distinguish the canonical Higgs
+radial scalar from an orthogonal neutral scalar with the same labels.  The
+current surface therefore cannot set the orthogonal top coupling to zero.
 
 FH/LSZ target time-series Higgs-identity no-go:
 

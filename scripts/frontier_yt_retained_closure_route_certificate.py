@@ -113,6 +113,7 @@ def main() -> int:
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
         "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
+        "no_orthogonal_top_coupling_selection_rule": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
         "d17_source_pole_identity_closure": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
         "source_overlap_sum_rule_no_go": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
         "short_distance_ope_lsz_no_go": "outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json",
@@ -598,6 +599,17 @@ def main() -> int:
         )
         is False
     )
+    no_orthogonal_top_coupling_selection_rule_blocks = (
+        "no-orthogonal-top-coupling selection rule not derived"
+        in certificates["no_orthogonal_top_coupling_selection_rule"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["no_orthogonal_top_coupling_selection_rule"].get("proposal_allowed") is False
+        and certificates["no_orthogonal_top_coupling_selection_rule"].get(
+            "no_orthogonal_top_coupling_selection_rule_gate_passed"
+        )
+        is False
+    )
     d17_source_pole_identity_closure_blocked = (
         "D17 source-pole identity closure attempt blocked"
         in certificates["d17_source_pole_identity_closure"].get("actual_current_surface_status", "")
@@ -1036,6 +1048,11 @@ def main() -> int:
         certificates["no_orthogonal_top_coupling_import"].get("actual_current_surface_status", ""),
     )
     report(
+        "no-orthogonal-top-coupling-selection-rule-blocks",
+        no_orthogonal_top_coupling_selection_rule_blocks,
+        certificates["no_orthogonal_top_coupling_selection_rule"].get("actual_current_surface_status", ""),
+    )
+    report(
         "d17-source-pole-identity-closure-blocked",
         d17_source_pole_identity_closure_blocked,
         certificates["d17_source_pole_identity_closure"].get("actual_current_surface_status", ""),
@@ -1326,6 +1343,10 @@ def main() -> int:
             "remain source-coordinate data unless source-pole purity, "
             "no-orthogonal-top-coupling, sector-overlap equality, or an "
             "independent canonical-Higgs response observable is supplied.  "
+            "The no-orthogonal-top-coupling selection-rule no-go blocks one "
+            "of those escape hatches: current listed substrate/gauge charges "
+            "cannot allow h tbar t while forbidding an orthogonal neutral "
+            "chi tbar t coupling with the same labels.  "
             "A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "

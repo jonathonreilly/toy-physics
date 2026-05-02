@@ -13,11 +13,14 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-133-target-timeseries-higgs-identity-no-go
-blocks_completed: 133
-active_route: "FH/LSZ target time-series versus canonical-Higgs identity"
-active_hard_residual: "Even perfect same-source target time series remain source-coordinate data: the same dE/ds, dGamma_ss/dp^2, and invariant readout can coexist with different canonical-Higgs Yukawa couplings unless source-pole purity, no-orthogonal-top-coupling, sector-overlap equality, or an independent canonical-Higgs response observable is supplied."
+current_phase: campaign-rerun-block-134-no-orthogonal-top-coupling-selection-rule
+blocks_completed: 134
+active_route: "No-orthogonal-top-coupling selection rule"
+active_hard_residual: "Current listed substrate/gauge charges do not distinguish the canonical Higgs radial scalar from an orthogonal neutral scalar with the same labels. Any current selection rule that allows h tbar t also allows chi tbar t, so no-orthogonal-top-coupling remains unproved."
 files_touched:
+  - "scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py"
+  - "docs/YT_NO_ORTHOGONAL_TOP_COUPLING_SELECTION_RULE_NO_GO_NOTE_2026-05-02.md"
+  - "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json"
   - "scripts/frontier_yt_fh_lsz_target_timeseries_higgs_identity_no_go.py"
   - "docs/YT_FH_LSZ_TARGET_TIMESERIES_HIGGS_IDENTITY_NO_GO_NOTE_2026-05-02.md"
   - "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json"
@@ -598,6 +601,7 @@ claim_state_movement:
   - "added an FH/LSZ target time-series harness extension: future chunks now serialize per-configuration source-response and scalar two-point target series, but the reduced smoke is instrumentation support only"
   - "processed seed-controlled FH/LSZ chunks007-008: the combiner now reports ready chunk indices [1,2,3,4,5,6,7,8], i.e. 8/63 L12 chunks; response stability still fails and target ESS remains blocked for current pre-extension chunk outputs"
   - "proved an FH/LSZ target-time-series Higgs-identity no-go: even perfect same-source target statistics do not identify the source pole with the canonical Higgs radial mode without source-pole purity, no-orthogonal-top-coupling, sector-overlap equality, or an independent canonical-Higgs response observable"
+  - "proved a no-orthogonal-top-coupling selection-rule no-go: current listed substrate/gauge charges cannot allow h tbar t while forbidding an orthogonal neutral chi tbar t coupling with the same labels"
 actual_current_surface_status: "open / exact negative boundary plus bounded production support"
 conditional_surface_status: "future production evidence remains conditional on completed chunks, target-observable autocorrelation/ESS certification, passed finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity"
 hypothetical_axiom_status: null
@@ -606,5 +610,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Process chunks009-010 if any finish through combiner, ready-set, response-stability, autocorrelation/ESS, retained-route, and campaign gates; otherwise attack one remaining canonical-Higgs identity premise directly: source-pole purity, no orthogonal top coupling, same-source sector-overlap equality, or same-source W/Z response. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 8/63 L12 chunks, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Process chunks009-010 if any finish through combiner, ready-set, response-stability, autocorrelation/ESS, retained-route, and campaign gates; otherwise attack source-pole purity, same-source sector-overlap equality, or same-source W/Z response directly. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 8/63 L12 chunks, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

@@ -67,6 +67,11 @@ orthogonal top-coupled scalar can mix into the measured source pole.  The next
 analytic attempts should therefore attack one of the identity premises
 directly: source-pole purity, no orthogonal top coupling, same-source
 sector-overlap equality, or an independent same-source W/Z response observable.
+The no-orthogonal-top-coupling selection-rule no-go blocks one of those
+identity premises on the current surface.  Without a new charge/representation
+theorem, the higher-probability analytic routes are now source-pole purity,
+sector-overlap equality, or a same-source W/Z response observable rather than
+another source-only statistic.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

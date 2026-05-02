@@ -175,6 +175,9 @@ def main() -> int:
         "no_orthogonal_top_coupling_import": load(
             "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json"
         ),
+        "no_orthogonal_top_coupling_selection_rule": load(
+            "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json"
+        ),
         "d17_source_pole_identity_closure": load(
             "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json"
         ),
@@ -630,6 +633,12 @@ def main() -> int:
         statuses["no_orthogonal_top_coupling_import"],
     )
     report(
+        "no-orthogonal-top-coupling-selection-rule-blocks",
+        "no-orthogonal-top-coupling selection rule not derived"
+        in str(statuses["no_orthogonal_top_coupling_selection_rule"]),
+        statuses["no_orthogonal_top_coupling_selection_rule"],
+    )
+    report(
         "d17-source-pole-identity-closure-blocked",
         "D17 source-pole identity closure attempt blocked"
         in str(statuses["d17_source_pole_identity_closure"]),
@@ -1056,7 +1065,10 @@ def main() -> int:
             "even perfect same-source target statistics as canonical-Higgs "
             "identity: the source-coordinate limits can stay fixed while the "
             "canonical-Higgs Yukawa changes through an orthogonal top-coupled "
-            "scalar.  "
+            "scalar.  The no-orthogonal-top-coupling selection-rule no-go "
+            "blocks setting that orthogonal coupling to zero from current "
+            "charges: an orthogonal neutral scalar with the same listed labels "
+            "has the same allowed top-bilinear coupling.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

@@ -1,5 +1,21 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 no-orthogonal-top-coupling selection-rule no-go:
+
+- Added `scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py`,
+  `docs/YT_NO_ORTHOGONAL_TOP_COUPLING_SELECTION_RULE_NO_GO_NOTE_2026-05-02.md`,
+  and `outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json`.
+- Result: current listed substrate/gauge charges cannot allow `h tbar t`
+  while forbidding an orthogonal neutral `chi tbar t` coupling with the same
+  labels.  No-orthogonal-top-coupling remains unproved.
+- Retained-route gate is `PASS=87 FAIL=0`; campaign status is
+  `PASS=113 FAIL=0` over 117 certificates.
+- Chunks009-010 remain running in the background.
+
+Next exact action: process chunks009-010 if they finish; otherwise attack
+source-pole purity, same-source sector-overlap equality, or a same-source W/Z
+response observable directly.
+
 Latest checkpoint, 2026-05-02 FH/LSZ target time-series Higgs-identity no-go:
 
 - Added `scripts/frontier_yt_fh_lsz_target_timeseries_higgs_identity_no_go.py`,

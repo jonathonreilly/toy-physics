@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Current charges do not prove no orthogonal top coupling
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+The current substrate/gauge labels do not distinguish the canonical Higgs
+radial scalar from an orthogonal neutral scalar with the same listed charges.
+Every current selection rule that allows `h tbar t` also allows
+`chi tbar t` in the witness.  Therefore the no-orthogonal-top-coupling premise
+cannot be used unless a new retained distinguishing theorem or direct
+measurement is supplied.
+
 ## Perfect target time series are not a canonical-Higgs identity
 
 Runner:

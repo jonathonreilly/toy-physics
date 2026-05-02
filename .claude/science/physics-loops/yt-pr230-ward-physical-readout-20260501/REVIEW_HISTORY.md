@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - No Orthogonal Top Coupling
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- no current substrate/gauge charge distinguishes the canonical Higgs radial
+  scalar from an orthogonal neutral scalar with the same labels;
+- current selection rules cannot allow `h tbar t` while forbidding
+  `chi tbar t` in that witness;
+- no-orthogonal-top-coupling remains a missing theorem, not an allowed
+  shortcut premise;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_no_orthogonal_top_coupling_selection_rule_no_go.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Target Time-Series Higgs Identity
 
 Local review-loop disposition:
