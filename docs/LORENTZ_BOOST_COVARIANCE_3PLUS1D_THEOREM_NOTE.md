@@ -1,14 +1,54 @@
 # 3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function
 
-**Date:** 2026-04-25
-**Status:** proposed_retained exact theorem on the continuum-limit free-scalar
-Hamiltonian-lattice surface, with explicit dim-6 cubic-harmonic LV bound
-at finite `a`
-**Script:** `scripts/frontier_lorentz_boost_3plus1d.py` (PASS=55, FAIL=0)
-**Companions:**
-[LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),
-`ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`,
-[EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+**Date:** 2026-04-25 (audit-ready hygiene: 2026-05-02)
+**Type:** positive_theorem
+**Claim type:** positive_theorem
+**Claim scope:** Continuum-limit theorem on the 3+1d Hamiltonian-lattice
+free-scalar surface (`Z^3` spatial, continuous time evolution by the
+bosonic Laplacian / staggered-Dirac construction). Given the lattice
+2-point Wightman function `W_lat(Δt, Δx⃗; a, m)` with the `O_h`-symmetric
+bosonic Laplacian dispersion `E_lat^2(p) = m^2 + sum_i (4/a^2) sin^2(p_i a / 2)`,
+the strict continuum limit `a → 0` (with `(Δt, Δx⃗, m)` held fixed in
+physical units) coincides with the standard 3+1d massive scalar Wightman
+function `W_cont(s^2; m) = m K_1(m sqrt(-s^2)) / (4π² sqrt(-s^2))` for
+spacelike separations, which depends on `(Δt, Δx⃗)` only through the
+SO(3,1)-invariant interval `s^2 = Δt^2 - |Δx⃗|^2`. The covariance
+follows from (i) `O_h`-symmetry and parity-evenness of the lattice
+dispersion, (ii) `O(a^2)` convergence of the lattice dispersion to the
+relativistic dispersion, (iii) standard SO(3,1) invariance of the
+on-shell Liouville measure `d^3p/(2 E_p)`, and (iv) standard
+Källén-Lehmann reduction in the continuum. At finite `a > 0`, the lattice
+2-point function inherits explicit dim-6 cubic-harmonic LV (the `K_4`
+angular structure with factor-of-3 anisotropy between `[100]` and
+`[111]/sqrt(3)` directions) from the dispersion-isotropy theorem, and
+the strict continuum-limit theorem is a `retained_bounded` statement
+with O((a^2 p^4)/E^2) finite-a bound. Decoupling: Phase 4 lives on the
+fixed staggered/Laplacian Hamiltonian construction; the directional
+path-measure angular kernel `w(theta)` (gravity-card lane) does not enter,
+per `ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`.
+Interactions, the timelike Wightman form, and observable-physics
+conversion (which requires the Planck-pin) are out of scope.
+**Status:** branch-local continuum-limit theorem on the 3+1d
+Hamiltonian-lattice free-scalar surface; runner passing PASS=55/55;
+classified PASS surface dominant_class=C (the 55 structural checks
+exercise lattice dispersion structure, SO(3,1) on-shell measure
+invariance, the analytic K_1-form continuum 2-pt function, the Euclidean
+Schwinger-function lattice→continuum convergence, the cubic-harmonic
+LV bound at finite `a`, and the strict-extension property over the
+dispersion-isotropy theorem). Audit ready. On clean audit: target
+effective_status = retained_bounded (continuum-limit theorem with
+explicit dim-6 cubic-harmonic finite-`a` LV bound, naturally bounded;
+auditor may upgrade to retained if judging the strict continuum-limit
+statement positive rather than bounded).
+**Script:** `scripts/frontier_lorentz_boost_3plus1d.py` (PASS=55, FAIL=0;
+classified runner counts {A:0, B:0, C:4, D:2}, dominant_class=C; the
+55 checks span 8 parts including the lattice→continuum convergence,
+SO(3,1) boost covariance at 5 rapidities along multiple axes, and the
+inherited cubic-harmonic LV at the dim-6 K_4 angular structure)
+**Companions (logical siblings, NOT load-bearing inputs):**
+- `LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md` (1+1d dimensional-reduction warm-up; the 3+1d theorem chain does not depend on it — they share the lattice→continuum machinery)
+- `ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md` (Phase 3 decoupling; routing observation that the directional-measure kernel question is on a separate carrier)
+**Inputs (load-bearing):** `EMERGENT_LORENTZ_INVARIANCE_NOTE.md` (dispersion-isotropy theorem; supplies the dim-6 cubic-harmonic LV structure inherited at the 2-pt-function level — currently audited_conditional pending CPT/parity/Planck-pin bridges)
 
 ## Theorem
 
@@ -48,8 +88,10 @@ finite-`a` violation suppressed as `(a^2 p^4)/E^2`. On the retained
 hierarchy surface `a ~ 1/M_Pl` this is `(E/M_Pl)^2`, well below all
 current experimental sensitivity.
 
-This is the 3+1D analogue of
-[LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md)
+This is the 3+1D analogue of the 1+1d theorem in
+`LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md` (logical sibling, not a
+load-bearing input — both stand independently on the lattice→continuum
+machinery)
 and **strictly extends** the dispersion-isotropy theorem: where the
 dispersion theorem closes the on-shell relation `E^2(p)`, this closes
 the **off-shell 2-point function** itself.
@@ -372,6 +414,23 @@ The 1+1D and 3+1D statements together close the boost-covariance Phase
 2/4 program. The Phase 3 angular-kernel question is closed as a no-go
 plus decoupling. The full four-phase program lands the boost-covariance
 upgrade for the emergent-Lorentz lane.
+
+## Honest claim-status
+
+```yaml
+actual_current_surface_status: support
+conditional_surface_status: continuum-limit theorem on the 3+1d Hamiltonian-lattice free-scalar surface (staggered/Laplacian construction)
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Branch-local continuum-limit theorem; load-bearing input is the dispersion-isotropy theorem in EMERGENT_LORENTZ_INVARIANCE_NOTE (currently audited_conditional pending CPT/parity/Planck-pin bridges) for the inherited dim-6 cubic-harmonic LV structure. The strict continuum-limit covariance proof does not depend on the conditional bridges — it uses only the unique relativistic dispersion E^2 = m^2 + |p|^2 in a→0 plus the Liouville-invariant on-shell measure. Bounded statement on the strict continuum-limit surface; finite-a violation is naturally bounded by the cubic-harmonic K_4 angular structure. Awaiting independent audit per AUDIT_AGENT_PROMPT_TEMPLATE."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+target_effective_status_on_clean_audit: retained_bounded
+target_effective_status_on_clean_audit_reason: "Continuum-limit theorem with explicit O((a^2 p^4)/E^2) finite-a LV bound at the dim-6 K_4 angular structure; the bound is the load-bearing finite-content (lattice covariance is naturally bounded by lattice scale, exactly per the lattice-QFT continuum-limit standard). Auditor may upgrade to retained if treating the strict continuum-limit theorem as positive_theorem; either landing is acceptable on this surface."
+audit_independence_required: cross_family_or_fresh_context
+runner_class_dominant: C
+```
 
 ## Verification
 

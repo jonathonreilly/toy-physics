@@ -5902,10 +5902,6 @@
     },
     {
       "from": "lorentz_boost_covariance_3plus1d_theorem_note",
-      "to": "lorentz_boost_covariance_2d_theorem_note"
-    },
-    {
-      "from": "lorentz_boost_covariance_3plus1d_theorem_note",
       "to": "emergent_lorentz_invariance_note"
     },
     {
@@ -19997,7 +19993,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:12:20.668308+00:00",
+  "generated_at": "2026-05-02T21:14:39.994770+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32988,16 +32984,15 @@
     },
     "lorentz_boost_covariance_3plus1d_theorem_note": {
       "claim_id": "lorentz_boost_covariance_3plus1d_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "lorentz_boost_covariance_2d_theorem_note",
         "emergent_lorentz_invariance_note",
         "light_cone_framing_note",
         "planck_scale_lane_status_note_2026-04-23"
       ],
-      "note_hash": "34ce72c985c05b2f4d7143f1969d484e72088a433af1a11066a88b1274a29041",
+      "note_hash": "f1db43febc965fae63577c646390332499a8502a0c0f41ef346d2ad118f11f1a",
       "path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_boost_3plus1d.py",
       "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function"
@@ -46558,8 +46553,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 12,
       "meta": 1,
-      "none": 1742,
-      "positive_theorem": 41
+      "none": 1741,
+      "positive_theorem": 42
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 512,
@@ -46569,7 +46564,7 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 4999,
+    "edge_count": 4998,
     "leaf_count": 762,
     "node_count": 1796,
     "root_count": 1217,

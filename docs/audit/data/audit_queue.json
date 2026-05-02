@@ -5,7 +5,7 @@
     "leaf": 169,
     "medium": 174
   },
-  "generated_at": "2026-05-02T21:12:24.195289+00:00",
+  "generated_at": "2026-05-02T21:14:43.499474+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -4302,29 +4302,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lorentz_boost_covariance_2d_theorem_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "emergent_lorentz_invariance_note"
-      ],
-      "direct_in_degree": 12,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.492,
-      "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_lorentz_boost_2d.py",
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "planck_scale_lane_status_note_2026-04-23",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -4389,15 +4366,37 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lorentz_boost_covariance_3plus1d_theorem_note",
+      "claim_id": "lorentz_boost_covariance_2d_theorem_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
+      "claim_type_provenance": "author_hint",
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
       "deps": [
-        "lorentz_boost_covariance_2d_theorem_note",
+        "emergent_lorentz_invariance_note"
+      ],
+      "direct_in_degree": 11,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.959,
+      "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_lorentz_boost_2d.py",
+      "transitive_descendants": 43
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "lorentz_boost_covariance_3plus1d_theorem_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
         "emergent_lorentz_invariance_note",
         "light_cone_framing_note",
         "planck_scale_lane_status_note_2026-04-23"
