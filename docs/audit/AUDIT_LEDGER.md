@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:01:44.802338+00:00
+**Generated:** 2026-05-02T00:05:51.051482+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 330 |
+| `audited_clean` | 331 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 478 |
+| `unaudited` | 477 |
 
 | criticality | count |
 |---|---:|
@@ -397,6 +397,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sixth_family_sheared_boundary_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `sixth_family_sheared_fm_transfer_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `sixth_family_sheared_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
+| `source_driven_field_recovery_h025_pocket_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -14486,6 +14487,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
   - `EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`
+- **auditor confidence:** high
+
+### `source_driven_field_recovery_h025_pocket_note`
+
+- **Note:** [`SOURCE_DRIVEN_FIELD_RECOVERY_H025_POCKET_NOTE.md`](../../docs/SOURCE_DRIVEN_FIELD_RECOVERY_H025_POCKET_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The refinement step preserves exact zero-source reduction, the dynamic pocket keeps all rows TOWARD, and the dynamic mass exponent stays essentially linear.  _(class `C`)_
+- **chain closes:** True — For the declared exact lattice, source-driven field rule, calibration target, and source strengths, the runner recomputes the frozen zero-source check, table, and fitted exponents exactly. There are no cited dependencies or external comparator claims to import.
+- **rationale:** The source note makes a narrow bounded numerical claim, not a retained physical bridge: refinement to h=0.25 preserves zero-source reduction, positive deflection sign, and near-linear dynamic mass scaling under the declared parameters. The runner output matches the frozen table and exposes the same amplitude limitation, with mean dynamic/instantaneous ratio 0.055. Residual risk is that this remains calibration- and architecture-specific, but that limitation is explicitly inside the claim boundary.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_architecture_bridge_note`
