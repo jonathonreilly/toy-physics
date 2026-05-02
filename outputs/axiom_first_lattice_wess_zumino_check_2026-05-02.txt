@@ -1,0 +1,54 @@
+Lattice Wess-Zumino / Fujikawa Theorem on Cl(3)/Z^3
+====================================================
+Theorem note: docs/AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_THEOREM_NOTE_2026-05-02.md
+
+
+=== E1: sublattice parity epsilon properties ===
+[PASS] E1a/L=4: epsilon is real
+[PASS] E1b/L=4: epsilon is involutive (epsilon^2 = 1)
+[PASS] E1c/L=4: epsilon takes values in {-1, +1}
+[PASS] E1d/L=4: |Lambda_e| = |Lambda_o| = L^3/2  |Lambda_e| = 32, |Lambda_o| = 32
+[PASS] E1a/L=6: epsilon is real
+[PASS] E1b/L=6: epsilon is involutive (epsilon^2 = 1)
+[PASS] E1c/L=6: epsilon takes values in {-1, +1}
+[PASS] E1d/L=6: |Lambda_e| = |Lambda_o| = L^3/2  |Lambda_e| = 108, |Lambda_o| = 108
+
+=== E2: epsilon D epsilon = -D (gamma_5 anticommutation) ===
+[PASS] E2/L=4: ||eps*D*eps + D|| = 0 (machine precision)  residual = 0.00e+00
+[PASS] E2/L=6: ||eps*D*eps + D|| = 0 (machine precision)  residual = 0.00e+00
+
+=== E3: Wess-Zumino cocycle / linearity ===
+[PASS] E3a/L=4: A[alpha_1 + alpha_2] = A[alpha_1] + A[alpha_2]  residual = 4.44e-16
+[PASS] E3b/L=4: abelian cocycle vanishes  cocycle = 0.00e+00
+
+=== E4: t-independence of A[1, U] (lattice index theorem) ===
+  L=4, t=0.01: A[1, U] = -0.000000
+  L=4, t=0.05: A[1, U] = -0.000000
+  L=4, t=0.1: A[1, U] = -0.000000
+  L=4, t=0.5: A[1, U] = -0.000000
+  L=4, t=1.0: A[1, U] = -0.000000
+  L=4, t=5.0: A[1, U] = -0.000000
+[PASS] E4a/L=4: A[1, U] is t-independent  max deviation across t = 1.13e-14
+[PASS] E4b/L=4: spectral form agrees with heat-kernel form  |A_heat_kernel - A_spectral| = 6.66e-16
+[PASS] E4c/L=4: A[1, U] is integer-valued  A = -0.000000, nearest int = 0
+[PASS] E4d/L=4: free field on torus has A[1, U] = 0  A = -1.221245e-15
+
+=== E5: framework LH anomaly traces are non-zero ===
+  Tr[Y]_LH       = 0
+  Tr[Y^3]_LH     = -16/9
+  Tr[SU(3)^2 Y] = 1/3
+  Tr[SU(2)^2 Y] = 0
+[PASS] E5a: Tr[Y]_LH = 0
+[PASS] E5b: Tr[Y^3]_LH = -16/9 (non-zero)
+[PASS] E5c: Tr[SU(3)^2 Y] = 1/3 (non-zero)
+[PASS] E5d: Tr[SU(2)^2 Y] = 0
+[PASS] E5e: SU(3)^3 = +2 (non-zero)
+
+  Three non-zero LH anomaly traces: Tr[Y^3], Tr[SU(3)^2 Y], SU(3)^3
+  By W4 of the lattice WZ theorem, gauge variation of W[U] is non-zero.
+  By WZ cocycle (W2), no local counterterm cancels.
+  Therefore: gauge theory is inconsistent on the retained Cl(3)/Z^3 surface.
+[PASS] E5f: anomaly ⇒ inconsistency (W4) closure
+
+Summary: PASS=22 FAIL=0
+All checks passed.
