@@ -420,3 +420,17 @@ The pole-fit mode/noise budget gives a concrete next production design:
 eight modes with eight noises keep the current L12 foreground estimate while
 adding enough shells for pole-fit kinematics.  It is still planning support
 and needs a variance gate before launch.
+
+The eight-mode noise variance gate now blocks using that x8 option as
+production-facing evidence on the current surface.  Dropping from sixteen to
+eight stochastic vectors raises the scalar-LSZ noise-only stderr by `sqrt(2)`,
+and no same-source production x8/x16 calibration is present.  The reduced
+smoke output is wrong phase, wrong volume, two modes, two noises, and one
+configuration.  Chunk001 is absent until completion and, by construction, is
+four-mode/x16 rather than an eight-mode/x8 calibration.
+
+Next exact action: keep chunk001 running under the non-evidence combiner gate.
+If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
+If it remains running, either design a same-source x8/x16 calibration with
+noise-subsample diagnostics or pivot back to analytic scalar denominator and
+residue work.

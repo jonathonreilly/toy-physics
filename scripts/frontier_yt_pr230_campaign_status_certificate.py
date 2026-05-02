@@ -84,6 +84,9 @@ def main() -> int:
         "fh_lsz_chunk_combiner_gate": load("outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"),
         "fh_lsz_pole_fit_kinematics": load("outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
+        "fh_lsz_eight_mode_noise_variance": load(
+            "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
+        ),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -315,6 +318,12 @@ def main() -> int:
         "pole-fit mode-noise budget" in str(statuses["fh_lsz_pole_fit_mode_budget"])
         or "bounded-support" in str(statuses["fh_lsz_pole_fit_mode_budget"]),
         statuses["fh_lsz_pole_fit_mode_budget"],
+    )
+    report(
+        "fh-lsz-eight-mode-noise-variance-gate-not-passed",
+        "eight-mode noise variance gate" in str(statuses["fh_lsz_eight_mode_noise_variance"])
+        or "open" in str(statuses["fh_lsz_eight_mode_noise_variance"]),
+        statuses["fh_lsz_eight_mode_noise_variance"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
@@ -589,7 +598,11 @@ def main() -> int:
             "not by itself an isolated-pole derivative.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
-            "a variance gate and production data exist.  "
+            "a variance gate and production data exist.  The eight-mode noise "
+            "variance gate now rejects the current evidence surface: the "
+            "reduced smoke is wrong phase/modes/noises/statistics and the "
+            "foreground chunk is absent or four-mode/x16, not an x8 "
+            "calibration.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

@@ -703,3 +703,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The eight-mode/eight-noise option is planning support only.  It authorizes no
 retained or proposed-retained wording without a variance gate and production
 pole data.
+
+FH/LSZ eight-mode noise variance checkpoint:
+
+```text
+actual_current_surface_status: open / FH-LSZ eight-mode noise variance gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=40 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=66 FAIL=0
+```
+
+The eight-mode/eight-noise option remains launch planning only.  The current
+surface has no same-source production x8/x16 variance calibration or theorem,
+and authorizes no retained or proposed-retained wording.

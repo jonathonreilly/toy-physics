@@ -80,6 +80,7 @@ def main() -> int:
         "fh_lsz_chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
         "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
+        "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
     }
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
@@ -286,6 +287,12 @@ def main() -> int:
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_pole_fit_mode_budget"].get("proposal_allowed") is False
     )
+    eight_mode_noise_variance_not_passed = (
+        "eight-mode noise variance gate"
+        in certificates["fh_lsz_eight_mode_noise_variance"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_eight_mode_noise_variance"].get("proposal_allowed") is False
+        and certificates["fh_lsz_eight_mode_noise_variance"].get("variance_gate_passed") is False
+    )
     joint_resource_multiday = (
         float(certificates["joint_resource_projection"].get("projection", {}).get("joint_mass_scaled_hours", 0.0)) > 1000.0
         and certificates["joint_resource_projection"].get("proposal_allowed") is False
@@ -461,6 +468,11 @@ def main() -> int:
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-eight-mode-noise-variance-not-passed",
+        eight_mode_noise_variance_not_passed,
+        certificates["fh_lsz_eight_mode_noise_variance"].get("actual_current_surface_status", ""),
+    )
+    report(
         "joint-fh-lsz-resource-is-multiday",
         joint_resource_multiday,
         f"hours={certificates['joint_resource_projection'].get('projection', {}).get('joint_mass_scaled_hours')}",
@@ -562,7 +574,11 @@ def main() -> int:
             "set would still need richer pole-fit kinematics or a theorem.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
-            "variance gate and cannot be treated as evidence.  "
+            "variance gate and cannot be treated as evidence.  The variance "
+            "gate now rejects the current evidence surface: the reduced smoke "
+            "has the wrong phase, modes, noises, volume, and statistics, while "
+            "the foreground chunk is absent or four-mode/x16 rather than an "
+            "eight-mode/x8 calibration.  "
             "The actual interacting "
             "scalar pole derivative theorem and production evidence remain open.  "
             "These cannot be assumed."
@@ -577,7 +593,9 @@ def main() -> int:
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action."
+            "the retained action.  If using the eight-mode/eight-noise foreground "
+            "option, first add a same-source x8/x16 variance calibration with "
+            "noise-subsample diagnostics."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

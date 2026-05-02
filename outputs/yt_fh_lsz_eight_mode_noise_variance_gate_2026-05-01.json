@@ -1,0 +1,150 @@
+{
+  "acceptance_requirements": [
+    "production phase output on the same additive scalar source coordinate as dE_top/ds",
+    "eight specified scalar-LSZ modes with eight noise vectors per configuration",
+    "at least 16 saved configurations for a calibration chunk",
+    "positive finite configuration stderr or explicit noise-subsample stability for C_ss(q)",
+    "paired x16 reference or a derived stochastic variance bound for the same modes",
+    "stable Gamma_ss(q) and pole-derivative fit under x8 versus x16 noise choices",
+    "no use of reduced cold pilots as production evidence"
+  ],
+  "actual_current_surface_status": "open / FH-LSZ eight-mode noise variance gate not passed",
+  "candidate_from_mode_budget": {
+    "command_fragment": {
+      "scalar_two_point_modes": "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+      "scalar_two_point_noises": 8
+    },
+    "distinct_p_hat_sq_shells": [
+      0.0,
+      0.267949192431,
+      0.535898384862,
+      0.803847577293,
+      1.0,
+      1.267949192431,
+      1.535898384862,
+      2.0
+    ],
+    "distinct_shell_count": 8,
+    "estimated_l12_chunk_hours": 11.318624935038127,
+    "factor_ratio_vs_current_manifest": 1.0,
+    "fits_12h_foreground": true,
+    "mode_count": 8,
+    "modes": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        0
+      ]
+    ],
+    "name": "pole_fit_eight_modes_x8_noise",
+    "noise_vectors": 8,
+    "nonzero_shell_count": 7,
+    "pole_fit_kinematics_ready": true,
+    "solve_budget_factor": 15.888888888888888
+  },
+  "current_surfaces": [
+    {
+      "configuration_count_min": 1,
+      "dims": [
+        3,
+        3,
+        3,
+        6
+      ],
+      "exists": true,
+      "issues": [
+        "phase='reduced_scope', expected production",
+        "noise_vectors_per_configuration=2, expected 8",
+        "missing eight-mode rows ['1,1,0', '1,1,1', '2,0,0', '2,1,0', '2,1,1', '2,2,0']",
+        "configuration_count_min=1, expected >= 16",
+        "no positive configuration stderr for C_ss_real",
+        "no noise_subsample_stability field"
+      ],
+      "mode_count": 2,
+      "mode_keys": [
+        "0,0,0",
+        "1,0,0"
+      ],
+      "name": "reduced_joint_smoke",
+      "noise_vectors_per_configuration": 2,
+      "path": "outputs/yt_direct_lattice_correlator_fh_lsz_joint_smoke_2026-05-01.json",
+      "phase": "reduced_scope",
+      "variance_calibration_ready": false
+    },
+    {
+      "exists": false,
+      "issues": [
+        "output absent"
+      ],
+      "name": "foreground_chunk001",
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+      "variance_calibration_ready": false
+    },
+    {
+      "exists": false,
+      "issues": [
+        "output absent"
+      ],
+      "name": "expected_eightmode_x8_calibration",
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_eightmode_x8_variance_calibration_2026-05-01.json",
+      "variance_calibration_ready": false
+    }
+  ],
+  "eight_mode_x8_launch_allowed_as_retained_evidence": false,
+  "exact_next_action": "Keep the running four-mode/x16 chunk as non-evidence until the combiner gate can inspect completed output.  For a pole-fit-ready foreground campaign, either add a paired eight-mode x8/x16 calibration chunk with noise-subsample diagnostics, or stay with the x16 noise plan and schedule beyond the 12-hour foreground window.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+    "mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"
+  },
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No production same-source eight-mode/x8 variance calibration or theorem is present.",
+  "stochastic_standard_error_multiplier_vs_x16": 1.4142135623730951,
+  "strict_non_claims": [
+    "not production evidence",
+    "not a kappa_s derivation",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0 as proof input"
+  ],
+  "variance_gate_passed": false,
+  "verdict": "The eight-mode/eight-noise L12 chunk shape is pole-fit-kinematics ready and fits the current foreground estimate, but lowering the stochastic scalar-LSZ noise count from 16 to 8 increases the noise-only standard error by sqrt(2) = 1.41421.  The current repo surface has no same-source production calibration showing that this inflation leaves C_ss(q), Gamma_ss(q), and the pole-derivative fit stable.  The reduced smoke output is wrong phase, wrong volume, two modes, two noises, and one configuration.  The foreground chunk001 surface is absent or four-mode/x16 and is not an eight-mode/x8 variance calibration.  Therefore the x8 option remains planning support only; it is not production evidence and cannot be used for a retained or proposed-retained top-Yukawa claim."
+}

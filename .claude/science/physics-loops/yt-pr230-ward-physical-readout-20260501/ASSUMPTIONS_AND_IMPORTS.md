@@ -488,6 +488,10 @@ theorem.
 The eight-mode/eight-noise budget is also not an assumption license.  Lowering
 the noise count is a launch-planning trade that requires a variance gate before
 it can be used as production-facing pole-fit evidence.
+The variance gate keeps that trade closed on the current surface: the reduced
+smoke and the running four-mode/x16 chunk cannot be imported as an x8
+same-source production variance calibration, and `sqrt(2)` stochastic-error
+inflation cannot be waived without a measured calibration or theorem.
 
 Positive-closure candidates left after the assumption exercise:
 

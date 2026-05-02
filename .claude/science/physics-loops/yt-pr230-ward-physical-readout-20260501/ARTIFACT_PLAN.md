@@ -356,7 +356,10 @@ Next artifact:
   `--scalar-source-shifts=-0.01,0.0,0.01`; the pole-fit kinematics gate shows
   the current four modes provide only one nonzero shell and cannot by
   themselves supply the isolated-pole derivative; the mode/noise budget gives
-  an eight-mode/eight-noise foreground option but leaves a variance gate open
+  an eight-mode/eight-noise foreground option; the variance gate now rejects
+  the current evidence surface because the reduced smoke is wrong
+  phase/modes/noises/statistics and the foreground chunk is absent or
+  four-mode/x16, not an eight-mode/x8 calibration
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

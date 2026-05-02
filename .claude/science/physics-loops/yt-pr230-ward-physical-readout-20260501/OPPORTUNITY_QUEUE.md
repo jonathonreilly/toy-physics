@@ -121,8 +121,11 @@ probability.
   syntactically executable.  The pole-fit kinematics gate shows the current
   four scalar modes have only one nonzero shell, so future closure needs a
   richer pole-fit manifest/gate or an analytic pole theorem.  The mode/noise
-  budget identifies an eight-mode/eight-noise foreground option, but it needs
-  a variance gate before production use.  The same-source
+  budget identifies an eight-mode/eight-noise foreground option.  The variance
+  gate now rejects current x8 use as evidence because the reduced smoke is not
+  a same-source production calibration and chunk001 is absent or four-mode/x16.
+  A paired x8/x16 calibration with noise-subsample diagnostics is required
+  before using that launch class.  The same-source
   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
   pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic

@@ -1015,6 +1015,20 @@ L12 16-configuration chunk, above the 12-hour foreground window.  Eight modes
 with eight noises fit the current estimate, but that lower-noise option needs a
 variance gate before it can be launched as production-facing pole-fit data.
 
+FH/LSZ eight-mode/eight-noise variance shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Lowering scalar-LSZ stochastic vectors from sixteen to eight raises the
+noise-only standard error by `sqrt(2)`.  The current surface has no
+same-source production x8/x16 variance calibration or theorem.  The reduced
+smoke is wrong phase, wrong volume, two modes, two noises, and one
+configuration; chunk001 is absent until completion and is four-mode/x16 rather
+than the needed eight-mode/x8 calibration.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

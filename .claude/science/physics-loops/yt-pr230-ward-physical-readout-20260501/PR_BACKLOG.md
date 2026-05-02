@@ -623,3 +623,22 @@ Adds an FH/LSZ pole-fit mode/noise budget:
   until a variance gate, production data, FV/IR control, and retained-proposal
   audit exist.
 ```
+
+Latest FH/LSZ eight-mode noise variance checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ eight-mode noise variance gate:
+- verifies the eight-mode/eight-noise L12 option is pole-fit-kinematics ready
+  and fits the current foreground estimate;
+- blocks using it as evidence because x8 raises scalar-LSZ noise-only stderr
+  by sqrt(2) versus x16 and no same-source production x8/x16 calibration or
+  theorem exists;
+- disqualifies the reduced smoke as wrong phase, volume, modes, noises, and
+  statistics; chunk001 is absent until complete and is four-mode/x16 rather
+  than the needed x8 calibration;
+- validator passes `PASS=10 FAIL=0`; retained-route gate reports
+  `PASS=40 FAIL=0`; campaign status consumes 70 certificates and reports
+  `PASS=66 FAIL=0`;
+- still no retained/proposed-retained closure: this is launch control only,
+  not production pole data or a scalar LSZ/canonical-Higgs theorem.
+```

@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-68-fh-lsz-pole-fit-mode-budget
-blocks_completed: 82
-active_route: "FH/LSZ pole-fit mode/noise budget"
-active_hard_residual: "Chunk001 is running as non-evidence; an eight-mode/eight-noise L12 option fits the current foreground estimate but needs variance gating and production data before pole-fit use"
+current_phase: campaign-rerun-block-69-fh-lsz-eight-mode-noise-variance-gate
+blocks_completed: 83
+active_route: "FH/LSZ eight-mode noise variance gate"
+active_hard_residual: "Chunk001 is running as non-evidence; the eight-mode/eight-noise L12 option is still planning-only because no same-source x8/x16 production variance calibration exists"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -398,6 +398,7 @@ claim_state_movement:
   - "fixed FH/LSZ production and chunk manifest command syntax: negative scalar-source shifts are now emitted as --scalar-source-shifts=-0.01,0.0,0.01 so argparse accepts the first production chunk launch"
   - "added an FH/LSZ pole-fit kinematics gate: the current four scalar modes provide one nonzero p_hat^2 shell, so completed chunks remain finite-difference support rather than isolated-pole dGamma/dp^2 evidence"
   - "added an FH/LSZ pole-fit mode/noise budget: eight modes with sixteen noises exceed the 12h foreground estimate, while eight modes with eight noises fit but need a variance gate before production use"
+  - "added an FH/LSZ eight-mode noise variance gate: x8 raises stochastic stderr by sqrt(2) vs x16, and current reduced/chunk surfaces do not supply same-source production variance calibration"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -406,5 +407,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Keep chunk001 running as non-evidence under the combiner gate; next add an eight-mode/eight-noise variance gate or continue analytic scalar denominator/residue work while the chunk runs."
+next_exact_action: "Keep chunk001 running as non-evidence under the combiner gate; next either add a paired eight-mode x8/x16 calibration design with noise-subsample diagnostics or pivot back to analytic scalar denominator/residue work while the chunk runs."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

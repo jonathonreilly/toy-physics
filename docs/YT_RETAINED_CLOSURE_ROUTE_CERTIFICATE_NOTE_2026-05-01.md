@@ -106,6 +106,10 @@ retained closure.
 The mode/noise budget gives a constructive next launch class: eight scalar
 modes with eight noises keep the current foreground L12 chunk estimate, but
 that is planning only and requires a variance gate before use.
+The eight-mode noise variance gate now rejects the current evidence surface:
+the reduced smoke has the wrong phase, volume, modes, noises, and statistics,
+and the current chunk surface is absent or four-mode/x16 rather than an
+eight-mode/x8 calibration.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
@@ -185,5 +189,7 @@ open / retained closure not yet reached
 No route currently satisfies retained-proposal conditions.  The next useful
 action is either launching/scheduling the strict production physical-response
 manifest and then passing the postprocess pole/LSZ gate, or deriving a real
-scalar two-point residue/common-dressing theorem.  More small pilot MC runs do
-not close PR #230.
+scalar two-point residue/common-dressing theorem.  If the eight-mode/x8
+foreground option is used, it first needs same-source x8/x16 variance
+calibration with noise-subsample diagnostics.  More small pilot MC runs do not
+close PR #230.
