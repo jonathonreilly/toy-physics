@@ -21,8 +21,8 @@ BH 1/4 carrier).
 | 06 | Stefan-Boltzmann | support, PR open (stacked on #257) | physics-loop/24h-axiom-first-block06-stefanboltzmann-20260501 | #266 |
 | 07 | Reeh-Schlieder cyclicity | support, PR open | physics-loop/24h-axiom-first-block07-reehschlieder-20260501 | #269 |
 | 08 | Unruh temperature | support, PR open (stacked on #257) | physics-loop/24h-axiom-first-block08-unruh-20260501 | #272 |
-| 09 | GSL | support, PR open (stacked on #265) | physics-loop/24h-axiom-first-block10-gsl-20260501 | #277 |
-| 10 | Birkhoff vacuum-spherical | queued (independent) | — | — |
+| 09 | Birkhoff vacuum-spherical | support, PR open | physics-loop/24h-axiom-first-block09-birkhoff-20260501 | #275 |
+| 10 | GSL | support, PR open (stacked on #265) | physics-loop/24h-axiom-first-block10-gsl-20260501 | #277 |
 | 11 | Bisognano-Wichmann | mostly subsumed by Block 08 (U4) | — | — |
 | 12 | Tomita-Takesaki | queued (uses Block 07 cyclic-and-separating) | — | — |
 
