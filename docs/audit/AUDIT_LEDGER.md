@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:23:08.598371+00:00
+**Generated:** 2026-05-02T00:24:37.204132+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 340 |
+| `audited_clean` | 341 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 464 |
+| `unaudited` | 463 |
 
 | criticality | count |
 |---|---:|
@@ -408,6 +408,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_new_family_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_support_recovery_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_wavefield_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_generated_wavefield_transfer_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14701,6 +14702,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The wavefield update is distinguishable from static and causal smoothing, but on the compact generated family it remains a bridge result rather than stable weak-field transfer or closure.  _(class `C`)_
 - **chain closes:** True — The artifact-chain runner reproduces every frozen summary row and wavefield-vs-static gain in the note. The source note explicitly keeps the result bounded and does not claim generated-family closure.
 - **rationale:** The current script output matches the note: zero-source reduction is 0 across rows, baseline/static is 4/16 with F~M=0.199 and N_eff=2.69, baseline/causal is 3/16 with F~M=-0.308 and N_eff=2.50, baseline/wavefield is 0/16 with F~M=0.655 and N_eff=2.53, tweak/static is 9/16 with F~M=-0.316 and N_eff=5.31, tweak/causal is 9/16 with F~M=0.444 and N_eff=5.67, and tweak/wavefield is 6/16 with F~M=0.098 and N_eff=5.14. The wavefield-vs-static deltas also match and are negative for aggregate centroid gain. Residual risk is that the ledger runner_path is unset even though the note's artifact chain names the script; the audit result is clean for the bounded claim as written, not for metadata completeness or closure.
+- **auditor confidence:** high
+
+### `source_resolved_generated_wavefield_transfer_v2_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_WAVEFIELD_TRANSFER_V2_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_WAVEFIELD_TRANSFER_V2_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The z-spread stencil slightly improves centroid sign counts but does not broaden detector support and worsens the wavefield mass-law read relative to the retained bridge.  _(class `C`)_
+- **chain closes:** True — The runner reproduces the note's bridge and z-stencil summaries, geometry deltas, and zero-source reductions. The note frames the result as a bounded no-go for this geometry rule, not as a universal generated-family theorem.
+- **rationale:** The current runner output matches all frozen readouts: bridge/static 9/16, N_eff 5.31, F~M=-0.316; bridge/wavefield 6/16, N_eff 5.14, F~M=0.098; z-stencil/static 10/16, N_eff 5.13, F~M=0.103; z-stencil/wavefield 7/16, N_eff 4.68, F~M=-0.436. The geometry deltas also match and show no support widening. Residual risk is limited to the tested z-spread rule and compact generated-family bridge scope.
 - **auditor confidence:** high
 
 ### `source_resolved_propagating_green_pocket_note`
