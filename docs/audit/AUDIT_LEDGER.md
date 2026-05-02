@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:40:59.770990+00:00
+**Generated:** 2026-05-02T21:43:10.964405+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 97 |
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 2 |
-| unaudited | 553 |
+| open_gate | 3 |
+| unaudited | 552 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 381 |
+| `audited_clean` | 382 |
 | `audited_conditional` | 635 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 21 |
-| `unaudited` | 589 |
+| `unaudited` | 588 |
 
 | claim_type | count |
 |---|---:|
@@ -446,6 +446,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
+| `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -15867,6 +15868,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** This is the honest conclusion of the current in-repo evidence. The lane is closed as a conditional planning artifact with precise remaining obligations. It is not closed as unconditional nature-grade theory.  _(class `A`)_
 - **chain closes:** True — The note does not claim an unconditional teleportation theorem; it explicitly records three unresolved obligations and restricts the claim to ordinary quantum state teleportation. The runner checks that the boundary remains a HOLD rather than certifying the closed physical claim.
 - **rationale:** Clean as an open gate, not as a positive theorem. The runner hard-codes the present boundary data, but its PASS gates are directed at preserving the obstruction boundary: selector not bare-derived, scaling finite only through side 12 with side 14 unresolved, hardware thresholds not measured, and nature-grade promotion false. No matter, mass, charge, energy, object transport, FTL transport, all-even-side induction, fabricated hardware, or unconditional teleportation closure is promoted.
+- **auditor confidence:** high
+
+### `teleportation_native_axioms_theory_note`
+
+- **Note:** [`TELEPORTATION_NATIVE_AXIOMS_THEORY_NOTE.md`](../../docs/TELEPORTATION_NATIVE_AXIOMS_THEORY_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open-gate boundary for native taste-qubit teleportation axioms: finite framed-state teleportation consistency is allowed, while nature-grade native closure remains held open.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-teleportation-native-axioms-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** If any factor is missing, the lane remains a planning or conditional artifact even when a small-surface fidelity number is excellent.  _(class `A`)_
+- **chain closes:** True — The chain closes as an open gate, not as a retained teleportation theorem. The note explicitly requires retained-factor closure, Bell-frame calibration, native resource genesis, causal record delivery, exhaustive branch accounting, and no-transfer accounting, then lists unresolved blockers.
+- **rationale:** The note does not claim matter, mass, charge, energy, object transport, FTL signaling, or unconditional native teleportation closure. The runner checks that planning-level finite evidence is internally consistent while explicitly holding resource genesis and nature-grade closure open, so it is not being used as a proof of a closed teleportation theorem. The positive theorem language is scoped by assumptions and by the final status statement; residual risk is that future citations must preserve this open-gate boundary.
 - **auditor confidence:** high
 
 ### `tensor_block_closure_test_note`
