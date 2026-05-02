@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:12:17.162221+00:00
+**Generated:** 2026-05-02T22:14:53.969014+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 188 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 544 |
+| unaudited | 543 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 639 |
+| ~~audited_conditional~~ | 640 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 639 |
+| `audited_conditional` | 640 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 580 |
+| `unaudited` | 579 |
 
 | claim_type | count |
 |---|---:|
@@ -579,6 +579,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complete_prediction_chain_2026_04_15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | E | - |
+| `complex_selectivity_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | G | - |
 | `composite_source_additivity_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `connectivity_family_v2_elliptical_duplicate_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3093,6 +3094,25 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** S = L(1-f) + i * gamma * L * f, interpreted as a single complex action whose imaginary part supplies horizon-like absorption.  _(class `E`)_
 - **chain closes:** False — The bounded computational facts close only after accepting the ansatz S = L(1-f) + i*gamma*L*f, the field f=s/r, the chosen lattice/readout, and gamma as external premises. The physical bridge to action, phase, measure, signature, units, and horizon readout does not close from the note alone.
 - **rationale:** Issue: the load-bearing step is the introduced equation S = L(1-f) + i*gamma*L*f, plus the interpretation that its imaginary term represents horizon/absorption physics; gamma is free and the horizon readout is imposed through the kernel rather than derived. Why this blocks: the runner checks constructed examples of that ansatz, including gamma sweeps, I3 cancellation, reduction at gamma=0, and mass-strength scaling, but it does not compute the hard bridge from Cl(3)/Z3, a physical action principle, a phase/measure map, or a horizon observable such as a photon sphere, Schwarzschild radius, Hawking spectrum, or causal boundary. Repair target: derive gamma or the imaginary action term from retained primitives and add a runner that constructs a horizon-specific observable rather than labeling absorption-biased centroid/escape behavior as horizon-like after the fact. Claim boundary until fixed: the note may claim a conditional numerical model of an imposed complex action with linear Born cancellation and absorption-biased detector behavior in the listed setup, not a gravity-horizon unification theorem.
+- **auditor confidence:** high
+
+### `complex_selectivity_compare_note`
+
+- **Note:** [`COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](../../docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Conditional comparison/meta-summary over cited family cards: signed-source portability versus complex-action anchor-local/boundary-sensitive selectivity, not an independently closed positive theorem.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-complex-selectivity-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The conclusion is carried by a static comparison table over cited family rows, while the registered runner only renders hard-coded row text and performs no recomputation, status validation, or dependency closure.  _(class `G`)_
+- **chain closes:** False — Several cited rows are conditional, bounded, or non-retained/no-go, and the claim declares no dependencies despite relying on those rows. The runner has zero classified checks and only restates imported claims, so it cannot independently establish family portability or complex-action selectivity.
+- **rationale:** Issue: the note states a retained selectivity split, but its support is a hard-coded comparison over cited family claims, including retained_no_go and audited_conditional rows, with no declared dependencies. Why this blocks: a positive theorem cannot be retained-grade when the load-bearing support includes non-retained/conditional rows and the runner performs no checks beyond rendering static strings. Repair target: register all load-bearing dependency claims, restrict the theorem to retained-grade supports or re-audit/upgrade the conditional rows, and replace the static renderer with a runner that validates cited statuses and recomputes or imports verified outputs. Claim boundary until fixed: usable only as a conditional comparison card/meta-summary of the supplied family rows, not as a closed theorem that signed-source transfer is family-portable while complex-action is anchor-local/boundary-sensitive.
+- **open / conditional deps cited:**
+  - `archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`
+  - `SECOND_GROWN_FAMILY_COMPLEX_NOTE.md`
+  - `SECOND_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+  - `ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md`
+  - `THIRD_GROWN_FAMILY_SIGN_NOTE.md`
 - **auditor confidence:** high
 
 ### `composite_source_additivity_2d_note`
