@@ -17,29 +17,23 @@ Verifies the standalone linear-algebra / parity-decomposition identity:
           residual-Z_2 odd;
     (v)   the CP-tensor formula on K is
               Im[(K_01)^2] = 2 c_even c_odd;
-    (vi)  c_odd = 0 forces Im[(K_01)^2] = 0 (CP-vanishing on the even
-          sector);
-    (vii) c_odd != 0 with c_even != 0 gives nonzero CP tensor.
+    (vi)  c_odd = 0 forces Im[(K_01)^2] = 0;
+    (vii) c_odd != 0 with c_even != 0 gives a nonzero value of this scalar.
 
-This is class-C pure linear algebra on 3x3 Hermitian circulants and the
+This is pure linear algebra on 3x3 Hermitian circulants and the
 residual Z_2 transposition. No DM-side / DM-circulant CP / two-Higgs
 right-Gram bridge / weak-axis-1+2 split / standard CP tensor readout
 authority is consumed; the narrow theorem treats (d, c_even, c_odd) as
 abstract real symbols.
 
 Companion role: this is a Pattern A new narrow claim row carving out the
-load-bearing class-(C) algebraic core of
-`dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15`
-(claim_type=positive_theorem, audit_status=audited_conditional, td=111,
-load_bearing_step_class=C). The narrow theorem isolates the
-parity-decomposition + CP-tensor algebra on Hermitian circulants from
-any DM-side / Wilson-environment / weak-axis-split framework-specific
-input.
+algebraic core from `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15`.
+The narrow theorem isolates the parity-decomposition + CP-tensor algebra on
+Hermitian circulants from any DM-side / Wilson-environment / weak-axis-split
+framework-specific input.
 """
 
-from pathlib import Path
 import sys
-import json
 
 try:
     import sympy
@@ -47,8 +41,6 @@ try:
 except ImportError:
     print("FAIL: sympy required for exact algebra")
     sys.exit(1)
-
-ROOT = Path(__file__).resolve().parent.parent
 
 PASS = 0
 FAIL = 0
@@ -163,18 +155,18 @@ check("Im[(K_01)^2] = 2 c_even c_odd exact",
 
 
 # ----------------------------------------------------------------------------
-section("Part 5: CP-vanishing at c_odd = 0 (even-only sector)")
+section("Part 5: vanishing of Im[(K_01)^2] at c_odd = 0")
 # ----------------------------------------------------------------------------
 K_even_only = K.subs(c_odd, 0)
 K01_even = K_even_only[0, 1]
 K01_even_squared_imag = simplify(im(K01_even**2))
-check("c_odd = 0 forces Im[(K_01)^2] = 0 exact (even-only sector has no CP)",
+check("c_odd = 0 forces Im[(K_01)^2] = 0 exact",
       K01_even_squared_imag == 0,
       detail=f"Im[K_01^2] at c_odd = 0 = {K01_even_squared_imag}")
 
 
 # ----------------------------------------------------------------------------
-section("Part 6: nonzero CP at concrete instance (d, c_even, c_odd) = (1, 1/3, 1/5)")
+section("Part 6: nonzero scalar at concrete instance (d, c_even, c_odd) = (1, 1/3, 1/5)")
 # ----------------------------------------------------------------------------
 sub = {d: Rational(1), c_even: Rational(1, 3), c_odd: Rational(1, 5)}
 K_concrete = K.subs(sub)
@@ -184,23 +176,6 @@ expected_cp_concrete = 2 * Rational(1, 3) * Rational(1, 5)  # = 2/15
 check("Im[(K_01)^2] = 2 c_even c_odd = 2/15 at (1, 1/3, 1/5)",
       simplify(K01_concrete_squared_imag - expected_cp_concrete) == 0,
       detail=f"Im[K_01^2] = {K01_concrete_squared_imag}, expected = {expected_cp_concrete}")
-
-
-# ----------------------------------------------------------------------------
-section("Part 7: parent row context (no ledger modification)")
-# ----------------------------------------------------------------------------
-LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
-ledger = json.loads(LEDGER.read_text())
-parent = ledger['rows'].get('dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15', {})
-print(f"\n  Parent row state on origin/main:")
-print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
-print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
-print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
-print(f"    deps: {parent.get('deps')}")
-
-check("parent row class-C load-bearing step (linear algebra / parity decomposition)",
-      parent.get('load_bearing_step_class') == 'C')
 
 
 # ----------------------------------------------------------------------------
@@ -221,16 +196,16 @@ print("""
     (ii)  I and (S + S^2) are residual-Z_2-even; i(S - S^2) is residual-Z_2-odd;
     (iii) P_{23} K P_{23} sends c_odd -> -c_odd, leaves d, c_even fixed;
     (iv)  Im[(K_01)^2] = 2 c_even c_odd  (exact CP-tensor formula);
-    (v)   c_odd = 0 forces Im[(K_01)^2] = 0 (CP vanishes on the even-only sector).
+    (v)   c_odd = 0 forces Im[(K_01)^2] = 0.
 
   Audit-lane class:
-    (C) — pure linear algebra on 3x3 Hermitian circulants and a residual Z_2
+    pure linear algebra on 3x3 Hermitian circulants and a residual Z_2
     transposition. No DM-side / Wilson-environment / weak-axis-split / two-Higgs
     right-Gram / standard CP tensor readout authority consumed.
 
   This narrow theorem isolates the circulant parity decomposition + CP-tensor
   formula from any DM-side framework-specific framing, so it can be
-  audit-ratified independently of the parent's authority-stack inputs.
+  checked independently of the parent's authority-stack inputs.
 """)
 
 
