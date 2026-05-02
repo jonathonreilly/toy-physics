@@ -274,3 +274,10 @@ not derive LSZ source-pole purity.  It cannot be used to set an orthogonal top
 coupling to zero or to identify the measured source pole with the canonical
 Higgs radial mode.  The retained-route certificate is refreshed at
 `PASS=69 FAIL=0` and still authorizes no retained/proposed-retained wording.
+
+The D17 source-pole identity closure attempt then checks the strongest
+carrier-uniqueness upgrade directly.  D17 fixes a single scalar carrier/irrep
+statement, but it does not fix source operator overlap, source two-point pole
+residue, inverse-propagator derivative, or the canonical kinetic metric used
+by `v`.  The retained-route certificate is refreshed at `PASS=70 FAIL=0` and
+still authorizes no retained/proposed-retained wording.

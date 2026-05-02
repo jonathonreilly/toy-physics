@@ -179,6 +179,7 @@ the visible shortcut routes:
 | same-source sector-overlap identity obstruction | a shared source coordinate cancels common rescaling but does not prove `k_top = k_gauge`; the gauge-normalized ratio reads `y_t * k_top/k_gauge` until that identity is derived or directly measured |
 | source-pole canonical-Higgs mixing obstruction | a completed same-source pole readout is a coupling to the source-created scalar pole; it is physical `y_t` only if that pole is proved to be the canonical Higgs radial mode with no orthogonal scalar admixture |
 | no-orthogonal-top-coupling import audit | no-retained-2HDM/no-second-scalar authority is support only; it does not derive LSZ source-pole purity or zero top coupling for an orthogonal response component |
+| D17 source-pole identity closure attempt | D17 carrier uniqueness is support only; it does not derive source overlap, pole residue, `D'(pole)`, or canonical-Higgs identity |
 | joint Feynman-Hellmann / scalar-LSZ pole-fit mode/noise budget | eight modes with eight noises fit the current L12 chunk estimate and give pole-fit kinematics, but this is planning only until a variance gate and production data exist |
 | joint Feynman-Hellmann / scalar-LSZ eight-mode noise variance gate | x8 lowers solve cost but raises stochastic stderr by `sqrt(2)` versus x16; current reduced smoke and four-mode/x16 chunk surfaces do not provide same-source production variance calibration |
 | joint Feynman-Hellmann / scalar-LSZ noise-subsample diagnostics harness | scalar two-point outputs now emit split-noise stability diagnostics needed by future x8/x16 calibration, but the current smokes are reduced-scope instrumentation support only |
@@ -246,3 +247,7 @@ the visible shortcut routes:
 Latest checkpoint: the campaign runner now includes the
 no-orthogonal-top-coupling import audit and reports `PASS=95 FAIL=0`.  No
 retained/proposed-retained wording is authorized.
+
+Latest D17 source-pole checkpoint: campaign status now includes the D17
+identity closure attempt and reports `PASS=96 FAIL=0` over 100 certificates.
+No retained/proposed-retained wording is authorized.

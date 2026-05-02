@@ -559,3 +559,11 @@ Still forbidden unless derived or measured on the current surface:
 - no orthogonal response component in the source pole;
 - zero top coupling for every orthogonal scalar response component;
 - `kappa_s = 1`, `Z_match = 1`, or `c2 = 1`.
+
+2026-05-02 D17 source-pole identity closure attempt:
+
+D17 may be used as carrier/irrep uniqueness support only.  It must not be used
+as a source-pole LSZ normalization theorem.  The source operator overlap
+`<0|O_s|h>`, source two-point pole residue, inverse-propagator derivative
+`D'(pole)`, and canonical-Higgs identity remain open unless separately derived
+or measured.

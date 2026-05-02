@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-114-fh-lsz-dynamic-ready-chunk-set
-blocks_completed: 114
-active_route: "seed-controlled FH/LSZ production checkpoint automation"
-active_hard_residual: "The ready chunk-set gate now derives combiner-ready seed-controlled chunk indices dynamically, but the current surface remains only 4/63 L12 chunks and still lacks combined L12, L16/L24, pole-derivative/model-class, FV/IR, and canonical-Higgs identity gates."
+current_phase: campaign-rerun-block-115-d17-source-pole-identity-closure-attempt
+blocks_completed: 115
+active_route: "D17 source-pole identity theorem attempt"
+active_hard_residual: "D17 single-scalar carrier uniqueness and no-retained-2HDM support do not fix source operator overlap, source two-point pole residue, inverse-propagator derivative, or the canonical kinetic metric used by v."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -546,5 +546,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll seed-controlled chunks005-006. If either has finished, rerun the combiner, dynamic ready-set checkpoint, response-stability diagnostic, retained-route gate, and campaign gate; otherwise continue the source-pole identity or scalar-denominator/threshold theorem route. Do not claim retained/proposed-retained from a partial chunk set."
+next_exact_action: "Poll seed-controlled chunks005-006. If either has finished, rerun the combiner, dynamic ready-set checkpoint, response-stability diagnostic, retained-route gate, and campaign gate; otherwise pivot from D17 identity closure to a scalar-denominator/source-overlap theorem or production pole-residue route. Do not claim retained/proposed-retained from D17 carrier uniqueness."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

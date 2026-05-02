@@ -313,3 +313,8 @@ Production-support update: the ready chunk-set checkpoint now derives ready
 indices from the combiner.  As chunks005-006 finish, rerun the combiner and the
 dynamic ready/stability gates before deciding whether the production route has
 enough new information to outrank the analytic source-pole identity route.
+
+D17 identity update: direct promotion from D17 carrier uniqueness to
+source-pole identity is now blocked.  The analytic queue should target the
+scalar denominator/source-overlap theorem (`D'(pole)` and source residue) or a
+production pole-residue route, not another carrier-only uniqueness argument.

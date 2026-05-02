@@ -154,6 +154,9 @@ def main() -> int:
         "no_orthogonal_top_coupling_import": load(
             "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json"
         ),
+        "d17_source_pole_identity_closure": load(
+            "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -535,6 +538,12 @@ def main() -> int:
         "no-orthogonal-top-coupling import audit"
         in str(statuses["no_orthogonal_top_coupling_import"]),
         statuses["no_orthogonal_top_coupling_import"],
+    )
+    report(
+        "d17-source-pole-identity-closure-blocked",
+        "D17 source-pole identity closure attempt blocked"
+        in str(statuses["d17_source_pole_identity_closure"]),
+        statuses["d17_source_pole_identity_closure"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

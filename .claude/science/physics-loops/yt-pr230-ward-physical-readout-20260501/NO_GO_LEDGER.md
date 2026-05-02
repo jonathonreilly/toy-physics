@@ -1425,3 +1425,17 @@ component has zero top coupling.  Therefore the same-source gauge-response
 route still needs a source-pole identity/no-orthogonal-top-coupling theorem or
 direct production response certificate before it can be physical `y_t`
 evidence.
+
+D17 carrier uniqueness is not source-pole LSZ normalization:
+
+```text
+python3 scripts/frontier_yt_d17_source_pole_identity_closure_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+```
+
+D17 fixes a carrier/irrep uniqueness statement, not the source operator
+overlap, source two-point pole residue, inverse-propagator derivative, or
+canonical kinetic metric.  A single-carrier residue family keeps D17 facts
+fixed while changing `Z_s`, `Res C_ss`, and `dE/ds`.  Therefore D17 cannot be
+used to set `kappa_s = 1` or identify the measured source pole with canonical
+`h` without a separate LSZ/source-overlap theorem.

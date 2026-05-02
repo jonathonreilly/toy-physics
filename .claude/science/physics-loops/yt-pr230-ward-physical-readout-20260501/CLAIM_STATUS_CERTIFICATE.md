@@ -1338,3 +1338,24 @@ python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
 The ready-set checkpoint now derives ready indices from the combiner.  Current
 ready indices remain `[1, 2, 3, 4]`, so this is still only partial L12
 production support and no retained/proposed-retained wording is authorized.
+
+D17 source-pole identity closure-attempt checkpoint:
+
+```text
+actual_current_surface_status: open / D17 source-pole identity closure attempt blocked
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_d17_source_pole_identity_closure_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=70 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=96 FAIL=0
+```
+
+D17 carrier uniqueness is support only.  It does not derive source-pole
+overlap, residue, inverse-propagator derivative, or canonical-Higgs identity.
+No retained/proposed-retained wording is authorized.

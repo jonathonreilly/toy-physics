@@ -757,3 +757,22 @@ Current dynamic set is still `[1, 2, 3, 4]`, with `ready_chunks=4` of
 production-grade stability rule for the partial set.  When chunks005-006
 finish, rerun the combiner first, then this ready-set checkpoint and the
 stability diagnostic.
+
+Block 115 completed the D17 source-pole identity closure attempt:
+
+```text
+python3 scripts/frontier_yt_d17_source_pole_identity_closure_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=70 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=96 FAIL=0
+```
+
+Result: D17 single-scalar carrier uniqueness and no-retained-2HDM support do
+not derive source-pole LSZ normalization.  A single-carrier residue family
+keeps D17 facts fixed while moving source overlap, source two-point pole
+residue, and source-response slope.  The next positive theorem must derive the
+source overlap / `D'(pole)` object or measure it under the production gates.

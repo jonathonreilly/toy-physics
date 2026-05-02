@@ -2593,3 +2593,16 @@ Disposition: bounded support.  The current dynamic set remains `[1, 2, 3, 4]`
 and is only `4/63` L12 chunks.  The response-stability diagnostic still blocks
 production-grade response evidence, and scalar LSZ/canonical-Higgs gates
 remain open.
+
+## 2026-05-02 - Block 115 D17 Source-Pole Identity Closure Attempt
+
+Review stance: analytic theorem attempt / claim firewall.
+
+- Added `scripts/frontier_yt_d17_source_pole_identity_closure_attempt.py`.
+- Added `docs/YT_D17_SOURCE_POLE_IDENTITY_CLOSURE_ATTEMPT_NOTE_2026-05-02.md`.
+- Added `outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: open / blocked.  D17 carrier uniqueness and no-retained-2HDM
+support do not derive the LSZ source overlap or canonical-Higgs pole identity.
+No retained or proposed-retained wording is allowed.
