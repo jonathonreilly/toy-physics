@@ -1,8 +1,25 @@
 # Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate
 
 **Date:** 2026-04-30
-**Status:** proposed_retained measurement route; production certificate
-complete, strict runner passing, pending audit ratification
+**Type:** bounded_theorem
+**Claim scope:** the lattice Wilson-loop certificate on the
+`Cl(3)/Z^3 graph-first SU(3)` Wilson gauge surface at `g_bare = 1`,
+`beta = 6` — i.e., the static-potential extraction from rectangular
+Wilson-loop expectation values, evaluated by the strict-passing
+production runner. The **bridge to `alpha_s(M_Z)`** depends on four
+external/admitted-context items: external Sommer scale setting,
+standard QCD running, threshold matching, and a sea-quark / full-QCD
+bridge. These are explicitly **out of scope** of this note's
+load-bearing claim. The PDG comparator
+`alpha_s(M_Z) = 0.1180 +/- 0.0009` is **never** consumed as a
+derivation input; it appears only in the audit-comparator role.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+The current audit verdict is `audited_conditional` and audit-lane
+ratification is required before any retained-grade status applies. The
+verdict identifies the four external/admitted-context items above as the
+load-bearing gaps preventing retained-grade status.
 **Primary runner:** `scripts/frontier_alpha_s_direct_wilson_loop.py`
 
 ## Theorem Statement
@@ -420,11 +437,57 @@ measurement and cannot certify `alpha_s(M_Z)`.
 
 Safe current claim:
 
-The framework now has an audit-visible direct Wilson-loop alpha_s production
-certificate and strict gate passing without using the known `alpha_LM/u_0`
-decoration route as authority.
+The framework now has an audit-visible direct Wilson-loop production
+certificate (the lattice static-potential extraction at `beta = 6` on the
+`Cl(3)/Z^3 SU(3)` surface) and strict gate passing without using the known
+`alpha_LM/u_0` decoration route as authority.
 
 Unsafe current claim:
 
-That the theorem is retained.  The current status is `proposed_retained`;
-audit ratification is still required.
+That the theorem is retained at the `alpha_s(M_Z)` level. The current
+audit status is `audited_conditional` per the verdict cited above;
+audit-lane ratification is required and the four
+external/admitted-context items must be resolved (or explicitly
+ratified as audit-pending external authorities) before retained-grade
+status applies.
+
+## Out of scope (admitted-context to this note)
+
+The following items are explicitly **NOT** load-bearing claims of this
+note. They depend on external authorities / open derivations and enter
+only as admitted-context. Per the audit verdict on this row, items
+(1)-(4) below are the **specific** unclosed dependencies the audit
+lane identifies as preventing retained-grade `alpha_s(M_Z)` status:
+
+1. **External Sommer scale setting.** The Sommer parameter `r_0`
+   provides the lattice-to-physical length-scale calibration. This
+   note treats the Sommer-scale calibration as an external admitted
+   input.
+
+2. **Standard QCD running.** The running of `alpha_s` from the lattice
+   short-distance scale to `M_Z` follows standard 4-loop QCD
+   beta-function machinery. This note treats the running machinery as
+   admitted external authority, not as a load-bearing internal
+   derivation.
+
+3. **Threshold matching.** Matching across heavy-quark mass thresholds
+   (charm, bottom) is admitted from standard PDG-style threshold-matching
+   formulas, not derived here.
+
+4. **Sea-quark / full-QCD bridge.** The bridge from the framework's
+   pure-gauge Wilson surface to full-QCD physics including dynamical
+   sea quarks is **not** closed by the cited authorities or
+   constructed by the runner. This is the audit lane's principal
+   identified gap.
+
+5. **PDG comparator `alpha_s(M_Z) = 0.1180 +/- 0.0009`.** The PDG 2025
+   world average appears only in the audit-comparator role. It is
+   **never** consumed as a derivation input; the framework target
+   `0.1181` is computed from the lattice Wilson-loop chain plus the
+   four admitted bridges above, then compared to PDG for posture.
+
+The **in-scope content** of this note is the Wilson-loop certificate
+itself (the strict-passing static-potential extraction at `beta = 6` on
+the `Cl(3)/Z^3 SU(3)` surface). The full `alpha_s(M_Z)` claim depends on
+the four admitted external bridges above and is therefore out of scope
+of the in-scope load-bearing content.
