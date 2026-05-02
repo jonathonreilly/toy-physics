@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 FH/LSZ finite-source-linearity gate:
+
+- Added `scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py`,
+  `docs/YT_FH_LSZ_FINITE_SOURCE_LINEARITY_GATE_NOTE_2026-05-02.md`, and
+  `outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json`.
+- Result: the current chunks do not pass finite-source-linearity because they
+  have one nonzero source radius.  The future calibration manifest uses three
+  radii `0.005`, `0.010`, and `0.015`, but it is launch planning only and
+  estimates `26.4101` hours for one L12 calibration chunk under the current
+  source-count model.
+- Retained-route gate is `PASS=83 FAIL=0`; campaign status is
+  `PASS=109 FAIL=0` over 113 certificates.
+- Chunks007-008 remain running; chunks009-010 are still in thermalization.
+
+Next exact action: process chunks007-010 as they finish; otherwise continue
+scalar-denominator / canonical-Higgs identity work.  Do not treat the
+finite-source-linearity calibration manifest as evidence, and do not treat
+single-radius finite source slopes as zero-source derivatives.
+
 Latest checkpoint, 2026-05-02 finite source-shift derivative no-go:
 
 - Added `scripts/frontier_yt_finite_source_shift_derivative_no_go.py`,

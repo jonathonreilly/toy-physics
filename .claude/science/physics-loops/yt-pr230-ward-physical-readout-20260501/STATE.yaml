@@ -13,11 +13,14 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-128-finite-source-shift-derivative-no-go
-blocks_completed: 128
-active_route: "finite scalar-source shift derivative test"
-active_hard_residual: "A single symmetric finite scalar-source radius does not determine the zero-source Feynman-Hellmann derivative; odd nonlinear response can hold E(-delta), E(0), E(+delta), and the finite slope fixed while changing dE/ds at zero. PR230 still needs multiple source radii, a finite-source-linearity gate, a retained response-bound theorem, or accepted production same-source LSZ/Higgs-identity evidence."
+current_phase: campaign-rerun-block-129-finite-source-linearity-gate
+blocks_completed: 129
+active_route: "FH/LSZ finite-source-linearity acceptance gate"
+active_hard_residual: "Current FH/LSZ chunks still have one nonzero source radius and fail the finite-source-linearity gate. A three-radius calibration manifest is executable but is planning support only, projects beyond the foreground window, and still needs scalar LSZ, FV/IR/model-class, and canonical-Higgs identity gates."
 files_touched:
+  - "scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py"
+  - "docs/YT_FH_LSZ_FINITE_SOURCE_LINEARITY_GATE_NOTE_2026-05-02.md"
+  - "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json"
   - "scripts/frontier_yt_finite_source_shift_derivative_no_go.py"
   - "docs/YT_FINITE_SOURCE_SHIFT_DERIVATIVE_NO_GO_NOTE_2026-05-02.md"
   - "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json"
@@ -565,13 +568,14 @@ claim_state_movement:
   - "processed seed-controlled FH/LSZ chunks005-006: the combiner now reports ready chunk indices [1,2,3,4,5,6], i.e. 6/63 L12 chunks; the ready-set runner now accepts dynamic indices and response stability still fails"
   - "proved an effective-potential Hessian/source-overlap no-go: canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the source operator direction or source-pole identity"
   - "proved a finite source-shift derivative no-go: one symmetric finite source radius can keep E(-delta), E(0), E(+delta), and the finite slope fixed while changing the zero-source Feynman-Hellmann derivative"
+  - "added an FH/LSZ finite-source-linearity gate: current chunks fail because they have one source radius; a three-radius calibration command is recorded but is not foreground evidence"
 actual_current_surface_status: "open / exact negative boundary plus bounded production support"
-conditional_surface_status: "future production evidence remains conditional on completed chunks, finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity"
+conditional_surface_status: "future production evidence remains conditional on completed chunks, passed finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity"
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Process chunks007-010 if any finish through combiner, ready-set, response-stability, retained-route, and campaign gates; otherwise continue scalar-denominator/canonical-Higgs identity work. Do not treat single-radius finite source slopes, 6/63 L12 chunks, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Process chunks007-010 if any finish through combiner, ready-set, response-stability, retained-route, and campaign gates; otherwise continue scalar-denominator/canonical-Higgs identity work. Do not treat single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 6/63 L12 chunks, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

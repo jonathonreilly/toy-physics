@@ -118,6 +118,7 @@ def main() -> int:
         "short_distance_ope_lsz_no_go": "outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json",
         "effective_mass_plateau_residue_no_go": "outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json",
         "finite_source_shift_derivative_no_go": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
+        "fh_lsz_finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
@@ -630,6 +631,15 @@ def main() -> int:
         )
         is False
     )
+    finite_source_linearity_gate_blocks = (
+        "finite-source-linearity gate not passed"
+        in certificates["fh_lsz_finite_source_linearity_gate"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_finite_source_linearity_gate"].get("proposal_allowed") is False
+        and certificates["fh_lsz_finite_source_linearity_gate"].get(
+            "finite_source_linearity_gate_passed"
+        )
+        is False
+    )
     higgs_pole_identity_latest_blocker_blocks = (
         "latest Higgs-pole identity blocker certificate"
         in certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", "")
@@ -1024,6 +1034,11 @@ def main() -> int:
         certificates["finite_source_shift_derivative_no_go"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-finite-source-linearity-gate-blocks",
+        finite_source_linearity_gate_blocks,
+        certificates["fh_lsz_finite_source_linearity_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         higgs_pole_identity_latest_blocker_blocks,
         certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", ""),
@@ -1202,6 +1217,10 @@ def main() -> int:
             "shortcut: one symmetric finite source radius can keep "
             "E(-delta), E(0), E(+delta), and the finite slope fixed while "
             "changing dE/ds at zero through odd nonlinear response.  "
+            "The finite-source-linearity gate turns the repair into an "
+            "acceptance condition: current chunks still have one nonzero "
+            "source radius, while a three-radius calibration is planning "
+            "support only and projects beyond the foreground window.  "
             "The effective-potential Hessian/source-overlap no-go blocks the "
             "radial-curvature repair: canonical VEV, W/Z masses, and scalar "
             "Hessian eigenvalues do not fix the source operator direction.  "
@@ -1290,7 +1309,8 @@ def main() -> int:
             "option, first add a same-source x8/x16 variance calibration with "
             "noise-subsample diagnostics.  Before using finite source-shift "
             "slopes as FH derivatives, add multiple source radii or a retained "
-            "analytic response-bound theorem."
+            "analytic response-bound theorem; the current finite-source-"
+            "linearity gate is not passed."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

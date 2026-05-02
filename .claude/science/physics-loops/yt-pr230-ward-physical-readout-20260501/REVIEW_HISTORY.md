@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Finite-Source-Linearity Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN ACCEPTANCE GATE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- current FH/LSZ chunks have one nonzero source radius and fail the
+  finite-source-linearity gate;
+- the three-radius calibration command is planning support only and is not
+  foreground evidence;
+- a passed finite-source-linearity gate would still not supply scalar LSZ,
+  FV/IR/model-class control, or canonical-Higgs identity;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Finite Source-Shift Derivative
 
 Local review-loop disposition:

@@ -42,6 +42,12 @@ the zero-source FH derivative until multiple source radii, a finite-source
 linearity gate, or an analytic response-bound theorem excludes odd nonlinear
 response.  This raises the priority of finite-source-linearity acceptance
 support after any completed chunks are processed.
+The finite-source-linearity gate now exists and is not passed.  It records a
+three-radius calibration command, but the estimate is `26.4101` hours for one
+L12 calibration chunk, so it is not a foreground closure path.  Unless a
+scheduler is available, the higher retained-positive route remains a direct
+scalar-denominator/canonical-Higgs identity theorem while existing chunks
+continue in the background.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
@@ -128,7 +134,8 @@ support after any completed chunks are processed.
    measurement for `kappa_s`.  The single-radius finite source slope remains
    diagnostic until a finite-source-linearity gate, multi-radius source
    response, or retained response-bound theorem certifies the zero-source
-   derivative.  The same-source two-point object is now
+   derivative.  The finite-source-linearity gate is now executable but not
+   passed; the recorded three-radius calibration is planning support only.  The same-source two-point object is now
    executable as `C_ss(q)=Tr[S V_q S V_-q]`; closure still requires a
    controlled pole/continuum limit and canonical residue.  A finite-mode
    Bethe-Salpeter interpolation cannot supply that residue by itself.  The

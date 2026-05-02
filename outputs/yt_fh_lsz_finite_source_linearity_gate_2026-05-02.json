@@ -1,0 +1,88 @@
+{
+  "acceptance_requirements": {
+    "fit_space": "finite slopes S(delta) versus delta^2",
+    "load_bearing_acceptance": "intercept dE/ds|_0 accepted only with a small certified higher-order remainder or retained response-bound theorem",
+    "minimum_nonzero_source_radii_without_response_bound": 3,
+    "same_gauge_configurations_for_all_source_shifts": true,
+    "still_required_after_linearity": [
+      "same-source scalar LSZ pole derivative",
+      "FV/IR/zero-mode and model-class gates",
+      "canonical-Higgs source-pole identity",
+      "retained-proposal certificate"
+    ],
+    "symmetric_source_shifts_required": true
+  },
+  "actual_current_surface_status": "open / FH-LSZ finite-source-linearity gate not passed",
+  "current_source_radii": [
+    0.01
+  ],
+  "current_source_shifts": [
+    -0.01,
+    0.0,
+    0.01
+  ],
+  "exact_next_action": "Either schedule a multi-radius finite-source-linearity calibration with at least three nonzero radii and a response-bound acceptance rule, or keep current single-radius chunks as response diagnostics while attacking scalar LSZ/canonical-Higgs identity directly.",
+  "fail_count": 0,
+  "finite_source_linearity_gate_passed": false,
+  "future_calibration_manifest": {
+    "base_l12_chunk_hours": 11.318624935038127,
+    "calibration_command": {
+      "calibration_index": 1,
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.015,-0.01,-0.005,0.0,0.005,0.01,0.015 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_linearity/L12_T24_calib001 --resume --seed 2026052001 --output outputs/yt_pr230_fh_lsz_finite_source_linearity_L12_T24_calib001_2026-05-02.json",
+      "output": "outputs/yt_pr230_fh_lsz_finite_source_linearity_L12_T24_calib001_2026-05-02.json",
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_linearity/L12_T24_calib001",
+      "seed": 2026052001,
+      "source_radii": [
+        0.005,
+        0.01,
+        0.015
+      ],
+      "source_shifts": [
+        -0.015,
+        -0.01,
+        -0.005,
+        0.0,
+        0.005,
+        0.01,
+        0.015
+      ],
+      "status": "launch command only; not evidence until completed, accepted by finite-source-linearity, scalar-LSZ, FV/IR/model-class, and canonical-Higgs identity gates",
+      "volume": "12x24"
+    },
+    "estimated_l12_calibration_chunk_hours": 26.410124848422296,
+    "foreground_window_hours": 12.0,
+    "source_count_factor_over_current": 2.3333333333333335,
+    "source_radii": [
+      0.005,
+      0.01,
+      0.015
+    ],
+    "source_shifts": [
+      -0.015,
+      -0.01,
+      -0.005,
+      0.0,
+      0.005,
+      0.01,
+      0.015
+    ]
+  },
+  "parent_certificates": {
+    "chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+    "chunked_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
+    "fh_production_protocol": "outputs/yt_fh_production_protocol_certificate_2026-05-01.json",
+    "finite_source_shift_derivative_no_go": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
+    "production_postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No completed multi-radius production calibration or analytic response-bound theorem exists.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat current single-radius dE/ds as zero-source dE/ds",
+    "does not treat finite-source-linearity as scalar LSZ or canonical-Higgs identity",
+    "does not set kappa_s = 1",
+    "does not use H_unit, yt_ward_identity, observed top mass/y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "The current FH/LSZ chunks use one nonzero symmetric source radius, so they cannot certify the zero-source Feynman-Hellmann derivative. A future production-grade response gate must include multiple nonzero radii on common ensembles and fit the finite slopes S(delta) against delta^2 with a certified small remainder, or it must supply a retained analytic response-bound theorem.  The calibration manifest below uses three radii, but it is launch planning only, projects beyond the 12h foreground window under current chunk settings, and still would not bypass scalar LSZ, FV/IR/model-class, or canonical-Higgs identity gates."
+}

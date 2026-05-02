@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Finite-source-linearity gate is not passed
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+This is an acceptance-gate boundary for the FH response route.  The current
+chunks have one nonzero source radius and therefore cannot certify the
+zero-source derivative.  A future three-radius calibration manifest is
+recorded, but it is launch planning only, estimates `26.4101` hours for one
+L12 calibration chunk under current settings, and still leaves scalar LSZ,
+FV/IR/model-class, and canonical-Higgs identity gates open.
+
 ## Single finite source-shift radius is not a zero-source FH derivative
 
 Runner:

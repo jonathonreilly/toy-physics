@@ -190,6 +190,9 @@ def main() -> int:
         "finite_source_shift_derivative_no_go": load(
             "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json"
         ),
+        "fh_lsz_finite_source_linearity_gate": load(
+            "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json"
+        ),
         "higgs_pole_identity_latest_blocker": load(
             "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json"
         ),
@@ -648,6 +651,12 @@ def main() -> int:
         statuses["finite_source_shift_derivative_no_go"],
     )
     report(
+        "fh-lsz-finite-source-linearity-gate-blocks",
+        "finite-source-linearity gate not passed"
+        in str(statuses["fh_lsz_finite_source_linearity_gate"]),
+        statuses["fh_lsz_finite_source_linearity_gate"],
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         "latest Higgs-pole identity blocker certificate"
         in str(statuses["higgs_pole_identity_latest_blocker"]),
@@ -1007,6 +1016,9 @@ def main() -> int:
             "symmetric source radius as a zero-source FH derivative: identical "
             "E(-delta), E(0), E(+delta), and finite slopes can coexist with "
             "different dE/ds at zero.  "
+            "The finite-source-linearity gate records the constructive repair "
+            "but does not pass it: current chunks have one source radius, and "
+            "the three-radius calibration manifest is not foreground evidence.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

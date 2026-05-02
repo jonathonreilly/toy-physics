@@ -50,6 +50,7 @@ plus same-source pole-data sufficiency gate
 plus short-distance/OPE LSZ shortcut no-go
 plus effective-mass plateau residue no-go
 plus finite source-shift derivative no-go
+plus FH/LSZ finite-source-linearity gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -62,6 +63,22 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+FH/LSZ finite-source-linearity gate:
+
+```text
+actual_current_surface_status: open / FH-LSZ finite-source-linearity gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_finite_source_linearity_gate.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+Current FH/LSZ chunks have one nonzero source radius and do not certify the
+zero-source derivative.  The three-radius calibration manifest is launch
+planning only and still leaves scalar LSZ, FV/IR/model-class, and
+canonical-Higgs identity gates open.
 
 Finite source-shift derivative no-go:
 
