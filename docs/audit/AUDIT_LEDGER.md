@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:00:26.676555+00:00
+**Generated:** 2026-05-02T17:02:00.335508+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -237,7 +237,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open_gate | ~~audited_clean~~ | open_gate | judicial_review | codex-current | A | - |
+| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
@@ -7585,14 +7585,14 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
 - **claim_type:** `open_gate`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** The normalized Wilson mixed-kernel compression on the marked plaquette character sector factorizes exactly as the four marked-link local factor a_(p,q)(beta)^4, leaving residual source-sector environment data beyond the normalized mixed kernel open.
 - **audit_status:** ~~audited_clean~~
 - **effective_status:** open_gate  (reason: `audited_open_gate`)
-- **auditor:** `codex-judge-20260430-phase-a-local-env-factorization`  (codex-current; independence=judicial_review)
-- **load-bearing step:** After trivial-channel normalization, non-marked mixed-link factors are scalar and the marked links give D_beta^mix,norm chi_(p,q)=a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
-- **chain closes:** True — The contention was clean algebraic closure versus conditional status because the source row is open. Audit-clean is allowed on support/open/unknown rows without promoting their effective tier; the mixed-kernel locality proof and runner close the stated factorization, while residual environment data remain outside the claim boundary.
-- **rationale:** The contention was clean algebraic closure versus conditional status because the source row is open. Audit-clean is allowed on support/open/unknown rows without promoting their effective tier; the mixed-kernel locality proof and runner close the stated factorization, while residual environment data remain outside the claim boundary.
-- **auditor confidence:** judicial
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-local-environment-factorization-mill`  (codex-current; independence=fresh_context)
+- **load-bearing step:** After trivial-channel normalization, the four marked plaquette links contribute a_(p,q)(beta)^4 while all non-marked mixed-link factors contribute only representation-independent scalars, so D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
+- **chain closes:** True — Within the stated setup, the argument closes the mixed-kernel part by combining explicit one-link Wilson convolution eigenvalues with the trivial-channel action of non-marked links. It does not claim to compute the residual source-sector environment or the full beta=6 plaquette value.
+- **rationale:** The scoped result is not the full plaquette closure but the exact localization of the normalized mixed-kernel compression. The source note explicitly keeps the residual source-sector environment and beta=6 Perron data open, so the unresolved object is not smuggled into the conclusion. The runner supports the local factorization, zero mixed-kernel spread, and distinction between the local-only Perron value and the full comparator.
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
 
