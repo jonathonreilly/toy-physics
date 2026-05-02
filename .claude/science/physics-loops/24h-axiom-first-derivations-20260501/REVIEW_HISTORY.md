@@ -91,3 +91,44 @@ Test 6 (Rindler T_Unruh = a/(2 pi) preview):                  PASS  max resid 0
 
 OVERALL: PASS
 ```
+
+## Block 05 — First law of BH mechanics
+
+### Branch-local self-review (2026-05-01)
+
+- **theorem note:** [docs/AXIOM_FIRST_FIRST_LAW_BH_MECHANICS_THEOREM_NOTE_2026-05-01.md](../../../../docs/AXIOM_FIRST_FIRST_LAW_BH_MECHANICS_THEOREM_NOTE_2026-05-01.md)
+- **runner:** [scripts/axiom_first_first_law_bh_mechanics_check.py](../../../../scripts/axiom_first_first_law_bh_mechanics_check.py)
+- **log:** [outputs/axiom_first_first_law_bh_mechanics_check_2026-05-01.txt](../../../../outputs/axiom_first_first_law_bh_mechanics_check_2026-05-01.txt)
+
+#### Findings
+
+- **F1 (resolved during write):** typo in Test 6 unpacking from over-eager
+  edit; fixed and rerun.
+- **F2 (no-issue):** Schwarzschild differential dM = T_H dS_BH at
+  finite-difference precision (~1e-6).
+- **F3 (no-issue):** Smarr formula M = 2 T_H S_BH at <1e-12.
+- **F4 (no-issue):** integrated form M_2 - M_1 = ∫ T_H dS_BH at <1e-15.
+- **F5 (no-issue):** negative specific heat dT_H/dM < 0 verified for all
+  Schwarzschild masses tested.
+
+#### Disposition
+
+- **disposition:** pass.
+- **proposal-allowed:** false (per CLAIM_STATUS_CERTIFICATE_BLOCK05.md;
+  inherits Block 02 audit-pending classification).
+- **branch action:** commit, push, open stacked PR (base = Block 02 branch).
+- **integration action:** record in HANDOFF.md as cornerstone for GSL
+  (Block 09).
+
+#### Runner results summary (2026-05-01)
+
+```text
+Test 1 (dM = T_H dS_BH for Schwarzschild):     PASS
+Test 2 (Smarr formula M = 2 T_H S_BH):         PASS
+Test 3 (explicit identity dM = dM):            PASS
+Test 4 (negative specific heat dT_H/dM < 0):   PASS
+Test 5 (integral form over (M_1, M_2)):        PASS
+Test 6 (Smarr derivative consistency):         PASS
+
+OVERALL: PASS
+```

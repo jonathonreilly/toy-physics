@@ -14,10 +14,10 @@ BH 1/4 carrier).
 | Block | Slug | Status | Branch | PR |
 |---|---|---|---|---|
 | 01 | KMS condition from RP | support theorem, runner PASS, PR open | physics-loop/24h-axiom-first-block01-kms-20260501 | #257 |
-| 02 | Hawking T_H = κ/(2π) | support theorem, runner PASS, branch ready, PR pending | physics-loop/24h-axiom-first-block02-hawking-20260501 (stacked on 01) | pending |
-| 03 | Bekenstein bound | queued (independent) | — | — |
-| 04 | Microcausality theorem | queued (independent) | — | — |
-| 05 | First law of BH mechanics | queued (depends on Block 02) | — | — |
+| 02 | Hawking T_H = κ/(2π) | support, PR open (stacked on #257) | physics-loop/24h-axiom-first-block02-hawking-20260501 | #259 |
+| 03 | Bekenstein bound | support, PR open | physics-loop/24h-axiom-first-block03-bekenstein-20260501 | #261 |
+| 04 | Microcausality / Lieb-Robinson | support, PR open | physics-loop/24h-axiom-first-block04-microcausality-20260501 | #263 |
+| 05 | First law of BH mechanics | support, branch ready (stacked on #259) | physics-loop/24h-axiom-first-block05-firstlaw-20260501 | pending |
 | 06 | Stefan-Boltzmann | queued (depends on Block 01) | — | — |
 | 07 | Unruh temperature | queued (depends on Block 01) | — | — |
 | 08 | Reeh-Schlieder | queued (independent) | — | — |
@@ -56,5 +56,5 @@ If/when Block 02 is integrated (after Block 01 lands):
 
 ## Next exact action
 
-Open Block 02 stacked PR (base = Block 01 branch); pivot to Block 03
-(Bekenstein bound) on a new independent branch from origin/main.
+Open Block 05 stacked PR (base = Block 02 branch); pivot to Block 06
+(Stefan-Boltzmann) on a branch stacked on Block 01 (KMS).
