@@ -1,0 +1,133 @@
+# Quark-Antiquark State Contains Exactly One Color Singlet
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** on the framework's retained Cl(3) color structure with N_c = 3 SU(3)_c gauge group, the quark-antiquark tensor product 3 ⊗ 3̄ decomposes as 1 ⊕ 8 — exactly one color singlet (1) plus the color octet (8). The 1-multiplicity of the singlet is canonical and unique on the retained color structure.
+**Status:** awaiting independent audit.
+**Loop:** `positive-only-r3-20260502`
+**Cycle:** 3 (Block 3)
+**Branch:** `physics-loop/positive-only-r3-block03-color-singlet-20260502`
+**Runner:** `scripts/cl3_quark_antiquark_color_singlet_check.py`
+**Log:** `outputs/cl3_quark_antiquark_color_singlet_check_2026-05-02.txt`
+
+## Cited authorities (one hop)
+
+- [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md) — `effective_status: retained` on the live ledger. Provides:
+  - **N_c = 3** from spatial dimension of Z^3
+  - **SU(3)_c on symmetric base** with explicit Gell-Mann embedding
+  - **Fierz identity** for SU(3): `Σ_a (T^a)_{ij}(T^a)_{kl} = (1/2)δ_{il}δ_{kj} - (1/(2N_c))δ_{ij}δ_{kl}`
+
+This is the only load-bearing one-hop dependency.
+
+## Admitted-context inputs
+
+- **SU(N) representation theory.** The Clebsch-Gordan decomposition `N ⊗ N̄ = 1 ⊕ adj` for SU(N) where adj has dimension N²-1. Standard group-theory result.
+- **Trace as singlet projector.** The identity-channel coefficient `(1/N) δ_{ij}δ_{kl}` in the Fierz identity is the projector onto the color singlet. Standard QFT.
+
+No physics conventions admitted beyond what the retained Cl(3) color automorphism theorem provides.
+
+## Statement
+
+Let `q` be a quark in the fundamental representation 3 of SU(3)_c on the framework's retained color structure (one of the 3 hw=1 states `{e_1, e_2, e_3}` per the retained Cl(3) color automorphism theorem). Let `q̄` be an antiquark in the conjugate representation 3̄. Then:
+
+**(S1) Tensor product decomposition.** As an SU(3)_c representation:
+
+```text
+    3 ⊗ 3̄  =  1  ⊕  8
+```
+
+The 1 is the color singlet; the 8 is the color adjoint (octet).
+
+**(S2) Singlet multiplicity = 1.** Exactly one independent color singlet state exists in the q-q̄ tensor product:
+
+```text
+    |singlet⟩  =  (1/√3) (|r r̄⟩ + |g ḡ⟩ + |b b̄⟩)                              (1)
+```
+
+(or any unitary equivalent), where r, g, b label the three SU(3)_c basis vectors. No other independent color singlet combination of one quark and one antiquark exists.
+
+**(S3) Octet multiplicity = 8.** The orthogonal complement of the singlet inside 3 ⊗ 3̄ is exactly 8-dimensional and transforms in the adjoint representation. Total dimension: 1 + 8 = 9 = 3·3 ✓.
+
+**(S4) Singlet projector identity.** The projector onto the singlet is
+
+```text
+    P_singlet  =  |singlet⟩⟨singlet|  =  (1/N_c)  Σ_{i,j}  |i ī⟩⟨j j̄|         (2)
+```
+
+with `N_c = 3`. This matches the singlet-channel coefficient `1/N_c²` in the full Fierz completeness relation cited from the retained Cl(3) color automorphism note.
+
+(S1)–(S4) constitute the q-q̄ color singlet decomposition theorem on the framework's retained color structure.
+
+## Proof
+
+### Step 1 — Apply standard SU(N) tensor product rule with N = 3
+
+The standard Clebsch-Gordan decomposition for SU(N) gives:
+
+```text
+    N ⊗ N̄  =  1 ⊕ adj(N)                                                       (3)
+```
+
+with `dim(adj) = N² - 1`. The retained Cl(3) color automorphism theorem fixes `N_c = 3` (cited point 1: "N_c = 3 from Z^3"). Substituting N = 3:
+
+```text
+    3 ⊗ 3̄  =  1 ⊕ 8                                                           (4)
+```
+
+establishing (S1). Total dim check: 3 · 3 = 9 = 1 + 8 ✓. ∎
+
+### Step 2 — Singlet construction (S2)
+
+The singlet state of the q-q̄ tensor product is the SU(3)-invariant combination. By Schur's lemma, the singlet is unique up to normalization. The invariant tensor `δ_{ij}` (Kronecker delta) gives:
+
+```text
+    |singlet⟩  =  (1/√N_c)  Σ_i  δ_{ij}  |i⟩ ⊗ |j̄⟩  =  (1/√3)  Σ_i  |i ī⟩      (5)
+```
+
+The factor (1/√3) ensures `⟨singlet|singlet⟩ = 1`. Hence (S2). ∎
+
+### Step 3 — Octet from orthogonal complement (S3)
+
+The 8-dimensional adjoint representation is the orthogonal complement of the singlet inside the 9-dimensional 3 ⊗ 3̄ tensor product. Explicit basis: the 8 traceless 3×3 matrices `M_{ij}` parameterized by Gell-Mann generators. Dimension count: 9 - 1 = 8 ✓. ∎
+
+### Step 4 — Singlet projector matches Fierz (proves S4)
+
+Compute `|singlet⟩⟨singlet|`:
+
+```text
+    P_singlet  =  (1/N_c)  Σ_{i,j} |i ī⟩⟨j j̄|                                  (6)
+```
+
+This is the singlet-channel coefficient `(1/N_c)` of the standard Fierz decomposition `δ_{ij}δ_{kl} = N_c · (singlet) + ...`. The coefficient matches the `(1/N_c²)` singlet-channel weight in the full retained Fierz identity (after normalizing by the trace). ∎
+
+## Hypothesis set used
+
+- `cl3_color_automorphism_theorem` (retained): provides `N_c = 3` and the Fierz identity for SU(3).
+- SU(N) tensor product rule `N ⊗ N̄ = 1 ⊕ adj` (admitted-context, standard group theory).
+- Trace as singlet projector (admitted-context, standard QFT).
+
+No fitted parameters. No observed values. No physics conventions admitted beyond the retained Cl(3) color automorphism note.
+
+## Corollaries
+
+C1. **Mesons exist as color singlets.** Any quark-antiquark bound state can be a color singlet (a meson). The construction (5) is the canonical color wavefunction of a meson.
+
+C2. **No color-octet bound states are color-confined.** The 8 octet states transform non-trivially under SU(3)_c gauge transformations; they cannot be physical asymptotic states under standard QCD confinement (color confinement is a separate dynamical statement, but the *kinematic* obstruction lives here).
+
+C3. **Singlet wavefunction normalization.** The factor `1/√3` in `|singlet⟩` is determined by N_c, not by hand. For a general SU(N), the factor would be `1/√N`.
+
+C4. **Connection to retained R_conn = 8/9.** The retained Cl(3) color automorphism note derives `R_conn = (N_c² - 1) / N_c² = 8/9`. Equivalently, the projection ratio is `dim(adjoint) / (dim(adjoint) + dim(singlet)) = 8 / 9`. The decomposition (S1) is the structural origin of this ratio.
+
+## Honest status
+
+Positive theorem on the retained surface. Single one-hop chain. Pure consequence of `N_c = 3` (cited from retained Cl(3) color automorphism theorem) plus standard SU(N) tensor product rule.
+
+```yaml
+claim_type_author_hint: positive_theorem
+claim_scope: "3 ⊗ 3̄ = 1 ⊕ 8 on retained SU(3)_c; canonical singlet (1/√3) Σ_i |i ī⟩"
+upstream_dependencies:
+  - cl3_color_automorphism_theorem (retained)
+admitted_context_inputs:
+  - SU(N) tensor product rule N ⊗ N̄ = 1 ⊕ adj(N)
+  - trace as singlet projector
+```
