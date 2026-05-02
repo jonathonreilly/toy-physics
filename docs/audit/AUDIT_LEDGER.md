@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:55:49.816609+00:00
+**Generated:** 2026-05-02T17:57:29.036311+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 543 |
+| unaudited | 544 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 18 |
+| ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 636 |
 | ~~audited_failed~~ | 1 |
 
@@ -39,24 +39,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 5 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 18 |
-| `unaudited` | 578 |
+| `audited_renaming` | 17 |
+| `unaudited` | 579 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 517 |
+| `bounded_theorem` | 516 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 155 |
 | `open_gate` | 107 |
-| `positive_theorem` | 861 |
+| `positive_theorem` | 862 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 43 |
+| `critical` | 44 |
 | `high` | 388 |
 | `medium` | 433 |
-| `leaf` | 816 |
+| `leaf` | 815 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 83
@@ -87,7 +87,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 11 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
 | 12 | `three_generation_structure_note` | positive_theorem | critical | 248 | 20.96 | `unaudited` | unaudited |
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `left_handed_charge_matching_note` | bounded_theorem | critical | 264 | 20.55 | `audited_renaming` | ~~audited_renaming~~ |
+| 14 | `left_handed_charge_matching_note` | positive_theorem | critical | 264 | 20.55 | `unaudited` | unaudited |
 | 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_conditional` | ~~audited_conditional~~ |
 | 16 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 299 | 19.23 | `unaudited` | unaudited |
@@ -1195,7 +1195,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
-| `left_handed_charge_matching_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | E | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
@@ -10680,19 +10679,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** On the weak-field ordered-lattice pocket, the retained N = 30 through 100 rows are Born-clean, k=0-clean, MI/decoherence-positive, and gravity-positive, and fit 1 - pur_cl ~= 1.0467 * N^-0.222 with R^2 = 0.9683.  _(class `C`)_
 - **chain closes:** True — The live artifact reproduces the N sweep, canonical N=40 row, retained/all-row purity fits, retention counts, and bounded retained-window interpretation from the source note.
 - **rationale:** The runner recomputes the load-bearing table: N=30 through 100 are retained, all seven rows are Born-clean and positive-gravity, and the retained-row purity-complement fit matches the source coefficient, exponent, and R^2. The note correctly treats the result as a bounded scaling law on the tested weak-field pocket, with N=20 excluded and no universal/asymptotic lattice theorem claimed. The runner's final 'PROMOTED' line is clean only under that bounded retained-window meaning.
-- **auditor confidence:** high
-
-### `left_handed_charge_matching_note`
-
-- **Note:** [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](../../docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Selected-axis graph surface charge-pattern matching: a weak-doublet 3+1 split admits a traceless abelian eigenvalue ratio +1/3 on the triplet block and -1 on the singlet block.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-left-handed-charge-ohm`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Q = T_3 + Y/2 then matches the left-handed doublet charges on the bounded surface.  _(class `F`)_
-- **chain closes:** False — The retained-bounded dependencies and runner close the graph-theoretic weak SU(2), SU(3), 3+1 split, and traceless abelian eigenvalue ratio. They do not derive the physical identification of that abelian factor and the two blocks with Standard Model hypercharge, quark doublets, lepton doublets, or electromagnetic charge.
-- **rationale:** Issue: the hard step identifies the graph traceless abelian direction and its 3+1 eigenspaces with the Standard Model left-handed Y assignments via Q = T_3 + Y/2. Why this blocks: the runner constructs Y_hyp = (1/3)Pi_+ - Pi_- and verifies its algebraic properties, but it does not derive the physical hypercharge/electric-charge bridge or matter assignment; the SM labels are a naming match. Repair target: derive a retained theorem mapping the graph abelian generator and 3+1 blocks to anomaly-compatible SM hypercharge and matter carriers, with a runner that computes the normalization/assignment rather than setting Y_hyp. Claim boundary until fixed: the safe statement is an algebraic selected-axis pattern match, not an independent U(1)_Y or left-handed SM charge derivation.
 - **auditor confidence:** high
 
 ### `legacy_exploratory_drivers_note`
