@@ -1,5 +1,21 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 Cl(3)/Z3 automorphism/source-identity no-go:
+
+- Added `scripts/frontier_yt_cl3_automorphism_source_identity_no_go.py`,
+  `docs/YT_CL3_AUTOMORPHISM_SOURCE_IDENTITY_NO_GO_NOTE_2026-05-02.md`,
+  and `outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json`.
+- Result: finite Cl(3)/Z3 source-orbit data, D17 carrier count, and source
+  unit conventions can stay fixed while source overlap, `D'(pole)`, same-source
+  pole residue, and canonical response factor vary.
+- Retained-route gate is `PASS=78 FAIL=0`; campaign status is
+  `PASS=104 FAIL=0` over 108 certificates.
+- Chunks007-008 are running in sessions `38412` and `78004`.
+
+Next exact action: continue scalar-denominator/canonical-Higgs theorem work
+or process chunks007-008 if they finish.  Do not use finite Cl(3)/Z3 orbit
+data, D17, or source-unit conventions as LSZ normalization or retained closure.
+
 Latest checkpoint, 2026-05-02 BRST/Nielsen Higgs-identity no-go:
 
 - Added `scripts/frontier_yt_brst_nielsen_higgs_identity_no_go.py`,

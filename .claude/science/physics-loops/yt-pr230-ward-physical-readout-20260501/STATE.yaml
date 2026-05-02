@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-123-brst-nielsen-higgs-identity-no-go
-blocks_completed: 123
-active_route: "BRST/ST/Nielsen gauge-identity shortcut stress test"
-active_hard_residual: "BRST/ST residuals and Nielsen physical-pole gauge-parameter independence can be held fixed while a gauge-invariant neutral scalar source direction rotates; gauge identities do not derive source overlap, source-pole purity, or canonical-Higgs identity."
+current_phase: campaign-rerun-block-124-cl3-automorphism-source-identity-no-go
+blocks_completed: 124
+active_route: "Cl(3)/Z3 finite automorphism/source-isotropy shortcut stress test"
+active_hard_residual: "Finite substrate orbit data, D17 carrier count, and source-unit conventions can be held fixed while continuous LSZ data vary; Cl(3)/Z3 automorphism data do not derive source overlap, D'(pole), pole residue, or canonical-Higgs identity."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"

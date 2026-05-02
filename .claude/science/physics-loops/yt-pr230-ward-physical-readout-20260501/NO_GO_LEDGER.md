@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Finite Cl(3)/Z3 orbit data are not a source-Higgs identity
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_cl3_automorphism_source_identity_no_go.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Finite substrate source-orbit facts are structural support only.  The runner
+keeps Cl(3) generator norms, Z3 translation orbit size, signed-permutation
+orbit size, D17 scalar carrier count, source-coordinate unit, and neutral
+source quantum numbers fixed while varying source overlap, `D'(pole)`,
+same-source pole residue, and canonical response factor.  Therefore finite
+automorphism/orbit data cannot replace a microscopic scalar denominator
+theorem, source-pole purity theorem, or production pole-residue measurement.
+
 ## BRST/ST/Nielsen identities are not a Higgs-pole identity
 
 Runner:

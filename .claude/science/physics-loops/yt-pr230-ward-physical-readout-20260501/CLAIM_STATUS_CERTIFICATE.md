@@ -45,6 +45,7 @@ plus FH gauge-response mixed-scalar obstruction
 plus reflection-positivity LSZ shortcut no-go
 plus effective-potential Hessian source-overlap no-go
 plus BRST/Nielsen Higgs-identity no-go
+plus Cl(3)/Z3 automorphism source-identity no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -125,6 +126,23 @@ stay fixed while the gauge-invariant neutral source rotates between the
 canonical Higgs radial mode and an orthogonal scalar.  Gauge identities are
 therefore gauge-consistency support only; they do not derive source overlap,
 source-pole purity, `kappa_s=1`, or retained/proposed-retained `y_t` closure.
+
+Cl(3)/Z3 automorphism/source-identity checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / Cl3 automorphism data not source-Higgs identity
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_cl3_automorphism_source_identity_no_go.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Finite Cl(3)/Z3 source-orbit data, D17 carrier count, and source-unit
+conventions can stay fixed while source overlap, `D'(pole)`, same-source pole
+residue, and canonical response factor vary.  These substrate facts are
+structural support only; they do not derive `kappa_s=1`, source-pole purity,
+or retained/proposed-retained `y_t` closure.
 
 Allowed wording:
 

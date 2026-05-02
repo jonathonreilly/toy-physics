@@ -101,6 +101,7 @@ def main() -> int:
         "reflection_positivity_lsz_shortcut": "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json",
         "effective_potential_hessian_source_overlap": "outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json",
         "brst_nielsen_higgs_identity": "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json",
+        "cl3_automorphism_source_identity": "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -503,6 +504,23 @@ def main() -> int:
         )
         > 0.5
     )
+    cl3_automorphism_source_identity_blocks = (
+        "Cl3 automorphism data not source-Higgs identity"
+        in certificates["cl3_automorphism_source_identity"].get("actual_current_surface_status", "")
+        and certificates["cl3_automorphism_source_identity"].get("proposal_allowed") is False
+        and certificates["cl3_automorphism_source_identity"]
+        .get("orbit_witness", {})
+        .get("checks", {})
+        .get("finite_invariants_fixed")
+        is True
+        and float(
+            certificates["cl3_automorphism_source_identity"]
+            .get("orbit_witness", {})
+            .get("checks", {})
+            .get("dprime_span_factor", 0.0)
+        )
+        >= 8.0
+    )
     scalar_carrier_projector_closure_blocked = (
         "scalar carrier-projector closure attempt blocked"
         in certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", "")
@@ -886,6 +904,11 @@ def main() -> int:
         certificates["brst_nielsen_higgs_identity"].get("actual_current_surface_status", ""),
     )
     report(
+        "cl3-automorphism-data-not-source-higgs-identity",
+        cl3_automorphism_source_identity_blocks,
+        certificates["cl3_automorphism_source_identity"].get("actual_current_surface_status", ""),
+    )
+    report(
         "scalar-carrier-projector-closure-attempt-blocked",
         scalar_carrier_projector_closure_blocked,
         certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", ""),
@@ -1119,6 +1142,10 @@ def main() -> int:
             "repair too: BRST/ST residuals and physical pole "
             "gauge-parameter independence can stay fixed while the neutral "
             "source direction and source overlap rotate.  "
+            "The Cl(3)/Z3 automorphism/source-identity no-go blocks finite "
+            "substrate orbit data as the missing continuous LSZ input: finite "
+            "orbit sizes, D17 carrier count, and source unit can stay fixed "
+            "while source overlap, D'(pole), and residue vary.  "
             "The scalar carrier/projector closure attempt confirms the "
             "remaining taste/carrier side is also open: unit taste algebra and "
             "color-singlet support do not admit non-origin corners, preserve "

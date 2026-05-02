@@ -2718,3 +2718,17 @@ Disposition: exact negative boundary.  BRST/ST gauge identities and Nielsen
 physical-pole gauge-parameter independence do not determine the gauge-invariant
 neutral scalar source direction, source overlap, or source-pole purity.  No
 retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 124 Cl(3)/Z3 Automorphism Source-Identity No-Go
+
+Review stance: analytic shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_cl3_automorphism_source_identity_no_go.py`.
+- Added `docs/YT_CL3_AUTOMORPHISM_SOURCE_IDENTITY_NO_GO_NOTE_2026-05-02.md`.
+- Added `outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  Finite Cl(3)/Z3 source-orbit facts,
+D17 carrier count, and source-unit conventions do not determine continuous LSZ
+source overlap, `D'(pole)`, pole residue, or canonical-Higgs identity.  No
+retained or proposed-retained wording is allowed.

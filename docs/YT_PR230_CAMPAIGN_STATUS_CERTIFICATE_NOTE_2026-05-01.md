@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=103 FAIL=0
+# SUMMARY: PASS=104 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -112,6 +112,7 @@ The certificate consumes the PR-local route certificates for:
 - direct measurement scale requirements;
 - retained-closure route certificate refresh.
 - BRST/Nielsen Higgs-identity no-go.
+- Cl(3)/Z3 automorphism source-identity no-go.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
 proposal.
@@ -140,6 +141,7 @@ the visible shortcut routes:
 | Feynman-Hellmann source response | additive rest mass cancels, scalar source normalization remains open |
 | mass-response bracket | reduced data show positive `dE/dm_bare`, not physical `dE/dh` |
 | BRST/ST/Nielsen identities | gauge identities do not fix the neutral scalar source direction or source-pole purity |
+| finite Cl(3)/Z3 automorphism/orbit data | discrete substrate facts do not fix continuous LSZ overlap, `D'(pole)`, or pole residue |
 | source-reparametrization gauge | source-only analytic routes need canonical scalar normalization |
 | canonical scalar normalization import audit | existing EW/Higgs notes assume or structure canonical `H`, not derive source `kappa_s` |
 | source-to-Higgs LSZ closure attempt | no allowed current-surface premise fixes `kappa_s` |

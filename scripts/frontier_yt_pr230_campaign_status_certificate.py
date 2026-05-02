@@ -141,6 +141,9 @@ def main() -> int:
         "brst_nielsen_higgs_identity": load(
             "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json"
         ),
+        "cl3_automorphism_source_identity": load(
+            "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -534,6 +537,12 @@ def main() -> int:
         "BRST-Nielsen identities not Higgs-pole identity"
         in str(statuses["brst_nielsen_higgs_identity"]),
         statuses["brst_nielsen_higgs_identity"],
+    )
+    report(
+        "cl3-automorphism-data-not-source-higgs-identity",
+        "Cl3 automorphism data not source-Higgs identity"
+        in str(statuses["cl3_automorphism_source_identity"]),
+        statuses["cl3_automorphism_source_identity"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

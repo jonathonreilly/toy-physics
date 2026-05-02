@@ -1,0 +1,112 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Cl3 automorphism data not source-Higgs identity",
+  "exact_next_action": "Derive the continuous scalar denominator/source-overlap theorem, or measure same-source pole residue and D'(pole) in production; do not infer them from finite substrate automorphism/orbit data.",
+  "fail_count": 0,
+  "orbit_witness": {
+    "checks": {
+      "dprime_span_factor": 8.0,
+      "finite_invariants_fixed": true,
+      "residue_span_factor": 67.70247933884298,
+      "source_overlap_span": 1.05
+    },
+    "rows": [
+      {
+        "continuous_lsz_data": {
+          "canonical_response_factor": 0.275,
+          "inverse_propagator_derivative_dprime": 4.0,
+          "same_source_pole_residue": 0.07562500000000001,
+          "source_overlap_z_s": 0.55
+        },
+        "finite_substrate_invariants": {
+          "cl3_generator_norms": [
+            1,
+            1,
+            1
+          ],
+          "d17_scalar_carrier_count": 1,
+          "scalar_source_quantum_numbers": "neutral_singlet",
+          "signed_permutation_orbit_size": 6,
+          "source_coordinate_unit": 1,
+          "z3_translation_orbit_size": 3
+        }
+      },
+      {
+        "continuous_lsz_data": {
+          "canonical_response_factor": 0.6010407640085653,
+          "inverse_propagator_derivative_dprime": 2.0,
+          "same_source_pole_residue": 0.36124999999999996,
+          "source_overlap_z_s": 0.85
+        },
+        "finite_substrate_invariants": {
+          "cl3_generator_norms": [
+            1,
+            1,
+            1
+          ],
+          "d17_scalar_carrier_count": 1,
+          "scalar_source_quantum_numbers": "neutral_singlet",
+          "signed_permutation_orbit_size": 6,
+          "source_coordinate_unit": 1,
+          "z3_translation_orbit_size": 3
+        }
+      },
+      {
+        "continuous_lsz_data": {
+          "canonical_response_factor": 1.2,
+          "inverse_propagator_derivative_dprime": 1.0,
+          "same_source_pole_residue": 1.44,
+          "source_overlap_z_s": 1.2
+        },
+        "finite_substrate_invariants": {
+          "cl3_generator_norms": [
+            1,
+            1,
+            1
+          ],
+          "d17_scalar_carrier_count": 1,
+          "scalar_source_quantum_numbers": "neutral_singlet",
+          "signed_permutation_orbit_size": 6,
+          "source_coordinate_unit": 1,
+          "z3_translation_orbit_size": 3
+        }
+      },
+      {
+        "continuous_lsz_data": {
+          "canonical_response_factor": 2.262741699796952,
+          "inverse_propagator_derivative_dprime": 0.5,
+          "same_source_pole_residue": 5.120000000000001,
+          "source_overlap_z_s": 1.6
+        },
+        "finite_substrate_invariants": {
+          "cl3_generator_norms": [
+            1,
+            1,
+            1
+          ],
+          "d17_scalar_carrier_count": 1,
+          "scalar_source_quantum_numbers": "neutral_singlet",
+          "signed_permutation_orbit_size": 6,
+          "source_coordinate_unit": 1,
+          "z3_translation_orbit_size": 3
+        }
+      }
+    ]
+  },
+  "parent_certificates": {
+    "brst_nielsen_higgs_identity": "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json",
+    "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
+    "d17_source_pole_identity": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
+    "higgs_identity_gate": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "source_overlap_sum_rule": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json"
+  },
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The missing LSZ/source-overlap quantities are continuous pole data, not finite automorphism invariants.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not promote D17 or finite Cl(3)/Z3 orbit data into LSZ pole normalization",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "Finite Cl(3)/Z3 source-orbit and automorphism data do not derive the PR #230 scalar source-to-canonical-Higgs identity.  The witness keeps generator norms, Z3 and signed-permutation orbit sizes, D17 single-carrier count, source coordinate unit, and neutral source quantum numbers fixed while source overlap, D'(pole), and the pole residue vary.  Therefore finite substrate orbit data are structural support only; they cannot replace a microscopic scalar denominator theorem, source-pole purity theorem, or production pole-residue measurement."
+}

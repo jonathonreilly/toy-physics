@@ -280,6 +280,9 @@ canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.
    The BRST/Nielsen Higgs-identity no-go also blocks the gauge-identity
    shortcut: BRST/ST residuals and physical-pole gauge-parameter independence
    do not fix the gauge-invariant neutral scalar source direction.
+   The Cl(3)/Z3 automorphism/source-identity no-go blocks the finite substrate
+   orbit shortcut: finite orbit data, D17 count, and source unit do not fix the
+   continuous LSZ overlap, `D'(pole)`, or same-source pole residue.
    The scalar carrier/projector closure attempt also blocks the taste/projector
    shortcut.  Color-singlet support and unit taste-singlet algebra do not
    derive physical carrier authority, preserve unit-projector crossings, or
