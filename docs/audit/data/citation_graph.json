@@ -20005,7 +20005,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:11:06.885989+00:00",
+  "generated_at": "2026-05-02T21:13:13.401803+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -33673,14 +33673,14 @@
     },
     "native_gauge_closure_note": {
       "claim_id": "native_gauge_closure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem proposal. Audit status is assigned only by the",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "graph_first_selector_derivation_note",
         "graph_first_su3_integration_note"
       ],
-      "note_hash": "de4cccd69be247db954883861b76a291034e92b4895ddbbfaa9d359b0b313204",
+      "note_hash": "8dc7d8762c1e06239a4d9020c38d7b0507aeedb68624c5427685efca0f24bb3e",
       "path": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_non_abelian_gauge.py",
       "title": "Native Gauge Closure Note: Graph-First Gauge Closure on Z^3"
@@ -46578,9 +46578,9 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 12,
+      "bounded_theorem": 13,
       "meta": 1,
-      "none": 1742,
+      "none": 1741,
       "positive_theorem": 42
     },
     "claim_type_seed_hint_counts": {
