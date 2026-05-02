@@ -1,4 +1,4 @@
-"""Per-site Hilbert dim = 2 check on retained Cl(3) per-site uniqueness."""
+"""Per-site Hilbert dim = 2 check on Cl(3) per-site uniqueness."""
 from __future__ import annotations
 
 import numpy as np
@@ -45,21 +45,28 @@ def main() -> None:
 
     # ----- Test 3: representation is irreducible -----
     print("-" * 72)
-    print("TEST 3: representation is irreducible (no nontrivial invariant subspace)")
+    print("TEST 3: Pauli commutant is scalar, hence the site module is irreducible")
     print("-" * 72)
-    # Check: by Schur, irreducibility ⇔ commutant is C·I.
-    # Find all matrices commuting with σ_1 AND σ_2 AND σ_3.
-    # By Schur, only scalar multiples of identity should commute.
-    # Compute symbolically: a generic commutant matrix M satisfies [σ_i, M] = 0 for all i.
-    # On 2x2 complex matrices, [σ_i, M] = 0 for all i ⇔ M = α I.
-    # Verify by checking commutators of a generic matrix.
-    rng = np.random.default_rng(20260502)
-    M = rng.standard_normal((2, 2)) + 1j * rng.standard_normal((2, 2))
-    comm_norms = [np.linalg.norm(s @ M - M @ s) for s in sigmas]
-    print(f"  random matrix M's commutators with σ_1, σ_2, σ_3: {[f'{n:.2f}' for n in comm_norms]}")
-    print(f"  (generic non-scalar M does NOT commute → confirms commutant is trivial → irreducible)")
-    nontrivial_commutator = max(comm_norms) > 0.1
-    t3_ok = nontrivial_commutator
+    # Solve the linear commutant constraints exactly as a finite-dimensional
+    # linear-algebra problem over C: [σ_i, M] = 0 for all i.  The nullspace
+    # should be one-dimensional and spanned by the identity matrix.
+    basis = []
+    for r in range(2):
+        for c in range(2):
+            E = np.zeros((2, 2), dtype=complex)
+            E[r, c] = 1.0
+            basis.append(E)
+    rows = []
+    for s in sigmas:
+        for E in basis:
+            rows.append((s @ E - E @ s).reshape(-1))
+    commutant_matrix = np.stack(rows, axis=1)
+    singular_values = np.linalg.svd(commutant_matrix, compute_uv=False)
+    rank = int(np.sum(singular_values > 1e-12))
+    nullity = 4 - rank
+    print(f"  commutant constraint rank = {rank}; nullity = {nullity}")
+    print(f"  singular values: {[f'{v:.3e}' for v in singular_values]}")
+    t3_ok = nullity == 1
     print(f"  STATUS: {'PASS' if t3_ok else 'FAIL'}")
     print()
 
@@ -75,12 +82,11 @@ def main() -> None:
     print(f"  STATUS: {'PASS' if t4_ok else 'FAIL'}")
     print()
 
-    # ----- Test 5: no nontrivial alternative 2-dim irrep -----
+    # ----- Test 5: unitary-equivalent representatives preserve Cl(3) -----
     print("-" * 72)
-    print("TEST 5: any 2-dim faithful irrep is unitarily equivalent to Pauli")
+    print("TEST 5: unitary-equivalent Pauli representatives preserve Cl(3)")
     print("-" * 72)
     # Create an alternative rep by unitary similarity transform: σ_i' = U σ_i U†
-    # This should be the only kind of 2-dim irrep.
     rng2 = np.random.default_rng(100)
     A = rng2.standard_normal((2, 2)) + 1j * rng2.standard_normal((2, 2))
     Q, _ = np.linalg.qr(A)  # random unitary
@@ -101,9 +107,9 @@ def main() -> None:
     print("=" * 72)
     print(f"  Test 1 (Cl(3) anticommutation):              {'PASS' if t1_ok else 'FAIL'}")
     print(f"  Test 2 (dim = 2):                             {'PASS' if t2_ok else 'FAIL'}")
-    print(f"  Test 3 (irreducibility via Schur):            {'PASS' if t3_ok else 'FAIL'}")
+    print(f"  Test 3 (scalar commutant / irreducible):      {'PASS' if t3_ok else 'FAIL'}")
     print(f"  Test 4 (total dim 2^|Λ| formula):             {'PASS' if t4_ok else 'FAIL'}")
-    print(f"  Test 5 (uniqueness up to unitary equiv):     {'PASS' if t5_ok else 'FAIL'}")
+    print(f"  Test 5 (unitary-equivalent representatives): {'PASS' if t5_ok else 'FAIL'}")
     all_ok = all([t1_ok, t2_ok, t3_ok, t4_ok, t5_ok])
     print(f"  OVERALL: {'PASS' if all_ok else 'FAIL'}")
     if not all_ok:

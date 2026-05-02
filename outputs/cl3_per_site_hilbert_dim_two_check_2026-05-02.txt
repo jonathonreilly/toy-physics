@@ -16,10 +16,10 @@ TEST 2: representation acts on dim-2 complex space
   STATUS: PASS
 
 ------------------------------------------------------------------------
-TEST 3: representation is irreducible (no nontrivial invariant subspace)
+TEST 3: Pauli commutant is scalar, hence the site module is irreducible
 ------------------------------------------------------------------------
-  random matrix M's commutators with σ_1, σ_2, σ_3: ['2.99', '1.80', '2.90']
-  (generic non-scalar M does NOT commute → confirms commutant is trivial → irreducible)
+  commutant constraint rank = 3; nullity = 1
+  singular values: ['2.828e+00', '2.828e+00', '2.828e+00', '0.000e+00']
   STATUS: PASS
 
 ------------------------------------------------------------------------
@@ -32,7 +32,7 @@ TEST 4: total Hilbert dim on cube of side L is 2^(L^3)
   STATUS: PASS
 
 ------------------------------------------------------------------------
-TEST 5: any 2-dim faithful irrep is unitarily equivalent to Pauli
+TEST 5: unitary-equivalent Pauli representatives preserve Cl(3)
 ------------------------------------------------------------------------
   alternative rep (unitary conjugate) max ||{σ', σ'} - 2δI|| = 2.013e-15
   STATUS: PASS
@@ -40,7 +40,7 @@ TEST 5: any 2-dim faithful irrep is unitarily equivalent to Pauli
 ========================================================================
   Test 1 (Cl(3) anticommutation):              PASS
   Test 2 (dim = 2):                             PASS
-  Test 3 (irreducibility via Schur):            PASS
+  Test 3 (scalar commutant / irreducible):      PASS
   Test 4 (total dim 2^|Λ| formula):             PASS
-  Test 5 (uniqueness up to unitary equiv):     PASS
+  Test 5 (unitary-equivalent representatives): PASS
   OVERALL: PASS
