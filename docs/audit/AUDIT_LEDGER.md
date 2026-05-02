@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:26:10.380356+00:00
+**Generated:** 2026-05-02T18:27:11.951428+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,24 +24,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 543 |
+| unaudited | 544 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 636 |
+| ~~audited_conditional~~ | 635 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 375 |
-| `audited_conditional` | 636 |
+| `audited_conditional` | 635 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 579 |
+| `unaudited` | 580 |
 
 | claim_type | count |
 |---|---:|
@@ -81,7 +81,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 183 | 26.52 | `audited_renaming` | ~~audited_renaming~~ |
 | 6 | `minimal_axioms_2026-04-11` | meta | critical | 289 | 26.18 | `unaudited` | meta |
-| 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 199 | 26.14 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 199 | 26.14 | `unaudited` | unaudited |
 | 8 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
 | 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
 | 10 | `native_gauge_closure_note` | bounded_theorem | critical | 257 | 22.51 | `audited_clean` | **retained_bounded** |
@@ -928,7 +928,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `newton_law_derived_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `newton_persistent_pattern_control_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `observable_principle_from_axiom_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `oh_schur_boundary_action_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `one_generation_matter_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -11813,25 +11812,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** In the tested linear/quadratic/cubic lattice propagators, the linear propagator has I_3 = 0 and attractive gravity, while the two nonlinear propagators have I_3 != 0 and repulsive gravity.  _(class `C`)_
 - **chain closes:** False — The runner verifies the stated correlation for the specific toy propagators and lattice setup, but it does not prove the general theorem that Born-rule validity and attractive Newtonian gravity are both forced by linear amplitude superposition. The causal/general claim remains broader than the finite tested family.
 - **rationale:** Issue: the executable evidence is a finite toy-model stress test over three propagator choices, while the prose interprets it as a general link between Born-rule linearity and attractive gravity. Why this blocks: a finite simulation cannot rule over arbitrary nonlinear propagator deformations or prove the physical diamond-NV/gravity implication without a general theorem connecting the propagator nonlinearity to the gravitational source law. Repair target: either narrow the note to the tested propagator family, or add a theorem deriving the force-sign/Born-rule correlation for the admissible propagator class. Claim boundary until fixed: the tested linear/quadratic/cubic models show the reported correlation; the broad causal conclusion remains conditional.
-- **auditor confidence:** high
-
-### `observable_principle_from_axiom_note`
-
-- **Note:** [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](../../docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Exact finite Grassmann source-response theorem on the minimal hierarchy block, conditional on scalar-additivity/CPT-even observable premises and canonical hierarchy normalization inputs.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-observable-principle-halley`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The unique additive CPT-even scalar source generator is W[J]=log|det(D+J)|-log|det D|, and its local curvature is identified with the hierarchy normalization surface.  _(class `C`)_
-- **chain closes:** False — The algebraic log-det/source-response checks close inside the supplied finite-block model. The full hierarchy/v consequence does not close because it imports canonical plaquette-surface constants from an unaudited authority note and assumes scalar-observable selection premises rather than deriving them from retained-grade inputs.
-- **rationale:** Issue: the runner verifies strong finite-block algebra, but the hierarchy normalization and v prediction depend on canonical constants whose authority note is currently unaudited, and the scalar additivity/CPT-even phase-blindness premises are selection assumptions. Why this blocks: those inputs are load-bearing for claiming the observable principle closes the hierarchy gap rather than merely defining a consistent generator inside the block. Repair target: audit docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md to retained grade and separately prove or explicitly axiomatize the scalar-observable premises from the lattice axiom. Claim boundary until fixed: conditional finite-block log-det source-response theorem, not a clean retained-grade hierarchy/v derivation.
-- **open / conditional deps cited:**
-  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
-  - `scripts/canonical_plaquette_surface.py canonical constants`
-  - `Premise that physical scalar observable generators for independent subsystems must be additive`
-  - `Premise that scalar bosonic observables must be CPT-even and phase-blind`
-  - `Downstream hierarchy/Higgs normalization chain currently audited_conditional`
 - **auditor confidence:** high
 
 ### `oh_schur_boundary_action_note`
