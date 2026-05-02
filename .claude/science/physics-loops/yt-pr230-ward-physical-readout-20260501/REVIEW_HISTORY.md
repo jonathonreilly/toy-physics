@@ -3281,3 +3281,17 @@ Disposition: exact negative boundary.  Current neutral labels and D17 support
 do not force a rank-one neutral scalar response space; a rank-two same-label
 response family keeps source-only `C_ss` fixed while canonical-Higgs overlap
 remains uncertified.  No retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 145 Neutral Scalar Dynamical Rank-One Closure Attempt
+
+Review stance: dynamical shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_neutral_scalar_dynamical_rank_one_closure_attempt.py`.
+- Added `docs/YT_NEUTRAL_SCALAR_DYNAMICAL_RANK_ONE_CLOSURE_ATTEMPT_NOTE_2026-05-02.md`.
+- Added `outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  Current dynamics do not force neutral
+rank one; a positive two-pole family keeps the source-created pole mass and
+residue fixed while canonical-Higgs overlap varies.  No retained or
+proposed-retained wording is allowed.

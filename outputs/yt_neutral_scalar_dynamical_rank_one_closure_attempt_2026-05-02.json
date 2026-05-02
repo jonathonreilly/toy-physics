@@ -1,0 +1,118 @@
+{
+  "actual_current_surface_status": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
+  "dynamic_counterfamily": [
+    {
+      "canonical_higgs_overlap_with_source_pole": 0.5,
+      "canonical_higgs_vector_in_source_basis": [
+        0.5,
+        0.8660254037844386
+      ],
+      "canonical_higgs_yukawa_example": 0.5,
+      "kernel_basis": [
+        "source_pole",
+        "orthogonal_neutral"
+      ],
+      "kernel_positive_definite": true,
+      "neutral_response_rank": 2,
+      "orthogonal_pole_finite": true,
+      "orthogonal_pole_mass_sq": 1.4,
+      "quadratic_kernel": [
+        [
+          0.25,
+          0.0
+        ],
+        [
+          0.0,
+          1.4
+        ]
+      ],
+      "source_pole_mass_sq": 0.25,
+      "source_pole_residue": 1.0,
+      "source_pole_yukawa_readout": 1.0,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "canonical_higgs_overlap_with_source_pole": 0.8,
+      "canonical_higgs_vector_in_source_basis": [
+        0.8,
+        0.5999999999999999
+      ],
+      "canonical_higgs_yukawa_example": 0.8,
+      "kernel_basis": [
+        "source_pole",
+        "orthogonal_neutral"
+      ],
+      "kernel_positive_definite": true,
+      "neutral_response_rank": 2,
+      "orthogonal_pole_finite": true,
+      "orthogonal_pole_mass_sq": 2.0,
+      "quadratic_kernel": [
+        [
+          0.25,
+          0.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ],
+      "source_pole_mass_sq": 0.25,
+      "source_pole_residue": 1.0,
+      "source_pole_yukawa_readout": 1.0,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "canonical_higgs_overlap_with_source_pole": 0.95,
+      "canonical_higgs_vector_in_source_basis": [
+        0.95,
+        0.31224989991991997
+      ],
+      "canonical_higgs_yukawa_example": 0.95,
+      "kernel_basis": [
+        "source_pole",
+        "orthogonal_neutral"
+      ],
+      "kernel_positive_definite": true,
+      "neutral_response_rank": 2,
+      "orthogonal_pole_finite": true,
+      "orthogonal_pole_mass_sq": 3.2,
+      "quadratic_kernel": [
+        [
+          0.25,
+          0.0
+        ],
+        [
+          0.0,
+          3.2
+        ]
+      ],
+      "source_pole_mass_sq": 0.25,
+      "source_pole_residue": 1.0,
+      "source_pole_yukawa_readout": 1.0,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    }
+  ],
+  "exact_next_action": "Measure same-surface C_sH/C_HH Gram purity, derive a genuine dynamical rank-one theorem, implement W/Z response with identity certificates, or process seed-controlled FH/LSZ chunks.",
+  "fail_count": 0,
+  "pass_count": 17,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Open Higgs-pole identity and source-Higgs purity imports remain.",
+  "rank_one_dynamical_theorem_derived": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s=1, cos(theta)=1, c2=1, or Z_match=1",
+    "does not use H_unit matrix-element readout or yt_ward_identity authority",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, or reduced cold pilots as proof selectors",
+    "does not treat finite orthogonal mass as decoupling without a derived decoupling theorem"
+  ],
+  "verdict": "The current PR #230 surface does not derive a dynamical rank-one neutral scalar response theorem.  A positive two-pole neutral scalar family keeps the source-created pole mass and residue fixed while a finite orthogonal neutral pole remains and the canonical-Higgs overlap varies.  Therefore source-pole purity still needs a dynamical rank-one theorem, same-surface C_sH/C_HH Gram-purity data, or an equivalent accepted Higgs-identity certificate."
+}

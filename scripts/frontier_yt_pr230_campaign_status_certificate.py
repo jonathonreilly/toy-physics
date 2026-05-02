@@ -196,6 +196,9 @@ def main() -> int:
         "neutral_scalar_commutant_rank_no_go": load(
             "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json"
         ),
+        "neutral_scalar_dynamical_rank_one_closure": load(
+            "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json"
+        ),
         "fh_gauge_response_mixed_scalar": load(
             "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json"
         ),
@@ -700,6 +703,12 @@ def main() -> int:
         "neutral scalar commutant does not force rank-one purity"
         in str(statuses["neutral_scalar_commutant_rank_no_go"]),
         statuses["neutral_scalar_commutant_rank_no_go"],
+    )
+    report(
+        "neutral-scalar-dynamical-rank-one-closure-blocks",
+        "dynamical rank-one neutral scalar theorem not derived"
+        in str(statuses["neutral_scalar_dynamical_rank_one_closure"]),
+        statuses["neutral_scalar_dynamical_rank_one_closure"],
     )
     report(
         "fh-gauge-response-mixed-scalar-blocks",
@@ -1210,6 +1219,10 @@ def main() -> int:
             "The neutral-scalar commutant rank no-go now blocks the symmetry-only "
             "rank-one route: current neutral labels still admit a rank-two "
             "response family unless dynamics or C_sH/C_HH data remove it.  "
+            "The dynamical rank-one closure attempt then shows the current "
+            "dynamical surface still permits a finite orthogonal neutral pole "
+            "with fixed source pole mass/residue and varying canonical-Higgs "
+            "overlap.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

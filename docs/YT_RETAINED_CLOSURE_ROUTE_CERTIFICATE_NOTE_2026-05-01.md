@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=96 FAIL=0
+# SUMMARY: PASS=97 FAIL=0
 ```
 
 The runner verifies:
@@ -84,6 +84,7 @@ The runner verifies:
 | `H_unit` is certified as canonical `O_H` | no |
 | neutral scalar response space rank-one purity gate is passed | no |
 | neutral scalar commutant rank-one purity is forced | no |
+| dynamical rank-one neutral scalar theorem is derived | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -209,6 +210,11 @@ The neutral-scalar commutant rank no-go blocks the symmetry-only rank-one
 repair.  Current neutral labels and D17 support still admit a rank-two response
 family, so rank-one purity requires a dynamical theorem or same-surface
 `C_sH` / `C_HH` pole-residue data rather than symmetry labels alone.
+The dynamical rank-one closure attempt then blocks the immediate dynamics
+shortcut.  A positive two-pole neutral scalar family can keep the source pole
+mass and residue fixed while a finite orthogonal pole remains and the
+canonical-Higgs overlap varies.  Therefore the current dynamical surface does
+not yet certify rank-one purity.
 The chunked FH/LSZ route has also advanced only as bounded support:
 chunks009-010 are seed-controlled and combiner-ready, raising the current
 L12 ready set to `10/63` chunks and `160/1000` saved configurations.  Response
@@ -418,6 +424,12 @@ same listed labels, preserving source-only `C_ss` while leaving the
 canonical-Higgs overlap uncertified.  A rank-one purity theorem must therefore
 come from dynamics or direct source-Higgs pole data, not the current
 symmetry/D17 surface.
+
+The neutral-scalar dynamical rank-one closure attempt tests the dynamics
+alternative directly and still fails.  The current certificates do not remove
+a finite orthogonal neutral pole; the source-created pole mass/residue can
+stay fixed while canonical-Higgs overlap and example physical `y_t` vary.
+No retained/proposed-retained wording is authorized.
 
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive

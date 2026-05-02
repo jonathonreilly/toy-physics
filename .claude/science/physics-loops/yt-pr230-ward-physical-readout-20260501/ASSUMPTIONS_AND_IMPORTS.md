@@ -687,3 +687,11 @@ rank-one dynamical theorem, source-pole purity certificate, or
 canonical-Higgs overlap identity.  A future positive route must derive the
 rank-one response dynamically or measure `C_sH` / `C_HH` pole data on the same
 surface.
+
+2026-05-02 neutral scalar dynamical rank-one closure attempt:
+
+A finite orthogonal neutral pole must not be assumed away.  Current dynamics
+do not derive rank-one purity merely because the source-created pole mass and
+residue can be measured.  Rank-one closure requires a new microscopic theorem,
+same-surface `C_sH` / `C_HH` Gram-purity data, or an accepted source-Higgs
+identity certificate.

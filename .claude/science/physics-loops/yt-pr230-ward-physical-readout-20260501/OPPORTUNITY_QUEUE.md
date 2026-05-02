@@ -475,3 +475,11 @@ alone.  Remaining positive actions are: process chunk011 if complete; derive a
 dynamical rank-one theorem; implement same-surface `O_H`/`C_sH`/`C_HH`
 production rows; or build W/Z response only with sector-overlap and
 canonical-Higgs identity certificates.
+
+Neutral-scalar dynamical rank-one update: the immediate dynamics theorem also
+failed on the current certificate surface.  A finite orthogonal neutral pole
+can remain while the source pole mass/residue stay fixed and the canonical
+Higgs overlap varies.  Do not spend another block on rank-one dynamics without
+a new microscopic premise; prioritize chunk011 processing, same-surface
+`O_H`/`C_sH`/`C_HH` implementation, W/Z response with identity certificates,
+or a stronger source-Higgs identity theorem.

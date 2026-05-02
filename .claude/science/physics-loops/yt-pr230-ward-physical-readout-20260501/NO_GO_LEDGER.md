@@ -1884,3 +1884,16 @@ preserve the listed labels and source-only `C_ss` residue while leaving the
 canonical-Higgs overlap uncertified.  Do not treat symmetry labels, D17
 carrier support, or a commutant-counting argument as source-pole purity,
 `cos(theta)=1`, or `kappa_s` closure.
+
+Neutral scalar dynamics do not force rank one on the current surface:
+
+```text
+python3 scripts/frontier_yt_neutral_scalar_dynamical_rank_one_closure_attempt.py
+# SUMMARY: PASS=17 FAIL=0
+```
+
+The current certificates do not remove a finite orthogonal neutral pole.  A
+positive two-pole neutral scalar family keeps the source-created pole mass and
+source residue fixed while the canonical-Higgs overlap varies.  Therefore the
+rank-one route still needs a real dynamical theorem, same-surface `C_sH` /
+`C_HH` Gram-purity data, or an equivalent Higgs-identity certificate.
