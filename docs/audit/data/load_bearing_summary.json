@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-02T18:10:16.136199+00:00",
+  "computed_at": "2026-05-02T18:11:26.922928+00:00",
   "criticality_counts": {
     "critical": 44,
     "high": 389,
@@ -20,7 +20,7 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 30.968,
+      "load_bearing_score": 31.968,
       "transitive_descendants": 353
     },
     {
@@ -144,16 +144,16 @@
       "transitive_descendants": 244
     },
     {
+      "claim_id": "graph_first_selector_derivation_note",
+      "criticality": "critical",
+      "load_bearing_score": 16.397,
+      "transitive_descendants": 336
+    },
+    {
       "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
       "criticality": "critical",
       "load_bearing_score": 15.544,
       "transitive_descendants": 131
-    },
-    {
-      "claim_id": "graph_first_selector_derivation_note",
-      "criticality": "critical",
-      "load_bearing_score": 15.397,
-      "transitive_descendants": 336
     },
     {
       "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
