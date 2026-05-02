@@ -1,7 +1,9 @@
 # Axiom-First Generalized Second Law on Framework Surface
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on retained framework GR + retained BH 1/4 carrier + Block 01 KMS + Block 02 Hawking + Block 05 first law; runner passing; audit-pending. `proposal_allowed: false`.
+**Type:** bounded_theorem
+**Claim scope:** Generalized Second Law δ(S_BH + S_matter) ≥ 0 (GSL3) on the framework's retained gravity surface plus the upstream chain (KMS, Hawking T_H, first law); equivalently the Hawking 1971 area theorem δA ≥ 0 under NEC (GSL1) plus matter Gibbs H-theorem δS_matter ≥ 0 (GSL2) sum to GSL3, with Bekenstein bound enforcement (GSL4) as cross-link. Conditional on universal-physics NEC + retained BH 1/4 carrier.
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 10 (Block 10; stacked on Block 05 (First law))
 **Branch:** `physics-loop/24h-axiom-first-block10-gsl-20260501`
