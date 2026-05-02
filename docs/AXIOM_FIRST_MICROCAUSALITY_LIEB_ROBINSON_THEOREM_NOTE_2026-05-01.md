@@ -1,7 +1,9 @@
 # Axiom-First Microcausality / Lieb-Robinson Bound on A_min
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on A_min plus retained RP + spectrum condition; runner passing; audit-pending. Honest status: derived support theorem. `proposal_allowed: false` because upstream RP and spectrum-condition support notes are themselves audit-pending.
+**Type:** positive_theorem
+**Claim scope:** equal-time strict locality [O_x, O_y] = 0 for x ≠ y on Cl(3) tensor structure (M1); Lieb-Robinson lightcone bound ‖[α_t(O_x), O_y]‖ ≤ 2‖O_x‖‖O_y‖exp(-d + v_LR|t|) with v_LR = 2erJ on framework's finite-range Hamiltonian (M2); continuum spacelike microcausality in the smooth-limit Lorentz regime (M3).
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline from `audit_status` + `claim_type` + dependency chain.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 4 (Block 04; independent of Blocks 01-03)
 **Branch:** `physics-loop/24h-axiom-first-block04-microcausality-20260501`
