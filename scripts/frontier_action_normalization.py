@@ -419,7 +419,8 @@ def measure_rescaling_degeneracy(N: int, k: float, source_pos: tuple[int, int, i
     print()
     print("Key observation: c*phi_max is approximately CONSTANT across rescalings.")
     print("The physical quantity is c*f, not f alone. This confirms the degeneracy.")
-    print("Convention: set G = Newton's constant. Then c is fixed by the metric.")
+    print("Convention: after fixing the f/Phi map and source normalization, c has")
+    print("a definite value; the rescaling freedom itself does not select it.")
     print()
 
 
@@ -427,19 +428,20 @@ def main():
     t_start = time.time()
 
     print("=" * 80)
-    print("ACTION NORMALIZATION: SELF-CONSISTENCY FIXES COUPLING COEFFICIENT")
+    print("ACTION NORMALIZATION: CONVENTION-LOCKED COUPLING COEFFICIENT")
     print("=" * 80)
     print()
     print("Question: Is the coefficient c in S = L(1 - c*f) arbitrary?")
-    print("Answer: NO. Three independent arguments fix c = 1.")
+    print("Answer: It is not convention-free; once the f/Phi identification")
+    print("and Poisson source normalization are named, c is convention-locked.")
     print()
     print("The reviewer's objection: 'You chose S = L(1-f). If you chose S = L(1-2f),")
     print("you would get a different metric. The coefficient is arbitrary.'")
     print()
-    print("Our response: the coefficient is determined by the requirement that")
-    print("the action reproduce the correct weak-field metric, which in turn")
-    print("is the unique metric consistent with both Newtonian gravity and")
-    print("the factor-of-2 light bending that defines GR.")
+    print("Our narrowed response: the earlier convention-free light-bending")
+    print("argument was wrong. PPN gamma=1 holds for any positive c under")
+    print("Phi=c*f/2, so the coefficient is fixed only after choosing the")
+    print("field-identification and Poisson-normalization convention.")
     print()
 
     N = 20
@@ -457,7 +459,8 @@ def main():
     print(f"Grid: {N}^3, k={k}, G=1.0, sigma={sigma}")
     print()
     print("Purpose: show self-consistency converges for a RANGE of c values.")
-    print("This means convergence alone does NOT fix c. We need additional physics.")
+    print("This means convergence alone does NOT fix c. We need an explicit")
+    print("field-identification / source-normalization convention.")
     print()
 
     G_fixed = 1.0
@@ -513,7 +516,7 @@ def main():
     print("The self-consistent loop depends on c*G*rho (the effective coupling).")
     print("Rescaling (c, G) -> (c/a, a*G) leaves the product c*G fixed.")
     print("So there is a one-parameter family of equivalent solutions.")
-    print("Convention must fix one parameter. We show it is c.")
+    print("A convention must fix one parameter before c has a definite value.")
     print()
 
     measure_rescaling_degeneracy(N, k, source_pos, sigma=sigma)

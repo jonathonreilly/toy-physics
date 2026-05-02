@@ -30,8 +30,8 @@ Each row is now `unaudited` and queued for fresh independent Codex audit.
 
 | metric | origin/main | this branch |
 |---|---|---|
-| `audit_status=audited_failed` | 70 | 64 |
-| `effective_status=audited_failed` | 26 | 20 |
+| rows with `audited_failed` audit verdict | 70 | 64 |
+| rows with `audited_failed` effective status | 26 | 20 |
 | `audit_lint warnings` | 78 | 78 |
 | `audit_lint errors` | 0 | 0 |
 

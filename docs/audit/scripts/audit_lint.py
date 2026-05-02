@@ -196,11 +196,18 @@ def main() -> int:
                             f"{cid}: same-family critical cross-confirmation requires "
                             "second_audit.independence='fresh_context'"
                         )
-                    if first.get("claim_type") != second.get("claim_type"):
-                        errors.append(
-                            f"{cid}: critical cross-confirmation claim_type mismatch "
-                            f"{first.get('claim_type')!r} vs {second.get('claim_type')!r}"
-                        )
+                    if xc_status == "confirmed":
+                        if first.get("claim_type") != second.get("claim_type"):
+                            errors.append(
+                                f"{cid}: critical cross-confirmation claim_type mismatch "
+                                f"{first.get('claim_type')!r} vs {second.get('claim_type')!r}"
+                            )
+                        if first.get("load_bearing_step_class") != second.get("load_bearing_step_class"):
+                            errors.append(
+                                f"{cid}: critical cross-confirmation load_bearing_step_class mismatch "
+                                f"{first.get('load_bearing_step_class')!r} vs "
+                                f"{second.get('load_bearing_step_class')!r}"
+                            )
                     if xc_status in {"third_confirmed_first", "third_confirmed_second"}:
                         third = xc.get("third_audit") or {}
                         if not third:
@@ -220,6 +227,14 @@ def main() -> int:
                                 f"{cid}: same-family third audit requires "
                                 "fresh_context or judicial_review independence"
                             )
+                        else:
+                            winning = first if xc_status == "third_confirmed_first" else second
+                            for key in ("verdict", "claim_type", "load_bearing_step_class"):
+                                if third.get(key) != winning.get(key):
+                                    errors.append(
+                                        f"{cid}: {xc_status} third_audit {key}={third.get(key)!r} "
+                                        f"does not match winning audit {winning.get(key)!r}"
+                                    )
 
         if a == "audited_decoration":
             parent = row.get("decoration_parent_claim_id")

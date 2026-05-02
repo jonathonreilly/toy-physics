@@ -1,0 +1,70 @@
+========================================================================
+CPT PARTICLE/ANTIPARTICLE MASS EQUALITY CHECK
+========================================================================
+
+Setup:
+  4-mode block-Hermitian Hamiltonian on (particle) ⊕ (antiparticle)
+  CPT = swap(p ↔ a) ∘ complex conjugation (antiunitary)
+  Random CPT-symmetric H constructed from random particle block
+
+------------------------------------------------------------------------
+TEST 1: H is Hermitian
+------------------------------------------------------------------------
+  ||H - H^†|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: [CPT, H] = 0  (i.e. (CPT) H (CPT)^{-1} = H)
+------------------------------------------------------------------------
+  ||CPT H CPT^{-1} - H|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3 (M1, M2): particle and antiparticle blocks have
+                 identical spectrum (mass equality)
+------------------------------------------------------------------------
+  particle block eigenvalues:     [-0.55168895  1.42183679]
+  antiparticle block eigenvalues: [-0.55168895  1.42183679]
+  ||eigs_p - eigs_a|| (sorted)    = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4 (M3): universality — 5 random CPT-symmetric H all show
+            identical particle/antiparticle spectra
+------------------------------------------------------------------------
+  trial 0: particle eigs = [-1.8807  1.6506], antiparticle eigs = [-1.8807  1.6506], |diff| = 0.00e+00
+  trial 1: particle eigs = [-1.4238 -0.5755], antiparticle eigs = [-1.4238 -0.5755], |diff| = 0.00e+00
+  trial 2: particle eigs = [-0.4804  1.295 ], antiparticle eigs = [-0.4804  1.295 ], |diff| = 0.00e+00
+  trial 3: particle eigs = [-0.6285  1.0764], antiparticle eigs = [-0.6285  1.0764], |diff| = 0.00e+00
+  trial 4: particle eigs = [-1.1172  0.1446], antiparticle eigs = [-1.1172  0.1446], |diff| = 0.00e+00
+
+  max |eigs_p - eigs_a| across 5 trials = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5 (negative control): a non-CPT-symmetric H DOES break
+                            particle/antiparticle mass equality
+------------------------------------------------------------------------
+  ||CPT H_bad CPT^{-1} - H_bad|| = 2.603e+00  (CPT broken)
+  ||eigs_p - eigs_a||              = 1.288e+00  (mass equality broken)
+  → without CPT, particle/antiparticle spectra differ.
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (Hermiticity sanity):                PASS
+  Test 2 ([CPT, H] = 0):                      PASS
+  Test 3 (M1, M2: identical spectra):         PASS
+  Test 4 (M3: universality, 5 trials):        PASS
+  Test 5 (negative control: no-CPT breaks):   PASS
+
+  OVERALL: PASS
+
+Note: this runner verifies the energy-equality consequence of CPT
+invariance on a 4-mode toy fermionic block-Hamiltonian. The proof
+in the companion theorem note is dimension-independent: it uses
+only [CPT, H] = 0 from the declared cpt_exact_note dependency plus
+the convention that particle/antiparticle sectors are exchanged by
+the CPT operator. The toy here is a structural witness; concrete
+species-level bookkeeping is left outside this runner's scope.

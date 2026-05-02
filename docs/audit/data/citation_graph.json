@@ -2901,6 +2901,10 @@
       "to": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
     },
     {
+      "from": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
       "from": "cross_lane_dependency_map_note_2026-04-30",
       "to": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
     },
@@ -4773,6 +4777,14 @@
       "to": "global_coherence_off_scaffold_note"
     },
     {
+      "from": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
       "from": "graph_first_selector_derivation_note",
       "to": "graph_first_su3_integration_note"
     },
@@ -4889,6 +4901,10 @@
       "to": "evanescent_barrier_amplitude_suppression_theorem_note"
     },
     {
+      "from": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
       "from": "g_bare_derivation_status_correction_audit_note_2026-05-02",
       "to": "g_bare_derivation_note"
     },
@@ -4955,6 +4971,14 @@
     {
       "from": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
       "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "to": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
     },
     {
       "from": "higgs_mass_derived_note",
@@ -5262,6 +5286,10 @@
     },
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
+      "to": "koide_dweh_cyclic_compression_note_2026-04-18"
+    },
+    {
+      "from": "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02",
       "to": "koide_dweh_cyclic_compression_note_2026-04-18"
     },
     {
@@ -7021,6 +7049,10 @@
       "to": "anomaly_forces_time_theorem"
     },
     {
+      "from": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
+      "to": "axiom_first_spin_statistics_theorem_note_2026-04-29"
+    },
+    {
       "from": "periodic_2d_wraparound_fix_note_2026-04-11",
       "to": "self_consistency_structured_null_note_2026-04-11"
     },
@@ -7751,6 +7783,10 @@
     {
       "from": "scalar_harmonic_tower_theorem_note_2026-04-24",
       "to": "s3_cap_uniqueness_note"
+    },
+    {
+      "from": "schur_covariance_inheritance_narrow_theorem_note_2026-05-02",
+      "to": "site_phase_cube_shift_intertwiner_note"
     },
     {
       "from": "signed_gravity_aps_action_origin_superselection_stability_note",
@@ -8495,6 +8531,22 @@
     {
       "from": "three_generation_observable_dep_chain_audit_note_2026-05-02",
       "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "to": "site_phase_cube_shift_intertwiner_note"
+    },
+    {
+      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "to": "s3_taste_cube_decomposition_note"
+    },
+    {
+      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "to": "s3_mass_matrix_no_go_note"
+    },
+    {
+      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "to": "z2_hw1_mass_matrix_parametrization_note"
     },
     {
       "from": "three_generation_observable_theorem_note",
@@ -19981,7 +20033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T16:35:43.218619+00:00",
+  "generated_at": "2026-05-02T17:28:06.220393+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24246,6 +24298,19 @@
       "runner_path": null,
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
     },
+    "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02": {
+      "claim_id": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "note_hash": "3952cc7949fbc6d96ee612cde3cb2c657d0213c5daa0a2645c8624156c5f9164",
+      "path": "docs/CPT_PARTICLE_ANTIPARTICLE_MASS_EQUALITY_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cpt_particle_antiparticle_mass_equality_check.py",
+      "title": "Particle/Antiparticle Mass Equality from Retained CPT"
+    },
     "cross_family_universality_note": {
       "claim_id": "cross_family_universality_note",
       "claim_type_author_hint": null,
@@ -28188,6 +28253,19 @@
       "runner_path": "scripts/frontier_full_y_squared_trace_su5_gut.py",
       "title": "Full One-Generation Tr[Y\u00b2] = 40/3 and SU(5) GUT Normalization Check"
     },
+    "g_bare_canonical_convention_narrow_theorem_note_2026-05-02": {
+      "claim_id": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "f4997d3302652f89f08728768534b4f6bafbeeff649ea9f675981bcadf493d01",
+      "path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
+      "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem"
+    },
     "g_bare_derivation_note": {
       "claim_id": "g_bare_derivation_note",
       "claim_type_author_hint": null,
@@ -29145,6 +29223,20 @@
       "runner_path": "scripts/global_coherence_predictor.py",
       "title": "Global Free-Beam Coherence Predictor \u2014 Modest Revival"
     },
+    "gluon_tree_level_masslessness_theorem_note_2026-05-02": {
+      "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "1c43bd220fb99e1fdaf9c1cf8b02cb7607214b5fc782e736155d1393ff1ac0ea",
+      "path": "docs/GLUON_TREE_LEVEL_MASSLESSNESS_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/gluon_tree_level_massless_check.py",
+      "title": "Tree-Level Gluon Masslessness from Retained SU(3) Gauge Invariance"
+    },
     "gr_class_expansion_finite_rank_target_note": {
       "claim_id": "gr_class_expansion_finite_rank_target_note",
       "claim_type_author_hint": null,
@@ -29829,6 +29921,20 @@
       "path": "docs/HIGGS_FROM_LATTICE_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs From Lattice: Bounded Quantitative Support"
+    },
+    "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02": {
+      "claim_id": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+      ],
+      "note_hash": "be9b239bf67ba2d6ec2b77d5a6197269fba99ace32126addb154f5d110d92d36",
+      "path": "docs/HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py",
+      "title": "Higgs Lattice Eigenvalue Ratio (Mean-Field) \u2014 Narrow Theorem"
     },
     "higgs_mass_derived_note": {
       "claim_id": "higgs_mass_derived_note",
@@ -30716,6 +30822,19 @@
       "path": "docs/KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_cyclic_projector_block_democracy.py",
       "title": "Koide Cyclic-Projector Block Democracy"
+    },
+    "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02": {
+      "claim_id": "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "note_hash": "ac4a7b3a3993c31804b2821ad2c7297c880d88bd63f76498c1dfed9accdd5041",
+      "path": "docs/KOIDE_CYCLIC_WILSON_3_RESPONSE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_koide_cyclic_wilson_3_response_narrow.py",
+      "title": "Koide Cyclic Wilson 3-Response Law \u2014 Narrow Conditional Theorem"
     },
     "koide_cyclic_wilson_descendant_law_note_2026-04-18": {
       "claim_id": "koide_cyclic_wilson_descendant_law_note_2026-04-18",
@@ -34696,6 +34815,19 @@
       "path": "docs/PAPER_OUTLINE_2026-04-12.md",
       "runner_path": null,
       "title": "Paper Outline: \"Physics from Cl(3) on Z\u00b3\""
+    },
+    "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02": {
+      "claim_id": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_spin_statistics_theorem_note_2026-04-29"
+      ],
+      "note_hash": "6888ac34cb1fbdcd2de1a3041d804c305653ffbc8b4b061cc8a8d051d98d1201",
+      "path": "docs/PAULI_EXCLUSION_FROM_SPIN_STATISTICS_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/pauli_exclusion_check.py",
+      "title": "Pauli Exclusion Principle from Retained Spin-Statistics Theorem"
     },
     "periodic_2d_wraparound_fix_note_2026-04-11": {
       "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
@@ -39538,6 +39670,19 @@
       "runner_path": null,
       "title": "Scaling Targets"
     },
+    "schur_covariance_inheritance_narrow_theorem_note_2026-05-02": {
+      "claim_id": "schur_covariance_inheritance_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "site_phase_cube_shift_intertwiner_note"
+      ],
+      "note_hash": "1e15c15134f946624158e1c76e4142fd3c9e47e8482a0388f20af7651dd9feed",
+      "path": "docs/SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_schur_covariance_inheritance_narrow.py",
+      "title": "Schur Complement Covariance Inheritance \u2014 Narrow Theorem"
+    },
     "science_3plus1_line_law_known_limits_note_2026-04-20": {
       "claim_id": "science_3plus1_line_law_known_limits_note_2026-04-20",
       "claim_type_author_hint": null,
@@ -41940,6 +42085,22 @@
       "path": "docs/THREE_GENERATION_OBSERVABLE_DEP_CHAIN_AUDIT_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem \u2014 Dep-Chain Audit"
+    },
+    "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02": {
+      "claim_id": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "site_phase_cube_shift_intertwiner_note",
+        "s3_taste_cube_decomposition_note",
+        "s3_mass_matrix_no_go_note",
+        "z2_hw1_mass_matrix_parametrization_note"
+      ],
+      "note_hash": "996bbe9d127b53aad2b131ce4f749eb07e653ebbe3e72a55d94be275d68e7532",
+      "path": "docs/THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py",
+      "title": "Three-Generation Observable: No-Proper-Quotient Narrow Theorem"
     },
     "three_generation_observable_theorem_note": {
       "claim_id": "three_generation_observable_theorem_note",
@@ -46284,21 +46445,21 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 5,
+      "bounded_theorem": 8,
       "none": 1764,
-      "positive_theorem": 6
+      "positive_theorem": 11
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 506,
+      "bounded_theorem": 509,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 608
+      "positive_theorem": 613
     },
-    "edge_count": 4995,
-    "leaf_count": 747,
-    "node_count": 1775,
+    "edge_count": 5008,
+    "leaf_count": 754,
+    "node_count": 1783,
     "root_count": 1213,
-    "runners_with_path": 1337
+    "runners_with_path": 1345
   }
 }
