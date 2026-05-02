@@ -1,0 +1,239 @@
+# Per-Site n̂ ∈ {0, 1} ⇒ Total Q̂ Integer Spectrum on Framework Fock Space
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the framework's per-site number operator n̂_x = a_x^† a_x
+(defined on per-site Hilbert ≅ Pauli C² by retained per-site uniqueness) has
+eigenvalues exactly {0, 1}, and the total charge operator
+Q̂_total = Σ_x n̂_x on the N-site Fock space has integer spectrum
+{0, 1, ..., N} with multiplicity C(N, k) at charge k. Hence framework charge
+is quantized in the integers, with no fractional or continuous values
+permitted at the global Fock level.
+**Status:** awaiting independent audit.
+**Loop:** `positive-only-r7-20260502`
+**Cycle:** 3 (Block 3)
+**Branch:** `physics-loop/positive-only-r7-block03-q-integer-spectrum-20260502`
+**Runner:** `scripts/q_integer_spectrum_check.py`
+**Log:** `outputs/q_integer_spectrum_check_2026-05-02.txt`
+
+## Cited authorities (one hop)
+
+- [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
+  — `effective_status: retained`. Provides:
+  - **(U2)** Per-site Hilbert H_x ≅ C² (Pauli rep) is the unique faithful
+    2-dim Cl(3) module.
+  - **(U4)** Per-site Grassmann construction: one Grassmann mode per site
+    gives a 2-dim Fock space matching the Pauli C².
+
+This is the only load-bearing one-hop dependency.
+
+## Admitted-context inputs
+
+- **Single-mode fermion creation/annihilation construction.** On the per-site
+  C², define a^†, a as the standard raising/lowering operators in the
+  occupation basis: a^† |0⟩ = |1⟩, a |1⟩ = |0⟩, with a |0⟩ = 0 and
+  a^† |1⟩ = 0. Standard QM construction; equivalent to a^† = (σ_1 + iσ_2)/2 = σ_+
+  in the Pauli basis.
+- **Tensor product Fock space.** The N-site Fock space is H = ⊗_{x=1}^N C²,
+  the standard tensor product. Standard construction.
+- **Binomial coefficient counting.** C(N, k) = N! / (k! (N-k)!) is the
+  number of ways to choose k of N distinct sites. Combinatorial identity.
+
+All three are pure mathematical / definitional facts; no admitted physics
+conventions.
+
+## Statement
+
+Let H_x ≅ C² be the per-site Hilbert (retained per-site uniqueness, Pauli
+rep). Define a, a^† as the canonical fermion lowering/raising operators on
+each site, and the per-site number operator
+
+```text
+    n̂_x  :=  a_x^† a_x.                                                   (1)
+```
+
+The total charge operator on the N-site Fock space H = ⊗_x H_x is
+
+```text
+    Q̂_total  :=  Σ_{x=1}^{N} n̂_x.                                        (2)
+```
+
+Then:
+
+**(I1) Per-site CCR/anticommutation.** {a_x, a_x^†} = I_2 and {a_x, a_x} =
+{a_x^†, a_x^†} = 0 (Grassmann nilpotency).
+
+**(I2) Per-site n̂_x eigenvalues = {0, 1}.** Spec(n̂_x) = {0, 1} exactly,
+with eigenvectors |0⟩ (occupation 0) and |1⟩ (occupation 1).
+
+**(I3) Multi-site n̂_x commute.** [n̂_x, n̂_y] = 0 for all x, y (since
+each n̂_x acts as identity on every other site).
+
+**(I4) Q̂_total integer spectrum.** Spec(Q̂_total) = {0, 1, 2, ..., N}.
+Equivalently, every framework Fock-space state carries an integer-valued
+total charge in [0, N].
+
+**(I5) Multiplicity at charge k.** dim Ker(Q̂_total - k · I) = C(N, k).
+The total degeneracy at charge k is the binomial coefficient.
+
+**(I6) Equivalent σ_3 formula.** Q̂_total = (N/2) · I - (1/2) Σ_x σ_{3,x},
+i.e. the total charge equals N/2 minus half the total z-spin.
+
+## Proof
+
+### Step 1 — Per-site Pauli rep (cited)
+
+By per-site uniqueness (retained), H_x ≅ C² with Pauli generators σ_i.
+Define
+```text
+    a_x  =  (σ_{1,x} + i σ_{2,x}) / 2,  a_x^†  =  (σ_{1,x} - i σ_{2,x}) / 2  (3)
+```
+
+i.e. a_x = σ_{+,x} (raising in basis {|0⟩, |1⟩}) and a_x^† = σ_{-,x}
+(lowering). [Convention choice: |0⟩ = (1, 0)^T as eigenvalue +1 of σ_3
+corresponds to "empty" state with n = 0.]
+
+### Step 2 — Per-site CCR (I1)
+
+Direct computation in the Pauli basis:
+
+```text
+    {a, a^†}  =  σ_+ σ_-  +  σ_- σ_+  =  (1/2)(σ_1² + σ_2² + i[σ_2, σ_1])
+              =  (1/2)(I + I + i·(-2i σ_3) ... no this needs care)
+```
+
+Cleaner direct verification: σ_+ = [[0, 1], [0, 0]], σ_- = [[0, 0], [1, 0]].
+
+```text
+    σ_+ σ_-  =  [[0, 1], [0, 0]] · [[0, 0], [1, 0]]  =  [[1, 0], [0, 0]]    (4)
+    σ_- σ_+  =  [[0, 0], [1, 0]] · [[0, 1], [0, 0]]  =  [[0, 0], [0, 1]]    (5)
+```
+
+Hence σ_+ σ_- + σ_- σ_+ = I_2 — establishing {a, a^†} = I.
+
+Nilpotency: σ_+² = 0 and σ_-² = 0 (direct computation on 2x2). Hence
+{a, a} = 2 a² = 0 and {a^†, a^†} = 2 (a^†)² = 0 — establishing (I1).
+
+### Step 3 — Per-site number operator (I2)
+
+n̂ = a^† a = σ_- σ_+ = [[0, 0], [0, 1]] from (5). This is diag(0, 1)
+with eigenvectors |0⟩ (eigenvalue 0) and |1⟩ (eigenvalue 1) —
+establishing (I2).
+
+### Step 4 — Multi-site commutativity (I3)
+
+On the tensor product H = ⊗_x H_x, n̂_x acts as I ⊗ ... ⊗ n̂ ⊗ ... ⊗ I
+with the n̂ factor at position x. For x ≠ y, n̂_x and n̂_y act on
+disjoint tensor factors, hence commute trivially: [n̂_x, n̂_y] = 0 —
+establishing (I3).
+
+### Step 5 — Q̂_total spectrum (I4)
+
+Since the n̂_x are mutually commuting Hermitian operators with eigenvalues
+{0, 1}, they have a joint eigenbasis labelled by binary strings
+ν = (ν_1, ..., ν_N) ∈ {0, 1}^N. The action is
+
+```text
+    n̂_x · |ν⟩  =  ν_x · |ν⟩.                                              (6)
+```
+
+Hence
+
+```text
+    Q̂_total · |ν⟩  =  (Σ_x ν_x) · |ν⟩  =  |ν| · |ν⟩,                      (7)
+```
+
+where |ν| = Σ_x ν_x is the Hamming weight of ν. As ν ranges over
+{0, 1}^N, |ν| takes every integer value in {0, 1, ..., N} —
+establishing (I4).
+
+### Step 6 — Multiplicity (I5)
+
+The number of binary strings of length N with exactly k ones is the
+binomial coefficient C(N, k) = N! / (k! (N-k)!). Therefore the
+eigenvalue k of Q̂_total has multiplicity C(N, k) — establishing (I5).
+
+### Step 7 — Equivalent formula via σ_3 (I6)
+
+In the chosen basis, σ_3 = diag(1, -1) and n̂ = diag(0, 1) = (I - σ_3)/2.
+Therefore on each site:
+
+```text
+    n̂_x  =  (I_2 - σ_{3, x}) / 2.                                          (8)
+```
+
+Summing over sites:
+
+```text
+    Q̂_total  =  Σ_x (I_2 - σ_{3, x}) / 2  =  (N/2) · I_{tot}  -  (1/2) Σ_x σ_{3, x},  (9)
+```
+
+where I_{tot} is the identity on the full Fock space — establishing (I6). ∎
+
+## Hypothesis set used
+
+- `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` (retained):
+  provides per-site Pauli C² Hilbert.
+- Single-mode fermion creation/annihilation construction (definitional).
+- Tensor product Fock space construction (definitional).
+- Binomial coefficient counting (combinatorial).
+
+No fitted parameters. No observed values. No physics conventions admitted
+beyond the retained per-site uniqueness theorem.
+
+## Corollaries
+
+C1. **Charge quantization on framework Fock space.** Every framework state
+has an integer-valued total charge in {0, 1, ..., N_sites}. There is no
+state with fractional Q or continuous Q. This establishes "charge is an
+integer" at the kinematic Fock-space level, before any dynamical
+considerations.
+
+C2. **Vacuum Q = 0.** The empty state |0...0⟩ ∈ H has Q̂_total = 0. This
+is the unique state with Q = 0 (multiplicity C(N, 0) = 1).
+
+C3. **Maximally-occupied Q = N.** The fully-occupied state |1...1⟩ ∈ H has
+Q̂_total = N. Unique by C(N, N) = 1.
+
+C4. **Q-sector decomposition.** The framework Fock space splits as
+
+```text
+    H  =  ⊕_{k=0}^{N} H_k,    dim H_k = C(N, k)
+```
+
+into Q-eigenspaces. By [H, Q̂_total] = 0 (R3 Block 01, also from N2 of
+retained Noether), the Hamiltonian H is block-diagonal in this
+decomposition: each H_k is invariant under H. Particle/hole excitations
+move within a fixed-Q sector.
+
+C5. **Z_2 fermion parity is the Q-mod-2 grading.** The fermion-parity
+operator (-1)^{Q̂_total} = (-1)^k on H_k splits H = H_even ⊕ H_odd,
+with dim H_even = dim H_odd = 2^{N-1} (each is a sum of binomials of
+even / odd parities, exactly half the total Fock space).
+
+C6. **Half-filling is the symmetry-protected sector.** The k = N/2
+sector (when N is even) has the largest dimension C(N, N/2) ≈ 2^N / √N
+and is the natural target of half-filling QCD-like physics on the
+framework. The σ_3 formula (I6) shows that half-filling corresponds to
+zero total z-spin, ⟨Σ σ_3⟩ = 0.
+
+## Honest status
+
+Positive theorem on the framework's per-site charge operator and the
+total charge spectrum on the N-site Fock space, derived from a single
+retained one-hop dependency by elementary fermion algebra and combinatorial
+counting. The runner exhibits per-site CCR ({a, a^†} = I, Grassmann
+nilpotency), per-site n̂ eigenvalues, multi-site commutativity, total
+spectrum {0, ..., N}, binomial multiplicities, and the equivalent σ_3
+formula — all at machine precision.
+
+```yaml
+claim_type_author_hint: positive_theorem
+claim_scope: "Per-site n̂_x has eigenvalues {0, 1}; Q̂_total = Σ n̂_x has integer spectrum {0, 1, ..., N} with binomial multiplicities C(N, k)."
+upstream_dependencies:
+  - axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29 (retained)
+admitted_context_inputs:
+  - single-mode fermion creation/annihilation (definitional)
+  - tensor product Fock space (definitional)
+  - binomial coefficient counting (combinatorial)
+```
