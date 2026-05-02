@@ -1,12 +1,19 @@
 {
-  "actual_current_surface_status": "bounded-support / FH-LSZ chunk002 production checkpoint seed-invalid diagnostic",
+  "actual_current_surface_status": "bounded-support / FH-LSZ chunk002 seed-controlled production checkpoint",
   "chunk_artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk002/L12xT24/ensemble_measurement.json",
   "chunk_output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
   "chunk_summary": {
     "combiner_expected_chunks": 63,
-    "combiner_present_chunks": 2,
-    "combiner_ready_chunks": 1,
-    "ensemble_rng_seed_control": null,
+    "combiner_present_chunks": 4,
+    "combiner_ready_chunks": 4,
+    "ensemble_rng_seed_control": {
+      "base_seed": 2026051002,
+      "gauge_rng_seed": 2038271262,
+      "numba_gauge_seeded_before_thermalization": true,
+      "scalar_rng_seed": 2038271262,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "volume_rng_seed": 2038271262
+    },
     "measurement_sweeps": 16,
     "mode_keys": [
       "0,0,0",
@@ -44,18 +51,18 @@
     ],
     "scalar_two_point_noises": 16,
     "seed": 2026051002,
-    "seed_control_version": null,
-    "seed_independence_valid": false,
-    "slope_dE_ds_lat": 1.40789992627276,
-    "slope_dE_ds_lat_err": 24.56267704393537,
+    "seed_control_version": "numba_gauge_seed_v1",
+    "seed_independence_valid": true,
+    "slope_dE_ds_lat": 6.629960999250584,
+    "slope_dE_ds_lat_err": 13.3339880038919,
     "volumes": "12x24"
   },
   "combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
-  "exact_next_action": "Rerun a replacement chunk002 under numba_gauge_seed_v1 before counting it toward L12 combination.",
+  "exact_next_action": "Continue seed-controlled chunk003+ processing and collect the remaining L12 chunks before any L12 combination.",
   "fail_count": 0,
   "pass_count": 11,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "Historical chunk002 lacks auditable numba gauge seed control; no combined L12, L16/L24, pole derivative, model-class, or FV/IR certificate exists.",
+  "proposal_allowed_reason": "Only a partial L12 chunk set is ready; no combined L12, L16/L24, pole derivative, model-class, FV/IR, or Higgs-identity certificate exists.",
   "strict_non_claims": [
     "does not use chunk002 as retained evidence",
     "does not count historical chunk002 as independent production evidence",
@@ -63,5 +70,5 @@
     "does not use H_unit, Ward authority, observed target values, alpha_LM, plaquette, or u0 as proof input",
     "does not treat partial L12 output as L16/L24 or pole-fit evidence"
   ],
-  "verdict": "Historical L12_T24 chunk002 completed with production-phase metadata, same-source dE/ds response, and same-source scalar C_ss(q) rows for the four-mode/x16 plan.  It is not independent production evidence on the current surface because it lacks the numba_gauge_seed_v1 seed-control marker.  This is a seed-invalid production-format diagnostic only."
+  "verdict": "Replacement L12_T24 chunk002 completed with production-phase metadata, same-source dE/ds response, same-source scalar C_ss(q) rows for the four-mode/x16 plan, and numba_gauge_seed_v1 seed control.  The combiner counts it as ready, but this remains partial L12 support only."
 }

@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## FH/LSZ ready chunk-set support is not closure
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Chunks001-004 are seed-controlled and combiner-ready, giving `4/63` of the
+planned L12 set.  This retires the immediate seed-invalid chunk002 blocker for
+the replacement output, but it does not close PR #230.  The remaining blockers
+are the absent combined L12 ensemble, L16/L24 scaling, scalar-pole derivative,
+model-class or pole-saturation control, FV/IR/zero-mode control, and the
+canonical-Higgs identity.
+
 ## Same-source pole residue is not automatically the canonical Higgs radial mode
 
 Closed by

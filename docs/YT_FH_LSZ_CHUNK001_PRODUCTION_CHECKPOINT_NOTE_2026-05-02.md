@@ -19,20 +19,18 @@ command.  It emits:
 After rerunning the combiner gate, the current chunk set is:
 
 ```text
-present_chunks = 2
-ready_chunks = 1
+present_chunks = 4
+ready_chunks = 4
 expected_chunks = 63
 ```
 
-Chunk001 is the single ready seed-controlled chunk.  Chunk002 remains the
-historical seed-invalid diagnostic until its replacement run completes.  The
-combined L12 output is still unavailable because only `1/63` required L12
-chunks are ready.
+Chunks001-004 are seed-controlled and ready.  The combined L12 output is still
+unavailable because only `4/63` required L12 chunks are ready.
 
 ## Claim Boundary
 
 This is bounded production support only.  It is not retained or
-proposed-retained closure because one ready chunk is not a combined L12
+proposed-retained closure because four ready chunks are not a combined L12
 ensemble, and PR #230 still needs the remaining L12 chunks, L16/L24 scaling,
 richer pole-fit kinematics/model-class control, FV/IR/zero-mode control, and
 retained proposal certification.

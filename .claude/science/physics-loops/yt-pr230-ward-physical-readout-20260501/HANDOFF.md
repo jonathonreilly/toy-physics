@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 ready chunk-set production support:
+
+- Seed-controlled FH/LSZ chunks002 and 003 completed in the current Codex
+  sessions, and chunk004 output was present on disk.  Rerunning the combiner
+  now reports `present_chunks=4`, `ready_chunks=4`, `expected_chunks=63`.
+- Updated chunk001/chunk002 checkpoint outputs and added
+  `scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py`,
+  `docs/YT_FH_LSZ_READY_CHUNK_SET_CHECKPOINT_NOTE_2026-05-02.md`, and
+  `outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json`.
+- The ready set is bounded support only: no combined L12 output, L16/L24
+  scaling, isolated scalar-pole derivative, model-class/pole-saturation,
+  FV/IR/zero-mode, or canonical-Higgs identity certificate exists.
+
+Next exact action: continue toward positive closure.  Either launch/process
+additional seed-controlled L12 chunks if compute budget permits, or pivot to a
+fresh analytic canonical-Higgs/source-pole identity or same-source W/Z response
+route.  Do not stop at the 4/63 support checkpoint and do not claim retained or
+proposed-retained status from it.
+
 Latest checkpoint, 2026-05-02 chunk002 checkpoint runner:
 
 - Updated `scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py` and

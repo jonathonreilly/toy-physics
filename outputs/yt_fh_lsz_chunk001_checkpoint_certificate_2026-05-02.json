@@ -4,8 +4,8 @@
   "chunk_output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
   "chunk_summary": {
     "combiner_expected_chunks": 63,
-    "combiner_present_chunks": 2,
-    "combiner_ready_chunks": 1,
+    "combiner_present_chunks": 4,
+    "combiner_ready_chunks": 4,
     "ensemble_rng_seed_control": {
       "base_seed": 2026051001,
       "gauge_rng_seed": 2038271261,

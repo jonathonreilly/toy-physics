@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-109-chunk002-checkpoint-runner-replacement-ready
-blocks_completed: 109
-active_route: "FH/LSZ chunk002 checkpoint runner replacement-ready support"
-active_hard_residual: "Historical chunk002 remains seed-invalid while replacement chunk002 and chunk003 are running; the checkpoint runner now correctly handles the current 1/63 ready combiner state and future seed-controlled chunk002 output."
+current_phase: campaign-rerun-block-110-ready-chunk-set-production-checkpoint
+blocks_completed: 110
+active_route: "FH/LSZ ready chunk-set production support"
+active_hard_residual: "Chunks001-004 are now seed-controlled and combiner-ready, but the set is only 4/63 of L12 and still lacks combined L12, L16/L24, pole-derivative, model-class, FV/IR, and canonical-Higgs identity closure."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -535,6 +535,7 @@ claim_state_movement:
   - "proved a same-source sector-overlap identity obstruction: a common source coordinate cancels common rescaling, but the gauge-normalized response ratio reads y_t times k_top/k_gauge unless the top and gauge overlaps with the canonical Higgs radial mode are derived equal or directly measured"
   - "proved a source-pole canonical-Higgs mixing obstruction: a same-source FH/LSZ pole readout can remain fixed while the canonical Higgs overlap cos(theta) varies, so physical y_t is not identified until the source pole is proved to be the canonical Higgs radial mode"
   - "updated the chunk002 checkpoint runner to handle both the current seed-invalid diagnostic and a future numba_gauge_seed_v1 replacement; current output now records 1/63 ready chunks with historical chunk002 still demoted"
+  - "processed seed-controlled FH/LSZ chunks002-004 and reran the combiner: chunks001-004 are ready, the set is 4/63 L12 chunks, and the ready chunk-set checkpoint remains bounded production support only"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -543,5 +544,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll seed-controlled replacement chunk002 session 74882 and chunk003 session 30296; if a replacement chunk completes, rerun the chunk combiner and add/update the chunk checkpoint as seed-controlled, then rerun retained/campaign gates. If both are still running, continue the canonical-Higgs source identity, source-pole mixing exclusion, or genuine same-source W/Z response route without claiming closure."
+next_exact_action: "Continue toward positive closure: either launch/process further seed-controlled L12 chunks if compute budget permits, or pivot to the higher-probability analytic canonical-Higgs/source-pole identity or same-source W/Z response route. Do not claim retained/proposed-retained from the current 4/63 chunk set."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

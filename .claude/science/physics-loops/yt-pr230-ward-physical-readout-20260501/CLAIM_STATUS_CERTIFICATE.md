@@ -39,6 +39,7 @@ plus FH/LSZ chunked production manifest
 plus same-source sector-overlap identity obstruction
 plus source-pole canonical-Higgs mixing obstruction
 plus chunk002 checkpoint replacement-ready support
+plus ready chunk-set production checkpoint
 **PR:** #230 draft branch
 
 ```yaml
@@ -51,6 +52,23 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+FH/LSZ ready chunk-set production checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ ready chunk-set production checkpoint
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Chunks001-004 are seed-controlled and combiner-ready (`4/63` L12 chunks).
+This is useful production support but not retained or proposed-retained
+closure.  The missing gates remain combined L12, L16/L24 scaling, pole
+derivative/model-class or pole-saturation control, FV/IR/zero-mode control,
+and canonical-Higgs source-pole identity.
 
 Allowed wording:
 

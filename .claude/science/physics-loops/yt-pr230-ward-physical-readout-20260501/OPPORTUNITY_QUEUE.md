@@ -8,6 +8,14 @@ because it has concrete harness support, but it must not displace the requested
 LSZ/physical-response attack unless route refresh shows higher closure
 probability.
 
+2026-05-02 update: seed-controlled FH/LSZ chunks001-004 are ready (`4/63`
+of L12).  This makes further chunk collection a concrete production-support
+route, but it remains low closure probability in the current foreground window:
+even complete L12 would still need L16/L24, pole-derivative/model-class,
+FV/IR/zero-mode, and canonical-Higgs identity gates.  Highest retained-positive
+probability remains a true canonical-Higgs/source-pole identity theorem or a
+same-source W/Z response measurement that closes the sector-overlap premise.
+
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
    Current-scale relativistic production is not enough because `am_top =

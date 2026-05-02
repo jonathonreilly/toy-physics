@@ -91,6 +91,9 @@ def main() -> int:
         "fh_lsz_chunk_combiner_gate": load("outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"),
         "fh_lsz_chunk001_checkpoint": load("outputs/yt_fh_lsz_chunk001_checkpoint_certificate_2026-05-02.json"),
         "fh_lsz_chunk002_checkpoint": load("outputs/yt_fh_lsz_chunk002_checkpoint_certificate_2026-05-02.json"),
+        "fh_lsz_ready_chunk_set_checkpoint": load(
+            "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_kinematics": load("outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"),
         "fh_lsz_pole_fit_postprocessor": load("outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json"),
         "fh_lsz_finite_shell_identifiability": load(
@@ -397,8 +400,14 @@ def main() -> int:
     )
     report(
         "fh-lsz-chunk002-checkpoint-not-closure",
-        "chunk002 production checkpoint" in str(statuses["fh_lsz_chunk002_checkpoint"]),
+        "chunk002" in str(statuses["fh_lsz_chunk002_checkpoint"])
+        and "production checkpoint" in str(statuses["fh_lsz_chunk002_checkpoint"]),
         statuses["fh_lsz_chunk002_checkpoint"],
+    )
+    report(
+        "fh-lsz-ready-chunk-set-checkpoint-not-closure",
+        "ready chunk-set production checkpoint" in str(statuses["fh_lsz_ready_chunk_set_checkpoint"]),
+        statuses["fh_lsz_ready_chunk_set_checkpoint"],
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",

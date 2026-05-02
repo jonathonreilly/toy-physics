@@ -2481,3 +2481,31 @@ Replacement chunk001 is now seed-controlled and combiner-ready, but it is only
 `1/63` of L12.  The combined L12, L16/L24, pole derivative, model-class,
 FV/IR, and canonical-Higgs identity gates remain open.  No retained/
 proposed-retained wording is authorized.
+
+## Review-Loop Backpressure - FH/LSZ Ready Chunk-Set 001-004
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / PARTIAL L12 ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+Chunks001-004 are seed-controlled and combiner-ready, but this is only `4/63`
+of L12 and still lacks combined L12, L16/L24, pole derivative, model-class,
+FV/IR, and canonical-Higgs identity gates.  No retained/proposed-retained
+wording is authorized.
