@@ -1,0 +1,34 @@
+slug: 24h-axiom-first-derivations-20260501
+mode: campaign
+runtime_budget: 24h
+target: best-honest-status
+checkpoint_interval: 30m
+deep_block: 90m
+goal: "NEW first-principles derivations from A_min + retained axiom-first foundations"
+date_started: 2026-05-01
+current_cycle: 7
+current_block: 07
+active_route: reeh-schlieder-cyclicity
+hard_residual: null
+files_touched_this_branch:
+  - docs/AXIOM_FIRST_REEH_SCHLIEDER_THEOREM_NOTE_2026-05-01.md
+  - scripts/axiom_first_reeh_schlieder_check.py
+  - outputs/axiom_first_reeh_schlieder_check_2026-05-01.txt
+  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/*
+open_imports:
+  - Edge-of-the-wedge / Schwarz reflection (admitted-context, basic complex analysis)
+no_go_routes: []
+review_findings:
+  - "Block 07 F1: all 4 runner tests PASS first run"
+  - "Block 07 F2: rank of time-translated A(O)|Ω⟩ = 64 = full dim H_phys"
+  - "Block 07 F3: equal-time A(O) alone has rank < 64 (correct: local alone too small)"
+pr_status:
+  - "Block 01: PR #257 open"
+  - "Block 02: PR #259 open (stacked on #257)"
+  - "Block 03: PR #261 open"
+  - "Block 04: PR #263 open"
+  - "Block 05: PR #265 open (stacked on #259)"
+  - "Block 06: PR #266 open (stacked on #257)"
+  - "Block 07: branch ready, PR pending"
+next_exact_action: "Commit and push block07 branch, open PR; pivot to Block 08 Unruh on branch stacked on Block 01 KMS"
+stop_condition: null
