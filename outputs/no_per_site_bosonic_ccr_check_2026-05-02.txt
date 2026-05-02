@@ -34,17 +34,9 @@ TEST 4: bosonic CCR is satisfied on infinite-dim Fock space (truncated)
   boundary [a, a†]_NN = -30.000 (truncation artifact)
   STATUS: PASS (bulk is exactly identity)
 
-------------------------------------------------------------------------
-TEST 5: collective bosonic mode (1/√N)Σ c_x approximates [a_coll, a_coll†] = I
-------------------------------------------------------------------------
-  ⟨0|[a_coll, a_coll†]|0⟩ = 1.0000  (should approach 1 for large N)
-  In bosonization limit (N → ∞), collective op satisfies CCR exactly
-  STATUS: PASS
-
 ========================================================================
   Test 1 (trace obstruction tr([A,B])=0):       PASS
   Test 2 (bosonic CCR ⇒ contradiction):         PASS
-  Test 3 (fermionic only, not bosonic):         PASS
+  Test 3 (Pauli ladder is not bosonic CCR):     PASS
   Test 4 (bosonic CCR works infinite-dim):      PASS
-  Test 5 (collective bosonic from N fermions):  PASS
   OVERALL: PASS

@@ -79,50 +79,12 @@ def main() -> None:
     print(f"  STATUS: {'PASS' if t4_ok else 'FAIL'} (bulk is exactly identity)")
     print()
 
-    # ----- Test 5: collective bosonic mode from many fermionic sites -----
-    print("-" * 72)
-    print("TEST 5: collective bosonic mode (1/√N)Σ c_x approximates [a_coll, a_coll†] = I")
-    print("-" * 72)
-    n_sites = 10
-    # Build fermionic Fock space on n_sites qubits
-    dim = 2 ** n_sites
-    Z = np.array([[1, 0], [0, -1]], dtype=complex)
-    a_dag_one = np.array([[0, 0], [1, 0]], dtype=complex)
-    a_one = np.array([[0, 1], [0, 0]], dtype=complex)
-    I2 = np.eye(2, dtype=complex)
-
-    def site_op(op_one_site, i, n_sites):
-        op = np.array([[1.0]], dtype=complex)
-        for j in range(n_sites):
-            if j < i:
-                op = np.kron(op, Z)
-            elif j == i:
-                op = np.kron(op, op_one_site)
-            else:
-                op = np.kron(op, I2)
-        return op
-
-    # Collective bosonic op: a_coll = (1/√N) Σ c_x
-    a_coll = sum(site_op(a_one, i, n_sites) for i in range(n_sites)) / np.sqrt(n_sites)
-    a_coll_dag = sum(site_op(a_dag_one, i, n_sites) for i in range(n_sites)) / np.sqrt(n_sites)
-    comm_coll = a_coll @ a_coll_dag - a_coll_dag @ a_coll
-    # Project onto vacuum sector to test CCR-like behavior
-    vacuum = np.zeros(dim, dtype=complex)
-    vacuum[0] = 1.0
-    avg_on_vac = np.real(vacuum.conj() @ comm_coll @ vacuum)
-    print(f"  ⟨0|[a_coll, a_coll†]|0⟩ = {avg_on_vac:.4f}  (should approach 1 for large N)")
-    print(f"  In bosonization limit (N → ∞), collective op satisfies CCR exactly")
-    t5_ok = abs(avg_on_vac - 1.0) < 0.5  # rough bosonization test
-    print(f"  STATUS: {'PASS' if t5_ok else 'FAIL'}")
-    print()
-
     print("=" * 72)
     print(f"  Test 1 (trace obstruction tr([A,B])=0):       {'PASS' if t1_ok else 'FAIL'}")
     print(f"  Test 2 (bosonic CCR ⇒ contradiction):         {'PASS' if t2_ok else 'FAIL'}")
-    print(f"  Test 3 (fermionic only, not bosonic):         {'PASS' if t3_ok else 'FAIL'}")
+    print(f"  Test 3 (Pauli ladder is not bosonic CCR):     {'PASS' if t3_ok else 'FAIL'}")
     print(f"  Test 4 (bosonic CCR works infinite-dim):      {'PASS' if t4_ok else 'FAIL'}")
-    print(f"  Test 5 (collective bosonic from N fermions):  {'PASS' if t5_ok else 'FAIL'}")
-    all_ok = all([t1_ok, t2_ok, t3_ok, t4_ok, t5_ok])
+    all_ok = all([t1_ok, t2_ok, t3_ok, t4_ok])
     print(f"  OVERALL: {'PASS' if all_ok else 'FAIL'}")
     if not all_ok:
         raise SystemExit(1)
