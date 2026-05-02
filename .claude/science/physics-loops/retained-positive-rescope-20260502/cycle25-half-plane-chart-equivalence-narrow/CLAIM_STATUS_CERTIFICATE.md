@@ -3,7 +3,7 @@
 **Block:** physics-loop/half-plane-chart-equivalence-narrow-block25-20260502
 **Note:** docs/HALF_PLANE_CHART_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md
 **Runner:** scripts/frontier_half_plane_chart_equivalence_narrow.py (PASS=14/0)
-**Parent row carved from:** dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16 (claim_type=positive_theorem, audit_status=audited_conditional, td=131, load_bearing_step_class=A)
+**Parent row carved from:** dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16 (claim_type=positive_theorem, load_bearing_step_class=A)
 
 ## Block type
 
@@ -25,7 +25,7 @@ source-surface upstream is consumed.
 ## Claim-Type Certificate
 
 ```yaml
-target_claim_type: positive_theorem
+proposed_claim_type: positive_theorem
 proposed_claim_scope: |
   Pure algebraic / inverse-chart equivalence: the parametric map
   f(delta, r) = (delta, c - delta + sqrt(r^2 - 1/4)) on r >= 1/2
@@ -34,18 +34,18 @@ proposed_claim_scope: |
   framework instance c = sqrt(8/3) is one concrete case; the
   implication holds for any c > 0.
 proposed_load_bearing_step_class: A
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+status_authority: independent_audit_lane
+source_sets_audit_outcome: false
 ```
 
 ## 7-criteria check
 
 | # | Criterion | Pass? |
 |---|---|---|
-| 1 | target_claim_type named | YES (`positive_theorem`) |
+| 1 | proposed_claim_type named | YES (`positive_theorem`) |
 | 2 | No open imports for the claimed target | YES (zero ledger deps; `c > 0` is a hypothesis, not a ledger import) |
 | 3 | No load-bearing observed/fitted/admitted | YES (purely two-variable real algebra; no PDG / literature / fitted / admitted-convention input) |
-| 4 | Every dep retained-grade | YES (vacuously — zero deps) |
+| 4 | Every dep accounted for | YES (vacuously — zero deps) |
 | 5 | Runner verifies the algebraic identity at exact precision | YES (sympy symbolic image inclusion; symbolic `g compose f = id`; symbolic `f compose g = id` on H_c; boundary correspondence; monotonicity; three concrete rational instances; framework instance `c = sqrt(8/3)`) |
 | 6 | Review-loop disposition | proposed pass as audit-pending narrow theorem; independent audit pending |
 | 7 | PR body says independent audit required | YES |
@@ -85,7 +85,7 @@ source-surface authority because it has zero ledger dependencies.
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 ## Audit-graph effect

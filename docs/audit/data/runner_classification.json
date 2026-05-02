@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T18:41:51.756128+00:00",
+  "generated_at": "2026-05-02T18:45:36.659630+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -7044,6 +7044,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_hadron_lane1_sqrt_sigma_b5_ladder_budget.py"
+    },
+    "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_half_plane_chart_equivalence_narrow.py"
     },
     "hard_geometry_gravity_window_note": {
       "assert_count": 0,
@@ -24310,6 +24322,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_half_plane_chart_equivalence_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_bosonic_bilinear_selector.py": {
       "assert_count": 0,
       "claims": [
@@ -35648,11 +35675,11 @@
       "A": 9,
       "B": 153,
       "C": 509,
-      "D": 197,
+      "D": 198,
       "none": 410
     },
-    "runners_classified": 1278,
+    "runners_classified": 1279,
     "runners_with_C": 611,
-    "runners_with_D": 311
+    "runners_with_D": 312
   }
 }

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 33,
     "high": 231,
-    "leaf": 156,
+    "leaf": 157,
     "medium": 170
   },
-  "generated_at": "2026-05-02T18:41:52.337461+00:00",
+  "generated_at": "2026-05-02T18:45:37.295006+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -11939,6 +11939,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/HALF_PLANE_CHART_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_half_plane_chart_equivalence_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15514,6 +15535,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 113,
-  "total_pending": 590
+  "ready_count": 114,
+  "total_pending": 591
 }

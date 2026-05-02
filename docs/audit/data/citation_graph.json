@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:41:47.502747+00:00",
+  "generated_at": "2026-05-02T18:45:33.237630+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29759,6 +29759,17 @@
       "path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
       "runner_path": null,
       "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap"
+    },
+    "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02": {
+      "claim_id": "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "547ff7393d0e348616ca5b4527205841189ccf147a47ad7d31bb79d1695dc645",
+      "path": "docs/HALF_PLANE_CHART_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_half_plane_chart_equivalence_narrow.py",
+      "title": "Half-Plane Chart Equivalence Narrow Theorem"
     },
     "hard_geometry_gravity_window_note": {
       "claim_id": "hard_geometry_gravity_window_note",
@@ -45658,6 +45669,7 @@
     "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30",
     "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
     "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+    "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02",
     "hard_geometry_gravity_window_note",
     "hard_geometry_head_to_head_note",
     "hard_geometry_local_note",
@@ -46358,7 +46370,7 @@
       "bounded_theorem": 9,
       "meta": 1,
       "none": 1752,
-      "positive_theorem": 21
+      "positive_theorem": 22
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 509,
@@ -46366,12 +46378,12 @@
       "no_go": 106,
       "none": 443,
       "open_gate": 110,
-      "positive_theorem": 614
+      "positive_theorem": 615
     },
     "edge_count": 4990,
-    "leaf_count": 753,
-    "node_count": 1783,
-    "root_count": 1214,
-    "runners_with_path": 1350
+    "leaf_count": 754,
+    "node_count": 1784,
+    "root_count": 1215,
+    "runners_with_path": 1351
   }
 }

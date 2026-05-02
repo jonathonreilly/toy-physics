@@ -27,8 +27,8 @@ implication holds for any positive constant c.
 Companion role: this is a Pattern A new narrow claim row carving out the
 load-bearing class-(A) algebraic core of
 `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16`
-(claim_type=positive_theorem, audit_status=audited_conditional, td=131,
-load_bearing_step_class=A). The parent's load-bearing identity is the
+(claim_type=positive_theorem, load_bearing_step_class=A). The parent's
+load-bearing identity is the
 half-plane equivalence above; this narrow theorem isolates that identity
 from the five upstream DM-neutrino source-surface theorems by
 parametrizing over the abstract constant c.
@@ -213,7 +213,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16', {})
 print(f"\n  Parent row state on origin/main:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 print(f"    deps: {parent.get('deps')}")
