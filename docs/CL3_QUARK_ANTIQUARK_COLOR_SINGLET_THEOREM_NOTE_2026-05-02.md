@@ -28,7 +28,9 @@ This is the only load-bearing one-hop dependency.
 ## Admitted-context inputs
 
 - **SU(N) representation theory.** The Clebsch-Gordan decomposition `N ⊗ N̄ = 1 ⊕ adj` for SU(N) where adj has dimension N²-1. Standard group-theory result.
-- **Trace as singlet projector.** The identity-channel coefficient `(1/N) δ_{ij}δ_{kl}` in the Fierz identity is the projector onto the color singlet. Standard QFT.
+- **Trace as singlet projector.** The invariant tensor `δ_{ij}` selects the
+  normalized trace channel, whose rank-one projector is the color singlet.
+  Standard SU(N) representation theory.
 
 No physics conventions admitted beyond what
 `CL3_COLOR_AUTOMORPHISM_THEOREM.md` provides.
@@ -64,9 +66,10 @@ The 1 is the color singlet; the 8 is the color adjoint (octet).
     P_singlet  =  |singlet⟩⟨singlet|  =  (1/N_c)  Σ_{i,j}  |i ī⟩⟨j j̄|         (2)
 ```
 
-with `N_c = 3`. This matches the singlet-channel coefficient `1/N_c²`
-in the full Fierz completeness relation cited from
-`CL3_COLOR_AUTOMORPHISM_THEOREM.md`.
+with `N_c = 3`. This is the normalized projector onto the invariant trace
+channel selected by the Fierz completeness relation cited from
+`CL3_COLOR_AUTOMORPHISM_THEOREM.md`; no independent coefficient convention
+is imported here.
 
 (S1)–(S4) constitute the q-q̄ color singlet decomposition theorem on the
 framework's color structure.
@@ -112,16 +115,17 @@ Compute `|singlet⟩⟨singlet|`:
     P_singlet  =  (1/N_c)  Σ_{i,j} |i ī⟩⟨j j̄|                                  (6)
 ```
 
-This is the singlet-channel coefficient `(1/N_c)` of the standard Fierz
-decomposition `δ_{ij}δ_{kl} = N_c · (singlet) + ...`. The coefficient
-matches the `(1/N_c²)` singlet-channel weight in the full cited Fierz
-identity after normalizing by the trace. ∎
+This is the rank-one projector onto the invariant trace channel. It uses
+the same `δ` tensor selected by the cited Fierz completeness relation; the
+runner verifies normalization, idempotence, and rank directly rather than
+importing an additional coefficient convention. ∎
 
 ## Hypothesis set used
 
 - `cl3_color_automorphism_theorem`: provides `N_c = 3` and the Fierz identity for SU(3).
 - SU(N) tensor product rule `N ⊗ N̄ = 1 ⊕ adj` (admitted-context, standard group theory).
-- Trace as singlet projector (admitted-context, standard QFT).
+- Trace as singlet projector (admitted-context, standard SU(N)
+  representation theory).
 
 No fitted parameters. No observed values. No physics conventions admitted
 beyond `CL3_COLOR_AUTOMORPHISM_THEOREM.md`.
