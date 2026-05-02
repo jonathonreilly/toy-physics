@@ -1,0 +1,98 @@
+========================================================================
+AXIOM-FIRST FIRST LAW OF BH MECHANICS CHECK
+========================================================================
+
+Setup:
+  retained framework GR action (UNIVERSAL_GR_*)
+  retained BH 1/4 carrier composition (S_BH = A/4G)
+  Block 02 Hawking T_H = kappa/(2 pi)
+
+First law: dM = T_H dS_BH for the Schwarzschild family
+
+------------------------------------------------------------------------
+TEST 1: Schwarzschild differential dM = T_H dS_BH
+------------------------------------------------------------------------
+       M             T_H        dS_BH/dM    T_H*dS_BH/dM    should=1
+  ------  --------------  --------------  --------------  ----------
+    0.50    7.957747e-02    1.256637e+01    1.000000e+00  diff=2.17e-11
+    1.00    3.978874e-02    2.513274e+01    1.000000e+00  diff=4.02e-12
+    2.00    1.989437e-02    5.026548e+01    1.000000e+00  diff=6.67e-11
+    5.00    7.957747e-03    1.256637e+02    1.000000e+00  diff=2.22e-10
+   10.00    3.978874e-03    2.513274e+02    1.000000e+00  diff=6.83e-10
+
+  max | T_H dS_BH/dM - 1 | = 6.825e-10
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: Smarr formula M = 2 T_H S_BH (Schwarzschild)
+------------------------------------------------------------------------
+       M             T_H            S_BH      2 T_H S_BH               M
+    0.50    7.957747e-02    3.141593e+00    5.000000e-01    5.000000e-01
+    1.00    3.978874e-02    1.256637e+01    1.000000e+00    1.000000e+00
+    2.00    1.989437e-02    5.026548e+01    2.000000e+00    2.000000e+00
+    5.00    7.957747e-03    3.141593e+02    5.000000e+00    5.000000e+00
+   10.00    3.978874e-03    1.256637e+03    1.000000e+01    1.000000e+01
+
+  max | 2 T_H S_BH - M | = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: explicit symbolic check dM = dM (proof equation 6)
+------------------------------------------------------------------------
+Substitute T_H = 1/(8 pi G M), S_BH = 4 pi G M^2:
+  T_H dS_BH = (1/8 pi G M) * d(4 pi G M^2)
+            = (1/8 pi G M) * 8 pi G M dM
+            = dM   ✓
+
+  T_H * 8 pi G M at M = 2.5: 1.0000000000
+  expected 1.0, diff = 1.110e-16
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: negative specific heat dT_H/dM < 0 (Schwarzschild)
+------------------------------------------------------------------------
+       M             T_H         dT_H/dM    sign
+    0.50    7.957747e-02   -1.591549e-01      <0
+    1.00    3.978874e-02   -3.978874e-02      <0
+    2.00    1.989437e-02   -9.947184e-03      <0
+    5.00    7.957747e-03   -1.591549e-03      <0
+   10.00    3.978874e-03   -3.978874e-04      <0
+
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: integrated first law M(M_2) - M(M_1) = integral T_H dS_BH
+------------------------------------------------------------------------
+  M_1 = 1.0, M_2 = 5.0
+  M_2 - M_1 = 4.0
+  integral T_H dS_BH from M_1 to M_2 = 4.0000000000
+  | integral - (M_2 - M_1) | = 2.665e-15
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 6: Smarr-derivative consistency: d(2 T_H S_BH)/dM = 1
+------------------------------------------------------------------------
+  M = 1.0: d(2 T_H S_BH)/dM = 1.0000000000, expected 1
+  M = 2.0: d(2 T_H S_BH)/dM = 1.0000000004, expected 1
+  M = 5.0: d(2 T_H S_BH)/dM = 1.0000000001, expected 1
+
+  max diff = 3.618e-10
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (dM = T_H dS_BH for Schwarzschild):              PASS
+  Test 2 (Smarr formula M = 2 T_H S_BH):                  PASS
+  Test 3 (explicit identity dM = dM):                     PASS
+  Test 4 (negative specific heat dT_H/dM < 0):            PASS
+  Test 5 (integral form over (M_1, M_2)):                 PASS
+  Test 6 (Smarr derivative consistency):                  PASS
+
+  OVERALL: PASS
+
+Note: the proof in the companion theorem note follows Bardeen-Carter-
+Hawking 1973 plus the Wald-Noether identity (admitted, same as upstream
+BH 1/4 carrier composition). The runner verifies the Schwarzschild
+specialization at machine precision; Kerr-Newman extensions are
+recorded as corollaries (not numerically checked here).
