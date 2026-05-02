@@ -2737,6 +2737,10 @@
       "to": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
     },
     {
+      "from": "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
       "from": "cl3_sm_embedding_master_note",
       "to": "cl3_sm_embedding_theorem"
     },
@@ -19981,7 +19985,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:05:05.321343+00:00",
+  "generated_at": "2026-05-02T20:14:52.149619+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23875,6 +23879,19 @@
       "path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation"
+    },
+    "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02": {
+      "claim_id": "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "note_hash": "2340409c32410bf80410bf2af414d0b27f9b60c563d88037475951a0188ea050",
+      "path": "docs/CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cl3_quark_antiquark_color_singlet_check.py",
+      "title": "Quark-Antiquark State Contains Exactly One Color Singlet"
     },
     "cl3_sm_embedding_master_note": {
       "claim_id": "cl3_sm_embedding_master_note",
@@ -46479,7 +46496,7 @@
       "bounded_theorem": 11,
       "meta": 1,
       "none": 1747,
-      "positive_theorem": 32
+      "positive_theorem": 33
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
@@ -46487,12 +46504,12 @@
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 624
+      "positive_theorem": 625
     },
-    "edge_count": 4995,
-    "leaf_count": 758,
-    "node_count": 1791,
+    "edge_count": 4996,
+    "leaf_count": 759,
+    "node_count": 1792,
     "root_count": 1216,
-    "runners_with_path": 1359
+    "runners_with_path": 1360
   }
 }
