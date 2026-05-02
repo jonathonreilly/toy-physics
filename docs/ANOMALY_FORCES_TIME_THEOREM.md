@@ -1,6 +1,42 @@
 # Anomaly Cancellation Forces 3+1 Spacetime
 
-## Theorem (Anomaly-forced time, single-clock form)
+**Date:** 2026-04-24 (scope tightened 2026-05-02)
+**Type:** bounded_theorem (proposed; audit-lane to ratify; current ledger
+verdict is `audited_conditional` on `positive_theorem`, this edit narrows
+source-note prose to a `bounded_theorem` claim conditional on four
+explicitly-named external bridge admissions)
+**Claim scope:** conditional 3+1 derivation under four explicitly-named
+external admissions:
+  (i) the standard Adler--Bell--Jackiw anomaly-to-inconsistency
+  implication for chiral gauge theories with the exact gauge content
+  `su(2) + su(3) + u(1)` and left-handed content
+  `(2,3)_{+1/3} + (2,1)_{-1}`;
+  (ii) the framework-specific structural admission that anomaly
+  cancellation in this Cl(3)/Z^3 setting is realized by an opposite-
+  chirality SU(2)-singlet right-handed completion (rather than a
+  different anomaly-free extension);
+  (iii) the framework-specific structural admission that the only
+  chirality grading available in this lattice formulation is the
+  Clifford volume-element chirality;
+  (iv) the standard ultrahyperbolic / multi-time Cauchy-problem
+  obstruction for codimension-1 well-posedness when `d_t > 1`
+  (Craig--Weinstein 2009, Tegmark 1997).
+Under these four admissions, spacetime signature `(3,1)` is forced.
+**Load-bearing class:** B (conditional bridge — the four bridge
+premises above are explicitly external, not derived from framework
+primitives in this note).
+
+## Out of scope: unconditional first-principles 3+1 derivation
+
+The unconditional / first-principles version, in which every bridge
+premise is derived from framework primitives without external
+admissions, is *not* the claim of this row. The latest fresh-context
+audit explicitly named the four external bridge premises above as
+unclosed in the current ledger; this edit accepts that boundary and
+narrows the load-bearing claim of this note to the conditional
+derivation under those four named admissions.
+
+## Theorem (Anomaly-forced time, single-clock form, conditional)
 
 Let the Cl(3) Clifford algebra acting on Z^3 produce the gauge algebra
 su(2) + su(3) + u(1) with left-handed fermion content
@@ -12,10 +48,34 @@ su(2) + su(3) + u(1) with left-handed fermion content
 1. states evolve by a single strongly continuous unitary one-parameter
    group `U(t) = exp(-itH)`,
 2. any acceptable continuum limit preserves arbitrary-state deterministic
-   evolution from one codimension-1 initial surface.
+   evolution from one codimension-1 initial surface,
+3. the four external bridge premises listed in the Claim scope above
+   (ABJ anomaly-to-inconsistency, opposite-chirality singlet completion,
+   Clifford-volume-element chirality uniqueness, ultrahyperbolic
+   codimension-1 obstruction).
 
 Then consistency of the quantum gauge theory forces exactly one temporal
 dimension, giving spacetime signature `(3,1)`.
+
+## Independent audit handoff
+
+```yaml
+proposed_claim_type: bounded_theorem
+proposed_claim_scope: |
+  Conditional derivation that Cl(3) gauge content plus the four named
+  external admissions (ABJ inconsistency, opposite-chirality singlet
+  completion, Clifford-volume chirality uniqueness, ultrahyperbolic
+  codimension-1 obstruction) force spacetime signature (3,1). NOT an
+  unconditional first-principles 3+1 derivation.
+proposed_load_bearing_step_class: B
+status_authority: independent audit lane only
+```
+
+This source note does not set or predict an audit outcome. It submits
+the conditional 3+1 derivation under the four named external
+admissions. The unconditional first-principles version (where every
+bridge premise is derived from framework primitives) remains out of
+scope for this row.
 
 ## Proof
 
@@ -109,11 +169,11 @@ Therefore:
 For d_s = 3 spatial dimensions, chirality requires d_s + d_t even,
 hence d_t must be **odd**: d_t in {1, 3, 5, ...}.
 
-### Step 4. Single-clock codimension-1 evolution excludes `d_t > 1`
+### Step 4. Single-clock codimension-1 evolution excludes `d_t > 1` (external bridge)
 
 From Step 3, chirality allows odd `d_t in {1, 3, 5, ...}`. To finish the
-derivation, one uses the framework's clock structure rather than more
-anomaly arithmetic.
+derivation, one uses the framework's clock structure together with an
+external classical PDE result.
 
 The graph framework already has one Hamiltonian clock. So any acceptable
 continuum limit must preserve:
@@ -127,13 +187,22 @@ For `d_t = 1`, relativistic fields admit the standard hyperbolic Cauchy
 problem on codimension-1 slices.
 
 For `d_t > 1`, the continuum problem is ultrahyperbolic / multi-time.
-Codimension-1 well-posedness is not available for arbitrary local data:
-one must impose extra nonlocal Fourier-space support constraints on the
-initial data. That is incompatible with the framework's graph semantics,
-which allow arbitrary local basis states on a single time slice.
+The standard classical-PDE result (Craig--Weinstein 2009 [4],
+Tegmark 1997 [5]) is that codimension-1 well-posedness is not
+available for arbitrary local data: one must impose extra nonlocal
+Fourier-space support constraints on the initial data. That is
+incompatible with the framework's graph semantics, which allow
+arbitrary local basis states on a single time slice.
 
-In that precise sense, `d_t > 1` is excluded by the single-clock /
-codimension-1 Cauchy requirement.
+**Audit boundary (external bridge premise iv):** the ultrahyperbolic
+codimension-1 obstruction is imported here from the classical-PDE
+literature ([4], [5]) as an external bridge premise. This note does
+not derive that obstruction from framework primitives. The narrowed
+claim is conditional on this external result.
+
+In that precise sense, and conditional on the literature obstruction,
+`d_t > 1` is excluded by the single-clock / codimension-1 Cauchy
+requirement.
 
 Closed timelike curves, Wick-rotation pathologies, and multi-Hamiltonian
 objections remain useful supporting remarks, but they are not the
@@ -141,22 +210,30 @@ load-bearing theorem step.
 
 ### Step 5. Conclusion
 
-Combining Steps 1--4:
+Combining Steps 1--4 *under the four external bridge admissions named in
+the Claim scope above*:
 
     Cl(3) on Z^3
       => SU(2) x SU(3) x U(1) with left-handed (2,3)_{+1/3} + (2,1)_{-1}
       => gauge anomaly (Tr[Y^3] != 0)
-      => anomaly cancellation requires right-handed SU(2) singlets
+      => [admission (i): ABJ inconsistency for chiral gauge theory]
+      => anomaly cancellation required
+      => [admission (ii): opposite-chirality SU(2)-singlet completion]
       => chirality operator gamma_5 required
+      => [admission (iii): Clifford-volume-element chirality only]
       => d_total = d_s + d_t must be even
       => d_t odd, with d_s = 3
+      => [admission (iv): ultrahyperbolic codimension-1 obstruction]
       => single-clock codimension-1 evolution excludes d_t > 1
       => d_t = 1 uniquely
-      => spacetime is 3+1 dimensional.  QED.
+      => spacetime is 3+1 dimensional.  QED (conditional).
 
-The temporal direction is not assumed; it is **derived** from the
-combination of anomaly cancellation, chirality, and single-clock
-codimension-1 evolution.
+The temporal direction is *conditionally* derived from the combination
+of anomaly cancellation, chirality, single-clock codimension-1
+evolution, and the four external bridge admissions named above. The
+unconditional / first-principles version (with every bridge premise
+re-derived from framework primitives) is *out of scope* for this
+narrowed claim and remains an open lane.
 
 ## Numerical verification
 
