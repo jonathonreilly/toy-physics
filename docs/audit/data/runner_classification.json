@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T18:59:01.304047+00:00",
+  "generated_at": "2026-05-02T19:03:34.654741+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -2292,6 +2292,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_staggered_cycle_break_slice.py"
+    },
+    "cyclic_projector_compression_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_cyclic_projector_compression_narrow.py"
     },
     "dark_energy_eos_note": {
       "assert_count": 0,
@@ -19920,6 +19932,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_cyclic_projector_compression_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "cyclic_projector_compression_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_dark_energy_eos.py": {
       "assert_count": 0,
       "claims": [
@@ -35670,15 +35697,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 104,
+    "decoration_candidates": 105,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 153,
+      "B": 154,
       "C": 509,
       "D": 198,
       "none": 410
     },
-    "runners_classified": 1279,
+    "runners_classified": 1280,
     "runners_with_C": 611,
     "runners_with_D": 312
   }
