@@ -1,83 +1,101 @@
-# Action Normalization: Self-Consistency Fixes the Coupling Coefficient
+# Action Normalization: Convention-Locked Coupling Coefficient
 
-**Status:** bounded - bounded or caveated result note
+**Status:** bounded - convention-locked support, not a c-fixing first-principles theorem
 **Script:** `scripts/frontier_action_normalization.py`
-**Date:** 2026-04-12
+**Date:** 2026-04-12 (NARROWED 2026-05-01)
 
 ## The Reviewer's Objection
 
 "You chose S = L(1-f). If you chose S = L(1-2f), you'd get a different metric.
 The coefficient is arbitrary."
 
-## Summary of the Response
+## Summary of the Response (NARROWED)
 
-The coefficient c in S = L(1 - c*f) is **not** a free parameter. It is fixed by
-the requirement that the action reproduce the observed weak-field metric.
-Specifically, only c = 1 gives the correct factor-of-2 light bending that
-distinguishes GR from Newtonian gravity.
+The coefficient `c` in `S = L(1 - c*f)` is **not** independently observable: there
+is a one-parameter rescaling degeneracy `(c, G) -> (c/a, a*G)` that leaves the
+dynamics invariant. Once one names the convention identifying the lattice scalar
+`f` with the physical Newtonian potential `Phi` and fixes the Poisson source
+normalization, `c` is determined.
 
-## The Argument (Five Steps)
+This note **does not** claim `c = 1` is fixed by a convention-free observable. The
+earlier claim that "light bending fixes c=1" was retracted on review. The PPN
+parameter gamma = 1 holds for any positive `c` once `Phi = c*f/2`, so PPN gamma
+alone does not fix `c`.
 
-### 1. Self-consistency converges for all c > 0
+## The Argument (Three Steps, Narrowed)
+
+### 1. Self-consistency converges for the tested c values
 
 The propagator-field self-consistency loop (propagate -> get density -> solve
-Poisson -> propagate) converges for any positive c. Self-consistency alone does
-not select c. Larger c requires more iterations but still converges.
+Poisson -> propagate) converges for the positive `c` values tested in the
+runner. Self-consistency alone does not select `c`.
 
 ### 2. Rescaling degeneracy
 
-The transformation (c, G) -> (c/a, a*G) leaves the dynamics invariant because
-the self-consistent loop depends only on the product c*G. This is verified
-numerically: c*phi_max is constant across rescalings at fixed c*G.
+The transformation `(c, G) -> (c/a, a*G)` leaves the dynamics invariant because
+the self-consistent loop depends only on the product `c*G`. This is verified
+numerically: `c*phi_max` is approximately constant across rescalings at fixed
+`c*G`. There is therefore a one-parameter family of equivalent theories
+parameterized by `c`.
 
-### 3. Convention breaks the degeneracy
+### 3. Convention fixes c
 
-We define G as Newton's constant (measured from Cavendish experiment or orbital
-periods). This fixes one parameter. The field f is then determined by Poisson's
-equation. The remaining question: what is c?
+Once we adopt the framework's natural convention identifying the lattice
+scalar `f` with the Newtonian potential `Phi`:
 
-### 4. Light bending fixes c = 1
+- Convention A: `f = Phi` with the standard Newtonian Poisson source
+  `nabla^2 f = -4*pi*G*rho`. Matching the Schwarzschild weak-field metric
+  `g_tt = -(1 - 2*Phi)` to the lattice metric `g_tt = -(1 - c*f)` forces
+  `c = 2`.
+- Convention B: the framework's actual choice `S = L(1 - f)` (i.e., `c = 1`)
+  corresponds to a lattice Poisson source rescaled by a factor of 2 relative
+  to textbook Newtonian. Matching forces this together with `c = 1`.
 
-The action S = L(1 - c*f) yields the effective weak-field metric:
+Both choices reproduce the Schwarzschild weak-field metric and PPN gamma = 1.
+The difference is an overall convention on what `f` means and how the Poisson
+equation is normalized, not new physics.
 
-    g_tt = -(1 - c*f),  g_rr = 1 + c*f
+## Key Numerical Results (Narrowed)
 
-For massive particles, the deflection is proportional to c*f (Newtonian).
-For null rays, the deflection picks up contributions from both g_tt and g_rr,
-giving a total factor of (1 + c) times the Newtonian deflection.
+| c    | Converges | beta  | Note                                        |
+|------|-----------|-------|---------------------------------------------|
+| 0.5  | Yes       | 1.28  | converges, deflection scales with c         |
+| 1.0  | Yes       | 1.28  | framework choice (with absorbed factor 2)   |
+| 2.0  | Yes       | 1.28  | textbook Newtonian convention               |
+| 5.0  | Yes       | 1.28  | converges, deflection scales with c         |
 
-Eddington's 1919 observation confirmed: light bending = 2 * Newtonian.
-Therefore 1 + c = 2, so **c = 1**.
+The mass exponent `beta ~ 1.28` is a finite-size lattice artifact (`N=20`
+grid, Dirichlet boundary). It is independent of `c` because the field is
+perturbatively weak.
 
-### 5. Equivalence with Schwarzschild
+The earlier "Light Factor = 1 + c" entry in this table was a purely analytical
+restatement of the (1+gamma) Schwarzschild deflection result. It cannot be
+verified by the present propagator (the runner uses a single massive quantum
+probe, with no separate null-ray channel). That column has been removed.
 
-The Schwarzschild metric in isotropic coordinates has g_tt = -(1 - Phi)^2 and
-g_rr = (1 + Phi)^2 where Phi = GM/r. In weak field: g_tt ~ -(1 - 2*Phi) and
-g_rr ~ (1 + 2*Phi). Our action with c = 1 gives g_tt ~ -(1 - f) and
-g_rr ~ (1 + f), matching with f = 2*Phi.
+## Response to the Reviewer (Narrowed)
 
-## Key Numerical Results
+The objection is partially correct: the coefficient `c` is convention-dependent.
+There is a literal `(c, G) -> (c/a, a*G)` rescaling freedom in the theory.
 
-| c    | Converges | Light Factor | beta  | Correct GR? |
-|------|-----------|-------------|-------|-------------|
-| 0.5  | Yes       | 1.50        | 1.28  | No          |
-| 1.0  | Yes       | 2.00        | 1.28  | **Yes**     |
-| 2.0  | Yes       | 3.00        | 1.28  | No          |
-| 5.0  | Yes       | 6.00        | 1.28  | No          |
+Within the framework, what fixes the coefficient is not a convention-free
+observable but the natural convention adopted for what `f` means in terms of
+the standard Newtonian potential `Phi` together with the Poisson source
+normalization. The framework's choice of `S = L(1 - f)` corresponds to a
+specific convention; the textbook Newtonian choice would give `S = L(1 - 2f)`.
+Both reproduce Schwarzschild.
 
-The mass exponent beta ~ 1.28 is a finite-size lattice artifact (N=20 grid
-with Dirichlet boundary conditions). It is independent of c because the field
-is perturbatively weak. The light bending factor, which is an exact analytic
-result (1 + c), uniquely selects c = 1.
+This is analogous to the ambiguity in the gauge potential `A` in
+electromagnetism (modulo the analogous rescaling of charge): the freedom is
+real, and it is fixed by convention, not by a convention-free measurement.
 
-## Response to the Reviewer
+## Earlier Wording Retracted
 
-The objection conflates convention with physics. One can always rescale
-c -> c/a and G -> a*G simultaneously, which changes the definition of f but not
-any observable. Once G is fixed by laboratory measurement, c is determined by
-the observed light bending ratio. The result is c = 1.
-
-This is analogous to the situation in electromagnetism: one can rescale the
-vector potential A -> a*A and the charge e -> e/a, but once e is fixed by
-measurement, A is determined. The "arbitrary" rescaling freedom is just a choice
-of units for the potential, not a physical ambiguity.
+The previous version of this note claimed `c = 1` is fixed by the
+convention-free observable of the factor-of-2 light bending. That argument
+was incorrect: PPN gamma = 1 (which IS the factor-of-2 light bending content)
+holds for any positive `c` under the identification `Phi = c*f/2`. The runner's
+former numerical "deflection ratio" verification (`defl(k=5)/defl(k=25)`)
+compared two massive-probe momenta and had no analytical relation to the
+`(1+c)` null-vs-massive deflection ratio. Both the bogus numerical table and
+the convention-free claim have been removed from this runner and note.

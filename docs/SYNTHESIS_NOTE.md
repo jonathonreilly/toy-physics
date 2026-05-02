@@ -1,8 +1,25 @@
 # Synthesis Note: Emergent Physics on Discrete Causal DAGs
 
 **Date:** 2026-04-03
-**Status:** support - structural or confirmatory support note
-retained conclusions are summarized in the next section.
+**Status:** support - structural narrative / historical synthesis only
+This note is **not** a current retained-claim surface. It is a running
+synthesis from an earlier program phase, kept for narrative continuity
+and route history. Several of its quantitative claims (especially the
+"publishable quantitative results" enumeration in §"Honest assessment",
+the §"Full Axiom Chain Closure (2026-04-03)" axiom-by-axiom rollup, and
+the §"Dimensional Selection Principle" three-dimensional uniqueness
+read) are not currently registered as retained theorems with named
+runners. They are cited here as program memory, not as live claims.
+
+For the current per-claim status surface, use the audit ledger
+(`docs/audit/AUDIT_LEDGER.md`), the per-runner notes, and the
+publication-package documents under `docs/publication/`. Where a
+specific quantitative readout in this note has a current frozen
+runner, it is also captured in its own dedicated note.
+
+The remainder of this section preserves the running-synthesis status
+language for historical reference; treat it as narrative, not as a
+current retained-status statement.
 
 ## The model
 

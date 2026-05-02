@@ -1,0 +1,112 @@
+slug: audit-substantive-2026-05-02
+mode: run
+target: best-honest-status
+runtime: focused-session
+goal: Resolve 6 substantive audited_failed rows under new claim_type framework.
+target_rows:
+  - koide_axiom_native_support_batch_note_2026-04-22
+  - action_normalization_note
+  - monopole_derived_note
+  - lorentz_violation_derived_note
+  - self_gravity_backreaction_closure_note
+  - dimensional_gravity_table
+resolutions:
+  koide_axiom_native_support_batch_note_2026-04-22:
+    decision: FIX
+    summary: |
+      Stale audit verdict. Subrunner frontier_koide_q_so2_phase_erasure_support.py
+      was repaired at commit 5097b492 (2026-04-30) and now passes 23/23.
+      Integrated regression frontier_koide_lane_regression.py reports 381/381.
+      Added a 2026-05-02 audit re-check section to the note; this triggers
+      hash drift and queues fresh re-audit. The bounded-support character is
+      unchanged; status is unchanged at "support, not closed" for Q, delta, v_0.
+    note_changes: docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md
+    runner_changes: none
+    claim_type_change: none (stays bounded_theorem)
+  action_normalization_note:
+    decision: NARROW
+    summary: |
+      "Convention-free light bending fixes c=1" claim was wrong: PPN gamma=1
+      holds for any c>0 under Phi=c*f/2. Reused PR #245 narrowing: removed
+      bogus deflection ratio table; rewrote conclusion as convention-locked
+      (c is fixed by naming f<->Phi identification + Poisson source
+      normalization). Both c=1 (framework) and c=2 (textbook Newtonian) match
+      Schwarzschild and PPN gamma=1; difference is convention not physics.
+    note_changes: docs/ACTION_NORMALIZATION_NOTE.md
+    runner_changes: scripts/frontier_action_normalization.py
+    claim_type_change: stays bounded_theorem (now honestly bounded)
+  monopole_derived_note:
+    decision: NARROW
+    summary: |
+      Note advertised M_mono ~ 0.80 M_Pl from placeholder alpha_inv(M_Pl)~40.
+      Live runner uses one-loop SM RG running giving alpha_inv(M_Pl)~72.1 and
+      computes M_mono = 1.43 M_Pl. Reused PR #245 reconciliation: updated note
+      headline + runner synthesis label to 1.43 M_Pl. Sensitivity table
+      preserved (M_mono in [0.59, 1.21] M_Pl across alpha_inv in [30, 60]);
+      order-of-magnitude prediction M ~ M_Pl is robust across the plausible
+      window. Note language now bounded (RG-window-dependent), so next audit
+      should re-classify positive_theorem -> bounded_theorem.
+    note_changes: docs/MONOPOLE_DERIVED_NOTE.md
+    runner_changes: scripts/frontier_monopole_derived.py
+    claim_type_change: pending audit reclassification (positive_theorem -> bounded_theorem)
+  lorentz_violation_derived_note:
+    decision: FIX
+    summary: |
+      Runner used (2/a^2) sin^2(pa/2) as kinetic eigenvalue but its printed
+      Taylor expansion claimed the (4/a^2) result. Mathematical inconsistency:
+      the half-normalized (2/a^2) form gives leading p^2/2, not p^2. Updated
+      runner to use the standard (4/a^2) sin^2(pa/2) = (2/a^2)(1-cos(pa))
+      Laplacian eigenvalue, which matches the note's Step 2 derivation.
+      Numerical residual (lattice - p^4 expansion) at pa=0.1256 dropped from
+      0.788 to 1.09e-6 — sub-microscopic, consistent with the note's claim of
+      "<0.02% for pa<0.5". Note's "non-standard normalization" footnote
+      replaced with audit-fix annotation.
+    note_changes: docs/LORENTZ_VIOLATION_DERIVED_NOTE.md
+    runner_changes: scripts/frontier_lorentz_violation.py
+    claim_type_change: none (stays bounded_theorem)
+  self_gravity_backreaction_closure_note:
+    decision: FIX
+    summary: |
+      Full sweep takes ~110s on reference laptop, exceeding audit-loop
+      runner_timeout_sec=60. Reused PR #245 --quick mode patch (~23s
+      measured) preserving exact eps=0 reduction, one nonzero coupling row,
+      step-local Born; skips end-to-end Born mask sweep. Note updated with
+      slow-runner annotation and --quick invocation. Bounded no-go verdict
+      survives; --quick output preserves the load-bearing physics.
+    note_changes: docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md
+    runner_changes: scripts/poisson_self_gravity_loop_v3.py
+    claim_type_change: none (stays no_go)
+  dimensional_gravity_table:
+    decision: NARROW
+    summary: |
+      "F proportional to M = 1.00 is universal" claim contradicted the note's
+      own bounded caveat. Replaced "Key properties" with finite-entry
+      formulation: F~M=1.00 holds on every tested (d, kernel, h, family) row,
+      not as a universality theorem. Added explicit scope statement after the
+      table: "covers d in {2,3,4}, kernel = 1/L^(d-1), valley-linear,
+      h<=0.5". Decoherence and Born statements similarly scoped to tested
+      rows.
+    note_changes: docs/DIMENSIONAL_GRAVITY_TABLE.md
+    runner_changes: none
+    claim_type_change: none (stays bounded_theorem)
+state_change:
+  audit_status_audited_failed_before: 70  # origin/main pre-fix
+  audit_status_audited_failed_after: 64
+  effective_status_audited_failed_before: 26
+  effective_status_audited_failed_after: 20
+  net_drop: 6  # all 6 target rows moved to unaudited
+hard_rules_observed:
+  - notes edited honestly; not auto-applying audited_clean as Claude
+  - audit pipeline regenerates ledger from current source notes
+  - all 6 rows now unaudited and queued for fresh independent (Codex) audit
+  - lint clean (78 warnings same as origin/main, 0 errors)
+audit_pipeline_state:
+  warnings: 78
+  errors: 0
+  baseline_warnings_origin_main: 78
+honest_open_items:
+  - monopole_derived_note still has claim_type=positive_theorem; expects
+    Codex re-audit to reclassify to bounded_theorem given new RG-window
+    language in the note
+  - all 6 rows are now unaudited; they need fresh independent Codex audits
+    before they re-promote to retained or land at audited_conditional

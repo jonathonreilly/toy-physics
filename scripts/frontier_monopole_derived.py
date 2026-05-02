@@ -3,8 +3,8 @@
 Magnetic Monopole Mass from First Principles
 =============================================
 
-QUESTION: Can the monopole mass M_mono ~ 0.8 M_Planck be derived from the
-lattice axioms alone, with every step traceable?
+QUESTION: Can the monopole mass M_mono ~ M_Planck be derived from the lattice
+axioms alone, with every step traceable?
 
 CONTEXT:
   The framework starts from Cl(3) on Z^3.  Gauge fields live as group
@@ -19,6 +19,18 @@ DERIVATION CHAIN:
   Step 4: Self-energy integral with lattice regulator =>  exact coefficient
   Step 5: Overclosure without inflation    =>  framework REQUIRES inflation
 
+CURRENT NUMERICAL RESULT (2026-05-01 reconciliation):
+  c_lat = G_lat(0) ~ 0.2527 (BKM Green's function on cubic Z^3)
+  alpha_EM^{-1}(M_Pl) ~ 72.1 (one-loop SM RG running from M_Z)
+  beta = 1/(4*pi*alpha) ~ 5.738
+  M_mono = c_lat * beta * M_Pl ~ 1.43 M_Pl ~ 1.75e19 GeV
+
+  An earlier version of this note advertised M ~ 0.80 M_Pl using the
+  alpha^{-1}(M_Pl) ~ 40 placeholder. The runner's actual one-loop SM RG
+  calculation gives alpha^{-1}(M_Pl) ~ 72, hence the larger M_mono. Both
+  values land in the Planckian band; the order-of-magnitude prediction
+  M ~ M_Planck is robust across the plausible alpha_EM(M_Pl) range.
+
 WHAT IS DERIVED vs WHAT IS ASSUMED:
   DERIVED:
     - Charge quantization (from compactness)
@@ -30,7 +42,7 @@ WHAT IS DERIVED vs WHAT IS ASSUMED:
     - Planck-scale package pin a^(-1) = M_Pl on the accepted physical-lattice reading
     - Wilson action S = -beta * sum cos(theta_P) (simplest compact action)
     - Standard cosmology (FRW, entropy conservation) for abundance calc
-    - alpha(M_Pl) ~ 1/40 from SM RG running (external input)
+    - alpha_EM(M_Pl) one-loop SM RG running (external input)
 
 PStack experiment: monopole-mass-derived
 Self-contained: numpy only (no scipy needed).
@@ -776,7 +788,7 @@ def synthesis(results_step3, results_step5):
   +-------------------------------------------------------------------+
   | Claim                        | Status    | Comment                |
   |------------------------------+-----------+------------------------|
-  | M ~ 0.8 M_Pl                | DERIVED   | c*beta*M_Pl, c from   |
+  | M ~ {M:.2f} M_Pl              | DERIVED   | c*beta*M_Pl, c from   |
   |                              |           | lattice Green's fn     |
   | Dirac quantization auto     | PROVED    | From compactness of    |
   |                              |           | U(1) on Z^3 edges     |
@@ -788,12 +800,13 @@ def synthesis(results_step3, results_step5):
   ASSUMPTIONS (explicit):
   1. Planck-scale package pin a^(-1) = M_Pl on the accepted physical-lattice reading
   2. Wilson action (simplest compact U(1) action)
-  3. alpha_EM(M_Pl) ~ 1/40 (SM RG running -- external input)
+  3. alpha_EM(M_Pl) one-loop SM RG running from M_Z (gives alpha_inv_Pl ~ 72)
   4. Standard FRW cosmology for abundance calculation
   5. Kibble mechanism applies at graph-growth epoch
 
   WHAT IS NOT DERIVED:
-  - The exact value of alpha_EM(M_Pl) (needs full SM RG, external input)
+  - alpha_EM(M_Pl) is computed by one-loop RG running from alpha_EM(M_Z)
+    inputs; full two-loop SM RG and threshold matching are not implemented
   - Whether inflation actually happened (required, not derived)
   - Monopole-monopole interaction at short range (lattice artifacts)
 """)

@@ -419,7 +419,8 @@ def measure_rescaling_degeneracy(N: int, k: float, source_pos: tuple[int, int, i
     print()
     print("Key observation: c*phi_max is approximately CONSTANT across rescalings.")
     print("The physical quantity is c*f, not f alone. This confirms the degeneracy.")
-    print("Convention: set G = Newton's constant. Then c is fixed by the metric.")
+    print("Convention: after fixing the f/Phi map and source normalization, c has")
+    print("a definite value; the rescaling freedom itself does not select it.")
     print()
 
 
@@ -427,19 +428,20 @@ def main():
     t_start = time.time()
 
     print("=" * 80)
-    print("ACTION NORMALIZATION: SELF-CONSISTENCY FIXES COUPLING COEFFICIENT")
+    print("ACTION NORMALIZATION: CONVENTION-LOCKED COUPLING COEFFICIENT")
     print("=" * 80)
     print()
     print("Question: Is the coefficient c in S = L(1 - c*f) arbitrary?")
-    print("Answer: NO. Three independent arguments fix c = 1.")
+    print("Answer: It is not convention-free; once the f/Phi identification")
+    print("and Poisson source normalization are named, c is convention-locked.")
     print()
     print("The reviewer's objection: 'You chose S = L(1-f). If you chose S = L(1-2f),")
     print("you would get a different metric. The coefficient is arbitrary.'")
     print()
-    print("Our response: the coefficient is determined by the requirement that")
-    print("the action reproduce the correct weak-field metric, which in turn")
-    print("is the unique metric consistent with both Newtonian gravity and")
-    print("the factor-of-2 light bending that defines GR.")
+    print("Our narrowed response: the earlier convention-free light-bending")
+    print("argument was wrong. PPN gamma=1 holds for any positive c under")
+    print("Phi=c*f/2, so the coefficient is fixed only after choosing the")
+    print("field-identification and Poisson-normalization convention.")
     print()
 
     N = 20
@@ -457,7 +459,8 @@ def main():
     print(f"Grid: {N}^3, k={k}, G=1.0, sigma={sigma}")
     print()
     print("Purpose: show self-consistency converges for a RANGE of c values.")
-    print("This means convergence alone does NOT fix c. We need additional physics.")
+    print("This means convergence alone does NOT fix c. We need an explicit")
+    print("field-identification / source-normalization convention.")
     print()
 
     G_fixed = 1.0
@@ -513,16 +516,16 @@ def main():
     print("The self-consistent loop depends on c*G*rho (the effective coupling).")
     print("Rescaling (c, G) -> (c/a, a*G) leaves the product c*G fixed.")
     print("So there is a one-parameter family of equivalent solutions.")
-    print("Convention must fix one parameter. We show it is c.")
+    print("A convention must fix one parameter before c has a definite value.")
     print()
 
     measure_rescaling_degeneracy(N, k, source_pos, sigma=sigma)
 
     # ===================================================================
-    # TEST 3: Effective metric and light bending -- FIXES c = 1
+    # TEST 3: Effective metric structure -- analytical only, narrowed
     # ===================================================================
     print("=" * 80)
-    print("TEST 3: METRIC STRUCTURE FIXES c = 1")
+    print("TEST 3: METRIC STRUCTURE (NARROWED -- ANALYTICAL READ)")
     print("=" * 80)
     print()
     print("The action S = L(1 - c*f) defines an effective metric:")
@@ -531,40 +534,19 @@ def main():
     print("In the weak-field limit f << 1:")
     print("  g_tt = -(1 - c*f)    g_rr = 1 + c*f")
     print()
-    print("For a massive particle: V_eff = c*f/2 (Newtonian potential)")
-    print("For a null ray: deflection ~ (1 + c) * c*f / 2")
-    print("   = c*f/2 (from g_tt) + c*f/2 (from g_rr)")
-    print("   = c * f    [total deflection]")
+    print("Identifying Phi = c*f/2 (PPN convention), gamma = 1 holds for any c.")
+    print("Light bending in PHI units is therefore (1 + gamma) = 2 for any c.")
     print()
-    print("The RATIO of null-to-massive deflection = (1 + c)/1 = 1 + c")
+    print("The 'light factor = 1 + c' formula previously printed here was a")
+    print("statement in F-units (that is, with c absorbed into f instead of Phi).")
+    print("It does NOT pick out c = 1 as a convention-free observable.")
+    print("The earlier 'verification' table that read 'YES' only at c = 1 was")
+    print("circular: it just printed 1 + c and tested whether 1 + c = 2.")
     print()
-    print("GR prediction: factor of 2 (confirmed by Eddington 1919)")
-    print("=> 1 + c = 2 => c = 1")
-    print()
-
-    # Numerical verification: measure deflection at different c
-    print("Numerical verification via propagator deflection:")
-    print(f"{'c':>6s}  {'LightFactor':>12s}  {'Prediction':>12s}  {'Match':>6s}")
-    print("-" * 45)
-    for c_val in [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 3.0]:
-        # Get or compute converged field
-        if c_val in results_by_c:
-            r = results_by_c[c_val]
-        else:
-            mix = min(0.3, 0.3 / max(c_val, 1.0))
-            r = self_consistent_iterate_c(
-                N, k, G_fixed, c_val, source_pos,
-                max_iter=50, tol=1e-4, mixing=mix, sigma=sigma)
-            results_by_c[c_val] = r
-            if r['converged'] or r['reason'] == 'max_iter':
-                r['physics'] = extract_physics(N, r['phi'], source_pos)
-
-        light_factor = 1.0 + c_val
-        match = "YES" if abs(light_factor - 2.0) < 0.01 else "no"
-        print(f"{c_val:>6.2f}  {light_factor:>12.2f}  {'2.00':>12s}  {match:>6s}")
-    print()
-
-    print("RESULT: Only c = 1 gives factor-of-2 light bending.")
+    print("The honest read: c is fixed by the convention identifying f with the")
+    print("standard Newtonian potential Phi and by the chosen Poisson source")
+    print("normalization. See TEST 5 / SYNTHESIS for the convention-locked")
+    print("statement.")
     print()
 
     # ===================================================================
@@ -630,46 +612,50 @@ def main():
     print()
 
     # ===================================================================
-    # TEST 5: PPN parameter gamma constrains c
+    # TEST 5: PPN gamma and the convention that fixes c
     # ===================================================================
     print("=" * 80)
-    print("TEST 5: PPN PARAMETER GAMMA FROM ACTION COEFFICIENT")
+    print("TEST 5: PPN GAMMA AND THE CONVENTION THAT FIXES c")
     print("=" * 80)
     print()
     print("In the PPN formalism, the metric is:")
     print("  g_tt = -(1 - 2*Phi)   g_rr = (1 + 2*gamma*Phi)")
     print("where gamma = 1 in GR, gamma != 1 in alternative theories.")
     print()
-    print("Our action S = L(1 - c*f) gives (identifying Phi = c*f/2):")
-    print("  g_tt = -(1 - 2*Phi)   [matches GR for any c]")
-    print("  g_rr = 1 + c*f = 1 + 2*Phi * (c / c) = 1 + 2*Phi")
-    print()
-    print("Wait -- let us be more careful. If f is the field solving Poisson,")
-    print("then the physical Newtonian potential Phi = c*f/2. The metric is:")
+    print("Our action S = L(1 - c*f). Identifying the lattice scalar f with")
+    print("the physical Newtonian potential Phi at convention level:")
+    print("  Phi := c*f/2  (i.e., absorb the factor c/2 into the identification)")
+    print("Then for any positive c:")
     print("  g_tt = -(1 - c*f) = -(1 - 2*Phi)")
     print("  g_rr = (1/(1-c*f)) ~ 1 + c*f = 1 + 2*Phi")
-    print("=> gamma = 1 for ALL c (the PPN parameter is always 1).")
+    print("=> gamma = 1 for any c on this identification.")
     print()
-    print("So gamma does not fix c. But the PHYSICAL interpretation does:")
-    print("  Phi = G*M/r (Newton's law) with G = Newton's constant.")
-    print("  f = Phi / (c/2) = 2*Phi / c")
-    print("  The Poisson equation: nabla^2 f = -G_eff * rho")
-    print("  where G_eff = 2*G / c (effective coupling in f-equation)")
+    print("HONEST READ: PPN gamma=1 holds for any c > 0 once we accept the")
+    print("identification Phi = c*f/2. This means gamma alone does NOT fix c.")
+    print("The deflection ratio is (1+gamma) = 2 in PHI units, independent of c.")
     print()
-    print("If we demand f to satisfy the STANDARD Poisson equation")
-    print("  nabla^2 f = -4*pi*G*rho (Newtonian convention)")
-    print("then c/2 = 1 is required, i.e., c = 2... unless we use the")
-    print("convention nabla^2 Phi = -4*pi*G*rho with Phi = c*f/2.")
+    print("WHAT FIXES c IS THE CONVENTION FOR f ITSELF:")
+    print("  Convention A (f = Phi):    requires c = 2 to match Schwarzschild")
+    print("                              under the standard Newtonian Poisson source")
+    print("  Convention B (S = L(1-f)): the framework's choice (c = 1) absorbs the")
+    print("                              factor of 2 into the lattice Poisson source")
+    print("                              normalization")
+    print("  Convention C (raw lattice f, no Phi identification): c is undetermined")
     print()
-    print("The UNAMBIGUOUS test is light bending, which is convention-free:")
+    print("This means the action coefficient c in S = L(1 - c*f) is convention-")
+    print("locked, NOT convention-free.")
+    print()
+    print("NUMERICAL CHECK: deflection scales with c (sanity check only).")
+    print("Note the absolute deflection magnitudes; the analytical (1+c) ratio")
+    print("of null-vs-massive cannot be measured by the present propagator,")
+    print("which is a single (massive) quantum probe and does not separate")
+    print("null and massive deflection.")
     print()
 
-    # Measure deflection ratio numerically
     c_test = [0.5, 1.0, 2.0]
-    print("Convention-free deflection test:")
-    print(f"{'c':>6s}  {'defl(5k)':>10s}  {'defl(25k)':>10s}  "
-          f"{'ratio':>8s}  {'theory(1+c)':>12s}")
-    print("-" * 55)
+    print("Massive-probe deflection magnitude vs c (sanity check, NOT a c-fixing test):")
+    print(f"{'c':>6s}  {'|defl|':>10s}")
+    print("-" * 24)
 
     for c_val in c_test:
         r = results_by_c.get(c_val)
@@ -678,57 +664,63 @@ def main():
 
         defls = measure_effective_potential(N, r['phi'], k, c_val,
                                            source_pos, sigma=sigma)
-        d1 = defls[k]
-        d2 = defls[k * 5.0]
-
-        # In the massive limit, deflection ~ c*f. At different k,
-        # the ratio should approach (1+c)/1 = 1+c for the relativistic
-        # vs non-relativistic case. But both are massive here.
-        # Instead, the absolute deflection scales with c.
-        print(f"{c_val:>6.1f}  {d1:>10.6f}  {d2:>10.6f}  "
-              f"{d1/d2 if abs(d2) > 1e-30 else float('nan'):>8.4f}  "
-              f"{1+c_val:>12.2f}")
+        # report only the absolute scale check; the original bogus
+        # "ratio" was defl(k)/defl(5k) on two MASSIVE probes, which has
+        # no relation to the analytical null-vs-massive (1+c) factor.
+        d_abs = abs(defls[k])
+        print(f"{c_val:>6.1f}  {d_abs:>10.6f}")
 
     print()
-    print("The absolute deflection scales with c, confirming c enters the physics.")
-    print("Light bending = (1+c) times Newtonian deflection. Only c=1 gives factor 2.")
+    print("Confirms: deflection scales with c (consistent with c entering the physics).")
+    print("This sanity check does NOT verify the (1+c) null-vs-massive ratio;")
+    print("that is an analytical statement that requires a separate null-ray")
+    print("propagator the present runner does not implement.")
     print()
 
     # ===================================================================
     # SYNTHESIS
     # ===================================================================
     print("=" * 80)
-    print("SYNTHESIS: WHY c = 1 IS NOT ARBITRARY")
+    print("SYNTHESIS: c IS CONVENTION-LOCKED, NOT CONVENTION-FREE")
     print("=" * 80)
     print()
     print("ARGUMENT STRUCTURE:")
     print()
-    print("1. SELF-CONSISTENCY establishes that S = L(1 - c*f) with Poisson")
-    print("   equation gives a convergent propagator-field loop for ANY c > 0.")
-    print("   Self-consistency alone does NOT fix c.")
+    print("1. SELF-CONSISTENCY converges for the c values tested.")
+    print("   The propagator-Poisson loop converges across the c values in")
+    print("   Test 1. This is a numerical observation, NOT a c-fixing argument.")
     print()
     print("2. RESCALING DEGENERACY: (c, G) -> (c/a, a*G) leaves the dynamics")
-    print("   invariant. There is a one-parameter family of equivalent theories")
-    print("   parameterized by c. The physics depends only on c*f = c*G*rho/r.")
+    print("   invariant; only the product c*G enters the iteration.")
     print()
-    print("3. CONVENTION FIXING: We define G as Newton's constant (measured")
-    print("   from Cavendish experiment or orbit periods). This fixes G.")
-    print("   Given G, the field f is determined by Poisson. The question")
-    print("   becomes: what is c?")
+    print("3. PPN gamma = 1 FOR ANY c on the identification Phi = c*f/2.")
+    print("   The metric g_tt = -(1 - c*f), g_rr = 1 + c*f gives gamma = 1")
+    print("   for any positive c. Thus PPN gamma alone does NOT fix c.")
     print()
-    print("4. LIGHT BENDING FIXES c = 1:")
-    print("   The action S = L(1-c*f) gives effective metric")
-    print("     g_tt = -(1 - c*f), g_rr = 1 + c*f")
-    print("   Null geodesic deflection = (1 + c) * (Newtonian deflection)")
-    print("   Eddington's 1919 observation: deflection = 2 * Newtonian")
-    print("   => 1 + c = 2 => c = 1")
+    print("4. WHAT FIXES c IS THE FRAMEWORK CONVENTION ON f:")
+    print("   The framework's natural convention is Phi = f (the lattice scalar")
+    print("   f IS the Newtonian potential). Under that convention with the")
+    print("   standard Newtonian Poisson source nabla^2 f = -4*pi*G*rho, matching")
+    print("   g_tt = -(1 - 2*Phi) to -(1 - c*f) forces c = 2.")
+    print("   Alternatively, the framework's S = L(1-f) corresponds to c = 1")
+    print("   together with a Poisson source rescaled by a factor of 2.")
     print()
-    print("5. EQUIVALENTLY: the Schwarzschild metric in isotropic coordinates")
-    print("   gives g_tt = -(1 - Phi)^2, g_rr = (1 + Phi)^2 where Phi = GM/r.")
-    print("   Weak-field: g_tt ~ -(1 - 2*Phi), g_rr ~ (1 + 2*Phi).")
-    print("   Our action with c=1: g_tt ~ -(1 - f), g_rr ~ (1 + f).")
-    print("   Matching: f = 2*Phi = 2*GM/r. The factor 2 is absorbed into f,")
-    print("   and c = 1 is the unique coefficient that reproduces Schwarzschild.")
+    print("5. NARROW HONEST CLAIM:")
+    print("   * The action coefficient c is NOT a free parameter once we fix the")
+    print("     identification between the lattice scalar f and the Newtonian")
+    print("     potential Phi.")
+    print("   * The choice c = 1 corresponds to the convention f = Phi WITH a")
+    print("     Poisson source rescaled by a factor of 2 relative to textbook")
+    print("     Newtonian, so that S = L(1-f) reproduces Schwarzschild.")
+    print("   * The choice c = 2 corresponds to the convention f = Phi WITH the")
+    print("     textbook Newtonian Poisson source nabla^2 f = -4*pi*G*rho.")
+    print("   * Both choices reproduce Schwarzschild and PPN gamma = 1; the")
+    print("     difference is an overall convention choice, not new physics.")
+    print()
+    print("This is a NARROWED claim: c is fixed by convention (not by light")
+    print("bending). The framework's natural convention does pick out a specific")
+    print("c value once we name what f is in terms of Phi and what source")
+    print("normalization the Poisson equation uses.")
     print()
 
     # Overall verdict
@@ -736,24 +728,25 @@ def main():
     print("VERDICT")
     print("=" * 80)
     print()
-    print("The coefficient c in S = L(1 - c*f) is NOT a free parameter.")
+    print("NARROWED: The coefficient c in S = L(1 - c*f) is determined by the")
+    print("convention used to identify the lattice scalar f with the physical")
+    print("Newtonian potential Phi and by the chosen Poisson source normalization.")
     print()
-    print("The reviewer's objection confuses convention with physics. Yes,")
-    print("one can always rescale c -> c/a and G -> a*G simultaneously.")
-    print("This changes the DEFINITION of f but not the physics. It is")
-    print("analogous to choosing units for the gravitational potential.")
+    print("The reviewer's objection is partially correct: the coefficient is")
+    print("convention-dependent, not convention-free. There is a one-parameter")
+    print("rescaling family (c, G) -> (c/a, a*G) of equivalent theories.")
     print()
-    print("Once G is fixed by Cavendish/orbits (convention), c is determined")
-    print("by the requirement that the metric reproduce observed light bending.")
-    print("The result is c = 1, giving S = L(1 - f) exactly.")
+    print("Once a convention is named, c is determined. With f = Phi and the")
+    print("textbook Newtonian source, c = 2. With S = L(1 - f) (i.e., c = 1),")
+    print("the Poisson normalization absorbs the missing factor of 2.")
     print()
-    print("This is NOT an arbitrary choice. It is the unique value for which:")
-    print("  (a) The action reproduces the Schwarzschild weak-field metric")
-    print("  (b) Light bending is twice Newtonian deflection")
-    print("  (c) The PPN parameter gamma = 1")
-    print()
-    print("Any other c would predict a different light bending ratio,")
-    print("contradicting observation.")
+    print("EARLIER INTERPRETATION RETRACTED:")
+    print("The earlier 'convention-free light bending' argument was incorrect.")
+    print("PPN gamma = 1 holds for any c > 0 under the identification Phi = c*f/2,")
+    print("so light bending alone does not fix c. The numerical 'deflection ratio'")
+    print("table previously printed in this runner (defl(k)/defl(5k)) compared two")
+    print("massive probe momenta and had no analytical relation to the (1+c)")
+    print("null-vs-massive ratio. That table has been removed.")
     print()
 
     dt = time.time() - t_start

@@ -56,7 +56,9 @@ Frozen readout:
 Fitted exponents:
 
 - instantaneous `F~M`: `0.43` or lower-level noisy negative class
-- self-consistent Green `F~M`: `0.00`-class collapse on the retained sweep
+- self-consistent Green `F~M`: `-0.30` on the retained sweep (negative-exponent
+  collapse — the self-consistent shift gets *smaller* as the source mass grows,
+  the opposite of Newtonian linear scaling)
 
 ## Safe read
 
