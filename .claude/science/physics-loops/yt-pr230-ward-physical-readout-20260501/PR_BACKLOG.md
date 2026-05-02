@@ -321,3 +321,19 @@ Adds flat-toron thermodynamic washout support:
   massless gauge-zero-mode/IR prescription, LSZ derivative, and production
   evidence remain open.
 ```
+
+Latest color-singlet zero-mode cancellation checkpoint text for PR #230:
+
+```text
+Adds color-singlet gauge-zero-mode cancellation support:
+- proves `(T_q^a + T_qbar^a)|S>=0` for the `q qbar` singlet;
+- validator passes `PASS=7 FAIL=0`; retained-route gate reports
+  `PASS=24 FAIL=0`; campaign status now consumes 54 route certificates and
+  reports `PASS=50 FAIL=0`;
+- the q=0 self and exchange pieces cancel as `C_F + C_F - 2 C_F = 0`, so an
+  exchange-only finite ladder with the q=0 mode kept is not the color-neutral
+  scalar denominator;
+- still no retained/proposed-retained closure: finite-q IR behavior,
+  interacting pole derivative, source/projector normalization, and production
+  FH/LSZ evidence remain open.
+```

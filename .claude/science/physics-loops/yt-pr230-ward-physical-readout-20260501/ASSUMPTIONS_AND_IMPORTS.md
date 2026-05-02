@@ -305,6 +305,18 @@ washes out because the integrand is smooth and periodic for `m > 0`.  This is
 support only.  It does not derive the massless gauge-zero-mode/IR prescription,
 interacting pole denominator, or LSZ derivative.
 
+Color-singlet gauge-zero-mode cancellation:
+
+```text
+(T_q^a + T_qbar^a)|S> = 0
+C_F + C_F - 2 C_F = 0
+```
+
+The exact `q=0` gauge mode cancels in a color-neutral scalar `q qbar` singlet
+when self and exchange pieces are included together.  This permits a
+zero-mode-removed color-singlet scalar kernel as exact support, but does not
+derive the finite-`q` IR behavior or the pole derivative.
+
 Source-reparametrization gauge boundary:
 
 ```text

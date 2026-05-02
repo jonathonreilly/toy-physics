@@ -753,6 +753,20 @@ shows the relative bubble and inverse-denominator shifts are below `1e-4` for
 massive bubble, but not the interacting scalar pole, massless gauge-zero-mode
 IR prescription, finite-`N_c` residue, or production evidence.
 
+Color-singlet `q=0` gauge zero mode cancels, but closure remains open:
+
+```text
+python3 scripts/frontier_yt_color_singlet_zero_mode_cancellation.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The total color charge annihilates the `q qbar` singlet:
+`(T_q^a + T_qbar^a)|S>=0`.  The quark self, antiquark self, and exchange
+pieces cancel exactly as `C_F + C_F - 2 C_F = 0`.  This blocks the
+exchange-only finite-ladder `q=0` divergence, but finite-`q` IR behavior,
+the interacting scalar pole derivative, source/projector normalization, and
+production FH/LSZ evidence remain open.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

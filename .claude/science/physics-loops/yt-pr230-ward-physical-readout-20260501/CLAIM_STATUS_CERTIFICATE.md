@@ -489,3 +489,20 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=49 FAIL=0
 ```
+
+Color-singlet zero-mode cancellation checkpoint:
+
+```text
+actual_current_surface_status: exact-support / color-singlet gauge-zero-mode cancellation
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_color_singlet_zero_mode_cancellation.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=24 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=50 FAIL=0
+```

@@ -32,6 +32,12 @@ Completed in block 1:
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_color_singlet_zero_mode_cancellation.py`
+- `outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json`
+- `docs/YT_COLOR_SINGLET_ZERO_MODE_CANCELLATION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_retained_closure_route_certificate.py`
+- `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
+- `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_flat_toron_thermodynamic_washout.py`
 - `outputs/yt_flat_toron_thermodynamic_washout_2026-05-01.json`
 - `docs/YT_FLAT_TORON_THERMODYNAMIC_WASHOUT_NOTE_2026-05-01.md`
@@ -273,7 +279,9 @@ Next artifact:
   select the trivial zero mode without an extra theorem; fixed-holonomy
   flat-toron dependence washes out for the local massive bubble in the
   thermodynamic limit, leaving the massless gauge-zero-mode/IR and pole
-  derivative theorem as the active analytic blocker
+  derivative theorem as the active analytic blocker; exact color-singlet
+  zero-mode cancellation removes the q=0 gauge divergence but leaves finite-q
+  IR and pole derivative control open
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

@@ -1,0 +1,37 @@
+{
+  "actual_current_surface_status": "exact-support / color-singlet gauge-zero-mode cancellation",
+  "cancellation_terms": {
+    "antiquark_self": 1.3333333333333337,
+    "quark_self": 1.3333333333333337,
+    "sum": 0.0,
+    "twice_exchange": -2.6666666666666674
+  },
+  "fail_count": 0,
+  "parent_certificate": "outputs/yt_flat_toron_thermodynamic_washout_2026-05-01.json",
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Color-singlet zero-mode cancellation removes one IR obstruction but does not derive the scalar pole derivative or production evidence.",
+  "remaining_blockers": [
+    "derive finite-q IR and finite-volume behavior of the zero-mode-removed scalar kernel",
+    "derive or measure the scalar pole and inverse-propagator derivative",
+    "derive projector/source normalization and finite-Nc continuum control",
+    "run production FH/LSZ evidence with the color-singlet prescription fixed"
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "verdict": "A spatially constant gauge mode couples to total color charge.  For the q qbar color singlet, (T_q^a + T_qbar^a)|S>=0 for every SU(3) generator.  The quark self, antiquark self, and exchange zero-mode pieces cancel: C_F + C_F - 2 C_F = 0.  Therefore an exchange-only finite ladder that keeps the q=0 gauge mode is not a color-neutral scalar denominator.  The q=0 mode is removed by singlet color neutrality, but PR #230 still needs finite-q IR control, the interacting scalar pole derivative, and production evidence before retained y_t closure.",
+  "witnesses": {
+    "C_A": 3.0,
+    "C_F": 1.3333333333333333,
+    "full_color_neutral_zero_mode": 0.0,
+    "max_singlet_charge_norm": 0.0,
+    "naive_exchange_only_zero_mode": -1.3333333333333337,
+    "octet_total_charge_sq": 3.0000000000000004
+  }
+}

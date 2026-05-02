@@ -340,4 +340,8 @@ thermodynamic washout block gives positive support: fixed-holonomy flat-sector
 dependence vanishes for the local massive scalar bubble as `N -> infinity`.
 The remaining denominator blocker is therefore the interacting scalar pole and
 massless gauge-zero-mode/IR prescription, not this finite-volume toron artifact
-by itself.
+by itself.  The color-singlet zero-mode cancellation block then removes the
+exact `q=0` gauge mode from the singlet denominator: total color charge
+annihilates the scalar singlet, and self plus exchange pieces cancel.  The
+live analytic blocker is now finite-`q` IR behavior and the interacting pole
+derivative in that color-singlet kernel.
