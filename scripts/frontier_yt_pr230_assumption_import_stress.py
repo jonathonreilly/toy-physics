@@ -56,6 +56,9 @@ def main() -> int:
         "source_contact_term_scheme": load(
             "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json"
         ),
+        "finite_source_shift_derivative_no_go": load(
+            "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json"
+        ),
     }
 
     required_terms = [
@@ -68,6 +71,7 @@ def main() -> int:
         "kappa_s = 1 unless derived",
         "source operator overlap",
         "Source contact counterterms",
+        "Single finite source-shift radius as a zero-source derivative",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -108,6 +112,12 @@ def main() -> int:
         in str(certificates["source_contact_term_scheme"].get("actual_current_surface_status")),
         certificates["source_contact_term_scheme"].get("actual_current_surface_status"),
     )
+    report(
+        "single-finite-source-radius-not-zero-derivative",
+        "finite source-shift slope not zero-source derivative certificate"
+        in str(certificates["finite_source_shift_derivative_no_go"].get("actual_current_surface_status")),
+        certificates["finite_source_shift_derivative_no_go"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -118,7 +128,9 @@ def main() -> int:
             "kappa_s = 1 are forbidden as proof shortcuts unless the relevant "
             "normalization or matching theorem is derived.  Canonical Z_h=1 "
             "does not derive the source operator overlap <0|O_s|h>, and source "
-            "contact-term schemes do not derive the isolated pole residue.  No current route "
+            "contact-term schemes do not derive the isolated pole residue.  A "
+            "single finite source-shift radius also does not derive the zero-source "
+            "Feynman-Hellmann derivative.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

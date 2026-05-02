@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## Single finite source-shift radius is not a zero-source FH derivative
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_finite_source_shift_derivative_no_go.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The current production chunk design uses `s in {-0.01, 0, +0.01}`.  That
+three-point finite-difference slope does not by itself certify
+`dE/ds|_0`.  The runner constructs
+`E(s)=E0+a s+c s^3` families where `E(-delta)`, `E(0)`, `E(+delta)`, and the
+finite symmetric slope are identical while the true zero-source derivative
+varies.  Future FH response evidence therefore needs multiple source radii, a
+finite-source-linearity acceptance gate, or a retained analytic response-bound
+theorem, in addition to scalar LSZ and canonical-Higgs identity gates.
+
 ## Finite effective-mass plateaus are not scalar LSZ residue closure
 
 Runner:

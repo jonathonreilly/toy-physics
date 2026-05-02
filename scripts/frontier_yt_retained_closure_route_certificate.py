@@ -117,6 +117,7 @@ def main() -> int:
         "source_overlap_sum_rule_no_go": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
         "short_distance_ope_lsz_no_go": "outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json",
         "effective_mass_plateau_residue_no_go": "outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json",
+        "finite_source_shift_derivative_no_go": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
@@ -620,6 +621,15 @@ def main() -> int:
         )
         is False
     )
+    finite_source_shift_derivative_no_go_blocks = (
+        "finite source-shift slope not zero-source derivative certificate"
+        in certificates["finite_source_shift_derivative_no_go"].get("actual_current_surface_status", "")
+        and certificates["finite_source_shift_derivative_no_go"].get("proposal_allowed") is False
+        and certificates["finite_source_shift_derivative_no_go"].get(
+            "finite_source_shift_derivative_gate_passed"
+        )
+        is False
+    )
     higgs_pole_identity_latest_blocker_blocks = (
         "latest Higgs-pole identity blocker certificate"
         in certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", "")
@@ -1009,6 +1019,11 @@ def main() -> int:
         certificates["effective_mass_plateau_residue_no_go"].get("actual_current_surface_status", ""),
     )
     report(
+        "finite-source-shift-derivative-no-go-blocks",
+        finite_source_shift_derivative_no_go_blocks,
+        certificates["finite_source_shift_derivative_no_go"].get("actual_current_surface_status", ""),
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         higgs_pole_identity_latest_blocker_blocks,
         certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", ""),
@@ -1183,6 +1198,10 @@ def main() -> int:
             "postprocess shortcut: positive multi-exponential correlators can "
             "share a finite plateau window while changing the ground/source "
             "residue by a factor of ten.  "
+            "The finite source-shift derivative no-go closes the adjacent FH "
+            "shortcut: one symmetric finite source radius can keep "
+            "E(-delta), E(0), E(+delta), and the finite slope fixed while "
+            "changing dE/ds at zero through odd nonlinear response.  "
             "The effective-potential Hessian/source-overlap no-go blocks the "
             "radial-curvature repair: canonical VEV, W/Z masses, and scalar "
             "Hessian eigenvalues do not fix the source operator direction.  "
@@ -1269,7 +1288,9 @@ def main() -> int:
             "theorem excluding shell-vanishing derivative deformations.  If "
             "using the eight-mode/eight-noise foreground "
             "option, first add a same-source x8/x16 variance calibration with "
-            "noise-subsample diagnostics."
+            "noise-subsample diagnostics.  Before using finite source-shift "
+            "slopes as FH derivatives, add multiple source radii or a retained "
+            "analytic response-bound theorem."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

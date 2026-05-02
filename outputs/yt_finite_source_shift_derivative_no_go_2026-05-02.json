@@ -1,0 +1,93 @@
+{
+  "actual_current_surface_status": "exact negative boundary / finite source-shift slope not zero-source derivative certificate",
+  "exact_next_action": "Add a finite-source-linearity acceptance gate with at least two source radii or a retained analyticity/response-bound theorem; otherwise keep single-radius dE/ds slopes as diagnostics until same-source LSZ, FV/IR, and Higgs-identity gates pass.",
+  "fail_count": 0,
+  "finite_shift_family": {
+    "checks": {
+      "energy_triplet_count": 1,
+      "finite_slope_count": 1,
+      "true_derivative_span": 0.4000000000000001,
+      "true_derivative_values": [
+        0.6000000000000001,
+        0.5,
+        0.4,
+        0.30000000000000004,
+        0.2
+      ]
+    },
+    "measured_symmetric_slope": 0.4,
+    "rows": [
+      {
+        "cubic_response_coefficient": -2000.0,
+        "energy_samples": {
+          "+delta": 1.254,
+          "-delta": 1.246,
+          "0": 1.25
+        },
+        "finite_symmetric_slope": 0.40000000000000036,
+        "true_zero_source_derivative": 0.6000000000000001
+      },
+      {
+        "cubic_response_coefficient": -1000.0,
+        "energy_samples": {
+          "+delta": 1.254,
+          "-delta": 1.246,
+          "0": 1.25
+        },
+        "finite_symmetric_slope": 0.40000000000000036,
+        "true_zero_source_derivative": 0.5
+      },
+      {
+        "cubic_response_coefficient": 0.0,
+        "energy_samples": {
+          "+delta": 1.254,
+          "-delta": 1.246,
+          "0": 1.25
+        },
+        "finite_symmetric_slope": 0.40000000000000036,
+        "true_zero_source_derivative": 0.4
+      },
+      {
+        "cubic_response_coefficient": 1000.0,
+        "energy_samples": {
+          "+delta": 1.254,
+          "-delta": 1.246,
+          "0": 1.25
+        },
+        "finite_symmetric_slope": 0.40000000000000036,
+        "true_zero_source_derivative": 0.30000000000000004
+      },
+      {
+        "cubic_response_coefficient": 2000.0,
+        "energy_samples": {
+          "+delta": 1.254,
+          "-delta": 1.246,
+          "0": 1.25
+        },
+        "finite_symmetric_slope": 0.40000000000000036,
+        "true_zero_source_derivative": 0.2
+      }
+    ],
+    "source_radius_delta": 0.01
+  },
+  "finite_source_shift_derivative_gate_passed": false,
+  "parent_certificates": {
+    "chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+    "fh_production_protocol": "outputs/yt_fh_production_protocol_certificate_2026-05-01.json",
+    "postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
+    "ready_chunk_response": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
+    "same_source_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
+    "source_response_harness": "outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A single finite source-shift radius leaves the zero-source derivative underdetermined by odd nonlinear response terms.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat finite source-shift slopes as physical dE/dh",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "A three-point symmetric source response at one finite radius does not certify the zero-source Feynman-Hellmann derivative.  The family E(s)=E0+a s+c s^3 keeps E(-delta), E(0), E(+delta), and the finite symmetric slope fixed while changing dE/ds|_0 through the cubic coefficient.  Current chunks with shifts [-0.01,0,+0.01] therefore provide production diagnostics only until a finite-source-linearity gate, multiple source radii, or an analytic response-bound certificate is supplied, in addition to the scalar LSZ and Higgs-identity gates."
+}

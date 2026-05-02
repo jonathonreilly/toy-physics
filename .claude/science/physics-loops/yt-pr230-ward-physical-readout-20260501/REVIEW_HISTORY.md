@@ -1,5 +1,38 @@
 # Review History
 
+## Review-Loop Backpressure - Finite Source-Shift Derivative
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- one symmetric finite source radius is treated as response instrumentation,
+  not as a zero-source Feynman-Hellmann derivative;
+- the witness holds `E(-delta)`, `E(0)`, `E(+delta)`, and the finite symmetric
+  slope fixed while varying `dE/ds|_0`;
+- `kappa_s=1`, single-radius finite source slopes, observed target values,
+  `H_unit`, Ward authority, alpha/plaquette/u0, `c2=1`, and `Z_match=1`
+  remain forbidden;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_finite_source_shift_derivative_no_go.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_finite_source_shift_derivative_no_go.py
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Effective-Mass Plateau Residue
 
 Local review-loop disposition:

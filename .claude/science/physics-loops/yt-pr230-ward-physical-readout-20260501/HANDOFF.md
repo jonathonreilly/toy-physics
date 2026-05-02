@@ -1,5 +1,28 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 finite source-shift derivative no-go:
+
+- Added `scripts/frontier_yt_finite_source_shift_derivative_no_go.py`,
+  `docs/YT_FINITE_SOURCE_SHIFT_DERIVATIVE_NO_GO_NOTE_2026-05-02.md`,
+  and `outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json`.
+- Result: one symmetric finite scalar-source radius is diagnostic only.  The
+  witness `E(s)=E0+a s+c s^3` keeps `E(-delta)`, `E(0)`, `E(+delta)`, and the
+  finite symmetric slope fixed while changing the zero-source derivative
+  `dE/ds|_0`.
+- Assumption/import stress is refreshed to forbid treating a single finite
+  source-shift radius as the zero-source derivative.  It is now
+  `PASS=11 FAIL=0`.
+- Retained-route gate is `PASS=82 FAIL=0`; campaign status is
+  `PASS=108 FAIL=0` over 112 certificates.
+- Chunks007-008 remain running; chunks009-010 are in thermalization.
+
+Next exact action: process chunks007-010 as they finish through combiner,
+ready-set, response-stability, retained-route, and campaign gates; otherwise
+continue scalar-denominator / source-pole identity work.  Do not use
+single-radius finite source slopes as physical `dE/dh` or as zero-source FH
+derivatives without a finite-source-linearity gate, multiple source radii, or
+a retained analytic response-bound theorem.
+
 Latest checkpoint, 2026-05-02 effective-mass plateau residue no-go:
 
 - Added `scripts/frontier_yt_effective_mass_plateau_residue_no_go.py`,

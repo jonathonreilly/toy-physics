@@ -2,6 +2,7 @@
   "actual_current_surface_status": "open / assumption-import stress complete",
   "checked_certificates": {
     "campaign": "open / active campaign continuing after current shortcut blocks",
+    "finite_source_shift_derivative_no_go": "exact negative boundary / finite source-shift slope not zero-source derivative certificate",
     "kinetic_matching": "exact negative boundary / heavy kinetic matching obstruction",
     "momentum_pilot": "bounded-support / momentum pilot scaling",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
@@ -11,7 +12,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 10,
+  "pass_count": 11,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [
@@ -22,5 +23,5 @@
     "does not use yt_ward_identity as y_t authority",
     "does not set kappa_s to one without scalar LSZ/canonical normalization"
   ],
-  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  Canonical Z_h=1 does not derive the source operator overlap <0|O_s|h>, and source contact-term schemes do not derive the isolated pole residue.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
+  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  Canonical Z_h=1 does not derive the source operator overlap <0|O_s|h>, and source contact-term schemes do not derive the isolated pole residue.  A single finite source-shift radius also does not derive the zero-source Feynman-Hellmann derivative.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
 }

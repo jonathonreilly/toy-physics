@@ -36,6 +36,12 @@ Euclidean-time plateaus can coexist with different ground/source-pole
 residues.  Future production postprocessing must retain a model-class,
 spectral-gap/pole-saturation, FV/IR, and Higgs-identity gate before amplitude
 readouts can count.
+The single-radius source-shift shortcut is now blocked as well.  The current
+`[-0.01,0,+0.01]` slope is useful instrumentation, but it does not certify
+the zero-source FH derivative until multiple source radii, a finite-source
+linearity gate, or an analytic response-bound theorem excludes odd nonlinear
+response.  This raises the priority of finite-source-linearity acceptance
+support after any completed chunks are processed.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
@@ -119,7 +125,10 @@ readouts can count.
    derived `kappa_s`, not setting `kappa_s = 1`.  The production protocol is
    now specified: common-ensemble symmetric source shifts, correlated slope
    fits, and a same-source scalar two-point LSZ/canonical-normalization
-   measurement for `kappa_s`.  The same-source two-point object is now
+   measurement for `kappa_s`.  The single-radius finite source slope remains
+   diagnostic until a finite-source-linearity gate, multi-radius source
+   response, or retained response-bound theorem certifies the zero-source
+   derivative.  The same-source two-point object is now
    executable as `C_ss(q)=Tr[S V_q S V_-q]`; closure still requires a
    controlled pole/continuum limit and canonical residue.  A finite-mode
    Bethe-Salpeter interpolation cannot supply that residue by itself.  The

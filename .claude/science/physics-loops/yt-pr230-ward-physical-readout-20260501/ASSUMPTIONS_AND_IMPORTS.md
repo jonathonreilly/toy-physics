@@ -22,6 +22,7 @@
 | Nonzero-momentum production ensembles | kinetic route evidence | scout and reduced cold pilots only | unavailable for closure |
 | Feynman-Hellmann scalar-source response data | alternate observable route | synthetic support only | unavailable for closure |
 | Same-source scalar pole derivative `D'_ss(pole)` | removes source-coordinate normalization with `dE/ds` | sufficiency theorem support only; production pole data absent | open import until postprocess/model-class/FV/IR/Higgs-identity gates pass |
+| Single finite source-shift radius as a zero-source derivative | possible FH shortcut | exact negative boundary for PR230 FH response closure | allowed as diagnostic support only; one finite radius does not exclude odd nonlinear response |
 | Reduced mass-bracket `dE/dm_bare` response | lightweight response scout | bounded support | bare-source data; forbidden as physical `y_t` evidence |
 | Reduced cold-gauge momentum pilots | implementation support | bounded support | forbidden as strict evidence |
 | Scalar-channel contact coupling `G` | HS/RPA pole condition | not in `A_min` | forbidden unless derived from Wilson gauge ladder |
@@ -146,6 +147,19 @@ The response route cancels additive rest-mass shifts in energy slopes, but it
 does not fix `kappa_s`.  Therefore it remains blocked by the same scalar
 source-to-Higgs normalization / LSZ residue import unless that bridge is
 derived or measured on production ensembles.
+
+Finite source-shift derivative boundary:
+
+```text
+E(s) = E0 + a s + c s^3
+[E(+delta)-E(-delta)]/(2 delta) = a + c delta^2
+```
+
+A single finite symmetric source radius fixes the finite-difference slope, not
+the zero-source derivative `a = dE/ds|_0`.  Using a single finite source-shift
+radius as a zero-source derivative is therefore forbidden as a proof shortcut
+until multiple source radii, a finite-source-linearity gate, or a retained
+analytic response-bound theorem excludes nonlinear contamination.
 
 Same-source FH/LSZ invariant readout support:
 

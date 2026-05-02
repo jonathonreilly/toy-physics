@@ -187,6 +187,9 @@ def main() -> int:
         "effective_mass_plateau_residue_no_go": load(
             "outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json"
         ),
+        "finite_source_shift_derivative_no_go": load(
+            "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json"
+        ),
         "higgs_pole_identity_latest_blocker": load(
             "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json"
         ),
@@ -639,6 +642,12 @@ def main() -> int:
         statuses["effective_mass_plateau_residue_no_go"],
     )
     report(
+        "finite-source-shift-derivative-no-go-blocks",
+        "finite source-shift slope not zero-source derivative certificate"
+        in str(statuses["finite_source_shift_derivative_no_go"]),
+        statuses["finite_source_shift_derivative_no_go"],
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         "latest Higgs-pole identity blocker certificate"
         in str(statuses["higgs_pole_identity_latest_blocker"]),
@@ -994,6 +1003,10 @@ def main() -> int:
             "no-go blocks the finite-time postprocess shortcut too: identical "
             "finite-window effective masses do not identify the ground/source "
             "residue.  "
+            "The finite source-shift derivative no-go also blocks treating one "
+            "symmetric source radius as a zero-source FH derivative: identical "
+            "E(-delta), E(0), E(+delta), and finite slopes can coexist with "
+            "different dE/ds at zero.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "

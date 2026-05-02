@@ -49,6 +49,7 @@ plus Cl(3)/Z3 automorphism source-identity no-go
 plus same-source pole-data sufficiency gate
 plus short-distance/OPE LSZ shortcut no-go
 plus effective-mass plateau residue no-go
+plus finite source-shift derivative no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -61,6 +62,22 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+Finite source-shift derivative no-go:
+
+```text
+actual_current_surface_status: exact negative boundary / finite source-shift slope not zero-source derivative certificate
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_finite_source_shift_derivative_no_go.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+Single-radius source-response slopes are diagnostics, not zero-source
+Feynman-Hellmann derivative certificates.  A cubic response family can keep
+the measured finite source triplet and symmetric slope fixed while changing
+`dE/ds|_0`, so no retained or proposed-retained `y_t` closure is authorized.
 
 Short-distance/OPE LSZ shortcut no-go:
 

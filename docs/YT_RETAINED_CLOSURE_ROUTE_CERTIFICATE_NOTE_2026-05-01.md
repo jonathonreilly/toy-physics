@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=81 FAIL=0
+# SUMMARY: PASS=82 FAIL=0
 ```
 
 The runner verifies:
@@ -56,6 +56,7 @@ The runner verifies:
 | source contact-term curvature scheme fixes the pole residue | no |
 | short-distance/OPE operator normalization fixes the IR source-pole residue | no |
 | finite effective-mass plateau window fixes the source-pole residue | no |
+| single finite source-shift radius certifies the zero-source FH derivative | no |
 | BRST/ST/Nielsen identities fix the source pole as canonical Higgs | no |
 | finite Cl(3)/Z3 automorphism/orbit data fix continuous LSZ source overlap | no |
 | same-source pole-data sufficiency gate is passed | no |
@@ -137,6 +138,12 @@ residue, not the source operator matrix element `<0|O_s|h>`.
 The source contact-term scheme boundary blocks using contact-renormalized
 low-momentum curvature as the LSZ bridge: `C_ss(0)` and `C_ss'(0)` can be fixed
 by source contact terms while the isolated pole residue remains different.
+The finite source-shift derivative no-go blocks treating the current
+single-radius source response as the zero-source FH derivative: `E(-delta)`,
+`E(0)`, `E(+delta)`, and the finite slope can remain fixed while `dE/ds|_0`
+changes through odd nonlinear response.  Future source-response evidence needs
+multiple source radii, a finite-source-linearity gate, or a retained analytic
+response-bound theorem.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
