@@ -294,7 +294,16 @@ For publication-facing or quantitative work, also inspect
    two no-go/support-only cycles.
 7. **Apply the dramatic-step gate.** Execute only routes that can change the
    lane state: import retired, exact support added, no-go proven, major blocker
-   isolated, or novel structure introduced with a falsifier.
+   isolated, or novel structure introduced with a falsifier. Apply the
+   **corollary-churn check** alongside the gate: if the proposed cycle's output
+   would be a one-step algebraic corollary of an already-landed cycle in this
+   campaign — same load-bearing premises, same retained surface, just a
+   relabeling or specialization — reject it as churn even when the arithmetic
+   is correct. A cycle must introduce a new load-bearing premise, close a
+   named residual not yet closed in this campaign, attempt a stretch on an
+   unattempted hard residual, or synthesize prior cycles with a new structural
+   insight. "Plug already-derived hypercharges into the photon-charge formula
+   for hadron X" is the canonical churn shape; do not produce it.
 8. **Execute one major cycle.** Produce a theorem note, runner/log pair,
    import-retirement audit, literature bridge, no-go packet, or demotion
    packet. Keep edits scoped to the chosen route.
@@ -377,6 +386,18 @@ routes are risky.
 - **No-churn exception:** an honest first-principles attempt with named
   obstructions is valid progress even without closure. This exception does not
   allow vague prose, unverified algebra, or unsupported status promotion.
+- **Corollary-churn guard (late campaign):** the `--max-cycles` cap is a
+  ceiling, not a target. After ~5 substantive cycles in a campaign, before
+  launching each new cycle, name the new load-bearing premise, named
+  residual, stretch target, or synthesis insight that this cycle introduces
+  beyond what already-landed campaign cycles imply. If the answer is "none —
+  it's a corollary of cycle N applied to a different label," do not
+  launch the cycle. Pivot to a fresh lane, attempt a stretch on a hard
+  residual not yet attempted, or stop the campaign. A passing runner that
+  verifies arithmetic Python already implies (e.g. `2/3 + 2/3 - 1/3 = 1`) is
+  not a derivation; it is repackaging. PRs at this density are blocked by
+  Content Integrity policy and will be closed as churn even if individually
+  technically correct.
 
 ## Literature
 
@@ -412,6 +433,12 @@ Stop and write a clear `HANDOFF.md` when:
 - runtime or max cycles is reached;
 - no route in the refreshed opportunity queue passes the dramatic-step gate
   **after** the Deep Work Rules have been satisfied for the active target;
+- **corollary exhaustion**: every remaining ranked opportunity would produce
+  only a one-step algebraic corollary of an already-landed campaign cycle
+  with no new load-bearing premise. This is a real stop condition, not a
+  reason to fill the cycle cap with thin restatements. The campaign's
+  substantive ground is covered when the highest-value remaining moves are
+  "apply cycle N's exact-support theorem to a different label";
 - the worktree changes externally in a way that affects the route;
 - the requested target status is honestly achieved and the user did not ask for
   a continuing campaign;
@@ -420,6 +447,10 @@ Stop and write a clear `HANDOFF.md` when:
 Do not stop solely because review-loop finds a blocker, retained certification
 fails, PR creation fails, or one lane needs human science judgment. Demote or
 backlog that block and pivot.
+
+When stopping for corollary exhaustion, name in `HANDOFF.md` the highest-blast-
+radius unattempted hard residual so the next campaign can resume on fresh
+ground rather than re-mining the already-covered surface.
 
 ## Final Report
 
