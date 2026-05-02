@@ -193,6 +193,9 @@ def main() -> int:
         "neutral_scalar_rank_one_purity_gate": load(
             "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json"
         ),
+        "neutral_scalar_commutant_rank_no_go": load(
+            "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json"
+        ),
         "fh_gauge_response_mixed_scalar": load(
             "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json"
         ),
@@ -691,6 +694,12 @@ def main() -> int:
         "neutral scalar rank-one purity gate not passed"
         in str(statuses["neutral_scalar_rank_one_purity_gate"]),
         statuses["neutral_scalar_rank_one_purity_gate"],
+    )
+    report(
+        "neutral-scalar-commutant-rank-no-go-blocks",
+        "neutral scalar commutant does not force rank-one purity"
+        in str(statuses["neutral_scalar_commutant_rank_no_go"]),
+        statuses["neutral_scalar_commutant_rank_no_go"],
     )
     report(
         "fh-gauge-response-mixed-scalar-blocks",
@@ -1198,6 +1207,9 @@ def main() -> int:
             "The H_unit candidate gate now blocks the direct legacy substitute: "
             "H_unit is a named D17 bilinear, but without pole-purity and "
             "canonical-normalization certificates it is not the canonical O_H.  "
+            "The neutral-scalar commutant rank no-go now blocks the symmetry-only "
+            "rank-one route: current neutral labels still admit a rank-two "
+            "response family unless dynamics or C_sH/C_HH data remove it.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

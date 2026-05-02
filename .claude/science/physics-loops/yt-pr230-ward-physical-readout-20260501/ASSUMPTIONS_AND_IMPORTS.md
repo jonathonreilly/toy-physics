@@ -678,3 +678,12 @@ A manifest for `O_H` / `C_sH` / `C_HH` production rows is planning support
 only.  It must not be used as evidence until production rows, pole residues,
 covariance, model-class/FV/IR controls, and the retained-route claim gate all
 pass.
+
+2026-05-02 neutral scalar commutant rank no-go:
+
+Neutral scalar symmetry labels, D17 carrier support, and commutant rank
+bookkeeping may be used only as support.  They must not be promoted to a
+rank-one dynamical theorem, source-pole purity certificate, or
+canonical-Higgs overlap identity.  A future positive route must derive the
+rank-one response dynamically or measure `C_sH` / `C_HH` pole data on the same
+surface.

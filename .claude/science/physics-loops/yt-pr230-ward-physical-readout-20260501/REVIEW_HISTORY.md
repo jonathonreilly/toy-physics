@@ -3267,3 +3267,17 @@ Disposition: bounded support.  The future `O_H` / `C_sH` / `C_HH` route now
 has a minimum same-ensemble residue/covariance schema, but the current harness
 does not emit those rows and no production certificate exists.  No retained or
 proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 144 Neutral Scalar Commutant Rank No-Go
+
+Review stance: symmetry shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_neutral_scalar_commutant_rank_no_go.py`.
+- Added `docs/YT_NEUTRAL_SCALAR_COMMUTANT_RANK_NO_GO_NOTE_2026-05-02.md`.
+- Added `outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  Current neutral labels and D17 support
+do not force a rank-one neutral scalar response space; a rank-two same-label
+response family keeps source-only `C_ss` fixed while canonical-Higgs overlap
+remains uncertified.  No retained or proposed-retained wording is allowed.

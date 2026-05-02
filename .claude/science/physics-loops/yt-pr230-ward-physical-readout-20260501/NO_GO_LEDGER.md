@@ -1870,3 +1870,17 @@ schema.  It does not provide production rows, a canonical-Higgs operator
 identity, pole residues, covariance, model-class/pole-saturation control, or a
 retained-route gate.  A manifest cannot be used as retained/proposed-retained
 evidence.
+
+Neutral scalar commutant does not force rank one:
+
+```text
+python3 scripts/frontier_yt_neutral_scalar_commutant_rank_no_go.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+Current symmetry/D17 data do not collapse the neutral scalar response
+commutant to rank one.  A two-direction neutral scalar response family can
+preserve the listed labels and source-only `C_ss` residue while leaving the
+canonical-Higgs overlap uncertified.  Do not treat symmetry labels, D17
+carrier support, or a commutant-counting argument as source-pole purity,
+`cos(theta)=1`, or `kappa_s` closure.

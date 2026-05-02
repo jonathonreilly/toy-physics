@@ -1341,3 +1341,27 @@ exists.  No retained/proposed-retained wording is authorized.
 Next exact action: poll chunk011.  If complete, process it.  If not, implement
 the actual `O_H`/`C_sH`/`C_HH` rows, W/Z response with identity certificates,
 or rank-one neutral-scalar theorem work.
+
+Block 144 added the neutral scalar commutant rank no-go:
+
+```text
+python3 scripts/frontier_yt_neutral_scalar_commutant_rank_no_go.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=96 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=122 FAIL=0
+```
+
+Result: symmetry/D17 labels alone do not force a rank-one neutral scalar
+response space.  A rank-two response family preserves source-only `C_ss` while
+canonical-Higgs overlap remains uncertified.  No retained/proposed-retained
+wording is authorized.
+
+Next exact action: poll chunk011.  If complete, process the target-series
+chunk through combiner, ready-set, stability, ESS, retained-route, and
+campaign gates.  If not, pivot to a genuinely dynamical rank-one theorem,
+same-surface `O_H`/`C_sH`/`C_HH` rows, or W/Z response with identity
+certificates.

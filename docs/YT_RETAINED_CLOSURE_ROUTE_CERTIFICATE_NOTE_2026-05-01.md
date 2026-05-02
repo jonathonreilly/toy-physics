@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=95 FAIL=0
+# SUMMARY: PASS=96 FAIL=0
 ```
 
 The runner verifies:
@@ -83,6 +83,7 @@ The runner verifies:
 | canonical-Higgs operator realization gate is passed | no |
 | `H_unit` is certified as canonical `O_H` | no |
 | neutral scalar response space rank-one purity gate is passed | no |
+| neutral scalar commutant rank-one purity is forced | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -204,6 +205,10 @@ The `H_unit` candidate gate blocks the direct legacy substitute: `H_unit` is a
 named D17/substrate bilinear, but without pole-purity and
 canonical-normalization certificates it is not `O_H` and re-enters the
 forbidden matrix-element readout.
+The neutral-scalar commutant rank no-go blocks the symmetry-only rank-one
+repair.  Current neutral labels and D17 support still admit a rank-two response
+family, so rank-one purity requires a dynamical theorem or same-surface
+`C_sH` / `C_HH` pole-residue data rather than symmetry labels alone.
 The chunked FH/LSZ route has also advanced only as bounded support:
 chunks009-010 are seed-controlled and combiner-ready, raising the current
 L12 ready set to `10/63` chunks and `160/1000` saved configurations.  Response
@@ -406,6 +411,13 @@ admixture, but current D17 carrier support is not that theorem.  The gate
 records a rank-two neutral scalar witness preserving the listed labels while
 changing the source-pole readout, so no retained/proposed-retained wording is
 authorized.
+
+The neutral-scalar commutant rank no-go sharpens that blocker.  The current
+commutant/symmetry data allow two neutral scalar response directions with the
+same listed labels, preserving source-only `C_ss` while leaving the
+canonical-Higgs overlap uncertified.  A rank-one purity theorem must therefore
+come from dynamics or direct source-Higgs pole data, not the current
+symmetry/D17 surface.
 
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive

@@ -467,3 +467,11 @@ change claim status; it only makes the next harness work concrete.  Highest
 priority remains processing chunk011 if it finishes, otherwise implementing
 actual `O_H`/`C_sH`/`C_HH` rows or pursuing W/Z response / rank-one purity
 with identity certificates.
+
+Neutral-scalar commutant rank update: symmetry-only rank-one closure is now
+blocked.  Current neutral labels and D17 support still admit a rank-two
+response family, so do not spend another block on symmetry/D17 rank-counting
+alone.  Remaining positive actions are: process chunk011 if complete; derive a
+dynamical rank-one theorem; implement same-surface `O_H`/`C_sH`/`C_HH`
+production rows; or build W/Z response only with sector-overlap and
+canonical-Higgs identity certificates.

@@ -119,6 +119,7 @@ def main() -> int:
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
         "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+        "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
         "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
         "no_orthogonal_top_coupling_selection_rule": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
@@ -658,6 +659,12 @@ def main() -> int:
         )
         is False
     )
+    neutral_scalar_commutant_rank_no_go_blocks = (
+        "neutral scalar commutant does not force rank-one purity"
+        in certificates["neutral_scalar_commutant_rank_no_go"].get("actual_current_surface_status", "")
+        and certificates["neutral_scalar_commutant_rank_no_go"].get("proposal_allowed") is False
+        and certificates["neutral_scalar_commutant_rank_no_go"].get("rank_one_theorem_derived") is False
+    )
     fh_gauge_response_mixed_scalar_blocks = (
         "FH gauge-response mixed-scalar obstruction"
         in certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", "")
@@ -1151,6 +1158,11 @@ def main() -> int:
         certificates["neutral_scalar_rank_one_purity_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "neutral-scalar-commutant-rank-no-go-blocks",
+        neutral_scalar_commutant_rank_no_go_blocks,
+        certificates["neutral_scalar_commutant_rank_no_go"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-gauge-response-mixed-scalar-blocks",
         fh_gauge_response_mixed_scalar_blocks,
         certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", ""),
@@ -1486,7 +1498,10 @@ def main() -> int:
             "The neutral-scalar rank-one purity gate "
             "also fails: D17 carrier support is not a dynamical rank-one "
             "theorem, and a rank-two neutral scalar witness still preserves "
-            "the listed labels while changing the source-pole readout.  "
+            "the listed labels while changing the source-pole readout.  The "
+            "commutant rank no-go sharpens that boundary: symmetry/D17 labels "
+            "still allow a rank-two neutral scalar response family, so rank "
+            "one requires dynamics or C_sH/C_HH data.  "
             "A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "

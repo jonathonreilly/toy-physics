@@ -1,0 +1,105 @@
+{
+  "actual_current_surface_status": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
+  "exact_next_action": "Derive a dynamical rank-one neutral scalar theorem, measure C_sH/C_HH Gram purity, implement W/Z response with identity certificates, or process seed-controlled FH/LSZ chunks.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "d17_source_pole_identity": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
+    "higgs_identity_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "hunit_candidate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
+    "neutral_scalar_rank_one_purity": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "source_higgs_cross_correlator_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current symmetry/D17 surface does not derive the rank-one neutral scalar response theorem.",
+  "rank_one_theorem_derived": false,
+  "rank_two_commutant_family": [
+    {
+      "canonical_higgs_vector": [
+        0.5,
+        0.8660254037844386
+      ],
+      "commutant_dimension": 4,
+      "matrix_rank": 2,
+      "neutral_labels_identical": true,
+      "rank_one_purity": false,
+      "response_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.2
+        ]
+      ],
+      "source_higgs_overlap": 0.5,
+      "source_only_residue": 1.0,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "canonical_higgs_vector": [
+        0.8,
+        0.5999999999999999
+      ],
+      "commutant_dimension": 4,
+      "matrix_rank": 2,
+      "neutral_labels_identical": true,
+      "rank_one_purity": false,
+      "response_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.6
+        ]
+      ],
+      "source_higgs_overlap": 0.8,
+      "source_only_residue": 1.0,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "canonical_higgs_vector": [
+        0.95,
+        0.31224989991991997
+      ],
+      "commutant_dimension": 4,
+      "matrix_rank": 2,
+      "neutral_labels_identical": true,
+      "rank_one_purity": false,
+      "response_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "source_higgs_overlap": 0.95,
+      "source_only_residue": 1.0,
+      "source_vector": [
+        1.0,
+        0.0
+      ]
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set cos(theta)=1 or kappa_s=1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat D17 carrier support as rank-one dynamics"
+  ],
+  "verdict": "Current neutral scalar labels/D17 support do not force the response space to be rank one.  With two neutral scalars carrying identical listed labels, the symmetry commutant contains a rank-two positive response family.  Source-only C_ss data can remain fixed while the canonical-Higgs overlap is not certified by symmetry alone.  A rank-one result still requires a dynamical theorem, C_sH/C_HH Gram purity data, or another accepted Higgs-identity certificate."
+}
