@@ -1,11 +1,15 @@
 # Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action
 
 **Date:** 2026-04-29
-**Status:** support — branch-local theorem note on A_min; runner passing; audit-pending.
+**Status:** support — branch-local theorem note on A_min; runner passing; audit-ready (criticality bumped leaf->medium; prior audit `audited_clean class C` archived; submitted for fresh re-audit).
+**Type:** positive_theorem
+**Claim type:** positive_theorem
+**Claim scope:** Reflection positivity (R1)–(R4) for the canonical staggered-Dirac + Wilson-plaquette action at `g_bare = 1` on a finite block `Λ ⊂ Z^3` is proved on `A_min` by Sharatchandra–Osterwalder–Seiler factorisation of (i) Wilson-plaquette gauge integration, (ii) staggered-fermion link reflection, and (iii) commuting product of the two, plus the standard reconstruction theorem yielding a Hermitian transfer matrix `T ≥ 0` and reconstructed Hamiltonian `H = -log(T)/a_τ` bounded below on the reconstructed Hilbert space `H_phys`. No fitted, observed, or PDG inputs.
 **Loop:** `axiom-first-foundations`
 **Cycle:** 2 (Route R2)
 **Runner:** `scripts/axiom_first_reflection_positivity_check.py`
 **Log:** `outputs/axiom_first_reflection_positivity_check_2026-04-29.txt`
+**Re-audit context:** prior audit `audited_clean` (verdict class `C`, runner_check_breakdown `{A:0,B:0,C:21,D:0,total_pass:21}`) archived on 2026-05-02 by `invalidate_stale_audits.py` with reason `criticality_increased:leaf->medium`. The note content is unchanged; only the cross-confirmation requirement is stricter at the new criticality tier. Resubmitting under fresh-look audit with the same load-bearing step.
 
 ## Scope
 
@@ -318,6 +322,25 @@ to the framework's specific staggered + Wilson + canonical-`β`
 surface. The runner exhibits the structural content (transfer
 matrix construction, Hermiticity, positive spectrum, RP inequality)
 on tractable small lattices.
+
+**Honest claim-status fields (audit-pipeline rubric):**
+
+```yaml
+actual_current_surface_status: support
+target_claim_type: positive_theorem
+load_bearing_step_class: C  # first-principles compute on Cl(3)/Z^3 axiom (lattice eigenvalue, transfer-matrix construction)
+chain_closes: true  # proof self-contained on listed A_min objects + standard lattice-theorem references
+deps: []  # the runner's classified PASS surface depends on no other note
+fresh_look_required: true  # criticality=medium needs fresh independent auditor
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+```
+
+The prior `audited_clean` verdict (class C, 21 PASS lines) was
+invalidated by `criticality_increased:leaf->medium`; the proof
+content has not changed. A fresh-look re-audit at the medium
+criticality tier is the next step; this note does not
+self-promote.
 
 **Not in scope.**
 
