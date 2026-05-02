@@ -2,9 +2,10 @@
 """
 PR #230 FH/LSZ chunk002 production checkpoint certificate.
 
-This runner audits the completed L12_T24 chunk002 output from the chunked
-FH/LSZ production plan.  It records that a second production-phase chunk now
-exists and is combiner-ready, but it remains partial L12 evidence only.
+This runner audits the historical L12_T24 chunk002 output from the chunked
+FH/LSZ production plan.  It records that a second production-format chunk
+exists, but the numba seed-independence audit demotes it from independent
+evidence until it is rerun under the patched seed-control harness or excluded.
 """
 
 from __future__ import annotations
@@ -77,6 +78,8 @@ def main() -> int:
     lsz = ensemble.get("scalar_two_point_lsz_analysis", {})
     mode_rows = lsz.get("mode_rows", {}) if isinstance(lsz, dict) else {}
     combiner_summary = combiner.get("chunk_summary", {})
+    seed_gate = combiner.get("seed_independence_gate", {})
+    seed_control = ensemble.get("rng_seed_control")
 
     source_shifts = {
         round(float(row.get("source_shift_lat")), 8)
@@ -106,9 +109,12 @@ def main() -> int:
         and metadata.get("scalar_two_point_lsz", {}).get("used_as_physical_yukawa_readout") is False,
         "readout flags false",
     )
+    report("historical-numba-seed-control-missing", not isinstance(seed_control, dict), "historical output predates numba_gauge_seed_v1")
     report(
-        "combiner-sees-two-ready-chunks",
-        combiner_summary.get("present_chunks") == 2 and combiner_summary.get("ready_chunks") == 2,
+        "combiner-demotes-historical-chunks",
+        combiner_summary.get("present_chunks", 0) >= 2
+        and combiner_summary.get("ready_chunks") == 0
+        and seed_gate.get("present_chunks_pass_seed_independence_gate") is False,
         str(combiner_summary),
     )
     report(
@@ -116,23 +122,24 @@ def main() -> int:
         combiner.get("combined_summary", {}).get("available") is False,
         "63 chunks required before L12 combination",
     )
-    report("does-not-authorize-retained-proposal", True, "partial L12 chunk is not retained evidence")
+    report("does-not-authorize-retained-proposal", True, "seed-invalid partial L12 chunk is not retained evidence")
 
     result = {
-        "actual_current_surface_status": "bounded-support / FH-LSZ chunk002 production checkpoint",
+        "actual_current_surface_status": "bounded-support / FH-LSZ chunk002 production checkpoint seed-invalid diagnostic",
         "verdict": (
-            "L12_T24 chunk002 completed with production-phase metadata, "
+            "Historical L12_T24 chunk002 completed with production-phase metadata, "
             "same-source dE/ds response, and same-source scalar C_ss(q) rows "
-            "for the four-mode/x16 plan.  The chunk combiner marks two chunks "
-            "present and ready, but 61 additional L12 chunks, L16/L24 scaling, "
-            "a richer pole-fit/model-class gate, FV/IR/zero-mode control, and "
-            "retained proposal certification remain open.  This is bounded "
-            "production support only."
+            "for the four-mode/x16 plan.  It is not independent production "
+            "evidence on the current surface because it lacks the "
+            "numba_gauge_seed_v1 seed-control marker and shares the historical "
+            "duplicate gauge-evolution signature.  This is a seed-invalid "
+            "production-format diagnostic only."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
-            "Only two of 63 L12 chunks are present; no combined L12, L16/L24, "
-            "pole derivative, model-class, or FV/IR certificate exists."
+            "Historical chunk002 lacks auditable numba gauge seed control; no "
+            "combined L12, L16/L24, pole derivative, model-class, or FV/IR "
+            "certificate exists."
         ),
         "chunk_output": str(CHUNK.relative_to(ROOT)),
         "chunk_artifact": str(ARTIFACT.relative_to(ROOT)),
@@ -145,6 +152,9 @@ def main() -> int:
             "scalar_source_shifts": run_control.get("scalar_source_shifts"),
             "scalar_two_point_modes": run_control.get("scalar_two_point_modes"),
             "scalar_two_point_noises": run_control.get("scalar_two_point_noises"),
+            "seed_control_version": run_control.get("seed_control_version"),
+            "ensemble_rng_seed_control": seed_control,
+            "seed_independence_valid": False,
             "slope_dE_ds_lat": source.get("slope_dE_ds_lat"),
             "slope_dE_ds_lat_err": source.get("slope_dE_ds_lat_err"),
             "mode_keys": sorted(mode_keys),
@@ -154,13 +164,14 @@ def main() -> int:
         },
         "strict_non_claims": [
             "does not use chunk002 as retained evidence",
+            "does not count historical chunk002 as independent production evidence",
             "does not set kappa_s = 1",
             "does not use H_unit, Ward authority, observed target values, alpha_LM, plaquette, or u0 as proof input",
             "does not treat partial L12 output as L16/L24 or pole-fit evidence",
         ],
         "exact_next_action": (
-            "Launch or schedule chunk003, and keep the combiner gate blocking "
-            "until all L12 chunks and postprocess/model-class gates pass."
+            "Rerun a replacement chunk002 under numba_gauge_seed_v1 before "
+            "counting it toward L12 combination."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

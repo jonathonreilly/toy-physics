@@ -2107,3 +2107,33 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 Finite-L discreteness does not certify infinite-volume pole saturation; a
 uniform gap/scalar-denominator theorem or production postprocess evidence
 remains required.  No retained/proposed-retained wording is authorized.
+
+## Review-Loop Backpressure - FH/LSZ Numba Seed-Independence Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY FOR HISTORICAL CHUNK EVIDENCE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/yt_direct_lattice_correlator_production.py scripts/frontier_yt_fh_lsz_numba_seed_independence_audit.py scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_numba_seed_independence_audit.py
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py
+python3 scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+Historical chunk001/chunk002 have distinct metadata seeds, identical
+gauge-evolution signatures, and no `numba_gauge_seed_v1` marker.  The harness
+and combiner now enforce seed-control metadata.  No retained/proposed-retained
+wording is authorized.

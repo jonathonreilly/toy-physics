@@ -33,6 +33,7 @@ EXPECTED_THERM = 1000
 EXPECTED_SEPARATION = 20
 EXPECTED_CHUNK_MEASUREMENTS = 16
 EXPECTED_VOLUME = "12x24"
+EXPECTED_SEED_CONTROL_VERSION = "numba_gauge_seed_v1"
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -82,6 +83,10 @@ def expected_chunks(manifest: dict[str, Any]) -> list[dict[str, Any]]:
             }
         )
     return rows
+
+
+def expected_volume_seed(base_seed: int, spatial_l: int = 12, time_l: int = 24) -> int:
+    return int(base_seed + 1000003 * spatial_l + 9176 * time_l)
 
 
 def selected_ensemble(data: dict[str, Any]) -> dict[str, Any]:
@@ -185,6 +190,75 @@ def audit_scalar_lsz(metadata: dict[str, Any], ensemble: dict[str, Any]) -> list
     return issues
 
 
+def audit_seed_control(metadata: dict[str, Any], ensemble: dict[str, Any], expected: dict[str, Any]) -> list[str]:
+    issues: list[str] = []
+    run_control = metadata.get("run_control", {})
+    engine = run_control.get("engine") if isinstance(run_control, dict) else None
+    if engine != "numba":
+        return issues
+
+    seed_control = ensemble.get("rng_seed_control")
+    if not isinstance(seed_control, dict):
+        return ["missing ensemble.rng_seed_control for numba gauge seed independence"]
+    if seed_control.get("seed_control_version") != EXPECTED_SEED_CONTROL_VERSION:
+        issues.append(f"seed_control_version={seed_control.get('seed_control_version')!r}")
+    if seed_control.get("base_seed") != expected["seed"]:
+        issues.append(f"base_seed={seed_control.get('base_seed')!r}, expected {expected['seed']}")
+    expected_seed = expected_volume_seed(expected["seed"])
+    if seed_control.get("gauge_rng_seed") != expected_seed:
+        issues.append(f"gauge_rng_seed={seed_control.get('gauge_rng_seed')!r}, expected {expected_seed}")
+    if seed_control.get("numba_gauge_seeded_before_thermalization") is not True:
+        issues.append("numba_gauge_seeded_before_thermalization is not true")
+    return issues
+
+
+def seed_independence_signature(ensemble: dict[str, Any]) -> dict[str, Any]:
+    source = ensemble.get("scalar_source_response_analysis", {})
+    mass_fit = ensemble.get("mass_fit", {})
+    values = {
+        "plaquette_mean": ensemble.get("plaquette_mean"),
+        "mass_fit_m_lat": mass_fit.get("m_lat") if isinstance(mass_fit, dict) else None,
+        "source_slope_dE_ds_lat": source.get("slope_dE_ds_lat") if isinstance(source, dict) else None,
+    }
+    rounded = {}
+    for key, value in values.items():
+        rounded[key] = round(float(value), 15) if finite_number(value) else None
+    rounded["complete"] = all(value is not None for value in rounded.values())
+    return rounded
+
+
+def apply_seed_independence_audit(audits: list[dict[str, Any]]) -> None:
+    groups: dict[tuple[float, float, float], list[dict[str, Any]]] = {}
+    for row in audits:
+        if not row.get("exists"):
+            continue
+        data = load_json(ROOT / row["output"])
+        ensemble = selected_ensemble(data)
+        signature = seed_independence_signature(ensemble)
+        row["seed_independence_signature"] = signature
+        if not signature.get("complete"):
+            continue
+        key = (
+            float(signature["plaquette_mean"]),
+            float(signature["mass_fit_m_lat"]),
+            float(signature["source_slope_dE_ds_lat"]),
+        )
+        groups.setdefault(key, []).append(row)
+
+    for rows in groups.values():
+        distinct_seeds = {row.get("seed") for row in rows}
+        if len(rows) <= 1 or len(distinct_seeds) <= 1:
+            continue
+        chunk_ids = [int(row["chunk_index"]) for row in rows]
+        issue = (
+            "duplicate gauge-evolution signature across distinct metadata seeds; "
+            f"chunks={chunk_ids}"
+        )
+        for row in rows:
+            row.setdefault("issues", []).append(issue)
+            row["ready_for_l12_combination"] = False
+
+
 def audit_chunk(expected: dict[str, Any]) -> dict[str, Any]:
     path = ROOT / expected["output"]
     data = load_json(path)
@@ -212,6 +286,7 @@ def audit_chunk(expected: dict[str, Any]) -> dict[str, Any]:
     if ensemble.get("measurement_separation_sweeps") != EXPECTED_SEPARATION:
         issues.append(f"measurement_separation_sweeps={ensemble.get('measurement_separation_sweeps')!r}")
     issues.extend(audit_run_control(metadata, expected))
+    issues.extend(audit_seed_control(metadata, ensemble, expected))
     issues.extend(audit_source_response(ensemble))
     issues.extend(audit_scalar_lsz(metadata, ensemble))
 
@@ -306,6 +381,7 @@ def main() -> int:
     manifest = load_json(MANIFEST)
     chunks = expected_chunks(manifest) if manifest else []
     audits = [audit_chunk(row) for row in chunks]
+    apply_seed_independence_audit(audits)
     present = [row for row in audits if row.get("exists")]
     ready = [row for row in audits if row.get("ready_for_l12_combination")]
     missing = [row for row in audits if not row.get("exists")]
@@ -315,6 +391,14 @@ def main() -> int:
     output_dirs = [row["production_output_dir"] for row in chunks]
     chunk_dirs_isolated = len(output_dirs) == len(set(output_dirs)) == len(chunks)
     combined_summary = combine_if_ready(audits)
+    present_seed_control_ready = all(
+        not any("seed" in issue.lower() for issue in row.get("issues", []))
+        for row in present
+    )
+    seed_gate_enforced = present_seed_control_ready or any(
+        any("seed" in issue.lower() for issue in row.get("issues", []))
+        for row in present
+    )
 
     policy = manifest.get("chunk_policy", {}) if manifest else {}
     report("manifest-loaded", bool(manifest), str(MANIFEST.relative_to(ROOT)))
@@ -326,6 +410,11 @@ def main() -> int:
     )
     report("chunk-artifact-dirs-isolated", chunk_dirs_isolated, f"unique_dirs={len(set(output_dirs))}")
     report("harness-records-run-control", harness_has_provenance, "future chunks expose seed and command provenance")
+    report(
+        "present-chunks-seed-independence-gate-enforced",
+        seed_gate_enforced,
+        f"present={len(present)} ready_after_seed_gate={len(ready)}",
+    )
     report("current-chunk-set-incomplete", not all_ready, f"present={len(present)} ready={len(ready)} expected={len(chunks)}")
     report(
         "chunk-readiness-consistent-with-combiner",
@@ -341,19 +430,21 @@ def main() -> int:
         else f"{len(ready)} of {len(chunks)} L12 chunk outputs are ready; the set is still partial."
     )
     result = {
-        "actual_current_surface_status": "open / FH-LSZ chunk combiner gate blocks partial evidence",
+        "actual_current_surface_status": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
         "verdict": (
             "The L12 chunked FH/LSZ path now has an auditable combiner gate. "
             f"{chunk_sentence}  Chunks must expose "
             "production phase, same-source dE/ds and C_ss(q), scalar-source "
-            "non-readout metadata, and run-control provenance before an L12 "
-            "combined summary can be constructed.  Even a complete L12 "
+            "non-readout metadata, run-control provenance, and numba gauge "
+            "seed-control metadata before an L12 combined summary can be "
+            "constructed.  Duplicate gauge signatures across distinct metadata "
+            "seeds are rejected as non-independent evidence.  Even a complete L12 "
             "combination is not PR #230 closure because L16/L24 scaling, an "
             "isolated scalar pole inverse-derivative fit, FV/IR/zero-mode "
             "control, and the retained-proposal certificate remain open."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "The combiner is an acceptance boundary; the current chunk set is partial and supplies no combined L12 output or scalar pole derivative.",
+        "proposal_allowed_reason": "The combiner is an acceptance boundary; the current chunk set is partial/non-independent and supplies no combined L12 output or scalar pole derivative.",
         "manifest": str(MANIFEST.relative_to(ROOT)),
         "combined_output_target": str(COMBINED_OUTPUT.relative_to(ROOT)),
         "chunk_summary": {
@@ -363,6 +454,22 @@ def main() -> int:
             "missing_chunks": len(missing),
             "target_saved_configurations": int(policy.get("target_measurements", 0)) if policy else 0,
             "available_saved_configurations": len(ready) * EXPECTED_CHUNK_MEASUREMENTS,
+        },
+        "seed_independence_gate": {
+            "expected_seed_control_version": EXPECTED_SEED_CONTROL_VERSION,
+            "present_chunks_pass_seed_independence_gate": present_seed_control_ready,
+            "ready_chunks_after_seed_gate": len(ready),
+            "present_signatures": [
+                {
+                    "chunk_index": row["chunk_index"],
+                    "seed": row.get("seed"),
+                    "seed_independence_signature": row.get("seed_independence_signature"),
+                    "seed_related_issues": [
+                        issue for issue in row.get("issues", []) if "seed" in issue.lower()
+                    ],
+                }
+                for row in present
+            ],
         },
         "first_missing_outputs": [row["output"] for row in missing[:10]],
         "first_blocking_issues": [
@@ -375,6 +482,8 @@ def main() -> int:
             "all 63 L12 chunk outputs must exist",
             "each chunk must declare metadata.phase == production",
             "each chunk must record run_control.seed and command settings matching the manifest",
+            "each numba chunk must record seed_control_version == numba_gauge_seed_v1 and gauge_rng_seed matching the chunk seed",
+            "chunks with duplicate gauge-evolution signatures across distinct metadata seeds are not independent evidence",
             "each chunk must record its chunk-local production_output_dir matching the manifest",
             "each chunk must contain same-source linear dE/ds with shifts -0.01, 0.0, 0.01",
             "each chunk must contain same-source scalar C_ss(q) modes 0,100,010,001 with 16 noises",
@@ -385,6 +494,7 @@ def main() -> int:
             "does not treat missing or partial chunks as evidence",
             "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0 as proof selectors",
             "does not set c2, Z_match, or kappa_s to one",
+            "does not count chunks without auditable independent gauge seeding",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

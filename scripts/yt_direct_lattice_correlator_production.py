@@ -1245,6 +1245,10 @@ def physical_mass_gev(m_lat: float) -> float:
     return m_lat * a_inv
 
 
+def volume_seed(base_seed: int, spatial_l: int, time_l: int) -> int:
+    return int(base_seed + 1000003 * spatial_l + 9176 * time_l)
+
+
 def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: list[float], rng: np.random.Generator) -> dict[str, Any]:
     if resolve_engine(args) == "numba":
         return run_volume_numba(args, spatial_l, time_l, masses)
@@ -1400,8 +1404,10 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
 
 def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, masses: list[float]) -> dict[str, Any]:
     geom = Geometry(spatial_l, time_l)
+    volume_rng_seed = volume_seed(int(args.seed), spatial_l, time_l)
+    nb_seed(volume_rng_seed)
     u = cold_link_array(geom)
-    scalar_rng = np.random.default_rng(args.seed + 1000003 * spatial_l + 9176 * time_l)
+    scalar_rng = np.random.default_rng(volume_rng_seed)
     t0 = time.time()
     plaquette_history = []
     for sweep in range(args.therm):
@@ -1531,6 +1537,14 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         },
         "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
         "update_engine": "numba",
+        "rng_seed_control": {
+            "seed_control_version": "numba_gauge_seed_v1",
+            "base_seed": int(args.seed),
+            "volume_rng_seed": volume_rng_seed,
+            "gauge_rng_seed": volume_rng_seed,
+            "scalar_rng_seed": volume_rng_seed,
+            "numba_gauge_seeded_before_thermalization": True,
+        },
         "thermalization_sweeps": args.therm,
         "measurement_sweeps": args.measurements,
         "measurement_separation_sweeps": args.separation,
@@ -1709,6 +1723,11 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 "measurement_separation_sweeps": int(args.separation),
                 "overrelaxation_sweeps": int(args.overrelax),
                 "engine": resolve_engine(args),
+                "seed_control_version": (
+                    "numba_gauge_seed_v1"
+                    if resolve_engine(args) == "numba"
+                    else "python_generator_v1"
+                ),
                 "production_targets": bool(args.production_targets),
                 "pilot_targets": bool(args.pilot_targets),
                 "momentum_modes": getattr(args, "momentum_modes_parsed", []),

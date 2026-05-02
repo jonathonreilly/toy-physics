@@ -1,0 +1,73 @@
+{
+  "actual_current_surface_status": "exact negative boundary / FH-LSZ numba seed-independence audit",
+  "combiner_policy": "The chunk combiner must reject historical chunks without the seed marker and any chunks sharing duplicate gauge-evolution signatures across distinct metadata seeds.",
+  "duplicate_gauge_signature_detected": true,
+  "exact_next_action": "Let any old-code chunk finish only as a seed-invalid diagnostic; rerun replacement L12 chunks under numba_gauge_seed_v1 before counting them for combination.",
+  "fail_count": 0,
+  "harness_seed_control": {
+    "harness": "scripts/yt_direct_lattice_correlator_production.py",
+    "numba_smoke": {
+      "available": true,
+      "distinct_seeds_diverge": true,
+      "plaquette_seed_111_a": 0.6933208970371468,
+      "plaquette_seed_111_b": 0.6933208970371468,
+      "plaquette_seed_222": 0.718170363345297,
+      "same_seed_reproducible": true
+    },
+    "seed_call_present": true,
+    "seed_control_version": "numba_gauge_seed_v1",
+    "seed_marker_present": true
+  },
+  "historical_chunk_rows": [
+    {
+      "engine": "numba",
+      "ensemble_seed_control": null,
+      "exists": true,
+      "metadata_seed": 2026051001,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+      "phase": "production",
+      "seed_control_version": null,
+      "signature": {
+        "mass_fit_m_lat": 1.849996588704016,
+        "plaquette_mean": 0.002052291751301,
+        "source_slope_dE_ds_lat": 1.40789992627276
+      },
+      "signature_complete": true
+    },
+    {
+      "engine": "numba",
+      "ensemble_seed_control": null,
+      "exists": true,
+      "metadata_seed": 2026051002,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
+      "phase": "production",
+      "seed_control_version": null,
+      "signature": {
+        "mass_fit_m_lat": 1.849996588704016,
+        "plaquette_mean": 0.002052291751301,
+        "source_slope_dE_ds_lat": 1.40789992627276
+      },
+      "signature_complete": true
+    }
+  ],
+  "historical_completed_chunks": 2,
+  "historical_independent_chunks_counted_for_evidence": 0,
+  "historical_nonindependent_chunks": [
+    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json"
+  ],
+  "missing_seed_control_marker": [
+    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json"
+  ],
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This audit demotes historical chunk evidence; it supplies no scalar pole residue, L16/L24 scaling, or physical y_t closure.",
+  "strict_non_claims": [
+    "does not treat chunk001/chunk002 as independent production evidence",
+    "does not set kappa_s = 1",
+    "does not use observed top mass or observed y_t",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, or u0 as proof selectors"
+  ],
+  "verdict": "The completed chunk001/chunk002 outputs cannot be counted as independent production evidence.  Their metadata seeds differ, but their gauge-evolution signature is identical and neither historical output carries the numba_gauge_seed_v1 seed-control marker.  The harness is now patched to seed numba gauge evolution inside run_volume_numba and to record per-volume seed-control metadata.  Current historical chunks must be rerun under the patched harness or excluded from L12 combination."
+}

@@ -3,18 +3,20 @@
     "all 63 L12 chunk outputs must exist",
     "each chunk must declare metadata.phase == production",
     "each chunk must record run_control.seed and command settings matching the manifest",
+    "each numba chunk must record seed_control_version == numba_gauge_seed_v1 and gauge_rng_seed matching the chunk seed",
+    "chunks with duplicate gauge-evolution signatures across distinct metadata seeds are not independent evidence",
     "each chunk must record its chunk-local production_output_dir matching the manifest",
     "each chunk must contain same-source linear dE/ds with shifts -0.01, 0.0, 0.01",
     "each chunk must contain same-source scalar C_ss(q) modes 0,100,010,001 with 16 noises",
     "the combined L12 summary remains non-retained until L16/L24 and isolated-pole/FV/IR gates pass"
   ],
-  "actual_current_surface_status": "open / FH-LSZ chunk combiner gate blocks partial evidence",
+  "actual_current_surface_status": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
   "chunk_summary": {
-    "available_saved_configurations": 32,
+    "available_saved_configurations": 0,
     "expected_chunks": 63,
     "missing_chunks": 61,
     "present_chunks": 2,
-    "ready_chunks": 2,
+    "ready_chunks": 0,
     "target_saved_configurations": 1000
   },
   "combined_output_target": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json",
@@ -24,6 +26,22 @@
   },
   "fail_count": 0,
   "first_blocking_issues": [
+    {
+      "chunk_index": 1,
+      "issues": [
+        "missing ensemble.rng_seed_control for numba gauge seed independence",
+        "duplicate gauge-evolution signature across distinct metadata seeds; chunks=[1, 2]"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json"
+    },
+    {
+      "chunk_index": 2,
+      "issues": [
+        "missing ensemble.rng_seed_control for numba gauge seed independence",
+        "duplicate gauge-evolution signature across distinct metadata seeds; chunks=[1, 2]"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json"
+    },
     {
       "chunk_index": 3,
       "issues": [
@@ -79,20 +97,6 @@
         "chunk output absent"
       ],
       "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json"
-    },
-    {
-      "chunk_index": 11,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk011_2026-05-01.json"
-    },
-    {
-      "chunk_index": 12,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk012_2026-05-01.json"
     }
   ],
   "first_missing_outputs": [
@@ -108,14 +112,50 @@
     "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk012_2026-05-01.json"
   ],
   "manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
-  "pass_count": 8,
+  "pass_count": 9,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The combiner is an acceptance boundary; the current chunk set is partial and supplies no combined L12 output or scalar pole derivative.",
+  "proposal_allowed_reason": "The combiner is an acceptance boundary; the current chunk set is partial/non-independent and supplies no combined L12 output or scalar pole derivative.",
+  "seed_independence_gate": {
+    "expected_seed_control_version": "numba_gauge_seed_v1",
+    "present_chunks_pass_seed_independence_gate": false,
+    "present_signatures": [
+      {
+        "chunk_index": 1,
+        "seed": 2026051001,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.849996588704016,
+          "plaquette_mean": 0.002052291751301,
+          "source_slope_dE_ds_lat": 1.40789992627276
+        },
+        "seed_related_issues": [
+          "missing ensemble.rng_seed_control for numba gauge seed independence",
+          "duplicate gauge-evolution signature across distinct metadata seeds; chunks=[1, 2]"
+        ]
+      },
+      {
+        "chunk_index": 2,
+        "seed": 2026051002,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.849996588704016,
+          "plaquette_mean": 0.002052291751301,
+          "source_slope_dE_ds_lat": 1.40789992627276
+        },
+        "seed_related_issues": [
+          "missing ensemble.rng_seed_control for numba gauge seed independence",
+          "duplicate gauge-evolution signature across distinct metadata seeds; chunks=[1, 2]"
+        ]
+      }
+    ],
+    "ready_chunks_after_seed_gate": 0
+  },
   "strict_non_claims": [
     "does not launch production",
     "does not treat missing or partial chunks as evidence",
     "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0 as proof selectors",
-    "does not set c2, Z_match, or kappa_s to one"
+    "does not set c2, Z_match, or kappa_s to one",
+    "does not count chunks without auditable independent gauge seeding"
   ],
-  "verdict": "The L12 chunked FH/LSZ path now has an auditable combiner gate. 2 of 63 L12 chunk outputs are ready; the set is still partial.  Chunks must expose production phase, same-source dE/ds and C_ss(q), scalar-source non-readout metadata, and run-control provenance before an L12 combined summary can be constructed.  Even a complete L12 combination is not PR #230 closure because L16/L24 scaling, an isolated scalar pole inverse-derivative fit, FV/IR/zero-mode control, and the retained-proposal certificate remain open."
+  "verdict": "The L12 chunked FH/LSZ path now has an auditable combiner gate. No current chunk outputs are ready.  Chunks must expose production phase, same-source dE/ds and C_ss(q), scalar-source non-readout metadata, run-control provenance, and numba gauge seed-control metadata before an L12 combined summary can be constructed.  Duplicate gauge signatures across distinct metadata seeds are rejected as non-independent evidence.  Even a complete L12 combination is not PR #230 closure because L16/L24 scaling, an isolated scalar pole inverse-derivative fit, FV/IR/zero-mode control, and the retained-proposal certificate remain open."
 }

@@ -491,6 +491,16 @@ finite-L discreteness is not enough.  Positive near-pole continuum levels with
 gaps closing like `1/L^2` keep the residue lower bound at zero across
 `L=12,16,24`, so a uniform gap or scalar denominator theorem is still needed.
 
-Next exact action: keep chunk003 running under the non-evidence combiner gate.
-In parallel, attack the uniform spectral-gap/scalar-denominator theorem or
-continue toward combined production plus postprocess.
+The numba seed-independence audit then found a production-evidence quality
+blocker.  Historical chunk001/chunk002 have distinct metadata seeds but
+identical gauge-evolution signatures, and neither output contains the
+`numba_gauge_seed_v1` marker.  The production harness now seeds numba gauge
+evolution inside `run_volume_numba` and records per-volume seed-control
+metadata.  The combiner rejects historical chunks without that marker or with
+duplicate gauge signatures.  Chunk001/chunk002 are diagnostics only until
+rerun or excluded.
+
+Next exact action: let old-code chunk003 finish only as a seed-invalid
+diagnostic.  Then either launch seed-controlled replacement L12 chunks under
+`numba_gauge_seed_v1`, or pivot to the uniform spectral-gap/scalar-denominator
+theorem while the production route remains non-evidence.

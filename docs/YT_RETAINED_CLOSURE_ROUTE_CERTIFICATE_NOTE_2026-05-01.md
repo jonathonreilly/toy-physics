@@ -213,17 +213,23 @@ scalar two-point residue/common-dressing theorem.  A finite-shell
 analytic-continuation gate is also required before any Euclidean
 `Gamma_ss(p^2)` pole fit can be load-bearing: finite shell rows can share the
 same sampled values and pole while changing `dGamma_ss/dp^2`.  The executable
-model-class gate now enforces that boundary and remains open.  Chunk001 and
-chunk002 have completed and are combiner-ready, but this is only two of 63 L12 chunks and no
-combined L12, L16/L24, pole-derivative, model-class, or FV/IR certificate
-exists.  Positive Stieltjes/spectral form alone also does not close the
+model-class gate now enforces that boundary and remains open.  Historical
+chunk001 and chunk002 have completed as production-format diagnostics, but the
+numba seed-independence audit demotes them from independent L12 evidence:
+their metadata seeds differ while their gauge-evolution signatures match, and
+they lack the `numba_gauge_seed_v1` marker.  They must be rerun under the
+patched harness or excluded before L12 combination.  No combined L12, L16/L24,
+pole-derivative, model-class, or FV/IR certificate exists.  Positive
+Stieltjes/spectral form alone also does not close the
 model-class gate because positive continuum freedom can preserve finite shell
 values and the pole while changing the residue.  The pole-saturation threshold
 gate now converts that requirement into a concrete residue-interval check, and
 the current interval is not tight.  The threshold-authority import audit finds
 no hidden current artifact that supplies the missing premise.  The finite-volume
 pole-saturation obstruction also blocks using finite-L discreteness as a
-uniform continuum-gap theorem.  If the eight-mode/x8
+uniform continuum-gap theorem.  The combiner gate now also rejects chunks
+without auditable numba gauge seeding or with duplicate gauge signatures across
+distinct metadata seeds.  If the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not
 close PR #230.

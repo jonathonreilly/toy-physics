@@ -1,5 +1,17 @@
 # No-Go Ledger
 
+## Historical FH/LSZ chunks are not independent production evidence
+
+Closed by
+`docs/YT_FH_LSZ_NUMBA_SEED_INDEPENDENCE_AUDIT_NOTE_2026-05-02.md` and
+`scripts/frontier_yt_fh_lsz_numba_seed_independence_audit.py`.
+
+Chunk001 and chunk002 have different metadata seeds, but identical
+gauge-evolution signatures and no `numba_gauge_seed_v1` marker.  They cannot
+count toward L12 combination until rerun under the patched harness or excluded.
+This is an evidence-quality no-go for the historical chunks, not a no-go
+against the FH/LSZ route itself.
+
 ## Current Block
 
 The current repo does not already contain an audit-retained top-Yukawa proof.

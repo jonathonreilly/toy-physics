@@ -147,9 +147,15 @@ probability.
   supplies the threshold or scalar-denominator premise.  The finite-volume
   pole-saturation obstruction also blocks treating finite-L discreteness as a
   substitute for a uniform continuum gap.
-  Chunk001 and chunk002 are now complete and combiner-ready, which validates
-  the chunk-local protocol but does not change claim status: this is `2/63` of L12 and still
-  lacks L16/L24 scaling, pole/model-class, and FV/IR gates.
+  Chunk001 and chunk002 completed as production-format diagnostics, which
+  initially validated the chunk-local protocol but did not change claim status:
+  this was still `2/63` of L12 and still lacked L16/L24 scaling,
+  pole/model-class, and FV/IR gates.  The numba seed-independence audit now
+  demotes those historical chunks.
+  They have distinct metadata seeds but identical gauge-evolution signatures
+  and no `numba_gauge_seed_v1` marker.  Treat them as diagnostics only until
+  rerun under the patched harness or excluded.  Replacement seed-controlled
+  chunks are the only production path that can count toward combination.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

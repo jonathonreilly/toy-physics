@@ -1020,3 +1020,35 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 Finite-volume pole-like rows do not replace a uniform pole-saturation or
 continuum-gap theorem.  No retained/proposed-retained wording is authorized.
+
+FH/LSZ numba seed-independence audit checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / FH-LSZ numba seed-independence audit
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_numba_seed_independence_audit.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk001_checkpoint_certificate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=55 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=81 FAIL=0
+```
+
+Historical chunk001/chunk002 are not independent production evidence.  They
+have distinct metadata seeds, identical gauge-evolution signatures, and no
+`numba_gauge_seed_v1` marker.  No retained/proposed-retained wording is
+authorized; rerun replacement chunks under the patched harness before counting
+them toward L12 combination.

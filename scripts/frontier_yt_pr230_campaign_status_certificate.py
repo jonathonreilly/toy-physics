@@ -111,6 +111,9 @@ def main() -> int:
         "fh_lsz_finite_volume_pole_saturation": load(
             "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json"
         ),
+        "fh_lsz_numba_seed_independence": load(
+            "outputs/yt_fh_lsz_numba_seed_independence_audit_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -413,6 +416,11 @@ def main() -> int:
         statuses["fh_lsz_finite_volume_pole_saturation"],
     )
     report(
+        "fh-lsz-numba-seed-independence-blocks-historical-chunks",
+        "numba seed-independence audit" in str(statuses["fh_lsz_numba_seed_independence"]),
+        statuses["fh_lsz_numba_seed_independence"],
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         "pole-fit mode-noise budget" in str(statuses["fh_lsz_pole_fit_mode_budget"])
         or "bounded-support" in str(statuses["fh_lsz_pole_fit_mode_budget"]),
@@ -707,13 +715,17 @@ def main() -> int:
             "checkpointed production evidence.  A chunked L12 production "
             "manifest gives foreground-sized launch commands, but it remains "
             "planning support and does not cover L16/L24 or the pole postprocess.  "
-            "The chunk combiner gate now blocks absent or partial chunks and "
-            "requires run-control provenance before L12 combination; the "
+            "The chunk combiner gate now blocks absent, partial, or "
+            "non-independent chunks and requires run-control plus numba "
+            "seed-control provenance before L12 combination; the "
             "chunk commands now use chunk-local artifact directories and "
             "per-chunk resume to avoid cross-chunk artifact collisions.  "
-            "Chunk001 and chunk002 have completed as production-phase, "
-            "combiner-ready L12 chunks, but this is still only two of 63 L12 "
-            "chunks and no combined L12 summary exists.  "
+            "Historical chunk001 and chunk002 completed as production-format "
+            "L12 chunks, but the seed-independence audit demotes them: their "
+            "metadata seeds differ while their gauge-evolution signatures "
+            "match, and they lack the numba_gauge_seed_v1 marker.  They are "
+            "not independent L12 evidence until rerun under the patched "
+            "harness or explicitly excluded.  "
             "The pole-fit kinematics gate shows the current scalar modes give "
             "only one nonzero momentum shell, so four-mode chunk completion is "
             "not by itself an isolated-pole derivative.  "
@@ -736,6 +748,8 @@ def main() -> int:
             "audit finds no hidden current artifact that supplies that premise.  "
             "The finite-volume pole-saturation obstruction also blocks using "
             "finite-L discreteness as a substitute for a uniform gap.  "
+            "The numba seed-independence audit closes the adjacent production "
+            "quality gap before further chunk evidence is counted.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "
@@ -779,7 +793,7 @@ def main() -> int:
         "remaining_routes": remaining_routes,
         "strict_non_claims": [
             "does not claim retained closure",
-            "does not demote PR230's scout/proposed evidence",
+            "does not count non-independent historical chunks as production evidence",
             "does not use observed top mass or y_t as proof input",
             "does not allow H_unit matrix-element definition as y_t readout",
         ],

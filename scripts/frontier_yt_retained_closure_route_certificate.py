@@ -91,6 +91,7 @@ def main() -> int:
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
         "fh_lsz_finite_volume_pole_saturation": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+        "fh_lsz_numba_seed_independence": "outputs/yt_fh_lsz_numba_seed_independence_audit_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -311,13 +312,15 @@ def main() -> int:
         "chunk001 production checkpoint"
         in certificates["fh_lsz_chunk001_checkpoint"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_chunk001_checkpoint"].get("proposal_allowed") is False
-        and certificates["fh_lsz_chunk001_checkpoint"].get("chunk_summary", {}).get("combiner_ready_chunks") == 1
+        and certificates["fh_lsz_chunk001_checkpoint"].get("chunk_summary", {}).get("seed_independence_valid")
+        is False
     )
     chunk002_checkpoint_not_closure = (
         "chunk002 production checkpoint"
         in certificates["fh_lsz_chunk002_checkpoint"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_chunk002_checkpoint"].get("proposal_allowed") is False
-        and certificates["fh_lsz_chunk002_checkpoint"].get("chunk_summary", {}).get("combiner_ready_chunks") == 2
+        and certificates["fh_lsz_chunk002_checkpoint"].get("chunk_summary", {}).get("seed_independence_valid")
+        is False
     )
     pole_fit_kinematics_not_closure = (
         "scalar-pole kinematics gate"
@@ -374,6 +377,17 @@ def main() -> int:
         "finite-volume pole-saturation obstruction"
         in certificates["fh_lsz_finite_volume_pole_saturation"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_finite_volume_pole_saturation"].get("proposal_allowed") is False
+    )
+    numba_seed_independence_blocks_historical_chunks = (
+        "numba seed-independence audit"
+        in certificates["fh_lsz_numba_seed_independence"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_numba_seed_independence"].get("proposal_allowed") is False
+        and int(
+            certificates["fh_lsz_numba_seed_independence"].get(
+                "historical_independent_chunks_counted_for_evidence", -1
+            )
+        )
+        == 0
     )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
@@ -626,6 +640,11 @@ def main() -> int:
         certificates["fh_lsz_finite_volume_pole_saturation"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-numba-seed-independence-blocks-historical-chunks",
+        numba_seed_independence_blocks_historical_chunks,
+        certificates["fh_lsz_numba_seed_independence"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -766,7 +785,11 @@ def main() -> int:
             "denominator theorem.  The threshold-authority audit finds no "
             "hidden current artifact that supplies that premise.  The "
             "finite-volume pole-saturation obstruction blocks using finite-L "
-            "discreteness as a substitute for a uniform gap.  "
+            "discreteness as a substitute for a uniform gap.  The numba "
+            "seed-independence audit also demotes historical chunk001/chunk002: "
+            "their metadata seeds differ, but their gauge-evolution signatures "
+            "match and they lack the numba_gauge_seed_v1 marker.  They must be "
+            "rerun under the patched harness or excluded before L12 combination.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "
@@ -801,8 +824,9 @@ def main() -> int:
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action.  Continue chunked production with chunk003 "
-            "or scheduler handoff; do not treat chunk001/chunk002 as retained evidence.  "
+            "the retained action.  Continue chunked production only with "
+            "seed-controlled replacement chunks or scheduler handoff; do not "
+            "treat historical chunk001/chunk002 as independent evidence.  "
             "Before treating any finite-shell pole fit as "
             "load-bearing, add a model-class/analytic-continuation gate or a "
             "theorem excluding shell-vanishing derivative deformations.  If "
