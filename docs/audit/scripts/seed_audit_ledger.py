@@ -89,6 +89,7 @@ NEVER_GATE_SOURCE_PATHS = {
 # ledger metadata instead of dropped from the graph or treated as claims.
 META_SOURCE_PATTERNS = (
     "docs/AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_*.md",
+    "docs/PHYSICAL_LATTICE_NECESSITY_DEP_DECLARATION_AUDIT_NOTE_*.md",
 )
 
 CLAIM_TYPES = {

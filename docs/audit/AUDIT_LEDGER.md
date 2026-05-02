@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:36:08.939104+00:00
+**Generated:** 2026-05-02T23:37:31.745022+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,8 +24,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 512 |
-| meta | 37 |
+| unaudited | 511 |
+| meta | 38 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
@@ -50,10 +50,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `bounded_theorem` | 533 |
 | `decoration` | 9 |
-| `meta` | 37 |
+| `meta` | 38 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
-| `positive_theorem` | 866 |
+| `positive_theorem` | 865 |
 
 | criticality | count |
 |---|---:|
