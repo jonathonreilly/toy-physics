@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:09:45.492659+00:00
+**Generated:** 2026-05-02T21:11:11.218368+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 140 |
-| **retained_no_go** | 96 |
+| **retained_no_go** | 97 |
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 1 |
-| unaudited | 556 |
+| unaudited | 555 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 379 |
+| `audited_clean` | 380 |
 | `audited_conditional` | 632 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 592 |
+| `unaudited` | 591 |
 
 | claim_type | count |
 |---|---:|
@@ -358,6 +358,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_record_overlap_kernel_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `persistent_record_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `physical_lattice_necessity_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
@@ -12210,6 +12211,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** For H = iD, the naive CP K action flips H, while the Hermitian Hamiltonian antiunitary representative Theta_H = P K preserves H and makes the CPT-odd Hamiltonian sector vanish.  _(class `A`)_
 - **chain closes:** True — The bridge closes as exact algebra over the explicitly constructed free staggered D operator, the C/P spectral-flip identities, and the antiunitary action K(i) = -i. The claim boundary stays within the free Hermitian Hamiltonian and its lattice CPT-odd bilinear sectors.
 - **rationale:** The note directly addresses the prior Hermitization gap rather than assuming it away: it shows naive CP K flips H and then constructs Theta_H = P K to compensate the antiunitary i -> -i step. The runner checks Hermitization, D-level C/P/CP identities, the naive failure mode, the physical Hermitian CPT lift, and full plus direction-resolved CPT-odd sectors for even periodic lattices. Residual risk is bounded to the stated free Hamiltonian substrate; this audit does not ratify interacting CKM-sector CP violation, continuum CPT theorem replacement, or full gauge-sector CPT.
+- **auditor confidence:** high
+
+### `physical_lattice_necessity_note`
+
+- **Note:** [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](../../docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Narrow no-go: within the retained Wilson SU(3) beta surface with tunable u_0, no nontrivial positive-branch (beta, u_0) deformation preserves both alpha_s(v) and v ratios.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-arden-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Setting x = alpha_bare(beta)/alpha_bare(6) and y = u_0/u_0_can, the system x/y^2 = 1 and (x/y)^16 = 1 forces y = 1 and hence x = 1 on the positive canonical branch.  _(class `A`)_
+- **chain closes:** True — The scoped claim is a no-go only for the specified two-invariant (beta, u_0) deformation family. It does not prove substrate-level physical lattice necessity, does not exhaustively rule out all regulator alternatives, and does not use the Hilbert/locality/information commentary as load-bearing input.
+- **rationale:** The exact load-bearing algebra closes: x/y^2 = 1 and (x/y)^16 = 1 imply x = y on the positive branch, then y = 1 and x = 1, so beta = 6 and u_0 = u_0_can. This is clean only under the narrowed boundary: it proves algebraic rigidity of the canonical two-invariant surface, not physical lattice necessity from first principles and not a universal no-go against every regulator scheme.
 - **auditor confidence:** high
 
 ### `planck_boundary_density_extension_theorem_note_2026-04-24`
