@@ -28,14 +28,14 @@ The narrow theorem **explicitly does NOT** claim:
 The result is a **pure determinant identity** on the staggered Dirac
 operator at minimal block size with admitted mean-field factorization.
 
-## Retained / admitted dependencies
+## Admitted dependencies
 
-| Authority | Effective status | Role |
-|---|---|---|
-| Cl(3) Clifford identity `D_taste² = d · I` | admitted standard staggered fermion algebra | gives the eigenvalue magnitudes per taste |
-| Mean-field factorization `U_{ab} → u_0 δ_{ab}` | admitted standard mean-field | scales eigenvalues by `u_0`; cycle 7 sister |
-| `L_s = 2` minimal APBC block | admitted block-size choice | pins spatial momenta to BZ corners (`sin²(k_i) = 1`) |
-| Standard staggered Dirac dispersion `λ²(k, ω) = u_0² Σ_μ sin²(k_μ)` | admitted standard staggered fermion algebra | gives the eigenvalue formula at general (k, ω) |
+| Authority | Role |
+|---|---|
+| Cl(3) Clifford identity `D_taste² = d · I` | admitted standard staggered fermion algebra; gives the eigenvalue magnitudes per taste |
+| Mean-field factorization `U_{ab} → u_0 δ_{ab}` | admitted standard mean-field convention; scales eigenvalues by `u_0` |
+| `L_s = 2` minimal APBC block | admitted block-size choice; pins spatial momenta to BZ corners (`sin²(k_i) = 1`) |
+| Standard staggered Dirac dispersion `λ²(k, ω) = u_0² Σ_μ sin²(k_μ)` | admitted standard staggered fermion algebra; gives the eigenvalue formula at general `(k, ω)` |
 
 The deps are admitted standard staggered fermion algebra + the same
 mean-field setup used in cycle 7 (PR #302). No external authority is
@@ -84,27 +84,28 @@ Verifies, at exact rational precision via Python `Fraction` and `sympy`:
 4. The closed form is exact (matches direct matrix evaluation at
    tested `(L_t, m, u_0)` values).
 
-## Audit-lane disposition (proposed)
+## Independent audit handoff
 
 ```yaml
-target_claim_type: positive_theorem
+proposed_claim_type: positive_theorem
 proposed_claim_scope: |
   Pure algebraic determinant identity for the staggered Dirac operator
   on Z^4 APBC at L_s = 2 with mean-field gauge factorization:
   |det(D + m)| = prod_omega [m^2 + u_0^2 (3 + sin^2 omega)]^4. NO physical
   EWSB order-parameter identification, NO m_H prediction.
 proposed_load_bearing_step_class: A
-audit_required_before_effective_retained: true
+status_authority: independent audit lane only
 ```
 
 The narrow theorem is class (A) algebraic on admitted-standard staggered
-fermion algebra. The audit lane will verdict the load-bearing class.
+fermion algebra. The independent audit lane will evaluate the load-bearing
+class and any later status.
 
 ## What this theorem closes
 
 The exact algebraic determinant identity on the minimal block, freed
 from the conditional physical-electroweak-order-parameter selection
-that the parent's audit verdict flagged.
+identified in prior review of the parent row.
 
 ## What this theorem does NOT close
 
@@ -117,9 +118,8 @@ that the parent's audit verdict flagged.
 
 ## Cross-references
 
-- `HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md` — parent
-  (`audit_status: audited_conditional`, td=154); this narrow theorem
-  carves out the algebraic determinant identity.
+- `HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md` — parent; this narrow
+  theorem carves out the algebraic determinant identity.
 - Cycle 7 / PR #302 — sister narrow theorem on Higgs lattice eigenvalue
   ratio (related mean-field admission).
 - Cycles 1-11 — sister narrow theorems / source-note edits / audit

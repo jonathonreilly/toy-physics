@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T18:04:20.863908+00:00",
+  "generated_at": "2026-05-02T18:06:27.706995+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -7104,6 +7104,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_matsubara_decomposition.py"
+    },
+    "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py"
     },
     "hierarchy_spatial_bc_and_u0_scaling_note": {
       "assert_count": 0,
@@ -24307,6 +24319,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hierarchy_matsubara_determinant_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_observable_principle_from_axiom.py": {
       "assert_count": 0,
       "claims": [
@@ -35538,13 +35565,13 @@
     "decoration_candidates": 104,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 151,
+      "B": 152,
       "C": 509,
       "D": 195,
       "none": 410
     },
-    "runners_classified": 1274,
-    "runners_with_C": 610,
+    "runners_classified": 1275,
+    "runners_with_C": 611,
     "runners_with_D": 308
   }
 }

@@ -55,7 +55,7 @@ required = [
     "EWSB",
     "Physical EWSB order-parameter",  # the actual phrasing used
     "class (A)",
-    "target_claim_type: positive_theorem",
+    "proposed_claim_type: positive_theorem",
 ]
 for s in required:
     check(f"contains: {s!r}", s in note_text)
