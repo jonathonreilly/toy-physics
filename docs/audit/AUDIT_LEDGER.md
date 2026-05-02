@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:05:55.335029+00:00
+**Generated:** 2026-05-02T22:08:56.177020+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 188 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 546 |
+| unaudited | 545 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 637 |
+| ~~audited_conditional~~ | 638 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 637 |
+| `audited_conditional` | 638 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 582 |
+| `unaudited` | 581 |
 
 | claim_type | count |
 |---|---:|
@@ -1048,6 +1048,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `spectral_symmetry_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `staggered_graph_failure_map_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_gauge_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_gauge_closure_results_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -15497,6 +15498,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The current retained harness at scripts/frontier_staggered_17card.py is self-contained and reruns to 17/17 for 1D n=61 and 3D n=9, n=11, and n=13, with the documented 3D family-coverage gate.  _(class `C`)_
 - **chain closes:** True — The registered runner was executed during this audit session and reproduces the note's 1D and 3D 17/17 score surface, including the 4/6 C17 family coverage qualifier for n=11 and n=13.
 - **rationale:** The bounded force-based staggered 17-card claim closes. scripts/frontier_staggered_17card.py reports 1D n=61 SCORE 17/17 with C1=1.2804e-15, C4 R^2=0.917492, C5 +5.7496e-05, and C17 6/6; 3D n=9, n=11, and n=13 each report SCORE 17/17 with the same C17 family-coverage qualifier described in the note. The note explicitly states that the card is force-based, not the repo-wide centroid card, and limits portability/growth/cosmology claims to separate probes.
+- **auditor confidence:** high
+
+### `staggered_fermion_card_2026-04-11`
+
+- **Note:** [`STAGGERED_FERMION_CARD_2026-04-11.md`](../../docs/STAGGERED_FERMION_CARD_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Canonical parity-coupled staggered-fermion 17-card harness only: fixed parity mass/scalar coupling, fixed runner operating point/families/gates, and the registered finite 1D/3D lattice cards; not physical gravity or general staggered-fermion gravity closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-staggered-fermion-card-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Attraction and force-direction closure require importing the screened Poisson bridge (L+mu^2)Phi=G rho with G>0, fixed/free mu, positive source, static lattice, and selected graph families; the runner then verifies finite-card consequences under those premises.  _(class `B`)_
+- **chain closes:** False — The registered runner closes the finite numerical card checks it computes, but the attraction/sign interpretation rests on external harness premises. The parity-coupled Dirac sign behavior is tested numerically, while the Phi>=0 sign chain and attraction reading require the assumed screened Poisson equation and parameter choices.
+- **rationale:** Issue: the row presents attraction/force direction as a bounded card result, but the source note says the screened Poisson equation is not derived, G and mu are free, the lattice is static, and graph families are specific/gated. Why this blocks: even within the scoped card, the sign chain from density to Phi to mass-gap widening to attraction is conditional on those premises; the runner demonstrates consistency for selected finite cards, not unconditional theorem closure. Repair target: explicitly restate the claim as conditional on the screened Poisson bridge, fixed G/mu/sign conventions, static finite lattice, and enumerated graph-family/eigensolve gates, or add a derivation/ratification of those premises inside the bounded theorem. Claim boundary until fixed: conditional finite-harness numerical/card result for the registered parity-coupled runner outputs, not an audited-clean bounded theorem/card.
 - **auditor confidence:** high
 
 ### `staggered_geometry_superposition_note_2026-04-11`
