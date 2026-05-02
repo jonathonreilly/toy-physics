@@ -26,7 +26,7 @@ on the (6 + 2) state count of the LH-doublet sector
 (`6 · α + 2 · β = 0` ⇒ `β = −3α`); the overall scale `α = +1/3` is fixed
 by the convention that the lepton-doublet eigenvalue is `−1`.
 
-This is the retained publication-safe statement.
+This is the scope-safe statement submitted for independent audit.
 
 ## Canonical derivation stack
 
@@ -61,32 +61,31 @@ load-bearing chain. Specifically:
 
 The safe authority boundary is:
 
-- selected-axis left-handed eigenvalue pattern `(+1/3, −1)` is retained;
+- selected-axis left-handed eigenvalue pattern `(+1/3, −1)` is the scoped
+  theorem candidate submitted for independent audit;
 - full anomaly-complete hypercharge closure is **not** claimed here
   (absorbed into `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`);
 - SM hypercharge identification is **not** claimed here (separate
   downstream labelling).
 
-## Audit-lane disposition (proposed)
+## Independent audit handoff
 
 ```yaml
-target_claim_type: positive_theorem
+proposed_claim_type: positive_theorem
 proposed_claim_scope: |
   Eigenvalue pattern (+1/3, -1) on (2,3) and (2,1) blocks of LH-doublet
   sector under graph-first commutant decomposition, with overall scale
   fixed by lepton-doublet = -1 convention. SM hypercharge identification
   out of scope (separate downstream labelling step).
 proposed_load_bearing_step_class: A
-audit_required_before_effective_retained: true
+status_authority: independent audit lane only
 ```
 
-If the audit lane reads the load-bearing step as the **class-(A)
-algebraic eigenvalue derivation** in step 3 (rather than the SM
-labelling step that's now explicitly out of scope), the row's
-load-bearing class is (A) and `effective_status` should land **retained**
-(positive_theorem + audited_clean + retained-grade deps:
-`graph_first_selector_derivation_note` and
-`graph_first_su3_integration_note`, both retained_bounded).
+This note does not set an audit verdict. It submits the narrowed
+load-bearing step in item 3 for independent audit, with the SM labelling
+step explicitly outside this row's claim boundary. Any later status change
+must be made by the independent audit lane and the generated dependency
+pipeline, not by this source note.
 
 ## Validation
 

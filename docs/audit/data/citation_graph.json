@@ -5681,6 +5681,10 @@
       "to": "graph_first_su3_integration_note"
     },
     {
+      "from": "left_handed_charge_matching_note",
+      "to": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
+    },
+    {
       "from": "lensing_adjoint_kernel_note",
       "to": "lensing_long_path_test_note"
     },
@@ -19945,7 +19949,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T17:52:55.064674+00:00",
+  "generated_at": "2026-05-02T17:56:14.206861+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32419,14 +32423,15 @@
     },
     "left_handed_charge_matching_note": {
       "claim_id": "left_handed_charge_matching_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "graph_first_selector_derivation_note",
-        "graph_first_su3_integration_note"
+        "graph_first_su3_integration_note",
+        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
       ],
-      "note_hash": "28f7ea2e62d8f4ff540838e8bd9eaee4f85e26b597301fd57dee3e930ada7279",
+      "note_hash": "59b54bd795a2785fb43d485dabbf8577c43140df9417c9961fff22c68a0079be",
       "path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "title": "Left-Handed Charge Matching on the Selected-Axis Surface"
@@ -46288,8 +46293,8 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 8,
-      "none": 1759,
-      "positive_theorem": 12
+      "none": 1758,
+      "positive_theorem": 13
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 508,
@@ -46298,8 +46303,8 @@
       "open_gate": 110,
       "positive_theorem": 610
     },
-    "edge_count": 4986,
-    "leaf_count": 750,
+    "edge_count": 4987,
+    "leaf_count": 749,
     "node_count": 1779,
     "root_count": 1211,
     "runners_with_path": 1346

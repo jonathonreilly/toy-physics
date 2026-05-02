@@ -2,7 +2,7 @@
 
 **Block:** physics-loop/lhcm-source-tightening-block10-20260502
 **Edit:** docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md (71 insertions, 21 deletions)
-**Target row:** left_handed_charge_matching_note (audit_status: unaudited, td=304)
+**Target row:** left_handed_charge_matching_note
 
 ## Block type
 
@@ -16,8 +16,8 @@
 | Safe statement | Reworded from "SM charge pattern" to "eigenvalue pattern" with explicit ratio derivation |
 | Canonical derivation stack | Removed step 4 (the class-F renaming step `Q = T_3 + Y/2 then matches`); flagged step 3 as load-bearing class (A) |
 | New "Out of scope" section | Explicitly lists what is NOT in this row's claim chain (SM hypercharge identification, `Q = T_3 + Y/2` matching) |
-| Boundary section | Strengthened to state the eigenvalue pattern is retained, SM identification is downstream |
-| New "Audit-lane disposition" | Proposes target_claim_type=positive_theorem with proposed_load_bearing_step_class=A |
+| Boundary section | States the eigenvalue pattern is the scoped theorem candidate for independent audit, while SM identification remains downstream |
+| New "Independent audit handoff" | Proposes claim type/scope and records that status authority belongs only to the independent audit lane |
 | Validation cross-ref | Added link to cycle 1 narrow ratio sister theorem (PR #292) |
 
 ## What this edit changes — and what it does NOT change
@@ -30,23 +30,26 @@
 
 **Does NOT change** (algebraic content preserved):
 - The eigenvalue pattern `(+1/3, -1)` is unchanged
-- The retained dependencies `graph_first_selector_derivation_note` and `graph_first_su3_integration_note` are unchanged
+- The source-note dependencies `graph_first_selector_derivation_note` and `graph_first_su3_integration_note` are unchanged
 - The validation runners are unchanged
 - The note's claim_id `left_handed_charge_matching_note` is unchanged (same row in the ledger)
 
 ## Audit-lane positioning
 
-Under the new scope-aware framework, when the audit lane re-audits this row:
-- **Old framing**: load-bearing step was step 4 (class F renaming "Q = T_3 + Y/2 then matches"); verdict: audited_conditional.
-- **New framing (this edit)**: load-bearing step is step 3 (class A algebraic eigenvalue derivation from tracelessness on retained graph-first commutant); verdict should be audited_clean.
+Under the new scope-aware framework, this edit prepares the row for a fresh
+independent audit by narrowing the load-bearing step:
 
-If audit ratifies under the new framing:
-- audit_status: audited_clean
-- effective_status: retained (positive_theorem + audited_clean + 2 retained_bounded deps)
-- 304 transitive descendants gain a retained-grade upstream
+- **Old framing**: load-bearing step included the class-F renaming
+  `Q = T_3 + Y/2 then matches`.
+- **New framing (this edit)**: load-bearing step is step 3, the algebraic
+  eigenvalue derivation from tracelessness on the graph-first commutant.
+
+This certificate does not set or predict an audit verdict. The independent
+audit lane owns the verdict, and any effective status is generated only after
+audit ratification and dependency closure.
 
 ## Cross-references
 
 - Cycle 1 / PR #292 — sister narrow ratio theorem (same lane, narrower scope, no normalization claim).
 - Cycles 2-9 (PRs #293, #294, #297, #299, #301, #302, #304, #307) — sister narrow theorems on different lanes + opportunity-queue + Pattern B companion.
-- Parent dep: `graph_first_su3_integration_note` (retained_bounded).
+- Parent dep: `graph_first_su3_integration_note`.
