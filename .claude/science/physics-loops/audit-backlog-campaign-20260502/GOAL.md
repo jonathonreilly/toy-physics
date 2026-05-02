@@ -20,7 +20,8 @@ The audit ledger is the lane map. Candidates are mined from
 1. downstream transitive descendants (blast radius)
 2. named-residual tractability (does the verdict name a specific repair target
    with a candidate retained chain?)
-3. dependency cleanliness (fraction of deps at effective_status=retained)
+3. dependency cleanliness (fraction of deps with retained-grade
+   effective status)
 4. independence from already-attempted no-go routes
 
 ## Forbidden Imports

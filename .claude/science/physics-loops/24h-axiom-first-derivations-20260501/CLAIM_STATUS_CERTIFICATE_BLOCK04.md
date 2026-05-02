@@ -23,38 +23,29 @@ claim_scope: "Equal-time strict locality [O_x, O_y]=0 for x≠y on Cl(3) tensor 
 admitted_context_inputs:
   - Lieb-Robinson 1972 estimate (theorem-grade lattice-statistics reference)
 upstream_dependencies:
-  - axiom_first_reflection_positivity_theorem_note_2026-04-29 (Codex audited_clean cross_family; awaiting framework-adoption sweep to lift effective_status)
+  - axiom_first_reflection_positivity_theorem_note_2026-04-29 (Codex clean audit record cross_family; awaiting framework-adoption sweep before retained-grade pipeline derivation)
   - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional — needs RP citation registered as ledger dep)
-  - axiom_first_cluster_decomposition_theorem_note_2026-04-29 (Codex audited_clean cross_family; awaiting framework-adoption sweep)
+  - axiom_first_cluster_decomposition_theorem_note_2026-04-29 (Codex clean audit record cross_family; awaiting framework-adoption sweep)
   - emergent_lorentz_invariance_note (retained)
   - lorentz_kernel_positive_closure_note (retained)
 runner_classified_passes: 4 PASS, including small-t scaling t^d at 3-4 sig figs across d=2,3,4
 ```
 
-## Expected `effective_status` after audit
+## Audit handoff
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-positive_theorem`:
-
-- **Path A** (RP + cluster_decomp upstream both reach retained, spectrum
-  condition's dep-registration repair lands): `effective_status = retained`
-  immediately on next pipeline run.
-- **Path B** (spectrum condition stays `audited_conditional`):
-  `effective_status = proposed_retained` (computed transient state, auto-
-  resolves when spectrum condition's dependency-registration is repaired
-  and re-audited).
-
-The block 04 chain has **no admitted load-bearing physics input** beyond
-the Lieb-Robinson 1972 lattice-statistics theorem reference. Only the
-upstream chain status gates promotion.
+Audit status is set only by the independent audit lane. Review-loop does not
+prefill an `audit_status` or promise an `effective_status`; after any clean
+independent audit, the pipeline derives effective status from `claim_type` plus
+dependency closure. If upstream deps remain non-retained-grade, the row remains
+pending/blocked until those deps are repaired and audited.
 
 ## Dependency chain status snapshot (2026-05-02)
 
 | Dep | Today's `effective_status` (post adoption) |
 |---|---|
-| RP | support (Codex audited_clean; awaiting lift via new propagation rule) |
+| RP | support (Codex clean audit record; awaiting propagation-rule sweep) |
 | Spectrum cond | audited_conditional (Codex flagged: register RP as ledger dep) |
-| Cluster decomp | support (Codex audited_clean; awaiting lift) |
+| Cluster decomp | support (Codex clean audit record; awaiting propagation-rule sweep) |
 | Emergent Lorentz | retained |
 | Lorentz kernel | retained |
 

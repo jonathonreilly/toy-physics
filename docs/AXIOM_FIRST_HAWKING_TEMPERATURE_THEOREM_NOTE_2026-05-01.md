@@ -14,11 +14,11 @@
 ## Scope
 
 This note proves, on the framework's retained discrete GR action surface
-(`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`,
-`UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`,
-`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`)
+([`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md),
+[`UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md),
+[`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md))
 plus the Block 01 KMS support theorem
-(`AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`), that any
+([`AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md)), that any
 stationary solution of the framework's GR action with a non-degenerate
 Killing horizon of surface gravity `κ > 0` carries a Hawking
 temperature
@@ -43,7 +43,7 @@ instead of treating it as a continuum-QFT-only result.
 
 - **Framework GR action on PL S³ × R.** The retained discrete-global
   Lorentzian Einstein/Regge stationary action family
-  (`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`) gives an exact
+  ([`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)) gives an exact
   stationary problem on every nondegenerate Lorentzian background in
   the route. Stationary backgrounds with Killing horizons (e.g., the
   Schwarzschild family on the framework's smooth-limit equivalence
@@ -51,12 +51,12 @@ instead of treating it as a continuum-QFT-only result.
 - **Canonical Einstein-Hilbert equivalence.** On the smooth surface
   the framework's gravitational action equals the canonical
   Einstein-Hilbert action up to a closed boundary term
-  (`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`),
+  ([`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)),
   so the differential-geometric vocabulary of Killing vector fields,
   surface gravity, and bifurcate horizons applies on the framework's
   GR action surface.
 - **BH 1/4 carrier composition.** The retained
-  `BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`
+  [`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
   composes the framework primitive coframe `c_cell = 1/4` with the
   Wald-Noether entropy formula to yield `S_BH = A / (4 G_Newton,lat)`.
   We do not redo that composition; we use only the
@@ -87,7 +87,7 @@ instead of treating it as a continuum-QFT-only result.
 
 These three are the same admitted-context inputs already paid for by
 the retained Wald-Noether composition in
-`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`
+[`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
 (which uses both the Killing-horizon vocabulary and the smooth
 gravitational action surface). We do not introduce new admitted
 inputs.
@@ -141,7 +141,7 @@ KMS state at `T_H = κ / (2π)` on the asymptotic algebra (using Block
 
 **(H4) Composition with retained BH 1/4 carrier.** Combined with the
 retained `S_BH = A / (4 G_Newton,lat)` composition from
-`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`,
+[`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md),
 the pair `(T_H, S_BH) = (κ / 2π, A / 4 G_N)` already satisfies the
 Bekenstein-Hawking entropy-temperature relation, opening the bridge to
 the first law of BH mechanics (Block 05).
@@ -161,7 +161,7 @@ Step 3 is direct application of Block 01 KMS.
 Let `(M, g)` be a stationary solution of the framework's discrete
 GR action on PL S³ × R, in the smooth-limit regime where the
 canonical-textbook Einstein-Hilbert equivalence
-(`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`)
+([`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md))
 holds. Let `ξ^a` be the asymptotic time-translation Killing vector,
 `H` its bifurcate Killing horizon, and `κ` the surface gravity defined
 by `ξ^a ∇_a ξ^b = κ ξ^b` on `H`.
@@ -267,14 +267,14 @@ Equation (9) is the load-bearing input. ∎
 - A_min (only as inherited from upstream RP and spectrum-condition
   notes via Block 01 KMS).
 - Retained framework GR action surface
-  (`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md` and family).
+  ([`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md) and family).
 - Retained canonical Einstein-Hilbert equivalence
-  (`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`).
+  ([`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)).
 - Retained primitive coframe `c_cell = 1/4` and Wald-Noether
   composition (used only in (H4); the core T_H derivation H1-H3 does
   not need the entropy expression).
 - Block 01 KMS support theorem
-  (`AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`).
+  ([`AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md)).
 - Standard Killing-vector / surface-gravity / Wick-rotation-regularity
   vocabulary (admitted-context inputs already paid for by the retained
   Wald-Noether composition).
@@ -349,16 +349,16 @@ bare_retained_allowed: false
 
 ## Citations
 
-- A_min: `docs/MINIMAL_AXIOMS_2026-04-11.md`
-- retained framework GR action: `docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`,
-  `docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`,
-  `docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`
+- A_min: [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+- retained framework GR action: [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md),
+  [`UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md),
+  [`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)
 - retained BH 1/4 carrier composition:
-  `docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`
+  [`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
 - retained primitive coframe carrier:
-  `docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`
+  [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
 - Block 01 KMS support theorem:
-  `docs/AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`
+  [`AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md)
 - standard external references (theorem-grade, no numerical input):
   Hawking (1975) *Comm. Math. Phys.* 43, 199;
   Gibbons-Hawking (1977) *Phys. Rev. D* 15, 2752;

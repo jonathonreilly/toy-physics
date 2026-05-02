@@ -25,7 +25,7 @@ admitted_context_inputs:
 upstream_dependencies:
   - bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29 (today's effective_status: audited_conditional via Planck-row dependency propagation; needs primitive-Wald-carrier identification ratified)
   - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional)
-  - axiom_first_cluster_decomposition_theorem_note_2026-04-29 (Codex audited_clean)
+  - axiom_first_cluster_decomposition_theorem_note_2026-04-29 (Codex clean audit record)
   - universal_gr_discrete_global_closure_note (retained)
 runner_classified_passes: 6 PASS, including 900-pair (R, E) sweep with 0 violations
 ```
@@ -37,17 +37,13 @@ matter systems (2GE < R), explicitly named in the claim; (ii) the proof
 inherits the BH 1/4 carrier's `audited_conditional` upstream status. The
 auditor's `claim_type = bounded_theorem` correctly captures both.
 
-## Expected `effective_status` after audit
+## Audit handoff
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-bounded_theorem`:
-
-- **Path A** (BH 1/4 carrier promotes to retained or retained_bounded after
-  the Wald-Noether universal-input positioning lands and the bridge premise
-  is either derived or accepted): `effective_status = retained_bounded`
-  immediately on next pipeline run.
-- **Path B** (BH 1/4 stays at audited_conditional): `effective_status =
-  proposed_retained` (transient).
+Audit status is set only by the independent audit lane. Review-loop does not
+prefill an `audit_status` or promise an `effective_status`; after any clean
+independent audit, the pipeline derives effective status from `claim_type` plus
+dependency closure. If upstream deps remain non-retained-grade, the row remains
+pending/blocked until those deps are repaired and audited.
 
 ## Dependency chain status snapshot (2026-05-02)
 

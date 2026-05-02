@@ -8,7 +8,9 @@ pattern Q = T_3 + Y/2). NOT proposed_retained.
 ## 0. Statement
 
 **Theorem.** Given:
-1. EWSB pattern Q = T_3 + Y/2 (cycle 18, PR #281);
+1. EWSB pattern Q = T_3 + Y/2 from
+   [`EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md`](EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md)
+   (cycle 18, PR #281);
 2. Photon-fermion coupling form `e Q ψ̄γ^μψ A_μ` (admitted SM convention);
 3. EW gauge-boson mixing parameterized by Weinberg angle θ_W:
    - A_μ = sin(θ_W) W_μ^3 + cos(θ_W) B_μ
@@ -76,6 +78,6 @@ bare_retained_allowed: false
 
 ## 4. Cross-references
 
-- Cycle 18 / PR #281 — EWSB pattern Q = T_3 + Y/2
-- Cycle 19 / PR #282 — sin²θ_W^GUT = 3/8 (sister)
-- Cycle 21 / PR #284 — M_W²/M_Z² = cos²θ_W (sister)
+- Cycle 18 / PR #281 — [`EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md`](EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md)
+- Cycle 19 / PR #282 — [`SIN_SQUARED_THETA_W_GUT_FROM_SU5_NOTE_2026-05-02.md`](SIN_SQUARED_THETA_W_GUT_FROM_SU5_NOTE_2026-05-02.md)
+- Cycle 21 / PR #284 — [`W_Z_MASS_RATIO_FROM_EWSB_NOTE_2026-05-02.md`](W_Z_MASS_RATIO_FROM_EWSB_NOTE_2026-05-02.md)

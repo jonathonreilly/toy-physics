@@ -14,6 +14,7 @@ electromagnetic charge `Q = T_3 + Y/2` from the Higgs VEV and `Y_H = +1`.
 
 Given:
 1. Higgs in `(1, 2)_{Y=+1}` representation under SU(3) × SU(2)_L × U(1)_Y
+   from [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md)
    (cycle 15, PR #278);
 2. Higgs VEV in the **neutral** component (T_3 = −1/2 for the lower
    doublet entry):
@@ -98,7 +99,7 @@ All 10 cases reproduce SM electric charges.
 
 | Ingredient | Class | Source |
 |---|---|---|
-| Higgs in (1, 2)_{Y=+1} | exact-support (cycle 15) | PR #278 |
+| Higgs in (1, 2)_{Y=+1} | exact-support (cycle 15) | [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md) |
 | Higgs VEV in neutral T_3=−1/2 component | admitted SM convention | standard SSB |
 | SU(2)_L Lie algebra T_a = σ_a/2 | standard | Pauli matrices |
 | U(1)_Y action `Y · H = Y_H · H` | standard gauge action | SM |
@@ -134,7 +135,7 @@ bare_retained_allowed: false
 
 ## 7. Cross-references
 
-- Cycle 15 / PR [#278](https://github.com/jonathonreilly/cl3-lattice-framework/pull/278) — Higgs Y_H = +1 derivation
-- Cycle 16 / PR [#279](https://github.com/jonathonreilly/cl3-lattice-framework/pull/279) — Tr[Y²] = 40/3 + SU(5) GUT
-- Cycle 6 / PR [#262](https://github.com/jonathonreilly/cl3-lattice-framework/pull/262) — LHCM atlas
+- Cycle 15 / PR [#278](https://github.com/jonathonreilly/cl3-lattice-framework/pull/278) — [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md)
+- Cycle 16 / PR [#279](https://github.com/jonathonreilly/cl3-lattice-framework/pull/279) — [`FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md`](FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md)
+- Cycle 6 / PR [#262](https://github.com/jonathonreilly/cl3-lattice-framework/pull/262) — [`LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md`](LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md)
 - LHCM closure trio: PRs [#254](https://github.com/jonathonreilly/cl3-lattice-framework/pull/254), [#255](https://github.com/jonathonreilly/cl3-lattice-framework/pull/255), [#256](https://github.com/jonathonreilly/cl3-lattice-framework/pull/256)

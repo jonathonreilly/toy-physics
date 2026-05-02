@@ -22,28 +22,25 @@ admitted_context_inputs:
   - Wick rotation convention (already paid for by RP reconstruction)
   - cyclic-trace identity (basic linear algebra)
 upstream_dependencies:
-  - axiom_first_reflection_positivity_theorem_note_2026-04-29 (Codex audited_clean cross_family; awaiting framework-adoption sweep to lift effective_status from support to retained)
+  - axiom_first_reflection_positivity_theorem_note_2026-04-29 (Codex clean audit record cross_family; awaiting framework-adoption sweep before any retained-grade pipeline derivation)
   - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional — needs RP citation registered as ledger dep)
   - minimal_axioms_2026-04-11 (retained: A1-A4)
 runner_classified_passes: 5 PASS at <1e-10 precision (KMS strip identity, strip continuity, equilibrium uniqueness, path-integral correspondence, detailed-balance at z = iβ_th)
 ```
 
-## Expected `effective_status` after audit
+## Audit handoff
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-positive_theorem`:
-
-- **Path A** (RP + spectrum cond reach retained): `effective_status =
-  retained` immediately. The spectrum-condition `audited_conditional` is a
-  mechanical fix (register RP as a one-hop ledger dep, re-audit).
-- **Path B** (chain still partial): `effective_status = proposed_retained`
-  (transient; auto-resolves on next pipeline run when chain clears).
+Audit status is set only by the independent audit lane. Review-loop does not
+prefill an `audit_status` or promise an `effective_status`; after any clean
+independent audit, the pipeline derives effective status from `claim_type` plus
+dependency closure. If upstream deps remain non-retained-grade, the row remains
+pending/blocked until those deps are repaired and audited.
 
 ## Dependency chain status snapshot (2026-05-02)
 
 | Dep | Today's `effective_status` (post adoption) |
 |---|---|
-| RP | support (Codex audited_clean; framework-adoption sweep promotes) |
+| RP | support (Codex clean audit record; framework-adoption sweep required) |
 | Spectrum cond | audited_conditional (RP dep registration repair pending) |
 | A_min (A1-A4) | retained |
 

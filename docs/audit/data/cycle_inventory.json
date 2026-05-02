@@ -19,7 +19,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 278,
+      "max_transitive_descendants": 289,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -28,7 +28,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 278
+          "transitive_descendants": 289
         },
         {
           "audit_status": "unaudited",
@@ -37,7 +37,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate",
-          "transitive_descendants": 278
+          "transitive_descendants": 289
         },
         {
           "audit_status": "audited_conditional",
@@ -46,7 +46,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
           "title": "Minimal Framework Inputs",
-          "transitive_descendants": 278
+          "transitive_descendants": 289
         }
       ],
       "requires_lemma_extraction": false
@@ -73,7 +73,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 278,
+      "max_transitive_descendants": 289,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -82,7 +82,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 278
+          "transitive_descendants": 289
         },
         {
           "audit_status": "unaudited",
@@ -91,7 +91,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate",
-          "transitive_descendants": 278
+          "transitive_descendants": 289
         },
         {
           "audit_status": "audited_conditional",
@@ -100,7 +100,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
           "title": "Minimal Framework Inputs",
-          "transitive_descendants": 278
+          "transitive_descendants": 289
         },
         {
           "audit_status": "unaudited",
@@ -109,50 +109,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
           "title": "y_t Lane: Zero-Import Authority",
-          "transitive_descendants": 278
+          "transitive_descendants": 289
         }
       ],
       "requires_lemma_extraction": false
     },
     {
       "cycle_id": "cycle-0003",
-      "decision": null,
-      "edges": [
-        {
-          "from": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
-          "to": "n_eff_from_three_generations_theorem_note_2026-04-24"
-        },
-        {
-          "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
-          "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 41,
-      "nodes": [
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "Matter-Radiation Equality Structural Identity Theorem",
-          "transitive_descendants": 41
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "n_eff_from_three_generations_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md",
-          "title": "N_eff From Retained Three Generations",
-          "transitive_descendants": 41
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0004",
       "decision": null,
       "edges": [
         {
@@ -165,7 +128,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 40,
+      "max_transitive_descendants": 44,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -174,7 +137,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
           "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 40
+          "transitive_descendants": 44
         },
         {
           "audit_status": "unaudited",
@@ -183,7 +146,44 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 40
+          "transitive_descendants": 44
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0004",
+      "decision": null,
+      "edges": [
+        {
+          "from": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
+          "to": "n_eff_from_three_generations_theorem_note_2026-04-24"
+        },
+        {
+          "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
+          "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 42,
+      "nodes": [
+        {
+          "audit_status": "audited_conditional",
+          "claim_id": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "audited_conditional",
+          "note_path": "docs/MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
+          "title": "Matter-Radiation Equality Structural Identity Theorem",
+          "transitive_descendants": 42
+        },
+        {
+          "audit_status": "audited_conditional",
+          "claim_id": "n_eff_from_three_generations_theorem_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "audited_conditional",
+          "note_path": "docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md",
+          "title": "N_eff From Retained Three Generations",
+          "transitive_descendants": 42
         }
       ],
       "requires_lemma_extraction": false
@@ -4313,7 +4313,7 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-02T14:48:11.587420+00:00",
+  "generated_at": "2026-05-02T16:22:02.841223+00:00",
   "length_counts": {
     "2": 43,
     "3": 22,
@@ -4328,5 +4328,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-02T14:48:07.768227+00:00"
+  "source_graph_generated_at": "2026-05-02T16:21:58.820140+00:00"
 }

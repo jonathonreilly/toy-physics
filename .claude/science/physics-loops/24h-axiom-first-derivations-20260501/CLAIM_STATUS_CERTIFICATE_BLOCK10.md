@@ -37,15 +37,13 @@ Inherits the bounded scope from upstream Block 05 plus admits the Hawking
 1971 area theorem (NEC) as load-bearing admitted-context. Bounded scope
 captures both honestly.
 
-## Expected `effective_status` after audit
+## Audit handoff
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-bounded_theorem`:
-
-- **Path A** (full upstream chain reaches retained / retained_bounded):
-  `effective_status = retained_bounded`.
-- **Path B** (any upstream pending): `effective_status = proposed_retained`
-  (transient).
+Audit status is set only by the independent audit lane. Review-loop does not
+prefill an `audit_status` or promise an `effective_status`; after any clean
+independent audit, the pipeline derives effective status from `claim_type` plus
+dependency closure. If upstream deps remain non-retained-grade, the row remains
+pending/blocked until those deps are repaired and audited.
 
 ## Dependency chain status snapshot (2026-05-02)
 

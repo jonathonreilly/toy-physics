@@ -11,13 +11,13 @@ Parent note has 5 deps. Verifying status at 2026-05-02:
 
 | Dep | Status | Audit |
 |---|---|---|
-| `site_phase_cube_shift_intertwiner_note` | `support` | audited_clean ✓ |
-| `s3_taste_cube_decomposition_note` | `proposed_retained` | audited_clean ✓ |
-| `s3_mass_matrix_no_go_note` | `proposed_retained` | audited_clean ✓ |
-| `z2_hw1_mass_matrix_parametrization_note` | `proposed_retained` | audited_clean ✓ |
+| `site_phase_cube_shift_intertwiner_note` | `support` | clean audit record ✓ |
+| `s3_taste_cube_decomposition_note` | `proposed_retained` | clean audit record ✓ |
+| `s3_mass_matrix_no_go_note` | `proposed_retained` | clean audit record ✓ |
+| `z2_hw1_mass_matrix_parametrization_note` | `proposed_retained` | clean audit record ✓ |
 | `generation_axiom_boundary_note` | `proposed_retained` | **audited_conditional** ❌ |
 
-**4 of 5 deps are audited_clean.** Only `generation_axiom_boundary_note`
+**4 of 5 deps have clean audit records.** Only `generation_axiom_boundary_note`
 is conditional, blocking the parent's effective retention.
 
 ## 1. Implication for retention path
@@ -62,7 +62,7 @@ current_status: bounded support theorem  # was: proposed_retained
 After cycle 7 + this cycle's recommendations land:
 - `physical_lattice_necessity_note`: deps declared, status `bounded support`
 - `generation_axiom_boundary_note`: deps declared, status `bounded support`
-- `three_generation_observable_theorem_note`: 4/5 deps audited_clean; if
+- `three_generation_observable_theorem_note`: 4/5 deps have clean audit records; if
   the 5th (generation_axiom_boundary) is at least `bounded support` not
   `audited_conditional`, the parent's effective_status updates accordingly.
 
@@ -81,13 +81,13 @@ recommended dep cleanup):
 | 6 | Review-loop disposition | PENDING |
 | 7 | Independent audit required | YES |
 
-## 5. What this audit closes
+## 5. What this review checks
 
-- Dep-chain status verification (4/5 audited_clean)
+- Dep-chain status verification (4/5 clean audit records)
 - Cluster identification with cycle 7 (`physical_lattice_necessity_note`)
 - Path to retention identified: lift `generation_axiom_boundary_note`
 
-## 6. What this audit does NOT close
+## 6. What this review does NOT close
 
 - Lifting `generation_axiom_boundary_note` itself (separate work, similar
   to cycle 7 dep-declaration audit)

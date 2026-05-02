@@ -14,6 +14,11 @@ This skill is **review only**. It may make branch/package hygiene changes that
 allow the independent audit system to parse and queue claims, but it must not
 apply audit verdicts, write `audited_clean`, or run the audit worker.
 
+The bar is intentionally high: if review-loop is doing its job, the later
+fresh-context audit should be mostly confirmatory. Do not pass branches that
+leave the audit lane to discover basic claim-boundary, dependency-graph,
+status-vocabulary, or runner-validity defects.
+
 ## Arguments
 
 Parse:
@@ -76,7 +81,10 @@ locally and report that limitation.
   Review changed Python/scripts/log-producing code. Check syntax, decisive
   assertions, hard-coded targets, stale fixtures, literal `True` checks,
   hidden observations, reproducibility, paired runner/output agreement, and
-  whether the runner actually tests the note's load-bearing bridge.
+  whether the runner actually tests the note's load-bearing bridge. If a
+  runner checks audit-ledger dependency status, it must use the current
+  retained-grade set (`retained`, `retained_bounded`, `retained_no_go`) rather
+  than hard-coding stale expectations such as exactly `retained`.
 
 - `PhysicsClaimReviewer`
   Attack theorem notes, claims tables, publication surfaces, and prose. Check
@@ -106,7 +114,9 @@ locally and report that limitation.
   `docs/work_history/repo/review_feedback/`, publication edits update the
   relevant `docs/publication/ci3_z3/` surfaces, status wording follows
   `docs/repo/CONTROLLED_VOCABULARY.md`, and changed claim notes are compatible
-  with the audit lane's propose/ratify split.
+  with the audit lane's propose/ratify split. Also verify that load-bearing
+  dependencies are real markdown links that seed the citation graph, not just
+  code-formatted file names in prose.
 
 ### Optional Reviewer
 
@@ -226,7 +236,18 @@ performing the independent audit:
    ratification.
 3. Keep disclaimers such as "This is not charged-lepton mass closure" outside
    audit metadata fields.
-4. Run the audit pipeline after review fixes:
+4. Do not prefill or recommend a verdict in author/review surfaces. Wording
+   such as `target_audit_status: audited_clean`, `audit_status =
+   audited_clean`, `effective_status = retained`, or "can land audited_clean"
+   is not review-loop compatible. Use wording like `audit_status_authority:
+   independent audit lane only` and "effective status is pipeline-derived
+   after audit ratification and dependency closure."
+5. Changed claim notes that cite load-bearing authorities must use markdown
+   links, for example
+   ``[`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)``.
+   Code-formatted names such as `` `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md` `` do
+   not seed graph dependencies and are not enough.
+6. Run the audit pipeline after review fixes:
 
 ```bash
 bash docs/audit/scripts/run_pipeline.sh
@@ -241,6 +262,21 @@ The review loop must not run `docs/audit/scripts/apply_audit.py` and must not
 write `audit_status`, `audited_clean`, or other audit verdicts. If the branch
 introduces retained-grade `claim_type` rows, report those claim IDs in the
 final report as requiring the independent audit worker.
+
+After the pipeline, inspect the changed claim rows in
+`docs/audit/data/audit_ledger.json`:
+
+- `claim_type` must match the intended class (`positive_theorem`,
+  `bounded_theorem`, `no_go`, `open_gate`, `decoration`, or `meta`).
+- `audit_status` must remain `unaudited` unless the branch is only carrying
+  already-audited history from `origin/main`.
+- `effective_status` must be pipeline-derived, not hand-authored.
+- New theorem/no-go/bounded rows with declared load-bearing authorities must
+  have non-empty `deps` matching the markdown-linked authorities.
+- Dependencies asserted as retained-grade must currently have
+  `effective_status` in `{retained, retained_bounded, retained_no_go}`. Open
+  gates, `unaudited`, `audit_in_progress`, `retained_pending_chain`, and
+  terminal non-clean audit statuses are blockers for retained-grade claims.
 
 Useful review-only inventory:
 
@@ -263,7 +299,8 @@ rows=json.load(open("docs/audit/data/audit_ledger.json"))["rows"]
 for cid,row in rows.items():
     if row.get("note_path") in changed:
         print(cid, row.get("claim_type"), row.get("audit_status"),
-              row.get("effective_status"), row.get("note_path"))
+              row.get("effective_status"), row.get("deps"),
+              row.get("note_path"))
 PY
 ```
 
@@ -278,6 +315,9 @@ After fixes, run the smallest relevant checks:
 
 - `python3 -m py_compile <changed .py files>` for changed Python files;
 - changed paired runners directly when they are expected to be short;
+- if many changed runners are part of the branch, execute all practical
+  changed runners with a bounded timeout, then rerun any timeout once with a
+  longer timeout before classifying it as slow rather than broken;
 - any reproduction commands named in changed notes when practical;
 - publication/control-plane consistency checks by reading changed tables and
   nearby authority surfaces.

@@ -87,9 +87,9 @@ The runner verifies:
 
 Audit must verify:
 
-1. The cited retained upstreams (`GRAPH_FIRST_SU3_INTEGRATION_NOTE`,
+1. The cited retained-grade upstreams (`GRAPH_FIRST_SU3_INTEGRATION_NOTE`,
    `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE`, `NATIVE_GAUGE_CLOSURE_NOTE`)
-   are at `effective_status: retained` on `main` at the time of audit.
+   have retained-grade `effective_status` on `main` at the time of audit.
 2. The eigenvalue pattern `+1/3, −1` is correctly retained-cited from
    `GRAPH_FIRST_SU3_INTEGRATION_NOTE` (the runner's Part 2 reproduces
    it from first principles via the trace-free constraint).

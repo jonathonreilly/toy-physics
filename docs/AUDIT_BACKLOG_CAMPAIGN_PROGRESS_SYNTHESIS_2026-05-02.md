@@ -45,7 +45,7 @@ handoff for review backlog.
 
 ### 2.1 LHCM closure chain (cycles 1-3, 6, 14, 15, 16, 18, 19)
 
-The LHCM (`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`) repair chain is now
+The LHCM ([`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md)) repair chain is now
 **fully covered** as exact-support theorems on the retained graph-first
 surface modulo two SM-definition conventions (Q_e = −1, color-charged ↔
 quark labelling):

@@ -3,10 +3,10 @@
 **Date:** 2026-05-01
 **Status:** support / structural anomaly-cancellation theorem (one of three repair-target items for `LEFT_HANDED_CHARGE_MATCHING_NOTE`'s audit objection). This note proves that the left-handed doublet sector of the framework's graph-first surface satisfies the `SU(2)² × U(1)_Y` (W-W-B) triangle anomaly identity exactly. It does **not** close the full anomaly-complete one-generation chain — it addresses only one of the three repair targets named in the LHCM audit verdict.
 **Primary runner:** `scripts/frontier_lh_doublet_su2_squared_hypercharge_anomaly.py`
-**Cited authorities (one-hop, all retained on `main`):**
-- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — `effective_status: retained`. Provides the eigenvalue pattern: traceless `u(1)` direction has eigenvalue `+1/3` on the 3-dim symmetric/weak-doublet block and `-1` on the 1-dim antisymmetric/weak-doublet block.
-- [`GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md) — `effective_status: retained`. Provides the selected-axis surface on which the eigenvalues are computed.
-- [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) — `effective_status: retained`. Provides native cubic SU(2) for the doublet structure.
+**Cited authorities (one-hop, all retained-grade on `main`):**
+- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — retained-grade effective status. Provides the eigenvalue pattern: traceless `u(1)` direction has eigenvalue `+1/3` on the 3-dim symmetric/weak-doublet block and `-1` on the 1-dim antisymmetric/weak-doublet block.
+- [`GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md) — retained-grade effective status. Provides the selected-axis surface on which the eigenvalues are computed.
+- [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) — retained-grade effective status. Provides native cubic SU(2) for the doublet structure.
 
 **This note explicitly cites `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` only as the parent claim whose audit objection is being partially addressed.** It does not import any load-bearing content from LHCM; the derivation goes through retained primitives directly.
 

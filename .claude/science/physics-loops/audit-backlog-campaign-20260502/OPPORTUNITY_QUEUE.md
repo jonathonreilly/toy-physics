@@ -12,7 +12,8 @@ rank = blast_radius_score + dep_clean_score + named_residual_score + audit_state
 
 where:
 - blast_radius_score: 0–10 from min(transitive_descendants, 500)/50
-- dep_clean_score: 0–5 from fraction of deps at effective_status=retained × 5
+- dep_clean_score: 0–5 from fraction of deps with retained-grade effective
+  status × 5
 - named_residual_score: +3 if verdict names a specific repair target with candidate retained chain
 - audit_state_score: +2 if proposed_retained, +1 if audited_conditional
 

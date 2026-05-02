@@ -103,7 +103,7 @@ These are machine-precision deviations from the analytic no-signaling value.
 
 ## Claim Boundary
 
-This audit supports only the standard teleportation no-signaling statement:
+This review supports only the standard teleportation no-signaling statement:
 without Alice's two classical bits, Bob's reduced state is input-independent.
 
 It does not support:

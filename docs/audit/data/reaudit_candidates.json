@@ -32,14 +32,14 @@
           "rank_delta": 70
         }
       ],
-      "load_bearing_score": 9.17,
+      "load_bearing_score": 9.19,
       "note_hash": "7373ed482b2b13ded1f2a513a8ce7ab4a2665ff2cab57d93e23c8b75cfd98c99",
       "note_path": "docs/KOIDE_FULL_LATTICE_SCHUR_INHERITANCE_NOTE_2026-04-18.md",
       "reraudit_after_claim_ids": [
         "site_phase_cube_shift_intertwiner_note"
       ],
       "runner_path": "scripts/frontier_koide_full_lattice_schur_inheritance.py",
-      "transitive_descendants": 71
+      "transitive_descendants": 72
     },
     {
       "audit_independence_required": "any_non_self",
@@ -67,14 +67,14 @@
           "rank_delta": 70
         }
       ],
-      "load_bearing_score": 8.15,
+      "load_bearing_score": 8.17,
       "note_hash": "eeecac1592415c8aecf1bdfa92c9e15f6cc1d8e2e34008c52cdf381ae567b4f0",
       "note_path": "docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md",
       "reraudit_after_claim_ids": [
         "koide_dweh_cyclic_compression_note_2026-04-18"
       ],
       "runner_path": "scripts/frontier_koide_cyclic_wilson_descendant_law.py",
-      "transitive_descendants": 70
+      "transitive_descendants": 71
     },
     {
       "audit_independence_required": "any_non_self",
@@ -274,7 +274,7 @@
     "open_gate",
     "positive_theorem"
   ],
-  "generated_at": "2026-05-02T14:48:11.700204+00:00",
+  "generated_at": "2026-05-02T16:22:03.020834+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited theorem/no-go/open-gate claims whose current one-hop dependencies are all retained-grade and whose audit-time dependency snapshot contains at least one dependency that has since become retained-grade.",
   "ratified_dependency_statuses": [

@@ -4,7 +4,7 @@
 **Status:** stretch-attempt note + named obstruction packet on the
 observable-level reduction residual flagged in the audit verdict for
 `gauge_scalar_temporal_completion_theorem_note` (current_status: support,
-audit_status: audited_conditional, td=266). Per skill workflow #9, declares
+audit ledger verdict: conditional, td=266). Per skill workflow #9, declares
 A_min and forbidden imports, attempts derivation from minimal premises,
 and isolates the named obstruction.
 **Primary runner:** `scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py`

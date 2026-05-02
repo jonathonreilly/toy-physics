@@ -30,7 +30,7 @@ bare_retained_allowed: false
 ```yaml
 # observable_principle_from_axiom_note (parent)
 current_status: bounded support theorem  # was: unknown
-audit_status: audited_conditional          # unchanged
+audit ledger verdict remains conditional; no review-side change
 ```
 
 ## Audit-graph effect

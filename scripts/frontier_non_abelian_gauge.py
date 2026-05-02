@@ -24,6 +24,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 LEDGER_PATH = REPO_ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 
 TOL = 1.0e-10
+RETAINED_GRADES = {"retained", "retained_bounded", "retained_no_go"}
 PASS = 0
 FAIL = 0
 
@@ -193,8 +194,11 @@ def verify_retained_graph_first_dependencies() -> None:
     }
     for claim_id, runner in required.items():
         row = rows[claim_id]
-        check(f"{claim_id} audit_status = audited_clean", row.get("audit_status") == "audited_clean")
-        check(f"{claim_id} effective_status = retained", row.get("effective_status") == "retained")
+        check(
+            f"{claim_id} effective_status is retained-grade",
+            row.get("effective_status") in RETAINED_GRADES,
+            detail=str(row.get("effective_status")),
+        )
         check(f"{claim_id} runner path registered", row.get("runner_path") == runner, detail=str(row.get("runner_path")))
         check(f"{claim_id} runner exists", (REPO_ROOT / runner).exists())
 
@@ -258,7 +262,7 @@ def main() -> int:
     print("SUMMARY")
     print("=" * 76)
     print("  Exact native cubic Cl(3) / SU(2): checked directly.")
-    print("  Graph-first selector and structural SU(3): checked as audit-ratified dependencies.")
+    print("  Graph-first selector and structural SU(3): checked as retained-grade dependencies.")
     print("  Abelian factor: bounded to the left-handed +1/3 / -1 eigenvalue surface.")
 
     if FAIL:

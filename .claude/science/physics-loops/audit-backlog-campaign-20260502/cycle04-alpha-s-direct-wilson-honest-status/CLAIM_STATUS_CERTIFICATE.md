@@ -22,7 +22,7 @@ based on the actual current authority surface.
 # For the parent note: ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30
 current_status: bounded            # was: proposed_retained
 effective_status: bounded          # was: audited_conditional
-audit_status: audited_conditional  # unchanged
+audit ledger verdict remains conditional; no review-side change
 
 # Reason:
 proposal_allowed: false
@@ -39,7 +39,7 @@ For the parent note, applied at the current ledger state:
 
 | # | Criterion | Pass? | Notes |
 |---|---|---|---|
-| 1 | `proposal_allowed: true` | **NO** | This audit sets false. |
+| 1 | `proposal_allowed: true` | **NO** | This review recommends false. |
 | 2 | No open imports for the claimed target | **NO** | Sommer scale r_0 = 0.5 fm + 4-loop QCD running are admitted external imports. |
 | 3 | No observed values, fitted selectors, **admitted unit conventions, or literature values** are load-bearing | **NO** | Sommer scale = literature value (Sommer 1993, FLAG); QCD running = PDG-standard 4-loop. Both load-bearing. |
 | 4 | Every dep is retained, retained corollary, or exact support | **PARTIAL** | graph_first_su3_integration is retained; minimal_axioms_2026-04-11 is `audited_conditional`. |
@@ -54,7 +54,7 @@ For the parent note, applied at the current ledger state:
   literature standard corrections (Sommer scale + QCD running bridge).
 - The honest narrowest tier is **bounded support theorem with admitted
   Sommer-scale and standard QCD-running imports**.
-- This audit does NOT challenge the runner output (PASS=18/0 verified) or
+- This review does NOT challenge the runner output (PASS=18/0 verified) or
   the algebra. It corrects the status label.
 
 ## What This Block Does NOT Close

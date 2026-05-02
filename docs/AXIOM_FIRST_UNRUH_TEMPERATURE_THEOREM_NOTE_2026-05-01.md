@@ -35,11 +35,11 @@ right Rindler wedge in flat space.
 - **Block 01 KMS support theorem.** Periodic-Euclidean ↔ thermal
   Gibbs identification on `H_phys`.
 - **Retained Lorentz kernel.** From
-  `LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`, the framework has a
+  [`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md), the framework has a
   positive boost generator `K` such that `U(η) = exp(-i η K)` is the
   one-parameter group of Lorentz boosts on `H_phys`.
 - **Retained emergent Lorentz invariance.** From
-  `EMERGENT_LORENTZ_INVARIANCE_NOTE.md`, framework states transform
+  [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](EMERGENT_LORENTZ_INVARIANCE_NOTE.md), framework states transform
   covariantly under boosts in the smooth-limit regime.
 - **Retained anomaly-forced 3+1 dimensions.** Rindler wedge structure
   is 3+1-dimensional, matching the framework's retained signature.
@@ -152,7 +152,7 @@ the KMS condition. ∎
 ### Step 4 — Bisognano-Wichmann (proves U4)
 
 The retained Lorentz kernel `K` is the boost generator on `H_phys`
-(`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`). By the standard
+([`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)). By the standard
 Bisognano-Wichmann argument (1975, 1976), restricted to the right
 Rindler wedge `R`, the boost generator `K` is the modular Hamiltonian
 for the local algebra `A(R)` and the Minkowski vacuum `|Ω⟩`:
@@ -239,12 +239,12 @@ bare_retained_allowed: false
 
 ## Citations
 
-- A_min: `docs/MINIMAL_AXIOMS_2026-04-11.md`
-- retained Lorentz kernel: `docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`
-- retained emergent Lorentz: `docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md`
-- Block 01 KMS support: `docs/AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`
+- A_min: [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+- retained Lorentz kernel: [`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)
+- retained emergent Lorentz: [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+- Block 01 KMS support: [`AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md)
 - Block 02 Hawking T_H (parallel proof structure):
-  `docs/AXIOM_FIRST_HAWKING_TEMPERATURE_THEOREM_NOTE_2026-05-01.md`
+  [`AXIOM_FIRST_HAWKING_TEMPERATURE_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_HAWKING_TEMPERATURE_THEOREM_NOTE_2026-05-01.md)
 - standard external references (theorem-grade, no numerical input):
   Unruh (1976) *Phys. Rev. D* 14, 870;
   Bisognano-Wichmann (1975) *J. Math. Phys.* 16, 985;

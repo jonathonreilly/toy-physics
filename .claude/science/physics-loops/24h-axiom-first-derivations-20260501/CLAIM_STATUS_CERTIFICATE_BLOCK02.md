@@ -37,15 +37,13 @@ context — it's the same admission already paid for by the retained Wald-
 Noether composition, but it's load-bearing for the claim. `bounded_theorem`
 honestly captures this. The bound becomes the canonical `claim_scope`.
 
-## Expected `effective_status` after audit
+## Audit handoff
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-bounded_theorem`:
-
-- **Path A** (Block 01 promotes to retained AND BH 1/4 promotes to
-  retained_bounded): `effective_status = retained_bounded`.
-- **Path B** (any upstream still pending): `effective_status =
-  proposed_retained` (transient).
+Audit status is set only by the independent audit lane. Review-loop does not
+prefill an `audit_status` or promise an `effective_status`; after any clean
+independent audit, the pipeline derives effective status from `claim_type` plus
+dependency closure. If upstream deps remain non-retained-grade, the row remains
+pending/blocked until those deps are repaired and audited.
 
 ## Dependency chain status snapshot (2026-05-02)
 
