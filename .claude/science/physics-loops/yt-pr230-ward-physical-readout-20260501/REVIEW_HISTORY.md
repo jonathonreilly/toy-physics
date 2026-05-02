@@ -3238,3 +3238,18 @@ Disposition: open gate.  Current EW gauge-mass artifacts assume canonical
 `H` after it is supplied, and the PR #230 source harness has no same-surface
 `O_H`, `C_sH`, or `C_HH` pole-residue path.  The Gram-purity route therefore
 remains future work, not retained or proposed-retained closure.
+
+## 2026-05-02 - Block 142 H_unit Canonical-Higgs Operator Candidate Gate
+
+Review stance: candidate-gate stress test / claim firewall.
+
+- Added `scripts/frontier_yt_hunit_canonical_higgs_operator_candidate_gate.py`.
+- Added `docs/YT_HUNIT_CANONICAL_HIGGS_OPERATOR_CANDIDATE_GATE_NOTE_2026-05-02.md`.
+- Added `outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json`.
+- Updated assumption stress, retained-route, and campaign certificates.
+
+Disposition: exact negative boundary.  `H_unit` remains a named D17/substrate
+bilinear, but without pole-purity and canonical-normalization certificates it
+is not a same-surface canonical `O_H`.  The witness keeps `H_unit` readout
+fixed while canonical-Higgs `y_t` varies.  No retained or proposed-retained
+wording is allowed.

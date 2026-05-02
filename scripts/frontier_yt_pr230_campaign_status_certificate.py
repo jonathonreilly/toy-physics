@@ -184,6 +184,9 @@ def main() -> int:
         "canonical_higgs_operator_realization_gate": load(
             "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json"
         ),
+        "hunit_canonical_higgs_operator_candidate_gate": load(
+            "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json"
+        ),
         "neutral_scalar_rank_one_purity_gate": load(
             "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json"
         ),
@@ -667,6 +670,12 @@ def main() -> int:
         "canonical-Higgs operator realization gate not passed"
         in str(statuses["canonical_higgs_operator_realization_gate"]),
         statuses["canonical_higgs_operator_realization_gate"],
+    )
+    report(
+        "hunit-canonical-higgs-operator-candidate-gate-blocks",
+        "H_unit not canonical-Higgs operator realization"
+        in str(statuses["hunit_canonical_higgs_operator_candidate_gate"]),
+        statuses["hunit_canonical_higgs_operator_candidate_gate"],
     )
     report(
         "neutral-scalar-rank-one-purity-gate-not-passed",
@@ -1174,6 +1183,9 @@ def main() -> int:
             "missing object on the same surface: EW gauge-mass algebra assumes "
             "canonical H after it is supplied, but the PR #230 source harness "
             "does not yet implement O_H, C_sH, or C_HH pole residues.  "
+            "The H_unit candidate gate now blocks the direct legacy substitute: "
+            "H_unit is a named D17 bilinear, but without pole-purity and "
+            "canonical-normalization certificates it is not the canonical O_H.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

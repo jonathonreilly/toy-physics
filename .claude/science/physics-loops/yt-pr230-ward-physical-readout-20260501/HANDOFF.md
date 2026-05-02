@@ -1290,3 +1290,31 @@ chunk through the combiner, ready-set, response-stability, ESS, retained, and
 campaign gates.  If it is still running, pivot to implementing a real
 same-surface `O_H`/`C_sH`/`C_HH` observable design or the W/Z response
 certificate harness; do not treat EW algebra as a source-response substitute.
+
+Block 142 added the H_unit canonical-Higgs operator candidate gate:
+
+```text
+python3 scripts/frontier_yt_hunit_canonical_higgs_operator_candidate_gate.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=94 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=120 FAIL=0
+```
+
+Result: the obvious legacy substitute is blocked.  `H_unit` is a named
+D17/substrate bilinear, but without pole-purity and canonical-normalization
+certificates it is not a same-surface canonical `O_H`.  The witness keeps
+`H_unit` unit norm and `H_unit` top readout fixed while canonical-Higgs `y_t`
+varies through an orthogonal scalar admixture.  No retained/proposed-retained
+wording is authorized.
+
+Next exact action: poll chunk011.  If it completed, process the new
+target-series chunk.  If not, pivot to real `O_H`/`C_sH`/`C_HH` harness design,
+W/Z response with identity certificates, or rank-one neutral-scalar theorem
+work.

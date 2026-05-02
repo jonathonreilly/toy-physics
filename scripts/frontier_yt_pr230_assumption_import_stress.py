@@ -68,6 +68,9 @@ def main() -> int:
         "canonical_higgs_operator_realization_gate": load(
             "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json"
         ),
+        "hunit_canonical_higgs_operator_candidate_gate": load(
+            "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json"
+        ),
     }
 
     required_terms = [
@@ -86,6 +89,7 @@ def main() -> int:
         "Slope-only W/Z outputs",
         "same-surface PR #230 operator",
         "`O_H`",
+        "`H_unit` matrix-element readout",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -162,6 +166,16 @@ def main() -> int:
         is False,
         certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status"),
     )
+    report(
+        "hunit-not-canonical-higgs-operator",
+        "H_unit not canonical-Higgs operator realization"
+        in str(certificates["hunit_canonical_higgs_operator_candidate_gate"].get("actual_current_surface_status"))
+        and certificates["hunit_canonical_higgs_operator_candidate_gate"].get(
+            "hunit_canonical_higgs_operator_gate_passed"
+        )
+        is False,
+        certificates["hunit_canonical_higgs_operator_candidate_gate"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -178,7 +192,9 @@ def main() -> int:
             "is not hidden in the current harness or EW/Higgs notes; it remains "
             "an open observable/theorem.  Current EW gauge-mass algebra also "
             "does not realize a same-surface canonical-Higgs operator O_H or "
-            "C_HH/C_sH pole residues.  Static EW W/Z algebra is not dM_W/ds, "
+            "C_HH/C_sH pole residues.  H_unit likewise is not O_H without "
+            "the same pole-purity and canonical-normalization certificates.  "
+            "Static EW W/Z algebra is not dM_W/ds, "
             "and slope-only W/Z outputs need production mass fits plus sector-"
             "overlap and canonical-Higgs identity certificates.  No current route "
             "certificate authorizes retained proposal wording.  Positive "

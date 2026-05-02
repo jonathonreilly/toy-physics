@@ -663,3 +663,11 @@ realization.  The route needs an explicit `O_H` or radial `H` observable on the
 Cl(3)/Z3 source surface, with `C_sH` and `C_HH` pole residues or an equivalent
 identity theorem.  Do not treat source-only `C_ss`, static EW algebra, D17
 carrier support, or `H_unit` matrix-element readout as that missing operator.
+
+2026-05-02 H_unit canonical-Higgs operator candidate gate:
+
+`H_unit` may be discussed as a substrate/D17 bilinear candidate only.  It must
+not be used as the canonical `O_H` for PR #230 unless the route supplies the
+same pole-purity, `C_sH` / `C_HH`, source-overlap, inverse-propagator
+derivative, and canonical-normalization certificates required of any
+same-surface canonical-Higgs operator candidate.

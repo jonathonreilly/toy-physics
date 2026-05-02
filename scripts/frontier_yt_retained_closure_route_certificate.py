@@ -116,6 +116,7 @@ def main() -> int:
         "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
         "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+        "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
         "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
         "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
@@ -632,6 +633,15 @@ def main() -> int:
         )
         is False
     )
+    hunit_canonical_higgs_operator_candidate_gate_blocks = (
+        "H_unit not canonical-Higgs operator realization"
+        in certificates["hunit_canonical_higgs_operator_candidate_gate"].get("actual_current_surface_status", "")
+        and certificates["hunit_canonical_higgs_operator_candidate_gate"].get("proposal_allowed") is False
+        and certificates["hunit_canonical_higgs_operator_candidate_gate"].get(
+            "hunit_canonical_higgs_operator_gate_passed"
+        )
+        is False
+    )
     neutral_scalar_rank_one_purity_gate_blocks = (
         "neutral scalar rank-one purity gate not passed"
         in certificates["neutral_scalar_rank_one_purity_gate"].get("actual_current_surface_status", "")
@@ -1119,6 +1129,11 @@ def main() -> int:
         certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "hunit-canonical-higgs-operator-candidate-gate-blocks",
+        hunit_canonical_higgs_operator_candidate_gate_blocks,
+        certificates["hunit_canonical_higgs_operator_candidate_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "neutral-scalar-rank-one-purity-gate-blocks",
         neutral_scalar_rank_one_purity_gate_blocks,
         certificates["neutral_scalar_rank_one_purity_gate"].get("actual_current_surface_status", ""),
@@ -1449,7 +1464,11 @@ def main() -> int:
             "gate adds the adjacent object-level blocker: existing EW "
             "gauge-mass artifacts assume canonical H after it is supplied, "
             "while the PR #230 harness has no same-surface O_H, C_sH, or C_HH "
-            "operator path.  The neutral-scalar rank-one purity gate "
+            "operator path.  The H_unit candidate gate blocks the obvious "
+            "legacy substitute: H_unit is a named D17/substrate bilinear, but "
+            "without pole-purity and canonical-normalization certificates it "
+            "is not O_H and re-enters the forbidden matrix-element readout.  "
+            "The neutral-scalar rank-one purity gate "
             "also fails: D17 carrier support is not a dynamical rank-one "
             "theorem, and a rank-two neutral scalar witness still preserves "
             "the listed labels while changing the source-pole readout.  "

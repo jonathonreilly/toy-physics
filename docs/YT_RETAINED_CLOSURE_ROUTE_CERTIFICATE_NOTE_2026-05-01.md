@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=93 FAIL=0
+# SUMMARY: PASS=94 FAIL=0
 ```
 
 The runner verifies:
@@ -80,6 +80,7 @@ The runner verifies:
 | hidden source-Higgs cross-correlator authority exists | no |
 | source-Higgs Gram purity gate is passed | no |
 | canonical-Higgs operator realization gate is passed | no |
+| `H_unit` is certified as canonical `O_H` | no |
 | neutral scalar response space rank-one purity gate is passed | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
@@ -194,6 +195,10 @@ The canonical-Higgs operator realization gate now records the missing
 same-surface object behind that condition: existing EW gauge-mass artifacts
 assume canonical `H` after it is supplied, while the PR #230 production harness
 has no `O_H`, `C_sH`, or `C_HH` operator path.
+The `H_unit` candidate gate blocks the direct legacy substitute: `H_unit` is a
+named D17/substrate bilinear, but without pole-purity and
+canonical-normalization certificates it is not `O_H` and re-enters the
+forbidden matrix-element readout.
 The chunked FH/LSZ route has also advanced only as bounded support:
 chunks009-010 are seed-controlled and combiner-ready, raising the current
 L12 ready set to `10/63` chunks and `160/1000` saved configurations.  Response

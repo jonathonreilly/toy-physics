@@ -1,0 +1,71 @@
+{
+  "acceptance_requirements": [
+    "do not use H_unit matrix-element readout as y_t authority",
+    "derive or measure source-pole purity / cos(theta)=1",
+    "derive C_HH and C_sH pole residues with a canonical-Higgs identity certificate",
+    "derive source overlap or D'(pole), not only D17 carrier uniqueness",
+    "pass retained-route and campaign certificates with proposal_allowed true before any proposed_retained wording"
+  ],
+  "actual_current_surface_status": "exact negative boundary / H_unit not canonical-Higgs operator realization",
+  "exact_next_action": "If using H_unit as O_H, first supply C_HH/C_sH pole residues and a purity/canonical-Higgs identity certificate.  Otherwise pivot to W/Z response with identity certificates or seed-controlled FH/LSZ chunk processing.",
+  "fail_count": 0,
+  "hunit_canonical_higgs_operator_gate_passed": false,
+  "parent_certificates": {
+    "canonical_higgs_operator_realization": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "d17_source_pole_identity": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
+    "global_proof_audit": "outputs/yt_pr230_global_proof_audit_2026-05-01.json",
+    "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "ward_physical_readout_repair": "outputs/yt_ward_physical_readout_repair_audit_2026-05-01.json"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "H_unit lacks the current-surface LSZ/purity/canonical-Higgs identity certificates required for O_H.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity, observed top mass, observed y_t, observed W/Z masses, alpha_LM, plaquette, or u0",
+    "does not set kappa_s = 1, cos(theta)=1, c2 = 1, or Z_match = 1"
+  ],
+  "text_authorities": {
+    "class5_hunit": "docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md",
+    "d17_closure_attempt": "docs/YT_D17_SOURCE_POLE_IDENTITY_CLOSURE_ATTEMPT_NOTE_2026-05-02.md",
+    "global_proof_audit": "docs/YT_PR230_GLOBAL_YT_PROOF_AUDIT_NOTE_2026-05-01.md",
+    "ward_physical_readout_repair": "docs/YT_WARD_PHYSICAL_READOUT_REPAIR_AUDIT_NOTE_2026-05-01.md"
+  },
+  "verdict": "H_unit remains a named substrate/D17 bilinear candidate, but it is not a certified canonical-Higgs operator for PR #230.  The current audited objection is precisely the H_unit matrix-element readout, and D17 carrier support leaves the source overlap, pole residue, inverse-propagator derivative, and canonical kinetic metric open.  The witness keeps H_unit unit norm and H_unit top readout fixed while the canonical-Higgs Yukawa varies through an orthogonal neutral scalar admixture.  Therefore H_unit can enter a future C_sH/C_HH route only after the same purity and canonical-normalization certificates required of any O_H candidate.",
+  "witness_rows": [
+    {
+      "canonical_higgs_yukawa_y_h": 1.0,
+      "cos_theta": 1.0,
+      "csh_purity_required": 1.0,
+      "fixed_hunit_top_readout": 1.0,
+      "hunit_unit_norm": 1.0,
+      "orthogonal_top_coupling_y_chi": 0.4,
+      "sin_theta": 0.0,
+      "theta": 0.0
+    },
+    {
+      "canonical_higgs_yukawa_y_h": 0.9185287854513252,
+      "cos_theta": 0.9393727128473789,
+      "csh_purity_required": 0.0,
+      "fixed_hunit_top_readout": 1.0,
+      "hunit_unit_norm": 1.0,
+      "orthogonal_top_coupling_y_chi": 0.4,
+      "sin_theta": 0.34289780745545134,
+      "theta": 0.35
+    },
+    {
+      "canonical_higgs_yukawa_y_h": 0.9705439075483621,
+      "cos_theta": 0.7648421872844885,
+      "csh_purity_required": 0.0,
+      "fixed_hunit_top_readout": 1.0,
+      "hunit_unit_norm": 1.0,
+      "orthogonal_top_coupling_y_chi": 0.4,
+      "sin_theta": 0.644217687237691,
+      "theta": 0.7
+    }
+  ]
+}

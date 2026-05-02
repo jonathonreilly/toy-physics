@@ -1827,3 +1827,25 @@ The current PR #230 surface still lacks a same-surface canonical-Higgs
 operator `O_H` or radial observable, plus `C_sH` and `C_HH` pole residues.
 EW gauge-mass algebra after canonical `H` is supplied is not that realization.
 No retained or `proposed_retained` wording is authorized.
+
+H_unit canonical-Higgs operator candidate checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / H_unit not canonical-Higgs operator realization
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_hunit_canonical_higgs_operator_candidate_gate.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=94 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=120 FAIL=0
+```
+
+`H_unit` is a substrate/D17 bilinear candidate only.  It is not certified as
+canonical `O_H` without the same pole-purity, `C_sH` / `C_HH`, and
+canonical-normalization certificates required of any candidate.  No retained
+or `proposed_retained` wording is authorized.

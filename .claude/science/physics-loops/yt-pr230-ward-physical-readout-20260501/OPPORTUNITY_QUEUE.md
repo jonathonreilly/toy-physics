@@ -452,3 +452,11 @@ canonical `H` and cannot be used as source-response evidence.  Highest-ranked
 actions remain: process target-series FH/LSZ chunks as they complete; design a
 real `O_H`/`C_sH`/`C_HH` harness; or implement W/Z response only with
 sector-overlap and canonical-Higgs identity certificates.
+
+H_unit candidate update: using `H_unit` as `O_H` is now explicitly blocked
+unless it receives the same pole-purity, `C_sH`/`C_HH`, and
+canonical-normalization certificates required of any canonical-Higgs operator
+candidate.  Do not spend another block on a bare H_unit/D17 substitution.  The
+remaining positive actions are production chunk processing, a real
+same-surface `O_H` harness, W/Z response with identity certificates, or a
+rank-one neutral-scalar response theorem.

@@ -1842,3 +1842,18 @@ supplied and verify object-level mass algebra; they do not provide `O_H`,
 `C_sH`, or `C_HH` pole residues in the production harness.  Do not use static
 EW algebra, observed W/Z masses, D17 carrier support, source-only `C_ss`, or
 `H_unit` as that operator realization.
+
+`H_unit` is not certified as canonical `O_H`:
+
+```text
+python3 scripts/frontier_yt_hunit_canonical_higgs_operator_candidate_gate.py
+# SUMMARY: PASS=18 FAIL=0
+```
+
+`H_unit` remains a named substrate/D17 bilinear, but the current audited
+objection is precisely the `H_unit` matrix-element readout.  The candidate gate
+keeps `H_unit` unit norm and `H_unit` top readout fixed while changing the
+canonical-Higgs Yukawa through orthogonal neutral scalar admixture.  Therefore
+`H_unit` can be used in a future `C_sH` / `C_HH` route only after the missing
+pole-purity, source-overlap, inverse-propagator derivative, and
+canonical-normalization certificates are supplied.
