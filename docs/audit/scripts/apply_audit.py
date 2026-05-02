@@ -12,10 +12,8 @@ rules:
   - independence='weak' may not land audited_clean
   - independence='fresh_context' may land audited_clean when the audit was
     performed in a distinct clean-room session with the restricted audit inputs
-  - audited_clean records the audit verdict for any allowed current_status;
-    compute_effective_status.py only promotes clean proposed_* rows, so
-    support/bounded/open/unknown rows keep their declared tier unless later
-    re-tiered by the author
+  - audited_clean records the audit verdict plus auditor-owned claim_type;
+    compute_effective_status.py promotes from claim_type
   - auditor identity must differ from author identity for audited_clean
   - the row's note_hash must match disk (otherwise the audit is stale)
   - fresh-context second passes over existing high/critical terminal verdicts
@@ -40,6 +38,8 @@ LEDGER_PATH = REPO_ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 REQUIRED_FIELDS = {
     "claim_id",
     "verdict",
+    "claim_type",
+    "claim_scope",
     "auditor",
     "auditor_family",
     "independence",
@@ -64,6 +64,15 @@ ALLOWED_VERDICTS = {
     "audited_decoration",
     "audited_failed",
     "audited_numerical_match",
+}
+
+ALLOWED_CLAIM_TYPES = {
+    "positive_theorem",
+    "bounded_theorem",
+    "no_go",
+    "open_gate",
+    "decoration",
+    "meta",
 }
 
 ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", "judicial_review"}
@@ -132,6 +141,8 @@ def audit_summary_from_row(row: dict) -> dict:
         "auditor_family": row.get("auditor_family"),
         "independence": row.get("independence"),
         "audit_date": row.get("audit_date"),
+        "claim_type": row.get("claim_type"),
+        "claim_scope": row.get("claim_scope"),
         "load_bearing_step_class": row.get("load_bearing_step_class"),
         "verdict": row.get("audit_status"),
     }
@@ -143,6 +154,8 @@ def audit_summary_from_blob(audit: dict) -> dict:
         "auditor_family": audit.get("auditor_family"),
         "independence": audit.get("independence"),
         "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+        "claim_type": audit.get("claim_type"),
+        "claim_scope": audit.get("claim_scope"),
         "load_bearing_step_class": audit.get("load_bearing_step_class"),
         "verdict": audit.get("verdict"),
     }
@@ -154,6 +167,8 @@ def judicial_summary_from_blob(judgment: dict) -> dict:
         "auditor_family": judgment.get("auditor_family"),
         "independence": judgment.get("independence"),
         "audit_date": judgment.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+        "claim_type": judgment.get("ratified_claim_type"),
+        "claim_scope": judgment.get("ratified_claim_scope"),
         "load_bearing_step_class": judgment.get("ratified_load_bearing_step_class"),
         "verdict": judgment.get("ratified_verdict"),
         "sided_with": judgment.get("sided_with"),
@@ -168,9 +183,7 @@ def snapshot_audit_state(row: dict, rows: dict[str, dict]) -> dict:
     return {
         "deps": deps,
         "dep_effective_status": {
-            d: rows.get(d, {}).get("effective_status")
-            or rows.get(d, {}).get("current_status")
-            or "unknown"
+            d: rows.get(d, {}).get("effective_status") or "unaudited"
             for d in deps
         },
         "criticality": row.get("criticality"),
@@ -211,6 +224,9 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
     ratified_verdict = judgment.get("ratified_verdict")
     if ratified_verdict not in ALLOWED_VERDICTS:
         return False, f"ratified_verdict {ratified_verdict!r} not in {sorted(ALLOWED_VERDICTS)}"
+    ratified_claim_type = judgment.get("ratified_claim_type")
+    if ratified_claim_type is not None and ratified_claim_type not in ALLOWED_CLAIM_TYPES:
+        return False, f"ratified_claim_type {ratified_claim_type!r} not in {sorted(ALLOWED_CLAIM_TYPES)}"
 
     err = note_hash_drift_error(row)
     if err:
@@ -252,6 +268,12 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
             f"ratified_verdict {ratified_verdict!r} does not match "
             f"{chosen_label}_audit verdict {chosen.get('verdict')!r}"
         )
+    chosen_claim_type = chosen.get("claim_type")
+    if ratified_claim_type is not None and ratified_claim_type != chosen_claim_type:
+        return False, (
+            f"ratified_claim_type {ratified_claim_type!r} does not match "
+            f"{chosen_label}_audit claim_type {chosen_claim_type!r}"
+        )
     ratified_class = judgment.get("ratified_load_bearing_step_class")
 
     row["cross_confirmation"]["status"] = (
@@ -262,6 +284,10 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
     row["auditor_family"] = judgment["auditor_family"]
     row["independence"] = judgment["independence"]
     row["audit_date"] = third["audit_date"]
+    row["claim_type"] = ratified_claim_type or chosen_claim_type or row.get("claim_type")
+    row["claim_scope"] = judgment.get("ratified_claim_scope") or chosen.get("claim_scope") or row.get("claim_scope")
+    row["claim_type_provenance"] = "judicial_review"
+    row["claim_type_last_reviewed"] = row["audit_date"]
     row["load_bearing_step"] = judgment.get("ratified_load_bearing_step") or row.get("load_bearing_step")
     row["load_bearing_step_class"] = ratified_class
     row["chain_closes"] = ratified_verdict == "audited_clean"
@@ -296,6 +322,21 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     verdict = audit["verdict"]
     if verdict not in ALLOWED_VERDICTS:
         return False, f"verdict {verdict!r} not in {sorted(ALLOWED_VERDICTS)}"
+
+    claim_type = audit.get("claim_type")
+    if claim_type not in ALLOWED_CLAIM_TYPES:
+        return False, f"claim_type {claim_type!r} not in {sorted(ALLOWED_CLAIM_TYPES)}"
+    claim_scope = audit.get("claim_scope")
+    if not isinstance(claim_scope, str) or not claim_scope.strip():
+        return False, "claim_scope must be a non-empty string"
+
+    if verdict == "audited_clean" and claim_type in {"decoration", "meta"}:
+        return False, f"audited_clean cannot ratify claim_type={claim_type!r}"
+    if verdict == "audited_decoration":
+        if claim_type != "decoration":
+            return False, "audited_decoration requires claim_type='decoration'"
+        if not audit.get("decoration_parent_claim_id"):
+            return False, "audited_decoration requires decoration_parent_claim_id"
 
     independence = audit["independence"]
     if independence not in ALLOWED_INDEPENDENCE:
@@ -341,6 +382,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         second = audit_summary_from_blob(audit)
         matches = (
             first.get("verdict") == second.get("verdict")
+            and first.get("claim_type") == second.get("claim_type")
             and first.get("load_bearing_step_class") == second.get("load_bearing_step_class")
         )
         row["cross_confirmation"] = {
@@ -354,8 +396,10 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         else:
             terminal_second_pass_error = (
                 "first and second audits disagree "
-                f"({first.get('verdict')!r}/{first.get('load_bearing_step_class')!r} vs "
-                f"{second.get('verdict')!r}/{second.get('load_bearing_step_class')!r}); "
+                f"({first.get('verdict')!r}/{first.get('claim_type')!r}/"
+                f"{first.get('load_bearing_step_class')!r} vs "
+                f"{second.get('verdict')!r}/{second.get('claim_type')!r}/"
+                f"{second.get('load_bearing_step_class')!r}); "
                 "promote to third-auditor review or human escalation"
             )
             terminal_second_pass_blocker = "cross_confirmation_disagreement"
@@ -374,12 +418,20 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         first_verdict = first.get("verdict")
         second_verdict = second.get("verdict")
         third_verdict = third.get("verdict")
-        if third_verdict == first_verdict:
+        third_matches_first = (
+            third_verdict == first_verdict
+            and third.get("claim_type") == first.get("claim_type")
+        )
+        third_matches_second = (
+            third_verdict == second_verdict
+            and third.get("claim_type") == second.get("claim_type")
+        )
+        if third_matches_first:
             row["cross_confirmation"]["third_audit"] = third
             row["cross_confirmation"]["status"] = "third_confirmed_first"
             row["cross_confirmation"]["mode"] = "terminal_third_pass"
             third_pass_msg = "third auditor confirmed first verdict"
-        elif third_verdict == second_verdict:
+        elif third_matches_second:
             row["cross_confirmation"]["third_audit"] = third
             row["cross_confirmation"]["status"] = "third_confirmed_second"
             row["cross_confirmation"]["mode"] = "terminal_third_pass"
@@ -389,8 +441,10 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             row["cross_confirmation"]["status"] = "three_way_disagreement"
             row["cross_confirmation"]["mode"] = "terminal_third_pass"
             third_pass_error = (
-                "third auditor introduced a third verdict "
-                f"({first_verdict!r} vs {second_verdict!r} vs {third_verdict!r}); "
+                "third auditor introduced a third verdict or claim_type "
+                f"({first_verdict!r}/{first.get('claim_type')!r} vs "
+                f"{second_verdict!r}/{second.get('claim_type')!r} vs "
+                f"{third_verdict!r}/{third.get('claim_type')!r}); "
                 "escalate to human review"
             )
             third_pass_blocker = "third_auditor_disagreement"
@@ -409,6 +463,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         row["cross_confirmation"]["second_audit"] = second
         matches = (
             first.get("verdict") == second.get("verdict")
+            and first.get("claim_type") == second.get("claim_type")
             and first.get("load_bearing_step_class") == second.get("load_bearing_step_class")
         )
         if matches:
@@ -421,8 +476,10 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             ledger["rows"] = rows
             return True, (
                 "cross-confirmation disagreement recorded "
-                f"({first.get('verdict')!r}/{first.get('load_bearing_step_class')!r} vs "
-                f"{second.get('verdict')!r}/{second.get('load_bearing_step_class')!r}); "
+                f"({first.get('verdict')!r}/{first.get('claim_type')!r}/"
+                f"{first.get('load_bearing_step_class')!r} vs "
+                f"{second.get('verdict')!r}/{second.get('claim_type')!r}/"
+                f"{second.get('load_bearing_step_class')!r}); "
                 "promote to third-auditor review"
             )
 
@@ -445,6 +502,8 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
                     "auditor_family": audit["auditor_family"],
                     "independence": independence,
                     "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+                    "claim_type": claim_type,
+                    "claim_scope": claim_scope,
                     "load_bearing_step_class": audit.get("load_bearing_step_class"),
                     "verdict": "audited_clean",
                 },
@@ -453,6 +512,10 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             }
             row["audit_status"] = "audit_in_progress"
             row["blocker"] = "awaiting_cross_confirmation"
+            row["claim_type"] = claim_type
+            row["claim_scope"] = claim_scope.strip()
+            row["claim_type_provenance"] = "audited_pending_cross_confirmation"
+            row["claim_type_last_reviewed"] = audit.get("audit_date") or datetime.now(timezone.utc).isoformat()
             rows[cid] = row
             ledger["rows"] = rows
             return True, "first audit recorded; awaiting independent second auditor"
@@ -460,12 +523,17 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         err = cross_confirmation_error(first, audit)
         if err:
             return False, err
-        if first.get("load_bearing_step_class") != audit.get("load_bearing_step_class"):
+        if (
+            first.get("load_bearing_step_class") != audit.get("load_bearing_step_class")
+            or first.get("claim_type") != claim_type
+        ):
             row["cross_confirmation"]["second_audit"] = {
                 "auditor": audit["auditor"],
                 "auditor_family": audit["auditor_family"],
                 "independence": independence,
                 "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+                "claim_type": claim_type,
+                "claim_scope": claim_scope,
                 "load_bearing_step_class": audit.get("load_bearing_step_class"),
                 "verdict": "audited_clean",
             }
@@ -475,8 +543,9 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             rows[cid] = row
             ledger["rows"] = rows
             return False, (
-                "first and second audits disagree on load_bearing_step_class "
-                f"({first.get('load_bearing_step_class')!r} vs {audit.get('load_bearing_step_class')!r}); "
+                "first and second audits disagree on claim_type or load_bearing_step_class "
+                f"({first.get('claim_type')!r}/{first.get('load_bearing_step_class')!r} vs "
+                f"{claim_type!r}/{audit.get('load_bearing_step_class')!r}); "
                 "promote to third-auditor review"
             )
         # Concordant second audit: promote.
@@ -485,6 +554,8 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
             "auditor_family": audit["auditor_family"],
             "independence": independence,
             "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+            "claim_type": claim_type,
+            "claim_scope": claim_scope,
             "load_bearing_step_class": audit.get("load_bearing_step_class"),
             "verdict": "audited_clean",
         }
@@ -496,6 +567,11 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     row["auditor_family"] = audit["auditor_family"]
     row["independence"] = independence
     row["audit_date"] = audit.get("audit_date") or datetime.now(timezone.utc).isoformat()
+    row["claim_type"] = claim_type
+    row["claim_scope"] = claim_scope.strip()
+    row["claim_type_provenance"] = "audited"
+    row["claim_type_last_reviewed"] = row["audit_date"]
+    row["notes_for_re_audit_if_any"] = audit.get("notes_for_re_audit_if_any")
     row["load_bearing_step"] = audit.get("load_bearing_step")
     row["load_bearing_step_class"] = audit.get("load_bearing_step_class")
     row["chain_closes"] = audit.get("chain_closes")

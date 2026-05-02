@@ -1,30 +1,16 @@
 #!/usr/bin/env python3
 """Compute effective_status for every row in the audit ledger.
 
-The propagation rule (from FRESH_LOOK_REQUIREMENTS.md):
-  effective_status = the weaker of (this row's intrinsic status from its
-  audit verdict, the minimum effective_status of all dependencies).
+Scope-aware rule:
+  - `claim_type` is auditor-owned and determines which retained-grade bucket
+    a clean audit may enter.
+  - clean theorem/no-go/bounded rows become retained-grade only when every
+    one-hop dependency is already retained-grade.
+  - open gates, decorations, metadata, and terminal non-clean audit verdicts
+    have explicit effective statuses and never become retained by author tier.
 
-Intrinsic status mapping:
-  - current_status=proposed_retained + audit_status=audited_clean -> retained
-  - current_status=proposed_promoted + audit_status=audited_clean -> promoted
-  - current_status=proposed_no_go    + audit_status=audited_clean -> retained_no_go
-    (author declared a no-go theorem and the audit ratified it; symmetric
-    path to `retained` for negative results — Coleman-Mandula, Kochen-Specker,
-    Weinberg-Witten style claims born as no-gos rather than failed positives)
-  - current_status=proposed_*        + audit_status=unaudited     -> proposed_*
-  - audit_status=audited_failed AND note in archive_unlanded/      -> retained_no_go
-    (legacy path: a positive claim failed audit and was archived. The audit
-    verdict stays as audited_failed but the project-level interpretation
-    lifts to retained_no_go. Going forward, prefer the proposed_no_go
-    direct path above for new no-go theorems.)
-  - current_status=proposed_*        + audit_status=audited_<fail> -> audited_<fail>
-  - current_status in {support, bounded, open}                    -> as declared
-  - current_status=unknown                                        -> unknown
-
-Writes effective_status, effective_status_reason, and a summary back into
-docs/audit/data/audit_ledger.json. Also emits docs/audit/data/effective_status_summary.json
-with cluster statistics.
+Writes effective_status, intrinsic_status, effective_status_reason, and a
+summary back into docs/audit/data/audit_ledger.json.
 """
 from __future__ import annotations
 
@@ -37,22 +23,30 @@ DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 LEDGER_PATH = DATA_DIR / "audit_ledger.json"
 SUMMARY_PATH = DATA_DIR / "effective_status_summary.json"
 
-# Strength rank: higher = stronger publication-facing tier.
-# retained_no_go sits at the same tier as retained: both are audit-ratified,
-# durable scientific commitments. A retained no-go is a negative theorem
-# (Coleman-Mandula, Kochen-Specker, Weinberg-Witten) that downstream rows
-# can cite without weakening.
+RETAINED_GRADES = {"retained", "retained_no_go", "retained_bounded"}
+TERMINAL_AUDIT_STATUSES = {
+    "audited_renaming",
+    "audited_conditional",
+    "audited_failed",
+    "audited_numerical_match",
+}
+CLAIM_TYPE_TO_RETAINED = {
+    "positive_theorem": "retained",
+    "no_go": "retained_no_go",
+    "bounded_theorem": "retained_bounded",
+}
+
+# Strength rank: higher = stronger publication-facing tier. Dynamic
+# decoration_under_<claim_id> values are ranked by status_rank().
 RANK = {
     "retained": 100,
     "retained_no_go": 100,
-    "promoted": 90,
-    "proposed_retained": 80,
-    "proposed_no_go": 80,
-    "proposed_promoted": 70,
-    "bounded": 60,
-    "support": 50,
-    "open": 40,
-    "unknown": 30,
+    "retained_bounded": 95,
+    "retained_pending_chain": 80,
+    "open_gate": 40,
+    "unaudited": 30,
+    "audit_in_progress": 30,
+    "meta": 25,
     "audited_decoration": 20,
     "audited_numerical_match": 15,
     "audited_renaming": 10,
@@ -60,67 +54,91 @@ RANK = {
     "audited_failed": 0,
 }
 
-AUDIT_PROMOTION = {
-    "proposed_retained": "retained",
-    "proposed_promoted": "promoted",
-    "proposed_no_go": "retained_no_go",
-}
 
-# Verdicts that override the proposed tier and become the intrinsic status.
-TERMINAL_AUDIT_STATUSES = {
-    "audited_decoration",
-    "audited_numerical_match",
-    "audited_renaming",
-    "audited_conditional",
-    "audited_failed",
-}
+def status_rank(status: str | None) -> int:
+    if status and status.startswith("decoration_under_"):
+        return 70
+    return RANK.get(status or "unaudited", -1)
 
 
-def intrinsic_status(row: dict) -> str:
-    cs = row.get("current_status") or "unknown"
-    a = row.get("audit_status") or "unaudited"
-    if a == "audited_failed":
-        # Terminal failed audits whose notes have been moved to archive_unlanded/
-        # are retained as no-go theorems, not active failures. The audit verdict
-        # stays as audited_failed (faithful to what Codex said about the
-        # original positive claim), but the effective_status lifts to
-        # retained_no_go to reflect that the project has accepted this lane is
-        # closed and built it into institutional memory.
-        note_path = row.get("note_path") or ""
-        if note_path.startswith("archive_unlanded/"):
-            if (REPO_ROOT / note_path).exists():
-                return "retained_no_go"
-    if a in TERMINAL_AUDIT_STATUSES:
-        return a
-    if a == "audited_clean":
-        return AUDIT_PROMOTION.get(cs, cs)
-    return cs  # unaudited / audit_in_progress: report what the author proposed
+def is_retained_grade(status: str | None) -> bool:
+    return status in RETAINED_GRADES
 
 
-def weaker(a: str, b: str) -> str:
-    """Return whichever of a, b has the lower rank. Ties prefer a."""
-    return a if RANK.get(a, -1) <= RANK.get(b, -1) else b
+def archived_failed_is_retained_no_go(row: dict) -> bool:
+    if row.get("audit_status") != "audited_failed":
+        return False
+    note_path = row.get("note_path") or ""
+    return note_path.startswith("archive_unlanded/") and (REPO_ROOT / note_path).exists()
 
 
-def compute_effective(rows: dict[str, dict]) -> dict[str, dict]:
-    """Compute effective_status for every row by topo-sorting on deps.
+def decoration_status(row: dict, dep_effective: dict[str, str]) -> tuple[str, str]:
+    parent = row.get("decoration_parent_claim_id")
+    if not parent:
+        return "audited_decoration", "decoration_missing_parent"
+    parent_status = dep_effective.get(parent)
+    if parent_status is None:
+        parent_status = "unknown"
+    if is_retained_grade(parent_status):
+        return f"decoration_under_{parent}", "decoration_parent_retained"
+    return "retained_pending_chain", f"decoration_waiting_on:{parent}"
 
-    Cycles are detected and broken by treating the cycle as a single
-    component whose effective_status is the weakest intrinsic in the
-    cycle, attributed reason 'cycle'.
+
+def clean_status(row: dict, dep_effective: dict[str, str]) -> tuple[str, str]:
+    claim_type = row.get("claim_type")
+    if claim_type == "open_gate":
+        return "open_gate", "audited_open_gate"
+    if claim_type == "meta":
+        return "meta", "metadata"
+    if claim_type == "decoration":
+        return decoration_status(row, dep_effective)
+
+    retained_status = CLAIM_TYPE_TO_RETAINED.get(claim_type)
+    if retained_status is None:
+        return "retained_pending_chain", "missing_or_unknown_claim_type"
+
+    for dep_id in sorted(row.get("deps", [])):
+        dep_status = dep_effective.get(dep_id, "unaudited")
+        if not is_retained_grade(dep_status):
+            return "retained_pending_chain", f"chain_waiting_on:{dep_id}"
+    return retained_status, "self"
+
+
+def intrinsic_status(row: dict, dep_effective: dict[str, str]) -> tuple[str, str]:
+    if archived_failed_is_retained_no_go(row):
+        return "retained_no_go", "archived_failed_no_go"
+
+    claim_type = row.get("claim_type")
+    audit_status = row.get("audit_status") or "unaudited"
+
+    if claim_type == "meta" and audit_status in {"unaudited", "audit_in_progress"}:
+        return "meta", "metadata"
+    if audit_status in {"unaudited", "audit_in_progress"}:
+        return audit_status, "awaiting_audit"
+    if audit_status == "audited_decoration":
+        return decoration_status(row, dep_effective)
+    if audit_status in TERMINAL_AUDIT_STATUSES:
+        return audit_status, "terminal_audit"
+    if audit_status == "audited_clean":
+        return clean_status(row, dep_effective)
+    return "unaudited", "unknown_audit_status"
+
+
+def compute_effective(rows: dict[str, dict]) -> tuple[dict[str, dict], list[list[str]]]:
+    """Compute effective_status by resolving dependencies first.
+
+    Cycles are reported and treated conservatively: any clean row waiting on
+    an unresolved cycle member remains retained_pending_chain.
     """
-    # Index for quick lookup.
-    intrinsic = {cid: intrinsic_status(r) for cid, r in rows.items()}
-
-    # Use iterative DFS with a memo + WIP set to detect cycles.
     effective: dict[str, str] = {}
     reason: dict[str, str] = {}
+    intrinsic: dict[str, str] = {}
     cycles: list[list[str]] = []
 
     WHITE, GRAY, BLACK = 0, 1, 2
     color: dict[str, int] = {cid: WHITE for cid in rows}
 
-    def visit(start: str):
+    def visit(start: str) -> None:
         stack = [(start, iter(rows[start].get("deps", [])))]
         path = [start]
         path_set = {start}
@@ -130,26 +148,23 @@ def compute_effective(rows: dict[str, dict]) -> dict[str, dict]:
             try:
                 dep = next(deps_iter)
             except StopIteration:
-                # Finalize this node.
-                node_intrinsic = intrinsic[node]
-                worst = node_intrinsic
-                worst_source = "self"
-                for d in rows[node].get("deps", []):
-                    d_eff = effective.get(d, intrinsic.get(d, "unknown"))
-                    if RANK.get(d_eff, -1) < RANK.get(worst, -1):
-                        worst = d_eff
-                        worst_source = f"inherited_from:{d}"
-                effective[node] = worst
-                reason[node] = worst_source
+                dep_effective = {
+                    d: effective.get(d, "unaudited")
+                    for d in rows[node].get("deps", [])
+                    if d in rows
+                }
+                status, why = intrinsic_status(rows[node], dep_effective)
+                intrinsic[node] = status
+                effective[node] = status
+                reason[node] = why
                 color[node] = BLACK
                 path.pop()
                 path_set.discard(node)
                 stack.pop()
                 continue
             if dep not in rows:
-                continue  # dangling citation; skip
+                continue
             if color[dep] == GRAY:
-                # Cycle detected.
                 if dep in path_set:
                     cycle_start = path.index(dep)
                     cycles.append(list(path[cycle_start:]))
@@ -165,10 +180,10 @@ def compute_effective(rows: dict[str, dict]) -> dict[str, dict]:
         if color[cid] == WHITE:
             visit(cid)
 
-    # Mark unfinished nodes (nodes inside cycles that didn't finalize).
     for cid in rows:
         if cid not in effective:
-            effective[cid] = intrinsic[cid]
+            intrinsic[cid] = "retained_pending_chain"
+            effective[cid] = "retained_pending_chain"
             reason[cid] = "cycle_unresolved"
 
     out: dict[str, dict] = {}
@@ -183,32 +198,27 @@ def compute_effective(rows: dict[str, dict]) -> dict[str, dict]:
 
 def summarize(rows: dict[str, dict]) -> dict:
     eff_counts: dict[str, int] = {}
-    for r in rows.values():
-        e = r.get("effective_status", "unknown")
-        eff_counts[e] = eff_counts.get(e, 0) + 1
-
-    proposed_demoted_by_upstream = []
+    claim_type_counts: dict[str, int] = {}
+    pending_chain = []
     for cid, r in rows.items():
-        if r.get("intrinsic_status") in {
-            "proposed_retained", "proposed_promoted", "proposed_no_go",
-            "retained", "promoted", "retained_no_go",
-        }:
-            if r.get("effective_status") != r.get("intrinsic_status"):
-                if r.get("effective_status_reason", "").startswith("inherited_from:"):
-                    proposed_demoted_by_upstream.append(cid)
+        e = r.get("effective_status", "unaudited")
+        eff_counts[e] = eff_counts.get(e, 0) + 1
+        ct = r.get("claim_type") or "unset"
+        claim_type_counts[ct] = claim_type_counts.get(ct, 0) + 1
+        if e == "retained_pending_chain":
+            pending_chain.append(cid)
 
     return {
         "effective_status_counts": eff_counts,
-        "proposed_demoted_by_upstream_count": len(proposed_demoted_by_upstream),
-        "proposed_demoted_by_upstream_examples": sorted(proposed_demoted_by_upstream)[:25],
+        "claim_type_counts": claim_type_counts,
+        "retained_pending_chain_count": len(pending_chain),
+        "retained_pending_chain_examples": sorted(pending_chain)[:25],
     }
 
 
 def main() -> int:
     if not LEDGER_PATH.exists():
-        raise SystemExit(
-            "audit_ledger.json missing; run seed_audit_ledger.py first"
-        )
+        raise SystemExit("audit_ledger.json missing; run seed_audit_ledger.py first")
     ledger = json.loads(LEDGER_PATH.read_text(encoding="utf-8"))
     rows = ledger.get("rows", {})
 
@@ -227,7 +237,7 @@ def main() -> int:
     print(f"Updated {LEDGER_PATH.relative_to(REPO_ROOT)}")
     print(f"Wrote   {SUMMARY_PATH.relative_to(REPO_ROOT)}")
     print(f"  effective_status counts: {summary['effective_status_counts']}")
-    print(f"  proposed demoted by upstream: {summary['proposed_demoted_by_upstream_count']}")
+    print(f"  retained pending chain: {summary['retained_pending_chain_count']}")
     if summary["cycles_detected"]:
         print(f"  cycles detected: {summary['cycles_detected']}")
     return 0

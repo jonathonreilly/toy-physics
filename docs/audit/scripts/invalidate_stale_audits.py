@@ -36,14 +36,12 @@ LEDGER_PATH = DATA_DIR / "audit_ledger.json"
 RANK = {
     "retained": 100,
     "retained_no_go": 100,
-    "promoted": 90,
-    "proposed_retained": 80,
-    "proposed_no_go": 80,
-    "proposed_promoted": 70,
-    "bounded": 60,
-    "support": 50,
-    "open": 40,
-    "unknown": 30,
+    "retained_bounded": 95,
+    "retained_pending_chain": 80,
+    "open_gate": 40,
+    "unaudited": 30,
+    "audit_in_progress": 30,
+    "meta": 25,
     "audited_decoration": 20,
     "audited_numerical_match": 15,
     "audited_renaming": 10,
@@ -72,6 +70,11 @@ ARCHIVED_FIELDS = [
     "blocker",
     "audit_state_snapshot",
     "cross_confirmation",
+    "claim_type",
+    "claim_scope",
+    "claim_type_provenance",
+    "claim_type_last_reviewed",
+    "notes_for_re_audit_if_any",
 ]
 
 EMPTY_AFTER_INVALIDATION = {
@@ -92,7 +95,18 @@ EMPTY_AFTER_INVALIDATION = {
     "blocker": None,
     "audit_state_snapshot": None,
     "cross_confirmation": None,
+    "claim_type": None,
+    "claim_scope": None,
+    "claim_type_provenance": "needs_reaudit_after_invalidation",
+    "claim_type_last_reviewed": None,
+    "notes_for_re_audit_if_any": None,
 }
+
+
+def status_rank(status: str | None) -> int:
+    if status and status.startswith("decoration_under_"):
+        return 70
+    return RANK.get(status or "unaudited", -1)
 
 
 def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
@@ -120,8 +134,8 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
     snap_dep_status = snap.get("dep_effective_status", {})
     for d in current_deps:
         before = snap_dep_status.get(d, "unknown")
-        after = rows.get(d, {}).get("effective_status") or rows.get(d, {}).get("current_status") or "unknown"
-        if RANK.get(after, -1) < RANK.get(before, -1):
+        after = rows.get(d, {}).get("effective_status") or "unaudited"
+        if status_rank(after) < status_rank(before):
             return f"dep_weakened:{d}:{before}->{after}"
 
     snap_crit = snap.get("criticality") or "leaf"

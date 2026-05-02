@@ -106,7 +106,11 @@ The auditor answers exactly five questions per claim:
    does the conclusion follow without appeal to anything else?
 4. **What does the runner actually check?** Classify each runner PASS as
    A/B/C/D using the same rubric.
-5. **Verdict.** One of the `audit_status` values from
+5. **Claim type and scope.** Choose one `claim_type` from
+   `positive_theorem`, `bounded_theorem`, `no_go`, `open_gate`,
+   `decoration`, `meta`, and write a short `claim_scope` describing what
+   was actually audited.
+6. **Verdict.** One of the `audit_status` values from
    `README.md`.
 
 Each answer is a short field in the audit ledger row. No long prose.
@@ -129,10 +133,10 @@ For critical claims:
   `auditor_family` than the first, or record `independence: fresh_context`
   from a distinct same-family auditor/session using only the Section 2
   restricted inputs.
-- Both must return matching `verdict` and matching
+- Both must return matching `verdict`, matching `claim_type`, and matching
   `load_bearing_step_class` before the row may move to `audited_clean`.
-- Disagreement on `load_bearing_step_class` promotes the claim to a
-  third-auditor review and logs the disagreement in
+- Disagreement on `claim_type` or `load_bearing_step_class` promotes the
+  claim to a third-auditor review and logs the disagreement in
   `cross_confirmation.status = disagreement`.
 
 Claims at `criticality = high` (`transitive_descendants >= 30`)

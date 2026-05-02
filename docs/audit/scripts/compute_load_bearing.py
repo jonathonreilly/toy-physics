@@ -52,13 +52,13 @@ SUMMARY_PATH = DATA_DIR / "load_bearing_summary.json"
 # Status strength rank used for max_descendant_status reporting only.
 RANK = {
     "retained": 100,
-    "promoted": 90,
-    "proposed_retained": 80,
-    "proposed_promoted": 70,
-    "bounded": 60,
-    "support": 50,
-    "open": 40,
-    "unknown": 30,
+    "retained_no_go": 100,
+    "retained_bounded": 95,
+    "retained_pending_chain": 80,
+    "open_gate": 40,
+    "unaudited": 30,
+    "audit_in_progress": 30,
+    "meta": 25,
     "audited_decoration": 20,
     "audited_numerical_match": 15,
     "audited_renaming": 10,
@@ -75,6 +75,12 @@ CRITICALITY_THRESHOLDS = {
     "medium_in_degree": 2,
     "medium_descendants": 5,
 }
+
+
+def rank_for_status(status: str | None) -> int:
+    if status and status.startswith("decoration_under_"):
+        return 70
+    return RANK.get(status or "unaudited", -1)
 
 
 def reverse_adjacency(graph: dict) -> dict[str, list[str]]:
@@ -119,7 +125,7 @@ def compute_score(direct_in: int, transitive: int, max_desc_rank: int) -> float:
     """
     base = log2(1 + transitive)
     local = 0.5 * direct_in
-    bounded_floor = max(0, max_desc_rank - RANK["bounded"]) / 10.0
+    bounded_floor = max(0, max_desc_rank - RANK["retained_pending_chain"]) / 10.0
     return round(base + local + 2.0 * bounded_floor, 3)
 
 
@@ -143,12 +149,12 @@ def main() -> int:
         max_rank = -1
         for d in descendants:
             row = rows.get(d, {})
-            d_status = row.get("effective_status") or row.get("current_status") or "unknown"
-            r = RANK.get(d_status, -1)
+            d_status = row.get("effective_status") or "unaudited"
+            r = rank_for_status(d_status)
             if r > max_rank:
                 max_rank = r
         if max_rank < 0:
-            max_rank = RANK["unknown"]
+            max_rank = RANK["unaudited"]
         metrics[cid] = {
             "direct_in_degree": len(rev.get(cid, [])),
             "transitive_descendants": len(descendants),

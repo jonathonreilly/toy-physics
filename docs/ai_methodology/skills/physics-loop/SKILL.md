@@ -90,8 +90,8 @@ unless the user explicitly supplied `--no-pr`.
   complete `PR_BACKLOG.md` and continue the campaign if runtime remains.
   Missing GitHub access is a delivery degradation, not a science stop.
 - PR titles must include `[physics-loop]`, the lane/block slug, and the honest
-  status (`proposed_retained`, `proposed_promoted`, `exact-support`,
-  `bounded-support`, `no-go`, `open`, or `demotion`).
+  status (`exact theorem`, `bounded theorem`, `no-go`, `exact support`,
+  `bounded support`, `open`, or `demotion`).
 - PR bodies must link the block's `HANDOFF.md`, notes, runners, verification
   commands/results, review findings, imports retired/exposed, and remaining
   blockers.
@@ -151,9 +151,8 @@ targets by:
 
 Use `CLAIM_STATUS_CERTIFICATE.md` for every science block. It must record the
 actual current-surface status, any conditional/hypothetical status, dependency
-classes, open imports, review-loop disposition, whether
-`proposed_retained` / `proposed_promoted` wording is allowed in the PR
-title/body/status lines, and whether independent audit remains required.
+classes, open imports, review-loop disposition, the intended audit
+`claim_type`, and whether independent audit remains required.
 
 ## Claim-Status Firewalls
 
@@ -169,12 +168,12 @@ surface status is **not** `retained`.
 Required status fields for major artifacts:
 
 ```yaml
-actual_current_surface_status: open|no-go|exact-support|bounded-support|conditional-support|demotion|proposed_retained|proposed_promoted
+actual_current_surface_status: open|no-go|exact-support|bounded-support|conditional-support|demotion|candidate-retained-grade
+target_claim_type: positive_theorem|bounded_theorem|no_go|open_gate|decoration|meta|null
 conditional_surface_status: null|...
 hypothetical_axiom_status: null|...
 admitted_observation_status: null|...
-proposal_allowed: true|false
-proposal_allowed_reason: "..."
+claim_type_reason: "..."
 audit_required_before_effective_retained: true|false
 bare_retained_allowed: false
 ```
@@ -182,15 +181,16 @@ bare_retained_allowed: false
 Hard wording bans in branch-local physics-loop artifacts:
 
 - bare `retained` / `promoted` in source-note `Status:` lines;
+- using source-note status prose as an audit authority;
 - `retained branch-local`
 - `would become retained`
-- `promoted to retained`
+- `promote to retained`
 - `retained on the actual surface` when a required premise is conditional,
   hypothetical, admitted, fitted, or human-judgment-only.
 
-`proposed_retained` / `proposed_promoted` are allowed only when the certificate
-supports a theorem-grade author proposal and marks the later independent audit
-requirement. They must never be presented as audit-ratified retained status.
+Use `Type:` / `Claim type:` metadata for the intended audit classification.
+Source-note status prose must never be presented as audit-ratified retained
+status.
 
 Allowed replacements include `exact negative boundary`, `exact support`,
 `bounded support`, `conditional / support`, `open`, `demotion`, and
@@ -198,13 +198,14 @@ Allowed replacements include `exact negative boundary`, `exact support`,
 unadopted axiom, every table and runner summary must say "conditional on
 accepted new axiom; not retained on the actual current surface."
 
-## Retained-Proposal Certificate
+## Claim-Type Certificate
 
 Bare `retained` / `promoted` is an audit-ratified effective status, not a
 branch-local author status. A physics-loop PR, note, runner, or status line may
-use `proposed_retained` / `proposed_promoted` only after all of these are true:
+set `target_claim_type: positive_theorem`, `bounded_theorem`, or `no_go` only
+after all of these are true:
 
-1. `CLAIM_STATUS_CERTIFICATE.md` says `proposal_allowed: true`.
+1. `CLAIM_STATUS_CERTIFICATE.md` names the intended `target_claim_type`.
 2. No open imports remain for the claimed target.
 3. No observed target values, fitted selectors, admitted unit conventions, or
    literature values are load-bearing proof inputs.
@@ -215,7 +216,7 @@ use `proposed_retained` / `proposed_promoted` only after all of these are true:
 6. Review-loop disposition is `pass`; `pending`, `passed_with_notes`,
    `demote`, or `block` cannot certify a retained-grade proposal.
 7. The PR body and handoff explicitly say independent audit is still required
-   before the repo may treat the claim as effective retained/promoted.
+   before the repo may treat the claim as retained-grade.
 
 If any item fails, use `open`, `exact-support`, `bounded-support`,
 `conditional-support`, `no-go`, or `demotion` instead.
@@ -304,7 +305,7 @@ For publication-facing or quantitative work, also inspect
    **Deep Work Rules** below.
 10. **Certify status.** Before committing a block, write or update
     `CLAIM_STATUS_CERTIFICATE.md`. Demote any title, status line, table row,
-    runner printout, or handoff sentence that fails the retained-proposal
+    runner printout, or handoff sentence that fails the claim-type
     certificate.
 11. **Checkpoint.** Update `STATE.yaml` and `HANDOFF.md` at least every
    checkpoint interval, before long scripts, after long scripts, and before
@@ -317,9 +318,9 @@ For publication-facing or quantitative work, also inspect
    or `block`; `self-review pending` is not enough to push a PR. Either fix
    locally, demote locally, archive locally, or select a new route.
 13. **Close the cycle honestly.** Use the narrowest honest status inside the
-    branch artifacts: proposed_retained / proposed_promoted only when the
-    certificate allows an audit-ready proposal; otherwise exact support,
-    bounded support, open, no-go, reject, or historical. Do not patch a missing
+    branch artifacts: candidate retained-grade only when the certificate names
+    an audit-ready `claim_type`; otherwise exact support, bounded support,
+    open, no-go, reject, or historical. Do not patch a missing
     theorem step with prose. Put
     any proposed repo-wide weaving in `HANDOFF.md` for later review and
     backpressure integration.

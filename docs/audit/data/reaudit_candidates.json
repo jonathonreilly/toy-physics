@@ -1,11 +1,266 @@
 {
   "by_criticality": {
     "critical": 0,
-    "high": 0,
-    "leaf": 0,
-    "medium": 0
+    "high": 1,
+    "leaf": 5,
+    "medium": 1
   },
-  "candidates": [],
+  "candidates": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "koide_full_lattice_schur_inheritance_note_2026-04-18",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "current_dep_effective_status": {
+        "site_phase_cube_shift_intertwiner_note": "retained"
+      },
+      "deps": [
+        "site_phase_cube_shift_intertwiner_note"
+      ],
+      "direct_in_degree": 6,
+      "effective_status": "audited_conditional",
+      "generated_order": 1,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained",
+          "before_effective_status": "unaudited",
+          "claim_id": "site_phase_cube_shift_intertwiner_note",
+          "rank_delta": 70
+        }
+      ],
+      "load_bearing_score": 9.17,
+      "note_hash": "7373ed482b2b13ded1f2a513a8ce7ab4a2665ff2cab57d93e23c8b75cfd98c99",
+      "note_path": "docs/KOIDE_FULL_LATTICE_SCHUR_INHERITANCE_NOTE_2026-04-18.md",
+      "reraudit_after_claim_ids": [
+        "site_phase_cube_shift_intertwiner_note"
+      ],
+      "runner_path": "scripts/frontier_koide_full_lattice_schur_inheritance.py",
+      "transitive_descendants": 71
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "koide_cyclic_wilson_descendant_law_note_2026-04-18",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "current_dep_effective_status": {
+        "koide_dweh_cyclic_compression_note_2026-04-18": "retained"
+      },
+      "deps": [
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "audited_conditional",
+      "generated_order": 2,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained",
+          "before_effective_status": "unaudited",
+          "claim_id": "koide_dweh_cyclic_compression_note_2026-04-18",
+          "rank_delta": 70
+        }
+      ],
+      "load_bearing_score": 8.15,
+      "note_hash": "eeecac1592415c8aecf1bdfa92c9e15f6cc1d8e2e34008c52cdf381ae567b4f0",
+      "note_path": "docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md",
+      "reraudit_after_claim_ids": [
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "runner_path": "scripts/frontier_koide_cyclic_wilson_descendant_law.py",
+      "transitive_descendants": 70
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "branch_entanglement_robustness_note_2026-04-11",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "bounded_theorem",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "current_dep_effective_status": {
+        "bmv_entanglement_note_2026-04-11": "retained_bounded",
+        "bmv_threebody_note_2026-04-11": "retained"
+      },
+      "deps": [
+        "bmv_entanglement_note_2026-04-11",
+        "bmv_threebody_note_2026-04-11"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "audited_conditional",
+      "generated_order": 3,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained_bounded",
+          "before_effective_status": "unaudited",
+          "claim_id": "bmv_entanglement_note_2026-04-11",
+          "rank_delta": 65
+        },
+        {
+          "after_effective_status": "retained",
+          "before_effective_status": "unaudited",
+          "claim_id": "bmv_threebody_note_2026-04-11",
+          "rank_delta": 70
+        }
+      ],
+      "load_bearing_score": 1.5,
+      "note_hash": "cc83ac2e432051e3703c9e8333bed6cac922bbfe4a18573d934622ede48558fa",
+      "note_path": "docs/BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md",
+      "reraudit_after_claim_ids": [
+        "bmv_entanglement_note_2026-04-11",
+        "bmv_threebody_note_2026-04-11"
+      ],
+      "runner_path": "scripts/frontier_branch_entanglement_robustness.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "cycle_battery_scaled_note_2026-04-10",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "bounded_theorem",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "current_dep_effective_status": {
+        "cycle_battery_note_2026-04-10": "retained_bounded"
+      },
+      "deps": [
+        "cycle_battery_note_2026-04-10"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "audited_conditional",
+      "generated_order": 4,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained_bounded",
+          "before_effective_status": "unaudited",
+          "claim_id": "cycle_battery_note_2026-04-10",
+          "rank_delta": 65
+        }
+      ],
+      "load_bearing_score": 1.5,
+      "note_hash": "973754949d49414d46249e7bd66313e0eb92c44565a22afd77712a11fd1b5aa4",
+      "note_path": "docs/CYCLE_BATTERY_SCALED_NOTE_2026-04-10.md",
+      "reraudit_after_claim_ids": [
+        "cycle_battery_note_2026-04-10"
+      ],
+      "runner_path": "scripts/frontier_staggered_cycle_battery_scaled.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "global_coherence_predictor_note",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "bounded_theorem",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "current_dep_effective_status": {
+        "global_coherence_off_scaffold_note": "retained_bounded"
+      },
+      "deps": [
+        "global_coherence_off_scaffold_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "audited_conditional",
+      "generated_order": 5,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained_bounded",
+          "before_effective_status": "unaudited",
+          "claim_id": "global_coherence_off_scaffold_note",
+          "rank_delta": 65
+        }
+      ],
+      "load_bearing_score": 1.5,
+      "note_hash": "2f240a64449669d4761bdbe4619d820372a17e16ed9c03724599c2dd37c6061e",
+      "note_path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
+      "reraudit_after_claim_ids": [
+        "global_coherence_off_scaffold_note"
+      ],
+      "runner_path": "scripts/global_coherence_predictor.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "causal_distance_tail_note",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "bounded_theorem",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "current_dep_effective_status": {
+        "causal_field_portability_note": "retained"
+      },
+      "deps": [
+        "causal_field_portability_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "audited_conditional",
+      "generated_order": 6,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained",
+          "before_effective_status": "unaudited",
+          "claim_id": "causal_field_portability_note",
+          "rank_delta": 70
+        }
+      ],
+      "load_bearing_score": 0.0,
+      "note_hash": "1b0983e90603349a5e1f4a3f0242af6287df902d7686aedd85acf585df37e0f6",
+      "note_path": "docs/CAUSAL_DISTANCE_TAIL_NOTE.md",
+      "reraudit_after_claim_ids": [
+        "causal_field_portability_note"
+      ],
+      "runner_path": "scripts/causal_distance_tail_probe.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "dirac_observable_panel_note",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "bounded_theorem",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "current_dep_effective_status": {
+        "dirac_core_card_note": "retained_bounded"
+      },
+      "deps": [
+        "dirac_core_card_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "audited_conditional",
+      "generated_order": 7,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained_bounded",
+          "before_effective_status": "audited_conditional",
+          "claim_id": "dirac_core_card_note",
+          "rank_delta": 85
+        }
+      ],
+      "load_bearing_score": 0.0,
+      "note_hash": "5773be2a069e00556ff2419206a62d794c3bc62016ea8116a5902dc3f907c8ca",
+      "note_path": "docs/DIRAC_OBSERVABLE_PANEL_NOTE.md",
+      "reraudit_after_claim_ids": [
+        "dirac_core_card_note"
+      ],
+      "runner_path": "scripts/frontier_dirac_walk_3plus1d_v3.py",
+      "transitive_descendants": 0
+    }
+  ],
   "eligible_audit_statuses": [
     "audited_conditional",
     "audited_decoration",
@@ -13,18 +268,19 @@
     "audited_numerical_match",
     "audited_renaming"
   ],
-  "eligible_current_statuses": [
-    "proposed_no_go",
-    "proposed_promoted",
-    "proposed_retained"
+  "eligible_claim_types": [
+    "bounded_theorem",
+    "no_go",
+    "open_gate",
+    "positive_theorem"
   ],
-  "generated_at": "2026-05-02T11:47:52.888644+00:00",
+  "generated_at": "2026-05-02T12:15:21.274552+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
-  "policy_summary": "Non-clean audited proposed claims whose current one-hop dependencies are all retained/promoted and whose audit-time dependency snapshot contains at least one dependency that has since become retained/promoted.",
+  "policy_summary": "Non-clean audited theorem/no-go/open-gate claims whose current one-hop dependencies are all retained-grade and whose audit-time dependency snapshot contains at least one dependency that has since become retained-grade.",
   "ratified_dependency_statuses": [
-    "promoted",
     "retained",
+    "retained_bounded",
     "retained_no_go"
   ],
-  "total_candidates": 0
+  "total_candidates": 7
 }

@@ -6,7 +6,7 @@ queue is the input that an auditor (Codex GPT-5.5 by default) pulls from.
 
 Sorting key (descending priority):
   1. criticality (critical -> high -> medium -> leaf)
-  2. all deps already at retained / proposed_retained / bounded ('ready')
+  2. all deps already at retained-grade ('ready')
      ahead of those waiting on an upstream audit
   3. transitive_descendants
   4. load_bearing_score
@@ -32,26 +32,38 @@ QUEUE_MD = REPO_ROOT / "docs" / "audit" / "AUDIT_QUEUE.md"
 
 CRITICALITY_RANK = {"critical": 3, "high": 2, "medium": 1, "leaf": 0}
 
-# Effective statuses considered "ready" inputs for an auditor: their
-# values are stable enough that the auditor can take them as inputs.
+# Effective statuses considered stable inputs for an auditor.
 READY_DEP_STATUSES = {
     "retained",
     "retained_no_go",
-    "promoted",
-    "proposed_retained",
-    "proposed_no_go",
-    "proposed_promoted",
-    "bounded",
-    "support",
+    "retained_bounded",
+    "meta",
 }
+
+
+def dep_ready(status: str | None) -> bool:
+    if status in READY_DEP_STATUSES:
+        return True
+    return bool(status and status.startswith("decoration_under_"))
 
 
 def is_ready(row: dict, rows: dict[str, dict]) -> bool:
     for d in row.get("deps", []):
         d_eff = rows.get(d, {}).get("effective_status") or "unknown"
-        if d_eff not in READY_DEP_STATUSES:
+        if not dep_ready(d_eff):
             return False
     return True
+
+
+def needs_audit(row: dict) -> tuple[bool, str]:
+    if row.get("claim_type") == "meta":
+        return False, "metadata"
+    audit_status = row.get("audit_status", "unaudited")
+    if audit_status in {"unaudited", "audit_in_progress"}:
+        return True, audit_status
+    if row.get("claim_type_provenance") == "backfilled_pending_reaudit":
+        return True, "claim_type_backfill_reaudit"
+    return False, "not_pending"
 
 
 def main() -> int:
@@ -62,16 +74,21 @@ def main() -> int:
 
     pending: list[dict] = []
     for cid, row in rows.items():
-        a = row.get("audit_status", "unaudited")
-        if a not in {"unaudited", "audit_in_progress"}:
+        include, queue_reason = needs_audit(row)
+        if not include:
             continue
+        a = row.get("audit_status", "unaudited")
         criticality = row.get("criticality") or "leaf"
         ready = is_ready(row, rows)
         entry = {
             "claim_id": cid,
             "note_path": row.get("note_path"),
-            "current_status": row.get("current_status"),
+            "claim_type": row.get("claim_type"),
+            "claim_scope": row.get("claim_scope"),
+            "claim_type_provenance": row.get("claim_type_provenance"),
             "audit_status": a,
+            "effective_status": row.get("effective_status"),
+            "queue_reason": queue_reason,
             "criticality": criticality,
             "criticality_rank": CRITICALITY_RANK.get(criticality, 0),
             "transitive_descendants": row.get("transitive_descendants", 0),
@@ -120,7 +137,7 @@ def main() -> int:
         "",
         f"**Generated:** {queue['generated_at']}",
         f"**Total pending:** {queue['total_pending']}",
-        f"**Ready (all deps already at a stable tier):** {queue['ready_count']}",
+        f"**Ready (all deps already at retained-grade or metadata tiers):** {queue['ready_count']}",
         "",
         "By criticality:",
     ]
@@ -136,12 +153,13 @@ def main() -> int:
     md_lines.append("## Top 50")
     md_lines.append("")
     md_lines.append(
-        "| # | claim_id | criticality | desc | score | ready | indep required | runner |"
+        "| # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |"
     )
-    md_lines.append("|---:|---|---|---:|---:|:---:|---|---|")
+    md_lines.append("|---:|---|---|---|---|---:|---:|:---:|---|---|")
     for i, e in enumerate(top, 1):
         md_lines.append(
-            f"| {i} | `{e['claim_id']}` | {e['criticality']} | "
+            f"| {i} | `{e['claim_id']}` | {e.get('claim_type') or '-'} | "
+            f"{e['queue_reason']} | {e['criticality']} | "
             f"{e['transitive_descendants']} | "
             f"{e['load_bearing_score']:.2f} | "
             f"{'Y' if e['ready'] else ''} | "

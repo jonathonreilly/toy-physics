@@ -21,7 +21,7 @@ the questions in section 5.
 
 - `claim_id`: `{{CLAIM_ID}}`
 - Source note path: `{{NOTE_PATH}}`
-- Author-declared `current_status`: `{{CURRENT_STATUS}}`
+- Seeded `claim_type` hint, if any: `{{CLAIM_TYPE_HINT}}`
 - Primary runner: `{{RUNNER_PATH}}`
 
 The full text of the source note follows between the markers.
@@ -40,7 +40,8 @@ inputs. You must not assume access to any other note.
 ```
 {{FOREACH cited_authority IN CITED_AUTHORITIES}}
 === BEGIN CITED AUTHORITY: {{cited_authority.path}} ===
-=== Cited authority's own current_status: {{cited_authority.current_status}} ===
+=== Cited authority effective_status: {{cited_authority.effective_status}} ===
+=== Cited authority claim_type: {{cited_authority.claim_type}} ===
 {{cited_authority.body}}
 === END CITED AUTHORITY: {{cited_authority.path}} ===
 {{ENDFOREACH}}
@@ -72,17 +73,16 @@ Definitions you must use:
   - `(G)` numerical match at a tuned input scale
 - **Verdicts:**
   - `audited_clean` — the load-bearing step is in class (C) or is a
-    genuine algebraic closure of class (A) over independent inputs, AND
-    every cited authority's `current_status` is `retained` or
-    `proposed_retained`. Conclusion follows from cited inputs without
-    appeal to anything else.
+    genuine algebraic closure of class (A) over independent retained-grade
+    inputs. Conclusion follows from cited inputs without appeal to anything
+    else.
   - `audited_renaming` — the load-bearing step is in class (E) or (F).
     The chain reduces to a definition substitution rather than a
     derivation.
-  - `audited_conditional` — at least one cited authority has
-    `current_status` of `support`, `open`, or contains explicit language
-    that the identification is open work. The retained tag does not
-    propagate through an open identification.
+  - `audited_conditional` — at least one cited authority is not retained-grade
+    (`retained`, `retained_no_go`, or `retained_bounded`) or contains
+    explicit language that the identification is open work. Retained status
+    does not propagate through an open identification.
   - `audited_decoration` — every load-bearing step is class (A), the
     note has zero (D) checks, and the chain reduces to a single upstream
     parent claim plus standard mathematics. (See
@@ -101,6 +101,8 @@ Return a single JSON object with exactly these fields. No other prose.
   "claim_id": "{{CLAIM_ID}}",
   "load_bearing_step": "<one-sentence quote or paraphrase from the note>",
   "load_bearing_step_class": "<one of A, B, C, D, E, F, G>",
+  "claim_type": "<one of positive_theorem, bounded_theorem, no_go, open_gate, decoration, meta>",
+  "claim_scope": "<short citeable statement of what was actually audited>",
   "chain_closes": <true | false>,
   "chain_closure_explanation": "<one or two sentences. If false, name the missing step.>",
   "runner_check_breakdown": {
@@ -146,7 +148,7 @@ If you are torn between two verdicts:
   measurement.
 
 The audit lane prefers conservative verdicts. Borderline cases that turn
-out to be clean can be re-promoted by a second audit with explicit
+out to be clean can be ratified by a second audit with explicit
 rationale; borderline cases that turn out to be renamings cannot easily be
 caught downstream.
 
@@ -163,10 +165,11 @@ caught downstream.
 - For `criticality: critical` claims (by transitive-descendant count;
   the audit lane intentionally does not use author-declared flagship
   status), the pipeline runs the prompt twice in independent sessions
-  and requires matching `verdict` and matching `load_bearing_step_class`
-  before landing `audited_clean`. A same-family second audit is eligible
-  only when recorded as `independence: fresh_context` from a distinct
-  restricted-input session. Mismatches promote to a third-auditor review.
+  and requires matching `verdict`, `claim_type`, and
+  `load_bearing_step_class` before landing `audited_clean`. A same-family
+  second audit is eligible only when recorded as `independence:
+  fresh_context` from a distinct restricted-input session. Mismatches
+  promote to a third-auditor review.
 - The auditor's session metadata (model version, session ID, timestamp)
   is recorded in the audit row's `auditor` field; `auditor_family =
   "codex-gpt-5.5"` is set automatically when this template is used.

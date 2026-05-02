@@ -3,13 +3,13 @@
 
 This detector is intentionally separate from invalidation. A dependency
 getting weaker invalidates an audit; a dependency getting stronger can make a
-previously conditional proposed claim worth a fresh clean-context re-audit.
+previously conditional scoped claim worth a fresh clean-context re-audit.
 
 Candidate policy:
-  1. claim is still proposed_retained/proposed_promoted;
+  1. claim is a theorem/no-go/open-gate row, not metadata or decoration;
   2. claim has a terminal non-clean audit verdict;
-  3. every current one-hop dependency is ratified (retained/promoted);
-  4. at least one audit-time dependency status was not ratified but is now.
+  3. every current one-hop dependency is retained-grade;
+  4. at least one audit-time dependency status was not retained-grade but is now.
 
 Writes:
   - data/reaudit_candidates.json
@@ -26,8 +26,8 @@ LEDGER_PATH = DATA_DIR / "audit_ledger.json"
 CANDIDATES_JSON = DATA_DIR / "reaudit_candidates.json"
 
 CRITICALITY_RANK = {"critical": 3, "high": 2, "medium": 1, "leaf": 0}
-RATIFIED_DEP_STATUSES = {"retained", "promoted", "retained_no_go"}
-ELIGIBLE_CURRENT_STATUSES = {"proposed_retained", "proposed_promoted", "proposed_no_go"}
+RATIFIED_DEP_STATUSES = {"retained", "retained_no_go", "retained_bounded"}
+ELIGIBLE_CLAIM_TYPES = {"positive_theorem", "bounded_theorem", "no_go", "open_gate"}
 ELIGIBLE_AUDIT_STATUSES = {
     "audited_conditional",
     "audited_renaming",
@@ -40,14 +40,12 @@ ELIGIBLE_AUDIT_STATUSES = {
 STATUS_RANK = {
     "retained": 100,
     "retained_no_go": 100,
-    "promoted": 90,
-    "proposed_retained": 80,
-    "proposed_no_go": 80,
-    "proposed_promoted": 70,
-    "bounded": 60,
-    "support": 50,
-    "open": 40,
-    "unknown": 30,
+    "retained_bounded": 95,
+    "retained_pending_chain": 80,
+    "open_gate": 40,
+    "unaudited": 30,
+    "audit_in_progress": 30,
+    "meta": 25,
     "audited_decoration": 20,
     "audited_numerical_match": 15,
     "audited_renaming": 10,
@@ -58,7 +56,13 @@ STATUS_RANK = {
 
 def dep_effective_status(dep_id: str, rows: dict[str, dict]) -> str:
     dep = rows.get(dep_id) or {}
-    return dep.get("effective_status") or dep.get("current_status") or "unknown"
+    return dep.get("effective_status") or "unaudited"
+
+
+def status_rank(status: str | None) -> int:
+    if status and status.startswith("decoration_under_"):
+        return 70
+    return STATUS_RANK.get(status or "unaudited", -1)
 
 
 def improved_ratified_deps(row: dict, rows: dict[str, dict]) -> list[dict]:
@@ -72,8 +76,8 @@ def improved_ratified_deps(row: dict, rows: dict[str, dict]) -> list[dict]:
             continue
         if before in RATIFIED_DEP_STATUSES:
             continue
-        before_rank = STATUS_RANK.get(before, -1)
-        after_rank = STATUS_RANK.get(after, -1)
+        before_rank = status_rank(before)
+        after_rank = status_rank(after)
         if after_rank <= before_rank:
             continue
         improved.append(
@@ -100,7 +104,8 @@ def candidate_entry(cid: str, row: dict, rows: dict[str, dict], improved: list[d
         "claim_id": cid,
         "note_path": row.get("note_path"),
         "runner_path": row.get("runner_path"),
-        "current_status": row.get("current_status"),
+        "claim_type": row.get("claim_type"),
+        "claim_scope": row.get("claim_scope"),
         "audit_status": row.get("audit_status"),
         "effective_status": row.get("effective_status"),
         "criticality": criticality,
@@ -144,7 +149,7 @@ def main() -> int:
 
     candidates: list[dict] = []
     for cid, row in rows.items():
-        if row.get("current_status") not in ELIGIBLE_CURRENT_STATUSES:
+        if row.get("claim_type") not in ELIGIBLE_CLAIM_TYPES:
             continue
         if row.get("audit_status") not in ELIGIBLE_AUDIT_STATUSES:
             continue
@@ -163,11 +168,12 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
         "policy_summary": (
-            "Non-clean audited proposed claims whose current one-hop dependencies "
-            "are all retained/promoted and whose audit-time dependency snapshot "
-            "contains at least one dependency that has since become retained/promoted."
+            "Non-clean audited theorem/no-go/open-gate claims whose current "
+            "one-hop dependencies are all retained-grade and whose audit-time "
+            "dependency snapshot contains at least one dependency that has "
+            "since become retained-grade."
         ),
-        "eligible_current_statuses": sorted(ELIGIBLE_CURRENT_STATUSES),
+        "eligible_claim_types": sorted(ELIGIBLE_CLAIM_TYPES),
         "eligible_audit_statuses": sorted(ELIGIBLE_AUDIT_STATUSES),
         "ratified_dependency_statuses": sorted(RATIFIED_DEP_STATUSES),
         "total_candidates": len(candidates),

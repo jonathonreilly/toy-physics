@@ -106,8 +106,7 @@ def main() -> int:
                         "claim_id": cid,
                         "note_path": rows.get(cid, {}).get("note_path")
                         or graph_nodes.get(cid, {}).get("path"),
-                        "current_status": rows.get(cid, {}).get("current_status")
-                        or graph_nodes.get(cid, {}).get("current_status"),
+                        "claim_type": rows.get(cid, {}).get("claim_type"),
                         "audit_status": rows.get(cid, {}).get("audit_status"),
                         "effective_status": rows.get(cid, {}).get("effective_status"),
                         "transitive_descendants": rows.get(cid, {}).get(

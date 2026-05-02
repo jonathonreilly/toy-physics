@@ -95,10 +95,10 @@ agreement then becomes a real test of a derived identity.
 ### Path B: honest downgrade
 
 If the action coupling cannot be derived in this form, downgrade the
-note's `Status:` from `proposed_retained` to `support` or `bounded`,
-with the claim boundary narrowed to "near-unity exponents on the
-lattice." This is a perfectly respectable scientific outcome — the
-audit lane is supposed to surface exactly this kind of distinction.
+note's claim boundary to a support or bounded theorem, with the claim
+boundary narrowed to "near-unity exponents on the lattice." This is a
+perfectly respectable scientific outcome — the audit lane is supposed to
+surface exactly this kind of distinction.
 
 Either path closes the audit. Path A leaves a strong claim; Path B
 removes a weak one. Both are wins.
@@ -110,9 +110,8 @@ removes a weak one. Both are wins.
   fit data with uncertainties. Cross-confirmation required (high
   criticality, but below the critical threshold).
 - Path B: `equivalence_principle_note` is rewritten with
-  `current_status: support` or `bounded` and a narrowed claim
-  boundary; re-audit returns `audited_clean` against the narrower
-  claim or accepts the support tier without ratification.
+  `claim_type: bounded_theorem` or a support-only boundary and a narrowed
+  claim; re-audit returns the appropriate scoped verdict.
 
 ## Branch / worker conventions
 

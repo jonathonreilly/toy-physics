@@ -3,8 +3,9 @@
 
 For every node in citation_graph.json, ensure an audit ledger row exists
 with audit_status=unaudited as the default. If a row already exists,
-preserve its audit fields but update the dependency list and current_status
-from the graph. If the source note's hash has changed since the last
+preserve its audit fields but update graph metadata and dependencies. The
+audit-owned `claim_type` drives retained/no-go/bounded classification. If
+the source note's hash has changed since the last
 audit, reset audit_status to unaudited and archive the prior verdict in
 previous_audits. Terminal failed rows whose source notes moved to
 archive_unlanded/ are preserved as negative-result history even though
@@ -79,17 +80,18 @@ EXCLUDED_SOURCE_PATTERNS = (
 )
 
 # Exact source paths that must remain in the ledger even if they match a
-# broad infrastructure pattern. This protects rows that already have a
-# real audit verdict or a retained/proposed tier.
+# broad infrastructure pattern.
 NEVER_GATE_SOURCE_PATHS = {
     "docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md",
 }
 
-PROTECTED_CURRENT_STATUSES = {
-    "retained",
-    "promoted",
-    "proposed_retained",
-    "proposed_promoted",
+CLAIM_TYPES = {
+    "positive_theorem",
+    "bounded_theorem",
+    "no_go",
+    "open_gate",
+    "decoration",
+    "meta",
 }
 
 # Default empty audit fields applied to a freshly seeded row.
@@ -109,6 +111,11 @@ EMPTY_AUDIT = {
     "auditor_confidence": None,
     "runner_check_breakdown": {"A": 0, "B": 0, "C": 0, "D": 0, "total_pass": 0},
     "blocker": None,
+    "claim_type": None,
+    "claim_scope": None,
+    "claim_type_provenance": None,
+    "claim_type_last_reviewed": None,
+    "notes_for_re_audit_if_any": None,
 }
 
 # Audit fields that are preserved across re-seeds when the note hash is
@@ -128,12 +135,6 @@ def should_gate_node(node: dict, prior: dict | None) -> bool:
     if path in NEVER_GATE_SOURCE_PATHS:
         return False
 
-    current_statuses = {node.get("current_status")}
-    if prior is not None:
-        current_statuses.add(prior.get("current_status"))
-    if current_statuses & PROTECTED_CURRENT_STATUSES:
-        return False
-
     if prior is not None:
         audit_status = prior.get("audit_status")
         if audit_status and audit_status != "unaudited":
@@ -144,7 +145,7 @@ def should_gate_node(node: dict, prior: dict | None) -> bool:
         if effective_status and effective_status != "unknown":
             return False
 
-    return node.get("current_status") == "unknown"
+    return True
 
 
 def should_preserve_archived_failed_row(row: dict) -> bool:
@@ -155,6 +156,74 @@ def should_preserve_archived_failed_row(row: dict) -> bool:
     if not note_path.startswith("archive_unlanded/"):
         return False
     return (REPO_ROOT / note_path).exists()
+
+
+def default_claim_type_for(node: dict) -> tuple[str, str]:
+    """Return a provisional claim type for legacy rows.
+
+    The auditor owns the final value. This backfill exists so the new
+    propagation rule is total over old ledger rows before their next audit.
+    """
+    hint = node.get("claim_type_author_hint") or node.get("claim_type_seed_hint")
+    if hint in CLAIM_TYPES:
+        provenance = "author_hint" if node.get("claim_type_author_hint") else "migration_hint"
+        return hint, provenance
+
+    path = node.get("path") or ""
+    if path.startswith(("docs/repo/", "docs/work_history/", "docs/lanes/", "docs/publication/")):
+        return "meta", "backfilled_from_path"
+
+    return "positive_theorem", "default_positive_theorem"
+
+
+def backfill_scope(row: dict) -> str | None:
+    if row.get("audit_status") in {None, "unaudited", "audit_in_progress"}:
+        return None
+    return (
+        "Legacy audit row backfilled during scope-aware classification migration; "
+        "re-audit may narrow this scope."
+    )
+
+
+def needs_critical_type_reaudit(row: dict, prior: dict | None) -> bool:
+    if prior is None:
+        return False
+    if prior.get("claim_type") in CLAIM_TYPES:
+        return False
+    if prior.get("audit_status") in {None, "unaudited", "audit_in_progress"}:
+        return False
+    return (prior.get("criticality") or row.get("criticality")) == "critical"
+
+
+def apply_claim_type_defaults(row: dict, node: dict, prior: dict | None) -> None:
+    row.pop("current_status", None)
+    row.pop("current_status_raw", None)
+    row["claim_type_author_hint_raw"] = node.get("claim_type_author_hint_raw")
+    row["claim_type_author_hint"] = node.get("claim_type_author_hint")
+
+    audited_type = row.get("claim_type")
+    provenance = row.get("claim_type_provenance")
+    if audited_type in CLAIM_TYPES and provenance == "audited":
+        return
+
+    if row.get("audit_status") == "audited_decoration" and audited_type != "decoration":
+        row["claim_type"] = "decoration"
+        row["claim_type_provenance"] = "backfilled_pending_reaudit"
+        row["claim_scope"] = row.get("claim_scope") or backfill_scope(row)
+        return
+
+    if audited_type not in CLAIM_TYPES:
+        claim_type, inferred_provenance = default_claim_type_for(node)
+        row["claim_type"] = claim_type
+        row["claim_type_provenance"] = inferred_provenance
+        if needs_critical_type_reaudit(row, prior):
+            row["claim_type_provenance"] = "backfilled_pending_reaudit"
+        if not row.get("claim_scope"):
+            row["claim_scope"] = backfill_scope(row)
+    elif provenance in {None, "author_hint", "backfilled", "backfilled_from_status", "backfilled_from_path", "migration_hint", "default_positive_theorem"}:
+        claim_type, inferred_provenance = default_claim_type_for(node)
+        row["claim_type"] = claim_type
+        row["claim_type_provenance"] = inferred_provenance
 
 
 def load_json(path: Path, default):
@@ -215,8 +284,8 @@ def seed() -> dict:
                 "claim_id": cid,
                 "note_path": node["path"],
                 "title": node["title"],
-                "current_status": node["current_status"],
-                "current_status_raw": node["current_status_raw"],
+                "claim_type_author_hint_raw": node.get("claim_type_author_hint_raw"),
+                "claim_type_author_hint": node.get("claim_type_author_hint"),
                 "runner_path": node["runner_path"],
                 "deps": deps,
                 "note_hash": node["note_hash"],
@@ -224,14 +293,15 @@ def seed() -> dict:
             }
             for k, v in EMPTY_AUDIT.items():
                 row[k] = v if not isinstance(v, (list, dict)) else (list(v) if isinstance(v, list) else dict(v))
+            apply_claim_type_defaults(row, node, prior)
             seeded += 1
         else:
             row = dict(prior)
             row["claim_id"] = cid
             row["note_path"] = node["path"]
             row["title"] = node["title"]
-            row["current_status"] = node["current_status"]
-            row["current_status_raw"] = node["current_status_raw"]
+            row["claim_type_author_hint_raw"] = node.get("claim_type_author_hint_raw")
+            row["claim_type_author_hint"] = node.get("claim_type_author_hint")
             row["runner_path"] = node["runner_path"]
             row["deps"] = deps
             if prior.get("note_hash") != node["note_hash"]:
@@ -240,9 +310,16 @@ def seed() -> dict:
                 re_audit_required += 1
             else:
                 preserved += 1
+            apply_claim_type_defaults(row, node, prior)
         out_rows[cid] = row
 
     for cid, row in archived_failed_rows.items():
+        row.pop("current_status", None)
+        row.pop("current_status_raw", None)
+        if row.get("claim_type") not in CLAIM_TYPES:
+            row["claim_type"] = "no_go"
+            row["claim_type_provenance"] = "backfilled_from_archived_failed"
+            row["claim_scope"] = row.get("claim_scope") or backfill_scope(row)
         out_rows[cid] = row
 
     # Drop ledger rows whose source note no longer exists, plus rows

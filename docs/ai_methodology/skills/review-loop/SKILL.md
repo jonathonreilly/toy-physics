@@ -218,14 +218,14 @@ claim tables, lane stubs, or publication/control-plane files.
 The review loop must enforce the audit lane's propose/ratify split without
 performing the independent audit:
 
-1. Source-note `Status:` lines must not contain bare `retained` or `promoted`.
-   Valid author-facing tiers are `proposed_retained`, `proposed_promoted`,
-   `support`, `bounded`, `open`, and existing repo-recognized equivalents.
-2. If a no-go/firewall is intended to be theorem-grade, status the no-go as
-   `proposed_retained exact negative boundary ...`; do not status it as
-   `support` and then expect audit ratification.
+1. Source-note `Status:` prose is not an audit authority. New or touched claim
+   notes should use `Type:` / `Claim type:` metadata for intended audit
+   classification.
+2. If a no-go/firewall is intended to be theorem-grade, use
+   `claim_type = no_go`; do not rely on support-style prose and expect audit
+   ratification.
 3. Keep disclaimers such as "This is not charged-lepton mass closure" outside
-   the `Status:` line, because strict audit lint scans that line literally.
+   audit metadata fields.
 4. Run the audit pipeline after review fixes:
 
 ```bash
@@ -239,8 +239,8 @@ review-loop PASS.
 
 The review loop must not run `docs/audit/scripts/apply_audit.py` and must not
 write `audit_status`, `audited_clean`, or other audit verdicts. If the branch
-introduces `proposed_retained` / `proposed_promoted` rows, report those claim
-IDs in the final report as requiring the independent audit worker.
+introduces retained-grade `claim_type` rows, report those claim IDs in the
+final report as requiring the independent audit worker.
 
 Useful review-only inventory:
 
@@ -262,7 +262,7 @@ except Exception:
 rows=json.load(open("docs/audit/data/audit_ledger.json"))["rows"]
 for cid,row in rows.items():
     if row.get("note_path") in changed:
-        print(cid, row.get("current_status"), row.get("audit_status"),
+        print(cid, row.get("claim_type"), row.get("audit_status"),
               row.get("effective_status"), row.get("note_path"))
 PY
 ```

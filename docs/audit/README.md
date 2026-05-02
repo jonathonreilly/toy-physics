@@ -5,11 +5,11 @@ This lane does not produce physics claims. It audits existing ones.
 
 ## What this lane does
 
-The publication package's `retained / promoted / bounded / open` tiers are
-**self-declared** by the note that introduces each claim. The audit lane adds
-an outside check: a separate `audit_status` per claim, propagated through the
-citation graph, and a hard rule that nothing presents as `retained` to the
-outside world unless its audit chain is clean.
+The publication package historically mixed author-facing status labels with
+claim strength. The audit lane now separates those concerns: the auditor sets
+`claim_type`, the auditor sets `audit_status`, and the pipeline derives
+`effective_status` through the citation graph. Nothing presents as retained
+to the outside world unless the scoped audit chain is clean.
 
 The first repo-wide trace (CKM atlas) showed several failure modes that
 self-declared tiers do not catch:
@@ -47,81 +47,61 @@ docs/audit/
     audit_lint.py                    # validate ledger consistency
 ```
 
-## Status fields and the propose / ratify split
+## Scope-aware fields
 
-The audit lane separates the **science work** of proposing a strong claim
-from the **sign-off work** of ratifying it. Authors propose; the audit lane
-ratifies.
+The audit lane separates **classification** from **verdict**. Authors may
+write whatever status prose they need inside source notes, but the retained
+library is driven only by auditor-owned fields:
 
-Three parallel fields per claim:
-
-- `current_status` — what the source note declares. Authors may set:
-  - `proposed_retained` — "I have done the science work and believe this
-    should be retained, pending audit." This is the strongest tier an
-    author may self-assign for a positive claim.
-  - `proposed_no_go` — "I have proven a no-go theorem and believe it
-    should be retained as such, pending audit." Symmetric to
-    `proposed_retained` but for negative-result theorems
-    (Coleman-Mandula, Kochen-Specker, Weinberg-Witten style).
-  - `proposed_promoted`, `proposed_bounded` — same idea for those tiers.
-  - `support`, `open` — unchanged; these do not require audit ratification.
-- `audit_status` — what the audit found. Set only by the audit lane:
-  - `unaudited` — no audit yet (default for every seeded row)
+- `claim_type` — what kind of object the auditor says the row is:
+  - `positive_theorem`
+  - `bounded_theorem`
+  - `no_go`
+  - `open_gate`
+  - `decoration`
+  - `meta`
+- `claim_scope` — the auditor's short, citeable statement of what was
+  actually audited. This is required for applied audits.
+- `audit_status` — what the audit found:
+  - `unaudited`
   - `audit_in_progress`
-  - `audited_clean` — derivation actually closes from cited inputs
-  - `audited_renaming` — load-bearing step is a definition / symbol rename
-  - `audited_conditional` — depends on a `support` / `open` upstream node
-  - `audited_decoration` — algebraic consequence of an upstream claim with no
-    new physical content
-  - `audited_failed` — derivation does not close on its own terms
-  - `audited_numerical_match` — depends on a tuned numerical input rather than
-    a structural identity
-- `effective_status` — derived. The publication-facing tables read this:
-  - `retained` — `current_status = proposed_retained` AND `audit_status =
-    audited_clean` AND every dependency's `effective_status` is `retained`
-    or `retained_no_go`.
-  - `retained_no_go` — two paths to this tier:
-    - **(a) Direct path**: `current_status = proposed_no_go` AND
-      `audit_status = audited_clean`. Author declared a no-go theorem and
-      the audit ratified it. Symmetric to how `proposed_retained +
-      audited_clean -> retained`.
-    - **(b) Legacy path**: `audit_status = audited_failed` AND the note has
-      been moved to `archive_unlanded/`. The original positive claim failed
-      audit; the project archived the note and the failure record is
-      lifted to `retained_no_go` for project-level interpretation.
+  - `audited_clean`
+  - `audited_renaming`
+  - `audited_conditional`
+  - `audited_decoration`
+  - `audited_failed`
+  - `audited_numerical_match`
+- `effective_status` — derived, publication-facing status:
+  - `retained` for `claim_type = positive_theorem` plus
+    `audit_status = audited_clean` plus retained-grade dependencies.
+  - `retained_no_go` for `claim_type = no_go` plus
+    `audit_status = audited_clean` plus retained-grade dependencies.
+  - `retained_bounded` for `claim_type = bounded_theorem` plus
+    `audit_status = audited_clean` plus retained-grade dependencies.
+  - `retained_pending_chain` for a clean theorem/no-go/bounded row whose
+    upstream chain is not yet retained-grade.
+  - `open_gate` for a clean open gate; this blocks retained propagation.
+  - `decoration_under_<parent_claim_id>` for an audited decoration whose
+    parent is retained-grade.
+  - `meta` for non-claim infrastructure rows.
+  - `audited_<failure_mode>` for terminal non-clean audit verdicts on active
+    claims.
 
-    Either way, sits at the same tier as `retained` for downstream
-    propagation: depending on a no-go theorem does not weaken downstream
-    rows.
-  - `proposed_retained` — author has proposed retained, audit not yet clean
-    (or upstream not yet ratified). Honest pending state.
-  - `support` / `bounded` / `open` — as declared, or demoted by audit verdict.
-  - `audited_<failure_mode>` — terminal state from a failed audit on an
-    **active** claim (note still in `docs/`). Distinct from `retained_no_go`
-    which represents an archived no-go.
-
-The landing migration rewrites legacy source-note Status lines from bare
-`retained` / `promoted` to `proposed_retained` /
-`proposed_promoted`. The graph builder also preserves the same
-interpretation rule for any older branch that has not yet been relabeled:
-pre-audit bare `retained` is read as `proposed_retained` until audited.
+Generated audit data must not contain legacy source-status authority fields.
+The graph builder may use old source-note status prose as a one-way migration
+hint when seeding `claim_type`, but the ledger, queue, prompt, and rendered
+audit surfaces are `claim_type` / `audit_status` / `effective_status` only.
 
 ## The hard rules
 
-1. **`retained` is audit-only.** No author may directly write `retained` as
-   `current_status`. The strongest author-settable state is
-   `proposed_retained`. `audit_status = audited_clean` records the audit
-   verdict on the chain as written, regardless of author tier. Only proposed
-   rows can promote publication-facing status: the audit lane may grant
-   `effective_status = retained` only when this row's `current_status =
-   proposed_retained`, this row's `audit_status = audited_clean`, and every
-   dependency's `effective_status = retained`. A clean `support`, `bounded`,
-   `open`, or `unknown` row keeps that effective tier unless an author later
-   re-tiers the source note.
+1. **Retained grade is audit-only.** The audit lane may grant
+   `effective_status = retained`, `retained_no_go`, or `retained_bounded`
+   only from `claim_type + audited_clean + retained-grade dependencies`.
+   Author labels and source-note status prose do not promote rows.
 
-2. **Inheritance is monotone-down.** A claim's `effective_status` cannot
-   exceed the minimum of its dependencies' `effective_status`. One renaming
-   near a root demotes everything that inherits from it.
+2. **Open gates block propagation.** `open_gate`, `unaudited`,
+   `audit_in_progress`, `retained_pending_chain`, and terminal non-clean
+   audit verdicts are not retained-grade dependencies.
 
 3. **No self-audit.** The auditor of a claim must not share identity with
    the claim's author. Codex GPT-5.5 is the designated independent auditor
@@ -131,16 +111,12 @@ pre-audit bare `retained` is read as `proposed_retained` until audited.
    recorded as `fresh_context` from a distinct restricted-input session.
 
 4. **Decoration must be boxed.** Claims tagged `audited_decoration` cannot
-   appear as separate `proposed_retained` or `retained` rows in the
-   publication-facing tables; they roll up under their parent claim. See
-   `ALGEBRAIC_DECORATION_POLICY.md`.
+   appear as separate retained rows in the publication-facing tables; they
+   roll up under their parent claim. See `ALGEBRAIC_DECORATION_POLICY.md`.
 
-5. **Publication tables must not blur proposed and ratified tiers.**
-   Until a renderer consumes `audit_ledger.json` directly, public tables
-   may render source-note declarations (`proposed_retained`,
-   `proposed_promoted`, etc.) but must not present them as audit-ratified
-   `retained` / `promoted`. External readers should be pointed to
-   `AUDIT_LEDGER.md` for the canonical `effective_status` surface.
+5. **Publication tables consume effective status.** Public tables must read
+   `effective_status` from the audit ledger or an artifact derived from it,
+   not source-note status prose.
 
 ## Workflow
 
@@ -187,11 +163,8 @@ When a claim is marked `audited_decoration`, the pruning policy
 
 ## Reading the publication package after audit
 
-External readers should read `effective_status`, not `current_status`.
-The audit ledger is the canonical surface for claim strength. During the
-transition, public tables that still render source-note declarations must
-show `proposed_*` language plainly and cross-reference `AUDIT_LEDGER.md`
-before any external claim of "retained."
+External readers should read `effective_status`. The audit ledger is the
+canonical surface for claim strength.
 
 ## What this lane is not
 

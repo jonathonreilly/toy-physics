@@ -1,70 +1,70 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T11:47:52.836559+00:00
-**Total pending:** 410
-**Ready (all deps already at a stable tier):** 0
+**Generated:** 2026-05-02T12:15:21.222267+00:00
+**Total pending:** 463
+**Ready (all deps already at retained-grade or metadata tiers):** 47
 
 By criticality:
-- `critical`: 9
-- `high`: 192
-- `medium`: 127
-- `leaf`: 82
+- `critical`: 90
+- `high`: 184
+- `medium`: 121
+- `leaf`: 68
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
 ## Top 50
 
-| # | claim_id | criticality | desc | score | ready | indep required | runner |
-|---:|---|---|---:|---:|:---:|---|---|
-| 1 | `plaquette_self_consistency_note` | critical | 264 | 16.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
-| 2 | `ew_current_matching_ozi_suppression_theorem_note_2026-04-27` | critical | 262 | 8.54 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_color_projection_mc.py` |
-| 3 | `g_bare_dynamical_fixation_obstruction_note_2026-04-18` | critical | 260 | 10.03 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_critical_feature_scan.py` |
-| 4 | `qcd_low_energy_running_bridge_note_2026-05-01` | critical | 260 | 8.53 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_qcd_low_energy_running_bridge.py` |
-| 5 | `alpha_s_derived_note` | critical | 259 | 29.52 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_zero_import_chain.py` |
-| 6 | `yt_zero_import_authority_note` | critical | 259 | 11.52 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 7 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | critical | 259 | 9.52 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_alpha_s_direct_wilson_loop.py` |
-| 8 | `yt_flagship_boundary_note` | critical | 259 | 8.52 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 9 | `publication.ci3_z3.publication_matrix` | critical | 34 | 12.63 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 10 | `neutrino_majorana_native_gaussian_no_go_note` | high | 182 | 10.02 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
-| 11 | `neutrino_majorana_finite_normal_grammar_no_go_note` | high | 181 | 10.51 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
-| 12 | `neutrino_majorana_pfaffian_extension_note` | high | 180 | 10.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
-| 13 | `neutrino_majorana_pfaffian_axiom_boundary_note` | high | 179 | 7.99 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py` |
-| 14 | `neutrino_majorana_pfaffian_no_forcing_theorem_note` | high | 178 | 10.48 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py` |
-| 15 | `neutrino_majorana_current_atlas_nonrealization_note` | high | 178 | 8.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py` |
-| 16 | `neutrino_majorana_charge_two_primitive_reduction_note` | high | 177 | 8.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py` |
-| 17 | `neutrino_majorana_unique_source_slot_note` | high | 176 | 10.97 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_unique_source_slot.py` |
-| 18 | `neutrino_majorana_phase_removal_note` | high | 175 | 9.96 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_phase_removal.py` |
-| 19 | `neutrino_majorana_canonical_local_block_note` | high | 171 | 9.93 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_canonical_local_block.py` |
-| 20 | `neutrino_majorana_local_pfaffian_uniqueness_note` | high | 168 | 9.40 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_local_pfaffian_uniqueness.py` |
-| 21 | `neutrino_majorana_nambu_source_principle_note` | high | 167 | 10.39 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_nambu_source_principle.py` |
-| 22 | `neutrino_majorana_source_ray_theorem_note` | high | 166 | 11.88 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_source_ray_theorem.py` |
-| 23 | `neutrino_majorana_z3_nonactivation_theorem_note` | high | 164 | 10.87 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_z3_nonactivation_theorem.py` |
-| 24 | `neutrino_majorana_nambu_radial_observable_note` | high | 163 | 8.86 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_nambu_radial_observable.py` |
-| 25 | `neutrino_majorana_nambu_quadratic_comparator_note` | high | 162 | 8.35 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_nambu_quadratic_comparator.py` |
-| 26 | `neutrino_majorana_background_normalization_theorem_note` | high | 161 | 9.84 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_background_normalization_theorem.py` |
-| 27 | `neutrino_majorana_staircase_blindness_theorem_note` | high | 161 | 9.84 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_staircase_blindness_theorem.py` |
-| 28 | `neutrino_majorana_axis_exchange_fixed_point_note` | high | 159 | 10.32 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_axis_exchange_fixed_point.py` |
-| 29 | `neutrino_majorana_self_dual_staircase_lift_obstruction_note` | high | 158 | 9.81 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_self_dual_staircase_lift_obstruction.py` |
-| 30 | `yt_boundary_theorem` | high | 155 | 9.79 |  | fresh_context_or_stronger | `scripts/frontier_yt_boundary_consistency.py` |
-| 31 | `neutrino_majorana_endpoint_exchange_midpoint_theorem_note` | high | 151 | 9.25 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_endpoint_exchange_midpoint_theorem.py` |
-| 32 | `neutrino_majorana_adjacent_singlet_placement_theorem_note` | high | 150 | 10.24 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_adjacent_singlet_placement_theorem.py` |
-| 33 | `neutrino_majorana_residual_sharing_split_theorem_note` | high | 147 | 8.71 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_residual_sharing_split_theorem.py` |
-| 34 | `dm_neutrino_atmospheric_scale_theorem_note_2026-04-15` | high | 146 | 9.70 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_atmospheric_scale_theorem.py` |
-| 35 | `dm_z3_texture_factor_theorem_note_2026-04-15` | high | 146 | 7.70 |  | fresh_context_or_stronger | `scripts/frontier_dm_z3_texture_factor_theorem.py` |
-| 36 | `dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15` | high | 145 | 9.19 |  | fresh_context_or_stronger | `scripts/frontier_dm_leptogenesis_universal_yukawa_nogo.py` |
-| 37 | `dm_neutrino_ckm_texture_transfer_no_go_note_2026-04-15` | high | 144 | 8.18 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_ckm_texture_transfer_nogo.py` |
-| 38 | `dm_neutrino_cp_kernel_deformation_necessity_note_2026-04-15` | high | 143 | 8.17 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_cp_kernel_deformation_necessity.py` |
-| 39 | `dm_neutrino_z3_circulant_cp_tool_note_2026-04-15` | high | 142 | 8.66 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_z3_circulant_cp_tool.py` |
-| 40 | `dm_neutrino_singlet_doublet_cp_slot_tool_note_2026-04-15` | high | 140 | 11.64 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_singlet_doublet_cp_slot_tool.py` |
-| 41 | `dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15` | high | 134 | 8.58 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_two_higgs_right_gram_bridge.py` |
-| 42 | `dm_neutrino_two_higgs_23_symmetric_slot_no_go_note_2026-04-15` | high | 133 | 8.07 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_two_higgs_23_symmetric_slot_nogo.py` |
-| 43 | `dm_neutrino_canonical_two_higgs_slot_no_go_note_2026-04-15` | high | 132 | 8.05 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_canonical_two_higgs_slot_nogo.py` |
-| 44 | `dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16` | high | 131 | 10.04 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_surface_m_spectator_theorem.py` |
-| 45 | `dm_neutrino_postcanonical_extension_class_note_2026-04-15` | high | 131 | 8.54 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_extension_class.py` |
-| 46 | `dm_neutrino_source_surface_slot_torsion_boundary_theorem_note_2026-04-16` | high | 130 | 9.03 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_source_surface_slot_torsion_boundary_theorem.py` |
-| 47 | `dm_neutrino_postcanonical_slot_support_class_note_2026-04-15` | high | 130 | 8.03 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_slot_support_class.py` |
-| 48 | `dm_neutrino_postcanonical_right_frame_obstruction_note_2026-04-15` | high | 129 | 7.52 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_right_frame_obstruction.py` |
-| 49 | `dm_neutrino_postcanonical_polar_section_note_2026-04-15` | high | 128 | 9.51 |  | fresh_context_or_stronger | `scripts/frontier_dm_neutrino_postcanonical_polar_section.py` |
-| 50 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | high | 121 | 13.93 |  | fresh_context_or_stronger | `scripts/frontier_sm_hypercharge_uniqueness.py` |
+| # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
+|---:|---|---|---|---|---:|---:|:---:|---|---|
+| 1 | `graph_first_su3_integration_note` | positive_theorem | claim_type_backfill_reaudit | critical | 312 | 25.79 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
+| 2 | `graph_first_selector_derivation_note` | positive_theorem | claim_type_backfill_reaudit | critical | 311 | 14.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_selector_derivation.py` |
+| 3 | `native_gauge_closure_note` | positive_theorem | claim_type_backfill_reaudit | critical | 308 | 22.27 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_non_abelian_gauge.py` |
+| 4 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | claim_type_backfill_reaudit | critical | 305 | 15.26 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_site_phase_cube_shift_intertwiner.py` |
+| 5 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | claim_type_backfill_reaudit | critical | 303 | 13.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_z2_hw1_mass_matrix_parametrization.py` |
+| 6 | `s3_taste_cube_decomposition_note` | positive_theorem | claim_type_backfill_reaudit | critical | 303 | 13.25 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
+| 7 | `s3_mass_matrix_no_go_note` | positive_theorem | claim_type_backfill_reaudit | critical | 303 | 12.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_mass_matrix_no_go.py` |
+| 8 | `generation_axiom_boundary_note` | positive_theorem | claim_type_backfill_reaudit | critical | 303 | 10.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_axiom_boundary.py` |
+| 9 | `physical_lattice_necessity_note` | positive_theorem | claim_type_backfill_reaudit | critical | 301 | 15.74 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_physical_lattice_necessity.py` |
+| 10 | `observable_principle_from_axiom_note` | positive_theorem | claim_type_backfill_reaudit | critical | 294 | 26.70 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_observable_principle_from_axiom.py` |
+| 11 | `hypercharge_identification_note` | positive_theorem | claim_type_backfill_reaudit | critical | 272 | 11.09 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hypercharge_identification.py` |
+| 12 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 268 | 11.57 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py` |
+| 13 | `left_handed_charge_matching_note` | positive_theorem | claim_type_backfill_reaudit | critical | 267 | 17.57 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
+| 14 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | positive_theorem | claim_type_backfill_reaudit | critical | 267 | 11.57 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py` |
+| 15 | `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | positive_theorem | claim_type_backfill_reaudit | critical | 267 | 11.57 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py` |
+| 16 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open_gate | claim_type_backfill_reaudit | critical | 267 | 11.07 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py` |
+| 17 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 267 | 11.07 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py` |
+| 18 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 267 | 11.07 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py` |
+| 19 | `gauge_scalar_temporal_completion_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 266 | 11.06 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_scalar_temporal_completion_theorem.py` |
+| 20 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | positive_theorem | claim_type_backfill_reaudit | critical | 266 | 11.06 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py` |
+| 21 | `scalar_3plus1_temporal_ratio_note` | positive_theorem | claim_type_backfill_reaudit | critical | 266 | 11.06 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_scalar_3plus1_temporal_ratio.py` |
+| 22 | `yukawa_color_projection_theorem` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 12.05 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_color_projection_correction.py` |
+| 23 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 11.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py` |
+| 24 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 11.05 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py` |
+| 25 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py` |
+| 26 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py` |
+| 27 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py` |
+| 28 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py` |
+| 29 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py` |
+| 30 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
+| 31 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
+| 32 | `yt_ward_identity_derivation_theorem` | positive_theorem | claim_type_backfill_reaudit | critical | 264 | 27.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 33 | `higgs_mass_from_axiom_note` | positive_theorem | claim_type_backfill_reaudit | critical | 264 | 10.05 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_corrected_yt.py` |
+| 34 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | critical | 263 | 9.54 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_derivation.py` |
+| 35 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 262 | 11.04 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
+| 36 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | claim_type_backfill_reaudit | critical | 261 | 14.03 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_taste_scalar_isotropy.py` |
+| 37 | `yt_color_projection_correction_note` | positive_theorem | claim_type_backfill_reaudit | critical | 261 | 12.53 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_color_projection_correction.py` |
+| 38 | `higgs_mechanism_note` | positive_theorem | claim_type_backfill_reaudit | critical | 261 | 9.03 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
+| 39 | `higgs_from_lattice_note` | bounded_theorem | claim_type_backfill_reaudit | critical | 261 | 8.53 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
+| 40 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | critical | 260 | 11.53 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_qfp_insensitivity.py` |
+| 41 | `yt_explicit_systematic_budget_note` | positive_theorem | claim_type_backfill_reaudit | critical | 260 | 10.03 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_explicit_systematic_budget.py` |
+| 42 | `confinement_string_tension_note` | positive_theorem | claim_type_backfill_reaudit | critical | 53 | 13.26 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_confinement_string_tension.py` |
+| 43 | `three_generation_observable_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 302 | 21.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_three_generation_observable_theorem.py` |
+| 44 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 267 | 11.07 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
+| 45 | `three_generation_structure_note` | positive_theorem | claim_type_backfill_reaudit | critical | 266 | 21.06 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_fermi_point.py` |
+| 46 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | claim_type_backfill_reaudit | critical | 266 | 9.06 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
+| 47 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 15.05 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 48 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 14.55 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 49 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py` |
+| 50 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 265 | 10.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py` |
 
 Full queue lives in `data/audit_queue.json`.

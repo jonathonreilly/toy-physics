@@ -61,9 +61,8 @@ amplitude), with:
 
 119 transitive descendants. Sits inside the dark-matter "flagship
 closed" package on `CLAIMS_TABLE.md`. Per the audit lane's hard rule,
-that flagship designation should currently be reading as
-`proposed_retained` (unratified) rather than `flagship closed`, and
-this audit finding is exactly why.
+that flagship designation must not be treated as retained-grade without
+an independent scoped audit, and this audit finding is exactly why.
 
 If the renaming cannot be replaced with a derivation, the DM "flagship
 closed" claim's effective_status drops by inheritance — a claim

@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-02T11:47:52.575198+00:00",
+  "computed_at": "2026-05-02T12:15:20.924949+00:00",
   "criticality_counts": {
     "critical": 91,
     "high": 325,
@@ -17,12 +17,6 @@
     "medium_in_degree": 2
   },
   "top_25_by_load_bearing_score": [
-    {
-      "claim_id": "graph_first_su3_integration_note",
-      "criticality": "critical",
-      "load_bearing_score": 29.79,
-      "transitive_descendants": 312
-    },
     {
       "claim_id": "alpha_s_derived_note",
       "criticality": "critical",
@@ -54,6 +48,12 @@
       "transitive_descendants": 294
     },
     {
+      "claim_id": "graph_first_su3_integration_note",
+      "criticality": "critical",
+      "load_bearing_score": 25.79,
+      "transitive_descendants": 312
+    },
+    {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "criticality": "critical",
       "load_bearing_score": 23.7,
@@ -64,6 +64,12 @@
       "criticality": "critical",
       "load_bearing_score": 23.533,
       "transitive_descendants": 261
+    },
+    {
+      "claim_id": "native_gauge_closure_note",
+      "criticality": "critical",
+      "load_bearing_score": 22.271,
+      "transitive_descendants": 308
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -106,18 +112,6 @@
       "criticality": "critical",
       "load_bearing_score": 18.544,
       "transitive_descendants": 263
-    },
-    {
-      "claim_id": "graph_first_selector_derivation_note",
-      "criticality": "critical",
-      "load_bearing_score": 18.285,
-      "transitive_descendants": 311
-    },
-    {
-      "claim_id": "native_gauge_closure_note",
-      "criticality": "critical",
-      "load_bearing_score": 18.271,
-      "transitive_descendants": 308
     },
     {
       "claim_id": "left_handed_charge_matching_note",
@@ -166,6 +160,12 @@
       "criticality": "critical",
       "load_bearing_score": 15.522,
       "transitive_descendants": 129
+    },
+    {
+      "claim_id": "higgs_vacuum_explicit_systematic_note",
+      "criticality": "critical",
+      "load_bearing_score": 15.522,
+      "transitive_descendants": 259
     }
   ]
 }

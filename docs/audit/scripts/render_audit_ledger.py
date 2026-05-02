@@ -27,14 +27,12 @@ OUTPUT_PATH = REPO_ROOT / "docs" / "audit" / "AUDIT_LEDGER.md"
 STATUS_DISPLAY_ORDER = [
     "retained",
     "retained_no_go",
-    "promoted",
-    "proposed_retained",
-    "proposed_no_go",
-    "proposed_promoted",
-    "bounded",
-    "support",
-    "open",
-    "unknown",
+    "retained_bounded",
+    "retained_pending_chain",
+    "open_gate",
+    "unaudited",
+    "audit_in_progress",
+    "meta",
     "audited_decoration",
     "audited_numerical_match",
     "audited_renaming",
@@ -45,10 +43,12 @@ STATUS_DISPLAY_ORDER = [
 
 def render_status_badge(s: str) -> str:
     """Visual differentiation for proposed vs ratified vs failure tiers."""
-    if s in {"retained", "promoted", "retained_no_go"}:
+    if s in {"retained", "retained_no_go", "retained_bounded"}:
         return f"**{s}**"
-    if s.startswith("proposed_"):
+    if s == "retained_pending_chain":
         return f"_{s}_"  # italic = unratified
+    if s.startswith("decoration_under_"):
+        return f"`{s}`"
     if s.startswith("audited_"):
         return f"~~{s}~~"  # strikethrough = failed audit verdict
     return s
@@ -64,14 +64,14 @@ def render_audited_rows_table(rows: dict[str, dict]) -> str:
         return "_No audits applied yet._\n"
     audited.sort(key=lambda r: (r.get("audit_status"), r.get("claim_id")))
     lines = [
-        "| claim_id | current | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |",
+        "| claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |",
         "|---|---|---|---|---|---|---|---|",
     ]
     for r in audited:
         lines.append(
-            "| `{cid}` | {cs} | {a} | {e} | {ind} | {fam} | {cls} | {par} |".format(
+            "| `{cid}` | {ct} | {a} | {e} | {ind} | {fam} | {cls} | {par} |".format(
                 cid=r["claim_id"],
-                cs=render_status_badge(r.get("current_status", "unknown")),
+                ct=r.get("claim_type") or "-",
                 a=render_status_badge(r.get("audit_status", "unaudited")),
                 e=render_status_badge(r.get("effective_status", "unknown")),
                 ind=r.get("independence") or "-",
@@ -92,7 +92,9 @@ def render_audited_findings(rows: dict[str, dict]) -> str:
     for r in audited:
         parts.append(f"### `{r['claim_id']}`\n")
         parts.append(f"- **Note:** [`{short_path(r['note_path'])}`](../../{r['note_path']})")
-        parts.append(f"- **current_status:** {render_status_badge(r.get('current_status', 'unknown'))}")
+        parts.append(f"- **claim_type:** `{r.get('claim_type') or '-'}`")
+        if r.get("claim_scope"):
+            parts.append(f"- **claim_scope:** {r['claim_scope']}")
         parts.append(f"- **audit_status:** {render_status_badge(r.get('audit_status', 'unaudited'))}")
         parts.append(f"- **effective_status:** {render_status_badge(r.get('effective_status', 'unknown'))}  "
                      f"(reason: `{r.get('effective_status_reason', 'self')}`)")
@@ -120,10 +122,13 @@ def render_summary_block(rows: dict[str, dict], summary: dict | None) -> str:
         e = r.get("effective_status", "unknown")
         counts[e] = counts.get(e, 0) + 1
     audit_status_counts: dict[str, int] = {}
+    claim_type_counts: dict[str, int] = {}
     crit_counts: dict[str, int] = {}
     for r in rows.values():
         a = r.get("audit_status", "unaudited")
         audit_status_counts[a] = audit_status_counts.get(a, 0) + 1
+        ct = r.get("claim_type") or "unset"
+        claim_type_counts[ct] = claim_type_counts.get(ct, 0) + 1
         c = r.get("criticality") or "leaf"
         crit_counts[c] = crit_counts.get(c, 0) + 1
     lines = [
@@ -133,11 +138,19 @@ def render_summary_block(rows: dict[str, dict], summary: dict | None) -> str:
     for s in STATUS_DISPLAY_ORDER:
         if counts.get(s, 0) > 0:
             lines.append(f"| {render_status_badge(s)} | {counts[s]} |")
+    for s in sorted(counts):
+        if s not in STATUS_DISPLAY_ORDER and counts.get(s, 0) > 0:
+            lines.append(f"| {render_status_badge(s)} | {counts[s]} |")
     lines.append("")
     lines.append("| audit_status | count |")
     lines.append("|---|---:|")
     for k in sorted(audit_status_counts):
         lines.append(f"| `{k}` | {audit_status_counts[k]} |")
+    lines.append("")
+    lines.append("| claim_type | count |")
+    lines.append("|---|---:|")
+    for k in sorted(claim_type_counts):
+        lines.append(f"| `{k}` | {claim_type_counts[k]} |")
     lines.append("")
     lines.append("| criticality | count |")
     lines.append("|---|---:|")
@@ -146,8 +159,8 @@ def render_summary_block(rows: dict[str, dict], summary: dict | None) -> str:
             lines.append(f"| `{k}` | {crit_counts[k]} |")
     if summary:
         lines.append("")
-        lines.append(f"- **Proposed claims demoted by upstream:** "
-                     f"{summary.get('proposed_demoted_by_upstream_count', 0)}")
+        lines.append(f"- **Retained pending chain closure:** "
+                     f"{summary.get('retained_pending_chain_count', 0)}")
         lines.append(f"- **Citation cycles detected:** {summary.get('cycles_detected', 0)}")
     return "\n".join(lines) + "\n"
 
@@ -160,14 +173,15 @@ def render_top_load_bearing(rows: dict[str, dict], n: int = 25) -> str:
     sortable.sort(key=lambda r: -float(r.get("load_bearing_score") or 0))
     top = sortable[:n]
     lines = [
-        "| # | claim_id | criticality | desc | score | audit_status | effective |",
-        "|---:|---|---|---:|---:|---|---|",
+        "| # | claim_id | claim_type | criticality | desc | score | audit_status | effective |",
+        "|---:|---|---|---|---:|---:|---|---|",
     ]
     for i, r in enumerate(top, 1):
         lines.append(
-            "| {i} | `{cid}` | {crit} | {td} | {sc:.2f} | `{a}` | {e} |".format(
+            "| {i} | `{cid}` | {ct} | {crit} | {td} | {sc:.2f} | `{a}` | {e} |".format(
                 i=i,
                 cid=r.get("claim_id"),
+                ct=r.get("claim_type") or "-",
                 crit=r.get("criticality") or "leaf",
                 td=r.get("transitive_descendants") or 0,
                 sc=float(r.get("load_bearing_score") or 0),
@@ -203,18 +217,20 @@ def main() -> int:
     out.append("")
     out.append("## Reading rule")
     out.append("")
-    out.append("- **Bold** = audit-ratified (`retained`, `promoted`, `retained_no_go`).")
-    out.append("- _Italic_ = author-proposed but not yet audit-ratified "
-               "(`proposed_retained`, `proposed_promoted`).")
+    out.append("- **Bold** = audit-ratified retained grade "
+               "(`retained`, `retained_no_go`, `retained_bounded`).")
+    out.append("- _Italic_ = clean but waiting on retained-grade chain closure "
+               "(`retained_pending_chain`).")
     out.append("- ~~Strikethrough~~ = audit returned a failure verdict on an "
                "active claim (`audited_failed`, `audited_conditional`, etc.). "
                "Note: an `audited_failed` row whose note has been moved to "
                "`archive_unlanded/` is lifted to `retained_no_go` in "
                "`effective_status` — that is a ratified negative result, not "
                "an active failure.")
-    out.append("- Plain = `support`, `bounded`, `open`, or `unknown`.")
+    out.append("- Plain = `open_gate`, `unaudited`, `audit_in_progress`, or `meta`.")
     out.append("")
-    out.append("Publication-facing tables MUST read `effective_status`, not `current_status`.")
+    out.append("Publication-facing tables MUST read `effective_status`; "
+               "`claim_type` is the auditor-owned classification field.")
     out.append("")
     out.append("## Summary")
     out.append("")

@@ -6,29 +6,23 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
   1. Schema:
      - Every row has the expected fields.
      - audit_status is one of the allowed enum values.
-     - current_status is one of the allowed enum values.
+     - claim_type is one of the auditor-owned allowed enum values.
+     - legacy source-status fields are absent from generated audit data.
 
   2. The hard rules:
-     - No row has current_status = 'retained' or 'promoted' (these are
-       audit-ratified only; authors may only declare proposed_*).
      - audit_status = audited_clean requires auditor and auditor_family set.
-     - audit_status = audited_clean records the audit verdict for any
-       allowed current_status. Only clean proposed_* rows may promote to
-       retained/promoted effective_status; clean non-proposed rows stay in
-       their declared tier unless demoted by dependencies.
-     - effective_status = retained requires audit_status = audited_clean
-       AND every dep's effective_status is `retained` or `retained_no_go`
-       (a no-go theorem is a durable, audit-ratified commitment).
+     - audit_status = audited_clean promotes only through claim_type:
+       positive_theorem -> retained, no_go -> retained_no_go, and
+       bounded_theorem -> retained_bounded, provided the dependency chain is
+       already retained-grade.
+     - effective_status in a retained-grade bucket requires audit_status =
+       audited_clean (or archived audited_failed for legacy retained_no_go)
+       AND every dep's effective_status is retained-grade.
      - effective_status = retained_no_go has two paths:
-       (a) author declares current_status = proposed_no_go and audit_status =
-           audited_clean ratifies it (the symmetric path to `retained` for
-           negative theorems, born as no-gos rather than failed positives).
+       (a) claim_type = no_go and audit_status = audited_clean ratifies it.
        (b) audit_status = audited_failed AND the note has been moved to
-           archive_unlanded/ (legacy path: a positive claim failed audit and
-           was archived).
+           archive_unlanded/ (legacy path).
        Both paths represent ratified negative results, not active failures.
-     - source Status lines must not self-assign audited_clean; audit verdicts
-       live in the ledger.
      - independence = 'weak' cannot land audited_clean. Critical clean
        confirmations must be cross-family, strong/external, or same-family
        fresh_context from a distinct restricted-input session.
@@ -45,7 +39,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -64,27 +57,33 @@ ALLOWED_AUDIT_STATUSES = {
     "audited_failed",
     "audited_numerical_match",
 }
-ALLOWED_CURRENT_STATUSES = {
-    "proposed_retained",
-    "proposed_promoted",
-    "proposed_no_go",
-    "support",
-    "bounded",
-    "open",
-    "unknown",
+ALLOWED_CLAIM_TYPES = {
+    "positive_theorem",
+    "bounded_theorem",
+    "no_go",
+    "open_gate",
+    "decoration",
+    "meta",
+    None,
 }
-RATIFIED_BY_AUDIT_ONLY = {"retained", "promoted"}
+RETAINED_GRADES = {"retained", "retained_no_go", "retained_bounded"}
+ALLOWED_EFFECTIVE_STATUSES = {
+    "retained",
+    "retained_no_go",
+    "retained_bounded",
+    "retained_pending_chain",
+    "open_gate",
+    "unaudited",
+    "audit_in_progress",
+    "meta",
+    "audited_decoration",
+    "audited_numerical_match",
+    "audited_renaming",
+    "audited_conditional",
+    "audited_failed",
+}
 ALLOWED_INDEPENDENCE = {"weak", "fresh_context", "cross_family", "strong", "external", "judicial_review", None}
-
-# After relabel, the raw Status: text on a source note must not contain
-# the bare ratified-tier words; only the audit lane may grant them.
-# This regex matches `retained` / `promoted` only when NOT prefixed with
-# `proposed_`.
-RAW_FORBIDDEN_TIER_RE = re.compile(
-    r"(?<!proposed_)\b(?:retained|promoted)\b",
-    re.IGNORECASE,
-)
-RAW_FORBIDDEN_AUDIT_CLEAN_RE = re.compile(r"\baudited_clean\b", re.IGNORECASE)
+DEPRECATED_LEDGER_FIELDS = {"current_status", "current_status_raw"}
 
 
 def load_json(path: Path):
@@ -101,13 +100,8 @@ def hash_note_on_disk(note_path_str: str) -> str | None:
 def main() -> int:
     import argparse
     p = argparse.ArgumentParser()
-    p.add_argument(
-        "--strict",
-        action="store_true",
-        help="Fail on raw 'retained'/'promoted' in Status: lines (post-relabel mode).",
-    )
+    p.add_argument("--strict", action="store_true", help="Accepted for compatibility; lint is strict by default.")
     args, _ = p.parse_known_args()
-    strict = args.strict or bool(__import__("os").environ.get("AUDIT_LINT_STRICT_RAW"))
 
     if not LEDGER_PATH.exists():
         print("FAIL: audit_ledger.json missing", file=sys.stderr)
@@ -121,37 +115,28 @@ def main() -> int:
 
     # Schema and hard-rule checks.
     for cid, row in rows.items():
-        cs = row.get("current_status")
         a = row.get("audit_status")
         e = row.get("effective_status")
+        ct = row.get("claim_type")
         ind = row.get("independence")
 
-        if cs in RATIFIED_BY_AUDIT_ONLY:
-            errors.append(
-                f"{cid}: current_status={cs!r} forbidden — only audit lane may grant {cs}; use proposed_{cs}"
-            )
-        if cs not in ALLOWED_CURRENT_STATUSES:
-            errors.append(f"{cid}: current_status={cs!r} not in allowed set")
-
-        # Raw Status: line on the source note must not contain bare
-        # `retained` or `promoted` — those are audit-only tiers.
-        # Authors must declare `proposed_retained` / `proposed_promoted`.
-        # Pre-relabel: warning. Post-relabel (--strict or env var): error.
-        raw = row.get("current_status_raw") or ""
-        if raw and RAW_FORBIDDEN_TIER_RE.search(raw):
-            msg = (
-                f"{cid}: source note Status line contains bare 'retained' or 'promoted'; "
-                f"use proposed_retained / proposed_promoted (raw={raw!r})"
-            )
-            (errors if strict else warnings).append(msg)
-        if raw and RAW_FORBIDDEN_AUDIT_CLEAN_RE.search(raw):
-            msg = (
-                f"{cid}: source note Status line contains audit verdict 'audited_clean'; "
-                f"keep audit verdicts in docs/audit/data/audit_ledger.json (raw={raw!r})"
-            )
-            (errors if strict else warnings).append(msg)
+        for field in DEPRECATED_LEDGER_FIELDS & set(row):
+            errors.append(f"{cid}: deprecated ledger field {field!r} must not be present")
         if a not in ALLOWED_AUDIT_STATUSES:
             errors.append(f"{cid}: audit_status={a!r} not in allowed set")
+        if ct not in ALLOWED_CLAIM_TYPES:
+            errors.append(f"{cid}: claim_type={ct!r} not in allowed set")
+        if e not in ALLOWED_EFFECTIVE_STATUSES and not (isinstance(e, str) and e.startswith("decoration_under_")):
+            errors.append(f"{cid}: effective_status={e!r} not in allowed set")
+        if a not in {None, "unaudited", "audit_in_progress"}:
+            if ct is None:
+                errors.append(f"{cid}: audited row requires claim_type")
+            if not row.get("claim_scope"):
+                errors.append(f"{cid}: audited row requires claim_scope")
+        if row.get("claim_type_provenance") == "backfilled_pending_reaudit":
+            warnings.append(
+                f"{cid}: claim_type was backfilled for a critical legacy audit; queue for re-audit"
+            )
         if ind not in ALLOWED_INDEPENDENCE:
             errors.append(f"{cid}: independence={ind!r} not in allowed set")
 
@@ -160,20 +145,26 @@ def main() -> int:
                 errors.append(f"{cid}: audited_clean requires non-empty auditor")
             if not row.get("auditor_family"):
                 errors.append(f"{cid}: audited_clean requires auditor_family")
-            # Effective status promotion is tier-gated: a clean audit may be
-            # recorded on support/bounded/open/unknown rows, but those rows do
-            # not become retained/promoted unless the author re-tiers them.
-            PROPOSED_TIERS = {"proposed_retained", "proposed_promoted", "proposed_no_go"}
-            RATIFIED_TIERS = {"retained", "promoted", "retained_no_go"}
-            if cs in PROPOSED_TIERS and e not in RATIFIED_TIERS:
-                # Could be inherited demotion; warn rather than error.
-                warnings.append(
-                    f"{cid}: audited_clean but effective_status={e!r} (likely demoted by upstream dep)"
-                )
-            if cs not in PROPOSED_TIERS and e in RATIFIED_TIERS:
+            expected = {
+                "positive_theorem": "retained",
+                "no_go": "retained_no_go",
+                "bounded_theorem": "retained_bounded",
+                "open_gate": "open_gate",
+            }.get(ct)
+            if expected is None:
                 errors.append(
-                    f"{cid}: audited_clean current_status={cs!r} must not promote to effective_status={e!r}"
+                    f"{cid}: audited_clean claim_type={ct!r} cannot become a retained-grade theorem"
                 )
+            elif e != expected:
+                if e == "retained_pending_chain":
+                    warnings.append(
+                        f"{cid}: audited_clean claim_type={ct!r} waiting on upstream retained-grade closure"
+                    )
+                else:
+                    errors.append(
+                        f"{cid}: audited_clean claim_type={ct!r} expected effective_status={expected!r} "
+                        f"or 'retained_pending_chain', got {e!r}"
+                    )
             # Criticality-aware independence rules.
             criticality = row.get("criticality") or "leaf"
             if criticality in {"critical", "high"} and ind == "weak":
@@ -205,6 +196,11 @@ def main() -> int:
                             f"{cid}: same-family critical cross-confirmation requires "
                             "second_audit.independence='fresh_context'"
                         )
+                    if first.get("claim_type") != second.get("claim_type"):
+                        errors.append(
+                            f"{cid}: critical cross-confirmation claim_type mismatch "
+                            f"{first.get('claim_type')!r} vs {second.get('claim_type')!r}"
+                        )
                     if xc_status in {"third_confirmed_first", "third_confirmed_second"}:
                         third = xc.get("third_audit") or {}
                         if not third:
@@ -224,6 +220,24 @@ def main() -> int:
                                 f"{cid}: same-family third audit requires "
                                 "fresh_context or judicial_review independence"
                             )
+
+        if a == "audited_decoration":
+            parent = row.get("decoration_parent_claim_id")
+            if ct != "decoration":
+                errors.append(f"{cid}: audited_decoration requires claim_type='decoration'")
+            if not parent:
+                msg = f"{cid}: audited_decoration requires decoration_parent_claim_id"
+                if row.get("claim_type_provenance") == "backfilled_pending_reaudit":
+                    warnings.append(msg + "; legacy row queued for re-audit")
+                else:
+                    errors.append(msg)
+            else:
+                parent_eff = rows.get(parent, {}).get("effective_status")
+                if parent_eff not in RETAINED_GRADES:
+                    warnings.append(
+                        f"{cid}: decoration parent {parent!r} is not retained-grade "
+                        f"(effective_status={parent_eff!r})"
+                    )
 
         # Criticality bump after audit (warn that re-audit may be needed).
         snap = row.get("audit_state_snapshot")
@@ -251,18 +265,17 @@ def main() -> int:
             if d not in rows:
                 warnings.append(f"{cid}: dangling dep {d!r} (no ledger row)")
 
-    # Effective-status propagation sanity.
-    # A retained row's deps must themselves be retained or retained_no_go
-    # (a no-go theorem is a durable, audit-ratified scientific commitment;
-    # depending on one is fine).
-    RATIFIED_DEP_OK = {"retained", "retained_no_go"}
+    # Effective-status propagation sanity. A retained-grade row's deps must
+    # themselves be retained-grade. Open gates and retained_pending_chain are
+    # explicit blockers, not support for downstream theorem retention.
     for cid, row in rows.items():
-        if row.get("effective_status") == "retained":
+        if row.get("effective_status") in RETAINED_GRADES:
             for d in row.get("deps", []):
                 d_eff = rows.get(d, {}).get("effective_status")
-                if d_eff not in RATIFIED_DEP_OK:
+                if d_eff not in RETAINED_GRADES:
                     errors.append(
-                        f"{cid}: effective_status=retained but dep {d!r} has effective_status={d_eff!r}"
+                        f"{cid}: effective_status={row.get('effective_status')!r} but dep {d!r} "
+                        f"has effective_status={d_eff!r}"
                     )
 
     # Graph health: cycles (informational).

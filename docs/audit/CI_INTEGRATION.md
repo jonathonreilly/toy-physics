@@ -113,4 +113,4 @@ After a pipeline run, four files are the canonical output:
 
 Publication-facing tables (`CLAIMS_TABLE.md`, `PUBLICATION_MATRIX.md`,
 `ARXIV_DRAFT.md`) should read `effective_status` from
-`audit_ledger.json` (or the rendered markdown), not `current_status`.
+`audit_ledger.json` (or an artifact derived from it).

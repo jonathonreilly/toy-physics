@@ -4,7 +4,8 @@
 Walks every .md file under docs/ (excluding docs/audit/), extracts:
   - claim_id (stable, derived from path)
   - title (first H1)
-  - raw status line and normalized current_status
+  - optional Type: hint for auditor-owned claim_type
+  - optional legacy Status-line migration hint for claim_type backfill
   - cited authorities (markdown links to other .md files in docs/)
   - primary runner script path
   - note hash (sha256 of body)
@@ -29,36 +30,32 @@ OUTPUT_PATH = AUDIT_DATA_DIR / "citation_graph.json"
 # Skip the audit lane itself and any auto-generated subtrees.
 SKIP_PREFIXES = ("audit/",)
 
-# Status normalization: maps raw status text fragments to the audit lane's
-# normalized vocabulary. Order matters; first match wins.
-STATUS_PATTERNS = [
-    (re.compile(r"\bproposed[_ -]no[_ -]?go\b", re.IGNORECASE), "proposed_no_go"),
-    (re.compile(r"\bproposed[_ -]retained\b", re.IGNORECASE), "proposed_retained"),
-    (re.compile(r"\bproposed[_ -]promoted\b", re.IGNORECASE), "proposed_promoted"),
-    # The audit lane treats every author-declared "retained" as
-    # "proposed_retained" until audited. This is the load-bearing
-    # interpretation rule from FRESH_LOOK_REQUIREMENTS.md.
-    (re.compile(r"\bretained[_ -]no[_ -]?go\b", re.IGNORECASE), "proposed_no_go"),
-    (re.compile(r"\bretained\b", re.IGNORECASE), "proposed_retained"),
-    (re.compile(r"\bpromoted\b", re.IGNORECASE), "proposed_promoted"),
-    (re.compile(r"\bsuperseded_by\b", re.IGNORECASE), "support"),
-    (re.compile(r"\boutside\s+audit-ratified\s+tier\b", re.IGNORECASE), "support"),
-    (re.compile(r"\bflagship\s+closed\b", re.IGNORECASE), "proposed_retained"),
-    (re.compile(r"\bbounded\b", re.IGNORECASE), "bounded"),
-    (re.compile(r"\bsupport\b", re.IGNORECASE), "support"),
-    (re.compile(r"\b(open|scaffold|planning)\b", re.IGNORECASE), "open"),
-    (re.compile(r"\baccepted\b", re.IGNORECASE), "support"),
-    (re.compile(r"\bderived\b", re.IGNORECASE), "support"),
-    # A bare "no-go" or "nogo" Status line (no other tier word matched
-    # earlier) is treated as proposed_no_go pending audit, parallel to how
-    # bare "retained" is read as proposed_retained.
-    (re.compile(r"\bno-?go\b", re.IGNORECASE), "proposed_no_go"),
+# Legacy Status-line normalization is used only as a temporary migration hint
+# for seeding claim_type on rows that predate Type: metadata. It is not emitted
+# as an audit authority field.
+LEGACY_STATUS_TO_CLAIM_TYPE_PATTERNS = [
+    (re.compile(r"\b(?:proposed[_ -]no[_ -]?go|retained[_ -]no[_ -]?go|no-?go)\b", re.IGNORECASE), "no_go"),
+    (re.compile(r"\bbounded\b", re.IGNORECASE), "bounded_theorem"),
+    (re.compile(r"\b(open|scaffold|planning)\b", re.IGNORECASE), "open_gate"),
+    (re.compile(r"\b(?:proposed[_ -]retained|proposed[_ -]promoted|retained|promoted|flagship\s+closed|support|accepted|derived|outside\s+audit-ratified\s+tier|superseded_by)\b", re.IGNORECASE), "positive_theorem"),
 ]
 
-STATUS_LINE_RE = re.compile(
+LEGACY_STATUS_LINE_RE = re.compile(
     r"^\s*(?:\*\*Status:?\*\*|Status:)\s*(.+)$",
     re.IGNORECASE | re.MULTILINE,
 )
+TYPE_LINE_RE = re.compile(
+    r"^\s*(?:\*\*(?:Type|Claim type):?\*\*|(?:Type|Claim type):)\s*(.+)$",
+    re.IGNORECASE | re.MULTILINE,
+)
+CLAIM_TYPES = {
+    "positive_theorem",
+    "bounded_theorem",
+    "no_go",
+    "open_gate",
+    "decoration",
+    "meta",
+}
 TITLE_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
 RUNNER_LABEL_RE = re.compile(
     r"^\s*(?:[-*]\s*)?"
@@ -89,22 +86,49 @@ def claim_id_from_path(path: Path) -> str:
     return ".".join(parts).lower()
 
 
-def normalize_status(raw: str | None) -> str:
+def claim_type_from_legacy_status(raw: str | None) -> str | None:
     if not raw:
-        return "unknown"
+        return None
     text = raw.strip()
-    for pattern, label in STATUS_PATTERNS:
+    for pattern, label in LEGACY_STATUS_TO_CLAIM_TYPE_PATTERNS:
         if pattern.search(text):
             return label
-    return "unknown"
+    return None
 
 
-def extract_status(body: str) -> tuple[str | None, str]:
-    m = STATUS_LINE_RE.search(body)
+def extract_legacy_status_claim_type(body: str) -> str | None:
+    m = LEGACY_STATUS_LINE_RE.search(body)
     if not m:
-        return None, "unknown"
+        return None
+    return claim_type_from_legacy_status(m.group(1).strip())
+
+
+def normalize_claim_type(raw: str | None) -> str | None:
+    if not raw:
+        return None
+    token = raw.strip().split()[0].strip("`*_:.").lower()
+    token = token.replace("-", "_")
+    if token == "nogo":
+        token = "no_go"
+    if token in CLAIM_TYPES:
+        return token
+    phrase = raw.strip().lower().replace("-", " ").replace("_", " ")
+    phrase = " ".join(phrase.split())
+    aliases = {
+        "positive theorem": "positive_theorem",
+        "bounded theorem": "bounded_theorem",
+        "no go": "no_go",
+        "open gate": "open_gate",
+    }
+    return aliases.get(phrase)
+
+
+def extract_claim_type_hint(body: str) -> tuple[str | None, str | None]:
+    m = TYPE_LINE_RE.search(body)
+    if not m:
+        return None, None
     raw = m.group(1).strip()
-    return raw, normalize_status(raw)
+    return raw, normalize_claim_type(raw)
 
 
 def extract_title(body: str) -> str | None:
@@ -234,13 +258,16 @@ def build_graph() -> dict:
         cid = claim_id_from_path(note_path)
         rel = note_path.relative_to(DOCS_DIR)
         body = note_path.read_text(encoding="utf-8", errors="replace")
-        raw_status, current_status = extract_status(body)
+        raw_type, claim_type_hint = extract_claim_type_hint(body)
+        legacy_status_hint = extract_legacy_status_claim_type(body)
+        claim_type_seed_hint = claim_type_hint or legacy_status_hint
         nodes[cid] = {
             "claim_id": cid,
             "path": note_path.relative_to(REPO_ROOT).as_posix(),
             "title": extract_title(body),
-            "current_status_raw": raw_status,
-            "current_status": current_status,
+            "claim_type_author_hint_raw": raw_type,
+            "claim_type_author_hint": claim_type_hint,
+            "claim_type_seed_hint": claim_type_seed_hint,
             "runner_path": extract_runner(body, rel.as_posix()),
             "note_hash": hashlib.sha256(body.encode("utf-8")).hexdigest(),
             "deps": [],
@@ -261,9 +288,13 @@ def build_graph() -> dict:
             edges.append({"from": cid, "to": cited_cid})
 
     # Stats.
-    status_counts: dict[str, int] = {}
+    claim_type_hint_counts: dict[str, int] = {}
+    claim_type_seed_hint_counts: dict[str, int] = {}
     for n in nodes.values():
-        status_counts[n["current_status"]] = status_counts.get(n["current_status"], 0) + 1
+        hint = n.get("claim_type_author_hint") or "none"
+        claim_type_hint_counts[hint] = claim_type_hint_counts.get(hint, 0) + 1
+        seed_hint = n.get("claim_type_seed_hint") or "none"
+        claim_type_seed_hint_counts[seed_hint] = claim_type_seed_hint_counts.get(seed_hint, 0) + 1
 
     runners_with_path = sum(1 for n in nodes.values() if n["runner_path"])
     roots = [cid for cid, n in nodes.items() if not n["deps"]]
@@ -275,7 +306,8 @@ def build_graph() -> dict:
         "stats": {
             "node_count": len(nodes),
             "edge_count": len(edges),
-            "status_counts": status_counts,
+            "claim_type_author_hint_counts": claim_type_hint_counts,
+            "claim_type_seed_hint_counts": claim_type_seed_hint_counts,
             "runners_with_path": runners_with_path,
             "root_count": len(roots),
             "leaf_count": len(leaves),
@@ -295,7 +327,7 @@ def main() -> int:
     print(f"  nodes: {s['node_count']}  edges: {s['edge_count']}")
     print(f"  roots: {s['root_count']}  leaves: {s['leaf_count']}")
     print(f"  runners attached: {s['runners_with_path']}")
-    print(f"  status_counts: {s['status_counts']}")
+    print(f"  claim_type_seed_hint_counts: {s['claim_type_seed_hint_counts']}")
     return 0
 
 
