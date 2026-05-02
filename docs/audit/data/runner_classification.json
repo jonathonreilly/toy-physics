@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T20:33:52.002446+00:00",
+  "generated_at": "2026-05-02T20:35:09.299128+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -15588,6 +15588,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/wide_lattice_h2t_distance_replay.py"
+    },
+    "wigner_mode_low_d_sublattice_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/wigner_mode_low_d_sublattice_check.py"
     },
     "wilson_mu2_distance_sweep_note_2026-04-11": {
       "assert_count": 0,
@@ -35963,6 +35975,21 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "exists": true
+    },
+    "scripts/wigner_mode_low_d_sublattice_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "wigner_mode_low_d_sublattice_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
     }
   },
   "schema_version": 1,
@@ -35971,12 +35998,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 155,
-      "C": 516,
+      "C": 517,
       "D": 198,
       "none": 411
     },
-    "runners_classified": 1290,
-    "runners_with_C": 618,
+    "runners_classified": 1291,
+    "runners_with_C": 619,
     "runners_with_D": 312
   }
 }
