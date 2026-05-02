@@ -2737,6 +2737,10 @@
       "to": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
     },
     {
+      "from": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
       "from": "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
     },
@@ -19985,7 +19989,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:24:20.817208+00:00",
+  "generated_at": "2026-05-02T20:26:34.374417+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23890,6 +23894,19 @@
       "path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation"
+    },
+    "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02": {
+      "claim_id": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "8b7f82d4de294d0c61593cd8f8bbbb6ede4f94fb96036bbf8d30bd7d558d6827",
+      "path": "docs/CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cl3_per_site_hilbert_dim_two_check.py",
+      "title": "Per-Site Hilbert Space Dimension = 2 from Cl(3) Per-Site Uniqueness"
     },
     "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02": {
       "claim_id": "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02",
@@ -46508,7 +46525,7 @@
       "bounded_theorem": 11,
       "meta": 1,
       "none": 1747,
-      "positive_theorem": 34
+      "positive_theorem": 35
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
@@ -46516,12 +46533,12 @@
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 626
+      "positive_theorem": 627
     },
-    "edge_count": 4996,
+    "edge_count": 4997,
     "leaf_count": 760,
-    "node_count": 1793,
+    "node_count": 1794,
     "root_count": 1217,
-    "runners_with_path": 1361
+    "runners_with_path": 1362
   }
 }

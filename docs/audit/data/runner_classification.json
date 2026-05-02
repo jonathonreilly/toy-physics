@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T20:24:24.982622+00:00",
+  "generated_at": "2026-05-02T20:26:38.520074+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -1908,6 +1908,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/verify_cl3_sm_embedding.py"
+    },
+    "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_per_site_hilbert_dim_two_check.py"
     },
     "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02": {
       "assert_count": 0,
@@ -17868,6 +17880,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/cl3_per_site_hilbert_dim_two_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_quark_antiquark_color_singlet_check.py": {
@@ -35944,12 +35971,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 155,
-      "C": 515,
+      "C": 516,
       "D": 198,
       "none": 411
     },
-    "runners_classified": 1289,
-    "runners_with_C": 617,
+    "runners_classified": 1290,
+    "runners_with_C": 618,
     "runners_with_D": 312
   }
 }
