@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T16:22:02.362731+00:00",
+  "generated_at": "2026-05-02T17:06:13.233228+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -2160,6 +2160,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/coupled_field_generated_family_probe.py"
+    },
+    "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cpt_particle_antiparticle_mass_equality_check.py"
     },
     "critical_exponents_topology_note_2026-04-10": {
       "assert_count": 0,
@@ -6529,6 +6541,18 @@
       "dominant_class": null,
       "runner": "scripts/global_coherence_predictor.py"
     },
+    "gluon_tree_level_masslessness_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/gluon_tree_level_massless_check.py"
+    },
     "gr_class_expansion_finite_rank_target_note": {
       "assert_count": 1,
       "counts": {
@@ -7752,6 +7776,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_koide_cyclic_projector_block_democracy.py"
+    },
+    "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_koide_cyclic_wilson_3_response_narrow.py"
     },
     "koide_cyclic_wilson_descendant_law_note_2026-04-18": {
       "assert_count": 1,
@@ -10500,6 +10536,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/packet_memory.py"
+    },
+    "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/pauli_exclusion_check.py"
     },
     "periodic_2d_wraparound_fix_note_2026-04-11": {
       "assert_count": 0,
@@ -14533,6 +14581,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_three_generation_observable_theorem.py"
     },
+    "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py"
+    },
     "three_generation_observable_theorem_note": {
       "assert_count": 0,
       "counts": {
@@ -17666,6 +17726,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cpt_particle_antiparticle_mass_equality_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/decoherence_action_independence.py": {
@@ -24891,6 +24966,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_koide_cyclic_wilson_3_response_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_koide_cyclic_wilson_descendant_law.py": {
       "assert_count": 1,
       "claims": [
@@ -30203,6 +30293,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_three_generation_observable_theorem.py": {
       "assert_count": 0,
       "claims": [
@@ -31984,6 +32089,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/gluon_tree_level_massless_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "gluon_tree_level_masslessness_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/graph_phase_diagram_scout.py": {
       "assert_count": 0,
       "claims": [
@@ -33356,6 +33476,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/pauli_exclusion_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/persistent_inertial_object_probe.py": {
@@ -35333,16 +35468,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 103,
+    "decoration_candidates": 104,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 147,
-      "C": 507,
+      "B": 149,
+      "C": 510,
       "D": 195,
       "none": 409
     },
-    "runners_classified": 1267,
-    "runners_with_C": 607,
-    "runners_with_D": 306
+    "runners_classified": 1272,
+    "runners_with_C": 610,
+    "runners_with_D": 307
   }
 }

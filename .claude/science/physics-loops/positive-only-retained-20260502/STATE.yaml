@@ -1,0 +1,18 @@
+slug: positive-only-retained-20260502
+mode: campaign
+runtime_budget: 24h
+target: retained
+strict_bar: positive_theorem only
+date_started: 2026-05-02
+current_cycle: 0
+current_block: null
+prescreen_drop_rate: "6 of 8 initial candidates dropped (75%) — A_min audited_conditional propagates blocking to most chains; only deps already at retained / retained_bounded on live ledger qualify"
+qualified_blocks_queued:
+  - 1: gluon-massless (deps both retained_bounded)
+  - 2: pauli-exclusion (dep spin-statistics retained)
+  - 3: cpt-mass-equality (dep cpt_exact_note retained)
+no_go_routes: []
+review_findings: []
+pr_status: []
+next_exact_action: "Block 1: Gluon masslessness — write theorem note + runner + certificate + commit + push + PR"
+stop_condition: null
