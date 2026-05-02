@@ -1,7 +1,26 @@
 # Gauge-Vacuum Plaquette Local / Environment Factorization Theorem
 
-**Date:** 2026-04-17
-**Status:** exact mixed-kernel locality theorem on the accepted Wilson `3 spatial + 1 derived-time` source surface; after trivial-channel normalization the mixed-kernel source-sector action is exactly the local Wilson marked-link factor, so the remaining open object is residual source-sector environment data outside that normalized mixed kernel
+**Date:** 2026-04-17 (scope-tightening re-frame: 2026-05-02)
+**Type:** bounded_theorem
+**Claim scope:** mixed-kernel locality factorization on the marked-plaquette
+character sector at the accepted Wilson `3+1` source surface; explicitly
+*out of scope*: residual source-sector environment data, framework-point
+Perron state at `beta = 6`, and analytic closure of `P(6)`.
+**Bounded scope (what this note proves):** after trivial-channel
+normalization the mixed-kernel source-sector action on the marked
+plaquette character sector is exactly the local Wilson marked-link factor
+`a_(p,q)(beta)^4`. Equivalently, the normalized mixed-kernel compression
+contributes no further representation-dependent environment sequence
+beyond that local factor.
+**Bounded scope (what this note explicitly does not prove):** the
+residual source-sector environment operator outside the normalized mixed
+kernel; the framework-point Perron state of the full source-sector
+transfer law; explicit `beta = 6` Perron moments; analytic closure of
+canonical `P(6)`. Those objects are tracked in named companion notes
+(`gauge_vacuum_plaquette_residual_environment_identification_theorem_note`,
+`gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note`,
+`gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`)
+and remain open-grade independently of the bounded-theorem statement here.
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`
 
 ## Question
@@ -131,12 +150,38 @@ What is still open is not:
 - nor any hidden mixed-kernel environment sequence on top of
   `a_(p,q)(6)^4`.
 
-What remains open is:
+What remains open (and is explicitly *outside* this note's bounded
+theorem scope) is:
 
 > the residual source-sector environment operator beyond the normalized mixed
 > kernel, equivalently the framework-point Perron state of the full exact
 > source-sector transfer law after the mixed-kernel local factor has been
 > identified.
+
+That residual object is tracked in separate companion notes
+(`gauge_vacuum_plaquette_residual_environment_identification_theorem_note`,
+`gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note`,
+`gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`).
+The bounded theorem stated here is independent of any progress on
+those successor notes; they consume `a_(p,q)(beta)^4` as a closed
+local factor.
+
+## Bounded-theorem scope summary
+
+This note's `claim_type` is `bounded_theorem`:
+
+- *Closed within scope:* normalized Wilson mixed-kernel compression on the
+  marked-plaquette character sector factorizes exactly as the four
+  marked-link local factor `a_(p,q)(beta)^4`. The chain from the Bessel-
+  determinant character coefficients and the trivial-irrep action of
+  non-marked links closes algebraically.
+- *Not claimed here:* residual source-sector environment data,
+  `beta = 6` Perron moments after full environment, framework-point
+  closure of `P(6)`, repo-wide repinning of the canonical plaquette.
+- *Companion successor notes:* the residual environment object is
+  named and tracked separately; nothing in those still-open notes is
+  treated as a load-bearing input here, and the bounded factorization
+  theorem can be reviewed independently of their disposition.
 
 ## What this closes
 

@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-02T18:38:48.514116+00:00",
+  "computed_at": "2026-05-02T20:42:10.807341+00:00",
   "criticality_counts": {
-    "critical": 44,
-    "high": 389,
-    "leaf": 888,
-    "medium": 462
+    "critical": 45,
+    "high": 388,
+    "leaf": 897,
+    "medium": 465
   },
   "flagship_signal_used": false,
-  "node_count": 1783,
+  "node_count": 1795,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -120,16 +120,34 @@
       "transitive_descendants": 299
     },
     {
+      "claim_id": "site_phase_cube_shift_intertwiner_note",
+      "criticality": "critical",
+      "load_bearing_score": 19.033,
+      "transitive_descendants": 130
+    },
+    {
       "claim_id": "ckm_atlas_axiom_closure_note",
       "criticality": "critical",
       "load_bearing_score": 17.285,
       "transitive_descendants": 77
     },
     {
+      "claim_id": "z2_hw1_mass_matrix_parametrization_note",
+      "criticality": "high",
+      "load_bearing_score": 16.977,
+      "transitive_descendants": 125
+    },
+    {
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "criticality": "critical",
       "load_bearing_score": 16.555,
       "transitive_descendants": 132
+    },
+    {
+      "claim_id": "s3_taste_cube_decomposition_note",
+      "criticality": "high",
+      "load_bearing_score": 16.477,
+      "transitive_descendants": 125
     },
     {
       "claim_id": "r_base_group_theory_derivation_theorem_note_2026-04-24",
@@ -148,24 +166,6 @@
       "criticality": "critical",
       "load_bearing_score": 16.397,
       "transitive_descendants": 336
-    },
-    {
-      "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
-      "criticality": "critical",
-      "load_bearing_score": 15.544,
-      "transitive_descendants": 131
-    },
-    {
-      "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
-      "criticality": "critical",
-      "load_bearing_score": 15.2,
-      "transitive_descendants": 51
-    },
-    {
-      "claim_id": "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
-      "criticality": "critical",
-      "load_bearing_score": 15.033,
-      "transitive_descendants": 130
     }
   ]
 }
