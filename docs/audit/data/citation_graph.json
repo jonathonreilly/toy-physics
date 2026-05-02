@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:27:06.941357+00:00",
+  "generated_at": "2026-05-02T18:31:21.355762+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21325,11 +21325,11 @@
     },
     "anomaly_forces_time_theorem": {
       "claim_id": "anomaly_forces_time_theorem",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify; current ledger",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c147743d4cd9e87b710b496712fe587e8c143c64efee94345485f1c43233ea76",
+      "note_hash": "e74828eeb3a69c8722d96e87635bc94abcfde687cf0ea3a77512aec7bdcc8dba",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
       "runner_path": null,
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
@@ -42018,11 +42018,11 @@
     },
     "three_generation_structure_note": {
       "claim_id": "three_generation_structure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (audit verdict: bounded_theorem +",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "4d4cbba029fac84e829c79c7619006c3926b548341c52348d0bcbf1b428f9644",
+      "note_hash": "88f5e69b29b68dd373faaaae2d67decf796e320208510099d84e622f4837a9fe",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
@@ -46331,18 +46331,18 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 9,
+      "bounded_theorem": 11,
       "meta": 1,
-      "none": 1754,
+      "none": 1752,
       "positive_theorem": 17
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 509,
+      "bounded_theorem": 511,
       "meta": 1,
       "no_go": 106,
-      "none": 443,
+      "none": 442,
       "open_gate": 110,
-      "positive_theorem": 612
+      "positive_theorem": 611
     },
     "edge_count": 4990,
     "leaf_count": 751,
