@@ -35,9 +35,9 @@ permutations of (0, 1, 2).
 Companion role: this is a Pattern A new narrow claim row carving out the
 load-bearing class-(A) algebraic core of
 `neutrino_dirac_z3_support_trichotomy_note` (claim_type=bounded_theorem,
-audit_status=audited_conditional, td=77). The narrow theorem isolates the
+load_bearing_step_class=A). The narrow theorem isolates the
 Z_3-character arithmetic from any specific charge assignment, so it can be
-audit-ratified independently of the parent's hypothesized
+reviewed independently of the parent's hypothesized
 (q_L, q_R, q_H) values.
 """
 
@@ -209,7 +209,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('neutrino_dirac_z3_support_trichotomy_note', {})
 print(f"\n  Parent row state on origin/main:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 print(f"    deps: {parent.get('deps')}")
@@ -243,7 +242,7 @@ print("""
   q_L (e.g., (0, 0, 0)) the trichotomy fails (one q_H gives the full
   grid; the other two give empty supports).
 
-  Audit-lane class:
+  Runner evidence class:
     (A) — pure number theory / Z_3-character arithmetic. No DM-side,
     neutrino-side, Higgs-doublet, or framework-specific authority. The
     framework instance q_L = (0, +1, -1), q_R = (0, -1, +1) is one

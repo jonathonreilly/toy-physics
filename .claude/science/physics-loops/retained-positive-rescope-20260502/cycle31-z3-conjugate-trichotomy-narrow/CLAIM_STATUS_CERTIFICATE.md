@@ -3,12 +3,12 @@
 **Block:** physics-loop/z3-conjugate-support-trichotomy-narrow-block31-20260502
 **Note:** docs/Z3_CONJUGATE_SUPPORT_TRICHOTOMY_NARROW_THEOREM_NOTE_2026-05-02.md
 **Runner:** scripts/frontier_z3_conjugate_support_trichotomy_narrow.py (PASS=13/0)
-**Parent row carved from:** neutrino_dirac_z3_support_trichotomy_note (claim_type=bounded_theorem, audit_status=audited_conditional, td=77, load_bearing_step_class=A)
+**Parent row carved from:** neutrino_dirac_z3_support_trichotomy_note (claim_type=bounded_theorem, load_bearing_step_class=A)
 
 ## Block type
 
 **Pattern A — narrow rescope as new claim row.** This block introduces a new
-audit-pending positive_theorem candidate row by isolating the load-bearing
+positive_theorem candidate row by isolating the load-bearing
 class-(A) Z_3 character-arithmetic core of the parent neutrino Dirac Z_3
 support trichotomy note.
 
@@ -25,7 +25,7 @@ Higgs-doublet authority is consumed.
 ## Claim-Type Certificate
 
 ```yaml
-target_claim_type: positive_theorem
+proposed_claim_type: positive_theorem
 proposed_claim_scope: |
   Pure Z_3 character-arithmetic / permutation-counting: any permutation
   q_L of Z_3 with pointwise conjugate q_R = -q_L mod 3 forces the
@@ -34,20 +34,20 @@ proposed_claim_scope: |
   diagonal/forward/backward cyclic disjointly covering the grid. The
   framework instance q_L = (0, +1, -1) is one of the 6 permutations.
 proposed_load_bearing_step_class: A
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+status_authority: independent_audit_lane
+source_sets_audit_outcome: false
 ```
 
 ## 7-criteria check
 
 | # | Criterion | Pass? |
 |---|---|---|
-| 1 | target_claim_type named | YES (`positive_theorem`) |
+| 1 | proposed_claim_type named | YES (`positive_theorem`) |
 | 2 | No open imports for the claimed target | YES (zero ledger deps; charges and `q_H` are abstract `Z_3`-valued symbols) |
 | 3 | No load-bearing observed/fitted/admitted | YES (purely number theory; no PDG / literature / fitted / admitted-convention input) |
-| 4 | Every dep retained-grade | YES (vacuously — zero deps) |
+| 4 | Dependency closure | YES (vacuously — zero deps) |
 | 5 | Runner verifies the algebraic identity at exact precision | YES (Python finite enumeration over Z_3; framework instance + 6 permutations of (0,1,2) + counterexample at constant q_L = (0,0,0) confirming distinct-Z_3 hypothesis is essential) |
-| 6 | Review-loop disposition | proposed pass as audit-pending narrow theorem; independent audit pending |
+| 6 | Review-loop disposition | proposed pass as narrow theorem; independent audit required |
 | 7 | PR body says independent audit required | YES |
 
 ## Cited deps
@@ -73,7 +73,7 @@ permutations of `(0, 1, 2)`.
 
 ## What this proposes
 
-A new audit-pending positive_theorem candidate carving out the
+A new positive_theorem candidate carving out the
 purely-algebraic core of the parent
 `neutrino_dirac_z3_support_trichotomy_note`. The narrow theorem can be
 ratified independently of any DM-neutrino, generation-charge, or
@@ -84,7 +84,7 @@ Higgs-doublet authority because it has zero ledger dependencies.
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 ## Audit-graph effect
