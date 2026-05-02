@@ -446,10 +446,12 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         third_matches_first = (
             third_verdict == first_verdict
             and third.get("claim_type") == first.get("claim_type")
+            and third.get("load_bearing_step_class") == first.get("load_bearing_step_class")
         )
         third_matches_second = (
             third_verdict == second_verdict
             and third.get("claim_type") == second.get("claim_type")
+            and third.get("load_bearing_step_class") == second.get("load_bearing_step_class")
         )
         if third_matches_first:
             row["cross_confirmation"]["third_audit"] = third
