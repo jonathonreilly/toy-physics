@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:36:17.965478+00:00
+**Generated:** 2026-05-02T01:39:27.308500+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 362 |
+| `audited_clean` | 363 |
 | `audited_conditional` | 667 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 427 |
+| `unaudited` | 426 |
 
 | criticality | count |
 |---|---:|
@@ -440,6 +440,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `unification_basin_failure_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `universal_gr_block_ident_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
+| `universal_gr_block_normalization_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -15992,6 +15993,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** the universal Hessian is blockwise exact except for a single trace-shear mixer  _(class `A`)_
 - **chain closes:** True — For the support-scope finite anisotropic prototype, the claim closes as exact linear algebra: the projectors are orthogonal/complete with ranks 1,3,1,5, all cross-block leaks vanish except trace-shear, and that block has rank 1. It does not claim full live invariant-background GR closure.
 - **rationale:** The note is honest about scope and records a negative/support result, not a promoted Einstein/Regge identification. The named runner currently passes and directly checks the load-bearing matrix facts: exact projector algebra, isolated lapse/shift blocks, unique trace-shear leakage, and rank-1 obstruction. No hidden physical bridge is needed for this narrowed finite-prototype obstruction claim.
+- **auditor confidence:** high
+
+### `universal_gr_block_normalization_note`
+
+- **Note:** [`UNIVERSAL_GR_BLOCK_NORMALIZATION_NOTE.md`](../../docs/UNIVERSAL_GR_BLOCK_NORMALIZATION_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-current-restricted-fresh-auditor`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Block normalization canonically fixes the invariant A1 core and scalar shift/shear block ratios, but it does not canonically section the E \oplus T1 complement; the residual ambiguity is the connected SO(3) complement orbit.  _(class `A`)_
+- **chain closes:** True — The note's limited support claim is a no-go about normalization data: invariant block norms, ratios, and sign choices do not select a canonical complement section. The runner corroborates this by showing A1 invariance, nontrivial complement SO(3) action, invariant shift/shear ratios, and nonzero normalized-orbit spread.
+- **rationale:** The claim is not that direct universal localization is finished, but that block normalization alone leaves a connected SO(3) complement ambiguity. That conclusion follows as exact algebra over the block decomposition and is supported by the current runner output: PASS=12, FAIL=0. No hidden physical comparator, numerical tuning, or symbol renaming is needed for this limited support/no-go statement.
 - **auditor confidence:** high
 
 ### `universal_gr_casimir_block_localization_note`

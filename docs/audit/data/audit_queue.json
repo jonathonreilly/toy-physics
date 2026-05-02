@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 96,
+    "leaf": 95,
     "medium": 130
   },
-  "generated_at": "2026-05-02T01:36:17.536964+00:00",
+  "generated_at": "2026-05-02T01:39:26.857295+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "universal_gr_block_normalization_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/UNIVERSAL_GR_BLOCK_NORMALIZATION_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "universal_gr_canonical_projector_connection_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -11991,6 +11974,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 16,
-  "total_pending": 427
+  "ready_count": 15,
+  "total_pending": 426
 }
