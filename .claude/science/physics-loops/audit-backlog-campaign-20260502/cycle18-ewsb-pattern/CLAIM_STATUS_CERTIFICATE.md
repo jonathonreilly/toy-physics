@@ -1,0 +1,1 @@
+# Cycle 18 cert: exact algebraic theorem deriving Q = T_3 + Y/2 from Y_H = +1 (cycle 15) + standard SSB. PASS=22/0. proposal_allowed: false (admitted SM Higgs VEV neutral component + Yukawa structure from cycle 15).
