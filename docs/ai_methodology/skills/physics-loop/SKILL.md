@@ -305,6 +305,36 @@ For publication-facing or quantitative work, also inspect
    unattempted hard residual, or synthesize prior cycles with a new structural
    insight. "Plug already-derived hypercharges into the photon-charge formula
    for hadron X" is the canonical churn shape; do not produce it.
+
+   **PROMOTION VALUE GATE (mandatory pre-PR self-review).** If the campaign goal
+   includes "promote bounded → retained" or any retained-positive movement, the
+   agent MUST answer the following questions IN WRITING in a value-gate section
+   of `OPPORTUNITY_QUEUE.md` or `REVIEW_HISTORY.md` before opening any PR. This
+   value-gate record is not an audit certificate and must not state or predict
+   an audit verdict. Failing any single question forbids the PR — discard the
+   cycle and pivot, do NOT downgrade to a lower-value pattern just because work
+   has already been done.
+
+   | # | Question | Required answer to allow PR |
+   |---|---|---|
+   | V1 | What SPECIFIC verdict-identified obstruction does this PR close? | Quote the exact obstruction text from the parent row's `verdict_rationale`. "The upstream is unratified" does NOT qualify — that's a dependency-chain issue, not a derivation gap. |
+   | V2 | What NEW derivation does this PR contain that the audit lane doesn't already have? | One paragraph describing genuinely new content. "Sympy-exact verification of the existing primary runner's identities" is NOT new derivation. "Pattern A narrow rescope of the algebraic core" is NOT new derivation if the audit lane already understands the algebra; it just creates a new audit-pending row with no closer derivation. |
+   | V3 | Could the audit lane already complete this derivation from existing retained primitives + standard math machinery (Schur complement, cube-root-of-unity arithmetic, Casimir formulas, Pauli matrix algebra, etc.)? | "No" — explain why the framework's retained primitives are necessary. If "yes", the cycle is performative and the PR must not be opened. |
+   | V4 | Is the marginal content non-trivial (not a textbook identity, not a definition restated)? | "Yes" with one-sentence justification. Examples that fail: "real shifts don't change imaginary parts", "(1/sqrt(N)) * I has matrix elements 1/sqrt(N)", "scaling by mu preserves slope". |
+   | V5 | Is this a one-step variant of an already-landed cycle in this campaign? | "No" — name the closest prior cycle and explain the structural distinction. "Same matrix structure, different physical interpretation" is NOT a structural distinction; it's relabeling. |
+
+   Review-loop triage of the 2026-05-02 audit-backlog campaign found too many
+   branches whose marginal repo value was review-prep rather than new science.
+   Do not repeat that failure mode.
+
+   **Source-note hygiene as a separate, lower-volume lane.** Pattern C
+   tightenings (correcting `proposed_retained` / `DERIVED` / `EXACT` author-side
+   labels that conflict with the audit-lane verdict) are real housekeeping the
+   audit lane wants done — but they are NOT bounded → retained promotion work.
+   When invoked under `--mode source-note-hygiene`, these are allowed at a
+   max of 5 per session and must NOT be conflated with retained-promotion
+   campaigns. When invoked under any other mode, treat Pattern-C-shaped output
+   the same as any other PR: it must pass the V1-V5 gate.
 8. **Execute one major cycle.** Produce a theorem note, runner/log pair,
    import-retirement audit, literature bridge, no-go packet, or demotion
    packet. Keep edits scoped to the chosen route.
@@ -440,6 +470,21 @@ Stop and write a clear `HANDOFF.md` when:
   reason to fill the cycle cap with thin restatements. The campaign's
   substantive ground is covered when the highest-value remaining moves are
   "apply cycle N's exact-support theorem to a different label";
+- **value-gate exhaustion**: every remaining ranked opportunity would fail
+  V1-V5 of the Promotion Value Gate (workflow step 7). If the only PRs the
+  campaign can produce are textbook re-verifications, near-tautological
+  rescopes, or one-step variants of landed cycles, the campaign must stop
+  rather than fill the cycle cap;
+- **volume cap reached**: maximum 5 PRs per 24-hour campaign on a single
+  goal-specific target unless the user has explicitly extended. After 5,
+  stop and report — do not continue past this cap on the strength of
+  earlier "keep going" affirmations. The cap exists because the marginal
+  value of cycle N+1 reliably drops below the cost of audit-lane review
+  burden once N exceeds ~5–8 in one session;
+- **cluster cap reached**: maximum 2 PRs per parent-row family
+  (`koide_*`, `dm_neutrino_*`, `gauge_vacuum_plaquette_*`,
+  `ckm_*_2026-04-25`, etc.) per campaign. After 2 in a single cluster,
+  pivot to a different family or stop;
 - the worktree changes externally in a way that affects the route;
 - the requested target status is honestly achieved and the user did not ask for
   a continuing campaign;
