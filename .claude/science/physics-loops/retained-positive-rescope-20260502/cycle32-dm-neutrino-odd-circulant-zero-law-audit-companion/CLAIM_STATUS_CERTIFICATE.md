@@ -2,7 +2,7 @@
 
 **Block:** physics-loop/dm-neutrino-odd-circulant-zero-law-audit-companion-block32-20260502
 **Runner:** scripts/audit_companion_dm_neutrino_odd_circulant_zero_law_exact.py (PASS=17/0)
-**Target row:** dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15 (claim_type=positive_theorem, audit_status=audited_conditional, td=111, load_bearing_step_class=C)
+**Target row:** dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15 (claim_type=positive_theorem, load_bearing_step_class=C)
 
 ## Block type
 
@@ -17,13 +17,13 @@ argument and the `c_odd = 0` conclusion.
 ## Claim-Type Certificate (Pattern B)
 
 ```yaml
-target_claim_type: meta  # audit-companion runner; not a claim row
+proposed_claim_type: meta  # companion runner; not a claim row
 proposed_load_bearing_step_class: C
 introduces_new_claim_row: false
 introduces_new_source_note: false
-modifies_parent_audit_status: false  # audit-lane decides
-audit_required_before_effective_retained: true  # parent row only; companion is meta
-bare_retained_allowed: false
+modifies_parent_status: false
+status_authority: independent_audit_lane
+source_sets_audit_outcome: false
 ```
 
 ## 7-criteria check (adapted for Pattern B)
@@ -51,9 +51,8 @@ bare_retained_allowed: false
 ## Audit-graph effect
 
 This companion is **meta** — it does not move the parent row by itself.
-The parent's `audited_conditional` verdict identifies upstream weak-axis
-split / Z_3 bridge / DM-circulant authorities as the unratified deps.
-None of those gaps are addressed here; the companion only verifies that
+The upstream weak-axis split / Z_3 bridge / DM-circulant authorities are
+outside this companion's scope. The companion only verifies that
 the parent's local class-(C) parity-preservation step holds at exact
 symbolic precision, including the cube-root-of-unity reductions in the
 Z_3 bridge.
@@ -63,7 +62,7 @@ Z_3 bridge.
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 The companion is pure symbolic linear algebra on the standard 3x3
@@ -76,5 +75,5 @@ A standalone audit-companion runner that complements the existing primary
 runner by providing exact symbolic verification of the residual-Z_2
 parity-preservation argument with the cube-root-of-unity Z_3 bridge
 reduced symbolically (rather than at 1e-12 float tolerance). The block
-proposes nothing about any retained-status change; the audit lane is the
-authority for that.
+proposes nothing about any parent status change; the independent audit
+lane is the authority for that.

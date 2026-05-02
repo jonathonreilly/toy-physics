@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Pattern B audit-companion runner for
 `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15`
-(claim_type=positive_theorem, audit_status=audited_conditional, td=111,
-load_bearing_step_class=C).
+(claim_type=positive_theorem, load_bearing_step_class=C).
 
 The parent's load-bearing step is the residual-Z_2-parity preservation
 argument:
@@ -25,10 +24,10 @@ Z_3-bridge U_Z3 with omega = exp(2 pi i/3), so all parity tests close
 with exact-zero residuals (not just within 1e-12).
 
 Companion role: not a new claim row; not a new source note. Provides
-audit-friendly evidence that the parent's load-bearing class-(C)
+review-friendly evidence that the parent's load-bearing class-(C)
 parity-preservation step holds at exact symbolic precision. Does not
-modify the parent's audit_status; that decision belongs to the audit
-lane.
+modify the parent's status; that decision belongs to the independent
+audit lane.
 """
 
 from pathlib import Path
@@ -210,7 +209,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15', {})
 print(f"\n  dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15 current ledger state:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 
@@ -238,14 +236,14 @@ print("""
   exact symbolic zero via sympy `rewrite(cos).expand(complex=True)`
   reductions on the cube-root-of-unity expressions in U_Z3.
 
-  Audit-lane class for the parent's load-bearing step:
+  Runner evidence class for the parent's load-bearing step:
     (C) — first-principles compute / parity preservation. No external
     observed/fitted/literature input.
 
-  This audit-companion does NOT introduce a new claim row, a new source
-  note, or any modification of the parent's audit_status. The parent
-  remains audited_conditional pending audit-lane review of the
-  upstream weak-axis split / Z_3 bridge / DM-circulant authorities.
+  This companion does NOT introduce a new claim row, a new source note,
+  or any modification of the parent's status. The upstream weak-axis
+  split / Z_3 bridge / DM-circulant authorities remain outside this
+  companion's scope.
 """)
 
 
