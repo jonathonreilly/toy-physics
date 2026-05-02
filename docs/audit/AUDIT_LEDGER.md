@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T14:55:57.461691+00:00
+**Generated:** 2026-05-02T15:38:10.576514+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -403,7 +403,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_static_discriminator_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | B | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
-| `site_phase_cube_shift_intertwiner_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `site_phase_cube_shift_intertwiner_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `sixth_family_complex_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
 | `sixth_family_sheared_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
 | `sixth_family_sheared_fm_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
@@ -15209,13 +15209,13 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 
 - **Note:** [`SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](../../docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Exact intertwining of cube-shift operators on C^8 with lattice site-phase operators restricted to the eight BZ-corner subspace, including the induced Hadamard joint eigensystem.
 - **audit_status:** ~~audited_clean~~
 - **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-crossconfirm-20260430-b`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Phi^dagger P_mu Phi = S_mu, with P_mu |X_alpha> = |X_(alpha xor e_mu)> on the BZ-corner subspace.  _(class `A`)_
-- **chain closes:** True — The note has no one-hop dependencies and the runner directly checks the finite Fourier/BZ-corner intertwiner identities. The safe boundary is narrow: it proves the exact taste-cube/BZ-corner operator bridge, not physical generation identification.
-- **rationale:** The load-bearing step is a finite-dimensional algebra/Fourier intertwiner, and the runner checks the bit-flip law, pulled-back operators, and joint eigensystem transfer without importing a physical-generation claim. Residual risk is limited to downstream over-reading: this clean result only covers the restricted C^8/BZ-corner bridge stated in the note.
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-site-phase-galileo`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On the eight BZ-corner basis with Phi|alpha>=|X_alpha>, lattice site phases P_mu act as alpha -> alpha xor e_mu, so Phi^dagger P_mu Phi is the cube-shift S_mu and the joint eigensystem is the Z_2^3 Hadamard character basis.  _(class `A`)_
+- **chain closes:** True — The stated result is finite-dimensional algebra on the explicitly restricted eight-corner support. It does not require a physical generation identification or any cited external authority beyond the defined Fourier/character action.
+- **rationale:** Issue checked: whether the lattice site-phase operators and abstract cube shifts are exactly intertwined on the restricted BZ-corner support. The runner directly checks the bit-flip law, the isometry, pulled-back operators, and all joint eigenstates with zero reported discrepancies. The note explicitly avoids identifying the support with physical generations, so the scoped theorem closes as exact algebra rather than an unratified physical bridge.
 - **auditor confidence:** high
 
 ### `sixth_family_complex_boundary_note`
