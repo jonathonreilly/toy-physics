@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Same-Source W/Z Response Certificate Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN GATE / SUPPORT ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- future same-source W/Z evidence must contain production W/Z mass fits,
+  source-shift slopes, covariance, and identity certificates;
+- static EW algebra is `dM_W/dh` after canonical `H` is supplied, not a
+  measurement of `dM_W/ds`;
+- slope-only W/Z outputs remain support-only without sector-overlap and
+  canonical-Higgs identity;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_same_source_wz_response_certificate_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_same_source_wz_response_certificate_gate.py
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Chunks009-010 Processing
 
 Local review-loop disposition:

@@ -163,6 +163,9 @@ def main() -> int:
         "fh_gauge_mass_response_manifest": load(
             "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json"
         ),
+        "same_source_wz_response_certificate_gate": load(
+            "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
+        ),
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
@@ -616,6 +619,12 @@ def main() -> int:
         "same-source WZ gauge-mass response manifest"
         in str(statuses["fh_gauge_mass_response_manifest"]),
         statuses["fh_gauge_mass_response_manifest"],
+    )
+    report(
+        "same-source-wz-response-certificate-gate-not-passed",
+        "same-source WZ response certificate gate not passed"
+        in str(statuses["same_source_wz_response_certificate_gate"]),
+        statuses["same_source_wz_response_certificate_gate"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",
@@ -1132,7 +1141,10 @@ def main() -> int:
             "nearby shortcut in the gauge-normalized response route: common "
             "source-coordinate scaling cancels, but the ratio is physical y_t "
             "only after k_top/k_gauge is derived or measured.  A same-source "
-            "label alone is not that theorem.  The source-pole/canonical-Higgs "
+            "label alone is not that theorem.  The W/Z response certificate "
+            "gate now defines the future acceptance schema and rejects static "
+            "EW algebra or slope-only W/Z outputs without production mass fits "
+            "and identity certificates.  The source-pole/canonical-Higgs "
             "mixing obstruction now blocks the adjacent pole-identity shortcut: "
             "a same-source pole readout is the top coupling to the source pole, "
             "not physical y_t, unless the source pole is proved to be the "

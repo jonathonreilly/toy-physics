@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=116 FAIL=0
+# SUMMARY: PASS=117 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -77,6 +77,7 @@ The certificate consumes the PR-local route certificates for:
 - joint Feynman-Hellmann / scalar-LSZ variance calibration manifest;
 - FH gauge-normalized response route;
 - FH gauge-mass response observable gap;
+- same-source W/Z response certificate gate;
 - same-source sector-overlap identity obstruction;
 - source-pole canonical-Higgs mixing obstruction;
 - Feynman-Hellmann / scalar-LSZ invariant readout theorem;
@@ -209,6 +210,7 @@ the visible shortcut routes:
 | FH gauge-normalized response route | same-source `(dE_top/ds)/(dM_W/ds)` would cancel `kappa_s`, but no W/Z mass-response harness or production certificate exists and the Higgs-identity gate remains open |
 | FH gauge-mass response observable gap | the current production harness is QCD top-only and has no `dM_W/ds` or `dM_Z/ds` path; EW gauge-mass algebra starts after canonical `H` is supplied |
 | same-source W/Z gauge-mass response manifest | concrete production observable and minimum schema are recorded, but the W/Z response harness and identity certificates are absent |
+| same-source W/Z response certificate gate | future W/Z evidence must contain production W/Z mass fits, fitted `dM_W/ds` or `dM_Z/ds`, covariance, and sector-overlap/canonical-Higgs identity certificates; static EW algebra and slope-only schemas are rejected |
 | same-source sector-overlap identity obstruction | a shared source coordinate cancels common rescaling but does not prove `k_top = k_gauge`; the gauge-normalized ratio reads `y_t * k_top/k_gauge` until that identity is derived or directly measured |
 | source-pole canonical-Higgs mixing obstruction | a completed same-source pole readout is a coupling to the source-created scalar pole; it is physical `y_t` only if that pole is proved to be the canonical Higgs radial mode with no orthogonal scalar admixture |
 | no-orthogonal-top-coupling import audit | no-retained-2HDM/no-second-scalar authority is support only; it does not derive LSZ source-pole purity or zero top coupling for an orthogonal response component |
@@ -302,6 +304,13 @@ certificates.  No retained/proposed-retained wording is authorized.
 Latest W/Z response manifest checkpoint: campaign status now includes the
 same-source gauge-mass response manifest and reports `PASS=100 FAIL=0` over
 104 certificates.  No retained/proposed-retained wording is authorized.
+
+Latest same-source W/Z certificate-gate checkpoint: campaign status now
+includes `scripts/frontier_yt_same_source_wz_response_certificate_gate.py` and
+reports `PASS=117 FAIL=0` over 121 certificates.  The future W/Z response
+route has an executable acceptance schema, but current PR #230 has no W/Z
+mass-response certificate; static EW algebra and slope-only outputs remain
+blocked.  No retained/proposed-retained wording is authorized.
 
 Latest reflection-positivity checkpoint: campaign status now includes the
 reflection-positivity LSZ shortcut no-go and reports `PASS=101 FAIL=0` over

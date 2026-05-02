@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 same-source W/Z response certificate gate:
+
+- Added `scripts/frontier_yt_same_source_wz_response_certificate_gate.py`,
+  `docs/YT_SAME_SOURCE_WZ_RESPONSE_CERTIFICATE_GATE_NOTE_2026-05-02.md`, and
+  `outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json`.
+- Result: the future same-source W/Z response route now has an executable
+  acceptance schema.  Static EW algebra is rejected as `dM_W/dh`, not
+  `dM_W/ds`; slope-only W/Z outputs are rejected unless production W/Z mass
+  fits, sector-overlap, and canonical-Higgs identity certificates are present.
+- Retained-route gate is `PASS=91 FAIL=0`; campaign status is
+  `PASS=117 FAIL=0` over 121 certificates.
+- Assumption/import stress is refreshed to `PASS=13 FAIL=0`, explicitly
+  forbidding static EW W/Z algebra as `dM_W/ds` and slope-only W/Z proof input.
+- No same-source W/Z mass-response certificate exists, so no retained or
+  proposed-retained closure is authorized.
+
+Next exact action: implement a real same-source electroweak W/Z mass-response
+harness, derive the sector-overlap/canonical-Higgs identity directly, or pivot
+back to scalar-pole purity / seed-controlled FH/LSZ production.
+
 Latest checkpoint, 2026-05-02 FH/LSZ chunks009-010 processing:
 
 - Background chunks009-010 completed and were processed through the existing

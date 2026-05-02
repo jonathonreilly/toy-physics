@@ -60,6 +60,7 @@ plus source-pole purity cross-correlator gate
 plus source-Higgs cross-correlator import audit
 plus source-Higgs Gram purity gate
 plus FH/LSZ chunks009-010 ready-set processing
+plus same-source W/Z response certificate gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -72,6 +73,22 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+Same-source W/Z response certificate gate:
+
+```text
+actual_current_surface_status: open / same-source WZ response certificate gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_same_source_wz_response_certificate_gate.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The W/Z physical-response bypass now has an executable acceptance schema, but
+the current PR surface has no W/Z mass-response certificate.  Static EW algebra
+is rejected as `dM_W/dh`, not `dM_W/ds`, and slope-only W/Z output is rejected
+without sector-overlap plus canonical-Higgs identity certificates.
 
 FH/LSZ chunks009-010 ready-set processing:
 

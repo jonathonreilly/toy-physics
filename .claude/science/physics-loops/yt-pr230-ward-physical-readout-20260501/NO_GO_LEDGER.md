@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## Same-source W/Z response certificate gate is not passed
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_same_source_wz_response_certificate_gate.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The future W/Z response route now has an executable certificate gate.  Current
+PR #230 does not pass it: no W/Z mass-response certificate exists, static EW
+gauge-mass algebra supplies `dM_W/dh` after canonical `H` is assumed rather
+than `dM_W/ds`, and slope-only W/Z outputs are support-only unless
+sector-overlap and canonical-Higgs identity certificates pass.
+
 ## Ten ready L12 chunks are still not production closure
 
 Runners:

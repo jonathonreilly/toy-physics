@@ -26,7 +26,7 @@ route, matching obstruction, and source-overlap renormalization boundary.
 
 ```text
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
-# SUMMARY: PASS=12 FAIL=0
+# SUMMARY: PASS=13 FAIL=0
 ```
 
 The refreshed `A_min` allows only:
@@ -59,6 +59,11 @@ The stress test explicitly forbids:
 - a source-Higgs cross-correlator `C_sH` as hidden authority; it remains an
   open observable/theorem until a canonical-Higgs source operator and
   cross-correlator implementation are supplied.
+- static EW W/Z algebra as a source-response certificate: `dM_W/dh = g2/2`
+  after canonical `H` is not `dM_W/ds`.
+- slope-only W/Z outputs as proof input unless they come from production W/Z
+  mass fits and are paired with sector-overlap plus canonical-Higgs identity
+  certificates.
 
 ## Consequence
 

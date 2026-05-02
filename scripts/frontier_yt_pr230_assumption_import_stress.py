@@ -62,6 +62,9 @@ def main() -> int:
         "source_higgs_cross_correlator_import": load(
             "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json"
         ),
+        "same_source_wz_response_certificate_gate": load(
+            "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
+        ),
     }
 
     required_terms = [
@@ -76,6 +79,8 @@ def main() -> int:
         "Source contact counterterms",
         "Single finite source-shift radius as a zero-source derivative",
         "Source-Higgs cross-correlator `C_sH`",
+        "Static EW W/Z algebra is not a source-response certificate",
+        "Slope-only W/Z outputs",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -132,6 +137,16 @@ def main() -> int:
         is False,
         certificates["source_higgs_cross_correlator_import"].get("actual_current_surface_status"),
     )
+    report(
+        "static-wz-algebra-not-source-response",
+        "same-source WZ response certificate gate not passed"
+        in str(certificates["same_source_wz_response_certificate_gate"].get("actual_current_surface_status"))
+        and certificates["same_source_wz_response_certificate_gate"].get(
+            "same_source_wz_response_certificate_gate_passed"
+        )
+        is False,
+        certificates["same_source_wz_response_certificate_gate"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -146,7 +161,9 @@ def main() -> int:
             "single finite source-shift radius also does not derive the zero-source "
             "Feynman-Hellmann derivative.  A C_sH source-Higgs cross-correlator "
             "is not hidden in the current harness or EW/Higgs notes; it remains "
-            "an open observable/theorem.  No current route "
+            "an open observable/theorem.  Static EW W/Z algebra is not dM_W/ds, "
+            "and slope-only W/Z outputs need production mass fits plus sector-"
+            "overlap and canonical-Higgs identity certificates.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."

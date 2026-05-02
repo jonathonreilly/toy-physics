@@ -644,3 +644,12 @@ measurement design.  It must not be treated as evidence without a real W/Z
 mass-response harness, correlated production slopes, retained electroweak
 coupling normalization, and same-source sector-overlap / Higgs-pole identity
 certificates.  Observed W/Z masses remain forbidden proof selectors.
+
+2026-05-02 same-source W/Z response certificate gate:
+
+Static EW W/Z algebra is not a source-response certificate.  `dM_W/dh = g2/2`
+is allowed only after canonical `H` has been supplied; it must not be imported
+as `dM_W/ds` for the Cl(3)/Z3 source.  Slope-only W/Z outputs are also
+forbidden as proof input unless they come from production W/Z correlator mass
+fits under the same source and are paired with sector-overlap and
+canonical-Higgs identity certificates.

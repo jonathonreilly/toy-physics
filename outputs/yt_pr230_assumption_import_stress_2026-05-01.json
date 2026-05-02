@@ -6,6 +6,7 @@
     "kinetic_matching": "exact negative boundary / heavy kinetic matching obstruction",
     "momentum_pilot": "bounded-support / momentum pilot scaling",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
+    "same_source_wz_response_certificate_gate": "open / same-source WZ response certificate gate not passed",
     "scalar_ir": "exact negative boundary / scalar ladder IR zero-mode obstruction",
     "scalar_renormalization_condition_overlap": "exact negative boundary / scalar renormalization-condition source-overlap no-go",
     "source_contact_term_scheme": "exact negative boundary / scalar source contact-term scheme boundary",
@@ -13,7 +14,7 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 12,
+  "pass_count": 13,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [
@@ -24,5 +25,5 @@
     "does not use yt_ward_identity as y_t authority",
     "does not set kappa_s to one without scalar LSZ/canonical normalization"
   ],
-  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  Canonical Z_h=1 does not derive the source operator overlap <0|O_s|h>, and source contact-term schemes do not derive the isolated pole residue.  A single finite source-shift radius also does not derive the zero-source Feynman-Hellmann derivative.  A C_sH source-Higgs cross-correlator is not hidden in the current harness or EW/Higgs notes; it remains an open observable/theorem.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
+  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  Canonical Z_h=1 does not derive the source operator overlap <0|O_s|h>, and source contact-term schemes do not derive the isolated pole residue.  A single finite source-shift radius also does not derive the zero-source Feynman-Hellmann derivative.  A C_sH source-Higgs cross-correlator is not hidden in the current harness or EW/Higgs notes; it remains an open observable/theorem.  Static EW W/Z algebra is not dM_W/ds, and slope-only W/Z outputs need production mass fits plus sector-overlap and canonical-Higgs identity certificates.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
 }

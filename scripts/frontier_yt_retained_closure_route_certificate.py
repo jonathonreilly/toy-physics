@@ -109,6 +109,7 @@ def main() -> int:
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
         "fh_gauge_mass_response_manifest": "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json",
+        "same_source_wz_response_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
@@ -574,6 +575,15 @@ def main() -> int:
         in certificates["fh_gauge_mass_response_manifest"].get("actual_current_surface_status", "")
         and certificates["fh_gauge_mass_response_manifest"].get("proposal_allowed") is False
         and certificates["fh_gauge_mass_response_manifest"].get("manifest_is_evidence") is False
+    )
+    same_source_wz_response_certificate_gate_blocks = (
+        "same-source WZ response certificate gate not passed"
+        in certificates["same_source_wz_response_certificate_gate"].get("actual_current_surface_status", "")
+        and certificates["same_source_wz_response_certificate_gate"].get("proposal_allowed") is False
+        and certificates["same_source_wz_response_certificate_gate"].get(
+            "same_source_wz_response_certificate_gate_passed"
+        )
+        is False
     )
     same_source_sector_overlap_identity_blocks = (
         "same-source sector-overlap identity obstruction"
@@ -1054,6 +1064,11 @@ def main() -> int:
         certificates["fh_gauge_mass_response_manifest"].get("actual_current_surface_status", ""),
     )
     report(
+        "same-source-wz-response-certificate-gate-blocks",
+        same_source_wz_response_certificate_gate_blocks,
+        certificates["same_source_wz_response_certificate_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "same-source-sector-overlap-identity-blocks",
         same_source_sector_overlap_identity_blocks,
         certificates["same_source_sector_overlap_identity"].get("actual_current_surface_status", ""),
@@ -1357,7 +1372,10 @@ def main() -> int:
             "same-source W/Z mass slope, but that gauge response observable and "
             "the shared canonical-Higgs identity are absent.  The observable-gap "
             "gate confirms the present production harness is QCD top-only and "
-            "does not emit dM_W/ds or dM_Z/ds.  The same-source sector-overlap "
+            "does not emit dM_W/ds or dM_Z/ds.  The W/Z response certificate "
+            "gate now rejects static EW algebra and any slope-only certificate "
+            "without production W/Z mass fits, sector-overlap, and canonical-"
+            "Higgs identity.  The same-source sector-overlap "
             "identity obstruction further blocks treating a common source label "
             "as proof that the top and gauge responses have equal canonical-Higgs "
             "overlap; without k_top = k_gauge, the gauge-normalized ratio reads "

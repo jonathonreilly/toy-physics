@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=90 FAIL=0
+# SUMMARY: PASS=91 FAIL=0
 ```
 
 The runner verifies:
@@ -73,6 +73,7 @@ The runner verifies:
 | four-mode scalar-LSZ kinematics determine the isolated pole derivative | no |
 | pole-fit postprocessor has combined production input | no |
 | pole-fit mode/noise budget is production evidence | no |
+| same-source W/Z response certificate gate is passed | no |
 | same-source sector-overlap identity is derived | no |
 | source pole is certified as canonical Higgs radial mode | no |
 | source-only pole data prove source-pole purity | no |
@@ -319,7 +320,10 @@ remain open.  A same-source gauge-normalized response ratio could also cancel
 `kappa_s` using a W/Z mass slope, but the W/Z response observable and shared
 Higgs identity certificate are absent.  The gauge-mass observable-gap gate
 confirms that the present production harness is QCD top-only and does not
-produce `dM_W/ds` or `dM_Z/ds`.  The same-source sector-overlap identity
+produce `dM_W/ds` or `dM_Z/ds`.  The W/Z response certificate gate now rejects
+static EW algebra and slope-only W/Z outputs unless production W/Z mass fits,
+sector-overlap, and canonical-Higgs identity certificates are present.  The
+same-source sector-overlap identity
 obstruction also blocks treating a common source coordinate as proof that
 `k_top = k_gauge`; without that theorem or a direct measurement, the
 gauge-normalized ratio reads `y_t * k_top/k_gauge`.  If
@@ -372,6 +376,13 @@ response observable that could cancel `kappa_s`, but it is not evidence.  The
 current harness has top `dE/ds` support only; no W/Z response path or identity
 certificate exists.  The retained-route certificate is refreshed at
 `PASS=74 FAIL=0` and still authorizes no retained/proposed-retained wording.
+
+The same-source W/Z response certificate gate makes the future response route
+executable.  It requires production W/Z correlator mass fits under the same
+source, fitted `dM_W/ds` or `dM_Z/ds`, covariance with the top slope, and
+sector-overlap plus canonical-Higgs identity certificates.  Current static EW
+algebra and slope-only schemas are rejected, so no retained/proposed-retained
+wording is authorized.
 
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive

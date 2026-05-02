@@ -86,6 +86,13 @@ The source-Higgs Gram purity gate gives the `C_sH` route a concrete future
 acceptance test: `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` at the isolated pole.
 Because current `C_sH` and `C_HH` residues are absent, this does not change
 current status, but it lowers ambiguity for any later cross-correlator work.
+The same-source W/Z response certificate gate now does the same for the
+physical-response bypass: future evidence must contain production W/Z mass
+fits and a real `dM_W/ds` or `dM_Z/ds`, plus sector-overlap and canonical-Higgs
+identity certificates.  Static EW algebra and slope-only outputs remain
+blocked, so the live queue is unchanged: implement that harness only if paired
+with identity certificates, otherwise pursue sector-overlap/purity theorem or
+production FH/LSZ processing.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.
