@@ -1,11 +1,23 @@
 # B-L Anomaly-Freedom Theorem With Retained nu_R
 
 **Date:** 2026-04-24
-**Status:** proposed_retained standalone structural theorem on `main`. This note
-replaces the partial linear-only B-L remark in
-`PROTON_LIFETIME_DERIVED_NOTE.md` with the
-full anomaly packet needed to gauge `U(1)_{B-L}` alongside the retained
-Standard Model gauge group.
+**Type:** positive_theorem
+**Claim scope:** the exact rational arithmetic of all six anomaly traces
+`(G1)-(G6)` for `U(1)_{B-L}` on the retained one-generation matter
+content, evaluated via standard SM `B`/`L` charge assignments. The
+**gaugeability conclusion** ("`U(1)_{B-L}` is gauge-anomaly-consistent on
+the retained content") follows from the arithmetic plus the standard
+quantum-consistency criterion. The **upstream supply** of the
+one-generation matter content (including `nu_R`), the doubled-hypercharge
+convention, the anomaly-cancellation-as-quantum-consistency principle,
+and the standard SM `B`/`L` bookkeeping are explicitly **out of scope**
+here and live in separate authority notes (admitted-context to this
+note).
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+The current ledger state is `unaudited` and audit-lane ratification is
+required before any retained-grade status applies.
 
 **Primary runner:** `scripts/frontier_bminusl_anomaly_freedom.py`
 
@@ -189,7 +201,38 @@ TOTAL: PASS=36, FAIL=0
 The runner uses `fractions.Fraction` throughout, so all anomaly equalities are
 exact rational identities rather than floating-point comparisons.
 
-## 8. Cross-References
+## 8. Out of scope (admitted-context to this note)
+
+The following items are explicitly **NOT** load-bearing claims of this
+note. They depend on separate authority rows and enter only as
+admitted-context:
+
+1. **One-generation matter content** including `nu_R`. Supplied by
+   [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md).
+   This note does not derive the matter content; it consumes the
+   spectrum as an input.
+
+2. **Hypercharge convention and `Y(nu_R) = 0`.** Supplied by
+   [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md).
+   The doubled-hypercharge convention `Q = T_3 + Y/2` is admitted-context.
+
+3. **Anomaly-cancellation-as-quantum-consistency principle.** Supplied by
+   [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md).
+   The general principle that gauge-anomaly traces must vanish for the
+   gauged group is admitted external authority.
+
+4. **Standard SM `B` and `L` bookkeeping.** Quark `B = 1/3`, lepton
+   `L = 1` is the standard SM assignment, admitted as conventional
+   bookkeeping. This note does not derive `B` and `L` from any
+   underlying axiom.
+
+The **in-scope content** of this note is the exact rational anomaly
+arithmetic itself: the six trace evaluations `Tr[B-L]`, `Tr[(B-L)^3]`,
+`Tr[F_a^2 (B-L)]`, etc., conditional on the matter content and charge
+conventions above. The gaugeability conclusion follows from the
+arithmetic plus the admitted quantum-consistency principle.
+
+## 9. Cross-References
 
 - [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
 - [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
