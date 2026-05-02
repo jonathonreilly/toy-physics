@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:36:55.742501+00:00
+**Generated:** 2026-05-02T18:38:49.192955+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 

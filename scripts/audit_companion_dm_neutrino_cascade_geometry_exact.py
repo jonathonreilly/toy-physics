@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Pattern B audit-companion runner for
 `dm_neutrino_cascade_geometry_note_2026-04-14`
-(claim_type=positive_theorem, audit_status=audited_conditional, td=153,
-load_bearing_step_class=A).
+(claim_type=positive_theorem, load_bearing_step_class=A).
 
 The parent's load-bearing step is the exact operator-algebra identity on
 the C^8 taste cube. With Gamma_1 = sigma_x (x) I_2 (x) I_2 acting on the
@@ -30,7 +29,7 @@ companion verifies them at sympy `Rational` exact precision.
 Companion role: not a new claim row; not a new source note. Provides
 audit-friendly evidence that the parent's load-bearing class-(A)
 operator algebra holds at exact precision. Does not modify the parent's
-audit_status; that decision belongs to the audit lane.
+status; that decision belongs to the independent audit lane.
 """
 
 from pathlib import Path
@@ -200,8 +199,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('dm_neutrino_cascade_geometry_note_2026-04-14', {})
 print(f"\n  dm_neutrino_cascade_geometry_note_2026-04-14 current ledger state:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
-print(f"    effective_status: {parent.get('effective_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 
@@ -229,11 +226,9 @@ print("""
     (A) — algebraic identity / linear algebra on the explicit C^8 Clifford
     realization. No external observed/fitted/literature input.
 
-  This audit-companion does NOT introduce a new claim row, a new source
-  note, or any modification of the parent's audit_status. The parent
-  remains audited_conditional pending audit-lane review of the
-  C^8-to-C^16 chiral embedding, the operator-chain identification of the
-  physical Dirac Yukawa, and the neutrino-sector base normalization.
+  This companion does NOT introduce a new claim row, a new source note,
+  or any modification of the parent row's status. Independent audit
+  remains responsible for any later parent-row disposition.
 """)
 
 

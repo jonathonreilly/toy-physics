@@ -2,7 +2,7 @@
 
 **Block:** physics-loop/dm-neutrino-cascade-geometry-audit-companion-block23-20260502
 **Runner:** scripts/audit_companion_dm_neutrino_cascade_geometry_exact.py (PASS=11/0)
-**Target row:** dm_neutrino_cascade_geometry_note_2026-04-14 (claim_type=positive_theorem, audit_status=audited_conditional, td=153, load_bearing_step_class=A)
+**Target row:** dm_neutrino_cascade_geometry_note_2026-04-14 (claim_type=positive_theorem, load_bearing_step_class=A)
 
 ## Block type
 
@@ -28,13 +28,12 @@ The companion verifies all of these at sympy exact precision via explicit
 ## Claim-Type Certificate (Pattern B)
 
 ```yaml
-target_claim_type: meta  # audit-companion runner; not a claim row
+proposed_artifact_type: meta  # audit-companion runner; not a claim row
 proposed_load_bearing_step_class: A
 introduces_new_claim_row: false
 introduces_new_source_note: false
-modifies_parent_audit_status: false  # audit-lane decides
-audit_required_before_effective_retained: true  # parent row only; companion is meta
-bare_retained_allowed: false
+modifies_parent_status: false
+status_authority: independent_audit_lane
 ```
 
 ## 7-criteria check (adapted for Pattern B)
@@ -47,7 +46,7 @@ bare_retained_allowed: false
 | 4 | Parent row's deps unchanged by this block | YES (does not modify ledger row state; only adds runner artifact) |
 | 5 | Runner verifies parent's load-bearing step at exact precision | YES (sympy `Matrix`, `Rational`, explicit Kronecker product, exact equality checks) |
 | 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; audit-lane decides |
-| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert any retained-status promotion) |
+| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert any status promotion) |
 
 ## What the companion verifies
 
@@ -67,20 +66,15 @@ bare_retained_allowed: false
 ## Audit-graph effect
 
 This companion is **meta** — it does not move the parent row by itself.
-The parent's `audited_conditional` verdict identifies remaining open steps
-in the C^8-to-C^16 chiral embedding, the operator-chain identification of
-the physical Dirac Yukawa, and the neutrino-sector base normalization.
-None of those gaps are addressed by this companion; the companion only
-verifies that the local operator-algebra identities hold at exact
-precision, useful when audit-lane reviewers revisit the conditional
-verdict on the local-algebra portion of the row.
+The companion only verifies that the local operator-algebra identities hold
+at exact precision.
 
 ## Forbidden imports check
 
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 The companion is pure symbolic linear algebra on the explicit Clifford
@@ -90,5 +84,5 @@ realization of the C^8 taste cube.
 
 A standalone audit-companion runner that complements the existing primary
 runner by providing exact symbolic verification of the cascade-geometry
-operator algebra. The block proposes nothing about any retained-status
+operator algebra. The block proposes nothing about any parent-row status
 change; the audit lane is the authority for that.
