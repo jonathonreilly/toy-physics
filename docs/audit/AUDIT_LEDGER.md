@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:21:49.878044+00:00
+**Generated:** 2026-05-02T00:23:08.598371+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 339 |
+| `audited_clean` | 340 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 465 |
+| `unaudited` | 464 |
 
 | criticality | count |
 |---|---:|
@@ -407,6 +407,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_new_family_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_new_family_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_support_recovery_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_generated_wavefield_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14688,6 +14689,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The kNN-floor connectivity tweak broadens detector support and moves the aggregated centroid sign from AWAY to TOWARD, but the detector distribution remains localized enough that this is only partial recovery.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the note's zero-source checks, detector support table, and sign counts for the declared compact generated family and kNN-floor tweak. The note keeps the claim bounded and does not promote it to generated-family transfer closure.
 - **rationale:** The current runner output matches all frozen values: baseline shift -4.357340e-02 with N_eff 2.77, support fraction 0.311, peak share 0.234, and 1/4 TOWARD; kNN floor shift +3.850909e-01 with N_eff 6.00, support fraction 0.458, peak share 0.439, and 3/4 TOWARD. The note's limitation is explicit: support and sign improve, but localization remains strong. Residual risk is limited to the single source strength and compact generated-family tweak under test.
+- **auditor confidence:** high
+
+### `source_resolved_generated_wavefield_bridge_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_WAVEFIELD_BRIDGE_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_WAVEFIELD_BRIDGE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The wavefield update is distinguishable from static and causal smoothing, but on the compact generated family it remains a bridge result rather than stable weak-field transfer or closure.  _(class `C`)_
+- **chain closes:** True — The artifact-chain runner reproduces every frozen summary row and wavefield-vs-static gain in the note. The source note explicitly keeps the result bounded and does not claim generated-family closure.
+- **rationale:** The current script output matches the note: zero-source reduction is 0 across rows, baseline/static is 4/16 with F~M=0.199 and N_eff=2.69, baseline/causal is 3/16 with F~M=-0.308 and N_eff=2.50, baseline/wavefield is 0/16 with F~M=0.655 and N_eff=2.53, tweak/static is 9/16 with F~M=-0.316 and N_eff=5.31, tweak/causal is 9/16 with F~M=0.444 and N_eff=5.67, and tweak/wavefield is 6/16 with F~M=0.098 and N_eff=5.14. The wavefield-vs-static deltas also match and are negative for aggregate centroid gain. Residual risk is that the ledger runner_path is unset even though the note's artifact chain names the script; the audit result is clean for the bounded claim as written, not for metadata completeness or closure.
 - **auditor confidence:** high
 
 ### `source_resolved_propagating_green_pocket_note`
