@@ -826,3 +826,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 Contact-renormalized source curvature does not fix the isolated same-source
 pole residue.  No retained/proposed-retained wording is authorized.
+
+FH/LSZ pole-fit postprocessor scaffold checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ scalar-pole fit postprocessor scaffold
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_pole_fit_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=46 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=72 FAIL=0
+```
+
+The postprocessor is a future acceptance path only.  No combined production
+input, isolated scalar pole, or `dGamma_ss/dp^2` certificate is present, so no
+retained/proposed-retained wording is authorized.

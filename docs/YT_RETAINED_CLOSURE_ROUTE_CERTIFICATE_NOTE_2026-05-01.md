@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=45 FAIL=0
+# SUMMARY: PASS=46 FAIL=0
 ```
 
 The runner verifies:
@@ -60,6 +60,7 @@ The runner verifies:
 | chunked L12 production manifest is complete production evidence | no |
 | chunk-combiner gate has complete ready L12 chunks | no |
 | four-mode scalar-LSZ kinematics determine the isolated pole derivative | no |
+| pole-fit postprocessor has combined production input | no |
 | pole-fit mode/noise budget is production evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
@@ -105,6 +106,9 @@ The scalar-pole kinematics gate adds that the current four scalar modes contain
 only one nonzero `p_hat^2` shell.  Completed four-mode chunks are therefore
 finite-difference support, not the isolated-pole `dGamma_ss/dp^2` needed for
 retained closure.
+The pole-fit postprocessor scaffold now gives a concrete future fit path after
+chunk combination, but the combined production input is absent/nonready, so it
+is not evidence.
 The mode/noise budget gives a constructive next launch class: eight scalar
 modes with eight noises keep the current foreground L12 chunk estimate, but
 that is planning only and requires a variance gate before use.

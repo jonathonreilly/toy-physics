@@ -454,6 +454,11 @@ curvature-renormalization shortcut.  Source contact terms can enforce the same
 `C_ss(0)` and `C_ss'(0)` convention for different pole residues, so
 contact-normalized curvature is not a source-to-Higgs normalization.
 
+The FH/LSZ scalar-pole fit postprocessor scaffold now gives future combined
+production output a concrete fit path.  It requires zero plus at least three
+positive momentum shells and an isolated negative-`p_hat^2` pole before using
+`dGamma_ss/dp^2`; the current combined input is absent/nonready.
+
 Next exact action: keep chunk001 running under the non-evidence combiner gate.
 If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
 If it remains running, continue analytic scalar denominator/residue work or

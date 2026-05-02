@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-74-scalar-source-contact-term-scheme-boundary
-blocks_completed: 88
-active_route: "Scalar source contact-term scheme boundary"
-active_hard_residual: "Chunk001 is running as non-evidence; contact-normalized C_ss(0) and C_ss'(0) conventions do not fix the isolated same-source pole residue"
+current_phase: campaign-rerun-block-75-fh-lsz-pole-fit-postprocessor-scaffold
+blocks_completed: 89
+active_route: "FH/LSZ scalar-pole fit postprocessor scaffold"
+active_hard_residual: "Chunk001 is running as non-evidence; a pole-fit postprocessor now exists but combined production input is absent/nonready"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -304,6 +304,9 @@ files_touched:
   - "scripts/frontier_yt_scalar_source_contact_term_scheme_boundary.py"
   - "docs/YT_SCALAR_SOURCE_CONTACT_TERM_SCHEME_BOUNDARY_NOTE_2026-05-01.md"
   - "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json"
+  - "scripts/frontier_yt_fh_lsz_pole_fit_postprocessor.py"
+  - "docs/YT_FH_LSZ_POLE_FIT_POSTPROCESSOR_NOTE_2026-05-01.md"
+  - "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json"
   - "scripts/frontier_yt_retained_closure_route_certificate.py"
   - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
   - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
@@ -416,6 +419,7 @@ claim_state_movement:
   - "proved a gauge-VEV source-overlap no-go: canonical electroweak v and gauge-boson masses fix an already identified Higgs metric, not h=kappa_s s for the substrate source"
   - "proved a scalar renormalization-condition source-overlap no-go: canonical Z_h=1 fixes the Higgs field residue, not the source operator matrix element <0|O_s|h>; same-source pole residue remains required"
   - "proved a scalar source contact-term scheme boundary: local source contact terms can fix low-q C_ss(0) and C_ss'(0) conventions while leaving the isolated pole residue and kappa_s different"
+  - "added an FH/LSZ scalar-pole fit postprocessor scaffold: future combined same-source Gamma_ss(q) data must have zero plus at least three positive shells and an isolated negative-p_hat^2 pole before dGamma/dp^2 can be used"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

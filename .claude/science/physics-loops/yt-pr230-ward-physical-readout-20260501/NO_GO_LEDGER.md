@@ -1091,6 +1091,18 @@ Local source contact terms can enforce identical low-momentum conventions
 contact-renormalized source-curvature convention cannot replace measuring or
 deriving `Res C_ss` for the source used in `dE/ds`.
 
+FH/LSZ pole-fit postprocessor scaffold is not evidence:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_pole_fit_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+```
+
+The scaffold defines the future fit path for combined same-source production
+data, but the combined L12 input is absent/nonready.  A runner that knows how
+to fit a pole does not itself supply production `Gamma_ss(q)`, an isolated
+pole, or `dGamma_ss/dp^2`.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

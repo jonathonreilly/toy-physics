@@ -720,3 +720,19 @@ Adds a scalar source contact-term scheme boundary:
 - still no retained/proposed-retained closure: source contact-term schemes do
   not replace scalar LSZ residue or same-source production pole data.
 ```
+
+Latest FH/LSZ pole-fit postprocessor checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ scalar-pole fit postprocessor scaffold:
+- defines the future combined-output fit path for same-source Gamma_ss(q);
+- requires zero plus at least three positive p_hat^2 shells and an isolated
+  negative-p_hat^2 pole before dGamma_ss/dp^2 can be used;
+- current combined production input is absent/nonready, so this is bounded
+  support only;
+- runner passes `PASS=5 FAIL=0`; retained-route gate reports
+  `PASS=46 FAIL=0`; campaign status consumes 76 certificates and reports
+  `PASS=72 FAIL=0`;
+- still no retained/proposed-retained closure: the scaffold is not production
+  data, pole isolation, or a scalar LSZ theorem.
+```

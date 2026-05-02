@@ -82,6 +82,7 @@ def main() -> int:
         "fh_lsz_chunked_production_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
         "fh_lsz_chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
         "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
+        "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -302,6 +303,12 @@ def main() -> int:
         in certificates["fh_lsz_pole_fit_kinematics"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_pole_fit_kinematics"].get("proposal_allowed") is False
     )
+    pole_fit_postprocessor_not_evidence = (
+        "pole fit postprocessor scaffold"
+        in certificates["fh_lsz_pole_fit_postprocessor"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_pole_fit_postprocessor"].get("proposal_allowed") is False
+        and certificates["fh_lsz_pole_fit_postprocessor"].get("readiness", {}).get("fit_ready") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -508,6 +515,11 @@ def main() -> int:
         certificates["fh_lsz_pole_fit_kinematics"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-pole-fit-postprocessor-not-evidence",
+        pole_fit_postprocessor_not_evidence,
+        certificates["fh_lsz_pole_fit_postprocessor"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -627,6 +639,8 @@ def main() -> int:
             "The scalar pole-fit kinematics gate also shows the current four "
             "modes give only one nonzero p_hat^2 shell, so a completed chunk "
             "set would still need richer pole-fit kinematics or a theorem.  "
+            "A pole-fit postprocessor scaffold now exists, but it has no "
+            "combined production input and is not evidence.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "

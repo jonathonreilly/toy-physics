@@ -1,0 +1,32 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ scalar-pole fit postprocessor scaffold",
+  "exact_next_action": "After chunk outputs are combined, rerun this postprocessor on the combined same-source Gamma_ss(q) rows; until then continue analytic LSZ work or production scheduling.",
+  "fail_count": 0,
+  "fit_result_if_ready": {},
+  "input": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json",
+  "parent_certificates": {
+    "chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+    "kinematics_gate": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"
+  },
+  "pass_count": 5,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No combined production same-source pole-fit data are present.",
+  "readiness": {
+    "distinct_shells": 0,
+    "fit_ready": false,
+    "has_three_positive_shells": false,
+    "has_zero_shell": false,
+    "input_exists": false,
+    "isolated_negative_pole_ready": false,
+    "mode_rows": 0
+  },
+  "strict_non_claims": [
+    "not production evidence until input exists and passes combiner/postprocess gates",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0 as proof input"
+  ],
+  "verdict": "The runner defines a concrete postprocess path for future combined same-source FH/LSZ production output: require a zero mode plus at least three positive momentum shells, fit Gamma_ss versus p_hat^2, and use only an isolated negative-p_hat^2 pole with finite slope as a candidate dGamma_ss/dp^2 input.  The current combined production input is absent/nonready, so no pole derivative or retained proposal is authorized."
+}

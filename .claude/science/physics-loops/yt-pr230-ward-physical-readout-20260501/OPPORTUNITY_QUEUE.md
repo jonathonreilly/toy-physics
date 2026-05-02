@@ -128,7 +128,9 @@ probability.
   x8/x16 calibration chunk has been specified; the diagnostic smokes
   themselves remain reduced-scope, and the calibration outputs are absent.  The same-source
   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
-  pole/derivative control, not setting `kappa_s`.
+  pole/derivative control, not setting `kappa_s`.  The pole-fit postprocessor
+  scaffold now defines the future fit path after chunk combination, but the
+  combined production input is absent/nonready.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the
