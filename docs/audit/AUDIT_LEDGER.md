@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:25:48.129972+00:00
+**Generated:** 2026-05-02T22:31:40.302296+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 539 |
+| unaudited | 538 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 643 |
+| ~~audited_conditional~~ | 644 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 386 |
-| `audited_conditional` | 643 |
+| `audited_conditional` | 644 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 575 |
+| `unaudited` | 574 |
 
 | claim_type | count |
 |---|---:|
@@ -523,6 +523,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audited_symmetry_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1880,6 +1881,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `ASSUMPTION_DERIVATION_LEDGER.md`
   - `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
   - `AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`
+- **auditor confidence:** high
+
+### `axiom_first_cpt_theorem_stretch_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Runner-backed pure-staggered fermion-sector CPT identities on canonical A_min finite Z^3 blocks: Theta_CPT^2 = id, Theta_CPT M Theta_CPT^-1 = M^*, epsilon-Hermiticity, and det(M) real; excludes full SU(3) Wilson-plaquette gauge-sector CPT invariance, full S_F+S_G action invariance, partition-function symmetry, H_phys lift, and downstream CPT-even discharge.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-cpt-stretch-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The extension from the checked fermion-sector CPT identities to the full canonical A_min action requires an explicit SU(3) Wilson-link/plaquette CPT operator-level lift, which the note says is asserted by inspection and deferred.  _(class `B`)_
+- **chain closes:** False — The runner supports the bounded pure-staggered fermion-sector identities, but the stated theorem also claims full S_F+S_G invariance and partition/observable consequences. Those depend on the deferred SU(3) Wilson-plaquette representation-level CPT identity, so the full chain does not close.
+- **rationale:** Issue: the fermion-sector identities close on the bounded runner surface, but the full-action CPT theorem imports a deferred SU(3) Wilson-plaquette operator lift and prior physical-Hilbert/partition-function consequences. Why this blocks: the ledger cannot retain the broader canonical action invariance or CPT-even Observable Principle discharge from a runner that explicitly excludes the gauge-sector algebraic lift. Repair target: construct the CPT action on SU(3) Wilson links/plaquettes and tie it to S_G, Z, H_phys, and CP-odd observables. Claim boundary until fixed: pure-staggered finite-block fermion-sector CPT identities are runner-backed, while full canonical action CPT remains conditional.
+- **open / conditional deps cited:**
+  - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
 - **auditor confidence:** high
 
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
