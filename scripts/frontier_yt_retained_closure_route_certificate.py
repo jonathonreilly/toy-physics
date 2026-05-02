@@ -82,6 +82,7 @@ def main() -> int:
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
+        "fh_lsz_variance_calibration_manifest": "outputs/yt_fh_lsz_variance_calibration_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
     }
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
@@ -299,6 +300,11 @@ def main() -> int:
         in certificates["fh_lsz_noise_subsample_diagnostics"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_noise_subsample_diagnostics"].get("proposal_allowed") is False
     )
+    variance_calibration_manifest_not_evidence = (
+        "variance calibration manifest"
+        in certificates["fh_lsz_variance_calibration_manifest"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_variance_calibration_manifest"].get("proposal_allowed") is False
+    )
     joint_resource_multiday = (
         float(certificates["joint_resource_projection"].get("projection", {}).get("joint_mass_scaled_hours", 0.0)) > 1000.0
         and certificates["joint_resource_projection"].get("proposal_allowed") is False
@@ -484,6 +490,11 @@ def main() -> int:
         certificates["fh_lsz_noise_subsample_diagnostics"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-variance-calibration-manifest-not-evidence",
+        variance_calibration_manifest_not_evidence,
+        certificates["fh_lsz_variance_calibration_manifest"].get("actual_current_surface_status", ""),
+    )
+    report(
         "joint-fh-lsz-resource-is-multiday",
         joint_resource_multiday,
         f"hours={certificates['joint_resource_projection'].get('projection', {}).get('joint_mass_scaled_hours')}",
@@ -592,7 +603,9 @@ def main() -> int:
             "eight-mode/x8 calibration.  The harness now emits "
             "noise-subsample stability diagnostics for future paired x8/x16 "
             "calibrations, but the current diagnostics are reduced-scope "
-            "instrumentation support only.  "
+            "instrumentation support only.  A paired x8/x16 calibration "
+            "manifest now exists, but it is still launch planning rather than "
+            "completed same-source production variance evidence.  "
             "The actual interacting "
             "scalar pole derivative theorem and production evidence remain open.  "
             "These cannot be assumed."

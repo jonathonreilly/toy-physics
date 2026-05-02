@@ -70,6 +70,7 @@ The certificate consumes the PR-local route certificates for:
 - joint Feynman-Hellmann / scalar-LSZ pole-fit mode/noise budget;
 - joint Feynman-Hellmann / scalar-LSZ eight-mode noise variance gate;
 - joint Feynman-Hellmann / scalar-LSZ noise-subsample diagnostics harness;
+- joint Feynman-Hellmann / scalar-LSZ variance calibration manifest;
 - Feynman-Hellmann / scalar-LSZ invariant readout theorem;
 - scalar pole determinant gate;
 - scalar ladder eigen-derivative gate;
@@ -149,6 +150,7 @@ the visible shortcut routes:
 | joint Feynman-Hellmann / scalar-LSZ pole-fit mode/noise budget | eight modes with eight noises fit the current L12 chunk estimate and give pole-fit kinematics, but this is planning only until a variance gate and production data exist |
 | joint Feynman-Hellmann / scalar-LSZ eight-mode noise variance gate | x8 lowers solve cost but raises stochastic stderr by `sqrt(2)` versus x16; current reduced smoke and chunk001 surfaces do not provide same-source production variance calibration |
 | joint Feynman-Hellmann / scalar-LSZ noise-subsample diagnostics harness | scalar two-point outputs now emit split-noise stability diagnostics needed by future x8/x16 calibration, but the current smokes are reduced-scope instrumentation support only |
+| joint Feynman-Hellmann / scalar-LSZ variance calibration manifest | paired x8/x16 L12 commands now match seed, source, modes, and run controls, but no calibration output has completed |
 | Feynman-Hellmann / scalar-LSZ invariant readout | exact formula avoids `kappa_s = 1` shortcut, but still needs same-source production pole data |
 | scalar pole determinant gate | exact denominator condition identifies `K(x)` and `K'(pole)` as load-bearing open inputs |
 | scalar ladder eigen-derivative gate | finite `lambda_max=1` crossing is not enough; `d lambda/dp^2` and momentum-dependent kernel remain open |
@@ -180,7 +182,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
-| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, postprocess-gate block, checkpoint-granularity block, chunked-manifest block, chunk-combiner gate, pole-fit kinematics gate, pole-fit mode/noise budget, eight-mode noise variance gate, and noise-subsample diagnostics harness; still no proposed-retained authorization |
+| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, residue-envelope, Ward-kernel, zero-mode limit-order, zero-mode import-audit, flat-toron obstruction/washout, color-singlet zero-mode/finite-q IR support, zero-mode-removed ladder pole search, taste-corner obstruction/import audit, taste-singlet normalization boundary, scalar taste-projector normalization attempt, unit-projector pole-threshold obstruction, scalar-kernel enhancement import audit, fitted-kernel selector no-go, manifest block, postprocess-gate block, checkpoint-granularity block, chunked-manifest block, chunk-combiner gate, pole-fit kinematics gate, pole-fit mode/noise budget, eight-mode noise variance gate, noise-subsample diagnostics harness, and variance calibration manifest; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

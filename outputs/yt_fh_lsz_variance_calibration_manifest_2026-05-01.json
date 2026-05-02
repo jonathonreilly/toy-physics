@@ -1,0 +1,77 @@
+{
+  "acceptance_requirements": [
+    "both x8 and x16 calibration outputs must complete as production phase",
+    "both must expose metadata.run_control matching this manifest",
+    "both must expose noise_subsample_stability for each scalar-LSZ mode",
+    "compare same-mode C_ss(q), Gamma_ss(q), and pole-derivative stability before accepting x8",
+    "do not use either calibration as physical y_t evidence without the retained gates"
+  ],
+  "actual_current_surface_status": "bounded-support / FH-LSZ variance calibration manifest",
+  "calibration_policy": {
+    "allowed_differences": [
+      "scalar_two_point_noises",
+      "output path",
+      "production_output_dir"
+    ],
+    "matched_controls": [
+      "volume",
+      "masses",
+      "source shifts",
+      "scalar-LSZ modes",
+      "seed",
+      "thermalization sweeps",
+      "measurement count",
+      "measurement separation"
+    ],
+    "purpose": "paired x8/x16 scalar-LSZ variance calibration",
+    "same_gauge_stream_assumption": "same seed and same gauge-update controls are required so the gauge stream is matched; completed certificates must still record run_control and pass the combiner/postprocess gates"
+  },
+  "commands": [
+    {
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.75 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0' --scalar-two-point-noises 8 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_variance_calibration/L12_T24_x8 --resume --seed 2026051801 --output outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x8_2026-05-01.json",
+      "label": "x8",
+      "masses": "0.75",
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "output": "outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x8_2026-05-01.json",
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_variance_calibration/L12_T24_x8",
+      "scalar_source_shifts": "-0.01,0.0,0.01",
+      "scalar_two_point_modes": "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+      "scalar_two_point_noises": 8,
+      "seed": 2026051801,
+      "thermalization_sweeps": 1000,
+      "volume": "12x24"
+    },
+    {
+      "command": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.75 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_variance_calibration/L12_T24_x16 --resume --seed 2026051801 --output outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x16_2026-05-01.json",
+      "label": "x16",
+      "masses": "0.75",
+      "measurement_separation_sweeps": 20,
+      "measurement_sweeps": 16,
+      "output": "outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x16_2026-05-01.json",
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_variance_calibration/L12_T24_x16",
+      "scalar_source_shifts": "-0.01,0.0,0.01",
+      "scalar_two_point_modes": "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+      "scalar_two_point_noises": 16,
+      "seed": 2026051801,
+      "thermalization_sweeps": 1000,
+      "volume": "12x24"
+    }
+  ],
+  "fail_count": 0,
+  "parent_certificates": {
+    "mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
+    "noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
+    "variance_gate": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A calibration launch manifest is not completed same-source production data.",
+  "strict_non_claims": [
+    "not production evidence",
+    "not a kappa_s derivation",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "A paired L12 x8/x16 variance calibration can now be launched with matched volume, mass, source shifts, eight scalar-LSZ modes, seed, thermalization, and measurement schedule, while using distinct artifact directories and outputs.  This is a manifest only.  It does not supply production variance evidence, does not pass the eight-mode variance gate, and does not derive scalar LSZ normalization."
+}

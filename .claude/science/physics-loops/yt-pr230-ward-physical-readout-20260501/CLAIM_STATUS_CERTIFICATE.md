@@ -744,3 +744,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 The harness diagnostic fields are bounded instrumentation support for a future
 calibration.  They authorize no retained/proposed-retained wording.
+
+FH/LSZ variance calibration manifest checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ variance calibration manifest
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_variance_calibration_manifest.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=42 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=68 FAIL=0
+```
+
+The paired x8/x16 commands are launch planning only.  They authorize no
+retained/proposed-retained wording until completed production outputs pass the
+variance, pole, FV/IR, and retained-proposal gates.

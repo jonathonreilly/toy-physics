@@ -113,6 +113,8 @@ eight-mode/x8 calibration.
 The harness now emits noise-subsample stability diagnostics needed by a future
 paired x8/x16 calibration, but the current diagnostic smokes remain
 reduced-scope instrumentation support only.
+The paired x8/x16 variance calibration manifest now fixes matched launch
+controls, but no completed calibration output exists.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

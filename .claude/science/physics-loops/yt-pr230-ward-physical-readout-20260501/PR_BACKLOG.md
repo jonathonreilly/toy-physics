@@ -657,3 +657,18 @@ Adds scalar-LSZ noise-subsample diagnostics to the production harness:
 - still no retained/proposed-retained closure: diagnostics are future
   calibration plumbing, not production pole data or scalar LSZ normalization.
 ```
+
+Latest FH/LSZ variance calibration manifest checkpoint text for PR #230:
+
+```text
+Adds a paired x8/x16 FH/LSZ variance calibration manifest:
+- emits exact L12 commands with matched mass, source shifts, eight scalar-LSZ
+  modes, seed, therm/measurement schedule, and separate artifact dirs;
+- x8 and x16 differ only by scalar-LSZ noise count and output paths;
+- manifest validator passes `PASS=9 FAIL=0`; retained-route gate reports
+  `PASS=42 FAIL=0`; campaign status consumes 72 certificates and reports
+  `PASS=68 FAIL=0`;
+- still no retained/proposed-retained closure: this is launch planning only;
+  no completed calibration, pole derivative, FV/IR control, or retained gate
+  exists.
+```

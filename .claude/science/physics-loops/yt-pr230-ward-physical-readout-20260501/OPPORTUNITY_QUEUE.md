@@ -125,8 +125,8 @@ probability.
   gate now rejects current x8 use as evidence because the reduced smoke is not
   a same-source production calibration and chunk001 is absent or four-mode/x16.
   The harness now emits the required noise-subsample diagnostics, so a paired
-  x8/x16 calibration chunk can be specified next; the diagnostic smokes
-  themselves remain reduced-scope.  The same-source
+  x8/x16 calibration chunk has been specified; the diagnostic smokes
+  themselves remain reduced-scope, and the calibration outputs are absent.  The same-source
   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
   pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic

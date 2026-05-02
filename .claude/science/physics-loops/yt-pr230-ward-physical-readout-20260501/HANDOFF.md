@@ -433,9 +433,12 @@ The production harness now emits `noise_subsample_stability` diagnostics in
 the scalar-LSZ analysis and each mode row.  The scalar-only and joint smokes
 were rerun to validate the field shape.  This is instrumentation support for a
 future paired x8/x16 calibration, not a production variance result.
+The paired variance calibration manifest now gives exact x8 and x16 L12
+commands with matched seed, source shifts, eight scalar-LSZ modes, and separate
+artifact directories.  This is still launch planning; no calibration output is
+present.
 
 Next exact action: keep chunk001 running under the non-evidence combiner gate.
 If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
-If it remains running, either design a same-source x8/x16 calibration chunk
-using the new diagnostics or pivot back to analytic scalar denominator and
-residue work.
+If it remains running, either run/schedule the paired x8/x16 calibration or
+pivot back to analytic scalar denominator and residue work.

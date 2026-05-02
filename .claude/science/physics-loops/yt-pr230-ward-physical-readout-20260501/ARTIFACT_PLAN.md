@@ -361,7 +361,9 @@ Next artifact:
   phase/modes/noises/statistics and the foreground chunk is absent or
   four-mode/x16, not an eight-mode/x8 calibration; the production harness now
   emits noise-subsample diagnostics needed by future paired x8/x16 calibration,
-  but the rerun smokes remain reduced-scope instrumentation support
+  but the rerun smokes remain reduced-scope instrumentation support; the
+  paired calibration manifest fixes matched x8/x16 commands but no calibration
+  output is present
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

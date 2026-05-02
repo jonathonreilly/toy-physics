@@ -1041,6 +1041,17 @@ are reduced-scope two-mode/two-noise instrumentation runs.  They do not pass
 the x8 variance gate and cannot be used as production evidence or scalar LSZ
 normalization.
 
+FH/LSZ paired variance calibration manifest is not evidence:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_variance_calibration_manifest.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The x8/x16 command pair fixes matched controls for a future calibration, but
+no calibration output is present.  A manifest cannot pass the variance gate or
+replace production pole data.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

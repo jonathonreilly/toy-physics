@@ -90,6 +90,9 @@ def main() -> int:
         "fh_lsz_noise_subsample_diagnostics": load(
             "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json"
         ),
+        "fh_lsz_variance_calibration_manifest": load(
+            "outputs/yt_fh_lsz_variance_calibration_manifest_2026-05-01.json"
+        ),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -333,6 +336,12 @@ def main() -> int:
         "noise-subsample diagnostics" in str(statuses["fh_lsz_noise_subsample_diagnostics"])
         or "bounded-support" in str(statuses["fh_lsz_noise_subsample_diagnostics"]),
         statuses["fh_lsz_noise_subsample_diagnostics"],
+    )
+    report(
+        "fh-lsz-variance-calibration-manifest-not-evidence",
+        "variance calibration manifest" in str(statuses["fh_lsz_variance_calibration_manifest"])
+        or "bounded-support" in str(statuses["fh_lsz_variance_calibration_manifest"]),
+        statuses["fh_lsz_variance_calibration_manifest"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
@@ -614,7 +623,8 @@ def main() -> int:
             "calibration.  The harness now emits noise-subsample stability "
             "diagnostics for future paired x8/x16 calibrations, but the "
             "current diagnostic smokes are still reduced-scope instrumentation "
-            "support only.  "
+            "support only.  A paired x8/x16 calibration manifest now defines "
+            "matched commands, but no completed calibration output exists.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

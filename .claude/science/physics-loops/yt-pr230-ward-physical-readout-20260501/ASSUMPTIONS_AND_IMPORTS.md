@@ -495,6 +495,9 @@ inflation cannot be waived without a measured calibration or theorem.
 The new `noise_subsample_stability` fields are diagnostics only.  They may
 support a future paired production calibration, but reduced smoke diagnostics
 are still forbidden as proof input for physical `y_t`.
+The paired x8/x16 calibration manifest is also not an assumption license: only
+completed production-phase calibration outputs with matching run-control
+metadata can test the lower-noise route.
 
 Positive-closure candidates left after the assumption exercise:
 
