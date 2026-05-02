@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:41:13.822550+00:00
+**Generated:** 2026-05-02T00:42:18.473759+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 348 |
+| `audited_clean` | 349 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 452 |
+| `unaudited` | 451 |
 
 | criticality | count |
 |---|---:|
@@ -416,6 +416,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_support_localization_split_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `spectral_closure_2026-04-09` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `staggered_dag_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -15085,6 +15086,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `cycle_force_gap_now_9.624e-01_not_8.767e-01`
   - `layered_force_gap_now_8.822e-01_not_8.759e-01`
   - `runner_has_no_assertions_for_exact_diagnostics`
+- **auditor confidence:** high
+
+### `staggered_dag_note_2026-04-10`
+
+- **Note:** [`STAGGERED_DAG_NOTE_2026-04-10.md`](../../docs/STAGGERED_DAG_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The staggered force-first lane is not confined to periodic cubic lattices; it survives a narrow layered acyclic template with forward-depth bias, machine-clean norm/Born, and stable inward proxy response under the prescribed attractive sign, even though the live transport operator is still symmetrized rather than truly directed.  _(class `C`)_
+- **chain closes:** True — The runner directly evaluates the three layered DAG-derived configurations and reproduces the load-bearing 6/6 score surface, TOWARD forces, N-stability, Born linearity, forward-depth fraction, and state-family robustness. The small norm-row roundoff difference remains at machine precision and does not affect the bounded compatibility claim.
+- **rationale:** The source note is narrowly framed as a compatibility control, not a proof of truly directed DAG Hamiltonian transport. The current runner gives 6/6 on all three configurations, with TOWARD force, 14/14 N-stability, machine-clean norm/Born behavior, forward-depth fraction 0.1266, and 3/3 state families. Residual risk is limited to the symmetrized-adjacency scope boundary, which the note states explicitly.
 - **auditor confidence:** high
 
 ### `staggered_fermion_card_2026-04-10`
