@@ -3427,3 +3427,18 @@ Disposition: bounded production support.  Chunk012 is seed-controlled and has
 target time series, raising the ready set to 12/63 L12 chunks.  The ready set
 still lacks target ESS and response stability, and no canonical-Higgs identity
 is supplied.  No retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 155 Generic Chunk Discovery Support
+
+Review stance: runner maintenance / claim firewall.
+
+- Updated `scripts/frontier_yt_retained_closure_route_certificate.py`.
+- Updated `scripts/frontier_yt_pr230_campaign_status_certificate.py`.
+- Added `docs/YT_FH_LSZ_GENERIC_CHUNK_DISCOVERY_CHECKPOINT_NOTE_2026-05-02.md`.
+- Updated retained-route and campaign certificates.
+
+Disposition: bounded processing support.  Generic chunk target-timeseries
+certificates are now discovered dynamically, with chunks011-012 currently
+loaded.  This does not close target ESS, response stability, scalar-pole
+control, or canonical-Higgs identity.  No retained or proposed-retained
+wording is allowed.

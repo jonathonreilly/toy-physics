@@ -16,6 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "outputs" / "yt_retained_closure_route_certificate_2026-05-01.json"
+GENERIC_CHUNK_TARGET_PATTERN = "yt_fh_lsz_chunk*_target_timeseries_generic_checkpoint_2026-05-02.json"
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -37,6 +38,13 @@ def load_json(path: str) -> dict:
     if not full.exists():
         return {}
     return json.loads(full.read_text(encoding="utf-8"))
+
+
+def generic_chunk_target_key(path: Path) -> str:
+    stem = path.name.removeprefix("yt_fh_lsz_").removesuffix(
+        "_target_timeseries_generic_checkpoint_2026-05-02.json"
+    )
+    return f"fh_lsz_{stem}_target_timeseries_generic"
 
 
 def main() -> int:
@@ -148,6 +156,8 @@ def main() -> int:
         "fh_lsz_variance_calibration_manifest": "outputs/yt_fh_lsz_variance_calibration_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
     }
+    for path in sorted((ROOT / "outputs").glob(GENERIC_CHUNK_TARGET_PATTERN)):
+        required_certificates[generic_chunk_target_key(path)] = str(path.relative_to(ROOT))
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
 
     direct_certificates = [
@@ -421,6 +431,16 @@ def main() -> int:
         .get("target_timeseries_summary", {})
         .get("complete_for_all_ready_chunks")
         is False
+    )
+    generic_chunk_target_certificates = {
+        name: cert
+        for name, cert in certificates.items()
+        if name.startswith("fh_lsz_chunk") and name.endswith("_target_timeseries_generic")
+    }
+    generic_chunk_targets_not_closure = bool(generic_chunk_target_certificates) and all(
+        "generic target-timeseries checkpoint" in cert.get("actual_current_surface_status", "")
+        and cert.get("proposal_allowed") is False
+        for cert in generic_chunk_target_certificates.values()
     )
     pole_fit_kinematics_not_closure = (
         "scalar-pole kinematics gate"
@@ -1112,6 +1132,11 @@ def main() -> int:
         "fh-lsz-chunk012-target-timeseries-not-closure",
         chunk012_generic_target_timeseries_not_closure,
         certificates["fh_lsz_chunk012_target_timeseries_generic"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-generic-chunk-target-checkpoints-discovered",
+        generic_chunk_targets_not_closure,
+        f"count={len(generic_chunk_target_certificates)}",
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",

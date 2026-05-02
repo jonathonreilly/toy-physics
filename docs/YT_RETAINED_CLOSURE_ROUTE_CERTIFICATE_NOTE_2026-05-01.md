@@ -486,6 +486,11 @@ still fails, target ESS is not available for the whole ready set, and the
 retained-route certificate is refreshed at `PASS=105 FAIL=0` with no
 retained/proposed-retained authorization.
 
+Generic chunk target-timeseries certificates are now discovered dynamically by
+the retained-route runner.  The discovery row currently sees chunks011-012 and
+the retained-route certificate is refreshed at `PASS=106 FAIL=0`.  This is
+processing support only and authorizes no retained/proposed-retained wording.
+
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive
 pole-plus-continuum family can be realized by reflection-positive Euclidean

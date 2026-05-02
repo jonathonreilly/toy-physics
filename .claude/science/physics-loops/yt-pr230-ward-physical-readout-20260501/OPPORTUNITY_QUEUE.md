@@ -551,3 +551,11 @@ series, but chunks001-010 do not.  Response stability still fails
 the live production path is still support only.  Next useful production moves:
 continue new target-series chunks, or replace older chunks if a same-ready-set
 target ESS certificate is required.
+
+Generic chunk discovery update: retained-route and campaign-status runners now
+discover generic target-timeseries chunk checkpoint certificates automatically.
+This removes one static-edit step for chunk013 and later.  It does not improve
+the physics rank/identity gap; the highest-priority positive work remains
+continued target-series chunks, actual `O_H/C_sH/C_HH` rows, actual W/Z
+response rows with identity certificates, or a theorem forbidding the
+orthogonal neutral top-coupling loophole.

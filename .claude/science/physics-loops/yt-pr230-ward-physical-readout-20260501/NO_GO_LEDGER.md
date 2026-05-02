@@ -2025,3 +2025,20 @@ Chunk012 is the second target-timeseries chunk, but the ready set is still only
 12/63 L12 chunks.  Response stability fails, chunks001-010 still lack target
 series, and no scalar-pole/canonical-Higgs identity gate is closed.  Do not
 use chunk012 or 12/63 L12 support as retained/proposed-retained evidence.
+
+Automatic generic chunk discovery is not closure:
+
+```text
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=106 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=132 FAIL=0
+```
+
+The campaign surface now discovers generic chunk target-timeseries
+certificates dynamically.  This prevents stale static certificate lists but
+does not certify target ESS, response stability, full L12/L16/L24 production,
+scalar-pole derivative/model-class/FV/IR control, or canonical-Higgs identity.
+Do not use automatic discovery or the count of discovered chunk checkpoints as
+retained/proposed-retained evidence.

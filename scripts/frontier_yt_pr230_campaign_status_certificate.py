@@ -16,6 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "outputs" / "yt_pr230_campaign_status_certificate_2026-05-01.json"
+GENERIC_CHUNK_TARGET_PATTERN = "yt_fh_lsz_chunk*_target_timeseries_generic_checkpoint_2026-05-02.json"
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -34,6 +35,13 @@ def report(tag: str, ok: bool, msg: str) -> None:
 
 def load(rel: str) -> dict:
     return json.loads((ROOT / rel).read_text(encoding="utf-8"))
+
+
+def generic_chunk_target_key(path: Path) -> str:
+    stem = path.name.removeprefix("yt_fh_lsz_").removesuffix(
+        "_target_timeseries_generic_checkpoint_2026-05-02.json"
+    )
+    return f"fh_lsz_{stem}_target_timeseries_generic"
 
 
 def main() -> int:
@@ -319,6 +327,8 @@ def main() -> int:
         "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
         "retained_closure_route": load("outputs/yt_retained_closure_route_certificate_2026-05-01.json"),
     }
+    for path in sorted((ROOT / "outputs").glob(GENERIC_CHUNK_TARGET_PATTERN)):
+        certificates[generic_chunk_target_key(path)] = load(str(path.relative_to(ROOT)))
 
     all_present = all(isinstance(cert, dict) for cert in certificates.values())
     all_no_fail = all(int(cert.get("fail_count", 0)) == 0 for cert in certificates.values())
@@ -326,6 +336,11 @@ def main() -> int:
         name for name, cert in certificates.items() if cert.get("proposal_allowed") is True
     ]
     statuses = {name: cert.get("actual_current_surface_status") for name, cert in certificates.items()}
+    generic_chunk_target_statuses = {
+        name: status
+        for name, status in statuses.items()
+        if name.startswith("fh_lsz_chunk") and name.endswith("_target_timeseries_generic")
+    }
 
     report("campaign-certificates-present", all_present, f"count={len(certificates)}")
     report("campaign-runners-have-no-fails", all_no_fail, "all loaded certificates have FAIL=0")
@@ -548,6 +563,15 @@ def main() -> int:
         "chunk012 generic target-timeseries checkpoint"
         in str(statuses["fh_lsz_chunk012_target_timeseries_generic"]),
         statuses["fh_lsz_chunk012_target_timeseries_generic"],
+    )
+    report(
+        "fh-lsz-generic-chunk-target-checkpoints-discovered",
+        bool(generic_chunk_target_statuses)
+        and all(
+            "generic target-timeseries checkpoint" in str(status)
+            for status in generic_chunk_target_statuses.values()
+        ),
+        f"count={len(generic_chunk_target_statuses)}",
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",

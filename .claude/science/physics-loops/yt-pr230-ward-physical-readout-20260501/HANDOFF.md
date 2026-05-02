@@ -1627,3 +1627,27 @@ wording is authorized.
 Next exact action: continue target-timeseries chunks, replace older chunks if
 a same-ready-set target ESS certificate is required, or pivot to actual
 non-source identity rows/theorems.
+
+Block 155 added dynamic discovery for generic chunk target-timeseries
+certificates:
+
+```text
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=106 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=132 FAIL=0
+```
+
+Result: retained-route and campaign-status runners now glob generic
+`yt_fh_lsz_chunkNNN_target_timeseries_generic_checkpoint_2026-05-02.json`
+certificates and include an aggregate discovery row.  The current discovery
+set is chunks011-012.  This is processing support only; target ESS, response
+stability, combined/scaled production, scalar-pole control, and
+canonical-Higgs identity remain open.
+
+Next exact action: let chunk013 continue.  If it completes, refresh the
+combiner, ready-set, response-stability, autocorrelation/ESS, then run
+`scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py
+--chunk-index 13`, followed by retained-route and campaign-status
+certificates.

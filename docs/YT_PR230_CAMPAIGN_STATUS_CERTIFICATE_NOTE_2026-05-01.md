@@ -422,3 +422,9 @@ certificates.  The ready L12 set is `12/63` chunks and `192/1000` saved
 configurations.  Chunks011-012 have target time series, but chunks001-010 do
 not; response stability still fails and no retained/proposed-retained wording
 is authorized.
+
+Latest generic chunk discovery checkpoint: campaign status now discovers
+generic chunk target-timeseries certificates dynamically and reports
+`PASS=132 FAIL=0` over 135 certificates.  The aggregate discovery row sees two
+generic chunk certificates, chunks011-012.  This is processing support only;
+no retained/proposed-retained wording is authorized.

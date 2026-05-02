@@ -2103,3 +2103,21 @@ Chunk012 raises the ready set to 12/63 L12 chunks and 192/1000 saved
 configurations.  This is not retained or `proposed_retained` evidence because
 target ESS, response stability, scalar-pole control, and canonical-Higgs
 identity remain open.
+
+Generic chunk discovery support:
+
+```text
+actual_current_surface_status: bounded-support / closure-certificate discovery support
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=106 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=132 FAIL=0
+```
+
+Automatic discovery of generic target-timeseries chunk checkpoints is not
+retained or `proposed_retained` evidence.  It only keeps the certificate
+surface synchronized as chunk013 and later outputs arrive.
