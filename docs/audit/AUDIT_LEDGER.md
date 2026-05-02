@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:39:11.961827+00:00
+**Generated:** 2026-05-02T00:40:10.864590+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 347 |
+| `audited_clean` | 348 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 454 |
+| `unaudited` | 453 |
 
 | criticality | count |
 |---|---:|
@@ -415,6 +415,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_radical_geometry_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_support_localization_split_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `spectral_closure_2026-04-09` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14947,6 +14948,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The split is not gradual. It is a sharp algebraic distinction: spectral observables are traces over the one-body operator, while trajectory observables are expectations in a many-body state.  _(class `B`)_
 - **chain closes:** False — The note has no attached runner and no ledger dependencies, yet it synthesizes many numerical and theoretical inputs into a structural theorem about spectral gravity and many-body trajectory emergence.
 - **rationale:** Issue: The spectral-trajectory dichotomy is presented as a structural theorem, but the row provides no runner and no audited dependency chain for the cited sign-selectivity, boundary-law shift, CDT-like flow, Hartree failures, Penrose/DP/BH failures, or BMV ordering claims. Why this blocks: the conclusion may be a coherent synthesis, but it does not follow from the note alone and imports multiple unratified numerical and physical bridges. Repair target: split the theorem into explicit dependencies on audited spectral-success notes, audited trajectory-failure notes, and a separate derivation of the one-body-trace versus many-body-expectation bridge, with runner or proof artifacts for each load-bearing step. Claim boundary until fixed: it is safe to treat this as a bounded interpretive synthesis and research program, not as an audit-clean theorem that gravity is fundamentally spectral or that trajectory GR emerges from spectral flow plus many-body coarse-graining.
+- **auditor confidence:** high
+
+### `staggered_3d_self_gravity_sign_note_2026-04-11`
+
+- **Note:** [`STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md`](../../docs/STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Retain this as a bounded positive / negative split: the primary staggered architecture has a real 3D blocked-envelope self-gravity contraction observable, but the same centered self-gravity surface does not yield an honest sign-selective trajectory observable under a matched sign-flip control.  _(class `C`)_
+- **chain closes:** True — The runner directly computes the centered 3D staggered self-gravity sign-flip control and reproduces the note's exact width-ratio, core-excess, shell-gradient, drift, and norm-drift table. The bounded split closes because contraction holds for both signs while the trajectory envelope does not separate by sign.
+- **rationale:** The note's claim is deliberately bounded to this centered open-cubic staggered probe. The current runner matches every frozen row and aggregate check: width contraction is strong for attract and repulse, core excess is essentially unchanged across signs, shell-gradient sign flips 20/20 versus 0/20, and norm drift remains machine-clean. Residual risk is limited to interpreting this architecture-specific envelope observable; the note does not claim sign-selective trajectory or Newton closure.
 - **auditor confidence:** high
 
 ### `staggered_backreaction_capture_closure_note`
