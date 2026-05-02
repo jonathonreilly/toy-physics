@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:04:21.880988+00:00
+**Generated:** 2026-05-02T18:05:54.460263+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,8 +24,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 544 |
-| meta | 35 |
+| unaudited | 543 |
+| meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
@@ -46,10 +46,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `bounded_theorem` | 516 |
 | `decoration` | 5 |
-| `meta` | 35 |
+| `meta` | 36 |
 | `no_go` | 155 |
 | `open_gate` | 107 |
-| `positive_theorem` | 862 |
+| `positive_theorem` | 861 |
 
 | criticality | count |
 |---|---:|
@@ -79,7 +79,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 118 | 28.89 | `unaudited` | unaudited |
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 183 | 26.52 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 289 | 26.18 | `unaudited` | unaudited |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 289 | 26.18 | `unaudited` | meta |
 | 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 199 | 26.14 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
 | 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |

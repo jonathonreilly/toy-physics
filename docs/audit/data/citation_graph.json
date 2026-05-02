@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:04:16.583211+00:00",
+  "generated_at": "2026-05-02T18:05:49.841747+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -33125,11 +33125,11 @@
     },
     "minimal_axioms_2026-04-11": {
       "claim_id": "minimal_axioms_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "ea8cb7848592a93c2b528e5afc1f4a076fa08e3f605dec32f27d21f14cb2a541",
+      "note_hash": "5700d7727f62c12deb09f576d288e942f92d8e7878b1414f53f5afd5781e3ff6",
       "path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
       "runner_path": null,
       "title": "Minimal Framework Inputs"
@@ -46308,13 +46308,15 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 8,
-      "none": 1757,
+      "meta": 1,
+      "none": 1756,
       "positive_theorem": 14
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 508,
+      "meta": 1,
       "no_go": 106,
-      "none": 445,
+      "none": 444,
       "open_gate": 110,
       "positive_theorem": 610
     },
