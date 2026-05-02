@@ -1,0 +1,55 @@
+/Users/jonBridger/Toy Physics/.claude/worktrees/exciting-darwin-656d7c/scripts/cl3_baryon_qqq_color_singlet_check.py:119: RuntimeWarning: invalid value encountered in divide
+  ratio = permuted_singlet / singlet
+========================================================================
+3 ⊗ 3 ⊗ 3 BARYON COLOR SINGLET CHECK
+========================================================================
+
+  N_c = 3 (from retained Cl(3) color automorphism note)
+  3 ⊗ 3 ⊗ 3 has dimension 27 = 27
+
+------------------------------------------------------------------------
+TEST 1: dim(3 ⊗ 3 ⊗ 3) = 1 + 8 + 8 + 10 = 27
+------------------------------------------------------------------------
+  1 + 8 + 8 + 10 = 27
+  3^3 = 27
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: |baryon_singlet⟩ = (1/√6) ε_{abc} |abc⟩ is normalized
+------------------------------------------------------------------------
+  ⟨singlet|singlet⟩ = 1.0000000000
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: SU(3) generator action on baryon singlet vanishes
+        T^a_total = T^a ⊗ I ⊗ I + I ⊗ T^a ⊗ I + I ⊗ I ⊗ T^a
+------------------------------------------------------------------------
+  max ||T^a_total |singlet⟩|| over 8 generators = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: |singlet⟩ picks up sign(σ) under permutation σ
+------------------------------------------------------------------------
+  Testing all 6 permutations:
+    perm (0, 1, 2): expected sign=1, observed=1 → ✓
+    perm (0, 2, 1): expected sign=-1, observed=-1 → ✓
+    perm (1, 0, 2): expected sign=-1, observed=-1 → ✓
+    perm (1, 2, 0): expected sign=1, observed=1 → ✓
+    perm (2, 0, 1): expected sign=1, observed=1 → ✓
+    perm (2, 1, 0): expected sign=-1, observed=-1 → ✓
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: SU(3) singlet subspace in 3 ⊗ 3 ⊗ 3 has dimension 1
+------------------------------------------------------------------------
+  smallest 5 eigenvalues of total Casimir-action: [np.float64(1.0401684636174689e-16), np.float64(2.9999999999999933), np.float64(2.9999999999999964), np.float64(2.999999999999998), np.float64(2.999999999999999)]
+  number of singlets (near-zero eigenvalues) = 1
+  STATUS: PASS
+
+========================================================================
+  Test 1 (dim 1+8+8+10 = 27):                PASS
+  Test 2 (singlet normalized):               PASS
+  Test 3 (SU(3) invariance):                 PASS
+  Test 4 (total antisymmetry under perms):   PASS
+  Test 5 (uniqueness of singlet, dim = 1):   PASS
+  OVERALL: PASS
