@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T16:16:53.856630+00:00
+**Generated:** 2026-05-02T16:22:03.246391+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 507 |
+| unaudited | 508 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -40,7 +40,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 16 |
-| `unaudited` | 542 |
+| `unaudited` | 543 |
 
 | claim_type | count |
 |---|---:|
@@ -49,23 +49,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 35 |
 | `no_go` | 151 |
 | `open_gate` | 105 |
-| `positive_theorem` | 874 |
+| `positive_theorem` | 875 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 96 |
 | `high` | 339 |
 | `medium` | 428 |
-| `leaf` | 813 |
+| `leaf` | 814 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1266
+- runners classified: 1267
 - runners with (C) first-principles compute hits: 607
-- runners with (D) external comparator hits: 305
+- runners with (D) external comparator hits: 306
 - decoration candidates (no C, no D): 103
 
 ## Top 25 by load-bearing score (topology only)
@@ -97,8 +97,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
 | 22 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
 | 23 | `physical_lattice_necessity_note` | no_go | critical | 345 | 16.43 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | critical | 301 | 15.74 | `unaudited` | unaudited |
-| 25 | `higgs_mass_derived_note` | positive_theorem | critical | 290 | 15.69 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 350 | 15.96 | `audited_clean` | **retained** |
+| 25 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | critical | 301 | 15.74 | `unaudited` | unaudited |
 
 
 ## Applied audits

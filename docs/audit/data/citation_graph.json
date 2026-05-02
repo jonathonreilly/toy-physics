@@ -7753,6 +7753,10 @@
       "to": "s3_cap_uniqueness_note"
     },
     {
+      "from": "schur_covariance_inheritance_narrow_theorem_note_2026-05-02",
+      "to": "site_phase_cube_shift_intertwiner_note"
+    },
+    {
       "from": "signed_gravity_aps_action_origin_superselection_stability_note",
       "to": "signed_gravity_aps_locked_source_action_proposal_note"
     },
@@ -19981,7 +19985,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T16:16:49.630025+00:00",
+  "generated_at": "2026-05-02T16:21:58.820140+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39538,6 +39542,19 @@
       "runner_path": null,
       "title": "Scaling Targets"
     },
+    "schur_covariance_inheritance_narrow_theorem_note_2026-05-02": {
+      "claim_id": "schur_covariance_inheritance_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "site_phase_cube_shift_intertwiner_note"
+      ],
+      "note_hash": "1e15c15134f946624158e1c76e4142fd3c9e47e8482a0388f20af7651dd9feed",
+      "path": "docs/SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_schur_covariance_inheritance_narrow.py",
+      "title": "Schur Complement Covariance Inheritance \u2014 Narrow Theorem"
+    },
     "science_3plus1_line_law_known_limits_note_2026-04-20": {
       "claim_id": "science_3plus1_line_law_known_limits_note_2026-04-20",
       "claim_type_author_hint": null,
@@ -46286,19 +46303,19 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 5,
       "none": 1764,
-      "positive_theorem": 6
+      "positive_theorem": 7
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 506,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 608
+      "positive_theorem": 609
     },
-    "edge_count": 4995,
-    "leaf_count": 747,
-    "node_count": 1775,
+    "edge_count": 4996,
+    "leaf_count": 748,
+    "node_count": 1776,
     "root_count": 1213,
-    "runners_with_path": 1337
+    "runners_with_path": 1338
   }
 }

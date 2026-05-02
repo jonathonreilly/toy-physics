@@ -28,11 +28,11 @@ The narrow theorem provides a clean, reusable structural lemma that
 downstream Koide / DM / charged-lepton notes can cite without inheriting
 broader scope-creep.
 
-## Retained dependency (one-hop)
+## Retained-grade dependency (one-hop)
 
-| Authority | Effective status | Role |
+| Authority | Ledger status | Role |
 |---|---|---|
-| `site_phase_cube_shift_intertwiner_note` | retained (positive_theorem) | supplies the canonical group action structure used by downstream Koide consumers; cited here as the retained primitive that anchors the C₃[111] specialization the lemma applies to |
+| [`SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md) | retained-grade | supplies the canonical group action structure used by downstream Koide consumers; cited here as the retained primitive that anchors the C₃[111] specialization the lemma applies to |
 
 The lemma itself is stated and proved in general (any unitary group, any
 Hermitian operator); the cited authority is the retained anchor point that
@@ -90,13 +90,14 @@ proposed_claim_scope: |
   pure representation-theory / linear-algebra Schur complement covariance
   inheritance: U M U† = M block-diagonal ⇒ U_1 S U_1† = S where S is the
   Schur complement onto V_1; no physical-applicability claim.
-target_audit_status: audited_clean (subject to fresh-context audit-lane verdict)
 proposed_load_bearing_step_class: A
 audit_required_before_effective_retained: true
 ```
 
-If ratified, `effective_status = retained` (positive_theorem +
-audited_clean + retained dep).
+Audit status is set only by the independent audit lane. If the theorem is
+ratified and dependencies remain retained-grade, the audit pipeline derives
+the retained-family positive effective status from `claim_type` plus dependency
+closure.
 
 ## What this theorem closes
 
@@ -114,10 +115,11 @@ mathematical; physical applicability is a separate downstream claim.
 
 ## Cross-references
 
-- `site_phase_cube_shift_intertwiner_note` — retained dep, supplies the
+- [`SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`](SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md) — retained-grade dependency, supplies the
   C₃[111] action structure relevant to downstream Koide consumers.
-- `KOIDE_FULL_LATTICE_SCHUR_INHERITANCE_NOTE_2026-04-18.md` — parent
-  Koide-Schur application (currently `audited_conditional`); this narrow
-  theorem provides the underlying lemma the parent depends on.
+- KOIDE_FULL_LATTICE_SCHUR_INHERITANCE_NOTE_2026-04-18.md — parent
+  Koide-Schur application with a conditional audit verdict; this narrow
+  theorem provides the underlying lemma the parent depends on. This parent
+  application is not a load-bearing dependency for the narrow lemma.
 - Cycle 1 (PR #292) — sister narrow theorem: LH-doublet eigenvalue ratio.
 - Cycle 2 (PR #293) — sister narrow theorem: Koide cyclic 3-response.

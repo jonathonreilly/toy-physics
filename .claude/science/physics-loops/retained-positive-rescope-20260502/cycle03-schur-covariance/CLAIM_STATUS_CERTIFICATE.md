@@ -7,10 +7,10 @@
 ## Block type
 
 Narrow representation-theory / linear-algebra lemma underlying KOIDE_FULL_LATTICE_SCHUR_INHERITANCE
-(audit_status: audited_conditional). Provides the clean Schur-complement
+with a conditional audit verdict. Provides the clean Schur-complement
 covariance-inheritance theorem as a standalone positive_theorem with
-retained-grade dep, so downstream Koide / DM lanes can cite the lemma
-without scope-creep.
+retained-grade dep, so downstream Koide / DM lanes can cite the lemma without
+scope-creep.
 
 ## Claim-Type Certificate
 

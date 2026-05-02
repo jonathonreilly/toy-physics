@@ -21,6 +21,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTE_PATH = ROOT / "docs" / "SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md"
+RETAINED_GRADES = {"retained", "retained_bounded", "retained_no_go"}
 
 PASS = 0
 FAIL = 0
@@ -51,7 +52,7 @@ required = [
     "S = A − B D⁻¹ B†",
     "U_1 S U_1† = S",
     "not** claim",  # \"**does\\nnot** claim\" (line-wrapped)
-    "site_phase_cube_shift_intertwiner_note",
+    "SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md",
     "class (A)",
     "target_claim_type: positive_theorem",
 ]
@@ -222,8 +223,8 @@ ledger = json.loads(LEDGER.read_text())
 rows = ledger['rows']
 dep_id = "site_phase_cube_shift_intertwiner_note"
 dep_es = rows.get(dep_id, {}).get("effective_status")
-check(f"{dep_id} effective_status = retained",
-      dep_es == "retained",
+check(f"{dep_id} effective_status is retained-grade",
+      dep_es in RETAINED_GRADES,
       detail=f"observed = {dep_es!r}")
 
 

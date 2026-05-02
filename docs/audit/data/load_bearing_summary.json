@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-02T16:16:53.212379+00:00",
+  "computed_at": "2026-05-02T16:22:02.506472+00:00",
   "criticality_counts": {
     "critical": 96,
     "high": 340,
-    "leaf": 882,
+    "leaf": 883,
     "medium": 457
   },
   "flagship_signal_used": false,
-  "node_count": 1775,
+  "node_count": 1776,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -156,16 +156,16 @@
       "transitive_descendants": 345
     },
     {
+      "claim_id": "site_phase_cube_shift_intertwiner_note",
+      "criticality": "critical",
+      "load_bearing_score": 15.955,
+      "transitive_descendants": 350
+    },
+    {
       "claim_id": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
       "criticality": "critical",
       "load_bearing_score": 15.738,
       "transitive_descendants": 301
-    },
-    {
-      "claim_id": "higgs_mass_derived_note",
-      "criticality": "critical",
-      "load_bearing_score": 15.685,
-      "transitive_descendants": 290
     }
   ]
 }
