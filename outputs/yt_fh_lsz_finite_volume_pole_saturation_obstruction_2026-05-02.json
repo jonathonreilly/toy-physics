@@ -1,0 +1,93 @@
+{
+  "actual_current_surface_status": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
+  "exact_next_action": "Derive a uniform finite-volume/continuum gap or scalar denominator theorem, or continue production chunks toward a postprocessed pole fit plus model-class certificate.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
+    "threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite-volume pole-like behavior is not a uniform pole-saturation/threshold theorem.",
+  "strict_non_claims": [
+    "does not use finite-volume discreteness as scalar pole saturation",
+    "does not set kappa_s = 1",
+    "does not use observed top mass or observed y_t",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "Finite-volume discreteness does not by itself provide scalar pole saturation.  Positive finite-shell models with near-pole continuum levels whose gap closes like 1/L^2 keep the pole-residue lower bound at zero across L=12,16,24.  A retained FH/LSZ closure still needs a uniform spectral gap, pole-saturation theorem, continuum threshold certificate, or microscopic scalar denominator theorem.",
+  "volume_rows": [
+    {
+      "L": 12,
+      "continuum_mass_squared_grid": [
+        0.2569444444444444,
+        0.2777777777777778,
+        0.7,
+        1.2,
+        2.0,
+        4.0,
+        8.0,
+        16.0
+      ],
+      "feasible": true,
+      "lower_bound_is_zero": true,
+      "near_pole_gap_m2": 0.006944444444444444,
+      "residue_max": 1.8366499862659902,
+      "residue_min": 0.0,
+      "shells_p_hat_sq": [
+        0.0,
+        0.26794919243112264,
+        0.5358983848622453,
+        1.0
+      ]
+    },
+    {
+      "L": 16,
+      "continuum_mass_squared_grid": [
+        0.25390625,
+        0.265625,
+        0.7,
+        1.2,
+        2.0,
+        4.0,
+        8.0,
+        16.0
+      ],
+      "feasible": true,
+      "lower_bound_is_zero": true,
+      "near_pole_gap_m2": 0.00390625,
+      "residue_max": 1.8936480919422232,
+      "residue_min": 0.0,
+      "shells_p_hat_sq": [
+        0.0,
+        0.15224093497742647,
+        0.30448186995485294,
+        1.0
+      ]
+    },
+    {
+      "L": 24,
+      "continuum_mass_squared_grid": [
+        0.2517361111111111,
+        0.2569444444444444,
+        0.7,
+        1.2,
+        2.0,
+        4.0,
+        8.0,
+        16.0
+      ],
+      "feasible": true,
+      "lower_bound_is_zero": true,
+      "near_pole_gap_m2": 0.001736111111111111,
+      "residue_max": 1.9452469126231144,
+      "residue_min": 0.0,
+      "shells_p_hat_sq": [
+        0.0,
+        0.0681483474218634,
+        0.1362966948437268,
+        1.0
+      ]
+    }
+  ]
+}

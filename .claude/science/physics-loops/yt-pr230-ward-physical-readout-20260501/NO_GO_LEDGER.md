@@ -109,6 +109,18 @@ The threshold certificate, scalar denominator theorem certificate, and
 combined L12 production output are absent.  The missing premise cannot be
 imported silently.
 
+Finite-volume discreteness is not pole saturation:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_finite_volume_pole_saturation_obstruction.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+Positive near-pole continuum levels with gaps closing as `1/L^2` keep the
+finite-shell pole-residue lower bound at zero across `L=12,16,24`.  A uniform
+gap, continuum-threshold certificate, or scalar denominator theorem is still
+required.
+
 `R_conn = 8/9` does not by itself derive the scalar pole residue:
 
 ```text

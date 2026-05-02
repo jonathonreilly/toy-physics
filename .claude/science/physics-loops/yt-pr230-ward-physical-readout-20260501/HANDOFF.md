@@ -486,8 +486,11 @@ The threshold-authority import audit checks whether that premise is already
 available somewhere else in the current PR surface.  It is not: no
 pole-saturation/continuum-threshold certificate, scalar denominator theorem
 certificate, or combined L12 production output is present.
+The finite-volume pole-saturation obstruction blocks the adjacent shortcut:
+finite-L discreteness is not enough.  Positive near-pole continuum levels with
+gaps closing like `1/L^2` keep the residue lower bound at zero across
+`L=12,16,24`, so a uniform gap or scalar denominator theorem is still needed.
 
 Next exact action: keep chunk003 running under the non-evidence combiner gate.
-In parallel, attack the scalar denominator/pole-saturation theorem directly or
-produce a real continuum-threshold certificate that passes the residue-interval
-gate.
+In parallel, attack the uniform spectral-gap/scalar-denominator theorem or
+continue toward combined production plus postprocess.

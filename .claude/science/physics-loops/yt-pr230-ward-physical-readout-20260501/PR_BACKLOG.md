@@ -842,3 +842,18 @@ Adds an FH/LSZ threshold-authority import audit:
 - still no retained/proposed-retained closure: the missing threshold or
   scalar-denominator premise cannot be imported silently.
 ```
+
+Latest FH/LSZ finite-volume pole-saturation obstruction checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ finite-volume pole-saturation obstruction:
+- builds positive finite-shell models at L=12,16,24 with near-pole continuum
+  levels whose gap closes like 1/L^2;
+- the scalar pole-residue lower bound remains zero, so finite-L discreteness is
+  not a uniform pole-saturation/continuum-gap theorem;
+- runner passes `PASS=7 FAIL=0`; retained-route gate reports `PASS=54 FAIL=0`;
+  campaign status consumes 84 certificates and reports `PASS=80 FAIL=0`;
+- still no retained/proposed-retained closure: a uniform spectral gap,
+  continuum-threshold certificate, scalar denominator theorem, or production
+  postprocess evidence remains required.
+```

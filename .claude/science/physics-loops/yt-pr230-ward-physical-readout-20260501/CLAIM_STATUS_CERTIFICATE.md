@@ -1000,3 +1000,23 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The threshold certificate, scalar denominator theorem certificate, and
 combined L12 output are absent.  No retained/proposed-retained wording is
 authorized.
+
+FH/LSZ finite-volume pole-saturation obstruction checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_finite_volume_pole_saturation_obstruction.py
+# SUMMARY: PASS=7 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=54 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=80 FAIL=0
+```
+
+Finite-volume pole-like rows do not replace a uniform pole-saturation or
+continuum-gap theorem.  No retained/proposed-retained wording is authorized.

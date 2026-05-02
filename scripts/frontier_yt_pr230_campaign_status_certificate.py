@@ -108,6 +108,9 @@ def main() -> int:
         "fh_lsz_threshold_authority_audit": load(
             "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json"
         ),
+        "fh_lsz_finite_volume_pole_saturation": load(
+            "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -403,6 +406,11 @@ def main() -> int:
         "fh-lsz-threshold-authority-audit-blocks-hidden-import",
         "threshold-authority import audit" in str(statuses["fh_lsz_threshold_authority_audit"]),
         statuses["fh_lsz_threshold_authority_audit"],
+    )
+    report(
+        "fh-lsz-finite-volume-pole-saturation-blocks",
+        "finite-volume pole-saturation obstruction" in str(statuses["fh_lsz_finite_volume_pole_saturation"]),
+        statuses["fh_lsz_finite_volume_pole_saturation"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -726,6 +734,8 @@ def main() -> int:
             "interval is made tight by pole-saturation, continuum-threshold "
             "control, or a scalar denominator theorem.  The threshold-authority "
             "audit finds no hidden current artifact that supplies that premise.  "
+            "The finite-volume pole-saturation obstruction also blocks using "
+            "finite-L discreteness as a substitute for a uniform gap.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

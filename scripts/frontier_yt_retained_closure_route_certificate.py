@@ -90,6 +90,7 @@ def main() -> int:
         "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
         "fh_lsz_pole_saturation_threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
         "fh_lsz_threshold_authority_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json",
+        "fh_lsz_finite_volume_pole_saturation": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -369,6 +370,11 @@ def main() -> int:
         in certificates["fh_lsz_threshold_authority_audit"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_threshold_authority_audit"].get("proposal_allowed") is False
     )
+    finite_volume_pole_saturation_blocks = (
+        "finite-volume pole-saturation obstruction"
+        in certificates["fh_lsz_finite_volume_pole_saturation"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_finite_volume_pole_saturation"].get("proposal_allowed") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -615,6 +621,11 @@ def main() -> int:
         certificates["fh_lsz_threshold_authority_audit"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-finite-volume-pole-saturation-blocks",
+        finite_volume_pole_saturation_blocks,
+        certificates["fh_lsz_finite_volume_pole_saturation"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -753,7 +764,9 @@ def main() -> int:
             "needs a tight positive-Stieltjes residue interval certified by "
             "pole-saturation, continuum-threshold control, or a scalar "
             "denominator theorem.  The threshold-authority audit finds no "
-            "hidden current artifact that supplies that premise.  "
+            "hidden current artifact that supplies that premise.  The "
+            "finite-volume pole-saturation obstruction blocks using finite-L "
+            "discreteness as a substitute for a uniform gap.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "
