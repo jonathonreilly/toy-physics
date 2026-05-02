@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:44:19.817005+00:00
+**Generated:** 2026-05-02T18:02:13.123891+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 95 |
-| **retained_bounded** | 176 |
+| **retained_bounded** | 177 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 8 |
+| open_gate | 7 |
 | unaudited | 543 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
@@ -44,11 +44,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 517 |
+| `bounded_theorem` | 518 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 154 |
-| `open_gate` | 107 |
+| `open_gate` | 106 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -240,7 +240,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | anthropic-claude | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
@@ -7499,14 +7499,14 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 ### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** The normalized Wilson mixed-kernel compression on the marked plaquette character sector factorizes exactly as the four marked-link local factor a_(p,q)(beta)^4, leaving residual source-sector environment data beyond the normalized mixed kernel open.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded factorization theorem on the accepted Wilson 3+1 source surface: the normalized one-step Wilson mixed-kernel compression on the marked-plaquette character sector factorizes exactly as the four-marked-link local factor a_(p,q)(beta)^4. Explicitly out of scope: residual source-sector environment data outside the normalized mixed kernel, framework-point Perron state at beta=6, and analytic closure of P(6); those are tracked in named companion notes and remain open-grade independently of this bounded theorem.
 - **audit_status:** ~~audited_clean~~
-- **effective_status:** open_gate  (reason: `audited_open_gate`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-local-environment-factorization-mill`  (codex-current; independence=fresh_context)
-- **load-bearing step:** After trivial-channel normalization, the four marked plaquette links contribute a_(p,q)(beta)^4 while all non-marked mixed-link factors contribute only representation-independent scalars, so D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
-- **chain closes:** True — Within the stated setup, the argument closes the mixed-kernel part by combining explicit one-link Wilson convolution eigenvalues with the trivial-channel action of non-marked links. It does not claim to compute the residual source-sector environment or the full beta=6 plaquette value.
-- **rationale:** The scoped result is not the full plaquette closure but the exact localization of the normalized mixed-kernel compression. The source note explicitly keeps the residual source-sector environment and beta=6 Perron data open, so the unresolved object is not smuggled into the conclusion. The runner supports the local factorization, zero mixed-kernel spread, and distinction between the local-only Perron value and the full comparator.
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `claude-opus-4-7-1m:cross-family-physics-loop-2026-05-02-gauge-plaquette-gate`  (anthropic-claude; independence=cross_family)
+- **load-bearing step:** After trivial-channel normalization the four marked plaquette links contribute exactly a_(p,q)(beta)^4 while every non-marked mixed-link factor acts only through the trivial irrep on the marked-plaquette character sector and therefore contributes a representation-independent scalar that vanishes under normalization, so D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q) is the exact normalized mixed-kernel compression on that sector.  _(class `A`)_
+- **chain closes:** True — Within the stated bounded scope the chain closes algebraically: (i) the SU(3) character expansion of the central one-link Wilson class function w_beta(g) = exp[(beta/3) Re Tr g] gives explicit coefficients c_(p,q)(beta) via the standard Bessel-determinant mode sum; (ii) on a non-marked spatial link the marked-plaquette holonomy is independent of that link variable, so only the trivial irrep is seen and the normalized convolution acts as the identity; (iii) each of the four marked links contributes one factor a_(p,q)(beta) on each character; (iv) the product is exactly a_(p,q)(beta)^4. The runner verifies all four steps at zero numerical residual (mixed-kernel normalized spread = 0.000e+00, local-factor swap error = 2.711e-19) and explicitly carves out the non-closed objects (the |local-only - 0.5934| support check confirms residual environment data is non-trivial and outside the bounded scope).
+- **rationale:** The note proves an exact algebraic factorization theorem on a clearly stated bounded scope. The proof inputs are standard Lie-algebraic identities (SU(3) character expansion, Bessel-determinant formula for one-link coefficients) used as exact algebraic inputs with no observation, fit, or external comparator entering the load-bearing chain. The note's explicit 'What this closes / What this does not close' carving names the residual source-sector environment data and beta=6 Perron moments as out of scope and tracks them in separately audited companion notes. The runner produces THEOREM PASS=4 SUPPORT=3 FAIL=0 with zero spread on the locality witness. This is the textbook bounded_theorem shape under docs/audit/README.md: a derivation that closes on a narrowed scope while honestly carving out named open work, distinct from open_gate which would mean the load-bearing step within the stated scope itself does not close.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`

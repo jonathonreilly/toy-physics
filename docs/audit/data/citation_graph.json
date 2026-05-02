@@ -19945,7 +19945,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T17:44:15.772900+00:00",
+  "generated_at": "2026-05-02T18:02:09.803048+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28890,10 +28890,10 @@
     "gauge_vacuum_plaquette_local_environment_factorization_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
       "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint_raw": "bounded theorem (mixed-kernel locality factorization on the",
+      "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "3093688393831480fb86ba7ecac7dd11b81d801e12a9a5c62094388b281cc7fa",
+      "note_hash": "9a83cec451b410ccf7d3ce0edb4dfb88efb2b65015918463a85f71f04614932f",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py",
       "title": "Gauge-Vacuum Plaquette Local / Environment Factorization Theorem"
@@ -46294,8 +46294,8 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 508,
       "no_go": 106,
-      "none": 445,
-      "open_gate": 110,
+      "none": 446,
+      "open_gate": 109,
       "positive_theorem": 610
     },
     "edge_count": 4986,

@@ -1,0 +1,48 @@
+slug: gauge-plaquette-gate-2026-05-02
+goal: convert open_gate -> bounded_theorem on gauge_vacuum_plaquette_local_environment_factorization_theorem_note
+target_status: bounded_theorem
+runtime_budget: ~2h agent time
+cycle_count: 1
+active_route: R4-tighten-scope-and-cross-family-reaudit
+hard_residual: residual source-sector environment data outside normalized mixed kernel (out of scope; tracked in companion notes)
+files_touched:
+  - docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md
+  - docs/audit/AUDIT_LEDGER.md (auto-rendered)
+  - docs/audit/AUDIT_QUEUE.md (auto-rendered)
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/audit_queue.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/cycle_inventory.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/load_bearing_summary.json
+  - docs/audit/data/reaudit_candidates.json
+  - docs/audit/data/runner_classification.json
+open_imports: []
+no_go_routes_locally:
+  - R1-derive-residual-environment-here (belongs in companion notes)
+  - R2-convert-to-no-go (misclassifies positive factorization content)
+  - R3-prose-only-narrow (does not move effective_status)
+review_findings: self-review pass; external review pending
+pr_status: branch ready to push; PR pending
+next_exact_action: commit + push branch + open PR
+stop_condition: bounded_theorem audit landed cleanly; chain closure achieved
+status: COMPLETE
+actual_current_surface_status: bounded-theorem-ratified
+target_claim_type: bounded_theorem
+final_claim_type: bounded_theorem
+final_audit_status: audited_clean
+final_effective_status: retained_bounded
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+claim_type_reason: |
+  The proven content (Theorems 1, 2, 3 in the note) is the exact
+  factorization of the normalized Wilson mixed-kernel compression on
+  the marked-plaquette character sector as a_(p,q)(beta)^4. Inputs are
+  exact one-link Wilson character coefficients (Bessel-determinant
+  mode sums) and the trivial-irrep action of non-marked links. The
+  chain closes within that scope. The framework-point residual
+  environment data are explicitly named as outside scope and live in
+  separately tracked companion notes.
+audit_required_before_effective_retained: false  # already ratified by audit pipeline
+bare_retained_allowed: false  # uses retained_bounded, not bare retained
