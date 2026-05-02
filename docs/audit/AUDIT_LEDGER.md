@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:14:41.539480+00:00
+**Generated:** 2026-05-02T00:15:44.932317+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 334 |
+| `audited_clean` | 335 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 471 |
+| `unaudited` | 470 |
 
 | criticality | count |
 |---|---:|
@@ -402,6 +402,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_exact_green_pocket_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_exact_green_scaling_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_generated_discriminator_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14594,6 +14595,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_GENERATED_WAVEFIELD_TRANSFER_V2_NOTE.md`
   - `SOURCE_RESOLVED_GEOMETRY_RULE_REPAIR_NOTE.md`
   - `SOURCE_RESOLVED_RADICAL_GEOMETRY_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_generated_discriminator_probe_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_DISCRIMINATOR_PROBE_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_DISCRIMINATOR_PROBE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The support-rescue static Green variant beats the wavefield bridge on both sign count and detector effective support, giving delta_TOWARD = -3, delta_N_eff = -0.18, and a geometry-limited bottleneck label.  _(class `C`)_
+- **chain closes:** True — The runner recomputes the exact summary stated in the note over seeds 0..3 and the retained source ladder. The note keeps the result bounded as a discriminator rather than claiming generated-family closure.
+- **rationale:** The current runner output matches the frozen note: both variants have zero-source shift 0, support rescue gives 9/16 TOWARD with N_eff 5.31, wavefield gives 6/16 with N_eff 5.14, and the derived discriminator is delta_TOWARD=-3, delta_N_eff=-0.18, bottleneck=geometry-limited. The claim boundary is narrow and explicit: this is a generated-family bottleneck discriminator, not a closure theorem. Residual risk is limited to the chosen compact family, seeds, kNN-floor bridge, and two bridge variants.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
