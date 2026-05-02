@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:50:57.690139+00:00
+**Generated:** 2026-05-02T21:53:38.204988+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 97 |
-| **retained_bounded** | 187 |
+| **retained_bounded** | 188 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 550 |
+| unaudited | 549 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 383 |
+| `audited_clean` | 384 |
 | `audited_conditional` | 635 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 586 |
+| `unaudited` | 585 |
 
 | claim_type | count |
 |---|---:|
@@ -251,6 +251,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | C | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
@@ -7678,6 +7679,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `generation_axiom_boundary_note`
+
+- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Local M_3(C) observable-algebra reconstruction on H_hw=1 plus a reduced-stack witness that the older five-item memo kept substrate fundamentality explicit; physical-species bridge and substrate-fundamentality conclusions are out of scope.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-generation-boundary-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The local H_hw=1 observable algebra is reconstructed from the supplied translation-projector and cycle-generator data, yielding full M_3(C) with dimension 9 and commutant dimension 1, without using the substrate-fundamentality premise.  _(class `C`)_
+- **chain closes:** True — For the scoped bounded claim, the supplied checks close the local algebraic reconstruction: three hw=1 sectors, distinct translation characters, rank-one projectors, generated algebra dimension 9, and scalar commutant. The reduced-stack witness also closes at the stated level: the older stack retained one substrate-dependent step, while the local algebraic reconstruction does not consume that premise.
+- **rationale:** Clean only as a bounded theorem. The in-scope content is algebraic and local, and the runner supports that reconstruction without a hidden physical-species bridge or tuned numerical comparator. The runner's claims about triplet physicality and accepted Hilbert-surface semantics are broader than this row and remain out of scope rather than load-bearing for the audited claim. Residual risk: any downstream claim needing physical species or substrate fundamentality must cite and pass audit on the separate semantic authority rows.
+- **auditor confidence:** high
 
 ### `geometry_lane_head_to_head_note`
 
