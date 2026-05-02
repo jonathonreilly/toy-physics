@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:44:28.621776+00:00
+**Generated:** 2026-05-02T00:45:53.948917+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 349 |
+| `audited_clean` | 350 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 449 |
+| `unaudited` | 448 |
 
 | criticality | count |
 |---|---:|
@@ -421,6 +421,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
+| `staggered_self_consistent_two_body_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `tensor_block_closure_test_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -15307,6 +15308,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The staggered architecture can reproduce a Newton-compatible 3D distance law on an open cubic lattice, but only when the trajectory observable is coarse-grained to suppress sublattice beating.  _(class `C`)_
 - **chain closes:** True — The registered runner constructs the stated open staggered Hamiltonian, evolves free and gravitating packets, and fits exact-force, raw-centroid, and blocked-centroid distance laws; current output matches the source note. The result closes only on the calibrated bounded surface with external source, d=3..6, sigma=1.30, and 2x2x2 blocked readout.
 - **rationale:** The runner computes the load-bearing trajectory response and reproduces the note's global blocked exponent of about -1.982 with all blocked rows toward the source. The note's caveats correctly prevent overpromotion: it imports the external 1/r source surface and does not claim both-masses closure, self-consistent two-body gravity, irregular transfer, or replacement of the force-based canonical card. Residual risk is the calibrated readout and finite-window choice, not a mismatch between note and runner.
+- **auditor confidence:** high
+
+### `staggered_self_consistent_two_body_note_2026-04-11`
+
+- **Note:** [`STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md`](../../docs/STAGGERED_SELF_CONSISTENT_TWO_BODY_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The primary staggered architecture supports a genuine self-consistent two-body attraction channel in an exact partner-force observable, with a near-Newton distance law on a calibrated open-cubic surface, but the trajectory-level mutual channel remains noisy.  _(class `C`)_
+- **chain closes:** True — The runner directly computes the two-orbital shared-Poisson field, self-only controls, exact partner-force channel, and blocked trajectory diagnostic. Its current output matches the note's frozen rows, side-level fits, and global 15/15 force versus 10/15 blocked summary.
+- **rationale:** The source note is explicit that this is a bounded calibrated surface, not full Newton or trajectory closure. The current runner reproduces all load-bearing values: partner forces are attractive in 15/15 rows, per-side force exponents are near -2 with R2 about 1, global exponent is -1.947 with R2=0.9992, and the blocked trajectory channel is only 10/15. Residual risk is limited to the calibrated sigma/open-cubic surface and force-first readout boundaries that the note states.
 - **auditor confidence:** high
 
 ### `star_supported_bridge_class_note`
