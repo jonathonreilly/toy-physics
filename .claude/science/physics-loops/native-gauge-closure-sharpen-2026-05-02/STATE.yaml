@@ -33,9 +33,29 @@ chosen_action: |
   marker to the note so downstream auditors do not retry a sharpening that
   is genuinely impossible.
 next_actions:
-  - run baseline runner: confirm 50/0 PASS
-  - edit NATIVE_GAUGE_CLOSURE_NOTE.md to clarify scope-intrinsic boundary
+  - run baseline runner: confirm 50/0 PASS  [DONE]
+  - edit NATIVE_GAUGE_CLOSURE_NOTE.md to clarify scope-intrinsic boundary  [DONE]
   - run audit pipeline (note_hash will reset audit; documentation update is
-    intentional)
-  - commit + push + open PR
+    intentional)  [DONE]
+  - commit + push + open PR  [DONE: PR #397]
 review_disposition: pending
+final_state:
+  pr_url: https://github.com/jonathonreilly/cl3-lattice-framework/pull/397
+  pr_state: OPEN, MERGEABLE/CLEAN
+  branch: claude/native-gauge-closure-sharpen-2026-05-02
+  claim_type_at_block_close: bounded_theorem (no change from prior)
+  claim_type_after_re-audit_target: bounded_theorem (re-establish prior)
+  effective_status_after_re-audit_target: retained_bounded
+  outcome: NARROW honest scope-intrinsic clarification (NOT claim_type promotion)
+  net_effect_on_anomaly_forces_time: |
+    No claim_type movement on anomaly_forces_time itself. Confirmed that
+    NATIVE_GAUGE_CLOSURE retained_bounded is the right input strength
+    for the WZ theorem at PR #392. The next blocker for ratifying
+    anomaly_forces_time → retained is in its own admitted bridges
+    (ii)-(iv), not in NATIVE_GAUGE_CLOSURE.
+  newly_exposed_blockers:
+    - anomaly-complete U(1)_Y identification on bounded LH +1/3 / -1
+      eigenvalue surface (separate audit lane)
+    - admissions (ii)-(iv) of anomaly_forces_time_theorem
+      (Clifford-volume chirality uniqueness, opposite-chirality singlet
+      completion, ultrahyperbolic codimension-1 obstruction)
