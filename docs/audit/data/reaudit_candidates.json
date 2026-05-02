@@ -239,7 +239,7 @@
     "open_gate",
     "positive_theorem"
   ],
-  "generated_at": "2026-05-02T18:38:48.970552+00:00",
+  "generated_at": "2026-05-02T20:24:25.718506+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited theorem/no-go/open-gate claims whose current one-hop dependencies are all retained-grade and whose audit-time dependency snapshot contains at least one dependency that has since become retained-grade.",
   "ratified_dependency_statuses": [
