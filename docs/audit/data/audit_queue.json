@@ -1,36 +1,12 @@
 {
   "by_criticality": {
-    "critical": 91,
+    "critical": 90,
     "high": 201,
     "leaf": 138,
     "medium": 146
   },
-  "generated_at": "2026-05-02T14:52:10.855769+00:00",
+  "generated_at": "2026-05-02T14:55:57.224224+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "native_gauge_closure_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "graph_first_selector_derivation_note",
-        "graph_first_su3_integration_note"
-      ],
-      "direct_in_degree": 21,
-      "effective_status": "unaudited",
-      "load_bearing_score": 18.909,
-      "note_path": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_non_abelian_gauge.py",
-      "transitive_descendants": 339
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audited_clean",
@@ -431,6 +407,30 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_scalar_3plus1_temporal_ratio.py",
+      "transitive_descendants": 285
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "ew_current_fierz_channel_decomposition_note_2026-05-01",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.66,
+      "note_path": "docs/EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_ew_current_fierz_channel_decomposition.py",
       "transitive_descendants": 285
     },
     {
@@ -1050,30 +1050,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py",
       "transitive_descendants": 286
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ew_current_fierz_channel_decomposition_note_2026-05-01",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "native_gauge_closure_note",
-        "graph_first_su3_integration_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.66,
-      "note_path": "docs/EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_ew_current_fierz_channel_decomposition.py",
-      "transitive_descendants": 285
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -15111,5 +15087,5 @@
     }
   ],
   "ready_count": 115,
-  "total_pending": 576
+  "total_pending": 575
 }

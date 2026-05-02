@@ -19593,7 +19593,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T14:52:07.242620+00:00",
+  "generated_at": "2026-05-02T14:55:53.615593+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32977,7 +32977,7 @@
         "graph_first_selector_derivation_note",
         "graph_first_su3_integration_note"
       ],
-      "note_hash": "0e0648a278ff8ee782b0941ff97ca256d428c065f307eb413454994f4dcc955f",
+      "note_hash": "de4cccd69be247db954883861b76a291034e92b4895ddbbfaa9d359b0b313204",
       "path": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_non_abelian_gauge.py",
       "title": "Native Gauge Closure Note: Graph-First Gauge Closure on Z^3"

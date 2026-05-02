@@ -7,7 +7,7 @@
     "open_gate": 105,
     "positive_theorem": 877
   },
-  "computed_at": "2026-05-02T14:52:10.742806+00:00",
+  "computed_at": "2026-05-02T14:55:57.109565+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -43,10 +43,10 @@
     "meta": 35,
     "open_gate": 8,
     "retained": 150,
-    "retained_bounded": 168,
+    "retained_bounded": 169,
     "retained_no_go": 91,
     "retained_pending_chain": 2,
-    "unaudited": 501
+    "unaudited": 500
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

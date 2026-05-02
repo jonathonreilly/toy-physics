@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T14:52:11.108499+00:00
+**Generated:** 2026-05-02T14:55:57.461691+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 150 |
 | **retained_no_go** | 91 |
-| **retained_bounded** | 168 |
+| **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 501 |
+| unaudited | 500 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -34,13 +34,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 373 |
+| `audited_clean` | 374 |
 | `audited_conditional` | 652 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 16 |
-| `unaudited` | 536 |
+| `unaudited` | 535 |
 
 | claim_type | count |
 |---|---:|
@@ -89,7 +89,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 115 | 20.86 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `left_handed_charge_matching_note` | positive_theorem | critical | 291 | 19.69 | `unaudited` | unaudited |
 | 15 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 95 | 19.59 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `native_gauge_closure_note` | bounded_theorem | critical | 339 | 18.91 | `unaudited` | unaudited |
+| 16 | `native_gauge_closure_note` | bounded_theorem | critical | 339 | 18.91 | `audited_clean` | **retained_bounded** |
 | 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 287 | 18.67 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 76 | 17.27 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 283 | 16.65 | `unaudited` | unaudited |
@@ -324,6 +324,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `moving_source_cross_family_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_retarded_portability_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `native_gauge_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -11706,6 +11707,19 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`
   - `NEUTRINO_MASS_DERIVED_NOTE.md`
   - `MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `native_gauge_closure_note`
+
+- **Note:** [`NATIVE_GAUGE_CLOSURE_NOTE.md`](../../docs/NATIVE_GAUGE_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded native gauge-closure note: exact cubic Cl(3)/SU(2), retained graph-first SU(3) structural closure, and a selected-axis traceless abelian eigenvalue pattern only.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-native-gauge-peirce`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Exact native Cl(3)/SU(2) closure is established algebraically, while SU(3) and the bounded hypercharge-like abelian surface are inherited only through retained graph-first dependencies and explicitly not promoted to anomaly-complete U(1)_Y or phenomenology.  _(class `A`)_
+- **chain closes:** True — The native SU(2) chain is checked by exact finite algebra, and the graph-first SU(3)/abelian pieces are limited to retained-bounded cited authorities. The stated exclusions prevent an unratified jump to anomaly-complete U(1)_Y or downstream phenomenology.
+- **rationale:** Issue checked: whether the native gauge aggregator closes without importing a full Standard Model identification. Within the restricted scope, the claim closes as exact algebra plus retained dependency composition: the runner checks Clifford/SU(2), parity/hopping, dependency retained-grade status, and the selected-axis abelian eigenvalue surface. No hidden anomaly-complete U(1)_Y or phenomenology claim is asserted.
 - **auditor confidence:** high
 
 ### `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28`
