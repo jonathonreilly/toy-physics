@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:31:05.810177+00:00
+**Generated:** 2026-05-02T18:31:55.049132+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,24 +24,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 545 |
+| unaudited | 544 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 635 |
+| ~~audited_conditional~~ | 636 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 375 |
-| `audited_conditional` | 635 |
+| `audited_conditional` | 636 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 581 |
+| `unaudited` | 580 |
 
 | claim_type | count |
 |---|---:|
@@ -1062,6 +1062,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_casimir_block_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_curvature_localization_blocker_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `universal_gr_discrete_global_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `universal_gr_invariant_nonlinear_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -16256,6 +16257,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
   - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_discrete_global_closure_note`
+
+- **Note:** [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Capstone claim that the direct-universal route yields a discrete-global Lorentzian Einstein/Regge stationary action family on PL S^3 x R via local Lorentzian charts, congruence-compatible overlaps, and finite-atlas patching.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-universal-gr-global-closure-2026-05-02`  (codex-current; independence=cross_family)
+- **load-bearing step:** Compatible local stationary representatives patch to a unique global stationary section on finite atlases of PL S^3 x R.  _(class `B`)_
+- **chain closes:** False — The note asserts the closure stack and finite-atlas patching step but provides no registered one-hop retained authorities or runner establishing those inputs in this audit row.
+- **rationale:** Issue: the global GR capstone depends on a named stack of local scalar/tensor/lapse/glue/Lorentzian/global-patching results that are not registered as one-hop retained-grade dependencies for this row. Why this blocks retained status: the source note is a status summary and does not itself derive finite-atlas stationary-section patching from retained inputs, and there is no runner to check the global bridge. Repair target: split or cite the exact local closure, overlap covariance, Lorentzian extension, and finite-atlas patching theorems as audited retained-grade dependencies, with a runner or proof artifact for the patching bridge. Claim boundary until fixed: cite this only as a conditional capstone contingent on the GR closure stack being audited and retained.
 - **auditor confidence:** high
 
 ### `universal_gr_invariant_frame_obstruction_note`
