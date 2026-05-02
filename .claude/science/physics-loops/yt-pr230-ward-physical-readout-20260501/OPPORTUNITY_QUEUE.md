@@ -62,7 +62,8 @@ probability.
    scalar/gauge dressing.  The exact zero-mode limit-order theorem now shows
    the retained zero mode contributes `1/(V mu_IR^2)`, so the remaining
    analytic move is a gauge-fixing/IR/finite-volume prescription theorem, not
-   another unselected regulator path.
+   another unselected regulator path.  The zero-mode prescription import audit
+   finds no hidden repo authority that supplies that theorem.
 4. **Feynman-Hellmann scalar-response route.** Energy slopes with respect to a
    uniform scalar source bypass the absolute heavy rest-mass ambiguity.  This
    is a promising alternate measurement design, but it still requires
@@ -118,7 +119,9 @@ probability.
    The scalar-kernel Ward-identity obstruction confirms that Ward/Feshbach
    response identities are not a replacement for the missing denominator
    derivative theorem.  The scalar zero-mode limit-order theorem confirms that
-   the zero-mode prescription itself is load-bearing for the denominator.
+   the zero-mode prescription itself is load-bearing for the denominator, and
+   the import audit says the current repo does not already contain the
+   prescription.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

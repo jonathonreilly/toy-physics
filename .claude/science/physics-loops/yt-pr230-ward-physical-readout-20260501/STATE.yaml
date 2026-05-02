@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-46-scalar-zero-mode-limit-order
-blocks_completed: 60
+current_phase: campaign-rerun-block-47-zero-mode-prescription-import-audit
+blocks_completed: 61
 active_route: "interacting scalar denominator / Ward identity limit attempt"
-active_hard_residual: "the retained gauge zero mode contributes an exact 1/(V mu_IR^2) diagonal term, so the scalar denominator depends on the still-underdetermined gauge-fixing, zero-mode, IR, and finite-volume limiting prescription; remaining routes are production evidence or a new scalar denominator theorem"
+active_hard_residual: "no current PT, continuum-identification, production-manifest, or scalar-ladder surface supplies the gauge-fixing, zero-mode, IR, and finite-volume prescription; remaining routes are production evidence or a new scalar denominator theorem"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -216,6 +216,9 @@ files_touched:
   - "scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py"
   - "docs/YT_SCALAR_ZERO_MODE_LIMIT_ORDER_THEOREM_NOTE_2026-05-01.md"
   - "outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json"
+  - "scripts/frontier_yt_zero_mode_prescription_import_audit.py"
+  - "docs/YT_ZERO_MODE_PRESCRIPTION_IMPORT_AUDIT_NOTE_2026-05-01.md"
+  - "outputs/yt_zero_mode_prescription_import_audit_2026-05-01.json"
   - "scripts/frontier_yt_retained_closure_route_certificate.py"
   - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
   - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
@@ -303,6 +306,7 @@ claim_state_movement:
   - "proved a scalar ladder residue-envelope obstruction: after tuning each finite ladder surface to its own pole, the LSZ residue proxy remains zero-mode, projector, and finite-volume dependent"
   - "proved a scalar-kernel Ward-identity obstruction: existing Ward/gauge/Feshbach surfaces fix neither K'(x_pole) nor common scalar/gauge dressing"
   - "proved a scalar zero-mode limit-order theorem: retaining the gauge zero mode adds an exact 1/(V mu_IR^2) diagonal term, making the scalar denominator path-dependent until a gauge-fixing/IR/finite-volume prescription is derived"
+  - "audited candidate zero-mode prescription authorities; PT regulator notes, continuum-identification cautions, production manifests, and scalar ladder inputs do not hide the missing prescription"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -311,5 +315,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Derive the gauge-fixing, zero-mode, IR, and finite-volume prescription that selects the scalar-channel denominator limit, or pivot to production FH/LSZ evidence scheduling; Ward identities, finite ladder witnesses, and unselected zero-mode paths are exhausted as closure shortcuts."
+next_exact_action: "Either derive a new gauge-fixing/zero-mode/IR/finite-volume prescription theorem from retained dynamics, or pivot to production FH/LSZ evidence scheduling; existing repo surfaces do not supply the prescription."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

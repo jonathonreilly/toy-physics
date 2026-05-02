@@ -50,10 +50,11 @@
     "source_to_higgs_lsz": "open / source-to-Higgs LSZ closure attempt blocked",
     "source_two_point": "exact-support / open bridge",
     "spectral_saturation": "exact negative boundary / scalar spectral saturation no-go",
-    "static_mass": "exact negative boundary / static mass matching obstruction"
+    "static_mass": "exact negative boundary / static mass matching obstruction",
+    "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 46,
+  "pass_count": 47,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

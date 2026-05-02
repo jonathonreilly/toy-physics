@@ -1154,3 +1154,29 @@ The theorem isolates the exact zero-mode term in the finite scalar ladder:
 `(4/3) w_i/(V mu_IR^2)`.  This proves the IR/volume path is a load-bearing
 denominator premise.  It does not authorize retained or proposed-retained
 wording.
+
+## Review-Loop Backpressure - Zero-Mode Prescription Import Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_zero_mode_prescription_import_audit.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_zero_mode_prescription_import_audit.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The audit finds no hidden current-surface authority for the scalar
+zero-mode/IR/finite-volume prescription.  It is a no-hidden-import check, not
+closure.

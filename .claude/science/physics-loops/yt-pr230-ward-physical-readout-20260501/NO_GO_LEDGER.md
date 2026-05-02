@@ -710,6 +710,19 @@ Therefore the scalar denominator and LSZ derivative remain path-dependent
 until a retained gauge-fixing, zero-mode, IR, and finite-volume prescription is
 derived or production pole data fixes the prescription.
 
+Zero-mode prescription import audit is blocked:
+
+```text
+python3 scripts/frontier_yt_zero_mode_prescription_import_audit.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The strongest current repo candidates do not supply a retained prescription:
+the BZ perturbative note has IR-regulator and gauge-parameter conventions but
+not a PR #230 scalar zero-mode theorem; continuum identification warns about
+alternative gauge fixings; the production manifest requires zero-mode control;
+and scalar ladder certificates keep `proposal_allowed=false`.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

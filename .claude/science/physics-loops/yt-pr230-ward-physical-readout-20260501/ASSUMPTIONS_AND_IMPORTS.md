@@ -271,6 +271,17 @@ box-scaling the regulator selects different scalar denominators.  The
 zero-mode/IR/finite-volume prescription is therefore a load-bearing premise,
 not a numerical detail.
 
+Zero-mode prescription import audit:
+
+```text
+hidden current-surface authorities fixing the prescription = []
+```
+
+Perturbative BZ notes use regulator conventions, the continuum-identification
+note warns about alternative gauge fixings, and the production manifest
+requires finite-volume/IR/zero-mode control.  None can be used as the missing
+PR #230 scalar denominator prescription.
+
 Source-reparametrization gauge boundary:
 
 ```text

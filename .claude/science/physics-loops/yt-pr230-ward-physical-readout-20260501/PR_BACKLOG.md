@@ -274,3 +274,18 @@ Adds a scalar zero-mode limit-order theorem:
   IR, and finite-volume prescription or production pole data remains
   load-bearing.
 ```
+
+Latest zero-mode prescription import-audit checkpoint text for PR #230:
+
+```text
+Adds a zero-mode prescription import audit:
+- checks the strongest current PT, continuum-identification, FH/LSZ manifest,
+  and scalar-ladder certificate surfaces for a hidden prescription;
+- validator passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=21 FAIL=0`; campaign status now consumes 51 route certificates and
+  reports `PASS=47 FAIL=0`;
+- no current surface selects the PR #230 scalar zero-mode/IR/finite-volume
+  denominator prescription;
+- still no retained/proposed-retained closure: a new prescription theorem or
+  production same-source pole data is required.
+```

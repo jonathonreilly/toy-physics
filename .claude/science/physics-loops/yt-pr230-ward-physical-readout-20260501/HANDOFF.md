@@ -330,4 +330,7 @@ the old Ward/Feshbach surfaces cannot substitute for that theorem.  The
 zero-mode limit-order block makes the limiting theorem concrete: retaining the
 gauge zero mode adds an exact `1/(V mu_IR^2)` diagonal term, so taking the IR
 limit first, volume first, or a box-scaled regulator path gives different
-scalar denominators unless a prescription is derived.
+scalar denominators unless a prescription is derived.  The zero-mode
+prescription import audit checks the strongest current PT,
+continuum-identification, manifest, and scalar-ladder surfaces; none supplies
+that prescription.

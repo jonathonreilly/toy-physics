@@ -1,0 +1,72 @@
+{
+  "actual_current_surface_status": "exact negative boundary / zero-mode prescription import audit",
+  "candidate_summary": {
+    "continuum_identification": {
+      "has_alternative_gauge_fixings": true,
+      "has_pr230_scalar_denominator": false
+    },
+    "fh_lsz_manifest": {
+      "proposal_allowed": false,
+      "required_next_theorem": [],
+      "status": "bounded-support / joint FH-LSZ production manifest"
+    },
+    "fh_lsz_manifest_note": {
+      "claims_production_evidence": false,
+      "requires_zero_mode_control": true
+    },
+    "kernel_input_audit": {
+      "proposal_allowed": false,
+      "reason": "The scalar pole residue, projector, and kernel limiting theorem remain open imports.",
+      "status": "exact-support / input audit"
+    },
+    "p1_bz_pt_note": {
+      "has_gauge_parameter_convention": true,
+      "has_ir_regulator": true,
+      "has_retained_scalar_denominator_limit": false,
+      "has_zero_mode_prescription": false
+    },
+    "zero_mode_limit_order": {
+      "proposal_allowed": false,
+      "status": "exact negative boundary / scalar zero-mode limit-order theorem"
+    }
+  },
+  "fail_count": 0,
+  "json_candidates": {
+    "fh_lsz_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
+    "kernel_input_audit": "outputs/yt_scalar_ladder_kernel_input_audit_2026-05-01.json",
+    "ladder_derivative_limit": "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json",
+    "ladder_ir_zero_mode": "outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json",
+    "zero_mode_limit_order": "outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json"
+  },
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No audited current-surface authority selects the scalar zero-mode/IR/finite-volume prescription.",
+  "required_next_theorem": [
+    "derive a retained gauge fixing and zero-mode treatment for the scalar-channel kernel",
+    "derive the finite-volume and IR limiting order selected by that gauge fixing",
+    "prove pole-location and inverse-propagator-derivative convergence in that limit",
+    "or run production same-source scalar pole measurements with an explicitly selected prescription"
+  ],
+  "statuses": {
+    "fh_lsz_manifest": "bounded-support / joint FH-LSZ production manifest",
+    "kernel_input_audit": "exact-support / input audit",
+    "ladder_derivative_limit": "exact negative boundary / scalar ladder derivative limiting-order obstruction",
+    "ladder_ir_zero_mode": "exact negative boundary / scalar ladder IR zero-mode obstruction",
+    "zero_mode_limit_order": "exact negative boundary / scalar zero-mode limit-order theorem"
+  },
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "text_candidates": {
+    "continuum_identification": "docs/CONTINUUM_IDENTIFICATION_NOTE.md",
+    "fh_lsz_manifest_note": "docs/YT_FH_LSZ_PRODUCTION_MANIFEST_NOTE_2026-05-01.md",
+    "p1_bz_pt_note": "docs/YT_P1_BZ_QUADRATURE_2_LOOP_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
+    "zero_mode_theorem_note": "docs/YT_SCALAR_ZERO_MODE_LIMIT_ORDER_THEOREM_NOTE_2026-05-01.md"
+  },
+  "verdict": "The strongest current repo candidates do not supply a retained gauge-fixing, zero-mode, IR, and finite-volume prescription for the PR #230 scalar denominator.  Existing perturbative notes use fixed regulator conventions; continuum-identification warns about alternative gauge fixings; production manifests require the prescription instead of deriving it; and all scalar ladder certificates keep proposal_allowed=false."
+}

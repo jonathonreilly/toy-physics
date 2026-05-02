@@ -32,6 +32,12 @@ Completed in block 1:
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_zero_mode_prescription_import_audit.py`
+- `outputs/yt_zero_mode_prescription_import_audit_2026-05-01.json`
+- `docs/YT_ZERO_MODE_PRESCRIPTION_IMPORT_AUDIT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_retained_closure_route_certificate.py`
+- `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
+- `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_scalar_zero_mode_limit_order_theorem.py`
 - `outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json`
 - `docs/YT_SCALAR_ZERO_MODE_LIMIT_ORDER_THEOREM_NOTE_2026-05-01.md`
@@ -249,7 +255,9 @@ Next artifact:
   real interacting denominator/limit theorem or production pole data; current
   Ward/gauge/Feshbach surfaces do not fix `K'(x_pole)` or common dressing; the
   scalar zero-mode theorem shows the limit prescription itself is exact
-  load-bearing data, since the zero-mode term scales as `1/(V mu_IR^2)`
+  load-bearing data, since the zero-mode term scales as `1/(V mu_IR^2)`; the
+  zero-mode import audit finds no hidden repo authority that supplies the
+  required prescription
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,
