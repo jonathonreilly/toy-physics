@@ -1,0 +1,1 @@
+# Cycle 17 cert: Koide-lane audit batch. PASS=18/0. proposal_allowed: false. Documents 3 Koide notes' status + identifies Brannen-phase bridge as 4th instance of lattice->physical matching obstruction (extends cycle 13 cluster).
