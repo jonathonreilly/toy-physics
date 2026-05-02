@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 neutral-scalar rank-one purity gate:
+
+- Added `scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py`,
+  `docs/YT_NEUTRAL_SCALAR_RANK_ONE_PURITY_GATE_NOTE_2026-05-02.md`, and
+  `outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json`.
+- Result: a rank-one neutral scalar response theorem is a direct purity route,
+  but the current PR surface does not supply it.  D17 carrier support is not a
+  dynamical rank-one theorem, and a rank-two neutral scalar witness preserves
+  the listed labels while changing the source-pole readout.
+- Retained-route gate is `PASS=92 FAIL=0`; campaign status is
+  `PASS=118 FAIL=0` over 122 certificates.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: derive the rank-one theorem, measure `C_sH` / `C_HH` Gram
+purity, implement the W/Z response certificate route, or continue
+seed-controlled FH/LSZ production.
+
 Latest checkpoint, 2026-05-02 same-source W/Z response certificate gate:
 
 - Added `scripts/frontier_yt_same_source_wz_response_certificate_gate.py`,

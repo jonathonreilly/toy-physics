@@ -61,6 +61,7 @@ plus source-Higgs cross-correlator import audit
 plus source-Higgs Gram purity gate
 plus FH/LSZ chunks009-010 ready-set processing
 plus same-source W/Z response certificate gate
+plus neutral scalar rank-one purity gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -73,6 +74,22 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+Neutral scalar rank-one purity gate:
+
+```text
+actual_current_surface_status: open / neutral scalar rank-one purity gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+Rank-one neutral scalar response would be a direct source-pole purity theorem,
+but current D17 carrier support is not a dynamical rank-one theorem.  A
+rank-two witness with the same listed labels still changes the source-pole
+readout, so no retained or proposed-retained closure is authorized.
 
 Same-source W/Z response certificate gate:
 

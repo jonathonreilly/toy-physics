@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## Neutral scalar rank-one purity gate is not passed
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+A retained theorem that the neutral scalar response space is rank one would
+certify source-pole purity.  Current PR #230 does not supply that theorem:
+D17 carrier support is not a dynamical response-rank proof, no selection rule
+forbids an orthogonal top-coupled neutral scalar, and the `C_sH` / W/Z identity
+gates are not passed.
+
 ## Same-source W/Z response certificate gate is not passed
 
 Runner:

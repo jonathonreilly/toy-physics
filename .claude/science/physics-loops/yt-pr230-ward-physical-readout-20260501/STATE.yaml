@@ -13,11 +13,20 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-139-same-source-wz-response-certificate-gate
-blocks_completed: 139
-active_route: "Same-source W/Z response certificate gate"
-active_hard_residual: "The W/Z physical-response bypass has an acceptance schema, but no W/Z mass-response certificate exists; static EW algebra is dM_W/dh, not dM_W/ds, and slope-only W/Z output still needs sector-overlap/canonical-Higgs identity."
+current_phase: campaign-rerun-block-140-neutral-scalar-rank-one-purity-gate
+blocks_completed: 140
+active_route: "Neutral scalar rank-one purity gate"
+active_hard_residual: "Rank-one neutral scalar response would certify source-pole purity, but current D17 carrier support is not a dynamical rank theorem and a rank-two neutral scalar witness remains allowed."
 files_touched:
+  - "scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py"
+  - "docs/YT_NEUTRAL_SCALAR_RANK_ONE_PURITY_GATE_NOTE_2026-05-02.md"
+  - "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
   - "scripts/frontier_yt_same_source_wz_response_certificate_gate.py"
   - "docs/YT_SAME_SOURCE_WZ_RESPONSE_CERTIFICATE_GATE_NOTE_2026-05-02.md"
   - "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
@@ -666,6 +675,7 @@ claim_state_movement:
   - "proved a no-orthogonal-top-coupling selection-rule no-go: current listed substrate/gauge charges cannot allow h tbar t while forbidding an orthogonal neutral chi tbar t coupling with the same labels"
   - "processed seed-controlled FH/LSZ chunks009-010: the combiner now reports ready chunk indices [1,2,3,4,5,6,7,8,9,10], i.e. 10/63 L12 chunks and 160/1000 saved configurations; response stability still fails and target ESS remains blocked for current pre-extension chunk outputs"
   - "added a same-source W/Z response certificate gate: future evidence must contain production W/Z mass fits and dM_W/ds or dM_Z/ds plus covariance and sector-overlap/canonical-Higgs identity certificates; current static EW algebra and slope-only schemas are rejected, and the assumption stress now forbids those imports explicitly"
+  - "added a neutral-scalar rank-one purity gate: a rank-one response theorem would certify source-pole purity, but current D17 support is not a dynamical rank theorem and a rank-two neutral scalar witness remains allowed"
 actual_current_surface_status: "open / exact negative boundary plus bounded production support"
 conditional_surface_status: "future production evidence remains conditional on completed chunks, target-observable autocorrelation/ESS certification, passed finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity"
 hypothetical_axiom_status: null
@@ -674,5 +684,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Implement a real same-source electroweak W/Z mass-response harness, derive the sector-overlap/canonical-Higgs identity directly, or pivot back to scalar-pole purity / seed-controlled FH/LSZ production while monitoring for additional completed chunks. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, source-only pole purity, missing C_sH/C_HH authority, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 10/63 L12 chunks, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Measure C_sH/C_HH Gram purity, implement the W/Z response certificate route, continue seed-controlled FH/LSZ production, or derive a genuinely new rank-one neutral-scalar response theorem. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, D17 carrier support, source-only pole purity, missing C_sH/C_HH authority, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 10/63 L12 chunks, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

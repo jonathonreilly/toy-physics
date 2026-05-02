@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=91 FAIL=0
+# SUMMARY: PASS=92 FAIL=0
 ```
 
 The runner verifies:
@@ -79,6 +79,7 @@ The runner verifies:
 | source-only pole data prove source-pole purity | no |
 | hidden source-Higgs cross-correlator authority exists | no |
 | source-Higgs Gram purity gate is passed | no |
+| neutral scalar response space rank-one purity gate is passed | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -383,6 +384,13 @@ source, fitted `dM_W/ds` or `dM_Z/ds`, covariance with the top slope, and
 sector-overlap plus canonical-Higgs identity certificates.  Current static EW
 algebra and slope-only schemas are rejected, so no retained/proposed-retained
 wording is authorized.
+
+The neutral-scalar rank-one purity gate makes the direct purity-theorem route
+explicit.  A rank-one neutral scalar response theorem would exclude orthogonal
+admixture, but current D17 carrier support is not that theorem.  The gate
+records a rank-two neutral scalar witness preserving the listed labels while
+changing the source-pole readout, so no retained/proposed-retained wording is
+authorized.
 
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive

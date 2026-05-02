@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=117 FAIL=0
+# SUMMARY: PASS=118 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -126,6 +126,7 @@ The certificate consumes the PR-local route certificates for:
 - source-pole purity cross-correlator gate.
 - source-Higgs cross-correlator import audit.
 - source-Higgs Gram purity gate.
+- neutral scalar rank-one purity gate.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
 proposal.
@@ -201,6 +202,7 @@ the visible shortcut routes:
 | source-pole purity cross-correlator gate | source-only `C_ss` and source response can stay fixed while source-Higgs overlap changes; `C_sH`, W/Z response, or a retained purity theorem is still required |
 | source-Higgs cross-correlator import audit | the current harness and EW/SM Higgs notes do not supply a hidden `C_sH` or canonical-Higgs source operator |
 | source-Higgs Gram purity gate | `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` is the future purity acceptance condition, but `C_sH` and `C_HH` residues are absent |
+| neutral scalar rank-one purity gate | a rank-one neutral scalar response theorem would certify purity, but current D17 carrier support is not a dynamical rank theorem and a rank-two witness remains allowed |
 | FH/LSZ chunks009-010 processing | seed-controlled chunks001-010 are now ready (`10/63` L12 chunks, `160/1000` saved configurations), but response stability fails and target-observable ESS is not certified because these pre-extension chunks lack same-source target time series |
 | reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
 | effective-potential Hessian source-overlap no-go | canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the PR #230 source operator direction |
@@ -349,3 +351,9 @@ Latest source-Higgs Gram purity checkpoint: campaign status now includes the
 Gram purity gate and reports `PASS=116 FAIL=0` over 120 certificates.  The
 future acceptance condition is explicit, but current `C_sH` and `C_HH` pole
 residues are absent, so no retained/proposed-retained wording is authorized.
+
+Latest neutral-scalar rank-one purity checkpoint: campaign status now includes
+`scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py` and reports
+`PASS=118 FAIL=0` over 122 certificates.  D17 carrier support remains support
+only, not a rank-one neutral scalar response theorem; no retained or
+proposed-retained wording is authorized.

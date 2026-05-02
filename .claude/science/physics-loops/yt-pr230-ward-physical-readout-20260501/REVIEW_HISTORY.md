@@ -1,5 +1,35 @@
 # Review History
 
+## Review-Loop Backpressure - Neutral Scalar Rank-One Purity Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN GATE / PURITY THEOREM ABSENT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- a rank-one neutral scalar response theorem would close a direct source-pole
+  purity route;
+- current D17 carrier support is not a dynamical rank-one response theorem;
+- a rank-two neutral scalar witness preserves listed labels while changing the
+  source-pole readout;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Same-Source W/Z Response Certificate Gate
 
 Local review-loop disposition:

@@ -612,7 +612,8 @@ D17 may be used as carrier/irrep uniqueness support only.  It must not be used
 as a source-pole LSZ normalization theorem.  The source operator overlap
 `<0|O_s|h>`, source two-point pole residue, inverse-propagator derivative
 `D'(pole)`, and canonical-Higgs identity remain open unless separately derived
-or measured.
+or measured.  It also must not be treated as a rank-one theorem for the full
+neutral scalar response space.
 
 2026-05-02 spectral sum-rule audit:
 

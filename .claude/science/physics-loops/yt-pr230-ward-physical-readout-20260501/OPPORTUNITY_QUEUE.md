@@ -93,6 +93,12 @@ identity certificates.  Static EW algebra and slope-only outputs remain
 blocked, so the live queue is unchanged: implement that harness only if paired
 with identity certificates, otherwise pursue sector-overlap/purity theorem or
 production FH/LSZ processing.
+The neutral-scalar rank-one purity gate clarifies the purity-theorem branch:
+rank-one response would close the orthogonal-admixture loophole, but D17
+carrier support does not prove it.  This makes a direct rank-one theorem lower
+probability unless a new substrate argument appears; the better foreground
+routes are still `C_sH`/Gram measurement, W/Z response with identity
+certificates, or continued FH/LSZ production.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

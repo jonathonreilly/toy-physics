@@ -181,6 +181,9 @@ def main() -> int:
         "source_higgs_gram_purity_gate": load(
             "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
         ),
+        "neutral_scalar_rank_one_purity_gate": load(
+            "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json"
+        ),
         "fh_gauge_response_mixed_scalar": load(
             "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json"
         ),
@@ -657,6 +660,12 @@ def main() -> int:
         statuses["source_higgs_gram_purity_gate"],
     )
     report(
+        "neutral-scalar-rank-one-purity-gate-not-passed",
+        "neutral scalar rank-one purity gate not passed"
+        in str(statuses["neutral_scalar_rank_one_purity_gate"]),
+        statuses["neutral_scalar_rank_one_purity_gate"],
+    )
+    report(
         "fh-gauge-response-mixed-scalar-blocks",
         "FH gauge-response mixed-scalar obstruction"
         in str(statuses["fh_gauge_response_mixed_scalar"]),
@@ -1112,7 +1121,10 @@ def main() -> int:
             "audit confirms that C_sH is not already supplied by the current "
             "production harness or EW/Higgs notes.  The source-Higgs Gram "
             "purity gate records the future acceptance condition, but it is not "
-            "passed because C_sH and C_HH pole residues are absent.  "
+            "passed because C_sH and C_HH pole residues are absent.  The "
+            "neutral-scalar rank-one purity gate also fails: D17 carrier "
+            "support is not a dynamical rank-one theorem for the neutral "
+            "scalar response space.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "
