@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:46:03.650837+00:00
+**Generated:** 2026-05-02T21:50:57.690139+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 97 |
-| **retained_bounded** | 186 |
+| **retained_bounded** | 187 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 551 |
+| unaudited | 550 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 382 |
+| `audited_clean` | 383 |
 | `audited_conditional` | 635 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 587 |
+| `unaudited` | 586 |
 
 | claim_type | count |
 |---|---:|
@@ -107,6 +107,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `action_power_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1304,6 +1305,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `action_normalization_note`
+
+- **Note:** [`ACTION_NORMALIZATION_NOTE.md`](../../docs/ACTION_NORMALIZATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded convention-locking result: the action coefficient c in S=L(1-c*f) is not fixed by a convention-free observable, but is fixed once the f/Phi identification and Poisson source normalization are stipulated.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-action-normalization-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The self-consistent dynamics have a (c,G)->(c/a,a*G) rescaling degeneracy, so c is fixed only after declaring the convention relating lattice f to Newtonian Phi and the Poisson source normalization.  _(class `A`)_
+- **chain closes:** True — Within the narrowed bounded scope, the chain closes: the runner supports convergence across positive c values, approximate invariance at fixed cG, and the analytic weak-field metric read gives gamma=1 for any positive c under Phi=c*f/2. The note explicitly retracts the prior convention-free light-bending claim and does not hide the convention as physics.
+- **rationale:** The scoped claim is not that c=1 is physically derived from a convention-free observable. It is that c is convention-locked after naming the f/Phi bridge and Poisson normalization, with a one-parameter rescaling family otherwise. The provided note and runner are aligned on that narrowed boundary, and the former light-bending selection argument is no longer load-bearing. Residual risk: a later stronger claim that observation or first principles select a particular c would require a separate physical bridge and runner, especially for null-ray bending.
 - **auditor confidence:** high
 
 ### `action_power_3d_gravity_sign_closure_note`
