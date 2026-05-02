@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:59:37.221636+00:00
+**Generated:** 2026-05-02T01:01:06.051521+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 152 |
-| support | 127 |
+| support | 126 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 964 |
-| ~~audited_failed~~ | 97 |
+| ~~audited_failed~~ | 98 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 355 |
 | `audited_conditional` | 664 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 68 |
+| `audited_failed` | 69 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 440 |
+| `unaudited` | 439 |
 
 | criticality | count |
 |---|---:|
@@ -1182,6 +1182,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_layered_loop_threshold_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_joint_validation_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
 | `structureless_dag_gravity_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
+| `synthesis_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -15576,6 +15577,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Mirror symmetry can produce a genuine near-rank-2 signature, but only in the strict chokepoint pocket and only at small N; outside that pocket, the rank story is heuristic rather than a retained large-N mechanism.  _(class `C`)_
 - **chain closes:** True — Running the registered script with the note's stated N=15,25 and 16-seed setup reproduces the table: original mirror has lower s2/s1 than random-2layer at both sizes, while mirror-chokepoint has high s2/s1, effective rank near 2, and Born zero at machine precision in the small-N pocket.
 - **rationale:** The current runner reproduces the note's diagnostic table under the stated setup, and the note's conclusion stays bounded: support exists for a strict small-N mirror-chokepoint rank signature, not for a scalable large-N rank-protected architecture. The default runner window tests larger N and is not the note's quoted table, but it reinforces the same non-scalability boundary rather than contradicting the bounded claim.
+- **auditor confidence:** high
+
+### `synthesis_note`
+
+- **Note:** [`SYNTHESIS_NOTE.md`](../../docs/SYNTHESIS_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** This is a reduced computational model with seven publishable quantitative results, followed by full axiom-chain closure and a dimensional selection principle for 3+1 spacetime.  _(class `B`)_
+- **chain closes:** False — The note is a broad synthesis with no runner and no ledger dependencies, and it still contains historical/global claims that are stronger than the audited status of the underlying lanes. A reader cannot verify the seven-result, full-closure, or dimensional-selection claims from this row.
+- **rationale:** Issue: the note presents a sweeping synthesis, including publishable quantitative results, full axiom-chain closure, and a dimensional selection principle, without a registered runner or explicit audited dependency chain, while the underlying lanes include bounded, conditional, failed, and numerical-match audit surfaces. Why this blocks: a synthesis row cannot claim retained or publishable closure by summarizing historical notes whose current audit statuses do not support those conclusions. Repair target: rewrite the note as an audit-ledger-aware historical synthesis that cites specific audited rows, removes or quarantines stale retained/full-closure language, and registers any runner or manifest used for quantitative summary claims. Claim boundary until fixed: usable only as a historical roadmap of explored computational lanes, not as an audited support claim for the model's current retained conclusions.
+- **open / conditional deps cited:**
+  - `MIRROR_CHOKEPOINT_NOTE.md`
 - **auditor confidence:** high
 
 ### `taste_scalar_isotropy_theorem_note`

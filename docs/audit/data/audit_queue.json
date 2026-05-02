@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 109,
+    "leaf": 108,
     "medium": 130
   },
-  "generated_at": "2026-05-02T00:59:36.967199+00:00",
+  "generated_at": "2026-05-02T01:01:05.797577+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "synthesis_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SYNTHESIS_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "synthesis_note_3d",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12212,6 +12195,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 29,
-  "total_pending": 440
+  "ready_count": 28,
+  "total_pending": 439
 }
