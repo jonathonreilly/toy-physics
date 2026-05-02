@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:50:36.732490+00:00
+**Generated:** 2026-05-02T22:53:32.738828+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 98 |
 | **retained_bounded** | 190 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 5 |
-| unaudited | 529 |
+| open_gate | 6 |
+| unaudited | 528 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 389 |
+| `audited_clean` | 390 |
 | `audited_conditional` | 647 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 565 |
+| `unaudited` | 564 |
 
 | claim_type | count |
 |---|---:|
@@ -453,6 +453,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
+| `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -16217,6 +16218,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** This is the honest conclusion of the current in-repo evidence. The lane is closed as a conditional planning artifact with precise remaining obligations. It is not closed as unconditional nature-grade theory.  _(class `A`)_
 - **chain closes:** True — The note does not claim an unconditional teleportation theorem; it explicitly records three unresolved obligations and restricts the claim to ordinary quantum state teleportation. The runner checks that the boundary remains a HOLD rather than certifying the closed physical claim.
 - **rationale:** Clean as an open gate, not as a positive theorem. The runner hard-codes the present boundary data, but its PASS gates are directed at preserving the obstruction boundary: selector not bare-derived, scaling finite only through side 12 with side 14 unresolved, hardware thresholds not measured, and nature-grade promotion false. No matter, mass, charge, energy, object transport, FTL transport, all-even-side induction, fabricated hardware, or unconditional teleportation closure is promoted.
+- **auditor confidence:** high
+
+### `teleportation_encoding_portability_note`
+
+- **Note:** [`TELEPORTATION_ENCODING_PORTABILITY_NOTE.md`](../../docs/TELEPORTATION_ENCODING_PORTABILITY_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Finite algebraic audit of ideal encoded taste-qubit teleportation over even side lengths 2, 4, 6, and 8 in dimensions 1, 2, and 3, showing current_fixed_x works only for last-axis encodings while axis_adapted_x works for all surveyed encodings.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-teleportation-encoding-portability-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Keeping the current row-major pair-hop X while selecting a non-last logical taste axis fails because X flips the last taste bit rather than the selected logical bit.  _(class `C`)_
+- **chain closes:** True — The supplied runner output matches the note's finite counts, failure cause, leakage/projector errors, and adapted-control pass results. No external authority is needed for this scoped open gate because the claim is only the audited finite algebraic obstruction.
+- **rationale:** The correct scoped object is a clean open_gate: it identifies a standalone operator-targeting gap in the current fixed pair-hop X, not a retained broad teleportation theorem. The runner confirms the bounded failure for all non-last logical axes in dimensions 2 and 3 and confirms that retargeting X removes the obstruction across the surveyed cases. The note also preserves the finite, idealized boundary and does not overclaim physical teleportation, matter transfer, or larger lattices.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_ENCODING_PORTABILITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `teleportation_native_axioms_theory_note`
