@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=40 FAIL=0
+# SUMMARY: PASS=41 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -53,6 +53,7 @@ The certificate consumes the PR-local route certificates for:
 - source-reparametrization gauge no-go;
 - canonical scalar-normalization import audit;
 - source-to-Higgs LSZ closure attempt;
+- Cl(3)/Z3 source-unit normalization no-go;
 - scalar-source response harness extension;
 - Feynman-Hellmann production protocol certificate;
 - same-source scalar two-point LSZ measurement primitive;
@@ -105,6 +106,7 @@ the visible shortcut routes:
 | source-reparametrization gauge | source-only analytic routes need canonical scalar normalization |
 | canonical scalar normalization import audit | existing EW/Higgs notes assume or structure canonical `H`, not derive source `kappa_s` |
 | source-to-Higgs LSZ closure attempt | no allowed current-surface premise fixes `kappa_s` |
+| Cl(3)/Z3 source-unit normalization | unit substrate/source conventions fix `s`, not the canonical Higgs field metric |
 | scalar-source response harness extension | production harness now emits `dE/ds`, but not physical `dE/dh` without `kappa_s` |
 | Feynman-Hellmann production protocol | common-ensemble symmetric source shifts and correlated `dE/ds` fits are specified; `kappa_s` remains required |
 | same-source scalar two-point LSZ measurement | `C_ss(q)` / `Gamma_ss(q)` object is executable, but no controlled pole/continuum limit fixes `kappa_s` |

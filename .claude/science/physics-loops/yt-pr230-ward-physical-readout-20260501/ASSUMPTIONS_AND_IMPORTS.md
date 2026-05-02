@@ -200,6 +200,17 @@ The zero-mode/IR limiting order is therefore a load-bearing proof input.  A
 route that uses the finite derivative as `kappa_s`/LSZ normalization without
 deriving that order is importing a hidden prescription.
 
+Cl(3)/Z3 source-unit normalization boundary:
+
+```text
+D + m + s fixes the source coordinate s and dS/ds
+h = kappa_s s still requires a scalar pole/kinetic normalization theorem
+```
+
+Unit lattice spacing, unit Clifford generator norms, and `g_bare=1` do not fix
+the canonical Higgs field metric.  Setting `kappa_s=1` from the substrate source
+unit remains forbidden.
+
 Source-reparametrization gauge boundary:
 
 ```text

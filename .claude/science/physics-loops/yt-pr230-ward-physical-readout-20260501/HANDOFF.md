@@ -227,6 +227,11 @@ What changed:
   mode makes the derivative grow as the IR regulator is lowered and changes
   the pole crossing, while removing the zero mode gives a different stable
   surface.
+- The Cl(3)/Z3 source-unit normalization no-go checks the substrate-level
+  premise directly.  Unit lattice spacing, unit Clifford generators, `g_bare=1`,
+  and the additive source coefficient define the source coordinate `s`, not
+  the canonical Higgs field metric.  `kappa_s=1` remains forbidden without a
+  pole/kinetic theorem.
 
 The scientific result is narrower than closure:
 
@@ -294,3 +299,6 @@ limit theorem or production pole data.
 The derivative limiting-order obstruction makes the missing theorem explicit:
 the zero-mode/IR prescription must be derived before the derivative can carry
 scalar LSZ normalization.
+The source-unit no-go makes the parallel functional point explicit: Cl(3)/Z3
+unit conventions alone do not turn the additive source coordinate into the
+canonical Higgs field.

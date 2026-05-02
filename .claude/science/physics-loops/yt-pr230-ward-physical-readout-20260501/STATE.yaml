@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-40-scalar-ladder-derivative-limiting-order-obstruction
-blocks_completed: 54
-active_route: "scalar Bethe-Salpeter derivative limiting-order obstruction"
-active_hard_residual: "d lambda/dp^2 depends on the gauge-zero-mode and IR limiting order; retained closure still needs that prescription or production pole-derivative data"
+current_phase: campaign-rerun-block-41-cl3-source-unit-normalization-no-go
+blocks_completed: 55
+active_route: "Cl(3)/Z3 source-unit normalization no-go"
+active_hard_residual: "substrate unit/source conventions fix the additive source coordinate but not the canonical Higgs field metric; retained closure still needs scalar pole/kinetic normalization or production pole-derivative data"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -192,6 +192,9 @@ files_touched:
   - "scripts/frontier_yt_scalar_ladder_derivative_limit_obstruction.py"
   - "docs/YT_SCALAR_LADDER_DERIVATIVE_LIMIT_OBSTRUCTION_NOTE_2026-05-01.md"
   - "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json"
+  - "scripts/frontier_yt_cl3_source_unit_normalization_no_go.py"
+  - "docs/YT_CL3_SOURCE_UNIT_NORMALIZATION_NO_GO_NOTE_2026-05-01.md"
+  - "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -267,6 +270,7 @@ claim_state_movement:
   - "isolated the matrix Bethe-Salpeter derivative gate: lambda_max(pole)=1 is only a pole-location test; d lambda_max/dp^2 controls the LSZ residue and varies with the momentum-dependent ladder kernel"
   - "computed a finite Wilson-exchange scalar ladder total-momentum derivative scout; d lambda/dp^2 is finite and negative on the scan but its magnitude is strongly prescription sensitive, so no retained limit or kappa_s closure is authorized"
   - "proved the scalar ladder derivative limiting-order obstruction: keeping versus removing the gauge zero mode changes the IR behavior of d lambda/dp^2 and the pole crossing, so the derivative is not retained LSZ input without a limiting theorem"
+  - "proved the Cl(3)/Z3 source-unit normalization no-go: unit lattice/Clifford/source conventions define the source coordinate s but do not derive the canonical Higgs metric or kappa_s"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

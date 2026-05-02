@@ -185,3 +185,18 @@ Adds a scalar ladder derivative limiting-order obstruction:
 - still no retained closure: the zero-mode/IR limiting theorem or production
   pole derivative remains load-bearing.
 ```
+
+Latest Cl(3)/Z3 source-unit checkpoint text for PR #230:
+
+```text
+Adds a Cl(3)/Z3 source-unit normalization no-go:
+- checks unit lattice spacing, unit Clifford generators, additive source
+  coefficient, `g_bare=1`, and source functional derivative definitions;
+- validator passes `PASS=8 FAIL=0`; campaign status now consumes 45 route
+  certificates and reports `PASS=41 FAIL=0`;
+- same-source invariant readouts are source-rescaling safe, but `dE/dh` and
+  canonical curvature still change with `kappa_s`;
+- still no retained closure: `kappa_s=1` is not derived from substrate unit
+  conventions and still needs scalar pole/kinetic normalization or production
+  LSZ data.
+```

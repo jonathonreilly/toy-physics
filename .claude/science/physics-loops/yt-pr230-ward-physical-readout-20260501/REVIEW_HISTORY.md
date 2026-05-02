@@ -998,3 +998,28 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The limiting-order obstruction shows that `d lambda_max/dp^2` is not a
 retained LSZ input until the zero-mode and IR prescription is derived or the
 pole derivative is measured in production.
+
+## Review-Loop Backpressure — Cl(3)/Z3 Source-Unit Normalization No-Go
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_cl3_source_unit_normalization_no_go.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_cl3_source_unit_normalization_no_go.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The source-unit no-go blocks the last direct substrate-unit shortcut:
+Cl(3)/Z3 unit conventions define the source coordinate and insertion, not the
+canonical Higgs field metric or `kappa_s`.

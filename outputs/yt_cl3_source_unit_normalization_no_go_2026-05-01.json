@@ -1,0 +1,102 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Cl3 source-unit normalization no-go",
+  "fail_count": 0,
+  "kappa_models": [
+    {
+      "Gamma_prime_hh": 0.6875,
+      "Gamma_prime_ss": 2.75,
+      "canonical_h_readout": 0.2271887981393449,
+      "curvature_hh": 1.125,
+      "dE_dh": 0.274,
+      "dE_ds": 0.137,
+      "kappa_s": 0.5,
+      "same_source_invariant": 0.2271887981393449,
+      "source_curvature_ss": 4.5
+    },
+    {
+      "Gamma_prime_hh": 2.75,
+      "Gamma_prime_ss": 2.75,
+      "canonical_h_readout": 0.2271887981393449,
+      "curvature_hh": 4.5,
+      "dE_dh": 0.137,
+      "dE_ds": 0.137,
+      "kappa_s": 1.0,
+      "same_source_invariant": 0.2271887981393449,
+      "source_curvature_ss": 4.5
+    },
+    {
+      "Gamma_prime_hh": 11.0,
+      "Gamma_prime_ss": 2.75,
+      "canonical_h_readout": 0.2271887981393449,
+      "curvature_hh": 18.0,
+      "dE_dh": 0.0685,
+      "dE_ds": 0.137,
+      "kappa_s": 2.0,
+      "same_source_invariant": 0.2271887981393449,
+      "source_curvature_ss": 4.5
+    },
+    {
+      "Gamma_prime_hh": 24.75,
+      "Gamma_prime_ss": 2.75,
+      "canonical_h_readout": 0.2271887981393449,
+      "curvature_hh": 40.5,
+      "dE_dh": 0.04566666666666667,
+      "dE_ds": 0.137,
+      "kappa_s": 3.0,
+      "same_source_invariant": 0.2271887981393449,
+      "source_curvature_ss": 4.5
+    }
+  ],
+  "parent_certificates": [
+    "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json",
+    "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"
+  ],
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No allowed Cl(3)/Z3 source-unit premise fixes the canonical Higgs metric or kappa_s.",
+  "required_next_theorem": [
+    "derive a scalar pole and inverse-propagator derivative for the same source",
+    "derive the match from that residue to canonical |D H|^2 normalization",
+    "or measure the same-source pole derivative on production ensembles and connect it to the canonical Higgs response"
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit or yt_ward_identity",
+    "does not use observed top mass or observed y_t",
+    "does not use alpha_LM, plaquette, or u0 as proof input"
+  ],
+  "substrate_premises": [
+    {
+      "fixes_canonical_higgs_metric": false,
+      "fixes_source_coordinate": true,
+      "premise": "unit lattice spacing a=1",
+      "reason": "sets dimensionless lattice units, not a propagating scalar kinetic residue"
+    },
+    {
+      "fixes_canonical_higgs_metric": false,
+      "fixes_source_coordinate": false,
+      "premise": "unit Cl(3) generator norm e_i^2=1",
+      "reason": "normalizes Clifford/taste algebra, not the scalar source-to-field map"
+    },
+    {
+      "fixes_canonical_higgs_metric": false,
+      "fixes_source_coordinate": true,
+      "premise": "additive source coefficient in D + m + s",
+      "reason": "defines dS/ds as the scalar density insertion; h=kappa_s s remains open"
+    },
+    {
+      "fixes_canonical_higgs_metric": false,
+      "fixes_source_coordinate": false,
+      "premise": "g_bare = 1 gauge normalization",
+      "reason": "normalizes gauge links/coupling, not scalar pole residue or |D H|^2"
+    },
+    {
+      "fixes_canonical_higgs_metric": false,
+      "fixes_source_coordinate": true,
+      "premise": "standard functional derivative definitions",
+      "reason": "extracts source correlators but is covariant under source-field rescaling"
+    }
+  ],
+  "verdict": "The Cl(3)/Z3 substrate unit conventions define the lattice source coordinate for the additive mass/source functional, but they do not define the canonical Higgs field metric.  Unit lattice spacing, unit Clifford generators, g_bare=1, and the coefficient of D+m+s leave h=kappa_s s open.  Same-source FH/LSZ combinations are invariant under this rescaling, but the physical slope dE/dh and canonical curvature change unless the scalar pole residue or kinetic normalization is derived.  Thus kappa_s=1 is not derived from the substrate source unit."
+}

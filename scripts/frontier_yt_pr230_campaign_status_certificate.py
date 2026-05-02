@@ -63,6 +63,7 @@ def main() -> int:
         "source_reparametrization": load("outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json"),
         "canonical_scalar_import": load("outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json"),
         "source_to_higgs_lsz": load("outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"),
+        "cl3_source_unit": load("outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json"),
         "scalar_source_response_harness": load("outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"),
         "fh_production_protocol": load("outputs/yt_fh_production_protocol_certificate_2026-05-01.json"),
         "same_source_scalar_two_point": load("outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json"),
@@ -180,6 +181,12 @@ def main() -> int:
         "source-to-Higgs" in str(statuses["source_to_higgs_lsz"])
         or "LSZ closure attempt" in str(statuses["source_to_higgs_lsz"]),
         statuses["source_to_higgs_lsz"],
+    )
+    report(
+        "cl3-source-unit-does-not-fix-kappa",
+        "Cl3 source-unit" in str(statuses["cl3_source_unit"])
+        or "source-unit normalization no-go" in str(statuses["cl3_source_unit"]),
+        statuses["cl3_source_unit"],
     )
     report(
         "scalar-source-response-harness-needs-kappa",
@@ -374,7 +381,9 @@ def main() -> int:
             "prescription-sensitive and is not a retained limiting theorem.  "
             "A direct IR-limiting scout shows why: keeping the gauge zero mode "
             "makes the derivative grow and changes the pole-test crossing, "
-            "while removing it gives a different stable surface."
+            "while removing it gives a different stable surface.  The Cl(3)/Z3 "
+            "source unit fixes the additive source coordinate but not the "
+            "canonical Higgs field normalization."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

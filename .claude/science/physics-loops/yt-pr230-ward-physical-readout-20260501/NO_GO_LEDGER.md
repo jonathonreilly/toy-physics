@@ -624,6 +624,21 @@ test crosses only in the zero-mode-included prescription.  Therefore the
 finite derivative is not a retained LSZ residue input without a zero-mode/IR
 limiting theorem or production pole data.
 
+Cl(3)/Z3 source-unit normalization shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_cl3_source_unit_normalization_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Unit lattice spacing, unit Clifford generator norms, `g_bare=1`, and the
+additive source coefficient in `D+m+s` define the source coordinate and
+operator insertion.  They do not define the canonical Higgs field metric.
+Reassigning `h=kappa_s s` leaves same-source invariant readouts fixed while
+changing `dE/dh` and canonical curvature.  Therefore `kappa_s=1` remains an
+import unless derived by scalar pole/kinetic normalization or measured by
+same-source LSZ data.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

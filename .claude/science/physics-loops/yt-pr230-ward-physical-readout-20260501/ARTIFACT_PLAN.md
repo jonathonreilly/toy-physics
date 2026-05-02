@@ -175,6 +175,9 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_ladder_derivative_limit_obstruction.py`
 - `outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json`
 - `docs/YT_SCALAR_LADDER_DERIVATIVE_LIMIT_OBSTRUCTION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_cl3_source_unit_normalization_no_go.py`
+- `outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json`
+- `docs/YT_CL3_SOURCE_UNIT_NORMALIZATION_NO_GO_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -219,7 +222,8 @@ Next artifact:
   total-momentum derivative scout computes that quantity but leaves
   prescription-sensitive magnitude and no retained limit theorem; the
   derivative limiting-order obstruction proves the zero-mode/IR prescription
-  changes the derivative and pole crossing
+  changes the derivative and pole crossing; the Cl(3)/Z3 source-unit no-go
+  proves substrate unit conventions do not derive `kappa_s`
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,
