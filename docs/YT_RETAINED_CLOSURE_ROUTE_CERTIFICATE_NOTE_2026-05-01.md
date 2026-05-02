@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=27 FAIL=0
+# SUMMARY: PASS=28 FAIL=0
 ```
 
 The runner verifies:
@@ -45,6 +45,7 @@ The runner verifies:
 | color-singlet finite-`q` IR regularity closes scalar LSZ | no |
 | color-singlet zero-mode-removed finite ladder pole search closes scalar LSZ | no |
 | taste-corner finite ladder pole witness closes scalar LSZ | no |
+| hidden taste-corner scalar-carrier authority exists | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
@@ -114,7 +115,9 @@ blockers.  The zero-mode-removed ladder pole search finds finite small-mass
 `lambda_max >= 1` witnesses, but they are volume, projector, taste-corner, and
 derivative sensitive, so they are not the retained interacting pole/LSZ
 theorem.  Filtering non-origin Brillouin-zone taste corners removes every
-finite crossing, so a taste/scalar-carrier theorem is load-bearing.
+finite crossing, so a taste/scalar-carrier theorem is load-bearing.  The
+taste-carrier import audit finds no current retained authority that supplies
+that theorem.
 
 ### Route 3: New Selector Theorem
 

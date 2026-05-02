@@ -41,6 +41,9 @@ Completed in block 1:
 - `scripts/frontier_yt_taste_corner_ladder_pole_obstruction.py`
 - `outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json`
 - `docs/YT_TASTE_CORNER_LADDER_POLE_OBSTRUCTION_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_taste_carrier_import_audit.py`
+- `outputs/yt_taste_carrier_import_audit_2026-05-01.json`
+- `docs/YT_TASTE_CARRIER_IMPORT_AUDIT_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
@@ -299,7 +302,9 @@ Next artifact:
   finds small-mass finite crossing witnesses, but they are volume, projector,
   taste-corner, and derivative sensitive, so they are not closure evidence;
   the taste-corner obstruction shows those finite crossings are dominated by
-  non-origin corners and vanish under physical-origin-only filtering
+  non-origin corners and vanish under physical-origin-only filtering; the
+  taste-carrier import audit finds no current retained authority admitting
+  those corners as the physical scalar carrier
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

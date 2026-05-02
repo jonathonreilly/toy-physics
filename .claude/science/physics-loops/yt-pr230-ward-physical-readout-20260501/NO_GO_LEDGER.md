@@ -817,6 +817,22 @@ Thus the finite crossings cannot be used as scalar pole evidence unless a
 retained taste/corner scalar-carrier theorem admits them and derives the pole
 derivative.
 
+Taste-corner scalar-carrier hidden-import route is blocked:
+
+```text
+python3 scripts/frontier_yt_taste_carrier_import_audit.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The current ledger does not contain a retained authority admitting the
+non-origin BZ corners as the physical scalar carrier.  The CL3 taste
+generation row is an audited-renaming boundary, taste-scalar isotropy is
+conditional for scalar-spectrum consequences, full staggered PT is conditional
+and imports non-clean normalization surfaces, and the scalar ladder input
+audit still lists the scalar color/taste/spin projector as missing.  Therefore
+the taste-corner finite crossings remain non-closure evidence until a new
+taste/scalar-carrier theorem or production pole data exists.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

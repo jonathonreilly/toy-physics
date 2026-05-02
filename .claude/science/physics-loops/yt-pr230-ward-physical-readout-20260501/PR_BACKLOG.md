@@ -387,3 +387,19 @@ Adds a taste-corner ladder pole-witness obstruction:
   plus continuum/projector/pole-derivative control, or production FH/LSZ pole
   data, remains required.
 ```
+
+Latest taste-corner scalar-carrier import-audit checkpoint text for PR #230:
+
+```text
+Adds a taste-corner scalar-carrier import audit:
+- checks CL3 taste generation, taste-scalar isotropy, full staggered PT, scalar
+  ladder input audit, and the taste-corner obstruction for a hidden authority;
+- validator passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=28 FAIL=0`; campaign status now consumes 58 route certificates and
+  reports `PASS=54 FAIL=0`;
+- no retained/audit-clean authority admits non-origin BZ corners as the
+  physical scalar carrier for PR #230;
+- still no retained/proposed-retained closure: a taste/scalar-carrier theorem,
+  continuum projector, pole derivative, or production FH/LSZ pole data remains
+  required.
+```

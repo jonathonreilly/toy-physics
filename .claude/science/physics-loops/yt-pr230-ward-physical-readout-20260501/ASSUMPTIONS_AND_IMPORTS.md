@@ -352,6 +352,16 @@ Any route that treats those non-origin corners as part of the physical scalar
 carrier must derive that taste/corner projection from the retained action.  It
 cannot be assumed as a proof input.
 
+Current taste-carrier authority audit:
+
+```text
+retained authorities admitting non-origin corners as scalar carrier = []
+```
+
+Existing taste and staggered-PT surfaces are support/conditional or
+renaming-bounded.  They do not derive the PR #230 scalar color/taste/spin
+projector or physical scalar carrier.
+
 Source-reparametrization gauge boundary:
 
 ```text

@@ -66,6 +66,7 @@ def main() -> int:
         "color_singlet_finite_q_ir": "outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json",
         "color_singlet_zero_mode_removed_ladder_pole_search": "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json",
         "taste_corner_ladder_pole_obstruction": "outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json",
+        "taste_carrier_import_audit": "outputs/yt_taste_carrier_import_audit_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -165,6 +166,11 @@ def main() -> int:
         "taste-corner pole-witness obstruction"
         in certificates["taste_corner_ladder_pole_obstruction"].get("actual_current_surface_status", "")
         and certificates["taste_corner_ladder_pole_obstruction"].get("proposal_allowed") is False
+    )
+    taste_carrier_import_audit_blocks_hidden_authority = (
+        "taste-corner scalar-carrier import audit"
+        in certificates["taste_carrier_import_audit"].get("actual_current_surface_status", "")
+        and certificates["taste_carrier_import_audit"].get("proposal_allowed") is False
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -277,6 +283,11 @@ def main() -> int:
         certificates["taste_corner_ladder_pole_obstruction"].get("actual_current_surface_status", ""),
     )
     report(
+        "taste-carrier-import-audit-blocks-hidden-authority",
+        taste_carrier_import_audit_blocks_hidden_authority,
+        certificates["taste_carrier_import_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -354,7 +365,9 @@ def main() -> int:
             "IR-regular in four dimensions.  Zero-mode-removed finite ladder "
             "pole witnesses exist at small mass, but they are volume, "
             "projector, taste-corner, and derivative sensitive; filtering "
-            "non-origin taste corners removes the finite crossings.  The "
+            "non-origin taste corners removes the finite crossings, and the "
+            "current taste-carrier import audit finds no retained authority "
+            "that admits those corners as the physical scalar carrier.  The "
             "actual interacting scalar pole derivative theorem and production "
             "evidence remain open.  "
             "These cannot be assumed."

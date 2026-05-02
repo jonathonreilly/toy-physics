@@ -557,3 +557,20 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=53 FAIL=0
 ```
+
+Taste-corner scalar-carrier import-audit checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / taste-corner scalar-carrier import audit
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_taste_carrier_import_audit.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=28 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=54 FAIL=0
+```

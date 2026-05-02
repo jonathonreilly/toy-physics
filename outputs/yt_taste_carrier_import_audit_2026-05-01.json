@@ -1,0 +1,54 @@
+{
+  "actual_current_surface_status": "exact negative boundary / taste-corner scalar-carrier import audit",
+  "candidate_rows": {
+    "cl3_taste_generation_theorem": {
+      "audit_status": "audited_renaming",
+      "chain_closes": false,
+      "chain_closure_explanation": "The S3/Z3 representation and hw=1 Y/T3 spectra are verified algebraically, but the step from Z3-related taste states to generation candidates is a physical identification and the note itself leaves graph-first axis selection and generation dynamics outside this theorem.",
+      "current_status_raw": "reviewed exact algebraic support theorem on current `main`; numerically verified",
+      "effective_status": "audited_renaming",
+      "runner_path": "scripts/verify_cl3_sm_embedding.py",
+      "verdict_rationale": "Issue: the runner closes the matrix-algebra checks for the taste cube, but the decisive claim that the Z3 orbit supplies generation candidates is an identification of algebraic orbit labels with SM-generation structure. Why this blocks: the restricted inputs contain no separate retained axis-selection or matter-readout theorem turning the orbit into physical generations, and the note explicitly says mass structure and specific SM-generation identification remain separate. Repair target: add one-hop authorities for graph-first axis selection and the taste-to-generation observable readout, or narrow the claim to the exact S3/Z3 decomposition and hw=1 spectra. Claim boundary until fixed: the exact representation-theory support is verified, but the generation interpretation is not an audited-clean derivation."
+    },
+    "taste_scalar_isotropy_theorem_note": {
+      "audit_status": "audited_conditional",
+      "chain_closes": false,
+      "chain_closure_explanation": "The exact fermion-CW Hessian isotropy theorem closes on the stated Cl(3)/Z^3 commuting-involution taste block, and the live runner reports THEOREM PASS=30 BOUNDED PASS=6 FAIL=0. The scalar-spectrum split, near-degenerate taste-pair readout, and thermal-transition estimate are explicitly bounded model consequences rather than theorem-grade closures.",
+      "current_status_raw": "exact support theorem with bounded downstream scalar-spectrum consequences",
+      "effective_status": "audited_conditional",
+      "runner_path": "scripts/frontier_taste_scalar_isotropy.py",
+      "verdict_rationale": "Issue: the exact isotropy theorem closes for the fermion Coleman-Weinberg block, but the note's scalar-spectrum and electroweak-transition consequences depend on a gauge-only leading split and a scalar-only thermal-cubic estimate that the note explicitly labels bounded.\nWhy this blocks: downstream proposed-retained/promoted claims cannot use this row as a theorem-grade Higgs/taste spectrum, y_b, generation-splitting, or electroweak-transition closure; they only inherit the no-fermion-CW-splitting boundary.\nRepair target: supply and audit a full scalar-sector theorem, including gauge/taste-breaking and thermal dynamics, with a runner that derives the spectrum or transition result rather than checking the bounded companion model.\nClaim boundary until fixed: safe to claim exact fermion-CW isotropy and the resulting exclusion of scalar-CW-only splitting on the stated taste block, not full scalar-spectrum or finite-temperature electroweak closure."
+    },
+    "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18": {
+      "audit_status": "audited_conditional",
+      "chain_closes": false,
+      "chain_closure_explanation": "The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md, YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md, YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md, YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md, YT_WARD_IDENTITY_DERIVATION_THEOREM.md.",
+      "current_status_raw": "proposed_retained **full staggered-PT 4D BZ quadrature** of the",
+      "effective_status": "audited_conditional",
+      "runner_path": "scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py",
+      "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md, YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md, YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md, YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md, YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md, YT_WARD_IDENTITY_DERIVATION_THEOREM.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row."
+    }
+  },
+  "fail_count": 0,
+  "ladder_input_certificate": "outputs/yt_scalar_ladder_kernel_input_audit_2026-05-01.json",
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The taste-corner scalar-carrier/projector authority is not retained on the current surface.",
+  "remaining_blockers": [
+    "derive a retained taste/scalar-carrier theorem for non-origin BZ corners, or exclude them in the continuum scalar denominator",
+    "derive the scalar color/taste/spin projector independent of H_unit readout",
+    "derive or measure the interacting inverse-propagator derivative at the scalar pole",
+    "run production same-source FH/LSZ pole data if the theorem route remains blocked"
+  ],
+  "retained_authorities": [],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "taste_corner_certificate": "outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json",
+  "verdict": "No current retained/audit-clean authority lets PR #230 use the non-origin Brillouin-zone taste corners that dominate the finite ladder crossings as the physical scalar carrier.  The CL3 taste generation row is audited as a physical-identification/renaming boundary, the taste-scalar isotropy row is conditional for scalar spectrum consequences, and the full staggered-PT row is conditional and imports non-clean H_unit/normalization surfaces.  The ladder input audit still lists the scalar color/taste/spin projector as missing.  Therefore the finite taste-corner crossings cannot be used as retained scalar pole or LSZ evidence without a new taste/scalar-carrier theorem or production pole data."
+}
