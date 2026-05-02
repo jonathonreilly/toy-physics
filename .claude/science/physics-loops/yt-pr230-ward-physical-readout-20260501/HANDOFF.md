@@ -458,8 +458,14 @@ The FH/LSZ scalar-pole fit postprocessor scaffold now gives future combined
 production output a concrete fit path.  It requires zero plus at least three
 positive momentum shells and an isolated negative-`p_hat^2` pole before using
 `dGamma_ss/dp^2`; the current combined input is absent/nonready.
+The FH/LSZ finite-shell identifiability no-go tightens that boundary: finite
+Euclidean `Gamma_ss(p^2)` rows can agree at every sampled shell and share the
+same negative pole while changing `dGamma_ss/dp^2`.  A future pole fit
+therefore still needs a model-class / analytic-continuation acceptance gate or
+a scalar denominator theorem before the derivative can be load-bearing.
 
 Next exact action: keep chunk001 running under the non-evidence combiner gate.
 If it finishes, run the chunk combiner and write a partial-chunk checkpoint.
-If it remains running, continue analytic scalar denominator/residue work or
-schedule the paired x8/x16 calibration if compute is available.
+If it remains running, add the finite-shell pole-fit model-class gate, continue
+analytic scalar denominator/residue work, or schedule the paired x8/x16
+calibration if compute is available.

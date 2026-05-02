@@ -736,3 +736,18 @@ Adds an FH/LSZ scalar-pole fit postprocessor scaffold:
 - still no retained/proposed-retained closure: the scaffold is not production
   data, pole isolation, or a scalar LSZ theorem.
 ```
+
+Latest FH/LSZ finite-shell identifiability checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ finite-shell pole-fit identifiability no-go:
+- constructs analytic inverse-propagator deformations that vanish on every
+  sampled Euclidean shell and at the same negative pole;
+- the finite shell values and pole are unchanged, but dGamma_ss/dp^2 varies by
+  a factor of 4 across the constructed family;
+- runner passes `PASS=7 FAIL=0`; retained-route gate reports `PASS=47 FAIL=0`;
+  campaign status consumes 77 certificates and reports `PASS=73 FAIL=0`;
+- still no retained/proposed-retained closure: a future pole fit needs a
+  model-class / analytic-continuation gate or scalar denominator theorem before
+  the pole derivative can be retained-grade evidence.
+```

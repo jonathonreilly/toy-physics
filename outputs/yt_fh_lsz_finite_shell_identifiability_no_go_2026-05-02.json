@@ -1,0 +1,87 @@
+{
+  "actual_current_surface_status": "exact negative boundary / FH-LSZ finite-shell pole-fit identifiability no-go",
+  "construction": {
+    "base_slope": 1.0,
+    "checks": {
+      "derivative_max": 2.0,
+      "derivative_min": 0.5,
+      "derivative_span_factor": 4.0,
+      "max_pole_abs": 0.0,
+      "max_shell_mismatch": 0.0,
+      "zero_plus_three_positive_shells": true
+    },
+    "models": [
+      {
+        "dGamma_dp2_at_pole": 0.5,
+        "epsilon": -3.930668570548848,
+        "name": "half_derivative",
+        "relative_lsz_y_proxy_for_fixed_dE_ds": 0.7071067811865476,
+        "same_pole_gamma": 0.0,
+        "shell_values": [
+          0.25,
+          0.5179491924311226,
+          0.7858983848622453,
+          1.25
+        ]
+      },
+      {
+        "dGamma_dp2_at_pole": 1.0,
+        "epsilon": 0.0,
+        "name": "base_derivative",
+        "relative_lsz_y_proxy_for_fixed_dE_ds": 1.0,
+        "same_pole_gamma": 0.0,
+        "shell_values": [
+          0.25,
+          0.5179491924311226,
+          0.7858983848622453,
+          1.25
+        ]
+      },
+      {
+        "dGamma_dp2_at_pole": 2.0,
+        "epsilon": 7.861337141097696,
+        "name": "double_derivative",
+        "relative_lsz_y_proxy_for_fixed_dE_ds": 1.4142135623730951,
+        "same_pole_gamma": 0.0,
+        "shell_values": [
+          0.25,
+          0.5179491924311226,
+          0.7858983848622453,
+          1.25
+        ]
+      }
+    ],
+    "pole_p_hat_sq": -0.25,
+    "sample_reference": [
+      0.25,
+      0.5179491924311226,
+      0.7858983848622453,
+      1.25
+    ],
+    "shells_p_hat_sq": [
+      0.0,
+      0.26794919243112264,
+      0.5358983848622453,
+      1.0
+    ],
+    "vanishing_polynomial_at_pole": 0.12720482305385108
+  },
+  "exact_next_action": "Add a pole-fit model-class/analytic-continuation acceptance gate, or derive the scalar denominator theorem that excludes these finite-shell deformations before using dGamma_ss/dp^2 as retained evidence.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "kinematics_gate": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
+    "postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json"
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite-shell pole fits are underidentified without a model-class or scalar-pole theorem.",
+  "strict_non_claims": [
+    "does not use observed top mass or observed y_t",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use alpha_LM, plaquette, or u0 as proof input",
+    "does not treat reduced pilots or finite-shell fits as production evidence"
+  ],
+  "verdict": "A finite set of same-source Euclidean Gamma_ss(p^2) shell values, even with zero plus three positive shells and a named negative-p^2 pole, does not determine dGamma_ss/dp^2 at the pole.  The constructed analytic deformations vanish on every sampled shell and at the pole, but change the pole derivative and therefore the fixed-dE/ds FH/LSZ readout.  A future pole-fit postprocessor needs either a production-backed analytic model class, continuum/pole saturation theorem, or additional acceptance gate before finite Euclidean shell rows can be load-bearing retained evidence."
+}

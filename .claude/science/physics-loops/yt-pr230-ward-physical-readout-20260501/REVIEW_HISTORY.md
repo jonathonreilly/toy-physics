@@ -1896,3 +1896,29 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 The scaffold requires combined production data and enough momentum shells
 before fitting a pole.  No retained/proposed-retained wording is authorized.
+
+## Review-Loop Backpressure - FH/LSZ Finite-Shell Pole-Fit Identifiability No-Go
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_finite_shell_identifiability_no_go.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_finite_shell_identifiability_no_go.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+Finite Euclidean `Gamma_ss` shell rows do not identify the LSZ pole derivative
+without a model-class or scalar-denominator theorem.  No
+retained/proposed-retained wording is authorized.

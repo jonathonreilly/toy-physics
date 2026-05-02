@@ -28,6 +28,19 @@ scripts/frontier_yt_source_higgs_kappa_residue_obstruction.py
 The scalar two-point residue / LSZ normalization remains a real open theorem,
 not bookkeeping.
 
+Finite-shell FH/LSZ pole fits are not enough by themselves.  Analytic
+inverse-propagator deformations can vanish on every sampled Euclidean shell
+and at the named pole while changing the pole derivative:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_finite_shell_identifiability_no_go.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+Therefore a future same-source `Gamma_ss(p^2)` pole fit needs a model-class,
+analytic-continuation, pole-saturation, or scalar-denominator theorem before
+`dGamma_ss/dp^2` can be retained-grade LSZ input.
+
 `R_conn = 8/9` does not by itself derive the scalar pole residue:
 
 ```text

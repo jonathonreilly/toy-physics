@@ -91,6 +91,9 @@ def main() -> int:
         "fh_lsz_chunk_combiner_gate": load("outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"),
         "fh_lsz_pole_fit_kinematics": load("outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"),
         "fh_lsz_pole_fit_postprocessor": load("outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json"),
+        "fh_lsz_finite_shell_identifiability": load(
+            "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -349,6 +352,12 @@ def main() -> int:
         "pole fit postprocessor scaffold" in str(statuses["fh_lsz_pole_fit_postprocessor"])
         or "bounded-support" in str(statuses["fh_lsz_pole_fit_postprocessor"]),
         statuses["fh_lsz_pole_fit_postprocessor"],
+    )
+    report(
+        "fh-lsz-finite-shell-pole-fit-not-identified",
+        "finite-shell pole-fit identifiability no-go"
+        in str(statuses["fh_lsz_finite_shell_identifiability"]),
+        statuses["fh_lsz_finite_shell_identifiability"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -654,7 +663,10 @@ def main() -> int:
             "not by itself an isolated-pole derivative.  "
             "The pole-fit postprocessor scaffold is now present, but the "
             "combined production input is absent/nonready, so it is not "
-            "evidence.  "
+            "evidence.  A finite-shell identifiability no-go now tightens the "
+            "same boundary: finite Euclidean Gamma_ss shell rows, even with a "
+            "named pole, do not determine dGamma_ss/dp^2 without a model-class "
+            "or analytic-continuation theorem.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

@@ -130,7 +130,11 @@ probability.
   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
   pole/derivative control, not setting `kappa_s`.  The pole-fit postprocessor
   scaffold now defines the future fit path after chunk combination, but the
-  combined production input is absent/nonready.
+  combined production input is absent/nonready.  The finite-shell
+  identifiability no-go also shows a finite Euclidean pole fit needs a
+  model-class / analytic-continuation acceptance gate: shell-vanishing
+  deformations can preserve all sampled rows and the pole while changing
+  `dGamma_ss/dp^2`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the
@@ -189,6 +193,9 @@ probability.
    taste/scalar-carrier plus continuum/projector and interacting-kernel theorem for the
    interacting color-singlet pole and LSZ derivative, not another finite
    crossing witness.
+   The finite-shell identifiability no-go now folds the postprocessor itself
+   into the analytic blocker: even future finite shell rows do not fix the
+   LSZ derivative without a model-class theorem or production acceptance gate.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

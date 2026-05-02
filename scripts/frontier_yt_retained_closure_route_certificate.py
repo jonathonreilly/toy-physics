@@ -83,6 +83,7 @@ def main() -> int:
         "fh_lsz_chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
         "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
         "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
+        "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -309,6 +310,17 @@ def main() -> int:
         and certificates["fh_lsz_pole_fit_postprocessor"].get("proposal_allowed") is False
         and certificates["fh_lsz_pole_fit_postprocessor"].get("readiness", {}).get("fit_ready") is False
     )
+    finite_shell_identifiability_not_closure = (
+        "finite-shell pole-fit identifiability no-go"
+        in certificates["fh_lsz_finite_shell_identifiability"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_finite_shell_identifiability"].get("proposal_allowed") is False
+        and float(
+            certificates["fh_lsz_finite_shell_identifiability"].get("construction", {}).get("checks", {}).get(
+                "derivative_span_factor", 0.0
+            )
+        )
+        >= 4.0
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -520,6 +532,11 @@ def main() -> int:
         certificates["fh_lsz_pole_fit_postprocessor"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-finite-shell-pole-fit-not-identified",
+        finite_shell_identifiability_not_closure,
+        certificates["fh_lsz_finite_shell_identifiability"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -640,7 +657,11 @@ def main() -> int:
             "modes give only one nonzero p_hat^2 shell, so a completed chunk "
             "set would still need richer pole-fit kinematics or a theorem.  "
             "A pole-fit postprocessor scaffold now exists, but it has no "
-            "combined production input and is not evidence.  "
+            "combined production input and is not evidence.  Even with a "
+            "future finite shell set and a named pole, finite Euclidean "
+            "Gamma_ss rows do not identify the pole derivative by themselves: "
+            "analytic deformations can vanish on all sampled shells and at "
+            "the pole while changing dGamma_ss/dp^2.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "
@@ -675,7 +696,10 @@ def main() -> int:
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action.  If using the eight-mode/eight-noise foreground "
+            "the retained action.  Before treating any finite-shell pole fit as "
+            "load-bearing, add a model-class/analytic-continuation gate or a "
+            "theorem excluding shell-vanishing derivative deformations.  If "
+            "using the eight-mode/eight-noise foreground "
             "option, first add a same-source x8/x16 variance calibration with "
             "noise-subsample diagnostics."
         ),
