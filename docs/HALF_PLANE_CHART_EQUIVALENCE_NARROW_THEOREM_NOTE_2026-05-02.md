@@ -1,0 +1,153 @@
+# Half-Plane Chart Equivalence Narrow Theorem
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the standalone algebraic / inverse-chart identity that, for
+any positive constant `c > 0`, the parametric map
+`(delta, r) -> (delta, c - delta + sqrt(r^2 - 1/4))` on `r >= 1/2` bijects
+its domain with the closed half-plane `q >= c - delta`, with explicit
+inverse chart `r = sqrt((q - c + delta)^2 + 1/4)`. This is purely a fact of
+elementary two-variable real algebra; no DM-neutrino-specific authority is
+consumed, and the constant `c` is parametrized abstractly so no specific
+value is claimed.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+Audit-lane ratification is required before any retained-grade status applies.
+**Runner:** [`scripts/frontier_half_plane_chart_equivalence_narrow.py`](./../scripts/frontier_half_plane_chart_equivalence_narrow.py)
+**Authority role:** Pattern A narrow rescope of the load-bearing class-(A)
+algebraic core of [`DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16`](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md).
+
+## Statement
+
+Let `c > 0` be any positive real constant. Define the parametric map
+
+```text
+f : {(delta, r) in R x [1/2, infinity)}  ->  R^2,
+f(delta, r)  =  (delta,  c - delta + sqrt(r^2 - 1/4)).
+```
+
+**Conclusion (T1).** The image of `f` is exactly the closed half-plane
+
+```text
+H_c  =  {(delta, q) in R^2 : q >= c - delta}.
+```
+
+**Conclusion (T2).** The inverse chart on `H_c` is
+
+```text
+g : H_c  ->  R x [1/2, infinity),
+g(delta, q)  =  (delta,  sqrt((q - c + delta)^2 + 1/4)).
+```
+
+`f` and `g` are mutual inverses on their respective domains.
+
+**Conclusion (T3).** The boundary `q = c - delta` corresponds exactly to
+`r = 1/2`, and `r > 1/2` strictly inside the half-plane.
+
+## Proof
+
+`(T1)` Let `(delta, r)` be in the domain. Then `r^2 - 1/4 >= 0`, so
+`sqrt(r^2 - 1/4) >= 0`. Hence `q = c - delta + sqrt(r^2 - 1/4) >= c - delta`.
+This shows `image(f) ⊆ H_c`. Conversely, given `(delta, q) ∈ H_c`, set
+`s = q - c + delta >= 0` and `r = sqrt(s^2 + 1/4)`. Then `r >= 1/2` and
+`f(delta, r) = (delta, c - delta + sqrt(s^2 + 1/4 - 1/4)) = (delta, c - delta + s) = (delta, q)`.
+This shows `H_c ⊆ image(f)`, so `image(f) = H_c`.
+
+`(T2)` Direct computation:
+
+```text
+g(f(delta, r))  =  (delta, sqrt((c - delta + sqrt(r^2 - 1/4) - c + delta)^2 + 1/4))
+                =  (delta, sqrt(r^2 - 1/4 + 1/4))
+                =  (delta, r).
+```
+
+`f(g(delta, q))` for `(delta, q) in H_c`: set `s = q - c + delta >= 0`. Then
+`g(delta, q) = (delta, sqrt(s^2 + 1/4))`, so
+
+```text
+f(g(delta, q))  =  (delta, c - delta + sqrt(s^2 + 1/4 - 1/4))
+                =  (delta, c - delta + sqrt(s^2))
+                =  (delta, c - delta + s)        (since s >= 0)
+                =  (delta, q).
+```
+
+`(T3)` At `q = c - delta` we have `s = 0`, so `r = sqrt(0 + 1/4) = 1/2`.
+For `q > c - delta` we have `s > 0`, hence `r = sqrt(s^2 + 1/4) > 1/2`. ∎
+
+## What this claims
+
+- The half-plane image `(T1)`, inverse chart `(T2)`, and boundary
+  correspondence `(T3)` for any `c > 0`.
+- The chart is strictly monotonic in `s = q - c + delta`.
+
+## What this does NOT claim
+
+- Does **not** derive any specific value of `c`. The framework instance
+  `c = sqrt(8/3)` is one concrete case shown in the runner; the implication
+  holds for any positive `c`.
+- Does **not** claim any DM-neutrino source-surface significance for the
+  half-plane domain. The five upstream theorems that the parent row
+  imports
+  (`DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE`,
+  `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE`,
+  `DM_NEUTRINO_SOURCE_SURFACE_M_SPECTATOR_THEOREM_NOTE`,
+  `DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE`,
+  `DM_NEUTRINO_SOURCE_SURFACE_SLOT_TORSION_BOUNDARY_THEOREM_NOTE`)
+  carry the source-surface-specific construction; this narrow note treats
+  `(delta, r, q, c)` as abstract real symbols.
+- Does **not** consume any PDG observed value, literature numerical
+  comparator, fitted selector, or admitted unit convention.
+
+## Relation to the parent active half-plane theorem
+
+[`DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16`](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md)
+bundles two distinct components:
+
+1. The DM-neutrino source-surface construction that produces the
+   parametric formula `q_+ = sqrt(8/3) - delta + sqrt(r31^2 - 1/4)` from
+   the upstream bundle/normal-form/spectator/slot/torsion theorems.
+2. The pure algebraic / inverse-chart equivalence between this parametric
+   formula and the closed half-plane.
+
+The audit-lane verdict on the parent says component (1)'s upstream
+theorems are unratified. This narrow theorem isolates component (2) by
+parametrizing over the abstract constant `c`. The chart equivalence can
+be ratified independently of any source-surface authority.
+
+## Cited dependencies
+
+None. This narrow note has zero ledger dependencies because it states only
+elementary two-variable real algebra. The constant `c > 0` enters as a
+hypothesis, not as a ledger import.
+
+## Forbidden imports check
+
+- No PDG observed values consumed.
+- No literature numerical comparators consumed.
+- No fitted selectors consumed.
+- No admitted unit conventions load-bearing on retention.
+- No same-surface family arguments.
+
+## Validation
+
+Primary runner: [`scripts/frontier_half_plane_chart_equivalence_narrow.py`](./../scripts/frontier_half_plane_chart_equivalence_narrow.py)
+verifies (PASS=14/0):
+
+1. `q - (c - delta) = sqrt(r^2 - 1/4)` symbolically (image inclusion).
+2. At `r = 1/2`: `q = c - delta` (boundary correspondence).
+3. `g(f(delta, r)) = (delta, r)` symbolically (g compose f = id).
+4. `f(g(delta, q)) = (delta, q)` for `q >= c - delta` (f compose g = id on H_c).
+5. At `q = c - delta` (s = 0): `r = 1/2` (minimal r).
+6. `dr/ds > 0` for `s > 0` (inverse chart monotonic).
+7. Three concrete rational instances `(c, delta) ∈ {(1, 1), (2, 0), (5/3, -1/2)}`
+   each verify `g(f(r)) = r` at `r = 3/4` and boundary `r = 1/2`.
+8. Framework instance `c = sqrt(8/3)`, `delta = 0`, `r = 1` verifies
+   `g(f(r)) = r`.
+9. Parent row `load_bearing_step_class == 'A'` ledger check.
+
+## Cross-references
+
+- [`DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16`](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md) —
+  parent bundled note that combines this chart equivalence with the
+  DM-neutrino source-surface upstream construction.
