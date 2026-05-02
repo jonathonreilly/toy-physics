@@ -45,10 +45,14 @@ Frozen readout:
 
 | `s` | instantaneous deflection | Green-kernel deflection | ratio | max `|f|` |
 | --- | ---: | ---: | ---: | ---: |
-| `0.0010` | `+1.410541e-03` | `+1.872661e-03` | `1.328` | `2.0e-02` |
-| `0.0020` | `+2.821591e-03` | `+3.747301e-03` | `1.328` | `2.0e-02` |
-| `0.0040` | `+5.645274e-03` | `+7.502598e-03` | `1.329` | `2.0e-02` |
+| `0.0010` | `+1.410541e-03` | `+1.872661e-03` | `1.328` | `2.5e-03` |
+| `0.0020` | `+2.821591e-03` | `+3.747301e-03` | `1.328` | `5.0e-03` |
+| `0.0040` | `+5.645274e-03` | `+7.502598e-03` | `1.329` | `1.0e-02` |
 | `0.0080` | `+1.129975e-02` | `+1.503801e-02` | `1.331` | `2.0e-02` |
+
+Note: `max |f|` scales linearly with source strength `s` (target cap of
+`2.0e-02` reached at `s = 0.008`); previous frozen readout misreported
+this column as fixed.
 
 Fitted exponents:
 

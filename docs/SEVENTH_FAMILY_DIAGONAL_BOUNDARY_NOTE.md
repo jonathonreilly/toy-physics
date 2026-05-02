@@ -3,6 +3,8 @@
 **Status:** support - structural or confirmatory support note
 The diagonal-stripe seventh-family scout is highly selective.
 
+Runner: [`scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py`](../scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py)
+
 Exact-gate result:
 - exact zero-source baseline survives on every tested row
 - exact neutral cancellation survives on every tested row
@@ -11,7 +13,8 @@ Exact-gate result:
   the failing sign rows
 
 Sweep summary:
-- passing rows: `6/18`
+- passing rows: `7/18` (count corrected from a previously stale `6/18` line;
+  the explicit per-row list was already correct and totals seven)
 - passing rows: `drift = 0.0` seeds `0,1,2`
 - passing rows: `drift = 0.2` seed `2`
 - passing rows: `drift = 0.3` seeds `1,2`
