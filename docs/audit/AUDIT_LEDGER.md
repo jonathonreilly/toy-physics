@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:36:43.377554+00:00
+**Generated:** 2026-05-02T00:38:10.016418+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 158 |
-| support | 129 |
+| support | 128 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 961 |
+| ~~audited_conditional~~ | 962 |
 | ~~audited_failed~~ | 92 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 347 |
-| `audited_conditional` | 661 |
+| `audited_conditional` | 662 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 456 |
+| `unaudited` | 455 |
 
 | criticality | count |
 |---|---:|
@@ -1019,6 +1019,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_wavefield_green_pocket_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_mechanism_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_v2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `spectral_symmetry_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_failure_map_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -14920,6 +14921,20 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The primary retained-lattice runner and the explicitly named spectral-control runners compute the raw, Lorentzian, detector-equalized, and source-side weighting cases. Their current outputs support the bounded conclusion that broad/flat source-defined spectra remain AWAY and only detector-output reweighting flips selected comparisons.
 - **rationale:** The note is clean as a bounded negative for broadband attraction under the tested source-defined spectral controls. The current artifacts reproduce the stated pattern: raw broad/flat spectra are AWAY, source-coupled and source-equalized controls do not rescue broadband TOWARD, and detector-equalized TOWARD behavior is explicitly framed as an output-dependent diagnostic rather than a source model. Residual risk is that this does not rule out a later physical k-selection mechanism, but the note lists that as open work.
 - **auditor confidence:** medium
+
+### `spectral_symmetry_note`
+
+- **Note:** [`SPECTRAL_SYMMETRY_NOTE.md`](../../docs/SPECTRAL_SYMMETRY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained takeaway from this line is only that Z2 x Z2 is an exploratory decoherence-side lead, not a Born/gravity-validated successor.  _(class `B`)_
+- **chain closes:** False — The note explicitly routes the current review-safe read through HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE, which is already audited_conditional, and the selected runner only checks the CLT/rank-one ceiling rather than the full symmetry and joint-coexistence claims.
+- **rationale:** Issue: The historical support note's safe current takeaway depends on docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md, whose audit status is conditional, while scripts/ceiling_formal_proof.py only supports the rank-one/CLT ceiling part of the story. Why this blocks: the note cannot be certified as an independently clean symmetry-support claim when its current review-safe authority is conditional and the selected runner does not verify the Z2/Z2xZ2 joint Born/gravity/decoherence claims. Repair target: audit or repair the higher-symmetry joint validation chain and attach the relevant symmetry/joint runners as the row's load-bearing artifacts, with current outputs matching the note's quantitative tables. Claim boundary until fixed: it is safe to treat this as historical exploratory context for symmetry-protected decoherence and as a CLT-ceiling support computation, not as an audit-clean Born/gravity-validated successor.
+- **open / conditional deps cited:**
+  - `HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`
+- **auditor confidence:** high
 
 ### `staggered_backreaction_capture_closure_note`
 
