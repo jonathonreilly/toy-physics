@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:01:06.051521+00:00
+**Generated:** 2026-05-02T01:03:27.992645+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 152 |
-| support | 126 |
+| support | 125 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 964 |
+| ~~audited_conditional~~ | 965 |
 | ~~audited_failed~~ | 98 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 355 |
-| `audited_conditional` | 664 |
+| `audited_conditional` | 665 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 439 |
+| `unaudited` | 438 |
 
 | criticality | count |
 |---|---:|
@@ -1047,6 +1047,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `synthesis_note_3d` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -15591,6 +15592,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: the note presents a sweeping synthesis, including publishable quantitative results, full axiom-chain closure, and a dimensional selection principle, without a registered runner or explicit audited dependency chain, while the underlying lanes include bounded, conditional, failed, and numerical-match audit surfaces. Why this blocks: a synthesis row cannot claim retained or publishable closure by summarizing historical notes whose current audit statuses do not support those conclusions. Repair target: rewrite the note as an audit-ledger-aware historical synthesis that cites specific audited rows, removes or quarantines stale retained/full-closure language, and registers any runner or manifest used for quantitative summary claims. Claim boundary until fixed: usable only as a historical roadmap of explored computational lanes, not as an audited support claim for the model's current retained conclusions.
 - **open / conditional deps cited:**
   - `MIRROR_CHOKEPOINT_NOTE.md`
+- **auditor confidence:** high
+
+### `synthesis_note_3d`
+
+- **Note:** [`SYNTHESIS_NOTE_3D.md`](../../docs/SYNTHESIS_NOTE_3D.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** On 3D discrete causal DAGs, gravity, decoherence, Born compliance, and interference coexist on the same corrected path-sum model, with the large-N table and chokepoint Born fix supporting the claim.  _(class `C`)_
+- **chain closes:** False — The key large-N and Born chokepoint scripts reproduce the quoted tables, but the row has no registered primary runner or manifest tying the multi-script suite to the single synthesis claim, and the all-four coexistence claim is broader than any one runner output.
+- **rationale:** Issue: the note's core numerical tables are reproducible from the named 3D scripts, but the audited row itself has no runner path, dependency list, or manifest proving the full multi-script synthesis as a single claim. Why this blocks: a hostile reader can verify pieces such as the large-N gravity/decoherence table and chokepoint Born check, but cannot certify the broader all-four coexistence and 3D-extension synthesis from this row alone. Repair target: add a registered synthesis runner or manifest that invokes the required 3D scripts, records the exact commands, and asserts the combined gravity, decoherence, Born, and interference predicates. Claim boundary until fixed: treat this as conditional support for the 3D program, with reproducible component results but no audit-clean packaged synthesis.
 - **auditor confidence:** high
 
 ### `taste_scalar_isotropy_theorem_note`
