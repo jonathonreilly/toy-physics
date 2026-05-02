@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 30,
     "high": 230,
-    "leaf": 158,
+    "leaf": 159,
     "medium": 171
   },
-  "generated_at": "2026-05-02T19:19:45.039097+00:00",
+  "generated_at": "2026-05-02T19:23:45.613536+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -11932,6 +11932,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lattice_total_momentum_conservation_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/LATTICE_TOTAL_MOMENTUM_CONSERVATION_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/lattice_total_momentum_conservation_check.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15486,6 +15509,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 113,
-  "total_pending": 589
+  "ready_count": 114,
+  "total_pending": 590
 }
