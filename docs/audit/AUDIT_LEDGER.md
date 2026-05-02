@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:01:28.401308+00:00
+**Generated:** 2026-05-02T21:03:28.560659+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 1 |
-| unaudited | 556 |
+| unaudited | 555 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 631 |
+| ~~audited_conditional~~ | 632 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 631 |
+| `audited_conditional` | 632 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 592 |
+| `unaudited` | 591 |
 
 | claim_type | count |
 |---|---:|
@@ -756,6 +756,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -7547,6 +7548,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The residual environment operator is asserted to have the same normalized coefficients rho_(p,q)(beta) as the boundary class function, so R_beta^env=C_(Z_beta^env).  _(class `F`)_
 - **chain closes:** False — Centrality and formal character expansion of the constructed boundary function are plausible, but equality between the pre-existing residual operator and that convolution is asserted by coefficient identification. The runner injects a generic positive conjugation-symmetric rho_env witness and verifies packaging, not actual Wilson environment data.
 - **rationale:** Issue: the load-bearing closure is an asserted identity between the residual operator and the newly constructed convolution operator. Why this blocks: the runner confirms algebraic consistency once a rho_env sequence is supplied, but it does not compute rho_(p,q)(6) from the unmarked spatial Wilson integral or independently verify that the residual operator spectrum equals those coefficients. Repair target: compute or independently verify the beta=6 boundary character coefficients from the unmarked spatial Wilson environment. Claim boundary until fixed: safe to cite this as an open-gate reformulation of the residual environment datum, not as a retained positive theorem.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Structural identification of spatial-environment boundary character data with a positive SU(3) Wilson-character tensor-transfer operator built from Wilson coefficients and fusion/intertwiner primitives, limited to the stated finite truncated support packet.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-agent-rawls-2026-05-02`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** Then the unmarked spatial boundary character coefficients satisfy z_(p,q)^env(beta) = <chi_(p,q), (T_beta^env,tensor)^(L_perp-1) eta_beta^env>, and hence rho_(p,q)^env(beta) = z_(p,q)^env(beta) / z_(0,0)^env(beta).  _(class `F`)_
+- **chain closes:** False — The note names T_beta^env,tensor and eta_beta^env as compressed transfer objects, but does not derive the physical spatial plaquette environment, rim state, measure, normalization, boundary conditions, or readout from retained inputs. The runner checks a chosen truncated tensor word after constructing it, not the hard bridge from the plaquette environment to the claimed boundary coefficients.
+- **rationale:** Issue: the load-bearing transfer equation identifies the physical spatial-environment boundary coefficients with a named tensor-transfer object whose environment geometry, rim coupling eta, measure, normalization, and readout are not constructed in the note. Why this blocks: exact Wilson coefficients and SU(3) recurrence primitives are checked, but they do not by themselves prove that the plaquette residual environment is this transfer operator or that its boundary coefficients are the stated matrix elements. Repair target: provide a retained theorem deriving the spatial plaquette environment transfer construction, including source sector, boundary/rim state, Haar integrations, normalization, convergence/truncation handling, and readout map; update the runner to compute that bridge rather than hard-code a representative tensor word. Claim boundary until fixed: the note may safely claim a finite truncated positive algebraic support packet built from Wilson character coefficients and SU(3) fusion primitives, not an audited theorem identifying the physical plaquette boundary data with the tensor-transfer law.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spectral_measure_theorem_note`
