@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T19:27:33.573656+00:00",
+  "generated_at": "2026-05-02T19:30:57.074083+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -2172,6 +2172,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/coupled_field_generated_family_probe.py"
+    },
+    "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cpt_particle_antiparticle_lifetime_check.py"
     },
     "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02": {
       "assert_count": 0,
@@ -17874,6 +17886,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cpt_particle_antiparticle_lifetime_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cpt_particle_antiparticle_mass_equality_check.py": {
@@ -35755,12 +35782,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 155,
-      "C": 510,
+      "C": 511,
       "D": 198,
       "none": 410
     },
-    "runners_classified": 1282,
-    "runners_with_C": 612,
+    "runners_classified": 1283,
+    "runners_with_C": 613,
     "runners_with_D": 312
   }
 }
