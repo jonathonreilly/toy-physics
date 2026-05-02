@@ -403,3 +403,20 @@ Adds a taste-corner scalar-carrier import audit:
   continuum projector, pole derivative, or production FH/LSZ pole data remains
   required.
 ```
+
+Latest taste-singlet ladder normalization-boundary checkpoint text for PR #230:
+
+```text
+Adds a taste-singlet ladder normalization boundary:
+- checks the four finite zero-mode-removed ladder crossings under normalized
+  singlet weighting over the 16 BZ corners;
+- validator passes `PASS=6 FAIL=0`; retained-route gate reports
+  `PASS=29 FAIL=0`; campaign status now consumes 59 route certificates and
+  reports `PASS=55 FAIL=0`;
+- normalized source weighting rescales every witness by `1/16`, giving
+  normalized `lambda_max` range `0.0914604870307` to `0.442298920672`, so every
+  finite crossing disappears;
+- still no retained/proposed-retained closure: the scalar taste/projector
+  normalization, continuum pole derivative, or production FH/LSZ pole data
+  remains required.
+```

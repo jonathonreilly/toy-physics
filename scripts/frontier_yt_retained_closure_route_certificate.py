@@ -67,6 +67,7 @@ def main() -> int:
         "color_singlet_zero_mode_removed_ladder_pole_search": "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json",
         "taste_corner_ladder_pole_obstruction": "outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json",
         "taste_carrier_import_audit": "outputs/yt_taste_carrier_import_audit_2026-05-01.json",
+        "taste_singlet_ladder_normalization": "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -171,6 +172,18 @@ def main() -> int:
         "taste-corner scalar-carrier import audit"
         in certificates["taste_carrier_import_audit"].get("actual_current_surface_status", "")
         and certificates["taste_carrier_import_audit"].get("proposal_allowed") is False
+    )
+    taste_singlet_normalization_removes_crossings = (
+        "taste-singlet normalization removes finite ladder crossings"
+        in certificates["taste_singlet_ladder_normalization"].get("actual_current_surface_status", "")
+        and certificates["taste_singlet_ladder_normalization"].get("proposal_allowed") is False
+        and certificates["taste_singlet_ladder_normalization"].get("summary", {}).get("raw_over_normalized") == 16
+        and float(
+            certificates["taste_singlet_ladder_normalization"].get("summary", {}).get(
+                "normalized_lambda_max", 1.0
+            )
+        )
+        < 1.0
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -288,6 +301,11 @@ def main() -> int:
         certificates["taste_carrier_import_audit"].get("actual_current_surface_status", ""),
     )
     report(
+        "taste-singlet-normalization-removes-finite-crossings",
+        taste_singlet_normalization_removes_crossings,
+        certificates["taste_singlet_ladder_normalization"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -331,7 +349,7 @@ def main() -> int:
                 "re-run the Ward physical-readout repair audit"
             ),
             "why_shortest": "It directly repairs the audit's physical-readout objection.",
-            "current_blocker": "source scaling and Feshbach projection are controlled, but the interacting scalar denominator/residue, zero-mode/IR/finite-volume limiting prescription, and common dressing are still not derived",
+            "current_blocker": "source scaling and Feshbach projection are controlled, but the interacting scalar denominator/residue, zero-mode/IR/finite-volume limiting prescription, taste/projector normalization, and common dressing are still not derived",
         },
         {
             "route": "new_selector_or_axiom",
@@ -367,7 +385,10 @@ def main() -> int:
             "projector, taste-corner, and derivative sensitive; filtering "
             "non-origin taste corners removes the finite crossings, and the "
             "current taste-carrier import audit finds no retained authority "
-            "that admits those corners as the physical scalar carrier.  The "
+            "that admits those corners as the physical scalar carrier.  A "
+            "normalized taste-singlet source over the 16 corners also rescales "
+            "the finite ladder eigenvalues by 1/16 and removes every finite "
+            "crossing, so unnormalized taste multiplicity is load-bearing.  The "
             "actual interacting scalar pole derivative theorem and production "
             "evidence remain open.  "
             "These cannot be assumed."

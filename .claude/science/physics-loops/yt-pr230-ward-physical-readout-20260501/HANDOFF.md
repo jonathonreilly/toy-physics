@@ -361,4 +361,9 @@ audit checks the current ledger candidates and finds no retained authority:
 CL3 taste generation is a physical-identification boundary, taste-scalar
 isotropy is conditional for scalar-spectrum consequences, full staggered PT is
 conditional and imports non-clean normalization surfaces, and the ladder input
-audit still lists the scalar color/taste/spin projector as missing.
+audit still lists the scalar color/taste/spin projector as missing.  The
+taste-singlet normalization boundary then checks the constructive singlet
+normalization: applying normalized source weight over the 16 BZ corners divides
+each finite witness by `16` and removes every crossing.  The live blocker is
+therefore a retained scalar taste/projector normalization theorem plus the
+interacting pole derivative, or production same-source FH/LSZ pole data.

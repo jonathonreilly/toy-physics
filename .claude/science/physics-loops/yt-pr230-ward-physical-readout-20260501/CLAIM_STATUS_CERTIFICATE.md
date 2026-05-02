@@ -28,6 +28,7 @@ plus source-to-Higgs LSZ closure attempt
 plus scalar-source response harness extension
 plus Feynman-Hellmann production protocol certificate
 plus same-source scalar two-point LSZ measurement primitive
+plus taste-singlet ladder normalization boundary
 **PR:** #230 draft branch
 
 ```yaml
@@ -101,6 +102,9 @@ Allowed wording:
   retained PR230 source-to-canonical-Higgs normalization theorem;
 - open closure-attempt result: no allowed current-surface premise fixes
   `kappa_s`; a scalar LSZ/source-normalization theorem remains required;
+- exact negative boundary for using unnormalized taste-corner multiplicity as
+  scalar pole evidence; normalized taste-singlet source weighting removes the
+  finite ladder crossings;
 - bounded-support scalar-source response harness extension: the production
   harness now emits `dE/ds`, but physical `dE/dh` still requires production
   data and derived `kappa_s`;

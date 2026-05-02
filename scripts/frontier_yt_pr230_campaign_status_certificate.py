@@ -92,6 +92,9 @@ def main() -> int:
             "outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json"
         ),
         "taste_carrier_import_audit": load("outputs/yt_taste_carrier_import_audit_2026-05-01.json"),
+        "taste_singlet_ladder_normalization": load(
+            "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json"
+        ),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -351,6 +354,12 @@ def main() -> int:
         statuses["taste_carrier_import_audit"],
     )
     report(
+        "taste-singlet-normalization-removes-finite-crossings",
+        "taste-singlet normalization removes finite ladder crossings"
+        in str(statuses["taste_singlet_ladder_normalization"]),
+        statuses["taste_singlet_ladder_normalization"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -491,7 +500,11 @@ def main() -> int:
             "taste-corner, and derivative sensitive; filtering non-origin "
             "taste corners removes the crossings, and the current import "
             "audit finds no retained scalar-carrier authority for those "
-            "corners, so they do not supply the interacting scalar pole/LSZ "
+            "corners.  Normalized taste-singlet source weighting over the 16 "
+            "corners rescales the finite witnesses by 1/16 and also removes "
+            "every crossing.  Thus the finite ladder witnesses rely on an "
+            "unfixed taste/projector normalization and do not supply the "
+            "interacting scalar pole/LSZ "
             "theorem."
         ),
         "proposal_allowed": False,

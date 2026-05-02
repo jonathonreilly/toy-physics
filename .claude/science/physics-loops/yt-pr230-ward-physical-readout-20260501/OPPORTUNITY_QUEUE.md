@@ -143,8 +143,11 @@ probability.
    The taste-corner obstruction shows those crossings are dominated by
    non-origin corners and disappear under physical-origin-only filtering.  The
    taste-carrier import audit finds no retained authority that admits those
-   corners as the physical scalar carrier.  The retained task is therefore a
-   new taste/scalar-carrier plus continuum/projector theorem for the
+   corners as the physical scalar carrier.  The taste-singlet normalization
+   boundary shows that a normalized singlet source over the 16 corners divides
+   every finite witness by `16` and removes all crossings, so unnormalized
+   taste multiplicity is load-bearing.  The retained task is therefore a new
+   taste/scalar-carrier plus continuum/projector theorem for the
    interacting color-singlet pole and LSZ derivative, not another finite
    crossing witness.
    The refreshed retained-closure route certificate folds these blockers into

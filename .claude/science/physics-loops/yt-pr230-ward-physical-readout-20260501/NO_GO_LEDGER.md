@@ -833,6 +833,22 @@ audit still lists the scalar color/taste/spin projector as missing.  Therefore
 the taste-corner finite crossings remain non-closure evidence until a new
 taste/scalar-carrier theorem or production pole data exists.
 
+Taste-singlet normalization removes the finite ladder crossings:
+
+```text
+python3 scripts/frontier_yt_taste_singlet_ladder_normalization_boundary.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+If the scalar carrier is a normalized taste singlet over the 16 BZ corners,
+the finite ladder eigenvalue receives the expected `1/N_taste` source-vertex
+normalization.  Applying that normalization divides every raw finite crossing
+witness by `16`, giving normalized `lambda_max` values between
+`0.0914604870307` and `0.442298920672`.  No finite crossing remains.  The
+unnormalized taste multiplicity is therefore load-bearing and cannot be used
+as scalar pole/LSZ evidence without a retained scalar taste/projector
+normalization theorem.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

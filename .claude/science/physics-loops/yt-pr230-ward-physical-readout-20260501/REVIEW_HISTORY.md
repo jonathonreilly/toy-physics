@@ -1365,3 +1365,31 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The audit finds no retained authority for using non-origin BZ corners as the
 PR #230 physical scalar carrier.  The finite taste-corner crossings remain
 non-closure evidence.
+
+## Review-Loop Backpressure - Taste-Singlet Ladder Normalization Boundary
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_taste_singlet_ladder_normalization_boundary.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_taste_singlet_ladder_normalization_boundary.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The boundary shows normalized taste-singlet source weighting over the 16 BZ
+corners divides every finite zero-mode-removed ladder crossing witness by
+`16` and removes all crossings.  The unnormalized taste multiplicity is
+load-bearing, so a retained scalar taste/projector theorem or production
+same-source pole data remains required.

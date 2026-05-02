@@ -362,6 +362,17 @@ Existing taste and staggered-PT surfaces are support/conditional or
 renaming-bounded.  They do not derive the PR #230 scalar color/taste/spin
 projector or physical scalar carrier.
 
+Taste-singlet normalization boundary:
+
+```text
+normalized taste-singlet over 16 BZ corners => lambda_max -> lambda_max / 16
+```
+
+Under the normalized singlet source convention, every finite ladder crossing
+witness drops below `lambda_max = 1`.  Therefore any scalar-pole route must
+derive which taste/projector normalization is physical; it cannot use the
+unnormalized 16-corner multiplicity as a hidden proof input.
+
 Source-reparametrization gauge boundary:
 
 ```text

@@ -232,6 +232,9 @@ Completed in block 1:
 - `scripts/frontier_yt_fh_lsz_production_manifest.py`
 - `outputs/yt_fh_lsz_production_manifest_2026-05-01.json`
 - `docs/YT_FH_LSZ_PRODUCTION_MANIFEST_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_taste_singlet_ladder_normalization_boundary.py`
+- `outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json`
+- `docs/YT_TASTE_SINGLET_LADDER_NORMALIZATION_BOUNDARY_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
@@ -304,7 +307,9 @@ Next artifact:
   the taste-corner obstruction shows those finite crossings are dominated by
   non-origin corners and vanish under physical-origin-only filtering; the
   taste-carrier import audit finds no current retained authority admitting
-  those corners as the physical scalar carrier
+  those corners as the physical scalar carrier; normalized taste-singlet
+  source weighting divides the same finite witnesses by 16 and removes every
+  crossing, so the unnormalized taste multiplicity is load-bearing
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,
