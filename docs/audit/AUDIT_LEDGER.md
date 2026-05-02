@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T16:42:33.140138+00:00
+**Generated:** 2026-05-02T16:44:59.776806+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 146 |
-| **retained_no_go** | 92 |
+| **retained_no_go** | 93 |
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
@@ -29,13 +29,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 646 |
+| ~~audited_conditional~~ | 645 |
 | ~~audited_failed~~ | 26 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 372 |
-| `audited_conditional` | 646 |
+| `audited_clean` | 373 |
+| `audited_conditional` | 645 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
@@ -47,10 +47,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `bounded_theorem` | 510 |
 | `decoration` | 5 |
 | `meta` | 35 |
-| `no_go` | 151 |
+| `no_go` | 152 |
 | `open_gate` | 105 |
 | `positive_theorem` | 871 |
-| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
@@ -232,6 +231,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_weak_connectivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
+| `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -746,7 +746,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_poisson_self_gravity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_strong_field_observable_split_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
-| `gauge_vacuum_plaquette_constant_lift_obstruction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7356,19 +7355,14 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 ### `gauge_vacuum_plaquette_constant_lift_obstruction_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-28-gauge_vacuum_plaquette_constant_lift_obstruction_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** This obstruction does not rule out analytic plaquette closure entirely. It rules out only the simplest constant-lift ansatz.  _(class `A`)_
-- **chain closes:** False — The exact obstruction to the constant-lift ansatz closes, and the live runner reports THEOREM PASS=6 SUPPORT=1 FAIL=0. It does not close the remaining beta-dependent full-vacuum plaquette reduction law, which the note explicitly leaves as the open target.
-- **rationale:** Issue: the note proves an exact no-go only for the constant-lift ansatz P(beta)=P_1plaq(Gamma beta); it explicitly leaves the nontrivial beta-dependent reduction law and its beta=6 continuation open.
-Why this blocks: downstream plaquette or alpha_s claims cannot cite this row as positive analytic plaquette closure; it only removes one false closure route.
-Repair target: derive and audit the beta-dependent full-vacuum reduction law beta_eff(beta), including its nonperturbative continuation/evaluation at beta=6 with a runner that computes that law.
-Claim boundary until fixed: safe to claim the constant-lift obstruction Gamma_cand != 1 from the strong-coupling slope, not full plaquette observable closure.
-- **open / conditional deps cited:**
-  - `beta_dependent_full_vacuum_plaquette_reduction_law_missing`
+- **claim_type:** `no_go`
+- **claim_scope:** Rules out the exact constant-lift Wilson plaquette reduction P(beta)=P_1plaq(Gamma_cand beta) with Gamma_cand=(3/2)(2/sqrt(3))^(1/4), using the beta=0 strong-coupling slope.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-constant-lift-volta`  (codex-current; independence=fresh_context)
+- **load-bearing step:** But Theorem 1 gives P(beta) = beta / 18 + O(beta^2), so exact equality forces Gamma = 1; since Gamma_cand = 1.554921974442116 != 1, P(beta) = P_1plaq(Gamma_cand beta) cannot be true.  _(class `A`)_
+- **chain closes:** True — The note compares the same normalized plaquette observable on both sides and derives identical beta=0 slopes 1/18 for the full Wilson plaquette and local one-plaquette block. An exact constant rescaling would change the local slope to Gamma/18, so equality near beta=0 forces Gamma=1, contradicting the stated Gamma_cand.
+- **rationale:** The retained claim is a no-go, not support for the remaining beta-dependent program. The obstruction closes by exact small-beta algebra: equal analytic expansions of the same plaquette observable require equal first derivatives at beta=0, and the candidate constant lift has the wrong derivative. The runner hard-codes the elementary Haar slope rather than independently deriving Haar integration, but the source derivation is explicit enough and the runner checks the decisive slope mismatch for the scoped no-go. Residual risk is limited to normalization conventions for the plaquette/action; within the conventions stated in the note, the conclusion follows.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_distinct_shell_theorem_note`
