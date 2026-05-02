@@ -224,9 +224,18 @@ If any item fails, use `open`, `exact-support`, `bounded-support`,
 
 Long unattended runs must continue through local stops.
 
+In campaign or resume mode, a clean checkpoint is not a stop condition. Do not
+send a final answer, release the repo lock, or stand down merely because a
+route ends in no-go, exact support, bounded support, support-only status,
+failed PR update, or missing retained closure. Treat each coherent block as a
+checkpoint inside the larger run unless one of the explicit global stop
+conditions below is met.
+
 Nonfatal events that must **not** end a campaign while runtime remains:
 
 - a route produces a no-go, exact negative boundary, demotion, or blocker;
+- a route produces exact support, bounded support, or support-only evidence
+  without the target retained/proposed-retained certificate;
 - review-loop returns `demote` or `block` for the current artifact;
 - retained-proposal certification fails;
 - a PR is dirty, stacked, or cannot be opened because of GitHub/network auth;
@@ -237,16 +246,26 @@ Nonfatal events that must **not** end a campaign while runtime remains:
 
 Required response to a nonfatal event:
 
-1. demote or archive the current artifact honestly;
-2. checkpoint `STATE.yaml`, `HANDOFF.md`, `REVIEW_HISTORY.md`, and
+1. write the block's theorem/support/no-go note, runner, and output
+   certificate;
+2. demote or archive the current artifact honestly;
+3. checkpoint `STATE.yaml`, `HANDOFF.md`, `REVIEW_HISTORY.md`, and
    `CLAIM_STATUS_CERTIFICATE.md`;
-3. commit/push/open PR or write `PR_BACKLOG.md` for the coherent block;
-4. refresh `OPPORTUNITY_QUEUE.md`;
-5. choose the next highest-ranked retained-positive opportunity and continue.
+4. update the campaign status runner/certificate;
+5. run the required checks for the block;
+6. commit and push the coherent block;
+7. open/update the PR, or write `PR_BACKLOG.md` when PR editing is
+   unavailable;
+8. refresh `OPPORTUNITY_QUEUE.md`;
+9. immediately choose the next highest-ranked retained-positive opportunity
+   and continue.
 
 Global stop is allowed only when:
 
 - runtime or max cycles is exhausted;
+- the named target has a genuinely passing retained/proposed-retained
+  certificate and the user did not request continued campaign work beyond that
+  target;
 - the worktree/repo changes externally in a way that makes safe continuation
   impossible;
 - required core tooling for all viable routes is unavailable;
@@ -254,6 +273,10 @@ Global stop is allowed only when:
   clean independent worktree can be created;
 - the refreshed opportunity queue proves every viable target is blocked and no
   independent retained-positive candidate remains.
+
+If context compacts, the session resumes, or a new worker takes over, read
+`STATE.yaml` and `HANDOFF.md` first, reacquire or verify the repo lock, and
+continue from the recorded next exact action before reopening broad planning.
 
 ## Required Grounding
 
@@ -329,10 +352,11 @@ For publication-facing or quantitative work, also inspect
     runtime remains.
 15. **Continue the campaign or stop.** After PR/backlog handling, if runtime
     remains and the current lane is blocked or closed, pick the next
-    `OPPORTUNITY_QUEUE.md` item and continue. Stop the whole campaign only
-    when runtime/max cycles expires, the target status is genuinely achieved
-    and no further campaign target was requested, or the queue has been freshly
-    scanned and every viable opportunity is blocked by human judgment/tooling.
+    `OPPORTUNITY_QUEUE.md` item and continue without sending a final report or
+    releasing the repo lock. Stop the whole campaign only when runtime/max
+    cycles expires, the target status is genuinely achieved and no further
+    campaign target was requested, or the queue has been freshly scanned and
+    every viable opportunity is blocked by human judgment/tooling.
     In campaign mode, even successful retained-grade proposal of one target is
     a checkpoint, not a stop, unless no further target was requested or no
     viable next opportunity exists.
@@ -399,6 +423,10 @@ In short:
 - refresh the lock before it expires;
 - continue to the next ranked opportunity when one lane blocks and runtime
   remains;
+- after every coherent block, write docs/runner/output, update the loop pack
+  and campaign certificate, run checks, commit, push, record `PR_BACKLOG.md`
+  when PR editing is unavailable, then immediately pivot to the next ranked
+  route;
 - stop cleanly only when runtime, max cycles, global queue exhaustion, or a
   global safety/tooling condition dictates;
 - push only dedicated science block branches;
@@ -418,8 +446,9 @@ Stop and write a clear `HANDOFF.md` when:
 - required core tooling for every viable queued route is unavailable.
 
 Do not stop solely because review-loop finds a blocker, retained certification
-fails, PR creation fails, or one lane needs human science judgment. Demote or
-backlog that block and pivot.
+fails, PR creation fails, a route ends in no-go/bounded support/support-only
+status, a checkpoint is clean, or one lane needs human science judgment.
+Demote or backlog that block and pivot.
 
 ## Final Report
 
