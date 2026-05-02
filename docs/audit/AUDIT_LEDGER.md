@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T16:28:47.330153+00:00
+**Generated:** 2026-05-02T16:43:39.646890+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 508 |
+| unaudited | 509 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 646 |
+| ~~audited_conditional~~ | 645 |
 | ~~audited_failed~~ | 26 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 373 |
-| `audited_conditional` | 646 |
+| `audited_conditional` | 645 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 16 |
-| `unaudited` | 543 |
+| `unaudited` | 544 |
 
 | claim_type | count |
 |---|---:|
@@ -53,13 +53,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 96 |
-| `high` | 339 |
-| `medium` | 428 |
+| `critical` | 52 |
+| `high` | 378 |
+| `medium` | 433 |
 | `leaf` | 814 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 85
+- **Citation cycles detected:** 83
 
 ### Runner classification (static heuristic)
 
@@ -74,31 +74,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | bounded_theorem | critical | 289 | 29.68 | `unaudited` | unaudited |
-| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 364 | 29.01 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 354 | 28.97 | `audited_clean` | **retained_bounded** |
+| 2 | `alpha_s_derived_note` | bounded_theorem | critical | 238 | 28.90 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 118 | 28.89 | `unaudited` | unaudited |
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 294 | 27.70 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 325 | 27.35 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 289 | 26.18 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 293 | 24.70 | `unaudited` | unaudited |
-| 9 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `three_generation_observable_theorem_note` | positive_theorem | critical | 346 | 22.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 183 | 26.52 | `audited_renaming` | ~~audited_renaming~~ |
+| 6 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 289 | 26.18 | `unaudited` | unaudited |
+| 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 199 | 26.14 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
+| 10 | `three_generation_observable_theorem_note` | positive_theorem | critical | 307 | 22.27 | `audited_conditional` | ~~audited_conditional~~ |
 | 11 | `three_generation_structure_note` | positive_theorem | critical | 302 | 21.24 | `audited_conditional` | ~~audited_conditional~~ |
 | 12 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `left_handed_charge_matching_note` | positive_theorem | critical | 304 | 20.75 | `unaudited` | unaudited |
 | 15 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 16 | `anomaly_forces_time_theorem` | positive_theorem | critical | 299 | 19.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `native_gauge_closure_note` | bounded_theorem | critical | 358 | 18.99 | `audited_clean` | **retained_bounded** |
+| 17 | `native_gauge_closure_note` | bounded_theorem | critical | 334 | 18.89 | `audited_clean` | **retained_bounded** |
 | 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `rconn_derived_note` | bounded_theorem | critical | 296 | 16.71 | `unaudited` | unaudited |
-| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 294 | 16.70 | `unaudited` | unaudited |
-| 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
-| 22 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
-| 23 | `physical_lattice_necessity_note` | no_go | critical | 345 | 16.43 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 350 | 15.96 | `audited_clean` | **retained** |
-| 25 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | critical | 301 | 15.74 | `unaudited` | unaudited |
+| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
+| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 244 | 16.44 | `unaudited` | unaudited |
+| 22 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 311 | 15.79 | `audited_clean` | **retained** |
+| 23 | `physical_lattice_necessity_note` | no_go | critical | 306 | 15.76 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | critical | 301 | 15.74 | `unaudited` | unaudited |
+| 25 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 131 | 15.54 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -905,7 +905,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `mesoscopic_surrogate_multistage_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `minimal_axioms_2026-04-11` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_2d_gravity_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mirror_gravity_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -11316,38 +11315,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** On the retained 2D companion family, the broad surrogate survives two sourced-response stages as a stable mesoscopic source control, with stage-2 matching stage-1 to printed precision.  _(class `C`)_
 - **chain closes:** True — The registered 2D two-stage runner recomputes the topN captures, centroids, spreads, ratios, total-variation values, and carry, and the current output matches the note. The note explicitly remains a bounded control and not a persistent-mass theorem.
 - **rationale:** The runner verifies the load-bearing two-stage stability claim directly: topN=9, 25, and 49+ reproduce the stated captures, ratios, and carry=1.000, with stage-2 rows matching stage-1 to print precision. The note preserves the key limitation that the object remains broad/mesoscopic and does not become a localized inertial mass. Residual risk is the separate question of support sensitivity on other families.
-- **auditor confidence:** high
-
-### `minimal_axioms_2026-04-11`
-
-- **Note:** [`MINIMAL_AXIOMS_2026-04-11.md`](../../docs/MINIMAL_AXIOMS_2026-04-11.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The current package uses Cl(3), Z^3, finite local Grassmann/staggered-Dirac dynamics, and g_bare=1 with the accepted plaquette/u0 surface as its minimal input stack.  _(class `B`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md, G_BARE_RIGIDITY_THEOREM_NOTE.md, G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md, G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md, G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md, G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md, GENERATION_AXIOM_BOUNDARY_NOTE.md, and 10 more direct blockers.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md, G_BARE_RIGIDITY_THEOREM_NOTE.md, G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md, G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md, G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md, G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md, GENERATION_AXIOM_BOUNDARY_NOTE.md, and 10 more direct blockers. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
-  - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
-  - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
-  - `G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`
-  - `G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`
-  - `G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md`
-  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `RCONN_DERIVED_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
-  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`
 - **auditor confidence:** high
 
 ### `minimal_source_driven_field_probe_note`
