@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-02
 **Type:** positive_theorem
-**Claim scope:** the **derivation** that, given the retained left-handed quark
+**Claim scope:** the **derivation** that, given the cited left-handed quark
 representation `Q_L : (3, 2)_{1/3}` from `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
 and the SU(3)^3 anomaly cancellation requirement from
 `ANOMALY_FORCES_TIME_THEOREM.md`, the SU(3) representation content of the
@@ -13,36 +13,22 @@ across irreducible representations, applies anomaly cancellation, and
 applies a minimal-field-count completion principle. The hypercharges and
 SU(2)_L ⊗ U(1)_Y labelling distinguishing `u_R^c` from `d_R^c` are
 **out of scope** here (separate authority rows).
-**Status:** audit pending. This note is a candidate **closing derivation**
-of the verdict-identified obstruction on the parent
+**Status:** independent audit required. This note is a candidate closing
+derivation for the parent
 `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24`. Under the
-scope-aware classification framework, `effective_status` is computed by
-the audit pipeline; no author-side tier is asserted in source.
-Audit-lane ratification is required before any retained-grade status
-applies.
+scope-aware classification framework, ratified status is computed by the
+audit pipeline; no author-side tier is asserted in source.
 **Runner:** [`scripts/frontier_su3_anomaly_forced_3bar_completion.py`](./../scripts/frontier_su3_anomaly_forced_3bar_completion.py)
 **Authority role:** closing derivation for the parent's class-B
 load-bearing step (cross-note input verification on
 `one_generation_matter_closure` for `u_R^c, d_R^c` rep content).
 
-## Verdict-identified obstruction (quoted)
-
-> Issue: the cancellation relies on the retained presence and SU(3)
-> representations of u_R^c and d_R^c, but those right-handed
-> anti-triplets are not established by the provided retained one-hop
-> dependencies. The note's reproduction runner passes 33 checks, but
-> it checks the hand-entered content table rather than deriving the
-> missing matter-content authority. Why this blocks: without that
-> matter-content input, the load-bearing +2 - 1 - 1 = 0 sum is only
-> conditional algebra, not a theorem from the retained primitives.
-
 ## Statement
 
 Let:
 
-- (P1, retained) `Q_L : (3, 2)_{1/3}` be the left-handed quark
-  representation per `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` (retained
-  corollary on the current paper surface).
+- (P1) `Q_L : (3, 2)_{1/3}` be the left-handed quark representation per
+  `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`.
 - (P2, admitted) The SU(3)^3 cubic-anomaly trace must vanish for gauge
   consistency; this is the anomaly-cancellation requirement encoded by
   `ANOMALY_FORCES_TIME_THEOREM.md`.
@@ -144,15 +130,15 @@ plus the `SU(2)_L × U(1)_Y` representation theory; those are addressed
 by `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24`.
 
 The **SU(3) representation content (3̄)** of these RH fields is, however,
-fully derived from P1+P2+P3 — closing the verdict-identified obstruction
-on the parent row.
+fully derived from P1+P2+P3, addressing the missing derivation on the
+parent row.
 
 ∎
 
 ## What this claims
 
 - `(T1)`: forced SU(3) representation content of the RH (anti-)quark sector
-  as exactly 2 LH-Weyl fermions in the 3̄, derived from retained
+  as exactly 2 LH-Weyl fermions in the 3̄, derived from cited
   `Q_L : (3, 2)` + SU(3)^3 anomaly cancellation + minimal-field-count
   completion.
 - `(T2)`: identification of these 2 LH 3̄ fields with `u_R^c, d_R^c` in
@@ -161,21 +147,21 @@ on the parent row.
 ## What this does NOT claim
 
 - Hypercharges `Y(u_R^c) = -4/3, Y(d_R^c) = +2/3`: separate authority
-  ([`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)).
+  `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24`.
 - Generation count (3 generations): separate authority
-  ([`THREE_GENERATION_STRUCTURE_NOTE`](THREE_GENERATION_STRUCTURE_NOTE.md)).
+  `THREE_GENERATION_STRUCTURE_NOTE`.
 - The anomaly-cancellation **principle** itself (the requirement that
   gauge anomaly traces vanish): separate authority
-  ([`ANOMALY_FORCES_TIME_THEOREM`](ANOMALY_FORCES_TIME_THEOREM.md)).
+  `ANOMALY_FORCES_TIME_THEOREM`.
 - Lepton sector content (`L_L, e_R^c, ν_R^c`): separate authority
-  ([`ONE_GENERATION_MATTER_CLOSURE_NOTE`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md)).
+  `ONE_GENERATION_MATTER_CLOSURE_NOTE`.
 - Additional anomaly cancellations (`SU(2)^2 U(1)_Y`, `U(1)_Y^3`, etc.):
   these constrain hypercharges, not the SU(3) rep content.
 
 ## Cited dependencies
 
 - (P1) [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
-  — supplies retained `Q_L : (3, 2)_{1/3}`.
+  — supplies `Q_L : (3, 2)_{1/3}`.
 - (P2) [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
   — supplies the anomaly-cancellation requirement.
 - (P3) framework convention that RH (anti-)quark fields are LH-Weyl
@@ -195,7 +181,7 @@ on the parent row.
 ## Validation
 
 Primary runner: [`scripts/frontier_su3_anomaly_forced_3bar_completion.py`](./../scripts/frontier_su3_anomaly_forced_3bar_completion.py)
-verifies (PASS=15/0):
+verifies (PASS=14/0):
 
 1. SU(3) cubic-anomaly coefficient catalogue (with conjugation
    symmetry `A(R̄) = -A(R)` and self-conjugate-rep zero).
@@ -208,18 +194,19 @@ verifies (PASS=15/0):
    `{3̄: 2}` remains the unique 2-field solution.
 7. Identification: 2 LH 3̄ singlets are `u_R^c, d_R^c` (SU(3) rep
    content forced by P1+P2+P3).
-8. Parent row class-B load-bearing step.
 
-## Cross-references
+## Non-load-bearing related rows
 
-- [`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24`](SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md) —
-  parent row whose verdict-identified obstruction is closed by this
-  derivation.
-- [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md) —
+These references are intentionally not markdown links because they are
+contextual rather than load-bearing dependencies for this row:
+
+- `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24` — parent row
+  whose missing SU(3) representation derivation is addressed here.
+- `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24` —
   separate authority for hypercharges Y of `u_R^c, d_R^c`.
-- [`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24`](SU2_WITTEN_Z2_ANOVMALY_THEOREM_NOTE_2026-04-24.md) —
-  sister anomaly-cancellation theorem with similar verdict-identified
-  obstruction (identifies `Q_L, L_L` as SU(2) doublets).
-- [`BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24`](BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md) —
-  related B-L anomaly-freedom note; uses `u_R^c, d_R^c` reps as input
-  rather than deriving them.
+- `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24` — sister
+  anomaly-cancellation theorem with a similar matter-content derivation gap
+  (identifies `Q_L, L_L` as SU(2) doublets).
+- `BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24` — related B-L
+  anomaly-freedom note; uses `u_R^c, d_R^c` reps as input rather than
+  deriving them.

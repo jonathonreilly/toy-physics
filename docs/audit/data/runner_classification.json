@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T21:18:45.487312+00:00",
+  "generated_at": "2026-05-02T21:24:24.812323+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14088,6 +14088,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_su2_weak_beta_coefficient_structural_closed_form.py"
+    },
+    "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_su3_anomaly_forced_3bar_completion.py"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "assert_count": 2,
@@ -30027,6 +30039,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_su3_anomaly_forced_3bar_completion.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_substrate_to_p_a_forcing.py": {
       "assert_count": 2,
       "claims": [
@@ -36102,15 +36129,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 107,
+    "decoration_candidates": 108,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 155,
+      "B": 156,
       "C": 520,
       "D": 198,
       "none": 412
     },
-    "runners_classified": 1295,
+    "runners_classified": 1296,
     "runners_with_C": 622,
     "runners_with_D": 312
   }

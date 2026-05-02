@@ -1,22 +1,13 @@
 #!/usr/bin/env python3
 """SU(3) Anomaly-Forced 3̄ Singlet Completion — Closing Derivation Runner.
 
-Closes the verdict-identified obstruction on
-`su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` (claim_type=
-positive_theorem, audit_status=audited_conditional, td=134, lbs=B):
-
-  > the cancellation relies on the retained presence and SU(3)
-  > representations of u_R^c and d_R^c, but those right-handed
-  > anti-triplets are not established by the provided retained one-hop
-  > dependencies. The note's reproduction runner passes 33 checks, but
-  > it checks the hand-entered content table rather than deriving the
-  > missing matter-content authority.
+Candidate closing derivation for
+`su3_cubic_anomaly_cancellation_theorem_note_2026-04-24`.
 
 This runner DERIVES the SU(3) representation content of the RH (anti-)quark
 sector from:
 
-  P1: Retained `Q_L : (3, 2)_{1/3}` (LEFT_HANDED_CHARGE_MATCHING_NOTE,
-      retained corollary on the current paper surface).
+  P1: `Q_L : (3, 2)_{1/3}` (LEFT_HANDED_CHARGE_MATCHING_NOTE).
 
   P2: Anomaly-cancellation requirement (ANOMALY_FORCES_TIME_THEOREM):
       the SU(3)^3 cubic anomaly trace must vanish for gauge consistency.
@@ -40,12 +31,7 @@ Output: derivation that the SU(3) rep of u_R^c, d_R^c IS forced
 (not hand-entered) by P1+P2+P3.
 """
 
-from pathlib import Path
 import sys
-import json
-from itertools import product
-
-ROOT = Path(__file__).resolve().parent.parent
 
 PASS = 0
 FAIL = 0
@@ -278,7 +264,7 @@ section("Part 7: identification — 2 LH 3̄ fields = u_R^c, d_R^c")
 print("""
   Identification:
     The 2 LH 3̄ singlets forced by SU(3)^3 anomaly cancellation
-    (with retained Q_L : (3, 2)) are identified as
+    (with Q_L : (3, 2)) are identified as
         u_R^c, d_R^c : (3̄, 1)
     in the standard SM bookkeeping. The distinguishing labels (u vs d)
     and the hypercharge values are NOT determined by SU(3) anomaly
@@ -288,40 +274,28 @@ print("""
           and lepton-sector content.
 
     The SU(3) REPRESENTATION CONTENT (3̄) is, however, fully derived
-    from P1+P2+P3 — closing the verdict-identified obstruction on
-    the parent row.
+    from P1+P2+P3, addressing the missing derivation on the parent row.
 """)
-check("SU(3) representation 3̄ for u_R^c, d_R^c forced by P1+P2+P3 (closing derivation)",
-      True,
-      detail="parent's hand-coded matter content now derived from anomaly cancellation")
-
-
-# ----------------------------------------------------------------------------
-section("Part 8: parent row context (no ledger modification)")
-# ----------------------------------------------------------------------------
-LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
-ledger = json.loads(LEDGER.read_text())
-parent = ledger['rows'].get('su3_cubic_anomaly_cancellation_theorem_note_2026-04-24', {})
-print(f"\n  Parent row state on origin/main:")
-print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
-print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
-print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
-
-check("parent row class-B load-bearing step (cross-note input verification)",
-      parent.get('load_bearing_step_class') == 'B')
+identification_ok = (
+    canonical_in_minimal
+    and len(non_canonical_2field) == 0
+    and len(one_field_solutions) == 0
+)
+check("SU(3) representation 3̄ for two RH-conjugate quark fields is forced by P1+P2+P3",
+      identification_ok,
+      detail="minimal anomaly-cancelling completion is exactly {3bar: 2}")
 
 
 # ----------------------------------------------------------------------------
 section("Closing-derivation summary")
 # ----------------------------------------------------------------------------
 print("""
-  This runner closes the verdict-identified obstruction on
+  This runner addresses the missing derivation in
   su3_cubic_anomaly_cancellation_theorem_note_2026-04-24 by deriving
   (rather than hand-entering) the SU(3) representation content of u_R^c,
   d_R^c from:
 
-    P1 (retained):  Q_L : (3, 2)_{1/3}
+    P1:             Q_L : (3, 2)_{1/3}
                     [LEFT_HANDED_CHARGE_MATCHING_NOTE]
     P2 (admitted):  SU(3)^3 anomaly cancellation requirement
                     [ANOMALY_FORCES_TIME_THEOREM]
@@ -343,20 +317,14 @@ print("""
   What this closes:
     - The parent's hand-coded u_R^c, d_R^c rep content (3̄) is now
       DERIVED from P1+P2+P3 rather than stipulated.
-    - The verdict's specific obstruction ("the retained presence and
-      SU(3) representations of u_R^c and d_R^c are not established by
-      the provided retained one-hop dependencies") is addressed by
-      this derivation.
-
-  What remains separate (out-of-scope for this row, audited elsewhere):
+  What remains separate (out-of-scope for this row, handled separately):
     - Hypercharges Y(u_R^c), Y(d_R^c) — STANDARD_MODEL_HYPERCHARGE_UNIQUENESS.
     - Generation count (3 generations) — THREE_GENERATION_STRUCTURE.
     - SU(2)_L singlet labelling — implicit in the SM bookkeeping.
     - Anomaly-cancellation principle itself — ANOMALY_FORCES_TIME_THEOREM.
 
-  Status: this is a candidate retained-grade closing derivation of the
-  parent's class-B load-bearing step. Audit lane to ratify; no
-  retained-status promotion claimed in this runner output.
+  Status: this is a candidate closing derivation. Independent audit must
+  ratify the row before the repository treats it as accepted authority.
 """)
 
 

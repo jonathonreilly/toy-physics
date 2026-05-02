@@ -8437,6 +8437,14 @@
       "to": "three_generation_structure_note"
     },
     {
+      "from": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
       "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
       "to": "graph_first_su3_integration_note"
     },
@@ -20013,7 +20021,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:18:42.016374+00:00",
+  "generated_at": "2026-05-02T21:24:20.348365+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41474,6 +41482,20 @@
       "runner_path": null,
       "title": "SU(2) Witten Z_2 Global Anomaly Cancellation Theorem"
     },
+    "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02": {
+      "claim_id": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "left_handed_charge_matching_note",
+        "anomaly_forces_time_theorem"
+      ],
+      "note_hash": "0dc2c97e3a22d0ae4843ac0ccd9fe73d3c700e4998ff1549bb915c50a96bd20b",
+      "path": "docs/SU3_ANOMALY_FORCED_3BAR_COMPLETION_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_su3_anomaly_forced_3bar_completion.py",
+      "title": "SU(3) Anomaly-Forced 3\u0304 Singlet Completion Theorem"
+    },
     "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24": {
       "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
@@ -46616,7 +46638,7 @@
       "meta": 1,
       "no_go": 1,
       "none": 1742,
-      "positive_theorem": 43
+      "positive_theorem": 44
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 512,
@@ -46624,12 +46646,12 @@
       "no_go": 107,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 630
+      "positive_theorem": 631
     },
-    "edge_count": 5003,
-    "leaf_count": 765,
-    "node_count": 1799,
+    "edge_count": 5005,
+    "leaf_count": 766,
+    "node_count": 1800,
     "root_count": 1217,
-    "runners_with_path": 1367
+    "runners_with_path": 1368
   }
 }
