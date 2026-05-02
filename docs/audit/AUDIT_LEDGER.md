@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T16:04:04.946281+00:00
+**Generated:** 2026-05-02T16:07:00.469900+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 500 |
+| unaudited | 499 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 16 |
+| ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 652 |
 | ~~audited_failed~~ | 26 |
 
@@ -39,17 +39,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 16 |
-| `unaudited` | 535 |
+| `audited_renaming` | 17 |
+| `unaudited` | 534 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 507 |
+| `bounded_theorem` | 508 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 151 |
 | `open_gate` | 105 |
-| `positive_theorem` | 873 |
+| `positive_theorem` | 872 |
 
 | criticality | count |
 |---|---:|
@@ -87,7 +87,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 11 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 278 | 21.12 | `audited_conditional` | ~~audited_conditional~~ |
 | 12 | `one_generation_matter_closure_note` | positive_theorem | critical | 250 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 115 | 20.86 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `left_handed_charge_matching_note` | positive_theorem | critical | 291 | 19.69 | `unaudited` | unaudited |
+| 14 | `left_handed_charge_matching_note` | bounded_theorem | critical | 291 | 19.69 | `audited_renaming` | ~~audited_renaming~~ |
 | 15 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 95 | 19.59 | `audited_conditional` | ~~audited_conditional~~ |
 | 16 | `native_gauge_closure_note` | bounded_theorem | critical | 339 | 18.91 | `audited_clean` | **retained_bounded** |
 | 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 287 | 18.67 | `audited_conditional` | ~~audited_conditional~~ |
@@ -1235,6 +1235,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
+| `left_handed_charge_matching_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | E | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
@@ -10960,6 +10961,19 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** On the weak-field ordered-lattice pocket, the retained N = 30 through 100 rows are Born-clean, k=0-clean, MI/decoherence-positive, and gravity-positive, and fit 1 - pur_cl ~= 1.0467 * N^-0.222 with R^2 = 0.9683.  _(class `C`)_
 - **chain closes:** True — The live artifact reproduces the N sweep, canonical N=40 row, retained/all-row purity fits, retention counts, and bounded retained-window interpretation from the source note.
 - **rationale:** The runner recomputes the load-bearing table: N=30 through 100 are retained, all seven rows are Born-clean and positive-gravity, and the retained-row purity-complement fit matches the source coefficient, exponent, and R^2. The note correctly treats the result as a bounded scaling law on the tested weak-field pocket, with N=20 excluded and no universal/asymptotic lattice theorem claimed. The runner's final 'PROMOTED' line is clean only under that bounded retained-window meaning.
+- **auditor confidence:** high
+
+### `left_handed_charge_matching_note`
+
+- **Note:** [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](../../docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Selected-axis graph-first surface yields a weak su(2), residual 3+1 split, su(3) block, and traceless abelian eigenvalue pattern +1/3 x6 and -1 x2, read as left-handed charge matching only within that bounded surface.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-left-handed-charge-epicurus`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The unique traceless abelian direction with eigenvalues +1/3 on the 6-dimensional symmetric/weak-doublet block and -1 on the 2-dimensional antisymmetric/weak-doublet block is identified as the left-handed Standard Model Q_L/L_L charge pattern via Q = T3 + Y/2.  _(class `F`)_
+- **chain closes:** False — The retained authorities and runner close the internal graph-first algebraic pattern: weak su(2), su(3), and traceless U(1)-like eigenvalues. The additional identification of the framework blocks as SM quark/lepton doublets and of the abelian direction as physical hypercharge/charge matching is a naming bridge, not derived here.
+- **rationale:** Issue: the source note labels the internally derived selected-axis blocks as Q_L and L_L and invokes the Standard Model charge formula without deriving the physical identification bridge. Why this blocks: the runner strongly verifies the bounded graph-first construction and the +1/3/-1 eigenvalue pattern, but audited_clean would require an independent retained theorem mapping those blocks to physical SM quark/lepton doublets and U(1)_Y charge. Repair target: restate this row as an internal selected-axis hypercharge-like eigenvalue matching, or cite a retained one-generation closure note that derives the SM identification bridge. Claim boundary until fixed: bounded structural charge-pattern matching on the graph-first selected-axis surface, not a clean physical charge theorem or anomaly-complete hypercharge derivation.
 - **auditor confidence:** high
 
 ### `legacy_exploratory_drivers_note`
