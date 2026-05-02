@@ -5,22 +5,19 @@
 **Claim scope:** the framework's staggered Cl(3) Hamiltonian H_phys = i·D
 on a periodic L³ lattice (even L), with C the sublattice parity ε(x) =
 (-1)^{x+y+z} and the chiral anti-commutation {C, H_phys} = 0 supplied by
-the retained `cpt_exact_note`, has a spectrum that is **symmetric around
+the cited `cpt_exact_note`, has a spectrum that is **symmetric around
 zero**:
 σ(H_phys) = −σ(H_phys) as multisets. Equivalently, every eigenstate
 |E⟩ with eigenvalue E has a chiral partner C|E⟩ that is an eigenstate
 with eigenvalue −E. Multiplicities at +E and −E are equal for E ≠ 0;
 zero modes form a separate invariant subspace under C.
-**Status:** awaiting independent audit.
-**Loop:** `positive-only-r10-20260502`
-**Cycle:** 1 (Block 1)
-**Branch:** `physics-loop/positive-only-r10-block01-staggered-chiral-symmetry-20260502`
+**Status:** independent audit required.
 **Runner:** `scripts/staggered_chiral_symmetry_check.py`
 **Log:** `outputs/staggered_chiral_symmetry_check_2026-05-02.txt`
 
 ## Cited authorities (one hop)
 
-- [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md) — `effective_status: retained`. Provides:
+- [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md) provides:
   - Staggered single-component Hamiltonian D and H_phys = i·D
   - Sublattice parity C as diag(ε(x)) with ε(x) = (-1)^{x+y+z}
   - Exact identity C·H_phys·C = -H_phys (equivalently {C, H_phys} = 0)
@@ -44,7 +41,7 @@ in the admitted-context inputs — it is the result being proved.
 
 Let H_phys = i·D on the L³ lattice (even L) and C = diag(ε(x)) with ε(x) =
 (-1)^{x+y+z} be the staggered Hamiltonian and sublattice parity supplied by
-the retained `cpt_exact_note`.
+the cited `cpt_exact_note`.
 
 **(S1) Chiral spectral pairing.** For every eigenstate |E⟩ of H_phys with
 eigenvalue E ∈ R, the state C|E⟩ is also an eigenstate of H_phys with
@@ -66,14 +63,14 @@ multiplicity.
 **(S5) Zero-mode invariance under C.** The zero-eigenspace ker(H_phys) is
 C-invariant: C ker(H_phys) ⊂ ker(H_phys). It decomposes as
 ker(H_phys) = ker_+ ⊕ ker_- under the C-eigenvalue split (C-even vs C-odd).
-The integer dim ker_+ − dim ker_- is a chiral index of the lattice
-operator.
+The integer dim ker_+ − dim ker_- is the C-graded zero-mode imbalance
+for this finite lattice operator.
 
 ## Proof
 
 ### Step 1 — Chiral anticommutation (cited)
 
-By cpt_exact_note (retained): the sublattice parity C is unitary, real,
+By `cpt_exact_note`: the sublattice parity C is unitary, real,
 diagonal, satisfies C² = I, and acts as
 
 ```text
@@ -132,20 +129,19 @@ If H_phys |ψ⟩ = 0, then H_phys (C|ψ⟩) = -C H_phys |ψ⟩ = -C · 0 = 0, so
 C|ψ⟩ ∈ ker(H_phys). Since C² = I, C restricted to ker(H_phys) is a unitary
 involution, splitting ker(H_phys) into ±1-eigenspaces ker_±.
 
-The integer index dim ker_+ − dim ker_- = Tr(C|_{ker(H_phys)}) is the
-chiral index of H_phys with respect to C. (This integer is the lattice
-analog of the Atiyah-Singer index of the continuum Dirac operator on a
-manifold with chirality grading.) ∎
+The integer dim ker_+ − dim ker_- = Tr(C|_{ker(H_phys)}) is the C-graded
+zero-mode imbalance of H_phys with respect to this finite-lattice
+grading. ∎
 
 ## Hypothesis set used
 
-- `cpt_exact_note` (retained): provides H_phys = i·D, C = diag(ε(x)),
+- `cpt_exact_note`: provides H_phys = i·D, C = diag(ε(x)),
   and the chiral anti-commutation {C, H_phys} = 0.
 - Spectral theorem for finite-dim Hermitian operators (mathematical,
   admitted-context).
 
 No fitted parameters. No observed values. No physics conventions admitted
-beyond the retained CPT-exact theorem.
+beyond the cited CPT-exact theorem.
 
 ## Corollaries
 
@@ -155,39 +151,23 @@ of disjoint pairs (E, −E) for E > 0, plus (possibly degenerate) zero
 modes. This is the discrete-lattice analog of relativistic chiral symmetry
 ψ → γ_5 ψ.
 
-C2. **Massless Dirac points at zero modes.** The 8 zero modes on L = 4
-(verified by the runner) sit at the eight Brillouin-zone corners of the
-staggered lattice — the framework's structural realization of the
-continuum 2³ = 8 doublers, which combine into 2² = 4 Dirac species per
-spinor component. (The doubler structure is a known feature of the
-staggered convention.)
-
-C3. **Free-energy zero point.** The free-fermion ground-state energy is
-−Σ_{E > 0} E (filling the Dirac sea) and the spectrum-symmetric structure
-guarantees this sum is well-defined and finite for finite lattices.
-Renormalization of the vacuum energy is unambiguous.
-
-C4. **Bipartite lattice geometry forces chiral symmetry.** The result
+C2. **Bipartite lattice geometry is load-bearing.** The result
 S4 uses crucially that L is even (bipartite Z³ requires even side length
 to close periodically with both colorings present). This is exactly the
 constraint that cpt_exact_note imposes on the lattice geometry — and the
 chiral symmetry is structurally tied to this bipartite geometry.
 
-C5. **Symmetry-protected zero modes (chiral index).** The integer
-dim ker_+ − dim ker_- is a chiral-index protected number: small Hermitian
-perturbations of H_phys that preserve {C, H_phys} = 0 cannot change it.
-This is the discrete analog of index-theory protection in continuum gauge
-theory.
+## Out of scope
 
-C6. **Source-free correlator constraints.** Any matrix element
-⟨0|O₁ ... O_n|0⟩ of operators that flip between Λ_+ and Λ_-
-sublattices vanishes unless n is even (sublattice-parity superselection).
-This is a discrete chirality selection rule.
+This note does not claim continuum Dirac species counting, Atiyah-Singer
+index theory, vacuum-energy renormalization, interacting perturbation
+protection, or source-free correlator selection rules. It only proves the
+finite-lattice spectral pairing consequence of `{C, H_phys} = 0`.
 
 ## Honest status
 
 Positive theorem on the framework's staggered Hamiltonian spectrum, derived
-from a single retained one-hop dependency by elementary chiral-pairing
+from a single one-hop dependency by elementary chiral-pairing
 argument. The result σ(H) = −σ(H) is **not** present in the cited
 cpt_exact_note's claim list (which states [CPT, H] = 0 and SME=0 but
 doesn't extract the spectrum-symmetric corollary). The runner exhibits
@@ -196,9 +176,9 @@ lattice (8 zero modes + 28 positive + 28 negative).
 
 ```yaml
 claim_type_author_hint: positive_theorem
-claim_scope: "σ(H_phys) = -σ(H_phys); chiral pairing C|E⟩ ↔ |-E⟩; chiral index dim ker_+ - dim ker_- on staggered lattice."
+claim_scope: "σ(H_phys) = -σ(H_phys); chiral pairing C|E⟩ ↔ |-E⟩; C-graded zero-mode subspace on the finite staggered lattice."
 upstream_dependencies:
-  - cpt_exact_note (retained)
+  - cpt_exact_note
 admitted_context_inputs:
   - spectral theorem for finite-dim Hermitian operators
 ```

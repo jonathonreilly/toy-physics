@@ -1,6 +1,6 @@
 """Staggered Cl(3) Hamiltonian has chiral-symmetric spectrum: σ(H_phys) = -σ(H_phys).
 
-By cpt_exact_note (retained), the staggered single-component lattice operator
+By cpt_exact_note, the staggered single-component lattice operator
 D = Σ_μ (1/2) η_μ(x) [δ(y, x+e_μ) - δ(y, x-e_μ)] is anti-Hermitian, the
 physical Hermitian Hamiltonian is H_phys = i·D, and the C operator
 (sublattice parity ε(x) = (-1)^{x+y+z} as a diagonal real matrix) satisfies
@@ -14,11 +14,11 @@ This block proves the spectral consequence: the spectrum of H_phys is
 For every eigenstate |E⟩ of H_phys with eigenvalue E, the state C|E⟩ is
 also an eigenstate of H_phys with eigenvalue -E. Therefore:
 - positive and negative eigenvalues come in equal-multiplicity pairs (E, -E)
-- the chiral-symmetry-protected zero modes can only enter as a single
+- the zero modes can only enter as a single
   invariant subspace under C
 - σ(H_phys) on a bipartite lattice is a balanced "Dirac" spectrum
 
-This is a structural framework consequence of the retained CPT_EXACT_NOTE
+This is a structural framework consequence of CPT_EXACT_NOTE
 that doesn't appear in the cited note's own claim list (which states
 [CPT, H] = 0 and SME=0, but doesn't carry the spectrum-symmetric statement
 explicitly).

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T21:12:09.661399+00:00",
+  "generated_at": "2026-05-02T21:16:06.854359+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -13740,6 +13740,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_staggered_backreaction_shell_spectral.py"
+    },
+    "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/staggered_chiral_symmetry_check.py"
     },
     "staggered_dag_note_2026-04-10": {
       "assert_count": 0,
@@ -35411,6 +35423,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/staggered_chiral_symmetry_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/structured_chokepoint_bridge.py": {
       "assert_count": 0,
       "claims": [
@@ -36079,12 +36106,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 155,
-      "C": 519,
+      "C": 520,
       "D": 198,
       "none": 412
     },
-    "runners_classified": 1294,
-    "runners_with_C": 621,
+    "runners_classified": 1295,
+    "runners_with_C": 622,
     "runners_with_D": 312
   }
 }

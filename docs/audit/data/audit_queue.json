@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 27,
     "high": 222,
-    "leaf": 171,
+    "leaf": 172,
     "medium": 175
   },
-  "generated_at": "2026-05-02T21:12:10.233106+00:00",
+  "generated_at": "2026-05-02T21:16:07.707535+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -12126,6 +12126,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/STAGGERED_CHIRAL_SYMMETRY_SPECTRUM_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/staggered_chiral_symmetry_check.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "staggered_layered_backreaction_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -15607,6 +15630,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 119,
-  "total_pending": 595
+  "ready_count": 120,
+  "total_pending": 596
 }

@@ -37,14 +37,14 @@ TEST 4: ∀ E ≠ 0: mult(E) = mult(-E)
 TEST 5: H_phys (C |E⟩) = -E · (C |E⟩) for every eigenstate |E⟩ with E ≠ 0
 ------------------------------------------------------------------------
   Checked 56 non-zero eigenstates.
-  max ||H_phys (C|E⟩) - (-E)(C|E⟩)|| = 2.615e-15
+  max ||H_phys (C|E⟩) - (-E)(C|E⟩)|| = 2.654e-15
   STATUS: PASS
 
 ------------------------------------------------------------------------
 TEST 6: Tr(H_phys) = Σ E = 0  (sum of eigenvalues vanishes by symmetry)
 ------------------------------------------------------------------------
   Tr(H_phys) = 0.000e+00
-  Σ eigenvalues = -1.554e-15
+  Σ eigenvalues = 1.332e-14
   STATUS: PASS
 
 ------------------------------------------------------------------------
