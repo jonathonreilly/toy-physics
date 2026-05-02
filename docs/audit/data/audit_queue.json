@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 78,
     "high": 203,
-    "leaf": 131,
+    "leaf": 132,
     "medium": 162
   },
-  "generated_at": "2026-05-02T16:53:50.127287+00:00",
+  "generated_at": "2026-05-02T16:56:27.921365+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7556,8 +7556,8 @@
       "blocker": null,
       "claim_id": "axiom_first_spin_statistics_theorem_note_2026-04-29",
       "claim_scope": null,
-      "claim_type": null,
-      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
@@ -12018,6 +12018,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CPT_PARTICLE_ANTIPARTICLE_MASS_EQUALITY_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/cpt_particle_antiparticle_mass_equality_check.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15189,6 +15212,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 92,
-  "total_pending": 574
+  "ready_count": 93,
+  "total_pending": 575
 }
