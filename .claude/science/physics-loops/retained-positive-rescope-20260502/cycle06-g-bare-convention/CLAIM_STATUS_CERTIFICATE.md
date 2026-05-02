@@ -1,0 +1,1 @@
+# Cycle 6 cert: g_bare canonical convention narrow theorem. Type: bounded_theorem. PASS=24/0. Pattern A — resolves convention-vs-derivation ambiguity by stating g_bare=1 as admitted Wilson canonical convention.
