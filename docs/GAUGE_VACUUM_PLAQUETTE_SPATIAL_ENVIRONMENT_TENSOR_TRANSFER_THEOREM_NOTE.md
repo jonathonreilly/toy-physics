@@ -1,12 +1,19 @@
 # Gauge-Vacuum Plaquette Spatial Environment Tensor-Transfer Theorem
 
 **Date:** 2026-04-17
-**Status:** exact operator-structure theorem on the accepted Wilson
-`3 spatial + 1 derived-time` surface; the residual spatial-environment
-boundary data arise from one explicit positive character-tensor transfer built
-from exact Wilson character coefficients and exact `SU(3)` fusion
-intertwiners; the linked script is a finite truncated support packet, not a
-full `beta = 6` tensor-transfer Perron solve
+**Type:** positive_theorem
+**Claim scope:** the structural identification of the spatial-environment
+boundary data as arising from one positive character-tensor transfer built
+from exact `SU(3)` Wilson character coefficients `c_lambda(beta)` and exact
+`SU(3)` fusion intertwiners — at the level of named local ingredients and
+finite truncated support. The **full untruncated tensor-transfer operator
+construction at `beta = 6`** (the explicit Perron solve, the convergence /
+positivity proof beyond truncated support, and the named-tensor-word check
+beyond one example) is **out of scope** here. The script is a finite
+truncated support packet only.
+**Status:** independent audit required. Under the scope-aware classification
+framework, ratified status is computed by the audit pipeline from audit lane
+data and the dependency chain; no author-side tier is asserted in source.
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py`
 
 ## Question
@@ -190,3 +197,31 @@ python3 scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_trans
 Expected summary:
 
 - `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+
+## Out of scope (admitted-context to this note)
+
+The following items are explicitly **NOT** load-bearing claims of this
+note. They depend on separate authority rows / open derivations / open
+construction work and enter only as admitted-context:
+
+1. **Full untruncated tensor-transfer operator at `beta = 6`.** The
+   exact untruncated construction (positivity, convergence, full
+   support beyond `NMAX = 4`, full Bessel-mode sum beyond
+   `MODE_MAX = 80`) is not constructed or checked here.
+
+2. **`beta = 6` tensor-transfer Perron solve.** The explicit `beta = 6`
+   matrix elements, Perron state, and boundary coefficients
+   `rho_(p,q)(6)` are **not** computed here. The script is a finite
+   truncated support packet only.
+
+3. **Multi-tensor-word generalization.** The runner verifies one
+   explicit positive tensor-transfer word; the general case beyond
+   that example is asserted but not exhaustively enumerated.
+
+The **in-scope content** of this note is the structural
+character-tensor-transfer identification — the named local ingredients
+(Wilson character coefficients `c_lambda(beta)`, `SU(3)` fusion
+intertwiners) and the finite truncated support packet that exhibits
+their consistency under one tensor word. Theorems that depend on the
+full untruncated construction at `beta = 6` are out of scope here and
+must cite the unresolved open object directly.

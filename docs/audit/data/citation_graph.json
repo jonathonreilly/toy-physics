@@ -20001,7 +20001,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:49:49.462426+00:00",
+  "generated_at": "2026-05-02T20:54:24.358781+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21158,7 +21158,7 @@
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "d3cc0446fdf749d4f1e5ab2219ac08c8aa4dc254a60bd2df281e34928c65ef54",
+      "note_hash": "961b94dc62c4723c0bf191d3b9889bed242a03b884e4ea742538d36395636142",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
@@ -29133,11 +29133,11 @@
     },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "cd32df125009c73ccaf60a461f913086d2974efd48b74e825b4f2e8d9e3a3881",
+      "note_hash": "1ef110fc867200dfe8921168b630ff4a71849c9ba9b086bc0a91ce6e2cf403ce",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Tensor-Transfer Theorem"
@@ -46563,8 +46563,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
       "meta": 1,
-      "none": 1746,
-      "positive_theorem": 38
+      "none": 1745,
+      "positive_theorem": 39
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
