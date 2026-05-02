@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T02:15:10.322356+00:00
+**Generated:** 2026-05-02T02:19:00.837882+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 370 |
+| `audited_clean` | 371 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 417 |
+| `unaudited` | 416 |
 
 | criticality | count |
 |---|---:|
@@ -449,6 +449,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `valley_linear_asymptotic_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `valley_linear_mirror_transfer_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `valley_linear_repro_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `valley_linear_robustness_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_equation_gravity_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -16561,6 +16562,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** This note exists so a skeptical reader can replay the valley-linear lane without mistaking it for a flagship theorem or for the broader 3D kernel story.  _(class `C`)_
 - **chain closes:** True — The registered reproduction harness runs successfully with --valley-linear, prints the canonical retained comparison, and then runs the bounded same-family valley-linear replay. The note is an entry-point/replay note and explicitly does not certify derivation, convergence, or replacement of the spent-delay flagship.
 - **rationale:** The current harness passed and produced the expected bounded replay: spent-delay Born 4.20e-15, k=0 zero, F~M 0.50, gravity +0.045346, TOWARD 8/8, tail -0.52; valley-linear Born 4.20e-15, k=0 zero, F~M 1.00, gravity +0.000224, TOWARD 8/8, tail -0.93. The note's claim is not a physics theorem; it is that this is the reproducible skeptical-reader entry point for the valley-linear fork, with limits stated. Residual risk is only the long runtime of the optional valley-linear replay.
+- **auditor confidence:** high
+
+### `valley_linear_robustness_note`
+
+- **Note:** [`VALLEY_LINEAR_ROBUSTNESS_NOTE.md`](../../docs/VALLEY_LINEAR_ROBUSTNESS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The valley-linear action is robust on the tested 3D ordered-lattice slices, with machine-clean Born rows, F~M=1.00, and TOWARD gravity throughout, but the distance-tail exponent remains slice-dependent.  _(class `C`)_
+- **chain closes:** True — The registered robustness sweep reproduced the note's width, connectivity, and length tables. The claim is explicitly bounded to tested ordered-lattice slices and does not assert a universal tail exponent or continuum theorem.
+- **rationale:** The current runner output matches the frozen memo tables: all 12 rows are Born-clean, all gravity rows are TOWARD, and all F~M exponents print as 1.00. Tail fits are reported only where enough post-peak points exist, and the slopes vary across width, connectivity, and length slices. The note's bounded interpretation is therefore exactly supported by the registered artifact.
 - **auditor confidence:** high
 
 ### `valley_linear_wide_tail_note`
