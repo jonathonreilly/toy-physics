@@ -20033,7 +20033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T17:30:36.727060+00:00",
+  "generated_at": "2026-05-02T17:34:54.859081+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41451,6 +41451,17 @@
       "runner_path": null,
       "title": "Synthesis Note: 3D Extension of Discrete Causal DAG Model"
     },
+    "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02": {
+      "claim_id": "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "e39371f874a033d26e29cee72e3c3fbb0fbff7bb24740e14cd2d04f2fb57f300",
+      "path": "docs/TASTE_SCALAR_FERMION_CW_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_taste_scalar_fermion_cw_isotropy_narrow.py",
+      "title": "Taste-Scalar Fermion Coleman-Weinberg Isotropy \u2014 Narrow Theorem"
+    },
     "taste_scalar_isotropy_theorem_note": {
       "claim_id": "taste_scalar_isotropy_theorem_note",
       "claim_type_author_hint": null,
@@ -46255,6 +46266,7 @@
     "symmetry_spectrum_mirror_compare_note",
     "synthesis_note",
     "synthesis_note_3d",
+    "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02",
     "taste_scalar_isotropy_theorem_note",
     "teleportation_3d1_causal_record_channel_note",
     "teleportation_3d_initial_ramp_probe_note",
@@ -46447,19 +46459,19 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 8,
       "none": 1764,
-      "positive_theorem": 11
+      "positive_theorem": 12
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 509,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 613
+      "positive_theorem": 614
     },
     "edge_count": 5008,
-    "leaf_count": 754,
-    "node_count": 1783,
-    "root_count": 1213,
-    "runners_with_path": 1345
+    "leaf_count": 755,
+    "node_count": 1784,
+    "root_count": 1214,
+    "runners_with_path": 1346
   }
 }
