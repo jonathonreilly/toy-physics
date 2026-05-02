@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-02T23:20:57.097763+00:00",
+  "computed_at": "2026-05-02T23:22:24.130444+00:00",
   "criticality_counts": {
     "critical": 45,
     "high": 388,
@@ -126,6 +126,12 @@
       "transitive_descendants": 130
     },
     {
+      "claim_id": "cpt_exact_note",
+      "criticality": "critical",
+      "load_bearing_score": 18.022,
+      "transitive_descendants": 64
+    },
+    {
       "claim_id": "ckm_atlas_axiom_closure_note",
       "criticality": "critical",
       "load_bearing_score": 17.285,
@@ -160,12 +166,6 @@
       "criticality": "critical",
       "load_bearing_score": 16.437,
       "transitive_descendants": 244
-    },
-    {
-      "claim_id": "graph_first_selector_derivation_note",
-      "criticality": "critical",
-      "load_bearing_score": 16.405,
-      "transitive_descendants": 338
     }
   ]
 }

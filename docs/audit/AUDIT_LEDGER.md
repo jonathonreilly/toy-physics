@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:20:57.780160+00:00
+**Generated:** 2026-05-02T23:22:24.856514+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 194 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 519 |
+| unaudited | 518 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 648 |
 | ~~audited_failed~~ | 4 |
+| `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
@@ -38,20 +39,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audited_clean` | 397 |
 | `audited_conditional` | 648 |
-| `audited_decoration` | 7 |
+| `audited_decoration` | 8 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 556 |
+| `unaudited` | 555 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 531 |
-| `decoration` | 7 |
+| `decoration` | 8 |
 | `meta` | 37 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
-| `positive_theorem` | 870 |
+| `positive_theorem` | 869 |
 
 | criticality | count |
 |---|---:|
@@ -94,13 +95,13 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 16 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 301 | 20.24 | `audited_clean` | **retained_bounded** |
 | 17 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 130 | 19.03 | `audited_clean` | **retained** |
-| 19 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 125 | 16.98 | `audited_clean` | **retained** |
-| 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
-| 22 | `s3_taste_cube_decomposition_note` | positive_theorem | high | 125 | 16.48 | `audited_clean` | **retained** |
-| 23 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
-| 24 | `plaquette_self_consistency_note` | bounded_theorem | critical | 244 | 16.44 | `unaudited` | unaudited |
-| 25 | `graph_first_selector_derivation_note` | bounded_theorem | critical | 338 | 16.41 | `audited_clean` | **retained_bounded** |
+| 19 | `cpt_exact_note` | positive_theorem | critical | 64 | 18.02 | `audited_clean` | **retained** |
+| 20 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 125 | 16.98 | `audited_clean` | **retained** |
+| 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
+| 23 | `s3_taste_cube_decomposition_note` | positive_theorem | high | 125 | 16.48 | `audited_clean` | **retained** |
+| 24 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
+| 25 | `plaquette_self_consistency_note` | bounded_theorem | critical | 244 | 16.44 | `unaudited` | unaudited |
 
 
 ## Applied audits
@@ -1153,6 +1154,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_qfp_insensitivity_support_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
+| `cpt_squared_is_identity_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cpt_exact_note` | weak | codex-current | A | `cpt_exact_note` |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `left_handed_charge_matching_note` | decoration | ~~audited_decoration~~ | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | fresh_context | codex-current | A | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
 | `pmns_selector_unique_amplitude_slot_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
@@ -3570,6 +3572,20 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Use the retained CPT invariance [CPT,H]=0 to conjugate a single-particle energy eigenstate into its CPT-exchanged antiparticle sector, preserving the Hermitian eigenvalue; at p=0 this identical energy is the rest mass for both members of the pair.  _(class `C`)_
 - **chain closes:** True — Within the stated free-Hamiltonian sector scope, the retained CPT exact note supplies [CPT,H]=0. With the admitted convention that CPT exchanges the relevant sectors and standard antiunitary eigenvalue preservation for Hermitian H, the paired state has the same energy; the rest-mass statement follows at p=0.
 - **rationale:** The derivation is a real consequence of retained CPT symmetry on the scoped free-Hamiltonian surface, not a species-level physical claim. The source excludes named-species bookkeeping and interactions from the load-bearing proof, so the cited authority's open interacting and continuum extensions do not block this narrow theorem. The runner gives a structural witness that CPT-symmetric particle/antiparticle blocks have identical spectra and that breaking CPT breaks the equality.
+- **auditor confidence:** high
+
+### `cpt_squared_is_identity_theorem_note_2026-05-02`
+
+- **Note:** [`CPT_SQUARED_IS_IDENTITY_THEOREM_NOTE_2026-05-02.md`](../../docs/CPT_SQUARED_IS_IDENTITY_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Algebraic corollary of the retained CPT construction: with real CP, (CP)^2 = I, and T = K, the antiunitary CPT operator satisfies (CPT)^2 = I on the scoped H_phys surface.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_cpt_exact_note`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** (CPT)^2 = (CP T)(CP T) = CP (T CP) T = CP CP T T = (CP)^2 T^2 = I.  _(class `A`)_
+- **chain closes:** True — The algebra follows from the retained CPT note's real C, real P, T=K, and (CP)^2=I, plus standard antiunitary linear algebra. It is a corollary of that construction rather than an independent retained physics result.
+- **rationale:** Issue: the scoped identity is true, but its load-bearing content is ordinary algebra on the single retained parent CPT construction. Why this blocks separate retained-theorem status: the note adds no independent observable, comparator, bridge, or compression beyond cpt_exact_note. Repair target: box it as a citeable corollary under the CPT exact theorem, or add a genuinely independent physical consequence if separate status is needed. Claim boundary until fixed: (CPT)^2 = I is an exact algebraic corollary of the retained CPT operator definitions.
+- **decoration parent:** `cpt_exact_note`
 - **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
