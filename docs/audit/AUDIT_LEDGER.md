@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:31:55.049132+00:00
+**Generated:** 2026-05-02T18:34:12.898714+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,33 +24,33 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 544 |
+| unaudited | 545 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 636 |
+| ~~audited_conditional~~ | 635 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 375 |
-| `audited_conditional` | 636 |
+| `audited_conditional` | 635 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 580 |
+| `unaudited` | 581 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 517 |
+| `bounded_theorem` | 516 |
 | `decoration` | 6 |
 | `meta` | 36 |
 | `no_go` | 155 |
 | `open_gate` | 107 |
-| `positive_theorem` | 862 |
+| `positive_theorem` | 863 |
 
 | criticality | count |
 |---|---:|
@@ -86,7 +86,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
 | 10 | `native_gauge_closure_note` | bounded_theorem | critical | 257 | 22.51 | `audited_clean` | **retained_bounded** |
 | 11 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `three_generation_structure_note` | bounded_theorem | critical | 248 | 20.96 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `three_generation_structure_note` | positive_theorem | critical | 248 | 20.96 | `unaudited` | unaudited |
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `left_handed_charge_matching_note` | decoration | critical | 264 | 20.55 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
 | 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_conditional` | ~~audited_conditional~~ |
@@ -1056,7 +1056,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `three_generation_observable_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `three_generation_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_a1_invariant_section_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -16010,24 +16009,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
   - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
   - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
-- **auditor confidence:** high
-
-### `three_generation_structure_note`
-
-- **Note:** [`THREE_GENERATION_STRUCTURE_NOTE.md`](../../docs/THREE_GENERATION_STRUCTURE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** On the accepted Cl(3)/Z^3 Hamiltonian and physical-lattice surface, the BZ-corner/Wilson algebra gives an hw=1 triplet and the listed exact runners support no-rooting/no-proper-quotient obstructions; the full physical three-generation matter reading remains conditional on retained Hilbert/substrate-semantics authorities.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-three-generation-structure-2026-05-02`  (codex-current; independence=cross_family)
-- **load-bearing step:** Exact observable-sector semantics on the accepted Hilbert surface force the retained hw=1 triplet to be physically distinct species, and the accepted one-axiom Hilbert/locality/information surface derives the substrate-level physical-lattice reading.  _(class `B`)_
-- **chain closes:** False — The exact spectral and no-quotient checks close on their own bounded surface, but the full physical-generation conclusion imports Hilbert/substrate-semantics closure from authorities that are not retained-grade in the current audit ledger.
-- **rationale:** Issue: the source note's full physical-generation statement requires the physical-lattice/Hilbert-semantics bridge, not just the 1+3+3+1 Wilson-corner algebra. Why this blocks retained status: the primary runner labels physical identification as a physical-lattice assumption, and the named bridge authorities are currently conditional or unaudited rather than retained-grade. Repair target: retain the physical-lattice necessity, three-generation observable, chirality-boundary, and anomaly-forces-time bridge rows or narrow this row to the exact bounded corner/no-quotient algebra only. Claim boundary until fixed: cite the exact hw=1 triplet/no-rooting/no-proper-quotient structure only conditionally on the accepted physical-lattice/Hilbert semantics package.
-- **open / conditional deps cited:**
-  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
-  - `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`
-  - `ANOMALY_FORCES_TIME_THEOREM.md`
 - **auditor confidence:** high
 
 ### `triage_no_promotion_note`

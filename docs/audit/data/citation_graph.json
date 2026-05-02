@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:31:50.981971+00:00",
+  "generated_at": "2026-05-02T18:34:07.461970+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42029,11 +42029,11 @@
     },
     "three_generation_structure_note": {
       "claim_id": "three_generation_structure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4d4cbba029fac84e829c79c7619006c3926b548341c52348d0bcbf1b428f9644",
+      "note_hash": "2092de74928fc4ba3038d3f13dc9472a9e79d2210daae743ed41bf35fccc2c7a",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
@@ -46345,8 +46345,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 9,
       "meta": 1,
-      "none": 1754,
-      "positive_theorem": 18
+      "none": 1753,
+      "positive_theorem": 19
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 509,
