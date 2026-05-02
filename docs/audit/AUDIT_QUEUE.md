@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T21:33:41.933545+00:00
-**Total pending:** 595
-**Ready (all deps already at retained-grade or metadata tiers):** 118
+**Generated:** 2026-05-02T21:35:13.779597+00:00
+**Total pending:** 594
+**Ready (all deps already at retained-grade or metadata tiers):** 117
 
 By criticality:
 - `critical`: 27
-- `high`: 219
+- `high`: 218
 - `medium`: 175
 - `leaf`: 174
 
@@ -55,16 +55,16 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 37 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | high | 53 | 8.76 | Y | fresh_context_or_stronger | `scripts/frontier_yt_qfp_insensitivity.py` |
 | 38 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | claim_type_backfill_reaudit | high | 44 | 11.49 | Y | fresh_context_or_stronger | `scripts/frontier_taste_scalar_isotropy.py` |
 | 39 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 37 | 7.75 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_rigidity_theorem.py` |
-| 40 | `teleportation_conclusion_boundary_note` | open_gate | unaudited | high | 36 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_conclusion_boundary.py` |
-| 41 | `monopole_derived_note` | positive_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_monopole_derived.py` |
-| 42 | `teleportation_acceptance_suite_note` | bounded_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_acceptance_suite.py` |
-| 43 | `teleportation_native_axioms_theory_note` | open_gate | unaudited | high | 35 | 7.67 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_axiom_closure_checks.py` |
-| 44 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | unaudited | high | 247 | 10.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
-| 45 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | high | 246 | 8.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
-| 46 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | unaudited | high | 245 | 10.44 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py` |
-| 47 | `qcd_low_energy_running_bridge_note_2026-05-01` | bounded_theorem | unaudited | high | 239 | 8.41 |  | fresh_context_or_stronger | `scripts/frontier_qcd_low_energy_running_bridge.py` |
-| 48 | `neutrino_majorana_native_gaussian_no_go_note` | positive_theorem | unaudited | high | 184 | 10.03 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
-| 49 | `neutrino_majorana_finite_normal_grammar_no_go_note` | positive_theorem | unaudited | high | 183 | 10.52 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
-| 50 | `neutrino_majorana_pfaffian_extension_note` | positive_theorem | unaudited | high | 182 | 10.02 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
+| 40 | `monopole_derived_note` | positive_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_monopole_derived.py` |
+| 41 | `teleportation_acceptance_suite_note` | bounded_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_acceptance_suite.py` |
+| 42 | `teleportation_native_axioms_theory_note` | open_gate | unaudited | high | 35 | 7.67 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_axiom_closure_checks.py` |
+| 43 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | unaudited | high | 247 | 10.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
+| 44 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | high | 246 | 8.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
+| 45 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | unaudited | high | 245 | 10.44 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py` |
+| 46 | `qcd_low_energy_running_bridge_note_2026-05-01` | bounded_theorem | unaudited | high | 239 | 8.41 |  | fresh_context_or_stronger | `scripts/frontier_qcd_low_energy_running_bridge.py` |
+| 47 | `neutrino_majorana_native_gaussian_no_go_note` | positive_theorem | unaudited | high | 184 | 10.03 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
+| 48 | `neutrino_majorana_finite_normal_grammar_no_go_note` | positive_theorem | unaudited | high | 183 | 10.52 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
+| 49 | `neutrino_majorana_pfaffian_extension_note` | positive_theorem | unaudited | high | 182 | 10.02 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
+| 50 | `neutrino_majorana_pfaffian_axiom_boundary_note` | no_go | unaudited | high | 181 | 8.01 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py` |
 
 Full queue lives in `data/audit_queue.json`.
