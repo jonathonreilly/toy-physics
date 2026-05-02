@@ -195,11 +195,11 @@ enter only as admitted-context:
    comparison-only and not derivation inputs.
 
 The **in-scope content** of this note is the pure algebraic substitution
-producing `(R1)`, `(R2)`, `(R3)` from the parametric inputs above. See
-also the related Pattern A narrow rescope of the structural-counts
-algebra at [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md)
-(cycle 19), which carves out the input-supply-free pure-algebra content
-of the broader structural-counts theorem.
+producing `(R1)`, `(R2)`, `(R3)` from the parametric inputs above. A
+related non-authority narrow rescope,
+`CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02`,
+carves out input-supply-free pure algebra from the broader
+structural-counts theorem.
 
 ## Cross-References
 
@@ -208,4 +208,3 @@ of the broader structural-counts theorem.
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
-- [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md)

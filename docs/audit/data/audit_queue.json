@@ -5,7 +5,7 @@
     "leaf": 168,
     "medium": 173
   },
-  "generated_at": "2026-05-02T20:38:14.211439+00:00",
+  "generated_at": "2026-05-02T20:40:17.170757+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -406,12 +406,12 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
+      "audit_status": "unaudited",
       "blocker": null,
       "claim_id": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_scope": null,
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
@@ -422,10 +422,10 @@
         "alpha_s_derived_note"
       ],
       "direct_in_degree": 17,
-      "effective_status": "audited_conditional",
+      "effective_status": "unaudited",
       "load_bearing_score": 14.959,
       "note_path": "docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
-      "queue_reason": "claim_type_backfill_reaudit",
+      "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_ckm_third_row_magnitudes.py",
       "transitive_descendants": 87
@@ -7077,8 +7077,8 @@
       "blocker": null,
       "claim_id": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
       "claim_scope": null,
-      "claim_type": null,
-      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,

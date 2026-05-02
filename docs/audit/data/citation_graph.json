@@ -19997,7 +19997,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:38:06.803236+00:00",
+  "generated_at": "2026-05-02T20:40:12.359461+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23860,8 +23860,8 @@
     },
     "ckm_third_row_magnitudes_theorem_note_2026-04-24": {
       "claim_id": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
@@ -23869,7 +23869,7 @@
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
         "alpha_s_derived_note"
       ],
-      "note_hash": "1174c43d5419557a6222061fc728978ac31984ac61aec9751b67a35ae333bce5",
+      "note_hash": "c1841136c05b6f4c910f33747eb8449a7ea71d5ca8d1cbd3e1d99c49442f238c",
       "path": "docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_third_row_magnitudes.py",
       "title": "CKM Third-Row Magnitudes Structural Identities"
@@ -46546,8 +46546,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
       "meta": 1,
-      "none": 1747,
-      "positive_theorem": 36
+      "none": 1746,
+      "positive_theorem": 37
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
