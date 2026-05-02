@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:58:15.695585+00:00
+**Generated:** 2026-05-02T22:00:34.081197+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 188 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 548 |
+| unaudited | 547 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 636 |
+| ~~audited_conditional~~ | 637 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 384 |
-| `audited_conditional` | 636 |
+| `audited_conditional` | 637 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 584 |
+| `unaudited` | 583 |
 
 | claim_type | count |
 |---|---:|
@@ -897,6 +897,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `local_zsym_predictor_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `lorentz_violation_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | D | - |
 | `mass_spectrum_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `matched_2d_4d_decoherence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10936,6 +10937,19 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `metric_universe_for_node_level_classifier_search_not_defined`
   - `only_local_z_asym_added_to_fixed_3_property_AND_search`
   - `no_multiple_testing_or_global_search_certificate`
+- **auditor confidence:** high
+
+### `lorentz_violation_derived_note`
+
+- **Note:** [`LORENTZ_VIOLATION_DERIVED_NOTE.md`](../../docs/LORENTZ_VIOLATION_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Whether the cubic Z^3 finite-difference dispersion closes the stated Lorentz-violation, SME coefficient, CPT, and experimental-bound claims without imported physical bridges.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-lorentz-violation-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Identifying the finite-difference cubic-lattice dispersion with physical Lorentz-violating SME operators at lattice spacing a=l_Planck, then comparing the resulting coefficients against experimental bounds.  _(class `D`)_
+- **chain closes:** False — The runner checks the algebra of the standard lattice dispersion and cubic angular structure, but the bridge to physical Planck-scale spacetime, SME coefficients, CPT-sector exclusions, and experimental comparators is imported rather than derived from the provided inputs.
+- **rationale:** Issue: the note/runner derives finite-difference lattice dispersion on a cubic Z^3 stencil, but imports the physical identification a=l_Planck, the SME coefficient mapping, the assertion that C/P/T exactness eliminates all CPT-odd SME coefficients, and the experimental comparator table. Why this blocks: those bridges are load-bearing for the stated Lorentz-violation/SME/CPT/bounds claims, and the row has no retained authority deriving them. Repair target: add retained bridge theorems deriving the physical spacetime identification, normalization to SME observables, CPT-sector map for the relevant fields/actions, and validated comparator provenance, or narrow the row to pure lattice-dispersion algebra. Claim boundary until fixed: safe claims are the cubic finite-difference kinetic expansion, O_h angular structure, absence of odd powers from the parity-symmetric stencil, and conditional numerical estimates given imported Planck-spacing and SME/comparator assumptions.
 - **auditor confidence:** high
 
 ### `main_open_cubic_validation_2026-04-11`
