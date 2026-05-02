@@ -2,7 +2,7 @@
 
 **Block:** physics-loop/dm-neutrino-z3-character-audit-companion-block17-20260502
 **Runner:** scripts/audit_companion_dm_neutrino_z3_character_exact.py (PASS=24/0)
-**Target row:** dm_neutrino_z3_character_transfer_theorem_note_2026-04-15 (claim_type=positive_theorem, audit_status=audited_conditional, td=134, load_bearing_step_class=A)
+**Target row:** dm_neutrino_z3_character_transfer_theorem_note_2026-04-15 (claim_type=positive_theorem, load_bearing_step_class=A)
 
 ## Block type
 
@@ -29,13 +29,12 @@ reduces symbolically to `1` for integer `n`, and the Z3 character sum
 ## Claim-Type Certificate (Pattern B)
 
 ```yaml
-target_claim_type: meta  # audit-companion runner; not a claim row
+proposed_artifact_type: meta  # audit-companion runner; not a claim row
 proposed_load_bearing_step_class: A
 introduces_new_claim_row: false
 introduces_new_source_note: false
-modifies_parent_audit_status: false  # audit-lane decides
-audit_required_before_effective_retained: true  # parent row only; companion is meta
-bare_retained_allowed: false
+modifies_parent_status: false
+status_authority: independent_audit_lane
 ```
 
 ## 7-criteria check (adapted for Pattern B)
@@ -47,8 +46,8 @@ bare_retained_allowed: false
 | 3 | No load-bearing observed/fitted/admitted in the companion | YES (purely symbolic sympy verification of cube-root-of-unity arithmetic; no PDG/literature numerical comparators) |
 | 4 | Parent row's deps unchanged by this block | YES (does not modify ledger row state; only adds runner artifact) |
 | 5 | Runner verifies parent's load-bearing step at exact precision | YES (sympy symbolic exp/cos/sin reductions on integer / non-integer lambda; closed-form omega-arithmetic) |
-| 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; audit-lane decides whether the parent row's `audited_conditional` verdict can be tightened |
-| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert any retained-status promotion) |
+| 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; independent audit decides any parent-row disposition |
+| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert any status promotion) |
 
 ## What the companion verifies
 
@@ -68,20 +67,16 @@ bare_retained_allowed: false
 ## Audit-graph effect
 
 This companion is **meta** — it does not move the parent row by itself.
-The parent row currently sits at `audited_conditional` because the verdict
-identifies the upstream phase-lift family, weak-only source delta_src, and
-source-orientation branch selection authorities as not provided as ledger
-deps. The companion's role is to give the audit lane focused exact-precision
+The companion's role is to give the audit lane focused exact-precision
 evidence that the parent's load-bearing class-(A) algebraic step (the
-discretization itself) holds at exact symbolic precision, useful when
-revisiting the conditional verdict.
+discretization itself) holds at exact symbolic precision.
 
 ## Forbidden imports check
 
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 The companion is pure symbolic algebra on `exp(I * 2 * pi * n)` for various
@@ -91,5 +86,5 @@ rational `n`, with closed-form omega-arithmetic.
 
 A standalone audit-companion runner that complements the existing primary
 runner by providing exact symbolic verification of the Z3 character-transfer
-discretization. The block proposes nothing about any retained-status change;
-the audit lane is the authority for that.
+discretization. The block proposes nothing about any parent-row status
+change; the audit lane is the authority for that.
