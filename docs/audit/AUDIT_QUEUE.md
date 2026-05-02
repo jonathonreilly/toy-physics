@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T18:38:48.913800+00:00
+**Generated:** 2026-05-02T18:41:52.337461+00:00
 **Total pending:** 590
 **Ready (all deps already at retained-grade or metadata tiers):** 113
 
@@ -54,7 +54,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 36 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
 | 37 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
 | 38 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | positive_theorem | unaudited | high | 240 | 9.91 | Y | fresh_context_or_stronger | `scripts/frontier_alpha_s_direct_wilson_loop.py` |
-| 39 | `yt_color_projection_correction_note` | positive_theorem | claim_type_backfill_reaudit | high | 175 | 11.46 | Y | fresh_context_or_stronger | `scripts/frontier_yt_color_projection_correction.py` |
+| 39 | `yt_color_projection_correction_note` | positive_theorem | unaudited | high | 175 | 11.46 | Y | fresh_context_or_stronger | `scripts/frontier_yt_color_projection_correction.py` |
 | 40 | `yt_explicit_systematic_budget_note` | positive_theorem | claim_type_backfill_reaudit | high | 174 | 8.95 | Y | fresh_context_or_stronger | `scripts/frontier_yt_explicit_systematic_budget.py` |
 | 41 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | positive_theorem | unaudited | high | 134 | 13.58 | Y | fresh_context_or_stronger | - |
 | 42 | `generation_axiom_boundary_note` | bounded_theorem | unaudited | high | 124 | 8.97 | Y | fresh_context_or_stronger | `scripts/frontier_generation_axiom_boundary.py` |

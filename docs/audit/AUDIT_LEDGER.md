@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:38:49.192955+00:00
+**Generated:** 2026-05-02T18:41:52.626586+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,24 +24,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 545 |
+| unaudited | 546 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 636 |
+| ~~audited_conditional~~ | 635 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 375 |
-| `audited_conditional` | 636 |
+| `audited_conditional` | 635 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 581 |
+| `unaudited` | 582 |
 
 | claim_type | count |
 |---|---:|
@@ -1105,7 +1105,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_endpoint_shift_bound_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_rearrangement_principle_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_bridge_variational_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
-| `yt_color_projection_correction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_exact_hessian_selector_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_explicit_systematic_budget_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -17467,26 +17466,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md`
   - `HYPOTHESIS: positive local quadratic microscopic bridge selector`
   - `TARGET_CONDITIONED_INPUT: best-family J_aff band`
-- **auditor confidence:** high
-
-### `yt_color_projection_correction_note`
-
-- **Note:** [`YT_COLOR_PROJECTION_CORRECTION_NOTE.md`](../../docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-28-yt_color_projection_correction_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The physical Yukawa readout is y_t(physical) = y_t(Ward) * sqrt(R_conn) with R_conn = (N_c^2 - 1)/N_c^2 = 8/9 applied to the scalar channel.  _(class `C`)_
-- **chain closes:** False — The numerical support packet is internally consistent and the live runner reports 7/7 PASS, including the top-mass, Higgs-direction, double-counting, SM cross-check, and alpha_s checks. The source note itself states that the R_conn = 8/9 bridge remains physically motivated and numerically validated but not derivable from the CMT partition-function identity alone.
-- **rationale:** Issue: the sqrt(8/9) Yukawa correction produces a strong numerical support packet, but the note explicitly says the required R_conn = 8/9 bridge is not yet derived from the CMT partition-function identity alone and needs the same lattice measurement that would close the EW color-projection correction.
-Why this blocks: downstream candidate retained-grade/promoted rows cannot cite this as a theorem-grade zero-import y_t or top-mass derivation; the load-bearing scalar-channel projection remains conditional on the unclosed R_conn bridge and standard matching/running caveats.
-Repair target: compute and audit R_conn on the SU(3) beta=6 lattice in the scalar channel, then rerun the full Yukawa/pole-mass chain with that measured bridge and explicit matching-order uncertainty.
-Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) improves the live y_t/top/Higgs readout and is not double-counted with Ward matching, not a closed theorem-grade Yukawa prediction.
-- **open / conditional deps cited:**
-  - `R_conn_8_9_not_derived_from_CMT_partition_identity`
-  - `SU3_beta6_scalar_channel_R_conn_measurement_missing`
-  - `standard_lattice_matching_and_SM_running_precision_caveat`
 - **auditor confidence:** high
 
 ### `yt_constructive_uv_bridge_note`
