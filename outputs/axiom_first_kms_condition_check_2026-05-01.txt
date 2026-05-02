@@ -1,0 +1,98 @@
+========================================================================
+AXIOM-FIRST KMS CONDITION CHECK
+========================================================================
+
+Setup:
+  finite-dim H_phys (modeling RP-reconstructed physical Hilbert space)
+  H = self-adjoint, H >= 0 (modeling spectrum condition SC1, SC2)
+  T = exp(-a_tau H), Gibbs at beta_th = L_tau a_tau
+
+  dim(H_phys) = 8
+  a_tau       = 1.0
+  L_tau       = 6
+  beta_th     = 6.0
+
+  spec(H)     = [-0.        1.147889  1.919212  2.073275  2.93824   3.510596  4.1677
+  4.861641]
+  Z(beta_th)  = 1.001035
+
+------------------------------------------------------------------------
+TEST 1: KMS identity  F_{A,B}(t + i beta_th) = G_{A,B}(t)
+        equivalently  G_{A,B}(t - i beta_th) = F_{A,B}(t)
+------------------------------------------------------------------------
+F is analytically continued through the strip 0 <= Im z <= beta_th.
+Computing both sides in the eigenbasis of H.
+Sweeping t in [-2, 2] across 9 grid points, 4 (A, B) pairs.
+
+  pair 0: max |F(t + i beta_th) - G(t)| over grid = 9.525e-15
+  pair 1: max |F(t + i beta_th) - G(t)| over grid = 1.564e-14
+  pair 2: max |F(t + i beta_th) - G(t)| over grid = 5.790e-15
+  pair 3: max |F(t + i beta_th) - G(t)| over grid = 1.322e-14
+
+  GLOBAL MAX KMS RESIDUAL = 1.564e-14
+
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: strip analyticity (boundary continuity of G_{A,B}(z))
+------------------------------------------------------------------------
+We verify that G(z) is continuous and finite on the full strip,
+and that the analytic continuation satisfies G(t + i beta_th) =
+the same KMS-symmetric value as F(t).
+
+  ||A||                              = 6.4409
+  ||B||                              = 6.3688
+  energy spread                      = 4.8616
+  naive bound ||A|| ||B||            = 41.0205
+  worst-case strip bound ||A|| ||B|| exp(beta * spread) = 1.9112e+14
+
+  max |G(z)| over strip grid = 4.4464e+12
+  ratio max|G| / grown_bound = 0.023265
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: equilibrium uniqueness — Gibbs is the unique alpha_t-
+        invariant KMS state at beta_th
+------------------------------------------------------------------------
+Diagonal cyclic identity: rho_nn / rho_mm = exp(-beta_th(E_n - E_m))
+forces rho = exp(-beta_th H) / Z up to overall normalization.
+
+  max | consistent_rho - gibbs_rho | = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: path-integral correspondence
+        Z = tr T^{L_tau} = tr exp(-beta_th H)
+------------------------------------------------------------------------
+  tr T^6              = 1.0010345889
+  tr exp(-beta_th H)     = 1.0010345889
+  | difference |         = 4.441e-16
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: detailed-balance corollary at z = i beta_th
+        F(0 + i beta_th) = G(0) = < B A >_beta (a Hermitian-like ID)
+------------------------------------------------------------------------
+  F(0 + i beta_th)    = (-1.3457857774934088-0.8934523782774934j)
+  G(0) = <BA>_beta_th = (-1.3457857774934099-0.893452378277491j)
+  | difference |     = 2.582e-15
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (KMS identity strip endpoint):    PASS
+  Test 2 (strip continuity / bound):       PASS
+  Test 3 (equilibrium uniqueness):         PASS
+  Test 4 (path-integral correspondence):   PASS
+  Test 5 (detailed-balance at i beta_th):  PASS
+
+  OVERALL: PASS
+
+Note: this runner verifies the KMS theorem at the structural
+level on a generic finite-dim H >= 0 on H_phys. The framework's
+specific H_phys is the RP-reconstructed transfer-matrix Hilbert
+space from docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_
+2026-04-29.md (R3) plus docs/AXIOM_FIRST_SPECTRUM_CONDITION_
+THEOREM_NOTE_2026-04-29.md (SC1, SC2). The proof in the companion
+theorem note is dimension-independent (Steps 1-5).
