@@ -1,4 +1,4 @@
-"""U(1) fermion-number conservation from retained lattice Noether N2."""
+"""U(1) fermion-number conservation from cited lattice Noether N2."""
 from __future__ import annotations
 
 import numpy as np

@@ -8,7 +8,7 @@
 ## Strict-bar gate
 
 - claim_type: positive_theorem ✓
-- single retained-grade dep ✓ (`axiom_first_lattice_noether_theorem_note_2026-04-29` retained)
+- single load-bearing dependency named ✓ (`axiom_first_lattice_noether_theorem_note_2026-04-29`)
 - zero admitted physics inputs ✓
 - runner: 4/4 PASS at machine precision (including negative control)
 
@@ -18,7 +18,9 @@
 claim_type_author_hint: positive_theorem
 claim_scope: "Q_total(t) is t-independent on shell; [Q̂_total, H] = 0; integer-eigenvalue spectrum."
 upstream_dependencies:
-  - axiom_first_lattice_noether_theorem_note_2026-04-29 (retained)
+  - axiom_first_lattice_noether_theorem_note_2026-04-29
+source_sets_audit_outcome: false
 ```
 
-Expected `effective_status` after clean Codex audit: **retained**.
+This block proposes a `positive_theorem` claim type and leaves all row
+outcome decisions to the independent audit lane.
