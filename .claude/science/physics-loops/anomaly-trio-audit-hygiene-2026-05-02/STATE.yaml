@@ -9,7 +9,8 @@ goal: >
   anomaly_forces_time_theorem (already retained_bounded) and the broader
   anomaly cancellation backbone.
 science_branch: physics-loop/anomaly-trio-audit-hygiene-2026-05-02
-status: planning -> hygiene
+science_pr_url: https://github.com/jonathonreilly/cl3-lattice-framework/pull/400
+status: complete - PR #400 open with audit-ready hygiene for all 3 rows
 runtime_used: in_progress
 target_status: audit_ready
 target_rows:
