@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:20:10.790015+00:00
+**Generated:** 2026-05-02T01:23:11.259437+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 152 |
+| bounded | 151 |
 | support | 124 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 966 |
-| ~~audited_failed~~ | 98 |
+| ~~audited_failed~~ | 99 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 358 |
 | `audited_conditional` | 666 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 69 |
+| `audited_failed` | 70 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 434 |
+| `unaudited` | 433 |
 
 | criticality | count |
 |---|---:|
@@ -1191,6 +1191,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `triple_stack_collapse_scaling_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | C | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
@@ -15840,6 +15841,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `GROWN_TRANSFER_BASIN_NOTE.md`
   - `EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md`
+- **auditor confidence:** high
+
+### `triple_stack_collapse_scaling_note`
+
+- **Note:** [`TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md`](../../docs/TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** The strongest retained quantitative result is LN + |y| + collapse at N=25 with purity = 0.6887 and at N=100 with purity = 0.8819, with all four modes fitting decays in 1 - purity.  _(class `C`)_
+- **chain closes:** False — The current registered runner preserves the qualitative no-asymptotic-escape conclusion, but its quantitative table and fits no longer match the note: N=25 LN+|y|+collapse is 0.7075, collapse is 0.9302, and the collapse/triple-stack power-law coefficients differ from the note.
+- **rationale:** Issue: the note's quoted quantitative table and scaling coefficients are stale relative to the current runner, including the headline N=25 triple-stack purity and the collapse/triple-stack power-law fits. Why this blocks: the note is a bounded numerical result, so the exact reported finite-N floor and fit parameters are load-bearing, even though the qualitative conclusion that collapse is only a bounded helper still survives. Repair target: refresh the note from the current runner output, update the finite-N purity table and fit coefficients, and explicitly preserve the surviving qualitative boundary. Claim boundary until fixed: safe to say the current runner still shows LN+|y|+collapse as a bounded finite-N helper with negative alpha, but not safe to cite the note's frozen numerical values.
 - **auditor confidence:** high
 
 ### `two_sign_comparison_note_2026-04-10`
