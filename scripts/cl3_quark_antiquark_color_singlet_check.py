@@ -1,4 +1,4 @@
-"""3 ⊗ 3̄ = 1 ⊕ 8 color singlet decomposition check on retained Cl(3) color structure."""
+"""3 ⊗ 3̄ = 1 ⊕ 8 color singlet decomposition check on Cl(3) color structure."""
 from __future__ import annotations
 
 import math
@@ -26,7 +26,7 @@ def main() -> None:
     print()
 
     N_c = 3
-    print(f"  N_c = {N_c} (from retained Cl(3) color automorphism note)")
+    print(f"  N_c = {N_c} (from Cl(3) color automorphism note)")
     print(f"  3 ⊗ 3̄ has dimension {N_c*N_c} = 9")
     print()
 

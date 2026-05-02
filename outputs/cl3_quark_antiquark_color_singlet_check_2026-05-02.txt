@@ -2,7 +2,7 @@
 3 ⊗ 3̄ = 1 ⊕ 8 COLOR SINGLET DECOMPOSITION CHECK
 ========================================================================
 
-  N_c = 3 (from retained Cl(3) color automorphism note)
+  N_c = 3 (from Cl(3) color automorphism note)
   3 ⊗ 3̄ has dimension 9 = 9
 
 ------------------------------------------------------------------------
