@@ -110,13 +110,15 @@ a smoking gun for an underlying cubic lattice structure.
 
 ## Relation to frontier_lorentz_violation.py
 
-The original script `frontier_lorentz_violation.py` establishes the same
-claims but focuses on the SME coefficient mapping, taste-breaking, and
-comprehensive experimental comparison.  This derived script provides the
-step-by-step first-principles derivation with explicit numerical
-verification of each intermediate result (29 independent checks).
+The script `frontier_lorentz_violation.py` is the registered runner for
+this note. It computes the lattice dispersion using the standard
+second-order finite-difference Laplacian eigenvalue
+`(4/a^2) sin^2(pa/2) = (2/a^2)(1 - cos(pa))`, which yields the canonical
+expansion `p^2 - (a^2/12) p^4 + (a^4/360) p^6 + ...` directly.
 
-Note: the original script uses `(2/a^2) sin^2(pa/2)` for the lattice
-kinetic term (a non-standard normalization).  This derived script uses the
-standard second-order finite difference `(4/a^2) sin^2(pa/2) = (2/a^2)(1 - cos(pa))`,
-which yields the canonical expansion p^2 - (a^2/12) p^4 + ... directly.
+Audit fix (2026-05-02): a previous version of the runner used
+`(2/a^2) sin^2(pa/2)`, which is the half-normalized kinetic eigenvalue
+and is internally inconsistent with the printed Taylor expansion. The
+runner has been updated to the standard `(4/a^2)` form that matches
+this note's Step 2 and produces sub-microscopic residuals
+(`< 1.1e-6`) in the p^4 expansion check at `pa = 0.1256`.

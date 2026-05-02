@@ -114,3 +114,17 @@ For the Brannen-specific addendum, see
 `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`.
 For the second-order `Q` addendum, see
 `docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`.
+
+## Audit re-check (2026-05-02)
+
+A prior audit verdict (`audited_failed`, 2026-04-30) was based on a stale
+state in which `scripts/frontier_koide_q_so2_phase_erasure_support.py`
+failed one of its onsite source-domain synthesis checks. That subrunner
+was repaired at commit `5097b492` (2026-04-30) and now passes 23/23. The
+integrated regression `scripts/frontier_koide_lane_regression.py` reports
+`TOTAL: 381/381` and prints `VERDICT: all Koide-lane support runners
+pass. Support batch verified.`
+
+Per scope: this batch remains a **bounded support expansion**, not a
+closure of `Q`, `delta`, or `v_0`. The audit re-check re-establishes
+that the executable support stack runs end-to-end clean.

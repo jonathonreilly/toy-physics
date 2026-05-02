@@ -1,0 +1,1 @@
+# Cycle 12 cert: hierarchy Matsubara determinant narrow theorem. Type: positive_theorem (proposed; audit-lane to ratify). PASS=20/0. Pattern A — pure algebraic determinant identity, drops physical EWSB order-parameter identification.

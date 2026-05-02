@@ -1,7 +1,26 @@
 # Self-Gravity Backreaction Closure Note
 
-**Date:** 2026-04-06  
+**Date:** 2026-04-06 (audit-window annotation 2026-05-01)
 **Status:** bounded no-go on the exact-lattice Poisson-like backreaction lane under strict reduction/Born controls
+
+**Slow-runner annotation (2026-05-01):** the full sweep in the registered
+runner takes approximately 90s on the reference laptop, exceeding the
+audit-loop `runner_timeout_sec=60` window. A `--quick` flag has been added
+that runs a representative subset (1 source strength times 3 epsilons,
+skipping the end-to-end Born mask sweep) in <30s, preserving:
+
+- the exact `epsilon = 0` identity check
+- one nonzero-coupling row demonstrating the convergence/Born failure
+- the step-local Born check on the audit row
+
+For audit/replay use:
+
+```
+python3 scripts/poisson_self_gravity_loop_v3.py --quick
+```
+
+For the full sweep (4 epsilons times 3 source strengths plus the 7-mask
+end-to-end Born sweep), run without `--quick`.
 
 ## Artifact Chain
 

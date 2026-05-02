@@ -16,9 +16,11 @@ scale. This script computes:
 
 The key result: the lattice correction to the dispersion relation is
 
-    E^2 = m^2 + sum_i (2/a^2) sin^2(p_i a/2)
+    E^2 = m^2 + sum_i (4/a^2) sin^2(p_i a/2)
 
-Expanding at low momentum:
+(the standard second-order finite-difference Laplacian eigenvalue;
+matches LORENTZ_VIOLATION_DERIVED_NOTE.md Step 2). Expanding at low
+momentum:
 
     E^2 = m^2 + p^2 - (a^2/12) sum_i p_i^4 + O(a^4)
 
@@ -64,14 +66,24 @@ M_NEUTRINO_GEV = 1e-10       # upper bound, ~0.1 eV
 # ============================================================
 
 def lattice_dispersion_1d(p: np.ndarray, a: float, m: float) -> np.ndarray:
-    """Single-component lattice dispersion: (2/a^2) sin^2(p*a/2).
+    """Single-component lattice dispersion: (4/a^2) sin^2(p*a/2).
 
-    On a cubic lattice with spacing a, the kinetic term for direction i is
-        K_i = (2/a^2) sin^2(p_i a/2)
+    On a cubic lattice with spacing a, the standard second-order
+    finite-difference Laplacian eigenvalue is
+        K_i = (4/a^2) sin^2(p_i a/2) = (2/a^2) (1 - cos(p_i a))
 
-    rather than the continuum p_i^2.
+    rather than the continuum p_i^2. This is the canonical normalization
+    that matches LORENTZ_VIOLATION_DERIVED_NOTE.md Step 2.
 
-    E^2 = m^2 + sum_i (2/a^2) sin^2(p_i a/2)
+    Note (2026-05-02 audit fix): the previous version used (2/a^2)
+    sin^2(p_i a/2), which is half-normalized: it gives leading
+    p_i^2 / 2 rather than p_i^2 in the small-p_i limit, and the
+    runner's printed expansion was inconsistent with its actual kinetic
+    function. The (4/a^2) form below is the correct standard
+    normalization for which sin^2(pa/2) -> (pa/2)^2 - (pa/2)^4/3 + ...
+    multiplied by 4/a^2 yields p^2 - a^2 p^4/12 + ... .
+
+    E^2 = m^2 + sum_i (4/a^2) sin^2(p_i a/2)
 
     Args:
         p: momentum array (GeV, in natural units with c=hbar=1)
@@ -81,13 +93,13 @@ def lattice_dispersion_1d(p: np.ndarray, a: float, m: float) -> np.ndarray:
     Returns:
         E^2 array
     """
-    return m**2 + (2.0 / a**2) * np.sin(p * a / 2.0)**2
+    return m**2 + (4.0 / a**2) * np.sin(p * a / 2.0)**2
 
 
 def lattice_dispersion_3d(px: float, py: float, pz: float,
                           a: float, m: float) -> float:
-    """3D lattice dispersion relation."""
-    K = sum((2.0 / a**2) * math.sin(pi * a / 2.0)**2
+    """3D lattice dispersion relation (standard (4/a^2) normalization)."""
+    K = sum((4.0 / a**2) * math.sin(pi * a / 2.0)**2
             for pi in [px, py, pz])
     return m**2 + K
 
@@ -101,7 +113,7 @@ def lorentz_violation_coefficient(a: float) -> float:
     """The coefficient of the p_i^4 Lorentz-violating term.
 
     Expanding sin^2(p_i a/2) = (p_i a/2)^2 - (p_i a/2)^4/3 + ...
-    gives (2/a^2) sin^2(p_i a/2) = p_i^2 - a^2 p_i^4/12 + ...
+    gives (4/a^2) sin^2(p_i a/2) = p_i^2 - a^2 p_i^4/12 + ...
 
     The LV correction to E^2 is:
         delta(E^2) = -(a^2/12) sum_i p_i^4
@@ -115,7 +127,7 @@ def sixth_order_coefficient(a: float) -> float:
     """The coefficient of the p_i^6 term (next Lorentz-violating order).
 
     sin^2(x) = x^2 - x^4/3 + 2x^6/45 - ...
-    (2/a^2) sin^2(pa/2) = p^2 - a^2 p^4/12 + a^4 p^6/360 + ...
+    (4/a^2) sin^2(pa/2) = p^2 - a^2 p^4/12 + a^4 p^6/360 + ...
 
     Returns a^4/360.
     """
@@ -537,13 +549,16 @@ def run_experiment():
     print("""
   On a cubic lattice with spacing a, the dispersion relation is:
 
-    E^2 = m^2 + sum_i (2/a^2) sin^2(p_i a/2)
+    E^2 = m^2 + sum_i (4/a^2) sin^2(p_i a/2)
+
+  (Standard second-order finite-difference Laplacian eigenvalue;
+  see LORENTZ_VIOLATION_DERIVED_NOTE.md Step 2.)
 
   Taylor expanding for p_i a << 1:
 
     sin^2(p_i a/2) = (p_i a/2)^2 - (p_i a/2)^4/3 + (p_i a/2)^6*2/45 - ...
 
-    (2/a^2) sin^2(p_i a/2) = p_i^2 - a^2 p_i^4/12 + a^4 p_i^6/360 - ...
+    (4/a^2) sin^2(p_i a/2) = p_i^2 - a^2 p_i^4/12 + a^4 p_i^6/360 - ...
 
   Therefore:
     E^2 = m^2 + p^2 - (a^2/12) sum_i p_i^4 + (a^4/360) sum_i p_i^6 - ...
@@ -560,7 +575,7 @@ def run_experiment():
     m_test = 0.1
 
     E2_lattice = np.array([
-        m_test**2 + (2.0/a_test**2) * math.sin(p * a_test / 2)**2
+        m_test**2 + (4.0/a_test**2) * math.sin(p * a_test / 2)**2
         for p in p_test
     ])
     E2_continuum = m_test**2 + p_test**2
