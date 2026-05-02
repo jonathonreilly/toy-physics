@@ -6965,6 +6965,14 @@
       "to": "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
     },
     {
+      "from": "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "no_per_site_chirality_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
       "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
       "to": "three_generation_structure_note"
     },
@@ -7035,6 +7043,10 @@
     {
       "from": "periodic_2d_wraparound_fix_note_2026-04-11",
       "to": "bmv_threebody_note_2026-04-11"
+    },
+    {
+      "from": "per_site_su2_spin_half_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
     {
       "from": "physical_lattice_necessity_dep_declaration_audit_note_2026-05-02",
@@ -8257,6 +8269,10 @@
       "to": "full_y_squared_trace_su5_gut_note_2026-05-02"
     },
     {
+      "from": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
       "from": "staggered_layered_loop_threshold_note",
       "to": "graph_dirac_requirements_2026-04-10"
     },
@@ -8419,6 +8435,14 @@
     {
       "from": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
       "to": "three_generation_structure_note"
+    },
+    {
+      "from": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
+      "to": "anomaly_forces_time_theorem"
     },
     {
       "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
@@ -19997,7 +20021,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:40:12.359461+00:00",
+  "generated_at": "2026-05-02T21:29:18.151114+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21154,7 +21178,7 @@
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "d3cc0446fdf749d4f1e5ab2219ac08c8aa4dc254a60bd2df281e34928c65ef54",
+      "note_hash": "961b94dc62c4723c0bf191d3b9889bed242a03b884e4ea742538d36395636142",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
@@ -21239,14 +21263,14 @@
     },
     "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30": {
       "claim_id": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "graph_first_su3_integration_note",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "1849c0f3a377926ac38ac38a8c4fdf911b5ae94206386bf2a934521683600295",
+      "note_hash": "29202ae82052a809b7d5a6e5ed48b82568184c70f52e1d91df16d572d3deafa0",
       "path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
       "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate"
@@ -22138,15 +22162,15 @@
     },
     "bminusl_anomaly_freedom_theorem_note_2026-04-24": {
       "claim_id": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "one_generation_matter_closure_note",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
         "anomaly_forces_time_theorem"
       ],
-      "note_hash": "b480975d001f5398a15fe0070725cfa86139c5a80d13ad9eff01549e485f6c3e",
+      "note_hash": "83f89734a08d9ccc5765bdddcdc025a47b7967d93e514b1a1927785a9d315a2c",
       "path": "docs/BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_bminusl_anomaly_freedom.py",
       "title": "B-L Anomaly-Freedom Theorem With Retained nu_R"
@@ -29129,11 +29153,11 @@
     },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "cd32df125009c73ccaf60a461f913086d2974efd48b74e825b4f2e8d9e3a3881",
+      "note_hash": "1ef110fc867200dfe8921168b630ff4a71849c9ba9b086bc0a91ce6e2cf403ce",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Tensor-Transfer Theorem"
@@ -31801,11 +31825,11 @@
     },
     "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19": {
       "claim_id": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d1d3213bf1a5c0a2e80163e9dd6c24ec9e914c75848b494b80165c4f699c61b5",
+      "note_hash": "dfd4aafc5cb26893333c2b84eaec7ebf53daffb8bc409c68bbfc3f90cd0ba9f5",
       "path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Koide Z\u00b3 Scalar Potential \u2014 Lepton Mass Tower Note"
@@ -34701,6 +34725,32 @@
       "runner_path": null,
       "title": "Next Chunk Recommendation"
     },
+    "no_per_site_bosonic_ccr_theorem_note_2026-05-02": {
+      "claim_id": "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "54b0a371479eee86563104268b8135cda3dbd4255294a4a6611a84ee94478257",
+      "path": "docs/NO_PER_SITE_BOSONIC_CCR_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/no_per_site_bosonic_ccr_check.py",
+      "title": "No Per-Site Bosonic CCR on Cl(3) Lattice Sites"
+    },
+    "no_per_site_chirality_theorem_note_2026-05-02": {
+      "claim_id": "no_per_site_chirality_theorem_note_2026-05-02",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "ff529bb3e0ab5ee86bd5e039fe4e9721268464fdf866bb1e9e9626093266c5eb",
+      "path": "docs/NO_PER_SITE_CHIRALITY_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/no_per_site_chirality_check.py",
+      "title": "No Per-Site \u03b3_5 Chirality Operator on Cl(3) Pauli Rep"
+    },
     "nonlabel_grown_basin_note": {
       "claim_id": "nonlabel_grown_basin_note",
       "claim_type_author_hint": null,
@@ -34907,6 +34957,19 @@
       "path": "docs/PAULI_EXCLUSION_FROM_SPIN_STATISTICS_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/pauli_exclusion_check.py",
       "title": "Pauli Exclusion Principle from Retained Spin-Statistics Theorem"
+    },
+    "per_site_su2_spin_half_theorem_note_2026-05-02": {
+      "claim_id": "per_site_su2_spin_half_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "d0d7638afb212531bbc0474d17b5822785fc916e59783c593954542fc87d8d33",
+      "path": "docs/PER_SITE_SU2_SPIN_HALF_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/per_site_su2_spin_half_check.py",
+      "title": "Per-Site Cl(3) Hilbert Carries the Unique j = 1/2 Spin Irrep of su(2)"
     },
     "periodic_2d_wraparound_fix_note_2026-04-11": {
       "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
@@ -40996,6 +41059,19 @@
       "runner_path": "scripts/frontier_staggered_backreaction_shell_spectral.py",
       "title": "Staggered Backreaction Shell / Spectral Note"
     },
+    "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02": {
+      "claim_id": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "note_hash": "e4ed69aa8307d5177b4c641c4cca1f8be94d5ed118d61ebbb832a320800e7392",
+      "path": "docs/STAGGERED_CHIRAL_SYMMETRY_SPECTRUM_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/staggered_chiral_symmetry_check.py",
+      "title": "Staggered Cl(3) Hamiltonian Has Chiral-Symmetric Spectrum: \u03c3(H_phys) = \u2212\u03c3(H_phys)"
+    },
     "staggered_dag_note_2026-04-10": {
       "claim_id": "staggered_dag_note_2026-04-10",
       "claim_type_author_hint": null,
@@ -41405,6 +41481,20 @@
       "path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": null,
       "title": "SU(2) Witten Z_2 Global Anomaly Cancellation Theorem"
+    },
+    "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02": {
+      "claim_id": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "left_handed_charge_matching_note",
+        "anomaly_forces_time_theorem"
+      ],
+      "note_hash": "0dc2c97e3a22d0ae4843ac0ccd9fe73d3c700e4998ff1549bb915c50a96bd20b",
+      "path": "docs/SU3_ANOMALY_FORCED_3BAR_COMPLETION_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_su3_anomaly_forced_3bar_completion.py",
+      "title": "SU(3) Anomaly-Forced 3\u0304 Singlet Completion Theorem"
     },
     "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24": {
       "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
@@ -46544,23 +46634,24 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 11,
+      "bounded_theorem": 12,
       "meta": 1,
-      "none": 1746,
-      "positive_theorem": 37
+      "no_go": 1,
+      "none": 1742,
+      "positive_theorem": 44
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 511,
+      "bounded_theorem": 512,
       "meta": 1,
-      "no_go": 106,
+      "no_go": 107,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 628
+      "positive_theorem": 631
     },
-    "edge_count": 4999,
-    "leaf_count": 761,
-    "node_count": 1795,
+    "edge_count": 5005,
+    "leaf_count": 766,
+    "node_count": 1800,
     "root_count": 1217,
-    "runners_with_path": 1363
+    "runners_with_path": 1368
   }
 }
