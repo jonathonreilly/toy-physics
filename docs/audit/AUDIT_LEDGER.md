@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T02:07:03.184021+00:00
+**Generated:** 2026-05-02T02:15:10.322356+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 369 |
+| `audited_clean` | 370 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 418 |
+| `unaudited` | 417 |
 
 | criticality | count |
 |---|---:|
@@ -448,6 +448,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `valley_linear_asymptotic_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `valley_linear_mirror_transfer_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `valley_linear_repro_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_equation_gravity_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | C | - |
@@ -16548,6 +16549,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Valley-linear improves the random-DAG family relative to spent-delay, but spent-delay still has the edge on the mirror family, so the result is a transfer diagnostic rather than a unification theorem.  _(class `C`)_
 - **chain closes:** True — The registered runner recomputes the random and mirror DAG comparison and reproduces the note's four-row table exactly. The source note remains bounded and explicitly denies a universal action-replacement theorem.
 - **rationale:** The current output matches the frozen replay: random spent-delay 11/36 with mean -0.770064, random valley-linear 18/36 with +0.000155, mirror spent-delay 24/36 with +0.545083, and mirror valley-linear 23/36 with +0.036664. The note's safe read is exactly the runner's conclusion: branch-specific transfer, not a unification theorem. Residual risk is limited to the finite generator/seed scope declared in the note.
+- **auditor confidence:** high
+
+### `valley_linear_repro_note`
+
+- **Note:** [`VALLEY_LINEAR_REPRO_NOTE.md`](../../docs/VALLEY_LINEAR_REPRO_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This note exists so a skeptical reader can replay the valley-linear lane without mistaking it for a flagship theorem or for the broader 3D kernel story.  _(class `C`)_
+- **chain closes:** True — The registered reproduction harness runs successfully with --valley-linear, prints the canonical retained comparison, and then runs the bounded same-family valley-linear replay. The note is an entry-point/replay note and explicitly does not certify derivation, convergence, or replacement of the spent-delay flagship.
+- **rationale:** The current harness passed and produced the expected bounded replay: spent-delay Born 4.20e-15, k=0 zero, F~M 0.50, gravity +0.045346, TOWARD 8/8, tail -0.52; valley-linear Born 4.20e-15, k=0 zero, F~M 1.00, gravity +0.000224, TOWARD 8/8, tail -0.93. The note's claim is not a physics theorem; it is that this is the reproducible skeptical-reader entry point for the valley-linear fork, with limits stated. Residual risk is only the long runtime of the optional valley-linear replay.
 - **auditor confidence:** high
 
 ### `valley_linear_wide_tail_note`
