@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T19:23:44.957439+00:00",
+  "generated_at": "2026-05-02T19:27:33.573656+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16416,6 +16416,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py"
+    },
+    "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_z3_conjugate_support_trichotomy_narrow.py"
     }
   },
   "per_runner": {
@@ -31815,6 +31827,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_z3_conjugate_support_trichotomy_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/gap_ln_born_check.py": {
       "assert_count": 0,
       "claims": [
@@ -35724,15 +35751,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 105,
+    "decoration_candidates": 106,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 154,
+      "B": 155,
       "C": 510,
       "D": 198,
       "none": 410
     },
-    "runners_classified": 1281,
+    "runners_classified": 1282,
     "runners_with_C": 612,
     "runners_with_D": 312
   }
