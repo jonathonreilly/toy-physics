@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:56:08.757587+00:00
+**Generated:** 2026-05-02T00:58:07.614760+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 353 |
+| `audited_clean` | 354 |
 | `audited_conditional` | 664 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 442 |
+| `unaudited` | 441 |
 
 | criticality | count |
 |---|---:|
@@ -427,6 +427,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `structureless_dag_gravity_harness_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
+| `symmetry_generated_paired_chokepoint_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `tensor_block_closure_test_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -15531,6 +15532,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** P_3 violates none of the stated constraints (a)-(e). It is not P_A, so uniqueness fails.  _(class `A`)_
 - **chain closes:** True — The explicit P_3 projector is rank four, tensor-local, complex-linear, and equivariant under the same spin/time/CPT actions while distinct from P_A. A single admitted non-P_A witness is sufficient to refute uniqueness from the stated constraints.
 - **rationale:** The claim is a finite-dimensional no-go, not a positive carrier identification. The load-bearing step is an explicit algebraic counterexample: the runner constructs the substrate actions, verifies P_A, verifies non-P_A P_3 under the same constraints, and enumerates 17 rank-four local equivariant projector classes. No external comparator, tuned value, open dependency, or symbol renaming is needed for the negative conclusion.
+- **auditor confidence:** high
+
+### `symmetry_generated_paired_chokepoint_note`
+
+- **Note:** [`SYMMETRY_GENERATED_PAIRED_CHOKEPOINT_NOTE.md`](../../docs/SYMMETRY_GENERATED_PAIRED_CHOKEPOINT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At the density optimum, the generated paired scaffold is still Born-clean where it runs and recovers a modest subset of the mirror gap at N=25 and N=40, but it loses retention by N=60.  _(class `C`)_
+- **chain closes:** True — Running the registered script with the note's density-optimum parameters reproduces the saved log and the note's key table: paired-generated noise values have Born=0 where they run at N=25/40 and all paired-generated N=60 rows fail. The note keeps the conclusion bounded and does not promote the generated scaffold.
+- **rationale:** The load-bearing bounded negative conclusion matches the current runner when invoked with the note's explicit density-optimum parameters and is consistent with the archived log. The note states the correct boundary: the generated scaffold has a small viable pocket, does not consistently beat exact mirror, and does not survive to N=60. Residual process risk is that the runner defaults now run a different all-FAIL window, so future readers need the note/log command rather than the default invocation.
 - **auditor confidence:** high
 
 ### `symmetry_head_to_head_note`
