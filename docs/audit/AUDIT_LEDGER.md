@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:24:26.052985+00:00
+**Generated:** 2026-05-02T21:26:51.747625+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 1 |
-| unaudited | 558 |
+| unaudited | 557 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 632 |
+| ~~audited_conditional~~ | 633 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 632 |
+| `audited_conditional` | 633 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 594 |
+| `unaudited` | 593 |
 
 | claim_type | count |
 |---|---:|
@@ -885,6 +885,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lensing_deflection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_finite_path_explanation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
+| `lensing_k_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | C | - |
 | `lepton_shared_higgs_universality_collapse_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `lepton_shared_higgs_universality_underdetermination_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lepton_single_higgs_pmns_triviality_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -10706,6 +10707,19 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `LENSING_LONG_PATH_TEST_NOTE.md`
   - `logs/2026-04-07-lensing-analytical-finite-path.txt`
 - **auditor confidence:** medium
+
+### `lensing_k_sweep_note`
+
+- **Note:** [`LENSING_K_SWEEP_NOTE.md`](../../docs/LENSING_K_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical diagnostic that, for one Fam1 setup with H=0.25, seeds 0-2, b in {3,4,5,6}, and k*H in {0.5,...,5.0}, the fitted lensing slope is k-dependent; no framework-level lensing theorem or wave-mode mechanism is audited as closed.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-lensing-k-sweep-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The lensing slope oscillates between +0.58 and -1.43 across k*H in {0.5..5.0} with period about 1.5.  _(class `C`)_
+- **chain closes:** False — The note reports a bounded sweep table, but the current live runner did not complete the first k*H block within the audit-loop budget and exposes no PASS thresholds. The physical bridge from the constructed propagator readout to a retained lensing observable, and the stronger wave-interference mechanism claim, do not close from the note alone.
+- **rationale:** Issue: the load-bearing slope-range and sign-flip table is a numerical diagnostic over one constructed Fam1 setup, while the current runner did not complete in the live audit and contains no PASS thresholds; the note also imports the lensing readout and wave-interference mechanism interpretation without a retained bridge theorem. Why this blocks: a bounded theorem cannot be cleanly ratified from the note alone when the current runner output is incomplete and the physical observable bridge is selected rather than derived. Repair target: provide a runnable registered output/PASS surface for the exact sweep, plus a theorem or registered kernel/mode analysis deriving the carrier, source law, normalization, readout, and lensing-observable map. Claim boundary until fixed: it may be cited only as a conditional, single-setup numerical diagnostic suggested by the source table and runner design, not as a closed framework theorem or confirmed wave-interference mechanism.
+- **auditor confidence:** high
 
 ### `lepton_shared_higgs_universality_collapse_note`
 
