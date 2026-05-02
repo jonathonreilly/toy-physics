@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:49:04.328192+00:00
+**Generated:** 2026-05-02T01:52:29.671232+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 151 |
-| support | 122 |
+| support | 121 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 967 |
+| ~~audited_conditional~~ | 968 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 366 |
-| `audited_conditional` | 667 |
+| `audited_conditional` | 668 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 423 |
+| `unaudited` | 422 |
 
 | criticality | count |
 |---|---:|
@@ -1069,6 +1069,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_a1_invariant_section_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_block_constraint_interpretation_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_casimir_block_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `universal_gr_curvature_localization_blocker_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_invariant_nonlinear_completion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_glue_operator_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -16058,6 +16059,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The candidate is orbit-flat on the valid 3+1 polarization-frame orbit: complement coefficients move, but action-like invariants do not pick a unique section.  _(class `A`)_
 - **chain closes:** True — The local negative claim closes: an SO(3)-orbit-flat quadratic action/constraint cannot canonically select a complement-frame section when the complement coordinates still vary along that orbit.
 - **rationale:** The claim is a support/no-go result about failure of action stationarity to resolve the complement-frame ambiguity, not a positive GR closure theorem. The source note's load-bearing step is an algebraic orbit-flatness argument, and the runner's current algebraic checks support that step. The single current-checkout runner failure is tied to a stale blocker-note text check, not to the load-bearing stationarity computation.
+- **auditor confidence:** high
+
+### `universal_gr_curvature_localization_blocker_note`
+
+- **Note:** [`UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md`](../../docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-gpt5-restricted-auditor`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The smallest honest missing object is now a stronger interpretation theorem upgrading exact discrete global Lorentzian closure to a stricter notion of full GR beyond the project PL S^3 x R Einstein/Regge setting.  _(class `B`)_
+- **chain closes:** False — The note's narrowing of the remaining blocker depends on upstream exactness claims and cited closure/operator notes not present in the restricted dependency set. The available runner is stale against this checkout note and fails one current-note check while reading an external project root.
+- **rationale:** Issue: the claim that only a stricter interpretation theorem remains imports the exact isotropic glue/operator and discrete global closure results rather than deriving them in this note. Why this blocks: with deps=[] and no registered one-hop authorities, the audit cannot verify that earlier blockers are actually discharged. Repair target: register the cited operator-identification and discrete-global-closure authorities, and update the runner to read the current checkout and check the current blocker statement. Claim boundary until fixed: safe as a support-level status summary/open blocker; not safe as a closed minimal-blocker theorem.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
+  - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_discrete_global_closure_note`
