@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:10:27.408650+00:00
+**Generated:** 2026-05-02T17:14:04.897078+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 143 |
 | **retained_no_go** | 93 |
-| **retained_bounded** | 172 |
+| **retained_bounded** | 173 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
 | unaudited | 514 |
@@ -29,13 +29,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 644 |
+| ~~audited_conditional~~ | 643 |
 | ~~audited_failed~~ | 26 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 372 |
-| `audited_conditional` | 644 |
+| `audited_clean` | 373 |
+| `audited_conditional` | 643 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
@@ -44,12 +44,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 512 |
+| `bounded_theorem` | 513 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 152 |
 | `open_gate` | 107 |
-| `positive_theorem` | 871 |
+| `positive_theorem` | 870 |
 
 | criticality | count |
 |---|---:|
@@ -239,6 +239,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
@@ -753,7 +754,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7610,20 +7610,15 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-28-gauge_vacuum_plaquette_mixed_cumulant_audit_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The onset of the full-vacuum reduction law is now exact, but the nonperturbative continuation to the framework point `beta = 6` is still open.  _(class `A`)_
-- **chain closes:** False — The exact small-beta onset coefficient closes, and the live runner reports THEOREM PASS=6 SUPPORT=1 FAIL=0. It does not close the full nonperturbative beta-dependent reduction law or its beta=6 evaluation, which the note explicitly leaves open.
-- **rationale:** Issue: the note closes the first nonlinear small-beta coefficient beta_eff(beta)=beta+beta^5/26244+O(beta^6), but explicitly does not close the full nonperturbative beta_eff(beta) or its beta=6 value.
-Why this blocks: downstream plaquette or alpha_s claims need the framework-point reduction, not only the onset coefficient, so this support theorem cannot promote analytic plaquette closure.
-Repair target: derive and audit the full beta-dependent reduction law and its nonperturbative continuation/evaluation at beta=6 with a runner that computes the framework-point plaquette readout.
-Claim boundary until fixed: safe to claim the exact first nonlocal coefficient and beta_eff onset, not full plaquette observable closure.
-- **open / conditional deps cited:**
-  - `nonperturbative_beta6_continuation_of_beta_eff_missing`
-- **auditor confidence:** high
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the closed small-beta/onset theorem that the first nonlocal full-vacuum plaquette mixed-cumulant contribution is 4/18^5=1/472392 and hence beta_eff(beta)=beta+beta^5/26244+O(beta^6), with beta=6 continuation outside scope.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-mixed-cumulant-herschel`  (codex-current; independence=fresh_context)
+- **load-bearing step:** A finite first-principles SU(3) link-balance search has no nonlocal survivor through beta^4 and exactly four elementary cube-shell survivors at beta^5, each contributing 1/18^5.  _(class `C`)_
+- **chain closes:** True — Within the stated onset scope, the chain closes from leaf-factorization/leafless reduction, exhaustive finite local support enumeration, exact cube-shell contraction, and algebraic conversion using P_1plaq'(0)=1/18. The prompt explicitly excludes the nonperturbative beta=6 beta_eff and canonical P(6), so those do not block closure.
+- **rationale:** The scoped claim is a bounded onset theorem, not a full retained-grade beta=6 result. The runner reports exact verification of finite candidate counts, the beta^4 null result, the beta^5 four-survivor result, the per-shell coefficient, the total coefficient, and the beta_eff coefficient, with no failures. No one-hop dependencies are listed and no external comparator or tuning is involved under the scoped claim.
+- **auditor confidence:** medium
 
 ### `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note`
 

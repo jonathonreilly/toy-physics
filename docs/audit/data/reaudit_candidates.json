@@ -1,11 +1,46 @@
 {
   "by_criticality": {
-    "critical": 0,
+    "critical": 1,
     "high": 1,
     "leaf": 5,
     "medium": 0
   },
   "candidates": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audited_conditional",
+      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
+      "claim_id": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "current_dep_effective_status": {
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note": "retained_bounded"
+      },
+      "deps": [
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
+      ],
+      "direct_in_degree": 5,
+      "effective_status": "audited_conditional",
+      "generated_order": 1,
+      "improved_dependencies": [
+        {
+          "after_effective_status": "retained_bounded",
+          "before_effective_status": "audited_conditional",
+          "claim_id": "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
+          "rank_delta": 85
+        }
+      ],
+      "load_bearing_score": 10.709,
+      "note_hash": "268038cdd4e058e6657d01993233b781e410cf89b6222829f682059b5629c9af",
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
+      "reraudit_after_claim_ids": [
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
+      ],
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
+      "transitive_descendants": 295
+    },
     {
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "audited_conditional",
@@ -23,7 +58,7 @@
       ],
       "direct_in_degree": 6,
       "effective_status": "audited_conditional",
-      "generated_order": 1,
+      "generated_order": 2,
       "improved_dependencies": [
         {
           "after_effective_status": "retained",
@@ -60,7 +95,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_conditional",
-      "generated_order": 2,
+      "generated_order": 3,
       "improved_dependencies": [
         {
           "after_effective_status": "retained_bounded",
@@ -102,7 +137,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_conditional",
-      "generated_order": 3,
+      "generated_order": 4,
       "improved_dependencies": [
         {
           "after_effective_status": "retained_bounded",
@@ -137,7 +172,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_conditional",
-      "generated_order": 4,
+      "generated_order": 5,
       "improved_dependencies": [
         {
           "after_effective_status": "retained_bounded",
@@ -172,7 +207,7 @@
       ],
       "direct_in_degree": 0,
       "effective_status": "audited_conditional",
-      "generated_order": 5,
+      "generated_order": 6,
       "improved_dependencies": [
         {
           "after_effective_status": "retained",
@@ -207,7 +242,7 @@
       ],
       "direct_in_degree": 0,
       "effective_status": "audited_conditional",
-      "generated_order": 6,
+      "generated_order": 7,
       "improved_dependencies": [
         {
           "after_effective_status": "retained_bounded",
@@ -239,7 +274,7 @@
     "open_gate",
     "positive_theorem"
   ],
-  "generated_at": "2026-05-02T17:10:27.159282+00:00",
+  "generated_at": "2026-05-02T17:14:04.654621+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited theorem/no-go/open-gate claims whose current one-hop dependencies are all retained-grade and whose audit-time dependency snapshot contains at least one dependency that has since become retained-grade.",
   "ratified_dependency_statuses": [
@@ -247,5 +282,5 @@
     "retained_bounded",
     "retained_no_go"
   ],
-  "total_candidates": 6
+  "total_candidates": 7
 }
