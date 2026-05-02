@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:19:08.830504+00:00
+**Generated:** 2026-05-02T00:20:31.424870+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 160 |
+| bounded | 159 |
 | support | 129 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 961 |
-| ~~audited_failed~~ | 90 |
+| ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 338 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 61 |
+| `audited_failed` | 62 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 467 |
+| `unaudited` | 466 |
 
 | criticality | count |
 |---|---:|
@@ -1147,6 +1147,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_scaling_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `source_resolved_exact_green_h025_pocket_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_exact_green_self_consistent_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `source_resolved_generated_support_mass_scaling_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_retarded_green_pocket_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `source_resolved_transverse_propagating_green_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_capture_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -14646,6 +14647,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The split-shell fixed-weight wavefield improves the weak-field-law fit relative to the self-consistent wavefield, reaching F~M = 0.500, but remains far from generated-family closure.  _(class `C`)_
 - **chain closes:** True — The runner reproduces all six aggregate rows and the law comparison in the source note. The note explicitly frames the result as a bounded partial improvement rather than a closure theorem.
 - **rationale:** The current runner output matches the frozen table: bridge modes give 7/16, 6/16, and 5/16 TOWARD with F~M values 0.058, 0.098, and 0.230; split-shell modes give 8/16 for all three with F~M values 0.424, 0.381, and 0.500. The LAW COMPARISON also matches and supports the note's bounded read that fixed weights help the law but do not recover a near-linear class. Residual risk is limited to the chosen split-shell family and mode definitions.
+- **auditor confidence:** high
+
+### `source_resolved_generated_support_mass_scaling_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The kNN-floor connectivity tweak broadens detector support and partially rescues sign on the compact generated family, but it does not restore the weak-field mass-scaling class.  _(class `C`)_
+- **chain closes:** False — The current runner preserves the qualitative support/sign rescue and the N_eff/exponent summaries, but the note's frozen centroid-shift values are stale or underspecified. The note reports baseline -4.357340e-02 and tweak +3.850909e-01, while current per-strength output ends at -4.548761e-02 and +4.128727e-01 and has different means across the source ladder.
+- **rationale:** Issue: the frozen aggregated detector/scaling table contains centroid-shift values that do not match the current primary runner output or state which source-strength aggregation they represent. Why this blocks: a bounded numerical result cannot be certified clean while a reported load-bearing numeric column is stale or ambiguous, even though sign rows, N_eff, and fitted exponents match the runner. Repair target: refresh the centroid-shift column from the current runner and label whether it is the largest-strength row, an average over strengths, or another aggregate. Claim boundary until fixed: conditional/bounded support that kNN-floor broadens support from N_eff 2.66 to 5.25 and improves sign rows from 0/4 to 2/4, while F~M remains non-linear at -0.152.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
