@@ -9997,6 +9997,18 @@
       "to": "yt_explicit_systematic_budget_note"
     },
     {
+      "from": "yukawa_color_projection_theorem",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "yukawa_color_projection_theorem",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "yukawa_color_projection_theorem",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
       "from": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
       "to": "ai_methodology_note_2026-04-25"
     },
@@ -19949,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T17:57:24.602561+00:00",
+  "generated_at": "2026-05-02T18:04:16.583211+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -45055,13 +45067,17 @@
     },
     "yukawa_color_projection_theorem": {
       "claim_id": "yukawa_color_projection_theorem",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "3f2580c217dddc126afc4d33742fa7a1a760ad2e79b227df64e6017b332dff03",
+      "deps": [
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "a77d1a2b4cc2caa5073ee1348d3aba0344326e2df0bac06161342cf8e351db77",
       "path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
-      "runner_path": "scripts/frontier_yt_color_projection_correction.py",
+      "runner_path": "scripts/frontier_ew_current_fierz_channel_decomposition.py",
       "title": "Yukawa Color-Singlet Projection Theorem"
     },
     "z2_hw1_mass_matrix_parametrization_note": {
@@ -46286,15 +46302,14 @@
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
     "yt_ward_identity_derivation_theorem",
     "yt_zero_import_chain_note",
-    "yukawa_color_projection_theorem",
     "z2_hw1_mass_matrix_parametrization_note"
   ],
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 8,
-      "none": 1758,
-      "positive_theorem": 13
+      "none": 1757,
+      "positive_theorem": 14
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 508,
@@ -46303,10 +46318,10 @@
       "open_gate": 110,
       "positive_theorem": 610
     },
-    "edge_count": 4987,
+    "edge_count": 4990,
     "leaf_count": 749,
     "node_count": 1779,
-    "root_count": 1211,
+    "root_count": 1210,
     "runners_with_path": 1346
   }
 }
