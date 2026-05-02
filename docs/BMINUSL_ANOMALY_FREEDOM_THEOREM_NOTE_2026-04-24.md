@@ -3,7 +3,7 @@
 **Date:** 2026-04-24
 **Type:** positive_theorem
 **Claim scope:** the exact rational arithmetic of all six anomaly traces
-`(G1)-(G6)` for `U(1)_{B-L}` on the retained one-generation matter
+`(G1)-(G6)` for `U(1)_{B-L}` on the referenced one-generation matter
 content, evaluated via standard SM `B`/`L` charge assignments. The
 **gaugeability conclusion** ("`U(1)_{B-L}` is gauge-anomaly-consistent on
 the retained content") follows from the arithmetic plus the standard
@@ -13,11 +13,9 @@ convention, the anomaly-cancellation-as-quantum-consistency principle,
 and the standard SM `B`/`L` bookkeeping are explicitly **out of scope**
 here and live in separate authority notes (admitted-context to this
 note).
-**Status:** audit pending. Under the scope-aware classification framework,
-`effective_status` is computed by the audit pipeline from `audit_status` +
-`claim_type` + dependency chain; no author-side tier is asserted in source.
-The current ledger state is `unaudited` and audit-lane ratification is
-required before any retained-grade status applies.
+**Status:** independent audit required. Under the scope-aware classification
+framework, ratified status is computed by the audit pipeline from audit lane
+data and the dependency chain; no author-side tier is asserted in source.
 
 **Primary runner:** `scripts/frontier_bminusl_anomaly_freedom.py`
 

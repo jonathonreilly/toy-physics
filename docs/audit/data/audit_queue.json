@@ -5,7 +5,7 @@
     "leaf": 169,
     "medium": 174
   },
-  "generated_at": "2026-05-02T20:54:30.217437+00:00",
+  "generated_at": "2026-05-02T20:57:20.096060+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -3977,7 +3977,7 @@
       "claim_id": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
       "claim_scope": null,
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
+      "claim_type_provenance": "author_hint",
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
