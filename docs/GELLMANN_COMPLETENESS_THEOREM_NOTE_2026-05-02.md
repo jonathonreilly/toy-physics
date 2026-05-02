@@ -1,0 +1,208 @@
+# Gell-Mann Completeness: {T^a} Is an R-Basis for su(3)
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the eight Gell-Mann generators T^a = λ^a / 2 supplied by
+cl3_color_automorphism_theorem (retained) form a real-linear basis for
+su(3): they are R-linearly independent, span the full 8-dimensional space
+of traceless Hermitian 3x3 matrices (modulo i factor for the standard
+mathematical su(3) = anti-Hermitian convention), and close under commutator
+into structure constants f^{abc}. Equivalently, the framework's color
+algebra is exactly captured by the eight Gell-Mann generators with no
+additional independent generators required.
+**Status:** awaiting independent audit.
+**Loop:** `positive-only-r8-20260502`
+**Cycle:** 2 (Block 2)
+**Branch:** `physics-loop/positive-only-r8-block02-gellmann-completeness-20260502`
+**Runner:** `scripts/gellmann_completeness_check.py`
+**Log:** `outputs/gellmann_completeness_check_2026-05-02.txt`
+
+## Cited authorities (one hop)
+
+- [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md)
+  — `effective_status: retained`. Provides:
+  - SU(3)_c with eight Gell-Mann generators T^a = λ^a / 2
+  - Trace orthonormality Tr[T^a T^b] = (1/2) δ^{ab}
+
+This is the only load-bearing one-hop dependency.
+
+## Admitted-context inputs
+
+- **Definition of su(3) as 3x3 traceless anti-Hermitian matrices.** The
+  Lie algebra of SU(3) is the real vector space of traceless anti-Hermitian
+  3x3 complex matrices, with bracket [A, B] = AB - BA. Standard.
+- **dim_R su(3) = 8.** Standard count: 9 complex matrix entries minus 3
+  diagonal Hermiticity constraints minus 6 off-diagonal Hermiticity
+  constraints minus 1 trace constraint → 8 real parameters. Standard
+  Lie-algebra dimension formula for su(N) is N² - 1.
+- **Trace inner product on Hermitian matrices.** ⟨A, B⟩ := 2 Tr[A B] is
+  a positive-definite real inner product on traceless Hermitian matrices.
+  Standard.
+
+All three are pure mathematical / definitional facts; no admitted physics
+conventions.
+
+## Statement
+
+Let {T^a = λ^a / 2 : a = 1, ..., 8} be the Gell-Mann generators of SU(3)_c
+supplied by cl3_color_automorphism_theorem (retained), with Hermiticity,
+tracelessness, and orthonormality
+
+```text
+    (T^a)^†  =  T^a,    Tr[T^a]  =  0,    Tr[T^a T^b]  =  (1/2) δ^{ab}.   (1)
+```
+
+Then:
+
+**(B1) Linear independence.** The 8 generators T^a are R-linearly
+independent: the 8x8 Gram matrix G^{ab} := Tr[T^a T^b] = (1/2) δ^{ab} is
+non-singular.
+
+**(B2) Real span = traceless Hermitian.** R-span{T^a : a = 1, ..., 8} is
+exactly the 8-dim real vector space of 3x3 traceless Hermitian matrices.
+Equivalently, R-span{i T^a} = su(3) (with the standard anti-Hermitian
+convention).
+
+**(B3) Orthonormal decomposition.** Every traceless Hermitian matrix M
+decomposes uniquely as
+
+```text
+    M  =  Σ_{a=1}^{8} c_a T^a,    c_a  =  2 Tr[M T^a].                    (2)
+```
+
+**(B4) Closure under commutator.** For all a, b ∈ {1, ..., 8}:
+
+```text
+    [T^a, T^b]  =  i Σ_c f^{abc} T^c                                       (3)
+```
+
+with structure constants f^{abc} ∈ R, f^{abc} = -2i Tr[[T^a, T^b] T^c]
+(real, totally antisymmetric in (a, b, c)).
+
+**(B5) No extra generators.** No additional generator T^9 (linearly
+independent of T^1, ..., T^8) can be added while preserving the SU(3)
+algebra structure: any 3x3 traceless Hermitian matrix already lies in
+the R-span of the existing 8. The framework's color algebra is exactly
+8-dimensional.
+
+## Proof
+
+### Step 1 — Hermiticity, tracelessness (cited)
+
+By cl3_color_automorphism_theorem (retained), each T^a is Hermitian and
+traceless (1). Hence each i T^a is anti-Hermitian and traceless, i.e.
+i T^a ∈ su(3) using the standard mathematical convention.
+
+### Step 2 — Linear independence (B1)
+
+The Gram matrix G^{ab} = 2 Tr[T^a T^b] = δ^{ab} is the 8x8 identity
+matrix in the rescaled inner product ⟨A, B⟩ := 2 Tr[A B]. Its determinant
+is 1 ≠ 0, so {T^a} are linearly independent over R — establishing (B1).
+
+### Step 3 — Span of traceless Hermitian (B2)
+
+The space of 3x3 traceless Hermitian matrices has real dimension N² - 1 =
+9 - 1 = 8 (standard count). The R-span of 8 linearly independent vectors
+in an 8-dim space is the full space. Hence R-span{T^a} = traceless
+Hermitian — establishing (B2). Equivalently, R-span{i T^a} = su(3).
+
+### Step 4 — Decomposition formula (B3)
+
+For any traceless Hermitian M:
+- write M = Σ_a c_a T^a (existence guaranteed by B2);
+- compute coefficients via 2 Tr[M T^b] = 2 Σ_a c_a Tr[T^a T^b] = Σ_a c_a δ^{ab}
+  = c_b;
+- so c_a = 2 Tr[M T^a].
+
+This is the orthonormal projection in the trace inner product —
+establishing (B3).
+
+### Step 5 — Closure under commutator (B4)
+
+For Hermitian T^a, T^b: [T^a, T^b] is anti-Hermitian (since [A, B]^† =
+B^† A^† - A^† B^† = -[A, B] when A, B Hermitian). Anti-Hermitian + traceless
+= i × (traceless Hermitian) = i × R-span{T^c}.
+
+Therefore [T^a, T^b] = i Σ_c f^{abc} T^c for some f^{abc} ∈ R. The
+projection formula:
+
+```text
+    f^{abc}  =  -2i · Tr[[T^a, T^b] T^c]                                   (4)
+```
+
+(real, by anti-Hermitian × Hermitian giving anti-real-multiple of trace).
+
+The numerical computation in the runner verifies (3) at machine precision
+for all a, b ∈ {1, ..., 8} — establishing (B4).
+
+The structure constants f^{abc} satisfy:
+- antisymmetry in (a, b): f^{abc} = -f^{bac} (since [T^b, T^a] = -[T^a, T^b]);
+- antisymmetry in (a, c): from Jacobi identity + orthogonality of T's;
+- hence total antisymmetry in (a, b, c).
+
+### Step 6 — No extra generators (B5)
+
+Any candidate T^9 (3x3 traceless Hermitian) would be in span{T^a : a = 1..8}
+by (B2). Hence T^9 = Σ_{a=1}^{8} c_a T^a for some real c_a, and is not
+linearly independent of the existing 8. There are no further linearly
+independent traceless Hermitian generators — establishing (B5). ∎
+
+## Hypothesis set used
+
+- `cl3_color_automorphism_theorem` (retained): provides Gell-Mann generators
+  T^a with (1).
+- Definition of su(3) (mathematical, admitted-context).
+- dim_R su(3) = 8 standard count (mathematical, admitted-context).
+- Trace inner product (mathematical, admitted-context).
+
+No fitted parameters. No observed values. No physics conventions admitted
+beyond the retained color automorphism theorem.
+
+## Corollaries
+
+C1. **Framework's color algebra is exactly 8-dimensional.** No "ninth
+gluon" can exist as an independent SU(3)_c degree of freedom — would be
+linearly dependent on the existing 8. This is a hard structural rigidity
+result on the framework's color content.
+
+C2. **Gluon count fixed at 8.** Since gluons live in the adjoint
+representation of SU(3)_c (dimension N² - 1 = 8 for N = 3), and since
+this dimension is exactly the Lie algebra dimension forced by (B2),
+the number of independent gluon modes is exactly 8. No more, no fewer.
+
+C3. **All color tensor identities reducible to f^{abc} and d^{abc}.** Any
+trace identity Tr[T^{a_1} T^{a_2} ... T^{a_n}] for SU(3)_c reduces to
+combinations of structure constants f^{abc} and the symmetric d^{abc}
+(defined by {T^a, T^b} = (1/3) δ^{ab} I + d^{abc} T^c). All higher
+n-point color tensor identities are determined by these two via the
+Lie / commutative-algebra structure.
+
+C4. **Quark-gluon vertex coefficient.** The QCD quark-gluon vertex carries
+a color factor T^a between quark spinors. Since {T^a} is a basis, every
+fermion–boson coupling decomposes uniquely into 8 independent
+amplitudes — one per Gell-Mann generator.
+
+C5. **Companion to R6/R7 Casimir results.** Together with C_2(fund) = 4/3
+(R6 Block 03) and C_2(adj) = 3 (R7 Block 01), this completes the basic
+SU(3)_c representation-theoretic toolkit needed for any framework QCD
+computation.
+
+## Honest status
+
+Positive theorem on the framework's color Lie algebra basis, derived
+from a single retained one-hop dependency by elementary linear algebra
+in the Gell-Mann basis. The runner exhibits Hermiticity, tracelessness,
+trace orthogonality, R-span dimension 8, decomposition of arbitrary
+traceless Hermitian matrices, round-trip reconstruction, and closure
+under commutator with structure constants — all at machine precision.
+
+```yaml
+claim_type_author_hint: positive_theorem
+claim_scope: "{T^a : a = 1, ..., 8} is R-basis for traceless 3x3 Hermitian (≅ su(3) × i); commutator closes with structure constants f^{abc}."
+upstream_dependencies:
+  - cl3_color_automorphism_theorem (retained)
+admitted_context_inputs:
+  - su(3) defined as 3x3 traceless anti-Hermitian matrices (mathematical)
+  - dim_R su(3) = N² - 1 = 8 (mathematical)
+  - trace inner product on Hermitian matrices (mathematical)
+```
