@@ -144,6 +144,8 @@ should be read as proposed until the audit ledger marks them clean.
   [docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md](docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md)
 - accepted critical open science lanes:
   [docs/lanes/open_science/README.md](docs/lanes/open_science/README.md)
+- signed gravitational response lane backlog:
+  [docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md](docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md)
 - scientific boundaries and explicit non-claims:
   [docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
   and [docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
