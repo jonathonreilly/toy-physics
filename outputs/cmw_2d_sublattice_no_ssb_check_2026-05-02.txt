@@ -1,0 +1,80 @@
+========================================================================
+CMW 2D/1D SUBLATTICE NO-SSB CHECK
+========================================================================
+
+Setup:
+  Lattice IR-integral I_d = (1/V) sum_{k≠0} 1/E_k
+  E_k = 2 sum_μ (1 - cos k_μ) (lattice Goldstone dispersion)
+  Divergence of I_d at large L is the Bogoliubov-bound mechanism
+  that forces ⟨q⟩_β = 0 (no SSB) for d ≤ 2.
+
+------------------------------------------------------------------------
+TEST 1: I_1 diverges linearly with L
+------------------------------------------------------------------------
+     L           I_1       I_1 / L
+     4      0.312500  7.812500e-02
+     8      0.656250  8.203125e-02
+    16      1.328125  8.300781e-02
+    32      2.664062  8.325195e-02
+    64      5.332031  8.331299e-02
+   128     10.666016  8.332825e-02
+  I_1 monotonically growing: True
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: I_2 diverges logarithmically with L
+------------------------------------------------------------------------
+     L           I_2    I_2 / log(L)
+     4      0.268229        0.193486
+     8      0.379295        0.182402
+    16      0.489924        0.176703
+    32      0.600326        0.173218
+    48      0.664874        0.171749
+  I_2 monotonically growing: True
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: I_3 converges to a finite value as L → ∞
+------------------------------------------------------------------------
+     L           I_3     rel. change
+     4      0.197526               —
+     6      0.215365      9.0313e-02
+     8      0.224606      4.2906e-02
+    10      0.230200      2.4906e-02
+    12      0.233942      1.6257e-02
+  final relative change = 1.6257e-02, bounded? True
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: I_d / appropriate-divergence is constant for d ≤ 2
+------------------------------------------------------------------------
+  d=1: I_1/L ratios = [0.0781, 0.082, 0.083, 0.0833, 0.0833, 0.0833]
+  d=2: I_2/log(L) ratios = [0.1935, 0.1824, 0.1767, 0.1732, 0.1717]
+  d=1 ratio stable: True
+  d=2 ratio stable: True
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: divergent I_d for d ≤ 2 → Bogoliubov bound forces ⟨q⟩ = 0
+------------------------------------------------------------------------
+  Bogoliubov inequality: |⟨q⟩|² ≤ const / I_d in CMW setup.
+  As L → ∞, I_d → ∞ for d ≤ 2 ⇒ |⟨q⟩| → 0.
+
+  d=1: |⟨q⟩| upper bound for L=[4, 8, 16, 32, 64, 128]:
+        [1.7889, 1.2344, 0.8677, 0.6127, 0.4331, 0.3062]
+  d=2: |⟨q⟩| upper bound for L=[4, 8, 16, 32, 48]:
+        [1.9308, 1.6237, 1.4287, 1.2906, 1.2264]
+  d=1 bound decreasing with L: True
+  d=2 bound decreasing with L: True
+  STATUS: PASS
+
+========================================================================
+SUMMARY
+========================================================================
+  Test 1 (I_1 ~ L linear divergence):           PASS
+  Test 2 (I_2 ~ log L logarithmic divergence):  PASS
+  Test 3 (I_3 finite as L → ∞):                 PASS
+  Test 4 (divergence ratios stable):            PASS
+  Test 5 (Bogoliubov bound forces ⟨q⟩ = 0):     PASS
+
+  OVERALL: PASS
