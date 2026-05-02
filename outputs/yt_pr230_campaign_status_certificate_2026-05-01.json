@@ -56,6 +56,7 @@
     "fh_lsz_stieltjes_model_class": "exact negative boundary / FH-LSZ Stieltjes model-class obstruction",
     "fh_lsz_target_timeseries_harness": "bounded-support / FH-LSZ target time-series harness extension",
     "fh_lsz_target_timeseries_higgs_identity_no_go": "exact negative boundary / FH-LSZ target time series not canonical-Higgs identity",
+    "fh_lsz_target_timeseries_replacement_queue": "bounded-support / FH-LSZ target-timeseries replacement queue",
     "fh_lsz_threshold_authority_audit": "exact negative boundary / FH-LSZ threshold-authority import audit",
     "fh_lsz_uniform_gap_self_certification": "exact negative boundary / FH-LSZ uniform-gap self-certification no-go",
     "fh_lsz_variance_calibration_manifest": "bounded-support / FH-LSZ variance calibration manifest",
@@ -138,7 +139,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 132,
+  "pass_count": 133,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

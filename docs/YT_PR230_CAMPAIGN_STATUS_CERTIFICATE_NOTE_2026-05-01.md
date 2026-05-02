@@ -428,3 +428,10 @@ generic chunk target-timeseries certificates dynamically and reports
 `PASS=132 FAIL=0` over 135 certificates.  The aggregate discovery row sees two
 generic chunk certificates, chunks011-012.  This is processing support only;
 no retained/proposed-retained wording is authorized.
+
+Latest target-timeseries replacement queue checkpoint: campaign status now
+includes `scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py`
+and reports `PASS=133 FAIL=0` over 136 certificates.  The queue identifies
+chunks001-010 as target-timeseries reruns required before the current ready
+set can have complete target ESS.  No retained/proposed-retained wording is
+authorized.

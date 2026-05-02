@@ -491,6 +491,12 @@ the retained-route runner.  The discovery row currently sees chunks011-012 and
 the retained-route certificate is refreshed at `PASS=106 FAIL=0`.  This is
 processing support only and authorizes no retained/proposed-retained wording.
 
+The FH/LSZ target-timeseries replacement queue is now included.  It derives
+chunks001-010 as the current rerun queue from the autocorrelation/ESS
+certificate and refreshes the retained-route certificate at `PASS=107 FAIL=0`.
+This is scheduling support only and authorizes no retained/proposed-retained
+wording.
+
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive
 pole-plus-continuum family can be realized by reflection-positive Euclidean

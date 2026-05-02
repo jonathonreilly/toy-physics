@@ -147,6 +147,7 @@ def main() -> int:
         "finite_source_shift_derivative_no_go": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
         "fh_lsz_finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
+        "fh_lsz_target_timeseries_replacement_queue": "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json",
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
         "fh_lsz_target_timeseries_higgs_identity_no_go": "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
@@ -875,6 +876,14 @@ def main() -> int:
         and certificates["fh_lsz_autocorrelation_ess_gate"].get("autocorrelation_ess_gate_passed")
         is False
     )
+    target_timeseries_replacement_queue_not_closure = (
+        "FH-LSZ target-timeseries replacement queue"
+        in certificates["fh_lsz_target_timeseries_replacement_queue"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_target_timeseries_replacement_queue"].get("proposal_allowed") is False
+        and bool(certificates["fh_lsz_target_timeseries_replacement_queue"].get("replacement_queue"))
+    )
     target_timeseries_harness_support_not_evidence = (
         "target time-series harness extension"
         in certificates["fh_lsz_target_timeseries_harness"].get("actual_current_surface_status", "")
@@ -1394,6 +1403,11 @@ def main() -> int:
         "fh-lsz-autocorrelation-ess-gate-blocks",
         autocorrelation_ess_gate_blocks,
         certificates["fh_lsz_autocorrelation_ess_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-target-timeseries-replacement-queue-not-closure",
+        target_timeseries_replacement_queue_not_closure,
+        certificates["fh_lsz_target_timeseries_replacement_queue"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-target-timeseries-harness-support-not-evidence",

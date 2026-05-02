@@ -261,6 +261,9 @@ def main() -> int:
         "fh_lsz_autocorrelation_ess_gate": load(
             "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
         ),
+        "fh_lsz_target_timeseries_replacement_queue": load(
+            "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json"
+        ),
         "fh_lsz_target_timeseries_harness": load(
             "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json"
         ),
@@ -865,6 +868,12 @@ def main() -> int:
         "autocorrelation ESS gate not passed"
         in str(statuses["fh_lsz_autocorrelation_ess_gate"]),
         statuses["fh_lsz_autocorrelation_ess_gate"],
+    )
+    report(
+        "fh-lsz-target-timeseries-replacement-queue-not-closure",
+        "FH-LSZ target-timeseries replacement queue"
+        in str(statuses["fh_lsz_target_timeseries_replacement_queue"]),
+        statuses["fh_lsz_target_timeseries_replacement_queue"],
     )
     report(
         "fh-lsz-target-timeseries-harness-support-not-evidence",

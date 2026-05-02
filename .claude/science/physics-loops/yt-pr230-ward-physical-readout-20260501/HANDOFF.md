@@ -1651,3 +1651,25 @@ combiner, ready-set, response-stability, autocorrelation/ESS, then run
 `scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py
 --chunk-index 13`, followed by retained-route and campaign-status
 certificates.
+
+Block 156 added an FH/LSZ target-timeseries replacement queue:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=107 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=133 FAIL=0
+```
+
+Result: chunks001-010 are the current replacement queue because they are ready
+production chunks but lack target time series.  Chunk013 and later can add
+target-series support, but cannot make `complete_for_all_ready_chunks` true
+while chunks001-010 remain in the ready set without replacement.
+
+Next exact action remains: finish/process chunk013.  After that, choose
+whether to continue chunk014 or rerun chunk001 with target-timeseries
+serialization.

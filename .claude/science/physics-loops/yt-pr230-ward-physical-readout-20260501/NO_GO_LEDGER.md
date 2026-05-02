@@ -2042,3 +2042,15 @@ does not certify target ESS, response stability, full L12/L16/L24 production,
 scalar-pole derivative/model-class/FV/IR control, or canonical-Higgs identity.
 Do not use automatic discovery or the count of discovered chunk checkpoints as
 retained/proposed-retained evidence.
+
+Target-timeseries replacement commands are not production evidence:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The queue identifies chunks001-010 as rerun targets because they lack target
+series.  It does not certify target ESS, response stability, pole derivative,
+or canonical-Higgs identity.  Do not treat the replacement queue, rerun command
+templates, or future scheduling intent as retained/proposed-retained evidence.

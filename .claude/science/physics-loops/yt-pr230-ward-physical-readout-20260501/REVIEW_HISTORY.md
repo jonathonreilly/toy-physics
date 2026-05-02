@@ -3442,3 +3442,17 @@ certificates are now discovered dynamically, with chunks011-012 currently
 loaded.  This does not close target ESS, response stability, scalar-pole
 control, or canonical-Higgs identity.  No retained or proposed-retained
 wording is allowed.
+
+## 2026-05-02 - Block 156 FH/LSZ Target-Timeseries Replacement Queue
+
+Review stance: production scheduling gate / claim firewall.
+
+- Added `scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py`.
+- Added `docs/YT_FH_LSZ_TARGET_TIMESERIES_REPLACEMENT_QUEUE_NOTE_2026-05-02.md`.
+- Added `outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: bounded scheduling support.  Chunks001-010 are the current
+target-timeseries replacement queue; new chunks alone cannot make target ESS
+complete for the current ready set.  No retained or proposed-retained wording
+is allowed.

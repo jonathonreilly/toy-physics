@@ -559,3 +559,10 @@ the physics rank/identity gap; the highest-priority positive work remains
 continued target-series chunks, actual `O_H/C_sH/C_HH` rows, actual W/Z
 response rows with identity certificates, or a theorem forbidding the
 orthogonal neutral top-coupling loophole.
+
+Target-timeseries replacement queue update: the current ready set has enough
+chunks to make target ESS relevant, but chunks001-010 lack target time series.
+The next production choice after chunk013 is therefore explicit: keep filling
+new chunks toward 63/63, or rerun chunk001 (then 002, etc.) with
+target-timeseries serialization if completing the current ready-set target ESS
+gate is prioritized.

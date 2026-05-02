@@ -1,0 +1,89 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ target-timeseries replacement queue",
+  "autocorrelation_certificate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
+  "combiner_certificate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+  "combiner_summary": {
+    "available_saved_configurations": 192,
+    "expected_chunks": 63,
+    "missing_chunks": 51,
+    "present_chunks": 12,
+    "ready_chunks": 12,
+    "target_saved_configurations": 1000
+  },
+  "complete_target_timeseries_indices": [
+    11,
+    12
+  ],
+  "exact_next_action": "After chunk013 is processed, either continue chunk014 or rerun chunk001 with target-timeseries serialization before claiming complete target ESS for the current ready set.",
+  "fail_count": 0,
+  "next_replacement_chunk": 1,
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The queue only identifies replacement work. It supplies no new target ESS, response stability, scalar-pole derivative, FV/IR, or canonical-Higgs identity certificate.",
+  "ready_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "replacement_commands": {
+    "chunk001": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk001 --resume --seed 2026051001 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+    "chunk002": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk002 --resume --seed 2026051002 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
+    "chunk003": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk003 --resume --seed 2026051003 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk003_2026-05-01.json",
+    "chunk004": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk004 --resume --seed 2026051004 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk004_2026-05-01.json",
+    "chunk005": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk005 --resume --seed 2026051005 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk005_2026-05-01.json",
+    "chunk006": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk006 --resume --seed 2026051006 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk006_2026-05-01.json",
+    "chunk007": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk007 --resume --seed 2026051007 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk007_2026-05-01.json",
+    "chunk008": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk008 --resume --seed 2026051008 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk008_2026-05-01.json",
+    "chunk009": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk009 --resume --seed 2026051009 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk009_2026-05-01.json",
+    "chunk010": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk010 --resume --seed 2026051010 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json"
+  },
+  "replacement_queue": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat plaquette ESS as target ESS",
+    "does not treat replacement commands as production evidence",
+    "does not set kappa_s = 1 or identify the source pole as canonical Higgs"
+  ],
+  "target_timeseries_summary": {
+    "complete_count": 2,
+    "complete_for_all_ready_chunks": false,
+    "complete_indices": [
+      11,
+      12
+    ],
+    "incomplete_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "ready_count": 12
+  },
+  "verdict": "The ready L12 set has reached the minimum size for target ESS checks, but chunks001-010 lack per-configuration source-response and scalar-LSZ target time series. Therefore chunk013 and later can increase the target-series subset, but cannot make complete_for_all_ready_chunks true while chunks001-010 remain in the ready set without replacement."
+}
