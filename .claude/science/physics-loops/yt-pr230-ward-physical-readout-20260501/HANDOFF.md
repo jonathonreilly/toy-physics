@@ -1,5 +1,17 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 chunk002 checkpoint runner:
+
+- Updated `scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py` and
+  `docs/YT_FH_LSZ_CHUNK002_PRODUCTION_CHECKPOINT_NOTE_2026-05-02.md`.
+- Result: production-support boundary.  The runner now accepts the current
+  historical seed-invalid state and is ready to recognize a future
+  `numba_gauge_seed_v1` replacement chunk002 as combiner-ready.
+- Current output remains bounded support: chunk001 is `1/63` ready, historical
+  chunk002 is present but seed-invalid, and no combined L12 evidence exists.
+- Replacement chunk002 is still running in session `74882`; replacement
+  chunk003 is still running in session `30296`.
+
 Latest checkpoint, 2026-05-02 source-pole/canonical-Higgs mixing:
 
 - Added

@@ -38,6 +38,7 @@ plus FH/LSZ production checkpoint granularity gate
 plus FH/LSZ chunked production manifest
 plus same-source sector-overlap identity obstruction
 plus source-pole canonical-Higgs mixing obstruction
+plus chunk002 checkpoint replacement-ready support
 **PR:** #230 draft branch
 
 ```yaml
@@ -150,6 +151,9 @@ Allowed wording:
 - exact negative boundary for treating a same-source scalar pole readout as
   physical `y_t` before the source pole is proved to be the canonical Higgs
   radial mode with no orthogonal scalar admixture;
+- bounded-support chunk002 checkpoint diagnostics: historical chunk002 remains
+  seed-invalid, and a future seed-controlled replacement still would be only
+  partial L12 support until combination and postprocess gates pass;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:

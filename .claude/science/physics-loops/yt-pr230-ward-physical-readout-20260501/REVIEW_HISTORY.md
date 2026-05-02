@@ -1,5 +1,33 @@
 # Review History
 
+## Review-Loop Backpressure - Chunk002 Checkpoint Runner
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- the runner no longer assumes zero ready chunks after replacement chunk001;
+  it checks the current combiner state with chunk001 ready and chunk002
+  seed-invalid;
+- the future seed-controlled path is explicit but still partial L12 support
+  only;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py
+python3 scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py
+```
+
 ## Review-Loop Backpressure - Source-Pole Mixing Block
 
 Local review-loop disposition:

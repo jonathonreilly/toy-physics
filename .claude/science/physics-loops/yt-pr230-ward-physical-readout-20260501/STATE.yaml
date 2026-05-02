@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-108-source-pole-canonical-higgs-mixing-obstruction
-blocks_completed: 108
-active_route: "Source-pole canonical-Higgs mixing obstruction"
-active_hard_residual: "A same-source pole readout determines the top coupling to the source-created pole, but physical y_t still needs proof that this pole is the canonical Higgs radial mode with no orthogonal scalar admixture; chunk002 and chunk003 replacements are running under numba_gauge_seed_v1."
+current_phase: campaign-rerun-block-109-chunk002-checkpoint-runner-replacement-ready
+blocks_completed: 109
+active_route: "FH/LSZ chunk002 checkpoint runner replacement-ready support"
+active_hard_residual: "Historical chunk002 remains seed-invalid while replacement chunk002 and chunk003 are running; the checkpoint runner now correctly handles the current 1/63 ready combiner state and future seed-controlled chunk002 output."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -402,6 +402,9 @@ files_touched:
   - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
   - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
   - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py"
+  - "docs/YT_FH_LSZ_CHUNK002_PRODUCTION_CHECKPOINT_NOTE_2026-05-02.md"
+  - "outputs/yt_fh_lsz_chunk002_checkpoint_certificate_2026-05-02.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -531,6 +534,7 @@ claim_state_movement:
   - "processed seed-controlled replacement chunk001: combiner now counts chunk001 as 1 ready chunk out of 63 L12 chunks, while historical chunk002 remains seed-invalid and no combined L12 evidence exists"
   - "proved a same-source sector-overlap identity obstruction: a common source coordinate cancels common rescaling, but the gauge-normalized response ratio reads y_t times k_top/k_gauge unless the top and gauge overlaps with the canonical Higgs radial mode are derived equal or directly measured"
   - "proved a source-pole canonical-Higgs mixing obstruction: a same-source FH/LSZ pole readout can remain fixed while the canonical Higgs overlap cos(theta) varies, so physical y_t is not identified until the source pole is proved to be the canonical Higgs radial mode"
+  - "updated the chunk002 checkpoint runner to handle both the current seed-invalid diagnostic and a future numba_gauge_seed_v1 replacement; current output now records 1/63 ready chunks with historical chunk002 still demoted"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

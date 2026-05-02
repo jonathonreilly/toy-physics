@@ -158,7 +158,8 @@ probability.
   chunks are the only production path that can count toward combination.
   Replacement chunk001 is now seed-controlled and combiner-ready, making the
   current ready set `1/63` of L12.  Historical chunk002 remains seed-invalid
-  until its replacement finishes.
+  until its replacement finishes; the chunk002 checkpoint runner now handles
+  both that diagnostic state and the future seed-controlled replacement state.
   The gauge-normalized response route adds another possible physical-response
   bypass: a same-source W/Z mass slope can cancel `kappa_s` in the ratio with
   `dE_top/ds`.  This requires a new same-source electroweak gauge-mass response

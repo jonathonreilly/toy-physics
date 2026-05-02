@@ -9,10 +9,11 @@
 Historical `L12_T24` chunk002 completed with production-phase metadata,
 same-source `dE/ds`, and four-mode/x16 same-source scalar `C_ss(q)` rows.
 
-The chunk combiner now sees two historical chunks present and zero ready chunks
-after the seed-independence gate.  Chunk002 lacks the `numba_gauge_seed_v1`
-marker and shares the duplicate gauge-evolution signature with chunk001 across
-distinct metadata seeds.
+The chunk combiner now sees two chunks present and one ready chunk after the
+seed-independence gate: replacement chunk001 is ready, while historical
+chunk002 lacks the `numba_gauge_seed_v1` marker and remains seed-invalid.  The
+checkpoint runner now handles both states: the current historical diagnostic
+and a future replacement chunk002 once it records valid seed-control metadata.
 
 ## Boundary
 
@@ -28,5 +29,5 @@ python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
 # SUMMARY: PASS=9 FAIL=0
 
 python3 scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py
-# SUMMARY: PASS=10 FAIL=0
+# SUMMARY: PASS=11 FAIL=0
 ```

@@ -42,7 +42,9 @@ gauge-evolution signatures, and no `numba_gauge_seed_v1` marker.  Replacement
 chunk001 has now been rerun under the patched harness and is combiner-ready;
 historical chunk002 remains seed-invalid until its replacement completes.  This
 is an evidence-quality no-go for historical chunks, not a no-go against the
-FH/LSZ route itself.
+FH/LSZ route itself.  The chunk002 checkpoint runner now reflects the current
+combiner state: `1/63` ready chunks, with historical chunk002 still demoted and
+a replacement chunk002 run in progress.
 
 ## Finite shell rows do not self-certify a uniform continuum gap
 
