@@ -3,9 +3,9 @@
     "critical": 9,
     "high": 192,
     "leaf": 83,
-    "medium": 128
+    "medium": 127
   },
-  "generated_at": "2026-05-02T11:40:56.549584+00:00",
+  "generated_at": "2026-05-02T11:44:21.818361+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6400,23 +6400,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 3.5,
-      "note_path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_wilson_to_dweh_hermitian_source_family_target_note_2026-04-18",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -11733,6 +11716,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 2,
-  "total_pending": 412
+  "ready_count": 1,
+  "total_pending": 411
 }

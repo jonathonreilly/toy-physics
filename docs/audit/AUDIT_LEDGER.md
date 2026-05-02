@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T11:40:56.777913+00:00
+**Generated:** 2026-05-02T11:44:22.055216+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 374 |
+| `audited_clean` | 375 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 412 |
+| `unaudited` | 411 |
 
 | criticality | count |
 |---|---:|
@@ -172,6 +172,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
+| `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate_note_2026-04-18` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
@@ -5105,6 +5106,18 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_dm_neutrino_postcanonical_polar_section.py`
   - `scripts/dm_leptogenesis_exact_common.py`
 - **auditor confidence:** 0.88
+
+### `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-fresh-context-audit-agent`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For exact family-threshold witness semantics, the witnessed threshold set is (-infinity, max_P w_P(H; mu)], so S_F(H; mu) is forced pointwise to equal max_P w_P(H; mu); the full rank-one family then gives log(1 + 1/lambda_min(A_mu(H))).  _(class `A`)_
+- **chain closes:** True — The bounded representation claim closes as exact algebra under the stated positive comparison window and exact threshold semantics. It does not claim observable-grammar exhaustion or exact-carrier completeness, and the note explicitly leaves those outside the theorem boundary.
+- **rationale:** The note's load-bearing content is an algebraic representation result: exact threshold-event preservation fixes the maximum, strict monotone threshold recalibration only reparameterizes that maximum, and the determinant/Rayleigh identity gives the rank-one canonical extremal score. The recovered-carrier Lambda_+ specialization is bounded to the current recovered carrier and is verified by the runner, while the two genuinely physical/global questions are explicitly left open. This is not a global closure theorem, but the bounded selector-class theorem as stated closes.
+- **auditor confidence:** high
 
 ### `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18`
 
