@@ -1,10 +1,23 @@
 # Axiom-First Spectrum Condition (Lattice Analogue) on Cl(3) ⊗ Z^3
 
-**Date:** 2026-04-29 (citation-graph repair: 2026-05-02)
-**Status:** support — branch-local theorem note on A_min; runner passing; audit-pending.
+**Date:** 2026-04-29 (citation-graph repair: 2026-05-02; audit-ready hygiene: 2026-05-02)
+**Type:** positive_theorem
+**Claim type:** positive_theorem
+**Claim scope:** branch-local lattice theorem on A_min + retained RP. (SC1)
+self-adjointness of the reconstructed Hamiltonian H = -(1/a_tau) log(T/M_T)
+on H_phys; (SC2) H >= 0 (boundedness below); (SC3) energy-gap positivity
+when T has a non-degenerate top eigenvalue; (SC4) compatibility with
+cluster decomposition (decay rate = m_gap). Functional-calculus arguments
+on bounded operators only; no hidden imports.
+**Status:** branch-local theorem on A_min + retained RP (load-bearing
+one-hop dep `axiom_first_reflection_positivity_theorem_note_2026-04-29`);
+runner passing PASS=4/4; classified PASS surface dominant_class=C; audit
+ready. On clean audit: target effective_status = retained_pending_chain
+until RP is retained-grade, then retained.
 **Loop:** `axiom-first-foundations-block02`
 **Cycle:** 1 (Route R7)
-**Runner:** `scripts/axiom_first_spectrum_condition_check.py`
+**Runner:** `scripts/axiom_first_spectrum_condition_check.py` (PASS=4, FAIL=0;
+classified counts {A:0,B:0,C:4,D:0}, dominant_class=C)
 **Log:** `outputs/axiom_first_spectrum_condition_check_2026-04-29.txt`
 
 ## Cited authorities (one hop)
@@ -135,6 +148,21 @@ the lattice Reed–Simon / Wightman-axiom-pair on `A_min`.
 the reflection-positivity companion as a support artifact. The runner exhibits the spectrum
 of `T`, the corresponding `H` spectrum, the gap, and confirms the
 ground state has `E_0 = 0` after subtraction.
+
+**Honest claim-status fields:**
+
+```yaml
+actual_current_surface_status: support
+conditional_surface_status: derived support theorem on A_min + retained RP
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Depends on retained-but-audit-pending RP support note. Per physics-loop SKILL retained-proposal certificate item 4, a chain of support cannot promote to proposed_retained until all dependencies are ratified retained on the current authority surface."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+target_effective_status_on_clean_audit: retained_pending_chain
+target_effective_status_on_clean_chain: retained
+```
 
 ## Citations
 

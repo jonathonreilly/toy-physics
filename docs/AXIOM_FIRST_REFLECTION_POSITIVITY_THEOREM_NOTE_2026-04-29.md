@@ -1,10 +1,27 @@
 # Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action
 
-**Date:** 2026-04-29
-**Status:** support — branch-local theorem note on A_min; runner passing; audit-pending.
+**Date:** 2026-04-29 (audit-ready hygiene: 2026-05-02)
+**Type:** positive_theorem
+**Claim type:** positive_theorem
+**Claim scope:** branch-local lattice theorem on A_min. (R1) reflection
+positivity inequality `<Theta(F) F> >= 0` on the link-reflection axis
+between time slices `t = -1` and `t = 0`; (R2) bilinear-form construction
+of physical Hilbert space `H_phys = A_+ / Null(G)`; (R3) positive
+Hermitian transfer matrix `T : H_phys -> H_phys` with operator norm
+bounded by 1 on the canonical surface, so reconstructed Hamiltonian
+`H = -log(T) / a_tau` is self-adjoint and bounded below; (R4) lattice
+spectrum-condition analogue `H >= 0` on `H_phys`. Standard
+Osterwalder-Seiler / Sharatchandra-Thun-Weisz / Menotti-Pelissetto
+factorisation arguments for the canonical staggered-Dirac + Wilson
+plaquette + canonical-`beta` action.
+**Status:** branch-local theorem on A_min; no one-hop deps load-bearing
+on cited rows (A_min only); runner passing PASS=4/4; classified PASS
+surface dominant_class=C; audit ready. On clean audit: target
+effective_status = retained (no-dep retained per audit-rubric).
 **Loop:** `axiom-first-foundations`
 **Cycle:** 2 (Route R2)
-**Runner:** `scripts/axiom_first_reflection_positivity_check.py`
+**Runner:** `scripts/axiom_first_reflection_positivity_check.py` (PASS=4,
+FAIL=0; classified counts {A:0,B:0,C:21,D:0}, dominant_class=C)
 **Log:** `outputs/axiom_first_reflection_positivity_check_2026-04-29.txt`
 
 ## Scope
@@ -318,6 +335,20 @@ to the framework's specific staggered + Wilson + canonical-`β`
 surface. The runner exhibits the structural content (transfer
 matrix construction, Hermiticity, positive spectrum, RP inequality)
 on tractable small lattices.
+
+**Honest claim-status fields:**
+
+```yaml
+actual_current_surface_status: support
+conditional_surface_status: derived support theorem on A_min (no load-bearing one-hop deps)
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Branch-local theorem on A_min; no one-hop deps load-bearing on retained-pending rows. Awaiting independent audit per AUDIT_AGENT_PROMPT_TEMPLATE."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+target_effective_status_on_clean_audit: retained
+```
 
 **Not in scope.**
 

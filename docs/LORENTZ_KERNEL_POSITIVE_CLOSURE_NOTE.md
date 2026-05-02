@@ -1,8 +1,24 @@
 # Lorentz Kernel Positive Closure Note
 
-**Date:** 2026-04-25
-**Status:** proposed_retained derived corollary on the boost-covariance lane
-**Runner:** `scripts/frontier_lorentz_kernel_positive_closure.py` (PASS=41, FAIL=0)
+**Date:** 2026-04-25 (audit-ready hygiene: 2026-05-02)
+**Type:** positive_theorem
+**Claim type:** positive_theorem
+**Claim scope:** Stone-uniqueness derived corollary on the fixed-`H_lat`
+boost-covariance lane. Given the retained lattice Hamiltonian H_lat (from
+the emergent-Lorentz dispersion theorem, re-scoped to T1-T3 + retained
+CPT 2026-05-02), the per-step lattice propagator is uniquely
+U(a) = exp(-i a H_lat) by Stone's theorem. The runner exhibits inheritance
+from H_lat, group-law identities, parity/T-reflection, scheme universality,
+and excludes the gravity-card directional-measure family on a bounded
+diagnostic surface. The note explicitly does not close the gravity-card
+directional-measure kernel question (separate lane, Phase 3 no-go applies).
+**Status:** branch-local Stone-uniqueness corollary on retained-pending
+EMERGENT_LORENTZ chain; runner passing PASS=41/41; classified PASS
+surface dominant_class=C; audit ready. On clean audit: target
+effective_status = retained_pending_chain until emergent-Lorentz +
+boost-covariance deps reach retained-grade.
+**Runner:** `scripts/frontier_lorentz_kernel_positive_closure.py` (PASS=41, FAIL=0;
+classified counts {A:0,B:2,C:5,D:1}, dominant_class=C)
 **Inputs:** [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
 [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),
 [LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md)
@@ -127,6 +143,21 @@ the second unchanged.
 - It does not turn the finite optimization into a global analytic no-go.
   The analytic closure is Stone uniqueness for the retained `H_lat`; the
   optimization is a diagnostic guardrail for the directional candidate.
+
+## Honest claim-status
+
+```yaml
+actual_current_surface_status: support
+conditional_surface_status: derived corollary on retained EMERGENT_LORENTZ + boost-covariance chain
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Stone-uniqueness derived corollary; depends on retained-pending EMERGENT_LORENTZ_INVARIANCE_NOTE (now scoped to T1-T3 dispersion structure + retained CPT) and the two retained-pending boost-covariance theorem rows. Cannot promote past retained-pending until upstream chain ratifies on retained-grade."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+target_effective_status_on_clean_audit: retained_pending_chain
+target_effective_status_on_clean_chain: retained
+```
 
 ## Verification
 

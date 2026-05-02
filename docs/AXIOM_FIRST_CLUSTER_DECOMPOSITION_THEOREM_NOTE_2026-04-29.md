@@ -1,10 +1,24 @@
 # Axiom-First Cluster Decomposition / Lieb–Robinson Bound on Cl(3) ⊗ Z^3
 
-**Date:** 2026-04-29
-**Status:** support — branch-local theorem note on A_min; runner passing; audit-pending.
+**Date:** 2026-04-29 (audit-ready hygiene: 2026-05-02)
+**Type:** positive_theorem
+**Claim type:** positive_theorem
+**Claim scope:** branch-local lattice theorem on A_min. (L1) Lieb–Robinson
+bound for any finite-range Hermitian Hamiltonian H = sum_X h_X built from
+Cl(3) site operators on Z^3, with v_LR = 2 e J Z_lat R_int and
+xi = R_int; (L2) thermal cluster decomposition with decay length
+xi_beta; (L3) lattice light-cone region d(x,y) <= v_LR |t|; (L4)
+Cl(3)-specific finite-norm bound on J. Uses only finite-dim Cl(3)
+operator-norm bounds, Z^3 graph metric, and standard
+Lieb–Robinson 1972 / Hastings–Koma / Nachtergaele–Sims technique.
+**Status:** branch-local theorem on A_min; no one-hop deps load-bearing
+on cited rows (A_min only); runner passing PASS=4/4; classified PASS
+surface dominant_class=C; audit ready. On clean audit: target
+effective_status = retained (no-dep retained per audit-rubric).
 **Loop:** `axiom-first-foundations`
 **Cycle:** 3 (Route R3)
-**Runner:** `scripts/axiom_first_cluster_decomposition_check.py`
+**Runner:** `scripts/axiom_first_cluster_decomposition_check.py` (PASS=4,
+FAIL=0; classified counts {A:0,B:0,C:3,D:0}, dominant_class=C)
 **Log:** `outputs/axiom_first_cluster_decomposition_check_2026-04-29.txt`
 
 ## Scope
@@ -230,6 +244,20 @@ classical Lieb–Robinson argument with explicit cubic-lattice
 constants. The runner exhibits the exponential envelope (7) on a
 small free-fermion lattice and confirms exponential decay of
 connected correlators.
+
+**Honest claim-status fields:**
+
+```yaml
+actual_current_surface_status: support
+conditional_surface_status: derived support theorem on A_min
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Branch-local theorem on A_min; no one-hop deps load-bearing on retained-pending rows. Runner PASS surface classified class-C. Awaiting independent audit per AUDIT_AGENT_PROMPT_TEMPLATE."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+target_effective_status_on_clean_audit: retained
+```
 
 **Not in scope.**
 

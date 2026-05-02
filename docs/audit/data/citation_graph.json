@@ -20009,7 +20009,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:58:05.440118+00:00",
+  "generated_at": "2026-05-02T21:01:24.569004+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21812,11 +21812,11 @@
     },
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "961bfd0db309b62aa1d176e83a989d0e0111c376fffbb94b5c8bbb1d3af11f14",
+      "note_hash": "29242dda4b58dc5371530c7e5dc2b9ad0789bee1e7785024081694400f9b93a1",
       "path": "docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cluster_decomposition_check.py",
       "title": "Axiom-First Cluster Decomposition / Lieb\u2013Robinson Bound on Cl(3) \u2297 Z^3"
@@ -21962,24 +21962,24 @@
     },
     "axiom_first_reflection_positivity_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d5e0c27fcb2697459a61091181ec8cb122e0e4a24f4e05190fc46b8c102839bb",
+      "note_hash": "f9faef663ed40192ca652b1181e0313e25dc58a292acbd4653f2371d9a7b0594",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
     },
     "axiom_first_spectrum_condition_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_spectrum_condition_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "axiom_first_reflection_positivity_theorem_note_2026-04-29"
       ],
-      "note_hash": "f59d1bfee215b9ccf139339c74b4a2b4152f3507fcffceca5ea5aad2058c19d9",
+      "note_hash": "5cc2e26aa91b547b20961801f410dc97f9a3d9beb21b50add14619bfe8c718ad",
       "path": "docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_spectrum_condition_check.py",
       "title": "Axiom-First Spectrum Condition (Lattice Analogue) on Cl(3) \u2297 Z^3"
@@ -33020,8 +33020,8 @@
     },
     "lorentz_kernel_positive_closure_note": {
       "claim_id": "lorentz_kernel_positive_closure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "emergent_lorentz_invariance_note",
@@ -33029,7 +33029,7 @@
         "lorentz_boost_covariance_3plus1d_theorem_note",
         "angular_kernel_underdetermination_no_go_note"
       ],
-      "note_hash": "e8757d8e74e35f3e6207564fc321f85e472a064de7b0135f32e823fb16c36da6",
+      "note_hash": "c963d8b5a8c8359de4c6d9af7fa2ab27ee482535f3e6a95aa5f90a1d5c01df9d",
       "path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_kernel_positive_closure.py",
       "title": "Lorentz Kernel Positive Closure Note"
@@ -46573,8 +46573,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 12,
       "meta": 1,
-      "none": 1745,
-      "positive_theorem": 38
+      "none": 1741,
+      "positive_theorem": 42
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
