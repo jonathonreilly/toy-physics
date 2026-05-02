@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:33:27.405963+00:00
+**Generated:** 2026-05-02T01:36:17.965478+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 361 |
+| `audited_clean` | 362 |
 | `audited_conditional` | 667 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 428 |
+| `unaudited` | 427 |
 
 | criticality | count |
 |---|---:|
@@ -439,6 +439,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `two_field_retarded_probe_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `unification_basin_failure_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
+| `universal_gr_block_ident_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -15979,6 +15980,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the load-bearing Hamiltonian/momentum constraint interpretation depends on an unregistered universal-stack input and on the still-open identification of the block-localized universal Hessian with the Einstein/Regge constraint operator. Why this blocks: an exact lapse/shift/trace/shear block split does not by itself prove that the A1 and j=1 blocks are the physical GR constraint operators with the required normalization and sign conventions. Repair target: register the cited block-localization authorities and add a theorem/runner deriving the Einstein/Regge constraint-operator identification on the E ⊕ T1 complement. Claim boundary until fixed: the note may be used as support for a canonical universal block split and a provisional constraint-sector reading, not as a closed GR constraint derivation.
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_block_ident_note`
+
+- **Note:** [`UNIVERSAL_GR_BLOCK_IDENT_NOTE.md`](../../docs/UNIVERSAL_GR_BLOCK_IDENT_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-gpt5-fresh-f161`  (codex-current; independence=fresh_context)
+- **load-bearing step:** the universal Hessian is blockwise exact except for a single trace-shear mixer  _(class `A`)_
+- **chain closes:** True — For the support-scope finite anisotropic prototype, the claim closes as exact linear algebra: the projectors are orthogonal/complete with ranks 1,3,1,5, all cross-block leaks vanish except trace-shear, and that block has rank 1. It does not claim full live invariant-background GR closure.
+- **rationale:** The note is honest about scope and records a negative/support result, not a promoted Einstein/Regge identification. The named runner currently passes and directly checks the load-bearing matrix facts: exact projector algebra, isolated lapse/shift blocks, unique trace-shear leakage, and rank-1 obstruction. No hidden physical bridge is needed for this narrowed finite-prototype obstruction claim.
 - **auditor confidence:** high
 
 ### `universal_gr_casimir_block_localization_note`
