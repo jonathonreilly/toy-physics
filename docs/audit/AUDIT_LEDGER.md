@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T02:37:22.842230+00:00
+**Generated:** 2026-05-02T02:41:31.073691+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 373 |
+| `audited_clean` | 374 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 414 |
+| `unaudited` | 413 |
 
 | criticality | count |
 |---|---:|
@@ -465,6 +465,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wide_family_h0125_bridge_reopen_audit` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wide_lattice_h2t_skeptic_audit_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
+| `work_history.yt.yt_unbounded_program_note` | open | ~~audited_clean~~ | open | fresh_context | codex-current | D | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `yt_schur_stability_gap_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `z2_hw1_mass_matrix_parametrization_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -17070,6 +17071,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `staggered_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
   - `Wilson_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
   - `2D_random_geometric_control_row_artifact_not_registered`
+- **auditor confidence:** high
+
+### `work_history.yt.yt_unbounded_program_note`
+
+- **Note:** [`work_history/yt/YT_UNBOUNDED_PROGRAM_NOTE.md`](../../docs/work_history/yt/YT_UNBOUNDED_PROGRAM_NOTE.md)
+- **current_status:** open
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open  (reason: `self`)
+- **auditor:** `codex-fresh-context-audit`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note's declared boundary is historical planning/program status, not live authority, with the residual y_t unbounded bridge work explicitly left open.  _(class `D`)_
+- **chain closes:** True — The note does not claim the YT lane is unbounded. It confines itself to historical/program status, identifies the remaining bridge budget as not closed, and states that unbounded status would require future intrinsic remainder control, endpoint-negligibility or collapse, and zero-input crossover closure.
+- **rationale:** The declared open boundary closes. A fresh restricted audit found no promotion of the YT lane to retained or unbounded authority inside this note. The strongest statements are framed as current package context and future targets, while the decisive bridge remainder remains explicitly unresolved. No runner exists or was executed, which is acceptable for this non-authoritative open planning boundary rather than a numerical or theorem runner claim.
 - **auditor confidence:** high
 
 ### `yt_bridge_action_invariant_note`
