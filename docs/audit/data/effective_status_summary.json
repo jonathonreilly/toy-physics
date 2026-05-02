@@ -5,10 +5,9 @@
     "meta": 36,
     "no_go": 155,
     "open_gate": 106,
-    "positive_theorem": 869,
-    "unset": 1
+    "positive_theorem": 870
   },
-  "computed_at": "2026-05-02T19:59:24.613296+00:00",
+  "computed_at": "2026-05-02T20:03:15.785167+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -34,7 +33,6 @@
   ],
   "cycles_detected": 83,
   "effective_status_counts": {
-    "audit_in_progress": 1,
     "audited_conditional": 633,
     "audited_decoration": 3,
     "audited_failed": 1,
@@ -44,7 +42,7 @@
     "meta": 36,
     "open_gate": 7,
     "retained": 140,
-    "retained_bounded": 177,
+    "retained_bounded": 178,
     "retained_no_go": 95,
     "retained_pending_chain": 2,
     "unaudited": 554

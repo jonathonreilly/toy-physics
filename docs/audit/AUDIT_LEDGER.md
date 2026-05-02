@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T19:59:25.334526+00:00
+**Generated:** 2026-05-02T20:03:16.414516+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 95 |
-| **retained_bounded** | 177 |
+| **retained_bounded** | 178 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
 | unaudited | 554 |
-| audit_in_progress | 1 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -36,8 +35,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 375 |
+| `audited_clean` | 376 |
 | `audited_conditional` | 633 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
@@ -52,8 +50,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 36 |
 | `no_go` | 155 |
 | `open_gate` | 106 |
-| `positive_theorem` | 869 |
-| `unset` | 1 |
+| `positive_theorem` | 870 |
 
 | criticality | count |
 |---|---:|
@@ -94,7 +91,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 14 | `left_handed_charge_matching_note` | decoration | critical | 264 | 20.55 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
 | 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_clean` | **retained** |
 | 16 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 299 | 19.23 | `audit_in_progress` | audit_in_progress |
+| 17 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 299 | 19.23 | `audited_clean` | **retained_bounded** |
 | 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 130 | 19.03 | `audited_clean` | **retained** |
 | 19 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 125 | 16.98 | `audited_clean` | **retained** |
@@ -109,12 +106,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `anomaly_forces_time_theorem` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_power_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `anomaly_forces_time_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | B | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1565,6 +1562,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Yes. The claim is a bounded companion replay on a fixed corrected harness, and the registered runner completed successfully for that finite phase-map check.
 - **rationale:** The note makes a bounded finite-harness claim, not a universal theorem. The current runner completed successfully and supports the replay surface classified as {'A': 0, 'B': 0, 'C': 6, 'D': 0, 'total_pass': 6}. Residual risk is generalization outside the stated mu2 and periodic-torus setup.
 - **auditor confidence:** high
+
+### `anomaly_forces_time_theorem`
+
+- **Note:** [`ANOMALY_FORCES_TIME_THEOREM.md`](../../docs/ANOMALY_FORCES_TIME_THEOREM.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional derivation that, given the stated Cl(3)/Z^3 left-handed gauge content, single-clock codimension-1 evolution, and the four named external admissions, anomaly cancellation plus Clifford chirality force spacetime signature (3,1).
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-pr291-anomaly-forces-time-pauli-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Combining chirality-compatible odd d_t with the ultrahyperbolic codimension-1 obstruction, single-clock codimension-1 evolution excludes d_t > 1, so d_t = 1.  _(class `B`)_
+- **chain closes:** True — The conditional chain closes within the stated boundary: anomaly arithmetic gives nonzero left-handed anomalies; the named admissions supply anomaly inconsistency, opposite-chirality singlet completion, Clifford-volume chirality uniqueness, and the multi-time Cauchy obstruction; Clifford algebra then leaves only d_t = 1. The external admissions themselves are not derived or independently audited here.
+- **rationale:** Within the bounded claim scope, the note does not hide the bridge premises: it explicitly makes the four external admissions part of the theorem boundary, then derives d_t = 1 from anomaly arithmetic, chirality parity, and the single-clock codimension-1 exclusion. The runner passed with 86 computed PASS, 2 assertion lines, and 0 FAIL; it checks the anomaly arithmetic, Clifford identities, chirality projectors, and finite Fourier-support witness, but it does not independently prove the external admissions. Residual risk is therefore confined to the admitted bridges, not to the conditional implication audited here.
+- **auditor confidence:** medium
 
 ### `architecture_note_directional_measure`
 
