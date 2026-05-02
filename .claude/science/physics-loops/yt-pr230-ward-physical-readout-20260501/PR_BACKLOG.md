@@ -243,3 +243,18 @@ Adds a scalar ladder pole-tuned residue-envelope obstruction:
   denominator/zero-mode/IR/finite-volume theorem or production pole data is
   required.
 ```
+
+Latest scalar-kernel Ward-identity checkpoint text for PR #230:
+
+```text
+Adds a scalar-kernel Ward-identity obstruction:
+- verifies the old `yt_ward_identity` surface is audited-renaming, not current
+  authority;
+- shows exact Feshbach response preservation and gauge/Ward identities do not
+  fix `K'(x_pole)` or common scalar/gauge dressing;
+- validator passes `PASS=9 FAIL=0`; retained-route gate reports
+  `PASS=19 FAIL=0`; campaign status now consumes 49 route certificates and
+  reports `PASS=45 FAIL=0`;
+- still no retained/proposed-retained closure: the interacting scalar
+  denominator derivative or production pole data remains load-bearing.
+```

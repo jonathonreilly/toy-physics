@@ -1,0 +1,82 @@
+{
+  "actual_current_surface_status": "exact negative boundary / scalar kernel Ward-identity obstruction",
+  "constraint_rank_model": {
+    "constraints": [
+      "D(x_pole)=0 fixes K_pole=1/Pi(x_pole)"
+    ],
+    "rank": 1,
+    "unknowns": [
+      "K_pole",
+      "K_prime_pole",
+      "common_scalar_gauge_dressing"
+    ]
+  },
+  "fail_count": 0,
+  "parent_certificates": {
+    "common_dressing": "outputs/yt_common_dressing_obstruction_2026-05-01.json",
+    "determinant_gate": "outputs/yt_scalar_pole_determinant_gate_2026-05-01.json",
+    "feshbach_response": "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json",
+    "residue_envelope": "outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "K'(x_pole), zero-mode/IR limiting order, and common scalar/gauge dressing remain open.",
+  "required_next_theorem": [
+    "derive K(x) and K'(x_pole) for the same-source scalar Bethe-Salpeter denominator",
+    "derive the gauge-zero-mode and IR/finite-volume limiting prescription",
+    "derive common scalar/gauge dressing if the Ward ratio route remains in use",
+    "or measure the scalar pole derivative directly in production FH/LSZ data"
+  ],
+  "same_pole_kernel_family": [
+    {
+      "D_pole": 1.1102230246251565e-16,
+      "D_prime_pole": 0.6431818181818183,
+      "K_pole": 0.606060606060606,
+      "K_prime_pole": -0.5,
+      "dGamma_dp_sq_at_pole": 0.3898071625344353,
+      "lsz_readout_factor": 0.6243453872132277,
+      "pi_pole": 1.6500000000000001,
+      "pi_prime_pole": 0.30000000000000004,
+      "x_pole": -1.0
+    },
+    {
+      "D_pole": 1.1102230246251565e-16,
+      "D_prime_pole": -0.18181818181818182,
+      "K_pole": 0.606060606060606,
+      "K_prime_pole": 0.0,
+      "dGamma_dp_sq_at_pole": -0.11019283746556473,
+      "lsz_readout_factor": 0.3319530651546461,
+      "pi_pole": 1.6500000000000001,
+      "pi_prime_pole": 0.30000000000000004,
+      "x_pole": -1.0
+    },
+    {
+      "D_pole": 1.1102230246251565e-16,
+      "D_prime_pole": -1.0068181818181818,
+      "K_pole": 0.606060606060606,
+      "K_prime_pole": 0.5,
+      "dGamma_dp_sq_at_pole": -0.6101928374655647,
+      "lsz_readout_factor": 0.7811484093727419,
+      "pi_pole": 1.6500000000000001,
+      "pi_prime_pole": 0.30000000000000004,
+      "x_pole": -1.0
+    }
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not use H_unit matrix elements as y_t authority",
+    "does not use yt_ward_identity as authority",
+    "does not set kappa_s = 1",
+    "does not use observed top mass/y_t, alpha_LM, plaquette, u0, c2, or Z_match as proof selectors"
+  ],
+  "verdict": "The current Ward/gauge/Feshbach surfaces do not fix the scalar Bethe-Salpeter denominator derivative.  They can preserve gauge responses or same-operator projected responses, and the pole condition fixes K(x_pole), but K'(x_pole) and common scalar/gauge dressing remain open.  A family with the same pole location and same Ward-side data changes the scalar LSZ readout factor.",
+  "witnesses": {
+    "lsz_readout_factor_spread": 2.353189325150019,
+    "max_abs_D_pole": 1.1102230246251565e-16,
+    "readout_factors": [
+      0.6243453872132277,
+      0.3319530651546461,
+      0.7811484093727419
+    ]
+  }
+}

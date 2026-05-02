@@ -244,6 +244,10 @@ What changed:
   residue proxy remains zero-mode, source-projector, and finite-volume
   dependent.  A finite ladder envelope is not a scalar-LSZ/canonical-Higgs
   theorem.
+- The scalar-kernel Ward-identity obstruction checks the next possible
+  shortcut.  Current Ward/gauge/Feshbach surfaces fix neither `K'(x_pole)` nor
+  common scalar/gauge dressing.  A same-pole kernel family changes the scalar
+  LSZ readout factor while preserving `D(x_pole)=0`.
 
 The scientific result is narrower than closure:
 
@@ -321,4 +325,5 @@ The refreshed retained-closure gate is the current claim firewall: no retained
 or proposed-retained wording is allowed until production or theorem evidence
 changes that certificate.  The residue-envelope block says the next analytic
 move must be the actual interacting denominator/zero-mode/IR/finite-volume
-limit theorem, not another finite ladder witness.
+limit theorem, not another finite ladder witness.  The Ward-kernel block says
+the old Ward/Feshbach surfaces cannot substitute for that theorem.

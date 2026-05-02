@@ -1100,3 +1100,30 @@ The residue-envelope obstruction shows that even pole-tuned finite ladder
 surfaces do not select a scalar LSZ residue.  The proxy remains dependent on
 zero-mode, projector, and finite-volume choices, so positive closure still
 requires an interacting denominator/limit theorem or production pole data.
+
+## Review-Loop Backpressure — Scalar-Kernel Ward-Identity Obstruction
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_scalar_kernel_ward_identity_obstruction.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_scalar_kernel_ward_identity_obstruction.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The Ward-kernel obstruction shows that the old Ward, gauge-response, and
+Feshbach-response surfaces do not determine `K'(x_pole)` or common
+scalar/gauge dressing.  They are not a substitute for the interacting scalar
+denominator theorem.

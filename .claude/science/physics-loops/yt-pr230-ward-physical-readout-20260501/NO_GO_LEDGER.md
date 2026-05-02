@@ -640,6 +640,21 @@ normalized point-split projectors differ by `2.09302x`.  Therefore finite
 Bethe-Salpeter ladder residues are not retained scalar-LSZ input without the
 limiting theorem or production pole-derivative data.
 
+Scalar-kernel Ward-identity shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_kernel_ward_identity_obstruction.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The old `yt_ward_identity` surface is audited-renaming, Feshbach response
+preservation is operator-specific, and common scalar/gauge dressing remains an
+open bridge.  A rank-count model fixes only `K(x_pole)` from `D(x_pole)=0`;
+`K'(x_pole)` and common dressing remain free.  A same-pole kernel family
+preserves the pole while changing the scalar LSZ readout factor by `2.35319x`.
+Therefore Ward/gauge identities cannot be used as the scalar denominator
+derivative theorem.
+
 Cl(3)/Z3 source-unit normalization shortcut is blocked:
 
 ```text
@@ -671,13 +686,13 @@ Retained-closure route certificate remains open after refresh:
 
 ```text
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=18 FAIL=0
+# SUMMARY: PASS=19 FAIL=0
 ```
 
 The refreshed gate includes same-source invariant readout, scalar ladder
 derivative limiting-order, scalar ladder residue-envelope, Cl(3)/Z3
-source-unit, production-manifest, and joint resource blocks.  It still
-authorizes no proposed-retained wording.
+source-unit, scalar-kernel Ward-identity, production-manifest, and joint
+resource blocks.  It still authorizes no proposed-retained wording.
 
 ## Inherited No-Gos And Boundaries
 

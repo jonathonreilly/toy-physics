@@ -57,6 +57,7 @@ def main() -> int:
         "fh_lsz_invariant_readout": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
         "scalar_ladder_derivative_limit": "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json",
         "scalar_ladder_residue_envelope": "outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json",
+        "scalar_kernel_ward_identity": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -118,6 +119,10 @@ def main() -> int:
     residue_envelope_blocks_ladder = (
         "residue-envelope obstruction" in certificates["scalar_ladder_residue_envelope"].get("actual_current_surface_status", "")
         and certificates["scalar_ladder_residue_envelope"].get("proposal_allowed") is False
+    )
+    ward_identity_does_not_fix_kernel = (
+        "Ward-identity obstruction" in certificates["scalar_kernel_ward_identity"].get("actual_current_surface_status", "")
+        and certificates["scalar_kernel_ward_identity"].get("proposal_allowed") is False
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -183,6 +188,11 @@ def main() -> int:
         "scalar-ladder-residue-envelope-blocks-lsz",
         residue_envelope_blocks_ladder,
         certificates["scalar_ladder_residue_envelope"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "scalar-kernel-ward-identity-does-not-fix-k-prime",
+        ward_identity_does_not_fix_kernel,
+        certificates["scalar_kernel_ward_identity"].get("actual_current_surface_status", ""),
     )
     report(
         "cl3-source-unit-does-not-fix-kappa",
@@ -253,7 +263,8 @@ def main() -> int:
             "and substrate source units are not the hard blockers.  The hard "
             "blockers are production pole/matching evidence or the microscopic "
             "interacting scalar denominator, zero-mode/IR limiting order, pole "
-            "residue envelope, and common dressing.  These cannot be assumed."
+            "residue envelope, Ward/gauge kernel derivative gap, and common "
+            "dressing.  These cannot be assumed."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",

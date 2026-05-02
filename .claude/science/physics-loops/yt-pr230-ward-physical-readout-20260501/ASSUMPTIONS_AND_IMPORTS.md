@@ -215,6 +215,19 @@ choices.  Therefore a finite ladder residue envelope cannot be used as
 source/projector normalization are derived, or the pole derivative is measured
 on production ensembles.
 
+Scalar-kernel Ward-identity obstruction:
+
+```text
+D(x_pole) = 0 fixes K(x_pole)
+D'(x_pole) still depends on K'(x_pole)
+```
+
+Existing Ward/gauge/Feshbach response identities do not derive
+`K'(x_pole)` or common scalar/gauge dressing.  A route that uses
+`yt_ward_identity`, `H_unit`, or exact Feshbach response preservation as
+authority for the scalar LSZ derivative is importing the missing scalar
+denominator theorem.
+
 Cl(3)/Z3 source-unit normalization boundary:
 
 ```text
