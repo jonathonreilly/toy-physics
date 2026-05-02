@@ -2039,3 +2039,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 Chunk011 has target time series, but 11/63 L12 chunks and an uncertified target
 ESS gate are not retained or `proposed_retained` evidence.
+
+Source-Higgs guard-only schema firewall checkpoint:
+
+```text
+actual_current_surface_status: open / source-pole purity cross-correlator gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_canonical_higgs_operator_realization_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=17 FAIL=0
+```
+
+The `source_higgs_cross_correlator` metadata guard is not a real `O_H`,
+`C_sH`, or `C_HH` measurement path.  It remains claim hygiene only and cannot
+authorize retained or `proposed_retained` wording.

@@ -466,6 +466,14 @@ an explicit `wz_mass_response` guard block to production certificates, with
 certificates named.  It is not W/Z response evidence or gauge-normalized
 closure.
 
+The source-Higgs guard-only schema repair keeps the same claim firewall
+strict after those guards were added.  The source-pole purity and
+canonical-Higgs operator gates now distinguish an absent/guarded
+`source_higgs_cross_correlator` metadata block from a real `O_H`, `C_sH`, or
+`C_HH` measurement path.  The assumption stress runner also rejects
+guard-only schemas explicitly.  This is not retained/proposed-retained
+closure.
+
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive
 pole-plus-continuum family can be realized by reflection-positive Euclidean

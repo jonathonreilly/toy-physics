@@ -1981,3 +1981,22 @@ ready-set target ESS gate remains open, response stability still fails, and no
 canonical-Higgs identity is supplied.  Do not treat chunk011, target
 time-series presence, plaquette ESS, or 11/63 L12 support as retained/proposed
 retained evidence.
+
+Guard-only source-Higgs schema is not a cross-correlator observable:
+
+```text
+python3 scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_canonical_higgs_operator_realization_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=17 FAIL=0
+```
+
+The `source_higgs_cross_correlator` metadata block can name the future
+`O_H`, `C_sH`, and `C_HH` rows only as an absence guard.  While it is
+`enabled: false` and `absent_guarded`, it is not a source-Higgs
+cross-correlator, not a canonical-Higgs operator realization, and not
+Gram-purity or retained/proposed-retained evidence.

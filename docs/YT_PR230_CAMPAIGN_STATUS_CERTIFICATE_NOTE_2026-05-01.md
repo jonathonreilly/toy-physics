@@ -401,3 +401,10 @@ reports `PASS=129 FAIL=0` over 133 certificates.  The ready L12 set is now
 `11/63` chunks and `176/1000` saved configurations.  Chunk011 has target time
 series, but the whole ready set still lacks target ESS and response stability;
 no retained/proposed-retained wording is authorized.
+
+Latest source-Higgs guard-only schema checkpoint: campaign status remains
+`PASS=129 FAIL=0` over 133 certificates after refreshing the source-pole
+purity gate, canonical-Higgs operator gate, and assumption stress runner.  The
+`source_higgs_cross_correlator` metadata guard is explicitly rejected as
+`O_H`, `C_sH`, or `C_HH` evidence while it remains `enabled: false` /
+`absent_guarded`; no retained/proposed-retained wording is authorized.

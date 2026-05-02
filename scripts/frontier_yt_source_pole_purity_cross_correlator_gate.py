@@ -87,10 +87,32 @@ def purity_witness() -> dict[str, Any]:
     }
 
 
-def harness_schema_contains_cross_observable() -> bool:
+def harness_cross_observable_status() -> dict[str, bool]:
     harness = (ROOT / "scripts" / "yt_direct_lattice_correlator_production.py").read_text(encoding="utf-8")
-    required_tokens = ("source_higgs_cross", "C_sH", "wz_mass_response", "gauge_mass_response")
-    return any(token in harness for token in required_tokens)
+    key = '"source_higgs_cross_correlator"'
+    start = harness.find(key)
+    block = ""
+    if start >= 0:
+        end = harness.find("},", start)
+        block = harness[start : end + 2] if end >= 0 else harness[start:]
+    guard_present = bool(block)
+    guarded_absence = (
+        '"enabled": False' in block
+        and '"implementation_status": "absent_guarded"' in block
+        and '"canonical_higgs_operator_realization": "absent"' in block
+    )
+    required_objects_named = all(token in block for token in ("C_sH(q)", "C_HH(q)", "O_H or radial canonical-Higgs"))
+    real_measurement_path = (
+        '"enabled": True' in block
+        and '"absent_guarded"' not in block
+        and '"canonical_higgs_operator_realization": "absent"' not in block
+    )
+    return {
+        "guard_present": guard_present,
+        "guarded_absence": guarded_absence,
+        "required_objects_named": required_objects_named,
+        "real_measurement_path": real_measurement_path,
+    }
 
 
 def main() -> int:
@@ -102,7 +124,7 @@ def main() -> int:
     proposal_allowed = [name for name, cert in parents.items() if cert.get("proposal_allowed") is True]
     witness = purity_witness()
     checks = witness["checks"]
-    harness_has_cross = harness_schema_contains_cross_observable()
+    harness_cross_status = harness_cross_observable_status()
 
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
@@ -132,8 +154,13 @@ def main() -> int:
     )
     report(
         "current-harness-lacks-cross-observable",
-        not harness_has_cross,
-        "no C_sH/source_higgs_cross/WZ response schema in current QCD top harness",
+        not harness_cross_status["real_measurement_path"],
+        f"guarded_absence={harness_cross_status['guarded_absence']}",
+    )
+    report(
+        "source-higgs-guard-not-evidence",
+        harness_cross_status["guard_present"] and harness_cross_status["guarded_absence"],
+        "metadata guard names required objects but keeps enabled false",
     )
     report("source-only-data-equal-in-witness", checks["source_only_data_equal"], str(checks))
     report("cross-correlator-distinguishes-models", checks["cross_correlator_distinguishes_models"], str(checks))
@@ -155,7 +182,8 @@ def main() -> int:
         "proposal_allowed_reason": "No cross-correlator, W/Z response, or retained source-pole purity theorem exists.",
         "source_pole_purity_gate_passed": False,
         "parents": PARENTS,
-        "current_harness_has_cross_observable": harness_has_cross,
+        "current_harness_source_higgs_status": harness_cross_status,
+        "current_harness_has_cross_observable": harness_cross_status["real_measurement_path"],
         "witness": witness,
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",

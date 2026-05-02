@@ -22,6 +22,11 @@ same-source `C_ss` diagnostics.  It does not yet provide `O_H`, `C_sH`, or
 `C_HH` observables, so the Gram-purity acceptance condition cannot be evaluated
 from current artifacts.
 
+The refreshed runner treats the `source_higgs_cross_correlator` production
+metadata as an absence guard unless the block is enabled and no longer marked
+`absent_guarded`.  Naming the future `O_H`, `C_sH`, and `C_HH` rows in metadata
+does not realize a canonical-Higgs operator.
+
 ## Claim Boundary
 
 This is an open gate, not retained or proposed-retained top-Yukawa closure.  It

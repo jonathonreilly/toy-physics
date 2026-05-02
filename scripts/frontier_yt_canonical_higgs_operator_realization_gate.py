@@ -61,6 +61,32 @@ def text(path: Path) -> str:
     return path.read_text(encoding="utf-8") if path.exists() else ""
 
 
+def source_higgs_guard_status(harness_text: str) -> dict[str, bool]:
+    key = '"source_higgs_cross_correlator"'
+    start = harness_text.find(key)
+    block = ""
+    if start >= 0:
+        end = harness_text.find("},", start)
+        block = harness_text[start : end + 2] if end >= 0 else harness_text[start:]
+    guarded_absence = (
+        '"enabled": False' in block
+        and '"implementation_status": "absent_guarded"' in block
+        and '"canonical_higgs_operator_realization": "absent"' in block
+    )
+    required_objects_named = all(token in block for token in ("O_H or radial canonical-Higgs", "C_sH(q)", "C_HH(q)"))
+    real_canonical_h_operator = (
+        '"enabled": True' in block
+        and '"absent_guarded"' not in block
+        and '"canonical_higgs_operator_realization": "absent"' not in block
+    )
+    return {
+        "guard_present": bool(block),
+        "guarded_absence": guarded_absence,
+        "required_objects_named": required_objects_named,
+        "real_canonical_h_operator": real_canonical_h_operator,
+    }
+
+
 def main() -> int:
     print("PR #230 canonical-Higgs operator realization gate")
     print("=" * 72)
@@ -87,10 +113,8 @@ def main() -> int:
         "--scalar-source-shifts" in harness_text
         and "scalar_source_response_analysis" in harness_text
     )
-    harness_has_canonical_h_operator = any(
-        token in harness_text
-        for token in ("canonical_higgs_operator", "source_higgs_cross_correlator", "C_sH")
-    )
+    source_higgs_guard = source_higgs_guard_status(harness_text)
+    harness_has_canonical_h_operator = source_higgs_guard["real_canonical_h_operator"]
     cross_import_blocks = (
         "source-Higgs cross-correlator import audit"
         in status(certs["source_higgs_cross_correlator_import"])
@@ -152,6 +176,11 @@ def main() -> int:
     report("ew-runner-is-object-level-after-h-supplied", ew_runner_object_level, str(EW_RUNNER.relative_to(ROOT)))
     report("harness-has-pr-scalar-source", harness_has_scalar_source, str(PRODUCTION_HARNESS.relative_to(ROOT)))
     report("harness-lacks-canonical-h-operator", not harness_has_canonical_h_operator, "no C_sH/O_H path")
+    report(
+        "source-higgs-absence-guard-not-evidence",
+        source_higgs_guard["guard_present"] and source_higgs_guard["guarded_absence"],
+        "guard names required rows but keeps enabled false",
+    )
     report("cross-correlator-import-blocks", cross_import_blocks, status(certs["source_higgs_cross_correlator_import"]))
     report("gram-purity-gate-blocks", gram_gate_blocks, status(certs["source_higgs_gram_purity"]))
     report("canonical-scalar-import-blocks", canonical_import_blocks, status(certs["canonical_scalar_import"]))
@@ -173,6 +202,7 @@ def main() -> int:
         "proposal_allowed": False,
         "proposal_allowed_reason": "No same-surface canonical-Higgs operator or C_sH/C_HH residue certificate exists.",
         "canonical_higgs_operator_realization_gate_passed": gate_passed,
+        "current_harness_source_higgs_status": source_higgs_guard,
         "acceptance_schema": acceptance_schema,
         "parent_certificates": CERTS,
         "strict_non_claims": [

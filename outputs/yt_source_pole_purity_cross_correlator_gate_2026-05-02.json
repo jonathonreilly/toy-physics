@@ -1,6 +1,12 @@
 {
   "actual_current_surface_status": "open / source-pole purity cross-correlator gate not passed",
   "current_harness_has_cross_observable": false,
+  "current_harness_source_higgs_status": {
+    "guard_present": true,
+    "guarded_absence": true,
+    "real_measurement_path": false,
+    "required_objects_named": true
+  },
   "exact_next_action": "Add or derive a source-Higgs cross-correlator/purity theorem, or implement an independent canonical-Higgs response observable such as same-source W/Z mass slopes.",
   "fail_count": 0,
   "parents": {
@@ -11,7 +17,7 @@
     "target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
     "target_timeseries_higgs_identity": "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json"
   },
-  "pass_count": 11,
+  "pass_count": 12,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No cross-correlator, W/Z response, or retained source-pole purity theorem exists.",
   "source_pole_purity_gate_passed": false,

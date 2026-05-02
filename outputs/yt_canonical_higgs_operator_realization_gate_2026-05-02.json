@@ -18,6 +18,12 @@
   },
   "actual_current_surface_status": "open / canonical-Higgs operator realization gate not passed",
   "canonical_higgs_operator_realization_gate_passed": false,
+  "current_harness_source_higgs_status": {
+    "guard_present": true,
+    "guarded_absence": true,
+    "real_canonical_h_operator": false,
+    "required_objects_named": true
+  },
   "exact_next_action": "Construct a same-surface canonical-Higgs operator with C_HH and C_sH residues, derive rank-one purity, implement W/Z response with identity certificates, or continue seed-controlled FH/LSZ production.",
   "fail_count": 0,
   "parent_certificates": {
@@ -28,7 +34,7 @@
     "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
     "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
   },
-  "pass_count": 13,
+  "pass_count": 14,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No same-surface canonical-Higgs operator or C_sH/C_HH residue certificate exists.",
   "strict_non_claims": [

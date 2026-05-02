@@ -1540,3 +1540,32 @@ series.  No retained/proposed-retained wording is authorized.
 Next exact action: continue target-timeseries chunks or replace older chunks
 if a same-ready-set target ESS certificate is required; otherwise pivot to
 actual non-source identity rows/theorems.
+
+Block 152 repaired the guard-only source-Higgs schema firewall:
+
+```text
+python3 scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_canonical_higgs_operator_realization_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=103 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=129 FAIL=0
+```
+
+Result: the `source_higgs_cross_correlator` metadata guard is now explicitly
+treated as absent/guarded, not as a real `O_H`, `C_sH`, or `C_HH` measurement
+path.  This repairs the claim firewall only; no retained/proposed-retained
+wording is authorized.  Chunk012 is running under target-timeseries production
+settings.
+
+Next exact action: let chunk012 continue and process it if complete; otherwise
+work on actual non-source identity rows/theorems or continue target-timeseries
+FH/LSZ production.

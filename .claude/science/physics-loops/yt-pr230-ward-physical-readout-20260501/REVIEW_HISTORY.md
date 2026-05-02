@@ -3383,3 +3383,19 @@ Disposition: bounded production support.  Chunk011 is seed-controlled and has
 target time series, raising the ready set to 11/63 L12 chunks.  The ready set
 still lacks target ESS and response stability, and no canonical-Higgs identity
 is supplied.  No retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 152 Source-Higgs Guard-Only Schema Firewall
+
+Review stance: runner repair / claim firewall.
+
+- Updated `scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py`.
+- Updated `scripts/frontier_yt_canonical_higgs_operator_realization_gate.py`.
+- Updated `scripts/frontier_yt_pr230_assumption_import_stress.py`.
+- Updated source-pole purity, canonical-Higgs operator, assumption-stress,
+  retained-route, and campaign certificates.
+- Updated the associated notes and loop-pack ledgers.
+
+Disposition: bounded support / guard repair.  The
+`source_higgs_cross_correlator` metadata guard is now explicitly treated as
+absent/guarded rather than a real `O_H/C_sH/C_HH` measurement path.  No
+retained or proposed-retained wording is allowed.

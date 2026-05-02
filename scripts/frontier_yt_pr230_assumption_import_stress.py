@@ -71,6 +71,12 @@ def main() -> int:
         "hunit_canonical_higgs_operator_candidate_gate": load(
             "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json"
         ),
+        "source_higgs_harness_absence_guard": load(
+            "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json"
+        ),
+        "source_pole_purity_cross_correlator_gate": load(
+            "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json"
+        ),
     }
 
     required_terms = [
@@ -90,6 +96,8 @@ def main() -> int:
         "same-surface PR #230 operator",
         "`O_H`",
         "`H_unit` matrix-element readout",
+        "`source_higgs_cross_correlator` guard is claim",
+        "`wz_mass_response` guard is claim",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -176,6 +184,35 @@ def main() -> int:
         is False,
         certificates["hunit_canonical_higgs_operator_candidate_gate"].get("actual_current_surface_status"),
     )
+    report(
+        "source-higgs-absence-guard-not-evidence",
+        "source-Higgs harness absence guard"
+        in str(certificates["source_higgs_harness_absence_guard"].get("actual_current_surface_status"))
+        and certificates["source_higgs_harness_absence_guard"].get("proposal_allowed") is False
+        and certificates["source_higgs_harness_absence_guard"].get("guard_fields", {}).get(
+            "source_higgs_cross_correlator"
+        )
+        is True
+        and certificates["source_higgs_harness_absence_guard"].get("guard_fields", {}).get("enabled_false")
+        is True,
+        certificates["source_higgs_harness_absence_guard"].get("actual_current_surface_status"),
+    )
+    report(
+        "source-pole-purity-gate-rejects-guard-only-schema",
+        "source-pole purity cross-correlator gate not passed"
+        in str(certificates["source_pole_purity_cross_correlator_gate"].get("actual_current_surface_status"))
+        and certificates["source_pole_purity_cross_correlator_gate"].get("source_pole_purity_gate_passed")
+        is False
+        and certificates["source_pole_purity_cross_correlator_gate"].get(
+            "current_harness_source_higgs_status", {}
+        ).get("guarded_absence")
+        is True
+        and certificates["source_pole_purity_cross_correlator_gate"].get(
+            "current_harness_source_higgs_status", {}
+        ).get("real_measurement_path")
+        is False,
+        certificates["source_pole_purity_cross_correlator_gate"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -194,6 +231,8 @@ def main() -> int:
             "does not realize a same-surface canonical-Higgs operator O_H or "
             "C_HH/C_sH pole residues.  H_unit likewise is not O_H without "
             "the same pole-purity and canonical-normalization certificates.  "
+            "The source-Higgs absence guard names the missing rows but is not "
+            "itself C_sH/C_HH evidence.  "
             "Static EW W/Z algebra is not dM_W/ds, "
             "and slope-only W/Z outputs need production mass fits plus sector-"
             "overlap and canonical-Higgs identity certificates.  No current route "

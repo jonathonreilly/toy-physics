@@ -24,6 +24,11 @@ The models are separated by data that are not in the current QCD top harness:
 - an independent canonical-Higgs response observable, such as same-source W/Z
   mass slopes.
 
+The refreshed runner distinguishes an absence guard from evidence.  The
+production metadata may name the required `O_H`, `C_sH`, and `C_HH` rows, but
+while that block is `enabled: false` and `absent_guarded`, it is claim hygiene
+only and does not count as a cross-correlator observable.
+
 Without one of these, `C_ss` and source response remain source-coordinate
 observables and do not certify source-pole purity.
 

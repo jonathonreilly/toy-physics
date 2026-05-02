@@ -526,3 +526,12 @@ not certified for the whole ready set, and canonical-Higgs identity remains
 open.  Future production chunks should keep target time-series serialization;
 older chunks may need replacement if a same-ready-set target ESS certificate is
 required.
+
+Guard-only source-Higgs schema update: the `source_higgs_cross_correlator`
+metadata guard is now explicitly rejected as a real cross-correlator path by
+the source-pole purity gate, canonical-Higgs operator gate, and assumption
+stress runner.  This removes a future false-positive risk but does not reduce
+the physics gap.  Highest-priority positive work remains: complete/process
+target-timeseries FH/LSZ chunks, implement actual same-surface `O_H/C_sH/C_HH`
+rows, implement W/Z response with identity certificates, or derive a theorem
+forbidding the orthogonal neutral top-coupling loophole.
