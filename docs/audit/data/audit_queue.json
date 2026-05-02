@@ -5,7 +5,7 @@
     "leaf": 157,
     "medium": 170
   },
-  "generated_at": "2026-05-02T18:54:40.253660+00:00",
+  "generated_at": "2026-05-02T18:59:02.015873+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1479,12 +1479,12 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "audited_conditional",
+      "audit_status": "unaudited",
       "blocker": null,
       "claim_id": "gauge_vacuum_plaquette_bridge_support_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_scope": null,
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
+      "claim_type_provenance": "author_hint",
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
@@ -1495,10 +1495,10 @@
         "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
       ],
       "direct_in_degree": 5,
-      "effective_status": "audited_conditional",
+      "effective_status": "unaudited",
       "load_bearing_score": 10.443,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
-      "queue_reason": "claim_type_backfill_reaudit",
+      "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "transitive_descendants": 245
