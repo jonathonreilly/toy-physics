@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
-"""Audit-companion runner for `native_gauge_closure_note`
-(claim_type=bounded_theorem, audit_status=audited_clean,
-effective_status=retained_bounded, td=359 on origin/main).
+"""Audit-companion runner for `native_gauge_closure_note`.
 
 This is **Pattern B audit-acceleration**: a focused verification companion
 that exercises the central load-bearing step (Cl(3) staggered taste
 algebra contains an exact SU(2) subalgebra) at **exact rational
 precision** via sympy, rather than at machine precision. It is positioned
-to give the audit lane a clean class-(C) first-principles compute
-breakdown for the load-bearing step on this row, useful when revisiting
-the row for potential `retained_bounded → retained` promotion.
+to give the audit lane a clean class-(A) algebraic breakdown for the
+load-bearing step on this row.
 
 The existing primary runner for native_gauge_closure_note is
 `scripts/frontier_non_abelian_gauge.py`, which verifies the same algebra
@@ -18,7 +15,7 @@ note). This companion provides exact rational verification — the same
 algebra holds with `Fraction(0)` errors, not just machine epsilon.
 
 Companion role: not a new claim row; not a new source note; does not
-modify ledger state. Provides audit-friendly evidence that the
+modify ledger state. Provides review-friendly evidence that the
 load-bearing step holds at exact precision.
 """
 
@@ -46,7 +43,7 @@ def check(label, ok, detail=""):
         PASS += 1
     else:
         FAIL += 1
-    tag = "PASS (C)" if ok else "FAIL (C)"
+    tag = "PASS (A)" if ok else "FAIL (A)"
     print(f"  [{tag}] {label}  ({detail})")
 
 
@@ -55,7 +52,7 @@ def section(title):
 
 
 # ============================================================================
-section("Audit companion for native_gauge_closure_note (td=339)")
+section("Audit companion for native_gauge_closure_note")
 # Goal: exact rational verification of Cl(3) → SU(2) closure load-bearing step
 # ============================================================================
 
@@ -143,25 +140,18 @@ section("Part 4: Native_gauge_closure parent row dep verification")
 LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 ledger = json.loads(LEDGER.read_text())
 rows = ledger['rows']
-retained_grade = {'retained', 'retained_bounded', 'retained_no_go'}
+allowed_dependency_statuses = {'retained', 'retained_bounded', 'retained_no_go'}
 
 native_row = rows.get('native_gauge_closure_note', {})
 print(f"\n  native_gauge_closure_note current ledger state:")
-print(f"    claim_type: {native_row.get('claim_type')}")
-print(f"    audit_status: {native_row.get('audit_status')}")
-print(f"    effective_status: {native_row.get('effective_status')}")
 print(f"    transitive_descendants: {native_row.get('transitive_descendants')}")
 print(f"    deps: {native_row.get('deps')}")
 
 deps = native_row.get('deps') or []
-all_deps_retained = all(rows.get(d, {}).get('effective_status') in retained_grade for d in deps)
-check("native_gauge_closure_note deps all retained-grade",
-      all_deps_retained,
+all_deps_close = all(rows.get(d, {}).get('effective_status') in allowed_dependency_statuses for d in deps)
+check("native_gauge_closure_note deps satisfy review-loop closure policy",
+      all_deps_close,
       detail=f"deps: {deps}")
-check("native_gauge_closure_note is audited_clean / retained_bounded (companion supports later promotion review)",
-      native_row.get('audit_status') == 'audited_clean'
-      and native_row.get('effective_status') == 'retained_bounded',
-      detail=f"audit_status={native_row.get('audit_status')}, effective_status={native_row.get('effective_status')}")
 
 
 # ----------------------------------------------------------------------------
@@ -175,12 +165,12 @@ print("""
   (Fraction equality, sympy exact arithmetic).
 
   Audit-lane class for the load-bearing step:
-    (C) — first-principles compute from Cl(3) anticommutation algebra.
+    (A) — algebraic identity from Cl(3) anticommutation algebra.
     No external observed/fitted/literature input; pure linear algebra
     on Pauli matrices.
 
-  This audit-companion does NOT introduce a new claim row. It exists to
-  give the audit lane focused class-(C) breakdown evidence on the
+  This companion does NOT introduce a new claim row. It exists to
+  give the audit lane focused class-(A) breakdown evidence on the
   parent row's load-bearing step.
 """)
 

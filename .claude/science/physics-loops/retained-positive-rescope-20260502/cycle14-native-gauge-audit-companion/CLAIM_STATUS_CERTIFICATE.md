@@ -1,8 +1,8 @@
 # Cycle 14 Claim Status Certificate — Native Gauge Closure SU(2) Audit Companion (Pattern B)
 
 **Block:** physics-loop/native-gauge-su2-audit-companion-block14-20260502
-**Runner:** scripts/audit_companion_native_gauge_closure_cl3_su2_exact.py (PASS=21/0)
-**Target row:** native_gauge_closure_note (claim_type=bounded_theorem, audit_status=audited_clean, effective_status=retained_bounded, td=359, load_bearing_step_class=A)
+**Runner:** scripts/audit_companion_native_gauge_closure_cl3_su2_exact.py (PASS=20/0)
+**Target row:** native_gauge_closure_note
 
 ## Block type
 
@@ -10,8 +10,7 @@
 claim row, a new source note, or a new positive theorem. It contributes a
 focused exact-precision verification companion to the existing
 `native_gauge_closure_note` row, providing audit-lane evidence at sympy
-`Rational` precision that is useful when the audit lane revisits this row for
-potential `retained_bounded → retained` promotion review.
+`Rational` precision for the parent row's load-bearing algebra.
 
 The parent row's load-bearing step is the algebraic content:
 
@@ -25,12 +24,12 @@ brings the same checks to exact rational precision via sympy.
 ## Claim-Type Certificate (Pattern B)
 
 ```yaml
-target_claim_type: meta  # audit-companion runner; not a claim row
+artifact_type: audit_companion_meta
 proposed_load_bearing_step_class: A  # algebraic identity on Pauli matrices
 introduces_new_claim_row: false
 introduces_new_source_note: false
-modifies_parent_audit_status: false  # audit-lane decides
-audit_required_before_effective_retained: true  # parent row only; companion is meta
+modifies_parent_status: false
+status_authority: independent audit lane only
 bare_retained_allowed: false
 ```
 
@@ -48,25 +47,22 @@ its own role; the audit lane's authoritative class assignment is `A`.
 | 3 | No load-bearing observed/fitted/admitted in the companion | YES (purely symbolic sympy verification on Pauli matrices; no PDG/literature numerical comparators) |
 | 4 | Parent row's deps unchanged by this block | YES (does not modify ledger row state; only adds runner artifact) |
 | 5 | Runner verifies parent's load-bearing step at exact precision | YES (sympy `I`, `Rational`, `Matrix`; exact Pauli anticommutation, SU(2) closure, Casimir 3/4) |
-| 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; audit-lane decides whether the parent row's `retained_bounded` may be promoted on later review |
-| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert any retained-status promotion) |
+| 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; independent audit lane decides whether the parent row changes |
+| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert any status promotion) |
 
 ## Audit-graph effect
 
 This companion is **meta** — it does not move the parent row by itself. The
-parent row currently sits at `audited_clean / retained_bounded` (td=359, with
-both deps `graph_first_selector_derivation_note` and `graph_first_su3_integration_note`
-at `retained_bounded`). The companion's role is to provide focused
-exact-precision evidence that audit-lane reviewers may consult when
-considering whether the row qualifies for promotion beyond `retained_bounded`.
-Any such promotion decision belongs to the audit lane, not to this proposal.
+companion's role is to provide focused exact-precision evidence that
+audit-lane reviewers may consult when reassessing the parent row. Any such
+decision belongs to the audit lane, not to this proposal.
 
 ## Forbidden imports check
 
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the companion.
 - No same-surface family arguments.
 
 The companion is pure symbolic algebra on the standard Pauli realization of
@@ -77,5 +73,5 @@ Cl(3) — `σ_1, σ_2, σ_3` as exact 2×2 sympy matrices over `Z[i]`.
 A standalone audit-companion runner that complements the existing primary
 runner `frontier_non_abelian_gauge.py` by providing exact rational
 verification of the load-bearing Cl(3)/SU(2) closure algebra. The block
-proposes nothing about any retained-status change; the audit lane is the
-authority for that.
+proposes nothing about any status change; the audit lane is the authority
+for that.
