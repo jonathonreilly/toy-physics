@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T17:57:28.098691+00:00",
+  "generated_at": "2026-05-02T18:03:19.572241+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16310,16 +16310,16 @@
       "runner": "scripts/frontier_yt_zero_import_chain.py"
     },
     "yukawa_color_projection_theorem": {
-      "assert_count": 0,
+      "assert_count": 2,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 4,
-        "D": 24
+        "B": 1,
+        "C": 0,
+        "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": "D",
-      "runner": "scripts/frontier_yt_color_projection_correction.py"
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_ew_current_fierz_channel_decomposition.py"
     },
     "z2_hw1_mass_matrix_parametrization_note": {
       "assert_count": 1,
@@ -23091,7 +23091,8 @@
     "scripts/frontier_ew_current_fierz_channel_decomposition.py": {
       "assert_count": 2,
       "claims": [
-        "ew_current_fierz_channel_decomposition_note_2026-05-01"
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "yukawa_color_projection_theorem"
       ],
       "counts": {
         "A": 0,
@@ -30904,8 +30905,7 @@
     "scripts/frontier_yt_color_projection_correction.py": {
       "assert_count": 0,
       "claims": [
-        "yt_color_projection_correction_note",
-        "yukawa_color_projection_theorem"
+        "yt_color_projection_correction_note"
       ],
       "counts": {
         "A": 0,

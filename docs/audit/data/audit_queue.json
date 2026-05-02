@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 38,
-    "high": 229,
+    "high": 230,
     "leaf": 152,
     "medium": 170
   },
-  "generated_at": "2026-05-02T17:57:28.671898+00:00",
+  "generated_at": "2026-05-02T18:03:20.067834+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1140,6 +1140,31 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": null,
+      "transitive_descendants": 119
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yukawa_color_projection_theorem",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 11.407,
+      "note_path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_ew_current_fierz_channel_decomposition.py",
       "transitive_descendants": 119
     },
     {
@@ -15496,6 +15521,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 107,
-  "total_pending": 589
+  "ready_count": 108,
+  "total_pending": 590
 }

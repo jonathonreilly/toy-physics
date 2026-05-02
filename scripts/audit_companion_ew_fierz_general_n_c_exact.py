@@ -258,7 +258,7 @@ print("""
     representations. No external observed/fitted/literature input.
 
   This companion does NOT introduce a new claim row and does NOT set an
-  audit verdict. It gives focused class-(A) breakdown evidence on the
+  audit outcome. It gives focused class-(A) breakdown evidence on the
   parent row's load-bearing step.
 """)
 
