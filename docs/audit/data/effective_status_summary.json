@@ -3,11 +3,11 @@
     "bounded_theorem": 505,
     "decoration": 5,
     "meta": 35,
-    "no_go": 149,
+    "no_go": 150,
     "open_gate": 105,
-    "positive_theorem": 877
+    "positive_theorem": 876
   },
-  "computed_at": "2026-05-02T15:43:13.448648+00:00",
+  "computed_at": "2026-05-02T15:48:23.562052+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -42,9 +42,9 @@
     "audited_renaming": 16,
     "meta": 35,
     "open_gate": 8,
-    "retained": 150,
+    "retained": 149,
     "retained_bounded": 169,
-    "retained_no_go": 91,
+    "retained_no_go": 92,
     "retained_pending_chain": 2,
     "unaudited": 500
   },
