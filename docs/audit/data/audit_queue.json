@@ -1,33 +1,12 @@
 {
   "by_criticality": {
-    "critical": 74,
+    "critical": 73,
     "high": 203,
     "leaf": 134,
     "medium": 162
   },
-  "generated_at": "2026-05-02T17:13:14.666960+00:00",
+  "generated_at": "2026-05-02T17:16:18.498925+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
-      "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 6,
-      "effective_status": "audited_conditional",
-      "load_bearing_score": 11.214,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md",
-      "queue_reason": "claim_type_backfill_reaudit",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py",
-      "transitive_descendants": 296
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audited_clean",
@@ -131,6 +110,29 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py",
+      "transitive_descendants": 295
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audited_conditional",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "backfilled_pending_reaudit",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
+      ],
+      "direct_in_degree": 5,
+      "effective_status": "audited_conditional",
+      "load_bearing_score": 10.709,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
+      "queue_reason": "claim_type_backfill_reaudit",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
       "transitive_descendants": 295
     },
     {
@@ -786,29 +788,6 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
-      "transitive_descendants": 295
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
-      "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "audited_conditional",
-      "load_bearing_score": 10.709,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
-      "queue_reason": "claim_type_backfill_reaudit",
-      "ready": false,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
       "transitive_descendants": 295
     },
     {
@@ -15175,5 +15154,5 @@
     }
   ],
   "ready_count": 91,
-  "total_pending": 573
+  "total_pending": 572
 }
