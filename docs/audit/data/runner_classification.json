@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T17:16:17.922522+00:00",
+  "generated_at": "2026-05-02T17:21:05.671664+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -7128,6 +7128,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_mass_derived.py"
+    },
+    "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py"
     },
     "higgs_mass_derived_note": {
       "assert_count": 0,
@@ -24311,6 +24323,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_higgs_mass_corrected_yt.py": {
       "assert_count": 0,
       "claims": [
@@ -35495,15 +35522,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 104,
+    "decoration_candidates": 105,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 150,
+      "B": 151,
       "C": 510,
       "D": 195,
       "none": 409
     },
-    "runners_classified": 1273,
+    "runners_classified": 1274,
     "runners_with_C": 611,
     "runners_with_D": 307
   }

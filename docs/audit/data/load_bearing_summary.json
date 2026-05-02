@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-02T17:16:18.053995+00:00",
+  "computed_at": "2026-05-02T17:21:05.903427+00:00",
   "criticality_counts": {
     "critical": 96,
     "high": 341,
-    "leaf": 888,
+    "leaf": 889,
     "medium": 457
   },
   "flagship_signal_used": false,
-  "node_count": 1782,
+  "node_count": 1783,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -20,8 +20,8 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 30.02,
-      "transitive_descendants": 366
+      "load_bearing_score": 30.524,
+      "transitive_descendants": 367
     },
     {
       "claim_id": "alpha_s_derived_note",

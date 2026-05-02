@@ -4973,6 +4973,14 @@
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
+      "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "to": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+    },
+    {
       "from": "higgs_mass_derived_note",
       "to": "taste_scalar_isotropy_theorem_note"
     },
@@ -20025,7 +20033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T17:16:14.689432+00:00",
+  "generated_at": "2026-05-02T17:21:02.356585+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29913,6 +29921,20 @@
       "path": "docs/HIGGS_FROM_LATTICE_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs From Lattice: Bounded Quantitative Support"
+    },
+    "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02": {
+      "claim_id": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+      ],
+      "note_hash": "be9b239bf67ba2d6ec2b77d5a6197269fba99ace32126addb154f5d110d92d36",
+      "path": "docs/HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py",
+      "title": "Higgs Lattice Eigenvalue Ratio (Mean-Field) \u2014 Narrow Theorem"
     },
     "higgs_mass_derived_note": {
       "claim_id": "higgs_mass_derived_note",
@@ -46423,21 +46445,21 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 7,
+      "bounded_theorem": 8,
       "none": 1764,
       "positive_theorem": 11
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 508,
+      "bounded_theorem": 509,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
       "positive_theorem": 613
     },
-    "edge_count": 5006,
+    "edge_count": 5008,
     "leaf_count": 754,
-    "node_count": 1782,
+    "node_count": 1783,
     "root_count": 1213,
-    "runners_with_path": 1344
+    "runners_with_path": 1345
   }
 }

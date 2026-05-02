@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:19:36.564263+00:00
+**Generated:** 2026-05-02T17:21:06.594713+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 515 |
+| unaudited | 516 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -40,11 +40,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 550 |
+| `unaudited` | 551 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 515 |
+| `bounded_theorem` | 516 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 152 |
@@ -56,17 +56,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 96 |
 | `high` | 340 |
 | `medium` | 428 |
-| `leaf` | 819 |
+| `leaf` | 820 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1273
+- runners classified: 1274
 - runners with (C) first-principles compute hits: 611
 - runners with (D) external comparator hits: 307
-- decoration candidates (no C, no D): 104
+- decoration candidates (no C, no D): 105
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -74,7 +74,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 366 | 30.02 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 367 | 30.52 | `audited_clean` | **retained_bounded** |
 | 2 | `alpha_s_derived_note` | bounded_theorem | critical | 289 | 29.68 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 118 | 28.89 | `unaudited` | unaudited |
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
