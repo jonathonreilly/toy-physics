@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:47:36.481183+00:00
+**Generated:** 2026-05-02T23:53:40.425200+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 142 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 198 |
+| **retained_bounded** | 199 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 507 |
+| unaudited | 506 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -38,22 +38,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 402 |
+| `audited_clean` | 403 |
 | `audited_conditional` | 651 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 546 |
+| `unaudited` | 545 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 533 |
+| `bounded_theorem` | 534 |
 | `decoration` | 9 |
 | `meta` | 39 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
-| `positive_theorem` | 864 |
+| `positive_theorem` | 863 |
 
 | criticality | count |
 |---|---:|
@@ -421,6 +421,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_gravity_failure_diagnosis` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `self_gravity_scaling_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
 | `session_synthesis_2026-04-10_graph_axioms` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | B | - |
+| `seventh_family_diagonal_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `shapiro_qa_retest_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
 | `shapiro_static_discriminator_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | claude-opus | C | - |
@@ -14970,6 +14971,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The bounded historical claim is supported by the legacy frontier_axioms_16card.py proxy harness returning 16/16 on cubic, random geometric, and growing graphs while the note explicitly limits C11 to KG-like spectrum/CN scalar dynamics, C12 to an AB proxy, and the runner to historical control evidence rather than current-main evidence.  _(class `B`)_
 - **chain closes:** True — The provided source note, runner summary, and current runner output agree on the material facts: the legacy proxy harness reports 16/16 for all three graph families, norm drift near machine precision, KG/AB caveats, and an explicit guardrail not to cite the harness as current-main evidence. Because the claim is only support/historical synthesis and not promotion of a live physics result, the chain closes at that declared tier.
 - **rationale:** The support boundary is internally accurate. Issue: the primary runner is explicitly legacy and cannot support a current-main graph-axiom or staggered successor claim. Why this does not block this row: the note states that limitation directly and frames itself as historical synthesis/support. Repair target: any re-promotion must be audited against current runner-backed claims such as corrected graph-KG and force-based staggered cards. Claim boundary until fixed: historical support note only, with C11 as KG-like spectrum/CN scalar control and C12 as AB proxy.
+- **auditor confidence:** high
+
+### `seventh_family_diagonal_boundary_note`
+
+- **Note:** [`SEVENTH_FAMILY_DIAGONAL_BOUNDARY_NOTE.md`](../../docs/SEVENTH_FAMILY_DIAGONAL_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite runner-output audit of the 18-row grid DRIFTS=[0.0,0.05,0.10,0.20,0.30,0.50] x SEEDS=[0,1,2] for the diagonal-stripe seventh-family scout.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Maxwell-019deb1b-f097-7a61-ae4b-a8b8720fe865`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The tested diagonal-stripe seventh-family rows are seed-selective: only 7/18 rows pass, with exact zero/neutral gates surviving and the sign gate selecting failures.  _(class `C`)_
+- **chain closes:** True — The runner output directly matches the note's corrected 7/18 pass count, pass/fail row lists, exact zero and neutral columns, near-1 doubling exponents, and safe boundary read. The closure is only over the finite tested grid, not a family-wide theorem.
+- **rationale:** The scoped finite claim closes from the runner output: the table explicitly shows seven YES rows and eleven sign-orientation failures while zero and neutral cancellation remain exact throughout. The runner lacks a PASS/FAIL assertion wrapper, but the audited source note is a boundary/readout note rather than a promoted broad closure theorem. Claim boundary: this is clean only as a finite bounded sweep over the listed drifts and seeds, not as a general seventh-family result.
 - **auditor confidence:** high
 
 ### `shapiro_complex_interaction_note`
