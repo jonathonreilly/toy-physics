@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:13:18.756963+00:00
+**Generated:** 2026-05-02T00:14:41.539480+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 160 |
-| support | 130 |
+| support | 129 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 960 |
+| ~~audited_conditional~~ | 961 |
 | ~~audited_failed~~ | 90 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 334 |
-| `audited_conditional` | 660 |
+| `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 472 |
+| `unaudited` | 471 |
 
 | criticality | count |
 |---|---:|
@@ -999,6 +999,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `single_axiom_information_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `source_resolved_generated_bridge_failure_audit` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `source_resolved_generated_support_recovery_basin_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_propagating_green_pocket_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_escalation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -14576,6 +14577,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Support recovery plus a causal parent-averaged field is better, but the weak-field mass law improves without fully closing.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the note's exact zero-source, TOWARD-count, N_eff, and fitted-exponent table; the source note keeps the result bounded and does not claim generated-family closure.
 - **rationale:** The bounded bridge claim closes against the current runner. scripts/source_resolved_generated_architecture_bridge.py reproduces baseline/static 4/16 TOWARD, F~M=0.199, N_eff=2.69; baseline/causal 3/16, -0.308, 2.50; tweak/static 9/16, -0.316, 5.31; and tweak/causal 9/16, 0.444, 5.67, with all zero-source shifts at 0. The note's limitation that the weak-field mass law does not cleanly close is explicit, so the clean audit only certifies the bounded bridge result.
+- **auditor confidence:** high
+
+### `source_resolved_generated_bridge_failure_audit`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_BRIDGE_FAILURE_AUDIT.md`](../../docs/SOURCE_RESOLVED_GENERATED_BRIDGE_FAILURE_AUDIT.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current compact generated-family bridge is robustly closed on the tested family because four separate bridge-repair attempts all fail to open weak-field closure.  _(class `B`)_
+- **chain closes:** False — The note is a cross-note synthesis with no runner and no registered ledger dependencies; the four cited bridge notes are still unaudited bounded rows. The synthesis may be useful support, but it cannot be certified clean until those inputs are audited and registered as dependencies.
+- **rationale:** Issue: the note claims the generated-family bridge is robustly closed by synthesizing four cited bridge notes, but the audit row has no dependency edges and those cited rows remain unaudited bounded inputs. Why this blocks: a clean synthesis cannot propagate from unratified and unregistered source claims, especially with no runner or reproduced numerical table inside this note. Repair target: audit the four cited bridge notes, register them as dependencies for this synthesis row, and state the exact closed-family theorem or no-go boundary this note is meant to certify. Claim boundary until fixed: conditional support that the tested compact generated-family variants did not rescue weak-field closure; not an audited closure theorem for the generated-family bridge.
+- **open / conditional deps cited:**
+  - `SOURCE_RESOLVED_GENERATED_DISCRIMINATOR_PROBE_NOTE.md`
+  - `SOURCE_RESOLVED_GENERATED_WAVEFIELD_TRANSFER_V2_NOTE.md`
+  - `SOURCE_RESOLVED_GEOMETRY_RULE_REPAIR_NOTE.md`
+  - `SOURCE_RESOLVED_RADICAL_GEOMETRY_PROBE_NOTE.md`
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
