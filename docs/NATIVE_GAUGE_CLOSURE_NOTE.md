@@ -1,7 +1,12 @@
 # Native Gauge Closure Note: Graph-First Gauge Closure on Z^3
 
-**Date:** 2026-04-12
-**Status:** proposed_retained audit target: exact native cubic `Cl(3)` / `SU(2)` plus ledger-ratified graph-first selector and structural `SU(3)` dependencies; bounded hypercharge-like left-handed abelian surface only
+**Date:** 2026-04-12 (scope-intrinsic boundary clarified 2026-05-02)
+**Type:** bounded_theorem proposal. Audit status is assigned only by the
+independent audit lane; this note does not set or predict a verdict. The
+bounded scope here is **intrinsic to the gauge-structure backbone**
+(structural `SU(2) × SU(3)` algebra plus left-handed `+1/3 / -1` abelian
+eigenvalue surface), not a deferred placeholder for an anomaly-complete
+`U(1)_Y` identification. See "Why the bounded scope is intrinsic" below.
 **Claim boundary authority:** this note
 **Primary runner:** `scripts/frontier_non_abelian_gauge.py`
 
@@ -133,6 +138,65 @@ by this note.
 - this note is an audit target for the gauge-structure backbone, not the full
   Standard Model matter-completion story
 
+### Why the bounded scope is intrinsic, not deferred overcaution
+
+The bounded `claim_type` on this row reflects an **intentional structural
+boundary**, not an inherited weakness from upstream that could be sharpened
+by closing more sub-derivations:
+
+1. **Both upstream deps are intentionally bounded.**
+   - `graph_first_selector_derivation_note`: `claim_type=bounded_theorem`,
+     `claim_type_provenance=audited`, cross-confirmation status =
+     `confirmed`. Bounded because the note's `claim_scope` excludes
+     "the downstream abelian factor".
+   - `graph_first_su3_integration_note`: `claim_type=bounded_theorem`,
+     `claim_type_provenance=audited`, cross-confirmation status =
+     `confirmed`. Bounded because the auditor verdict explicitly states:
+     "The abelian factor remains explicitly bounded as hypercharge-like,
+     so no anomaly-complete physical bridge is imported."
+2. **The bounded scope is an exclusion of a separate audit lane.**
+   Closing `retained_bounded → retained` on this aggregator requires
+   a positive theorem identifying the LH `+1/3 / -1` eigenvalue surface
+   with the physical Standard Model hypercharge. Such a theorem must
+   bridge cube-graph commutant algebra to anomaly-cancellation
+   constraints (the `nu_R = 0` selection that picks the physical SM
+   branch from the two anomaly-cancelling branches). That bridge is the
+   subject of a separate matter-completion lane and is not blocked by
+   any sub-derivation hidden inside this aggregator.
+3. **No new sub-derivation in the current bank would change this.**
+   The exact native cubic `Cl(3)` / `SU(2)` and graph-first `SU(3)`
+   pieces are already exact finite-dimensional algebra. Re-running or
+   strengthening those checks does not retire the U(1) anomaly-completion
+   admission.
+
+The right honest reading: this note is a clean **bounded theorem**
+aggregating the gauge-structure backbone of the framework. Promoting it
+to `positive_theorem` requires a separate U(1)_Y anomaly-completion
+theorem on the bounded eigenvalue surface, not a stronger version of any
+input already on this row.
+
+### Downstream consumer note: WZ / Fujikawa theorem (W4)
+
+The `AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_THEOREM_NOTE_2026-05-02`
+imports this row at step W4 ("Anomaly ⇒ gauge non-invariance") via the
+phrasing "From the retained_bounded `NATIVE_GAUGE_CLOSURE_NOTE`, the
+gauge sector on the framework is exactly `SU(2)_L × SU(3)_C × U(1)_Y`-
+like." That import is **fully served by the bounded scope of this row**:
+
+- W4 needs the gauge content (`SU(2)`, `SU(3)`, an abelian factor) to
+  exist on the cube graph. The bounded `+1/3 / -1` eigenvalue surface is
+  exactly that abelian factor.
+- W4 does **not** need anomaly-complete `U(1)_Y` identification. That
+  admission is internalised by the WZ note's Step 2 anomaly arithmetic
+  (the `nu_R = 0` selection) inside the parent ABJ chain, not by this
+  row.
+
+Therefore this row's `retained_bounded` effective status is the
+**intended input strength** for the lattice WZ theorem; sharpening this
+row to `retained` would not flip the WZ theorem nor
+`anomaly_forces_time_theorem` because both retain other independent
+admitted bridges.
+
 ### Prior art that must be cited
 
 - Furey (2014-2024): SU(3) from Cl(6)/division algebras
@@ -157,3 +221,21 @@ gauge lane on `main`.
   - all downstream phenomenology
 - do not treat broader CI(3) / `Z^3` derivation memos or phenomenology notes as
   retention authority unless they are separately promoted with bounded wording
+
+## Re-audit triggers
+
+This row is intended to remain `claim_type=bounded_theorem`,
+`effective_status=retained_bounded` until an independent audit lane closes
+the U(1)_Y anomaly-completion sub-claim on the bounded LH eigenvalue
+surface. Specifically:
+
+- **DO** trigger re-audit if this note is edited to promote the abelian
+  surface to anomaly-complete `U(1)_Y` or to add downstream phenomenology.
+- **DO** trigger re-audit if either upstream dep
+  (`graph_first_selector_derivation_note`,
+  `graph_first_su3_integration_note`) is promoted to
+  `claim_type=positive_theorem` via a substantive new derivation.
+- **DO NOT** trigger re-audit merely because a downstream consumer
+  (e.g. the lattice WZ theorem, `anomaly_forces_time_theorem`) is
+  re-audited or its claim_type changes; this row's `retained_bounded`
+  status is the intended input strength for those consumers.

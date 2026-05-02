@@ -1,0 +1,41 @@
+slug: native-gauge-closure-sharpen-2026-05-02
+goal: drive native_gauge_closure_note from retained_bounded to retained-clean (positive_theorem + audited_clean) OR document that the bounded scope is genuinely needed
+target_status: best-honest-status
+mode: campaign
+runtime_budget: 90m
+checkpoint_interval: 30m
+parent_campaign: 3plus1d-native-closure-2026-05-02 (iteration 4)
+campaign_iteration: 4
+worktree: /Users/jonBridger/Toy Physics/.claude/worktrees/agent-ac6a413e02a78e771
+branch: claude/native-gauge-closure-sharpen-2026-05-02
+base: origin/main
+target_row: native_gauge_closure_note
+verdict_so_far: |
+  The bounded scope of native_gauge_closure_note is GENUINE, not inherited
+  overcaution. Both upstream deps (graph_first_selector_derivation_note,
+  graph_first_su3_integration_note) carry claim_type=bounded_theorem with
+  claim_type_provenance='audited' (i.e. the auditor decided bounded was the
+  right type after fresh review), each with cross_confirmation status
+  'confirmed'. The bounded scope reflects the explicit exclusion of
+  anomaly-complete U(1)_Y, which is a separate audit lane. The note also
+  itself includes a 'Bounded left-handed abelian corollary' section
+  (lines 119-133 of NATIVE_GAUGE_CLOSURE_NOTE.md) that is intentionally
+  bounded.
+chosen_action: |
+  Produce NARROW honest sharpening, not a claim_type promotion. Document the
+  fact that the bounded scope is intrinsic (anomaly-complete U(1)_Y is a
+  separate completion theorem). Verify NATIVE_GAUGE_CLOSURE_NOTE's bounded
+  scope is cleanly stated, that the WZ theorem's W4 step uses the framework
+  gauge content available within the bounded scope (it does not require
+  anomaly-complete U(1)_Y; that admission is closed inside the WZ note's
+  Step 1 anomaly arithmetic), and that the WZ theorem is properly served by
+  retained_bounded inputs. Add explicit "scope-intrinsic, not deferred"
+  marker to the note so downstream auditors do not retry a sharpening that
+  is genuinely impossible.
+next_actions:
+  - run baseline runner: confirm 50/0 PASS
+  - edit NATIVE_GAUGE_CLOSURE_NOTE.md to clarify scope-intrinsic boundary
+  - run audit pipeline (note_hash will reset audit; documentation update is
+    intentional)
+  - commit + push + open PR
+review_disposition: pending
