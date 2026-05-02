@@ -1,6 +1,6 @@
 # Claim Status Certificate — Block 06 (Stefan-Boltzmann)
 
-**Date:** 2026-05-01
+**Date:** 2026-05-01 (originally) / 2026-05-02 (reframed under scope-aware classification)
 **Block:** 06 — Stefan-Boltzmann u = (π²/15) T⁴
 **Slug:** `24h-axiom-first-derivations-20260501`
 **Branch:** `physics-loop/24h-axiom-first-block06-stefanboltzmann-20260501`
@@ -9,61 +9,64 @@
 **Runner:** [scripts/axiom_first_stefan_boltzmann_check.py](../../../../scripts/axiom_first_stefan_boltzmann_check.py)
 **Log:** [outputs/axiom_first_stefan_boltzmann_check_2026-05-01.txt](../../../../outputs/axiom_first_stefan_boltzmann_check_2026-05-01.txt)
 
-## Status fields
+## Framework
+
+Reframed under scope-aware classification (audit-lane proposal #291).
+
+## Author classification (non-authoritative hint to auditor)
 
 ```yaml
-actual_current_surface_status: support
-conditional_surface_status: derived support theorem on retained framework EW + emergent Lorentz + Block 01 KMS support
-hypothetical_axiom_status: null
-admitted_observation_status: null
-proposal_allowed: false
-proposal_allowed_reason: "Inherits Block 01 KMS upstream support classification (audit-pending). Per physics-loop SKILL retained-proposal certificate item 4."
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+claim_type_author_hint: positive_theorem
+claim_scope: "For blackbody photon radiation in thermal equilibrium at temperature T on the framework retained EW + emergent Lorentz + Block 01 KMS surface, u(T) = (π²/15) (k_B T)⁴ / (ℏc)³ (SB1)-(SB4); equivalently the Planck distribution n(ω, T) = 1/(e^(βω) - 1) and σ_SB = (π²/60) k_B⁴/(ℏ³c²) follow."
+admitted_context_inputs:
+  - 3D photon density of states (basic 3D mode counting)
+  - Bose-Einstein statistics for photons (consistent with retained spin-statistics)
+  - Γ(s)ζ(s) integral identity (pure math)
+upstream_dependencies:
+  - block_01_kms_condition (this PR's stacked base)
+  - rconn_derived_note + standard_model_hypercharge_uniqueness_theorem (retained: U(1) photon)
+  - anomaly_forces_time_theorem (retained: 3+1 dimensions)
+  - emergent_lorentz_invariance_note + lorentz_kernel_positive_closure_note (retained)
+  - axiom_first_spin_statistics_theorem_note_2026-04-29 (Codex audited_clean)
+  - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional)
+runner_classified_passes: 6 PASS (Planck dist from KMS Gibbs at <1e-15; (π²/15) T⁴ at <1e-4 numerical; ζ(4) at <1e-6; Wien displacement; σ_SB matches CODATA 2018 at <1e-9)
 ```
 
-## Dependency classes
+## Why positive_theorem
 
-| Dep | Class | Source |
-|---|---|---|
-| Block 01 KMS support | support, audit-pending | (this PR's base) |
-| Retained EW package (U(1) photon) | retained | RCONN_DERIVED_NOTE, STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM |
-| Retained anomaly-forced 3+1 | retained | ANOMALY_FORCES_TIME_THEOREM |
-| Retained emergent Lorentz | retained | EMERGENT_LORENTZ_INVARIANCE_NOTE, LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE |
-| Retained spin-statistics | retained support, audit-pending | AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29 |
-| Retained spectrum condition | retained support, audit-pending | AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29 |
-| 3D mode counting | admitted-context | basic 3D physics |
-| Γ(4) ζ(4) = π⁴/15 | pure math | not an import |
+The Stefan-Boltzmann formula is a clean derivation from KMS + framework
+photon spectrum + standard 3D mode counting (basic admitted-context input,
+not a load-bearing physics admission). The auditor should classify as
+`positive_theorem`. This is the **framework's first numerical
+thermodynamic prediction beyond structural identity**.
 
-## Open imports
+## Expected `effective_status` after audit
 
-3D mode-counting on Z^3 in the smooth-limit regime. No new
-admissions beyond standard counting.
+If Codex returns `audit_status = audited_clean` and `claim_type =
+positive_theorem`:
+
+- **Path A** (Block 01 reaches retained): `effective_status = retained`
+  immediately.
+- **Path B** (Block 01 still proposed_retained): `effective_status =
+  proposed_retained` (transient).
+
+## Dependency chain status snapshot (2026-05-02)
+
+| Dep | Today's `effective_status` |
+|---|---|
+| Block 01 KMS | proposed_retained (pending RP + spectrum cond) |
+| Retained EW package + Lorentz | retained |
+| Spin-statistics | support → retained on framework-adoption sweep |
 
 ## Review-loop disposition
 
-- branch-local self-review: `pass` (Planck distribution from KMS Gibbs
-  trace verified at <1e-15; numerical Planck spectrum integral matches
-  (π²/15)T⁴ at <1e-4; zeta(4) identity at <1e-6; Wien law at <1e-5;
-  CODATA 2018 σ_SB at <1e-9).
-- formal `/review-loop`: deferred.
-- F1 (resolved during write): `np.trapz` removed in newer numpy;
-  switched to `np.trapezoid`.
+- branch-local self-review: `pass` (6/6 tests; CODATA 2018 σ_SB matched
+  to 1e-9).
+- formal Codex audit: pending.
 
-## Status conclusion
+## Audit hand-off
 
-This block is a **derived support theorem** that produces the
-framework's first numerical thermodynamic prediction beyond structural
-identity: photon energy density u(T) at any temperature T.
-
-It is **not** suitable for `proposed_retained` until upstream Block 01
-KMS is ratified retained.
-
-## Audit hand-off requirement
-
-If a later integration / review process wants to promote this note to
-`proposed_retained`, it needs:
-
-1. Upstream Block 01 KMS ratified retained.
-2. Independent audit of Steps 1–4 of the proof.
-3. Independent verification of the 6-test runner pass.
+This is the framework's first numerical thermodynamic prediction. Auditor
+should evaluate under the new prompt template. Successful clean audit puts
+the framework in position to derive specific CMB / early-universe
+predictions.

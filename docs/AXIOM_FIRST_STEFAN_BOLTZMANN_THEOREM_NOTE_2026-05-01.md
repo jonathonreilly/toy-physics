@@ -1,7 +1,9 @@
 # Axiom-First Stefan-Boltzmann Law from KMS + Framework Photon Spectrum
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on retained framework EW package + retained emergent Lorentz invariance + Block 01 KMS support theorem; runner passing; audit-pending. `proposal_allowed: false`.
+**Type:** positive_theorem
+**Claim scope:** for blackbody photon radiation in thermal equilibrium at temperature T on the framework retained EW + emergent Lorentz + Block 01 KMS surface, the energy density is u(T) = (π²/15) (k_B T)⁴ / (ℏc)³ (SB1)-(SB4); equivalently the Planck distribution n(ω, T) = 1/(e^(βω) - 1) and the Stefan-Boltzmann constant σ_SB = (π²/60) k_B⁴/(ℏ³c²) follow.
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 6 (Block 06; stacked on Block 01 (KMS))
 **Branch:** `physics-loop/24h-axiom-first-block06-stefanboltzmann-20260501`
