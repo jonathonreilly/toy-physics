@@ -252,7 +252,9 @@ measured scalar source pole is not certified as the canonical Higgs radial mode
 used by `v`.  Production pole derivative data and the source-to-Higgs identity
 remain open.  A same-source gauge-normalized response ratio could also cancel
 `kappa_s` using a W/Z mass slope, but the W/Z response observable and shared
-Higgs identity certificate are absent.  If
+Higgs identity certificate are absent.  The gauge-mass observable-gap gate
+confirms that the present production harness is QCD top-only and does not
+produce `dM_W/ds` or `dM_Z/ds`.  If
 the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not

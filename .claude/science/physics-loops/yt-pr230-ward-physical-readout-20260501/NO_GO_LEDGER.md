@@ -1312,3 +1312,17 @@ source moves the same canonical Higgs radial mode in both sectors.  No current
 W/Z mass-response harness or production certificate exists, and the shared
 canonical-Higgs identity remains blocked.  Observed W/Z masses cannot be used
 as proof selectors.
+
+FH gauge-mass response observable gap remains open:
+
+```text
+python3 scripts/frontier_yt_fh_gauge_mass_response_observable_gap.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The current production harness supplies scalar-source top response support but
+is QCD top-only.  It does not emit `dM_W/ds` or `dM_Z/ds`, and the EW
+gauge-mass theorem supplies `dM_W/dh` only after canonical `H` is supplied.
+Sector-overlap countermodels keep the same static `v` and `M_W` while changing
+the inferred ratio unless the top and gauge responses are certified to share
+the same canonical Higgs radial mode.

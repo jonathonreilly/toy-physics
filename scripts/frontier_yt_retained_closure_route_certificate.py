@@ -99,6 +99,7 @@ def main() -> int:
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
+        "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -437,6 +438,12 @@ def main() -> int:
         and certificates["fh_gauge_normalized_response"].get("proposal_allowed") is False
         and certificates["fh_gauge_normalized_response"].get("gauge_normalized_response_gate_passed") is False
     )
+    gauge_mass_response_observable_gap_blocks = (
+        "FH gauge-mass response observable gap"
+        in certificates["fh_gauge_mass_response_observable_gap"].get("actual_current_surface_status", "")
+        and certificates["fh_gauge_mass_response_observable_gap"].get("proposal_allowed") is False
+        and certificates["fh_gauge_mass_response_observable_gap"].get("gauge_mass_response_observable_ready") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -728,6 +735,11 @@ def main() -> int:
         certificates["fh_gauge_normalized_response"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-gauge-mass-response-observable-gap-blocks",
+        gauge_mass_response_observable_gap_blocks,
+        certificates["fh_gauge_mass_response_observable_gap"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -900,7 +912,9 @@ def main() -> int:
             "canonical Higgs radial mode used by v.  "
             "A gauge-normalized response ratio could cancel kappa_s with a "
             "same-source W/Z mass slope, but that gauge response observable and "
-            "the shared canonical-Higgs identity are absent.  "
+            "the shared canonical-Higgs identity are absent.  The observable-gap "
+            "gate confirms the present production harness is QCD top-only and "
+            "does not emit dM_W/ds or dM_Z/ds.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "
@@ -935,7 +949,7 @@ def main() -> int:
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action, including the canonical-Higgs pole identity or a same-source gauge-normalized response.  Continue chunked production only with "
+            "the retained action, including the canonical-Higgs pole identity or a same-source gauge-mass response observable.  Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "
             "Before treating any finite-shell pole fit as "

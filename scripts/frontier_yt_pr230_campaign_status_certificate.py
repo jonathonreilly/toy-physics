@@ -133,6 +133,9 @@ def main() -> int:
         "fh_gauge_normalized_response": load(
             "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json"
         ),
+        "fh_gauge_mass_response_observable_gap": load(
+            "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -473,6 +476,11 @@ def main() -> int:
         "fh-gauge-normalized-response-needs-gauge-mass-slope",
         "FH gauge-normalized response route" in str(statuses["fh_gauge_normalized_response"]),
         statuses["fh_gauge_normalized_response"],
+    )
+    report(
+        "fh-gauge-mass-response-observable-gap-blocks",
+        "FH gauge-mass response observable gap" in str(statuses["fh_gauge_mass_response_observable_gap"]),
+        statuses["fh_gauge_mass_response_observable_gap"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

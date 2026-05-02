@@ -1,0 +1,77 @@
+{
+  "acceptance_schema": {
+    "accepted_ratio": "y_t = (g2 / sqrt(2)) * (dE_top/ds) / (dM_W/ds)",
+    "required_fields": [
+      "source_coordinate",
+      "source_shifts",
+      "gauge_sector_action",
+      "W_or_Z_correlator_mass_fits_by_shift",
+      "slope_dM_W_ds_or_dM_Z_ds",
+      "same_canonical_higgs_identity_certificate",
+      "used_observed_WZ_masses_as_selector=false",
+      "used_static_v_overlap_selector=false",
+      "production_phase"
+    ],
+    "required_observable": "same-source W/Z mass-response slope under the scalar source used for dE_top/ds"
+  },
+  "actual_current_surface_status": "open / FH gauge-mass response observable gap",
+  "current_harness_gap": {
+    "gauge_mass_response_cli_absent": true,
+    "missing_gauge_response_certificate": "outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json",
+    "production_action_is_qcd_top": true,
+    "top_scalar_response_present": true
+  },
+  "exact_next_action": "Implement a genuine same-source W/Z mass-response observable with the same scalar source used for dE_top/ds, or derive the canonical-Higgs identity; otherwise continue scalar-denominator or seed-controlled FH/LSZ production work.",
+  "fail_count": 0,
+  "gauge_mass_response_observable_ready": false,
+  "parent_certificates": {
+    "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
+    "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "gauge_vev_source_overlap_no_go": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
+    "scalar_source_response_harness": "outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No same-source W/Z mass-response certificate exists, and the canonical-Higgs identity remains blocked.",
+  "sector_overlap_countermodels": [
+    {
+      "dE_top_ds": 0.6576093065034891,
+      "dM_W_ds": 0.1625,
+      "gauge_source_overlap": 0.5,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 1.0,
+      "true_y_top": 0.93,
+      "y_inferred_if_overlaps_identified": 1.8599999999999999
+    },
+    {
+      "dE_top_ds": 0.6576093065034891,
+      "dM_W_ds": 0.325,
+      "gauge_source_overlap": 1.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 1.0,
+      "true_y_top": 0.93,
+      "y_inferred_if_overlaps_identified": 0.9299999999999999
+    },
+    {
+      "dE_top_ds": 0.6576093065034891,
+      "dM_W_ds": 0.65,
+      "gauge_source_overlap": 2.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 1.0,
+      "true_y_top": 0.93,
+      "y_inferred_if_overlaps_identified": 0.46499999999999997
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use observed W/Z masses or observed top/y_t values as proof selectors",
+    "does not use static electroweak v to identify the substrate source",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not set kappa_s, c2, or Z_match to one"
+  ],
+  "verdict": "The gauge-normalized response formula identifies a useful possible bypass, but the current repo surface has no same-source W/Z mass-response observable.  The production harness measures QCD top correlators with scalar-source mass shifts, not electroweak gauge-boson mass shifts.  The EW gauge-mass theorem supplies dM_W/dh after a canonical Higgs field has already been identified; it does not measure dM_W/ds or prove that the top and gauge responses share the same source overlap.  Therefore this route remains open until a true same-source gauge-mass response harness or a canonical-Higgs identity theorem is supplied."
+}

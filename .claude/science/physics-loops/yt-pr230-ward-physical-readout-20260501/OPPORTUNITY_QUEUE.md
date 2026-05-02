@@ -160,7 +160,9 @@ probability.
   bypass: a same-source W/Z mass slope can cancel `kappa_s` in the ratio with
   `dE_top/ds`.  This requires a new same-source electroweak gauge-mass response
   observable plus the same canonical-Higgs identity certificate; no such
-  production data or harness exists yet.
+  production data or harness exists yet.  The observable-gap gate now makes
+  that absence executable: the present harness is QCD top-only and has no
+  `dM_W/ds` or `dM_Z/ds` path.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

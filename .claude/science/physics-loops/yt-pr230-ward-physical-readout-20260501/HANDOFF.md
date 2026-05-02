@@ -593,3 +593,17 @@ route remains blocked.
 Next exact action: poll seed-controlled replacement chunks001/002/003.  If no
 chunk completes, either design the same-source gauge-mass response observable
 or continue the scalar-denominator/Higgs-pole identity theorem route.
+
+The FH gauge-mass response observable-gap gate is now explicit.  The current
+production harness can generate top-side `dE_top/ds`, but it is a QCD
+top-correlator harness and has no W/Z mass-response path.  The EW gauge-mass
+theorem provides `dM_W/dh = g2/2` only after the canonical Higgs field has been
+identified; it is not a same-source `dM_W/ds` measurement.  The future
+acceptance target is a same-source W/Z mass fit over scalar shifts plus a
+certificate that top and gauge responses move the same canonical Higgs radial
+mode.
+
+Next exact action: poll seed-controlled replacement chunks001/002/003.  If no
+replacement chunk completes, either implement a genuine same-source W/Z
+mass-response harness or return to the scalar-denominator/Higgs-pole identity
+theorem route.

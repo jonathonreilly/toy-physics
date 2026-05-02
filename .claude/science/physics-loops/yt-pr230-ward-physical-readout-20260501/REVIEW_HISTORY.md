@@ -2333,3 +2333,30 @@ would cancel `kappa_s` by comparing top and W/Z mass slopes.  It is not current
 evidence: the W/Z response harness and production certificate are absent, and
 the shared canonical-Higgs identity gate remains open.  No retained/proposed-
 retained wording is authorized.
+
+## Review-Loop Backpressure - FH Gauge-Mass Response Observable Gap
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN / OBSERVABLE GAP
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_gauge_mass_response_observable_gap.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_gauge_mass_response_observable_gap.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The current production harness supplies top-side scalar source response but no
+same-source W/Z mass response.  The EW gauge-mass theorem is algebra after
+canonical `H` is supplied, not a measurement of `dM_W/ds`.  No retained/
+proposed-retained wording is authorized.
