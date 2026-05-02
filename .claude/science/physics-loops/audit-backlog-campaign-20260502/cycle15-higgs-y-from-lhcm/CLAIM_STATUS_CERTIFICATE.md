@@ -1,0 +1,1 @@
+# Cycle 15 cert: exact algebraic theorem deriving Y_H = +1 from LHCM + Yukawa structure. PASS=20/0. proposal_allowed: false (admitted SM Yukawa form). All 4 SM Yukawa couplings consistently give Y_H = +1 at exact Fraction precision.
