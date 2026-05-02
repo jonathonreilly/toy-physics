@@ -1,11 +1,25 @@
 # Axiom-First Spectrum Condition (Lattice Analogue) on Cl(3) ⊗ Z^3
 
-**Date:** 2026-04-29
+**Date:** 2026-04-29 (citation-graph repair: 2026-05-02)
 **Status:** support — branch-local theorem note on A_min; runner passing; audit-pending.
 **Loop:** `axiom-first-foundations-block02`
 **Cycle:** 1 (Route R7)
 **Runner:** `scripts/axiom_first_spectrum_condition_check.py`
 **Log:** `outputs/axiom_first_spectrum_condition_check_2026-04-29.txt`
+
+## Cited authorities (one hop)
+
+This note's load-bearing one-hop citation registered to the audit-graph
+builder:
+
+- [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+  — provides (R3) the positive Hermitian transfer matrix `T` on `H_phys`
+  used by Step 1 of the proof of (SC1)–(SC2) below.
+
+The 2026-05-02 citation-graph repair registers
+`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md` explicitly
+as the one-hop load-bearing dependency, so the citation-graph builder picks
+up the edge on the next pipeline run.
 
 ## Scope
 

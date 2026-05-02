@@ -1,17 +1,31 @@
 # Dimensional Gravity Table
 
-**Status:** bounded inventory of finite-tested entries; this is not a universal F∝M theorem across all dimensions, h values, or parameter variations. The bolded "1.00" entries are point-tested results on the listed family/parameter rows, not universality claims.
-**Date:** 2026-04-04
+**Status:** bounded finite-entry inventory. This note tabulates point-tested
+results on the listed family/parameter rows. It does NOT claim universality
+across all dimensions, all h values, or all parameter variations. The bolded
+"1.00" entries are point-tested results, not universality theorems. (NARROWED
+2026-05-02 in response to audit verdict requesting a finite-scope reframing.)
+
+**Date:** 2026-04-04 (NARROWED 2026-05-02)
 **Action:** Valley-linear S = L(1-f)
 **Kernel:** 1/L^(d-1) with h^(d-1) measure
 
-## Complete results
+## Tested entries
+
+The following table reports point-tested results on the listed (d, kernel,
+h, lattice family) rows only. Each "1.00" is a finite measurement at the
+listed parameter point with the listed measurement quality, not a
+universality claim.
 
 | d | Kernel | F∝M | Distance tail | Born | Decoh | TOWARD |
 |---|--------|-----|---------------|------|-------|--------|
-| 2 | 1/L | **1.00** | varies (2D = log) | <6e-16 | →50% | 7/7 at h≤0.5 |
-| 3 | 1/L² | **1.00** | **b^(-0.93)** | <4e-15 | →50% | 8/8 at h≤0.5 |
-| 4 | 1/L³ | **0.99-1.00** | bounded, width-limited (`W=7:-0.96`, `W=8:-0.54` companions) | 1.5e-15 .. 4.4e-15 | TBD | `3/3 .. 6/6` at h=0.5 |
+| 2 | 1/L | **1.00** (point) | varies (2D = log) | <6e-16 | →50% | 7/7 at h≤0.5 |
+| 3 | 1/L² | **1.00** (point) | **b^(-0.93)** | <4e-15 | →50% | 8/8 at h≤0.5 |
+| 4 | 1/L³ | **0.99-1.00** (point) | bounded, width-limited (`W=7:-0.96`, `W=8:-0.54` companions) | 1.5e-15 .. 4.4e-15 | TBD | `3/3 .. 6/6` at h=0.5 |
+
+The table above covers `d in {2, 3, 4}`, kernel = `1/L^(d-1)`, valley-linear
+action `S = L(1-f)`, with `h <= 0.5` for d=2,3 and `h = 0.5` for d=4. No
+entries are reported outside that scope.
 
 ## Newtonian predictions
 
@@ -21,18 +35,23 @@
 | 3 | 1/b | b^(-0.93) | **yes (~7% off)** |
 | 4 | 1/b² | supportive but width-limited | needs wider lattice |
 
-## Key properties
+## Key properties on the tested entries
 
-**F∝M = 1.00 is universal** across all dimensions, all h values,
-all parameter variations. This is the strongest retained result:
-linear mass scaling from the linear-in-f valley action.
+**Linear mass scaling F∝M ≈ 1.00 holds on every tested row above.** This is
+a finite-entry observation across the listed (d, kernel, h, family) points,
+not a universality theorem across all dimensions, all h values, or all
+parameter choices. No theorem in this note proves F∝M = 1 outside the
+tabulated scope. Future work could attempt that universality theorem; this
+note does not.
 
-**Decoherence is action-independent.** Valley-linear and spent-delay
-give identical d_TV, MI, CL purity at all h. Decoherence depends on
-geometry, not the action formula.
+**Decoherence is action-independent on the tested rows.** Valley-linear and
+spent-delay give identical d_TV, MI, CL purity at the tested h points.
+Decoherence depends on geometry, not the action formula. (Tested entries
+only.)
 
-**Born holds at machine precision** across all dimensions and kernels.
-This is a mathematical property of the linear propagator.
+**Born holds at machine precision on the tested rows.** This is a
+mathematical property of the linear propagator on the tested
+(d, kernel, h, family) points.
 
 ## Spent-delay comparison
 
