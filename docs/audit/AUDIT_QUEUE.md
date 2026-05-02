@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T20:44:10.139574+00:00
+**Generated:** 2026-05-02T21:01:03.914679+00:00
 **Total pending:** 595
 **Ready (all deps already at retained-grade or metadata tiers):** 120
 
@@ -53,17 +53,17 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 35 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | high | 112 | 8.82 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_derivation.py` |
 | 36 | `planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30` | positive_theorem | unaudited | high | 71 | 9.67 | Y | fresh_context_or_stronger | `scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py` |
 | 37 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded_theorem | unaudited | high | 69 | 8.63 | Y | fresh_context_or_stronger | - |
-| 38 | `physical_lattice_necessity_note` | no_go | unaudited | high | 57 | 12.86 | Y | fresh_context_or_stronger | `scripts/frontier_physical_lattice_necessity.py` |
-| 39 | `complex_action_note` | bounded_theorem | unaudited | high | 57 | 8.36 | Y | fresh_context_or_stronger | `scripts/complex_action_harness.py` |
+| 38 | `complex_action_note` | bounded_theorem | unaudited | high | 58 | 8.88 | Y | fresh_context_or_stronger | `scripts/complex_action_harness.py` |
+| 39 | `physical_lattice_necessity_note` | no_go | unaudited | high | 57 | 12.86 | Y | fresh_context_or_stronger | `scripts/frontier_physical_lattice_necessity.py` |
 | 40 | `lensing_k_sweep_note` | bounded_theorem | unaudited | high | 57 | 8.36 | Y | fresh_context_or_stronger | `scripts/lensing_k_sweep.py` |
 | 41 | `cl3_sm_embedding_theorem` | positive_theorem | unaudited | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
 | 42 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/frontier_universal_theta_induced_edm_vanishing.py` |
 | 43 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | high | 53 | 8.76 | Y | fresh_context_or_stronger | `scripts/frontier_yt_qfp_insensitivity.py` |
 | 44 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | claim_type_backfill_reaudit | high | 44 | 11.49 | Y | fresh_context_or_stronger | `scripts/frontier_taste_scalar_isotropy.py` |
-| 45 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 37 | 7.75 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_rigidity_theorem.py` |
-| 46 | `teleportation_conclusion_boundary_note` | open_gate | unaudited | high | 36 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_conclusion_boundary.py` |
-| 47 | `monopole_derived_note` | positive_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_monopole_derived.py` |
-| 48 | `teleportation_acceptance_suite_note` | bounded_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_acceptance_suite.py` |
+| 45 | `teleportation_acceptance_suite_note` | bounded_theorem | unaudited | high | 37 | 8.25 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_acceptance_suite.py` |
+| 46 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 37 | 7.75 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_rigidity_theorem.py` |
+| 47 | `teleportation_conclusion_boundary_note` | open_gate | unaudited | high | 36 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_conclusion_boundary.py` |
+| 48 | `monopole_derived_note` | positive_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_monopole_derived.py` |
 | 49 | `teleportation_native_axioms_theory_note` | open_gate | unaudited | high | 35 | 7.67 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_axiom_closure_checks.py` |
 | 50 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | unaudited | high | 247 | 10.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
 

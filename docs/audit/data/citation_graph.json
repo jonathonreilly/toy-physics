@@ -285,6 +285,22 @@
       "to": "lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26"
     },
     {
+      "from": "audit_acceleration_ready_items_bundle_3_2026-05-02",
+      "to": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_3_2026-05-02",
+      "to": "koide_dweh_cyclic_compression_note_2026-04-18"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_3_2026-05-02",
+      "to": "complex_action_note"
+    },
+    {
+      "from": "audit_acceleration_ready_items_bundle_3_2026-05-02",
+      "to": "teleportation_acceptance_suite_note"
+    },
+    {
       "from": "audit_backlog_campaign_progress_synthesis_2026-05-02",
       "to": "left_handed_charge_matching_note"
     },
@@ -20001,7 +20017,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:44:04.983293+00:00",
+  "generated_at": "2026-05-02T21:01:03.479850+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21685,6 +21701,22 @@
       "path": "docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_atomic_rydberg_dependency_firewall.py",
       "title": "Atomic Rydberg Dependency Firewall"
+    },
+    "audit_acceleration_ready_items_bundle_3_2026-05-02": {
+      "claim_id": "audit_acceleration_ready_items_bundle_3_2026-05-02",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta (audit-acceleration request, not a science claim)",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
+        "koide_dweh_cyclic_compression_note_2026-04-18",
+        "complex_action_note",
+        "teleportation_acceptance_suite_note"
+      ],
+      "note_hash": "24ec1e40bee6d98712250fc8dae173162bbdf2a39197f591bda6ff7dee9795a3",
+      "path": "docs/AUDIT_ACCELERATION_READY_ITEMS_BUNDLE_3_2026-05-02.md",
+      "runner_path": null,
+      "title": "Audit-Acceleration Manifest: Ready-Items Bundle 3"
     },
     "audit_backlog_campaign_progress_synthesis_2026-05-02": {
       "claim_id": "audit_backlog_campaign_progress_synthesis_2026-05-02",
@@ -46562,21 +46594,21 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
-      "meta": 1,
+      "meta": 2,
       "none": 1746,
       "positive_theorem": 38
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
-      "meta": 1,
+      "meta": 2,
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
       "positive_theorem": 629
     },
-    "edge_count": 5000,
-    "leaf_count": 762,
-    "node_count": 1796,
+    "edge_count": 5004,
+    "leaf_count": 763,
+    "node_count": 1797,
     "root_count": 1217,
     "runners_with_path": 1364
   }
