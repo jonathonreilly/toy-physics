@@ -1,7 +1,9 @@
 # Axiom-First Birkhoff Theorem on Framework GR Action
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on retained framework GR action surface; runner passing; audit-pending. `proposal_allowed: false`.
+**Type:** positive_theorem
+**Claim scope:** any spherically-symmetric vacuum (T_μν = 0) solution of the framework's retained discrete GR action is locally isometric to a piece of Schwarzschild and is therefore necessarily static.
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline from `audit_status` + `claim_type` + dependency chain; no author-side tier is asserted in source.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 9 (Block 09; independent of Blocks 01-08)
 **Branch:** `physics-loop/24h-axiom-first-block09-birkhoff-20260501`
