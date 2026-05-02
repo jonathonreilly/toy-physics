@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:17:23.674390+00:00
+**Generated:** 2026-05-02T23:20:57.780160+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 140 |
+| **retained** | 141 |
 | **retained_no_go** | 98 |
 | **retained_bounded** | 194 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 520 |
+| unaudited | 519 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 396 |
+| `audited_clean` | 397 |
 | `audited_conditional` | 648 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 557 |
+| `unaudited` | 556 |
 
 | claim_type | count |
 |---|---:|
@@ -138,6 +138,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `cpt_exact_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh | C | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -3556,6 +3557,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the proof's pole-reflection and universality steps import the physical resonance/effective-Hamiltonian bridge rather than deriving it from the retained free CPT theorem. Why this blocks: unstable lifetimes require interacting decay dynamics or an S-matrix/resolvent pole theorem, while the cited authority is scoped to the free staggered Hamiltonian and notes interacting extension as open. Repair target: add a retained theorem and runner that construct CPT-invariant resonance pole dynamics or total decay widths from the framework, without setting the antiparticle block by hand. Claim boundary until fixed: a toy CPT-symmetric non-Hermitian effective Hamiltonian with antiparticle block defined as the CPT conjugate has equal width magnitudes.
 - **open / conditional deps cited:**
   - `CPT_EXACT_NOTE.md`
+- **auditor confidence:** high
+
+### `cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02`
+
+- **Note:** [`CPT_PARTICLE_ANTIPARTICLE_MASS_EQUALITY_THEOREM_NOTE_2026-05-02.md`](../../docs/CPT_PARTICLE_ANTIPARTICLE_MASS_EQUALITY_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** CPT-exchanged single-particle/antiparticle sector pairs of the retained free staggered Cl(3) Hamiltonian on even periodic Z^3 lattices have equal energy eigenvalues, and equal rest masses at p=0; interacting extensions, named-species bookkeeping, and measurement/readout claims are outside scope.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-cpt-mass-sector-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Use the retained CPT invariance [CPT,H]=0 to conjugate a single-particle energy eigenstate into its CPT-exchanged antiparticle sector, preserving the Hermitian eigenvalue; at p=0 this identical energy is the rest mass for both members of the pair.  _(class `C`)_
+- **chain closes:** True — Within the stated free-Hamiltonian sector scope, the retained CPT exact note supplies [CPT,H]=0. With the admitted convention that CPT exchanges the relevant sectors and standard antiunitary eigenvalue preservation for Hermitian H, the paired state has the same energy; the rest-mass statement follows at p=0.
+- **rationale:** The derivation is a real consequence of retained CPT symmetry on the scoped free-Hamiltonian surface, not a species-level physical claim. The source excludes named-species bookkeeping and interactions from the load-bearing proof, so the cited authority's open interacting and continuum extensions do not block this narrow theorem. The runner gives a structural witness that CPT-symmetric particle/antiparticle blocks have identical spectra and that breaking CPT breaks the equality.
 - **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
