@@ -4901,6 +4901,10 @@
       "to": "evanescent_barrier_amplitude_suppression_theorem_note"
     },
     {
+      "from": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
       "from": "g_bare_derivation_status_correction_audit_note_2026-05-02",
       "to": "g_bare_derivation_note"
     },
@@ -20021,7 +20025,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T17:10:23.017790+00:00",
+  "generated_at": "2026-05-02T17:16:14.689432+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28240,6 +28244,19 @@
       "path": "docs/FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_full_y_squared_trace_su5_gut.py",
       "title": "Full One-Generation Tr[Y\u00b2] = 40/3 and SU(5) GUT Normalization Check"
+    },
+    "g_bare_canonical_convention_narrow_theorem_note_2026-05-02": {
+      "claim_id": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "f4997d3302652f89f08728768534b4f6bafbeeff649ea9f675981bcadf493d01",
+      "path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
+      "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem"
     },
     "g_bare_derivation_note": {
       "claim_id": "g_bare_derivation_note",
@@ -46406,21 +46423,21 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 6,
+      "bounded_theorem": 7,
       "none": 1764,
       "positive_theorem": 11
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 507,
+      "bounded_theorem": 508,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
       "positive_theorem": 613
     },
-    "edge_count": 5005,
-    "leaf_count": 753,
-    "node_count": 1781,
+    "edge_count": 5006,
+    "leaf_count": 754,
+    "node_count": 1782,
     "root_count": 1213,
-    "runners_with_path": 1343
+    "runners_with_path": 1344
   }
 }

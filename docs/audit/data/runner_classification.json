@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T17:10:26.444443+00:00",
+  "generated_at": "2026-05-02T17:16:17.922522+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -5592,6 +5592,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_full_y_squared_trace_su5_gut.py"
+    },
+    "g_bare_canonical_convention_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_g_bare_canonical_convention_narrow.py"
     },
     "g_bare_derivation_note": {
       "assert_count": 0,
@@ -23186,6 +23198,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_g_bare_canonical_convention_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_g_bare_critical_feature_scan.py": {
       "assert_count": 1,
       "claims": [
@@ -35471,13 +35498,13 @@
     "decoration_candidates": 104,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 149,
+      "B": 150,
       "C": 510,
       "D": 195,
       "none": 409
     },
-    "runners_classified": 1272,
-    "runners_with_C": 610,
+    "runners_classified": 1273,
+    "runners_with_C": 611,
     "runners_with_D": 307
   }
 }
