@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Same source coordinate is not a sector-overlap identity
+
+Closed by
+`docs/YT_SAME_SOURCE_SECTOR_OVERLAP_IDENTITY_OBSTRUCTION_NOTE_2026-05-02.md`
+and
+`scripts/frontier_yt_same_source_sector_overlap_identity_obstruction.py`.
+
+The gauge-normalized FH response ratio cancels a common source rescaling, but
+it still reads `y_t * k_top/k_gauge` unless the top and gauge responses are
+proved to have the same canonical-Higgs source overlap.  Current Higgs identity
+and source-to-Higgs LSZ gates are blocking, and the present harness has no
+same-source W/Z mass-response certificate.  This is an exact negative boundary
+on the shortcut from "same source coordinate" to `k_top = k_gauge`; it is not a
+no-go against a future canonical-Higgs identity theorem or genuine W/Z response
+measurement.
+
 ## Historical FH/LSZ chunks are not independent production evidence
 
 Closed by

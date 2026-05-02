@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=46 FAIL=0
+# SUMMARY: PASS=64 FAIL=0
 ```
 
 The runner verifies:
@@ -62,6 +62,7 @@ The runner verifies:
 | four-mode scalar-LSZ kinematics determine the isolated pole derivative | no |
 | pole-fit postprocessor has combined production input | no |
 | pole-fit mode/noise budget is production evidence | no |
+| same-source sector-overlap identity is derived | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -253,7 +254,10 @@ remain open.  A same-source gauge-normalized response ratio could also cancel
 `kappa_s` using a W/Z mass slope, but the W/Z response observable and shared
 Higgs identity certificate are absent.  The gauge-mass observable-gap gate
 confirms that the present production harness is QCD top-only and does not
-produce `dM_W/ds` or `dM_Z/ds`.  If
+produce `dM_W/ds` or `dM_Z/ds`.  The same-source sector-overlap identity
+obstruction also blocks treating a common source coordinate as proof that
+`k_top = k_gauge`; without that theorem or a direct measurement, the
+gauge-normalized ratio reads `y_t * k_top/k_gauge`.  If
 the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not

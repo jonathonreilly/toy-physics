@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-106-seed-controlled-chunk001-checkpoint
-blocks_completed: 106
-active_route: "Seed-controlled FH/LSZ chunk001 production checkpoint"
-active_hard_residual: "Replacement chunk001 is seed-controlled and combiner-ready, but only 1/63 L12 chunks are ready; chunk002/chunk003 replacements are still running and no combined L12, L16/L24, pole-derivative, FV/IR, model-class, or canonical-Higgs identity gate has passed"
+current_phase: campaign-rerun-block-107-same-source-sector-overlap-identity-obstruction
+blocks_completed: 107
+active_route: "Same-source sector-overlap identity obstruction"
+active_hard_residual: "A common scalar source coordinate cancels common rescaling in the gauge-normalized FH ratio, but k_top/k_gauge remains load-bearing; no canonical-Higgs source identity, same-source W/Z response certificate, combined L12, L16/L24, pole-derivative, FV/IR, or model-class gate has passed. Replacement chunk002 is running under numba_gauge_seed_v1."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -388,6 +388,13 @@ files_touched:
   - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
   - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
   - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_same_source_sector_overlap_identity_obstruction.py"
+  - "docs/YT_SAME_SOURCE_SECTOR_OVERLAP_IDENTITY_OBSTRUCTION_NOTE_2026-05-02.md"
+  - "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -400,6 +407,7 @@ open_imports:
   - "static heavy-quark additive mass and lattice-HQET-to-SM matching"
   - "interacting kinetic coefficient / c2 and lattice-to-SM matching"
   - "common tadpole/dressing proof without alpha_LM or plaquette dependence"
+  - "same-source sector-overlap identity k_top = k_gauge for gauge-normalized FH response"
 no_go_routes_inherited:
   - "direct production lattice correlator: production compute not complete"
   - "top mass cutoff substrate pin: bounded obstruction"
@@ -513,6 +521,7 @@ claim_state_movement:
   - "added an FH gauge-normalized response route: a same-source ratio (dE_top/ds)/(dM_W/ds) cancels kappa_s if the source moves the same canonical Higgs radial mode, but the W/Z response observable and Higgs-identity certificate are absent"
   - "added an FH gauge-mass response observable-gap gate: the current harness supplies top dE/ds support but no W/Z mass-response path; EW gauge-mass algebra starts after canonical H is supplied"
   - "processed seed-controlled replacement chunk001: combiner now counts chunk001 as 1 ready chunk out of 63 L12 chunks, while historical chunk002 remains seed-invalid and no combined L12 evidence exists"
+  - "proved a same-source sector-overlap identity obstruction: a common source coordinate cancels common rescaling, but the gauge-normalized response ratio reads y_t times k_top/k_gauge unless the top and gauge overlaps with the canonical Higgs radial mode are derived equal or directly measured"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -521,5 +530,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll seed-controlled replacement chunk002/chunk003; if a replacement chunk completes, rerun chunk combiner/checkpoint/retained/campaign gates, otherwise continue the scalar-denominator/Higgs-pole-identity theorem route or implement a genuine same-source W/Z mass-response harness."
+next_exact_action: "Poll seed-controlled replacement chunk002 session 74882; if it completes, rerun the chunk combiner and patch/run the chunk002 checkpoint as seed-controlled, then rerun retained/campaign gates. If it is still running, continue the canonical-Higgs source identity or genuine same-source W/Z response route without claiming closure."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

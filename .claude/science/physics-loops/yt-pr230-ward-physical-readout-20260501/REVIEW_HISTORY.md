@@ -1,5 +1,38 @@
 # Review History
 
+## Review-Loop Backpressure - Same-Source Sector-Overlap Block
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- the runner varies only the sector-overlap ratio `k_top/k_gauge` after common
+  source scaling has cancelled, so it does not duplicate the source
+  reparametrization no-go;
+- static electroweak `v` and gauge masses are kept out of the proof-selector
+  role;
+- no observed top/W/Z value, `H_unit`, Ward authority, alpha/plaquette/u0,
+  `c2 = 1`, `Z_match = 1`, or `kappa_s = 1` shortcut is used;
+- the result is a blocker certificate only and does not authorize retained or
+  proposed-retained wording.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_same_source_sector_overlap_identity_obstruction.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_same_source_sector_overlap_identity_obstruction.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 Self-review disposition: pass for boundary/support packaging; block for any
 retained-closure claim.
 

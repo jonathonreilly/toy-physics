@@ -165,7 +165,10 @@ probability.
   observable plus the same canonical-Higgs identity certificate; no such
   production data or harness exists yet.  The observable-gap gate now makes
   that absence executable: the present harness is QCD top-only and has no
-  `dM_W/ds` or `dM_Z/ds` path.
+  `dM_W/ds` or `dM_Z/ds` path.  The same-source sector-overlap identity
+  obstruction further shows that even a shared source coordinate is
+  insufficient: the ratio reads `y_t * k_top/k_gauge` until `k_top = k_gauge`
+  is derived or directly measured.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

@@ -100,6 +100,7 @@ def main() -> int:
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+        "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -441,6 +442,12 @@ def main() -> int:
         and certificates["fh_gauge_mass_response_observable_gap"].get("proposal_allowed") is False
         and certificates["fh_gauge_mass_response_observable_gap"].get("gauge_mass_response_observable_ready") is False
     )
+    same_source_sector_overlap_identity_blocks = (
+        "same-source sector-overlap identity obstruction"
+        in certificates["same_source_sector_overlap_identity"].get("actual_current_surface_status", "")
+        and certificates["same_source_sector_overlap_identity"].get("proposal_allowed") is False
+        and certificates["same_source_sector_overlap_identity"].get("sector_overlap_identity_gate_passed") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -737,6 +744,11 @@ def main() -> int:
         certificates["fh_gauge_mass_response_observable_gap"].get("actual_current_surface_status", ""),
     )
     report(
+        "same-source-sector-overlap-identity-blocks",
+        same_source_sector_overlap_identity_blocks,
+        certificates["same_source_sector_overlap_identity"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -911,7 +923,11 @@ def main() -> int:
             "same-source W/Z mass slope, but that gauge response observable and "
             "the shared canonical-Higgs identity are absent.  The observable-gap "
             "gate confirms the present production harness is QCD top-only and "
-            "does not emit dM_W/ds or dM_Z/ds.  "
+            "does not emit dM_W/ds or dM_Z/ds.  The same-source sector-overlap "
+            "identity obstruction further blocks treating a common source label "
+            "as proof that the top and gauge responses have equal canonical-Higgs "
+            "overlap; without k_top = k_gauge, the gauge-normalized ratio reads "
+            "y_t times k_top/k_gauge.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "
@@ -946,7 +962,9 @@ def main() -> int:
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action, including the canonical-Higgs pole identity or a same-source gauge-mass response observable.  Continue chunked production only with "
+            "the retained action, including the canonical-Higgs pole identity, "
+            "a same-source sector-overlap identity, or a same-source gauge-mass "
+            "response observable.  Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "
             "Before treating any finite-shell pole fit as "

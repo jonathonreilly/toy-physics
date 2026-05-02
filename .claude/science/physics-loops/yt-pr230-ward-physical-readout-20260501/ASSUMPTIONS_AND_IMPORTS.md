@@ -510,6 +510,22 @@ contact-renormalized convention for `C_ss(0)` or `C_ss'(0)` may be useful for a
 scheme definition, but it is forbidden as a proof selector for `kappa_s` unless
 the isolated same-source pole residue is also derived or measured.
 
+The same-source gauge-normalized response ratio adds one more explicit
+forbidden shortcut.  A common source label and common source-coordinate
+rescaling do not imply equal sector overlaps:
+
+```text
+dE_top/ds = k_top y_t / sqrt(2)
+dM_W/ds   = k_gauge g2 / 2
+y_readout = y_t (k_top / k_gauge)
+```
+
+Setting `k_top/k_gauge = 1` is forbidden unless the same route derives the
+canonical-Higgs source identity or measures an equivalent same-source W/Z
+physical-response certificate.  Static `v`, observed W/Z masses, and the EW
+gauge-mass theorem after canonical `H` is supplied are not proof selectors for
+that equality.
+
 Positive-closure candidates left after the assumption exercise:
 
 1. production/statistics with momentum modes plus a derived heavy matching

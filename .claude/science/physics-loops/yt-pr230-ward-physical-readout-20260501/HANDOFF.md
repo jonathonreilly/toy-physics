@@ -1,5 +1,20 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 same-source sector-overlap identity:
+
+- Added `scripts/frontier_yt_same_source_sector_overlap_identity_obstruction.py`,
+  `docs/YT_SAME_SOURCE_SECTOR_OVERLAP_IDENTITY_OBSTRUCTION_NOTE_2026-05-02.md`,
+  and
+  `outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json`.
+- Result: exact negative boundary.  The gauge-normalized FH ratio cancels a
+  common source rescaling, but without a theorem or measurement proving
+  `k_top = k_gauge`, it reads `y_t * k_top/k_gauge`.
+- Retained gate refreshed to `PASS=64 FAIL=0`; campaign gate refreshed to
+  `PASS=90 FAIL=0` over 94 certificates.  No retained or proposed-retained
+  wording is authorized.
+- Replacement FH/LSZ chunk002 is running in session `74882`; after it finishes,
+  rerun the combiner and update the chunk002 checkpoint as seed-controlled.
+
 Block 1 completed the Ward-route triage for PR #230.
 
 What changed:

@@ -1,0 +1,147 @@
+{
+  "actual_current_surface_status": "exact negative boundary / same-source sector-overlap identity obstruction",
+  "exact_next_action": "Either derive the canonical-Higgs source identity that enforces k_top = k_gauge, implement a genuine same-source W/Z response harness that certifies the shared sector overlap, or continue seed-controlled FH/LSZ production toward a direct scalar pole residue measurement.",
+  "fail_count": 0,
+  "formula": {
+    "closure_requirement": "derive k_top/k_gauge = 1 or measure an equivalent physical-response identity",
+    "ratio_readout": "y_readout = y_t * (k_top / k_gauge)",
+    "top_response": "dE_top/ds = k_top * y_t / sqrt(2)",
+    "w_response": "dM_W/ds = k_gauge * g2 / 2"
+  },
+  "open_identity_gates": [
+    "canonical-Higgs pole identity",
+    "source-to-Higgs LSZ normalization",
+    "same-source W/Z mass-response observable",
+    "sector-overlap equality k_top = k_gauge"
+  ],
+  "parent_certificates": {
+    "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+    "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
+    "gauge_vev_source_overlap_no_go": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
+    "higgs_pole_identity_gate": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "source_reparametrization_gauge_no_go": "outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The equality k_top = k_gauge is not derived, and no same-source W/Z response certificate exists.",
+  "sector_overlap_family": [
+    {
+      "common_source_scale": 0.5,
+      "dE_top_ds": 0.16440232662587229,
+      "dM_W_ds": 0.1625,
+      "gauge_source_overlap": 0.5,
+      "rho_top_over_gauge": 0.5,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 0.25,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 0.46499999999999997
+    },
+    {
+      "common_source_scale": 0.5,
+      "dE_top_ds": 0.32880465325174457,
+      "dM_W_ds": 0.1625,
+      "gauge_source_overlap": 0.5,
+      "rho_top_over_gauge": 1.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 0.5,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 0.9299999999999999
+    },
+    {
+      "common_source_scale": 0.5,
+      "dE_top_ds": 0.6576093065034891,
+      "dM_W_ds": 0.1625,
+      "gauge_source_overlap": 0.5,
+      "rho_top_over_gauge": 2.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 1.0,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 1.8599999999999999
+    },
+    {
+      "common_source_scale": 1.0,
+      "dE_top_ds": 0.32880465325174457,
+      "dM_W_ds": 0.325,
+      "gauge_source_overlap": 1.0,
+      "rho_top_over_gauge": 0.5,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 0.5,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 0.46499999999999997
+    },
+    {
+      "common_source_scale": 1.0,
+      "dE_top_ds": 0.6576093065034891,
+      "dM_W_ds": 0.325,
+      "gauge_source_overlap": 1.0,
+      "rho_top_over_gauge": 1.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 1.0,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 0.9299999999999999
+    },
+    {
+      "common_source_scale": 1.0,
+      "dE_top_ds": 1.3152186130069783,
+      "dM_W_ds": 0.325,
+      "gauge_source_overlap": 1.0,
+      "rho_top_over_gauge": 2.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 2.0,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 1.8599999999999999
+    },
+    {
+      "common_source_scale": 2.0,
+      "dE_top_ds": 0.6576093065034891,
+      "dM_W_ds": 0.65,
+      "gauge_source_overlap": 2.0,
+      "rho_top_over_gauge": 0.5,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 1.0,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 0.46499999999999997
+    },
+    {
+      "common_source_scale": 2.0,
+      "dE_top_ds": 1.3152186130069783,
+      "dM_W_ds": 0.65,
+      "gauge_source_overlap": 2.0,
+      "rho_top_over_gauge": 1.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 2.0,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 0.9299999999999999
+    },
+    {
+      "common_source_scale": 2.0,
+      "dE_top_ds": 2.6304372260139566,
+      "dM_W_ds": 0.65,
+      "gauge_source_overlap": 2.0,
+      "rho_top_over_gauge": 2.0,
+      "static_M_W": 0.325,
+      "static_v": 1.0,
+      "top_source_overlap": 4.0,
+      "true_y_t": 0.93,
+      "y_inferred_if_k_top_eq_k_gauge": 1.8599999999999999
+    }
+  ],
+  "sector_overlap_identity_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not set k_top = k_gauge",
+    "does not use static electroweak v or observed W/Z masses as proof selectors",
+    "does not use observed top mass, observed y_t, H_unit, yt_ward_identity, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "The same-source gauge-normalized FH ratio cancels a common source coordinate rescaling, but it still requires a sector-overlap identity: k_top must equal k_gauge for the lattice source's projection onto the canonical Higgs radial mode.  The current surface does not derive that identity.  Families with the same static electroweak point and same source coordinate can preserve common rescaling covariance while changing rho = k_top/k_gauge; the inferred y_t from the gauge-normalized formula then changes by rho.  Thus a same-source label is not enough.  Closure needs either a canonical-Higgs source identity theorem or a production observable that directly certifies the shared sector overlap."
+}

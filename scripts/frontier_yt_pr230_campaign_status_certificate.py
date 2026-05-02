@@ -136,6 +136,9 @@ def main() -> int:
         "fh_gauge_mass_response_observable_gap": load(
             "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json"
         ),
+        "same_source_sector_overlap_identity": load(
+            "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -482,6 +485,12 @@ def main() -> int:
         "fh-gauge-mass-response-observable-gap-blocks",
         "FH gauge-mass response observable gap" in str(statuses["fh_gauge_mass_response_observable_gap"]),
         statuses["fh_gauge_mass_response_observable_gap"],
+    )
+    report(
+        "same-source-sector-overlap-identity-blocks",
+        "same-source sector-overlap identity obstruction"
+        in str(statuses["same_source_sector_overlap_identity"]),
+        statuses["same_source_sector_overlap_identity"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -843,6 +852,11 @@ def main() -> int:
             "current diagnostic smokes are still reduced-scope instrumentation "
             "support only.  A paired x8/x16 calibration manifest now defines "
             "matched commands, but no completed calibration output exists.  "
+            "The same-source sector-overlap identity obstruction now blocks a "
+            "nearby shortcut in the gauge-normalized response route: common "
+            "source-coordinate scaling cancels, but the ratio is physical y_t "
+            "only after k_top/k_gauge is derived or measured.  A same-source "
+            "label alone is not that theorem.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

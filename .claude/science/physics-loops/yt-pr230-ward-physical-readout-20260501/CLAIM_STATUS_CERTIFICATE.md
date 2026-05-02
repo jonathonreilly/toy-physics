@@ -36,6 +36,7 @@ plus FH/LSZ production postprocess gate
 plus fitted scalar-kernel residue selector no-go
 plus FH/LSZ production checkpoint granularity gate
 plus FH/LSZ chunked production manifest
+plus same-source sector-overlap identity obstruction
 **PR:** #230 draft branch
 
 ```yaml
@@ -141,6 +142,10 @@ Allowed wording:
 - bounded-support same-source scalar two-point measurement: `C_ss(q)` and
   `Gamma_ss(q)` are executable for the source used in `dE/ds`, but no
   controlled pole/continuum LSZ residue is derived;
+- exact negative boundary for treating a shared scalar source coordinate as a
+  proof that top and gauge responses have equal canonical-Higgs overlap; the
+  gauge-normalized FH ratio still needs `k_top = k_gauge` derived or directly
+  measured;
 - PR #230 remains draft and not retained.
 
 Forbidden wording:
