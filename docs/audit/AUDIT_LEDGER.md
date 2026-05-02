@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:32:50.978978+00:00
+**Generated:** 2026-05-02T00:33:55.764207+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 345 |
+| `audited_clean` | 346 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 458 |
+| `unaudited` | 457 |
 
 | criticality | count |
 |---|---:|
@@ -413,6 +413,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_green_robustness_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_propagating_generated_transfer_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_radical_geometry_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_support_localization_split_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14810,6 +14811,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Treat this as the generated-geometry answer for the retained compact family: exact reduction survives, amplitude survives, weak-field gravity sign does not, Newtonian mass scaling does not.  _(class `C`)_
 - **chain closes:** False — The current runner supports the qualitative generated-family no-go, but the source note's frozen fitted-exponent line is stale: it states self-consistent Green F~M as a 0.00-class collapse while the runner prints -0.30.
 - **rationale:** Issue: The frozen readout's self-consistent Green F~M exponent is stale relative to the current runner, which reports -0.30 rather than the stated 0.00-class collapse. Why this blocks: the note is explicitly a frozen generated-family numerical probe, so the audit cannot certify it while one of the reported fitted exponents disagrees with the executable artifact. Repair target: update the source note's fitted-exponent and any derived summary language from the current runner, or change the runner if -0.30 is not the intended retained computation. Claim boundary until fixed: the detailed shift table, zero-source reduction, 0/4 TOWARD count, and qualitative non-Newtonian generated-family failure remain supported by the current runner.
+- **auditor confidence:** high
+
+### `source_resolved_support_localization_split_note`
+
+- **Note:** [`SOURCE_RESOLVED_SUPPORT_LOCALIZATION_SPLIT_NOTE.md`](../../docs/SOURCE_RESOLVED_SUPPORT_LOCALIZATION_SPLIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Treat this as a real mechanistic split: exact support is broad and stable under the clipping control, generated support is sharply localized, and the retained Green/self-consistent pocket likely depends on broad downstream connectivity support that the generated family does not provide.  _(class `C`)_
+- **chain closes:** True — The runner directly compares exact clipped, exact centered, and generated-family self-consistent Green cases using detector support metrics, and its current output matches the frozen table. The bounded mechanistic split closes because the exact controls have nearly identical broad support while the generated mean is sharply localized.
+- **rationale:** The note makes a bounded mechanism-discriminator claim rather than a full causal theorem. The current runner recomputes the exact clipped/interior controls and generated-family mean, matching the frozen centroid, N_eff, N_eff/N_det, top-10 fraction, 1% support, and peak-share values. Residual risk is that this identifies consistency with detector/connectivity localization rather than proving it as the only causal mechanism, and the note states that limitation.
 - **auditor confidence:** high
 
 ### `source_resolved_transverse_propagating_green_note`
