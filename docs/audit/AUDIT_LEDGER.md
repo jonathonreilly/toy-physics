@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T02:19:00.837882+00:00
+**Generated:** 2026-05-02T02:27:04.957537+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 371 |
+| `audited_clean` | 372 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 416 |
+| `unaudited` | 415 |
 
 | criticality | count |
 |---|---:|
@@ -462,6 +462,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `weak_coupling_retention_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | open | ~~audited_clean~~ | open | cross_family | codex-current | C | - |
+| `wide_family_h0125_bridge_reopen_audit` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `yt_schur_stability_gap_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -16908,6 +16909,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The weak-coupling regime has 14/15 runs with w_asym < 1 at both G=5 and G=10, with mean width effects of 9.5% and 13.5%, while still not closing the off-lattice sign-selection blocker.  _(class `C`)_
 - **chain closes:** True — The registered runner recomputes the full three-family, five-seed battery at G=5 and G=10, and the current output matches the note's reported counts, mean effects, borderline growing cases, and non-universal shell-force caveats. The note's claim is explicitly limited to an exploratory sign-sensitive regime rather than retained blocker closure.
 - **rationale:** The computation checks the load-bearing weak-coupling sign-sensitivity claim directly: both operating points reproduce 14/15 width-asymmetry successes and the quoted mean effects, including the stated failures/caveats. The note does not overstate this as a universal directional observable or blocker closure, so the derivation closes for the declared open exploratory scope. Residual risk is the note's own limitation that larger/diverse retained-family freezing is still required before promotion.
+- **auditor confidence:** high
+
+### `wide_family_h0125_bridge_reopen_audit`
+
+- **Note:** [`WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`](../../docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-fresh-context-audit-agent`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The bounded-negative conclusion rests on the fixed h=0.125 family giving clean Born and k=0, TOWARD gravity, but F~M alpha=0.501, and the first wider phys_w=4, phys_l=6 replay giving clean Born/k=0, TOWARD gravity, but full-window alpha=0.499; neither closes the weak-field F~M~=1 bridge.  _(class `C`)_
+- **chain closes:** True — The decisive observables were recomputed from the replay scripts and match the note's bounded-negative boundary: the tested families are numerically well-defined but fail the weak-field mass-law closure criterion. The note does not promote a continuum theorem or positive Newtonian bridge.
+- **rationale:** The audited claim is not a positive bridge claim; it is a bounded negative saying the reopened h=0.125 wide-family path currently does not close weak-field F~M~=1. A fresh restricted audit reran /usr/bin/python3 scripts/lattice_3d_l2_numpy_h0125_only.py and reproduced Born=6.59e-15, k=0=+0.000000, gravity +0.029856 TOWARD, F~M alpha=0.501. It also reran /usr/bin/python3 scripts/lattice_3d_l2_wide_h0125_replay.py --phys-w 4 --z-mass 3.0 --strength 1e-7 1e-6 5e-6 --window full and reproduced phys_w=4, Born=8.01e-15, k=0=-0.000000, gravity +0.010955 TOWARD, full-window alpha=0.499. The load-bearing comparator is therefore the right observable for the note's boundary, and both recomputed rows land near alpha 0.5 rather than 1.0 while Born and null checks stay clean. Residual risk is documentation quality rather than scientific closure: the ledger has no assigned runner and the width-4 replay is not linked in the note's artifact list, but the scripts on main directly reproduce the stated decisive numbers.
 - **auditor confidence:** high
 
 ### `wide_lattice_h2t_distance_law_note`
