@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:23:58.664722+00:00",
+  "generated_at": "2026-05-02T18:26:00.293376+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -34589,11 +34589,11 @@
     },
     "observable_principle_from_axiom_note": {
       "claim_id": "observable_principle_from_axiom_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "5881b9d9836968f3c365c72622bcf51efff0e54568505d9e6451a2c9e4360394",
+      "note_hash": "3c2104ec67e632088845788e36e7af027d7f627a272ef0e18799d90f6e5a83ec",
       "path": "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_observable_principle_from_axiom.py",
       "title": "Observable Principle From Axiom Note"
@@ -46333,16 +46333,16 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 9,
       "meta": 1,
-      "none": 1755,
-      "positive_theorem": 16
+      "none": 1754,
+      "positive_theorem": 17
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 509,
       "meta": 1,
       "no_go": 106,
-      "none": 444,
+      "none": 443,
       "open_gate": 110,
-      "positive_theorem": 611
+      "positive_theorem": 612
     },
     "edge_count": 4990,
     "leaf_count": 751,
