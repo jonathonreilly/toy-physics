@@ -8521,6 +8521,22 @@
       "to": "three_generation_observable_theorem_note"
     },
     {
+      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "to": "site_phase_cube_shift_intertwiner_note"
+    },
+    {
+      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "to": "s3_taste_cube_decomposition_note"
+    },
+    {
+      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "to": "s3_mass_matrix_no_go_note"
+    },
+    {
+      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "to": "z2_hw1_mass_matrix_parametrization_note"
+    },
+    {
       "from": "three_generation_observable_theorem_note",
       "to": "site_phase_cube_shift_intertwiner_note"
     },
@@ -20005,7 +20021,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T16:56:24.414813+00:00",
+  "generated_at": "2026-05-02T17:06:09.946949+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42031,6 +42047,22 @@
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem \u2014 Dep-Chain Audit"
     },
+    "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02": {
+      "claim_id": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "site_phase_cube_shift_intertwiner_note",
+        "s3_taste_cube_decomposition_note",
+        "s3_mass_matrix_no_go_note",
+        "z2_hw1_mass_matrix_parametrization_note"
+      ],
+      "note_hash": "996bbe9d127b53aad2b131ce4f749eb07e653ebbe3e72a55d94be275d68e7532",
+      "path": "docs/THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py",
+      "title": "Three-Generation Observable: No-Proper-Quotient Narrow Theorem"
+    },
     "three_generation_observable_theorem_note": {
       "claim_id": "three_generation_observable_theorem_note",
       "claim_type_author_hint": null,
@@ -46376,19 +46408,19 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 6,
       "none": 1764,
-      "positive_theorem": 10
+      "positive_theorem": 11
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 507,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 612
+      "positive_theorem": 613
     },
-    "edge_count": 5001,
-    "leaf_count": 752,
-    "node_count": 1780,
+    "edge_count": 5005,
+    "leaf_count": 753,
+    "node_count": 1781,
     "root_count": 1213,
-    "runners_with_path": 1342
+    "runners_with_path": 1343
   }
 }

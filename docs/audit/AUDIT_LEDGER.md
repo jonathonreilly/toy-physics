@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:04:34.230598+00:00
+**Generated:** 2026-05-02T17:06:14.187299+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 171 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 514 |
+| unaudited | 515 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -40,7 +40,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 549 |
+| `unaudited` | 550 |
 
 | claim_type | count |
 |---|---:|
@@ -49,24 +49,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 35 |
 | `no_go` | 152 |
 | `open_gate` | 107 |
-| `positive_theorem` | 870 |
-| `unset` | 1 |
+| `positive_theorem` | 872 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 96 |
 | `high` | 340 |
 | `medium` | 428 |
-| `leaf` | 817 |
+| `leaf` | 818 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1271
+- runners classified: 1272
 - runners with (C) first-principles compute hits: 610
-- runners with (D) external comparator hits: 306
+- runners with (D) external comparator hits: 307
 - decoration candidates (no C, no D): 104
 
 ## Top 25 by load-bearing score (topology only)
@@ -97,8 +96,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 294 | 16.70 | `unaudited` | unaudited |
 | 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
 | 22 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
-| 23 | `physical_lattice_necessity_note` | no_go | critical | 345 | 16.43 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 350 | 15.96 | `audited_clean` | **retained** |
+| 23 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 351 | 16.46 | `audited_clean` | **retained** |
+| 24 | `physical_lattice_necessity_note` | no_go | critical | 345 | 16.43 | `audited_conditional` | ~~audited_conditional~~ |
 | 25 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | critical | 301 | 15.74 | `unaudited` | unaudited |
 
 
