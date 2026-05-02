@@ -192,6 +192,28 @@ def snapshot_audit_state(row: dict, rows: dict[str, dict]) -> dict:
     }
 
 
+def legacy_confirmed_clean_claim_type_reaudit(row: dict, verdict: str, xc_status: str | None) -> bool:
+    """Return true when a legacy clean row only needs scoped claim typing.
+
+    PR291 made claim_type part of the audit verdict. Older critical clean
+    rows can already have confirmed cross-confirmation whose summaries predate
+    claim_type, so comparing a new scoped re-audit against those missing fields
+    would create a false disagreement. In that migration-only case, keep the
+    existing clean cross-confirmation and let the new restricted-input audit
+    own claim_type and claim_scope.
+    """
+    if row.get("claim_type_provenance") != "backfilled_pending_reaudit":
+        return False
+    if row.get("audit_status") != "audited_clean" or verdict != "audited_clean":
+        return False
+    if xc_status != "confirmed":
+        return False
+    xc = row.get("cross_confirmation") or {}
+    first = xc.get("first_audit") or {}
+    second = xc.get("second_audit") or {}
+    return first.get("claim_type") is None and second.get("claim_type") is None
+
+
 def note_hash_drift_error(row: dict) -> str | None:
     on_disk_path = REPO_ROOT / row.get("note_path", "")
     if not on_disk_path.exists():
@@ -365,6 +387,9 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         if isinstance(prior_cross_confirmation, dict)
         else prior_cross_confirmation
     )
+    legacy_claim_type_reaudit = legacy_confirmed_clean_claim_type_reaudit(
+        row, verdict, prior_cross_confirmation_status
+    )
     first_terminal_verdict = row.get("audit_status")
     terminal_second_pass = (
         first_terminal_verdict in TERMINAL_CROSS_CONFIRM_VERDICTS
@@ -492,6 +517,7 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         and criticality == "critical"
         and not critical_second_pass
         and not third_pass
+        and not legacy_claim_type_reaudit
     ):
         prior = row.get("cross_confirmation") or {}
         first = prior.get("first_audit")
@@ -583,6 +609,9 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     if "runner_check_breakdown" in audit:
         row["runner_check_breakdown"] = audit["runner_check_breakdown"]
     row["blocker"] = third_pass_blocker if third_pass else terminal_second_pass_blocker
+    if legacy_claim_type_reaudit:
+        row.setdefault("cross_confirmation", {})["claim_type_reaudit"] = audit_summary_from_blob(audit)
+        row["cross_confirmation"]["mode"] = "legacy_confirmed_clean_claim_type_reaudit"
 
     # Snapshot the state at audit time so invalidate_stale_audits.py can
     # detect changes that warrant re-audit (dep added/removed, dep status
