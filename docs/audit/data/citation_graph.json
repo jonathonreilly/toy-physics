@@ -19965,7 +19965,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:23:40.216525+00:00",
+  "generated_at": "2026-05-02T19:27:29.903316+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -45174,6 +45174,17 @@
       "path": "docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
       "runner_path": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py",
       "title": "Z_2 `hw=1` Mass-Matrix Parametrization Note"
+    },
+    "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02": {
+      "claim_id": "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "c53d418663d6554553aa534f41be32d7f86d3b460d1a8dfb52f9ddcf02f30655",
+      "path": "docs/Z3_CONJUGATE_SUPPORT_TRICHOTOMY_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_z3_conjugate_support_trichotomy_narrow.py",
+      "title": "Z_3 Conjugate-Pair Support Trichotomy Narrow Theorem"
     }
   },
   "roots": [
@@ -46391,7 +46402,8 @@
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
     "yt_ward_identity_derivation_theorem",
     "yt_zero_import_chain_note",
-    "z2_hw1_mass_matrix_parametrization_note"
+    "z2_hw1_mass_matrix_parametrization_note",
+    "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02"
   ],
   "schema_version": 1,
   "stats": {
@@ -46399,7 +46411,7 @@
       "bounded_theorem": 10,
       "meta": 1,
       "none": 1749,
-      "positive_theorem": 26
+      "positive_theorem": 27
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 510,
@@ -46407,12 +46419,12 @@
       "no_go": 106,
       "none": 442,
       "open_gate": 109,
-      "positive_theorem": 618
+      "positive_theorem": 619
     },
     "edge_count": 4991,
-    "leaf_count": 754,
-    "node_count": 1786,
-    "root_count": 1215,
-    "runners_with_path": 1353
+    "leaf_count": 755,
+    "node_count": 1787,
+    "root_count": 1216,
+    "runners_with_path": 1354
   }
 }
