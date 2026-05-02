@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:31:38.906823+00:00
+**Generated:** 2026-05-02T00:32:50.978978+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 159 |
+| bounded | 158 |
 | support | 129 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 961 |
-| ~~audited_failed~~ | 91 |
+| ~~audited_failed~~ | 92 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 345 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 62 |
+| `audited_failed` | 63 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 459 |
+| `unaudited` | 458 |
 
 | criticality | count |
 |---|---:|
@@ -1156,6 +1156,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_exact_green_self_consistent_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_generated_support_mass_scaling_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_retarded_green_pocket_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `source_resolved_self_consistent_generated_transfer_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_transverse_propagating_green_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_capture_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -14797,6 +14798,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
   - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_self_consistent_generated_transfer_note`
+
+- **Note:** [`SOURCE_RESOLVED_SELF_CONSISTENT_GENERATED_TRANSFER_NOTE.md`](../../docs/SOURCE_RESOLVED_SELF_CONSISTENT_GENERATED_TRANSFER_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Treat this as the generated-geometry answer for the retained compact family: exact reduction survives, amplitude survives, weak-field gravity sign does not, Newtonian mass scaling does not.  _(class `C`)_
+- **chain closes:** False — The current runner supports the qualitative generated-family no-go, but the source note's frozen fitted-exponent line is stale: it states self-consistent Green F~M as a 0.00-class collapse while the runner prints -0.30.
+- **rationale:** Issue: The frozen readout's self-consistent Green F~M exponent is stale relative to the current runner, which reports -0.30 rather than the stated 0.00-class collapse. Why this blocks: the note is explicitly a frozen generated-family numerical probe, so the audit cannot certify it while one of the reported fitted exponents disagrees with the executable artifact. Repair target: update the source note's fitted-exponent and any derived summary language from the current runner, or change the runner if -0.30 is not the intended retained computation. Claim boundary until fixed: the detailed shift table, zero-source reduction, 0/4 TOWARD count, and qualitative non-Newtonian generated-family failure remain supported by the current runner.
 - **auditor confidence:** high
 
 ### `source_resolved_transverse_propagating_green_note`
