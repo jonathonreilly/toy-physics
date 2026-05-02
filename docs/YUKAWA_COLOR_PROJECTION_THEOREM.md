@@ -1,9 +1,55 @@
 # Yukawa Color-Singlet Projection Theorem
 
-**Date:** 2026-04-14
-**Status:** DERIVED -- R_conn = 8/9 derived from 1/N_c expansion (RCONN_DERIVED_NOTE.md)
+**Date:** 2026-04-14 (scope tightened 2026-05-02)
+**Type:** positive_theorem (proposed; audit-lane to ratify)
+**Claim scope:** the SU(N_c) Fierz channel decomposition giving channel
+fraction `F_adjoint = (N_c² − 1)/N_c² = 8/9` at `N_c = 3` from
+graph-first retained-grade primitives. The physical-Higgs-scalar
+wave-function renormalization identification `Z_phi^{phys}/Z_phi^{lattice}
+= R_conn` (and the resulting `sqrt(8/9)` y_t correction) is **explicitly
+out of scope** — that is a separate downstream physical-matching theorem
+(part of the lattice → physical matching cluster obstruction; see
+prior campaign cycle 13 PR #274).
 **Depends on:** RCONN_DERIVED_NOTE.md, YT_EW_COLOR_PROJECTION_THEOREM.md
+(both `audited_conditional`); the Fierz channel-fraction half can be
+freed from these via the retained chain
+`ew_current_fierz_channel_decomposition_note_2026-05-01` →
+`native_gauge_closure_note` (retained_bounded) +
+`graph_first_su3_integration_note` (retained_bounded).
 **Script:** `scripts/frontier_yt_color_projection_correction.py` (7/7 PASS)
+
+## Out of scope: physical-Higgs-Z identification
+
+The claim `Z_phi^{phys} / Z_phi^{lattice} = R_conn` and the resulting
+`y_t^{phys} = y_t^{Ward} · sqrt(8/9)` correction are **separate downstream
+physical-matching steps**. They identify a physical (continuum) wave-
+function renormalization with a lattice color-trace fraction, which is the
+class-(F) renaming step the audit verdict flagged. This row's narrowed
+load-bearing step is the **algebraic Fierz channel-fraction identity**
+(class A on retained-grade primitives via PR #249's
+`ew_current_fierz_channel_decomposition_note_2026-05-01`).
+
+For the physical-matching half (the lattice → physical bridge), see the
+lattice-physical matching cluster obstruction synthesis (campaign cycle
+13, PR #274).
+
+## Audit-lane disposition (proposed)
+
+```yaml
+target_claim_type: positive_theorem
+proposed_claim_scope: |
+  SU(N_c) Fierz channel decomposition giving F_adjoint = (N_c²−1)/N_c² at
+  N_c=3 = 8/9 from graph-first retained primitives. NOT the physical
+  y_t correction or Higgs-Z identification (out of scope).
+proposed_load_bearing_step_class: A
+audit_required_before_effective_retained: true
+```
+
+If the audit lane reads the load-bearing step as the **class-(A) Fierz
+channel-fraction identity** (rather than the class-(B) physical-Higgs-Z
+identification that's now explicitly out of scope), the row's
+load-bearing class is (A) and its effective_status should land
+**retained** under the new framework.
 
 ---
 
