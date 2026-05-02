@@ -2737,6 +2737,14 @@
       "to": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
     },
     {
+      "from": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
       "from": "cl3_sm_embedding_master_note",
       "to": "cl3_sm_embedding_theorem"
     },
@@ -2755,6 +2763,10 @@
     {
       "from": "cl3_sm_embedding_theorem",
       "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
+      "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
     },
     {
       "from": "continuum_identification_note",
@@ -2893,7 +2905,15 @@
       "to": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
     },
     {
+      "from": "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
       "from": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "cpt_squared_is_identity_theorem_note_2026-05-02",
       "to": "cpt_exact_note"
     },
     {
@@ -3227,6 +3247,10 @@
     {
       "from": "dm_neutrino_cp_kernel_deformation_necessity_note_2026-04-15",
       "to": "dm_neutrino_ckm_texture_transfer_no_go_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
+      "to": "dm_neutrino_weak_vector_theorem_note_2026-04-15"
     },
     {
       "from": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
@@ -5673,6 +5697,10 @@
       "to": "yt_ew_color_projection_theorem"
     },
     {
+      "from": "lattice_total_momentum_conservation_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
       "from": "left_handed_charge_matching_note",
       "to": "graph_first_selector_derivation_note"
     },
@@ -6937,6 +6965,10 @@
       "to": "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
     },
     {
+      "from": "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
       "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
       "to": "three_generation_structure_note"
     },
@@ -7007,6 +7039,10 @@
     {
       "from": "periodic_2d_wraparound_fix_note_2026-04-11",
       "to": "bmv_threebody_note_2026-04-11"
+    },
+    {
+      "from": "per_site_su2_spin_half_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
     {
       "from": "physical_lattice_necessity_dep_declaration_audit_note_2026-05-02",
@@ -8489,8 +8525,8 @@
       "to": "z2_hw1_mass_matrix_parametrization_note"
     },
     {
-      "from": "three_generation_observable_theorem_note",
-      "to": "generation_axiom_boundary_note"
+      "from": "u1_fermion_number_conservation_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
     },
     {
       "from": "unified_program_note",
@@ -8987,6 +9023,14 @@
     {
       "from": "wave_direct_dm_transfer_diagnostic_note",
       "to": "wave_direct_dm_h025_family_pair_synthesis_note"
+    },
+    {
+      "from": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
+      "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
+    },
+    {
+      "from": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
     },
     {
       "from": "wilson_test_mass_continuum_note_2026-04-11",
@@ -19961,7 +20005,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:07:11.812282+00:00",
+  "generated_at": "2026-05-02T21:11:06.885989+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21118,7 +21162,7 @@
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "d3cc0446fdf749d4f1e5ab2219ac08c8aa4dc254a60bd2df281e34928c65ef54",
+      "note_hash": "961b94dc62c4723c0bf191d3b9889bed242a03b884e4ea742538d36395636142",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
@@ -21203,14 +21247,14 @@
     },
     "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30": {
       "claim_id": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "graph_first_su3_integration_note",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "1849c0f3a377926ac38ac38a8c4fdf911b5ae94206386bf2a934521683600295",
+      "note_hash": "29202ae82052a809b7d5a6e5ed48b82568184c70f52e1d91df16d572d3deafa0",
       "path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
       "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate"
@@ -21325,13 +21369,13 @@
     },
     "anomaly_forces_time_theorem": {
       "claim_id": "anomaly_forces_time_theorem",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem proposal. Audit status is assigned only by the",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c147743d4cd9e87b710b496712fe587e8c143c64efee94345485f1c43233ea76",
+      "note_hash": "003b590b1c7fa0427af690147cb516f7b7b4fb6b0830bc6987550427fcf44ec9",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_anomaly_forces_time.py",
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
     },
     "antigravity_sign_selector_boundary_note": {
@@ -22102,15 +22146,15 @@
     },
     "bminusl_anomaly_freedom_theorem_note_2026-04-24": {
       "claim_id": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "one_generation_matter_closure_note",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
         "anomaly_forces_time_theorem"
       ],
-      "note_hash": "b480975d001f5398a15fe0070725cfa86139c5a80d13ad9eff01549e485f6c3e",
+      "note_hash": "83f89734a08d9ccc5765bdddcdc025a47b7967d93e514b1a1927785a9d315a2c",
       "path": "docs/BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_bminusl_anomaly_freedom.py",
       "title": "B-L Anomaly-Freedom Theorem With Retained nu_R"
@@ -23116,6 +23160,17 @@
       "runner_path": "scripts/frontier_chronology_operational_no_past_signaling.py",
       "title": "Chronology Protection: Operational No-Past-Signaling Support Theorem"
     },
+    "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02": {
+      "claim_id": "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "e8bc7b792fe0576a27daea1cf8de7151a41b80b6133254c5777f05f3561c817f",
+      "path": "docs/CIRCULANT_PARITY_CP_TENSOR_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_circulant_parity_cp_tensor_narrow.py",
+      "title": "Hermitian Circulant Parity Decomposition + CP-Tensor Narrow Theorem"
+    },
     "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25": {
       "claim_id": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
       "claim_type_author_hint": null,
@@ -23813,8 +23868,8 @@
     },
     "ckm_third_row_magnitudes_theorem_note_2026-04-24": {
       "claim_id": "ckm_third_row_magnitudes_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
@@ -23822,7 +23877,7 @@
         "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
         "alpha_s_derived_note"
       ],
-      "note_hash": "1174c43d5419557a6222061fc728978ac31984ac61aec9751b67a35ae333bce5",
+      "note_hash": "c1841136c05b6f4c910f33747eb8449a7ea71d5ca8d1cbd3e1d99c49442f238c",
       "path": "docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_third_row_magnitudes.py",
       "title": "CKM Third-Row Magnitudes Structural Identities"
@@ -23855,6 +23910,32 @@
       "path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation"
+    },
+    "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02": {
+      "claim_id": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "8b7f82d4de294d0c61593cd8f8bbbb6ede4f94fb96036bbf8d30bd7d558d6827",
+      "path": "docs/CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cl3_per_site_hilbert_dim_two_check.py",
+      "title": "Per-Site Hilbert Space Dimension = 2 from Cl(3) Per-Site Uniqueness"
+    },
+    "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02": {
+      "claim_id": "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "note_hash": "2340409c32410bf80410bf2af414d0b27f9b60c563d88037475951a0188ea050",
+      "path": "docs/CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cl3_quark_antiquark_color_singlet_check.py",
+      "title": "Quark-Antiquark State Contains Exactly One Color Singlet"
     },
     "cl3_sm_embedding_master_note": {
       "claim_id": "cl3_sm_embedding_master_note",
@@ -23939,6 +24020,19 @@
       "path": "docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
+    },
+    "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02": {
+      "claim_id": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
+      ],
+      "note_hash": "2c9941c59706fed85ca658652a20ce88bec1df65599a972603b15793ff474848",
+      "path": "docs/CMW_2D_SUBLATTICE_NO_SSB_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cmw_2d_sublattice_no_ssb_check.py",
+      "title": "No SSB of Continuous Global Symmetry on Z\u00b2/Z\u00b9 Sublattices of Z\u00b3 at Finite T"
     },
     "complete_prediction_chain_2026_04_15": {
       "claim_id": "complete_prediction_chain_2026_04_15",
@@ -24235,6 +24329,19 @@
       "runner_path": null,
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
     },
+    "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
+      "claim_id": "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "note_hash": "33d6794cdfacf037c466de2f05bb8ba7c02849852f1a7ac439c6dbf3223eee5e",
+      "path": "docs/CPT_PARTICLE_ANTIPARTICLE_LIFETIME_EQUALITY_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cpt_particle_antiparticle_lifetime_check.py",
+      "title": "Particle/Antiparticle Lifetime Equality from Cited CPT"
+    },
     "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02": {
       "claim_id": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -24247,6 +24354,19 @@
       "path": "docs/CPT_PARTICLE_ANTIPARTICLE_MASS_EQUALITY_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/cpt_particle_antiparticle_mass_equality_check.py",
       "title": "Particle/Antiparticle Mass Equality from Retained CPT"
+    },
+    "cpt_squared_is_identity_theorem_note_2026-05-02": {
+      "claim_id": "cpt_squared_is_identity_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "note_hash": "beee6682c23ef51ca92defe19432b080774f4ab7256cf698c2e0cd2acc72d7c0",
+      "path": "docs/CPT_SQUARED_IS_IDENTITY_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cpt_squared_is_identity_check.py",
+      "title": "(CPT)\u00b2 = Identity on the Framework's CPT Structure"
     },
     "cross_family_universality_note": {
       "claim_id": "cross_family_universality_note",
@@ -25660,11 +25780,13 @@
     },
     "dm_neutrino_dirac_bridge_theorem_note_2026-04-15": {
       "claim_id": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "8170f17dfef71d61fe4fb686fa349338b2b5cfe2c12612dd1159be66825609f5",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "dm_neutrino_weak_vector_theorem_note_2026-04-15"
+      ],
+      "note_hash": "6e117d47f2f4b7b4ccbc0d2121fcb824dd399eeb7b52f7d17e4ca2b8967d9514",
       "path": "docs/DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_dirac_bridge_theorem.py",
       "title": "DM Neutrino Dirac Bridge Theorem Note"
@@ -29015,24 +29137,24 @@
     },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "cd32df125009c73ccaf60a461f913086d2974efd48b74e825b4f2e8d9e3a3881",
+      "note_hash": "1ef110fc867200dfe8921168b630ff4a71849c9ba9b086bc0a91ce6e2cf403ce",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Tensor-Transfer Theorem"
     },
     "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
       ],
-      "note_hash": "4f24711fb34563613fee693565e2b99cf7c845148910ec4762a01eff85f29070",
+      "note_hash": "eae797f734883fcbd472dc7a8bc793ee236183fe1195d1accecce51d4d356b47",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Transfer Theorem"
@@ -31687,11 +31809,11 @@
     },
     "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19": {
       "claim_id": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d1d3213bf1a5c0a2e80163e9dd6c24ec9e914c75848b494b80165c4f699c61b5",
+      "note_hash": "dfd4aafc5cb26893333c2b84eaec7ebf53daffb8bc409c68bbfc3f90cd0ba9f5",
       "path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Koide Z\u00b3 Scalar Potential \u2014 Lepton Mass Tower Note"
@@ -32454,6 +32576,19 @@
       "path": "docs/LATTICE_SYNTHESIS_GUARD_NOTE.md",
       "runner_path": null,
       "title": "Lattice Synthesis Guard Note"
+    },
+    "lattice_total_momentum_conservation_theorem_note_2026-05-02": {
+      "claim_id": "lattice_total_momentum_conservation_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "5bef9915c435817f41dd6c9801ba8339e77012f17fbf052b0a150b9503109a63",
+      "path": "docs/LATTICE_TOTAL_MOMENTUM_CONSERVATION_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/lattice_total_momentum_conservation_check.py",
+      "title": "Lattice Total Momentum Conservation from Retained Lattice Noether"
     },
     "lattice_weak_field_mass_scaling_note": {
       "claim_id": "lattice_weak_field_mass_scaling_note",
@@ -34574,6 +34709,19 @@
       "runner_path": null,
       "title": "Next Chunk Recommendation"
     },
+    "no_per_site_bosonic_ccr_theorem_note_2026-05-02": {
+      "claim_id": "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "54b0a371479eee86563104268b8135cda3dbd4255294a4a6611a84ee94478257",
+      "path": "docs/NO_PER_SITE_BOSONIC_CCR_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/no_per_site_bosonic_ccr_check.py",
+      "title": "No Per-Site Bosonic CCR on Cl(3) Lattice Sites"
+    },
     "nonlabel_grown_basin_note": {
       "claim_id": "nonlabel_grown_basin_note",
       "claim_type_author_hint": null,
@@ -34780,6 +34928,19 @@
       "path": "docs/PAULI_EXCLUSION_FROM_SPIN_STATISTICS_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/pauli_exclusion_check.py",
       "title": "Pauli Exclusion Principle from Retained Spin-Statistics Theorem"
+    },
+    "per_site_su2_spin_half_theorem_note_2026-05-02": {
+      "claim_id": "per_site_su2_spin_half_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "d0d7638afb212531bbc0474d17b5822785fc916e59783c593954542fc87d8d33",
+      "path": "docs/PER_SITE_SU2_SPIN_HALF_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/per_site_su2_spin_half_check.py",
+      "title": "Per-Site Cl(3) Hilbert Carries the Unique j = 1/2 Spin Irrep of su(2)"
     },
     "periodic_2d_wraparound_fix_note_2026-04-11": {
       "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
@@ -35060,9 +35221,9 @@
       "claim_id": "physical_lattice_necessity_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "604fbbc8a6a18e2cb89d54692178565b40ef3fe3321f40263fbea829b63aba04",
+      "note_hash": "99107dea55040bdc13659d9f1618167ac5fee0590c8b7b836bc2ba58f0bb0246",
       "path": "docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md",
       "runner_path": "scripts/frontier_physical_lattice_necessity.py",
       "title": "Physical-Lattice Necessity / No-Same-Stack Regulator Boundary Note"
@@ -42041,10 +42202,9 @@
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
-        "z2_hw1_mass_matrix_parametrization_note",
-        "generation_axiom_boundary_note"
+        "z2_hw1_mass_matrix_parametrization_note"
       ],
-      "note_hash": "5db23c7536c4a68b870736a1c82311c98d4bce81c2a7ceb79bb31c9047ac3915",
+      "note_hash": "32a55ca11c605a95e80f2632a26adb031d1111ce8a02652b8bfb80e63d8fda80",
       "path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem Note"
@@ -42103,6 +42263,19 @@
       "path": "docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md",
       "runner_path": "scripts/frontier_two_sign_comparison.py",
       "title": "Two-Sign Comparison Note"
+    },
+    "u1_fermion_number_conservation_theorem_note_2026-05-02": {
+      "claim_id": "u1_fermion_number_conservation_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "007912e193e28d7f8386814a956883c5cd0e619d02aa24794cfdc22af3acf4de",
+      "path": "docs/U1_FERMION_NUMBER_CONSERVATION_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/u1_fermion_number_conservation_check.py",
+      "title": "U(1) Fermion-Number Conservation from Cited Lattice Noether N2"
     },
     "unification_basin_failure_note": {
       "claim_id": "unification_basin_failure_note",
@@ -43517,6 +43690,20 @@
       "path": "docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md",
       "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
       "title": "Wide-Lattice `h^2+T` Skeptic Audit Note"
+    },
+    "wigner_mode_low_d_sublattice_theorem_note_2026-05-02": {
+      "claim_id": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "f320855379529305ba69244dacacf5b787e4d2e0de7ee66b802c181504152ce9",
+      "path": "docs/WIGNER_MODE_LOW_D_SUBLATTICE_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/wigner_mode_low_d_sublattice_check.py",
+      "title": "Wigner Mode Realization on 1D/2D Sublattices of Z\u00b3 (CMW + Noether)"
     },
     "wilson_mu2_distance_sweep_note_2026-04-11": {
       "claim_id": "wilson_mu2_distance_sweep_note_2026-04-11",
@@ -45156,6 +45343,17 @@
       "path": "docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
       "runner_path": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py",
       "title": "Z_2 `hw=1` Mass-Matrix Parametrization Note"
+    },
+    "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02": {
+      "claim_id": "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "c53d418663d6554553aa534f41be32d7f86d3b460d1a8dfb52f9ddcf02f30655",
+      "path": "docs/Z3_CONJUGATE_SUPPORT_TRICHOTOMY_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_z3_conjugate_support_trichotomy_narrow.py",
+      "title": "Z_3 Conjugate-Pair Support Trichotomy Narrow Theorem"
     }
   },
   "roots": [
@@ -45333,6 +45531,7 @@
     "chiral_layer_oscillation_2026-04-09",
     "chiral_split_mass_gravity_note",
     "chiral_walk_synthesis_2026-04-09",
+    "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_from_mass_hierarchy_note",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
@@ -45460,7 +45659,6 @@
     "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15",
     "dm_neutrino_cascade_geometry_note_2026-04-14",
     "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
-    "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
     "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16",
     "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
     "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
@@ -46374,28 +46572,29 @@
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
     "yt_ward_identity_derivation_theorem",
     "yt_zero_import_chain_note",
-    "z2_hw1_mass_matrix_parametrization_note"
+    "z2_hw1_mass_matrix_parametrization_note",
+    "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02"
   ],
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 10,
+      "bounded_theorem": 12,
       "meta": 1,
-      "none": 1750,
-      "positive_theorem": 24
+      "none": 1742,
+      "positive_theorem": 42
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 510,
+      "bounded_theorem": 512,
       "meta": 1,
-      "no_go": 105,
-      "none": 443,
+      "no_go": 106,
+      "none": 440,
       "open_gate": 109,
-      "positive_theorem": 617
+      "positive_theorem": 629
     },
-    "edge_count": 4990,
-    "leaf_count": 755,
-    "node_count": 1785,
-    "root_count": 1216,
-    "runners_with_path": 1352
+    "edge_count": 5001,
+    "leaf_count": 763,
+    "node_count": 1797,
+    "root_count": 1217,
+    "runners_with_path": 1365
   }
 }
