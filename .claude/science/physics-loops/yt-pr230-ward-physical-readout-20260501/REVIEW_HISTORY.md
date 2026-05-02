@@ -3295,3 +3295,17 @@ Disposition: exact negative boundary.  Current dynamics do not force neutral
 rank one; a positive two-pole family keeps the source-created pole mass and
 residue fixed while canonical-Higgs overlap varies.  No retained or
 proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 146 Orthogonal Neutral Decoupling No-Go
+
+Review stance: decoupling shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_orthogonal_neutral_decoupling_no_go.py`.
+- Added `docs/YT_ORTHOGONAL_NEUTRAL_DECOUPLING_NO_GO_NOTE_2026-05-02.md`.
+- Added `outputs/yt_orthogonal_neutral_decoupling_no_go_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  Finite/heavy orthogonal neutral mass
+gaps do not certify source-pole purity or zero orthogonal top coupling without
+a decoupling-scaling theorem.  No retained or proposed-retained wording is
+allowed.

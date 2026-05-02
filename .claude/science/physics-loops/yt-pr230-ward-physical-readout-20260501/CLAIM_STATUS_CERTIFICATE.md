@@ -1913,3 +1913,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 Current dynamics do not force rank one.  A finite orthogonal neutral pole can
 remain with fixed source pole mass/residue while canonical-Higgs overlap
 varies.  No retained or `proposed_retained` wording is authorized.
+
+Orthogonal neutral decoupling no-go checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / orthogonal neutral decoupling shortcut not derived
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_orthogonal_neutral_decoupling_no_go.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=98 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=124 FAIL=0
+```
+
+A finite/heavy orthogonal neutral mass gap alone does not force
+`cos(theta)=1` or zero orthogonal top coupling.  No retained or
+`proposed_retained` wording is authorized.

@@ -199,6 +199,9 @@ def main() -> int:
         "neutral_scalar_dynamical_rank_one_closure": load(
             "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json"
         ),
+        "orthogonal_neutral_decoupling_no_go": load(
+            "outputs/yt_orthogonal_neutral_decoupling_no_go_2026-05-02.json"
+        ),
         "fh_gauge_response_mixed_scalar": load(
             "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json"
         ),
@@ -709,6 +712,12 @@ def main() -> int:
         "dynamical rank-one neutral scalar theorem not derived"
         in str(statuses["neutral_scalar_dynamical_rank_one_closure"]),
         statuses["neutral_scalar_dynamical_rank_one_closure"],
+    )
+    report(
+        "orthogonal-neutral-decoupling-no-go-blocks",
+        "orthogonal neutral decoupling shortcut not derived"
+        in str(statuses["orthogonal_neutral_decoupling_no_go"]),
+        statuses["orthogonal_neutral_decoupling_no_go"],
     )
     report(
         "fh-gauge-response-mixed-scalar-blocks",
@@ -1222,7 +1231,9 @@ def main() -> int:
             "The dynamical rank-one closure attempt then shows the current "
             "dynamical surface still permits a finite orthogonal neutral pole "
             "with fixed source pole mass/residue and varying canonical-Higgs "
-            "overlap.  "
+            "overlap.  The orthogonal-neutral decoupling no-go blocks using a "
+            "finite/heavy mass gap as source-pole purity without a scaling "
+            "theorem.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

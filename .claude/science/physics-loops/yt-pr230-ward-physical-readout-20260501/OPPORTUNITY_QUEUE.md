@@ -483,3 +483,9 @@ Higgs overlap varies.  Do not spend another block on rank-one dynamics without
 a new microscopic premise; prioritize chunk011 processing, same-surface
 `O_H`/`C_sH`/`C_HH` implementation, W/Z response with identity certificates,
 or a stronger source-Higgs identity theorem.
+
+Orthogonal-neutral decoupling update: finite/heavy mass gaps alone are now
+blocked as source-pole purity.  A future decoupling route must derive a
+scaling theorem tying overlap or orthogonal top coupling to the heavy mass
+limit; otherwise prioritize chunk011, same-surface `O_H`/`C_sH`/`C_HH`,
+W/Z response with identity certificates, or a source-Higgs identity theorem.

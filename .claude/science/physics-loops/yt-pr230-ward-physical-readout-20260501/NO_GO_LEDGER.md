@@ -1897,3 +1897,16 @@ positive two-pole neutral scalar family keeps the source-created pole mass and
 source residue fixed while the canonical-Higgs overlap varies.  Therefore the
 rank-one route still needs a real dynamical theorem, same-surface `C_sH` /
 `C_HH` Gram-purity data, or an equivalent Higgs-identity certificate.
+
+Finite/heavy orthogonal neutral mass gap is not decoupling closure:
+
+```text
+python3 scripts/frontier_yt_orthogonal_neutral_decoupling_no_go.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+A finite or heavy orthogonal neutral pole cannot be dismissed without a
+derived scaling theorem.  The source pole mass and residue can stay fixed while
+the orthogonal mass grows and the canonical-Higgs overlap remains below one.
+Do not use generic mass-gap language, finite orthogonal masses, or decoupling
+intuition as source-pole purity or zero orthogonal top coupling.

@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=97 FAIL=0
+# SUMMARY: PASS=98 FAIL=0
 ```
 
 The runner verifies:
@@ -85,6 +85,7 @@ The runner verifies:
 | neutral scalar response space rank-one purity gate is passed | no |
 | neutral scalar commutant rank-one purity is forced | no |
 | dynamical rank-one neutral scalar theorem is derived | no |
+| orthogonal neutral decoupling shortcut is derived | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -215,6 +216,10 @@ shortcut.  A positive two-pole neutral scalar family can keep the source pole
 mass and residue fixed while a finite orthogonal pole remains and the
 canonical-Higgs overlap varies.  Therefore the current dynamical surface does
 not yet certify rank-one purity.
+The orthogonal-neutral decoupling no-go blocks the next fallback: a finite or
+heavy orthogonal mass gap alone does not set `cos(theta)=1` or zero the
+orthogonal top coupling.  A scaling/decoupling theorem or source-Higgs
+Gram-purity data is still required.
 The chunked FH/LSZ route has also advanced only as bounded support:
 chunks009-010 are seed-controlled and combiner-ready, raising the current
 L12 ready set to `10/63` chunks and `160/1000` saved configurations.  Response
@@ -430,6 +435,11 @@ alternative directly and still fails.  The current certificates do not remove
 a finite orthogonal neutral pole; the source-created pole mass/residue can
 stay fixed while canonical-Higgs overlap and example physical `y_t` vary.
 No retained/proposed-retained wording is authorized.
+
+The orthogonal-neutral decoupling no-go blocks treating that finite pole as
+harmless from a mass gap alone.  Raising the orthogonal mass while keeping the
+source pole mass/residue fixed does not by itself force overlap one or zero
+orthogonal top coupling.  No retained/proposed-retained wording is authorized.
 
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive

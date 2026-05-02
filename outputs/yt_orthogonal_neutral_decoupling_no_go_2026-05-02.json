@@ -1,0 +1,48 @@
+{
+  "actual_current_surface_status": "exact negative boundary / orthogonal neutral decoupling shortcut not derived",
+  "decoupling_scaling_theorem_derived": false,
+  "exact_next_action": "Derive a decoupling-scaling theorem, measure C_sH/C_HH Gram purity, derive a stronger source-Higgs identity theorem, implement W/Z response with identity certificates, or process FH/LSZ chunks.",
+  "fail_count": 0,
+  "heavy_orthogonal_counterfamily": [
+    {
+      "canonical_higgs_overlap_with_source_pole": 0.8,
+      "mass_gap_alone_sets_overlap_to_one": false,
+      "orthogonal_overlap_component": 0.5999999999999999,
+      "orthogonal_pole_gap_from_source": 1.75,
+      "orthogonal_pole_mass_sq": 2.0,
+      "requires_decoupling_scaling_theorem": true,
+      "source_pole_mass_sq": 0.25,
+      "source_pole_residue": 1.0
+    },
+    {
+      "canonical_higgs_overlap_with_source_pole": 0.8,
+      "mass_gap_alone_sets_overlap_to_one": false,
+      "orthogonal_overlap_component": 0.5999999999999999,
+      "orthogonal_pole_gap_from_source": 9.75,
+      "orthogonal_pole_mass_sq": 10.0,
+      "requires_decoupling_scaling_theorem": true,
+      "source_pole_mass_sq": 0.25,
+      "source_pole_residue": 1.0
+    },
+    {
+      "canonical_higgs_overlap_with_source_pole": 0.8,
+      "mass_gap_alone_sets_overlap_to_one": false,
+      "orthogonal_overlap_component": 0.5999999999999999,
+      "orthogonal_pole_gap_from_source": 99.75,
+      "orthogonal_pole_mass_sq": 100.0,
+      "requires_decoupling_scaling_theorem": true,
+      "source_pole_mass_sq": 0.25,
+      "source_pole_residue": 1.0
+    }
+  ],
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No decoupling-scaling theorem or same-surface source-Higgs purity certificate is present.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set cos(theta)=1 or kappa_s=1",
+    "does not infer decoupling from a finite mass gap alone",
+    "does not use observed masses, H_unit readout, yt_ward_identity authority, alpha_LM, plaquette, u0, or reduced pilots"
+  ],
+  "verdict": "A finite or heavy orthogonal neutral pole is not automatically harmless on the current surface.  The source pole mass and residue can remain fixed while the orthogonal mass is raised and the canonical-Higgs overlap stays below one.  Decoupling would require a theorem tying the overlap or orthogonal top coupling to the heavy mass limit, same-surface C_sH/C_HH Gram-purity data, or an accepted Higgs-identity certificate."
+}

@@ -121,6 +121,7 @@ def main() -> int:
         "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
         "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
         "neutral_scalar_dynamical_rank_one_closure": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+        "orthogonal_neutral_decoupling_no_go": "outputs/yt_orthogonal_neutral_decoupling_no_go_2026-05-02.json",
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
         "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
         "no_orthogonal_top_coupling_selection_rule": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
@@ -675,6 +676,15 @@ def main() -> int:
         )
         is False
     )
+    orthogonal_neutral_decoupling_no_go_blocks = (
+        "orthogonal neutral decoupling shortcut not derived"
+        in certificates["orthogonal_neutral_decoupling_no_go"].get("actual_current_surface_status", "")
+        and certificates["orthogonal_neutral_decoupling_no_go"].get("proposal_allowed") is False
+        and certificates["orthogonal_neutral_decoupling_no_go"].get(
+            "decoupling_scaling_theorem_derived"
+        )
+        is False
+    )
     fh_gauge_response_mixed_scalar_blocks = (
         "FH gauge-response mixed-scalar obstruction"
         in certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", "")
@@ -1178,6 +1188,11 @@ def main() -> int:
         certificates["neutral_scalar_dynamical_rank_one_closure"].get("actual_current_surface_status", ""),
     )
     report(
+        "orthogonal-neutral-decoupling-no-go-blocks",
+        orthogonal_neutral_decoupling_no_go_blocks,
+        certificates["orthogonal_neutral_decoupling_no_go"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-gauge-response-mixed-scalar-blocks",
         fh_gauge_response_mixed_scalar_blocks,
         certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", ""),
@@ -1520,7 +1535,10 @@ def main() -> int:
             "closure attempt also fails on the current surface: a positive "
             "two-pole neutral scalar family keeps the source pole mass and "
             "residue fixed while a finite orthogonal pole and varying "
-            "canonical-Higgs overlap remain allowed.  "
+            "canonical-Higgs overlap remain allowed.  The orthogonal-neutral "
+            "decoupling no-go also blocks dismissing that pole by finite mass "
+            "gap alone; no current theorem ties the overlap or top coupling to "
+            "inverse orthogonal mass.  "
             "A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "

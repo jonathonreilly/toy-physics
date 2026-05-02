@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-145-neutral-scalar-dynamical-rank-one-closure-attempt
-blocks_completed: 145
-active_route: "Neutral scalar dynamical rank-one closure attempt"
-active_hard_residual: "The immediate dynamics route is blocked: current certificates do not remove a finite orthogonal neutral pole, and a two-pole neutral family keeps source pole mass/residue fixed while canonical-Higgs overlap varies."
+current_phase: campaign-rerun-block-146-orthogonal-neutral-decoupling-no-go
+blocks_completed: 146
+active_route: "Orthogonal neutral decoupling no-go"
+active_hard_residual: "Finite/heavy orthogonal neutral mass gaps do not by themselves certify source-pole purity; no current theorem ties canonical-Higgs overlap or orthogonal top coupling to inverse orthogonal mass."
 files_touched:
   - "scripts/frontier_yt_source_higgs_cross_correlator_manifest.py"
   - "docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_MANIFEST_NOTE_2026-05-02.md"
@@ -27,6 +27,9 @@ files_touched:
   - "scripts/frontier_yt_neutral_scalar_dynamical_rank_one_closure_attempt.py"
   - "docs/YT_NEUTRAL_SCALAR_DYNAMICAL_RANK_ONE_CLOSURE_ATTEMPT_NOTE_2026-05-02.md"
   - "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json"
+  - "scripts/frontier_yt_orthogonal_neutral_decoupling_no_go.py"
+  - "docs/YT_ORTHOGONAL_NEUTRAL_DECOUPLING_NO_GO_NOTE_2026-05-02.md"
+  - "outputs/yt_orthogonal_neutral_decoupling_no_go_2026-05-02.json"
   - "scripts/frontier_yt_retained_closure_route_certificate.py"
   - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
   - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
@@ -717,6 +720,7 @@ claim_state_movement:
   - "added a source-Higgs cross-correlator production manifest: future O_H/C_sH/C_HH measurements now have a minimum schema, but current harness output remains C_ss-only and no production certificate exists"
   - "proved a neutral-scalar commutant rank no-go: current neutral scalar labels and D17 support do not force rank-one response, and a rank-two same-label response family keeps source-only C_ss fixed while canonical-Higgs overlap remains uncertified"
   - "attempted neutral-scalar dynamical rank-one closure: current certificates do not remove a finite orthogonal neutral pole, and a two-pole neutral scalar family keeps source pole mass/residue fixed while canonical-Higgs overlap varies"
+  - "proved an orthogonal-neutral decoupling no-go: finite or heavy orthogonal mass gaps alone do not set cos(theta)=1 or zero orthogonal top coupling without a scaling theorem or source-Higgs purity data"
 actual_current_surface_status: "open / exact negative boundary plus bounded production support"
 conditional_surface_status: "future production evidence remains conditional on completed chunks, target-observable autocorrelation/ESS certification, passed finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity"
 hypothetical_axiom_status: null
@@ -725,5 +729,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll chunk011 and process it if complete; otherwise implement same-surface O_H/C_sH/C_HH measurement rows, add W/Z response with identity certificates, derive a stronger source-Higgs identity theorem, or continue seed-controlled FH/LSZ production. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, D17 carrier support, symmetry-only commutant rank arguments, finite orthogonal neutral-pole assumptions, source-only pole purity, missing C_sH/C_HH authority, missing O_H realization, C_sH manifest support, H_unit-as-O_H substitution, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 10/63 L12 chunks, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Poll chunk011 and process it if complete; otherwise implement same-surface O_H/C_sH/C_HH measurement rows, add W/Z response with identity certificates, derive a stronger source-Higgs identity theorem, derive a real decoupling-scaling theorem, or continue seed-controlled FH/LSZ production. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, D17 carrier support, symmetry-only commutant rank arguments, finite orthogonal neutral-pole assumptions, finite/heavy orthogonal mass gaps, source-only pole purity, missing C_sH/C_HH authority, missing O_H realization, C_sH manifest support, H_unit-as-O_H substitution, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 10/63 L12 chunks, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

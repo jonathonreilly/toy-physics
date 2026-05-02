@@ -1388,3 +1388,26 @@ Next exact action: poll chunk011.  If complete, process it.  If not, pivot to
 same-surface `O_H`/`C_sH`/`C_HH` rows, W/Z response with identity
 certificates, a stronger source-Higgs identity theorem, or continued
 seed-controlled FH/LSZ production.
+
+Block 146 added the orthogonal neutral decoupling no-go:
+
+```text
+python3 scripts/frontier_yt_orthogonal_neutral_decoupling_no_go.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=98 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=124 FAIL=0
+```
+
+Result: finite/heavy orthogonal neutral mass gaps do not certify source-pole
+purity.  No current theorem ties canonical-Higgs overlap or orthogonal top
+coupling to inverse orthogonal mass.  No retained/proposed-retained wording is
+authorized.
+
+Next exact action: poll chunk011.  If complete, process it.  If not, pivot to
+same-surface `O_H`/`C_sH`/`C_HH` rows, W/Z response with identity
+certificates, a stronger source-Higgs identity theorem, a real
+decoupling-scaling theorem, or continued seed-controlled FH/LSZ production.

@@ -695,3 +695,11 @@ do not derive rank-one purity merely because the source-created pole mass and
 residue can be measured.  Rank-one closure requires a new microscopic theorem,
 same-surface `C_sH` / `C_HH` Gram-purity data, or an accepted source-Higgs
 identity certificate.
+
+2026-05-02 orthogonal neutral decoupling no-go:
+
+Finite or heavy orthogonal neutral mass gaps may not be used as decoupling
+closure unless a current-surface theorem derives the required scaling of
+source-Higgs overlap or orthogonal top coupling.  Generic gap language is
+support only and does not certify `cos(theta)=1`, `kappa_s`, or source-pole
+purity.
