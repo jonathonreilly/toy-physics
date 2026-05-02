@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-15 (last citation-graph repair: 2026-05-02)
 **Status:** current public framework memo for the `Cl(3)` / `Z^3` package
+**Type:** meta
 
 This file records the smallest input stack the current package actually uses.
 It is not a claim that every downstream lane is already closed, and it is not

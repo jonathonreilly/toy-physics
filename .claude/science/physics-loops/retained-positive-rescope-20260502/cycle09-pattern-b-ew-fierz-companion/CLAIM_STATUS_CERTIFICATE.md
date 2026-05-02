@@ -6,7 +6,7 @@
 
 ## Block type
 
-**Pattern B — Audit-acceleration companion runner.** Not a new claim row, not a new source note, and not an audit verdict. Provides exact-precision companion evidence that the parent row's load-bearing step (Fierz channel-fraction identity F_adjoint = (N_c² − 1)/N_c²) is a class-(A) algebraic identity, not a numerical coincidence at N_c = 3.
+**Pattern B — Audit-acceleration companion runner.** Not a new claim row, not a new source note, and not an audit outcome. Provides exact-precision companion evidence that the parent row's load-bearing step (Fierz channel-fraction identity F_adjoint = (N_c² − 1)/N_c²) is a class-(A) algebraic identity, not a numerical coincidence at N_c = 3.
 
 ## Audit-lane positioning
 
