@@ -90,6 +90,7 @@ def main() -> int:
         ),
         "fh_lsz_chunk_combiner_gate": load("outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"),
         "fh_lsz_chunk001_checkpoint": load("outputs/yt_fh_lsz_chunk001_checkpoint_certificate_2026-05-02.json"),
+        "fh_lsz_chunk002_checkpoint": load("outputs/yt_fh_lsz_chunk002_checkpoint_certificate_2026-05-02.json"),
         "fh_lsz_pole_fit_kinematics": load("outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"),
         "fh_lsz_pole_fit_postprocessor": load("outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json"),
         "fh_lsz_finite_shell_identifiability": load(
@@ -352,6 +353,11 @@ def main() -> int:
         "fh-lsz-chunk001-checkpoint-not-closure",
         "chunk001 production checkpoint" in str(statuses["fh_lsz_chunk001_checkpoint"]),
         statuses["fh_lsz_chunk001_checkpoint"],
+    )
+    report(
+        "fh-lsz-chunk002-checkpoint-not-closure",
+        "chunk002 production checkpoint" in str(statuses["fh_lsz_chunk002_checkpoint"]),
+        statuses["fh_lsz_chunk002_checkpoint"],
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",
@@ -681,9 +687,9 @@ def main() -> int:
             "requires run-control provenance before L12 combination; the "
             "chunk commands now use chunk-local artifact directories and "
             "per-chunk resume to avoid cross-chunk artifact collisions.  "
-            "Chunk001 has completed as a production-phase, combiner-ready "
-            "L12 chunk, but it is only one of 63 L12 chunks and no combined "
-            "L12 summary exists.  "
+            "Chunk001 and chunk002 have completed as production-phase, "
+            "combiner-ready L12 chunks, but this is still only two of 63 L12 "
+            "chunks and no combined L12 summary exists.  "
             "The pole-fit kinematics gate shows the current scalar modes give "
             "only one nonzero momentum shell, so four-mode chunk completion is "
             "not by itself an isolated-pole derivative.  "

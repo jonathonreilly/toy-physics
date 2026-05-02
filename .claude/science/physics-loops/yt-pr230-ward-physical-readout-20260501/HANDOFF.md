@@ -467,16 +467,16 @@ The FH/LSZ pole-fit model-class gate now makes that rule executable.  It
 blocks finite-shell pole fits unless a model-class, analytic-continuation,
 pole-saturation, continuum, or microscopic scalar-denominator certificate is
 present.
-Chunk001 of the L12_T24 FH/LSZ production manifest has completed.  It is
-production-phase and combiner-ready, with same-source `dE/ds` and four-mode
-same-source scalar-LSZ rows.  The combiner remains blocking because only
-`1/63` L12 chunks are ready, and L16/L24 plus pole/model-class/FV/IR gates are
-still open.
 The Stieltjes model-class obstruction checks the natural positivity repair to
 the finite-shell ambiguity.  Positive pole-plus-continuum models can keep the
 same finite shell values and the same pole while changing the pole residue, so
 spectral positivity alone is not the required model-class certificate.
+Chunk001 and chunk002 of the L12_T24 FH/LSZ production manifest have now
+completed.  They are production-phase and combiner-ready, with same-source
+`dE/ds` and four-mode same-source scalar-LSZ rows.  The combiner remains
+blocking because only `2/63` L12 chunks are ready, and L16/L24 plus
+pole/model-class/FV/IR gates are still open.
 
-Next exact action: keep chunk002 running under the non-evidence combiner gate.
-In parallel, strengthen the model-class gate toward pole-saturation /
+Next exact action: launch or schedule chunk003 under the non-evidence combiner
+gate.  In parallel, strengthen the model-class gate toward pole-saturation /
 continuum-threshold evidence or continue the scalar denominator theorem.

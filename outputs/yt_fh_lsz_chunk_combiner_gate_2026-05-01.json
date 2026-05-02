@@ -10,11 +10,11 @@
   ],
   "actual_current_surface_status": "open / FH-LSZ chunk combiner gate blocks partial evidence",
   "chunk_summary": {
-    "available_saved_configurations": 16,
+    "available_saved_configurations": 32,
     "expected_chunks": 63,
-    "missing_chunks": 62,
-    "present_chunks": 1,
-    "ready_chunks": 1,
+    "missing_chunks": 61,
+    "present_chunks": 2,
+    "ready_chunks": 2,
     "target_saved_configurations": 1000
   },
   "combined_output_target": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json",
@@ -24,13 +24,6 @@
   },
   "fail_count": 0,
   "first_blocking_issues": [
-    {
-      "chunk_index": 2,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json"
-    },
     {
       "chunk_index": 3,
       "issues": [
@@ -93,10 +86,16 @@
         "chunk output absent"
       ],
       "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk011_2026-05-01.json"
+    },
+    {
+      "chunk_index": 12,
+      "issues": [
+        "chunk output absent"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk012_2026-05-01.json"
     }
   ],
   "first_missing_outputs": [
-    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
     "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk003_2026-05-01.json",
     "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk004_2026-05-01.json",
     "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk005_2026-05-01.json",
@@ -105,7 +104,8 @@
     "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk008_2026-05-01.json",
     "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk009_2026-05-01.json",
     "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json",
-    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk011_2026-05-01.json"
+    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk011_2026-05-01.json",
+    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk012_2026-05-01.json"
   ],
   "manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
   "pass_count": 8,
@@ -117,5 +117,5 @@
     "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0 as proof selectors",
     "does not set c2, Z_match, or kappa_s to one"
   ],
-  "verdict": "The L12 chunked FH/LSZ path now has an auditable combiner gate. 1 of 63 L12 chunk outputs are ready; the set is still partial.  Chunks must expose production phase, same-source dE/ds and C_ss(q), scalar-source non-readout metadata, and run-control provenance before an L12 combined summary can be constructed.  Even a complete L12 combination is not PR #230 closure because L16/L24 scaling, an isolated scalar pole inverse-derivative fit, FV/IR/zero-mode control, and the retained-proposal certificate remain open."
+  "verdict": "The L12 chunked FH/LSZ path now has an auditable combiner gate. 2 of 63 L12 chunk outputs are ready; the set is still partial.  Chunks must expose production phase, same-source dE/ds and C_ss(q), scalar-source non-readout metadata, and run-control provenance before an L12 combined summary can be constructed.  Even a complete L12 combination is not PR #230 closure because L16/L24 scaling, an isolated scalar pole inverse-derivative fit, FV/IR/zero-mode control, and the retained-proposal certificate remain open."
 }

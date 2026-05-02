@@ -796,3 +796,18 @@ Adds an FH/LSZ Stieltjes model-class obstruction:
   continuum-threshold control, production acceptance certificate, or
   microscopic scalar denominator theorem is still required.
 ```
+
+Latest FH/LSZ chunk002 production checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ chunk002 production checkpoint:
+- chunk002 completed with production-phase metadata, same-source dE/ds, and
+  four-mode/x16 same-source scalar C_ss(q) rows;
+- the chunk combiner now sees present=2 ready=2 expected=63 and remains
+  blocking because no combined L12 summary exists;
+- runner passes `PASS=10 FAIL=0`; retained-route gate reports `PASS=51 FAIL=0`;
+  campaign status consumes 81 certificates and reports `PASS=77 FAIL=0`;
+- still no retained/proposed-retained closure: L12 needs 61 more chunks, then
+  L16/L24 scaling, pole/model-class gates, FV/IR control, and retained-proposal
+  certification.
+```

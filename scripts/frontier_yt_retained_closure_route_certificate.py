@@ -82,6 +82,7 @@ def main() -> int:
         "fh_lsz_chunked_production_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
         "fh_lsz_chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
         "fh_lsz_chunk001_checkpoint": "outputs/yt_fh_lsz_chunk001_checkpoint_certificate_2026-05-02.json",
+        "fh_lsz_chunk002_checkpoint": "outputs/yt_fh_lsz_chunk002_checkpoint_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
         "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
         "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
@@ -308,6 +309,12 @@ def main() -> int:
         in certificates["fh_lsz_chunk001_checkpoint"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_chunk001_checkpoint"].get("proposal_allowed") is False
         and certificates["fh_lsz_chunk001_checkpoint"].get("chunk_summary", {}).get("combiner_ready_chunks") == 1
+    )
+    chunk002_checkpoint_not_closure = (
+        "chunk002 production checkpoint"
+        in certificates["fh_lsz_chunk002_checkpoint"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_chunk002_checkpoint"].get("proposal_allowed") is False
+        and certificates["fh_lsz_chunk002_checkpoint"].get("chunk_summary", {}).get("combiner_ready_chunks") == 2
     )
     pole_fit_kinematics_not_closure = (
         "scalar-pole kinematics gate"
@@ -554,6 +561,11 @@ def main() -> int:
         certificates["fh_lsz_chunk001_checkpoint"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-chunk002-checkpoint-not-closure",
+        chunk002_checkpoint_not_closure,
+        certificates["fh_lsz_chunk002_checkpoint"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-kinematics-not-closure",
         pole_fit_kinematics_not_closure,
         certificates["fh_lsz_pole_fit_kinematics"].get("actual_current_surface_status", ""),
@@ -747,8 +759,8 @@ def main() -> int:
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action.  Continue chunked production with chunk002 "
-            "or scheduler handoff; do not treat chunk001 as retained evidence.  "
+            "the retained action.  Continue chunked production with chunk003 "
+            "or scheduler handoff; do not treat chunk001/chunk002 as retained evidence.  "
             "Before treating any finite-shell pole fit as "
             "load-bearing, add a model-class/analytic-continuation gate or a "
             "theorem excluding shell-vanishing derivative deformations.  If "

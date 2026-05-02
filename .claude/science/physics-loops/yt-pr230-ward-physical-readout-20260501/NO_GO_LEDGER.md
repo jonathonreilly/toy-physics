@@ -62,6 +62,18 @@ Chunk001 is production-phase and combiner-ready, but it is only `1/63` of L12.
 No combined L12 summary, L16/L24 scaling, pole derivative, model-class
 certificate, or FV/IR/zero-mode control exists.  It is bounded support only.
 
+Chunk002 production checkpoint:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk002_checkpoint_certificate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Chunk002 is also production-phase and combiner-ready, bringing the present set
+to `2/63` of L12.  No combined L12 summary, L16/L24 scaling, pole derivative,
+model-class certificate, or FV/IR/zero-mode control exists.  It remains
+bounded support only.
+
 Stieltjes positivity does not close the finite-shell model-class gate:
 
 ```text

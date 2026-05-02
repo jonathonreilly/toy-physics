@@ -141,8 +141,8 @@ probability.
   pole-plus-continuum representations can still agree on finite shells and the
   pole while changing the residue, so positivity alone is not the missing
   model-class certificate.
-  Chunk001 is now complete and combiner-ready, which validates the chunk-local
-  protocol but does not change claim status: it is `1/63` of L12 and still
+  Chunk001 and chunk002 are now complete and combiner-ready, which validates
+  the chunk-local protocol but does not change claim status: this is `2/63` of L12 and still
   lacks L16/L24 scaling, pole/model-class, and FV/IR gates.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
