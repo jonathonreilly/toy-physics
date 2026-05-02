@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:26:00.980274+00:00
+**Generated:** 2026-05-02T23:27:35.853374+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 195 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 517 |
+| unaudited | 516 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 648 |
+| ~~audited_conditional~~ | 649 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 398 |
-| `audited_conditional` | 648 |
+| `audited_conditional` | 649 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 554 |
+| `unaudited` | 553 |
 
 | claim_type | count |
 |---|---:|
@@ -792,6 +792,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | F | - |
 | `gr_class_expansion_finite_rank_target_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `grav_decoherence_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -8079,6 +8080,22 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`
   - `scripts/global_coherence_predictor.py`
+- **auditor confidence:** high
+
+### `gluon_tree_level_masslessness_theorem_note_2026-05-02`
+
+- **Note:** [`GLUON_TREE_LEVEL_MASSLESSNESS_THEOREM_NOTE_2026-05-02.md`](../../docs/GLUON_TREE_LEVEL_MASSLESSNESS_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Tree-level gluon masslessness on the framework's structural SU(3) surface, conditional on a retained bridge from graph-first su(3) closure to a local Lorentz-covariant Yang-Mills SU(3) gauge connection/action and propagator.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** Let A_mu^a be the SU(3) gauge connection on the framework's retained SU(3) gauge action surface, obeying the standard non-abelian gauge transformation law; then A_mu^a A^{a mu} is not gauge invariant unless m=0 and the kinetic inverse propagator has pole p^2=0.  _(class `F`)_
+- **chain closes:** False — The cited dependencies retain bounded structural su(3) closure on graph-first/cubic surfaces, but they do not themselves construct a local Lorentz-covariant Yang-Mills connection, gauge action, or propagator for framework gluons. The runner verifies the standard Yang-Mills algebra after assuming that bridge, not the bridge from the retained framework structure.
+- **rationale:** Issue: the proof imports the standard SU(3) gauge-connection transformation law, Lorentz-covariant Yang-Mills kinetic term, and propagator surface as if they were already retained framework outputs. Why this blocks: structural su(3) closure is not by itself a theorem that the framework has a local Yang-Mills gauge field A_mu^a with the standard action and tree-level propagator. Repair target: add a retained bridge theorem and runner deriving the local SU(3) gauge connection/action and quadratic propagator surface from the graph-first structural su(3) closure. Claim boundary until fixed: in an assumed standard SU(3) Yang-Mills theory, the explicit mass term A_mu^a A^{a mu} is gauge-noninvariant and the tree-level kinetic propagator is massless.
+- **open / conditional deps cited:**
+  - `NATIVE_GAUGE_CLOSURE_NOTE.md`
+  - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `gr_class_expansion_finite_rank_target_note`
