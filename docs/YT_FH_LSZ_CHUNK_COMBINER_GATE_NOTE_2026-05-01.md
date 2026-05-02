@@ -17,7 +17,8 @@ The gate reconstructs the full L12 chunk grid and audits future chunk outputs
 for:
 
 - `metadata.phase == "production"`;
-- run-control provenance, including the expected seed and command settings;
+- run-control provenance, including the expected seed, command settings, and
+  chunk-local production artifact directory;
 - same-source `dE_top/ds` from shifts `-0.01, 0.0, 0.01`;
 - same-source `C_ss(q)` / `Gamma_ss(q)` for modes `0,0,0`, `1,0,0`,
   `0,1,0`, and `0,0,1`;
@@ -34,6 +35,8 @@ ready chunks: 0
 
 The production harness now records `metadata.run_control`, so future chunk
 certificates expose the seed and command settings needed by the combiner.
+The combiner also verifies the manifest reconstructs `63` unique artifact
+directories.
 
 ## Claim Boundary
 
@@ -53,5 +56,5 @@ retained-proposal certificate.
 ```bash
 python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py scripts/yt_direct_lattice_correlator_production.py
 python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
-# SUMMARY: PASS=7 FAIL=0
+# SUMMARY: PASS=8 FAIL=0
 ```

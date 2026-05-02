@@ -563,3 +563,19 @@ Adds an FH/LSZ chunk combiner gate:
   alone is not closure, and L16/L24 plus isolated-pole/FV/IR postprocess remain
   open.
 ```
+
+Latest FH/LSZ chunk command-isolation checkpoint text for PR #230:
+
+```text
+Tightens the FH/LSZ L12 chunk launch preflight:
+- each chunk command now uses a chunk-local `--production-output-dir` and
+  `--resume`, preventing completed per-volume artifacts from colliding across
+  independent chunks;
+- the combiner gate now verifies 63 unique chunk artifact directories and
+  requires future chunk certificates to record the matching run-control path;
+- chunked-manifest validator passes `PASS=10 FAIL=0`; combiner gate passes
+  `PASS=8 FAIL=0`; retained-route gate remains `PASS=37 FAIL=0`; campaign
+  status remains `PASS=63 FAIL=0`;
+- still no retained/proposed-retained closure: zero chunks are present, and
+  production pole/FV/IR plus L16/L24 remain open.
+```

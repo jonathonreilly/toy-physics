@@ -477,6 +477,8 @@ Future L12 chunks must record `metadata.run_control` with seed and command
 settings, and must pass production-phase same-source FH/LSZ checks before
 combination.  Missing, partial, or L12-only chunk sets are forbidden as proof
 selectors for physical `y_t`.
+The chunk manifest now also requires chunk-local artifact directories, so
+reusing or overwriting per-volume artifacts is not an allowed provenance path.
 
 Positive-closure candidates left after the assumption exercise:
 

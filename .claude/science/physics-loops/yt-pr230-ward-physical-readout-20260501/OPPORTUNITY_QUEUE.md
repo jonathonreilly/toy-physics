@@ -114,7 +114,9 @@ probability.
   does not cover L16/L24 or pole postprocessing.  The chunk combiner gate now
   closes the next procedural gap: future L12 chunks must be production phase,
   seed/command-auditable, and same-source FH/LSZ complete before L12
-  combination; the current ready chunk count is zero.  The same-source
+  combination; the current ready chunk count is zero.  The chunk commands now
+  use chunk-local artifact directories plus per-chunk resume, so artifact
+  collision is no longer the next launch blocker.  The same-source
   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
   pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic

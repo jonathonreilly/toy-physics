@@ -405,3 +405,6 @@ command provenance, production phase, same-source `dE/ds`, and same-source
 current gate finds `0` present / `0` ready chunks.  L12-only remains
 non-retained because L16/L24 scaling, isolated scalar-pole inverse derivative,
 FV/IR/zero-mode control, and retained-proposal certification are still open.
+The chunk launch commands have also been tightened: each command now uses a
+chunk-local `--production-output-dir` and `--resume`, so future
+`ensemble_measurement.json` artifacts cannot collide across chunks.

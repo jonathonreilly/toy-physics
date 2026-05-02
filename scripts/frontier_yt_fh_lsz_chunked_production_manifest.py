@@ -61,6 +61,10 @@ def command_for_chunk(chunk_index: int) -> dict[str, Any]:
         "outputs/yt_pr230_fh_lsz_production_L12_T24_"
         f"chunk{chunk_index:03d}_2026-05-01.json"
     )
+    production_output_dir = (
+        "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/"
+        f"L12_T24_chunk{chunk_index:03d}"
+    )
     seed = 2026051000 + chunk_index
     command = shell_join(
         [
@@ -85,6 +89,9 @@ def command_for_chunk(chunk_index: int) -> dict[str, Any]:
             f"'{SCALAR_MODES}'",
             "--scalar-two-point-noises",
             str(SCALAR_NOISES),
+            "--production-output-dir",
+            production_output_dir,
+            "--resume",
             "--seed",
             str(seed),
             "--output",
@@ -97,6 +104,7 @@ def command_for_chunk(chunk_index: int) -> dict[str, Any]:
         "volume": "12x24",
         "measurements": CHUNK_MEASUREMENTS,
         "output": output,
+        "production_output_dir": production_output_dir,
         "command": command,
         "status": "launch command only; not evidence until completed and combined by a postprocess certificate",
     }
@@ -155,6 +163,16 @@ def main() -> int:
         all("--production-targets" in row["command"] for row in example_commands),
         "example commands include production-targeted flag",
     )
+    report(
+        "commands-use-chunk-local-artifacts",
+        all("--production-output-dir" in row["command"] and f"chunk{row['chunk_index']:03d}" in row["command"] for row in example_commands),
+        "example commands isolate per-volume artifacts by chunk",
+    )
+    report(
+        "commands-resumable-per-chunk",
+        all("--resume" in row["command"] for row in example_commands),
+        "example commands can resume the chunk-local artifact if complete",
+    )
     report("not-production-evidence", True, "chunk manifest is launch planning only")
 
     result = {
@@ -196,6 +214,7 @@ def main() -> int:
             "each chunk must complete as production phase output",
             "chunks must be combined by a multi-chain FH/LSZ postprocess certificate",
             "the combination must preserve independent seeds, source shifts, scalar modes, and noise counts",
+            "each chunk must use a chunk-local production-output-dir so per-volume artifacts cannot collide",
             "the scalar pole derivative and FV/IR/zero-mode control must still pass the postprocess gate",
         ],
         "strict_non_claims": [

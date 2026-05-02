@@ -626,3 +626,21 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 No retained or proposed-retained wording is authorized.  The chunk combiner
 finds no present L12 chunks and remains an acceptance gate for future
 production data, not evidence.
+
+FH/LSZ chunk command-isolation checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ chunked production manifest
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_chunked_production_manifest.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The command-isolation update changes launch provenance only.  It prevents
+cross-chunk per-volume artifact collisions, but it supplies no production data
+and authorizes no retained/proposed-retained wording.

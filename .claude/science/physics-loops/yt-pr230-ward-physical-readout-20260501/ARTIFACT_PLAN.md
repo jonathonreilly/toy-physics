@@ -350,7 +350,8 @@ Next artifact:
   it remains non-evidence and larger volumes are still open); the chunk
   combiner gate now requires all 63 L12 outputs to be production phase with
   run-control provenance before constructing even an L12 combined summary, and
-  currently finds zero ready chunks
+  currently finds zero ready chunks; the chunk launch commands now isolate
+  each chunk's per-volume artifact directory and use per-chunk resume
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

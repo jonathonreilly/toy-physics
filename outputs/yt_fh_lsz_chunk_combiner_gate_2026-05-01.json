@@ -3,6 +3,7 @@
     "all 63 L12 chunk outputs must exist",
     "each chunk must declare metadata.phase == production",
     "each chunk must record run_control.seed and command settings matching the manifest",
+    "each chunk must record its chunk-local production_output_dir matching the manifest",
     "each chunk must contain same-source linear dE/ds with shifts -0.01, 0.0, 0.01",
     "each chunk must contain same-source scalar C_ss(q) modes 0,100,010,001 with 16 noises",
     "the combined L12 summary remains non-retained until L16/L24 and isolated-pole/FV/IR gates pass"
@@ -107,7 +108,7 @@
     "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json"
   ],
   "manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
-  "pass_count": 7,
+  "pass_count": 8,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The combiner is an acceptance boundary for future chunks; it supplies no completed production data and no scalar pole derivative.",
   "strict_non_claims": [

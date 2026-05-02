@@ -961,6 +961,21 @@ finds `0` present / `0` ready chunks.  Even a future complete L12 combination
 would still be non-retained without L16/L24, isolated scalar-pole derivative,
 FV/IR/zero-mode control, and retained-proposal certification.
 
+FH/LSZ chunk artifact-collision shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunked_production_manifest.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Chunk commands now include a chunk-local `--production-output-dir` plus
+`--resume`, and the combiner verifies 63 unique artifact directories.  A future
+chunk cannot be accepted by overwriting or reusing another chunk's completed
+per-volume artifact.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

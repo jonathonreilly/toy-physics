@@ -75,6 +75,10 @@ def expected_chunks(manifest: dict[str, Any]) -> list[dict[str, Any]]:
                     "outputs/yt_pr230_fh_lsz_production_L12_T24_"
                     f"chunk{index:03d}_2026-05-01.json"
                 ),
+                "production_output_dir": (
+                    "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/"
+                    f"L12_T24_chunk{index:03d}"
+                ),
             }
         )
     return rows
@@ -121,6 +125,8 @@ def audit_run_control(metadata: dict[str, Any], expected: dict[str, Any]) -> lis
         issues.append(f"scalar_two_point_modes={sorted(modes)}")
     if run_control.get("scalar_two_point_noises") != EXPECTED_NOISES:
         issues.append(f"scalar_two_point_noises={run_control.get('scalar_two_point_noises')!r}")
+    if run_control.get("production_output_dir") != expected["production_output_dir"]:
+        issues.append(f"production_output_dir={run_control.get('production_output_dir')!r}")
     return issues
 
 
@@ -306,6 +312,8 @@ def main() -> int:
     partial_present = 0 < len(present) < len(chunks)
     all_ready = bool(chunks) and len(ready) == len(chunks)
     harness_has_provenance = '"run_control"' in HARNESS.read_text(encoding="utf-8")
+    output_dirs = [row["production_output_dir"] for row in chunks]
+    chunk_dirs_isolated = len(output_dirs) == len(set(output_dirs)) == len(chunks)
     combined_summary = combine_if_ready(audits)
 
     policy = manifest.get("chunk_policy", {}) if manifest else {}
@@ -316,6 +324,7 @@ def main() -> int:
         and int(policy.get("chunk_measurements", -1)) == EXPECTED_CHUNK_MEASUREMENTS,
         f"chunks={len(chunks)} measurements_per_chunk={policy.get('chunk_measurements')}",
     )
+    report("chunk-artifact-dirs-isolated", chunk_dirs_isolated, f"unique_dirs={len(set(output_dirs))}")
     report("harness-records-run-control", harness_has_provenance, "future chunks expose seed and command provenance")
     report("current-chunk-set-incomplete", not all_ready, f"present={len(present)} ready={len(ready)} expected={len(chunks)}")
     report(
@@ -361,6 +370,7 @@ def main() -> int:
             "all 63 L12 chunk outputs must exist",
             "each chunk must declare metadata.phase == production",
             "each chunk must record run_control.seed and command settings matching the manifest",
+            "each chunk must record its chunk-local production_output_dir matching the manifest",
             "each chunk must contain same-source linear dE/ds with shifts -0.01, 0.0, 0.01",
             "each chunk must contain same-source scalar C_ss(q) modes 0,100,010,001 with 16 noises",
             "the combined L12 summary remains non-retained until L16/L24 and isolated-pole/FV/IR gates pass",

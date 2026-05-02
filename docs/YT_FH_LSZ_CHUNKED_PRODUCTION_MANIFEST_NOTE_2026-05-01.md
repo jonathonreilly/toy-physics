@@ -27,7 +27,13 @@ The commands still use production-targeted FH/LSZ observables:
 --scalar-source-shifts -0.01,0.0,0.01
 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1'
 --scalar-two-point-noises 16
+--production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunkNNN
+--resume
 ```
+
+Each chunk now writes per-volume artifacts to a chunk-local
+`--production-output-dir`, so completed `ensemble_measurement.json` files
+cannot collide across independent chunks.
 
 This does not solve the whole production route.  Even under a minimum
 rethermalized chunk estimate, the larger volumes remain outside the foreground
@@ -56,5 +62,5 @@ proposal gate remain required.
 ```bash
 python3 -m py_compile scripts/frontier_yt_fh_lsz_chunked_production_manifest.py
 python3 scripts/frontier_yt_fh_lsz_chunked_production_manifest.py
-# SUMMARY: PASS=8 FAIL=0
+# SUMMARY: PASS=10 FAIL=0
 ```

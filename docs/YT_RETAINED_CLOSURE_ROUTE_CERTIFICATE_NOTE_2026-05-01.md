@@ -94,7 +94,9 @@ is launch planning only and leaves L16/L24 and pole postprocessing open.
 The chunk-combiner gate now requires all 63 L12 chunks to be production phase
 with seed/command run-control provenance, same-source `dE/ds`, and same-source
 `C_ss(q)` before L12 combination.  It currently finds zero present chunks, and
-L12-only remains non-retained even when complete.
+L12-only remains non-retained even when complete.  Chunk commands now use
+chunk-local production artifact directories plus per-chunk resume, so
+per-volume artifacts cannot collide across independent chunks.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

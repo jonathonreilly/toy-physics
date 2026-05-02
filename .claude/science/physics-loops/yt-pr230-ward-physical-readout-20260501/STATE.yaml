@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-64-fh-lsz-chunk-combiner-gate
-blocks_completed: 78
-active_route: "FH/LSZ chunk combiner acceptance gate"
-active_hard_residual: "L12 chunks now have a strict combination/provenance gate, but no chunks are present and L16/L24 plus isolated-pole/FV/IR postprocess remain open"
+current_phase: campaign-rerun-block-65-fh-lsz-chunk-command-isolation
+blocks_completed: 79
+active_route: "FH/LSZ chunk command isolation preflight"
+active_hard_residual: "L12 chunk commands now isolate per-volume artifacts and use per-chunk resume, but no chunks are present and L16/L24 plus isolated-pole/FV/IR postprocess remain open"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -394,6 +394,7 @@ claim_state_movement:
   - "proved the FH/LSZ production checkpoint-granularity gate: current --resume loads completed per-volume artifacts only, the smallest projected joint shard is 180.069 hours, and a 12h foreground launch cannot create safely checkpointed production evidence"
   - "created an FH/LSZ chunked production manifest: L12_T24 can be scheduled as 63 production-targeted 16-measurement chunks estimated at 11.3186 hours each, but this is launch planning only and L16/L24 still require scheduler/checkpointing"
   - "added an FH/LSZ chunk combiner gate and run-control provenance metadata: all 63 L12 chunks must be production-phase, seed/command-auditable, same-source dE/ds plus C_ss(q) outputs before L12 combination; zero chunks are present now and L12-only remains non-retained"
+  - "fixed the FH/LSZ chunk launch preflight: each L12 command now uses a chunk-local production-output-dir and --resume, and the combiner gate verifies 63 unique artifact directories before accepting future chunk outputs"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -402,5 +403,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Either launch/schedule the first L12 chunk only as non-evidence under the combiner gate, add true chunk/checkpoint support for L16/L24, or pivot back to the analytic interacting scalar denominator/residue theorem route."
+next_exact_action: "With chunk artifact collisions blocked, either launch/schedule the first L12 chunk only as non-evidence under the combiner gate, add true chunk/checkpoint support for L16/L24, or pivot back to the analytic interacting scalar denominator/residue theorem route."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."
