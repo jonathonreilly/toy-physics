@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:33:15.504258+00:00
+**Generated:** 2026-05-02T22:34:41.304625+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 537 |
+| unaudited | 536 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 644 |
-| ~~audited_failed~~ | 2 |
+| ~~audited_failed~~ | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 386 |
 | `audited_conditional` | 644 |
 | `audited_decoration` | 7 |
-| `audited_failed` | 46 |
+| `audited_failed` | 47 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 573 |
+| `unaudited` | 572 |
 
 | claim_type | count |
 |---|---:|
@@ -1146,6 +1146,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
+| `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
@@ -1910,6 +1911,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the fermion-sector identities close on the bounded runner surface, but the full-action CPT theorem imports a deferred SU(3) Wilson-plaquette operator lift and prior physical-Hilbert/partition-function consequences. Why this blocks: the ledger cannot retain the broader canonical action invariance or CPT-even Observable Principle discharge from a runner that explicitly excludes the gauge-sector algebraic lift. Repair target: construct the CPT action on SU(3) Wilson links/plaquettes and tie it to S_G, Z, H_phys, and CP-odd observables. Claim boundary until fixed: pure-staggered finite-block fermion-sector CPT identities are runner-backed, while full canonical action CPT remains conditional.
 - **open / conditional deps cited:**
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
+- **auditor confidence:** high
+
+### `axiom_first_lattice_noether_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Attempted general lattice Noether theorem asserting ordinary Z^3 translation momentum conservation, fermion-number current conservation, and a general on-shell current formula for one-parameter Lie or discrete symmetries of the canonical staggered action.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** For Z^3 translation, the generator is T^mu_xy = delta_{y,x+mu} - delta_{y,x-mu}; substituting into the general current formula gives the staggered momentum density, and M_KS commutes with discrete translation up to the staggered phase factor.  _(class `A`)_
+- **chain closes:** False — The claimed Z^3 translation/momentum current does not follow from the stated infinitesimal Noether formula: ordinary one-site translation is not the same symmetry checked by the runner, which only tests two-site shifts to avoid staggered phase modulation. The runner also verifies expectation-level identities from M^{-1}, not the advertised classical on-shell current for arbitrary fields or the general discrete-symmetry theorem.
+- **rationale:** Issue: the note applies a continuous infinitesimal Noether current formula to ordinary Z^3 translations and then claims a conserved staggered momentum density, but the staggered action is only checked under two-site shifts and the required one-site/phase-compensated translation current is not derived. Why this blocks: downstream lanes would cite momentum and general current conservation as if they were established on A_min, while the runner only confirms narrower U(1) and two-step/expectation-level identities. Repair target: split out the internal U(1) current, define the correct staggered translation or shift symmetry, derive its lattice Ward identity/current explicitly, and update the runner to test the same on-shell observable claimed in the note. Claim boundary until fixed: U(1) phase commutation and a finite expectation-level divergence check pass, but the advertised general lattice Noether theorem is not retained.
 - **auditor confidence:** high
 
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
