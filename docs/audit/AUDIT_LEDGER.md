@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:33:52.111729+00:00
+**Generated:** 2026-05-02T23:36:08.939104+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 513 |
+| unaudited | 512 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -33,22 +33,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
+| `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 401 |
 | `audited_conditional` | 649 |
-| `audited_decoration` | 8 |
+| `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 550 |
+| `unaudited` | 549 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 534 |
-| `decoration` | 8 |
+| `bounded_theorem` | 533 |
+| `decoration` | 9 |
 | `meta` | 37 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
@@ -1160,6 +1161,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `cpt_squared_is_identity_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cpt_exact_note` | weak | codex-current | A | `cpt_exact_note` |
+| `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | fresh_context | codex-fresh | B | `koide_dweh_cyclic_compression_note_2026-04-18` |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `left_handed_charge_matching_note` | decoration | ~~audited_decoration~~ | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | fresh_context | codex-current | A | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
 | `pmns_selector_unique_amplitude_slot_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
@@ -9781,6 +9783,20 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Demand equal cyclic block power E_+ = E_perp on the scalar/traceless cyclic split, which is exactly equivalent to 2 r0^2 = r1^2 + r2^2, the Koide selector equation.  _(class `F`)_
 - **chain closes:** False — The runner verifies the cyclic algebra and the Koide witness, but the equal-block-power condition is a coordinate restatement of the Koide selector rather than a microscopic derivation; the renaming verdict captures the symbol-substitution character.
 - **rationale:** Re-audit confirms the original renaming verdict: cleaner cyclic wording of the Koide equation, not an audit-clean Koide derivation. Scope narrowed from the migration backfill to the cyclic-projector restatement.
+- **auditor confidence:** high
+
+### `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`KOIDE_CYCLIC_WILSON_3_RESPONSE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/KOIDE_CYCLIC_WILSON_3_RESPONSE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Conditional algebraic restatement: for any admitted local Wilson first-variation on the retained C3[111]-cyclic Hermitian image, the cyclic descendant is determined by the three basis responses r0,r1,r2, with the Koide-style scalar equation treated only as a constraint in response space and not as a physical charged-lepton claim.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18`  (reason: `decoration_parent_retained`)
+- **auditor:** `fresh-koide-cyclic-wilson-response-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Given the retained cyclic Hermitian basis from the parent, linearity gives dW(H)=alpha0 r0+alpha1 r1+alpha2 r2 on span_R{B0,B1,B2}, and Frobenius-dual pairings recover the response triple from H_cyc=(r0/3)B0+(r1/6)B1+(r2/6)B2.  _(class `B`)_
+- **chain closes:** True — The chain closes algebraically once the retained parent is accepted: the parent already supplies the cyclic basis and three-response reconstruction, while this note only repackages that reconstruction in local-Wilson-response language and keeps all physical bridge claims out of scope.
+- **rationale:** The derivation is internally clean and conditional, but its load-bearing content is inherited from the retained one-hop parent, whose scope already includes reconstruction from r0,r1,r2. The Wilson first-variation phrasing and response-space scalar examples add scoped presentation rather than an independent theorem, comparator, or new compression.
+- **decoration parent:** `koide_dweh_cyclic_compression_note_2026-04-18`
 - **auditor confidence:** high
 
 ### `koide_cyclic_wilson_descendant_law_note_2026-04-18`
