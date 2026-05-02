@@ -1975,3 +1975,30 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 Chunk001 completed and is combiner-ready, but only `1/63` L12 chunks are ready.
 No retained/proposed-retained wording is authorized.
+
+## Review-Loop Backpressure - FH/LSZ Stieltjes Model-Class Obstruction
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_stieltjes_model_class_obstruction.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_stieltjes_model_class_obstruction.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+Positive Stieltjes/spectral form does not close the finite-shell model-class
+gate.  A retained route still needs pole-saturation, continuum-threshold
+control, a production acceptance certificate, or a microscopic scalar
+denominator theorem.  No retained/proposed-retained wording is authorized.

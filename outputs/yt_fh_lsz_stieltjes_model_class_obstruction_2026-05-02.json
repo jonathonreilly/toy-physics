@@ -1,0 +1,134 @@
+{
+  "actual_current_surface_status": "exact negative boundary / FH-LSZ Stieltjes model-class obstruction",
+  "exact_next_action": "Strengthen the model-class gate to require pole-saturation, a continuum threshold/gap theorem, multi-volume production continuum evidence, or a microscopic scalar denominator theorem.",
+  "fail_count": 0,
+  "family": {
+    "checks": {
+      "all_models_positive_stieltjes": true,
+      "inverse_derivative_span_factor": 8.0,
+      "max_shell_residual": 3.552713678800501e-15,
+      "pole_residue_span_factor": 8.0
+    },
+    "continuum_mass_squared_grid": [
+      0.26,
+      0.28,
+      0.33,
+      0.45,
+      0.7,
+      1.2,
+      2.0,
+      4.0,
+      8.0,
+      16.0
+    ],
+    "models": [
+      {
+        "continuum_weights": [
+          5.027526285422429,
+          0.0,
+          0.0,
+          4.899609371571423,
+          0.0,
+          4.527379240531162,
+          0.0,
+          0.0,
+          0.0,
+          11.864775123481381
+        ],
+        "dGamma_dp2_at_pole_proxy": 4.0,
+        "max_abs_shell_residual": 3.552713678800501e-15,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 0.25,
+        "relative_y_proxy_for_fixed_dE_ds": 2.0,
+        "success": true
+      },
+      {
+        "continuum_weights": [
+          4.739535857354828,
+          0.0,
+          0.0,
+          4.9609010788353745,
+          0.0,
+          4.487464307753468,
+          0.0,
+          0.0,
+          0.0,
+          11.940201405548828
+        ],
+        "dGamma_dp2_at_pole_proxy": 2.0,
+        "max_abs_shell_residual": 3.552713678800501e-15,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 0.5,
+        "relative_y_proxy_for_fixed_dE_ds": 1.4142135623730951,
+        "success": true
+      },
+      {
+        "continuum_weights": [
+          4.163555001219505,
+          0.0,
+          0.0,
+          5.083484493363671,
+          0.0,
+          4.407634442197443,
+          0.0,
+          0.0,
+          0.0,
+          12.091053969685671
+        ],
+        "dGamma_dp2_at_pole_proxy": 1.0,
+        "max_abs_shell_residual": 1.7763568394002505e-15,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 1.0,
+        "relative_y_proxy_for_fixed_dE_ds": 1.0,
+        "success": true
+      },
+      {
+        "continuum_weights": [
+          3.0115932889488795,
+          0.0,
+          0.0,
+          5.3286513224202094,
+          0.0,
+          4.24797471108544,
+          0.0,
+          0.0,
+          0.0,
+          12.392759097959425
+        ],
+        "dGamma_dp2_at_pole_proxy": 0.5,
+        "max_abs_shell_residual": 1.7763568394002505e-15,
+        "min_continuum_weight": 0.0,
+        "pole_residue": 2.0,
+        "relative_y_proxy_for_fixed_dE_ds": 0.7071067811865476,
+        "success": true
+      }
+    ],
+    "pole_p_hat_sq": -0.25,
+    "shells_p_hat_sq": [
+      0.0,
+      0.26794919243112264,
+      0.5358983848622453,
+      1.0
+    ],
+    "target_c_shell_values": [
+      35.73902486402486,
+      20.643357608263933,
+      14.930197712628198,
+      10.324968775664036
+    ]
+  },
+  "parent_certificates": {
+    "finite_shell_no_go": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
+    "model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json"
+  },
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite-shell Stieltjes positivity does not uniquely determine the scalar pole residue.",
+  "strict_non_claims": [
+    "does not claim a physical scalar pole residue",
+    "does not set kappa_s = 1",
+    "does not use observed top mass or observed y_t",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "Positive spectral/Stieltjes structure alone does not close the FH/LSZ finite-shell model-class gate.  The constructed pole-plus-positive-continuum models share the same finite Euclidean C_ss shell values and the same pole location, while the pole residue and inverse-propagator derivative proxy vary.  A retained closure still needs a stronger microscopic scalar denominator theorem, pole-saturation/continuum bound, or production continuum acceptance certificate."
+}

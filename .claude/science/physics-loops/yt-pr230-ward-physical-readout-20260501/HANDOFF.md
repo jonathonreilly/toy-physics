@@ -472,8 +472,11 @@ production-phase and combiner-ready, with same-source `dE/ds` and four-mode
 same-source scalar-LSZ rows.  The combiner remains blocking because only
 `1/63` L12 chunks are ready, and L16/L24 plus pole/model-class/FV/IR gates are
 still open.
+The Stieltjes model-class obstruction checks the natural positivity repair to
+the finite-shell ambiguity.  Positive pole-plus-continuum models can keep the
+same finite shell values and the same pole while changing the pole residue, so
+spectral positivity alone is not the required model-class certificate.
 
-Next exact action: launch or schedule chunk002 with the same chunk-local
-production protocol, while keeping the combiner/model-class gates blocking any
-retained claim.  Continue analytic scalar denominator/model-class work in
-parallel if compute is unavailable.
+Next exact action: keep chunk002 running under the non-evidence combiner gate.
+In parallel, strengthen the model-class gate toward pole-saturation /
+continuum-threshold evidence or continue the scalar denominator theorem.

@@ -98,6 +98,9 @@ def main() -> int:
         "fh_lsz_pole_fit_model_class_gate": load(
             "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json"
         ),
+        "fh_lsz_stieltjes_model_class": load(
+            "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -373,6 +376,11 @@ def main() -> int:
         "model-class gate blocks finite-shell fit"
         in str(statuses["fh_lsz_pole_fit_model_class_gate"]),
         statuses["fh_lsz_pole_fit_model_class_gate"],
+    )
+    report(
+        "fh-lsz-stieltjes-model-class-not-enough",
+        "Stieltjes model-class obstruction" in str(statuses["fh_lsz_stieltjes_model_class"]),
+        statuses["fh_lsz_stieltjes_model_class"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -687,7 +695,10 @@ def main() -> int:
             "or analytic-continuation theorem.  The pole-fit model-class gate "
             "now blocks future finite-shell pole fits from retained use unless "
             "that missing theorem or an equivalent production acceptance "
-            "certificate is present.  "
+            "certificate is present.  The Stieltjes model-class obstruction "
+            "also shows positivity alone is not that certificate: positive "
+            "continuum models can preserve finite shell rows and the pole while "
+            "moving the residue.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

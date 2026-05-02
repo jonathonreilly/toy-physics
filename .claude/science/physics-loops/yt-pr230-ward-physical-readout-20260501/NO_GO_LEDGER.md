@@ -62,6 +62,18 @@ Chunk001 is production-phase and combiner-ready, but it is only `1/63` of L12.
 No combined L12 summary, L16/L24 scaling, pole derivative, model-class
 certificate, or FV/IR/zero-mode control exists.  It is bounded support only.
 
+Stieltjes positivity does not close the finite-shell model-class gate:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_stieltjes_model_class_obstruction.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+Positive pole-plus-continuum models can share the finite shell values and pole
+location while changing the pole residue, so a stronger pole-saturation,
+continuum-threshold, production-continuum, or scalar-denominator theorem is
+still required.
+
 `R_conn = 8/9` does not by itself derive the scalar pole residue:
 
 ```text

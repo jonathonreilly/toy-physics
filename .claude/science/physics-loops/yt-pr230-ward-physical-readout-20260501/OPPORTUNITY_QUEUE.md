@@ -136,7 +136,11 @@ probability.
   deformations can preserve all sampled rows and the pole while changing
   `dGamma_ss/dp^2`.  The model-class gate now makes that boundary executable
   and blocks finite-shell pole fits until a model-class, pole-saturation,
-  continuum, or scalar-denominator certificate exists.
+  continuum, or scalar-denominator certificate exists.  The Stieltjes
+  positivity obstruction now closes the first natural repair: positive
+  pole-plus-continuum representations can still agree on finite shells and the
+  pole while changing the residue, so positivity alone is not the missing
+  model-class certificate.
   Chunk001 is now complete and combiner-ready, which validates the chunk-local
   protocol but does not change claim status: it is `1/63` of L12 and still
   lacks L16/L24 scaling, pole/model-class, and FV/IR gates.
@@ -201,7 +205,11 @@ probability.
    The finite-shell identifiability no-go now folds the postprocessor itself
    into the analytic blocker: even future finite shell rows do not fix the
    LSZ derivative without a model-class theorem or production acceptance gate.
-   The executable gate is now present and open/blocking.
+   The executable gate is now present and open/blocking.  The Stieltjes
+   obstruction strengthens that gate by showing positive spectral form alone
+   still leaves the pole residue underidentified; the remaining positive move
+   must be pole saturation, continuum-threshold control, or a microscopic
+   scalar denominator theorem.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

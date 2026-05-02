@@ -780,3 +780,19 @@ Adds an FH/LSZ chunk001 production checkpoint:
   L16/L24 scaling, pole/model-class gates, FV/IR control, and retained-proposal
   certification.
 ```
+
+Latest FH/LSZ Stieltjes model-class obstruction checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ Stieltjes model-class obstruction:
+- constructs positive pole-plus-continuum scalar two-point models with the
+  same finite Euclidean shell values and the same pole;
+- the pole residue and inverse-propagator derivative proxy vary across the
+  positive Stieltjes family, so spectral positivity alone does not close the
+  finite-shell model-class gate;
+- runner passes `PASS=6 FAIL=0`; retained-route gate reports `PASS=50 FAIL=0`;
+  campaign status consumes 80 certificates and reports `PASS=76 FAIL=0`;
+- still no retained/proposed-retained closure: a pole-saturation theorem,
+  continuum-threshold control, production acceptance certificate, or
+  microscopic scalar denominator theorem is still required.
+```

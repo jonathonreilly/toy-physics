@@ -86,6 +86,7 @@ def main() -> int:
         "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
         "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
         "fh_lsz_pole_fit_model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+        "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -336,6 +337,17 @@ def main() -> int:
         and certificates["fh_lsz_pole_fit_model_class_gate"].get("proposal_allowed") is False
         and certificates["fh_lsz_pole_fit_model_class_gate"].get("model_class_gate_passed") is False
     )
+    stieltjes_model_class_not_enough = (
+        "Stieltjes model-class obstruction"
+        in certificates["fh_lsz_stieltjes_model_class"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_stieltjes_model_class"].get("proposal_allowed") is False
+        and float(
+            certificates["fh_lsz_stieltjes_model_class"].get("family", {}).get("checks", {}).get(
+                "inverse_derivative_span_factor", 0.0
+            )
+        )
+        >= 8.0
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -562,6 +574,11 @@ def main() -> int:
         certificates["fh_lsz_pole_fit_model_class_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-stieltjes-model-class-not-enough",
+        stieltjes_model_class_not_enough,
+        certificates["fh_lsz_stieltjes_model_class"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -692,7 +709,10 @@ def main() -> int:
             "now makes this executable: a future finite-shell pole fit remains "
             "non-evidence unless a model-class, analytic-continuation, "
             "pole-saturation, continuum, or microscopic scalar-denominator "
-            "certificate excludes those deformations.  "
+            "certificate excludes those deformations.  Positive Stieltjes "
+            "spectral form by itself is not enough: positive continuum models "
+            "can keep the same finite shell rows and pole while changing the "
+            "pole residue.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "
