@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:29:23.015745+00:00
+**Generated:** 2026-05-02T21:32:28.392548+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 1 |
-| unaudited | 556 |
+| unaudited | 555 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 19 |
+| ~~audited_renaming~~ | 20 |
 | ~~audited_conditional~~ | 634 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 19 |
-| `unaudited` | 592 |
+| `audited_renaming` | 20 |
+| `unaudited` | 591 |
 
 | claim_type | count |
 |---|---:|
@@ -1197,6 +1197,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_ew_coupling_bridge_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | D | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
+| `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -2951,6 +2952,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The Cl(3)/Z^3 taste-cube construction has a 3D symmetric base subspace carrying SU(3), commuting with fiber SU(2) and hypercharge, with N_c=3 and R_conn=(N_c^2-1)/N_c^2=8/9 from the SU(3) Fierz identity.  _(class `C`)_
 - **chain closes:** True — The runner constructs the Cl(3) taste-space matrices, the symmetric-base SU(3) embedding, the commuting SU(2)/Y structure, and the Fierz/R_conn algebra directly. The source note limits the result to an algebraic support packet and explicitly leaves continuum color matching and running to separate lanes.
 - **rationale:** The support-tier algebraic color-structure claim closes on its own scoped surface: the runner verifies the Cl(3) generators, even-subalgebra su(2), hypercharge projectors, S3/Z3 taste decomposition, symmetric-base SU(3) embedding, commutators with weak/Y, N_c=3, Fierz identity, R_conn=8/9, and sqrt(9/8) factor. This clean audit is limited to the finite taste-cube support theorem; it does not ratify continuum QCD color matching, alpha_s running, or the critical native-gauge/EW-color projection lanes. Residual risk is downstream citation as a full physical gauge-closure theorem rather than as algebraic support.
+- **auditor confidence:** high
+
+### `cl3_sm_embedding_theorem`
+
+- **Note:** [`CL3_SM_EMBEDDING_THEOREM.md`](../../docs/CL3_SM_EMBEDDING_THEOREM.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact algebraic checks for a chosen 8D Cl(3) taste representation, chosen fiber SU(2), chosen symm/antisymm hypercharge operator, and bounded L-sector determinant pairing; not a derived SM embedding.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-cl3-sm-embedding-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The proof defines the SM readout by taking physical SU(2)_weak = {I4 tensor sigma_i/2} and Y = (+1/3)P_symm + (-1)P_antisymm, then reads the eigenspaces as quark/lepton weak doublets.  _(class `F`)_
+- **chain closes:** False — The Cl(3) algebraic identities close, but the physical carrier/readout bridge does not. The fiber weak action, hypercharge coefficients, matter labels, and chiral sector are selected rather than derived from minimal_axioms_2026-04-11, whose current ledger status is meta rather than retained-grade theorem input.
+- **rationale:** Issue: the theorem introduces the SM content by selected identifications: fiber = SU(2)_weak, Y = (+1/3)P_symm - P_antisymm, symm/antisymm blocks = quark/lepton carriers, and even parity = L-sector. Why this blocks: the runner verifies that these selected operators have the advertised algebra and spectra, but it does not derive why these are the physical SM carrier, gauge action, hypercharge, chirality, or matter readouts from the dependency. Repair target: a retained theorem deriving the carrier/readout map and hypercharge normalization from minimal primitives, with a runner that constructs those choices rather than setting them. Claim boundary until fixed: exact Cl(3) algebra, central omega, abstract su(2), selected-operator commutation/eigenvalue checks, and bounded L-sector determinant support.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `cl3_taste_generation_theorem`

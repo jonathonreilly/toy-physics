@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 27,
-    "high": 220,
+    "high": 219,
     "leaf": 173,
     "medium": 175
   },
-  "generated_at": "2026-05-02T21:29:22.678746+00:00",
+  "generated_at": "2026-05-02T21:32:28.128300+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -912,29 +912,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
       "transitive_descendants": 112
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cl3_sm_embedding_theorem",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "minimal_axioms_2026-04-11"
-      ],
-      "direct_in_degree": 11,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.281,
-      "note_path": "docs/CL3_SM_EMBEDDING_THEOREM.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/verify_cl3_sm_embedding.py",
-      "transitive_descendants": 54
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -15612,6 +15589,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 119,
-  "total_pending": 595
+  "ready_count": 118,
+  "total_pending": 594
 }
