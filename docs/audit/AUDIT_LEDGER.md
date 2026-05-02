@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:05:48.867469+00:00
+**Generated:** 2026-05-02T21:07:44.079693+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 1 |
-| unaudited | 556 |
+| unaudited | 555 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 631 |
+| ~~audited_conditional~~ | 632 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 631 |
+| `audited_conditional` | 632 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 592 |
+| `unaudited` | 591 |
 
 | claim_type | count |
 |---|---:|
@@ -499,6 +499,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ai_methodology.raw.prompts_session_04c820e1` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ai_methodology.raw.prompts_session_9fc3990b_jonreilly` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ai_methodology.raw.prompts_session_current` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `alt_connectivity_family_complex_failure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alt_connectivity_family_failure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alternative_coupled_field_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1455,6 +1456,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The load-bearing step is exact algebra from the definitions alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2, but the row presents this bookkeeping corollary as a separate candidate retained-grade theorem and registers no parent dependency or primary runner. Why this blocks: A definition-level geometric-mean identity adds no independent observable, comparator, falsifiability, or new physical bridge beyond the upstream plaquette/coupling surface, so it should not inflate the retained claim surface as a standalone theorem. Repair target: Box this identity under the retained plaquette/coupling-chain parent, or re-promote only if it is shown to be genuine compression used load-bearing by downstream claims with an explicit parent dependency. Claim boundary until fixed: It is safe to state the exact identity as a bookkeeping corollary of the accepted coupling definitions and to use it to avoid double-counting alpha_LM and alpha_s(v) as independent knobs.
 - **open / conditional deps cited:**
   - `accepted_plaquette_coupling_chain_parent_not_registered`
+- **auditor confidence:** high
+
+### `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30`
+
+- **Note:** [`ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md`](../../docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Direct Wilson-loop/static-potential certificate for alpha_s(M_Z) on the Cl(3)/Z^3 SU(3) Wilson surface at g_bare=1, beta=6, including strict certificate checks but not an internally derived Sommer-scale, sea-quark, threshold, or QCD-running bridge.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-agent-cicero-2026-05-02`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** On the Cl(3)/Z^3 graph-first SU(3) Wilson gauge surface with g_bare = 1 and beta = 6, the renormalized strong coupling extracted from Wilson loops, the static potential, the Sommer scale, and standard QCD running to M_Z should give alpha_s(M_Z) = 0.1181 +/- total_direct_Wilson_loop_uncertainty.  _(class `B`)_
+- **chain closes:** False — The Wilson-loop certificate passes, but the full readout to alpha_s(M_Z) uses admitted external scale setting, standard QCD running, threshold matching, and a pure-gauge to full-QCD bridge. g_bare=1 is an accepted normalization axiom in the dependency note, so beta=6 is a normalization-surface input, not a theorem derived here.
+- **rationale:** Issue: the note's alpha_s(M_Z) conclusion depends on admitted-context bridges: physical Sommer-scale calibration, standard QCD running, heavy-threshold matching, and the pure-gauge/sea-quark full-QCD bridge; the runner validates a supplied certificate after those choices rather than deriving the bridge from the allowed one-hop inputs. Why this blocks: the stated alpha_s(M_Z) theorem cannot be claimed from Wilson-loop/lattice inputs alone, and g_bare=1/beta=6 is an axiom/normalization surface, not a derived theorem in this note. Repair target: provide retained bridge theorems and a runner that computes the scale/running/full-QCD map from retained inputs rather than checking certificate consistency against calibrated/readout values. Claim boundary until fixed: the safe claim is a strict-passing Wilson-loop/static-potential certificate on the beta=6 surface, conditional on the admitted external bridges.
 - **auditor confidence:** high
 
 ### `alt_connectivity_family_basin_note`
