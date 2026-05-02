@@ -246,6 +246,11 @@ carrier, preserve unit-projector finite crossings, or derive `K'(pole)`.  The
 unclosed: finite derivative scouts remain blocked by limiting order, residue
 envelope dependence, Ward/Feshbach non-identification, carrier/projector
 choice, fitted-kernel imports, and missing threshold control.  If
+the FH/LSZ same-source invariant formula is used, it still needs the
+canonical-Higgs pole identity gate: source-coordinate scaling cancels, but the
+measured scalar source pole is not certified as the canonical Higgs radial mode
+used by `v`.  Production pole derivative data and the source-to-Higgs identity
+remain open.  If
 the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not

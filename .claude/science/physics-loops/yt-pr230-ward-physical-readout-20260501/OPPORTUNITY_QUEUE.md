@@ -248,6 +248,12 @@ probability.
    and keeps it open: finite derivative proxies remain blocked by limiting
    order, residue envelope, Ward/Feshbach non-identification, carrier/projector
    choice, fitted-kernel imports, and missing threshold control.
+   The canonical-Higgs pole identity gate now prevents another false closure:
+   the same-source invariant readout cancels source-coordinate scaling, but it
+   does not identify the measured source pole as the canonical Higgs radial
+   mode used by `v`.  A positive theorem must certify that identity together
+   with the pole derivative, or production data must come with an independent
+   current-surface Higgs-pole identity certificate.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

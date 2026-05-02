@@ -1164,3 +1164,26 @@ proxies exist, but limiting order, residue-envelope dependence,
 Ward/Feshbach non-identification, carrier/projector choice, fitted-kernel
 imports, and threshold control remain open.  No retained/proposed-retained
 wording is authorized.
+
+FH/LSZ canonical-Higgs pole identity gate checkpoint:
+
+```text
+actual_current_surface_status: open / FH-LSZ canonical-Higgs pole identity gate blocking
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_higgs_pole_identity_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=61 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=87 FAIL=0
+```
+
+The same-source invariant formula cancels source rescaling but does not
+certify that the measured source pole is the canonical Higgs radial mode used
+by `v`.  Existing EW/Higgs algebra assumes canonical `H`; the source-to-Higgs
+identity and production pole derivative remain open.  No
+retained/proposed-retained wording is authorized.

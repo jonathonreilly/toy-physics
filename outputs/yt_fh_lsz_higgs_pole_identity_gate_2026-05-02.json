@@ -1,0 +1,79 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ canonical-Higgs pole identity gate blocking",
+  "ew_note": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+  "ew_surface": {
+    "assumes_canonical_h": true,
+    "supplies_source_bridge": false
+  },
+  "exact_next_action": "Either derive the source-pole-to-canonical-Higgs identity together with D'(pole), or obtain production FH/LSZ pole data plus an independent current-surface certificate that the measured pole is the canonical Higgs radial mode used by v.",
+  "fail_count": 0,
+  "gate_requirements": [
+    {
+      "certificate": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
+      "current_status": "available support",
+      "requirement": "same-source invariant response formula",
+      "satisfied": true
+    },
+    {
+      "certificate": "outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json",
+      "current_status": "available measurement primitive",
+      "requirement": "same-source scalar two-point observable",
+      "satisfied": true
+    },
+    {
+      "certificate": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
+      "current_status": "absent/nonready",
+      "requirement": "production pole fit and dGamma_ss/dp^2",
+      "satisfied": false
+    },
+    {
+      "certificate": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json",
+      "current_status": "blocked",
+      "requirement": "identity of measured source pole with canonical Higgs radial mode",
+      "satisfied": false
+    },
+    {
+      "certificate": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+      "current_status": "blocked",
+      "requirement": "canonical Higgs kinetic normalization derived from source functional",
+      "satisfied": false
+    },
+    {
+      "certificate": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json; outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json; outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json",
+      "current_status": "shortcuts blocked",
+      "requirement": "no replacement by gauge-VEV, renormalization-condition, or contact-scheme shortcut",
+      "satisfied": true
+    },
+    {
+      "certificate": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json; outputs/yt_kprime_closure_attempt_2026-05-02.json",
+      "current_status": "blocked",
+      "requirement": "interacting denominator derivative and pole saturation",
+      "satisfied": false
+    }
+  ],
+  "higgs_pole_identity_gate_passed": false,
+  "parent_certificates": {
+    "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+    "contact_term_scheme": "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json",
+    "gauge_vev_overlap": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
+    "invariant_readout": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
+    "kprime": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
+    "same_source_two_point": "outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json",
+    "scalar_denominator": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "scalar_renorm_overlap": "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The canonical-Higgs pole identity and production pole derivative are not certified.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not treat same-source invariance as canonical-Higgs identity",
+    "does not use H_unit matrix-element readout",
+    "does not use yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0",
+    "does not set c2 or Z_match to one"
+  ],
+  "verdict": "The same-source FH/LSZ invariant readout removes the need to set kappa_s = 1, but it does not by itself identify the measured source pole with the canonical Higgs radial mode whose kinetic normalization defines v.  Existing EW/Higgs algebra starts after the canonical doublet has been supplied, and the source-to-Higgs, gauge-VEV overlap, renormalization-condition, contact-scheme, denominator, and K'(pole) certificates do not close that identity. The physical y_t gate therefore remains open even for future same-source response data until the Higgs-pole identity and pole derivative are certified."
+}

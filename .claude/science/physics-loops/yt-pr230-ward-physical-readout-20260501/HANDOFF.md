@@ -565,3 +565,18 @@ Next exact action: poll seed-controlled replacement chunk001.  If it completes,
 process it through the chunk combiner and checkpoint gates.  If it is still
 running, continue seed-controlled production planning or derive a genuinely new
 scalar-denominator theorem; the current analytic K-prime stack is blocked.
+
+The FH/LSZ canonical-Higgs pole identity gate is now explicit.  The
+same-source invariant readout cancels arbitrary source-coordinate scaling, so
+the route does not need to set `kappa_s = 1`.  That is not yet physical `y_t`:
+the measured source pole still has to be certified as the canonical Higgs
+radial mode whose kinetic normalization defines `v`, and the production
+`dGamma_ss/dp^2` pole derivative is absent.  Existing EW/Higgs algebra starts
+after canonical `H` is supplied, while the source-to-Higgs, gauge-VEV,
+renormalization-condition, contact-scheme, denominator, and K-prime gates all
+remain blocking.
+
+Next exact action: poll seed-controlled replacement chunks001/002/003.  If any
+replacement output completes, process it through the combiner and checkpoint
+gates.  If they are still running, continue either seed-controlled production
+planning or a new scalar-denominator/Higgs-pole-identity theorem attempt.

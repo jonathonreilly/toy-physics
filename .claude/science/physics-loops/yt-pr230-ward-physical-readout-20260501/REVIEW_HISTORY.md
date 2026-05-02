@@ -2277,3 +2277,31 @@ derivative is not closed.  Limiting order, residue-envelope dependence,
 Ward/Feshbach non-identification, kernel enhancement, carrier/projector
 choice, fitted-kernel imports, and threshold control remain open.  No
 retained/proposed-retained wording is authorized.
+
+## Review-Loop Backpressure - FH/LSZ Canonical-Higgs Pole Identity Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN / BLOCKING GATE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_higgs_pole_identity_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_higgs_pole_identity_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The same-source invariant readout is useful support, not closure.  It cancels
+source-coordinate scaling but does not prove the measured scalar source pole is
+the canonical Higgs radial mode whose kinetic normalization defines `v`.
+Production pole derivative data and the source-to-Higgs identity remain open.
+No retained/proposed-retained wording is authorized.

@@ -127,6 +127,9 @@ def main() -> int:
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
         "kprime_closure": load("outputs/yt_kprime_closure_attempt_2026-05-02.json"),
+        "fh_lsz_higgs_pole_identity": load(
+            "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -457,6 +460,11 @@ def main() -> int:
         "kprime-closure-attempt-blocked",
         "K-prime closure attempt blocked" in str(statuses["kprime_closure"]),
         statuses["kprime_closure"],
+    )
+    report(
+        "fh-lsz-higgs-pole-identity-gate-blocks",
+        "canonical-Higgs pole identity gate blocking" in str(statuses["fh_lsz_higgs_pole_identity"]),
+        statuses["fh_lsz_higgs_pole_identity"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

@@ -97,6 +97,7 @@ def main() -> int:
         "fh_lsz_soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+        "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -423,6 +424,12 @@ def main() -> int:
         and certificates["kprime_closure"].get("proposal_allowed") is False
         and certificates["kprime_closure"].get("kprime_closed") is False
     )
+    higgs_pole_identity_gate_blocks = (
+        "canonical-Higgs pole identity gate blocking"
+        in certificates["fh_lsz_higgs_pole_identity"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_higgs_pole_identity"].get("proposal_allowed") is False
+        and certificates["fh_lsz_higgs_pole_identity"].get("higgs_pole_identity_gate_passed") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -704,6 +711,11 @@ def main() -> int:
         certificates["kprime_closure"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-higgs-pole-identity-gate-blocks",
+        higgs_pole_identity_gate_blocks,
+        certificates["fh_lsz_higgs_pole_identity"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -870,6 +882,10 @@ def main() -> int:
             "blocked by limiting order, residue-envelope dependence, "
             "Ward/Feshbach non-identification, carrier/projector choice, and "
             "missing threshold control.  "
+            "The canonical-Higgs pole identity gate also remains open: the "
+            "same-source invariant formula cancels source-coordinate scaling, "
+            "but it does not identify the measured source pole with the "
+            "canonical Higgs radial mode used by v.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "
@@ -904,7 +920,7 @@ def main() -> int:
             "production physical-response manifest and follow it with pole/LSZ "
             "and matching analysis through the FH/LSZ postprocess gate, or derive "
             "the microscopic interacting scalar denominator/residue theorem from "
-            "the retained action.  Continue chunked production only with "
+            "the retained action, including the canonical-Higgs pole identity.  Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "
             "Before treating any finite-shell pole fit as "

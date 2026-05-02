@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-102-kprime-closure-attempt
-blocks_completed: 102
-active_route: "K'(pole) closure attempt"
-active_hard_residual: "Seed-controlled replacement chunk001 is running; K'(pole) is named and finite proxies exist, but limiting order, residue envelope, Ward/Feshbach non-identification, carrier/projector choice, and threshold control remain open"
+current_phase: campaign-rerun-block-103-higgs-pole-identity-gate
+blocks_completed: 103
+active_route: "FH/LSZ canonical-Higgs pole identity gate"
+active_hard_residual: "Seed-controlled replacement chunks001/002/003 are running; the same-source FH/LSZ invariant formula cancels source-coordinate scaling, but the measured source pole is not yet certified as the canonical Higgs radial mode used by v, and production pole derivative data remain absent"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -373,6 +373,9 @@ files_touched:
   - "scripts/frontier_yt_kprime_closure_attempt.py"
   - "docs/YT_KPRIME_CLOSURE_ATTEMPT_NOTE_2026-05-02.md"
   - "outputs/yt_kprime_closure_attempt_2026-05-02.json"
+  - "scripts/frontier_yt_fh_lsz_higgs_pole_identity_gate.py"
+  - "docs/YT_FH_LSZ_HIGGS_POLE_IDENTITY_GATE_NOTE_2026-05-02.md"
+  - "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
   - "scripts/frontier_yt_retained_closure_route_certificate.py"
   - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
   - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
@@ -500,6 +503,7 @@ claim_state_movement:
   - "proved an FH/LSZ soft-continuum threshold no-go: color-singlet q=0 cancellation plus finite-q IR regularity does not certify a positive threshold gap, because locally integrable positive continuum weight can start arbitrarily close to the pole"
   - "attempted scalar carrier/projector closure: color-singlet support and unit taste-singlet algebra are useful, but physical carrier authority, unit-projector crossings, kernel enhancement, fitted-kernel legitimacy, and K'(pole) remain blocked"
   - "attempted K'(pole) closure: determinant/eigen-derivative gates and finite derivative scouts name the object, but limiting order, residue envelope, Ward/Feshbach non-identification, carrier/projector choice, fitted-kernel imports, and threshold control still block closure"
+  - "added an FH/LSZ canonical-Higgs pole identity gate: same-source invariance avoids kappa_s=1 but does not identify the measured source pole with the canonical Higgs radial mode used by v; production pole derivative and source-to-Higgs identity remain open"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -508,5 +512,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll seed-controlled replacement chunk001; if it completes, rerun chunk combiner/checkpoint/retained/campaign gates, otherwise continue seed-controlled production planning or derive a genuinely new scalar-denominator theorem because K'(pole) closure is blocked."
+next_exact_action: "Poll seed-controlled replacement chunks001/002/003; if a replacement chunk completes, rerun chunk combiner/checkpoint/retained/campaign gates, otherwise continue seed-controlled production planning or derive a genuinely new scalar-denominator/Higgs-pole-identity theorem because the K'(pole) and canonical-Higgs identity gates are blocked."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

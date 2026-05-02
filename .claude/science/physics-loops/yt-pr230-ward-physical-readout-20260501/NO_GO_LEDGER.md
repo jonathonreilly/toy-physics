@@ -1285,3 +1285,17 @@ scouts compute proxies.  They do not derive the retained derivative.  The
 load-bearing blockers are limiting order, residue-envelope dependence,
 Ward/Feshbach non-identification, kernel-enhancement authority,
 carrier/projector choice, fitted-kernel imports, and threshold control.
+
+FH/LSZ same-source invariance is not the canonical-Higgs pole identity:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_higgs_pole_identity_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+The same-source response/LSZ ratio cancels source-coordinate rescaling, but it
+does not prove the measured scalar source pole is the canonical Higgs radial
+mode used by `v`.  Existing EW/Higgs notes assume canonical `H`; the
+source-to-Higgs bridge, production pole derivative, gauge-VEV shortcut,
+renormalization-condition shortcut, contact-scheme shortcut, denominator
+theorem, and `K'(pole)` remain open.
