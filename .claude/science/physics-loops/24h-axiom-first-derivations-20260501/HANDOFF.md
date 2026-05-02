@@ -13,18 +13,18 @@ BH 1/4 carrier).
 
 | Block | Slug | Status | Branch | PR |
 |---|---|---|---|---|
-| 01 | KMS condition from RP | support theorem, runner PASS, branch pushed, PR pending | physics-loop/24h-axiom-first-block01-kms-20260501 | pending |
-| 02 | Hawking T_H = κ/(2π) | queued (depends on Block 01) | — | — |
-| 03 | Bekenstein bound | queued | — | — |
-| 04 | Microcausality theorem | queued | — | — |
+| 01 | KMS condition from RP | support theorem, runner PASS, PR open | physics-loop/24h-axiom-first-block01-kms-20260501 | #257 |
+| 02 | Hawking T_H = κ/(2π) | support theorem, runner PASS, branch ready, PR pending | physics-loop/24h-axiom-first-block02-hawking-20260501 (stacked on 01) | pending |
+| 03 | Bekenstein bound | queued (independent) | — | — |
+| 04 | Microcausality theorem | queued (independent) | — | — |
 | 05 | First law of BH mechanics | queued (depends on Block 02) | — | — |
 | 06 | Stefan-Boltzmann | queued (depends on Block 01) | — | — |
 | 07 | Unruh temperature | queued (depends on Block 01) | — | — |
-| 08 | Reeh-Schlieder | queued | — | — |
+| 08 | Reeh-Schlieder | queued (independent) | — | — |
 | 09 | GSL | queued (depends on Blocks 01, 02) | — | — |
-| 10 | Birkhoff vacuum-spherical | queued | — | — |
-| 11 | Bisognano-Wichmann | queued | — | — |
-| 12 | Tomita-Takesaki | queued | — | — |
+| 10 | Birkhoff vacuum-spherical | queued (independent) | — | — |
+| 11 | Bisognano-Wichmann | queued (independent) | — | — |
+| 12 | Tomita-Takesaki | queued (independent) | — | — |
 
 ## Proposed repo weaving (deferred to integration)
 
@@ -45,7 +45,16 @@ If/when Block 01 is integrated:
   Corollaries section (C5: KMS condition holds for the Gibbs state on
   the periodic-time block).
 
+If/when Block 02 is integrated (after Block 01 lands):
+
+- Cross-reference Hawking T_H as a corollary of Block 01 KMS plus
+  retained framework GR action surface.
+- Add a one-line entry to `docs/CANONICAL_HARNESS_INDEX.md` for the
+  Hawking-temperature runner.
+- The Hawking temperature is the load-bearing input for Block 05 (first
+  law of BH mechanics) and Block 09 (GSL).
+
 ## Next exact action
 
-Open Block 01 review PR; pivot to Block 02 (Hawking T_H = κ/(2π)) on a
-new branch from origin/main.
+Open Block 02 stacked PR (base = Block 01 branch); pivot to Block 03
+(Bekenstein bound) on a new independent branch from origin/main.

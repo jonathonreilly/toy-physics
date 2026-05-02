@@ -50,3 +50,44 @@ Test 5 (detailed-balance at i beta_th):  PASS   diff 2.58e-15
 
 OVERALL: PASS
 ```
+
+## Block 02 — Hawking T_H from Wick-rotated Killing horizon + KMS
+
+### Branch-local self-review (2026-05-01)
+
+- **theorem note:** [docs/AXIOM_FIRST_HAWKING_TEMPERATURE_THEOREM_NOTE_2026-05-01.md](../../../../docs/AXIOM_FIRST_HAWKING_TEMPERATURE_THEOREM_NOTE_2026-05-01.md)
+- **runner:** [scripts/axiom_first_hawking_temperature_check.py](../../../../scripts/axiom_first_hawking_temperature_check.py)
+- **log:** [outputs/axiom_first_hawking_temperature_check_2026-05-01.txt](../../../../outputs/axiom_first_hawking_temperature_check_2026-05-01.txt)
+
+#### Findings
+
+- **F1 (no-issue):** all six runner tests pass on first run. Wick-
+  rotation regularity period β_th = 2π/κ is a 1-line algebraic
+  identity once the local Rindler form (4) is established.
+- **F2 (no-issue):** Schwarzschild benchmark recovers Hawking 1975
+  T_H = 1/(8πGM) at machine precision because κ_Schw = 1/(4GM) is
+  the standard textbook result.
+
+#### Disposition
+
+- **disposition:** pass.
+- **proposal-allowed:** false (per CLAIM_STATUS_CERTIFICATE_BLOCK02.md;
+  inherits Block 01 audit-pending classification).
+- **branch action:** commit, push, open stacked PR (base = Block 01
+  branch) with `support` honest status.
+- **integration action:** record in HANDOFF.md as the load-bearing
+  input for Block 05 (first law of BH mechanics dM = T_H dA / 8πG)
+  and Block 09 (GSL).
+
+#### Runner results summary (2026-05-01)
+
+```text
+Test 1 (conical-defect uniqueness at beta_th = 2 pi / kappa): PASS  max resid 0
+Test 2 (T_H = 1/beta_th = kappa/(2 pi)):                      PASS  max resid 0
+Test 3 (Schwarzschild T_H = 1/(8 pi G M) Hawking 1975):       PASS  max resid 0
+Test 4 (first-law differential T_H dS_BH = kappa dA / 8 pi):  PASS  max resid 0
+Test 5 (bolt-regularity Ricci coefficient vanishes):          PASS  max resid 0
+Test 6 (Rindler T_Unruh = a/(2 pi) preview):                  PASS  max resid 0
+
+OVERALL: PASS
+```
