@@ -10,7 +10,9 @@ completeness on the physical reduced carrier. This note now records the
 downstream LO+NLO RPSR assembly. The historical filename is preserved from the
 earlier conditional stage.
 **Primary runner:** `scripts/frontier_quark_up_amplitude_rpsr_conditional.py`
-(PASS=10 FAIL=0).
+(PASS=9 FAIL=0). T10 (det-phase neutrality compatibility) is checked in the
+companion runner `scripts/frontier_quark_projector_parameter_audit.py`
+(PASS=6 FAIL=0); see Section 5 for the split.
 
 ---
 
@@ -195,7 +197,7 @@ candidates.
 | (5) LO ray completeness `a_u/sin_d + a_d = 1` | `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` | YES |
 | (6) NLO excess `rho/49` from (3) + `delta_A1` | Minimal 3-atom contraction | YES |
 | (7) Full RPSR identity | From (1)-(6) | YES |
-| (8) Det-phase neutrality compatibility | `QUARK_PROJECTOR_PARAMETER_AUDIT` | YES |
+| (8) Det-phase neutrality compatibility | `QUARK_PROJECTOR_PARAMETER_AUDIT` (verified by its own runner) | YES |
 
 ### 4.1 Exact LO discharge
 
@@ -215,7 +217,7 @@ candidates.
 ## 5. Runner verification
 
 `scripts/frontier_quark_up_amplitude_rpsr_conditional.py` verifies
-(10 checks):
+(9 checks):
 
 - T1 `|p|^2 = 1` (unit projector ray).
 - T2 `a_d = rho` retained.
@@ -227,9 +229,14 @@ candidates.
 - T7 Target is unique among 8 Pareto candidates.
 - T8 Scalar-ray magnitude squared `= 1/7`.
 - T9 Scalar/tensor ratio squared `= 6/7 = supp`.
-- T10 Det-phase neutrality compatibility (retained anchor).
 
-Expected: PASS=10 FAIL=0.
+Expected: PASS=9 FAIL=0.
+
+T10 (det-phase neutrality compatibility) is intentionally not re-checked
+in this runner to avoid a hardcoded annotation PASS. It is verified in
+the companion runner `scripts/frontier_quark_projector_parameter_audit.py`
+(PASS=6 FAIL=0), which holds the retained anchor for the projector
+parameter audit.
 
 ---
 
@@ -286,4 +293,5 @@ retained no-gos pass. All 4 retained quark runners pass.
 **Status:** derived theorem. The quark `a_u` gate no longer depends on a
 separate STRC observable-principle postulate in this lane.
 
-Runner status: PASS=10 FAIL=0.
+Runner status: PASS=9 FAIL=0 (this runner) plus PASS=6 FAIL=0 in the
+companion `frontier_quark_projector_parameter_audit.py`.
