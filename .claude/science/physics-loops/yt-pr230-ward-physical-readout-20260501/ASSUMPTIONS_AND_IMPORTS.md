@@ -717,3 +717,11 @@ The production certificate's `wz_mass_response` guard is claim hygiene only.
 It marks W/Z response rows absent unless actually implemented.  It must not be
 used as W/Z response evidence, gauge-normalized closure, sector-overlap
 identity, canonical-Higgs identity, or retained/proposed-retained support.
+
+2026-05-02 complete source-spectrum identity no-go:
+
+Complete same-source `C_ss(p)` data and same-source `dE_top/ds` are still
+source-only observables.  They must not be used as a canonical-Higgs identity,
+`O_H`, `C_sH`, `C_HH`, W/Z response, or no-orthogonal-top-coupling theorem.
+Any route using complete source-spectrum data still needs non-source-only
+identity input before retained/proposed-retained wording is allowed.

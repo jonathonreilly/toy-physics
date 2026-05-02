@@ -3337,3 +3337,17 @@ Review stance: instrumentation guard / claim firewall.
 Disposition: bounded support.  Future production certificates explicitly mark
 W/Z response rows absent unless implemented.  This is not evidence and no
 retained/proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 149 Complete Source-Spectrum Identity No-Go
+
+Review stance: source-only identity shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_complete_source_spectrum_identity_no_go.py`.
+- Added `docs/YT_COMPLETE_SOURCE_SPECTRUM_IDENTITY_NO_GO_NOTE_2026-05-02.md`.
+- Added `outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  Complete same-source `C_ss(p)` data and
+same-source `dE_top/ds` can stay fixed while canonical-Higgs `y_t` varies
+through a finite orthogonal neutral top coupling.  No retained or
+proposed-retained wording is allowed.

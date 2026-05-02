@@ -501,3 +501,11 @@ explicitly mark W/Z mass response absent.  This is claim hygiene only.  It
 does not reduce the proof gap; the next positive work is actual W/Z response
 rows with identity certificates, same-surface `O_H`/`C_sH`/`C_HH`, chunk011
 processing, or a source-Higgs identity theorem.
+
+Complete source-spectrum identity update: source-only closure is now blocked
+even in the strongest form where complete `C_ss(p)` pole data and same-source
+`dE_top/ds` are known.  A future positive route must supply non-source-only
+identity information: same-surface `O_H`/`C_sH`/`C_HH` Gram-purity rows, real
+W/Z response rows with sector-overlap and canonical-Higgs certificates, or a
+theorem forbidding orthogonal neutral top couplings.  Do not spend another
+foreground block on source-only spectral completeness as a Higgs identity.

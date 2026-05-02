@@ -1936,3 +1936,18 @@ unless implemented.  This prevents the QCD top harness, static EW algebra, or
 absent W/Z slopes from being mistaken for `dM_W/ds` evidence, but it does not
 provide W/Z correlator fits, source slopes, covariance, sector-overlap, or
 canonical-Higgs identity.
+
+Complete source-only spectrum is not canonical-Higgs closure:
+
+```text
+python3 scripts/frontier_yt_complete_source_spectrum_identity_no_go.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+Even if the same-source scalar spectrum `C_ss(p)` is known completely and
+paired with same-source `dE_top/ds`, the physical canonical-Higgs Yukawa is not
+determined unless an orthogonal neutral top coupling is forbidden or measured.
+A two-scalar witness keeps `C_ss(p)` and `dE_top/ds` fixed while varying
+canonical `y_t` by a factor greater than four through finite positive
+orthogonal top couplings.  Do not treat complete source-only spectrum data as
+`O_H`, `C_sH`, `C_HH`, W/Z response, or a Higgs-pole identity certificate.

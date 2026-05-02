@@ -1976,3 +1976,25 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The guard records missing W/Z response rows in future production certificates.
 It is not evidence and does not authorize retained or `proposed_retained`
 wording.
+
+Complete source-spectrum identity no-go checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / complete source spectrum not canonical-Higgs closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_complete_source_spectrum_identity_no_go.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=101 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=127 FAIL=0
+```
+
+Complete source-only `C_ss(p)` plus same-source `dE_top/ds` remains
+insufficient because canonical `y_t` can vary through a finite orthogonal
+neutral top coupling.  No retained or `proposed_retained` wording is
+authorized.

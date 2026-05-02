@@ -1,0 +1,136 @@
+{
+  "actual_current_surface_status": "exact negative boundary / complete source spectrum not canonical-Higgs closure",
+  "exact_next_action": "Close one non-source-only identity premise: implement C_sH/C_HH Gram-purity measurements, implement a real same-source W/Z response with sector-overlap identity certificates, or derive a theorem forbidding orthogonal neutral top couplings.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "same_source_pole_data_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_harness_absence": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
+    "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
+    "wz_response_harness_absence": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "C_ss(p) and dE_top/ds are source-only data; C_sH/C_HH, W/Z response, or a no-orthogonal-coupling theorem remains required.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not set cos(theta) = 1",
+    "does not set the orthogonal scalar top coupling to zero",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1",
+    "does not treat complete source-only C_ss data as O_H/C_sH/C_HH data"
+  ],
+  "verdict": "Complete same-source scalar spectrum data C_ss(p), including pole masses and residues, plus the same-source top response dE_top/ds still do not determine the canonical-Higgs Yukawa if an orthogonal neutral scalar top coupling is not forbidden or measured.  The witness keeps C_ss(p) and dE_top/ds fixed while varying the canonical Higgs y_t by a factor greater than four through a finite orthogonal scalar coupling.",
+  "witness_family": {
+    "basis": [
+      "h_canonical",
+      "chi_orthogonal"
+    ],
+    "checks": {
+      "canonical_higgs_y_span_factor": 4.749999999999999,
+      "orthogonal_top_couplings_finite": true,
+      "orthogonal_top_couplings_positive": true,
+      "same_source_top_response_identical": true,
+      "source_spectrum_identical_across_rows": true
+    },
+    "rows": [
+      {
+        "canonical_higgs_y_t": 0.2,
+        "max_abs_spectrum_delta_from_first": 0.0,
+        "orthogonal_scalar_top_coupling": 1.0666666666666669,
+        "same_source_top_response": 0.8,
+        "source_spectrum_samples": [
+          0.7645674740484429,
+          0.702219519610824,
+          0.6266496815286625,
+          0.5328613569321534,
+          0.4125449871465296,
+          0.28695296523517383,
+          0.18024963715529754
+        ]
+      },
+      {
+        "canonical_higgs_y_t": 0.5,
+        "max_abs_spectrum_delta_from_first": 0.0,
+        "orthogonal_scalar_top_coupling": 0.6666666666666669,
+        "same_source_top_response": 0.8,
+        "source_spectrum_samples": [
+          0.7645674740484429,
+          0.702219519610824,
+          0.6266496815286625,
+          0.5328613569321534,
+          0.4125449871465296,
+          0.28695296523517383,
+          0.18024963715529754
+        ]
+      },
+      {
+        "canonical_higgs_y_t": 0.8,
+        "max_abs_spectrum_delta_from_first": 0.0,
+        "orthogonal_scalar_top_coupling": 0.2666666666666666,
+        "same_source_top_response": 0.8,
+        "source_spectrum_samples": [
+          0.7645674740484429,
+          0.702219519610824,
+          0.6266496815286625,
+          0.5328613569321534,
+          0.4125449871465296,
+          0.28695296523517383,
+          0.18024963715529754
+        ]
+      },
+      {
+        "canonical_higgs_y_t": 0.95,
+        "max_abs_spectrum_delta_from_first": 0.0,
+        "orthogonal_scalar_top_coupling": 0.06666666666666674,
+        "same_source_top_response": 0.8,
+        "source_spectrum_samples": [
+          0.7645674740484429,
+          0.702219519610824,
+          0.6266496815286625,
+          0.5328613569321534,
+          0.4125449871465296,
+          0.28695296523517383,
+          0.18024963715529754
+        ]
+      }
+    ],
+    "source_operator": {
+      "O_s": "cos(theta) h + sin(theta) chi",
+      "cos_theta": 0.8,
+      "sin_theta": 0.5999999999999999
+    },
+    "source_spectrum": {
+      "pole_masses_sq": {
+        "chi_orthogonal": 2.89,
+        "h_canonical": 1.0
+      },
+      "pole_residues": {
+        "chi_orthogonal": 0.3599999999999998,
+        "h_canonical": 0.6400000000000001
+      },
+      "q2_grid": [
+        0.0,
+        0.1,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "samples": [
+        0.7645674740484429,
+        0.702219519610824,
+        0.6266496815286625,
+        0.5328613569321534,
+        0.4125449871465296,
+        0.28695296523517383,
+        0.18024963715529754
+      ]
+    }
+  }
+}

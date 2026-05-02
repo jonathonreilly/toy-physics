@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=126 FAIL=0
+# SUMMARY: PASS=127 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -116,6 +116,7 @@ The certificate consumes the PR-local route certificates for:
 - BRST/Nielsen Higgs-identity no-go.
 - Cl(3)/Z3 automorphism source-identity no-go.
 - same-source pole-data sufficiency gate.
+- complete source-spectrum identity no-go.
 - short-distance/OPE LSZ shortcut no-go.
 - effective-mass plateau residue no-go.
 - finite source-shift derivative no-go.
@@ -165,6 +166,7 @@ the visible shortcut routes:
 | BRST/ST/Nielsen identities | gauge identities do not fix the neutral scalar source direction or source-pole purity |
 | finite Cl(3)/Z3 automorphism/orbit data | discrete substrate facts do not fix continuous LSZ overlap, `D'(pole)`, or pole residue |
 | same-source pole-data sufficiency | positive route identified, but production/model-class/FV/IR/Higgs-identity gates remain open |
+| complete source-only spectrum | full `C_ss(p)` plus `dE_top/ds` still leaves canonical `y_t` variable through orthogonal neutral top coupling |
 | source-reparametrization gauge | source-only analytic routes need canonical scalar normalization |
 | canonical scalar normalization import audit | existing EW/Higgs notes assume or structure canonical `H`, not derive source `kappa_s` |
 | source-to-Higgs LSZ closure attempt | no allowed current-surface premise fixes `kappa_s` |
@@ -373,3 +375,10 @@ Latest neutral-scalar rank-one purity checkpoint: campaign status now includes
 `PASS=118 FAIL=0` over 122 certificates.  D17 carrier support remains support
 only, not a rank-one neutral scalar response theorem; no retained or
 proposed-retained wording is authorized.
+
+Latest complete source-spectrum checkpoint: campaign status now includes
+`scripts/frontier_yt_complete_source_spectrum_identity_no_go.py` and reports
+`PASS=127 FAIL=0` over 131 certificates.  Complete source-only `C_ss(p)` plus
+same-source `dE_top/ds` is not canonical-Higgs closure because an orthogonal
+neutral top coupling can keep those rows fixed while changing canonical `y_t`.
+No retained/proposed-retained wording is authorized.
