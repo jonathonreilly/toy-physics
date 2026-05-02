@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T15:40:44.438520+00:00
+**Generated:** 2026-05-02T15:43:13.873779+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -14289,13 +14289,13 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 
 - **Note:** [`S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`](../../docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** For the S_3 action on C^8=(C^2)^{tensor 3} by tensor-position permutations, C^8 decomposes as 4A_1+2E, with no A_2 summand.
 - **audit_status:** ~~audited_clean~~
 - **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-clean-context-2026-05-01-crosscheck`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Under the tensor-position permutation action of S_3 on C^8 = (C^2)^{otimes 3}, the representation decomposes as 4 A_1 + 2 E with no A_2 copy.  _(class `A`)_
-- **chain closes:** True — The result follows from the explicitly defined S_3 action, Hamming-weight sectors, the character table, and the finite-group multiplicity formula. The note does not claim that this alone derives a physical flavor theorem.
-- **rationale:** The load-bearing step is a finite representation-theory decomposition of the stated tensor-position action. The runner verifies the representation law, Hamming-weight preservation, class characters, multiplicities, total dimension, and sector characters without importing a numerical comparator or an unstated physical observable. Residual risk is limited to later physical uses of this carrier content, not to the algebraic decomposition audited here.
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-s3-cube-linnaeus`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The S_3 permutation action on the 8 computational basis states has class character chi(e)=8, chi(2-cycle)=4, chi(3-cycle)=2, which decomposes as 4A_1+2E and excludes A_2.  _(class `A`)_
+- **chain closes:** True — The claim is a finite-dimensional representation-theoretic computation fully specified by the note. The runner checks the representation law, Hamming-weight invariance, class characters, and multiplicity calculation exactly over the stated S_3 action.
+- **rationale:** Issue checked: whether the full taste-cube S3 carrier content is exact without becoming a physical flavor theorem. The load-bearing step is standard finite-group character algebra from the stated S3 action on the eight-state cube, and the runner checks the representation law, invariant sectors, characters, irrep multiplicities, and absence of A2. The note explicitly avoids mass-hierarchy or physical-flavor identification, so no hidden physical bridge is imported.
 - **auditor confidence:** high
 
 ### `s3_time_bilinear_tensor_action_note`
