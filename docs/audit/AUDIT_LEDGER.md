@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:11:49.614430+00:00
+**Generated:** 2026-05-02T00:13:18.756963+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 161 |
+| bounded | 160 |
 | support | 130 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 960 |
-| ~~audited_failed~~ | 89 |
+| ~~audited_failed~~ | 90 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 334 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 60 |
+| `audited_failed` | 61 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 473 |
+| `unaudited` | 472 |
 
 | criticality | count |
 |---|---:|
@@ -1141,6 +1141,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_scaling_direct_replay_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `shapiro_scaling_note` | support | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `source_resolved_exact_green_h025_pocket_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `source_resolved_exact_green_self_consistent_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_retarded_green_pocket_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `source_resolved_transverse_propagating_green_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_capture_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -14551,6 +14552,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The source-resolved Green field remains a bounded weak-field pocket on the larger exact lattice, preserving zero-source reduction, TOWARD sign, near-linear F~M, and mean |green/inst| = 1.111.  _(class `C`)_
 - **chain closes:** True — The runner recomputes the note's larger-family replay exactly for the declared lattice, source cluster, kernel, source ladder, and calibration gain. The note keeps the result bounded as exact-lattice size-transfer evidence and does not claim a full self-consistent field theory.
 - **rationale:** The current runner output matches the frozen table: zero-source shift is 0, the Green-kernel deflections and ratios match, max |f| scales from 2.5e-03 to 2.0e-02, and both fitted exponents are 1.01. This closes the bounded size-transfer claim for the declared source-resolved linear Green architecture. Residual risk is still generated-geometry transfer, robustness, and self-consistency, which the note identifies as outside this claim.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_self_consistent_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The one-update self-consistent Green field preserves zero-source reduction, TOWARD sign, near-linear F~M, and nontrivial mean |green/inst| on the compact h=0.25 family.  _(class `C`)_
+- **chain closes:** False — The current runner preserves the qualitative gates, but the note's frozen numerical table is stale: instantaneous deflections, ratios, mean ratio, and max |f| values disagree with current output. Current output gives mean |green/inst| = 1.330 and per-row max |f| near 2.500e-03, 5.000e-03, 9.999e-03, and 1.999e-02, not the note's fixed 2.0e-02 column and mean 1.300.
+- **rationale:** Issue: the frozen self-consistent Green table is not current with the primary runner; the note reports instantaneous rows like 1.442e-03 and ratios near 1.300, while the runner reports 1.410541e-03 and ratios from 1.328 to 1.332, plus a scaled max |f| column. Why this blocks: a bounded numerical pocket cannot be certified clean when its stated frozen readout disagrees with the attached computation. Repair target: refresh the source note's table, fitted mean ratio, and max |f| description from the current runner, or update the runner if the old values are intended. Claim boundary until fixed: the current runner still supports zero-source reduction, TOWARD sign, near-linear F~M, and one-update Green-pocket feasibility on the declared compact lattice.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_architecture_bridge_note`

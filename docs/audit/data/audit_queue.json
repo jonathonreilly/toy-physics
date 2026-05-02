@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 142,
+    "leaf": 141,
     "medium": 130
   },
-  "generated_at": "2026-05-02T00:11:49.403080+00:00",
+  "generated_at": "2026-05-02T00:13:18.549771+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_exact_green_self_consistent_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/source_resolved_exact_green_self_consistent.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "source_resolved_generated_bridge_failure_audit",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12773,6 +12756,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 62,
-  "total_pending": 473
+  "ready_count": 61,
+  "total_pending": 472
 }
