@@ -23,7 +23,7 @@ The two load-bearing graph-first sub-claims are:
   (runner: `scripts/frontier_graph_first_su3_integration.py`)
 
 Each sub-claim has its own status, runner, and audit row. In the current
-ledger, both dependencies are audit-ratified with `effective_status = retained`.
+ledger, both dependencies are audit-ratified at retained-grade effective status.
 This aggregator asks the fresh audit to combine those retained dependencies
 with the native `SU(2)` result computed by the primary runner above.
 
