@@ -9,12 +9,14 @@ exactly diagonal in (i, j) with binary-orthogonality sum giving 8 δ_{ij}.
 
 from fractions import Fraction
 from itertools import product
+import json
 import math
 from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTE_PATH = ROOT / "docs" / "TASTE_SCALAR_FERMION_CW_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-02.md"
+CLAIM_ID = "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02"
 
 PASS = 0
 FAIL = 0
@@ -42,7 +44,7 @@ required = [
     "Taste-Scalar Fermion Coleman-Weinberg Isotropy",
     "Type:** positive_theorem",
     "δ_{ij} · C(v)",
-    "axis-aligned electroweak minimum",
+    "axis-aligned point",
     "8 · δ_{ij}",
     "out of scope",
     "class (A)",
@@ -165,6 +167,26 @@ H_test = hessian_at_v00(lambda x: x, lambda x: Fraction(1), lambda x: Fraction(0
 check("for f(x) = x at v = 1: H_ii = 16 = 8 · 2 (closure factor)",
       H_test[0][0] == Fraction(16),
       detail=f"H_00 = {H_test[0][0]}")
+
+
+# ============================================================================
+section("Part 7: self-contained audit row remains unaudited before audit")
+# ============================================================================
+LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
+ledger = json.loads(LEDGER.read_text())
+rows = ledger["rows"]
+claim_row = rows.get(CLAIM_ID)
+check(f"{CLAIM_ID} seeded by audit pipeline",
+      claim_row is not None,
+      detail="run docs/audit/scripts/run_pipeline.sh after editing the note")
+if claim_row is not None:
+    claim_deps = set(claim_row.get("deps", []))
+    check(f"{CLAIM_ID} has no declared dependency edges",
+          not claim_deps,
+          detail=f"deps={sorted(claim_deps)}")
+    check(f"{CLAIM_ID} remains effective-unaudited before independent audit",
+          claim_row.get("effective_status") == "unaudited",
+          detail=f"effective_status={claim_row.get('effective_status')!r}")
 
 
 print(f"\n{'='*88}\n  TOTAL: PASS={PASS}, FAIL={FAIL}\n{'='*88}")

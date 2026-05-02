@@ -8,7 +8,7 @@
 
 > On `ℂ⁸ = (ℂ²)^{⊗3}` with commuting taste-shift involutions `S_i = σ_x ⊗ I ⊗ I, I ⊗ σ_x ⊗ I, I ⊗ I ⊗ σ_x` and the linear taste Hamiltonian
 > `H(φ) = Σ_i φ_i S_i`, the one-loop fermion Coleman-Weinberg Hessian
-> at the axis-aligned electroweak minimum `φ = (v, 0, 0)` (with `v ≠ 0`) is
+> at the axis-aligned point `φ = (v, 0, 0)` (with `v ≠ 0`) is
 > exactly isotropic:
 > ```
 > ∂²V_f / ∂φ_i ∂φ_j  =  δ_{ij} · C(v)
@@ -16,22 +16,21 @@
 > for any smooth `f` such that `V_f(φ) = Σ_s f(λ_s(φ)²)`.
 
 The narrow scope is **purely the fermion Coleman-Weinberg isotropy
-identity** at the retained taste block. The audit row's previously-named
-"claim boundary until fixed" was: *"the exact isotropy theorem closes for
-the fermion Coleman-Weinberg block."* This narrow theorem is that exact
-safe scope.
+identity** on the binary taste block. The parent audit handoff's safe
+boundary was the exact fermion Coleman-Weinberg block; this narrow theorem
+keeps only that algebraic scope.
 
 The narrow theorem **does not** claim:
 
 - gauge-loop or scalar-loop contributions to the Hessian (these use
   separate split models that are bounded — out of scope here);
-- electroweak phase-transition consequences (separate downstream);
+- electroweak minimum selection or phase-transition consequences (separate downstream);
 - Higgs-mass splitting from any non-fermionic source (separate);
 - a Standard-Model Higgs-sector prediction.
 
-## Retained / admitted dependencies
+## Formal inputs
 
-| Authority | Effective status | Role |
+| Input | Status | Role |
 |---|---|---|
 | (none, formally) | — | The theorem is purely algebraic on the binary product space `ℂ⁸ = (ℂ²)^{⊗3}` with `σ_x` shift operators — no external authority is load-bearing. |
 
@@ -43,12 +42,12 @@ binary products of σ_x operators.
 ## Load-bearing step (class A)
 
 ```text
-Setup: C^8 = (C^2)^{⊗3}, basis |s_1, s_2, s_3⟩ with s_i ∈ {0, 1}.
+Setup: C^8 = (C^2)^{⊗3}, simultaneous shift-eigenbasis |s_1, s_2, s_3⟩
+       with s_i ∈ {0, 1}.
 Operators: S_i = σ_x acting on tensor factor i.
-Eigenvalue: S_i |s⟩ = (-1)^{s_i} |s⟩ in the σ_z eigenbasis.
-            (i.e., we use the eigenbasis where S_i is diagonal — by
-             commuting σ_z with σ_x via the basis rotation, but the
-             formal identity holds in any basis.)
+Eigenvalue: S_i |s⟩ = (-1)^{s_i} |s⟩ in the simultaneous S_i eigenbasis.
+            Equivalently, rotate each tensor factor so σ_x is diagonal;
+            the formal identity is basis-independent.
 
 H(φ) = Σ_i φ_i S_i  →  λ_s(φ) = Σ_i φ_i (-1)^{s_i}    [exact eigenvalue]
 
@@ -90,7 +89,8 @@ Verifies, at exact rational precision via Python `Fraction`:
 4. Hessian off-diagonal `∂²/∂φ_i ∂φ_j` for `i ≠ j` evaluates to 0 at
    the axis-aligned minimum (concrete numerical test for several `f`
    choices: `f(x) = x`, `f(x) = x²`, `f(x) = log(1 + x)`).
-5. Hessian diagonal `∂²/∂φ_i ∂φ_i` evaluates to a nonzero common value.
+5. Hessian diagonal `∂²/∂φ_i ∂φ_i` evaluates to a common value; concrete
+   examples have nonzero common value.
 
 ## Audit-lane disposition (proposed)
 
@@ -98,33 +98,36 @@ Verifies, at exact rational precision via Python `Fraction`:
 target_claim_type: positive_theorem
 proposed_claim_scope: |
   Pure algebraic isotropy identity for one-loop fermion Coleman-Weinberg
-  Hessian on Cl(3)/Z³ taste block at axis-aligned electroweak minimum.
+  Hessian on Cl(3)/Z³ taste block at axis-aligned point phi=(v,0,0).
   Gauge-loop, scalar-loop, EW-phase-transition, and Higgs-sector
   consequences explicitly out of scope.
 proposed_load_bearing_step_class: A
 audit_required_before_effective_retained: true
 ```
 
-If ratified, `effective_status = retained` (positive_theorem +
-audited_clean + no upstream chain — the load-bearing identity is
-self-contained algebra on binary products).
+Audit status is set only by the independent audit lane. This note is safe to
+land as an unaudited, graph-visible positive-theorem candidate with no
+declared dependency edges because the load-bearing identity is self-contained
+algebra on binary products. Retained-family effective status requires
+independent audit of this row.
 
 ## What this theorem closes
 
 The exact fermion Coleman-Weinberg isotropy half of the parent
-`TASTE_SCALAR_ISOTROPY_THEOREM_NOTE` (`audit_status: audited_conditional`,
-td=291). The parent's audit verdict named exactly this safe scope.
+`TASTE_SCALAR_ISOTROPY_THEOREM_NOTE`. The parent audit handoff named this
+as the safe algebraic scope.
 
 ## What this theorem does NOT close
 
 - Gauge-loop Hessian contributions (separate bounded model).
 - Scalar-loop Hessian contributions (separate bounded model).
-- Electroweak phase transition or thermal scalar-cubic (separate bounded).
+- Electroweak minimum selection, phase transition, or thermal scalar-cubic
+  claims (separate bounded lanes).
 - The full Higgs-sector spectrum (separate).
 
 ## Cross-references
 
-- `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md` — parent
-  (`audit_status: audited_conditional`, td=291); this narrow theorem
-  carves out the fermion CW isotropy half cleanly.
+- `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md` — parent with a conditional audit
+  verdict; this narrow theorem carves out the fermion CW isotropy half
+  cleanly.
 - Cycles 1-7 (PRs #292-302) — sister narrow theorems on different lanes.

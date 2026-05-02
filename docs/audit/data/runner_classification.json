@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T17:30:40.048238+00:00",
+  "generated_at": "2026-05-02T17:33:32.713610+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -13944,6 +13944,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/symmetry_spectrum_mirror_compare.py"
+    },
+    "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_taste_scalar_fermion_cw_isotropy_narrow.py"
     },
     "taste_scalar_isotropy_theorem_note": {
       "assert_count": 2,
@@ -29626,6 +29638,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_taste_scalar_fermion_cw_isotropy_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_taste_scalar_isotropy.py": {
       "assert_count": 2,
       "claims": [
@@ -35525,13 +35552,13 @@
     "decoration_candidates": 105,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 151,
+      "B": 152,
       "C": 510,
       "D": 195,
       "none": 409
     },
-    "runners_classified": 1274,
+    "runners_classified": 1275,
     "runners_with_C": 611,
-    "runners_with_D": 307
+    "runners_with_D": 308
   }
 }
