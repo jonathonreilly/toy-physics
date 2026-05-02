@@ -8,13 +8,31 @@
 **Historical support scan:** `scripts/frontier_yt_ew_coupling_derivation.py`
 
 **Cited authorities (one-hop deps):**
-- [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) — derivation of
-  `R_conn = (N_c²−1)/N_c²` via the `1/N_c` topological expansion.
+- [EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
+  — **exact group-theory derivation** of `(N_c²−1)/N_c²` via the SU(N_c)
+  Fierz completeness identity + Hilbert-space dimension counting. The ratio
+  is a representation-theoretic dimension fraction; no `O(1/N_c⁴)` correction
+  applies. At `N_c = 3` the ratio is exactly `8/9`. This is the primary
+  group-theory derivation route for the `(N_c²−1)/N_c²` coefficient.
+- [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) — complementary derivation
+  of the same ratio via the `1/N_c` topological expansion (leading-order
+  with `O(1/N_c⁴)` dynamical-correction estimate). Used here as the
+  dynamical-correction sibling of the Fierz route, not as the only chain
+  for the coefficient.
 - [EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md](EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md)
   — bounded large-`N_c` support for the **matching route** that selects
   the connected color trace as the physical EW coupling readout. This
   is corroborating support for Section 2.6, not an audit ratification
   of the package-level `9/8` coefficient.
+
+**Note on the matching rule (M).** The package-level `9/8` correction
+splits into two ingredients: (F) the exact group-theory ratio
+`(N_c²−1)/N_c²`, now retained-grade arithmetic via the Fierz-channel
+note; and (M) the matching rule that the physical EW vacuum polarization
+projects onto the adjoint channel after CMT factorization. (M) remains
+a load-bearing structural input from the framework's lattice EW current
+construction; it is named explicitly in the Fierz-channel note §5 and is
+not derived by any of the four cited authorities above.
 
 ---
 
@@ -330,11 +348,32 @@ This is equivalent to the statement that the connected color trace
 ratio in the q-qbar channel is (N_c^2-1)/N_c^2, which is the
 Fierz-identity value for the adjoint channel fraction.
 
-### 2.7 Why R_conn = (N_c^2-1)/N_c^2 -- now DERIVED
+### 2.7 Why R_conn = (N_c^2-1)/N_c^2 -- TWO INDEPENDENT EXACT DERIVATIONS
 
-R_conn = (N_c^2-1)/N_c^2 is derived from the 1/N_c expansion of
-SU(N_c) gauge theory (see RCONN_DERIVED_NOTE.md for the full proof).
-The key arguments that support the derivation:
+The `(N_c^2-1)/N_c^2` coefficient is now derived through TWO independent
+routes, with the Fierz-channel route giving the ratio exactly:
+
+**Route A: Fierz / Hilbert-space-dimension (EXACT at any N_c).** See
+[EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md).
+The SU(N_c) Fierz completeness identity decomposes the q-qbar two-point
+function into 1 singlet channel and `N_c^2-1` adjoint channels exactly.
+The ratio `(N_c^2-1)/N_c^2` is the representation-theoretic dimension
+fraction of the adjoint channel in the q-qbar Hilbert space, exact at any
+finite N_c with **no `O(1/N_c⁴)` correction**. At `N_c = 3` this is exactly
+`8/9`.
+
+**Route B: 1/N_c topological expansion (leading-order with `O(1/N_c⁴)`
+dynamical-correction bound).** See `RCONN_DERIVED_NOTE.md` for the full
+proof. Provides the dynamical-correction estimate of the ratio's stability
+under non-planar diagram contributions.
+
+The two routes are complementary: Route A is the exact representation-
+theoretic identity; Route B is the dynamical-correction bound. The audit-
+graph cycle previously associated with the 1/N_c-only route (the coefficient
+appearing only at leading order in expansion) is broken by Route A's exact
+result.
+
+The key arguments supporting the derivation:
 
 1. **Fierz counting.** In the q-qbar space N_c x N_c-bar = 1 + adj,
    the connected color trace (where color quantum numbers are
@@ -364,19 +403,29 @@ The key arguments that support the derivation:
    Casimir scaling of Wilson loops (confirmed by lattice MC to ~few%
    in the literature).
 
-**What prevents THEOREM status (now that R_conn is DERIVED):**
+**What prevents THEOREM status (R_conn DERIVED via two independent routes):**
 
 1. **The CMT gives no 9/8.** The partition-function change of
    variables U = u_0 V is exact. It gives the SAME u_0^2 for both
    the EW and SU(3) vacuum polarizations (same n_link = 2). The
    9/8 is invisible to the CMT because the CMT is color-blind.
-   The 1/N_c expansion provides the missing color-dependent analysis.
+   The Fierz-channel route (Route A) and the 1/N_c expansion
+   (Route B) provide complementary color-dependent analyses.
 
-2. **R_conn has O(1/N_c^4) corrections.** The 1/N_c derivation
-   (RCONN_DERIVED_NOTE.md) gives R_conn = (N_c^2-1)/N_c^2 at
-   leading order, with corrections O(1/N_c^4) ~ 1.2%. The MC
-   bounds |c_2| < 0.8. An exact result (c_2 = 0) would require
-   a non-perturbative proof that genus >= 2 contributions vanish.
+2. **The matching rule (M) is the residual load-bearing input.** The
+   Fierz-channel derivation (Route A,
+   `EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`) gives
+   the `(N_c^2-1)/N_c^2` ratio EXACTLY, with no `O(1/N_c^4)` correction
+   — it is a representation-theoretic dimension fraction. So the
+   coefficient itself is no longer the bottleneck. What remains
+   load-bearing is the matching rule (M): the assertion that the
+   physical EW vacuum polarization, after CMT factorization, projects
+   onto the adjoint (connected) channel rather than the total channel
+   sum. (M) is named explicitly in the Fierz-channel note §5 and is
+   not derived by the Fierz, 1/N_c, or OZI routes; it is a structural
+   input from the framework's lattice EW current construction. A
+   future research lane that derives (M) from retained primitives
+   would close the full 9/8 to retained-grade.
 
 3. **Alternative derivation routes are insufficient alone.** Wilson
    line ratio, representation-dependent u_0, and vertex-level

@@ -5,7 +5,17 @@
 **Primary runner:** `scripts/frontier_color_projection_mc.py`
 **Depends on:**
 [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md),
-`YT_EW_COLOR_PROJECTION_THEOREM.md`
+`YT_EW_COLOR_PROJECTION_THEOREM.md` (plain text reference, not a load-bearing import)
+**Sibling exact derivation of `(N_c^2−1)/N_c^2`:**
+[EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
+— independent representation-theoretic derivation of the same ratio via
+the SU(N_c) Fierz completeness identity. The OZI suppression argument
+in this note bounds the disconnected piece relative to the connected
+piece (a dynamical-suppression statement at leading 1/N_c). The Fierz
+note gives the exact channel-fraction ratio without 1/N_c expansion.
+The two arguments are complementary: this note bounds the disconnected
+contribution to `O(1/N_c^2)`; the Fierz note specifies the connected-
+channel weight as exact group theory.
 
 ---
 
