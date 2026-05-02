@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 27,
     "high": 215,
-    "leaf": 149,
+    "leaf": 148,
     "medium": 156
   },
-  "generated_at": "2026-05-02T23:44:24.707950+00:00",
+  "generated_at": "2026-05-02T23:47:36.192415+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10876,29 +10876,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "schur_covariance_inheritance_narrow_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "site_phase_cube_shift_intertwiner_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_schur_covariance_inheritance_narrow.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "seventh_family_diagonal_boundary_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -14575,6 +14552,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 72,
-  "total_pending": 547
+  "ready_count": 71,
+  "total_pending": 546
 }

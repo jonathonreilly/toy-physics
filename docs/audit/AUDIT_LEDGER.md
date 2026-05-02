@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:44:24.979505+00:00
+**Generated:** 2026-05-02T23:47:36.481183+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 141 |
+| **retained** | 142 |
 | **retained_no_go** | 98 |
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 508 |
+| unaudited | 507 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 401 |
+| `audited_clean` | 402 |
 | `audited_conditional` | 651 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 547 |
+| `unaudited` | 546 |
 
 | claim_type | count |
 |---|---:|
@@ -412,6 +412,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `scalar_trace_tensor_no_go_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `self_consistency_structured_null_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `self_gravity_backreaction_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh | C | - |
@@ -14761,6 +14762,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `gravity scaling logs/scripts for Q_sat`
   - `decoherence entropy/purity correlation script`
+
+### `schur_covariance_inheritance_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Pure finite-dimensional linear-algebra theorem: for a block-diagonal unitary action and covariant Hermitian block operator with invertible D block, the Schur complement onto V_1 inherits U_1-covariance; no physical applicability claim is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-Popper-019deb16-4f33-7a70-8cb3-3d96e5f0ae89`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Expanding the block-diagonal covariance equation U M U† = M gives U_1 A U_1† = A, U_1 B U_W† = B, and U_W D U_W† = D, so D^{-1} commutes with U_W and the Schur complement S = A - B D^{-1} B† is U_1-covariant.  _(class `A`)_
+- **chain closes:** True — The proof is an algebraic consequence of the stated block covariance relations, unitarity, and invertibility of D. The only cited authority is retained-grade and functions as framework anchoring rather than a needed mathematical premise for the general lemma.
+- **rationale:** The load-bearing step is exact block-matrix algebra and closes under the theorem's explicit hypotheses. The note clearly excludes physical charged-lepton applicability, physical invertibility of D, and identification of Schur reduction with a physical reduction map. The runner output reports exact PASS(A) checks for the stated examples, negative controls, scope discipline, and retained dependency status.
+- **auditor confidence:** high
 
 ### `science_3plus1_line_law_known_limits_note_2026-04-20`
 
