@@ -1,0 +1,33 @@
+slug: 3plus1d-native-closure-2026-05-02
+iteration: 2
+mode: run
+started_at: 2026-05-02
+worker_branch: claude/axiom-first-rp-microcausality-elevate-2026-05-02
+parallel_iterations:
+  iteration_1:
+    routes: [c, d]
+    target: lattice Wess-Zumino theorem; gauge-broken implication
+  iteration_2:
+    routes: [a, b]
+    target: axiom_first_reflection_positivity + axiom_first_microcausality
+            elevate to retained-clean (audit-ready)
+goal: Drive RP + microcausality theorem rows to retained-clean serve as
+      retained-grade dependencies for the anomaly-internalization chain.
+target_status: audit-ready (independent audit owns retained promotion)
+runtime: ~1h hygiene/review work
+runtime_used_min: 0
+cycle_count: 0
+active_route: route_a (RP) then route_b (microcaus)
+hard_residual: null
+files_touched: []
+open_imports: []
+no_go_routes: []
+review_findings: []
+pr_status: not_yet_opened
+next_exact_action: |
+  1. Tighten RP note Status line and add Type metadata.
+  2. Tighten microcausality note Status line and add Type metadata.
+  3. Run audit pipeline; verify audit_lint OK.
+  4. Commit incrementally and push branch.
+  5. Open PR for Codex re-audit.
+stop_condition: both notes hygiene-clean, audit_lint OK, PR opened
