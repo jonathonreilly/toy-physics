@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-02T17:06:13.364403+00:00",
+  "computed_at": "2026-05-02T17:10:26.628730+00:00",
   "criticality_counts": {
     "critical": 96,
     "high": 341,
@@ -72,6 +72,12 @@
       "transitive_descendants": 104
     },
     {
+      "claim_id": "native_gauge_closure_note",
+      "criticality": "critical",
+      "load_bearing_score": 22.492,
+      "transitive_descendants": 359
+    },
+    {
       "claim_id": "three_generation_observable_theorem_note",
       "criticality": "critical",
       "load_bearing_score": 22.439,
@@ -106,12 +112,6 @@
       "criticality": "critical",
       "load_bearing_score": 19.6,
       "transitive_descendants": 96
-    },
-    {
-      "claim_id": "native_gauge_closure_note",
-      "criticality": "critical",
-      "load_bearing_score": 19.492,
-      "transitive_descendants": 359
     },
     {
       "claim_id": "anomaly_forces_time_theorem",

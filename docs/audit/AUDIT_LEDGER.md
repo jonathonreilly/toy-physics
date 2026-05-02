@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:09:19.136672+00:00
+**Generated:** 2026-05-02T17:10:27.408650+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -83,13 +83,13 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 7 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 289 | 26.18 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 293 | 24.70 | `unaudited` | unaudited |
 | 9 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `three_generation_observable_theorem_note` | positive_theorem | critical | 346 | 22.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 11 | `three_generation_structure_note` | positive_theorem | critical | 302 | 21.24 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `left_handed_charge_matching_note` | bounded_theorem | critical | 304 | 20.75 | `audited_renaming` | ~~audited_renaming~~ |
-| 15 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `native_gauge_closure_note` | bounded_theorem | critical | 359 | 19.49 | `audited_clean` | **retained_bounded** |
+| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 359 | 22.49 | `audited_clean` | **retained_bounded** |
+| 11 | `three_generation_observable_theorem_note` | positive_theorem | critical | 346 | 22.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `three_generation_structure_note` | positive_theorem | critical | 302 | 21.24 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 304 | 20.75 | `audited_renaming` | ~~audited_renaming~~ |
+| 16 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 299 | 19.23 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `rconn_derived_note` | bounded_theorem | critical | 296 | 16.71 | `unaudited` | unaudited |
