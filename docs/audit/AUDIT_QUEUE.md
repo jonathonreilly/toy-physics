@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T20:05:09.726125+00:00
+**Generated:** 2026-05-02T20:08:46.866100+00:00
 **Total pending:** 595
 **Ready (all deps already at retained-grade or metadata tiers):** 117
 
@@ -18,7 +18,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `one_generation_matter_closure_note` | positive_theorem | claim_type_backfill_reaudit | critical | 259 | 21.02 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_right_handed_sector.py` |
 | 2 | `yt_ward_identity_derivation_theorem` | positive_theorem | claim_type_backfill_reaudit | critical | 183 | 26.52 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 3 | `cpt_exact_note` | positive_theorem | unaudited | critical | 63 | 13.50 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 3 | `cpt_exact_note` | positive_theorem | audit_in_progress | critical | 63 | 13.50 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 4 | `confinement_string_tension_note` | positive_theorem | claim_type_backfill_reaudit | critical | 54 | 13.28 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_confinement_string_tension.py` |
 | 5 | `plaquette_self_consistency_note` | bounded_theorem | unaudited | critical | 244 | 16.44 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
 | 6 | `alpha_s_derived_note` | bounded_theorem | unaudited | critical | 238 | 28.90 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_zero_import_chain.py` |
