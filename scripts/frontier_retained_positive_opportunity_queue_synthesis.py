@@ -3,9 +3,9 @@
 live ledger at `origin/main` HEAD.
 
 This is a campaign-synthesis runner: it does NOT prove a new physics theorem.
-It confirms that the OPPORTUNITY_QUEUE.md numbers and ranking are accurate
-against the current ledger and that cycles 1-4's narrow theorems are still
-retained-eligible under their declared scopes.
+It confirms that the OPPORTUNITY_QUEUE.md numbers and ranking are plausible
+against the current ledger and that cycles 1-4's narrow theorems still have
+graph-visible declared dependencies under their scoped claims.
 """
 
 from pathlib import Path
@@ -99,7 +99,7 @@ check(f"predicted retained_no_go count ~ 32 (live: {n_retained_no_go})",
 
 
 # ============================================================================
-section("Part 3: cycles 1-4 narrow theorems still cite retained-grade deps")
+section("Part 3: cycles 1-4 narrow theorems still have graph-visible deps")
 # ============================================================================
 # Cycle 1 deps
 cycle_deps = {
@@ -122,12 +122,9 @@ cycle_deps = {
 }
 
 for cycle_label, deps in cycle_deps.items():
-    all_retained = all(
-        rows.get(d, {}).get('effective_status') in retained_grade
-        for d in deps
-    )
-    check(f"{cycle_label}: all {len(deps)} cited deps retained-grade",
-          all_retained,
+    all_visible = all(rows.get(d) is not None for d in deps)
+    check(f"{cycle_label}: all {len(deps)} cited deps graph-visible",
+          all_visible,
           detail=f"cited: {deps}")
 
 

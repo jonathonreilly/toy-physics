@@ -7,8 +7,8 @@
 ## Block type
 
 Campaign-synthesis / opportunity-queue handoff packet. Documents the retained-
-positive movement potential under the new framework: 582 candidates predicted
-to land retained-grade on first clean audit, ranked by transitive descendants.
+positive movement potential under the new framework: 582 candidates that may
+land in the retained family if independently ratified, ranked by transitive descendants.
 This is meta-work that wraps cycles 1-4 with a clear handoff for the audit
 lane (and for any follow-up science cycles the user may direct).
 
@@ -19,10 +19,9 @@ target_claim_type: meta
 proposed_claim_scope: |
   Campaign opportunity-queue synthesis: documents 323 positive_theorem +
   227 bounded_theorem + 32 no_go candidates in the live ledger predicted to
-  land retained-grade on first clean audit. Provides top-30 priority ranking
-  by transitive descendants. Verifies cycles 1-4 narrow theorems still cite
-  retained-grade deps.
-target_audit_status: meta (no audit needed for opportunity queue)
+  land retained-family status if independently ratified and dependency-clean.
+  Provides top-30 priority ranking by transitive descendants. Verifies cycles
+  1-4 narrow theorems still declare graph-visible deps.
 audit_required_before_effective_retained: N/A (this is meta, not a claim)
 bare_retained_allowed: false
 ```
@@ -31,8 +30,11 @@ bare_retained_allowed: false
 
 1. **582-candidate retained-positive pipeline**: split by claim_type (323 positive_theorem + 227 bounded_theorem + 32 no_go).
 2. **Top-30 priority list** by transitive descendants for audit-lane prioritization.
-3. **Pattern observation**: most top-30 candidates have `deps = []` and `audited_conditional` from old framework — under new framework these become retained-grade with one clean re-audit.
-4. **Cycle 1-4 retained-grade dep verification**: all 4 cycles still cite retained-grade primitives via live ledger lookup.
+3. **Pattern observation**: most top-30 candidates have `deps = []` and
+   conditional verdicts from the old framework; under the new framework these
+   are good targets for independent re-audit.
+4. **Cycle 1-4 graph visibility verification**: all 4 cycles still declare
+   graph-visible primitives via live ledger lookup.
 5. **Anti-churn discipline**: campaign stops after 4 substantive cycles + this synthesis to avoid corollary-mining (per memory file `feedback_physics_loop_corollary_churn.md`).
 
 ## What this packet does NOT do

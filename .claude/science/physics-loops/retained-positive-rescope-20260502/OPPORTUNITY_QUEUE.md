@@ -7,7 +7,8 @@
 
 ## Executive summary
 
-Under the new framework, **582 rows** are predicted to land retained-grade on first clean audit:
+Under the new framework, **582 rows** are candidates for retained-family status
+if an independent audit ratifies the local claim and any dependency chain closes:
 
 | Predicted effective_status | Count | Reason |
 |---|---:|---|
@@ -15,18 +16,21 @@ Under the new framework, **582 rows** are predicted to land retained-grade on fi
 | `retained_bounded` | 227 | `bounded_theorem` + 0 or all-retained deps |
 | `retained_no_go` | 32 | `no_go` + 0 or all-retained deps |
 
-These are rows where the audit chain is structurally clean under the new framework's scope-aware rubric. The audit lane just needs to process them with `audited_clean` verdicts. No further dep-chain work is required from the science worker for this large class.
+These are rows where the audit chain appears structurally plausible under the
+new framework's scope-aware rubric. This is a prioritization snapshot, not an
+author-side audit verdict.
 
 ## Cycles 1-4 contributed 4 new retained-eligible primitives
 
 | Cycle | PR | Type | Lane | Lever | Verification |
 |---|---|---|---|---|---|
 | 1 | [#292](https://github.com/jonathonreilly/cl3-lattice-framework/pull/292) | positive_theorem | LH-doublet hypercharge | eigenvalue ratio 1:(−3) on Sym²:Anti² | PASS=23/0 |
-| 2 | [#293](https://github.com/jonathonreilly/cl3-lattice-framework/pull/293) | bounded_theorem | Koide cyclic Wilson | conditional 3-response reduction | PASS=32/0 |
+| 2 | [#293](https://github.com/jonathonreilly/cl3-lattice-framework/pull/293) | bounded_theorem | Koide cyclic Wilson | conditional 3-response reduction | PASS=38/0 |
 | 3 | [#294](https://github.com/jonathonreilly/cl3-lattice-framework/pull/294) | positive_theorem | Schur representation theory | covariance inheritance lemma | PASS=22/0 |
-| 4 | [#297](https://github.com/jonathonreilly/cl3-lattice-framework/pull/297) | positive_theorem | Three-generation observable | algebra-generation no-proper-quotient | PASS=30/0 |
+| 4 | [#297](https://github.com/jonathonreilly/cl3-lattice-framework/pull/297) | positive_theorem | Three-generation observable | algebra-generation no-proper-quotient | PASS=33/0 |
 
-Each cited only retained-grade primitives one-hop and excluded any conditional bridges; each is class (A) algebraic on retained-grade inputs.
+Each excludes its known conditional bridge and declares graph-visible one-hop
+dependencies; retained-family status remains audit-lane/pipeline-derived.
 
 ## Top 30 highest-leverage candidates (by transitive descendants)
 
@@ -71,7 +75,10 @@ Most of the top-30 share two characteristics:
 
 2. **Old framework `audited_conditional` verdicts** that flagged "undeclared upstream reads" or "support-tier authority not retained on the actual surface" — both diagnostics are obsolete under the new framework's scope-aware rubric. The new framework treats the audit row's content as primary; chain-level claims about upstream prose are no longer load-bearing for retention.
 
-This is exactly the situation that motivated cycles 1-4: when an `audited_conditional` row has retained-grade deps (or no deps) under the new framework, a fresh-context re-audit on the source note's class-A/C load-bearing step should grant `audited_clean` and the row lifts to retained-grade.
+This is exactly the situation that motivated cycles 1-4: when an older
+conditional row has graph-visible deps (or no deps) under the new framework, a
+fresh-context re-audit on the source note's class-A/C load-bearing step can
+decide whether the row lifts to retained-family status.
 
 ## Recommendations
 
@@ -82,7 +89,8 @@ For the audit lane:
 For follow-up science cycles (if user requests):
 - Cycles 1-4 demonstrate the **narrow-rescope pattern**: when a row's parent has scope creep blocking clean audit, write a sister NEW claim row that captures only the safe scope with retained-grade deps. The new row lands retained directly.
 - The narrow-rescope pattern is most valuable for rows where the parent's load-bearing step is **class (E)/(F) renaming** (the LHCM pattern) — where carving out the algebraic content as class (A) creates a clean retainable primitive.
-- Other targets for narrow-rescope: rows with `audit_status: audited_renaming` whose underlying algebra is class (A) on retained inputs.
+- Other targets for narrow-rescope: rows with renaming-style verdicts whose
+  underlying algebra is class (A) on declared inputs.
 
 ## Anti-churn note
 
