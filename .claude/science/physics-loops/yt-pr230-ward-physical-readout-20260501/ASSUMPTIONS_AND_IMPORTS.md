@@ -200,6 +200,21 @@ The zero-mode/IR limiting order is therefore a load-bearing proof input.  A
 route that uses the finite derivative as `kappa_s`/LSZ normalization without
 deriving that order is importing a hidden prescription.
 
+Scalar ladder residue-envelope obstruction:
+
+```text
+g = 1 / lambda_max(0)
+residue_proxy = |lambda_max(0) / lambda'_max(0)|
+```
+
+Tuning each finite ladder surface to its own pole removes the pole-location
+ambiguity, but does not fix scalar LSZ normalization.  The pole-tuned residue
+proxy still changes under zero-mode, source-projector, and finite-volume
+choices.  Therefore a finite ladder residue envelope cannot be used as
+`kappa_s` or a canonical-Higgs LSZ input unless the limiting prescription and
+source/projector normalization are derived, or the pole derivative is measured
+on production ensembles.
+
 Cl(3)/Z3 source-unit normalization boundary:
 
 ```text

@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=17 FAIL=0
+# SUMMARY: PASS=18 FAIL=0
 ```
 
 The runner verifies:
@@ -35,6 +35,7 @@ The runner verifies:
 | Feshbach response preservation proves common dressing | no |
 | same-source FH/LSZ invariant readout is production evidence | no |
 | scalar ladder derivative limiting order is derived | no |
+| scalar ladder pole-tuned residue envelope is an LSZ bound | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
@@ -80,7 +81,8 @@ residue and dressing.  Source-normalization covariance, exact Feshbach response
 preservation, same-source invariant readout, and Cl(3)/Z3 source-unit checks
 are now controlled, but none derives the microscopic interacting scalar
 denominator, zero-mode/IR limiting order, pole residue, or scalar/gauge
-equality.
+equality.  The pole-tuned finite-ladder residue envelope remains
+zero-mode/projector/volume dependent, so it is not a scalar-LSZ bound either.
 
 ### Route 3: New Selector Theorem
 

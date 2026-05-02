@@ -227,3 +227,19 @@ Refreshes the retained-closure route certificate:
 - still no retained/proposed-retained closure: remaining routes are strict
   production physical-response data or a scalar pole/common-dressing theorem.
 ```
+
+Latest scalar ladder residue-envelope checkpoint text for PR #230:
+
+```text
+Adds a scalar ladder pole-tuned residue-envelope obstruction:
+- tunes each finite Wilson-exchange ladder surface to its own pole, so the
+  check no longer confuses pole location with LSZ residue;
+- validator passes `PASS=9 FAIL=0`; retained-route gate reports
+  `PASS=18 FAIL=0`; campaign status now consumes 48 route certificates and
+  reports `PASS=44 FAIL=0`;
+- the pole-tuned residue proxy still has a `7.08739x` envelope spread, with
+  zero-mode, projector, and finite-volume choices changing the result;
+- still no retained/proposed-retained closure: a real interacting
+  denominator/zero-mode/IR/finite-volume theorem or production pole data is
+  required.
+```

@@ -382,8 +382,25 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=42 FAIL=0
 
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=17 FAIL=0
+# SUMMARY: PASS=18 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=43 FAIL=0
+# SUMMARY: PASS=44 FAIL=0
+```
+
+Scalar ladder residue-envelope checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / scalar ladder residue-envelope obstruction
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_scalar_ladder_residue_envelope_obstruction.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=44 FAIL=0
 ```

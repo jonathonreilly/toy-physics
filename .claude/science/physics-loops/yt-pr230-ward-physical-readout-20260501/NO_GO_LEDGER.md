@@ -624,6 +624,22 @@ test crosses only in the zero-mode-included prescription.  Therefore the
 finite derivative is not a retained LSZ residue input without a zero-mode/IR
 limiting theorem or production pole data.
 
+Scalar ladder pole-tuned residue-envelope shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_ladder_residue_envelope_obstruction.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+Tuning each finite ladder surface to its own pole removes the pole-location
+ambiguity, but the resulting LSZ residue proxy still has a `7.08739x` envelope
+spread across allowed current-surface zero-mode, projector, IR, and volume
+choices.  At `N=5`, fixed `mu_IR^2=0.05`, local-source zero-mode removal
+changes the proxy by `5.21259x`, and the removed-zero-mode local versus
+normalized point-split projectors differ by `2.09302x`.  Therefore finite
+Bethe-Salpeter ladder residues are not retained scalar-LSZ input without the
+limiting theorem or production pole-derivative data.
+
 Cl(3)/Z3 source-unit normalization shortcut is blocked:
 
 ```text
@@ -655,12 +671,13 @@ Retained-closure route certificate remains open after refresh:
 
 ```text
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=17 FAIL=0
+# SUMMARY: PASS=18 FAIL=0
 ```
 
 The refreshed gate includes same-source invariant readout, scalar ladder
-derivative limiting-order, Cl(3)/Z3 source-unit, production-manifest, and joint
-resource blocks.  It still authorizes no proposed-retained wording.
+derivative limiting-order, scalar ladder residue-envelope, Cl(3)/Z3
+source-unit, production-manifest, and joint resource blocks.  It still
+authorizes no proposed-retained wording.
 
 ## Inherited No-Gos And Boundaries
 

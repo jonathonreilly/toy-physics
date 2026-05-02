@@ -32,6 +32,9 @@ Completed in block 1:
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_ladder_residue_envelope_obstruction.py`
+- `outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json`
+- `docs/YT_SCALAR_LADDER_RESIDUE_ENVELOPE_OBSTRUCTION_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_direct_measurement_scale_requirements.py`
 - `outputs/yt_direct_measurement_scale_requirements_2026-05-01.json`
 - `docs/YT_DIRECT_MEASUREMENT_SCALE_REQUIREMENTS_NOTE_2026-05-01.md`
@@ -232,7 +235,9 @@ Next artifact:
   proves substrate unit conventions do not derive `kappa_s`; the joint FH/LSZ
   production manifest gives exact commands but no evidence; the retained
   closure route certificate has been refreshed and still disallows proposed
-  retained wording
+  retained wording; the pole-tuned finite-ladder residue envelope remains
+  zero-mode/projector/volume dependent, so the next positive move must be a
+  real interacting denominator/limit theorem or production pole data
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

@@ -77,6 +77,7 @@ def main() -> int:
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
         "scalar_ladder_total_momentum_derivative": load("outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json"),
         "scalar_ladder_derivative_limit": load("outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json"),
+        "scalar_ladder_residue_envelope": load("outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -269,6 +270,12 @@ def main() -> int:
         statuses["scalar_ladder_derivative_limit"],
     )
     report(
+        "scalar-ladder-residue-envelope-not-lsz-bound",
+        "residue-envelope obstruction" in str(statuses["scalar_ladder_residue_envelope"])
+        or "exact negative boundary" in str(statuses["scalar_ladder_residue_envelope"]),
+        statuses["scalar_ladder_residue_envelope"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -399,7 +406,10 @@ def main() -> int:
             "canonical Higgs field normalization.  The joint FH/LSZ production "
             "path now has exact launch commands, but the manifest is not "
             "production evidence.  The refreshed retained-closure route "
-            "certificate still authorizes no proposed-retained wording."
+            "certificate still authorizes no proposed-retained wording.  A "
+            "pole-tuned finite ladder residue envelope also fails to select a "
+            "unique LSZ input across current zero-mode, projector, and volume "
+            "choices."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

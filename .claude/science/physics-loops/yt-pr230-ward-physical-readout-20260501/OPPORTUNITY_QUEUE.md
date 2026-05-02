@@ -55,6 +55,9 @@ probability.
    finite-`N_c` continuum bound.  Finite same-source samples likewise do not
    bound the derivative of the interacting denominator unless the denominator
    theorem or a production pole-residue measurement supplies that bound.
+   Pole-tuned finite ladder surfaces also fail to select a unique residue
+   envelope across zero-mode, projector, and volume choices, so another finite
+   witness is lower value than a true limit theorem.
 4. **Feynman-Hellmann scalar-response route.** Energy slopes with respect to a
    uniform scalar source bypass the absolute heavy rest-mass ambiguity.  This
    is a promising alternate measurement design, but it still requires
@@ -104,7 +107,9 @@ probability.
    prescription sensitive; the retained task is the limiting theorem or
    production pole derivative, not another finite witness.  The limiting-order
    obstruction confirms that the zero-mode and IR prescription is load-bearing
-   for both the derivative and the pole crossing.
+   for both the derivative and the pole crossing.  The pole-tuned residue
+   envelope obstruction confirms that even after forcing each finite surface
+   to its own pole, the LSZ residue proxy is not a current-surface invariant.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

@@ -239,6 +239,11 @@ What changed:
   source-unit, derivative-limit, and production-manifest blocks.  It still
   reports `proposal_allowed=false`; the remaining positive routes are
   production evidence or a scalar pole/common-dressing theorem.
+- The scalar ladder residue-envelope obstruction normalizes away pole-location
+  ambiguity by tuning each finite ladder to its own pole.  Even then, the
+  residue proxy remains zero-mode, source-projector, and finite-volume
+  dependent.  A finite ladder envelope is not a scalar-LSZ/canonical-Higgs
+  theorem.
 
 The scientific result is narrower than closure:
 
@@ -255,17 +260,18 @@ static rephasing, same-1PI coefficient equality, finite ladder eigenvalue
 scouts, contact HS rewrite, and wording around the old Ward note are not enough.
 ```
 
-Exact next action:
+Exact next action after the residue-envelope checkpoint:
 
 ```text
-Package this PR #230 update.  The remaining positive options are now:
+Continue the campaign from the remaining positive options:
 
 1. strict direct physical measurement at a suitable top/heavy-quark scale with
    additive-mass/interacting-kinetic/matching control supplied by an
    independent observable or theorem; current single-worker projection is
    multi-day, not 12-hour foreground closure;
 2. interacting scalar denominator/pole-residue/common-dressing theorem from
-   retained dynamics, including a finite-`N_c=3` pole-residue bound;
+   retained dynamics, including zero-mode/IR/finite-volume control and a
+   finite-`N_c=3` pole-residue bound;
 3. Feynman-Hellmann scalar-response production measurement plus a derived
    scalar-source normalization bridge;
 4. a newly derived Planck stationarity selector.
@@ -313,4 +319,6 @@ The production-manifest block makes the empirical route resumable; running it
 is a multi-day compute action, not a foreground proof.
 The refreshed retained-closure gate is the current claim firewall: no retained
 or proposed-retained wording is allowed until production or theorem evidence
-changes that certificate.
+changes that certificate.  The residue-envelope block says the next analytic
+move must be the actual interacting denominator/zero-mode/IR/finite-volume
+limit theorem, not another finite ladder witness.
