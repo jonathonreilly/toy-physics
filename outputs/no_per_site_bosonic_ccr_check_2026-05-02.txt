@@ -1,0 +1,42 @@
+========================================================================
+NO PER-SITE BOSONIC CCR CHECK
+========================================================================
+
+------------------------------------------------------------------------
+TEST 1: tr([A, B]) = 0 for any bounded A, B on finite-dim H
+------------------------------------------------------------------------
+  max |tr([A, B])| over 10 random pairs = 9.930e-16
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: bosonic CCR [a, a†] = I is impossible on dim-2 H
+------------------------------------------------------------------------
+  IF [a, a†] = I_2 held, then tr([a, a†]) = tr(I_2) = 2.
+  BUT tr([a, a†]) = 0 always (Test 1).
+  Direct contradiction: 0 = 2 is false ⇒ no such (a, a†) exists.
+  STATUS: PASS (logical)
+
+------------------------------------------------------------------------
+TEST 3: explicit search for (a, a†) on dim 2 satisfying [a, a†] = I
+------------------------------------------------------------------------
+  Try standard fermionic creation (a† = sigma+, a = sigma-):
+  [σ-, σ+] = [[(1+0j), 0j], [0j, (-1+0j)]]  (NOT identity; this is the fermionic anticommutator's sibling)
+  fermionic case: {σ-, σ+} = identity (anticommutator), [σ-, σ+] = σ_z (commutator)
+  Bosonic CCR [a, a†] = I: NOT satisfied (would need infinite dim)
+  STATUS: PASS (correctly identifies failure)
+
+------------------------------------------------------------------------
+TEST 4: bosonic CCR is satisfied on infinite-dim Fock space (truncated)
+------------------------------------------------------------------------
+  N_max = 30, dim = 31
+  bulk diagonal of [a, a†]: ~1.0 (should match identity)
+  bulk max |[a, a†]_nn - 1| = 7.105e-15
+  boundary [a, a†]_NN = -30.000 (truncation artifact)
+  STATUS: PASS (bulk is exactly identity)
+
+========================================================================
+  Test 1 (trace obstruction tr([A,B])=0):       PASS
+  Test 2 (bosonic CCR ⇒ contradiction):         PASS
+  Test 3 (Pauli ladder is not bosonic CCR):     PASS
+  Test 4 (bosonic CCR works infinite-dim):      PASS
+  OVERALL: PASS

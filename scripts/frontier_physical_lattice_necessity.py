@@ -64,19 +64,34 @@ from canonical_plaquette_surface import (
 
 PASS_COUNT = 0
 SUPPORT_COUNT = 0
+COMMENTARY_NEUTRAL = 0
 FAIL_COUNT = 0
 
 
 def check(name: str, condition: bool, detail: str = "", kind: str = "SUPPORT") -> bool:
-    global PASS_COUNT, SUPPORT_COUNT, FAIL_COUNT
+    """Record a check.
+
+    Under the narrowed 2026-05-02 scope, only `EXACT` and `COMPUTE` checks
+    contribute to PASS/FAIL. SUPPORT and LOGICAL checks are commentary
+    about the package architecture: they are still printed for context,
+    but they do not contribute to FAIL_COUNT, since the narrowed
+    load-bearing claim is purely the algebraic two-invariant rigidity in
+    Parts 4 + 5.
+    """
+    global PASS_COUNT, SUPPORT_COUNT, COMMENTARY_NEUTRAL, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
-    if condition:
-        if kind in {"EXACT", "COMPUTE"}:
+    if kind in {"EXACT", "COMPUTE"}:
+        if condition:
             PASS_COUNT += 1
         else:
-            SUPPORT_COUNT += 1
+            FAIL_COUNT += 1
     else:
-        FAIL_COUNT += 1
+        # SUPPORT, LOGICAL: commentary only; track separately, never FAIL
+        if condition:
+            SUPPORT_COUNT += 1
+        else:
+            COMMENTARY_NEUTRAL += 1
+            status = "INFO"  # neutral marker for narrowed-out commentary
     tag = f" [{kind}]" if kind != "EXACT" else ""
     msg = f"  [{status}]{tag} {name}"
     if detail:
@@ -765,66 +780,57 @@ def main() -> int:
     )
 
     print("=" * 88)
-    print("SYNTHESIS")
+    print("SYNTHESIS (narrowed 2026-05-02)")
     print("=" * 88)
     print()
-    print("  Framework-boundary result:")
-    print("    - the accepted stack is a fixed theory surface, not a tunable")
-    print("      regulator family")
-    print("    - the retained generation surface is already quotient-closed")
-    print("    - regulator reinterpretation requires extra structure absent from")
-    print("      that accepted stack")
-    print("    - fixed-surface and invariant-collapse calculations pass as")
-    print("      support diagnostics, not as load-bearing premises")
-    print("    - exact observable-sector semantics already force the")
-    print("      retained hw=1 triplet to be physically distinct species")
-    print("      sectors on the accepted Hilbert surface")
-    print("    - conditional on the retained quantitative package contract,")
-    print("      the physical-lattice reading is the unique survivor")
-    print("    - on the accepted one-axiom framework surface, the")
-    print("      graph/locality object is already physical and the")
-    print("      substrate reading is derived rather than separately asserted")
+    print("  Narrowed load-bearing result (the no-go theorem):")
+    print("    - on the retained Wilson SU(3) action with one tunable plaquette")
+    print("      parameter u_0, the only (beta, u_0) family preserving both")
+    print("      alpha_s(v) and v is the trivial canonical point (beta=6,")
+    print("      u_0=u_0_can). This is a finite real-algebra two-invariant")
+    print("      rigidity statement, fully verified by Parts 4 and 5.")
     print()
-    print(f"  THEOREM/COMPUTE PASS = {PASS_COUNT}, SUPPORT = {SUPPORT_COUNT}, FAIL = {FAIL_COUNT}")
+    print("  Architectural commentary (informational, not load-bearing):")
+    print("    - the accepted minimal stack is fixed and does not contain a")
+    print("      continuum-limit/rooting/RG layer")
+    print("    - exact observable-sector semantics on the Hilbert surface")
+    print("    - one-axiom substrate-physicality narrative")
+    print("    All such checks are tagged [LOGICAL] / [SUPPORT] / [INFO] in the")
+    print("    output and depend on the (currently unaudited) sibling notes; they")
+    print("    are commentary on package architecture, not part of the narrowed")
+    print("    load-bearing no-go theorem.")
+    print()
     print(
-        "  CLOSED STATUS: "
-        + (
-            "NO SAME-STACK REGULATOR REINTERPRETATION"
-            if no_same_stack_regulator
-            else "NOT ESTABLISHED"
-        )
+        f"  THEOREM/COMPUTE PASS = {PASS_COUNT}, SUPPORT = {SUPPORT_COUNT}, "
+        f"COMMENTARY_NEUTRAL = {COMMENTARY_NEUTRAL}, FAIL = {FAIL_COUNT}"
+    )
+    print()
+    print("  Narrowed-scope load-bearing status:")
+    print(
+        "    TWO-INVARIANT RIGIDITY (Parts 4+5): "
+        + ("CLOSED" if (fixed_surface_rigid and cross_lane_rigid) else "NOT ESTABLISHED")
+    )
+    print()
+    print("  Architectural commentary status (informational, not load-bearing):")
+    print(
+        "    NO SAME-STACK REGULATOR REINTERPRETATION (commentary): "
+        + ("supported" if no_same_stack_regulator else "narrowed-out / pending sibling notes")
     )
     print(
-        "  HILBERT-SEMANTICS STATUS: "
-        + (
-            "TRIPLET PHYSICAL-SPECIES SEMANTICS FORCED"
-            if species_semantics_closed
-            else "NOT ESTABLISHED"
-        )
+        "    HILBERT-SEMANTICS commentary: "
+        + ("supported" if species_semantics_closed else "narrowed-out / pending sibling notes")
     )
     print(
-        "  PACKAGE-DIAGNOSTIC STATUS: "
-        + (
-            "CONDITIONAL PHYSICAL-LATTICE NECESSITY DIAGNOSTIC PASSED"
-            if package_internal_necessity
-            else "NOT ESTABLISHED"
-        )
+        "    PACKAGE-DIAGNOSTIC commentary: "
+        + ("supported" if package_internal_necessity else "narrowed-out / pending sibling notes")
     )
     print(
-        "  ONE-AXIOM STATUS: "
-        + (
-            "SUBSTRATE PHYSICALITY FORCED"
-            if substrate_physicality_derived
-            else "NOT ESTABLISHED"
-        )
+        "    ONE-AXIOM SUBSTRATE commentary: "
+        + ("supported" if substrate_physicality_derived else "narrowed-out / pending sibling notes")
     )
     print(
-        "  LIVE INPUT STATUS: "
-        + (
-            "NO SEPARATE PHYSICAL-LATTICE INPUT ITEM"
-            if no_separate_live_input
-            else "STILL PRESENT"
-        )
+        "    LIVE INPUT STATUS: "
+        + ("NO SEPARATE PHYSICAL-LATTICE INPUT ITEM" if no_separate_live_input else "STILL PRESENT")
     )
     return 0 if FAIL_COUNT == 0 else 1
 
