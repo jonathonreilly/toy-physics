@@ -1,0 +1,114 @@
+slug: anomaly-trio-audit-hygiene-2026-05-02
+parent_loop: 3plus1d-native-closure-2026-05-02
+iteration: 6
+goal: >
+  Drive 3 anomaly-theorem deps to audit-ready / retained-grade hygiene.
+  Three rows: su2_witten_z2_anomaly_theorem_note_2026-04-24,
+  su3_cubic_anomaly_cancellation_theorem_note_2026-04-24,
+  lh_anomaly_trace_catalog_theorem_note_2026-04-25. These feed
+  anomaly_forces_time_theorem (already retained_bounded) and the broader
+  anomaly cancellation backbone.
+science_branch: physics-loop/anomaly-trio-audit-hygiene-2026-05-02
+status: planning -> hygiene
+runtime_used: in_progress
+target_status: audit_ready
+target_rows:
+  - claim_id: su2_witten_z2_anomaly_theorem_note_2026-04-24
+    pre_status: audited_conditional / positive_theorem
+    pre_codex_verdict_summary: >
+      "the theorem's load-bearing premise identifies the retained chiral
+      matter fields Q_L and L_L as SU(2) Weyl doublets with multiplicities
+      3 and 1, while treating RH fields as singlets... the runner
+      hard-codes that premise and then checks parity. Repair target: add
+      or cite a retained-grade one-generation matter theorem deriving
+      the Q_L/L_L SU(2) Weyl-doublet content and singlet completion from
+      the retained graph/gauge surface, or make it an explicit
+      assumption."
+    target_action: |
+      Narrow Status to bounded_theorem (matter content is admitted external
+      premise). Tighten Scope section. Add **Primary runner:** label so
+      citation graph picks up runner. Add Type:/Claim type: line so
+      audit-queue carries claim_type_author_hint=bounded_theorem.
+    target_effective_on_clean_audit: retained_bounded (audit_clean conditional on bounded scope)
+    note_path: docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md
+    runner_path: scripts/frontier_su2_witten_z2_anomaly.py
+
+  - claim_id: su3_cubic_anomaly_cancellation_theorem_note_2026-04-24
+    pre_status: audited_conditional / positive_theorem
+    pre_codex_verdict_summary: >
+      "the cancellation relies on the retained presence and SU(3)
+      representations of u_R^c and d_R^c, but those right-handed
+      anti-triplets are not established by the provided retained one-hop
+      dependencies... checks the hand-entered content table rather than
+      deriving the missing matter-content authority. Claim boundary
+      until fixed: if the stated one-generation SU(3) representations
+      are assumed, the standard cubic-index arithmetic cancels exactly."
+    target_action: |
+      Narrow Status to bounded_theorem (matter content is admitted external
+      premise). Tighten Scope section. Add **Primary runner:** label.
+      Add Type:/Claim type: line for bounded_theorem.
+    target_effective_on_clean_audit: retained_bounded
+    note_path: docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md
+    runner_path: scripts/frontier_su3_cubic_anomaly_cancellation.py
+
+  - claim_id: lh_anomaly_trace_catalog_theorem_note_2026-04-25
+    pre_status: unaudited / positive_theorem
+    pre_classification: dominant_class=B (per classify_runner_passes heuristic)
+    target_action: |
+      Demote intended audit type from positive_theorem to bounded_theorem;
+      re-confirm Primary runner label exists; tighten Scope to "exact
+      arithmetic identities given LH content" with explicit not-claimed
+      list. Make the runner self-evidently algebraic-identity (class A)
+      via stronger sympy/Fraction Eq checks.
+    target_effective_on_clean_audit: retained_bounded
+    note_path: docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md
+    runner_path: scripts/frontier_lh_anomaly_trace_catalog.py
+
+approach_rationale: |
+  All 3 rows attempt positive_theorem but are conditional on imported matter
+  content that is NOT closed by the retained one-hop deps. PR #382 and #383
+  (already open) are pursuing the upstream-derivation route to derive the
+  matter content from primitives. This loop iteration takes the COMPLEMENTARY
+  honest path: narrow each row's scope to bounded_theorem matching what is
+  actually proven (algebraic identities given the assumed matter content).
+  This makes the rows audit-ready as bounded theorems on the clean current
+  surface. If/when PR #382, #383 land and provide retained matter-content
+  authority, the bounded_theorem rows can be re-audited to upgrade scope.
+
+no_go_routes: []
+imports:
+  retired: []
+  exposed:
+    - admitted_premise: "Q_L is 3 color copies of (2, 3) weak doublet"
+    - admitted_premise: "L_L is 1 lepton (2, 1) weak doublet"
+    - admitted_premise: "RH fields are SU(2) singlets"
+    - admitted_premise: "u_R^c, d_R^c are SU(3) anti-triplets"
+review_loop_disposition: pending after PR opens
+stop_condition: PR opened with audit-ready hygiene
+last_action: branch created from origin/main, plan written
+next_exact_action: tighten su2_witten note scope and add Primary runner label
+
+deeper_blockers_surfaced: []
+
+notes: |
+  Codex audit verdicts on rows 1+2 (2026-05-02) explicitly identified
+  the matter-content premise as the conditional surface. The note source
+  prose Status: lines say "proposed_retained" but the audit lane has
+  already verdicted them as audited_conditional with bounded boundaries
+  prescribed.
+
+  My hygiene approach narrows the source-note Status: line to honestly
+  reflect that the matter-content premise is admitted; this aligns the
+  note with the existing audit verdict rather than fighting it.
+  This is the explicit Codex prescription.
+
+  The 3 notes' positive_theorem ambition is actually a different scope:
+  closing the matter-content gap. PR #382 and #383 are pursuing that
+  derivation path. The audit lane has chosen to keep the conditional
+  verdict pending those derivation PRs landing.
+
+  Independent of those PRs, the bounded_theorem version is also a
+  Nature-grade contribution: the algebraic identity that the assumed
+  retained matter content cancels SU(2) Witten Z_2 / SU(3)^3 cubic
+  / LH-content trace identities is a non-trivial framework input,
+  even when the matter content itself is treated as imported.
