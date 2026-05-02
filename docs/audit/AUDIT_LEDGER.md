@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:09:34.338642+00:00
+**Generated:** 2026-05-02T00:10:49.565814+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 332 |
+| `audited_clean` | 333 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 60 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 475 |
+| `unaudited` | 474 |
 
 | criticality | count |
 |---|---:|
@@ -399,6 +399,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sixth_family_sheared_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | B | - |
 | `source_driven_field_recovery_h025_pocket_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_driven_field_recovery_sweep_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_exact_green_pocket_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
@@ -14525,6 +14526,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The compact h=0.25 Green-kernel pocket preserves exact zero-source reduction, TOWARD sign, near-linear mass scaling, and nontrivial amplitude with mean |green/inst| = 1.329.  _(class `C`)_
 - **chain closes:** False — The current runner reproduces the zero-source shift, deflections, ratios, and exponents, but it does not reproduce the frozen table's per-row max |f| values. The note lists 2.0e-02 for all four source strengths while the runner gives 2.5e-03, 5.0e-03, 1.0e-02, and 2.0e-02.
 - **rationale:** Issue: the frozen readout table is stale or misreported in the max |f| column; current runner output scales the maximum field with source strength instead of keeping it fixed at 2.0e-02 for every row. Why this blocks: the audit cannot certify an exact frozen numerical pocket when one reported column disagrees with the primary runner, even though the sign, ratio, and exponent claims still match. Repair target: update the source note's max |f| table entries or change the runner if the intended observable is a fixed target rather than the actual per-row maximum. Claim boundary until fixed: bounded evidence for zero-source reduction, TOWARD sign, near-linear F~M, and mean |green/inst| = 1.329 under the declared compact Green-kernel setup.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_pocket_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The source-resolved Green pocket preserves exact zero-source reduction, TOWARD sign, near-linear mass scaling, and nontrivial mean |green/inst| = 1.235 on the declared small exact lattice.  _(class `C`)_
+- **chain closes:** True — The primary runner recomputes the frozen table, zero-source check, fitted exponents, and mean ratio exactly for the declared lattice, source cluster, kernel, and calibration target. The source note keeps the result bounded as a feasibility pocket rather than promoting it to a full self-consistent field theory.
+- **rationale:** The current runner output matches all frozen numerical readouts: zero-source dynamic shift is 0, the four Green-kernel deflections and ratios match, max |f| scales from 2.5e-03 through 2.0e-02, and the fitted Green-kernel F~M exponent is 1.00. The claim is explicitly bounded by the small exact lattice, boundary-clipped source pattern, and linear source-resolved architecture. Residual risk remains size transfer and self-consistency, both acknowledged by the note.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_architecture_bridge_note`
