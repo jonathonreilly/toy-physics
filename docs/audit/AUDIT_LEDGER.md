@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:29:06.178772+00:00
+**Generated:** 2026-05-02T00:31:38.906823+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 344 |
+| `audited_clean` | 345 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 460 |
+| `unaudited` | 459 |
 
 | criticality | count |
 |---|---:|
@@ -412,6 +412,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_geometry_rule_repair_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_green_robustness_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_propagating_generated_transfer_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_radical_geometry_probe_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14768,6 +14769,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
   - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_radical_geometry_probe_note`
+
+- **Note:** [`SOURCE_RESOLVED_RADICAL_GEOMETRY_PROBE_NOTE.md`](../../docs/SOURCE_RESOLVED_RADICAL_GEOMETRY_PROBE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Treat this as a bounded no-go for the tested geometry rule: exact zero-source reduction survives, support can move a little in the static case, but the wavefield update does not become more relevant on this family.  _(class `C`)_
+- **chain closes:** True — The runner constructs the baseline kNN-floor bridge and downstream-reach fan geometries, evaluates static and wavefield observables across the stated seeds and source strengths, and reproduces the note's frozen no-go table. With no cited dependencies, the bounded claim closes as a computed discriminator for this tested geometry rule only.
+- **rationale:** The source note makes a narrow bounded-negative claim, not a universal geometry theorem. The current runner recomputes the load-bearing observables and exactly matches the note's zero-source, sign-count, N_eff, F~M, and geometry-delta summaries. Residual risk is limited to implementation fidelity of the generated-family simulator, but the stated claim is only that this particular downstream-reach fan does not produce the hoped-for transfer.
 - **auditor confidence:** high
 
 ### `source_resolved_retarded_green_pocket_note`
