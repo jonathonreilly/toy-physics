@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:26:12.015405+00:00
+**Generated:** 2026-05-02T17:28:43.728715+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 141 |
-| **retained_no_go** | 93 |
+| **retained** | 140 |
+| **retained_no_go** | 94 |
 | **retained_bounded** | 175 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
@@ -47,9 +47,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `bounded_theorem` | 517 |
 | `decoration` | 5 |
 | `meta` | 35 |
-| `no_go` | 152 |
+| `no_go` | 153 |
 | `open_gate` | 107 |
-| `positive_theorem` | 868 |
+| `positive_theorem` | 867 |
 
 | criticality | count |
 |---|---:|
@@ -240,7 +240,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
-| `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
@@ -7603,14 +7603,14 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 ### `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `no_go`
+- **claim_scope:** Within the factorized beta=6 source-sector class T=M D6^loc R M with positive conjugation-symmetric diagonal residual R, the local Wilson factor plus Perron symmetry do not determine unique Perron moments or symmetry-reduced Jacobi coefficients for the fixed source operator J.
 - **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-second-20260430-gauge-perron-jacobi-underdet`  (codex-gpt-5; independence=fresh_context)
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-laplace-gauge-perron-jacobi-20260502`  (codex-current; independence=fresh_context)
 - **load-bearing step:** The runner exhibits two explicit admissible positive residual source-sector environment operators with m_1^(A) != m_1^(B) and higher moments differing as well.  _(class `A`)_
-- **chain closes:** True — The note claims an underdetermination result, not a positive prediction of the missing Jacobi data. Given the stated admissible residual class R > 0 with conjugation symmetry, the displayed two-witness construction is enough to show the current structural boundary does not force a unique Perron moment sequence.
-- **rationale:** The load-bearing step is an explicit two-witness obstruction inside the factorized residual-environment class stated by the note. The runner checks that the local Wilson factor and both residual operators satisfy the required positivity and conjugation-symmetry constraints, then computes distinct Perron moments and distinct Jacobi coefficients for the same source operator J. Because the claim is negative underdetermination, no external comparator or calibrated numerical target is needed. Residual risk is limited to whether the source note's stated admissible residual class is exactly the intended current boundary, but under the restricted inputs there is no contrary dependency or hidden one-hop premise.
+- **chain closes:** True — The scoped no-go is witnessed by two admissible positive conjugation-symmetric residual operators in the stated factorized class whose Perron states give different J-moments and Jacobi coefficients. No external comparator, tuned match, or symbol renaming is used.
+- **rationale:** The claim is negative and scoped to underdetermination inside the residual source-sector environment class, not to computing canonical beta=6 Jacobi data. The runner constructs two admissible residual environments, verifies positivity/symmetry/Perron properties, and obtains distinct moments and Jacobi coefficients for the same J. This is a direct counterexample to uniqueness within the scoped class.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_perron_reduction_theorem_note`
