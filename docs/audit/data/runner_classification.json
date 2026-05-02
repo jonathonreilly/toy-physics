@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T16:22:02.362731+00:00",
+  "generated_at": "2026-05-02T16:42:06.012193+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -11029,18 +11029,6 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_hw1_source_transfer_boundary.py"
     },
-    "pmns_intrinsic_completion_boundary_note": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 4,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_pmns_intrinsic_completion_boundary.py"
-    },
     "pmns_minimal_branch_nonselection_note": {
       "assert_count": 1,
       "counts": {
@@ -11184,18 +11172,6 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_pmns_selector_current_stack_zero_law.py"
-    },
-    "pmns_selector_minimal_microscopic_extension_note": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": true,
-      "dominant_class": "B",
-      "runner": "scripts/frontier_pmns_selector_minimal_microscopic_extension.py"
     },
     "pmns_selector_nonuniversal_support_reduction_note": {
       "assert_count": 1,
@@ -12541,6 +12517,30 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_axioms_16card.py"
     },
+    "seventh_family_diagonal_boundary_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py"
+    },
+    "seventh_family_diagonal_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py"
+    },
     "shapiro_complex_interaction_note": {
       "assert_count": 0,
       "counts": {
@@ -13801,7 +13801,7 @@
       "dominant_class": null,
       "runner": "scripts/structured_chokepoint_bridge.py"
     },
-    "structured_mirror_joint_validation_note": {
+    "structureless_dag_gravity_note": {
       "assert_count": 0,
       "counts": {
         "A": 0,
@@ -13811,7 +13811,7 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
-      "runner": "scripts/structured_mirror_joint_validation.py"
+      "runner": "scripts/structureless_dag_gravity_harness.py"
     },
     "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26": {
       "assert_count": 1,
@@ -16694,6 +16694,22 @@
       "assert_count": 0,
       "claims": [
         "second_grown_family_complex_boundary_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py": {
+      "assert_count": 0,
+      "claims": [
+        "seventh_family_diagonal_boundary_note",
+        "seventh_family_diagonal_note"
       ],
       "counts": {
         "A": 0,
@@ -27417,21 +27433,6 @@
       "dominant_class": "C",
       "exists": true
     },
-    "scripts/frontier_pmns_intrinsic_completion_boundary.py": {
-      "assert_count": 1,
-      "claims": [
-        "pmns_intrinsic_completion_boundary_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 4,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
-    },
     "scripts/frontier_pmns_minimal_branch_nonselection.py": {
       "assert_count": 1,
       "claims": [
@@ -27624,21 +27625,6 @@
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": "B",
-      "exists": true
-    },
-    "scripts/frontier_pmns_selector_minimal_microscopic_extension.py": {
-      "assert_count": 1,
-      "claims": [
-        "pmns_selector_minimal_microscopic_extension_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": true,
       "dominant_class": "B",
       "exists": true
     },
@@ -34729,10 +34715,10 @@
       "dominant_class": null,
       "exists": true
     },
-    "scripts/structured_mirror_joint_validation.py": {
+    "scripts/structureless_dag_gravity_harness.py": {
       "assert_count": 0,
       "claims": [
-        "structured_mirror_joint_validation_note"
+        "structureless_dag_gravity_note"
       ],
       "counts": {
         "A": 0,
@@ -35333,16 +35319,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 103,
+    "decoration_candidates": 102,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 147,
-      "C": 507,
+      "B": 146,
+      "C": 506,
       "D": 195,
-      "none": 409
+      "none": 410
     },
-    "runners_classified": 1267,
-    "runners_with_C": 607,
+    "runners_classified": 1266,
+    "runners_with_C": 606,
     "runners_with_D": 306
   }
 }
