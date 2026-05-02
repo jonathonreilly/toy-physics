@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-39-scalar-ladder-total-momentum-derivative-scout
-blocks_completed: 53
-active_route: "scalar Bethe-Salpeter total-momentum derivative scout"
-active_hard_residual: "finite d lambda/dp^2 is computable in a Wilson-exchange scout, but its magnitude is prescription sensitive; retained closure still needs a limiting theorem or production pole-derivative data"
+current_phase: campaign-rerun-block-40-scalar-ladder-derivative-limiting-order-obstruction
+blocks_completed: 54
+active_route: "scalar Bethe-Salpeter derivative limiting-order obstruction"
+active_hard_residual: "d lambda/dp^2 depends on the gauge-zero-mode and IR limiting order; retained closure still needs that prescription or production pole-derivative data"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -189,6 +189,9 @@ files_touched:
   - "scripts/frontier_yt_scalar_ladder_total_momentum_derivative_scout.py"
   - "docs/YT_SCALAR_LADDER_TOTAL_MOMENTUM_DERIVATIVE_SCOUT_NOTE_2026-05-01.md"
   - "outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json"
+  - "scripts/frontier_yt_scalar_ladder_derivative_limit_obstruction.py"
+  - "docs/YT_SCALAR_LADDER_DERIVATIVE_LIMIT_OBSTRUCTION_NOTE_2026-05-01.md"
+  - "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -263,6 +266,7 @@ claim_state_movement:
   - "isolated the scalar pole determinant gate: D(x)=1-K(x)Pi(x)=0 gives the pole, but D'(pole) depends on K'(pole), so pole location alone does not fix the LSZ residue or FH/LSZ readout"
   - "isolated the matrix Bethe-Salpeter derivative gate: lambda_max(pole)=1 is only a pole-location test; d lambda_max/dp^2 controls the LSZ residue and varies with the momentum-dependent ladder kernel"
   - "computed a finite Wilson-exchange scalar ladder total-momentum derivative scout; d lambda/dp^2 is finite and negative on the scan but its magnitude is strongly prescription sensitive, so no retained limit or kappa_s closure is authorized"
+  - "proved the scalar ladder derivative limiting-order obstruction: keeping versus removing the gauge zero mode changes the IR behavior of d lambda/dp^2 and the pole crossing, so the derivative is not retained LSZ input without a limiting theorem"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

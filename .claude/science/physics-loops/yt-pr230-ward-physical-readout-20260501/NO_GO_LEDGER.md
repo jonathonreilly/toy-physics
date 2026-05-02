@@ -609,6 +609,21 @@ finite and negative on the scanned surfaces, but its magnitude varies by about
 `3903.98x` across mass, volume, IR regulator, zero-mode, and projector choices.
 This is not a retained scalar-LSZ theorem and does not fix `kappa_s`.
 
+Scalar ladder derivative limiting-order shortcut is blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_ladder_derivative_limit_obstruction.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The total-momentum derivative has prescription-dependent IR behavior.  On the
+same finite surface, retaining the gauge zero mode makes the derivative grow
+by `13.882x` to `24.0129x` as `mu_IR^2` is lowered from `0.50` to `0.02`;
+removing the zero mode keeps the derivative within about `1.11x`.  The pole
+test crosses only in the zero-mode-included prescription.  Therefore the
+finite derivative is not a retained LSZ residue input without a zero-mode/IR
+limiting theorem or production pole data.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

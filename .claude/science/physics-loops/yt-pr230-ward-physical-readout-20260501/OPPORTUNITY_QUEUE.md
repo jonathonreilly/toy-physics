@@ -99,7 +99,9 @@ probability.
    not yet a residue theorem.  A finite total-momentum derivative scout now
    computes `d lambda_max/dp^2` in a Wilson-exchange model, but the magnitude is
    prescription sensitive; the retained task is the limiting theorem or
-   production pole derivative, not another finite witness.
+   production pole derivative, not another finite witness.  The limiting-order
+   obstruction confirms that the zero-mode and IR prescription is load-bearing
+   for both the derivative and the pole crossing.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 7. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

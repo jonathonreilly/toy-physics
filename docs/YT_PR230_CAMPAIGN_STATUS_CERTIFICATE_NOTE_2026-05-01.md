@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=39 FAIL=0
+# SUMMARY: PASS=40 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -64,6 +64,7 @@ The certificate consumes the PR-local route certificates for:
 - scalar pole determinant gate;
 - scalar ladder eigen-derivative gate;
 - scalar ladder total-momentum derivative scout;
+- scalar ladder derivative limiting-order obstruction;
 - scalar ladder IR / zero-mode obstruction;
 - heavy kinetic-mass route scout;
 - nonzero-momentum correlator scout;
@@ -115,6 +116,7 @@ the visible shortcut routes:
 | scalar pole determinant gate | exact denominator condition identifies `K(x)` and `K'(pole)` as load-bearing open inputs |
 | scalar ladder eigen-derivative gate | finite `lambda_max=1` crossing is not enough; `d lambda/dp^2` and momentum-dependent kernel remain open |
 | scalar ladder total-momentum derivative scout | finite `d lambda/dp^2` can be computed, but its magnitude is prescription sensitive and no limiting theorem is derived |
+| scalar ladder derivative limiting-order obstruction | zero-mode and IR limiting order change the derivative and pole crossing, so the finite derivative is not yet LSZ input |
 | current-scale direct MC | `am_top = 81.423`, not a useful relativistic top run |
 | HQET/static shortcut | removes rest mass, therefore needs matching |
 | heavy kinetic mass | cancels additive rest mass, but needs nonzero-momentum data and matching |

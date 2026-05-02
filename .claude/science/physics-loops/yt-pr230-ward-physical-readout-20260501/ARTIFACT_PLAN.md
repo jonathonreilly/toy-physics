@@ -172,6 +172,9 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_ladder_total_momentum_derivative_scout.py`
 - `outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json`
 - `docs/YT_SCALAR_LADDER_TOTAL_MOMENTUM_DERIVATIVE_SCOUT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_scalar_ladder_derivative_limit_obstruction.py`
+- `outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json`
+- `docs/YT_SCALAR_LADDER_DERIVATIVE_LIMIT_OBSTRUCTION_NOTE_2026-05-01.md`
 
 Next artifact:
 
@@ -214,7 +217,9 @@ Next artifact:
   pole measurement; the ladder eigen-derivative gate gives the matrix version:
   `lambda_max=1` is not enough without `d lambda_max/dp^2`; the finite
   total-momentum derivative scout computes that quantity but leaves
-  prescription-sensitive magnitude and no retained limit theorem
+  prescription-sensitive magnitude and no retained limit theorem; the
+  derivative limiting-order obstruction proves the zero-mode/IR prescription
+  changes the derivative and pole crossing
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

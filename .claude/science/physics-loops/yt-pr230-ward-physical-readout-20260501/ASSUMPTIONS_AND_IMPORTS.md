@@ -189,6 +189,17 @@ normalization choices open.  The finite negative sign observed in the scan is
 not a proof selector; the load-bearing missing input remains the retained
 limiting prescription or production pole-derivative measurement.
 
+Scalar ladder derivative limiting-order obstruction:
+
+```text
+zero mode included: d lambda_max/dp^2 grows as mu_IR^2 is lowered
+zero mode removed:  d lambda_max/dp^2 is comparatively stable on the same scan
+```
+
+The zero-mode/IR limiting order is therefore a load-bearing proof input.  A
+route that uses the finite derivative as `kappa_s`/LSZ normalization without
+deriving that order is importing a hidden prescription.
+
 Source-reparametrization gauge boundary:
 
 ```text

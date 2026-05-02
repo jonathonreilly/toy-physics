@@ -170,3 +170,18 @@ Adds a scalar ladder total-momentum derivative scout:
   derivative, canonical-Higgs normalization, or production pole data remain
   open.
 ```
+
+Latest scalar ladder derivative limiting-order checkpoint text for PR #230:
+
+```text
+Adds a scalar ladder derivative limiting-order obstruction:
+- tests the total-momentum derivative as `mu_IR^2` is lowered with the gauge
+  zero mode included versus removed;
+- validator passes `PASS=8 FAIL=0`; campaign status now consumes 44 route
+  certificates and reports `PASS=40 FAIL=0`;
+- included zero mode makes the derivative grow by `13.882x` to `24.0129x`,
+  while zero-mode-removed stays within about `1.11x`;
+- pole crossing occurs only in the zero-mode-included prescription;
+- still no retained closure: the zero-mode/IR limiting theorem or production
+  pole derivative remains load-bearing.
+```

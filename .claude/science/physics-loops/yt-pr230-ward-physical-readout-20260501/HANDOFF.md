@@ -222,6 +222,11 @@ What changed:
   across the scan, but its magnitude is strongly sensitive to projector,
   zero-mode, IR regulator, mass, and volume choices.  This is constructive
   machinery, not a limiting theorem.
+- The scalar ladder derivative limiting-order obstruction shows why that
+  finite derivative cannot yet be used as LSZ input: retaining the gauge zero
+  mode makes the derivative grow as the IR regulator is lowered and changes
+  the pole crossing, while removing the zero mode gives a different stable
+  surface.
 
 The scientific result is narrower than closure:
 
@@ -286,3 +291,6 @@ the total-momentum derivative of the scalar Bethe-Salpeter kernel.
 The total-momentum derivative scout says this derivative is computable in a
 finite model, but the current route still needs the retained prescription and
 limit theorem or production pole data.
+The derivative limiting-order obstruction makes the missing theorem explicit:
+the zero-mode/IR prescription must be derived before the derivative can carry
+scalar LSZ normalization.

@@ -74,6 +74,7 @@ def main() -> int:
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
         "scalar_ladder_total_momentum_derivative": load("outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json"),
+        "scalar_ladder_derivative_limit": load("outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -247,6 +248,12 @@ def main() -> int:
         statuses["scalar_ladder_total_momentum_derivative"],
     )
     report(
+        "scalar-ladder-derivative-limit-needs-zero-mode-theorem",
+        "limiting-order obstruction" in str(statuses["scalar_ladder_derivative_limit"])
+        or "exact negative boundary" in str(statuses["scalar_ladder_derivative_limit"]),
+        statuses["scalar_ladder_derivative_limit"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -364,7 +371,10 @@ def main() -> int:
             "and its finite residue proxy is mass-dependent.  A finite "
             "Wilson-exchange scalar ladder total-momentum derivative can be "
             "computed, but the derivative magnitude is strongly "
-            "prescription-sensitive and is not a retained limiting theorem."
+            "prescription-sensitive and is not a retained limiting theorem.  "
+            "A direct IR-limiting scout shows why: keeping the gauge zero mode "
+            "makes the derivative grow and changes the pole-test crossing, "
+            "while removing it gives a different stable surface."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
