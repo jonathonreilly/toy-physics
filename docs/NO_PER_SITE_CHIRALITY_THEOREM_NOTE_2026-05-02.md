@@ -1,24 +1,21 @@
 # No Per-Site γ_5 Chirality Operator on Cl(3) Pauli Rep
 
 **Date:** 2026-05-02
-**Type:** positive_theorem (no-go form)
+**Type:** no_go
 **Claim scope:** on the framework's per-site Hilbert H_x ≅ C² (Pauli rep by
-retained per-site uniqueness), the Cl(3) volume element ω = γ_1 γ_2 γ_3 acts
+the cited per-site uniqueness theorem), the Cl(3) volume element ω = γ_1 γ_2 γ_3 acts
 as the central scalar i·I_2. Therefore there is **no element of M_2(C) that
 anticommutes with all three Cl(3) generators σ_i**, and in particular no
 γ_5 candidate satisfying γ_5² = +I_2 with {γ_5, σ_i} = 0. Per-site chirality
 operators do not exist in the framework's odd-spatial Cl(3) algebra.
-**Status:** awaiting independent audit.
-**Loop:** `positive-only-r6-20260502`
-**Cycle:** 1 (Block 1)
-**Branch:** `physics-loop/positive-only-r6-block01-no-per-site-chirality-20260502`
+**Status:** independent audit required.
 **Runner:** `scripts/no_per_site_chirality_check.py`
 **Log:** `outputs/no_per_site_chirality_check_2026-05-02.txt`
 
 ## Cited authorities (one hop)
 
 - [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
-  — `effective_status: retained`. Provides:
+  provides:
   - **(U2)** Per-site Hilbert H_x ≅ C² with γ_i ↦ σ_i (Pauli) is the unique
     faithful 2-dim Cl(3) representation up to unitary equivalence.
 
@@ -39,7 +36,7 @@ Both are pure mathematical facts; no admitted physics conventions.
 
 Let H_x ≅ C² be the per-site Hilbert space at any site x ∈ Z^3 of the
 framework, with Cl(3) generators acting as Pauli matrices `γ_i ↦ σ_i`
-(retained per-site uniqueness). Define the Cl(3) volume element
+(cited per-site uniqueness). Define the Cl(3) volume element
 
 ```text
     ω  :=  γ_1 γ_2 γ_3.                                                     (1)
@@ -69,7 +66,7 @@ internal Z_2 grading, hence no chirality projector P_± = (1 ± γ_5)/2.
 
 ### Step 1 — Pauli rep is the per-site Hilbert (cited)
 
-By the retained per-site uniqueness theorem (U2), H_x ≅ C² with
+By the cited per-site uniqueness theorem (U2), H_x ≅ C² with
 γ_i ↦ σ_i.
 
 ### Step 2 — Volume element computation (N1, N2)
@@ -129,7 +126,7 @@ Hilbert — establishing (N4). ∎
 
 ## Hypothesis set used
 
-- `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` (retained):
+- `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`:
   provides Pauli rep on per-site Hilbert.
 - Standard Clifford volume-element identity (mathematical, admitted-context).
 - Pauli matrices span M_2(C) (mathematical, admitted-context).
@@ -141,46 +138,29 @@ beyond the retained per-site uniqueness theorem.
 
 C1. **No per-site chirality projector.** A "left/right" projection of
 elementary fermions cannot be defined intrinsically at the per-site
-Cl(3) level. Chirality must enter from a structure beyond per-site
-Cl(3) — e.g. by extending the Clifford algebra to include a temporal
-generator (Cl(3,1) with n=4 even, where ω anticommutes with all four
-generators and yields a true γ_5).
+Cl(3) level by an operator internal to M_2(C).
 
-C2. **Connection to anomaly_forces_time.** This per-site no-chirality
-result is the local instance of the well-known "no chirality in odd
-total dimension" fact (`docs/ANOMALY_FORCES_TIME_THEOREM.md` Step 3).
-Adding one temporal direction (n_total = 3 + 1 = 4 even) is exactly
-the algebraic step required to recover a γ_5 — confirming that the
-framework's 3+1 spacetime signature is forced by the anomaly + chirality
-combination at the algebraic level.
+## Out of scope
 
-C3. **Per-site fermion content is "vector-like" in 3D.** Without a
-chirality operator at the site level, every Cl(3) per-site fermion looks
-like a vector-like (non-chiral) Dirac doublet from a 3D-only viewpoint.
-The physical chirality grading is generated only after lifting to a
-3+1D Cl(3,1) algebra, where the temporal direction supplies the missing
-generator that anticommutes with the spatial three.
-
-C4. **Algebraic no-go: no internal "left-handed" subspace at single
-site.** The framework's Standard Model gauge content (left-handed weak
-doublets vs. right-handed weak singlets) cannot be implemented as a
-*site-local* projection. It enters only after the temporal direction
-is in play — consistent with the framework's overall axiom-cascade
-narrative.
+This note does not derive a temporal direction, 3+1 signature, Standard
+Model left/right gauge assignments, or a physical chirality mechanism.
+It only proves the per-site M_2(C) no-go above. Any claim that a
+larger Clifford algebra supplies physical γ_5 structure belongs to a
+separate theorem and runner.
 
 ## Honest status
 
-Positive theorem (in no-go form) on the framework's per-site Hilbert
-space, derived from a single retained one-hop dependency by elementary
+No-go theorem on the framework's per-site Hilbert space, derived from a
+single one-hop dependency by elementary
 matrix algebra in the Pauli basis. The volume element identity is
 standard Clifford theory; the no-γ_5 conclusion follows by exhausting
 the Pauli basis decomposition.
 
 ```yaml
-claim_type_author_hint: positive_theorem
+claim_type_author_hint: no_go
 claim_scope: "Cl(3) volume element ω = i·I in Pauli rep; no per-site γ_5 chirality operator exists in M_2(C)."
 upstream_dependencies:
-  - axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29 (retained)
+  - axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29
 admitted_context_inputs:
   - Clifford volume-element commutation identity (Lawson–Michelsohn)
   - Pauli matrices span M_2(C) (basic linear algebra)

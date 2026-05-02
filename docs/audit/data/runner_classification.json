@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T21:11:10.298872+00:00",
+  "generated_at": "2026-05-02T21:12:09.661399+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -10536,6 +10536,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/no_per_site_bosonic_ccr_check.py"
+    },
+    "no_per_site_chirality_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/no_per_site_chirality_check.py"
     },
     "nonlabel_grown_basin_note": {
       "assert_count": 0,
@@ -33923,6 +33935,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/no_per_site_chirality_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "no_per_site_chirality_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/node_placement_emergence.py": {
       "assert_count": 0,
       "claims": [
@@ -36052,12 +36079,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 155,
-      "C": 518,
+      "C": 519,
       "D": 198,
       "none": 412
     },
-    "runners_classified": 1293,
-    "runners_with_C": 620,
+    "runners_classified": 1294,
+    "runners_with_C": 621,
     "runners_with_D": 312
   }
 }
