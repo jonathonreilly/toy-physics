@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:41:52.626586+00:00
+**Generated:** 2026-05-02T18:44:25.924169+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 140 |
+| **retained** | 141 |
 | **retained_no_go** | 95 |
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 546 |
+| unaudited | 545 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 375 |
+| `audited_clean` | 376 |
 | `audited_conditional` | 635 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 582 |
+| `unaudited` | 581 |
 
 | claim_type | count |
 |---|---:|
@@ -86,7 +86,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
 | 10 | `native_gauge_closure_note` | bounded_theorem | critical | 257 | 22.51 | `audited_clean` | **retained_bounded** |
 | 11 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `three_generation_structure_note` | positive_theorem | critical | 248 | 20.96 | `unaudited` | unaudited |
+| 12 | `three_generation_structure_note` | positive_theorem | critical | 248 | 20.96 | `audited_clean` | **retained** |
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `left_handed_charge_matching_note` | decoration | critical | 264 | 20.55 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
 | 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_conditional` | ~~audited_conditional~~ |
@@ -447,6 +447,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_boundary_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `third_grown_family_complex_boundary_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `third_grown_family_complex_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `three_generation_structure_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `two_field_retarded_probe_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
@@ -16022,6 +16023,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
   - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
   - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
+- **auditor confidence:** high
+
+### `three_generation_structure_note`
+
+- **Note:** [`THREE_GENERATION_STRUCTURE_NOTE.md`](../../docs/THREE_GENERATION_STRUCTURE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Local algebraic/spectral content of the three-generation matter structure on the physical-lattice surface: exact corner/orbit algebra 8=1+1+3+3; the hw=1 triplet is the lightest nonzero-mass species on Z^3; rooting is undefined in Hamiltonian Cl(3) on Z^3; and the hw=1 triplet carries irreducible exact algebra M_3(C) with no proper exact quotient.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-pr291-three-generation-structure-rawls-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Exact algebraic/spectral runner checks establish the BZ-corner degeneracy decomposition, Wilson-mass Hamming-weight ordering with three distinct hw=1 species, absence of any proper taste projection preserving Hamiltonian Cl(3), and generation of all M_3(C) matrix units on the hw=1 triplet with irreducibility blocking proper observable-preserving quotients.  _(class `A`)_
+- **chain closes:** True — The scoped claim excludes the physical species bridge and substrate-level physical-lattice interpretation. Within the local algebraic/spectral scope, the runner summaries directly verify all four load-bearing items without requiring an external comparator, tuned numerical scale, or unregistered semantic bridge.
+- **rationale:** The in-scope theorem is supported by exact algebraic checks: seven exact Fermi-point checks, thirty-seven rooting-undefined checks, and forty-seven three-generation observable-algebra checks. The single bounded SM-generation/minimum-spacing check is explicitly out of scope and is not load-bearing. No open premise remains inside the scoped derivation.
 - **auditor confidence:** high
 
 ### `triage_no_promotion_note`
