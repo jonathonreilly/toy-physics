@@ -9017,6 +9017,14 @@
       "to": "wave_direct_dm_h025_family_pair_synthesis_note"
     },
     {
+      "from": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
+      "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
+    },
+    {
+      "from": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
       "from": "wilson_test_mass_continuum_note_2026-04-11",
       "to": "wilson_normalization_reconciliation_note_2026-04-11"
     },
@@ -19989,7 +19997,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:33:48.340531+00:00",
+  "generated_at": "2026-05-02T20:35:05.086582+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43649,6 +43657,20 @@
       "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
       "title": "Wide-Lattice `h^2+T` Skeptic Audit Note"
     },
+    "wigner_mode_low_d_sublattice_theorem_note_2026-05-02": {
+      "claim_id": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "f320855379529305ba69244dacacf5b787e4d2e0de7ee66b802c181504152ce9",
+      "path": "docs/WIGNER_MODE_LOW_D_SUBLATTICE_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/wigner_mode_low_d_sublattice_check.py",
+      "title": "Wigner Mode Realization on 1D/2D Sublattices of Z\u00b3 (CMW + Noether)"
+    },
     "wilson_mu2_distance_sweep_note_2026-04-11": {
       "claim_id": "wilson_mu2_distance_sweep_note_2026-04-11",
       "claim_type_author_hint": null,
@@ -46525,7 +46547,7 @@
       "bounded_theorem": 11,
       "meta": 1,
       "none": 1747,
-      "positive_theorem": 35
+      "positive_theorem": 36
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
@@ -46533,12 +46555,12 @@
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 627
+      "positive_theorem": 628
     },
-    "edge_count": 4997,
-    "leaf_count": 760,
-    "node_count": 1794,
+    "edge_count": 4999,
+    "leaf_count": 761,
+    "node_count": 1795,
     "root_count": 1217,
-    "runners_with_path": 1362
+    "runners_with_path": 1363
   }
 }
