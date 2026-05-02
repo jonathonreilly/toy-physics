@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:37:58.911813+00:00
+**Generated:** 2026-05-02T22:39:24.347024+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 534 |
+| unaudited | 533 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 646 |
-| ~~audited_failed~~ | 3 |
+| ~~audited_failed~~ | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 386 |
 | `audited_conditional` | 646 |
 | `audited_decoration` | 7 |
-| `audited_failed` | 47 |
+| `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 570 |
+| `unaudited` | 569 |
 
 | claim_type | count |
 |---|---:|
@@ -1149,6 +1149,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
+| `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
@@ -1960,6 +1961,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
   - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
   - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `axiom_first_spin_statistics_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Attempted axiom-first lattice spin-statistics theorem claiming Grassmann anticommutation is forced by A_min rather than assumed, with determinant and correlator antisymmetry corollaries for the canonical staggered matter sector.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The Grassmann implementation is the unique canonical-quantisation choice on A_min that gives a finite-dim per-site Hilbert space matching the Cl(3) spinor module, hence anticommutation is forced.  _(class `B`)_
+- **chain closes:** False — The anticommutator/determinant/sign-flip exhibits close only after Grassmann generators are already assumed by A3. The claimed force step depends on a per-site Cl(3) uniqueness/dimension premise that is not retained and has been audited failed, and the runner does not prove uniqueness of Grassmann quantisation from A1-A4.
+- **rationale:** Issue: the note treats A3's finite Grassmann partition as evidence that anticommutation is forced, then relies on a finite per-site Cl(3) module argument to exclude bosonic CCR; that per-site representation premise is not retained and the stronger uniqueness claim has failed audit. Why this blocks: the row would let downstream notes cite spin-statistics as derived from A_min, when the runner only checks standard CAR/Berezin consequences and a finite-dimensional trace obstruction to exact bosonic CCR. Repair target: either demote this to a bounded Grassmann-calculus lemma conditional on A3, or provide a correct independent theorem deriving the matter algebra from retained Cl(3)/locality/reflection-positivity inputs. Claim boundary until fixed: given Grassmann generators, the anticommutators, determinant identity, and exchange sign checks are valid; the forced spin-statistics theorem is not retained.
+- **open / conditional deps cited:**
+  - `AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`
 - **auditor confidence:** high
 
 ### `axiom_reduction_note`
