@@ -1,0 +1,62 @@
+========================================================================
+NO PER-SITE γ_5 CHIRALITY ON Cl(3) PAULI REP
+========================================================================
+
+  ω = σ_1 σ_2 σ_3 =
+  [[1j, 0j], [0j, 1j]]
+
+------------------------------------------------------------------------
+TEST 1: ω = i·I_2 (scalar in Pauli rep)
+------------------------------------------------------------------------
+  ||ω - i·I_2|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: [ω, σ_i] = 0 for all i (ω is central in Cl(3))
+------------------------------------------------------------------------
+  ||[ω, σ_1]|| = 0.000e+00
+  ||[ω, σ_2]|| = 0.000e+00
+  ||[ω, σ_3]|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: ω² = -I_2 (consistent with central scalar i·I)
+------------------------------------------------------------------------
+  ||ω² - (-I_2)|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: No nonzero M ∈ M_2(C) anticommutes with all three σ_i
+        (sweep through Pauli basis: only zero satisfies all three)
+------------------------------------------------------------------------
+  rank of constraint matrix = 4 (out of 4 unknowns)
+  null space dim = 0 (only zero solution if dim = 0)
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: No γ_5 candidate exists — no M satisfies (γ_5² = +I_2)
+        AND {γ_5, σ_i} = 0 for all i, on Pauli per-site Hilbert.
+------------------------------------------------------------------------
+  Test 4 proved: only zero anticommutes with all three σ_i.
+  Zero matrix doesn't satisfy γ_5² = +I_2 (since 0² = 0 ≠ I).
+  Therefore no γ_5 exists on per-site Cl(3) Hilbert.
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 6: Cl(3) has 4-dim even subalgebra (span{I, σ_1σ_2, σ_2σ_3, σ_3σ_1})
+        and 4-dim odd subalgebra (span{σ_1, σ_2, σ_3, σ_1σ_2σ_3 = iI})
+        BUT in Pauli rep both subalgebras already span M_2(C) = 4-dim,
+        so even and odd subalgebras COINCIDE on Pauli (no Z_2 grading)
+------------------------------------------------------------------------
+  rank of even subalgebra in M_2(C) = 4 (full = 4)
+  rank of odd subalgebra in M_2(C)  = 4 (full = 4)
+  STATUS: PASS
+
+========================================================================
+  Test 1 (ω = i·I_2):                                PASS
+  Test 2 ([ω, σ_i] = 0 — ω is central):              PASS
+  Test 3 (ω² = -I_2):                                PASS
+  Test 4 (no M anticommutes with all σ_i):           PASS
+  Test 5 (no γ_5 candidate exists):                  PASS
+  Test 6 (even/odd subalgebras coincide on Pauli):   PASS
+  OVERALL: PASS
