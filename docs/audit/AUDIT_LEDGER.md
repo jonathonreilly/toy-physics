@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:48:25.237408+00:00
+**Generated:** 2026-05-02T00:51:49.768377+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,23 +23,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
 | bounded | 154 |
-| support | 128 |
+| support | 127 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 963 |
+| ~~audited_conditional~~ | 964 |
 | ~~audited_failed~~ | 95 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 352 |
-| `audited_conditional` | 663 |
+| `audited_conditional` | 664 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 446 |
+| `unaudited` | 445 |
 
 | criticality | count |
 |---|---:|
@@ -1036,6 +1036,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_graph_portability_stress_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_layered_gauge_engineering_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_layered_gauge_phase_diagram_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `strc_lo_collinearity_theorem_note_2026-04-19` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | E | - |
 | `strong_cp_theta_zero_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
 | `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -15362,6 +15363,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md`
   - `OH_STATIC_CONSTRAINT_LIFT_NOTE.md`
   - `OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
+- **auditor confidence:** high
+
+### `strc_lo_collinearity_theorem_note_2026-04-19`
+
+- **Note:** [`STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`](../../docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** support
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** T_p := Pi_5 |p><e_1| = sin_d |e_5><e_1|, applied to d := a_d e_1, makes the remaining 5-budget the unique residual u_5 = a_u e_5.  _(class `E`)_
+- **chain closes:** False — The algebra closes after choosing the e_1 -> Pi_5 p polarization, but the note itself says this is one of several rank-1 operators and several cited carrier/ray inputs are support or already audited conditional.
+- **rationale:** Issue: the load-bearing STRC-LO split depends on selecting the transfer operator T_p = Pi_5 |p><e_1| and on cited carrier/ray authorities whose audit surface is support/conditional, not independently retained. Why this blocks: the runner verifies exact algebra after those inputs and the operator polarization are installed, but it does not prove that this is the unique physically forced A1 -> 5 transfer. Repair target: a retained theorem deriving the physical carrier, scalar ray, down occupancy, and e_1 -> Pi_5 p polarization as the required transfer map, or a runner that constructs that transfer from retained primitives. Claim boundary until fixed: the note is valid conditional algebra for the named polarization and exact 1(+)5 inputs, not an audit-clean discharge of STRC-LO.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`
