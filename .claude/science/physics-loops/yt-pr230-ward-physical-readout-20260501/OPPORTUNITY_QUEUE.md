@@ -109,8 +109,10 @@ probability.
    physical `y_t` claim.  The checkpoint-granularity gate shows current
    `--resume` is only whole-volume resume; the smallest shard is projected at
    `180.069` hours, so a foreground launch needs chunk-level checkpointing or
-   an external scheduler.  The same-source invariant-readout theorem now gives
-   the exact response formula; the remaining blocker is production
+   an external scheduler.  A chunked L12 manifest now gives 63 foreground-sized
+   production-targeted launch commands, but this remains planning support and
+   does not cover L16/L24 or pole postprocessing.  The same-source
+   invariant-readout theorem now gives the exact response formula; the remaining blocker is production
    pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs

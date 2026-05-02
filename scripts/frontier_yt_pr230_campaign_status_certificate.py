@@ -78,6 +78,9 @@ def main() -> int:
         "fh_lsz_production_checkpoint_granularity": load(
             "outputs/yt_fh_lsz_production_checkpoint_granularity_gate_2026-05-01.json"
         ),
+        "fh_lsz_chunked_production_manifest": load(
+            "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json"
+        ),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -285,6 +288,12 @@ def main() -> int:
         "checkpoint granularity gate" in str(statuses["fh_lsz_production_checkpoint_granularity"])
         or "open" in str(statuses["fh_lsz_production_checkpoint_granularity"]),
         statuses["fh_lsz_production_checkpoint_granularity"],
+    )
+    report(
+        "fh-lsz-chunked-production-manifest-not-evidence",
+        "chunked production manifest" in str(statuses["fh_lsz_chunked_production_manifest"])
+        or "bounded-support" in str(statuses["fh_lsz_chunked_production_manifest"]),
+        statuses["fh_lsz_chunked_production_manifest"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
@@ -547,7 +556,10 @@ def main() -> int:
             "control are all present.  The checkpoint-granularity gate also "
             "shows the current harness resumes only completed per-volume "
             "artifacts, so a 12-hour foreground launch cannot produce safely "
-            "checkpointed production evidence.  The refreshed retained-closure route "
+            "checkpointed production evidence.  A chunked L12 production "
+            "manifest gives foreground-sized launch commands, but it remains "
+            "planning support and does not cover L16/L24 or the pole postprocess.  "
+            "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "
             "unique LSZ input across current zero-mode, projector, and volume "

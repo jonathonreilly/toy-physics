@@ -467,6 +467,11 @@ so the FH/LSZ route needs chunk-level checkpointing or an external scheduler
 that can finish the smallest shard before any production certificate can be
 considered.
 
+The chunked-production manifest preserves that boundary.  A foreground-sized
+L12 chunk is still only a production-targeted launch command until it completes
+and is combined with enough independent chunks by a postprocess certificate.
+It cannot be used as a reduced-pilot substitute for production evidence.
+
 Positive-closure candidates left after the assumption exercise:
 
 1. production/statistics with momentum modes plus a derived heavy matching

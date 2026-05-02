@@ -935,6 +935,18 @@ detected.  Since the smallest joint shard is projected at `180.069` hours, a
 12-hour foreground launch would be a partial run with no safely checkpointed
 production evidence.
 
+Chunked L12 production manifest is launch planning only:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunked_production_manifest.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+L12_T24 can be split into 63 production-targeted chunks of 16 saved
+configurations, with a conservative estimate of `11.3186` hours per chunk.
+This is not production evidence, does not cover L16/L24, and still requires a
+multi-chain combination plus scalar-pole postprocess certificate.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

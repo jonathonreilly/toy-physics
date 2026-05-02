@@ -1557,3 +1557,30 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The gate blocks a 12-hour foreground production launch as evidence.  Current
 `--resume` loads only completed per-volume artifacts, and the smallest joint
 FH/LSZ shard is projected at `180.069` hours.
+
+## Review-Loop Backpressure - FH/LSZ Chunked Production Manifest
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_chunked_production_manifest.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_chunked_production_manifest.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The manifest makes L12 foreground scheduling possible as 63
+production-targeted chunks of 16 configurations, estimated at `11.3186` hours
+each.  It is not evidence and does not solve L16/L24 or scalar pole
+postprocessing.

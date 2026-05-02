@@ -55,6 +55,7 @@ The runner verifies:
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ production postprocess gate is ready | no |
 | current FH/LSZ resume support makes 12h foreground production launch safe | no |
+| chunked L12 production manifest is complete production evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -86,6 +87,9 @@ and autocorrelation tuning.  The checkpoint-granularity gate also shows the
 current `--resume` support is whole-volume only, while the smallest projected
 joint shard is `180.069` single-worker hours.  A 12-hour foreground launch
 would not create a safely checkpointed production certificate.
+The chunked manifest provides an L12 scheduling route with 63 production-targeted
+chunks of 16 saved configurations, estimated at `11.3186` hours each, but it
+is launch planning only and leaves L16/L24 and pole postprocessing open.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

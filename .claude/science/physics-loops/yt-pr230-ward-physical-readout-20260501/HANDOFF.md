@@ -245,9 +245,13 @@ What changed:
   resumes only completed per-volume artifacts.  The smallest projected joint
   shard is `180.069` hours, so a 12-hour foreground launch is not safely
   checkpointed production evidence.
+- The FH/LSZ chunked production manifest gives a foreground-sized L12
+  scheduling surface: 63 production-targeted chunks of 16 saved
+  configurations, estimated at `11.3186` hours each.  This is not production
+  evidence and does not cover L16/L24 or scalar pole postprocessing.
 - The retained-closure route certificate has been refreshed against the new
   source-unit, derivative-limit, production-manifest, postprocess-gate, and
-  checkpoint-granularity
+  checkpoint-granularity and chunked-manifest
   blocks.  It still reports `proposal_allowed=false`; the remaining positive routes are
   production evidence or a scalar pole/common-dressing theorem.
 - The scalar ladder residue-envelope obstruction normalizes away pole-location

@@ -253,6 +253,9 @@ Completed in block 1:
 - `scripts/frontier_yt_fh_lsz_production_checkpoint_granularity_gate.py`
 - `outputs/yt_fh_lsz_production_checkpoint_granularity_gate_2026-05-01.json`
 - `docs/YT_FH_LSZ_PRODUCTION_CHECKPOINT_GRANULARITY_GATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_fh_lsz_chunked_production_manifest.py`
+- `outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json`
+- `docs/YT_FH_LSZ_CHUNKED_PRODUCTION_MANIFEST_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
@@ -343,6 +346,8 @@ Next artifact:
   the residue proxy finite-row dependent; foreground production launch is
   blocked until chunk-level checkpointing or an external scheduler can finish
   at least the `180.069` hour smallest joint shard
+  (a chunked L12 manifest now supplies foreground-sized launch planning, but
+  it remains non-evidence and larger volumes are still open)
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

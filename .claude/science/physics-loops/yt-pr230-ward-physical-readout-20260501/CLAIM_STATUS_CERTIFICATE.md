@@ -35,6 +35,7 @@ plus scalar-kernel enhancement import audit
 plus FH/LSZ production postprocess gate
 plus fitted scalar-kernel residue selector no-go
 plus FH/LSZ production checkpoint granularity gate
+plus FH/LSZ chunked production manifest
 **PR:** #230 draft branch
 
 ```yaml
@@ -128,6 +129,9 @@ Allowed wording:
 - open FH/LSZ production checkpoint granularity gate: current resume support
   is whole-volume only, so a 12-hour foreground launch is not production
   evidence for a `180.069` hour smallest shard;
+- bounded-support FH/LSZ chunked production manifest: L12 has foreground-sized
+  launch commands, but no chunk output, L16/L24 evidence, scalar pole
+  postprocess, or retained proposal exists;
 - bounded-support scalar-source response harness extension: the production
   harness now emits `dE/ds`, but physical `dE/dh` still requires production
   data and derived `kappa_s`;

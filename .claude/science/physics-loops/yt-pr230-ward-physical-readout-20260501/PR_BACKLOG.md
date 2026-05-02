@@ -530,3 +530,19 @@ Adds an FH/LSZ production checkpoint-granularity gate:
   checkpointing, an external scheduler that can finish at least L12_T24, or a
   new analytic scalar-denominator theorem.
 ```
+
+Latest FH/LSZ chunked-production manifest checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ chunked production manifest:
+- derives foreground-sized L12_T24 launch chunks from the resource projection
+  and checkpoint-granularity gate;
+- validator passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=36 FAIL=0`; campaign status now consumes 66 route certificates and
+  reports `PASS=62 FAIL=0`;
+- L12 can be scheduled as 63 production-targeted chunks of 16 saved
+  configurations, conservatively estimated at `11.3186` hours each;
+- still no retained/proposed-retained closure: the chunk manifest is launch
+  planning only, L16/L24 still need scheduler/checkpoint support, and no
+  scalar pole postprocess certificate exists.
+```
