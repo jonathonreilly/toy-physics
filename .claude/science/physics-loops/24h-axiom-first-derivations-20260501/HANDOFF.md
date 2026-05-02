@@ -13,18 +13,18 @@ BH 1/4 carrier).
 
 | Block | Slug | Status | Branch | PR |
 |---|---|---|---|---|
-| 01 | KMS condition from RP | support theorem, runner PASS, branch pushed, PR pending | physics-loop/24h-axiom-first-block01-kms-20260501 | pending |
-| 02 | Hawking T_H = κ/(2π) | queued (depends on Block 01) | — | — |
-| 03 | Bekenstein bound | queued | — | — |
-| 04 | Microcausality theorem | queued | — | — |
-| 05 | First law of BH mechanics | queued (depends on Block 02) | — | — |
-| 06 | Stefan-Boltzmann | queued (depends on Block 01) | — | — |
+| 01 | KMS condition from RP | support, PR open | block01-kms-20260501 | #257 |
+| 02 | Hawking T_H = κ/(2π) | support, PR open (stacked on #257) | block02-hawking-20260501 | #259 |
+| 03 | Bekenstein bound | support, PR open | block03-bekenstein-20260501 | #261 |
+| 04 | Microcausality / Lieb-Robinson | support, PR open | block04-microcausality-20260501 | #263 |
+| 05 | First law of BH mechanics | support, PR open (stacked on #259) | block05-firstlaw-20260501 | #265 |
+| 06 | Stefan-Boltzmann | support, branch ready (stacked on #257) | block06-stefanboltzmann-20260501 | pending |
 | 07 | Unruh temperature | queued (depends on Block 01) | — | — |
-| 08 | Reeh-Schlieder | queued | — | — |
+| 08 | Reeh-Schlieder | queued (independent) | — | — |
 | 09 | GSL | queued (depends on Blocks 01, 02) | — | — |
-| 10 | Birkhoff vacuum-spherical | queued | — | — |
-| 11 | Bisognano-Wichmann | queued | — | — |
-| 12 | Tomita-Takesaki | queued | — | — |
+| 10 | Birkhoff vacuum-spherical | queued (independent) | — | — |
+| 11 | Bisognano-Wichmann | queued (independent) | — | — |
+| 12 | Tomita-Takesaki | queued (independent) | — | — |
 
 ## Proposed repo weaving (deferred to integration)
 
@@ -45,7 +45,16 @@ If/when Block 01 is integrated:
   Corollaries section (C5: KMS condition holds for the Gibbs state on
   the periodic-time block).
 
+If/when Block 06 is integrated:
+
+- Add Stefan-Boltzmann note as the framework's first numerical
+  thermodynamic prediction beyond structural identity.
+- Cross-reference in `docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`
+  as it gives the photon contribution to early-universe radiation
+  energy.
+- Add to `docs/CANONICAL_HARNESS_INDEX.md`.
+
 ## Next exact action
 
-Open Block 01 review PR; pivot to Block 02 (Hawking T_H = κ/(2π)) on a
-new branch from origin/main.
+Open Block 06 stacked PR (base = Block 01 KMS); pivot to Block 07
+(Reeh-Schlieder) on an independent branch from origin/main.
