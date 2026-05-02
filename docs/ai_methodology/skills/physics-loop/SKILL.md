@@ -308,10 +308,12 @@ For publication-facing or quantitative work, also inspect
 
    **PROMOTION VALUE GATE (mandatory pre-PR self-review).** If the campaign goal
    includes "promote bounded → retained" or any retained-positive movement, the
-   agent MUST answer the following questions IN WRITING in the cycle's
-   `CLAIM_STATUS_CERTIFICATE.md` before opening any PR. Failing any single
-   question forbids the PR — discard the cycle and pivot, do NOT downgrade to a
-   lower-value pattern just because work has already been done.
+   agent MUST answer the following questions IN WRITING in a value-gate section
+   of `OPPORTUNITY_QUEUE.md` or `REVIEW_HISTORY.md` before opening any PR. This
+   value-gate record is not an audit certificate and must not state or predict
+   an audit verdict. Failing any single question forbids the PR — discard the
+   cycle and pivot, do NOT downgrade to a lower-value pattern just because work
+   has already been done.
 
    | # | Question | Required answer to allow PR |
    |---|---|---|
@@ -321,9 +323,9 @@ For publication-facing or quantitative work, also inspect
    | V4 | Is the marginal content non-trivial (not a textbook identity, not a definition restated)? | "Yes" with one-sentence justification. Examples that fail: "real shifts don't change imaginary parts", "(1/sqrt(N)) * I has matrix elements 1/sqrt(N)", "scaling by mu preserves slope". |
    | V5 | Is this a one-step variant of an already-landed cycle in this campaign? | "No" — name the closest prior cycle and explain the structural distinction. "Same matrix structure, different physical interpretation" is NOT a structural distinction; it's relabeling. |
 
-   The 2026-05-02 audit-backlog campaign produced 40 PRs of which only ~10–13
-   added genuine value because this gate was not applied. Do not repeat that
-   failure mode.
+   Review-loop triage of the 2026-05-02 audit-backlog campaign found too many
+   branches whose marginal repo value was review-prep rather than new science.
+   Do not repeat that failure mode.
 
    **Source-note hygiene as a separate, lower-volume lane.** Pattern C
    tightenings (correcting `proposed_retained` / `DERIVED` / `EXACT` author-side

@@ -1,11 +1,11 @@
 # Retained-Promotion Campaign Prompt (replaces audit-backlog-rescope prompt)
 
-**Why this prompt exists:** The 2026-05-02 audit-backlog-campaign produced 40 PRs in
-one session, of which only ~10–13 added genuine value. The campaign was framed as
-"promote bounded → retained" but actually delivered audit-lane review-prep:
-narrow rescopes that create new audit-pending rows (don't promote anything),
-audit companions that re-verify identities the primary runners already verified,
-and source-note tightenings (the only category that did real housekeeping).
+**Why this prompt exists:** Review-loop triage of the 2026-05-02
+audit-backlog campaign found too many branches whose marginal repo value was
+review-prep rather than new science. The campaign was framed as "promote
+bounded -> retained" but often delivered audit-lane preparation: narrow
+rescopes that create new audit-pending rows, audit companions that re-verify
+identities the primary runners already verified, and source-note tightenings.
 
 This prompt is structured to make that failure mode hard.
 
@@ -82,8 +82,9 @@ The cycle MUST NOT produce:
 
 ## Value gate — write the answers before opening any PR
 
-Before `gh pr create`, answer these questions in writing in the cycle's
-`CLAIM_STATUS_CERTIFICATE.md`:
+Before `gh pr create`, answer these questions in a value-gate section of the
+cycle's `OPPORTUNITY_QUEUE.md` or `REVIEW_HISTORY.md`. This record is not an
+audit certificate and must not state or predict an audit verdict:
 
 | Question | Required answer for "open PR" |
 |---|---|
@@ -100,7 +101,7 @@ question, the PR must NOT be opened.
 
 1. **Volume cap:** maximum 5 PRs per 24-hour campaign unless the user
    extends. After 5, stop and ask for direction. (The 2026-05-02
-   campaign's 40-PR volume was the failure mode.)
+   campaign's high PR volume was the failure mode.)
 
 2. **Cluster cap:** maximum 2 PRs per parent-row family
    (`koide_*`, `dm_neutrino_*`, `gauge_vacuum_plaquette_*`,
