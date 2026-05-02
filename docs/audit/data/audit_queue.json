@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 138,
+    "leaf": 137,
     "medium": 130
   },
-  "generated_at": "2026-05-02T00:16:52.061793+00:00",
+  "generated_at": "2026-05-02T00:18:01.640194+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_generated_new_family_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_GENERATED_NEW_FAMILY_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/source_resolved_generated_new_family_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "source_resolved_generated_new_family_v2_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12705,6 +12688,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 58,
-  "total_pending": 469
+  "ready_count": 57,
+  "total_pending": 468
 }
