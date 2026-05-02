@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 27,
     "high": 215,
-    "leaf": 159,
+    "leaf": 158,
     "medium": 156
   },
-  "generated_at": "2026-05-02T23:22:24.525539+00:00",
+  "generated_at": "2026-05-02T23:26:00.707946+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10876,27 +10876,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "cyclic_projector_compression_narrow_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CYCLIC_PROJECTOR_COMPRESSION_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_cyclic_projector_compression_narrow.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -14795,6 +14774,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 82,
-  "total_pending": 557
+  "ready_count": 81,
+  "total_pending": 556
 }

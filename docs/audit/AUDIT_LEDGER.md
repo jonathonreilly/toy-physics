@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:22:24.856514+00:00
+**Generated:** 2026-05-02T23:26:00.980274+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 141 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 194 |
+| **retained_bounded** | 195 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 518 |
+| unaudited | 517 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -37,22 +37,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 397 |
+| `audited_clean` | 398 |
 | `audited_conditional` | 648 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 555 |
+| `unaudited` | 554 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 531 |
+| `bounded_theorem` | 532 |
 | `decoration` | 8 |
 | `meta` | 37 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
-| `positive_theorem` | 869 |
+| `positive_theorem` | 868 |
 
 | criticality | count |
 |---|---:|
@@ -142,6 +142,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh | C | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `cyclic_projector_compression_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `distance_law_preserving_third_family_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3696,6 +3697,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — Yes. The registered runner completed successfully and checks the finite slice described by the source note.
 - **rationale:** The clean content is the finite cycle-break slice, not a universal repair. The runner completed successfully and the classified check surface is {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'total_pass': 0}. Residual risk is generalization outside the matched slice.
 - **auditor confidence:** medium
+
+### `cyclic_projector_compression_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`CYCLIC_PROJECTOR_COMPRESSION_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/CYCLIC_PROJECTOR_COMPRESSION_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Standalone exact linear-algebra / Z_3 representation-theory identity on Herm(3), limited to the cyclic projector, its invariant basis, basis-level action, and generic Hermitian compression formula; no physical Koide, DM-neutrino, charged-lepton source-response, numerical, fitted, or unit-convention claims are included.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-cyclic-projector-compression-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Exact cyclic-group averaging over the explicitly defined 3-cycle C is self-adjoint and idempotent under the Frobenius inner product, so it projects Herm(3) onto the C-fixed subspace; direct exact basis enumeration identifies that subspace as span_R{I, C+C^2, i(C-C^2)} and gives the stated coefficient formula.  _(class `A`)_
+- **chain closes:** True — The theorem closes from the explicit definition of C and P_cyc plus exact finite-dimensional algebra. The parent-row context line is not load-bearing: the row has no dependencies, defines C directly, and the asserted conclusions are independently checkable symbolic identities.
+- **rationale:** The source note is narrowly scoped and the exact runner output reports 26 algebraic checks with no failures, covering the group facts, Hermiticity, idempotence and fixed basis, basis action, and generic compression formula. The generated classifier's decoration-candidate signal arises from the parent-row context check rather than from the theorem's proof obligations, so it does not convert this independent helper theorem into decoration. Residual risk is downstream misuse: later rows must not treat B0/B1/B2 as physical response channels without a separate audited bridge.
+- **auditor confidence:** high
 
 ### `dark_energy_eos_note`
 
