@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 27,
     "high": 215,
-    "leaf": 152,
+    "leaf": 151,
     "medium": 156
   },
-  "generated_at": "2026-05-02T23:37:31.467974+00:00",
+  "generated_at": "2026-05-02T23:39:12.540376+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10876,27 +10876,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_quark_up_amplitude_rpsr_conditional.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "same_family_3d_closure_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -14638,6 +14617,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 75,
-  "total_pending": 550
+  "ready_count": 74,
+  "total_pending": 549
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:37:31.745022+00:00
+**Generated:** 2026-05-02T23:39:12.823478+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 511 |
+| unaudited | 510 |
 | meta | 38 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 649 |
+| ~~audited_conditional~~ | 650 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 401 |
-| `audited_conditional` | 649 |
+| `audited_conditional` | 650 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 549 |
+| `unaudited` | 548 |
 
 | claim_type | count |
 |---|---:|
@@ -1023,6 +1023,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_route2_exact_readout_map_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `quark_strc_observable_principle_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quark_up_amplitude_provenance_audit_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quasi_persistent_relaunch_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -14125,6 +14126,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`
   - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
   - `QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Quark up-amplitude RPSR value and uniqueness claim, conditional on explicit retained dependencies for the CKM projector ray, rho/eta/supp/delta_A1 inputs, down-amplitude anchor, STRC LO closure, scalar-tensor bridge, and the NLO minimal-contraction rule.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** Combining the STRC LO balance with the asserted NLO correction a_d * supp * delta_A1 = rho/49 gives a_u / sin_d + a_d = 1 + rho/49, hence a_u = sin_d * (1 - 48 rho / 49).  _(class `B`)_
+- **chain closes:** False — The ledger row has deps=[], but the proof imports multiple upstream quantities and the STRC/NLO selection rule from other notes. The runner hardcodes those values and the target RPSR formula, so the row cannot close as an independent dependency-free theorem.
+- **rationale:** Issue: the claimed quark up-amplitude theorem depends on undeclared upstream authorities and an asserted NLO minimal-contraction rule, while the runner defines the target a_u from the RPSR formula before checking the identity. Why this blocks: without explicit retained dependencies and an audited derivation of the RPSR/NLO selection rule, the result is conditional on hidden imports rather than a closed theorem. Repair target: declare the actual dependency chain, ensure each dependency is retained-grade, and add a runner that derives or separately verifies the selection rule instead of setting the target by it. Claim boundary until fixed: given rho, supp, delta_A1, sin_d, a_d, and the RPSR rule as hypotheses, the algebraic value a_u = sin_d*(1 - 48 rho/49) and the enumerated-candidate uniqueness check follow.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
+  - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28`
