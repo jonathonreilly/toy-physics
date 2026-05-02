@@ -20001,7 +20001,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:54:24.358781+00:00",
+  "generated_at": "2026-05-02T20:57:15.272896+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -22142,15 +22142,15 @@
     },
     "bminusl_anomaly_freedom_theorem_note_2026-04-24": {
       "claim_id": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "one_generation_matter_closure_note",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
         "anomaly_forces_time_theorem"
       ],
-      "note_hash": "b480975d001f5398a15fe0070725cfa86139c5a80d13ad9eff01549e485f6c3e",
+      "note_hash": "83f89734a08d9ccc5765bdddcdc025a47b7967d93e514b1a1927785a9d315a2c",
       "path": "docs/BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_bminusl_anomaly_freedom.py",
       "title": "B-L Anomaly-Freedom Theorem With Retained nu_R"
@@ -46563,8 +46563,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
       "meta": 1,
-      "none": 1745,
-      "positive_theorem": 39
+      "none": 1744,
+      "positive_theorem": 40
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
