@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:40:32.494092+00:00
+**Generated:** 2026-05-02T22:43:23.054988+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 98 |
 | **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 3 |
-| unaudited | 532 |
+| open_gate | 4 |
+| unaudited | 531 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 386 |
+| `audited_clean` | 387 |
 | `audited_conditional` | 647 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 568 |
+| `unaudited` | 567 |
 
 | claim_type | count |
 |---|---:|
@@ -50,8 +50,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 7 |
 | `meta` | 36 |
 | `no_go` | 157 |
-| `open_gate` | 100 |
-| `positive_theorem` | 875 |
+| `open_gate` | 101 |
+| `positive_theorem` | 874 |
 
 | criticality | count |
 |---|---:|
@@ -233,6 +233,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_v6_nearfield_comparator_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_weak_connectivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
@@ -7430,6 +7431,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** the accepted Wilson local bosonic scalar gauge-source class has one exact temporal kernel shape on the minimal 3+1 block, differing only by overall normalization: K_O(omega) = 3w (3 + sin^2 omega)  _(class `A`)_
 - **chain closes:** True — Within the stated Wilson-source grammar, the six uniform plaquette orientations induce a_x=a_y=a_z=a_t=3w, and the APBC minimal cube sets the spatial sin^2 gaps to 1, giving K_O(omega)=3w(3+sin^2 omega). The normalization cancels in A_inf/A_2, and the exact endpoint ratio is 2/sqrt(3).
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
+- **auditor confidence:** high
+
+### `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02`
+
+- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open gate documenting that the observable-level bridge <P>_full = R_O(beta_eff) from the full interacting Wilson plaquette expectation to the completed local one-plaquette response is not derived from A_min and remains a blocker; does not establish that bridge or any positive theorem.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-gauge-scalar-observable-bridge-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The bridge <P>_full = R_O(beta_eff) cannot be derived analytically from A_min alone with the current retained primitives; O1/O2/O3 identify the Schwinger-Dyson, effective-action, and RG obstruction routes.  _(class `B`)_
+- **chain closes:** True — The chain closes for the open-gate scope because the note explicitly documents the missing observable bridge, forbidden imports, and concrete obstruction routes, and the runner verifies that obstruction packet. The chain does not close for any positive theorem asserting <P>_full = R_O(beta_eff).
+- **rationale:** Clean only as an open gate, not as a positive theorem. The source note repeatedly states that the bridge remains open and that exact beta_eff(beta) is not analytically available from A_min; the runner checks obstruction documentation rather than computing the bridge. Residual risk: the phrase non-analytically-derivable should be cited as the documented unresolved bridge from current premises, not as a proved impossibility theorem.
+- **open / conditional deps cited:**
+  - `GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`
