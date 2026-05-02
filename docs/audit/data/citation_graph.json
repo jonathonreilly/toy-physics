@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:05:49.841747+00:00",
+  "generated_at": "2026-05-02T18:07:07.792192+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29825,6 +29825,17 @@
       "path": "docs/HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_matsubara_decomposition.py",
       "title": "Hierarchy Matsubara Decomposition Note"
+    },
+    "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02": {
+      "claim_id": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "5fe80803813e1534c4aba0b01232374bdb6ccc8c4ef19a5df1c22ee5a0fd8df7",
+      "path": "docs/HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py",
+      "title": "Hierarchy Matsubara Determinant \u2014 Narrow Algebraic Theorem"
     },
     "hierarchy_spatial_bc_and_u0_scaling_note": {
       "claim_id": "hierarchy_spatial_bc_and_u0_scaling_note",
@@ -45620,6 +45631,7 @@
     "hierarchy_dimensional_compression_note",
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_matsubara_decomposition_note",
+    "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
     "hierarchy_spatial_bc_and_u0_scaling_note",
     "higgs_from_lattice_note",
     "higgs_mass_from_axiom_note",
@@ -46310,7 +46322,7 @@
       "bounded_theorem": 8,
       "meta": 1,
       "none": 1756,
-      "positive_theorem": 14
+      "positive_theorem": 15
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 508,
@@ -46318,12 +46330,12 @@
       "no_go": 106,
       "none": 444,
       "open_gate": 110,
-      "positive_theorem": 610
+      "positive_theorem": 611
     },
     "edge_count": 4990,
-    "leaf_count": 749,
-    "node_count": 1779,
-    "root_count": 1210,
-    "runners_with_path": 1346
+    "leaf_count": 750,
+    "node_count": 1780,
+    "root_count": 1211,
+    "runners_with_path": 1347
   }
 }
