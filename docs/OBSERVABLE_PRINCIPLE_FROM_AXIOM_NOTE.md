@@ -59,7 +59,7 @@ In particular, this note does **not** load-bearingly claim:
 
 ## Why the narrowing is honest
 
-The 2026-04 verdict on the original note flagged two issues:
+The previous wider scope of the original note had two issues:
 
 1. The hierarchy/`v` prediction imports canonical constants from
    `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`, which is currently unaudited.

@@ -34,7 +34,7 @@ In particular, this note does **not** load-bearingly claim:
 
 - physical-species semantics for the retained `hw=1` triplet on the
   accepted Hilbert surface (Part 7 logical commentary, delegated to the
-  Hilbert/information notes which are themselves audited_conditional);
+  Hilbert/information notes);
 - one-axiom substrate-level physical-lattice necessity (Part 9 logical
   commentary, delegated to the same chain);
 - a full no-go theorem against every conceivable lattice regularization
@@ -50,12 +50,10 @@ narrowed scope.
 
 ## Why this narrowing is honest
 
-The 2026-04-30 audit verdict flagged that the previous wider scope of
-this note was load-bearing on:
+The previous wider scope of this note was load-bearing on:
 
 - semantic imports from `SINGLE_AXIOM_HILBERT_NOTE.md` and
-  `SINGLE_AXIOM_INFORMATION_NOTE.md` (themselves currently
-  `audited_conditional`);
+  `SINGLE_AXIOM_INFORMATION_NOTE.md`;
 - semantic imports from `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`
   and `CONTINUUM_IDENTIFICATION_NOTE.md` (currently unaudited);
 - the substrate-level "physical-lattice reading" semantics that fold
@@ -153,7 +151,7 @@ independent of and complementary to:
 - `GENERATION_AXIOM_BOUNDARY_NOTE.md` — narrowed local `M_3(C)`
   construction plus reduced-stack witness;
 - `SINGLE_AXIOM_HILBERT_NOTE.md` and `SINGLE_AXIOM_INFORMATION_NOTE.md`
-  — semantic surfaces, currently `audited_conditional`, **not**
+  — semantic surfaces, **not**
   load-bearing here.
 
 The wider "no same-stack regulator reinterpretation" architectural claim
@@ -166,8 +164,8 @@ Items that **were** load-bearing under the previous wider scope and are
 now explicitly delegated:
 
 - substrate-level physical-lattice necessity from one-axiom semantics —
-  open in `SINGLE_AXIOM_HILBERT_NOTE.md` (audited_conditional) and
-  `SINGLE_AXIOM_INFORMATION_NOTE.md` (audited_conditional);
+  open in `SINGLE_AXIOM_HILBERT_NOTE.md` and
+  `SINGLE_AXIOM_INFORMATION_NOTE.md`;
 - triplet physical-species semantics on the accepted Hilbert surface —
   open in the same chain;
 - the chirality-boundary inputs and continuum-identification inputs —

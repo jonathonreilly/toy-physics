@@ -92,10 +92,9 @@ The previous statement of this note conflated two things:
   load-bearing imports from sibling notes whose audit grade is not under
   this note's control.
 
-The audit verdict (2026-04) flagged the second item as a load-bearing
-import that this note's runner does not derive internally. The narrowing
-removes that import from this note's load-bearing surface; the upgrade
-still happens, but it is now explicitly delegated to
+The second item is a load-bearing import that this note's runner does not
+derive internally. The narrowing removes that import from this note's
+load-bearing surface; the upgrade still happens, but it is now explicitly delegated to
 `PHYSICAL_LATTICE_NECESSITY_NOTE.md` and
 `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`, which carry that load.
 
