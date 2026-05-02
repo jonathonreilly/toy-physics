@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:47:28.021502+00:00
+**Generated:** 2026-05-02T00:48:25.237408+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 351 |
+| `audited_clean` | 352 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 447 |
+| `unaudited` | 446 |
 
 | criticality | count |
 |---|---:|
@@ -423,6 +423,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_self_consistent_two_body_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_test_mass_companion_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `staggered_two_field_wave_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `tensor_block_closure_test_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -15333,6 +15334,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On the primary open-cubic staggered architecture, a weak-field static-source companion gives exact source-mass scaling in the force observable and near-linear source-mass scaling in the blocked-envelope trajectory observable, across a bounded side-and-separation surface.  _(class `C`)_
 - **chain closes:** True — The runner directly computes the static source packet, normalized test packet, source-only Poisson field, exact inward force, and blocked-envelope acceleration. Its current output reproduces the load-bearing 45/45 inward rows, source-mass exponent tables, representative rows, and max weak-field phi_peak bound.
 - **rationale:** The note is explicit that this is a bounded source-only test-mass lane, not both-masses or self-consistent mass-law closure. The current runner reproduces the exact-force source-mass exponent range 1.0000..1.0001, blocked-accel exponent range 1.0093..1.0197, 45/45 inward force rows, 45/45 inward blocked-accel rows, and the representative values used in the note. Residual risk is limited to the bounded open-cubic static-source surface and to a stale non-load-bearing lower phi_peak range bound; the max weak-field bound remains current.
+- **auditor confidence:** high
+
+### `staggered_two_field_wave_note`
+
+- **Note:** [`STAGGERED_TWO_FIELD_WAVE_NOTE.md`](../../docs/STAGGERED_TWO_FIELD_WAVE_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The wave-field hardening still closes the interaction, norm, and bounded-field story cleanly, but it does not close the full state-family battery and it does not give universal contraction on this operating point.  _(class `C`)_
+- **chain closes:** True — The runner directly computes the scalar wave field coupled to staggered matter and reproduces the note's hard scores of 4/5, 5/5, 4/5 plus width ratios 1.0047, 1.0019, and 0.9923. The note's bounded conclusion matches the current corrected output.
+- **rationale:** The claim is scoped to a bounded corrected wave-field prototype, not retained universal robustness. Current output confirms W1-W4 on all three families, W6 only on growing, and width response as a diagnostic rather than a gate. Residual risk is limited to the stated lack of universal contraction, full state-family robustness, larger-graph battery, and retarded-field closure.
 - **auditor confidence:** high
 
 ### `star_supported_bridge_class_note`
