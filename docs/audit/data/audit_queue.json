@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 85,
+    "critical": 84,
     "high": 202,
     "leaf": 128,
     "medium": 161
   },
-  "generated_at": "2026-05-02T16:22:02.966443+00:00",
+  "generated_at": "2026-05-02T16:25:06.655495+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -51,27 +51,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "transitive_descendants": 304
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
-      "blocker": null,
-      "claim_id": "gauge_scalar_temporal_completion_theorem_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 7,
-      "effective_status": "audited_conditional",
-      "load_bearing_score": 11.724,
-      "note_path": "docs/GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md",
-      "queue_reason": "claim_type_backfill_reaudit",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_scalar_temporal_completion_theorem.py",
-      "transitive_descendants": 298
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -11998,6 +11977,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_scalar_temporal_completion_theorem_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.085,
+      "note_path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "teleportation_bell_measurement_circuit_note",
       "claim_scope": null,
       "claim_type": "open_gate",
@@ -12884,29 +12886,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "gauge_scalar_temporal_completion_theorem_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.085,
-      "note_path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
-      "transitive_descendants": 2
     },
     {
       "audit_independence_required": "any_non_self",
@@ -15228,5 +15207,5 @@
     }
   ],
   "ready_count": 95,
-  "total_pending": 576
+  "total_pending": 575
 }
