@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:45:53.948917+00:00
+**Generated:** 2026-05-02T00:47:28.021502+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 350 |
+| `audited_clean` | 351 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 448 |
+| `unaudited` | 447 |
 
 | criticality | count |
 |---|---:|
@@ -422,6 +422,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `staggered_self_consistent_two_body_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `staggered_test_mass_companion_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | _proposed_no_go_ | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `tensor_block_closure_test_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -15320,6 +15321,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The primary staggered architecture supports a genuine self-consistent two-body attraction channel in an exact partner-force observable, with a near-Newton distance law on a calibrated open-cubic surface, but the trajectory-level mutual channel remains noisy.  _(class `C`)_
 - **chain closes:** True — The runner directly computes the two-orbital shared-Poisson field, self-only controls, exact partner-force channel, and blocked trajectory diagnostic. Its current output matches the note's frozen rows, side-level fits, and global 15/15 force versus 10/15 blocked summary.
 - **rationale:** The source note is explicit that this is a bounded calibrated surface, not full Newton or trajectory closure. The current runner reproduces all load-bearing values: partner forces are attractive in 15/15 rows, per-side force exponents are near -2 with R2 about 1, global exponent is -1.947 with R2=0.9992, and the blocked trajectory channel is only 10/15. Residual risk is limited to the calibrated sigma/open-cubic surface and force-first readout boundaries that the note states.
+- **auditor confidence:** high
+
+### `staggered_test_mass_companion_note_2026-04-11`
+
+- **Note:** [`STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md`](../../docs/STAGGERED_TEST_MASS_COMPANION_NOTE_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the primary open-cubic staggered architecture, a weak-field static-source companion gives exact source-mass scaling in the force observable and near-linear source-mass scaling in the blocked-envelope trajectory observable, across a bounded side-and-separation surface.  _(class `C`)_
+- **chain closes:** True — The runner directly computes the static source packet, normalized test packet, source-only Poisson field, exact inward force, and blocked-envelope acceleration. Its current output reproduces the load-bearing 45/45 inward rows, source-mass exponent tables, representative rows, and max weak-field phi_peak bound.
+- **rationale:** The note is explicit that this is a bounded source-only test-mass lane, not both-masses or self-consistent mass-law closure. The current runner reproduces the exact-force source-mass exponent range 1.0000..1.0001, blocked-accel exponent range 1.0093..1.0197, 45/45 inward force rows, 45/45 inward blocked-accel rows, and the representative values used in the note. Residual risk is limited to the bounded open-cubic static-source surface and to a stale non-load-bearing lower phi_peak range bound; the max weak-field bound remains current.
 - **auditor confidence:** high
 
 ### `star_supported_bridge_class_note`
