@@ -1,0 +1,59 @@
+slug: hypercharge-identification-post390-hygiene-2026-05-02
+iteration: 8
+parent_campaign: 3plus1d-native-closure-2026-05-02
+goal: verify post-#390 state of hypercharge_identification_note and add audit-ready hygiene so the audit lane re-fires cleanly
+science_branch: claude/hypercharge-identification-post390-hygiene-2026-05-02
+status: hygiene-complete; row reset to unaudited / bounded_theorem (provenance=author_hint), ready=true in audit queue
+runtime_used: complete
+target_status: audit_ready
+target_rows:
+  - claim_id: hypercharge_identification_note
+    pre_status: audited_renaming / bounded_theorem (provenance=audited)
+    post_status: unaudited / bounded_theorem (provenance=author_hint, ready=true)
+    target_action: hygiene + Type/Claim-scope hint + sibling-theorem routing + fix broken script reference
+    target_effective_on_clean_audit: audited_renaming (renaming verdict still honest)
+    note_path: docs/HYPERCHARGE_IDENTIFICATION_NOTE.md
+    runner_path: scripts/frontier_hypercharge_identification.py
+    runner_pass: 9 (per archived 2026-05-02 audit; full structural-algebra checks)
+findings:
+  - PR #390 (already merged 2026-05-02T21:35Z) added a SEPARATE note SM_HYPERCHARGE_UNIQUENESS_WITHOUT_NU_R_INPUT_THEOREM_NOTE_2026-05-02.md
+  - PR #390 did NOT touch HYPERCHARGE_IDENTIFICATION_NOTE.md (note_hash matched ledger pre-edit)
+  - The note is honestly a renaming/identification (commutant U(1) eigenvalue ratio 1:(-3) -> SM hypercharge labels with conventional a=1/3)
+  - The audit_status=audited_renaming verdict is correct and current
+  - Sibling LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02 (effective_status=retained) provides the structural ratio independent of the renaming
+  - Sibling SM_HYPERCHARGE_UNIQUENESS_WITHOUT_NU_R_INPUT_THEOREM_NOTE_2026-05-02 (positive_theorem, unaudited) provides SM RH hypercharges from anomaly cancellation alone, decoupled from the renaming
+  - Pre-existing broken script reference (frontier_su3_commutant.py -> not in scripts/) was fixed to frontier_graph_first_su3_integration.py
+hygiene_actions_applied:
+  - added Type bounded_theorem (proposed; audit-lane to ratify) line so audit lane gets author_hint provenance
+  - added explicit Claim scope statement matching the previous archived audit's bounded scope
+  - added Primary runner annotation
+  - added sibling-theorem routing in Audit boundary (no new citation edges - bare text refs only)
+  - added Identification boundary paragraph routing structural content to the retained narrow ratio theorem
+  - added Files entries for the two sibling theorem runners
+  - fixed broken frontier_su3_commutant.py reference to frontier_graph_first_su3_integration.py
+cascade_unblocking:
+  hypercharge_identification_note: |
+    NOT a "renaming -> derivation" promotion. The note is honestly a renaming and its
+    audit verdict will continue to be audited_renaming. The NEW PR #390 sibling
+    theorems achieve the cascade goal differently: they package the substantive
+    derivations separately and provide parallel chains that downstream rows
+    (lh_anomaly_trace_catalog, sm_hypercharge_uniqueness, ...) can adopt in their
+    next re-audit pass.
+  lh_anomaly_trace_catalog_theorem_note_2026-04-25: |
+    Currently citing hypercharge_identification_note as authority for Y(Q_L)=+1/3,
+    Y(L_L)=-1. After this hygiene, when the audit lane re-fires this row, it can
+    optionally re-route via LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM
+    (retained) for the structural part and treat hypercharge_identification_note as a
+    renaming-only authority. Whether that cuts the renaming dependency or
+    propagates audited_renaming is an audit-lane decision.
+  anomaly_forces_time_theorem: |
+    Already audited_clean / retained_bounded as of pre-#390. NOT bottlenecked on
+    hypercharge_identification_note's verdict.
+no_go_routes: []
+imports:
+  retired: []
+  exposed: []
+review_loop_disposition: pending
+stop_condition: PR opened
+last_action: pipeline rerun, lint OK (49 legacy warnings, 0 errors), runner PASS, row ready=true
+next_exact_action: open PR; audit lane fresh-context pickup will produce a clean audited_renaming verdict (or, if scope tighter than archived prior, possibly audit upgrade)

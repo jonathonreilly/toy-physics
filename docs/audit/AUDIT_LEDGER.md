@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:37:35.225999+00:00
+**Generated:** 2026-05-02T21:45:45.758788+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 2 |
-| unaudited | 554 |
+| unaudited | 555 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 21 |
+| ~~audited_renaming~~ | 20 |
 | ~~audited_conditional~~ | 634 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 21 |
-| `unaudited` | 590 |
+| `audited_renaming` | 20 |
+| `unaudited` | 591 |
 
 | claim_type | count |
 |---|---:|
@@ -1202,7 +1202,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
-| `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `monopole_derived_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
@@ -8970,19 +8969,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Lane 5 closure requires retaining premises from both (C1) the absolute-scale axiom and one of {(C2) cosmic-history-ratio retirement, (C3) direct cosmic-L derivation}; no fourth class exists and no single class is sufficient.  _(class `B`)_
 - **chain closes:** False — The registered runner verifies only the separate structural-lock theorem, while the status note's two-gate synthesis relies on multiple upstream workstream artifacts that are not registered as dependencies for this row.
 - **rationale:** Issue: the note's load-bearing two-gate Lane 5 closure map is a cross-artifact synthesis, but this row has no registered dependencies and its runner validates only the Cycle 1 structural-lock theorem. Why this blocks: the audit can confirm the runner's five structural-lock checks, but not the broader claim that the listed C1/C2/C3 taxonomy exhausts Lane 5 closure. Repair target: register the Cycle 2-5 artifacts as dependencies and add a dedicated runner or formal checklist for the two-gate/no-fourth-class synthesis. Claim boundary until fixed: the note remains a support/status surface summarizing the workstream, not an audited closure theorem.
-- **auditor confidence:** high
-
-### `hypercharge_identification_note`
-
-- **Note:** [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](../../docs/HYPERCHARGE_IDENTIFICATION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded left-handed-doublet identification: in C^8 with SU(2)_weak on factor 1 and SWAP_23 on factors 2 and 3, the unique traceless commutant U(1) has eigenvalue ratio 1:-3 and, after identifying the (2,3) and (2,1) sectors as Q_L and L_L with conventional normalization, reproduces their SM hypercharges and charges.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-hypercharge-mcclintock`  (codex-current; independence=fresh_context)
-- **load-bearing step:** With conventional normalization a=1/3, the (2,3)=C^2 x Sym^2(C^2) subspace is identified with the left-handed quark doublet and the (2,1)=C^2 x Anti^2(C^2) subspace is identified with the left-handed lepton doublet, so the traceless commutant U(1) matches SM hypercharge on that surface.  _(class `F`)_
-- **chain closes:** False — The algebraic uniqueness of the traceless U(1) direction closes inside the stated C^8 commutant setup. The physical bridge to Standard Model hypercharge is an identification of sectors and normalization, not an independently derived map from retained inputs.
-- **rationale:** Issue: the load-bearing step identifies the symmetric/antisymmetric commutant sectors with SM Q_L/L_L and names the unique traceless U(1) as hypercharge after choosing conventional normalization. Why this blocks: the runner verifies exact algebra and downstream consistency after that carrier identification, but it does not derive the SM fermion-sector map or hypercharge normalization from independent premises. Repair target: provide a retained theorem constructing the physical map from the C^8 taste sectors to SM left-handed fermion representations and deriving the allowed normalization/readout without importing the target labels. Claim boundary until fixed: the safe statement is that the commutant contains a unique traceless U(1) whose eigenvalue ratio matches the left-handed SM hypercharge ratio under the stated identification.
 - **auditor confidence:** high
 
 ### `i3_zero_exact_theorem_note`

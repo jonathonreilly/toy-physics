@@ -1,6 +1,12 @@
 # Hypercharge U(1)_Y Identification from the Commutant
 
-**Status:** support: structural identification of the unique traceless commutant U(1) generator with Standard Model hypercharge within A_min; audit_status=audited_renaming. This note is an identification, not a first-principles derivation of Standard Model hypercharge.
+**Status:** support: structural identification of the unique traceless commutant U(1) generator with Standard Model hypercharge within A_min; audit_status=audited_renaming. This note is an identification (a labelling step matching commutant-algebra eigenvalues to Standard Model hypercharge labels), not a first-principles derivation of Standard Model hypercharge.
+
+**Type:** bounded_theorem (proposed; audit-lane to ratify)
+
+**Claim scope:** bounded left-handed-doublet identification: in C^8 with SU(2)_weak on factor 1 and SWAP_23 on factors 2 and 3, the unique traceless commutant U(1) has eigenvalue ratio 1:(-3) and, after identifying the (2,3) and (2,1) sectors as Q_L and L_L with conventional normalization a=1/3, reproduces their SM hypercharges Y(Q_L)=+1/3 and Y(L_L)=-1 and the corresponding electric charges via Q = T_3 + Y/2. The renaming step (matching abstract eigenspaces to SM left-handed fermion labels) is in the load-bearing chain and is recorded by the audit lane as audited_renaming. The structural ratio 1:(-3) and the no-nu_R RH derivation are NOT in this row's load-bearing chain - they live in the sibling theorems listed under "Audit boundary".
+
+**Primary runner:** [`scripts/frontier_hypercharge_identification.py`](../scripts/frontier_hypercharge_identification.py) (PASS=9 on retained-grade structural-algebra checks per archived 2026-05-02 audit)
 
 ## Audit boundary
 
@@ -20,7 +26,30 @@ or to complete the full anomaly-canceling Standard Model spectrum.
 Audit history: the audit lane records `audit_status=audited_renaming`
 for `hypercharge_identification_note`, cross-confirmed as class F by
 `codex-audit-loop-round-2` and
-`codex-fresh-context-20260430-03-hypercharge`.
+`codex-fresh-context-20260430-03-hypercharge`. The renaming verdict is
+the honest scope of this note. Two sibling theorems package the
+substantive structural and anomaly-derived content separately and are
+NOT load-bearing on this renaming row:
+
+- `LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`
+  (effective_status `retained` as of 2026-05-02): retains the structural
+  eigenvalue ratio `1 : (-3)` on the Sym^2 (6-state) and Anti^2 (2-state)
+  decompositions of the LH-doublet sector, with no SM-identification
+  step in its load-bearing chain.
+- `SM_HYPERCHARGE_UNIQUENESS_WITHOUT_NU_R_INPUT_THEOREM_NOTE_2026-05-02.md`
+  (positive_theorem, awaiting independent audit): derives the SM
+  right-handed hypercharges `(y_1, y_2, y_3) = (+4/3, -2/3, -2)` from
+  anomaly cancellation alone on the no-nu_R minimal completion, with
+  NO load-bearing dependency on this identification note.
+
+Consumers of "the LH-sector hypercharges are `+1/3` and `-1`" should
+prefer the structural-ratio sibling for the ratio and use this note
+only for the conventional renaming step. Downstream rows that take
+literal `Y(Q_L) = +1/3` and `Y(L_L) = -1` as inputs (notably
+`LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md` and
+`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`)
+inherit the renaming via this note; the no-nu_R sibling above provides
+a parallel chain that does not require this note as an input.
 
 ## Statement
 
@@ -38,7 +67,7 @@ The taste space C^8 = (C^2)^{x3} carries two structures:
    permutation symmetry.
 
 The commutant of {SU(2), SWAP\_{23}} in End(C^8) is gl(3,C) + gl(1,C),
-established in `frontier_su3_commutant.py`. The mechanism:
+established in `frontier_graph_first_su3_integration.py`. The mechanism:
 
 - SU(2) on factor 1 restricts the commutant to gl(4,C) on factors 2,3
   (by Schur's lemma).
@@ -143,7 +172,23 @@ traceless U(1) generator is **unique up to normalization**. The audit
 status records the final step as an identification with hypercharge, not
 a first-principles derivation of hypercharge itself.
 
+The structural part of this argument (the existence and uniqueness of
+the traceless direction, and the eigenvalue ratio `1 : (-3)` on
+Sym^2(C^2) vs Anti^2(C^2)) is now packaged separately as the
+retained-grade narrow theorem
+`LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`.
+The remaining content of this note - calling the conventional choice
+`a = 1/3` the Standard Model normalization and labelling
+`Y(Q_L) = +1/3` and `Y(L_L) = -1` - is the renaming step that the
+audit lane records as `audited_renaming`.
+
 ## Files
 
-- `scripts/frontier_hypercharge_identification.py`: Full numerical verification
-- `scripts/frontier_su3_commutant.py`: Prior result establishing the commutant
+- `scripts/frontier_hypercharge_identification.py`: Full numerical verification of the renaming step (primary runner for this row).
+- `scripts/frontier_graph_first_su3_integration.py`: Prior result establishing the gl(3) + gl(1) commutant.
+- `scripts/frontier_lh_doublet_traceless_abelian_ratio.py`: Retained-grade
+  structural ratio theorem (`1 : (-3)`) on the LH-doublet sector,
+  independent of the SM-identification step.
+- `scripts/frontier_sm_hypercharge_no_nu_r_derivation.py`: SM RH
+  hypercharges `(+4/3, -2/3, -2)` from anomaly cancellation alone on
+  the no-nu_R completion, decoupled from this renaming.

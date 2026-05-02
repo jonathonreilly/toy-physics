@@ -20033,7 +20033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:37:31.083154+00:00",
+  "generated_at": "2026-05-02T21:45:42.481670+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -30489,11 +30489,11 @@
     },
     "hypercharge_identification_note": {
       "claim_id": "hypercharge_identification_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "3d90ebe6897287a712103e2d98f267043038c83d57c6b5c7f8ec0687d435bf0f",
+      "note_hash": "ca5465c094ce18537e7788203b0b87b6f6e7b414576b943e9770399658f64f24",
       "path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
       "runner_path": "scripts/frontier_hypercharge_identification.py",
       "title": "Hypercharge U(1)_Y Identification from the Commutant"
@@ -46661,19 +46661,19 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 12,
+      "bounded_theorem": 13,
       "meta": 1,
       "no_go": 1,
-      "none": 1742,
+      "none": 1741,
       "positive_theorem": 45
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 512,
+      "bounded_theorem": 513,
       "meta": 1,
       "no_go": 107,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 632
+      "positive_theorem": 631
     },
     "edge_count": 5008,
     "leaf_count": 767,

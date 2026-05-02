@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 27,
-    "high": 217,
+    "high": 218,
     "leaf": 174,
     "medium": 175
   },
-  "generated_at": "2026-05-02T21:37:34.965600+00:00",
+  "generated_at": "2026-05-02T21:45:45.566922+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -828,6 +828,27 @@
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "transitive_descendants": 245
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "hypercharge_identification_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": "confirmed",
+      "deps": [],
+      "direct_in_degree": 11,
+      "effective_status": "unaudited",
+      "load_bearing_score": 13.1,
+      "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_hypercharge_identification.py",
+      "transitive_descendants": 193
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -15572,6 +15593,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 116,
-  "total_pending": 593
+  "ready_count": 117,
+  "total_pending": 594
 }
