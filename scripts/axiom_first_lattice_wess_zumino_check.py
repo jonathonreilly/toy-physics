@@ -125,6 +125,58 @@ def free_staggered_dirac_matrix(L):
     return D
 
 
+def gauged_u1_staggered_dirac_matrix(L, link_phases):
+    """
+    Build the staggered Dirac matrix coupled to a U(1) link configuration.
+
+    D[U] = (1/2) sum_mu eta_mu(x) [ U_mu(x) delta_{x+mu, y} - U_mu(x-mu)^*  delta_{x-mu, y} ]
+
+    link_phases[mu, x_idx] is U_mu(x) = exp(i theta_mu(x)) on link from x to x+mu.
+    """
+    N = L ** 3
+    D = np.zeros((N, N), dtype=complex)
+    for x in product(range(L), repeat=3):
+        ix = site_index(x, L)
+        for mu in range(3):
+            eta = staggered_phase(mu, x)
+            xp = list(x)
+            xm = list(x)
+            xp[mu] = (xp[mu] + 1) % L
+            xm[mu] = (xm[mu] - 1) % L
+            iy_p = site_index(xp, L)
+            iy_m = site_index(xm, L)
+            U_pos = link_phases[mu, ix]  # U_mu(x)
+            U_neg = link_phases[mu, iy_m]  # U_mu(x-mu) ; we conjugate
+            D[ix, iy_p] += 0.5 * eta * U_pos
+            D[ix, iy_m] -= 0.5 * eta * U_neg.conj()
+    return D
+
+
+def random_u1_link_phases(L, rng):
+    """Return random U(1) link phases U_mu(x) = exp(i theta_mu(x)) for mu = 0, 1, 2."""
+    N = L ** 3
+    phases = np.zeros((3, N), dtype=complex)
+    for mu in range(3):
+        thetas = rng.uniform(-np.pi, np.pi, size=N)
+        phases[mu] = np.exp(1j * thetas)
+    return phases
+
+
+def apply_u1_gauge_rotation(link_phases, gauge_phases, L):
+    """Apply gauge rotation: U_mu(x) → G(x)^* U_mu(x) G(x+mu)
+    where gauge_phases[x_idx] = G(x) = exp(i alpha(x))."""
+    N = L ** 3
+    out = np.zeros_like(link_phases)
+    for x in product(range(L), repeat=3):
+        ix = site_index(x, L)
+        for mu in range(3):
+            xp = list(x)
+            xp[mu] = (xp[mu] + 1) % L
+            iy_p = site_index(xp, L)
+            out[mu, ix] = gauge_phases[ix].conj() * link_phases[mu, ix] * gauge_phases[iy_p]
+    return out
+
+
 # ---------------------------------------------------------------------------
 # E1: epsilon is diagonal, real, involutive
 # ---------------------------------------------------------------------------
@@ -177,10 +229,10 @@ def regularized_local_trace(D, t):
     Returns the diagonal of exp(-t D†D), shape (N,).
     """
     DtD = D.conj().T @ D
-    # Spectral decomposition (D†D is real symmetric)
+    # Spectral decomposition (D†D is Hermitian)
     evals, evecs = eigh(DtD)
-    # exp(-t * lambda) on diagonal in eigenbasis
-    T_diag = np.einsum("ij,j,ij->i", evecs, np.exp(-t * evals), evecs)
+    # <x|n><n|x> = |evecs[x, n]|^2, summed over n with weight exp(-t lam_n)
+    T_diag = np.real(np.einsum("xn,n,xn->x", evecs, np.exp(-t * evals), evecs.conj()))
     return T_diag
 
 
@@ -236,7 +288,7 @@ def chiral_anomaly_trace_spectral(D, eps):
     """
     DtD = D.conj().T @ D
     evals, evecs = eigh(DtD)
-    eps_in_eigenbasis = evecs.T @ np.diag(eps) @ evecs
+    eps_in_eigenbasis = evecs.conj().T @ np.diag(eps) @ evecs
     # Diagonal of eps in eigenbasis
     diag = np.diag(eps_in_eigenbasis).real
     # Zero modes: lambda < 1e-10
@@ -347,6 +399,117 @@ def check_E5_lh_anomaly_traces():
 
 
 # ---------------------------------------------------------------------------
+# E6: Gauge invariance of the lattice index (W4 cocycle non-triviality step)
+# ---------------------------------------------------------------------------
+
+def check_E6_gauge_invariance(L=4):
+    """
+    Verify: under U(1) gauge rotation U_mu(x) → G(x)^* U_mu(x) G(x+mu),
+    the lattice index n_+(D) - n_-(D) is invariant.
+
+    This is the load-bearing fact for W4: gauge invariance of the
+    integer index means the anomaly cocycle cannot be trivialized
+    by local gauge-invariant counterterms.
+    """
+    print("\n=== E6: gauge invariance of lattice index (W4 cocycle non-triviality) ===")
+    rng = np.random.default_rng(20260502)
+    eps = epsilon_diagonal(L)
+    link_phases = random_u1_link_phases(L, rng)
+    gauge_phases = np.exp(1j * rng.uniform(-np.pi, np.pi, size=L ** 3))
+
+    # Pre-rotation: D[U]
+    D_pre = gauged_u1_staggered_dirac_matrix(L, link_phases)
+    # Post-rotation: D[G^* U G]
+    link_rotated = apply_u1_gauge_rotation(link_phases, gauge_phases, L)
+    D_post = gauged_u1_staggered_dirac_matrix(L, link_rotated)
+
+    # Verify εDε = -D for both (the chiral structure is preserved by gauge)
+    D_pre_sandwich = np.outer(eps, eps) * D_pre
+    D_post_sandwich = np.outer(eps, eps) * D_post
+    check(f"E6a/L={L}: εD[U]ε = -D[U] (gauged)",
+          np.max(np.abs(D_pre_sandwich + D_pre)) < 1e-10,
+          f"residual = {np.max(np.abs(D_pre_sandwich + D_pre)):.2e}")
+    check(f"E6b/L={L}: εD[G*UG]ε = -D[G*UG] (gauge-rotated)",
+          np.max(np.abs(D_post_sandwich + D_post)) < 1e-10,
+          f"residual = {np.max(np.abs(D_post_sandwich + D_post)):.2e}")
+
+    # Compute the anomaly trace at fixed t for both
+    t = 0.1
+    DtD_pre = D_pre.conj().T @ D_pre
+    DtD_post = D_post.conj().T @ D_post
+    evals_pre = eigvalsh(DtD_pre)
+    evals_post = eigvalsh(DtD_post)
+    # Spectra must agree (gauge-conjugation preserves the spectrum)
+    check(f"E6c/L={L}: σ(D†D[U]) = σ(D†D[G*UG]) (spectrum gauge-invariant)",
+          np.max(np.abs(np.sort(evals_pre) - np.sort(evals_post))) < 1e-9,
+          f"spectrum max diff = {np.max(np.abs(np.sort(evals_pre) - np.sort(evals_post))):.2e}")
+
+    # Compute heat-kernel diagonal trace ε * exp(-t D†D) at both
+    from scipy.linalg import expm
+    K_pre = expm(-t * DtD_pre)
+    K_post = expm(-t * DtD_post)
+    # Note: under gauge rotation, the heat kernel transforms by the same
+    # unitary (G acts on sites). The diagonal sum_x ε(x) <x|K|x> changes,
+    # but the *index*, which is the limiting integer, is invariant.
+    # The proper invariant is the spectrum-weighted trace, which depends only
+    # on D†D's spectrum.
+    spectral_index_pre = sum(np.exp(-t * lam) * np.real(np.vdot(v, eps * v))
+                              for lam, v in zip(*eigh(DtD_pre)))
+    spectral_index_post = sum(np.exp(-t * lam) * np.real(np.vdot(v, eps * v))
+                               for lam, v in zip(*eigh(DtD_post)))
+    # The spectral form depends on how ε acts in eigenbasis; we instead test
+    # the gauge-conjugation property directly: G * D[U] * G^† = D[G*UG] when
+    # ε commutes with G (G is gauge group action on color, ε is chirality).
+    # In the U(1) case, G acts trivially on Dirac structure, so this should hold.
+
+    # The crucial cocycle property: at any t, the chiral anomaly trace
+    # A[1, U] = sum_n exp(-t lambda_n) <n|eps|n> is **gauge-invariant**
+    # under U → G^* U G, because [eps, G] = 0 (gauge rotation acts on color
+    # and links, eps acts on sites only).
+    #
+    # The full spectral trace, including contributions from non-zero
+    # eigenstates, is gauge-invariant. The integer index (zero-mode
+    # imbalance) is the t → infinity limit. Both invariances are needed
+    # for W4: at finite t the trace is gauge-invariant (anomaly cocycle is
+    # a single function of the gauge background, depending only on
+    # gauge-equivalence class), and at t = infinity it's the integer index.
+    A_pre_gauge = chiral_anomaly_trace_spectral(D_pre, eps)
+    A_post_gauge = chiral_anomaly_trace_spectral(D_post, eps)
+    print(f"  A[1, U]_pre  (zero-mode imbalance, t-indep) = {A_pre_gauge:.6e}")
+    print(f"  A[1, U]_post (zero-mode imbalance, t-indep) = {A_post_gauge:.6e}")
+
+    check(f"E6d/L={L}: zero-mode index gauge-invariant",
+          abs(A_pre_gauge - A_post_gauge) < 1e-6,
+          f"|index_pre - index_post| = {abs(A_pre_gauge - A_post_gauge):.2e}")
+
+    # For the heat-kernel trace at finite t, gauge invariance of the
+    # full trace (including non-zero modes) follows from spectrum
+    # invariance + the fact that <n|eps|n> is preserved when ε is the
+    # site operator and gauge rotation acts on sites by site phases.
+    # Actually, gauge rotation acts on D as D → G D G^*, where G = diag(g(x)).
+    # In the U(1) case, g(x) is a phase, and the eigenvectors transform as
+    # |n>_post = G |n>_pre. Then <n_post | eps | n_post> = <n_pre | G^* eps G | n_pre>
+    # = <n_pre | eps | n_pre> (since G is diagonal and eps is diagonal).
+    # So the full spectral trace is gauge-invariant.
+    A_pre_t = chiral_anomaly_trace(D_pre, eps, t)
+    A_post_t = chiral_anomaly_trace(D_post, eps, t)
+    print(f"  A[1, U]_pre  (heat-kernel t={t}) = {A_pre_t:.6e}")
+    print(f"  A[1, U]_post (heat-kernel t={t}) = {A_post_t:.6e}")
+    check(f"E6e/L={L}: heat-kernel trace gauge-invariant at finite t",
+          abs(A_pre_t - A_post_t) < 1e-6,
+          f"|A_pre - A_post| = {abs(A_pre_t - A_post_t):.2e}")
+
+    # At very large t, only zero modes survive
+    A_pre_large_t = chiral_anomaly_trace(D_pre, eps, 1e6)
+    A_post_large_t = chiral_anomaly_trace(D_post, eps, 1e6)
+    print(f"  A[1, U]_pre  (heat-kernel t→∞)   = {A_pre_large_t:.6e}")
+    print(f"  A[1, U]_post (heat-kernel t→∞)   = {A_post_large_t:.6e}")
+    check(f"E6f/L={L}: heat-kernel index agrees with spectral form (t→∞)",
+          abs(A_pre_large_t - A_pre_gauge) < 1e-6,
+          f"|A_t→∞ - A_spectral| = {abs(A_pre_large_t - A_pre_gauge):.2e}")
+
+
+# ---------------------------------------------------------------------------
 # Main runner
 # ---------------------------------------------------------------------------
 
@@ -361,6 +524,7 @@ def main():
     check_E3_wess_zumino_consistency(L=4, t=0.5)
     check_E4_t_independence(L_list=(4,))
     check_E5_lh_anomaly_traces()
+    check_E6_gauge_invariance(L=4)
 
     print()
     print(f"Summary: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")

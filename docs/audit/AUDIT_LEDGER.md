@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T20:51:30.047247+00:00
+**Generated:** 2026-05-02T20:55:48.086898+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,34 +23,33 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 92 |
 | **retained_bounded** | 181 |
 | _retained_pending_chain_ | 2 |
-| unaudited | 579 |
+| unaudited | 580 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 624 |
+| ~~audited_conditional~~ | 623 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 365 |
-| `audited_conditional` | 624 |
+| `audited_conditional` | 623 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 615 |
+| `unaudited` | 616 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 525 |
+| `bounded_theorem` | 526 |
 | `decoration` | 6 |
 | `meta` | 36 |
 | `no_go` | 155 |
-| `open_gate` | 99 |
-| `positive_theorem` | 871 |
-| `unset` | 4 |
+| `open_gate` | 100 |
+| `positive_theorem` | 873 |
 
 | criticality | count |
 |---|---:|
@@ -98,7 +97,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `s3_mass_matrix_no_go_note` | no_go | critical | 314 | 17.30 | `audited_clean` | **retained_no_go** |
 | 22 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `plaquette_self_consistency_note` | bounded_theorem | critical | 336 | 16.90 | `unaudited` | unaudited |
-| 24 | `cpt_exact_note` | - | critical | 304 | 16.75 | `unaudited` | unaudited |
+| 24 | `cpt_exact_note` | positive_theorem | critical | 304 | 16.75 | `unaudited` | unaudited |
 | 25 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 302 | 16.74 | `audited_conditional` | ~~audited_conditional~~ |
 
 
@@ -967,7 +966,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quasi_persistent_relaunch_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
-| `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `reproduction_audit_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `retardation_discriminator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -13310,19 +13308,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/quasi_persistent_relaunch_probe.py`
   - `scripts/two_body_momentum_harness.py`
-
-### `rconn_derived_note`
-
-- **Note:** [`RCONN_DERIVED_NOTE.md`](../../docs/RCONN_DERIVED_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded 1/N_c claim that the dynamical connected color-trace ratio R_conn equals (N_c^2 - 1)/N_c^2 + O(1/N_c^4), with N_c=3 giving 8/9 + O(1/81).
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-agent-ptolemy-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** If the dynamics populates the color channels according to their dimensionality, then Pi_singlet/Pi_total = 1/N_c^2 and Pi_adjoint/Pi_total = (N_c^2 - 1)/N_c^2.  _(class `F`)_
-- **chain closes:** False — The one-hop authorities close only the exact SU(N_c) adjoint channel-count fraction 8/9 at N_c=3. They do not derive the dynamical identification of the measured connected propagator ratio with that dimension fraction, nor the O(1/N_c^4) correction bound or physical observable propagation.
-- **rationale:** Issue: the note turns an exact Fierz/channel-count fraction into a dynamical statement about R_conn by assuming dimensional channel population and planar dominance fix h/f, then adds an O(1/N_c^4) bound and physical observable consequences. Why this blocks: the retained one-hop parent explicitly closes only the algebraic adjoint q-qbar fraction and excludes the physical matching rule; the --small runner is compatible with 8/9 but uses 2^4 quick-test evidence and checks tolerance around the expected value rather than deriving the bridge or reproducing the note's default 4^4/100-config claim. Repair target: a theorem or runner deriving the connected-trace projection and correction bound from retained lattice dynamics, plus current default-scale runner output. Claim boundary until fixed: the exact adjoint channel-count fraction (N_c^2 - 1)/N_c^2 = 8/9 may be cited via the retained Fierz parent only.
-- **auditor confidence:** high
 
 ### `replay_environment_note`
 

@@ -20081,7 +20081,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:51:26.662890+00:00",
+  "generated_at": "2026-05-02T20:55:44.362865+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -22022,7 +22022,7 @@
         "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
         "anomaly_forces_time_theorem"
       ],
-      "note_hash": "6a72e80e48371e58f98d1693f09e93e8f7507aa83a81ebdabf3f796a11b934ad",
+      "note_hash": "1c7b731658578426490c3c3342c4aebb0b9205cde77fff2b5f6e59ae79c52887",
       "path": "docs/AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/axiom_first_lattice_wess_zumino_check.py",
       "title": "Axiom-First Lattice Wess-Zumino / Fujikawa Theorem on Cl(3)/Z^3"

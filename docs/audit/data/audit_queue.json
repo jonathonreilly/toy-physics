@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 91,
+    "critical": 92,
     "high": 197,
     "leaf": 165,
     "medium": 166
   },
-  "generated_at": "2026-05-02T20:51:29.841268+00:00",
+  "generated_at": "2026-05-02T20:55:47.890967+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -13,8 +13,8 @@
       "blocker": null,
       "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
       "claim_scope": null,
-      "claim_type": null,
-      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
@@ -34,8 +34,8 @@
       "blocker": null,
       "claim_id": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
       "claim_scope": null,
-      "claim_type": null,
-      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "claim_type": "open_gate",
+      "claim_type_provenance": "migration_hint",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
@@ -160,8 +160,8 @@
       "blocker": null,
       "claim_id": "yukawa_color_projection_theorem",
       "claim_scope": null,
-      "claim_type": null,
-      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
@@ -836,6 +836,30 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "rconn_derived_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "yukawa_color_projection_theorem",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01"
+      ],
+      "direct_in_degree": 16,
+      "effective_status": "unaudited",
+      "load_bearing_score": 16.362,
+      "note_path": "docs/RCONN_DERIVED_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "transitive_descendants": 328
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audited_conditional",
       "blocker": null,
       "claim_id": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
@@ -1016,8 +1040,8 @@
       "blocker": null,
       "claim_id": "cpt_exact_note",
       "claim_scope": null,
-      "claim_type": null,
-      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
@@ -16158,5 +16182,5 @@
     }
   ],
   "ready_count": 135,
-  "total_pending": 619
+  "total_pending": 620
 }

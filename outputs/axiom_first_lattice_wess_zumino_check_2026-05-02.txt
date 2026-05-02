@@ -50,5 +50,19 @@ Theorem note: docs/AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_THEOREM_NOTE_2026-05
   Therefore: gauge theory is inconsistent on the retained Cl(3)/Z^3 surface.
 [PASS] E5f: anomaly ⇒ inconsistency (W4) closure
 
-Summary: PASS=22 FAIL=0
+=== E6: gauge invariance of lattice index (W4 cocycle non-triviality) ===
+[PASS] E6a/L=4: εD[U]ε = -D[U] (gauged)  residual = 0.00e+00
+[PASS] E6b/L=4: εD[G*UG]ε = -D[G*UG] (gauge-rotated)  residual = 0.00e+00
+[PASS] E6c/L=4: σ(D†D[U]) = σ(D†D[G*UG]) (spectrum gauge-invariant)  spectrum max diff = 6.66e-15
+  A[1, U]_pre  (zero-mode imbalance, t-indep) = 0.000000e+00
+  A[1, U]_post (zero-mode imbalance, t-indep) = 0.000000e+00
+[PASS] E6d/L=4: zero-mode index gauge-invariant  |index_pre - index_post| = 0.00e+00
+  A[1, U]_pre  (heat-kernel t=0.1) = 9.103829e-15
+  A[1, U]_post (heat-kernel t=0.1) = 1.543210e-14
+[PASS] E6e/L=4: heat-kernel trace gauge-invariant at finite t  |A_pre - A_post| = 6.33e-15
+  A[1, U]_pre  (heat-kernel t→∞)   = -5.576644e-187
+  A[1, U]_post (heat-kernel t→∞)   = -3.304181e-187
+[PASS] E6f/L=4: heat-kernel index agrees with spectral form (t→∞)  |A_t→∞ - A_spectral| = 5.58e-187
+
+Summary: PASS=28 FAIL=0
 All checks passed.

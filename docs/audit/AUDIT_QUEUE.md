@@ -1,11 +1,11 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T20:51:29.841268+00:00
-**Total pending:** 619
+**Generated:** 2026-05-02T20:55:47.890967+00:00
+**Total pending:** 620
 **Ready (all deps already at retained-grade or metadata tiers):** 135
 
 By criticality:
-- `critical`: 91
+- `critical`: 92
 - `high`: 197
 - `medium`: 166
 - `leaf`: 165
@@ -16,14 +16,14 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | - | unaudited | critical | 339 | 11.41 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py` |
-| 2 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | - | unaudited | critical | 337 | 10.90 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py` |
+| 1 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | unaudited | critical | 339 | 11.41 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py` |
+| 2 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | unaudited | critical | 337 | 10.90 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py` |
 | 3 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 337 | 10.90 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py` |
 | 4 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 337 | 10.90 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py` |
 | 5 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 337 | 10.90 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
 | 6 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 337 | 10.90 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
 | 7 | `yt_ward_identity_derivation_theorem` | positive_theorem | claim_type_backfill_reaudit | critical | 335 | 27.39 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 8 | `yukawa_color_projection_theorem` | - | unaudited | critical | 329 | 12.87 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ew_current_fierz_channel_decomposition.py` |
+| 8 | `yukawa_color_projection_theorem` | positive_theorem | unaudited | critical | 329 | 12.87 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_ew_current_fierz_channel_decomposition.py` |
 | 9 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | critical | 312 | 10.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_derivation.py` |
 | 10 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 310 | 11.28 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_rigidity_theorem.py` |
 | 11 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 309 | 9.78 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spin_statistics_check.py` |
@@ -53,18 +53,18 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 35 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 338 | 9.40 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
 | 36 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | unaudited | critical | 337 | 10.90 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py` |
 | 37 | `plaquette_self_consistency_note` | bounded_theorem | unaudited | critical | 336 | 16.90 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
-| 38 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | positive_theorem | claim_type_backfill_reaudit | critical | 310 | 11.28 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 39 | `g_bare_structural_normalization_theorem_note_2026-04-18` | positive_theorem | unaudited | critical | 309 | 11.28 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_structural_normalization.py` |
-| 40 | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | positive_theorem | claim_type_backfill_reaudit | critical | 309 | 10.78 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 41 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | claim_type_backfill_reaudit | critical | 308 | 10.77 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_two_ward_closure.py` |
-| 42 | `assumption_derivation_ledger` | bounded_theorem | unaudited | critical | 308 | 8.77 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 43 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 307 | 11.27 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
-| 44 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 306 | 10.76 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
-| 45 | `cpt_exact_note` | - | unaudited | critical | 304 | 16.75 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 46 | `planck_finite_response_no_go_note_2026-04-24` | no_go | unaudited | critical | 302 | 12.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_finite_response_nogo.py` |
-| 47 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | unaudited | critical | 302 | 9.24 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_boundary_law_robustness.py` |
-| 48 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | positive_theorem | unaudited | critical | 301 | 14.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_anomaly_trace_catalog.py` |
-| 49 | `area_law_quarter_broader_no_go_note_2026-04-25` | no_go | unaudited | critical | 301 | 13.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_quarter_broader_no_go.py` |
-| 50 | `planck_scale_conditional_completion_note_2026-04-24` | positive_theorem | unaudited | critical | 301 | 12.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_conditional_completion_audit.py` |
+| 38 | `rconn_derived_note` | bounded_theorem | unaudited | critical | 328 | 16.36 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_color_projection_mc.py` |
+| 39 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | positive_theorem | claim_type_backfill_reaudit | critical | 310 | 11.28 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 40 | `g_bare_structural_normalization_theorem_note_2026-04-18` | positive_theorem | unaudited | critical | 309 | 11.28 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_structural_normalization.py` |
+| 41 | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | positive_theorem | claim_type_backfill_reaudit | critical | 309 | 10.78 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 42 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | claim_type_backfill_reaudit | critical | 308 | 10.77 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_two_ward_closure.py` |
+| 43 | `assumption_derivation_ledger` | bounded_theorem | unaudited | critical | 308 | 8.77 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 44 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 307 | 11.27 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
+| 45 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 306 | 10.76 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
+| 46 | `cpt_exact_note` | positive_theorem | unaudited | critical | 304 | 16.75 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 47 | `planck_finite_response_no_go_note_2026-04-24` | no_go | unaudited | critical | 302 | 12.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_finite_response_nogo.py` |
+| 48 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | unaudited | critical | 302 | 9.24 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_boundary_law_robustness.py` |
+| 49 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | positive_theorem | unaudited | critical | 301 | 14.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_anomaly_trace_catalog.py` |
+| 50 | `area_law_quarter_broader_no_go_note_2026-04-25` | no_go | unaudited | critical | 301 | 13.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_quarter_broader_no_go.py` |
 
 Full queue lives in `data/audit_queue.json`.

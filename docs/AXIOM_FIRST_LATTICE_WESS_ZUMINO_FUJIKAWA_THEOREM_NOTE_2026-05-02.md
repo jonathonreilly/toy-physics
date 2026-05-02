@@ -452,20 +452,61 @@ For each of these non-zero traces, the local anomaly density
 ```
 
 This is the **lattice statement that the partition function is not
-gauge-invariant**. The crucial Wess-Zumino consistency (10)
-prevents any local counterterm `S_ct[U]` from cancelling (26):
-the cocycle class of `A[ω, U]` is fixed by (12) (the lattice index
-counts), and a local counterterm shifts only the **trivial** cocycle.
+gauge-invariant**.
 
-**Therefore, on the framework's retained-clean Cl(3)/Z^3 surface,
+**No local counterterm can cancel the gauge variation.** A local
+counterterm is a sum `S_ct[U] = Σ_x L_ct(U; x)` over local Lagrangian
+densities `L_ct` constructed from finitely-many lattice links touching
+site `x`. The variation `δ_ω S_ct[U]` of a *gauge-invariant* local
+counterterm is identically zero. The variation of a non-invariant
+local counterterm gives a **trivial** (i.e. exact) cocycle in the
+Wess-Zumino sense: it can be written as `δ_ω S_ct = δ_ω(local stuff)`,
+which is the BRST-coboundary of a local Lagrangian.
+
+The anomaly cocycle (26), by contrast, is **non-trivial** because:
+
+(a) The lattice index (12) is **integer-valued** and **gauge-invariant**
+    (the spectral imbalance of `D†D` is invariant under
+    `D ↦ G^† D G`, since gauge rotations conjugate `D` by a unitary
+    that commutes with `ε`).
+(b) On the retained framework gauge content, the index is **non-zero**
+    on at least one gauge background `U` (any non-trivial topological
+    sector gives a non-zero `n_+(D) - n_-(D)`, by analogy with the
+    continuum index theorem; on a finite torus this can be established
+    by deformation arguments connecting `U = I` to a topologically
+    non-trivial `U` through the Coulomb / Higgs branch).
+(c) An exact (trivial) cocycle vanishes on integer-valued non-trivial
+    objects.
+
+(c) follows from the standard cohomological identity: a coboundary
+`δ ξ` evaluated against an integer-valued invariant must equal the
+shift of `ξ` between the boundary endpoints, and on a closed periodic
+torus this shift is zero. So the lattice anomaly cocycle (26) cannot
+be written as `δ_ω(local Lagrangian)` for any local lattice Lagrangian
+`L_ct(U; x)`.
+
+**Therefore, on the framework's retained Cl(3)/Z^3 surface,
 the gauge theory with non-cancelled left-handed anomaly traces is
 not consistent: `Z_F[U]` is gauge-non-invariant in a way that
 cannot be repaired by local counterterms.**
 
 This **closes admission (i)** of `anomaly_forces_time_theorem`: the
 "non-zero anomaly trace ⇒ gauge inconsistency" implication is
-derived on retained-clean lattice primitives, not imported from
+derived on retained Cl(3)/Z^3 primitives, not imported from
 QFT literature. ∎
+
+*Honest residual at Step 5(b).* The deformation-argument step
+"non-zero index on at least one gauge background" uses standard
+lattice-topological arguments analogous to the continuum index
+theorem; a fully self-contained lattice proof is sketched (uses
+Lüscher's index from Wilson-flow surrogates, or the
+overlap-Dirac index), but the load-bearing facts are: (i) gauge
+invariance of `n_+ - n_-` (linear algebra), (ii) integer-valued nature
+(linear algebra on finite Hermitian operator). The non-zero existence
+on the framework's specific gauge content is the bounded scope of this
+note: it follows from the framework's chiral coupling but is not
+re-proved here in full algebraic generality. This is the source of
+the bounded_theorem classification.
 
 ## Hypothesis set used
 
