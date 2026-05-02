@@ -20033,7 +20033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T17:21:02.356585+00:00",
+  "generated_at": "2026-05-02T17:30:36.727060+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -20111,10 +20111,10 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "aa323875151f1dff61e10debb58ba4a1fbac49b9ad395592911f3894cab5ecab",
+      "note_hash": "b65106069786a76138ded4e77f2495230e70f030239fdb6f6834337efa965497",
       "path": "docs/ACTION_NORMALIZATION_NOTE.md",
       "runner_path": "scripts/frontier_action_normalization.py",
-      "title": "Action Normalization: Self-Consistency Fixes the Coupling Coefficient"
+      "title": "Action Normalization: Convention-Locked Coupling Coefficient"
     },
     "action_power_3d_gravity_sign_closure_note": {
       "claim_id": "action_power_3d_gravity_sign_closure_note",
@@ -24592,7 +24592,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "b8a6a3d00374fe212b519042f787eb4dcb54fc62646c9563e1362189748e9055",
+      "note_hash": "ea379ed024a452799ac86acc36790a5e40a8bc741a9e5cdff0936cfb48c2614a",
       "path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
       "runner_path": null,
       "title": "Dimensional Gravity Table"
@@ -30656,7 +30656,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "f4c943eeb761f7c1baf3ba112397200cfc043c2f2ef2903fefdfe9e0332c34db",
+      "note_hash": "e186d46b352fdc4dee45f7f9faba48f5e17a9702d0d50ce2679f57d396c87c97",
       "path": "docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md",
       "runner_path": null,
       "title": "Koide April 22 Axiom-Native Support Batch"
@@ -32927,7 +32927,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "311236909cbb13b7ad4e97f1d98943f292cac883179a258cf2a217a13ac62303",
+      "note_hash": "4b2dd1041bec6f0aa53eac99ef2ff99bd5dd6c28dd0bd6ccba4102fdda81ed33",
       "path": "docs/LORENTZ_VIOLATION_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_violation.py",
       "title": "Lorentz Violation Derived from Cubic Lattice Structure"
@@ -33397,7 +33397,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "37acc5f884c4f26d551de7d89b6390dffefce3a00063656e35586e3e184695fb",
+      "note_hash": "388b8e2a7cabb4bbf3ba9addad191dadf828284c43acce06cbdfb70ab8e26e89",
       "path": "docs/MONOPOLE_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_monopole_derived.py",
       "title": "Magnetic Monopole Mass: First-Principles Derivation"
@@ -39755,7 +39755,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "20ea2304ec9941bfea5f407043bf26855fb6056736025cf47e39e413d0561503",
+      "note_hash": "3646b166d19a58a702fc65ccf682de3561d501d77a6eff68518ae95d811c4d9b",
       "path": "docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md",
       "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
       "title": "Self-Gravity Backreaction Closure Note"

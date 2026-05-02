@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:28:43.728715+00:00
+**Generated:** 2026-05-02T17:30:40.932514+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 175 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 518 |
+| unaudited | 524 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 18 |
 | ~~audited_conditional~~ | 640 |
-| ~~audited_failed~~ | 27 |
+| ~~audited_failed~~ | 21 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 373 |
 | `audited_conditional` | 640 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 71 |
+| `audited_failed` | 65 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 553 |
+| `unaudited` | 559 |
 
 | claim_type | count |
 |---|---:|
@@ -1123,13 +1123,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_unique_amplitude_slot_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
-| `action_normalization_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | D | - |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `dimensional_gravity_table` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -1146,10 +1144,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `if_program_closing_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `kernel_vs_gravity_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `koide_axiom_native_support_batch_note_2026-04-22` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_dense_spent_delay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `lorentz_violation_derived_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
-| `monopole_derived_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5 | C | - |
 | `moonshot_other_testables_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `pmns_intrinsic_completion_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `pmns_selector_minimal_microscopic_extension_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -1159,7 +1154,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `same_family_3d_closure_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_full_stack_recovery_note_2026-04-19` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `second_grown_family_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `self_gravity_backreaction_closure_note` | no_go | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `seventh_family_diagonal_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -1318,19 +1312,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
-- **auditor confidence:** high
-
-### `action_normalization_note`
-
-- **Note:** [`ACTION_NORMALIZATION_NOTE.md`](../../docs/ACTION_NORMALIZATION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:2026-05-01-action_normalization_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The coefficient c in S=L(1-c f) is fixed to c=1 because only c=1 gives the observed factor-of-2 light bending once G is fixed as Newton's constant.  _(class `D`)_
-- **chain closes:** False — The runner emits no classified PASS lines and its own metric/deflection logic is inconsistent: it says gamma=1 for all c under Phi=c f/2, while the numerical deflection ratios do not match the claimed theory ratio 1+c.
-- **rationale:** Issue: the load-bearing normalization argument does not close on its own terms. The runner first shows a rescaling degeneracy in c and G, then says PPN gamma=1 for all c if Phi=c f/2, but still concludes that light bending convention-free fixes c=1; its printed numerical deflection ratios for c=0.5,1,2 are about 0.35,0.19,0.13, not the claimed 1+c values 1.5,2,3. The runner also emits zero classified PASS lines. Why this blocks: the central claim that observation uniquely fixes c=1 depends on a coherent metric normalization and light-bending comparator, but the current derivation mixes convention choices and unsupported printed formulas. Repair target: state one fixed normalization for f and G, derive the weak-field metric and null/massive deflection ratio from that normalization, add classified runner checks whose measured quantities match the analytic prediction, and cite the external light-bending/Schwarzschild authority. Claim boundary until fixed: a bounded discussion of the c-G rescaling degeneracy, not an audited proof that self-consistency plus light bending uniquely fixes c=1.
 - **auditor confidence:** high
 
 ### `action_power_3d_gravity_sign_closure_note`
@@ -3662,21 +3643,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
-- **auditor confidence:** high
-
-### `dimensional_gravity_table`
-
-- **Note:** [`DIMENSIONAL_GRAVITY_TABLE.md`](../../docs/DIMENSIONAL_GRAVITY_TABLE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note asserts that F proportional to M = 1.00 is universal across all dimensions, all h values, and all parameter variations.  _(class `C`)_
-- **chain closes:** False — The finite table and width-limited 4D discussion do not prove the universal statement. The note also contains no registered runner or cited theorem that upgrades the point-tested entries into an all-dimension/all-parameter result.
-- **rationale:** Issue: the load-bearing universal F proportional to M claim is inferred from a finite bounded table and contradicts the note's own status caveat. Why this blocks: a hostile reviewer can reject the all-dimension/all-parameter conclusion because no theorem, dependency, or registered runner covers that quantifier. Repair target: replace the universal statement with the finite tested scope, or add a theorem/runner proving the dimensional prescription over the claimed parameter family. Claim boundary until fixed: the listed rows may be treated only as a bounded inventory of point-tested numerical outcomes, with the 4D distance law explicitly unresolved.
-- **open / conditional deps cited:**
-  - `DIMENSIONAL_GRAVITY_TABLE.md`
 - **auditor confidence:** high
 
 ### `dirac_core_card_note`
@@ -9369,24 +9335,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** The executable support claim closes on its own boundary: the ambient APS eta=2/9 route is structurally fixed by the retained C3[111] kinematics and ABSS fixed-point computation, and the runner reproduces every listed block. This audit does not promote the missing physical bridge delta_physical = eta_APS; the note states that as the remaining open issue.
 - **auditor confidence:** high
 
-### `koide_axiom_native_support_batch_note_2026-04-22`
-
-- **Note:** [`KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`](../../docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** The batch advertises an integrated regression runner and support stack for the enlarged Koide lane, while maintaining that Q, delta, and v0 remain support-only and not closed.  _(class `C`)_
-- **chain closes:** False — The note's scoped support boundary is honest, but the listed integrated regression currently exits nonzero because frontier_koide_q_so2_phase_erasure_support.py fails 1 of 23 checks.
-- **rationale:** Issue: the executable support batch is stale relative to its integrated regression. Why this blocks: python3 scripts/frontier_koide_lane_regression.py reports TOTAL 380/381 and exits with failure; the failing subrunner is frontier_koide_q_so2_phase_erasure_support.py, where the onsite source-domain synthesis boundary check fails and the closeout prints KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT=FALSE. Repair target: update the stale source-domain prose/check or the support runner expectation, rerun the integrated regression to 381/381, and only then treat this as bounded support. Claim boundary until fixed: the batch remains a collection of candidate/support tools, but its integrated support-stack claim is not current.
-- **open / conditional deps cited:**
-  - `KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`
-  - `KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md`
-  - `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
-  - `KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`
-- **auditor confidence:** high
-
 ### `koide_berry_bundle_obstruction_theorem_note_2026-04-19`
 
 - **Note:** [`KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)
@@ -11001,19 +10949,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `no_multiple_testing_or_global_search_certificate`
 - **auditor confidence:** high
 
-### `lorentz_violation_derived_note`
-
-- **Note:** [`LORENTZ_VIOLATION_DERIVED_NOTE.md`](../../docs/LORENTZ_VIOLATION_DERIVED_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-2026-05-01-d522`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The standard lattice kinetic term Taylor-expands to E^2 = m^2 + p^2 - (a^2/12) sum_i p_i^4 + O(a^4 p^6), giving a dimension-6 Lorentz-violating cubic harmonic suppressed as (E/E_Planck)^2.  _(class `C`)_
-- **chain closes:** False — The registered runner uses the nonstandard (2/a^2) sin^2(pa/2) kinetic normalization while the note's load-bearing expansion uses the standard (4/a^2) normalization. Its own numerical expansion check prints a large residual instead of the note's claimed sub-percent agreement, so the computation does not support the stated derivation.
-- **rationale:** Issue: the note's load-bearing p^4 Lorentz-violation coefficient and claimed numerical verification are stale relative to the registered runner, which computes with the old half-normalized kinetic term and shows a large low-momentum residual. Why this blocks: the bounded conclusion depends on deriving the dimension-6 coefficient, cubic angular fingerprint, and SME comparisons from that expansion; the current runner neither verifies the expansion nor emits classified checks for the claimed 29 validations. Repair target: register and run the standard-normalization derived script, or fix this runner so the exact dispersion, Taylor expansion, cubic harmonic decomposition, and bound comparisons are asserted with classified PASS lines. Claim boundary until fixed: at most a motivation that a Planck-scale cubic lattice could generate CPT-even dimension-6 Lorentz-violating terms, not the specific coefficient/table as audited support.
-- **auditor confidence:** high
-
 ### `main_open_cubic_validation_2026-04-11`
 
 - **Note:** [`MAIN_OPEN_CUBIC_VALIDATION_2026-04-11.md`](../../docs/MAIN_OPEN_CUBIC_VALIDATION_2026-04-11.md)
@@ -11428,25 +11363,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`
   - `LATTICE_NN_CONTINUUM_NOTE.md`
   - `LATTICE_SYNTHESIS_GUARD_NOTE.md`
-- **auditor confidence:** high
-
-### `monopole_derived_note`
-
-- **Note:** [`MONOPOLE_DERIVED_NOTE.md`](../../docs/MONOPOLE_DERIVED_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-30`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The compact-lattice self-energy chain derives a runner-consistent magnetic monopole mass M_mono ~ 0.80 M_Planck on the current Planck-scale package pin, with Dirac quantization automatic and overclosure requiring inflation.  _(class `C`)_
-- **chain closes:** False — The live runner no longer reproduces the source headline. It computes alpha_EM^{-1}(M_Pl)=72.1 under its current one-loop branch and reports M_mono=1.43 M_Planck, while the note and parts of the runner synthesis still advertise the older 0.80 M_Planck value tied to alpha_EM^{-1}~40.
-- **rationale:** Issue: the source headline and current registered runner disagree on the monopole mass. The note claims M_mono ~ 0.80 M_Planck = 9.8e18 GeV using alpha_EM^{-1}(M_Pl) ~ 40, but the live runner computes alpha_EM^{-1}(M_Pl)=72.1, beta=5.738, and M_mono=1.43 M_Planck = 1.75e19 GeV; the runner's own synthesis also remains internally stale by labeling M ~ 0.8 M_Pl after printing 1.43 M_Pl. Why this blocks: the advertised derived mass and downstream overclosure numerics cannot be audited from a runner that now produces a different central value and contains inconsistent summary text. Repair target: choose and justify the Planck-scale alpha_EM input, update the note and runner summaries to one value, rerun the mass/overclosure tables, and separately validate the lattice self-energy coefficient and finite-volume Wilson-action cross-check. Claim boundary until fixed: compact U(1) cube-charge integrality and the Dirac product check are useful support; the sensitivity table shows a conditional ~0.79 M_Pl value if alpha_EM^{-1}=40 is imposed, but no current runner-consistent 0.80 M_Pl monopole mass theorem is available.
-- **open / conditional deps cited:**
-  - `alpha_EM_MPlanck_authority_or_pin`
-  - `lattice_monopole_self_energy_coefficient_authority`
-  - `Planck_scale_lattice_spacing_authority`
-  - `Wilson_action_monopole_core_model`
-  - `FRW_Kibble_overclosure_model`
 - **auditor confidence:** high
 
 ### `moonshot_other_testables_note`
@@ -14579,19 +14495,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On the corrected 10x10 periodic staggered torus, iterative backreaction is distinguished from matched static structured nulls, with the cleanest surviving separation in width contraction.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the note's SelfConsist, StaticInit, ShiftedNull, and PhaseNull sign-margin, width-ratio, boundary-alpha, and sigma-separation values; the source keeps the conclusion fixed-surface and non-universal.
 - **rationale:** The bounded structured-null claim closes against scripts/frontier_self_consistency_test.py. Current output matches SelfConsist sign margin +30, width 0.3554, alpha 0.145434; StaticInit +40, 0.3563, 0.159548; ShiftedNull +11, 0.4847, 0.134795; PhaseNull +21.4+/-31.1, 0.4012+/-0.0186, 0.131728+/-0.011976; and the stated width/alpha separations. The note explicitly limits the result to a fixed 10x10 periodic surface and does not claim architecture-wide closure. Plot generation failed locally due missing matplotlib, but the numerical runner output needed for the audit completed.
-- **auditor confidence:** high
-
-### `self_gravity_backreaction_closure_note`
-
-- **Note:** [`SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md`](../../docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The bounded no-go depends on the Poisson self-gravity loop runner verifying exact epsilon=0 reduction, nonzero-coupling convergence/Born failures, and the retained audit-row control surface.  _(class `C`)_
-- **chain closes:** False — The primary runner did not complete in the audit window: it remained silent for roughly 2m20s and had to be killed. Without current runner output, the bounded no-go's exact reduction and Born-control claims cannot be audited from this checkout.
-- **rationale:** Issue: the registered primary runner exceeded the normal audit-loop runner window and produced no output before being killed after roughly 2m20s. Why this blocks: the note's bounded no-go relies on exact epsilon=0 identity, convergence failure, and Born-audit measurements that must come from the runner; none were available in the current run. Repair target: make scripts/poisson_self_gravity_loop_v3.py complete within the audit window, add an explicit slow-runner annotation with rationale, or split/cache the expensive checks into a reviewable runner artifact. Claim boundary until fixed: the note remains an intended bounded no-go, but its current audit artifact is not executable enough to ratify.
 - **auditor confidence:** high
 
 ### `self_gravity_born_hardening_note`

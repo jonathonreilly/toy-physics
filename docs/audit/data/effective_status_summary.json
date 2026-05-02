@@ -7,7 +7,7 @@
     "open_gate": 107,
     "positive_theorem": 867
   },
-  "computed_at": "2026-05-02T17:28:43.268013+00:00",
+  "computed_at": "2026-05-02T17:30:40.543092+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -37,7 +37,7 @@
   "effective_status_counts": {
     "audited_conditional": 640,
     "audited_decoration": 3,
-    "audited_failed": 27,
+    "audited_failed": 21,
     "audited_numerical_match": 24,
     "audited_renaming": 18,
     "meta": 35,
@@ -46,7 +46,7 @@
     "retained_bounded": 175,
     "retained_no_go": 94,
     "retained_pending_chain": 2,
-    "unaudited": 518
+    "unaudited": 524
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
