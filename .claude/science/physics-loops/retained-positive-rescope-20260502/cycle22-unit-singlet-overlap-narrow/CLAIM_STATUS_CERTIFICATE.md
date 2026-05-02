@@ -3,7 +3,7 @@
 **Block:** physics-loop/g-bare-rep-b-overlap-narrow-block22-20260502
 **Note:** docs/UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md
 **Runner:** scripts/frontier_unit_singlet_overlap_narrow.py (PASS=19/0)
-**Parent row carved from:** g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19 (claim_type=positive_theorem, audit_status=audited_conditional, td=292, load_bearing_step_class=A)
+**Parent row carved from:** g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19 (claim_type=positive_theorem, load_bearing_step_class=A)
 
 ## Block type
 
@@ -26,7 +26,7 @@ free-theory two-point function residue).
 ## Claim-Type Certificate
 
 ```yaml
-target_claim_type: positive_theorem
+proposed_claim_type: positive_theorem
 proposed_claim_scope: |
   Pure combinatorial / Wick-algebra implication: given positive integers
   (N_iso, N_c) and the explicit operator H_unit defined in the diagonal
@@ -36,18 +36,18 @@ proposed_claim_scope: |
   giving F = 1/sqrt(6) is one concrete case; the algebra closes for any
   positive integer pair.
 proposed_load_bearing_step_class: A
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+status_authority: independent_audit_lane
+source_sets_audit_outcome: false
 ```
 
 ## 7-criteria check
 
 | # | Criterion | Pass? |
 |---|---|---|
-| 1 | target_claim_type named | YES (`positive_theorem`) |
+| 1 | proposed_claim_type named | YES (`positive_theorem`) |
 | 2 | No open imports for the claimed target | YES (zero ledger deps; H_unit operator definition is stated, not derived from upstream) |
 | 3 | No load-bearing observed/fitted/admitted | YES (purely combinatorial; no PDG / literature / fitted / admitted-convention input) |
-| 4 | Every dep retained-grade | YES (vacuously — zero deps) |
+| 4 | Every dep accounted for | YES (vacuously: zero deps) |
 | 5 | Runner verifies the algebraic identity at exact precision | YES (sympy `Rational`, `sqrt`, `Matrix`, `eye`; framework instance (2,3); alternative instance (3,4); degenerate (1,1); explicit 6x6 matrix verification; gauge-coupling independence symbolic check) |
 | 6 | Review-loop disposition | proposed pass as audit-pending narrow theorem; independent audit pending |
 | 7 | PR body says independent audit required | YES |
@@ -79,7 +79,7 @@ authority because it has zero ledger dependencies.
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 ## Audit-graph effect

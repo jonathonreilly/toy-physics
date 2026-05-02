@@ -28,11 +28,10 @@ derived from the free-theory two-point function residue), so it does not
 import the upstream YT_WARD_IDENTITY_DERIVATION_THEOREM authority. It is
 a Pattern A carve-out of the load-bearing class-(A) combinatorial core of
 `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` (claim_type=
-positive_theorem, audit_status=audited_conditional, td=292,
-load_bearing_step_class=A).
+positive_theorem, load_bearing_step_class=A).
 
 Companion role: this is a Pattern A new narrow claim row, NOT an audit
-companion. It introduces a new audit-pending positive_theorem candidate
+companion. It introduces a new positive_theorem candidate
 that drops the parent's YT_WARD_IDENTITY dep by stating the operator
 normalization as a definition.
 """
@@ -190,7 +189,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19', {})
 print(f"\n  Parent row state on origin/main:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 print(f"    deps: {parent.get('deps')}")

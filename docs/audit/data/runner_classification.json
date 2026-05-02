@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T18:34:11.933572+00:00",
+  "generated_at": "2026-05-02T18:36:11.721475+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14748,6 +14748,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/FIXED_FIELD_FAMILY_UNIFICATION_BASIN.py"
+    },
+    "unit_singlet_overlap_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_unit_singlet_overlap_narrow.py"
     },
     "universal_gr_a1_invariant_section_note": {
       "assert_count": 1,
@@ -30533,6 +30545,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_unit_singlet_overlap_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "unit_singlet_overlap_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_universal_gr_a1_invariant_section.py": {
       "assert_count": 1,
       "claims": [
@@ -35619,13 +35646,13 @@
     "decoration_candidates": 104,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 152,
+      "B": 153,
       "C": 509,
       "D": 197,
       "none": 410
     },
-    "runners_classified": 1277,
+    "runners_classified": 1278,
     "runners_with_C": 611,
-    "runners_with_D": 310
+    "runners_with_D": 311
   }
 }
