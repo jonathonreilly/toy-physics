@@ -85,6 +85,12 @@ NEVER_GATE_SOURCE_PATHS = {
     "docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md",
 }
 
+# Top-level campaign/infrastructure notes that are intentionally kept as
+# ledger metadata instead of dropped from the graph or treated as claims.
+META_SOURCE_PATTERNS = (
+    "docs/AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_*.md",
+)
+
 CLAIM_TYPES = {
     "positive_theorem",
     "bounded_theorem",
@@ -170,6 +176,9 @@ def default_claim_type_for(node: dict) -> tuple[str, str]:
         return hint, provenance
 
     path = node.get("path") or ""
+    if any(fnmatchcase(path, pattern) for pattern in META_SOURCE_PATTERNS):
+        return "meta", "backfilled_from_path"
+
     if path.startswith(("docs/repo/", "docs/work_history/", "docs/lanes/", "docs/publication/")):
         return "meta", "backfilled_from_path"
 
