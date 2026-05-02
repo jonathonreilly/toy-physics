@@ -3253,3 +3253,17 @@ bilinear, but without pole-purity and canonical-normalization certificates it
 is not a same-surface canonical `O_H`.  The witness keeps `H_unit` readout
 fixed while canonical-Higgs `y_t` varies.  No retained or proposed-retained
 wording is allowed.
+
+## 2026-05-02 - Block 143 Source-Higgs Cross-Correlator Manifest
+
+Review stance: production-schema support / claim firewall.
+
+- Added `scripts/frontier_yt_source_higgs_cross_correlator_manifest.py`.
+- Added `docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_MANIFEST_NOTE_2026-05-02.md`.
+- Added `outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: bounded support.  The future `O_H` / `C_sH` / `C_HH` route now
+has a minimum same-ensemble residue/covariance schema, but the current harness
+does not emit those rows and no production certificate exists.  No retained or
+proposed-retained wording is allowed.

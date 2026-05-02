@@ -1849,3 +1849,24 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 canonical `O_H` without the same pole-purity, `C_sH` / `C_HH`, and
 canonical-normalization certificates required of any candidate.  No retained
 or `proposed_retained` wording is authorized.
+
+Source-Higgs cross-correlator production manifest checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / source-Higgs cross-correlator production manifest
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_source_higgs_cross_correlator_manifest.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=95 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=121 FAIL=0
+```
+
+The future `O_H` / `C_sH` / `C_HH` route now has a minimum production schema.
+It is not evidence: the current harness lacks those rows and no production
+certificate exists.  No retained or `proposed_retained` wording is authorized.

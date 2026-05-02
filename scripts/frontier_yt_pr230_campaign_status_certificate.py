@@ -175,6 +175,9 @@ def main() -> int:
         "source_pole_purity_cross_correlator": load(
             "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json"
         ),
+        "source_higgs_cross_correlator_manifest": load(
+            "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json"
+        ),
         "source_higgs_cross_correlator_import": load(
             "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json"
         ),
@@ -652,6 +655,12 @@ def main() -> int:
         "source-pole purity cross-correlator gate not passed"
         in str(statuses["source_pole_purity_cross_correlator"]),
         statuses["source_pole_purity_cross_correlator"],
+    )
+    report(
+        "source-higgs-cross-correlator-manifest-not-evidence",
+        "source-Higgs cross-correlator production manifest"
+        in str(statuses["source_higgs_cross_correlator_manifest"]),
+        statuses["source_higgs_cross_correlator_manifest"],
     )
     report(
         "source-higgs-cross-correlator-import-blocks",
@@ -1179,6 +1188,9 @@ def main() -> int:
             "a same-source pole readout is the top coupling to the source pole, "
             "not physical y_t, unless the source pole is proved to be the "
             "canonical Higgs radial mode with no orthogonal scalar admixture.  "
+            "The source-Higgs cross-correlator manifest now records the exact "
+            "future O_H/C_sH/C_HH production schema, but it is support only "
+            "because no such production rows or certificate exist.  "
             "The canonical-Higgs operator realization gate now records the "
             "missing object on the same surface: EW gauge-mass algebra assumes "
             "canonical H after it is supplied, but the PR #230 source harness "

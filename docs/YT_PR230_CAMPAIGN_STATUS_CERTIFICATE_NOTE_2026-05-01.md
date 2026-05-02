@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=120 FAIL=0
+# SUMMARY: PASS=121 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -124,6 +124,7 @@ The certificate consumes the PR-local route certificates for:
 - FH/LSZ target time-series Higgs-identity no-go.
 - no-orthogonal-top-coupling selection-rule no-go.
 - source-pole purity cross-correlator gate.
+- source-Higgs cross-correlator production manifest.
 - source-Higgs cross-correlator import audit.
 - source-Higgs Gram purity gate.
 - canonical-Higgs operator realization gate.
@@ -202,6 +203,7 @@ the visible shortcut routes:
 | FH/LSZ target time-series Higgs-identity no-go | even perfect source-coordinate target statistics do not identify the source pole with the canonical Higgs radial mode |
 | no-orthogonal-top-coupling selection-rule no-go | current listed substrate/gauge charges do not allow `h tbar t` while forbidding an orthogonal neutral `chi tbar t` coupling with the same labels |
 | source-pole purity cross-correlator gate | source-only `C_ss` and source response can stay fixed while source-Higgs overlap changes; `C_sH`, W/Z response, or a retained purity theorem is still required |
+| source-Higgs cross-correlator production manifest | future `O_H` / `C_sH` / `C_HH` rows now have a minimum schema, but the manifest is not evidence and no production certificate exists |
 | source-Higgs cross-correlator import audit | the current harness and EW/SM Higgs notes do not supply a hidden `C_sH` or canonical-Higgs source operator |
 | source-Higgs Gram purity gate | `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` is the future purity acceptance condition, but `C_sH` and `C_HH` residues are absent |
 | canonical-Higgs operator realization gate | EW gauge-mass algebra assumes canonical `H` after it is supplied; the PR #230 source harness has no same-surface `O_H`, `C_sH`, or `C_HH` operator path |

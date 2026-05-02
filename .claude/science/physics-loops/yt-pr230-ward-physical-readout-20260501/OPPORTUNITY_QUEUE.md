@@ -460,3 +460,10 @@ candidate.  Do not spend another block on a bare H_unit/D17 substitution.  The
 remaining positive actions are production chunk processing, a real
 same-surface `O_H` harness, W/Z response with identity certificates, or a
 rank-one neutral-scalar response theorem.
+
+Source-Higgs cross-correlator manifest update: the future `O_H` / `C_sH` /
+`C_HH` route now has a minimum same-ensemble production schema.  This does not
+change claim status; it only makes the next harness work concrete.  Highest
+priority remains processing chunk011 if it finishes, otherwise implementing
+actual `O_H`/`C_sH`/`C_HH` rows or pursuing W/Z response / rank-one purity
+with identity certificates.

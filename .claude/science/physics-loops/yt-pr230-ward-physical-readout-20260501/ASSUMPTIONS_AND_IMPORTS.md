@@ -671,3 +671,10 @@ not be used as the canonical `O_H` for PR #230 unless the route supplies the
 same pole-purity, `C_sH` / `C_HH`, source-overlap, inverse-propagator
 derivative, and canonical-normalization certificates required of any
 same-surface canonical-Higgs operator candidate.
+
+2026-05-02 source-Higgs cross-correlator manifest:
+
+A manifest for `O_H` / `C_sH` / `C_HH` production rows is planning support
+only.  It must not be used as evidence until production rows, pole residues,
+covariance, model-class/FV/IR controls, and the retained-route claim gate all
+pass.

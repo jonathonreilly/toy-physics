@@ -1318,3 +1318,26 @@ Next exact action: poll chunk011.  If it completed, process the new
 target-series chunk.  If not, pivot to real `O_H`/`C_sH`/`C_HH` harness design,
 W/Z response with identity certificates, or rank-one neutral-scalar theorem
 work.
+
+Block 143 added the source-Higgs cross-correlator production manifest:
+
+```text
+python3 scripts/frontier_yt_source_higgs_cross_correlator_manifest.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=95 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=121 FAIL=0
+```
+
+Result: the future `O_H` / `C_sH` / `C_HH` route now has a minimum production
+schema, including same-ensemble residue matrix and covariance requirements.
+This is bounded support only: the current harness emits same-source `C_ss` but
+no same-surface `O_H`, `C_sH`, or `C_HH` rows, and no production certificate
+exists.  No retained/proposed-retained wording is authorized.
+
+Next exact action: poll chunk011.  If complete, process it.  If not, implement
+the actual `O_H`/`C_sH`/`C_HH` rows, W/Z response with identity certificates,
+or rank-one neutral-scalar theorem work.

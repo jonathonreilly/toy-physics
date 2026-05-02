@@ -113,6 +113,7 @@ def main() -> int:
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
+        "source_higgs_cross_correlator_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
         "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
         "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
@@ -607,6 +608,12 @@ def main() -> int:
         and certificates["source_pole_purity_cross_correlator"].get("proposal_allowed") is False
         and certificates["source_pole_purity_cross_correlator"].get("source_pole_purity_gate_passed")
         is False
+    )
+    source_higgs_cross_correlator_manifest_not_evidence = (
+        "source-Higgs cross-correlator production manifest"
+        in certificates["source_higgs_cross_correlator_manifest"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_cross_correlator_manifest"].get("proposal_allowed") is False
+        and certificates["source_higgs_cross_correlator_manifest"].get("manifest_is_evidence") is False
     )
     source_higgs_cross_correlator_import_blocks = (
         "source-Higgs cross-correlator import audit"
@@ -1114,6 +1121,11 @@ def main() -> int:
         certificates["source_pole_purity_cross_correlator"].get("actual_current_surface_status", ""),
     )
     report(
+        "source-higgs-cross-correlator-manifest-not-evidence",
+        source_higgs_cross_correlator_manifest_not_evidence,
+        certificates["source_higgs_cross_correlator_manifest"].get("actual_current_surface_status", ""),
+    )
+    report(
         "source-higgs-cross-correlator-import-blocks",
         source_higgs_cross_correlator_import_blocks,
         certificates["source_higgs_cross_correlator_import"].get("actual_current_surface_status", ""),
@@ -1455,6 +1467,9 @@ def main() -> int:
             "C_ss and source response can stay fixed while the source-Higgs "
             "overlap changes unless a C_sH cross-correlator, W/Z response, "
             "or retained purity theorem is supplied.  The source-Higgs "
+            "cross-correlator manifest now records the exact future O_H/C_sH/"
+            "C_HH production schema, but it is not evidence because no such "
+            "rows or production certificate exist.  The source-Higgs "
             "cross-correlator import audit then confirms that C_sH is not "
             "already hidden in the current harness or EW/Higgs notes; it is a "
             "future observable/theorem, not current closure.  The Gram purity "

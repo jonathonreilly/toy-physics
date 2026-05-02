@@ -1,0 +1,76 @@
+{
+  "actual_current_surface_status": "bounded-support / source-Higgs cross-correlator production manifest",
+  "exact_next_action": "Implement O_H/C_sH/C_HH measurement rows with the manifest schema, or continue W/Z response, rank-one purity theorem, or seed-controlled FH/LSZ chunk processing.",
+  "fail_count": 0,
+  "future_certificate_validation": {
+    "present": false,
+    "reasons": [
+      "future C_sH production certificate absent"
+    ],
+    "valid": false
+  },
+  "manifest": {
+    "goal": "evaluate Res(C_sH)^2 = Res(C_ss) Res(C_HH) at the isolated scalar pole",
+    "minimum_certificate_fields": {
+      "canonical_higgs_operator_identity_passed": true,
+      "claim_gate": "proposal_allowed only after retained-route certificate passes",
+      "gram_purity": [
+        "rho_sH",
+        "rho_sH_error",
+        "purity_gate_passed"
+      ],
+      "hunit_used_as_operator": false,
+      "observed_targets_used_as_selectors": false,
+      "phase": "production",
+      "residue_matrix": [
+        "Res_C_ss",
+        "Res_C_sH",
+        "Res_C_HH",
+        "covariance"
+      ],
+      "same_ensemble": true,
+      "same_source_coordinate": true
+    },
+    "observable": "same-ensemble source-Higgs pole cross-correlator",
+    "rejection_rules": [
+      "source-only C_ss does not determine C_sH or C_HH",
+      "H_unit matrix-element readout is not O_H",
+      "EW gauge-mass algebra after canonical H is supplied is not O_H",
+      "a manifest or reduced smoke is not production evidence",
+      "no retained/proposed_retained wording until retained-route gate passes"
+    ],
+    "required_measurements": [
+      "C_ss(q) time series at zero and at least three positive momentum shells",
+      "C_HH(q) time series using the same gauge/source ensemble and momentum shells",
+      "C_sH(q) cross time series with paired source/Higgs samples",
+      "jackknife/bootstrap covariance across C_ss, C_sH, C_HH, and dE_top/ds",
+      "isolated-pole fit or accepted model-class/pole-saturation certificate",
+      "finite-volume/IR/zero-mode control for the scalar pole derivative"
+    ],
+    "required_operator_inputs": {
+      "O_H": "same-surface canonical-Higgs radial operator, not static EW algebra and not H_unit by fiat",
+      "O_s": "the exact PR #230 scalar source already used for dE_top/ds and C_ss",
+      "normalization": "canonical kinetic/LSZ certificate for O_H"
+    }
+  },
+  "manifest_is_evidence": false,
+  "parent_certificates": {
+    "canonical_higgs_operator_realization": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "higgs_identity_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "hunit_candidate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
+    "neutral_scalar_rank_one_purity": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This is a manifest; no O_H/C_sH/C_HH production certificate or retained purity gate exists.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use H_unit as O_H",
+    "does not use static EW algebra, observed W/Z masses, observed top mass, observed y_t, yt_ward_identity, alpha_LM, plaquette, or u0",
+    "does not set kappa_s = 1, cos(theta)=1, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "The source-Higgs cross-correlator route now has a concrete production schema.  It remains support only: the current harness emits same-source C_ss support but no same-surface O_H, C_sH, or C_HH rows, and no future C_sH production certificate exists.  The H_unit and EW-algebra substitutes are blocked, and the rank-one/purity/Higgs-identity gates remain open."
+}

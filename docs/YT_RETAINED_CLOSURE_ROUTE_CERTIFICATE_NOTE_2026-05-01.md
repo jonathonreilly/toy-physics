@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=94 FAIL=0
+# SUMMARY: PASS=95 FAIL=0
 ```
 
 The runner verifies:
@@ -77,6 +77,7 @@ The runner verifies:
 | same-source sector-overlap identity is derived | no |
 | source pole is certified as canonical Higgs radial mode | no |
 | source-only pole data prove source-pole purity | no |
+| source-Higgs cross-correlator production manifest is evidence | no |
 | hidden source-Higgs cross-correlator authority exists | no |
 | source-Higgs Gram purity gate is passed | no |
 | canonical-Higgs operator realization gate is passed | no |
@@ -183,6 +184,10 @@ source-only purity shortcut.  `C_ss`, the same source response, and the source
 inverse-propagator derivative can stay fixed while the source-Higgs overlap
 changes.  A `C_sH` pole cross-correlator, a same-source W/Z response, or a
 retained source-pole purity theorem is still required.
+The source-Higgs cross-correlator manifest now makes the future route
+executable as an acceptance schema, but it is not evidence: the current harness
+does not emit same-surface `O_H`, `C_sH`, or `C_HH` rows, and no production
+certificate exists.
 The source-Higgs cross-correlator import audit confirms that the named `C_sH`
 object is not already present: the production harness lacks a canonical-Higgs
 operator or cross schema, and the EW/SM Higgs notes assume canonical `H` or

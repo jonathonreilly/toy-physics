@@ -1857,3 +1857,16 @@ canonical-Higgs Yukawa through orthogonal neutral scalar admixture.  Therefore
 `H_unit` can be used in a future `C_sH` / `C_HH` route only after the missing
 pole-purity, source-overlap, inverse-propagator derivative, and
 canonical-normalization certificates are supplied.
+
+Source-Higgs cross-correlator manifest is not evidence:
+
+```text
+python3 scripts/frontier_yt_source_higgs_cross_correlator_manifest.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+The manifest records the minimum future `O_H` / `C_sH` / `C_HH` production
+schema.  It does not provide production rows, a canonical-Higgs operator
+identity, pole residues, covariance, model-class/pole-saturation control, or a
+retained-route gate.  A manifest cannot be used as retained/proposed-retained
+evidence.
