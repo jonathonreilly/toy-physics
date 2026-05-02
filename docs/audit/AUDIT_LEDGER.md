@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:53:40.425200+00:00
+**Generated:** 2026-05-02T23:56:01.426677+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 199 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 506 |
+| unaudited | 505 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 651 |
+| ~~audited_conditional~~ | 652 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 403 |
-| `audited_conditional` | 651 |
+| `audited_conditional` | 652 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 545 |
+| `unaudited` | 544 |
 
 | claim_type | count |
 |---|---:|
@@ -1059,6 +1059,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_complex_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `second_grown_family_complex_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `second_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `shapiro_delay_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_experimental_card` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -14984,6 +14985,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The tested diagonal-stripe seventh-family rows are seed-selective: only 7/18 rows pass, with exact zero/neutral gates surviving and the sign gate selecting failures.  _(class `C`)_
 - **chain closes:** True — The runner output directly matches the note's corrected 7/18 pass count, pass/fail row lists, exact zero and neutral columns, near-1 doubling exponents, and safe boundary read. The closure is only over the finite tested grid, not a family-wide theorem.
 - **rationale:** The scoped finite claim closes from the runner output: the table explicitly shows seven YES rows and eleven sign-orientation failures while zero and neutral cancellation remain exact throughout. The runner lacks a PASS/FAIL assertion wrapper, but the audited source note is a boundary/readout note rather than a promoted broad closure theorem. Claim boundary: this is clean only as a finite bounded sweep over the listed drifts and seeds, not as a general seventh-family result.
+- **auditor confidence:** high
+
+### `seventh_family_diagonal_note`
+
+- **Note:** [`SEVENTH_FAMILY_DIAGONAL_NOTE.md`](../../docs/SEVENTH_FAMILY_DIAGONAL_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the seventh-family diagonal sweep at H=0.5, NL=25, stripes=9, drifts [0.0,0.05,0.10,0.20,0.30,0.50], and seeds [0,1,2], seven listed rows satisfy the runner's ok predicates, conditional on adding assertion-backed routing/control separation before citing the stronger routing-cause read.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Poincare-019deb1e-1e47-72f1-ba45-8a71e73905a8`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** A parity-alternating non-shell diagonal-stripe routing rule reproduces the signed-source zero/neutral/orientation/linear-response package only on 7 of 18 drift/seed rows.  _(class `C`)_
+- **chain closes:** False — The output supports the finite row count and narrow-pocket read, but the runner has no assertion wrapper and the stronger 'selector is routing, not a control leak' statement is not independently isolated by an ablation or comparator in the provided material.
+- **rationale:** Issue: the finite sweep output supports a seed-selective pocket, but not a closed theorem that rules out a control leak. Why this blocks: the runner prints ok rows and exits 0 without an assertion wrapper, and the evidence has no independent ablation separating diagonal-stripe routing from fallback/control structure. Repair target: add enforced pass/fail checks plus routing/control comparators, or state the claim purely as a reproduced finite sweep table. Claim boundary until fixed: only the listed 7/18 bounded rows are supported, not family-wide closure or an isolated routing-causality theorem.
+- **open / conditional deps cited:**
+  - `scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py`
 - **auditor confidence:** high
 
 ### `shapiro_complex_interaction_note`
