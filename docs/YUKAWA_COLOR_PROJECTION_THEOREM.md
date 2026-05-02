@@ -1,15 +1,71 @@
 # Yukawa Color-Singlet Projection Theorem
 
-**Date:** 2026-04-14
-**Status:** DERIVED -- R_conn = 8/9 derived from 1/N_c expansion (RCONN_DERIVED_NOTE.md)
-**Depends on:** RCONN_DERIVED_NOTE.md, YT_EW_COLOR_PROJECTION_THEOREM.md
-**Script:** `scripts/frontier_yt_color_projection_correction.py` (7/7 PASS)
+**Date:** 2026-04-14 (scope tightened 2026-05-02)
+**Type:** positive_theorem (proposed; audit-lane to ratify)
+**Claim scope:** the SU(N_c) Fierz channel decomposition giving channel
+fraction `F_adjoint = (N_c² − 1)/N_c² = 8/9` at `N_c = 3` from
+graph-visible primitives. The physical-Higgs-scalar
+wave-function renormalization identification `Z_phi^{phys}/Z_phi^{lattice}
+= R_conn` (and the resulting `sqrt(8/9)` y_t correction) is **explicitly
+out of scope** — that is a separate downstream physical-matching theorem
+(part of the lattice → physical matching cluster obstruction; see
+prior campaign cycle 13 PR #274).
+**Scoped graph dependencies:** the Fierz channel-fraction half is carried by
+[`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md),
+[`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md), and
+[`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md).
+Historical physical-matching context below also references
+`RCONN_DERIVED_NOTE.md` and `YT_EW_COLOR_PROJECTION_THEOREM.md`,
+but that context is not part of this row's scoped claim.
+**Script:** `scripts/frontier_ew_current_fierz_channel_decomposition.py`
+**Supporting script:** `scripts/audit_companion_ew_fierz_general_n_c_exact.py`
+These test the scoped Fierz channel-counting claim. The legacy
+`scripts/frontier_yt_color_projection_correction.py` runner belongs to the
+excluded physical-matching context, not to this row's narrowed claim.
+
+## Out of scope: physical-Higgs-Z identification
+
+The claim `Z_phi^{phys} / Z_phi^{lattice} = R_conn` and the resulting
+`y_t^{phys} = y_t^{Ward} · sqrt(8/9)` correction are **separate downstream
+physical-matching steps**. They identify a physical (continuum) wave-
+function renormalization with a lattice color-trace fraction, which is the
+class-(F) renaming step identified in prior review. This row's narrowed
+load-bearing step is the **algebraic Fierz channel-fraction identity**
+(class A on graph-visible primitives via PR #249's
+`ew_current_fierz_channel_decomposition_note_2026-05-01`).
+
+For the physical-matching half (the lattice → physical bridge), see the
+lattice-physical matching cluster obstruction synthesis (campaign cycle
+13, PR #274).
+
+## Independent audit handoff
+
+```yaml
+proposed_claim_type: positive_theorem
+proposed_claim_scope: |
+  SU(N_c) Fierz channel decomposition giving F_adjoint = (N_c²−1)/N_c² at
+  N_c=3 = 8/9 from graph-first primitives. NOT the physical
+  y_t correction or Higgs-Z identification (out of scope).
+proposed_load_bearing_step_class: A
+status_authority: independent audit lane only
+```
+
+This source note does not set or predict an audit outcome. It submits only
+the class-(A) Fierz channel-fraction identity for independent audit. The
+physical-Higgs-Z matching material below is preserved as excluded historical
+context and must not be read as part of this row's claim boundary.
 
 ---
 
-## The Claim
+## Scoped Claim and Excluded Physical-Matching Context
 
-The physical Yukawa coupling y_t receives a multiplicative factor
+The scoped claim submitted by this row is only the SU(N_c) Fierz
+channel-counting result
+
+    R_conn = (N_c^2 - 1)/N_c^2 = 8/9   for  N_c = 3.
+
+The excluded downstream physical-matching claim was that the physical
+Yukawa coupling y_t receives a multiplicative factor
 sqrt(8/9) relative to the Ward-identity value, arising from the
 color-singlet wave function renormalization of the composite scalar
 (Higgs = taste condensate):
@@ -22,7 +78,8 @@ color-singlet wave function renormalization of the composite scalar
 The EW gauge couplings receive the OPPOSITE factor sqrt(9/8) from the
 same R_conn. The two corrections are independent, applied to different
 vertices, and derived from different color channels of the same Fierz
-decomposition.
+decomposition. Those physical-coupling statements require a separate
+matching theorem and are outside this row's independent-audit submission.
 
 ---
 
@@ -126,7 +183,8 @@ gives:
     F_adjoint = 2 sum_A |Tr[M t^A]|^2 / Tr[M M^dag]
     F_singlet + F_adjoint = 1
 
-The CLAIM is that the connected color trace (the part where color
+The scoped channel-counting statement is that the connected color trace
+(the part where color
 quantum numbers are exchanged between the two quark lines) saturates
 the adjoint channel, giving:
 
@@ -143,7 +201,7 @@ F_adjoint = (N_c^2 - 1)/N_c^2 exactly.
 
 ---
 
-## Part 2: Wave Function Renormalization Z_phi
+## Part 2: Excluded Context: Wave Function Renormalization Z_phi
 
 ### 2.1 Definition of Z_phi
 
@@ -301,7 +359,7 @@ This is a multiplicative correction to the scalar propagator.
 
 ---
 
-## Part 3: How Z_phi Enters the Physical Yukawa
+## Part 3: Excluded Context: How Z_phi Enters the Physical Yukawa
 
 ### 3.1 LSZ reduction and external leg factors
 
@@ -384,7 +442,7 @@ The two corrections are structurally different:
 
 ---
 
-## Part 4: Why sqrt(8/9) and Not sqrt(9/8) -- From Color Structure
+## Part 4: Excluded Context: Why sqrt(8/9) and Not sqrt(9/8) -- From Color Structure
 
 This section addresses the adversarial question: "How do you know
 the Yukawa gets sqrt(8/9) and not sqrt(9/8)?"
@@ -523,7 +581,7 @@ Hilbert space).
 
 ---
 
-## Part 5: Independence from the Ward Matching Correction
+## Part 5: Excluded Context: Independence from the Ward Matching Correction
 
 ### 5.1 The Ward matching correction
 
@@ -538,7 +596,7 @@ fermion action. Properties:
 - **UV:** acts at M_Pl, before RGE running
 - **Scheme-dependent:** converts lattice regularization to MSbar
 
-### 5.2 The color projection correction (this note)
+### 5.2 The color projection correction (excluded context)
 
     y_t(phys) = y_t(Ward) * sqrt(8/9)
 
@@ -570,7 +628,7 @@ operations in the prediction chain with no common subdiagram.
 
 ---
 
-## Part 6: Independence from the EW Vacuum Polarization Correction
+## Part 6: Excluded Context: Independence from the EW Vacuum Polarization Correction
 
 ### 6.1 Two different quantities, one R_conn
 
@@ -618,7 +676,7 @@ acts AFTER the RGE running. There is zero double counting.
 
 ---
 
-## Part 7: Numerical Verification
+## Part 7: Excluded Context: Numerical Verification
 
 With the correction applied:
 
@@ -638,9 +696,9 @@ The correction moves m_t from a 5.5% overshoot to a 0.07% match.
 
 ---
 
-## Part 8: Status Assessment
+## Part 8: Legacy Status Assessment for Excluded Physical Matching
 
-### 8.1 What is established
+### 8.1 Historical physical-matching assertions
 
 1. The correction sqrt(8/9) on y_t follows from the color-singlet
    wave function renormalization Z_phi = R_conn = 8/9 via LSZ
@@ -661,7 +719,7 @@ The correction moves m_t from a 5.5% overshoot to a 0.07% match.
 6. The correction uses the SAME R_conn = 8/9 already needed for
    the EW couplings -- zero new assumptions beyond the EW theorem.
 
-### 8.2 What prevents THEOREM status
+### 8.2 Why this excluded context is not theorem status here
 
 R_conn = 8/9 is now DERIVED from the 1/N_c expansion
 (RCONN_DERIVED_NOTE.md): the leading-order result of the 't Hooft
@@ -674,7 +732,7 @@ To promote to THEOREM: prove that higher-genus corrections vanish
 identically (an exact non-perturbative result, not currently available).
 The current DERIVED status has controlled O(1%) corrections.
 
-### 8.3 Status: DERIVED
+### 8.3 Historical status label, not this row's audit status
 
 The correction sqrt(8/9) on y_t is derived from R_conn = 8/9, which
 is itself derived from the 1/N_c expansion of SU(3) gauge theory
@@ -686,7 +744,7 @@ is itself derived from the 1/N_c expansion of SU(3) gauge theory
 
 ---
 
-## Import Status Table
+## Legacy Import Table for Excluded Physical-Matching Context
 
 | Element                          | Value      | Status   | Source                            |
 |----------------------------------|------------|----------|-----------------------------------|
@@ -696,6 +754,6 @@ is itself derived from the 1/N_c expansion of SU(3) gauge theory
 | R_conn = (N_c^2-1)/N_c^2         | 8/9        | DERIVED  | 1/N_c expansion (RCONN_DERIVED_NOTE.md) |
 | Ward BC: y_t(M_Pl)/g_s = 1/sqrt(6) | --      | DERIVED  | lattice Ward identity             |
 | y_t(v) [Ward] = 0.973            | 0.9732     | DERIVED  | backward Ward scan (2-loop RGE)   |
-| sqrt(Z_phi) = sqrt(8/9)          | 0.9428     | DERIVED  | scalar wave function (this note)  |
+| sqrt(Z_phi) = sqrt(8/9)          | 0.9428     | DERIVED  | scalar wave function (excluded context) |
 | y_t(v) [physical] = 0.918        | 0.9176     | DERIVED  | Ward * sqrt(8/9)                  |
 | m_t(pole, 2-loop) = 172.57 GeV   | 172.57     | DERIVED  | MSbar-to-pole conversion          |

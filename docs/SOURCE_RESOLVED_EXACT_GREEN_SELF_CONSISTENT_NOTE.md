@@ -40,15 +40,19 @@ Frozen readout:
 
 | `s` | instantaneous deflection | self-consistent deflection | ratio | max `|f|` |
 | --- | ---: | ---: | ---: | ---: |
-| `0.0010` | `+1.442000e-03` | `+1.874000e-03` | `1.299` | `2.0e-02` |
-| `0.0020` | `+2.885000e-03` | `+3.750000e-03` | `1.300` | `2.0e-02` |
-| `0.0040` | `+5.775000e-03` | `+7.508000e-03` | `1.300` | `2.0e-02` |
-| `0.0080` | `+1.157000e-02` | `+1.505000e-02` | `1.301` | `2.0e-02` |
+| `0.0010` | `+1.410541e-03` | `+1.873799e-03` | `1.328` | `2.500245e-03` |
+| `0.0020` | `+2.821591e-03` | `+3.749686e-03` | `1.329` | `5.000223e-03` |
+| `0.0040` | `+5.645274e-03` | `+7.507807e-03` | `1.330` | `9.999374e-03` |
+| `0.0080` | `+1.129975e-02` | `+1.505023e-02` | `1.332` | `1.999447e-02` |
 
 Fitted exponents:
 
 - instantaneous `F~M`: `1.00`
 - self-consistent Green `F~M`: `1.00`
+
+Note: `max |f|` scales linearly with source strength `s` (target cap of
+`2.0e-02` reached at `s = 0.008`); previous frozen readout misreported
+this column as fixed and rounded the deflections.
 
 ## Safe read
 
@@ -59,7 +63,7 @@ The strongest bounded statement is:
   compact `h = 0.25` family
 - the mass-scaling class stays essentially linear
 - the dynamic field remains nontrivial relative to the chosen instantaneous
-  comparator, with mean `|green/inst| = 1.300`
+  comparator, with mean `|green/inst| = 1.330`
 
 ## Honest limitation
 
