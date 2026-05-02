@@ -206,9 +206,9 @@ Latest joint FH/LSZ production-manifest checkpoint text for PR #230:
 ```text
 Adds a joint Feynman-Hellmann / scalar-LSZ production manifest:
 - exact three-volume launch commands now exist for `12x24`, `16x32`, and
-  `24x48` with common-ensemble source shifts and same-source scalar two-point
-  modes;
-- validator passes `PASS=8 FAIL=0`; campaign status now consumes 46 route
+  `24x48` with `--production-targets`, `--resume`, common-ensemble source
+  shifts, and same-source scalar two-point modes;
+- validator passes `PASS=9 FAIL=0`; campaign status now consumes 46 route
   certificates and reports `PASS=42 FAIL=0`;
 - projected joint cost remains about `3630.28` single-worker hours before
   pole-fit and autocorrelation tuning;
@@ -466,4 +466,18 @@ Adds a scalar-kernel enhancement import audit:
   scalar-channel enhancement or `K'(x_pole)`;
 - still no retained/proposed-retained closure: a new interacting kernel theorem
   or production same-source FH/LSZ pole data remains required.
+```
+
+Latest FH/LSZ production-manifest preflight checkpoint text for PR #230:
+
+```text
+Fixes the joint FH/LSZ production manifest preflight:
+- adds `--production-targets` and `--resume` to every strict three-volume launch
+  command so successful future runs emit production-targeted certificates
+  rather than reduced-scope certificates;
+- manifest validator now passes `PASS=9 FAIL=0`; retained-route gate remains
+  `PASS=32 FAIL=0`; campaign status remains 62 certificates and
+  `PASS=58 FAIL=0`;
+- still no retained/proposed-retained closure: the manifest is launch planning,
+  not production measurements, pole fits, or scalar LSZ evidence.
 ```

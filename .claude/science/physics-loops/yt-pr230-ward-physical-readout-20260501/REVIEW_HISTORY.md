@@ -1047,7 +1047,9 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 The manifest is useful production planning only.  It does not supply
 production measurements, scalar pole control, or a retained-proposal
-certificate.
+certificate.  The refreshed manifest now includes `--production-targets` and
+`--resume` in every launch command so future successful runs are marked as
+production-targeted rather than reduced-scope.
 
 ## Review-Loop Backpressure — Retained-Closure Route Refresh
 

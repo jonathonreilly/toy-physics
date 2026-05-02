@@ -674,13 +674,14 @@ Joint FH/LSZ production manifest is not evidence:
 
 ```text
 python3 scripts/frontier_yt_fh_lsz_production_manifest.py
-# SUMMARY: PASS=8 FAIL=0
+# SUMMARY: PASS=9 FAIL=0
 ```
 
-The manifest records exact launch commands for the strict three-volume
-physical-response route, but it does not run those commands, produce
-correlators, fit `dE/ds`, fit `Gamma_ss(q)`, or derive a scalar pole
-derivative.  It cannot authorize retained or proposed-retained wording.
+The manifest records exact production-targeted, resumable launch commands for
+the strict three-volume physical-response route, but it does not run those
+commands, produce correlators, fit `dE/ds`, fit `Gamma_ss(q)`, or derive a
+scalar pole derivative.  It cannot authorize retained or proposed-retained
+wording.
 
 Retained-closure route certificate remains open after refresh:
 

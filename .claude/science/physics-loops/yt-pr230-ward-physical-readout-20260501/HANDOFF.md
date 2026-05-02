@@ -232,9 +232,10 @@ What changed:
   and the additive source coefficient define the source coordinate `s`, not
   the canonical Higgs field metric.  `kappa_s=1` remains forbidden without a
   pole/kinetic theorem.
-- The joint FH/LSZ production manifest now gives exact three-volume commands
-  for the production route.  It is a launch surface only: no production output,
-  pole fit, or retained proposal certificate exists.
+- The joint FH/LSZ production manifest now gives exact three-volume,
+  production-targeted, resumable commands for the production route.  It is a
+  launch surface only: no production output, pole fit, or retained proposal
+  certificate exists.
 - The retained-closure route certificate has been refreshed against the new
   source-unit, derivative-limit, and production-manifest blocks.  It still
   reports `proposal_allowed=false`; the remaining positive routes are

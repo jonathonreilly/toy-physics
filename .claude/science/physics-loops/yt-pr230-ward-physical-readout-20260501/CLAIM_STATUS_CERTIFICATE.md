@@ -390,7 +390,7 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=41 FAIL=0
 
 python3 scripts/frontier_yt_fh_lsz_production_manifest.py
-# SUMMARY: PASS=8 FAIL=0
+# SUMMARY: PASS=9 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=42 FAIL=0

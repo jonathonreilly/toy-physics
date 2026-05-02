@@ -80,6 +80,8 @@ def main() -> int:
                 str(separation),
                 "--engine",
                 engine,
+                "--production-targets",
+                "--resume",
                 "--scalar-source-shifts",
                 source_shifts,
                 "--scalar-two-point-modes",
@@ -121,6 +123,11 @@ def main() -> int:
         all("--scalar-source-shifts" in item["command"] and "--scalar-two-point-modes" in item["command"] for item in commands),
         "all commands include source shifts and same-source scalar two-point modes",
     )
+    report(
+        "commands-mark-production-targets",
+        all("--production-targets" in item["command"] and "--resume" in item["command"] for item in commands),
+        "all commands mark production-targeted resumable output",
+    )
     report("production-cost-not-foreground", projected_hours > 1000.0, f"joint_mass_scaled_hours={projected_hours:.2f}")
     report("postprocess-gates-present", len(postprocess_requirements) == 5, f"gates={len(postprocess_requirements)}")
     report("not-retained-closure", True, "manifest is launch planning, not production data")
@@ -129,10 +136,11 @@ def main() -> int:
         "actual_current_surface_status": "bounded-support / joint FH-LSZ production manifest",
         "verdict": (
             "The joint FH/LSZ production route now has exact launch commands "
-            "for the three strict volumes, including common-ensemble scalar "
-            "source shifts and same-source scalar two-point modes.  This is a "
-            "resumable production manifest only.  It supplies no measurements, "
-            "no pole derivative, and no retained closure."
+            "for the three strict volumes, including production-targeted "
+            "certificate flags, resumable volume artifacts, common-ensemble "
+            "scalar source shifts, and same-source scalar two-point modes.  "
+            "This is a resumable production manifest only.  It supplies no "
+            "measurements, no pole derivative, and no retained closure."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "A command manifest is not production evidence and does not derive kappa_s.",

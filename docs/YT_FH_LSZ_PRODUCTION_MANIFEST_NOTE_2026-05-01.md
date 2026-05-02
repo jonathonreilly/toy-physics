@@ -28,13 +28,14 @@ certificate, and joint resource projection into exact production commands for:
 Each command includes masses `0.45,0.75,1.05`, scalar source shifts
 `-0.01,0.0,0.01`, same-source scalar two-point modes
 `0,0,0;1,0,0;0,1,0;0,0,1`, 16 scalar two-point noise vectors, 1000
-thermalization sweeps, 1000 saved configurations, and separation 20.
+thermalization sweeps, 1000 saved configurations, separation 20,
+`--production-targets`, and `--resume`.
 
 Validation:
 
 ```text
 python3 scripts/frontier_yt_fh_lsz_production_manifest.py
-# SUMMARY: PASS=8 FAIL=0
+# SUMMARY: PASS=9 FAIL=0
 ```
 
 ## Claim Boundary

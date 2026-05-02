@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-58-scalar-kernel-enhancement-import-audit
-blocks_completed: 72
+current_phase: campaign-rerun-block-59-production-manifest-preflight-fix
+blocks_completed: 73
 active_route: "interacting scalar denominator / Ward identity limit attempt"
-active_hard_residual: "no current retained/audit-clean surface derives the scalar-kernel enhancement needed after unit taste projection; deriving the interacting kernel, K'(x_pole), or production FH/LSZ pole data remains open"
+active_hard_residual: "finite-ladder/unit-projector analytic shortcut is blocked; production FH/LSZ manifest is now production-targeted and resumable but still lacks production data and pole fits"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -348,6 +348,7 @@ claim_state_movement:
   - "attempted the scalar taste/projector normalization theorem: unit taste-singlet algebra is exact support, but the source functional still allows source-coordinate rescaling and does not identify the physical scalar carrier or K'(x_pole)"
   - "proved a unit-projector finite-ladder pole-threshold obstruction: after unit taste projection, all finite witnesses are below lambda_max=1 and the best row needs an underived scalar-kernel multiplier 2.26091440260"
   - "audited scalar-kernel enhancement candidates: HS/RPA contact, ladder formulae, same-1PI, and Ward/Feshbach surfaces do not derive the underived multiplier or K'(x_pole)"
+  - "fixed the joint FH/LSZ production manifest commands to include --production-targets and --resume, so successful future runs emit production-targeted rather than reduced-scope certificates"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -356,5 +357,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Pivot to production same-source FH/LSZ pole data planning or find a genuinely new interacting scalar-channel kernel theorem; current finite-ladder/unit-projector shortcut is blocked."
+next_exact_action: "Choose between launching/scheduling the production FH/LSZ manifest shards and another analytic theorem attempt; do not treat the manifest itself as evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

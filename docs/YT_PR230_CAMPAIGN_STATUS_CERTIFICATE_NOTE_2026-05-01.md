@@ -131,7 +131,7 @@ the visible shortcut routes:
 | scalar two-point production harness | stochastic same-source `C_ss(q)` estimator is production-facing, but smoke output is reduced-scope and not a pole/LSZ theorem |
 | joint Feynman-Hellmann / scalar-LSZ harness | `dE/ds` and same-source `C_ss(q)` can be emitted together, but production data and `kappa_s` remain open |
 | joint Feynman-Hellmann / scalar-LSZ resource projection | modest LSZ noise/momentum plan projects to about 3630 single-worker hours; planning only, not evidence |
-| joint Feynman-Hellmann / scalar-LSZ production manifest | exact three-volume launch commands exist, but no production data or pole fit has been run |
+| joint Feynman-Hellmann / scalar-LSZ production manifest | exact production-targeted, resumable three-volume launch commands exist, but no production data or pole fit has been run |
 | Feynman-Hellmann / scalar-LSZ invariant readout | exact formula avoids `kappa_s = 1` shortcut, but still needs same-source production pole data |
 | scalar pole determinant gate | exact denominator condition identifies `K(x)` and `K'(pole)` as load-bearing open inputs |
 | scalar ladder eigen-derivative gate | finite `lambda_max=1` crossing is not enough; `d lambda/dp^2` and momentum-dependent kernel remain open |

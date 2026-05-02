@@ -293,7 +293,8 @@ Next artifact:
   derivative limiting-order obstruction proves the zero-mode/IR prescription
   changes the derivative and pole crossing; the Cl(3)/Z3 source-unit no-go
   proves substrate unit conventions do not derive `kappa_s`; the joint FH/LSZ
-  production manifest gives exact commands but no evidence; the retained
+  production manifest gives exact production-targeted resumable commands but
+  no evidence; the retained
   closure route certificate has been refreshed and still disallows proposed
   retained wording; the pole-tuned finite-ladder residue envelope remains
   zero-mode/projector/volume dependent, so the next positive move must be a
