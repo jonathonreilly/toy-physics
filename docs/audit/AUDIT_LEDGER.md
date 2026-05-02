@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:34:41.304625+00:00
+**Generated:** 2026-05-02T22:36:36.542273+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 536 |
+| unaudited | 535 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 644 |
+| ~~audited_conditional~~ | 645 |
 | ~~audited_failed~~ | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 386 |
-| `audited_conditional` | 644 |
+| `audited_conditional` | 645 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 47 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 572 |
+| `unaudited` | 571 |
 
 | claim_type | count |
 |---|---:|
@@ -846,6 +846,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_berry_phase_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_brannen_phase_reduction_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -9440,6 +9441,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** and write `e_+ = (1,1,1)/sqrt(3)`. By the retained algebraic Koide theorem,  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 7 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `koide_berry_phase_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Conditional actual-route Koide Berry-holonomy support theorem: on an already-selected charged-lepton line, the projective C3 doublet ray has tautological connection A=dtheta and holonomy delta(m); it does not by itself close the physical Brannen-phase bridge, selected-line construction, or current-main charged-lepton package.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the exact selected charged-lepton route, the physical charged-lepton phase offset is exactly the Berry holonomy of the tautological line over the projective C3 doublet ray.  _(class `B`)_
+- **chain closes:** False — The runner verifies exact geometry once the selected line, active-affine/Z3-doublet machinery, H3 construction, and scalar-phase bridge are imported. Those load-bearing inputs are not declared as dependencies and are currently conditional or numerical-match rows, so the physical Berry theorem does not close from retained-grade inputs.
+- **rationale:** Issue: the exact Berry holonomy calculation is performed only after importing the selected charged-lepton route and scalar-phase bridge from upstream machinery that is conditional or numerical-match, while the note itself still says the physical Brannen-phase bridge/current-main adoption remains open. Why this blocks: the ledger cannot treat delta=2/9 or m_* as physically closed by a tautological A=dtheta holonomy on a preselected route whose construction is not retained-grade. Repair target: declare and retain the selected-line, active-affine/Z3-doublet, H3, and scalar-phase bridge dependencies, then prove the physical Brannen phase is this route holonomy rather than a candidate coordinate. Claim boundary until fixed: the runner gives exact mathematical support for Berry holonomy on the selected route and no-go checks for alternative slice Berry selectors, but full physical closure remains conditional.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
+  - `KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md`
+  - `KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `koide_brannen_callan_harvey_candidate_note_2026-04-22`
