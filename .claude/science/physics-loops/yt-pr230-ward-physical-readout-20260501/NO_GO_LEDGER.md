@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## FH gauge-normalized response does not exclude mixed top-coupled scalars
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The response ratio cancels common source normalization, but with
+`phi = cos(theta) h + sin(theta) chi` it reads
+`y_h + y_chi tan(theta)`.  The same measured top slope, W slope, source
+overlap, and Higgs overlap can leave `y_h` different if `chi` also couples to
+the top.  The bypass therefore needs a source-pole/canonical-Higgs identity,
+a no-orthogonal-top-coupling theorem, or an independent measurement of the
+orthogonal coupling.
+
 ## FH/LSZ ready chunk dE/ds slopes are not production-grade response evidence
 
 Runner:

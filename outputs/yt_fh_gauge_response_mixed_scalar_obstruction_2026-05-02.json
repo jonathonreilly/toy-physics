@@ -1,0 +1,65 @@
+{
+  "actual_current_surface_status": "exact negative boundary / FH gauge-response mixed-scalar obstruction",
+  "countermodels": [
+    {
+      "cos_theta": 0.8,
+      "g2": 1.0,
+      "gauge_normalized_ratio_readout": 1.2499999999999996,
+      "measured_gauge_slope_dM_W_ds": 0.4,
+      "measured_top_slope_dE_ds": 0.7071067811865475,
+      "orthogonal_top_coupling_y_chi": -0.5,
+      "physical_canonical_higgs_y_h": 1.6249999999999998,
+      "pole_top_coupling_over_higgs_overlap": 1.25,
+      "sin_theta": 0.5999999999999999,
+      "source_overlap": 1.0
+    },
+    {
+      "cos_theta": 0.8,
+      "g2": 1.0,
+      "gauge_normalized_ratio_readout": 1.2499999999999996,
+      "measured_gauge_slope_dM_W_ds": 0.4,
+      "measured_top_slope_dE_ds": 0.7071067811865475,
+      "orthogonal_top_coupling_y_chi": 0.0,
+      "physical_canonical_higgs_y_h": 1.25,
+      "pole_top_coupling_over_higgs_overlap": 1.25,
+      "sin_theta": 0.5999999999999999,
+      "source_overlap": 1.0
+    },
+    {
+      "cos_theta": 0.8,
+      "g2": 1.0,
+      "gauge_normalized_ratio_readout": 1.2499999999999996,
+      "measured_gauge_slope_dM_W_ds": 0.4,
+      "measured_top_slope_dE_ds": 0.7071067811865475,
+      "orthogonal_top_coupling_y_chi": 0.5,
+      "physical_canonical_higgs_y_h": 0.875,
+      "pole_top_coupling_over_higgs_overlap": 1.25,
+      "sin_theta": 0.5999999999999999,
+      "source_overlap": 1.0
+    }
+  ],
+  "exact_next_action": "Derive a canonical-Higgs/source-pole identity or a theorem that orthogonal scalar admixtures have zero top coupling; otherwise a same-source W/Z response harness remains support, not closure.",
+  "fail_count": 0,
+  "missing_premises": [
+    "source pole equals canonical Higgs radial mode (sin_theta = 0)",
+    "orthogonal scalar has zero top coupling (y_chi = 0)",
+    "independent theorem/measured constraint fixing y_chi"
+  ],
+  "parent_certificates": {
+    "gauge_mass_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+    "gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
+    "sector_overlap_obstruction": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "source_pole_mixing_obstruction": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
+  },
+  "pass_count": 7,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The response ratio remains underidentified in the mixed-scalar family; scalar purity/identity premises are open.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use observed top, y_t, W/Z, or Higgs values as selectors",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not set kappa_s = 1",
+    "does not assume orthogonal scalar top coupling vanishes"
+  ],
+  "verdict": "A same-source top/W response ratio cancels common source normalization, but it measures the source-pole top coupling divided by the source-pole gauge/Higgs overlap.  If the source pole has an orthogonal scalar admixture that couples to the top, the same measured top slope, W slope, source overlap, and Higgs overlap are compatible with different physical canonical-Higgs Yukawa values. The physical-response bypass therefore still needs either a canonical-Higgs pole identity, a no-orthogonal-top-coupling theorem, or an independent measurement fixing the orthogonal coupling."
+}

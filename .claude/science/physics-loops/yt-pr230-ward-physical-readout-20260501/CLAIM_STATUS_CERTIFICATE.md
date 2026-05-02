@@ -41,6 +41,7 @@ plus source-pole canonical-Higgs mixing obstruction
 plus chunk002 checkpoint replacement-ready support
 plus ready chunk-set production checkpoint
 plus ready chunk response-stability diagnostic
+plus FH gauge-response mixed-scalar obstruction
 **PR:** #230 draft branch
 
 ```yaml
@@ -86,6 +87,23 @@ The current `4/63` ready L12 chunks have finite same-source `dE/ds` slopes, but
 the response is not production-grade stable (`relative_stdev=0.7505`,
 `spread_ratio=4.8051`, `n=4`).  This does not close scalar source-to-Higgs
 normalization, scalar LSZ pole derivative, or canonical-Higgs identity.
+
+FH gauge-response mixed-scalar obstruction:
+
+```text
+actual_current_surface_status: exact negative boundary / FH gauge-response mixed-scalar obstruction
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py
+# SUMMARY: PASS=7 FAIL=0
+```
+
+The gauge-normalized response ratio reads `y_h + y_chi tan(theta)` for a
+source pole `cos(theta) h + sin(theta) chi`.  A same-source W/Z response
+measurement is therefore not closure unless the source pole is proved to be
+the canonical Higgs radial mode, orthogonal scalar top coupling is proved
+zero, or the orthogonal coupling is independently fixed.
 
 Allowed wording:
 

@@ -1,5 +1,21 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 FH gauge-response mixed-scalar obstruction:
+
+- Added `scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py`,
+  `docs/YT_FH_GAUGE_RESPONSE_MIXED_SCALAR_OBSTRUCTION_NOTE_2026-05-02.md`,
+  and `outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json`.
+- Result: even a same-source top/W response ratio cancels only common source
+  normalization.  With `phi = cos(theta) h + sin(theta) chi`, the ratio reads
+  `y_h + y_chi tan(theta)`, so the physical canonical-Higgs Yukawa `y_h` is
+  underdetermined unless the source pole is pure canonical Higgs or
+  orthogonal top coupling is excluded/measured.
+- Chunks005 and 006 are still running in sessions `91457` and `55730`.
+
+Next exact action: continue chunks005-006 and, in foreground, attempt a
+canonical-Higgs/source-pole identity theorem or a no-orthogonal-top-coupling
+theorem.  A same-source W/Z response harness alone is support, not closure.
+
 Latest checkpoint, 2026-05-02 ready chunk response stability:
 
 - Added `scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py`,

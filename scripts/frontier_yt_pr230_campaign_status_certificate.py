@@ -148,6 +148,9 @@ def main() -> int:
         "source_pole_canonical_higgs_mixing": load(
             "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
         ),
+        "fh_gauge_response_mixed_scalar": load(
+            "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -517,6 +520,12 @@ def main() -> int:
         "source-pole canonical-Higgs mixing obstruction"
         in str(statuses["source_pole_canonical_higgs_mixing"]),
         statuses["source_pole_canonical_higgs_mixing"],
+    )
+    report(
+        "fh-gauge-response-mixed-scalar-blocks",
+        "FH gauge-response mixed-scalar obstruction"
+        in str(statuses["fh_gauge_response_mixed_scalar"]),
+        statuses["fh_gauge_response_mixed_scalar"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

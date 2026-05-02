@@ -17,6 +17,9 @@ probability remains a true canonical-Higgs/source-pole identity theorem or a
 same-source W/Z response measurement that closes the sector-overlap premise.
 The first ready-set response diagnostic also fails production-grade stability,
 so finite `dE/ds` slopes from `4/63` chunks must remain scout/support only.
+The same-source W/Z response bypass also needs a purity theorem: a mixed
+source pole with an orthogonal top-coupled scalar leaves the physical
+canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

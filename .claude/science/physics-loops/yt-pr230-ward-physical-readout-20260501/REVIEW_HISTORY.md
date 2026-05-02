@@ -2536,3 +2536,31 @@ The current `4/63` ready L12 chunks have finite `dE/ds` slopes, but the slope
 set fails the stability diagnostic and has large fitted uncertainties.  This
 is not physical `dE/dh`, not scalar LSZ closure, and not retained/proposed-
 retained evidence.
+
+## Review-Loop Backpressure - FH Gauge-Response Mixed-Scalar Obstruction
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / RESPONSE SHORTCUT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The mixed-scalar countermodel keeps same-source top/W response data fixed while
+varying the physical canonical-Higgs Yukawa through an orthogonal top-coupled
+scalar.  The response route still needs a source-pole/canonical-Higgs identity
+or no-orthogonal-top-coupling theorem.  No retained/proposed-retained wording
+is authorized.
