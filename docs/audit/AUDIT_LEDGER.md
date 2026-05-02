@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:53:38.204988+00:00
+**Generated:** 2026-05-02T21:58:15.695585+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 188 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 549 |
+| unaudited | 548 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 635 |
+| ~~audited_conditional~~ | 636 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 384 |
-| `audited_conditional` | 635 |
+| `audited_conditional` | 636 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 585 |
+| `unaudited` | 584 |
 
 | claim_type | count |
 |---|---:|
@@ -946,6 +946,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -12369,6 +12370,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The finite frame has an open identity neighborhood containing no nontrivial transformation, so finite automorphisms alone have zero infinitesimal tangent while local metric/coframe response requires nonzero symmetric directions.  _(class `A`)_
 - **chain closes:** True — The no-go follows from exact finite-group geometry: signed permutations in the four-axis frame have a positive Frobenius identity gap, so they cannot generate arbitrarily small metric/coframe perturbations. The one cited dependency is the already-clean hidden-character no-go and is not needed to bridge the finite-response obstruction.
 - **rationale:** The load-bearing step is an exact algebraic/topological obstruction for a finite signed-permutation group, not a numerical fit or a hidden physical identification. The runner checks the group order, nearest nonidentity distance, absence of a small nontrivial identity neighborhood, mismatch with the ten-dimensional linearized metric-response space, a small perturbation outside the finite orbit, and the finite-dimensional trace obstruction to a canonical commutator. Residual risk is only the separate positive Planck route through a realified response surface and carrier-identification theorem, which the note explicitly leaves open.
+- **auditor confidence:** high
+
+### `planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30`
+
+- **Note:** [`PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](../../docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Conditional algebraic selector result: if the retained microscopic source domain is exactly the four one-link variables u_t,u_x,u_y,u_z and if the active primitive block is identified with the support of the link-local first variation, then the selected rank-four equivariant projector is uniquely P_1=P_A, with P_3 only Hodge-dual/composite.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-planck-pa-forcing-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The active primitive response must be the support of the algebraic differential of the retained link-local microscopic action with respect to its fundamental local link/source variables, with S_link=sum_a u_a J_a and support(J_a)={a}.  _(class `B`)_
+- **chain closes:** False — The runner verifies the finite-exterior-algebra consequence once the one-link source domain and first-variation active-response criterion are installed, but the provided one-hop inputs do not derive that source-domain criterion or the identification of the active P_A block with this differential support.
+- **rationale:** Issue: the selector is the premise that the active primitive response is the support of the link-local first variation over an exactly four-dimensional one-link source domain. Why this blocks: minimal axioms and the listed retained/bounded inputs give finite Grassmann/staggered-Dirac dynamics, spatial hopping context, anomaly-forced time, Hilbert structure, and CPT context, but they do not derive the exact four-variable source map S_link=sum_a u_a J_a with support(J_a)={a} as the unique active-sector source domain, nor prove that active P_A must be read out as this differential support. Repair target: add a retained theorem deriving the fundamental local link/source domain and the active-response equals first-variation-support bridge from A_min plus anomaly-time and finite exterior algebra, rather than taking it as the selector. Claim boundary until fixed: under the explicit first-variation/source-domain criterion, P_1 is uniquely selected among the enumerated rank-four equivariant classes and P_3 is excluded as a fundamental first variation.
 - **auditor confidence:** high
 
 ### `planck_parent_source_hidden_character_no_go_note_2026-04-24`
