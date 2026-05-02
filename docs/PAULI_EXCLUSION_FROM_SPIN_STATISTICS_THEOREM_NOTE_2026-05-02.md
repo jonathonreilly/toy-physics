@@ -1,7 +1,7 @@
 # Pauli Exclusion Principle from Retained Spin-Statistics Theorem
 
 **Date:** 2026-05-02
-**Type:** positive_theorem
+**Type:** positive_theorem (proposed; audit-lane to ratify)
 **Claim scope:** for any single-particle fermionic mode |φ⟩ on the framework's retained matter content, the two-fermion Fock state with both particles in mode |φ⟩ is identically the zero vector; equivalently, the squared creation operator (a^†_φ)² = 0 and there is no normalizable physical state with multiplicity > 1 in any single fermionic mode (Pauli exclusion principle).
 **Status:** awaiting independent audit. Under scope-aware classification (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `positive-only-retained-20260502`
@@ -12,7 +12,7 @@
 
 ## Cited authorities (one hop)
 
-- [`AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md) — `effective_status: retained` (on the live ledger as of 2026-05-02). Provides: any half-integer-spin Cl(3) representation field anticommutes with itself and with a like field at a distinct site. Equivalently, the canonical staggered-Dirac fermion creation operator algebra is
+- [`AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md) — declared audit dependency; its live effective status is pipeline-derived and may be audit-pending after dependency-graph strengthening. Provides: any half-integer-spin Cl(3) representation field anticommutes with itself and with a like field at a distinct site. Equivalently, the canonical staggered-Dirac fermion creation operator algebra is
 
   ```text
       {a_φ, a_ψ}      = 0
@@ -39,9 +39,8 @@ already provides.
 ## Statement
 
 Let `a^†_φ` be the creation operator for the single-particle fermionic
-mode `|φ⟩` on the framework's retained matter content. Then on the live
-retained-grade chain (one cited authority — retained spin-statistics
-theorem):
+mode `|φ⟩` on the framework's matter content covered by the declared
+spin-statistics dependency. Then, conditional on that dependency:
 
 **(P1) Squared creation operator vanishes.** From the retained
 fermion anticommutator `{a^†_φ, a^†_φ} = 2 (a^†_φ)² = 0`, we have
@@ -112,7 +111,7 @@ anticommutator `{a_φ, a^†_φ} = 1` (mode-orthonormal basis):
 ```text
     n_φ²  =  a^†_φ a_φ a^†_φ a_φ
           =  a^†_φ ({a_φ, a^†_φ} - a^†_φ a_φ) a_φ
-          =  a^†_φ a_φ - (a^†_φ)² (a_φ)² a_φ
+          =  a^†_φ a_φ - (a^†_φ)² (a_φ)²
           =  a^†_φ a_φ - 0                                                   (6)
           =  n_φ
 ```
@@ -124,7 +123,8 @@ This completes the proof of (P1)–(P3) on the retained surface.
 
 ## Hypothesis set used
 
-- `axiom_first_spin_statistics_theorem_note_2026-04-29` (`effective_status: retained`):
+- `axiom_first_spin_statistics_theorem_note_2026-04-29` (declared audit
+  dependency; live status is pipeline-derived):
   provides Grassmann anticommutation `{a^†_φ, a^†_ψ} = 0` for fermionic
   fields on the retained matter content.
 - Standard QFT vacuum definition `a_φ |0⟩ = 0` (admitted-context,
@@ -171,10 +171,10 @@ ensemble averaging.
 
 ## Honest status
 
-**Positive theorem on the retained surface.** Steps 1–3 close from the
-retained spin-statistics theorem alone, plus the basic vacuum
-definition. No physics admission. The chain is single-hop and the
-upstream is at `retained` on the live ledger.
+**Positive theorem candidate on the declared spin-statistics surface.** Steps
+1–3 close from the spin-statistics dependency alone, plus the basic vacuum
+definition. No physics admission. The chain is single-hop; retained-family
+status is not asserted by this source note.
 
 The runner verifies (P1)–(P3) by:
 
@@ -196,9 +196,13 @@ admitted_context_inputs:
   - QFT vacuum definition a_φ |0⟩ = 0
   - basic finite-dim linear algebra
 upstream_dependencies:
-  - axiom_first_spin_statistics_theorem_note_2026-04-29 (effective_status: retained)
+  - axiom_first_spin_statistics_theorem_note_2026-04-29
 audit_required_before_effective_retained: true
 ```
+
+These are author-side hints only. The independent audit lane sets the audit
+verdict, and the pipeline computes any retained-family effective status after
+that verdict and dependency closure.
 
 ## Citations
 

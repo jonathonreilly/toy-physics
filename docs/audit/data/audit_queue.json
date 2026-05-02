@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 79,
     "high": 203,
-    "leaf": 130,
-    "medium": 161
+    "leaf": 131,
+    "medium": 162
   },
-  "generated_at": "2026-05-02T16:49:13.872375+00:00",
+  "generated_at": "2026-05-02T16:52:40.895598+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7575,6 +7575,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.585,
+      "note_path": "docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/axiom_first_spin_statistics_check.py",
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "dm_wilson_to_dweh_hermitian_source_family_target_note_2026-04-18",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -14717,6 +14738,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "axiom_first_spin_statistics_theorem_note_2026-04-29"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/PAULI_EXCLUSION_FROM_SPIN_STATISTICS_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/pauli_exclusion_check.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -15166,6 +15210,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 92,
-  "total_pending": 573
+  "ready_count": 93,
+  "total_pending": 575
 }

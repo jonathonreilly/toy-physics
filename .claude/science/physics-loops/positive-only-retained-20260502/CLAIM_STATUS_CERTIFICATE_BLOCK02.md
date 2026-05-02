@@ -15,9 +15,9 @@ positive_theorem-retained-only pre-screen:
 
 - claim_type: positive_theorem ✓ (no narrow scope; unconditional
   on retained matter content)
-- every load-bearing dep at retained-grade on live ledger ✓ (single
-  one-hop dep `axiom_first_spin_statistics_theorem_note_2026-04-29`
-  is at `effective_status: retained`)
+- load-bearing dependency disclosed: PENDING (single one-hop dep
+  `axiom_first_spin_statistics_theorem_note_2026-04-29`; retained-grade
+  closure awaits the independent audit lane after graph strengthening)
 - zero admitted physics inputs ✓ (vacuum definition is structural;
   basic linear algebra only)
 - runner produces classifiable PASS lines ✓ (5/5 PASS, including
@@ -33,29 +33,25 @@ admitted_context_inputs:
   - QFT vacuum definition (a_φ |0⟩ = 0)
   - basic finite-dim linear algebra
 upstream_dependencies:
-  - axiom_first_spin_statistics_theorem_note_2026-04-29 (effective_status: retained)
+  - axiom_first_spin_statistics_theorem_note_2026-04-29
 runner_classified_passes: 5 PASS at machine precision (anticommutator sanity {a^†_i, a^†_j} = 0; (a^†_φ)² = 0; same-mode state = 0; n_φ² = n_φ; full 4-state Hilbert basis with all occupations in {0, 1})
 ```
 
-## Expected `effective_status` after audit
+## Audit-pending disposition
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-positive_theorem`:
-
-- chain_clean check: single dep at `retained` → True
-- claim_type = positive_theorem → `effective_status = retained`
-
-Block 02 has the **shortest possible clean chain** of any block in the
-strict-bar campaign — single one-hop dependency on a retained note.
-This is the "easy retained" candidate.
+This certificate does not assign an audit verdict or an effective status. The
+block has a short dependency chain — a single one-hop spin-statistics dependency
+— but retained-family status is computed only after independent audit and
+dependency closure.
 
 ## Dependency chain status snapshot (2026-05-02 live ledger)
 
-| Dep | Today's `effective_status` | Affects propagation? |
+| Dep | Today's effective status | Affects propagation? |
 |---|---|---|
-| `axiom_first_spin_statistics_theorem_note_2026-04-29` | `retained` | clean |
+| `axiom_first_spin_statistics_theorem_note_2026-04-29` | pipeline-derived; may be audit-pending after graph strengthening | pending independent audit/propagation |
 
-Chain is fully clean.
+The chain is explicitly declared and graph-visible; retained-grade closure is
+not author-assigned here.
 
 ## Review-loop disposition
 
@@ -73,5 +69,5 @@ What an auditor needs to evaluate this note:
 3. The runner script and its output.
 4. The new audit prompt template.
 
-Expected outcome: `retained` (single retained-grade dep, no admitted
-physics, single-line consequence).
+The intended outcome is a retained-family theorem if the independent audit
+ratifies the single-line consequence and the dependency remains clean.

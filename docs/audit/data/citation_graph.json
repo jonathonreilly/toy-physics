@@ -7033,6 +7033,10 @@
       "to": "anomaly_forces_time_theorem"
     },
     {
+      "from": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
+      "to": "axiom_first_spin_statistics_theorem_note_2026-04-29"
+    },
+    {
       "from": "periodic_2d_wraparound_fix_note_2026-04-11",
       "to": "self_consistency_structured_null_note_2026-04-11"
     },
@@ -19997,7 +20001,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T16:49:09.841742+00:00",
+  "generated_at": "2026-05-02T16:52:37.272814+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -34740,6 +34744,19 @@
       "runner_path": null,
       "title": "Paper Outline: \"Physics from Cl(3) on Z\u00b3\""
     },
+    "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02": {
+      "claim_id": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_spin_statistics_theorem_note_2026-04-29"
+      ],
+      "note_hash": "6888ac34cb1fbdcd2de1a3041d804c305653ffbc8b4b061cc8a8d051d98d1201",
+      "path": "docs/PAULI_EXCLUSION_FROM_SPIN_STATISTICS_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/pauli_exclusion_check.py",
+      "title": "Pauli Exclusion Principle from Retained Spin-Statistics Theorem"
+    },
     "periodic_2d_wraparound_fix_note_2026-04-11": {
       "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
       "claim_type_author_hint": null,
@@ -46342,19 +46359,19 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 6,
       "none": 1764,
-      "positive_theorem": 8
+      "positive_theorem": 9
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 507,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 610
+      "positive_theorem": 611
     },
-    "edge_count": 4999,
-    "leaf_count": 750,
-    "node_count": 1778,
+    "edge_count": 5000,
+    "leaf_count": 751,
+    "node_count": 1779,
     "root_count": 1213,
-    "runners_with_path": 1340
+    "runners_with_path": 1341
   }
 }
