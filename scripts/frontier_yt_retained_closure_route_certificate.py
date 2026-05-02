@@ -116,6 +116,7 @@ def main() -> int:
         "d17_source_pole_identity_closure": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
         "source_overlap_sum_rule_no_go": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
         "short_distance_ope_lsz_no_go": "outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json",
+        "effective_mass_plateau_residue_no_go": "outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
@@ -610,6 +611,15 @@ def main() -> int:
         and certificates["short_distance_ope_lsz_no_go"].get("short_distance_ope_shortcut_closed")
         is False
     )
+    effective_mass_plateau_residue_no_go_blocks = (
+        "effective-mass plateau not scalar LSZ residue closure"
+        in certificates["effective_mass_plateau_residue_no_go"].get("actual_current_surface_status", "")
+        and certificates["effective_mass_plateau_residue_no_go"].get("proposal_allowed") is False
+        and certificates["effective_mass_plateau_residue_no_go"].get(
+            "effective_mass_plateau_residue_gate_passed"
+        )
+        is False
+    )
     higgs_pole_identity_latest_blocker_blocks = (
         "latest Higgs-pole identity blocker certificate"
         in certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", "")
@@ -994,6 +1004,11 @@ def main() -> int:
         certificates["short_distance_ope_lsz_no_go"].get("actual_current_surface_status", ""),
     )
     report(
+        "effective-mass-plateau-residue-no-go-blocks",
+        effective_mass_plateau_residue_no_go_blocks,
+        certificates["effective_mass_plateau_residue_no_go"].get("actual_current_surface_status", ""),
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         higgs_pole_identity_latest_blocker_blocks,
         certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", ""),
@@ -1164,6 +1179,10 @@ def main() -> int:
             "normalization repair as well: finite large-Q coefficients and "
             "operator matching can stay fixed while the isolated IR source-pole "
             "residue varies by a factor of ten.  "
+            "The effective-mass plateau residue no-go closes the finite-time "
+            "postprocess shortcut: positive multi-exponential correlators can "
+            "share a finite plateau window while changing the ground/source "
+            "residue by a factor of ten.  "
             "The effective-potential Hessian/source-overlap no-go blocks the "
             "radial-curvature repair: canonical VEV, W/Z masses, and scalar "
             "Hessian eigenvalues do not fix the source operator direction.  "

@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=80 FAIL=0
+# SUMMARY: PASS=81 FAIL=0
 ```
 
 The runner verifies:
@@ -55,6 +55,7 @@ The runner verifies:
 | canonical Higgs kinetic renormalization fixes the source overlap | no |
 | source contact-term curvature scheme fixes the pole residue | no |
 | short-distance/OPE operator normalization fixes the IR source-pole residue | no |
+| finite effective-mass plateau window fixes the source-pole residue | no |
 | BRST/ST/Nielsen identities fix the source pole as canonical Higgs | no |
 | finite Cl(3)/Z3 automorphism/orbit data fix continuous LSZ source overlap | no |
 | same-source pole-data sufficiency gate is passed | no |

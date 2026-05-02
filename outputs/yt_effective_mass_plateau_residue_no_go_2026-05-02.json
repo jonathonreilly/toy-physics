@@ -1,0 +1,181 @@
+{
+  "actual_current_surface_status": "exact negative boundary / effective-mass plateau not scalar LSZ residue closure",
+  "effective_mass_plateau_residue_gate_passed": false,
+  "exact_next_action": "Process seed-controlled chunks through the combiner when they finish, but require a spectral-gap/model-class/FV/IR/Higgs-identity certificate before any finite-time plateau amplitude is used as scalar LSZ residue evidence.",
+  "fail_count": 0,
+  "finite_time_family": {
+    "checks": {
+      "all_models_positive": true,
+      "ground_residue_span_factor": 10.0,
+      "max_abs_correlator_residual": 2.220446049250313e-16,
+      "max_abs_effective_mass_residual": 2.220446049250313e-16,
+      "y_proxy_span_factor": 3.16227766016838
+    },
+    "excited_masses": [
+      0.52,
+      0.57,
+      0.65,
+      0.85,
+      1.2,
+      1.8,
+      2.8,
+      4.0
+    ],
+    "ground_mass": 0.5,
+    "models": [
+      {
+        "effective_masses": [
+          0.5902796296757798,
+          0.5768049827144778,
+          0.5674713278002583
+        ],
+        "excited_weights": [
+          3.787110324417641,
+          0.0,
+          3.5933804623201984,
+          0.4084141309383069,
+          2.022372966147548,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ground_residue": 0.2,
+        "max_abs_correlator_residual": 2.220446049250313e-16,
+        "max_abs_effective_mass_residual": 2.220446049250313e-16,
+        "min_excited_weight": 0.0,
+        "relative_y_proxy_for_fixed_dE_ds": 2.23606797749979,
+        "success": true
+      },
+      {
+        "effective_masses": [
+          0.5902796296757801,
+          0.5768049827144779,
+          0.5674713278002583
+        ],
+        "excited_weights": [
+          3.3727851280193515,
+          0.0,
+          3.79741004412297,
+          0.2753439497944789,
+          2.076825394456845,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ground_residue": 0.5,
+        "max_abs_correlator_residual": 2.220446049250313e-16,
+        "max_abs_effective_mass_residual": 1.1102230246251565e-16,
+        "min_excited_weight": 0.0,
+        "relative_y_proxy_for_fixed_dE_ds": 1.414213562373095,
+        "success": true
+      },
+      {
+        "effective_masses": [
+          0.5902796296757801,
+          0.5768049827144778,
+          0.5674713278002581
+        ],
+        "excited_weights": [
+          2.682243134022047,
+          0.0,
+          4.137459347128184,
+          0.05356031455382798,
+          2.1675794416397802,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ground_residue": 1.0,
+        "max_abs_correlator_residual": 5.551115123125783e-17,
+        "max_abs_effective_mass_residual": 2.220446049250313e-16,
+        "min_excited_weight": 0.0,
+        "relative_y_proxy_for_fixed_dE_ds": 1.0,
+        "success": true
+      },
+      {
+        "effective_masses": [
+          0.5902796296757803,
+          0.5768049827144777,
+          0.5674713278002583
+        ],
+        "excited_weights": [
+          2.0131484139788527,
+          0.0,
+          4.38812104786208,
+          0.0,
+          2.0319958796323725,
+          0.27895461793970133,
+          0.0,
+          0.0
+        ],
+        "ground_residue": 1.5,
+        "max_abs_correlator_residual": 1.1102230246251565e-16,
+        "max_abs_effective_mass_residual": 2.220446049250313e-16,
+        "min_excited_weight": 0.0,
+        "relative_y_proxy_for_fixed_dE_ds": 0.8164965809277261,
+        "success": true
+      },
+      {
+        "effective_masses": [
+          0.5902796296757801,
+          0.5768049827144778,
+          0.5674713278002583
+        ],
+        "excited_weights": [
+          1.3508822521558288,
+          0.0,
+          4.610322793844711,
+          0.0,
+          1.8243491013352335,
+          0.6467250850862057,
+          0.0,
+          0.0
+        ],
+        "ground_residue": 2.0,
+        "max_abs_correlator_residual": 0.0,
+        "max_abs_effective_mass_residual": 0.0,
+        "min_excited_weight": 0.0,
+        "relative_y_proxy_for_fixed_dE_ds": 0.7071067811865475,
+        "success": true
+      }
+    ],
+    "target_correlator_values": [
+      1.4388277993143852,
+      0.797358510915846,
+      0.44786839156349156,
+      0.25392224360808585
+    ],
+    "target_effective_mass_spread": 0.02280830187552174,
+    "target_effective_masses": [
+      0.5902796296757801,
+      0.5768049827144778,
+      0.5674713278002583
+    ],
+    "times": [
+      3.0,
+      4.0,
+      5.0,
+      6.0
+    ]
+  },
+  "parent_certificates": {
+    "finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
+    "postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
+    "same_source_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
+    "same_source_two_point": "outputs/yt_same_source_scalar_two_point_lsz_measurement_2026-05-01.json",
+    "short_distance_ope": "outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json",
+    "stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",
+    "threshold_gate": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite effective-mass plateau data leave the same-source pole residue underdetermined.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not infer source-pole residue from a finite plateau window",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "A finite Euclidean-time effective-mass plateau does not determine the same-source scalar pole residue needed by PR #230.  Positive multi-exponential correlators can agree exactly on a finite time window, and therefore have identical effective masses on that window, while the ground/source-pole residue varies by a factor of ten.  A production plateau can be useful diagnostics, but it needs a model-class, spectral-gap/pole-saturation, continuum, or microscopic scalar-denominator certificate before its amplitude can be load-bearing for FH/LSZ y_t closure."
+}

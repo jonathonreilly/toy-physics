@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Finite effective-mass plateaus are not scalar LSZ residue closure
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_effective_mass_plateau_residue_no_go.py
+# SUMMARY: PASS=15 FAIL=0
+```
+
+Finite Euclidean-time plateau windows do not determine the same-source scalar
+pole residue.  The runner constructs positive multi-exponential correlators
+with identical finite-window correlator values and effective masses while the
+ground/source-pole residue varies by a factor of ten.  Future production
+plateaus therefore need a spectral-gap, model-class, pole-saturation,
+FV/IR/zero-mode, and canonical-Higgs identity certificate before amplitudes can
+be load-bearing.
+
 ## Short-distance/OPE normalization is not scalar LSZ closure
 
 Runner:

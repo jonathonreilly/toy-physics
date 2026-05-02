@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-126-short-distance-ope-lsz-no-go
-blocks_completed: 126
-active_route: "short-distance/OPE scalar LSZ shortcut test"
-active_hard_residual: "Finite UV/OPE source-normalization data do not determine the isolated IR same-source scalar pole residue; positive pole-plus-continuum families keep finite large-Q coefficients fixed while moving the pole residue. PR230 still needs production pole data or a microscopic scalar-denominator/source-pole-to-canonical-Higgs identity theorem."
+current_phase: campaign-rerun-block-127-effective-mass-plateau-residue-no-go
+blocks_completed: 127
+active_route: "finite Euclidean-time effective-mass plateau residue test"
+active_hard_residual: "Finite same-source effective-mass plateau windows do not determine the scalar pole residue; positive multi-exponential correlators can share the finite window while moving the ground/source residue. PR230 still needs production pole data accepted by model-class/FV/IR/Higgs-identity gates or a microscopic scalar-denominator/source-pole identity theorem."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"

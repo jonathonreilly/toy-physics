@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 effective-mass plateau residue no-go:
+
+- Added `scripts/frontier_yt_effective_mass_plateau_residue_no_go.py`,
+  `docs/YT_EFFECTIVE_MASS_PLATEAU_RESIDUE_NO_GO_NOTE_2026-05-02.md`,
+  and `outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json`.
+- Result: finite Euclidean-time effective-mass plateaus are diagnostics, not
+  scalar LSZ residue theorems.  Positive multi-exponential correlators can
+  have identical finite-window `C(t)` and effective masses while changing the
+  ground/source-pole residue by a factor of ten.
+- Retained-route gate is `PASS=81 FAIL=0`; campaign status is
+  `PASS=107 FAIL=0` over 111 certificates.
+- Chunks007-008 are still running; chunks009-010 were launched as additional
+  seed-controlled production-support jobs.
+
+Next exact action: process chunks007-010 as they finish through combiner,
+ready-set, and stability gates; otherwise continue scalar-denominator /
+source-pole identity work.  Do not use finite-time plateau amplitudes as
+source-pole residue without a spectral-gap/model-class/FV/IR/Higgs-identity
+certificate.
+
 Latest checkpoint, 2026-05-02 short-distance/OPE LSZ shortcut no-go:
 
 - Added `scripts/frontier_yt_short_distance_ope_lsz_no_go.py`,

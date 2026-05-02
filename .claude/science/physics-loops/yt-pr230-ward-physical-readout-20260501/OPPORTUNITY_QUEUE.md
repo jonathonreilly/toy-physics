@@ -31,6 +31,11 @@ source/operator coefficients can stay fixed while the isolated IR source-pole
 residue varies.  This does not change the ranked queue; the positive routes
 remain production pole data or a genuinely IR scalar-denominator/source-pole
 identity theorem.
+The effective-mass plateau shortcut is also blocked: identical finite-window
+Euclidean-time plateaus can coexist with different ground/source-pole
+residues.  Future production postprocessing must retain a model-class,
+spectral-gap/pole-saturation, FV/IR, and Higgs-identity gate before amplitude
+readouts can count.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

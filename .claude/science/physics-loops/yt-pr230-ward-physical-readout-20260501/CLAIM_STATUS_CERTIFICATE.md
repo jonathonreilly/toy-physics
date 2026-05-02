@@ -48,6 +48,7 @@ plus BRST/Nielsen Higgs-identity no-go
 plus Cl(3)/Z3 automorphism source-identity no-go
 plus same-source pole-data sufficiency gate
 plus short-distance/OPE LSZ shortcut no-go
+plus effective-mass plateau residue no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -76,6 +77,23 @@ Finite UV/operator-normalization data do not fix the isolated IR same-source
 pole residue.  The witness preserves the first four large-`Q` coefficients
 while varying the pole residue by a factor of ten, so it cannot authorize
 retained or proposed-retained `y_t` closure.
+
+Effective-mass plateau residue no-go:
+
+```text
+actual_current_surface_status: exact negative boundary / effective-mass plateau not scalar LSZ residue closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_effective_mass_plateau_residue_no_go.py
+# SUMMARY: PASS=15 FAIL=0
+```
+
+Finite Euclidean-time plateau windows do not determine the same-source pole
+residue.  Identical finite-window `C(t)` and effective masses can coexist with
+different ground/source-pole residues, so plateau amplitudes remain
+non-load-bearing until spectral-gap/model-class/FV/IR/Higgs-identity gates
+pass.
 
 FH/LSZ ready chunk-set production checkpoint:
 
