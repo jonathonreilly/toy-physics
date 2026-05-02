@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T18:14:06.316624+00:00
+**Generated:** 2026-05-02T18:17:00.932089+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,23 +24,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 543 |
+| unaudited | 544 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 636 |
+| ~~audited_conditional~~ | 635 |
 | ~~audited_failed~~ | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 375 |
-| `audited_conditional` | 636 |
+| `audited_conditional` | 635 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 579 |
+| `unaudited` | 580 |
 
 | claim_type | count |
 |---|---:|
@@ -757,7 +757,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7704,23 +7703,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
-
-### `generation_axiom_boundary_note`
-
-- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Accepted Hilbert/locality/information-surface boundary claim for hw=1 triplet species semantics, plus the older reduced-stack witness that substrate physicality remained explicit there.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-generation-boundary-mencius-aquinas`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Exact observable separation plus no-proper-quotient closure plus accepted Hilbert semantics already force the retained hw=1 triplet to be physically distinct species sectors of the accepted theory.  _(class `B`)_
-- **chain closes:** False — The local runner supports the reduced-stack witness and local M_3(C) observable-algebra construction, but the physical-species conclusion imports accepted Hilbert semantics and no-proper-quotient closure that are not retained-grade inputs for this row.
-- **rationale:** Issue: the central boundary statement depends on accepted Hilbert/no-proper-quotient semantics and the separate physical-lattice necessity lane, not just the supplied local M_3(C) construction. Why this blocks: exact observable separation on H_hw=1 does not by itself establish the physical-identification bridge from sectors to physically distinct species, and the named semantic/substrate authorities are not retained-grade here. Repair target: supply retained-grade Hilbert-generation and no-proper-quotient authority, or inline the semantic theorem deriving physical-species status from the exact observable algebra. Claim boundary until fixed: usable as a reduced-stack witness and local observable-algebra construction, but conditional as a retained physical-species boundary theorem.
-- **open / conditional deps cited:**
-  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  - `SINGLE_AXIOM_HILBERT_NOTE.md`
-  - `SINGLE_AXIOM_INFORMATION_NOTE.md`
-- **auditor confidence:** high
 
 ### `geometry_lane_head_to_head_note`
 
