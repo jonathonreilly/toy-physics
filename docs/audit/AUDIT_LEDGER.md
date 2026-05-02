@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:39:27.308500+00:00
+**Generated:** 2026-05-02T01:43:57.359445+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 363 |
+| `audited_clean` | 364 |
 | `audited_conditional` | 667 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 426 |
+| `unaudited` | 425 |
 
 | criticality | count |
 |---|---:|
@@ -441,6 +441,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unification_basin_failure_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `universal_gr_block_ident_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_block_normalization_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
+| `universal_gr_canonical_projector_connection_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -16006,6 +16007,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** True — The note's limited support claim is a no-go about normalization data: invariant block norms, ratios, and sign choices do not select a canonical complement section. The runner corroborates this by showing A1 invariance, nontrivial complement SO(3) action, invariant shift/shear ratios, and nonzero normalized-orbit spread.
 - **rationale:** The claim is not that direct universal localization is finished, but that block normalization alone leaves a connected SO(3) complement ambiguity. That conclusion follows as exact algebra over the block decomposition and is supported by the current runner output: PASS=12, FAIL=0. No hidden physical comparator, numerical tuning, or symbol renaming is needed for this limited support/no-go statement.
 - **auditor confidence:** high
+
+### `universal_gr_canonical_projector_connection_note`
+
+- **Note:** [`UNIVERSAL_GR_CANONICAL_PROJECTOR_CONNECTION_NOTE.md`](../../docs/UNIVERSAL_GR_CANONICAL_PROJECTOR_CONNECTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-gpt5-restricted-fresh-auditor`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Covariance forces the complementary data to live in an SO(3)-equivariant bundle, but does not collapse the orbit to a canonical section.  _(class `A`)_
+- **chain closes:** True — For the bounded claim actually made, the chain closes: the note claims only an invariant Pi_A1 section plus an associated SO(3) orbit bundle/natural orbit connection, and explicitly denies a distinguished Pi_curv.
+- **rationale:** The note is carefully bounded: it does not claim full curvature localization, a distinguished connection, or canonical Pi_curv. The load-bearing projector/orbit statement is an algebraic closure over the displayed 3+1 projector and residual spatial-rotation action, with no external comparator or tuned numerical match. Residual risk is runner hygiene: the unregistered script entry point fails as written because it tries to read a missing ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md, although the current-checkout algebra checks pass when those unused stale reads are bypassed.
+- **auditor confidence:** medium
 
 ### `universal_gr_casimir_block_localization_note`
 
