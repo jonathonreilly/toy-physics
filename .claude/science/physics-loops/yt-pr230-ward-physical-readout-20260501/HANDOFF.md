@@ -1,5 +1,26 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 FH/LSZ chunks009-010 processing:
+
+- Background chunks009-010 completed and were processed through the existing
+  chunk combiner, dynamic ready-set checkpoint, response-stability diagnostic,
+  autocorrelation/ESS gate, retained-route gate, and campaign status gate.
+- Result: ready chunk indices are now `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`,
+  i.e. `10/63` L12 chunks and `160/1000` target saved configurations.
+- Response stability still fails:
+  `relative_stdev=0.9078514133280878`, `spread_ratio=5.476535332624479`.
+- The ESS gate remains blocked: the current chunks expose diagnostic plaquette
+  histories, but not per-configuration same-source `dE/ds` or `C_ss(q)` target
+  time series, so target ESS is not certified.
+- Retained-route gate remains `PASS=90 FAIL=0`; campaign status remains
+  `PASS=116 FAIL=0` over 120 certificates.
+
+Next exact action: continue the scalar-denominator / canonical-Higgs identity
+route, prioritizing sector-overlap equality, same-source W/Z response
+implementation, or a source-pole purity theorem.  Do not use the `10/63` L12
+chunk set, plaquette ESS, finite source slopes, or source-only pole data as
+retained/proposed-retained evidence.
+
 Latest checkpoint, 2026-05-02 source-Higgs Gram purity gate:
 
 - Added `scripts/frontier_yt_source_higgs_gram_purity_gate.py`,

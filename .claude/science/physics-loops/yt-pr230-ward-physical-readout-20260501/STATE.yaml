@@ -13,11 +13,27 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-137-source-higgs-gram-purity-gate
-blocks_completed: 137
-active_route: "Source-Higgs Gram purity gate"
-active_hard_residual: "A future C_sH route has an acceptance condition, Res(C_sH)^2 = Res(C_ss) Res(C_HH) at the isolated pole, but current C_sH and C_HH pole residues and canonical-Higgs source operator are absent."
+current_phase: campaign-rerun-block-138-fh-lsz-chunks009-010-processing
+blocks_completed: 138
+active_route: "FH/LSZ chunks009-010 ready-set processing"
+active_hard_residual: "Chunks001-010 are combiner-ready bounded support only: response stability fails, target ESS is missing for pre-extension chunks, and scalar-pole/FV/IR/canonical-Higgs identity gates remain open."
 files_touched:
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk009_2026-05-01.json"
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json"
+  - "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk009/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk010/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"
+  - "docs/YT_FH_LSZ_CHUNK_COMBINER_GATE_NOTE_2026-05-01.md"
+  - "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json"
+  - "docs/YT_FH_LSZ_READY_CHUNK_SET_CHECKPOINT_NOTE_2026-05-02.md"
+  - "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json"
+  - "docs/YT_FH_LSZ_READY_CHUNK_RESPONSE_STABILITY_NOTE_2026-05-02.md"
+  - "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
+  - "docs/YT_FH_LSZ_AUTOCORRELATION_ESS_GATE_NOTE_2026-05-02.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
   - "scripts/frontier_yt_source_higgs_gram_purity_gate.py"
   - "docs/YT_SOURCE_HIGGS_GRAM_PURITY_GATE_NOTE_2026-05-02.md"
   - "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
@@ -635,6 +651,7 @@ claim_state_movement:
   - "processed seed-controlled FH/LSZ chunks007-008: the combiner now reports ready chunk indices [1,2,3,4,5,6,7,8], i.e. 8/63 L12 chunks; response stability still fails and target ESS remains blocked for current pre-extension chunk outputs"
   - "proved an FH/LSZ target-time-series Higgs-identity no-go: even perfect same-source target statistics do not identify the source pole with the canonical Higgs radial mode without source-pole purity, no-orthogonal-top-coupling, sector-overlap equality, or an independent canonical-Higgs response observable"
   - "proved a no-orthogonal-top-coupling selection-rule no-go: current listed substrate/gauge charges cannot allow h tbar t while forbidding an orthogonal neutral chi tbar t coupling with the same labels"
+  - "processed seed-controlled FH/LSZ chunks009-010: the combiner now reports ready chunk indices [1,2,3,4,5,6,7,8,9,10], i.e. 10/63 L12 chunks and 160/1000 saved configurations; response stability still fails and target ESS remains blocked for current pre-extension chunk outputs"
 actual_current_surface_status: "open / exact negative boundary plus bounded production support"
 conditional_surface_status: "future production evidence remains conditional on completed chunks, target-observable autocorrelation/ESS certification, passed finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity"
 hypothetical_axiom_status: null
@@ -643,5 +660,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Process chunks009-010 if any finish through combiner, ready-set, response-stability, autocorrelation/ESS, retained-route, and campaign gates; otherwise attack sector-overlap equality, same-source W/Z response implementation, or a source-pole purity theorem directly. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, source-only pole purity, missing C_sH/C_HH authority, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 8/63 L12 chunks, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Attack sector-overlap equality, same-source W/Z response implementation, or a source-pole purity theorem directly while monitoring for additional completed chunks. Future chunks should use the extended target time-series harness, but do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, source-only pole purity, missing C_sH/C_HH authority, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, 10/63 L12 chunks, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

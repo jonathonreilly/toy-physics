@@ -192,6 +192,55 @@
         "source_response_target_timeseries": false
       },
       "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 9,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk009_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 962.3103934064139,
+        "n": 1000,
+        "rho_first_lags": [
+          0.01958287411828285,
+          -0.00010165538323218451
+        ],
+        "tau_int_initial_positive": 0.5195828741182829,
+        "window_lag": 2
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
+    },
+    {
+      "chunk_index": 10,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 954.9034613113765,
+        "n": 1000,
+        "rho_first_lags": [
+          0.021488309139159046,
+          0.00011286544538724398,
+          0.00047210769035197576,
+          0.0015398579616508793,
+          -0.0017344094215347085
+        ],
+        "tau_int_initial_positive": 0.5236131402365491,
+        "window_lag": 5
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": false,
+        "source_response_target_timeseries": false
+      },
+      "target_timeseries_complete": false
     }
   ],
   "exact_next_action": "Extend the production harness or postprocessor to retain per-configuration same-source dE/ds and C_ss(q) target time series, or emit a predeclared blocking/bootstrap ESS certificate; then rerun this gate before using chunked FH/LSZ output as production evidence.",
@@ -216,7 +265,9 @@
     5,
     6,
     7,
-    8
+    8,
+    9,
+    10
   ],
   "ready_count_reaches_threshold": true,
   "strict_non_claims": [

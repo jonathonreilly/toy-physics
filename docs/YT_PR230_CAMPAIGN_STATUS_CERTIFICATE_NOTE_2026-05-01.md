@@ -200,6 +200,7 @@ the visible shortcut routes:
 | source-pole purity cross-correlator gate | source-only `C_ss` and source response can stay fixed while source-Higgs overlap changes; `C_sH`, W/Z response, or a retained purity theorem is still required |
 | source-Higgs cross-correlator import audit | the current harness and EW/SM Higgs notes do not supply a hidden `C_sH` or canonical-Higgs source operator |
 | source-Higgs Gram purity gate | `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` is the future purity acceptance condition, but `C_sH` and `C_HH` residues are absent |
+| FH/LSZ chunks009-010 processing | seed-controlled chunks001-010 are now ready (`10/63` L12 chunks, `160/1000` saved configurations), but response stability fails and target-observable ESS is not certified because these pre-extension chunks lack same-source target time series |
 | reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
 | effective-potential Hessian source-overlap no-go | canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the PR #230 source operator direction |
 | scalar carrier/projector closure attempt | color-singlet support and unit taste-singlet algebra are available, but physical carrier authority, unit-projector crossing, kernel enhancement, fitted-kernel legitimacy, and `K'(pole)` remain blocked |
@@ -311,6 +312,13 @@ seed-controlled chunks007-008 through the existing combiner/ready-set
 certificates.  The ready set is `[1, 2, 3, 4, 5, 6, 7, 8]`, or `8/63` L12
 chunks; response stability still fails and no retained/proposed-retained
 wording is authorized.
+
+Latest chunks009-010 ready-set checkpoint: campaign status now includes
+seed-controlled chunks009-010 through the existing combiner/ready-set,
+response-stability, and autocorrelation/ESS gates.  The ready set is now
+`[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, or `10/63` L12 chunks and `160/1000` saved
+configurations; response stability still fails, target-observable ESS is not
+certified, and no retained/proposed-retained wording is authorized.
 
 Latest effective-potential Hessian checkpoint: campaign status now includes
 the Hessian/source-overlap no-go and reports `PASS=102 FAIL=0` over 106

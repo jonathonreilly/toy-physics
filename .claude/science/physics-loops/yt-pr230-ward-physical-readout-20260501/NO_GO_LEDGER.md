@@ -1,5 +1,25 @@
 # No-Go Ledger
 
+## Ten ready L12 chunks are still not production closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+```
+
+Chunks009-010 are seed-controlled and combiner-ready, raising the ready set to
+`[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]` or `10/63` L12 chunks.  This remains
+bounded production support only.  The response-stability diagnostic still
+fails (`relative_stdev=0.9078514133280878`,
+`spread_ratio=5.476535332624479`), and target ESS is still blocked because
+these pre-extension chunk outputs do not expose same-source target time series.
+The route also still lacks combined L12, L16/L24 scaling, scalar-pole
+derivative/model-class, FV/IR, and canonical-Higgs identity gates.
+
 ## Source-Higgs Gram purity gate is not passed
 
 Runner:

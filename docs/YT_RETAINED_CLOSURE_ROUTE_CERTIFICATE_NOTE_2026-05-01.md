@@ -187,6 +187,12 @@ The source-Higgs Gram purity gate makes that future route sharp:
 `Res(C_sH)^2 = Res(C_ss) Res(C_HH)` at the isolated pole would certify purity
 after canonical `H` is supplied, but current `C_sH` and `C_HH` pole residues
 are absent.
+The chunked FH/LSZ route has also advanced only as bounded support:
+chunks009-010 are seed-controlled and combiner-ready, raising the current
+L12 ready set to `10/63` chunks and `160/1000` saved configurations.  Response
+stability still fails (`relative_stdev=0.9078514133280878`,
+`spread_ratio=5.476535332624479`), and target-observable ESS remains blocked
+because these pre-extension chunk outputs lack same-source target time series.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
@@ -379,6 +385,13 @@ combiner reports ready indices `[1, 2, 3, 4, 5, 6, 7, 8]`, or `8/63` L12
 chunks.  This improves production support only: response stability still fails
 and the route still lacks combined L12, L16/L24 scaling, scalar-pole
 derivative/model-class, FV/IR, and canonical-Higgs identity gates.
+
+Chunks009-010 are now included as well.  The combiner reports ready indices
+`[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, or `10/63` L12 chunks with `160/1000`
+saved configurations.  Response stability still fails
+(`relative_stdev=0.9078514133280878`, `spread_ratio=5.476535332624479`), and
+target-observable ESS remains unavailable because these chunks lack
+per-configuration same-source target time series.
 
 The effective-potential Hessian source-overlap no-go closes the radial-
 curvature shortcut.  Canonical VEV, W/Z masses, scalar Hessian eigenvalues,

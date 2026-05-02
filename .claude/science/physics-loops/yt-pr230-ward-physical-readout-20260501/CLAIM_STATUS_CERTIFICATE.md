@@ -59,6 +59,7 @@ plus no-orthogonal-top-coupling selection-rule no-go
 plus source-pole purity cross-correlator gate
 plus source-Higgs cross-correlator import audit
 plus source-Higgs Gram purity gate
+plus FH/LSZ chunks009-010 ready-set processing
 **PR:** #230 draft branch
 
 ```yaml
@@ -71,6 +72,29 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+FH/LSZ chunks009-010 ready-set processing:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ ready chunk-set production checkpoint
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=10 FAIL=0
+```
+
+Chunks009-010 raise the seed-controlled ready set to `10/63` L12 chunks and
+`160/1000` saved configurations.  This is bounded production support only.
+Response stability still fails, target ESS is not certified for these
+pre-extension outputs, and no combined L12, L16/L24, scalar-pole, FV/IR, or
+canonical-Higgs identity gate is passed.
 
 Source-Higgs Gram purity gate:
 
