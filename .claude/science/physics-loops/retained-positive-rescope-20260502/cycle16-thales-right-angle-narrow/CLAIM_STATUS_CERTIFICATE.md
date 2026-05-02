@@ -3,7 +3,7 @@
 **Block:** physics-loop/ckm-thales-right-angle-narrow-block16-20260502
 **Note:** docs/THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md
 **Runner:** scripts/frontier_thales_right_angle_narrow.py (PASS=18/0)
-**Parent row carved from:** ckm_atlas_triangle_right_angle_theorem_note_2026-04-24 (claim_type=positive_theorem, audit_status=audited_conditional, td=116, load_bearing_step_class=A)
+**Parent row carved from:** ckm_atlas_triangle_right_angle_theorem_note_2026-04-24 (claim_type=positive_theorem, load_bearing_step_class=A)
 
 ## Block type
 
@@ -24,7 +24,7 @@ hypothesis enters as a hypothesis, not as a load-bearing import.
 ## Claim-Type Certificate
 
 ```yaml
-target_claim_type: positive_theorem
+proposed_claim_type: positive_theorem
 proposed_claim_scope: |
   Pure Euclidean / arctan-algebra implication: any (rho, eta) on the upper
   half of the Thales circle on diameter [0, 1] sees that diameter under a
@@ -32,18 +32,18 @@ proposed_claim_scope: |
   point on this circle, but is not a load-bearing input to this note's
   implication.
 proposed_load_bearing_step_class: A
-audit_required_before_effective_retained: true
-bare_retained_allowed: false
+status_authority: independent_audit_lane
+source_sets_audit_outcome: false
 ```
 
 ## 7-criteria check
 
 | # | Criterion | Pass? |
 |---|---|---|
-| 1 | target_claim_type named | YES (`positive_theorem`) |
+| 1 | proposed_claim_type named | YES (`positive_theorem`) |
 | 2 | No open imports for the claimed target | YES (zero ledger deps; the Thales hypothesis is a stated premise, not an import) |
 | 3 | No load-bearing observed/fitted/admitted | YES (purely Euclidean / arctan-algebra; no PDG / literature / fitted / admitted-convention input) |
-| 4 | Every dep retained-grade | YES (vacuously — zero deps) |
+| 4 | Every dep accounted for | YES (vacuously: zero deps) |
 | 5 | Runner checks the algebraic identity at exact precision | YES (sympy symbolic dot-product reduction + 50-digit arctan-sum check + four concrete rational instances) |
 | 6 | Review-loop disposition | proposed pass as audit-pending narrow theorem; independent audit pending |
 | 7 | PR body says independent audit required | YES |
@@ -74,7 +74,7 @@ authority because it has zero ledger dependencies.
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the claim.
 - No same-surface family arguments.
 
 ## Audit-graph effect

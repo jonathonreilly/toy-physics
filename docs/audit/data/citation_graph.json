@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:16:56.456396+00:00",
+  "generated_at": "2026-05-02T18:21:14.734335+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -41897,6 +41897,17 @@
       "runner_path": "scripts/frontier_tensor_support_center_excess_law.py",
       "title": "Exact Support-Side `A1` Center-Excess Law and the Remaining Tensor Gap"
     },
+    "thales_right_angle_narrow_theorem_note_2026-05-02": {
+      "claim_id": "thales_right_angle_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "b769e5aa9a786d106d524fb7a27cfb73065861d5af3f1076fc9866d4fd6153e1",
+      "path": "docs/THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_thales_right_angle_narrow.py",
+      "title": "Thales Right-Angle Narrow Theorem"
+    },
     "third_grown_family_boundary_note": {
       "claim_id": "third_grown_family_boundary_note",
       "claim_type_author_hint": null,
@@ -46177,6 +46188,7 @@
     "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
     "tensor_source_map_eta_note",
     "tensor_support_center_excess_law_note",
+    "thales_right_angle_narrow_theorem_note_2026-05-02",
     "third_grown_family_boundary_note",
     "third_grown_family_complex_boundary_note",
     "third_grown_family_complex_note",
@@ -46322,7 +46334,7 @@
       "bounded_theorem": 9,
       "meta": 1,
       "none": 1755,
-      "positive_theorem": 15
+      "positive_theorem": 16
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 509,
@@ -46330,12 +46342,12 @@
       "no_go": 106,
       "none": 444,
       "open_gate": 110,
-      "positive_theorem": 610
+      "positive_theorem": 611
     },
     "edge_count": 4990,
-    "leaf_count": 750,
-    "node_count": 1780,
-    "root_count": 1211,
-    "runners_with_path": 1347
+    "leaf_count": 751,
+    "node_count": 1781,
+    "root_count": 1212,
+    "runners_with_path": 1348
   }
 }

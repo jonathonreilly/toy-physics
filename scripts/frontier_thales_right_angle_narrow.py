@@ -18,10 +18,9 @@ Thales hypothesis is the only premise.
 
 Companion role: not a new audit-companion; this is a Pattern A new
 narrow claim row carving out the algebra-only core of the existing
-`ckm_atlas_triangle_right_angle_theorem_note_2026-04-24`. The parent's
-load-bearing step is class A, and the parent's `audited_conditional`
-verdict is solely on the upstream supply of the (rho, eta) values; this
-narrow rephrasing drops that dependency by hypothesis.
+`ckm_atlas_triangle_right_angle_theorem_note_2026-04-24`. The parent row's
+load-bearing step is class A; this narrow rephrasing drops the upstream
+CKM-value dependency by hypothesis.
 """
 
 from pathlib import Path
@@ -167,10 +166,9 @@ check(f"non-CKM instance (rho, eta) = (7/13, sqrt(42)/13): right-angle holds",
 section("Part 5: parent row context (no ledger modification)")
 # ----------------------------------------------------------------------------
 # The narrow theorem carves out the load-bearing class-A geometric core of
-# `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24`, which currently
-# sits at audited_conditional with td=116. The parent's verdict cites the
-# unratified `ckm_cp_phase_structural_identity_theorem_note_2026-04-24`
-# dep that supplies the specific (rho, eta) = (1/6, sqrt(5)/6) values.
+# `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24`. The upstream
+# `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` dependency
+# supplies the specific (rho, eta) = (1/6, sqrt(5)/6) values.
 # The narrow theorem here drops that dep entirely by stating only the
 # geometric implication, conditioned on the Thales hypothesis as an
 # explicit input.
@@ -180,7 +178,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('ckm_atlas_triangle_right_angle_theorem_note_2026-04-24', {})
 print(f"\n  Parent row state on origin/main:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 print(f"    deps: {parent.get('deps')}")
