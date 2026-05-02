@@ -168,7 +168,7 @@ the visible shortcut routes:
 | joint Feynman-Hellmann / scalar-LSZ threshold-authority import audit | no current threshold certificate, scalar denominator theorem certificate, or combined L12 output supplies the premise required by the residue-interval gate |
 | confinement-gap threshold import audit | qualitative substrate confinement/mass-gap language does not provide the same-source scalar LSZ continuum threshold or pole residue |
 | joint Feynman-Hellmann / scalar-LSZ finite-volume pole-saturation obstruction | finite-L discreteness is not a uniform pole-saturation theorem; near-pole continuum levels with gaps closing like `1/L^2` keep the residue lower bound at zero |
-| joint Feynman-Hellmann / scalar-LSZ numba seed-independence audit | historical chunk002 still lacks `numba_gauge_seed_v1`; replacement chunk001 now passes the seed-control gate and is the only ready chunk |
+| joint Feynman-Hellmann / scalar-LSZ numba seed-independence audit | historical seed-invalid chunks are demoted; replacement seed-controlled chunks are counted only through the combiner seed gate |
 | joint Feynman-Hellmann / scalar-LSZ uniform-gap self-certification no-go | finite shell rows cannot certify the continuum gap; a gapped positive model's shell values are also fit by a near-pole positive continuum model with zero residue lower bound |
 | scalar denominator theorem closure attempt | current support identifies pole and derivative targets plus singlet zero-mode cancellation/finite-q regularity, but zero-mode prescription, physical scalar carrier/projector, `K'(pole)`, model class, threshold, and seed-controlled production remain open |
 | joint Feynman-Hellmann / scalar-LSZ soft-continuum threshold no-go | color-singlet q=0 cancellation and finite-q IR regularity do not certify a positive threshold gap; locally integrable soft continuum weight can start arbitrarily close to the pole |
@@ -276,3 +276,8 @@ same-source gauge-mass response manifest and reports `PASS=100 FAIL=0` over
 Latest reflection-positivity checkpoint: campaign status now includes the
 reflection-positivity LSZ shortcut no-go and reports `PASS=101 FAIL=0` over
 105 certificates.  No retained/proposed-retained wording is authorized.
+
+Latest chunks005-006 ready-set checkpoint: campaign status now includes
+seed-controlled chunks005-006 through the existing combiner/ready-set
+certificates.  The ready set is `[1, 2, 3, 4, 5, 6]`, or `6/63` L12 chunks; response stability
+still fails and no retained/proposed-retained wording is authorized.

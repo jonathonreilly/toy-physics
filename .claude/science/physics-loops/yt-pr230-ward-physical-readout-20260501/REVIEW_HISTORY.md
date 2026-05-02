@@ -2675,3 +2675,18 @@ Disposition: exact negative boundary.  OS positivity gives a positive
 spectral measure but not pole saturation, source-pole residue, or
 canonical-Higgs identity.  No retained or proposed-retained wording is
 allowed.
+
+## 2026-05-02 - Block 121 Chunks005-006 Ready-Set Checkpoint
+
+Review stance: production-support automation / claim firewall.
+
+- Processed completed seed-controlled chunks005-006 through the combiner gate.
+- Updated `scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py`
+  to accept non-contiguous dynamic ready indices.
+- Updated `scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py`.
+- Updated the ready chunk-set and response-stability notes/certificates.
+
+Disposition: bounded support.  The ready L12 set is now
+`[1, 2, 3, 4, 5, 6]`, or `6/63` chunks.  Response stability still fails, and no
+combined L12, L16/L24, pole-derivative, model-class, FV/IR, or Higgs-identity
+gate is closed.  No retained or proposed-retained wording is allowed.

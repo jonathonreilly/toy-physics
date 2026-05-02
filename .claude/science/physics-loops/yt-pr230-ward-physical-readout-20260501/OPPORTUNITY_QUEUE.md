@@ -8,15 +8,17 @@ because it has concrete harness support, but it must not displace the requested
 LSZ/physical-response attack unless route refresh shows higher closure
 probability.
 
-2026-05-02 update: seed-controlled FH/LSZ chunks001-004 are ready (`4/63`
+2026-05-02 update: seed-controlled FH/LSZ chunks001-006 are ready
+(`6/63`
 of L12).  This makes further chunk collection a concrete production-support
 route, but it remains low closure probability in the current foreground window:
 even complete L12 would still need L16/L24, pole-derivative/model-class,
 FV/IR/zero-mode, and canonical-Higgs identity gates.  Highest retained-positive
 probability remains a true canonical-Higgs/source-pole identity theorem or a
 same-source W/Z response measurement that closes the sector-overlap premise.
-The first ready-set response diagnostic also fails production-grade stability,
-so finite `dE/ds` slopes from `4/63` chunks must remain scout/support only.
+The ready-set response diagnostic also fails production-grade stability
+(`n=6`, `relative_stdev=0.8727`, `spread_ratio=5.4765`), so finite `dE/ds`
+slopes from `6/63` chunks must remain scout/support only.
 The same-source W/Z response bypass also needs a purity theorem: a mixed
 source pole with an orthogonal top-coupled scalar leaves the physical
 canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.

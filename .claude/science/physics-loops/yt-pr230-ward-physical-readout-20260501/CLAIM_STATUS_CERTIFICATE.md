@@ -67,7 +67,8 @@ python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
 # SUMMARY: PASS=8 FAIL=0
 ```
 
-Chunks001-004 are seed-controlled and combiner-ready (`4/63` L12 chunks).
+Chunks001-006 are seed-controlled and combiner-ready
+(`[1, 2, 3, 4, 5, 6]`, `6/63` L12 chunks).
 This is useful production support but not retained or proposed-retained
 closure.  The missing gates remain combined L12, L16/L24 scaling, pole
 derivative/model-class or pole-saturation control, FV/IR/zero-mode control,
@@ -84,9 +85,9 @@ python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
-The current `4/63` ready L12 chunks have finite same-source `dE/ds` slopes, but
-the response is not production-grade stable (`relative_stdev=0.7505`,
-`spread_ratio=4.8051`, `n=4`).  This does not close scalar source-to-Higgs
+The current `6/63` ready L12 chunks have finite same-source `dE/ds` slopes, but
+the response is not production-grade stable (`relative_stdev=0.8727`,
+`spread_ratio=5.4765`, `n=6`).  This does not close scalar source-to-Higgs
 normalization, scalar LSZ pole derivative, or canonical-Higgs identity.
 
 FH gauge-response mixed-scalar obstruction:

@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 chunks005-006 ready-set update:
+
+- Chunks005-006 completed under production-targeted settings with
+  `numba_gauge_seed_v1` seed control.
+- Rerunning the combiner reports `present_chunks=6`, `ready_chunks=6`,
+  `ready_chunk_indices=[1, 2, 3, 4, 5, 6]`, and `expected_chunks=63`.
+- Fixed `scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py`
+  so dynamic ready sets are derived from the combiner seed gate.
+- The response-stability diagnostic still fails (`n=6`,
+  `relative_stdev=0.8727`, `spread_ratio=5.4765`), so this remains bounded
+  support only.
+
+Next exact action: continue the scalar-denominator / canonical-Higgs identity
+route, and consider launching additional seed-controlled L12 chunks if compute
+budget permits.  Do not claim retained or proposed-retained status from
+`6/63` L12 chunks.
+
 Latest checkpoint, 2026-05-02 FH gauge-response mixed-scalar obstruction:
 
 - Added `scripts/frontier_yt_fh_gauge_response_mixed_scalar_obstruction.py`,

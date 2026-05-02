@@ -318,3 +318,9 @@ pole-plus-continuum family can be realized by reflection-positive Euclidean
 time correlators while finite same-source shell rows stay fixed and the pole
 residue changes.  The retained-route certificate is refreshed at
 `PASS=75 FAIL=0` and still authorizes no retained/proposed-retained wording.
+
+Chunks005-006 are now included in the seed-controlled FH/LSZ ready set.  The
+combiner reports ready indices `[1, 2, 3, 4, 5, 6]`, or `6/63` L12 chunks.  This improves
+production support only: response stability still fails and the route still
+lacks combined L12, L16/L24 scaling, scalar-pole derivative/model-class,
+FV/IR, and canonical-Higgs identity gates.

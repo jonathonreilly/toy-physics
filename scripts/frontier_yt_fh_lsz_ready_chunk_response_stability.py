@@ -5,7 +5,7 @@ PR #230 FH/LSZ ready chunk response-stability diagnostic.
 This runner checks the same-source dE/ds slopes in the current seed-controlled
 ready L12 chunk set.  It is a production diagnostic only.  A stable slope would
 still need the scalar LSZ/canonical-Higgs gates before physical y_t closure;
-an unstable partial set blocks using the current 4/63 chunks as anything
+an unstable partial set blocks using the current ready chunks as anything
 stronger than bounded support.
 """
 
@@ -139,8 +139,8 @@ def main() -> int:
         "actual_current_surface_status": "bounded-support / FH-LSZ ready chunk response-stability diagnostic",
         "verdict": (
             "The current seed-controlled ready chunks expose same-source dE/ds, "
-            "but the 4/63 partial set is not stable enough to use as production "
-            "response evidence beyond bounded support.  The chunk slopes are "
+            f"but the {len(slopes)}/63 partial set is not stable enough to use "
+            "as production response evidence beyond bounded support.  The chunk slopes are "
             "finite but have large chunk-to-chunk spread.  Even a stable slope "
             "would still require scalar LSZ pole derivative, model-class/FV/IR "
             "control, and canonical-Higgs identity before physical y_t closure."

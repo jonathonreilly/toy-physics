@@ -7,15 +7,17 @@
 ## Result
 
 The ready-set checkpoint is now dynamic: it derives `ready_chunk_indices` from
-the combiner gate rather than hardcoding a fixed chunk range.  At this
-checkpoint the seed-controlled `L12_T24` FH/LSZ chunk set still contains
-chunks001-004.  The combiner gate reports:
+the combiner gate rather than hardcoding a fixed chunk range.  It also accepts
+non-contiguous ready sets, because chunk completion order need not be
+sequential.  At this checkpoint the seed-controlled `L12_T24` FH/LSZ ready set
+contains chunks001-006:
 
 ```text
-present_chunks = 4
-ready_chunks = 4
+ready_chunk_indices = [1, 2, 3, 4, 5, 6]
+present_chunks = 6
+ready_chunks = 6
 expected_chunks = 63
-available_saved_configurations = 64
+available_saved_configurations = 96
 target_saved_configurations = 1000
 ```
 
@@ -24,7 +26,7 @@ directories, `numba_gauge_seed_v1` gauge seed-control metadata, same-source
 top `dE/ds`, and same-source scalar `C_ss(q)` / `Gamma_ss(q)` rows for the
 four-mode, sixteen-noise plan.
 
-When chunks005 and later finish, rerunning this certificate will include every
+When later chunks finish, rerunning this certificate will include every
 combiner-ready seed-controlled chunk in `ready_chunk_indices`, and the
 response-stability diagnostic will consume that dynamic set.
 

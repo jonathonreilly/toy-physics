@@ -168,15 +168,13 @@ def main() -> int:
     )
     ready_count = int(summary.get("ready_chunks", 0))
     expected_count = int(summary.get("expected_chunks", 1))
-    contiguous_ready_indices = list(range(1, len(ready_signature_indices) + 1))
     chunk_rows = [audit_chunk(index) for index in ready_signature_indices]
     chunk_issues = {row["chunk_index"]: row["issues"] for row in chunk_rows if row["issues"]}
 
     report("combiner-present", bool(combiner), str(COMBINER.relative_to(ROOT)))
     report(
         "ready-indices-derived-from-combiner",
-        ready_signature_indices == contiguous_ready_indices
-        and all(index in ready_signature_indices for index in MIN_READY_INDICES)
+        all(index in ready_signature_indices for index in MIN_READY_INDICES)
         and ready_count == len(ready_signature_indices),
         f"ready_signature_indices={ready_signature_indices}, summary={summary}",
     )

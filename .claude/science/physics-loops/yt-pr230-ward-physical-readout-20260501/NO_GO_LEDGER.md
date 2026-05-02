@@ -43,9 +43,9 @@ python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
 # SUMMARY: PASS=6 FAIL=0
 ```
 
-The current `4/63` ready L12 set has finite same-source `dE/ds` slopes, but
+The current `6/63` ready L12 set has finite same-source `dE/ds` slopes, but
 the response is not stable enough for production readout: `relative_stdev =
-0.7505`, `spread_ratio = 4.8051`, with only four chunks.  This is a diagnostic
+0.8727`, `spread_ratio = 5.4765`, with only six chunks.  This is a diagnostic
 boundary on using the partial set as response evidence.  It is not a no-go
 against the full FH/LSZ route or against future larger ready sets.
 
@@ -58,7 +58,7 @@ python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
 # SUMMARY: PASS=8 FAIL=0
 ```
 
-Chunks001-004 are seed-controlled and combiner-ready, giving `4/63` of the
+Chunks001-006 are seed-controlled and combiner-ready, giving `6/63` of the
 planned L12 set.  This retires the immediate seed-invalid chunk002 blocker for
 the replacement output, but it does not close PR #230.  The remaining blockers
 are the absent combined L12 ensemble, L16/L24 scaling, scalar-pole derivative,
