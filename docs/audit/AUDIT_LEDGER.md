@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:28:05.547192+00:00
+**Generated:** 2026-05-02T01:29:16.318719+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 359 |
+| `audited_clean` | 360 |
 | `audited_conditional` | 666 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 431 |
+| `unaudited` | 430 |
 
 | criticality | count |
 |---|---:|
@@ -436,6 +436,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_complex_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `third_grown_family_complex_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `two_field_retarded_probe_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -15879,6 +15880,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The family-closure loop preserves the retarded battery on the cycle-bearing families and extends the same operating-point closure to the layered DAG-derived control (8/9, with gauge structurally N/A).  _(class `C`)_
 - **chain closes:** True — The source note states a bounded graph-battery diagnostic rather than a retained attraction theorem, and the registered runner recomputes the force, stability, norm, family-closure, gauge, and gap rows from the stated retarded/hybrid law. The note's measurement caveat keeps the irregular sign rows at the field-profile diagnostic level, which matches what the runner checks.
 - **rationale:** The current runner output matches the note's battery table: the three cycle-bearing families score 9/9 and the layered DAG-derived control scores 8/9 only because native gauge is structurally unavailable without a cycle. The load-bearing claim is bounded to a family-conditioned closure diagnostic, and the note explicitly avoids using the irregular force rows as proof that attraction is dynamically chosen. Residual risk is that this remains a conditioned sibling harness rather than a single retained canonical theorem.
+- **auditor confidence:** high
+
+### `two_field_retarded_probe_note_2026-04-10`
+
+- **Note:** [`TWO_FIELD_RETARDED_PROBE_NOTE_2026-04-10.md`](../../docs/TWO_FIELD_RETARDED_PROBE_NOTE_2026-04-10.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retarded memory channel preserves the core force battery on admissible graph families, but it does not yet close the family-robustness row across all initial-state sectors.  _(class `C`)_
+- **chain closes:** True — The source note is bounded to a retarded/hybrid field-law battery and explicitly records the R7 family failures and the diagnostic-only status of R9. The registered runner recomputes the same rows and reproduces the note's 7/8, 8/8, 7/8 scored outcomes with the same sector failures.
+- **rationale:** The current runner output matches the source note's table: zero-source, linearity, additivity, main force, iterative stability, norm, and gauge rows pass as reported, while R7 fails on color-0 for random geometric and color-1 for layered cycle. The note does not promote those irregular sign rows to an attraction theorem and explicitly treats them as field-profile diagnostics under the parity-coupled proxy. Residual risk is confined to the note's own boundary: this is a viable bounded candidate battery with sector robustness still open, not a retained canonical closure.
 - **auditor confidence:** high
 
 ### `two_sign_comparison_note_2026-04-10`
