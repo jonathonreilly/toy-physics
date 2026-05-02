@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Pattern B audit-companion runner for `ckm_schur_complement_theorem`
-(audit_status: audited_conditional, claim_type: bounded_theorem, td=147).
+"""Pattern B audit-companion runner for `ckm_schur_complement_theorem`.
 
 The parent theorem's load-bearing step is class (A) algebraic:
   c_13^eff = c_12 * c_23
@@ -14,7 +13,7 @@ NNI/mass-ratio inputs that are separate downstream — this companion
 focuses ONLY on the Schur complement identity.
 
 Companion role: not a new claim row; not a new source note. Provides
-audit-friendly class-(A) breakdown evidence on the parent's load-bearing
+review-friendly class-(A) breakdown evidence on the parent's load-bearing
 step.
 """
 
@@ -170,8 +169,6 @@ rows = ledger['rows']
 parent_id = "ckm_schur_complement_theorem"
 parent_row = rows.get(parent_id, {})
 print(f"\n  {parent_id} current ledger state:")
-print(f"    claim_type: {parent_row.get('claim_type')}")
-print(f"    audit_status: {parent_row.get('audit_status')}")
 print(f"    transitive_descendants: {parent_row.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent_row.get('load_bearing_step_class')}")
 

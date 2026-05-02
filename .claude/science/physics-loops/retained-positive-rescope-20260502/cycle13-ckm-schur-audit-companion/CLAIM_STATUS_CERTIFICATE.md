@@ -2,7 +2,7 @@
 
 **Block:** physics-loop/ckm-schur-audit-companion-block13-20260502
 **Runner:** scripts/audit_companion_ckm_schur_complement_exact.py (PASS=11/0)
-**Target row:** ckm_schur_complement_theorem (claim_type=bounded_theorem, audit_status=audited_conditional, td=147, load_bearing_step_class=A)
+**Target row:** ckm_schur_complement_theorem
 
 ## Block type
 
@@ -26,12 +26,12 @@ no external observed/fitted/literature input.
 ## Claim-Type Certificate (Pattern B)
 
 ```yaml
-target_claim_type: meta  # audit-companion runner; not a claim row
+artifact_type: audit_companion_meta
 proposed_load_bearing_step_class: A
 introduces_new_claim_row: false
 introduces_new_source_note: false
-modifies_parent_audit_status: false  # audit-lane decides
-audit_required_before_effective_retained: true  # parent row only; companion is meta
+modifies_parent_status: false
+status_authority: independent audit lane only
 bare_retained_allowed: false
 ```
 
@@ -44,15 +44,15 @@ bare_retained_allowed: false
 | 3 | No load-bearing observed/fitted/admitted in the companion | YES (purely symbolic sympy verification; no PDG/literature numerical comparators) |
 | 4 | Parent row's deps unchanged by this block | YES (does not modify ledger row state; only adds runner artifact) |
 | 5 | Runner verifies parent's load-bearing step at exact precision | YES (sympy Rational; symbolic matrix; concrete rational test point; independence-of-(m_1,m_3) sweep) |
-| 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; audit-lane decides whether the parent row's `audited_conditional` verdict can be tightened |
-| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert retained status) |
+| 6 | Review-loop disposition | proposed pass as audit-companion meta artifact; independent audit lane decides whether the parent row changes |
+| 7 | PR body says audit-lane to ratify | YES (block proposes companion evidence only; does not assert status) |
 
 ## Audit-graph effect
 
 This companion is **meta** — it does not move the parent row by itself.
 The role is to give the audit lane focused class-(A) breakdown evidence that
 the parent's load-bearing identity holds at exact precision, useful when
-revisiting the `audited_conditional` verdict.
+revisiting the parent row.
 
 If the audit lane revisits ckm_schur_complement_theorem with this companion
 in scope, the conditional may tighten — but that decision belongs to the
@@ -63,7 +63,7 @@ audit lane, not to this proposal.
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the companion.
 - No same-surface family arguments.
 
 The companion is pure symbolic algebra on `(m_1, m_2, m_3, c_12, c_23)` with
