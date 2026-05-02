@@ -1,8 +1,24 @@
 # Color-Singlet Projection Correction to y_t
 
 **Date:** 2026-04-15
-**Status:** DERIVED quantitative support on the live YT lane -- zero SM
-imports on the framework-side readout
+**Type:** positive_theorem
+**Claim scope:** the algebraic Fierz identity `R_conn = (N_c^2 - 1)/N_c^2 = 8/9`
+at `N_c = 3` (in-scope class-A group theory) and the channel-counting
+argument that the singlet projection contributes `sqrt(R_conn)` to the
+Yukawa vertex while the EW vacuum-polarization adjoint channel contributes
+`R_conn` to the EW couplings (in-scope class-C structural derivation). The
+**bridge** `R_conn = 8/9` from a CMT partition-function identity to the
+*physical scalar self-energy ratio* on the framework's lattice surface, the
+**RGE running** from `M_Pl` to `m_t`, the **MSbar-to-pole** conversion, and
+the **specific physical numerical predictions** `y_t(v) = 0.9176`,
+`m_t(pole) = 172.57 GeV`, `m_H = 119.8 GeV`, `alpha_s(M_Z) = 0.1181` are
+explicitly **out of scope** here and enter only as admitted-context audit
+comparators (see "Out of scope" section below).
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+The current audit verdict is `audited_conditional` and audit-lane
+ratification is required before any retained-grade status applies.
 **Script:** `scripts/frontier_yt_color_projection_correction.py` (7/7 PASS)
 
 ---
@@ -33,25 +49,32 @@ the primary lane.
 
 ---
 
-## Numerical Results
+## Numerical Results (out-of-scope numerical readout — admitted-context only)
 
-With the correction applied and proper MSbar-to-pole conversion:
+**This subsection is out of the in-scope claim of this note.** The numerical
+table below is included as an audit-comparator readout under explicit
+admitted-context labels. The retained / proposed-retained status of the
+underlying RGE running, MSbar-to-pole conversion, lambda-stability boundary,
+and PDG observable comparators is decided by the audit lane on its own
+authority rows, not here.
 
-| Quantity              | Framework  | Observed  | Deviation |
-|-----------------------|------------|-----------|-----------|
-| m_t(pole, 2-loop)     | 172.57 GeV | 172.69 GeV | -0.07%   |
-| m_t(pole, 3-loop)     | 173.10 GeV | 172.69 GeV | +0.24%   |
-| m_H(2-loop, lam=0)    | 119.77 GeV | 125.25 GeV | -4.37%   |
-| alpha_s(M_Z)           | 0.1181     | 0.1179     | +0.14%   |
+With the correction applied and proper MSbar-to-pole conversion (admitted-
+context: depends on standard SM RGE+matching, which is not load-bearing on
+this note's in-scope class-A/C content):
 
-These central values are the current package readout. On the primary Ward path
-the current precision caveat is the standard-method residual budget; on the
-independent Schur-bridge cross-check path, the old bridge budget remains:
+| Quantity              | Framework  | Observed (audit-comparator only)  | Deviation |
+|-----------------------|------------|-----------------------------------|-----------|
+| m_t(pole, 2-loop)     | 172.57 GeV | 172.69 GeV (PDG comparator) | -0.07%   |
+| m_t(pole, 3-loop)     | 173.10 GeV | 172.69 GeV (PDG comparator) | +0.24%   |
+| m_H(2-loop, lam=0)    | 119.77 GeV | 125.25 GeV (PDG comparator) | -4.37%   |
+| alpha_s(M_Z)           | 0.1181     | 0.1179 (PDG comparator)     | +0.14%   |
 
-- `1.2147511%` conservative
-- `0.75500635%` support-tight on the current viable family average
+The "Observed" column entries are PDG measurement comparators in the
+audit-comparator role only. They are **never** consumed as derivation inputs
+by the in-scope algebraic content of this note (Fierz identity at `N_c = 3`
+giving `R_conn = 8/9`; channel-counting `sqrt(R_conn)` versus `R_conn`).
 
-Improvement from the correction:
+Improvement from the correction (audit-comparator readout only):
 
 | Quantity              | Before  | After  | Improvement |
 |-----------------------|---------|--------|-------------|
@@ -276,34 +299,58 @@ to the observed 125.25 GeV.
 
 ## Part 6: Status Assessment
 
-### What is established
+### What is in-scope (algebraic / channel-counting content)
 
-1. The correction sqrt(8/9) on y_t is derived from the SAME R_conn = 8/9
-   used for EW couplings -- zero new assumptions.
+1. The Fierz identity `R_conn = (N_c^2 - 1)/N_c^2 = 8/9` at `N_c = 3` is a
+   pure group-theoretic identity, runner-verified at exact symbolic
+   precision (see also the audit-acceleration companion at
+   [`scripts/audit_companion_ew_fierz_general_n_c_exact.py`](./../scripts/audit_companion_ew_fierz_general_n_c_exact.py)
+   covering general `N_c`).
 
-2. m_t(pole) = 172.57 GeV (-0.07%) with the correction -- the best
-   framework prediction of ANY observable.
+2. The channel-counting argument that the singlet projection contributes
+   `sqrt(R_conn)` to the Yukawa vertex while the EW vacuum-polarization
+   adjoint channel contributes `R_conn` to the EW gauge couplings is a
+   structural class-C derivation on the in-scope channel decomposition.
 
-3. m_H moves from +13% to -4%, in the right direction and consistent
-   with known perturbative-order corrections.
+3. The two corrections (sqrt(8/9) on y_t and 9/8 on alpha_EW) are
+   algebraically related through the same group-theory number; this
+   consistency is in-scope.
 
-4. The correction is consistent with the EW correction (opposite sign,
-   same R_conn).
+4. No double counting with the Ward matching correction (verified).
 
-5. No double counting with the Ward matching correction (verified).
+### What is out-of-scope (audit-pending or admitted-context)
 
-6. alpha_s(M_Z) is unaffected (+0.14%, same as before).
+1. **R_conn bridge from CMT.** The audit verdict explicitly identifies
+   the bridge from a CMT partition-function identity to the physical
+   scalar self-energy ratio on the framework's lattice surface as
+   **not yet derived** in this note. The corresponding lattice
+   measurement (R_conn on SU(3) at beta = 6) is the audit-lane's
+   identified repair target. Until that bridge closes, this note
+   cannot be cited as a theorem-grade zero-import y_t derivation.
 
-### What prevents THEOREM status
+2. **RGE running and MSbar-to-pole conversion.** Standard SM 2-loop /
+   3-loop RGE machinery is admitted-context, not derived here.
 
-The sqrt(8/9) correction inherits the same gap as the EW 9/8 correction
-(YT_EW_COLOR_PROJECTION_THEOREM.md, Section 5.2): R_conn = 8/9 is
-physically motivated and numerically validated, but not derivable from
-the CMT partition-function identity alone.
+3. **lambda(M_Pl) = 0 stability boundary.** The Higgs-mass extraction
+   uses a stability-boundary condition that is admitted-context; this
+   note does not derive that boundary.
 
-To promote to THEOREM, the same lattice measurement that would close
-the EW correction suffices: compute R_conn on the SU(3) lattice at
-beta = 6 and verify R_conn = 8/9 to statistical precision.
+4. **Specific physical numerical predictions.** `y_t(v) = 0.9176`,
+   `m_t(pole) = 172.57 GeV`, `m_H = 119.8 GeV`, `alpha_s(M_Z) = 0.1181`
+   are out-of-scope numerical readouts whose precision and validity
+   depend on the admitted-context items (1)-(3) above.
+
+5. **PDG comparators.** `m_t(pole) = 172.69 GeV`, `m_H = 125.25 GeV`,
+   `alpha_s(M_Z) = 0.1179` appear only in the audit-comparator role.
+   They are never consumed as derivation inputs by the in-scope
+   algebraic content of this note.
+
+### Path to retained-grade status (decided by audit lane)
+
+The audit-lane verdict identifies as the repair target: compute `R_conn`
+on the SU(3) lattice at `beta = 6` and verify `R_conn = 8/9` to
+statistical precision. This is a separate audit-lane item, not addressed
+by this note.
 
 ### The correction chain
 
@@ -335,16 +382,21 @@ Every step traces to the axiom. Zero free parameters. Zero imports.
 
 ## Import Status Table
 
-| Element                          | Value      | Status   | Source                            |
-|----------------------------------|------------|----------|-----------------------------------|
-| g_bare = 1                       | 1.0        | AXIOM    | Cl(3) canonical                   |
-| <P> = 0.5934                     | 0.5934     | COMPUTED | SU(3) MC at beta = 6             |
-| u_0 = <P>^{1/4}                  | 0.8777     | COMPUTED | mean-field link                   |
-| R_conn = (N_c^2-1)/N_c^2         | 8/9        | DERIVED  | 1/N_c expansion (RCONN_DERIVED_NOTE.md) |
-| Ward BC: y_t(M_Pl) = 0.436       | 0.4358     | DERIVED  | y_t/g_s = 1/sqrt(6)              |
-| y_t(v) [Ward] = 0.973            | 0.9732     | DERIVED  | backward Ward scan               |
-| sqrt(8/9) correction             | 0.9428     | DERIVED  | scalar Z_phi (this note)          |
-| y_t(v) [physical] = 0.9176       | 0.9176     | DERIVED  | Ward * sqrt(8/9)                  |
-| m_t(pole, 2-loop) = 172.57 GeV   | 172.57     | DERIVED  | MSbar-to-pole conversion          |
-| m_H(2-loop) = 119.8 GeV          | 119.77     | DERIVED  | lambda(M_Pl) = 0 stability       |
-| alpha_s(M_Z) = 0.1181            | 0.1181     | DERIVED  | 2-loop QCD running                |
+The following table records the role of each element in the chain. The
+"Status" column distinguishes in-scope content of this note from
+admitted-context items that depend on separate authority rows.
+
+| Element                          | Value      | Status                          | Source                            |
+|----------------------------------|------------|---------------------------------|-----------------------------------|
+| g_bare = 1                       | 1.0        | admitted-context (Wilson)       | Cl(3) canonical convention         |
+| <P> = 0.5934                     | 0.5934     | admitted-context (lattice MC)   | SU(3) MC at beta = 6              |
+| u_0 = <P>^{1/4}                  | 0.8777     | admitted-context (lattice MC)   | mean-field link                    |
+| R_conn = (N_c^2-1)/N_c^2 (Fierz, group theory) | 8/9 | **in-scope (Fierz, class A)**   | 1/N_c expansion (RCONN_DERIVED_NOTE.md) |
+| R_conn bridge to scalar Z_phi    | 8/9        | **out-of-scope (audit-pending)** | requires CMT partition-function identity bridge — audit verdict's repair target |
+| Ward BC: y_t(M_Pl) = 0.436       | 0.4358     | admitted-context (Ward)         | y_t/g_s = 1/sqrt(6)               |
+| y_t(v) [Ward] = 0.973            | 0.9732     | admitted-context (RGE)          | backward Ward scan                 |
+| sqrt(8/9) channel-counting       | 0.9428     | **in-scope (class C)**          | scalar singlet projection (this note) |
+| y_t(v) [physical] = 0.9176       | 0.9176     | out-of-scope (numerical readout)| Ward × sqrt(8/9)                  |
+| m_t(pole, 2-loop) = 172.57 GeV   | 172.57     | out-of-scope (numerical readout)| MSbar-to-pole conversion           |
+| m_H(2-loop) = 119.8 GeV          | 119.77     | out-of-scope (numerical readout)| lambda(M_Pl) = 0 stability        |
+| alpha_s(M_Z) = 0.1181            | 0.1181     | out-of-scope (numerical readout)| 2-loop QCD running                 |
