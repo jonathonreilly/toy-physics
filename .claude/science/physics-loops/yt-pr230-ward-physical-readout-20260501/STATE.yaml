@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-122-effective-potential-hessian-source-overlap-no-go
-blocks_completed: 122
-active_route: "effective-potential Hessian / canonical radial shortcut stress test"
-active_hard_residual: "Canonical VEV, W/Z masses, and scalar Hessian eigenvalues can be held fixed while the PR230 source operator direction rotates; effective-potential radial curvature does not derive source overlap, pole residue, or canonical-Higgs identity."
+current_phase: campaign-rerun-block-123-brst-nielsen-higgs-identity-no-go
+blocks_completed: 123
+active_route: "BRST/ST/Nielsen gauge-identity shortcut stress test"
+active_hard_residual: "BRST/ST residuals and Nielsen physical-pole gauge-parameter independence can be held fixed while a gauge-invariant neutral scalar source direction rotates; gauge identities do not derive source overlap, source-pole purity, or canonical-Higgs identity."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"

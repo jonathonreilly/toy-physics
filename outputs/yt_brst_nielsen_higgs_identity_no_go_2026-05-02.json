@@ -1,0 +1,177 @@
+{
+  "actual_current_surface_status": "exact negative boundary / BRST-Nielsen identities not Higgs-pole identity",
+  "exact_next_action": "Pursue a microscopic scalar source-pole identity or production same-source pole-residue/sector-overlap measurement; do not infer canonical-Higgs identity from BRST/ST/Nielsen constraints alone.",
+  "fail_count": 0,
+  "identity_family": {
+    "checks": {
+      "gauge_identity_surface_fixed": true,
+      "same_source_gauge_slope_span": 0.5464038785744227,
+      "same_source_top_slope_span": 0.7692057185897816,
+      "source_overlap_span": 0.5464038785744227
+    },
+    "fixed_inputs": {
+      "canonical_higgs_pole_mass": 0.5,
+      "canonical_top_yukawa": 1.0,
+      "canonical_vev": 1.0,
+      "g2": 0.65,
+      "gY": 0.36,
+      "orthogonal_scalar_pole_mass": 1.4,
+      "orthogonal_scalar_top_coupling": -0.25
+    },
+    "rows": [
+      {
+        "gauge_identity_surface": {
+          "brst_transversality_residual": 0.0,
+          "goldstone_masses_by_xi": [
+            0.0,
+            0.10562500000000001,
+            0.316875
+          ],
+          "m_w": 0.325,
+          "m_z": 0.3715171597651985,
+          "nielsen_physical_pole_mass_xi_derivative": 0.0,
+          "st_identity_residual": 0.0,
+          "xi_values_checked": [
+            0.0,
+            1.0,
+            3.0
+          ]
+        },
+        "scalar_spectrum": {
+          "canonical_higgs_pole_mass": 0.5,
+          "orthogonal_scalar_pole_mass": 1.4
+        },
+        "source_operator": {
+          "direction_in_neutral_scalar_space": [
+            1.0,
+            0.0
+          ],
+          "overlap_with_canonical_higgs_radial_mode": 1.0,
+          "overlap_with_orthogonal_scalar": 0.0,
+          "same_source_gauge_mass_slope_proxy": 1.0,
+          "same_source_top_slope": 1.0
+        },
+        "theta": 0.0
+      },
+      {
+        "gauge_identity_surface": {
+          "brst_transversality_residual": 0.0,
+          "goldstone_masses_by_xi": [
+            0.0,
+            0.10562500000000001,
+            0.316875
+          ],
+          "m_w": 0.325,
+          "m_z": 0.3715171597651985,
+          "nielsen_physical_pole_mass_xi_derivative": 0.0,
+          "st_identity_residual": 0.0,
+          "xi_values_checked": [
+            0.0,
+            1.0,
+            3.0
+          ]
+        },
+        "scalar_spectrum": {
+          "canonical_higgs_pole_mass": 0.5,
+          "orthogonal_scalar_pole_mass": 1.4
+        },
+        "source_operator": {
+          "direction_in_neutral_scalar_space": [
+            0.9689124217106447,
+            0.24740395925452294
+          ],
+          "overlap_with_canonical_higgs_radial_mode": 0.9689124217106447,
+          "overlap_with_orthogonal_scalar": 0.24740395925452294,
+          "same_source_gauge_mass_slope_proxy": 0.9689124217106447,
+          "same_source_top_slope": 0.907061431897014
+        },
+        "theta": 0.25
+      },
+      {
+        "gauge_identity_surface": {
+          "brst_transversality_residual": 0.0,
+          "goldstone_masses_by_xi": [
+            0.0,
+            0.10562500000000001,
+            0.316875
+          ],
+          "m_w": 0.325,
+          "m_z": 0.3715171597651985,
+          "nielsen_physical_pole_mass_xi_derivative": 0.0,
+          "st_identity_residual": 0.0,
+          "xi_values_checked": [
+            0.0,
+            1.0,
+            3.0
+          ]
+        },
+        "scalar_spectrum": {
+          "canonical_higgs_pole_mass": 0.5,
+          "orthogonal_scalar_pole_mass": 1.4
+        },
+        "source_operator": {
+          "direction_in_neutral_scalar_space": [
+            0.7960837985490559,
+            0.6051864057360395
+          ],
+          "overlap_with_canonical_higgs_radial_mode": 0.7960837985490559,
+          "overlap_with_orthogonal_scalar": 0.6051864057360395,
+          "same_source_gauge_mass_slope_proxy": 0.7960837985490559,
+          "same_source_top_slope": 0.644787197115046
+        },
+        "theta": 0.65
+      },
+      {
+        "gauge_identity_surface": {
+          "brst_transversality_residual": 0.0,
+          "goldstone_masses_by_xi": [
+            0.0,
+            0.10562500000000001,
+            0.316875
+          ],
+          "m_w": 0.325,
+          "m_z": 0.3715171597651985,
+          "nielsen_physical_pole_mass_xi_derivative": 0.0,
+          "st_identity_residual": 0.0,
+          "xi_values_checked": [
+            0.0,
+            1.0,
+            3.0
+          ]
+        },
+        "scalar_spectrum": {
+          "canonical_higgs_pole_mass": 0.5,
+          "orthogonal_scalar_pole_mass": 1.4
+        },
+        "source_operator": {
+          "direction_in_neutral_scalar_space": [
+            0.4535961214255773,
+            0.8912073600614354
+          ],
+          "overlap_with_canonical_higgs_radial_mode": 0.4535961214255773,
+          "overlap_with_orthogonal_scalar": 0.8912073600614354,
+          "same_source_gauge_mass_slope_proxy": 0.4535961214255773,
+          "same_source_top_slope": 0.23079428141021846
+        },
+        "theta": 1.1
+      }
+    ]
+  },
+  "parent_certificates": {
+    "fh_lsz_higgs_pole_identity_gate": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
+    "scalar_kernel_ward_identity": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
+    "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "ward_repair_audit": "outputs/yt_ward_physical_readout_repair_audit_2026-05-01.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Gauge identities constrain gauge redundancies and gauge-parameter dependence, not the gauge-invariant neutral scalar source direction.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix-element readout or yt_ward_identity as authority",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "BRST, Slavnov-Taylor, and Nielsen-style gauge identities are not the missing PR #230 source-to-canonical-Higgs theorem.  The witness keeps the gauge identity surface, gauge masses, Goldstone gauge-parameter bookkeeping, physical pole gauge-independence, and scalar spectrum fixed while rotating a gauge-invariant neutral source operator between the canonical Higgs radial mode and an orthogonal scalar.  The source overlap and same-source response then change, so these identities cannot replace a scalar pole-residue measurement, source-pole purity theorem, or canonical-Higgs identity certificate."
+}

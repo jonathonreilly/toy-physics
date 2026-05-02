@@ -44,6 +44,7 @@ plus ready chunk response-stability diagnostic
 plus FH gauge-response mixed-scalar obstruction
 plus reflection-positivity LSZ shortcut no-go
 plus effective-potential Hessian source-overlap no-go
+plus BRST/Nielsen Higgs-identity no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -107,6 +108,23 @@ source pole `cos(theta) h + sin(theta) chi`.  A same-source W/Z response
 measurement is therefore not closure unless the source pole is proved to be
 the canonical Higgs radial mode, orthogonal scalar top coupling is proved
 zero, or the orthogonal coupling is independently fixed.
+
+BRST/Nielsen Higgs-identity checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / BRST-Nielsen identities not Higgs-pole identity
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_brst_nielsen_higgs_identity_no_go.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+BRST/ST residuals and Nielsen physical-pole gauge-parameter independence can
+stay fixed while the gauge-invariant neutral source rotates between the
+canonical Higgs radial mode and an orthogonal scalar.  Gauge identities are
+therefore gauge-consistency support only; they do not derive source overlap,
+source-pole purity, `kappa_s=1`, or retained/proposed-retained `y_t` closure.
 
 Allowed wording:
 

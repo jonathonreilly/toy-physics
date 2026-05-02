@@ -28,6 +28,7 @@
 | IR / finite-volume kernel limit | needed for ladder eigenvalue crossing | not yet fixed | open import |
 | Reflection positivity / OS reconstruction | possible scalar spectral shortcut | exact negative boundary for PR230 LSZ closure | allowed as positivity support only; does not derive pole saturation, source residue, or canonical-Higgs identity |
 | Effective-potential Hessian / radial curvature | possible canonical-Higgs identity shortcut | exact negative boundary for PR230 source-overlap closure | allowed as canonical-field support only; does not derive the source operator direction |
+| BRST/ST/Nielsen gauge identities | possible canonical-Higgs identity shortcut | exact negative boundary for PR230 source-pole identity closure | allowed as gauge-consistency support only; does not derive neutral scalar source direction or source-pole purity |
 | Full-staggered PT formula layer | supplies `D_psi`, `D_gluon`, scalar/gauge kinematics | exact support only | formulas reusable; old alpha/plaquette/H_unit surfaces forbidden |
 | EW/Higgs canonical doublet notes | structural guardrails | proposed/unaudited or conditional parents | may not be used as PR230 source-normalization closure |
 

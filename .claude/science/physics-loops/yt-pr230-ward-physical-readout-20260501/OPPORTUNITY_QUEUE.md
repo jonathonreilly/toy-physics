@@ -277,6 +277,9 @@ canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.
    residue remains underidentified.  The effective-potential Hessian no-go
    also blocks the radial-curvature shortcut: canonical VEV, W/Z masses, and
    Hessian eigenvalues do not fix the source operator direction.
+   The BRST/Nielsen Higgs-identity no-go also blocks the gauge-identity
+   shortcut: BRST/ST residuals and physical-pole gauge-parameter independence
+   do not fix the gauge-invariant neutral scalar source direction.
    The scalar carrier/projector closure attempt also blocks the taste/projector
    shortcut.  Color-singlet support and unit taste-singlet algebra do not
    derive physical carrier authority, preserve unit-projector crossings, or

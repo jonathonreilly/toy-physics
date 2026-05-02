@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=65 FAIL=0
+# SUMMARY: PASS=77 FAIL=0
 ```
 
 The runner verifies:
@@ -54,6 +54,7 @@ The runner verifies:
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | canonical Higgs kinetic renormalization fixes the source overlap | no |
 | source contact-term curvature scheme fixes the pole residue | no |
+| BRST/ST/Nielsen identities fix the source pole as canonical Higgs | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ production postprocess gate is ready | no |
 | current FH/LSZ resume support makes 12h foreground production launch safe | no |

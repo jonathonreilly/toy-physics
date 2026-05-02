@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## BRST/ST/Nielsen identities are not a Higgs-pole identity
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_brst_nielsen_higgs_identity_no_go.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+Gauge identities constrain gauge redundancies and gauge-parameter dependence;
+they do not determine a gauge-invariant neutral scalar source direction.  The
+runner keeps BRST/ST residuals, Nielsen physical-pole gauge-parameter
+independence, W/Z mass algebra, Goldstone bookkeeping, and scalar pole spectrum
+fixed while rotating `O_s(theta)=cos(theta) h + sin(theta) chi`.  The source
+overlap and same-source top/gauge response then vary.  Therefore BRST/ST/Nielsen
+identities cannot replace a scalar pole-residue measurement, source-pole purity
+theorem, or canonical-Higgs identity certificate.
+
 ## Effective-potential Hessian is not a source-overlap identity
 
 Runner:

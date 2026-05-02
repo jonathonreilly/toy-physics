@@ -2704,3 +2704,17 @@ Disposition: exact negative boundary.  SSB radial curvature, canonical VEV,
 W/Z masses, and scalar Hessian eigenvalues do not determine the PR #230 source
 operator direction or source-pole identity.  No retained or proposed-retained
 wording is allowed.
+
+## 2026-05-02 - Block 123 BRST/Nielsen Higgs-Identity No-Go
+
+Review stance: analytic shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_brst_nielsen_higgs_identity_no_go.py`.
+- Added `docs/YT_BRST_NIELSEN_HIGGS_IDENTITY_NO_GO_NOTE_2026-05-02.md`.
+- Added `outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  BRST/ST gauge identities and Nielsen
+physical-pole gauge-parameter independence do not determine the gauge-invariant
+neutral scalar source direction, source overlap, or source-pole purity.  No
+retained or proposed-retained wording is allowed.

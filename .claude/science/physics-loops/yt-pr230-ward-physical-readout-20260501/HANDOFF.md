@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 BRST/Nielsen Higgs-identity no-go:
+
+- Added `scripts/frontier_yt_brst_nielsen_higgs_identity_no_go.py`,
+  `docs/YT_BRST_NIELSEN_HIGGS_IDENTITY_NO_GO_NOTE_2026-05-02.md`,
+  and `outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json`.
+- Result: BRST/ST residuals, Nielsen physical-pole gauge-parameter
+  independence, W/Z mass algebra, and scalar pole spectrum can stay fixed
+  while a gauge-invariant neutral scalar source rotates between the canonical
+  Higgs radial mode and an orthogonal scalar.
+- Retained-route gate is `PASS=77 FAIL=0`; campaign status is
+  `PASS=103 FAIL=0` over 107 certificates.
+- Chunks007-008 are running in sessions `38412` and `78004`.
+
+Next exact action: continue scalar-denominator/canonical-Higgs theorem work
+or process chunks007-008 if they finish.  Do not use BRST/ST/Nielsen identities
+as source-pole identity, `kappa_s=1`, or retained/proposed-retained closure.
+
 Latest checkpoint, 2026-05-02 effective-potential Hessian source-overlap no-go:
 
 - Added `scripts/frontier_yt_effective_potential_hessian_source_overlap_no_go.py`,

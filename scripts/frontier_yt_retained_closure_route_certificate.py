@@ -100,6 +100,7 @@ def main() -> int:
         "fh_lsz_soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
         "reflection_positivity_lsz_shortcut": "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json",
         "effective_potential_hessian_source_overlap": "outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json",
+        "brst_nielsen_higgs_identity": "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -485,6 +486,23 @@ def main() -> int:
         )
         > 0.4
     )
+    brst_nielsen_higgs_identity_blocks = (
+        "BRST-Nielsen identities not Higgs-pole identity"
+        in certificates["brst_nielsen_higgs_identity"].get("actual_current_surface_status", "")
+        and certificates["brst_nielsen_higgs_identity"].get("proposal_allowed") is False
+        and certificates["brst_nielsen_higgs_identity"]
+        .get("identity_family", {})
+        .get("checks", {})
+        .get("gauge_identity_surface_fixed")
+        is True
+        and float(
+            certificates["brst_nielsen_higgs_identity"]
+            .get("identity_family", {})
+            .get("checks", {})
+            .get("source_overlap_span", 0.0)
+        )
+        > 0.5
+    )
     scalar_carrier_projector_closure_blocked = (
         "scalar carrier-projector closure attempt blocked"
         in certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", "")
@@ -863,6 +881,11 @@ def main() -> int:
         ),
     )
     report(
+        "brst-nielsen-identities-not-higgs-pole-identity",
+        brst_nielsen_higgs_identity_blocks,
+        certificates["brst_nielsen_higgs_identity"].get("actual_current_surface_status", ""),
+    )
+    report(
         "scalar-carrier-projector-closure-attempt-blocked",
         scalar_carrier_projector_closure_blocked,
         certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", ""),
@@ -1092,6 +1115,10 @@ def main() -> int:
             "The effective-potential Hessian/source-overlap no-go blocks the "
             "radial-curvature repair: canonical VEV, W/Z masses, and scalar "
             "Hessian eigenvalues do not fix the source operator direction.  "
+            "The BRST/Nielsen Higgs-identity no-go blocks the gauge-identity "
+            "repair too: BRST/ST residuals and physical pole "
+            "gauge-parameter independence can stay fixed while the neutral "
+            "source direction and source overlap rotate.  "
             "The scalar carrier/projector closure attempt confirms the "
             "remaining taste/carrier side is also open: unit taste algebra and "
             "color-singlet support do not admit non-origin corners, preserve "

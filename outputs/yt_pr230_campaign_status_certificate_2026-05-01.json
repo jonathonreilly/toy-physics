@@ -3,6 +3,7 @@
   "certificate_statuses": {
     "assumption_stress": "open / assumption-import stress complete",
     "bridge_stack": "exact negative boundary / bridge stack not PR230 closure",
+    "brst_nielsen_higgs_identity": "exact negative boundary / BRST-Nielsen identities not Higgs-pole identity",
     "bs_kernel_residue_degeneracy": "exact negative boundary / scalar Bethe-Salpeter pole-residue degeneracy",
     "canonical_scalar_import": "exact negative boundary / canonical scalar normalization import audit",
     "cl3_source_unit": "exact negative boundary / Cl3 source-unit normalization no-go",
@@ -109,7 +110,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 102,
+  "pass_count": 103,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

@@ -138,6 +138,9 @@ def main() -> int:
         "effective_potential_hessian_source_overlap": load(
             "outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json"
         ),
+        "brst_nielsen_higgs_identity": load(
+            "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -525,6 +528,12 @@ def main() -> int:
         "effective-potential Hessian not source-overlap identity"
         in str(statuses["effective_potential_hessian_source_overlap"]),
         statuses["effective_potential_hessian_source_overlap"],
+    )
+    report(
+        "brst-nielsen-identities-not-higgs-pole-identity",
+        "BRST-Nielsen identities not Higgs-pole identity"
+        in str(statuses["brst_nielsen_higgs_identity"]),
+        statuses["brst_nielsen_higgs_identity"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",
