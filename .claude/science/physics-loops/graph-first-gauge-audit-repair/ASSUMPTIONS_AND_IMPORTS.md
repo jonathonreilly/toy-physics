@@ -1,0 +1,12 @@
+# Assumptions And Imports
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| `Cl(3)` cubic taste algebra on `Z^3` | Native `SU(2)` algebra and Clifford checks | zero-input structural | `docs/NATIVE_GAUGE_CLOSURE_NOTE.md`; `scripts/frontier_non_abelian_gauge.py` | yes | yes | already checked directly by runner | closed inside bounded gauge backbone |
+| Graph-first weak-axis selector | Supplies selected axis for graph-first gauge route | retained-grade dependency | `docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`; `effective_status=retained_bounded` | yes | yes | audit ledger already ratified; runner `PASS=63 FAIL=0` | blocker retired |
+| Graph-first `SU(3)` integration | Supplies selected-axis commutant and structural `su(3)` closure | retained-grade dependency | `docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`; `effective_status=retained_bounded` | yes | yes | audit ledger already ratified; runner `PASS=111 FAIL=0` | closed within bounded structural scope |
+| Left-handed abelian eigenvalue surface | Bounded abelian corollary carried by native gauge note | bounded support | `docs/NATIVE_GAUGE_CLOSURE_NOTE.md`; checked by `scripts/frontier_non_abelian_gauge.py` | yes, but only for bounded abelian statement | yes | narrow ratio theorem separates structural ratio from normalization | bounded; no full `U(1)_Y` claim |
+| `(+1/3, -1)` absolute normalization | Converts ratio to conventional eigenvalue pair | admitted normalization | `docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md`; `docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md` | yes for LHCM convention-normalized row | no for ratio theorem | derive nonconventional normalization or keep boxed as corollary | not an independent positive theorem in LHCM |
+| SM hypercharge / `Q = T_3 + Y/2` labelling | Downstream physical charge identification | unsupported import for this row | `HYPERCHARGE_IDENTIFICATION_NOTE.md` lane | no for native gauge bounded scope | no | separate audit lane only | explicitly out of scope |
+| Old exploratory non-Abelian probes | Historical graph-coloring/internal-cycle/Wilson-loop evidence | historical support/provenance | old version of `scripts/frontier_non_abelian_gauge.py` | no | no | replaced by audit-grade runner on current main | not publication authority |
+

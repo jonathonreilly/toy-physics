@@ -1,0 +1,42 @@
+loop: graph-first-gauge-audit-repair
+mode: run
+runtime_requested: 3h
+max_cycles: 1
+target: best-honest-status
+branch: physics-loop/graph-first-gauge-audit-repair-block01-20260502
+base: origin/main
+cycle_count: 1
+active_route: certify_already_landed_audit_repair
+actual_current_surface_status: bounded-support
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+audit_required_before_effective_retained: false
+bare_retained_allowed: false
+files_touched:
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/GOAL.md
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/ROUTE_PORTFOLIO.md
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/NO_GO_LEDGER.md
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/ARTIFACT_PLAN.md
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/CLAIM_STATUS_CERTIFICATE.md
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/HANDOFF.md
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/REVIEW_HISTORY.md
+  - .claude/science/physics-loops/graph-first-gauge-audit-repair/PR_BACKLOG.md
+open_imports:
+  - full anomaly-complete U(1)_Y closure is separate from native gauge backbone
+  - SM hypercharge and electric-charge labelling are separate downstream lanes
+no_go_routes:
+  - old exploratory non-Abelian probes as authority for native gauge closure
+  - independent retained-grade LHCM without deriving absolute normalization
+verification:
+  graph_first_selector: PASS=63 FAIL=0
+  graph_first_su3: PASS=111 FAIL=0
+  native_gauge: PASS=50 FAIL=0
+  lh_ratio: PASS=23 FAIL=0
+  audit_lint: "1691 rows checked; 52 warnings; OK: no errors"
+review_disposition: pass
+pr_status: "created and verified: https://github.com/jonathonreilly/cl3-lattice-framework/pull/378"
+next_exact_action: no graph-first gauge audit repair remains; use PR #378 as the review handoff
+stop_condition: max cycle complete after handoff and verification
