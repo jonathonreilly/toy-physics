@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T16:53:49.654559+00:00",
+  "generated_at": "2026-05-02T16:56:27.456698+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -2160,6 +2160,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/coupled_field_generated_family_probe.py"
+    },
+    "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cpt_particle_antiparticle_mass_equality_check.py"
     },
     "critical_exponents_topology_note_2026-04-10": {
       "assert_count": 0,
@@ -17702,6 +17714,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cpt_particle_antiparticle_mass_equality_check.py": {
+      "assert_count": 0,
+      "claims": [
+        "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 12,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/decoherence_action_independence.py": {
@@ -35418,12 +35445,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 148,
-      "C": 509,
+      "C": 510,
       "D": 195,
       "none": 409
     },
-    "runners_classified": 1270,
-    "runners_with_C": 609,
+    "runners_classified": 1271,
+    "runners_with_C": 610,
     "runners_with_D": 306
   }
 }

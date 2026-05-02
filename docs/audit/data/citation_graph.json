@@ -2901,6 +2901,10 @@
       "to": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
     },
     {
+      "from": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
       "from": "cross_lane_dependency_map_note_2026-04-30",
       "to": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
     },
@@ -20001,7 +20005,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T16:53:46.559909+00:00",
+  "generated_at": "2026-05-02T16:56:24.414813+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24265,6 +24269,19 @@
       "path": "docs/CPT_EXACT_NOTE.md",
       "runner_path": null,
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
+    },
+    "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02": {
+      "claim_id": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "note_hash": "3952cc7949fbc6d96ee612cde3cb2c657d0213c5daa0a2645c8624156c5f9164",
+      "path": "docs/CPT_PARTICLE_ANTIPARTICLE_MASS_EQUALITY_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cpt_particle_antiparticle_mass_equality_check.py",
+      "title": "Particle/Antiparticle Mass Equality from Retained CPT"
     },
     "cross_family_universality_note": {
       "claim_id": "cross_family_universality_note",
@@ -46359,19 +46376,19 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 6,
       "none": 1764,
-      "positive_theorem": 9
+      "positive_theorem": 10
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 507,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 611
+      "positive_theorem": 612
     },
-    "edge_count": 5000,
-    "leaf_count": 751,
-    "node_count": 1779,
+    "edge_count": 5001,
+    "leaf_count": 752,
+    "node_count": 1780,
     "root_count": 1213,
-    "runners_with_path": 1341
+    "runners_with_path": 1342
   }
 }

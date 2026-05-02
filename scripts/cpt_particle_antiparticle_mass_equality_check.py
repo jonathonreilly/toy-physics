@@ -184,11 +184,10 @@ def main() -> None:
     print("Note: this runner verifies the energy-equality consequence of CPT")
     print("invariance on a 4-mode toy fermionic block-Hamiltonian. The proof")
     print("in the companion theorem note is dimension-independent: it uses")
-    print("only [CPT, H] = 0 (retained from cpt_exact_note) plus the standard")
-    print("CPT action on particle/antiparticle states. The toy here is a")
-    print("structural witness; the full framework matter content has the same")
-    print("argument apply to every species in the retained one-generation")
-    print("(and three-generation) closure.")
+    print("only [CPT, H] = 0 from the declared cpt_exact_note dependency plus")
+    print("the convention that particle/antiparticle sectors are exchanged by")
+    print("the CPT operator. The toy here is a structural witness; concrete")
+    print("species-level bookkeeping is left outside this runner's scope.")
     if not all_ok:
         raise SystemExit(1)
 

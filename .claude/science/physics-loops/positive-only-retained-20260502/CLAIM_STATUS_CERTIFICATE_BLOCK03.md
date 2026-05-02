@@ -11,8 +11,9 @@
 ## Strict-bar gate
 
 - claim_type: positive_theorem ✓
-- single load-bearing dep at retained-grade on live ledger ✓
-  (`cpt_exact_note` is at `effective_status: retained`)
+- load-bearing dependency disclosed: PENDING
+  (`cpt_exact_note`; retained-grade closure awaits the independent audit lane
+  after graph strengthening)
 - zero admitted physics inputs ✓ (CPT operator action is structural;
   eigenvalue invariance is basic linear algebra)
 - runner produces classifiable PASS lines ✓ (5/5 PASS, including a
@@ -23,28 +24,26 @@
 
 ```yaml
 claim_type_author_hint: positive_theorem
-claim_scope: "On the framework's retained CPT-invariant Hamiltonian, every particle energy eigenstate has an antiparticle eigenstate with identical energy; in particular, particle/antiparticle rest masses are equal. Holds uniformly for every fermion species in the retained matter content."
+claim_scope: "On the framework's declared CPT-invariant Hamiltonian, every CPT-exchanged particle-sector energy eigenstate has an antiparticle-sector eigenstate with identical energy; in particular, rest masses of CPT-exchanged pairs are equal."
 admitted_context_inputs:
   - CPT operator action convention on particle/antiparticle states
   - eigenvalue invariance under (anti-)unitary conjugation
 upstream_dependencies:
-  - cpt_exact_note (effective_status: retained)
+  - cpt_exact_note
 runner_classified_passes: 5 PASS at machine precision (Hermiticity, [CPT, H] = 0, identical spectra, 5-trial universality, negative control without CPT shows split spectra)
 ```
 
-## Expected `effective_status` after audit
+## Audit-pending disposition
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-positive_theorem`:
-
-- chain_clean check: single dep at `retained` → True
-- claim_type = positive_theorem → `effective_status = retained`
+This certificate does not assign an audit verdict or an effective status. The
+claim is now scoped to CPT-exchanged sectors; retained-family status is computed
+only after independent audit and dependency closure.
 
 ## Dependency chain status snapshot (2026-05-02 live ledger)
 
-| Dep | Today's `effective_status` | Affects propagation? |
+| Dep | Today's effective status | Affects propagation? |
 |---|---|---|
-| `cpt_exact_note` | `retained` | clean |
+| `cpt_exact_note` | pipeline-derived; may be audit-pending after graph strengthening | pending independent audit/propagation |
 
 ## Review-loop disposition
 
@@ -64,4 +63,6 @@ What an auditor needs to evaluate this note:
    conclusion fails).
 4. The new audit prompt template.
 
-Expected outcome: `retained`.
+The intended outcome is a retained-family theorem if the independent audit
+ratifies the scoped CPT-exchanged-sector argument and the dependency remains
+clean.

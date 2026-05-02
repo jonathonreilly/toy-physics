@@ -64,8 +64,7 @@ SUMMARY
 Note: this runner verifies the energy-equality consequence of CPT
 invariance on a 4-mode toy fermionic block-Hamiltonian. The proof
 in the companion theorem note is dimension-independent: it uses
-only [CPT, H] = 0 (retained from cpt_exact_note) plus the standard
-CPT action on particle/antiparticle states. The toy here is a
-structural witness; the full framework matter content has the same
-argument apply to every species in the retained one-generation
-(and three-generation) closure.
+only [CPT, H] = 0 from the declared cpt_exact_note dependency plus
+the convention that particle/antiparticle sectors are exchanged by
+the CPT operator. The toy here is a structural witness; concrete
+species-level bookkeeping is left outside this runner's scope.
