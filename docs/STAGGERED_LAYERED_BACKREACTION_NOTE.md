@@ -22,14 +22,16 @@ instead of being imposed externally?
 
 | Family | n | zero-source `Phi` | zero-source force | source-on force | source `R^2` | `Phi` residual | norm drift | robustness | gauge |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| `layered_bipartite_dag_s13_n36` | 36 | `0.00e+00` | `+0.000e+00` | `+3.064e-01` TOWARD | `1.0000` | `3.84e-16` | `3.33e-16` | `3/3` | `N/A` |
-| `layered_bipartite_dag_s29_n55` | 55 | `0.00e+00` | `+0.000e+00` | `+1.849e-01` TOWARD | `1.0000` | `1.69e-16` | `2.22e-16` | `3/3` | `FAIL` |
+| `layered_bipartite_dag_s13_n36` | 36 | `0.00e+00` | `+0.000e+00` | `+3.116e-01` TOWARD | `0.9999` | `3.84e-16` | `3.33e-16` | `3/3` | `N/A` |
+| `layered_bipartite_dag_s29_n55` | 55 | `0.00e+00` | `+0.000e+00` | `+1.978e-01` TOWARD | `0.9987` | `1.69e-16` | `2.22e-16` | `3/3` | `FAIL` |
 
 ## Readout
 
 - Zero-source control is exact on both layered families.
 - The source-on response stays TOWARD on both families.
-- The source-response linearity is exact to machine precision (`R^2 = 1.0000`).
+- The source-response linearity stays above the `R^2 > 0.99` near-exact
+  threshold on both families (`R^2 = 0.9999` on the 36-node baseline,
+  `R^2 = 0.9987` on the 55-node stress family).
 - Norm stays machine-clean.
 - The DAG-compatible baseline has no gauge/current row, as expected.
 - The cycle-bearing stress family still has a weak gauge failure, so native
