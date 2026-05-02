@@ -6,31 +6,32 @@ checkpoint_interval: 30m
 deep_block: 90m
 goal: "NEW first-principles derivations from A_min + retained axiom-first foundations"
 date_started: 2026-05-01
-current_cycle: 1
-current_block: 01
-active_route: kms-from-rp
+current_cycle: 2
+current_block: 02
+active_route: hawking-temperature
 hard_residual: null
 files_touched:
   - docs/AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md
   - scripts/axiom_first_kms_condition_check.py
   - outputs/axiom_first_kms_condition_check_2026-05-01.txt
-  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/GOAL.md
-  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/ASSUMPTIONS_AND_IMPORTS.md
-  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/OPPORTUNITY_QUEUE.md
-  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/STATE.yaml
-  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/NO_GO_LEDGER.md
-  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/CLAIM_STATUS_CERTIFICATE_BLOCK01.md
-  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/REVIEW_HISTORY.md
-  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/HANDOFF.md
+  - docs/AXIOM_FIRST_HAWKING_TEMPERATURE_THEOREM_NOTE_2026-05-01.md
+  - scripts/axiom_first_hawking_temperature_check.py
+  - outputs/axiom_first_hawking_temperature_check_2026-05-01.txt
+  - .claude/science/physics-loops/24h-axiom-first-derivations-20260501/*
 open_imports:
   - Wick rotation (admitted convention; same as upstream RP note)
   - Standard cyclic-trace identity (basic linear algebra)
+  - Surface gravity κ definition (admitted-context, same as upstream Wald-Noether)
+  - Wick-rotation regularity at the bolt (admitted-context, same as upstream Wald-Noether)
 no_go_routes: []
 review_findings:
   - "Block 01 F1: corrected KMS direction F(t + i β_th) = G(t)"
   - "Block 01 F2: corrected strip bound to include exp(β_th * spread) factor"
   - "Block 01 F3: rewrote runner in eigenbasis to avoid numerical loss-of-precision"
+  - "Block 02 F1: all 6 runner tests PASS first run; geometric proof clean"
+  - "Block 02 F2: Schwarzschild benchmark T_H = 1/(8πGM) recovered exactly"
 pr_status:
-  - "Block 01: branch ready, PR pending push"
-next_exact_action: "Commit and push block01 branch, open PR, pivot to Block 02 (Hawking T_H from framework Killing horizon Wick rotation)"
+  - "Block 01: PR #257 open at https://github.com/jonathonreilly/cl3-lattice-framework/pull/257"
+  - "Block 02: branch ready (stacked on Block 01), PR pending push"
+next_exact_action: "Commit and push block02 branch, open stacked PR, pivot to Block 03 (Bekenstein bound) on independent branch from origin/main"
 stop_condition: null
