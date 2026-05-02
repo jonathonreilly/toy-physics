@@ -540,3 +540,20 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=52 FAIL=0
 ```
+
+Taste-corner ladder pole-witness obstruction checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / finite-ladder taste-corner pole-witness obstruction
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_taste_corner_ladder_pole_obstruction.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=27 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=53 FAIL=0
+```

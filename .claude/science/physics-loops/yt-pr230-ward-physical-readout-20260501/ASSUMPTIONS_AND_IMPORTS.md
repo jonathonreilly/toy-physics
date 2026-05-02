@@ -341,6 +341,17 @@ pole theorem.  They cannot be used as `kappa_s`, a canonical-Higgs LSZ
 normalization, or retained top-Yukawa closure unless the continuum/taste/
 projector limit and inverse-propagator derivative are derived or measured.
 
+Taste-corner carrier import:
+
+```text
+non-origin sin(p)=0 corners dominate finite ladder crossings
+physical-origin-only filtering removes every crossing
+```
+
+Any route that treats those non-origin corners as part of the physical scalar
+carrier must derive that taste/corner projection from the retained action.  It
+cannot be assumed as a proof input.
+
 Source-reparametrization gauge boundary:
 
 ```text

@@ -88,6 +88,9 @@ def main() -> int:
         "color_singlet_zero_mode_removed_ladder_pole_search": load(
             "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json"
         ),
+        "taste_corner_ladder_pole_obstruction": load(
+            "outputs/yt_taste_corner_ladder_pole_obstruction_2026-05-01.json"
+        ),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -335,6 +338,12 @@ def main() -> int:
         statuses["color_singlet_zero_mode_removed_ladder_pole_search"],
     )
     report(
+        "taste-corner-ladder-pole-witness-not-closure",
+        "taste-corner pole-witness obstruction" in str(statuses["taste_corner_ladder_pole_obstruction"])
+        or "exact negative boundary" in str(statuses["taste_corner_ladder_pole_obstruction"]),
+        statuses["taste_corner_ladder_pole_obstruction"],
+    )
+    report(
         "finite-ladder-route-needs-ir-limit",
         "zero-mode" in str(statuses["ladder_ir_zero_mode"]),
         statuses["ladder_ir_zero_mode"],
@@ -472,7 +481,8 @@ def main() -> int:
             "the scalar kernel derivative K'(x_pole).  After color-singlet "
             "q=0 cancellation and finite-q IR regularity, zero-mode-removed "
             "finite ladder pole witnesses still remain volume, projector, "
-            "taste-corner, and derivative sensitive, so they do not supply the "
+            "taste-corner, and derivative sensitive; filtering non-origin "
+            "taste corners removes the crossings, so they do not supply the "
             "interacting scalar pole/LSZ theorem."
         ),
         "proposal_allowed": False,

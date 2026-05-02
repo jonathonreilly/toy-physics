@@ -370,3 +370,20 @@ Adds a color-singlet zero-mode-removed ladder pole-search block:
   theorem for the interacting scalar pole and LSZ derivative, or production
   FH/LSZ pole data, remains required.
 ```
+
+Latest taste-corner ladder pole-witness checkpoint text for PR #230:
+
+```text
+Adds a taste-corner ladder pole-witness obstruction:
+- checks the four finite zero-mode-removed ladder crossings against
+  corner-only, non-origin-corner-only, physical-origin-only, and no-corner
+  policies;
+- validator passes `PASS=8 FAIL=0`; retained-route gate reports
+  `PASS=27 FAIL=0`; campaign status now consumes 57 route certificates and
+  reports `PASS=53 FAIL=0`;
+- non-origin taste corners supply `70.4828%` to `92.2308%` of the full crossing
+  scale, and physical-origin-only filtering removes every crossing;
+- still no retained/proposed-retained closure: a taste/scalar-carrier theorem
+  plus continuum/projector/pole-derivative control, or production FH/LSZ pole
+  data, remains required.
+```

@@ -1,0 +1,98 @@
+{
+  "actual_current_surface_status": "exact negative boundary / finite-ladder taste-corner pole-witness obstruction",
+  "crossing_rows_by_policy": [
+    {
+      "corner_only_fraction_of_full": 0.9870494565644139,
+      "grid_size_4d": 4,
+      "lambda_by_policy": {
+        "corner_only": 6.985134548611107,
+        "full": 7.07678273074989,
+        "no_corners": 0.06855728392712919,
+        "nonorigin_corner_only": 6.526970078159831,
+        "physical_origin_only": 0.2695950773821506
+      },
+      "mass": 0.2,
+      "nonorigin_corner_fraction_of_full": 0.9223075409393277,
+      "physical_origin_only_crosses": false,
+      "projector": "local",
+      "taste_corner_count": 16
+    },
+    {
+      "corner_only_fraction_of_full": 0.9276184623032149,
+      "grid_size_4d": 6,
+      "lambda_by_policy": {
+        "corner_only": 1.3797796639231819,
+        "full": 1.4874430813906838,
+        "no_corners": 0.07795547235822387,
+        "nonorigin_corner_only": 1.2892780401303365,
+        "physical_origin_only": 0.1628396458737379
+      },
+      "mass": 0.2,
+      "nonorigin_corner_fraction_of_full": 0.8667747063806481,
+      "physical_origin_only_crosses": false,
+      "projector": "local",
+      "taste_corner_count": 16
+    },
+    {
+      "corner_only_fraction_of_full": 0.942879617143179,
+      "grid_size_4d": 4,
+      "lambda_by_policy": {
+        "corner_only": 1.3797796639231814,
+        "full": 1.4633677924905846,
+        "no_corners": 0.06352706582538406,
+        "nonorigin_corner_only": 1.289278040130337,
+        "physical_origin_only": 0.1324029561612068
+      },
+      "mass": 0.3,
+      "nonorigin_corner_fraction_of_full": 0.8810348613290478,
+      "physical_origin_only_crosses": false,
+      "projector": "local",
+      "taste_corner_count": 16
+    },
+    {
+      "corner_only_fraction_of_full": 0.9851919062210118,
+      "grid_size_4d": 4,
+      "lambda_by_policy": {
+        "corner_only": 2.3558857724434352,
+        "full": 2.391296312492168,
+        "no_corners": 0.021781488451115147,
+        "nonorigin_corner_only": 1.6854523182150267,
+        "physical_origin_only": 0.19264598454272336
+      },
+      "mass": 0.2,
+      "nonorigin_corner_fraction_of_full": 0.7048278832741047,
+      "physical_origin_only_crosses": false,
+      "projector": "point_split_zero_momentum_normalized",
+      "taste_corner_count": 16
+    }
+  ],
+  "fail_count": 0,
+  "parent_certificate": "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json",
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite pole witnesses are taste-corner dominated and collapse under a physical-origin-only projection; no retained scalar carrier/taste theorem is supplied.",
+  "remaining_blockers": [
+    "derive whether non-origin taste corners belong to the retained scalar carrier",
+    "derive the continuum/taste/projector limit of the color-singlet scalar denominator",
+    "derive or measure the inverse-propagator derivative at the scalar pole",
+    "run production same-source FH/LSZ pole data if the theorem route remains blocked"
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "summary": {
+    "corner_only_fraction_max": 0.9870494565644139,
+    "corner_only_fraction_min": 0.9276184623032149,
+    "crossing_rows": 4,
+    "max_no_corner_lambda": 0.07795547235822387,
+    "max_physical_origin_only_lambda": 0.2695950773821506,
+    "nonorigin_corner_fraction_max": 0.9223075409393277,
+    "nonorigin_corner_fraction_min": 0.7048278832741047
+  },
+  "verdict": "The zero-mode-removed finite ladder crossings found after color-singlet q=0 cancellation are dominated by non-origin Brillouin-zone taste corners.  Keeping only the physical origin corner plus non-corner modes removes every finite crossing, and removing all sin(p)=0 corners removes them more strongly.  Therefore these finite lambda_max >= 1 witnesses cannot be used as retained scalar pole or LSZ evidence unless a separate continuum/taste/projector theorem derives the scalar carrier and inverse-propagator derivative, or production FH/LSZ pole data measure them."
+}

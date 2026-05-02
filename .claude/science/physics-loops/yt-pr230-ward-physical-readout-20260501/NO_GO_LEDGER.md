@@ -801,6 +801,22 @@ scalar pole/LSZ theorem.  The route still needs continuum/taste/projector
 control plus the interacting inverse-propagator derivative, or production
 same-source pole data.
 
+Taste-corner finite pole witness is blocked as scalar evidence:
+
+```text
+python3 scripts/frontier_yt_taste_corner_ladder_pole_obstruction.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+The four finite crossing witnesses are dominated by non-origin
+Brillouin-zone taste corners.  The non-origin corners supply `70.4828%` to
+`92.2308%` of the full crossing scale, and the corner-only kernel reproduces
+`92.7618%` to `98.7049%`.  Filtering to the physical origin corner plus
+non-corner modes removes every crossing, with maximum lambda `0.269595077382`.
+Thus the finite crossings cannot be used as scalar pole evidence unless a
+retained taste/corner scalar-carrier theorem admits them and derives the pole
+derivative.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

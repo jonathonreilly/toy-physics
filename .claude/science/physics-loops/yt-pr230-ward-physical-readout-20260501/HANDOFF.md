@@ -353,4 +353,7 @@ search checks that narrowed surface directly: finite small-mass pole witnesses
 exist, but they are volume, projector, taste-corner, and derivative sensitive.
 The live blocker is now a continuum/taste/projector theorem for the
 interacting color-singlet scalar denominator and LSZ derivative, or production
-pole data.
+pole data.  The taste-corner obstruction sharpens that further: the finite
+crossings are dominated by non-origin Brillouin-zone corners and disappear
+under a physical-origin-only filter, so a taste/scalar-carrier theorem is
+load-bearing before any finite crossing can be used.
