@@ -2578,3 +2578,18 @@ Disposition: exact negative boundary.  The Class #3 no-2HDM/no-second-scalar
 support does not contain the LSZ/source-pole purity theorem required to turn a
 same-source gauge-response ratio into physical `y_t`.  No retained or
 proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 114 Dynamic Ready Chunk-Set Checkpoint
+
+Review stance: production-support automation / claim firewall.
+
+- Updated `scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py`
+  to derive ready chunk indices from the combiner gate.
+- Updated `docs/YT_FH_LSZ_READY_CHUNK_SET_CHECKPOINT_NOTE_2026-05-02.md`.
+- Refreshed `outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json` and
+  `outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json`.
+
+Disposition: bounded support.  The current dynamic set remains `[1, 2, 3, 4]`
+and is only `4/63` L12 chunks.  The response-stability diagnostic still blocks
+production-grade response evidence, and scalar LSZ/canonical-Higgs gates
+remain open.

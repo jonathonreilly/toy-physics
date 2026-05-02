@@ -740,3 +740,20 @@ gauge-response route remains support only.
 Next exact action: keep chunks005-006 running; when they finish, rerun the
 combiner/ready-set/stability gates.  In foreground, attack the source-pole
 identity theorem or pivot to scalar-denominator/threshold theorem work.
+
+Block 114 updated the FH/LSZ ready chunk-set checkpoint to derive ready chunk
+indices from the combiner gate dynamically:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+Current dynamic set is still `[1, 2, 3, 4]`, with `ready_chunks=4` of
+`expected_chunks=63`.  The response-stability diagnostic still fails the
+production-grade stability rule for the partial set.  When chunks005-006
+finish, rerun the combiner first, then this ready-set checkpoint and the
+stability diagnostic.

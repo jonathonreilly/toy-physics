@@ -6,8 +6,10 @@
 
 ## Result
 
-The seed-controlled `L12_T24` FH/LSZ chunk set now contains chunks001-004.
-The combiner gate reports:
+The ready-set checkpoint is now dynamic: it derives `ready_chunk_indices` from
+the combiner gate rather than hardcoding a fixed chunk range.  At this
+checkpoint the seed-controlled `L12_T24` FH/LSZ chunk set still contains
+chunks001-004.  The combiner gate reports:
 
 ```text
 present_chunks = 4
@@ -21,6 +23,10 @@ Each ready chunk has production-phase run-control metadata, chunk-local output
 directories, `numba_gauge_seed_v1` gauge seed-control metadata, same-source
 top `dE/ds`, and same-source scalar `C_ss(q)` / `Gamma_ss(q)` rows for the
 four-mode, sixteen-noise plan.
+
+When chunks005 and later finish, rerunning this certificate will include every
+combiner-ready seed-controlled chunk in `ready_chunk_indices`, and the
+response-stability diagnostic will consume that dynamic set.
 
 ## Claim Boundary
 

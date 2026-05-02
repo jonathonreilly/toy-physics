@@ -2,11 +2,12 @@
 """
 PR #230 FH/LSZ ready chunk-set production checkpoint certificate.
 
-This runner records the current seed-controlled L12_T24 FH/LSZ chunk set as
-bounded production support.  It deliberately treats the set as partial L12
-evidence only: no retained or proposed-retained claim is allowed until the
-full L12 combination, L16/L24 scaling, scalar-pole derivative, FV/IR, and
-canonical-Higgs identity gates pass.
+This runner records the current seed-controlled L12_T24 FH/LSZ ready chunk set
+as bounded production support.  It derives the ready indices from the combiner
+gate instead of hardcoding a fixed checkpoint.  It deliberately treats the set
+as partial L12 evidence only: no retained or proposed-retained claim is allowed
+until the full L12 combination, L16/L24 scaling, scalar-pole derivative, FV/IR,
+and canonical-Higgs identity gates pass.
 """
 
 from __future__ import annotations
@@ -21,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 COMBINER = ROOT / "outputs" / "yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"
 OUTPUT = ROOT / "outputs" / "yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json"
 
-EXPECTED_READY_INDICES = [1, 2, 3, 4]
+MIN_READY_INDICES = [1, 2, 3, 4]
 EXPECTED_SEED_CONTROL_VERSION = "numba_gauge_seed_v1"
 EXPECTED_SOURCE_SHIFTS = {-0.01, 0.0, 0.01}
 EXPECTED_MODE_KEYS = {"0,0,0", "1,0,0", "0,1,0", "0,0,1"}
@@ -158,19 +159,25 @@ def main() -> int:
     seed_gate = combiner.get("seed_independence_gate", {})
     signatures = seed_gate.get("present_signatures", [])
     signature_indices = [row.get("chunk_index") for row in signatures if isinstance(row, dict)]
-    ready_signature_indices = [
-        row.get("chunk_index")
+    ready_signature_indices = sorted(
+        int(row.get("chunk_index"))
         for row in signatures
-        if isinstance(row, dict) and row.get("seed_related_issues") == []
-    ]
-    chunk_rows = [audit_chunk(index) for index in EXPECTED_READY_INDICES]
+        if isinstance(row, dict)
+        and isinstance(row.get("chunk_index"), int)
+        and row.get("seed_related_issues") == []
+    )
+    ready_count = int(summary.get("ready_chunks", 0))
+    expected_count = int(summary.get("expected_chunks", 1))
+    contiguous_ready_indices = list(range(1, len(ready_signature_indices) + 1))
+    chunk_rows = [audit_chunk(index) for index in ready_signature_indices]
     chunk_issues = {row["chunk_index"]: row["issues"] for row in chunk_rows if row["issues"]}
 
     report("combiner-present", bool(combiner), str(COMBINER.relative_to(ROOT)))
     report(
-        "current-ready-indices",
-        ready_signature_indices[: len(EXPECTED_READY_INDICES)] == EXPECTED_READY_INDICES
-        and summary.get("ready_chunks", 0) >= len(EXPECTED_READY_INDICES),
+        "ready-indices-derived-from-combiner",
+        ready_signature_indices == contiguous_ready_indices
+        and all(index in ready_signature_indices for index in MIN_READY_INDICES)
+        and ready_count == len(ready_signature_indices),
         f"ready_signature_indices={ready_signature_indices}, summary={summary}",
     )
     report(
@@ -187,24 +194,28 @@ def main() -> int:
     )
     report(
         "l12-set-incomplete",
-        int(summary.get("ready_chunks", 0)) < int(summary.get("expected_chunks", 1)),
-        f"ready={summary.get('ready_chunks')} expected={summary.get('expected_chunks')}",
+        ready_count < expected_count,
+        f"ready={ready_count} expected={expected_count}",
     )
     report(
         "no-physical-yukawa-readout",
         all(row["ready"] for row in chunk_rows),
         "chunk metadata keeps scalar response/LSZ as non-readout support",
     )
-    report("does-not-authorize-retained-proposal", True, "4/63 L12 chunks is partial production support only")
+    report(
+        "does-not-authorize-retained-proposal",
+        True,
+        f"{ready_count}/{expected_count} L12 chunks is partial production support only",
+    )
 
     result = {
         "actual_current_surface_status": "bounded-support / FH-LSZ ready chunk-set production checkpoint",
         "verdict": (
-            "Seed-controlled L12_T24 chunks001-004 are present and combiner-ready. "
+            f"Seed-controlled L12_T24 chunks{ready_signature_indices} are present and combiner-ready. "
             "They supply production-format same-source dE/ds and C_ss(q) support, "
-            "but only 4 of 63 required L12 chunks are ready, no combined L12 output "
-            "exists, and the scalar-pole derivative/model-class/FV/IR/canonical-Higgs "
-            "identity gates remain open."
+            f"but only {ready_count} of {expected_count} required L12 chunks are ready, "
+            "no combined L12 output exists, and the scalar-pole derivative/model-class/"
+            "FV/IR/canonical-Higgs identity gates remain open."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -215,7 +226,8 @@ def main() -> int:
         "combiner_gate": str(COMBINER.relative_to(ROOT)),
         "chunk_summary": summary,
         "seed_independence_gate": seed_gate,
-        "ready_chunk_indices": EXPECTED_READY_INDICES,
+        "ready_chunk_indices": ready_signature_indices,
+        "minimum_expected_ready_indices": MIN_READY_INDICES,
         "chunk_rows": chunk_rows,
         "strict_non_claims": [
             "does not use partial L12 chunks as retained evidence",
@@ -225,9 +237,10 @@ def main() -> int:
             "does not bypass pole derivative, model-class, FV/IR, or canonical-Higgs identity gates",
         ],
         "exact_next_action": (
-            "Continue collecting seed-controlled L12 chunks005-063 or switch to a "
-            "higher-probability analytic Higgs-identity/scalar-denominator route; "
-            "do not claim retained closure from the current 4/63 chunk set."
+            "Continue collecting seed-controlled L12 chunks and rerun this dynamic "
+            "checkpoint as each chunk finishes; switch foreground effort to a "
+            "higher-probability analytic Higgs-identity/scalar-denominator route "
+            "while production chunks run."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

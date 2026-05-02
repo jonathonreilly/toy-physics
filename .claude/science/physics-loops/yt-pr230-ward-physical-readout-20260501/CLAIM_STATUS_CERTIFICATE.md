@@ -1320,3 +1320,21 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 The current no-retained-second-scalar/no-2HDM authority is support only.  It
 does not derive source-pole purity or zero top coupling for an orthogonal
 response component.  No retained/proposed-retained wording is authorized.
+
+FH/LSZ dynamic ready chunk-set checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ ready chunk-set production checkpoint
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The ready-set checkpoint now derives ready indices from the combiner.  Current
+ready indices remain `[1, 2, 3, 4]`, so this is still only partial L12
+production support and no retained/proposed-retained wording is authorized.

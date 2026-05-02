@@ -308,3 +308,8 @@ source-pole purity premise.  It does not.  The highest-ranked routes remain:
    and excludes finite-shell ambiguity;
 4. build a same-source W/Z response harness only if paired with a purity or
    sector-overlap identity certificate.
+
+Production-support update: the ready chunk-set checkpoint now derives ready
+indices from the combiner.  As chunks005-006 finish, rerun the combiner and the
+dynamic ready/stability gates before deciding whether the production route has
+enough new information to outrank the analytic source-pole identity route.

@@ -107,8 +107,14 @@
     "target_saved_configurations": 1000
   },
   "combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
-  "exact_next_action": "Continue collecting seed-controlled L12 chunks005-063 or switch to a higher-probability analytic Higgs-identity/scalar-denominator route; do not claim retained closure from the current 4/63 chunk set.",
+  "exact_next_action": "Continue collecting seed-controlled L12 chunks and rerun this dynamic checkpoint as each chunk finishes; switch foreground effort to a higher-probability analytic Higgs-identity/scalar-denominator route while production chunks run.",
   "fail_count": 0,
+  "minimum_expected_ready_indices": [
+    1,
+    2,
+    3,
+    4
+  ],
   "pass_count": 8,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The ready chunk set is partial L12 production support only; no combined L12, L16/L24, pole derivative, model-class, FV/IR, or Higgs-identity certificate exists.",
@@ -176,5 +182,5 @@
     "does not treat source response as a physical Higgs readout",
     "does not bypass pole derivative, model-class, FV/IR, or canonical-Higgs identity gates"
   ],
-  "verdict": "Seed-controlled L12_T24 chunks001-004 are present and combiner-ready. They supply production-format same-source dE/ds and C_ss(q) support, but only 4 of 63 required L12 chunks are ready, no combined L12 output exists, and the scalar-pole derivative/model-class/FV/IR/canonical-Higgs identity gates remain open."
+  "verdict": "Seed-controlled L12_T24 chunks[1, 2, 3, 4] are present and combiner-ready. They supply production-format same-source dE/ds and C_ss(q) support, but only 4 of 63 required L12 chunks are ready, no combined L12 output exists, and the scalar-pole derivative/model-class/FV/IR/canonical-Higgs identity gates remain open."
 }
