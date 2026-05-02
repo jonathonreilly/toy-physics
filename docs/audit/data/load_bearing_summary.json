@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-02T20:44:09.541087+00:00",
+  "computed_at": "2026-05-02T20:58:08.617830+00:00",
   "criticality_counts": {
     "critical": 45,
     "high": 388,
@@ -42,16 +42,16 @@
       "transitive_descendants": 117
     },
     {
+      "claim_id": "minimal_axioms_2026-04-11",
+      "criticality": "critical",
+      "load_bearing_score": 26.69,
+      "transitive_descendants": 291
+    },
+    {
       "claim_id": "yt_ward_identity_derivation_theorem",
       "criticality": "critical",
       "load_bearing_score": 26.524,
       "transitive_descendants": 183
-    },
-    {
-      "claim_id": "minimal_axioms_2026-04-11",
-      "criticality": "critical",
-      "load_bearing_score": 26.18,
-      "transitive_descendants": 289
     },
     {
       "claim_id": "observable_principle_from_axiom_note",

@@ -4505,6 +4505,14 @@
       "to": "ckm_from_mass_hierarchy_note"
     },
     {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
       "from": "em_coupling_from_ewsb_note_2026-05-02",
       "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
     },
@@ -20001,7 +20009,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:44:04.983293+00:00",
+  "generated_at": "2026-05-02T20:58:05.440118+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -27826,14 +27834,17 @@
     },
     "emergent_lorentz_invariance_note": {
       "claim_id": "emergent_lorentz_invariance_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "296429f41517fec385da2461b9423dec161f859714822611a94680e67a8d4973",
+      "deps": [
+        "cpt_exact_note",
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "231dc3c8c23401579b699c98f4c85520f9b1907ad79f8c2413641f4931be0da3",
       "path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
       "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
-      "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice (Conditional)"
+      "title": "Emergent Lorentz Invariance \u2014 Lattice Dispersion Structure Theorem (Bounded)"
     },
     "emergent_product_law_audit_2026-04-11": {
       "claim_id": "emergent_product_law_audit_2026-04-11",
@@ -45721,7 +45732,6 @@
     "electrostatics_superposition_proxy_note",
     "em_gravity_coexistence_2x2_note",
     "emergent_geometry_growth_note_2026-04-10",
-    "emergent_lorentz_invariance_note",
     "emergent_product_law_audit_2026-04-11",
     "emergent_product_law_note",
     "equivalence_principle_harness_note",
@@ -46561,9 +46571,9 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 11,
+      "bounded_theorem": 12,
       "meta": 1,
-      "none": 1746,
+      "none": 1745,
       "positive_theorem": 38
     },
     "claim_type_seed_hint_counts": {
@@ -46574,10 +46584,10 @@
       "open_gate": 109,
       "positive_theorem": 629
     },
-    "edge_count": 5000,
+    "edge_count": 5002,
     "leaf_count": 762,
     "node_count": 1796,
-    "root_count": 1217,
+    "root_count": 1216,
     "runners_with_path": 1364
   }
 }

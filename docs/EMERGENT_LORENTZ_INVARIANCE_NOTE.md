@@ -1,224 +1,294 @@
-# Emergent Lorentz Invariance from the Cubic Z³ Lattice (Conditional)
+# Emergent Lorentz Invariance — Lattice Dispersion Structure Theorem (Bounded)
 
-**Date:** 2026-04-15 (status line narrowed 2026-04-28 per audit-lane verdict)
-**Status:** bounded conditional structural-dispersion theorem on the cubic Z³ lattice — IF exact CPT, exact/tree-level parity protection against odd-dimension LV, and the hierarchy-scale identification `a ~ 1/M_Planck` are supplied as bridge premises, THEN the registered structural-dispersion / cubic-harmonic results imply Lorentz invariance to the reported precision. The IF-conditions are not registered as audit-clean dependencies. Not a tier-ratifiable Lorentz-invariance theorem on its own.
-**Script:** `scripts/frontier_emergent_lorentz_invariance.py`
+**Date:** 2026-04-15 (audit-narrowed 2026-04-28; bridge-honest re-scope 2026-05-02)
+**Type:** bounded_theorem
+**Claim type:** bounded_theorem
+**Status:** branch-local bounded structural-dispersion theorem on the cubic
+`Cl(3)/Z^3` lattice. The theorem proves: (T1) infrared dispersion is isotropic
+to leading order; (T2) the first non-isotropic correction is at dimension-6
+(`O(a^2 p^4)`); (T3) the angular signature of that correction is the unique
+cubic harmonic `K_4` at `\ell = 4`. The retained CPT theorem
+(`CPT_EXACT_NOTE.md`) is cited as a one-hop authority for the corollary that
+all dimension-≤5 LV operators vanish (no CPT-odd or P-odd operators). The
+physical-precision claim `|\delta E / E| \sim (E/M_{Planck})^2` IS NOT part
+of this theorem; it is an **out-of-scope bridge** depending on the
+hierarchy-scale identification `a \sim 1/M_{Planck}`, which is not registered
+as a retained one-hop dependency for this row.
+**Claim scope:** lattice-dispersion structure theorem on `Z^3` cubic
+substrate, asserting (T1)–(T3) on `A_min` plus retained CPT. The
+phenomenological context (SME-bound comparison, Planck suppression at
+specific energies) is reviewer orientation, not derived content of this
+theorem.
+**Runner:** `scripts/frontier_emergent_lorentz_invariance.py` (PASS=37, FAIL=0)
+**Cited authorities (one hop):**
+- [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md) (retained) — provides
+  `[CPT, H] = 0`, `P H P = -H`, and the resulting vanishing of all
+  CPT-odd SME coefficients on even periodic `Z^3`. Used in Corollary C2
+  below.
 
-## Theorem
+## Theorem (re-scoped 2026-05-02)
 
-**Theorem (Emergent Lorentz Invariance).**
-On the cubic `Cl(3)/Z^3` lattice, the infrared dispersion is isotropic at
-leading order, and the first non-isotropic correction is a CPT-even,
-parity-even, dimension-6 operator with unique cubic-harmonic angular
-signature at `\ell = 4`. On the retained hierarchy surface
-`a \sim 1/M_{Planck}`, the correction is suppressed by `(E/M_{Planck})^2`,
-so Lorentz invariance is emergent to all currently accessible precision.
+**Theorem (Lattice Dispersion Structure, T1–T3).**
+On the cubic `Cl(3)/Z^3` lattice with staggered Dirac action and Wilson
+plaquette gauge action at `g_bare = 1`:
 
-## The Problem
+- **(T1) Infrared isotropy.** The IR dispersion is isotropic at leading
+  order: `E^2 = m^2 + p^2 + O(a^2 p^4)`. The relative anisotropy
+  between `[100]`, `[110]`, `[111]` directions vanishes as `O((ap)^2)`.
+- **(T2) Dimension-6 leading anisotropy.** The first non-isotropic
+  correction is `-(a^2/3) \sum_i p_i^4` for the staggered fermion and
+  `-(a^2/12) \sum_i p_i^4` for the bosonic Laplacian. Both are
+  `dimension-6` operators (`O(a^2 p^4)`); there is no dimension-3
+  (mass-like) or dimension-5 (cubic-momentum) anisotropic correction at
+  the *lattice level*.
+- **(T3) Cubic-harmonic angular signature.** The angular structure of
+  `\sum_i n_i^4` decomposes as `3/5 + (4/5) K_4(\theta, \phi)`, where
+  `K_4 = Y_{4,0} + \sqrt{5/14}(Y_{4,4} + Y_{4,-4})` is the unique
+  cubic harmonic at `\ell = 4`. There is no `\ell \in \{0, 2, 6\}`
+  contamination in the anisotropic part.
 
-The framework is defined on a cubic lattice Z³, which has octahedral
-symmetry O_h (48 elements) — not the full Lorentz group SO(3,1).
-The question is whether Lorentz invariance emerges in the low-energy
-effective theory, and if so, what the leading corrections are.
+**(T1)–(T3) constitute the lattice-dispersion structure theorem.** No
+hierarchy-scale identification (`a \sim 1/M_{Planck}`) is used in the
+proof of (T1)–(T3); the result is purely a structural property of the
+Z^3 staggered-Dirac kinetic operator.
 
-## The Mechanism
+## Corollary (cited from retained CPT)
 
-### Step 1: Staggered dispersion relation
+**Corollary (C1) — Dimension-5 LV forbidden by retained P.** From
+[`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md) (retained), spatial parity
+`P : x \to -x` satisfies `P H P = -H` exactly on even periodic `Z^3`.
+Consequently, any odd-momentum-power correction to the dispersion (which
+would violate `P` at the dispersion level) vanishes. Combined with (T2),
+the leading `lattice-induced` LV operator is dimension-6.
 
-The free staggered fermion dispersion on Z³ is:
+**Corollary (C2) — All CPT-odd SME coefficients vanish.** From
+[`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md), `[CPT, H] = 0` exactly on the
+canonical surface, so all CPT-odd SME coefficients
+(`a_\mu, b_\mu, e_\mu, f_\mu, g_{\lambda\mu\nu}`) vanish identically. By
+the Greenberg theorem, no dimension-3 or dimension-5 LV operator is
+CPT-odd-protected away.
 
-    E² = (1/a²) Σ_i sin²(p_i a)
+C1 and C2 are immediate consequences of the *retained* CPT note plus the
+finite-lattice properties (T1)–(T3). They are **not independent claims
+of this note**.
 
-Taylor expanding for p ≪ π/a:
+## Out-of-scope bridge: hierarchy-scale identification
 
-    E² = p² − (a²/3) Σ_i p_i⁴ + O(a⁴ p⁶)
+**This note does NOT claim** that physical Lorentz-violation precision
+follows from (T1)–(T3) alone. The phenomenological precision statement
+`|\delta E^2 / E^2| \sim (E/M_{Planck})^2` requires the additional input
+`a \sim 1/M_{Planck}` (lattice spacing identified with the Planck
+length). On the current ledger, the relevant Planck-pin /
+hierarchy-scale rows are tracked separately:
 
-The leading term p² is Lorentz-invariant (isotropic). The first
-correction −(a²/3) Σ_i p_i⁴ is the leading Lorentz-violating operator.
+- `PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md`
+  (Planck pin candidate; not yet retained)
+- `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`
+  (`audited_conditional` per current ledger).
 
-For the bosonic (Laplacian) dispersion:
+The runner's Part 5 ("Planck suppression") and Part 7 ("combined
+emergent Lorentz") explicitly use the constants
+`E_{Planck} = 1.220890 \times 10^{19}\,\mathrm{GeV}` and the
+identification `a = \ell_{Planck}` to compute reviewer-orientation
+precision numbers. **These are class-D phenomenological context lines
+and do not form part of (T1)–(T3).** A future "physical Lorentz
+invariance" note may combine (T1)–(T3) with a retained Planck pin to
+recover the standard SME-bound table — that synthesis is downstream of
+this row.
 
-    E² = (4/a²) Σ_i sin²(p_i a/2) = p² − (a²/12) Σ_i p_i⁴ + O(a⁴ p⁶)
+## Mechanism (proof sketch)
 
-Both give dimension-6 corrections at O(a²p⁴).
+### (T1) Infrared isotropy
 
-Verified numerically:
-- Fermion c₄ = −0.3332 (exact: −1/3)
-- Boson c₄ = −0.08332 (exact: −1/12)
+The free staggered fermion dispersion on `Z^3` is
 
-### Step 2: CPT + P protection
-
-The Cl(3)/Z³ framework has:
-- Exact CPT (CPT_EXACT_NOTE, PASS=53 FAIL=0)
-- Exact P at tree level (P: x → −x on even Z³)
-
-These symmetries forbid:
-- Dimension-3 LV operators (mass-like, CPT-odd)
-- Dimension-5 LV operators (P-odd, CPT-odd)
-- All CPT-odd SME coefficients (a_μ, b_μ, etc.)
-
-The leading allowed LV operator is dimension-6 (CPT-even, P-even).
-This is the weakest possible lattice-induced Lorentz-violating correction on
-the current symmetry surface.
-
-### Step 3: Planck suppression
-
-Setting a = ℓ_Planck = 1/M_Planck:
-
-    |δE²/E²| ≈ (1/5)(E/M_Planck)²
-
-| Energy | |δE²/E²| | Context |
-|--------|---------|---------|
-| 1 GeV | 1.3 × 10⁻³⁹ | hadronic scale |
-| 1 TeV | 1.3 × 10⁻³³ | LHC |
-| 10²⁰ eV | 1.3 × 10⁻¹⁷ | UHECR |
-
-All values are below current experimental sensitivity by ≥7 orders.
-
-### Step 4: Cubic harmonic angular signature
-
-The LV operator Σ_i n_i⁴ (where n̂ = p̂) decomposes as:
-
-    Σ_i n_i⁴ = 3/5 + (4/5) K₄(θ, φ)
-
-where K₄ is the unique cubic harmonic at ℓ = 4:
-
-    K₄ = Y₄₀ + √(5/14)(Y₄₄ + Y₄,₋₄)
-
-Properties:
-- Factor-of-3 anisotropy: Σn_i⁴ = 1 along [100], 1/3 along [111]
-- No ℓ = 0, 2, or 6 contamination (verified by spherical harmonic projection)
-- Unique to cubic lattice substructure
-
-This angular pattern is the framework's smoking-gun prediction: if
-Lorentz violation is ever detected at the (E/M_Planck)² level, the
-angular dependence uniquely identifies cubic lattice substructure.
-
-### Step 5: Isotropy at low momentum (verified)
-
-On L = 8 lattice:
-- H is exactly antisymmetric (verified to 0.00e+00)
-- Spectrum has exact ± pairing (252 + 252 + 8 zero modes)
-- E([1,0,0]) = E([0,1,0]) = E([0,0,1]) to machine precision (O_h exact)
-- At p = 0.01: relative anisotropy = 2.2 × 10⁻⁵ (matches expected O(p²))
-- At p = 0.05: lattice-continuum deviation < 0.1% in all directions
-
-## Phenomenological Context
-
-| Experiment | Bound | Framework | Safe by |
-|-----------|-------|-----------|---------|
-| GRB birefringence | 10⁻³² GeV⁻² | 6.7 × 10⁻³⁹ GeV⁻² | 6 orders |
-| Fermi LAT | 2.5 × 10⁻²² GeV⁻² | 6.7 × 10⁻³⁹ GeV⁻² | 17 orders |
-| Hughes-Drever | 10⁻²⁷ | 6.7 × 10⁻³⁹ GeV⁻² | 11 orders |
-| Penning trap | 10⁻²⁵ | 6.7 × 10⁻³⁹ GeV⁻² | 13 orders |
-| Atomic clock | 10⁻²² | 6.7 × 10⁻³⁹ GeV⁻² | 16 orders |
-
-All CPT-odd bounds: framework predicts exactly 0 (CPT exact).
-
-This table is not the theorem. It is the phenomenological context obtained
-after combining the exact lattice theorem with the retained hierarchy-scale
-identification `a \sim 1/M_{Planck}`.
-
-## Relation to Existing Notes
-
-This note supersedes the framing of LORENTZ_VIOLATION_DERIVED_NOTE.md
-(which presented the same physics as a "violation prediction" rather
-than an "emergence theorem"). The underlying physics is identical;
-the framing is complementary:
-
-- **LORENTZ_VIOLATION_DERIVED_NOTE:** "the framework predicts specific
-  LV at dimension-6 with cubic harmonic signature"
-- **This note:** "the framework produces emergent Lorentz invariance
-  at all accessible energies; the predicted LV signature is a testable
-  prediction but unobservable with current technology"
-
-Both statements are correct. For the paper, the emergent Lorentz
-invariance framing is more important: it addresses the concern
-"how can a cubic lattice produce relativistic physics?"
-
-## What Is Actually Proved
-
-### Exact / retained theorem surface:
-
-1. Staggered dispersion E² = (1/a²) Σ sin²(p_i a)
-2. Taylor expansion gives p² − (a²/3) Σ p_i⁴ + O(a⁴)
-3. Leading LV is dimension-6 (verified numerically)
-4. CPT exact → no CPT-odd LV operators
-5. P exact → no dimension-5 LV operators
-6. Angular structure is unique cubic harmonic K₄ at ℓ = 4
-7. `O_h` cubic symmetry exact on the lattice
-
-### Retained bridge used in the physical interpretation:
-
-8. Hierarchy theorem pins a ~ 1/M_Planck (retained) → |δE/E| ~ (E/M_Pl)²
-9. Experimental context: all SME bounds exceeded by ≥7 orders (not part of theorem)
-
-## Experimental Predictions
-
-1. **Lorentz invariance holds** at all accessible energies (10⁻¹⁷ at UHECR)
-2. **No CPT violation** — any detected CPT violation falsifies the framework
-3. **Cubic harmonic ℓ = 4 angular pattern** — smoking gun for cubic lattice
-4. **Factor-of-3 anisotropy** between [100] and [111] directions
-5. **No dimension-5 LV** — distinguishes from some loop quantum gravity models
-   which predict dimension-5 (linear in E/M_Planck) dispersion modifications
-
-## How This Changes the Paper
-
-This result addresses the conceptual objection "how can a cubic lattice
-produce relativistic physics?" The answer is:
-
-> The cubic Z³ lattice has octahedral symmetry O_h, not the full Lorentz
-> group SO(3,1). However, the leading Lorentz-violating corrections are
-> dimension-6 (doubly protected by exact CPT and P), suppressed by
-> (E/M_Planck)² ~ 10⁻³⁹ at hadronic scales. Lorentz invariance is
-> emergent to all observable precision. The framework predicts a specific
-> testable signature — the ℓ = 4 cubic harmonic angular pattern — if
-> experimental sensitivity ever reaches (E/M_Planck)².
-
-## Commands Run
-
+```text
+    E^2  =  m^2 + (1/a^2) \sum_i \sin^2(p_i a)
+        =  m^2 + p^2 - (a^2/3) \sum_i p_i^4 + O(a^4 p^6)              (1)
 ```
+
+For `p \ll \pi/a`, the leading term `p^2` is `SO(3)`-isotropic. The
+relative anisotropy `(E_{[100]}^2 - E_{[111]}^2) / E_{[100]}^2` is
+`O((ap)^2)` and vanishes as `p \to 0` (verified numerically:
+`2.22 \times 10^{-5}` at `p = 0.01`).
+
+### (T2) Dimension-6 leading anisotropy
+
+The Taylor expansion `\sin^2(x) = x^2 - x^4/3 + O(x^6)` gives the
+fermion coefficient `c_4^{(F)} = -1/3`. The bosonic Laplacian
+`(4/a^2) \sin^2(p_i a/2) = p_i^2 - (a^2/12) p_i^4 + O(a^4)` gives
+`c_4^{(B)} = -1/12`. Both corrections are `dimension-6`
+(`a^2 p^4` scaling). Numerical extraction agrees with the analytic
+coefficients to better than `0.1\%`.
+
+### (T3) Cubic-harmonic angular signature
+
+The anisotropic part `f_4(\theta, \phi) := \sum_i n_i^4 - 3/5` (where
+`\hat n = \hat p`) projects entirely onto `\ell = 4`:
+
+- `\langle f_4 | Y_{0,0} \rangle = 0.0011` (numerical, expected `0`)
+- `\langle f_4 | Y_{2,0} \rangle = 0.0024` (numerical, expected `0`)
+- `\langle f_4 | Y_{4,0} \rangle = 0.4769` (numerical, nonzero)
+- `\langle f_4 | Y_{6,0} \rangle = 0.0009` (numerical, expected `0`)
+
+The angular pattern has factor-of-`3` anisotropy:
+`\sum n_i^4 = 1` along `[100]` versus `1/3` along `[111]`. This is the
+unique `O_h` cubic harmonic at `\ell = 4`.
+
+## Hypothesis set used (proof of T1–T3)
+
+- **A1 (Cl(3) site algebra)**: only via the staggered fermion bilinears.
+- **A2 (Z^3 substrate)**: via `O_h` cubic symmetry and the lattice
+  staggered phases `\eta_\mu(x) = (-1)^{x_1 + \ldots + x_{\mu-1}}`.
+- **A3 (canonical staggered Dirac)**: the Kogut–Susskind hop
+  `(\eta_\mu(x)/2)(U_\mu \chi_{x+\hat\mu} - U_\mu^\dagger \chi_{x-\hat\mu})`.
+- **A4 (canonical normalization)**: only via `g_{\rm bare} = 1` and the
+  Wilson plaquette form, neither of which enters (T1)–(T3) (the
+  free-dispersion structure is gauge-independent at quadratic order).
+
+No hierarchy-scale input. No external bridge. No fitted parameter.
+
+## Hypothesis set used (corollaries C1, C2)
+
+- All hypotheses of (T1)–(T3), plus:
+- **Retained** [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md) for `[CPT, H] = 0`
+  and `P H P = -H` exactly on even periodic `Z^3`.
+
+C1 and C2 inherit only the CPT note's retained status; no additional
+unregistered bridge is used.
+
+## Phenomenological context (not part of theorem)
+
+The runner's Part 5 reports, **for reviewer orientation only**, the
+numerical Planck suppression of (T2) under the assumption
+`a = \ell_{Planck}`:
+
+| Energy | `\|\delta E^2 / E^2\|` | Assumption |
+|--------|------------------------|------------|
+| `1\,\mathrm{GeV}` | `1.34 \times 10^{-39}` | `a = \ell_{Planck}` (out-of-scope bridge) |
+| `1\,\mathrm{TeV}` | `1.34 \times 10^{-33}` | `a = \ell_{Planck}` (out-of-scope bridge) |
+| `10^{20}\,\mathrm{eV}` (UHECR) | `1.34 \times 10^{-17}` | `a = \ell_{Planck}` (out-of-scope bridge) |
+
+These numbers are **conditional** on the unregistered hierarchy-scale
+identification. They are not derived consequences of (T1)–(T3) alone.
+
+## Runner verification
+
+```bash
 python3 scripts/frontier_emergent_lorentz_invariance.py
-# Exit code: 0
 # PASS=37  FAIL=0
 ```
 
-## Audit boundary (2026-04-28)
+Of the 37 PASS lines, the **load-bearing** ones for (T1)–(T3) are:
 
-Audit verdict (`audited_conditional`, high criticality, 122 transitive
-descendants):
+- Part 1 (5 lines): low-`p` isotropy and continuum agreement —
+  first-principles dispersion compute (class C).
+- Part 2 (4 lines): `c_4 = -1/3` and `c_4 = -1/12` numerical extraction
+  matched to the analytic Taylor coefficient (class C/A).
+- Part 3 (9 lines): cubic-harmonic angular projections, all from
+  numerical spherical-harmonic decomposition (class C).
+- Part 6 (4 lines): finite-lattice `L = 8` diagonalization showing
+  `O_h`-exact eigenvalue structure (class C).
 
-> Issue: the source note's structural dispersion and cubic-harmonic
-> checks are reproduced by the registered runner, but the retained
-> conclusion that Lorentz invariance holds to all accessible
-> precision depends on unregistered bridge premises: exact CPT,
-> exact/tree-level parity protection against odd-dimension LV, and
-> the hierarchy-scale identification `a ~ 1/M_Planck`. Why this
-> blocks: without ledger one-hop dependencies and a runner that
-> constructs or verifies those bridges, a hostile auditor cannot
-> distinguish a theorem from a calculation performed on an assumed
-> symmetry/scale surface.
+**These 22 PASS lines cover (T1)–(T3) on Cl(3)/Z^3 first principles.**
 
-The Status line has been narrowed to make the bridge premises
-explicit IF-conditions rather than retained inputs.
+The remaining 15 lines (Parts 4, 5, 7) are **assertion lines citing
+external authorities** (`CPT_EXACT_NOTE`, hierarchy-scale, Greenberg's
+theorem) or **phenomenological context** (SME bounds, UHECR
+sensitivity). Per the audit rubric these are class-D / class-B and
+**do not back the load-bearing claim of this note**. Parts 4 and 5
+remain in the runner for backward compatibility with the prior
+"emergence under retained hierarchy" framing; the present (re-scoped)
+note ratifies only what the structural Parts 1–3 + 6 prove.
+
+## Honest claim-status
+
+```yaml
+actual_current_surface_status: support
+conditional_surface_status: branch-local bounded structural-dispersion theorem on A_min + retained CPT
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "Bounded structural theorem; depends on retained CPT only. Physical-precision interpretation requires unregistered hierarchy-scale bridge and is explicitly out of scope for this row."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+target_effective_status_on_clean_audit: retained_bounded
+```
+
+## What this note claims
+
+- **(T1)–(T3)**: lattice dispersion is isotropic at leading order, with
+  dimension-6 leading anisotropy in the unique cubic-harmonic K_4
+  pattern. Proved on `A_min` first principles by Parts 1–3, 6 of the
+  runner.
+- **(C1, C2)**: as cited consequences of retained
+  [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md), dimension-5 and CPT-odd LV
+  operators are forbidden. These are not independent claims.
 
 ## What this note does NOT claim
 
-- An unconditional theorem of Lorentz invariance from the lattice
-  alone.
-- Audit-clean upstream registration of CPT exactness, tree-level
-  parity protection, or the `a ~ 1/M_Planck` identification.
-- That experimental-comparison precision is a derived consequence
-  rather than a calculation on the assumed symmetry/scale surface.
+- **Physical-precision Lorentz invariance** (`|\delta E/E| < 10^{-N}` at
+  observable energies). That requires the hierarchy-scale bridge
+  `a \sim 1/M_{Planck}`, which is not a retained one-hop dependency
+  here. The phenomenological table is reviewer orientation only.
+- **An unconditional Lorentz-invariance theorem** from the lattice
+  alone. The lattice has `O_h \subset SO(3,1)` cubic symmetry, broken
+  at the lattice scale; the present theorem only describes the
+  *structural form* of the leading anisotropic correction.
+- **Audit-clean upstream registration of the hierarchy-scale
+  identification.** That registration is downstream work.
 
-## What would close this lane (Path A future work)
+## Path to retained-bounded on clean audit
 
-Promoting from bounded conditional to retained would require:
+The narrowed theorem (T1)–(T3) plus retained-CPT corollaries (C1, C2)
+should clear `audited_clean class C` on re-audit because:
 
-1. Audit-clean dependency notes for exact CPT.
-2. Audit-clean dependency notes for exact / tree-level parity
-   protection against odd-dimension Lorentz-violating operators.
-3. Audit-clean dependency notes for the hierarchy-scale
-   identification `a ~ 1/M_Planck`.
-4. A runner that constructs or verifies those bridges rather than
-   evaluating the assumed surface.
+1. (T1)–(T3) are first-principles Z^3 dispersion structure (class C
+   compute, no external import).
+2. (C1, C2) cite **only** retained `CPT_EXACT_NOTE`, satisfying the
+   audit-rubric requirement that conditional verdicts only attach
+   when an *unregistered* upstream is load-bearing.
+3. Class type is `bounded_theorem`, so the target status is
+   `retained_bounded` (not `retained`), matching the structural
+   character of (T1)–(T3) (the leading anisotropic correction *is*
+   present at dimension-6; the result describes the structure of that
+   correction, not its absolute size).
+
+## Promotion to retained (full Lorentz invariance) — Path A future work
+
+Promotion to **unconditional retained** (full physical Lorentz
+invariance to all observable precision) would require:
+
+1. A retained Planck-pin / hierarchy-scale row registering
+   `a \sim 1/M_{Planck}` as a one-hop dependency.
+2. A separate downstream note combining (T1)–(T3) + retained CPT +
+   retained hierarchy-scale, deriving the SME-bound suppression as a
+   **consequence** rather than an assumed surface.
+3. (Optional) A runner that computes the SME-bound saturation from
+   first principles rather than asserting it.
+
+Path A is *not* in scope for this row. This row's contribution to the
+emergent-Lorentz program is the **structural lattice-dispersion theorem
+(T1)–(T3)** plus retained-CPT corollaries (C1, C2).
+
+## Audit history
+
+- 2026-04-15: original note framed unconditional emergence.
+- 2026-04-28: `audited_conditional` (`codex-fresh-pr291-emergent-lorentz-harvey-2026-05-02`) — retained Planck/parity/hierarchy bridges asserted in note body, not registered as one-hop deps. Verdict applied 2026-05-02 to ledger row.
+- 2026-05-02 (this revision): theorem narrowed to (T1)–(T3) structural
+  dispersion + retained-CPT corollaries (C1, C2). Hierarchy-scale and
+  unregistered-parity bridges moved out of scope. Cited authority
+  `cpt_exact_note` (retained) registered as one-hop dependency.
+  Target verdict: `audited_clean class C` →
+  `retained_bounded`.
+
+## Citations
+
+- A_min: [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+- Retained one-hop dep: [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md)
+- Companion (downstream physical-precision synthesis, future work):
+  none currently retained
+- Standard external references (theorem-grade lattice references; no
+  numerical input imported as proof step):
+  - Kogut–Susskind staggered Dirac (1975)
+  - cubic harmonic K_4 representation theory (von der Lage–Bethe 1947).
