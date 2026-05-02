@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:14:55.048943+00:00
+**Generated:** 2026-05-02T23:17:23.674390+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 194 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 521 |
+| unaudited | 520 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 647 |
+| ~~audited_conditional~~ | 648 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 396 |
-| `audited_conditional` | 647 |
+| `audited_conditional` | 648 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 558 |
+| `unaudited` | 557 |
 
 | claim_type | count |
 |---|---:|
@@ -608,6 +608,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `coupled_field_generated_family_probe_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | F | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3540,6 +3541,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** CPT * H * (CPT)^{-1} = C * P * H * P * C = C * (-H) * C = -(-H) = H, with the Hermitian Hamiltonian and SME-zero lift supplied by the bridge theorem.  _(class `A`)_
 - **chain closes:** True — The source note proves the D-level C/P/T algebra by exact matrix identities and the one-hop bridge is stated as audited_clean/effective retained for the Hermitian H=iD and SME-zero lift. No unaudited or open dependency is needed for the scoped free-Hamiltonian theorem.
 - **rationale:** The load-bearing step is an algebraic closure: C and P each flip the staggered hopping operator, T is handled through the retained Hermitian bridge, and the combined antiunitary representative preserves H. The source-note runner reran locally with PASS=53 and FAIL=0, checking only internal exact identities and finite-lattice/taste-space consistency, with no external comparator or tuned input. Residual risk is wording scope: the clean verdict applies to the free Hermitian Hamiltonian-sector SME-zero statement, not to interacting or continuum SME sectors beyond the stated assumptions.
+- **auditor confidence:** high
+
+### `cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02`
+
+- **Note:** [`CPT_PARTICLE_ANTIPARTICLE_LIFETIME_EQUALITY_THEOREM_NOTE_2026-05-02.md`](../../docs/CPT_PARTICLE_ANTIPARTICLE_LIFETIME_EQUALITY_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Particle-antiparticle total-width and lifetime equality for unstable single-particle resonances, conditional on a retained bridge from the framework's CPT-invariant free Hamiltonian to CPT-invariant interacting resonance pole dynamics.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** The physical antiparticle pole on the same retarded-Green-function sheet is the reflection back into the lower half-plane, so Im E_pole(antiparticle) = Im E_pole(particle) = -Gamma/2.  _(class `F`)_
+- **chain closes:** False — The cited CPT exact note supplies CPT invariance of the free staggered Hamiltonian, but it explicitly leaves interacting extensions open. The source note needs an additional retained theorem mapping that CPT surface to decay-channel or resonance-pole dynamics before a lifetime prediction follows.
+- **rationale:** Issue: the proof's pole-reflection and universality steps import the physical resonance/effective-Hamiltonian bridge rather than deriving it from the retained free CPT theorem. Why this blocks: unstable lifetimes require interacting decay dynamics or an S-matrix/resolvent pole theorem, while the cited authority is scoped to the free staggered Hamiltonian and notes interacting extension as open. Repair target: add a retained theorem and runner that construct CPT-invariant resonance pole dynamics or total decay widths from the framework, without setting the antiparticle block by hand. Claim boundary until fixed: a toy CPT-symmetric non-Hermitian effective Hamiltonian with antiparticle block defined as the CPT conjugate has equal width magnitudes.
+- **open / conditional deps cited:**
+  - `CPT_EXACT_NOTE.md`
 - **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
