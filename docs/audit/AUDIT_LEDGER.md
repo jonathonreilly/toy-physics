@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:40:10.864590+00:00
+**Generated:** 2026-05-02T00:41:13.822550+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 157 |
+| bounded | 156 |
 | support | 128 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 963 |
-| ~~audited_failed~~ | 92 |
+| ~~audited_failed~~ | 93 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 348 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 63 |
+| `audited_failed` | 64 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 453 |
+| `unaudited` | 452 |
 
 | criticality | count |
 |---|---:|
@@ -1167,6 +1167,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_iterative_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_nonlocal_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `staggered_backreaction_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_results_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -15025,6 +15026,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `STAGGERED_BACKREACTION_ITERATIVE_NOTE.md`
   - `STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`
   - `STAGGERED_LAYERED_BACKREACTION_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_backreaction_note`
+
+- **Note:** [`STAGGERED_BACKREACTION_NOTE.md`](../../docs/STAGGERED_BACKREACTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The current prototype already gives a clean bounded source-response read on the retained graph families.  _(class `C`)_
+- **chain closes:** False — The current runner still gives a bounded source-generated TOWARD read, but it does not match the note's frozen numerical table for F_ext, F_solve, force gap, source R2, self-force, or self-gap.
+- **rationale:** Issue: The frozen table is stale relative to scripts/frontier_staggered_backreaction_prototype.py; for example the current bipartite_random_geometric row reports F_ext=+1.488e+00, F_solve=+5.593e-02, gap=9.624e-01, R2=0.9830, and self_gap=3.953e-01 rather than the note's +3.247e-01, +4.002e-02, 8.767e-01, 1.0000, and 7.041e-01. Why this blocks: the note is a frozen bounded numerical prototype, so the audit cannot certify it while key quantitative columns disagree with the executable artifact. Repair target: rerun the prototype, update the note table and readout to the current outputs, or restore the runner version that generated the frozen table. Claim boundary until fixed: it is safe to say the current runner has exact zero-source reduction, TOWARD force on all three families, exact two-body additivity to numerical precision, and a large external-vs-solved force gap; it is not safe to cite the frozen table values or exact source-response linearity on all families.
 - **auditor confidence:** high
 
 ### `staggered_backreaction_results_2026-04-10`
