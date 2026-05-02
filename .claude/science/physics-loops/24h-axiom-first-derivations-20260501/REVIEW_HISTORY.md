@@ -209,3 +209,36 @@ Test 6 (sigma_SB in SI = CODATA 2018):        PASS  rel diff 1.87e-9
 
 OVERALL: PASS
 ```
+
+## Block 08 — Unruh T_U = a/(2π) from KMS + Lorentz kernel
+
+### Branch-local self-review (2026-05-01)
+
+- **theorem note:** [docs/AXIOM_FIRST_UNRUH_TEMPERATURE_THEOREM_NOTE_2026-05-01.md](../../../../docs/AXIOM_FIRST_UNRUH_TEMPERATURE_THEOREM_NOTE_2026-05-01.md)
+- **runner:** [scripts/axiom_first_unruh_temperature_check.py](../../../../scripts/axiom_first_unruh_temperature_check.py)
+
+#### Findings
+
+- **F1 (no-issue):** all 5 tests pass at machine precision.
+- **F2 (no-issue):** SI Earth-gravity Unruh temperature ~4×10⁻²⁰ K
+  matches textbook value.
+- **F3 (no-issue):** Bisognano-Wichmann modular identity Δ = exp(-2π K)
+  numerically verified.
+
+#### Disposition
+
+- **disposition:** pass.
+- **proposal-allowed:** false.
+- **branch action:** commit, push, open stacked PR (base = Block 01 KMS).
+
+#### Runner results summary (2026-05-01)
+
+```text
+Test 1 (Wick-rotation period 2 pi):                PASS
+Test 2 (T_Unruh = a / (2 pi) sweep):               PASS
+Test 3 (SI scale at Earth gravity ~4e-20 K):       PASS
+Test 4 (T_Unruh / a = 1/(2 pi) universal):         PASS
+Test 5 (Bisognano-Wichmann Delta = exp(-2 pi K)):  PASS
+
+OVERALL: PASS
+```
