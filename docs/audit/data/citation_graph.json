@@ -19945,7 +19945,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:02:09.803048+00:00",
+  "generated_at": "2026-05-02T18:52:51.927650+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28893,7 +28893,7 @@
       "claim_type_author_hint_raw": "bounded theorem (mixed-kernel locality factorization on the",
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "9a83cec451b410ccf7d3ce0edb4dfb88efb2b65015918463a85f71f04614932f",
+      "note_hash": "d6fe3b3b04688aaf1be0b8e792032875a161a27d4baec53c9b3e69d73e5f94fd",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py",
       "title": "Gauge-Vacuum Plaquette Local / Environment Factorization Theorem"

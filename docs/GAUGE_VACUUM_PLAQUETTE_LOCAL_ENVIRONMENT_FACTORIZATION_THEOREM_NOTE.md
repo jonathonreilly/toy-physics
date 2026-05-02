@@ -1,11 +1,11 @@
 # Gauge-Vacuum Plaquette Local / Environment Factorization Theorem
 
-**Date:** 2026-04-17 (scope-tightening audit re-frame: 2026-05-02)
-**Type:** bounded theorem (mixed-kernel locality factorization on the
-marked-plaquette character sector at the accepted Wilson `3+1` source
-surface); explicitly *out of scope*: residual source-sector environment
-data, framework-point Perron state at `beta = 6`, and analytic closure of
-`P(6)`.
+**Date:** 2026-04-17 (scope-tightening re-frame: 2026-05-02)
+**Type:** bounded_theorem
+**Claim scope:** mixed-kernel locality factorization on the marked-plaquette
+character sector at the accepted Wilson `3+1` source surface; explicitly
+*out of scope*: residual source-sector environment data, framework-point
+Perron state at `beta = 6`, and analytic closure of `P(6)`.
 **Bounded scope (what this note proves):** after trivial-channel
 normalization the mixed-kernel source-sector action on the marked
 plaquette character sector is exactly the local Wilson marked-link factor
@@ -179,9 +179,9 @@ This note's `claim_type` is `bounded_theorem`:
   `beta = 6` Perron moments after full environment, framework-point
   closure of `P(6)`, repo-wide repinning of the canonical plaquette.
 - *Companion successor notes:* the residual environment object is
-  named, tracked, and audited separately; nothing in those still-open
-  notes is treated as a load-bearing input here, and the bounded
-  factorization theorem retains independently of their disposition.
+  named and tracked separately; nothing in those still-open notes is
+  treated as a load-bearing input here, and the bounded factorization
+  theorem can be reviewed independently of their disposition.
 
 ## What this closes
 
