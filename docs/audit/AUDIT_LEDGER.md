@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T02:27:04.957537+00:00
+**Generated:** 2026-05-02T02:37:22.842230+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 372 |
+| `audited_clean` | 373 |
 | `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 415 |
+| `unaudited` | 414 |
 
 | criticality | count |
 |---|---:|
@@ -464,6 +464,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | open | ~~audited_clean~~ | open | cross_family | codex-current | C | - |
 | `wide_family_h0125_bridge_reopen_audit` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `wide_lattice_h2t_skeptic_audit_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `yt_schur_stability_gap_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `z2_hw1_mass_matrix_parametrization_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -16933,6 +16934,18 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The independent wide-lattice replay at h = 0.25, W = 12, L = 12 gives 10/10 TOWARD distance support, far-tail b^(-1.05) with R^2 = 0.990, and F~M exponent 1.000.  _(class `C`)_
 - **chain closes:** True — The live replay reproduces the frozen sanity checks, distance rows, peak/far-tail fits, and mass-scaling sweep. The note explicitly limits the result to a finite-lattice frontier replay and disclaims a continuum theorem or exact exponent proof.
 - **rationale:** The runner supports the retained frontier claim as scoped. It independently computes the wide ordered-3D h^2+T replay on main and reproduces Born approximately 4.82e-15, k=0 zero, 10/10 attractive distance rows, peak-tail exponent -0.95, far-tail exponent -1.05, and linear F~M scaling. This audit certifies only that finite-lattice replay, not an exact Newtonian exponent or continuum-limit theorem.
+- **auditor confidence:** high
+
+### `wide_lattice_h2t_skeptic_audit_note`
+
+- **Note:** [`WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md`](../../docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-fresh-context-audit`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The wide-lattice replay is a real retained finite-lattice result: it supports near-Newtonian far-tail behavior on the tested W=12, h=0.25 ordered 3D slice, but does not justify a continuum theorem or final asymptotic law.  _(class `C`)_
+- **chain closes:** True — The note's bounded claim is limited to a finite-lattice replay on the specified W=12, h=0.25 ordered 3D family. The runner recomputes the reported sanity checks, distance rows, far-tail fit, and F~M sweep, while the note explicitly refuses the universal and continuum claims that the runner cannot establish.
+- **rationale:** Clean only within the note's bounded claim boundary. The registered runner completed in fresh restricted review and reproduced Born=4.82e-15, k=0=+0.000000, 10/10 TOWARD distance rows, peak tail b^(-0.95) with R^2=0.980 and n=8, far tail b^(-1.05) with R^2=0.990 and n=7, and F~M exponent=1.000. The source note does not promote exact 1/b asymptotics, width independence, geometry-generic behavior, or a continuum theorem. Residual risk is that this remains one harness and one detector/source setup, but the note states that limitation rather than hiding it.
 - **auditor confidence:** high
 
 ### `wilson_mu2_distance_sweep_note_2026-04-11`

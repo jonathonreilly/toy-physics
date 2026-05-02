@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 84,
+    "leaf": 83,
     "medium": 130
   },
-  "generated_at": "2026-05-02T02:27:04.687852+00:00",
+  "generated_at": "2026-05-02T02:37:22.486549+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wide_lattice_h2t_skeptic_audit_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "work_history.yt.yt_unbounded_program_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -11787,6 +11770,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 4,
-  "total_pending": 415
+  "ready_count": 3,
+  "total_pending": 414
 }
