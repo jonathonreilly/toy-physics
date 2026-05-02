@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 27,
     "high": 215,
-    "leaf": 172,
+    "leaf": 171,
     "medium": 156
   },
-  "generated_at": "2026-05-02T22:43:22.802245+00:00",
+  "generated_at": "2026-05-02T22:46:05.404139+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10876,29 +10876,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "graph_first_su3_integration_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "teleportation_bell_measurement_circuit_note",
       "claim_scope": null,
       "claim_type": "open_gate",
@@ -11242,6 +11219,30 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "graph_first_su3_integration_note",
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py",
       "transitive_descendants": 0
     },
     {
@@ -13850,30 +13851,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "graph_first_su3_integration_note",
-        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15081,5 +15058,5 @@
     }
   ],
   "ready_count": 93,
-  "total_pending": 570
+  "total_pending": 569
 }

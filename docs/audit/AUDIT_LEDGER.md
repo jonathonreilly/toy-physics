@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:43:23.054988+00:00
+**Generated:** 2026-05-02T22:46:05.698128+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 189 |
+| **retained_bounded** | 190 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 4 |
-| unaudited | 531 |
+| unaudited | 530 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 387 |
+| `audited_clean` | 388 |
 | `audited_conditional` | 647 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 567 |
+| `unaudited` | 566 |
 
 | claim_type | count |
 |---|---:|
@@ -220,6 +220,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fixed_field_grown_transfer_scout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fourth_family_quadrant_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `gate_b_grown_propagating_field_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_v3_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -6895,6 +6896,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `g_bare_canonical_convention_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given g_bare = 1 as an admitted Wilson canonical-normalization convention and retained graph-first SU(3) input with N_c = 3, the Wilson coefficient beta = 2 N_c / g_bare^2 evaluates to beta = 6, and the admitted 1/g_bare curvature-normalization factor is unity; does not derive or uniquely force g_bare = 1 or close broader gauge-coupling claims.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-g-bare-convention-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Substitute N_c = 3 and admitted convention g_bare = 1 into beta = 2 N_c / g_bare^2, and into the admitted curvature-normalization factor 1/g_bare.  _(class `A`)_
+- **chain closes:** True — The declared graph-first SU(3) dependency is retained_bounded, and the remaining inputs are explicitly scoped as admitted Wilson conventions rather than derived framework consequences. The narrowed conclusion is only algebraic substitution and unity rescaling at g_bare = 1.
+- **rationale:** Clean as a bounded convention-plus-substitution theorem. Once g_bare = 1 is admitted as convention and N_c = 3 is inherited from retained graph-first SU(3), beta = 6 and the absence of a 1/g_bare rescaling follow exactly. Residual risk: the source note's non-load-bearing verification prose misstates the N_c=2 example; this should be corrected later, but it does not affect the scoped N_c=3 claim or the runner's exact rational check.
+- **auditor confidence:** high
 
 ### `g_bare_derivation_note`
 
