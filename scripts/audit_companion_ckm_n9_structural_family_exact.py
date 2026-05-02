@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Pattern B audit-companion runner for
-`ckm_n9_structural_family_koide_bridge_support_note_2026-04-25`
-(claim_type=positive_theorem, audit_status=audited_conditional, td=84,
-load_bearing_step_class=A).
+`ckm_n9_structural_family_koide_bridge_support_note_2026-04-25`.
 
 The parent's load-bearing content is a complete `n/9` ladder of
 algebraically distinct CKM-native readouts:
@@ -27,9 +25,7 @@ identities hold at exact symbolic precision both at the framework
 counts (p, c, q) = (2, 3, 6) and over the parametric family.
 """
 
-from pathlib import Path
 import sys
-import json
 
 try:
     import sympy
@@ -37,8 +33,6 @@ try:
 except ImportError:
     print("FAIL: sympy required for exact algebra")
     sys.exit(1)
-
-ROOT = Path(__file__).resolve().parent.parent
 
 PASS = 0
 FAIL = 0
@@ -59,7 +53,7 @@ def section(title):
 
 
 # ============================================================================
-section("Audit companion for ckm_n9_structural_family_koide_bridge_support_note_2026-04-25 (td=84)")
+section("Audit companion for ckm_n9_structural_family_koide_bridge_support_note_2026-04-25")
 # Goal: exact symbolic verification of the F1-F9 ladder at sympy Rational
 # precision over abstract counts (p, c, q = p*c).
 # ============================================================================
@@ -238,22 +232,6 @@ for n in range(1, 10):
 
 
 # ----------------------------------------------------------------------------
-section("Part 5: parent row dep verification")
-# ----------------------------------------------------------------------------
-LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
-ledger = json.loads(LEDGER.read_text())
-parent = ledger['rows'].get('ckm_n9_structural_family_koide_bridge_support_note_2026-04-25', {})
-print(f"\n  ckm_n9_structural_family_koide_bridge_support_note_2026-04-25 current ledger state:")
-print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
-print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
-print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
-
-check("parent row class-A load-bearing step (algebraic identity ladder)",
-      parent.get('load_bearing_step_class') == 'A')
-
-
-# ----------------------------------------------------------------------------
 section("Audit-companion summary")
 # ----------------------------------------------------------------------------
 print("""
@@ -279,11 +257,10 @@ print("""
     (A) — algebraic identity / number-theoretic counting ladder. No
     external observed/fitted/literature input.
 
-  This audit-companion does NOT introduce a new claim row, a new source
-  note, or any modification of the parent's audit_status. The parent
-  remains audited_conditional pending audit-lane review of the
-  upstream Wolfenstein / CP-phase / magnitudes-counts / Bernoulli
-  authorities.
+  This companion does NOT introduce a new claim row, a new source note,
+  or any modification of the parent row. It only verifies the local
+  algebraic ladder; independent audit remains responsible for the parent
+  row and its upstream authorities.
 """)
 
 
