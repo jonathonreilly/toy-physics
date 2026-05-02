@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## No hidden source-Higgs cross-correlator authority exists
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_source_higgs_cross_correlator_import_audit.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+The current production harness emits top source-response and same-source
+`C_ss` support, but not a `C_sH` cross-correlator, canonical-Higgs source
+operator, or W/Z response schema.  The EW/SM Higgs notes assume canonical `H`
+or select allowed monomials; they do not derive the PR source-operator overlap.
+Therefore the `C_sH` route remains a future observable/theorem, not hidden
+current-surface retained/proposed-retained closure.
+
 ## Source-only pole data do not prove source-pole purity
 
 Runner:

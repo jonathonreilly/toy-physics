@@ -57,6 +57,7 @@ plus FH/LSZ chunks007-008 ready-set processing
 plus FH/LSZ target time-series Higgs-identity no-go
 plus no-orthogonal-top-coupling selection-rule no-go
 plus source-pole purity cross-correlator gate
+plus source-Higgs cross-correlator import audit
 **PR:** #230 draft branch
 
 ```yaml
@@ -69,6 +70,22 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+Source-Higgs cross-correlator import audit:
+
+```text
+actual_current_surface_status: exact negative boundary / source-Higgs cross-correlator import audit
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_source_higgs_cross_correlator_import_audit.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+No current harness or EW/SM Higgs authority supplies a `C_sH` source-Higgs
+cross-correlator, canonical-Higgs source operator, or hidden source-pole purity
+theorem.  The cross-correlator route remains a future measurement/theorem and
+does not authorize retained or proposed-retained closure.
 
 Source-pole purity cross-correlator gate:
 

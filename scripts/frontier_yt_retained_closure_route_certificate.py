@@ -112,6 +112,7 @@ def main() -> int:
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
+        "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
         "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
         "no_orthogonal_top_coupling_selection_rule": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
@@ -593,6 +594,15 @@ def main() -> int:
         and certificates["source_pole_purity_cross_correlator"].get("source_pole_purity_gate_passed")
         is False
     )
+    source_higgs_cross_correlator_import_blocks = (
+        "source-Higgs cross-correlator import audit"
+        in certificates["source_higgs_cross_correlator_import"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_cross_correlator_import"].get("proposal_allowed") is False
+        and certificates["source_higgs_cross_correlator_import"].get(
+            "source_higgs_cross_correlator_authority_found"
+        )
+        is False
+    )
     fh_gauge_response_mixed_scalar_blocks = (
         "FH gauge-response mixed-scalar obstruction"
         in certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", "")
@@ -1051,6 +1061,11 @@ def main() -> int:
         certificates["source_pole_purity_cross_correlator"].get("actual_current_surface_status", ""),
     )
     report(
+        "source-higgs-cross-correlator-import-blocks",
+        source_higgs_cross_correlator_import_blocks,
+        certificates["source_higgs_cross_correlator_import"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-gauge-response-mixed-scalar-blocks",
         fh_gauge_response_mixed_scalar_blocks,
         certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", ""),
@@ -1363,7 +1378,10 @@ def main() -> int:
             "The source-pole purity cross-correlator gate blocks another: "
             "C_ss and source response can stay fixed while the source-Higgs "
             "overlap changes unless a C_sH cross-correlator, W/Z response, "
-            "or retained purity theorem is supplied.  "
+            "or retained purity theorem is supplied.  The source-Higgs "
+            "cross-correlator import audit then confirms that C_sH is not "
+            "already hidden in the current harness or EW/Higgs notes; it is a "
+            "future observable/theorem, not current closure.  "
             "A paired x8/x16 calibration "
             "manifest now exists, but it is still launch planning rather than "
             "completed same-source production variance evidence.  The "

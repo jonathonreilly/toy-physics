@@ -77,6 +77,11 @@ well.  `C_ss`, source response, and the source inverse-propagator derivative
 can stay fixed while the source-Higgs overlap changes, so the remaining
 positive routes are a real `C_sH` cross-correlator/purity theorem,
 sector-overlap equality, or an implemented same-source W/Z response observable.
+The `C_sH` import audit confirms that the cross-correlator is not already
+available in the current harness or EW/SM Higgs notes.  If pursued, it must be
+implemented as a new canonical-Higgs operator/response surface paired with an
+identity certificate; otherwise the queue should favor sector-overlap equality,
+same-source W/Z response implementation, or production FH/LSZ processing.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

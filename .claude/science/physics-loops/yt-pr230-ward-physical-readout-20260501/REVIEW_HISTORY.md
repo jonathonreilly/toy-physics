@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Source-Higgs Cross-Correlator Import Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- the current production harness has top source-response and `C_ss` support,
+  but no `C_sH`, canonical-Higgs operator, or W/Z response schema;
+- EW/SM Higgs notes assume canonical `H` or select monomials, not the PR
+  source-operator overlap;
+- gauge-VEV, `Z_h`, Hessian, BRST/Nielsen, and W/Z manifest shortcuts remain
+  non-closure;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_higgs_cross_correlator_import_audit.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_source_higgs_cross_correlator_import_audit.py
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Source-Pole Purity Cross-Correlator Gate
 
 Local review-loop disposition:

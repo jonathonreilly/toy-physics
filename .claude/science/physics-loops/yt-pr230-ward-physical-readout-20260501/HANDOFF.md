@@ -1,5 +1,23 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 source-Higgs cross-correlator import audit:
+
+- Added `scripts/frontier_yt_source_higgs_cross_correlator_import_audit.py`,
+  `docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_IMPORT_AUDIT_NOTE_2026-05-02.md`,
+  and `outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json`.
+- Result: the current harness and EW/SM Higgs notes do not supply a hidden
+  `C_sH` source-Higgs cross-correlator, canonical-Higgs source operator, or
+  purity theorem.
+- Retained-route gate is `PASS=89 FAIL=0`; campaign status is
+  `PASS=115 FAIL=0` over 119 certificates.
+- Chunks009-010 remain running in the background unless completed outputs
+  appear.
+
+Next exact action: process chunks009-010 if they finish; otherwise attack
+sector-overlap equality, same-source W/Z response implementation, or a
+source-pole purity theorem directly.  Do not treat a missing `C_sH` schema as
+closure.
+
 Latest checkpoint, 2026-05-02 source-pole purity cross-correlator gate:
 
 - Added `scripts/frontier_yt_source_pole_purity_cross_correlator_gate.py`,

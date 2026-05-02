@@ -26,7 +26,7 @@ route, matching obstruction, and source-overlap renormalization boundary.
 
 ```text
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
-# SUMMARY: PASS=11 FAIL=0
+# SUMMARY: PASS=12 FAIL=0
 ```
 
 The refreshed `A_min` allows only:
@@ -56,6 +56,9 @@ The stress test explicitly forbids:
 - a single finite source-shift radius as the zero-source Feynman-Hellmann
   derivative without a finite-source-linearity gate, multiple radii, or a
   retained analytic response-bound theorem.
+- a source-Higgs cross-correlator `C_sH` as hidden authority; it remains an
+  open observable/theorem until a canonical-Higgs source operator and
+  cross-correlator implementation are supplied.
 
 ## Consequence
 

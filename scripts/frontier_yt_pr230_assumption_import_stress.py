@@ -59,6 +59,9 @@ def main() -> int:
         "finite_source_shift_derivative_no_go": load(
             "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json"
         ),
+        "source_higgs_cross_correlator_import": load(
+            "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json"
+        ),
     }
 
     required_terms = [
@@ -72,6 +75,7 @@ def main() -> int:
         "source operator overlap",
         "Source contact counterterms",
         "Single finite source-shift radius as a zero-source derivative",
+        "Source-Higgs cross-correlator `C_sH`",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -118,6 +122,16 @@ def main() -> int:
         in str(certificates["finite_source_shift_derivative_no_go"].get("actual_current_surface_status")),
         certificates["finite_source_shift_derivative_no_go"].get("actual_current_surface_status"),
     )
+    report(
+        "source-higgs-cross-correlator-not-hidden-authority",
+        "source-Higgs cross-correlator import audit"
+        in str(certificates["source_higgs_cross_correlator_import"].get("actual_current_surface_status"))
+        and certificates["source_higgs_cross_correlator_import"].get(
+            "source_higgs_cross_correlator_authority_found"
+        )
+        is False,
+        certificates["source_higgs_cross_correlator_import"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -130,7 +144,9 @@ def main() -> int:
             "does not derive the source operator overlap <0|O_s|h>, and source "
             "contact-term schemes do not derive the isolated pole residue.  A "
             "single finite source-shift radius also does not derive the zero-source "
-            "Feynman-Hellmann derivative.  No current route "
+            "Feynman-Hellmann derivative.  A C_sH source-Higgs cross-correlator "
+            "is not hidden in the current harness or EW/Higgs notes; it remains "
+            "an open observable/theorem.  No current route "
             "certificate authorizes retained proposal wording.  Positive "
             "closure still requires production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
