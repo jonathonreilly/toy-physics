@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T14:40:53.649467+00:00
+**Generated:** 2026-05-02T14:46:44.549302+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 150 |
 | **retained_no_go** | 91 |
-| **retained_bounded** | 168 |
+| **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 387 |
+| unaudited | 386 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -34,23 +34,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 373 |
+| `audited_clean` | 374 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 422 |
+| `unaudited` | 421 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 492 |
+| `bounded_theorem` | 495 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 146 |
 | `open_gate` | 67 |
-| `positive_theorem` | 815 |
-| `unset` | 11 |
+| `positive_theorem` | 823 |
 
 | criticality | count |
 |---|---:|
@@ -76,25 +75,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `alpha_s_derived_note` | bounded_theorem | critical | 259 | 29.52 | `unaudited` | unaudited |
-| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | - | critical | 117 | 28.88 | `unaudited` | unaudited |
+| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `unaudited` | unaudited |
 | 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 28.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 4 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 264 | 27.55 | `audited_renaming` | ~~audited_renaming~~ |
 | 5 | `observable_principle_from_axiom_note` | positive_theorem | critical | 294 | 26.70 | `audited_conditional` | ~~audited_conditional~~ |
-| 6 | `graph_first_su3_integration_note` | bounded_theorem | critical | 312 | 25.79 | `audited_clean` | **retained_bounded** |
-| 7 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 23.70 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 261 | 23.53 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `native_gauge_closure_note` | - | critical | 308 | 22.27 | `unaudited` | unaudited |
-| 10 | `three_generation_observable_theorem_note` | positive_theorem | critical | 302 | 21.74 | `audited_conditional` | ~~audited_conditional~~ |
-| 11 | `three_generation_structure_note` | positive_theorem | critical | 266 | 21.06 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 115 | 20.86 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 259 | 20.52 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `one_generation_matter_closure_note` | positive_theorem | critical | 246 | 20.45 | `audited_conditional` | ~~audited_conditional~~ |
-| 15 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 95 | 19.59 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `anomaly_forces_time_theorem` | positive_theorem | critical | 263 | 18.54 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `left_handed_charge_matching_note` | - | critical | 267 | 17.57 | `unaudited` | unaudited |
+| 6 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 23.70 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 261 | 23.53 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `graph_first_su3_integration_note` | bounded_theorem | critical | 312 | 21.79 | `audited_clean` | **retained_bounded** |
+| 9 | `three_generation_observable_theorem_note` | positive_theorem | critical | 302 | 21.74 | `audited_conditional` | ~~audited_conditional~~ |
+| 10 | `three_generation_structure_note` | positive_theorem | critical | 266 | 21.06 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 115 | 20.86 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 259 | 20.52 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `one_generation_matter_closure_note` | positive_theorem | critical | 246 | 20.45 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 95 | 19.59 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `anomaly_forces_time_theorem` | positive_theorem | critical | 263 | 18.54 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `native_gauge_closure_note` | bounded_theorem | critical | 308 | 18.27 | `unaudited` | unaudited |
+| 17 | `left_handed_charge_matching_note` | positive_theorem | critical | 267 | 17.57 | `unaudited` | unaudited |
 | 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 76 | 17.27 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 264 | 16.55 | `unaudited` | unaudited |
-| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | - | critical | 122 | 16.44 | `unaudited` | unaudited |
+| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 122 | 16.44 | `unaudited` | unaudited |
 | 21 | `physical_lattice_necessity_note` | positive_theorem | critical | 301 | 15.74 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `rconn_derived_note` | positive_theorem | critical | 264 | 15.55 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `higgs_mass_derived_note` | positive_theorem | critical | 260 | 15.53 | `audited_conditional` | ~~audited_conditional~~ |
@@ -249,6 +248,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
+| `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `graph_laplacian_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `graph_scalar_plus_spinor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -8061,6 +8061,19 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`
   - `UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`
+- **auditor confidence:** high
+
+### `graph_first_selector_derivation_note`
+
+- **Note:** [`GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](../../docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The canonical 2^3 cube axis-shift triplet yields a derived quartic selector whose normalized minima select exactly one taste-cube axis, without identifying the downstream abelian factor.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-selector-gibbs`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For canonical cube shifts S_i, V_sel(phi)=Tr H(phi)^4-(Tr H(phi)^2)^2/8 equals 32 sum_{i<j} phi_i^2 phi_j^2, whose normalized simplex minima are exactly the three axis vertices.  _(class `A`)_
+- **chain closes:** True — The derivation is closed as finite-dimensional exact algebra over the canonical cube shifts, and the runner checks the trace identities, normalization, simplex minima, and residual stabilizer. The cited authority is only needed for the bounded selected-axis context, not for full phenomenological identification.
+- **rationale:** Issue checked: whether the graph-shift triplet derives a selector rather than inserting one. The selector formula is an exact trace calculation for the canonical graph-shift operators, and the minimizer statement follows directly on the normalized simplex. The claim boundary excludes anomaly-complete hypercharge and downstream phenomenology, so the bounded theorem closes without tuned matching or renaming.
 - **auditor confidence:** high
 
 ### `graph_first_su3_integration_note`
