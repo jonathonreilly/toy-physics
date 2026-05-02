@@ -1,21 +1,19 @@
 # Three-Generation Matter Structure Note
 
 **Date:** 2026-04-15 (scope tightened 2026-05-02)
-**Type:** bounded_theorem (audit verdict: bounded_theorem +
-audited_conditional, applied 2026-05-02; this edit narrows source-note
-prose to match the auditor's bounded scope)
+**Type:** bounded_theorem proposal. Audit status is assigned only by the
+independent audit lane; this note does not set or predict a verdict.
 **Claim scope:** the *exact* corner/orbit algebra and no-quotient
 structure on the `Cl(3) / Z^3` Hamiltonian surface only:
 `8 = 1 + 1 + 3 + 3` Brillouin-zone corner decomposition,
 `C(3,1) = 3` hw=1 degeneracy, exact irreducible `M_3(C)`
-algebra on the retained `hw = 1` triplet, no-proper-quotient corollary,
+algebra on the `hw = 1` triplet, no-proper-quotient corollary,
 and the no-rooting boundary. The "physical-generation" /
 substrate-physicality upgrade depends on the accepted-Hilbert-surface
 semantics carried by `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`,
 `PHYSICAL_LATTICE_NECESSITY_NOTE.md`,
 `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`, and
-`ANOMALY_FORCES_TIME_THEOREM.md`, all of which are currently
-`audited_conditional`. That upgrade is **out of scope** for this row's
+`ANOMALY_FORCES_TIME_THEOREM.md`. That upgrade is **out of scope** for this row's
 narrowed load-bearing claim and is preserved below as cross-referenced
 downstream conditional context only.
 **Scripts:** `scripts/frontier_generation_fermi_point.py`,
@@ -29,18 +27,18 @@ sibling notes; this note does not carry it.
 
 ## Safe statement (narrowed)
 
-The framework retains an exact *structural* three-generation algebra on
+The framework states an exact *structural* three-generation algebra on
 the `Cl(3) / Z^3` Hamiltonian surface:
 
 - the exact corner/orbit algebra gives `8 = 1 + 1 + 3 + 3`
 - the three `hw=1` corners are the lightest nonzero-Wilson-mass states
   on `Z^3`, with multiplicity `C(3,1) = 3`
 - rooting is not a well-defined operation in Hamiltonian `Cl(3)` on `Z^3`
-- the retained `hw=1` triplet carries an exact irreducible
-  retained generation algebra (`M_3(C)`), so no proper exact quotient
+- the `hw=1` triplet carries an exact irreducible
+  generation algebra (`M_3(C)`), so no proper exact quotient
   survives on that surface
 
-The further reading that the retained `hw=1` triplet is identified with
+The further reading that the `hw=1` triplet is identified with
 *physically distinct observable species sectors* of the accepted theory,
 or that the substrate-level physical-lattice reading is itself derived
 on the accepted one-axiom Hilbert/locality/information surface, is a
@@ -49,21 +47,18 @@ notes and is *not* part of the load-bearing claim of this row.
 
 ## Out of scope: substrate-physicality / observable-species upgrade
 
-The substrate-physicality / "three observable species" reading is the
-audit-conditional bridge step. It depends on:
+The substrate-physicality / "three observable species" reading is a
+separate bridge step. It depends on:
 
 - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
-  (`audited_conditional`)
-- `PHYSICAL_LATTICE_NECESSITY_NOTE.md` (`audited_conditional`)
+- `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
 - `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md` (chirality bridge)
-- `ANOMALY_FORCES_TIME_THEOREM.md` (`audited_conditional`)
+- `ANOMALY_FORCES_TIME_THEOREM.md`
 
-The audit verdict on this row's prior `positive_theorem` framing was
-that those bridge authorities are not retained-grade in the current
-ledger and that this note must therefore narrow to the exact Wilson-
-corner / no-quotient / no-rooting algebra only, citing the substrate-
-physicality upgrade only as conditional downstream context. This
-edit applies that narrowing.
+Review found that those bridge authorities should not be load-bearing
+for this row's structural algebra claim. This note therefore narrows to
+the exact Wilson-corner / no-quotient / no-rooting algebra only, citing
+the substrate-physicality upgrade only as conditional downstream context.
 
 ## Canonical derivation stack (narrowed scope)
 
@@ -79,8 +74,8 @@ for the narrowed claim of this row.
    projection preserves the Hamiltonian `Cl(3)` structure; the triplet sectors
    cannot be removed by a legitimate rooting operation on this formulation.
    (load-bearing)
-3. `frontier_three_generation_observable_theorem.py` proves that the retained
-   `hw=1` triplet already carries the full exact retained generation algebra
+3. `frontier_three_generation_observable_theorem.py` proves that the
+   `hw=1` triplet already carries the full exact generation algebra
    `M_3(C)`, so no proper exact quotient exists even before flavor.
    (load-bearing)
 
@@ -88,42 +83,42 @@ for the narrowed claim of this row.
 
 4. *(out of scope)* `frontier_physical_lattice_necessity.py`: narrower
    semantics step that exact observable separation + no proper exact quotient
-   + accepted Hilbert semantics force the retained `hw=1` triplet to be
+   + accepted Hilbert semantics force the `hw=1` triplet to be
    physically distinct species sectors of the accepted theory. The bridge
-   authority `PHYSICAL_LATTICE_NECESSITY_NOTE.md` is currently
-   `audited_conditional`; this upgrade is **out of scope** for this row.
+   authority `PHYSICAL_LATTICE_NECESSITY_NOTE.md`; this upgrade is
+   **out of scope** for this row.
 5. *(out of scope)* `frontier_generation_axiom_boundary.py`: reduced-stack
    witness showing why the older five-item memo listed the substrate premise
    explicitly. Cross-reference only.
 6. *(out of scope)* The fixed-stack/fixed-surface regulator-reinterpretation
    closure and the substrate-level physical-lattice derivation on the
-   one-axiom Hilbert surface are carried in `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-   (`audited_conditional`). Cross-reference only.
+   one-axiom Hilbert surface are carried in `PHYSICAL_LATTICE_NECESSITY_NOTE.md`.
+   Cross-reference only.
 
 ## Boundary
 
 The narrowed statement is *structural*, not maximal:
 
 - in scope: exact corner/orbit algebra, no-proper-quotient, no-rooting,
-  irreducible `M_3(C)` on the retained `hw=1` triplet
+  irreducible `M_3(C)` on the `hw=1` triplet
 - out of scope (delegated to sibling notes): substrate-physicality
   reading, identification of the triplet with observable species
   sectors of the accepted theory, derivation of the substrate
   reading on the one-axiom surface
-- not retained: a first-principles `1+1+1` mass hierarchy
-- not retained: a pure-spatial chiral-regulator theorem divorced from the
+- out of scope: a first-principles `1+1+1` mass hierarchy
+- out of scope: a pure-spatial chiral-regulator theorem divorced from the
   anomaly-forced time step
 
 The remaining open work now belongs to:
 
-- ratification of the substrate-physicality reading via re-audit of
-  the cross-referenced bridge notes (currently `audited_conditional`)
+- independent audit of the substrate-physicality reading in the
+  cross-referenced bridge notes
 - generation hierarchy / flavor structure
-- full chirality / mass-spectrum tasks beyond the retained generation surface
+- full chirality / mass-spectrum tasks beyond the generation surface
 
 For the clean public chirality / anti-rooting boundary, see
 `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`.
-For the exact retained-generation algebra theorem, see
+For the exact generation algebra theorem, see
 `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
 (cross-reference, not a load-bearing upstream dep — this note's claim is
 established inline; the standalone packaging exists for reuse).
@@ -148,9 +143,8 @@ Current main-branch runner state:
 
 - `frontier_generation_fermi_point.py`: `EXACT PASS=7`, `BOUNDED PASS=1`
   (the BOUNDED entry is the substrate-physicality identification of the
-  three lightest species with SM generations; it is the audit-conditional
-  step delegated to sibling notes, not load-bearing for this row's
-  narrowed claim)
+  three lightest species with SM generations; it is delegated to sibling
+  notes, not load-bearing for this row's narrowed claim)
 - `frontier_generation_rooting_undefined.py`: `PASS=37`, `FAIL=0`
 - `frontier_three_generation_observable_theorem.py`: `PASS=47`, `FAIL=0`
 - `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`

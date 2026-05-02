@@ -1,10 +1,8 @@
 # Anomaly Cancellation Forces 3+1 Spacetime
 
 **Date:** 2026-04-24 (scope tightened 2026-05-02)
-**Type:** bounded_theorem (proposed; audit-lane to ratify; current ledger
-verdict is `audited_conditional` on `positive_theorem`, this edit narrows
-source-note prose to a `bounded_theorem` claim conditional on four
-explicitly-named external bridge admissions)
+**Type:** bounded_theorem proposal. Audit status is assigned only by the
+independent audit lane; this note does not set or predict a verdict.
 **Claim scope:** conditional 3+1 derivation under four explicitly-named
 external admissions:
   (i) the standard Adler--Bell--Jackiw anomaly-to-inconsistency
@@ -30,10 +28,10 @@ primitives in this note).
 
 The unconditional / first-principles version, in which every bridge
 premise is derived from framework primitives without external
-admissions, is *not* the claim of this row. The latest fresh-context
-audit explicitly named the four external bridge premises above as
-unclosed in the current ledger; this edit accepts that boundary and
-narrows the load-bearing claim of this note to the conditional
+admissions, is *not* the claim of this row. Review identified the four
+external bridge premises above as outside the current source derivation;
+this edit accepts that boundary and narrows the load-bearing claim to
+the conditional
 derivation under those four named admissions.
 
 ## Theorem (Anomaly-forced time, single-clock form, conditional)
@@ -57,7 +55,7 @@ su(2) + su(3) + u(1) with left-handed fermion content
 Then consistency of the quantum gauge theory forces exactly one temporal
 dimension, giving spacetime signature `(3,1)`.
 
-## Independent audit handoff
+## Audit-lane handoff
 
 ```yaml
 proposed_claim_type: bounded_theorem
@@ -97,14 +95,14 @@ Evaluating the standard anomaly traces:
 | Witten SU(2) (doublets) | 4 (even)| OK        |
 
 The Witten row is the nonperturbative global `SU(2)` anomaly count; its
-standalone retained packaging is `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
+standalone theorem packaging is `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
 (cross-reference, not a load-bearing upstream dep — the anomaly traces above
 are computed inline in this note).
 The pure color `SU(3)^3` row is the nontrivial cubic gauge anomaly; its
-standalone retained packaging is `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
+standalone theorem packaging is `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
 (cross-reference).
 The four perturbative left-handed traces and the LH-only Witten count are
-also packaged as the standalone retained subtheorem
+also packaged as the standalone subtheorem
 `LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md` (cross-reference).
 
 Three anomaly coefficients are nonzero. By the Adler--Bell--Jackiw theorem
@@ -194,7 +192,7 @@ Fourier-space support constraints on the initial data. That is
 incompatible with the framework's graph semantics, which allow
 arbitrary local basis states on a single time slice.
 
-**Audit boundary (external bridge premise iv):** the ultrahyperbolic
+**Review boundary (external bridge premise iv):** the ultrahyperbolic
 codimension-1 obstruction is imported here from the classical-PDE
 literature ([4], [5]) as an external bridge premise. This note does
 not derive that obstruction from framework primitives. The narrowed
