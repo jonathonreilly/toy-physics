@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:46:28.389835+00:00
+**Generated:** 2026-05-02T01:49:04.328192+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 365 |
+| `audited_clean` | 366 |
 | `audited_conditional` | 667 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 424 |
+| `unaudited` | 423 |
 
 | criticality | count |
 |---|---:|
@@ -443,6 +443,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_block_normalization_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_canonical_projector_connection_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
 | `universal_gr_complement_canonical_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | A | - |
+| `universal_gr_constraint_action_stationarity_note` | support | ~~audited_clean~~ | support | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -16046,6 +16047,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** True — For the bounded claim actually made, the algebraic checks support a canonical rank-2 Pi_A1 core, SO(3) closure on the complement, invariant A1 block data, and nontrivial orbit-valued complement response. This closes only as a current-atlas obstruction, not as an absolute no-go theorem against future added invariants.
 - **rationale:** The note is correctly framed as bounded: it does not claim a canonical complement section, and its strongest statement is the negative orbit-canonical obstruction. The runner passes the relevant algebraic invariance/orbit checks, but five text-presence checks use a hardcoded external ROOT and were treated only as ancillary input verification, not as authority over this checkout. No hidden physical comparator, tuned numerical match, or definition-as-derivation is load-bearing.
 - **auditor confidence:** medium
+
+### `universal_gr_constraint_action_stationarity_note`
+
+- **Note:** [`UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md`](../../docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-current-restricted-audit-f161`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The candidate is orbit-flat on the valid 3+1 polarization-frame orbit: complement coefficients move, but action-like invariants do not pick a unique section.  _(class `A`)_
+- **chain closes:** True — The local negative claim closes: an SO(3)-orbit-flat quadratic action/constraint cannot canonically select a complement-frame section when the complement coordinates still vary along that orbit.
+- **rationale:** The claim is a support/no-go result about failure of action stationarity to resolve the complement-frame ambiguity, not a positive GR closure theorem. The source note's load-bearing step is an algebraic orbit-flatness argument, and the runner's current algebraic checks support that step. The single current-checkout runner failure is tied to a stale blocker-note text check, not to the load-bearing stationarity computation.
+- **auditor confidence:** high
 
 ### `universal_gr_discrete_global_closure_note`
 
