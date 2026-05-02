@@ -2,7 +2,7 @@
 """Verify the narrow g_bare canonical Wilson convention theorem.
 
 Claim scope: GIVEN g_bare = 1 as admitted Wilson canonical-normalization
-convention + retained graph_first_su3 N_c = 3, the Wilson action coefficient
+convention + declared graph_first_su3 N_c = 3, the Wilson action coefficient
 β = 6 (class A algebraic substitution) and the lattice field strength
 equals Cl(3) curvature without rescaling.
 """
@@ -14,6 +14,7 @@ import json
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTE_PATH = ROOT / "docs" / "G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md"
+CLAIM_ID = "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
 
 PASS = 0
 FAIL = 0
@@ -44,7 +45,7 @@ required = [
     "an admitted convention",
     "NOT a derivation",
     "β  =  2 N_c / g_bare²  =  2 · 3 / 1  =  6",
-    "graph_first_su3_integration_note",
+    "GRAPH_FIRST_SU3_INTEGRATION_NOTE.md",
     "class (A)",
     "convention-vs-derivation",
     "target_claim_type: bounded_theorem",
@@ -112,18 +113,29 @@ for g in [Fraction(2), Fraction(1, 3), Fraction(7, 11)]:
 
 
 # ============================================================================
-section("Part 5: cited authority is retained-grade")
+section("Part 5: declared authority is graph-visible")
 # ============================================================================
 LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 ledger = json.loads(LEDGER.read_text())
 rows = ledger['rows']
 
 dep_id = "graph_first_su3_integration_note"
-dep_es = rows.get(dep_id, {}).get("effective_status")
-retained_grade = {'retained', 'retained_bounded', 'retained_no_go'}
-check(f"{dep_id} effective_status retained-grade",
-      dep_es in retained_grade,
-      detail=f"observed = {dep_es!r}")
+dep_row = rows.get(dep_id)
+claim_row = rows.get(CLAIM_ID)
+check(f"{dep_id} exists in audit ledger",
+      dep_row is not None,
+      detail=f"effective_status={dep_row.get('effective_status') if dep_row else None!r}")
+check(f"{CLAIM_ID} seeded by audit pipeline",
+      claim_row is not None,
+      detail="run docs/audit/scripts/run_pipeline.sh after editing the note")
+if claim_row is not None:
+    claim_deps = set(claim_row.get("deps", []))
+    check(f"{CLAIM_ID} records graph_first_su3 as declared dependency",
+          dep_id in claim_deps,
+          detail=f"deps={sorted(claim_deps)}")
+    check(f"{CLAIM_ID} remains effective-unaudited before independent audit",
+          claim_row.get("effective_status") == "unaudited",
+          detail=f"effective_status={claim_row.get('effective_status')!r}")
 
 
 print(f"\n{'='*88}\n  TOTAL: PASS={PASS}, FAIL={FAIL}\n{'='*88}")

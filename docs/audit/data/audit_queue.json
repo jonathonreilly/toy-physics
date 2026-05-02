@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 74,
     "high": 203,
-    "leaf": 133,
+    "leaf": 134,
     "medium": 162
   },
-  "generated_at": "2026-05-02T17:10:27.085781+00:00",
+  "generated_at": "2026-05-02T17:13:14.666960+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -11954,6 +11954,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "graph_first_su3_integration_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15151,6 +15174,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 90,
-  "total_pending": 572
+  "ready_count": 91,
+  "total_pending": 573
 }

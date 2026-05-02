@@ -8,8 +8,8 @@
 
 > **Given** the Wilson gauge-action canonical-normalization convention
 > `g_bare = 1` (an admitted convention, NOT a derivation), and given
-> the retained graph-first SU(3) gauge surface (from
-> `graph_first_su3_integration_note`, `retained_bounded`), the Wilson
+> the declared graph-first SU(3) gauge surface (from
+> [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)), the Wilson
 > action coefficient is
 > ```
 > β  =  2 N_c / g_bare²  =  2 · 3 / 1  =  6
@@ -32,11 +32,11 @@ The narrow theorem **does not** claim:
 - closure of the broader G_BARE_* family or the gauge-coupling-derivation
   lane.
 
-## Retained dependencies (one-hop)
+## Declared audit dependency (one-hop)
 
-| Authority | Effective status | Role |
+| Authority | Audit-lane status | Role |
 |---|---|---|
-| `graph_first_su3_integration_note` | retained_bounded | provides the graph-first SU(N_c) gauge surface with N_c = 3 from spatial dimension d = 3 |
+| [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | pipeline-derived; may be audit-pending after dependency-graph strengthening | provides the graph-first SU(N_c) gauge surface with N_c = 3 from spatial dimension d = 3 |
 
 The convention `g_bare = 1` is admitted but is **not** a load-bearing
 proof input — it parameterizes the action coefficient, not the proof of
@@ -61,7 +61,7 @@ Cl(3) curvature relation (admitted standard Wilson lattice gauge theory):
 ```
 
 This is class (A) — algebraic substitution into a standard Wilson formula
-on retained-grade graph-first input.
+on the declared graph-first input.
 
 ## Verification
 
@@ -75,7 +75,7 @@ Verifies, at exact rational precision:
 2. β formula is consistent for general N_c (e.g. N_c=2 → β=8, N_c=4 → β=8 with g_bare=1).
 3. The Wilson formula `S_W = (β/N_c) Σ Re Tr(I - U_p)` is the standard form
    (admitted convention).
-4. `graph_first_su3_integration_note` is retained-grade via live ledger
+4. `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md` is graph-visible via live ledger
    lookup.
 5. The convention-vs-derivation distinction is explicit in note prose.
 
@@ -92,8 +92,10 @@ proposed_load_bearing_step_class: A
 audit_required_before_effective_retained: true
 ```
 
-If ratified, `effective_status = retained_bounded` (bounded_theorem +
-audited_clean + retained_bounded dep).
+Audit status is set only by the independent audit lane. This note is safe to
+land as an unaudited, graph-visible bounded-theorem candidate; retained-family
+effective status requires independent audit of this row and retained-grade
+closure of its declared dependency chain.
 
 ## What this theorem closes
 
@@ -102,7 +104,8 @@ convention as a CONVENTION (not a derivation), resolving the parent
 `G_BARE_DERIVATION_NOTE.md`'s previously-named "constraint vs convention
 ambiguity." The narrow theorem provides a clean retained-bounded primitive
 that downstream rows depending on `g_bare = 1` for the Wilson action
-setup can cite without inheriting the conditional ambiguity.
+setup can cite without inheriting the conditional ambiguity, once the audit lane
+ratifies this row and its dependency chain.
 
 ## What this theorem does NOT close
 
@@ -114,9 +117,9 @@ setup can cite without inheriting the conditional ambiguity.
 
 ## Cross-references
 
-- `G_BARE_DERIVATION_NOTE.md` — parent (`audit_status: audited_conditional`,
-  td=294); this narrow theorem resolves the convention-vs-derivation
+- `G_BARE_DERIVATION_NOTE.md` — parent with a conditional audit verdict; this
+  narrow theorem resolves the convention-vs-derivation
   ambiguity by stating `g_bare = 1` as convention.
 - `G_BARE_RIGIDITY_THEOREM_NOTE.md` — sister rigidity argument.
-- `graph_first_su3_integration_note` — retained_bounded dep.
+- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — declared dependency.
 - Cycles 1-4 (PRs #292, #293, #294, #297) — sister narrow theorems on different lanes.
