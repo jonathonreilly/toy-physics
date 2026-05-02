@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:26:00.210929+00:00
+**Generated:** 2026-05-02T00:27:47.632919+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 342 |
+| `audited_clean` | 343 |
 | `audited_conditional` | 661 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 462 |
+| `unaudited` | 461 |
 
 | criticality | count |
 |---|---:|
@@ -410,6 +410,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_wavefield_bridge_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_generated_wavefield_transfer_v2_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `source_resolved_geometry_rule_repair_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `source_resolved_green_robustness_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
@@ -14727,6 +14728,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The adaptive sector-fan repair slightly improves sign count and F~M, but it reduces detector support and does not recover a clean weak-field mass law.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the note's baseline and repair summaries, zero-source checks, and repair deltas exactly. The note states a bounded negative with one partial improvement rather than a closure theorem.
 - **rationale:** The current runner output matches all frozen values: baseline has 7/16 TOWARD, F~M=0.058, N_eff=5.06; repair has 8/16 TOWARD, F~M=0.335, N_eff=2.80; zero-source shifts are 0; delta_TOWARD is +1 and delta_N_eff is -2.26. This closes the bounded read that the sector-fan repair is mixed and does not solve the geometry bottleneck. Residual risk is limited to this one geometry-rule repair on the compact generated family.
+- **auditor confidence:** high
+
+### `source_resolved_green_robustness_note`
+
+- **Note:** [`SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md`](../../docs/SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** bounded  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The source-resolved exact Green pocket has a local robustness region: all tested kernel and cluster neighbors preserve zero-source reduction, TOWARD sign, near-linear F~M, and nontrivial amplitude.  _(class `C`)_
+- **chain closes:** True — The runner reproduces the note's 9/9 kernel-neighborhood passes and 3/3 cluster-neighborhood passes on the declared exact lattice and source ladder. The note keeps the result bounded to local robustness and excludes generated geometry, refinement beyond the basin, and full self-consistency.
+- **rationale:** The current runner output matches every frozen table entry: all kernel cases pass with 4/4 TOWARD, F~M from 0.998 to 1.002, and mean |green/inst| from 0.934 to 1.421; all cluster cases pass with 4/4 TOWARD, F~M from 0.999 to 1.002, and mean ratios 1.134 to 1.235. Zero-source reduction is exact throughout. Residual risk is the declared locality of the sweep: it is not generated-family transfer, refinement beyond the basin, or a full self-consistent field theory.
 - **auditor confidence:** high
 
 ### `source_resolved_propagating_green_pocket_note`
