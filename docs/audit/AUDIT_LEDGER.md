@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T17:38:39.717326+00:00
+**Generated:** 2026-05-02T18:31:55.049132+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,53 +20,54 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 140 |
-| **retained_no_go** | 94 |
+| **retained_no_go** | 95 |
 | **retained_bounded** | 176 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 525 |
-| meta | 35 |
+| unaudited | 544 |
+| meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 639 |
-| ~~audited_failed~~ | 21 |
+| ~~audited_renaming~~ | 17 |
+| ~~audited_conditional~~ | 636 |
+| ~~audited_failed~~ | 1 |
+| `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 374 |
-| `audited_conditional` | 639 |
-| `audited_decoration` | 5 |
-| `audited_failed` | 65 |
+| `audited_clean` | 375 |
+| `audited_conditional` | 636 |
+| `audited_decoration` | 6 |
+| `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 18 |
-| `unaudited` | 560 |
+| `audited_renaming` | 17 |
+| `unaudited` | 580 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 518 |
-| `decoration` | 5 |
-| `meta` | 35 |
-| `no_go` | 153 |
+| `bounded_theorem` | 517 |
+| `decoration` | 6 |
+| `meta` | 36 |
+| `no_go` | 155 |
 | `open_gate` | 107 |
-| `positive_theorem` | 867 |
+| `positive_theorem` | 862 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 96 |
-| `high` | 340 |
-| `medium` | 428 |
-| `leaf` | 821 |
+| `critical` | 44 |
+| `high` | 388 |
+| `medium` | 433 |
+| `leaf` | 818 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 85
+- **Citation cycles detected:** 83
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1275
+- runners classified: 1277
 - runners with (C) first-principles compute hits: 611
-- runners with (D) external comparator hits: 308
-- decoration candidates (no C, no D): 105
+- runners with (D) external comparator hits: 310
+- decoration candidates (no C, no D): 104
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -74,31 +75,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 367 | 30.52 | `audited_clean` | **retained_bounded** |
-| 2 | `alpha_s_derived_note` | bounded_theorem | critical | 289 | 29.68 | `unaudited` | unaudited |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 353 | 31.97 | `audited_clean` | **retained_bounded** |
+| 2 | `alpha_s_derived_note` | bounded_theorem | critical | 238 | 28.90 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 118 | 28.89 | `unaudited` | unaudited |
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 294 | 27.70 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 325 | 27.35 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 289 | 26.18 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 293 | 24.70 | `unaudited` | unaudited |
-| 9 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 359 | 22.49 | `audited_clean` | **retained_bounded** |
-| 11 | `three_generation_observable_theorem_note` | positive_theorem | critical | 346 | 22.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `three_generation_structure_note` | positive_theorem | critical | 302 | 21.24 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
-| 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 304 | 20.75 | `audited_renaming` | ~~audited_renaming~~ |
+| 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 183 | 26.52 | `audited_renaming` | ~~audited_renaming~~ |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 289 | 26.18 | `unaudited` | meta |
+| 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 199 | 26.14 | `unaudited` | unaudited |
+| 8 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
+| 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
+| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 257 | 22.51 | `audited_clean` | **retained_bounded** |
+| 11 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `three_generation_structure_note` | bounded_theorem | critical | 248 | 20.96 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `left_handed_charge_matching_note` | decoration | critical | 264 | 20.55 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
+| 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_conditional` | ~~audited_conditional~~ |
 | 16 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 299 | 19.23 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `rconn_derived_note` | bounded_theorem | critical | 296 | 16.71 | `unaudited` | unaudited |
-| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 294 | 16.70 | `unaudited` | unaudited |
-| 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
-| 22 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
-| 23 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 351 | 16.46 | `audited_clean` | **retained** |
-| 24 | `physical_lattice_necessity_note` | no_go | critical | 345 | 16.43 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | critical | 301 | 15.74 | `unaudited` | unaudited |
+| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
+| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 244 | 16.44 | `unaudited` | unaudited |
+| 22 | `graph_first_selector_derivation_note` | bounded_theorem | critical | 336 | 16.40 | `audited_clean` | **retained_bounded** |
+| 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 131 | 15.54 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | critical | 51 | 15.20 | `audited_conditional` | ~~audited_conditional~~ |
+| 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 130 | 15.03 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -238,7 +239,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
-| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -310,6 +311,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `legacy_exploratory_drivers_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
+| `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `light_cone_framing_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -495,7 +497,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_complex_failure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alt_connectivity_family_failure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alternative_coupled_field_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `anomaly_forces_time_theorem` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `anomaly_forces_time_theorem` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `architecture_portability_sweep_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `asymmetry_persistence_born_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -752,11 +754,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `gauge_vacuum_plaquette_framework_point_underdetermination_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -899,7 +900,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `mesoscopic_surrogate_multistage_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `minimal_axioms_2026-04-11` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `mirror_2d_gravity_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `mirror_gravity_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -928,7 +928,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `newton_law_derived_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `newton_persistent_pattern_control_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `nonlinear_born_gravity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `observable_principle_from_axiom_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `oh_schur_boundary_action_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `one_generation_matter_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -1057,12 +1056,13 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `three_generation_observable_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `three_generation_structure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `three_generation_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_a1_invariant_section_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_casimir_block_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_curvature_localization_blocker_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `universal_gr_discrete_global_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `universal_gr_invariant_nonlinear_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1117,9 +1117,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p2_v_matching_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
-| `yukawa_color_projection_theorem` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
+| `left_handed_charge_matching_note` | decoration | ~~audited_decoration~~ | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | fresh_context | codex-current | A | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
 | `pmns_selector_unique_amplitude_slot_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
@@ -1146,46 +1146,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `kernel_vs_gravity_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `lattice_3d_dense_spent_delay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `moonshot_other_testables_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `pmns_intrinsic_completion_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `pmns_selector_minimal_microscopic_extension_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_card_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
-| `same_family_3d_closure_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
-| `scalar_selector_full_stack_recovery_note_2026-04-19` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `second_grown_family_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `seventh_family_diagonal_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `seventh_family_diagonal_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `shapiro_complex_interaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `shapiro_diamond_bridge_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
 | `shapiro_diamond_frequency_bridge_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
 | `shapiro_five_family_portability_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `shapiro_scaling_direct_replay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `shapiro_scaling_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
-| `source_resolved_exact_green_h025_pocket_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_retarded_green_pocket_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `source_resolved_self_consistent_generated_transfer_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_transverse_propagating_green_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_capture_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_green_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_iterative_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_nonlocal_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `staggered_backreaction_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_results_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `staggered_layered_backreaction_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `staggered_layered_loop_threshold_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `structured_mirror_joint_validation_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
-| `structureless_dag_gravity_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
-| `synthesis_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
 | `testable_predictions_map_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `triple_stack_collapse_scaling_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | C | - |
-| `two_body_mutual_attraction_note_2026-04-11` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | weak | codex-current | B | - |
 | `unified_basin_freeze_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
@@ -1218,7 +1198,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
-| `left_handed_charge_matching_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | E | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
@@ -1576,17 +1555,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 - **Note:** [`ANOMALY_FORCES_TIME_THEOREM.md`](../../docs/ANOMALY_FORCES_TIME_THEOREM.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Conditional derivation that Cl(3) gauge content plus anomaly cancellation, Clifford chirality, and single-clock codimension-1 evolution force exactly one temporal dimension.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The theorem claims anomaly cancellation forces the single-clock 3+1 spacetime setting from the SU(2), SU(3), and left-handed anomaly trace inputs.  _(class `B`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md, SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md, LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md, SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md, LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **auditor:** `codex-fresh-pr291-anomaly-forces-time-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Step 4 excludes all d_t > 1 by invoking the single-clock codimension-1 Cauchy requirement and the ultrahyperbolic/multi-time nonlocal-support obstruction.  _(class `B`)_
+- **chain closes:** False — The anomaly arithmetic and explicit Clifford parity checks are supported, but the final 3+1 conclusion still depends on unclosed framework and external theorem inputs: anomaly-to-inconsistency, mandatory opposite-chirality SU(2)-singlet completion, Clifford-volume-element chirality as the only allowed grading, and the general d_t > 1 codimension-1 obstruction.
+- **rationale:** Issue: the load-bearing exclusion of d_t > 1 and several anomaly/chirality bridge premises are stated or externally cited, not closed by retained one-hop dependencies or by the runner. Why this blocks: the theorem cannot claim that 3+1 spacetime is forced from current audited inputs while those premises remain unratified. Repair target: provide retained dependency notes or self-contained proofs for anomaly-to-inconsistency, the framework-specific singlet-completion requirement, Clifford-volume chirality as the only chirality mechanism, and the general ultrahyperbolic codimension-1 no-go. Claim boundary until fixed: the note is a coherent conditional derivation under those assumptions, with checked anomaly and Clifford arithmetic.
 - **open / conditional deps cited:**
-  - `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
-  - `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
-  - `LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`
+  - `missing retained proof: anomaly-to-inconsistency implication for this exact gauge content and conventions`
+  - `missing retained proof: acceptable anomaly cancellation in the framework requires an opposite-chirality SU(2)-singlet completion rather than another anomaly-free extension`
+  - `missing retained proof: the only allowed chirality grading in the framework is Clifford volume-element chirality`
+  - `missing retained proof: general continuum exclusion of arbitrary codimension-1 deterministic evolution for all d_t > 1 under the stated graph semantics`
 - **auditor confidence:** high
 
 ### `architecture_note_directional_measure`
@@ -7513,29 +7493,32 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 ### `gauge_vacuum_plaquette_framework_point_underdetermination_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-fresh-context-d97a-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** There exist distinct real-analytic strictly increasing witness laws on [0,6] that share the exact closed onset jet through order beta^5 but produce different framework-point values, hence different candidate plaquettes after composition with P_1plaq.  _(class `A`)_
-- **chain closes:** False — The algebraic obstruction closes as a support theorem, but the source row is source status=support, so it cannot be ratified as audited_clean by the audit lane.
-- **rationale:** Issue: the note's witness-law obstruction is framed on a source row with source status=support, while audit-clean ratification is legal only for candidate retained-grade/candidate promoted-grade rows. Why this blocks: a clean audit here would promote a support row beyond its declared tier even though the note explicitly leaves analytic P(6) open. Repair target: if this exact obstruction is intended to be tier-ratified, update the source note boundary to candidate retained-grade/candidate promoted-grade and re-run a fresh audit. Claim boundary until fixed: the witness construction may be used as support-level evidence that the current finite jet does not force P(6), but it is not an audit-clean retained claim.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md`
+- **claim_type:** `no_go`
+- **claim_scope:** Current beta^5 onset jet plus real analyticity and strict monotonicity on [0,6] do not determine beta_eff(6) or analytic P(6).
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-hume-framework-point-20260502`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The two analytic strictly increasing witnesses share beta_eff(beta)=beta+beta^5/26244+O(beta^6) but differ at beta=6, hence give different P_1plaq values.  _(class `A`)_
+- **chain closes:** True — The explicit witness pair satisfies the scoped hypotheses and has exact delta beta_eff(6)=0.0046656 with positive delta P, so the stated inputs cannot force a unique framework-point value.
+- **rationale:** Clean as a scoped no-go obstruction, not as analytic closure of canonical P(6). The runner confirms 5 theorem checks and 2 support checks with no failures; the load-bearing step is algebraic counterexample construction rather than support-class propagation. The safe conclusion is that the current onset jet plus analyticity/monotonicity does not force beta_eff(6) or analytic P(6).
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-second-20260430-gauge-infinite-hierarchy`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** If the full diagonal connected hierarchy truncated at finite order, then K_L(t) would be a polynomial and therefore P_L(t)=K_L'(t)/N_plaq would also be a polynomial; since P_L has finite limit 1 at infinity but P_L(0)=0, this is impossible.  _(class `A`)_
-- **chain closes:** True — The obstruction is an exact finite-dimensional real-variable argument on the diagonal source generator: finite Taylor support gives a polynomial, and a nonconstant polynomial cannot have a finite limit at infinity. The only substantive analytic input is the stated finite compact Wilson-surface concentration P_L(t)->1, which is used directly rather than tuned.
-- **rationale:** The note proves a negative no-go claim, not a numerical plaquette closure: exact finite-order truncation would force the diagonal generator to be polynomial, hence its derivative would be a polynomial with a finite large-t limit and must be constant, contradicting P(0)=0 and P(t)->1. The runner reproduces this structure and reports THEOREM PASS=4 SUPPORT=3 FAIL=0, with no external comparator or tuned scale. Residual risk is limited to the standard finite compact Wilson-surface concentration premise, but that premise is explicit and sufficient for this obstruction claim.
+- **claim_type:** `no_go`
+- **claim_scope:** Conditional obstruction to exact finite-order diagonal connected plaquette-hierarchy truncation for the local one-plaquette block and finite periodic Wilson L^4 source surface.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-pr291-gauge-infinite-hierarchy-faraday-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The algebraic contradiction closes only after accepting the asserted endpoint/limit facts P_1plaq(0)=0, P_1plaq(t)->1, P_L(0)=0, P_L(t)->1, and the identification that finite diagonal hierarchy support forces K(t) to be a polynomial.  _(class `B`)_
+- **chain closes:** False — The note contains a valid conditional algebraic skeleton. The pasted evidence does not prove the endpoint/limit properties or the hierarchy-support-to-polynomial equivalence, and the runner restates them rather than independently establishing them.
+- **rationale:** Issue: the proof treats the endpoint/asymptotic plaquette properties and finite-hierarchy-support-to-polynomial-K(t) equivalence as available inputs. Why this blocks: those are load-bearing analytic premises, not closed proof steps in the source note or runner output. Repair target: prove or cite retained lemmas for those premises, including compact Laplace concentration and the exact hierarchy-polynomial correspondence. Claim boundary until fixed: the row is a conditional no-go obstruction, not a retained no-go.
+- **open / conditional deps cited:**
+  - `missing lemma: exact one-plaquette P_1plaq(0)=0 and lim_{t->infinity} P_1plaq(t)=1`
+  - `missing lemma: finite periodic Wilson P_L(0)=0 and lim_{t->infinity} P_L(t)=1 by compact Laplace concentration`
+  - `missing lemma: exact finite connected diagonal hierarchy truncation is equivalent to finite Taylor support and polynomial K(t)`
+  - `missing convention check: whether the polynomial claim is global in real t or only formal/local near t=0`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
@@ -7723,23 +7706,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
-
-### `generation_axiom_boundary_note`
-
-- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Accepted Hilbert/locality/information-surface boundary claim for hw=1 triplet species semantics, plus the older reduced-stack witness that substrate physicality remained explicit there.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-generation-boundary-mencius-aquinas`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Exact observable separation plus no-proper-quotient closure plus accepted Hilbert semantics already force the retained hw=1 triplet to be physically distinct species sectors of the accepted theory.  _(class `B`)_
-- **chain closes:** False — The local runner supports the reduced-stack witness and local M_3(C) observable-algebra construction, but the physical-species conclusion imports accepted Hilbert semantics and no-proper-quotient closure that are not retained-grade inputs for this row.
-- **rationale:** Issue: the central boundary statement depends on accepted Hilbert/no-proper-quotient semantics and the separate physical-lattice necessity lane, not just the supplied local M_3(C) construction. Why this blocks: exact observable separation on H_hw=1 does not by itself establish the physical-identification bridge from sectors to physically distinct species, and the named semantic/substrate authorities are not retained-grade here. Repair target: supply retained-grade Hilbert-generation and no-proper-quotient authority, or inline the semantic theorem deriving physical-species status from the exact observable algebra. Claim boundary until fixed: usable as a reduced-stack witness and local observable-algebra construction, but conditional as a retained physical-species boundary theorem.
-- **open / conditional deps cited:**
-  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  - `SINGLE_AXIOM_HILBERT_NOTE.md`
-  - `SINGLE_AXIOM_INFORMATION_NOTE.md`
-- **auditor confidence:** high
 
 ### `geometry_lane_head_to_head_note`
 
@@ -10722,14 +10688,15 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 ### `left_handed_charge_matching_note`
 
 - **Note:** [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](../../docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Selected-axis graph surface charge-pattern matching: a weak-doublet 3+1 split admits a traceless abelian eigenvalue ratio +1/3 on the triplet block and -1 on the singlet block.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-left-handed-charge-ohm`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Q = T_3 + Y/2 then matches the left-handed doublet charges on the bounded surface.  _(class `F`)_
-- **chain closes:** False — The retained-bounded dependencies and runner close the graph-theoretic weak SU(2), SU(3), 3+1 split, and traceless abelian eigenvalue ratio. They do not derive the physical identification of that abelian factor and the two blocks with Standard Model hypercharge, quark doublets, lepton doublets, or electromagnetic charge.
-- **rationale:** Issue: the hard step identifies the graph traceless abelian direction and its 3+1 eigenspaces with the Standard Model left-handed Y assignments via Q = T_3 + Y/2. Why this blocks: the runner constructs Y_hyp = (1/3)Pi_+ - Pi_- and verifies its algebraic properties, but it does not derive the physical hypercharge/electric-charge bridge or matter assignment; the SM labels are a naming match. Repair target: derive a retained theorem mapping the graph abelian generator and 3+1 blocks to anomaly-compatible SM hypercharge and matter carriers, with a runner that computes the normalization/assignment rather than setting Y_hyp. Claim boundary until fixed: the safe statement is an algebraic selected-axis pattern match, not an independent U(1)_Y or left-handed SM charge derivation.
+- **claim_type:** `decoration`
+- **claim_scope:** Convention-normalized restatement of the retained LH-doublet traceless abelian eigenvalue ratio: (+1/3, -1) on the (2,3) and (2,1) LH-doublet blocks, with SM hypercharge/electric-charge identification out of scope.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-fresh-pr291-left-handed-charge-matching-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Use the retained 1:(-3) ratio from 6*alpha + 2*beta = 0, then choose the conventional normalization beta = -1, giving alpha = +1/3.  _(class `A`)_
+- **chain closes:** True — The row closes only as a convention-normalized consequence of the retained ratio theorem and retained selected-axis/block decomposition. It does not close as an independent physical charge-matching theorem because the absolute scale is fixed by convention and SM hypercharge identification is explicitly excluded.
+- **rationale:** Issue: the retained parent theorem already supplies the only nonconventional content, the scale-free 1:(-3) ratio from multiplicities and tracelessness. Why this blocks independent retained status: this note adds beta=-1 and alpha=+1/3 by convention, with no independent comparator, SM charge identification, or new physical closure. Repair target: derive the absolute normalization from nonconventional retained premises or move the downstream SM hypercharge/electric-charge identification into its own audited theorem. Claim boundary until fixed: cite this row only as a boxed convention-normalized corollary of the retained ratio theorem.
+- **decoration parent:** `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`
 - **auditor confidence:** high
 
 ### `legacy_exploratory_drivers_note`
@@ -10856,6 +10823,19 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
   - `One-generation matter closure`
   - `Three-generation matter structure`
   - `Neutrino Dirac monomial no-mixing theorem`
+- **auditor confidence:** high
+
+### `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Narrow structural ratio only: on the graph-first selected-axis surface, the traceless abelian direction in the gl(3)+gl(1) commutant has Sym^2(C^2) to Anti^2(C^2) eigenvalue ratio 1:(-3) on the 6-state and 2-state LH-doublet sub-decompositions.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-pr291-lh-doublet-ratio-b-2026-05-02`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Using retained multiplicities 6 for the symmetric weak-doublet block and 2 for the antisymmetric weak-doublet block, tracelessness gives 6*alpha + 2*beta = 0, hence beta = -3*alpha and the scale-independent ratio alpha:beta = 1:(-3).  _(class `A`)_
+- **chain closes:** True — The retained authorities supply the selected-axis surface, residual swap decomposition, gl(3)+gl(1) commutant setting, and the 6+2 LH-doublet multiplicities. The source note derives the ratio by exact tracelessness algebra and needs no Standard Model hypercharge identification, charge formula, normalization choice, or anomaly-cancellation premise.
+- **rationale:** Clean as a narrow structural ratio theorem. The claimed ratio is a direct algebraic consequence of the supplied 6 and 2 multiplicities plus tracelessness, and the runner confirms both the exact rational calculation and the note's scope discipline. Residual risk is limited to future expansion beyond the audited ratio-only boundary.
 - **auditor confidence:** high
 
 ### `light_cone_framing_note`
@@ -11169,38 +11149,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** On the retained 2D companion family, the broad surrogate survives two sourced-response stages as a stable mesoscopic source control, with stage-2 matching stage-1 to printed precision.  _(class `C`)_
 - **chain closes:** True — The registered 2D two-stage runner recomputes the topN captures, centroids, spreads, ratios, total-variation values, and carry, and the current output matches the note. The note explicitly remains a bounded control and not a persistent-mass theorem.
 - **rationale:** The runner verifies the load-bearing two-stage stability claim directly: topN=9, 25, and 49+ reproduce the stated captures, ratios, and carry=1.000, with stage-2 rows matching stage-1 to print precision. The note preserves the key limitation that the object remains broad/mesoscopic and does not become a localized inertial mass. Residual risk is the separate question of support sensitivity on other families.
-- **auditor confidence:** high
-
-### `minimal_axioms_2026-04-11`
-
-- **Note:** [`MINIMAL_AXIOMS_2026-04-11.md`](../../docs/MINIMAL_AXIOMS_2026-04-11.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The current package uses Cl(3), Z^3, finite local Grassmann/staggered-Dirac dynamics, and g_bare=1 with the accepted plaquette/u0 surface as its minimal input stack.  _(class `B`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md, G_BARE_RIGIDITY_THEOREM_NOTE.md, G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md, G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md, G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md, G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md, GENERATION_AXIOM_BOUNDARY_NOTE.md, and 10 more direct blockers.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md, G_BARE_RIGIDITY_THEOREM_NOTE.md, G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md, G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md, G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md, G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md, GENERATION_AXIOM_BOUNDARY_NOTE.md, and 10 more direct blockers. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
-- **open / conditional deps cited:**
-  - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
-  - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
-  - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
-  - `G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`
-  - `G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`
-  - `G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md`
-  - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
-  - `GENERATION_AXIOM_BOUNDARY_NOTE.md`
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `RCONN_DERIVED_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-  - `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
-  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`
 - **auditor confidence:** high
 
 ### `minimal_source_driven_field_probe_note`
@@ -11865,25 +11813,6 @@ Claim boundary until fixed: safe to claim finite-resolution support through h=0.
 - **load-bearing step:** In the tested linear/quadratic/cubic lattice propagators, the linear propagator has I_3 = 0 and attractive gravity, while the two nonlinear propagators have I_3 != 0 and repulsive gravity.  _(class `C`)_
 - **chain closes:** False — The runner verifies the stated correlation for the specific toy propagators and lattice setup, but it does not prove the general theorem that Born-rule validity and attractive Newtonian gravity are both forced by linear amplitude superposition. The causal/general claim remains broader than the finite tested family.
 - **rationale:** Issue: the executable evidence is a finite toy-model stress test over three propagator choices, while the prose interprets it as a general link between Born-rule linearity and attractive gravity. Why this blocks: a finite simulation cannot rule over arbitrary nonlinear propagator deformations or prove the physical diamond-NV/gravity implication without a general theorem connecting the propagator nonlinearity to the gravitational source law. Repair target: either narrow the note to the tested propagator family, or add a theorem deriving the force-sign/Born-rule correlation for the admissible propagator class. Claim boundary until fixed: the tested linear/quadratic/cubic models show the reported correlation; the broad causal conclusion remains conditional.
-- **auditor confidence:** high
-
-### `observable_principle_from_axiom_note`
-
-- **Note:** [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](../../docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Exact finite Grassmann source-response theorem on the minimal hierarchy block, conditional on scalar-additivity/CPT-even observable premises and canonical hierarchy normalization inputs.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-observable-principle-halley`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The unique additive CPT-even scalar source generator is W[J]=log|det(D+J)|-log|det D|, and its local curvature is identified with the hierarchy normalization surface.  _(class `C`)_
-- **chain closes:** False — The algebraic log-det/source-response checks close inside the supplied finite-block model. The full hierarchy/v consequence does not close because it imports canonical plaquette-surface constants from an unaudited authority note and assumes scalar-observable selection premises rather than deriving them from retained-grade inputs.
-- **rationale:** Issue: the runner verifies strong finite-block algebra, but the hierarchy normalization and v prediction depend on canonical constants whose authority note is currently unaudited, and the scalar additivity/CPT-even phase-blindness premises are selection assumptions. Why this blocks: those inputs are load-bearing for claiming the observable principle closes the hierarchy gap rather than merely defining a consistent generator inside the block. Repair target: audit docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md to retained grade and separately prove or explicitly axiomatize the scalar-observable premises from the lattice axiom. Claim boundary until fixed: conditional finite-block log-det source-response theorem, not a clean retained-grade hierarchy/v derivation.
-- **open / conditional deps cited:**
-  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
-  - `scripts/canonical_plaquette_surface.py canonical constants`
-  - `Premise that physical scalar observable generators for independent subsystems must be additive`
-  - `Premise that scalar bosonic observables must be CPT-even and phase-blind`
-  - `Downstream hierarchy/Higgs normalization chain currently audited_conditional`
 - **auditor confidence:** high
 
 ### `oh_schur_boundary_action_note`
@@ -12632,21 +12561,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `lower_level_source_transfer_observables_to_PMNS_readout_theorem_not_registered`
 - **auditor confidence:** high
 
-### `pmns_intrinsic_completion_boundary_note`
-
-- **Note:** [`PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md`](../../docs/PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The runner is supposed to verify that the current PMNS bank leaves the remaining intrinsic-completion gap at the selected-branch Hermitian-data law plus one residual sheet-fixing datum.  _(class `C`)_
-- **chain closes:** False — The registered runner exits nonzero before completing the current-bank boundary checks because it tries to read a missing file, docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md.
-- **rationale:** Issue: the registered runner is stale or broken: scripts/frontier_pmns_intrinsic_completion_boundary.py raises FileNotFoundError for docs/PMNS_BRANCH_SHEET_NONFORCING_NOTE.md during Part 2. Why this blocks: the load-bearing boundary claim depends on current-bank cross-checks beyond the local Hermitian reconstruction demo, and the runner never reaches those checks or the final PASS/FAIL summary. Repair target: update the runner and note artifact chain to reference the extant sheet/nonforcing theorem file, or restore the missing note, then rerun the full boundary checker to completion. Claim boundary until fixed: the runner's Part 1 Hermitian reconstruction examples pass, but the broader intrinsic-completion boundary is not currently auditable from the registered runner.
-- **open / conditional deps cited:**
-  - `scripts/frontier_pmns_intrinsic_completion_boundary.py references missing PMNS_BRANCH_SHEET_NONFORCING_NOTE.md`
-- **auditor confidence:** high
-
 ### `pmns_lower_level_end_to_end_closure_note`
 
 - **Note:** [`PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md`](../../docs/PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md)
@@ -12866,21 +12780,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md:unaudited_support`
   - `PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md:unaudited_support`
   - `PMNS_SELECTOR_CLASS_SPACE_UNIQUENESS_NOTE.md:unaudited_support`
-- **auditor confidence:** high
-
-### `pmns_selector_minimal_microscopic_extension_note`
-
-- **Note:** [`PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md`](../../docs/PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note claims the minimal surviving PMNS selector extension class is a non-additive sector-sensitive mixed bridge with one real amplitude slot, and that this row is carried in the derivation atlas.  _(class `B`)_
-- **chain closes:** False — The registered runner exits with PASS=9 FAIL=1 because the derivation atlas does not contain the required `PMNS selector minimal microscopic extension` row.
-- **rationale:** Issue: the note's atlas-placement claim is stale relative to the current derivation atlas. The runner verifies the internal cross-note selector reductions, but fails the atlas check: `| PMNS selector minimal microscopic extension |` is absent from docs/publication/ci3_z3/DERIVATION_ATLAS.md. Why this blocks: atlas placement is part of the note's stated artifact/status surface, and the registered runner exits nonzero, so the complete support note cannot be audited clean. Repair target: either add/restore the atlas row for this note and runner, or revise the note and runner if this boundary has been superseded by the existing sector-odd/current-stack rows. Claim boundary until fixed: the current runner supports the internal extension-class reduction checks, but not the claimed atlas registration.
-- **open / conditional deps cited:**
-  - `publication/ci3_z3/DERIVATION_ATLAS.md lacks PMNS selector minimal microscopic extension row`
 - **auditor confidence:** high
 
 ### `pmns_selector_nonuniversal_support_reduction_note`
@@ -13755,20 +13654,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
-### `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19`
-
-- **Note:** [`QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The theorem claims the RPSR relation derives a_u = sin_d*(1 - 48*rho/49) = 0.7748865611 from the retained unit ray, scalar/tensor support, a_d=rho, STRC collinearity, and the NLO rho/49 correction, with the runner reported as PASS=10 FAIL=0 including det-phase neutrality compatibility.  _(class `C`)_
-- **chain closes:** False — The current executable evidence does not match the note's stated PASS=10 theorem closure, so the advertised chain fails on its own terms.
-- **rationale:** Issue: the runner artifact is stale relative to the source note. The note advertises PASS=10 FAIL=0 and lists T10 det-phase-neutrality compatibility as a checked theorem step, but the current runner exits with PASS=9 FAIL=0, emits only unclassified PASS lines, and explicitly does not re-check T10. Why this blocks: the load-bearing theorem statement depends on the advertised det-phase compatibility and current executable evidence no longer matches the note's claimed verification surface. Repair target: either restore an executable T10 det-phase neutrality check and classified PASS output, or narrow the note and audit target to the nine RPSR/scalar-tensor algebra checks that the current runner actually performs. Claim boundary until fixed: T1-T9 reproduce the stated algebraic RPSR and scalar/tensor support identities; the full ten-check theorem closure advertised by the note is not current.
-- **open / conditional deps cited:**
-  - `scripts/frontier_quark_up_amplitude_rpsr_conditional.py`
-
 ### `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28`
 
 - **Note:** [`QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md`](../../docs/QUARK_UP_AMPLITUDE_RPSR_MASS_RETENTION_BOUNDARY_NOTE_2026-04-28.md)
@@ -14195,21 +14080,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
 - **auditor confidence:** high
 
-### `same_family_3d_closure_note`
-
-- **Note:** [`SAME_FAMILY_3D_CLOSURE_NOTE.md`](../../docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note claims the same-family 3D closure is carried as a real script/log/note chain: the wrapper replays L=8 and L=10, carries the retained L=12 core row, and supports the ten-property bounded valley-linear closure card on one h=0.25 family.  _(class `B`)_
-- **chain closes:** False — The executable evidence is hard-coded documentation rather than a replay or assertion of the closure card, so the bounded claim fails on its current runner surface.
-- **rationale:** Issue: the current runner exits successfully but does not replay the load-bearing closure checks; it prints frozen constants for the core rows, same-h multi-L rows, and distance-tail companion, and never calls the live core-card computation functions present in the script. Why this blocks: the note's claim that the bounded closure is carried by a real replay wrapper is not true of the current executable artifact, so the audit cannot distinguish a valid same-family closure from hard-coded stale log values. Repair target: make the runner actually recompute or read-and-assert the frozen L=8/L=10/L=12 and W=10/W=12 rows, emit classified PASS lines, and fail on drift. Claim boundary until fixed: the script currently documents prior frozen numbers; it does not verify the ten-property same-family closure card.
-- **open / conditional deps cited:**
-  - `scripts/same_family_3d_closure.py`
-  - `logs/2026-04-04-same-family-3d-closure.txt`
-
 ### `scalar_3plus1_temporal_ratio_note`
 
 - **Note:** [`SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md`](../../docs/SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
@@ -14266,22 +14136,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
   - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
-
-### `scalar_selector_full_stack_recovery_note_2026-04-19`
-
-- **Note:** [`SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_2026-04-19.md`](../../docs/SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_2026-04-19.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The recovery note claims to provide the full-stack per-lane status after recovery, including a final axiom-accounting table where Koide kappa, Koide theta, DM A-BCC, and quark a_u have no residues and reviewer-bar all-four-gate closure is achieved, while also saying the current package read is narrower and this note is route history rather than the current claim surface.  _(class `B`)_
-- **chain closes:** False — The Berry subclaim has executable support, but the full-stack recovery/accounting claim is contradictory and lacks the required per-lane dependency checks.
-- **rationale:** Issue: the registered Berry runner passes for the selected-line Berry subclaim, but the note's broad full-stack recovery/status claim is internally inconsistent and unsupported by this row's dependency surface. The top-level caveat says the current package read is narrower and that this is route history, while §5 states all four gates are closed with zero named residues; the row has no registered dependencies or executed runners for the MRU, DM, and quark closure assertions. Why this blocks: a hostile reviewer cannot ratify a full-stack zero-residue accounting from one Berry runner and a document that gives conflicting current-status readings. Repair target: split the route-history inventory from current package status, remove or reconcile the §5 zero-residue closure table, and register/run the cited per-lane theorem dependencies if any full-stack accounting remains. Claim boundary until fixed: the Berry selected-line runner currently passes and supports the narrow geometric-identification subclaim; the all-gates-closed recovery accounting does not close.
-- **open / conditional deps cited:**
-  - `scripts/frontier_koide_berry_phase_theorem.py`
-  - `MRU/DM/quark recovered theorem runners`
-  - `full-stack status reconciliation`
 
 ### `scalar_selector_proof_chains_2026-04-19`
 
@@ -14577,32 +14431,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** The support boundary is internally accurate. Issue: the primary runner is explicitly legacy and cannot support a current-main graph-axiom or staggered successor claim. Why this does not block this row: the note states that limitation directly and frames itself as historical synthesis/support. Repair target: any re-promotion must be audited against current runner-backed claims such as corrected graph-KG and force-based staggered cards. Claim boundary until fixed: historical support note only, with C11 as KG-like spectrum/CN scalar control and C12 as AB proxy.
 - **auditor confidence:** high
 
-### `seventh_family_diagonal_boundary_note`
-
-- **Note:** [`SEVENTH_FAMILY_DIAGONAL_BOUNDARY_NOTE.md`](../../docs/SEVENTH_FAMILY_DIAGONAL_BOUNDARY_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note's boundary read depends on the exact sweep summary that the diagonal-stripe scout is seed-selective, with only a narrow subset of rows passing the zero-source, neutral-cancellation, sign, and weak-field F~M gates.  _(class `B`)_
-- **chain closes:** False — The current SEVENTH_FAMILY_DIAGONAL_SWEEP.py run preserves the qualitative boundary read but reports 7/18 passing rows, not the note's 6/18 count. Because the exact pass count is part of the stated sweep summary, the note is stale relative to the current runner output.
-- **rationale:** Issue: The exact sweep count is stale: the note says passing rows are 6/18, while the current diagonal sweep reports 7/18 and includes drift=0.50, seed=1 as a pass. Why this blocks: an audit-clean boundary note must have current numerical row counts, especially when the count is the load-bearing evidence for selectivity. Repair target: update the note's pass count and any derived summary from the current sweep output, or attach the exact runner as the ledger runner. Claim boundary until fixed: the qualitative conclusion remains safe as a diagnosed seed-selective pocket, not family-wide seventh-family closure.
-- **auditor confidence:** high
-
-### `seventh_family_diagonal_note`
-
-- **Note:** [`SEVENTH_FAMILY_DIAGONAL_NOTE.md`](../../docs/SEVENTH_FAMILY_DIAGONAL_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note freezes the diagonal-stripe scout as a seed-selective boundary pocket by citing exact zero-source and neutral-cancellation gates, selective sign orientation and weak-field response, and a stated sweep result of 6/18 passing rows.  _(class `B`)_
-- **chain closes:** False — The current SEVENTH_FAMILY_DIAGONAL_SWEEP.py run supports the qualitative seed-selective boundary but reports 7/18 passing rows, not the note's stated 6/18 count. The exact count is part of the note's load-bearing sweep result, so the note is stale relative to the current local runner.
-- **rationale:** Issue: The sweep result is numerically stale: the note states passing rows are 6/18 while the current diagonal sweep reports 7/18, with drift=0.50, seed=1 also passing. Why this blocks: a bounded note whose evidence surface is an exact row count cannot be audit-clean when that count disagrees with the runner. Repair target: update the pass count and summary from scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py and preferably attach that runner in the audit ledger. Claim boundary until fixed: the diagonal-stripe construction remains a seed-selective boundary pocket, not broad seventh-family closure.
-- **auditor confidence:** high
-
 ### `shapiro_complex_interaction_note`
 
 - **Note:** [`archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_COMPLEX_INTERACTION_NOTE.md`](../../archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_COMPLEX_INTERACTION_NOTE.md)
@@ -14760,23 +14588,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `SHAPIRO_EXPERIMENTAL_CARD.md`
   - `SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md`
-- **auditor confidence:** high
-
-### `shapiro_scaling_note`
-
-- **Note:** [`SHAPIRO_SCALING_NOTE.md`](../../docs/SHAPIRO_SCALING_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note claims that the earlier reconstruction-only Shapiro scaling lane is closed because the canonical scaling replay is now the direct replay note, which freezes the s, b, k laws and exact controls from repo data.  _(class `B`)_
-- **chain closes:** False — The pointer target SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md is in archive_unlanded and its ledger row is already audited_failed/effective retained_no_go. A support note cannot cleanly close the scaling lane by pointing to an archived failed replay artifact, even though the current replay script still prints the direct tables.
-- **rationale:** Issue: The note's closure step relies on archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md, but that direct replay row is already audited_failed and effective retained_no_go. Why this blocks: an archived failed replay artifact cannot serve as the canonical closure surface for the active scaling lane, even if the script prints the frozen s, b, k tables. Repair target: create or identify an active audit-clean scaling replay with a primary runner and clean upstream Shapiro dependencies, then update this pointer. Claim boundary until fixed: safe as historical routing to the attempted direct replay; not safe as a claim that the Shapiro scaling lane is closed.
-- **open / conditional deps cited:**
-  - `archive_unlanded/shapiro-static-renderers-and-failed-bridges-2026-04-30/SHAPIRO_SCALING_DIRECT_REPLAY_NOTE.md`
-  - `SHAPIRO_EXPERIMENTAL_CARD.md`
-  - `SHAPIRO_DELAY_NOTE.md`
 - **auditor confidence:** high
 
 ### `shapiro_static_discriminator_note`
@@ -15053,19 +14864,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** The frozen broad sweep matches the current sweep runner for all seven target maxima, including the F~M drift from 0.997 at target 0.001 to 0.642 at target 0.080. The conservative pocket replay also matches: zero-source shift is exactly zero, dynamic F~M is 0.96, all four rows are TOWARD, and the mean dynamic/instantaneous ratio is 1.304. Residual risk is the declared calibration sensitivity, but the source note states that as the claim boundary rather than hiding it.
 - **auditor confidence:** high
 
-### `source_resolved_exact_green_h025_pocket_note`
-
-- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The compact h=0.25 Green-kernel pocket preserves exact zero-source reduction, TOWARD sign, near-linear mass scaling, and nontrivial amplitude with mean |green/inst| = 1.329.  _(class `C`)_
-- **chain closes:** False — The current runner reproduces the zero-source shift, deflections, ratios, and exponents, but it does not reproduce the frozen table's per-row max |f| values. The note lists 2.0e-02 for all four source strengths while the runner gives 2.5e-03, 5.0e-03, 1.0e-02, and 2.0e-02.
-- **rationale:** Issue: the frozen readout table is stale or misreported in the max |f| column; current runner output scales the maximum field with source strength instead of keeping it fixed at 2.0e-02 for every row. Why this blocks: the audit cannot certify an exact frozen numerical pocket when one reported column disagrees with the primary runner, even though the sign, ratio, and exponent claims still match. Repair target: update the source note's max |f| table entries or change the runner if the intended observable is a fixed target rather than the actual per-row maximum. Claim boundary until fixed: bounded evidence for zero-source reduction, TOWARD sign, near-linear F~M, and mean |green/inst| = 1.329 under the declared compact Green-kernel setup.
-- **auditor confidence:** high
-
 ### `source_resolved_exact_green_pocket_note`
 
 - **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md)
@@ -15090,19 +14888,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The source-resolved Green field remains a bounded weak-field pocket on the larger exact lattice, preserving zero-source reduction, TOWARD sign, near-linear F~M, and mean |green/inst| = 1.111.  _(class `C`)_
 - **chain closes:** True — The runner recomputes the note's larger-family replay exactly for the declared lattice, source cluster, kernel, source ladder, and calibration gain. The note keeps the result bounded as exact-lattice size-transfer evidence and does not claim a full self-consistent field theory.
 - **rationale:** The current runner output matches the frozen table: zero-source shift is 0, the Green-kernel deflections and ratios match, max |f| scales from 2.5e-03 to 2.0e-02, and both fitted exponents are 1.01. This closes the bounded size-transfer claim for the declared source-resolved linear Green architecture. Residual risk is still generated-geometry transfer, robustness, and self-consistency, which the note identifies as outside this claim.
-- **auditor confidence:** high
-
-### `source_resolved_exact_green_self_consistent_note`
-
-- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The one-update self-consistent Green field preserves zero-source reduction, TOWARD sign, near-linear F~M, and nontrivial mean |green/inst| on the compact h=0.25 family.  _(class `C`)_
-- **chain closes:** False — The current runner preserves the qualitative gates, but the note's frozen numerical table is stale: instantaneous deflections, ratios, mean ratio, and max |f| values disagree with current output. Current output gives mean |green/inst| = 1.330 and per-row max |f| near 2.500e-03, 5.000e-03, 9.999e-03, and 1.999e-02, not the note's fixed 2.0e-02 column and mean 1.300.
-- **rationale:** Issue: the frozen self-consistent Green table is not current with the primary runner; the note reports instantaneous rows like 1.442e-03 and ratios near 1.300, while the runner reports 1.410541e-03 and ratios from 1.328 to 1.332, plus a scaled max |f| column. Why this blocks: a bounded numerical pocket cannot be certified clean when its stated frozen readout disagrees with the attached computation. Repair target: refresh the source note's table, fitted mean ratio, and max |f| description from the current runner, or update the runner if the old values are intended. Claim boundary until fixed: the current runner still supports zero-source reduction, TOWARD sign, near-linear F~M, and one-update Green-pocket feasibility on the declared compact lattice.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_architecture_bridge_note`
@@ -15186,19 +14971,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The split-shell fixed-weight wavefield improves the weak-field-law fit relative to the self-consistent wavefield, reaching F~M = 0.500, but remains far from generated-family closure.  _(class `C`)_
 - **chain closes:** True — The runner reproduces all six aggregate rows and the law comparison in the source note. The note explicitly frames the result as a bounded partial improvement rather than a closure theorem.
 - **rationale:** The current runner output matches the frozen table: bridge modes give 7/16, 6/16, and 5/16 TOWARD with F~M values 0.058, 0.098, and 0.230; split-shell modes give 8/16 for all three with F~M values 0.424, 0.381, and 0.500. The LAW COMPARISON also matches and supports the note's bounded read that fixed weights help the law but do not recover a near-linear class. Residual risk is limited to the chosen split-shell family and mode definitions.
-- **auditor confidence:** high
-
-### `source_resolved_generated_support_mass_scaling_note`
-
-- **Note:** [`SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The kNN-floor connectivity tweak broadens detector support and partially rescues sign on the compact generated family, but it does not restore the weak-field mass-scaling class.  _(class `C`)_
-- **chain closes:** False — The current runner preserves the qualitative support/sign rescue and the N_eff/exponent summaries, but the note's frozen centroid-shift values are stale or underspecified. The note reports baseline -4.357340e-02 and tweak +3.850909e-01, while current per-strength output ends at -4.548761e-02 and +4.128727e-01 and has different means across the source ladder.
-- **rationale:** Issue: the frozen aggregated detector/scaling table contains centroid-shift values that do not match the current primary runner output or state which source-strength aggregation they represent. Why this blocks: a bounded numerical result cannot be certified clean while a reported load-bearing numeric column is stale or ambiguous, even though sign rows, N_eff, and fitted exponents match the runner. Repair target: refresh the centroid-shift column from the current runner and label whether it is the largest-strength row, an average over strengths, or another aggregate. Claim boundary until fixed: conditional/bounded support that kNN-floor broadens support from N_eff 2.66 to 5.25 and improves sign rows from 0/4 to 2/4, while F~M remains non-linear at -0.152.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
@@ -15340,19 +15112,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
   - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
-- **auditor confidence:** high
-
-### `source_resolved_self_consistent_generated_transfer_note`
-
-- **Note:** [`SOURCE_RESOLVED_SELF_CONSISTENT_GENERATED_TRANSFER_NOTE.md`](../../docs/SOURCE_RESOLVED_SELF_CONSISTENT_GENERATED_TRANSFER_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Treat this as the generated-geometry answer for the retained compact family: exact reduction survives, amplitude survives, weak-field gravity sign does not, Newtonian mass scaling does not.  _(class `C`)_
-- **chain closes:** False — The current runner supports the qualitative generated-family no-go, but the source note's frozen fitted-exponent line is stale: it states self-consistent Green F~M as a 0.00-class collapse while the runner prints -0.30.
-- **rationale:** Issue: The frozen readout's self-consistent Green F~M exponent is stale relative to the current runner, which reports -0.30 rather than the stated 0.00-class collapse. Why this blocks: the note is explicitly a frozen generated-family numerical probe, so the audit cannot certify it while one of the reported fitted exponents disagrees with the executable artifact. Repair target: update the source note's fitted-exponent and any derived summary language from the current runner, or change the runner if -0.30 is not the intended retained computation. Claim boundary until fixed: the detailed shift table, zero-source reduction, 0/4 TOWARD count, and qualitative non-Newtonian generated-family failure remain supported by the current runner.
 - **auditor confidence:** high
 
 ### `source_resolved_support_localization_split_note`
@@ -15579,19 +15338,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `STAGGERED_LAYERED_BACKREACTION_NOTE.md`
 - **auditor confidence:** high
 
-### `staggered_backreaction_note`
-
-- **Note:** [`STAGGERED_BACKREACTION_NOTE.md`](../../docs/STAGGERED_BACKREACTION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The current prototype already gives a clean bounded source-response read on the retained graph families.  _(class `C`)_
-- **chain closes:** False — The current runner still gives a bounded source-generated TOWARD read, but it does not match the note's frozen numerical table for F_ext, F_solve, force gap, source R2, self-force, or self-gap.
-- **rationale:** Issue: The frozen table is stale relative to scripts/frontier_staggered_backreaction_prototype.py; for example the current bipartite_random_geometric row reports F_ext=+1.488e+00, F_solve=+5.593e-02, gap=9.624e-01, R2=0.9830, and self_gap=3.953e-01 rather than the note's +3.247e-01, +4.002e-02, 8.767e-01, 1.0000, and 7.041e-01. Why this blocks: the note is a frozen bounded numerical prototype, so the audit cannot certify it while key quantitative columns disagree with the executable artifact. Repair target: rerun the prototype, update the note table and readout to the current outputs, or restore the runner version that generated the frozen table. Claim boundary until fixed: it is safe to say the current runner has exact zero-source reduction, TOWARD force on all three families, exact two-body additivity to numerical precision, and a large external-vs-solved force gap; it is not safe to cite the frozen table values or exact source-response linearity on all families.
-- **auditor confidence:** high
-
 ### `staggered_backreaction_results_2026-04-10`
 
 - **Note:** [`archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_RESULTS_2026-04-10.md`](../../archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/STAGGERED_BACKREACTION_RESULTS_2026-04-10.md)
@@ -15773,19 +15519,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
 - **auditor confidence:** high
 
-### `staggered_layered_backreaction_note`
-
-- **Note:** [`STAGGERED_LAYERED_BACKREACTION_NOTE.md`](../../docs/STAGGERED_LAYERED_BACKREACTION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** This note freezes the first retained bridge between the staggered transport law and a source-generated Phi on layered graph families.  _(class `C`)_
-- **chain closes:** False — The current runner supports the qualitative layered backreaction bridge, but its source-on force and source-linearity values differ from the frozen table and no longer justify the note's exact-to-machine-precision R2 statement.
-- **rationale:** Issue: The frozen table is stale relative to scripts/frontier_staggered_layered_backreaction.py: the current rows report F1=+3.116e-01 and +1.978e-01 with R2=0.9999 and 0.9987, rather than +3.064e-01 and +1.849e-01 with R2=1.0000. Why this blocks: the note explicitly freezes a retained numerical bridge and states source-response linearity is exact to machine precision, which is no longer true for the current runner. Repair target: refresh the table and readout from the current runner, or restore the runner version that produced the frozen values; add assertions for F1, R2, Phi residual, norm drift, robustness, and gauge status. Claim boundary until fixed: it is safe to say the current runner still gives exact zero-source control, TOWARD source-on force on both layered families, R2 above 0.99, clean robustness, and one gauge failure; it is not safe to cite the frozen force values or exact machine-precision source linearity.
-- **auditor confidence:** high
-
 ### `staggered_layered_gauge_engineering_note`
 
 - **Note:** [`STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md`](../../docs/STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md)
@@ -15815,19 +15548,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
   - `STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md`
-- **auditor confidence:** high
-
-### `staggered_layered_loop_threshold_note`
-
-- **Note:** [`STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md`](../../docs/STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The minimal nearby positive geometry is a source-connected two-rail layered corridor with one local K2,2 plaquette; that is enough to close gauge/current natively on the retained staggered transport law without losing the retained force battery.  _(class `C`)_
-- **chain closes:** False — The current runner supports the qualitative one-plaquette threshold, but the note's frozen threshold map is stale, especially the sparse-cycle gauge span and below-threshold factor.
-- **rationale:** Issue: The exact threshold map no longer matches scripts/frontier_staggered_layered_loop_threshold.py; the current control_sparse_cycle row reports J_span=5.015e-35 and J_resid=1.451e-35, not the note's 4.769e-06 and 6.748e-20, and the stated about-21x-below-threshold readout is therefore stale. Why this blocks: the claim is a frozen minimal threshold map, so a hostile reviewer cannot rely on the recorded threshold distances or exact gauge-current values even though the qualitative pass/fail pattern survives. Repair target: refresh the table and readout from the current runner, including the sparse-cycle below-threshold factor and one-plaquette J_span/J_resid values, or restore the runner version that generated the frozen map. Claim boundary until fixed: it is safe to say the current runner still finds control_dag and two_rail_no_loop as gauge N/A, sparse_cycle as gauge FAIL, and all tested one-plaquette cases as 8/8 retained with gauge PASS; it is not safe to cite the frozen current-span table or the 21x threshold margin.
 - **auditor confidence:** high
 
 ### `staggered_newton_blocking_sensitivity_note_2026-04-11`
@@ -15975,19 +15695,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/structured_mirror_bornsafe_scan.py`
 - **auditor confidence:** medium
 
-### `structured_mirror_joint_validation_note`
-
-- **Note:** [`STRUCTURED_MIRROR_JOINT_VALIDATION_NOTE.md`](../../docs/STRUCTURED_MIRROR_JOINT_VALIDATION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
-- **load-bearing step:** The default saved run reports bounded observables for N=25,30,40, including positive gravity, nontrivial purity/decoherence, non-Born-clean residuals, and k=0 numerically zero.  _(class `B`)_
-- **chain closes:** False — The note's table matches the archived log, but the primary runner path is a zero-byte script and currently produces no executable validation or PASS surface.
-- **rationale:** Issue: the load-bearing bounded validation is backed only by a saved log while the named primary runner is empty and cannot reproduce the reported observables. Why this blocks: an audit-clean or conditional bounded validation needs a current executable computation, not just a historical table, because stale or unreproducible numerics cannot be distinguished from a live validator. Repair target: restore the joint-validation script or replace the runner path with an executable reproducer that prints the reported metrics from the structured mirror geometry and linear propagator. Claim boundary until fixed: the archived log may be cited as a historical exploratory run, but the active claim should not be treated as an audited bounded validator.
-- **auditor confidence:** high
-
 ### `structured_mirror_reconciliation_note`
 
 - **Note:** [`STRUCTURED_MIRROR_RECONCILIATION_NOTE.md`](../../docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md)
@@ -16015,19 +15722,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On this bounded random-causal-DAG pocket, valley-linear propagation produces TOWARD shifts in the majority of seeds, and the TOWARD rows retain approximately linear mass scaling (F~M ~= 1.0).  _(class `C`)_
 - **chain closes:** True — The matching harness script constructs the random causal DAG pocket, source/mass/detector roles, valley-linear propagator, and seed sweep directly, and a fresh run reproduces the note's 28/32, 21/32, combined 49/64, F~M ~= 1.00, R^2 ~= 1.000, and no-field zero readouts. The note's stated boundary is narrow and does not claim graph universality.
 - **rationale:** The load-bearing bounded result is reproduced by the current harness for both tested sizes and the note states the correct caveats: sign is seed-sensitive, the 1000-node unstable pocket is excluded, and no graph-universality theorem is claimed. The only residual process risk is that the ledger has no registered runner path even though scripts/structureless_dag_gravity_harness.py exists and matches the note.
-- **auditor confidence:** high
-
-### `structureless_dag_gravity_note`
-
-- **Note:** [`STRUCTURELESS_DAG_GRAVITY_NOTE.md`](../../docs/STRUCTURELESS_DAG_GRAVITY_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
-- **load-bearing step:** On random causal DAGs with no imposed structure beyond x-ordering, the valley-linear propagator gives gravitational deflection that is TOWARD in the majority of seeds and follows F~M ~= 1.0 when TOWARD.  _(class `B`)_
-- **chain closes:** False — The row has no registered primary runner and no dedicated script or archived log for the listed 200/500/1000-node frozen probe table. The later bounded harness is narrower and does not reproduce or certify this older 1000-node/raw-probe claim surface.
-- **rationale:** Issue: the load-bearing structureless-DAG table and broad safe wording are not backed by a current dedicated runner or archived output in the row, and the available later harness explicitly narrows away from the older unstable 1000-node pocket. Why this blocks: a hostile reader cannot distinguish a live bounded result from stale exploratory numerics, and the note's wording claims a propagator property across structureless graphs rather than only the later reproduced pocket. Repair target: restore the original frozen-probe runner/log for the 200/500/1000-node configurations or rewrite this note to defer to the audited bounded harness with the narrower seed pocket. Claim boundary until fixed: treat this note as historical exploratory motivation, not an audited bounded universality result.
 - **auditor confidence:** high
 
 ### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
@@ -16087,21 +15781,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Mirror symmetry can produce a genuine near-rank-2 signature, but only in the strict chokepoint pocket and only at small N; outside that pocket, the rank story is heuristic rather than a retained large-N mechanism.  _(class `C`)_
 - **chain closes:** True — Running the registered script with the note's stated N=15,25 and 16-seed setup reproduces the table: original mirror has lower s2/s1 than random-2layer at both sizes, while mirror-chokepoint has high s2/s1, effective rank near 2, and Born zero at machine precision in the small-N pocket.
 - **rationale:** The current runner reproduces the note's diagnostic table under the stated setup, and the note's conclusion stays bounded: support exists for a strict small-N mirror-chokepoint rank signature, not for a scalable large-N rank-protected architecture. The default runner window tests larger N and is not the note's quoted table, but it reinforces the same non-scalability boundary rather than contradicting the bounded claim.
-- **auditor confidence:** high
-
-### `synthesis_note`
-
-- **Note:** [`SYNTHESIS_NOTE.md`](../../docs/SYNTHESIS_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
-- **load-bearing step:** This is a reduced computational model with seven publishable quantitative results, followed by full axiom-chain closure and a dimensional selection principle for 3+1 spacetime.  _(class `B`)_
-- **chain closes:** False — The note is a broad synthesis with no runner and no ledger dependencies, and it still contains historical/global claims that are stronger than the audited status of the underlying lanes. A reader cannot verify the seven-result, full-closure, or dimensional-selection claims from this row.
-- **rationale:** Issue: the note presents a sweeping synthesis, including publishable quantitative results, full axiom-chain closure, and a dimensional selection principle, without a registered runner or explicit audited dependency chain, while the underlying lanes include bounded, conditional, failed, and numerical-match audit surfaces. Why this blocks: a synthesis row cannot claim retained or publishable closure by summarizing historical notes whose current audit statuses do not support those conclusions. Repair target: rewrite the note as an audit-ledger-aware historical synthesis that cites specific audited rows, removes or quarantines stale retained/full-closure language, and registers any runner or manifest used for quantitative summary claims. Claim boundary until fixed: usable only as a historical roadmap of explored computational lanes, not as an audited support claim for the model's current retained conclusions.
-- **open / conditional deps cited:**
-  - `MIRROR_CHOKEPOINT_NOTE.md`
 - **auditor confidence:** high
 
 ### `synthesis_note_3d`
@@ -16336,17 +16015,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 ### `three_generation_structure_note`
 
 - **Note:** [`THREE_GENERATION_STRUCTURE_NOTE.md`](../../docs/THREE_GENERATION_STRUCTURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the accepted Cl(3)/Z^3 Hamiltonian and physical-lattice surface, the BZ-corner/Wilson algebra gives an hw=1 triplet and the listed exact runners support no-rooting/no-proper-quotient obstructions; the full physical three-generation matter reading remains conditional on retained Hilbert/substrate-semantics authorities.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-critical-sweep-20260430`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The note uses the three-generation observable theorem and physical-lattice necessity to read the three hw=1 sectors as the retained three-generation matter structure.  _(class `B`)_
-- **chain closes:** False — The local step cannot be promoted because direct upstream authorities remain unaudited, support/open/unknown, or terminal non-clean: THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md.
-- **rationale:** Issue: The load-bearing step still imports unratified direct authority: THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md, PHYSICAL_LATTICE_NECESSITY_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row.
+- **auditor:** `codex-audit-loop-three-generation-structure-2026-05-02`  (codex-current; independence=cross_family)
+- **load-bearing step:** Exact observable-sector semantics on the accepted Hilbert surface force the retained hw=1 triplet to be physically distinct species, and the accepted one-axiom Hilbert/locality/information surface derives the substrate-level physical-lattice reading.  _(class `B`)_
+- **chain closes:** False — The exact spectral and no-quotient checks close on their own bounded surface, but the full physical-generation conclusion imports Hilbert/substrate-semantics closure from authorities that are not retained-grade in the current audit ledger.
+- **rationale:** Issue: the source note's full physical-generation statement requires the physical-lattice/Hilbert-semantics bridge, not just the 1+3+3+1 Wilson-corner algebra. Why this blocks retained status: the primary runner labels physical identification as a physical-lattice assumption, and the named bridge authorities are currently conditional or unaudited rather than retained-grade. Repair target: retain the physical-lattice necessity, three-generation observable, chirality-boundary, and anomaly-forces-time bridge rows or narrow this row to the exact bounded corner/no-quotient algebra only. Claim boundary until fixed: cite the exact hw=1 triplet/no-rooting/no-proper-quotient structure only conditionally on the accepted physical-lattice/Hilbert semantics package.
 - **open / conditional deps cited:**
-  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
   - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+  - `THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md`
+  - `ANOMALY_FORCES_TIME_THEOREM.md`
 - **auditor confidence:** high
 
 ### `triage_no_promotion_note`
@@ -16363,32 +16044,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `GROWN_TRANSFER_BASIN_NOTE.md`
   - `EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md`
-- **auditor confidence:** high
-
-### `triple_stack_collapse_scaling_note`
-
-- **Note:** [`TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md`](../../docs/TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
-- **load-bearing step:** The strongest retained quantitative result is LN + |y| + collapse at N=25 with purity = 0.6887 and at N=100 with purity = 0.8819, with all four modes fitting decays in 1 - purity.  _(class `C`)_
-- **chain closes:** False — The current registered runner preserves the qualitative no-asymptotic-escape conclusion, but its quantitative table and fits no longer match the note: N=25 LN+|y|+collapse is 0.7075, collapse is 0.9302, and the collapse/triple-stack power-law coefficients differ from the note.
-- **rationale:** Issue: the note's quoted quantitative table and scaling coefficients are stale relative to the current runner, including the headline N=25 triple-stack purity and the collapse/triple-stack power-law fits. Why this blocks: the note is a bounded numerical result, so the exact reported finite-N floor and fit parameters are load-bearing, even though the qualitative conclusion that collapse is only a bounded helper still survives. Repair target: refresh the note from the current runner output, update the finite-N purity table and fit coefficients, and explicitly preserve the surviving qualitative boundary. Claim boundary until fixed: safe to say the current runner still shows LN+|y|+collapse as a bounded finite-N helper with negative alpha, but not safe to cite the note's frozen numerical values.
-- **auditor confidence:** high
-
-### `two_body_mutual_attraction_note_2026-04-11`
-
-- **Note:** [`TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md`](../../docs/TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
-- **load-bearing step:** The two-body lane is still open, with only a narrow positive periodic/massless partner-kick window and no broad or screened mutual-attraction closure.  _(class `B`)_
-- **chain closes:** False — The note is scientifically cautious, but it has no registered runner and the main scripts it names for the Hartree, acceleration, partner-kick, and size-scan surfaces are not present under those names in the current repo.
-- **rationale:** Issue: the note's numerical support and named artifact chain cannot be reproduced from the current row because the ledger has no runner and the listed frontier_two_body_mutual_attraction / two_orbital / acceleration / partner-kick scripts are absent under those paths. Why this blocks: even a cautious open-lane support note needs reproducible artifacts for the reported residuals, kick counts, size scan, and Wilson successor failure. Repair target: restore or relink the exact scripts/logs, or rewrite the note to cite the current available two-body runners and audited successor notes. Claim boundary until fixed: safe as a historical exploratory memo saying the two-body lane remains unresolved; not safe as audited support for the detailed numerical window or follow-up claims.
 - **auditor confidence:** high
 
 ### `two_field_retarded_family_closure_note_2026-04-10`
@@ -16602,6 +16257,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
   - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_discrete_global_closure_note`
+
+- **Note:** [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Capstone claim that the direct-universal route yields a discrete-global Lorentzian Einstein/Regge stationary action family on PL S^3 x R via local Lorentzian charts, congruence-compatible overlaps, and finite-atlas patching.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-universal-gr-global-closure-2026-05-02`  (codex-current; independence=cross_family)
+- **load-bearing step:** Compatible local stationary representatives patch to a unique global stationary section on finite atlases of PL S^3 x R.  _(class `B`)_
+- **chain closes:** False — The note asserts the closure stack and finite-atlas patching step but provides no registered one-hop retained authorities or runner establishing those inputs in this audit row.
+- **rationale:** Issue: the global GR capstone depends on a named stack of local scalar/tensor/lapse/glue/Lorentzian/global-patching results that are not registered as one-hop retained-grade dependencies for this row. Why this blocks retained status: the source note is a status summary and does not itself derive finite-atlas stationary-section patching from retained inputs, and there is no runner to check the global bridge. Repair target: split or cite the exact local closure, overlap covariance, Lorentzian extension, and finite-atlas patching theorems as audited retained-grade dependencies, with a runner or proof artifact for the patching bridge. Claim boundary until fixed: cite this only as a conditional capstone contingent on the GR closure stack being audited and retained.
 - **auditor confidence:** high
 
 ### `universal_gr_invariant_frame_obstruction_note`
@@ -18155,22 +17823,6 @@ Claim boundary until fixed: safe to claim quantitative support that sqrt(8/9) im
   - `YT_EW_COLOR_PROJECTION_THEOREM.md`
   - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
   - `HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`
-- **auditor confidence:** high
-
-### `yukawa_color_projection_theorem`
-
-- **Note:** [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](../../docs/YUKAWA_COLOR_PROJECTION_THEOREM.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** The physical top Yukawa is the Ward-chain Yukawa multiplied by sqrt((N_c^2-1)/N_c^2)=sqrt(8/9) from scalar color-singlet wave-function normalization.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-05-02-yukawa-color-projection-kant`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Z_phi^{phys} / Z_phi^{lattice} = R_conn = (N_c^2 - 1)/N_c^2 = 8/9, hence y_t(phys) = y_t(Ward) * sqrt(8/9).  _(class `F`)_
-- **chain closes:** False — The source note asserts the hard physical bridge from connected/adjoin color-trace fraction to the physical Higgs Z_phi, but does not derive that bridge from retained inputs. R_conn=8/9 and the connected-vs-singlet scalar interpretation are treated as premises and then hard-coded by the runner.
-- **rationale:** Issue: The proof sets R_conn=(N_c^2-1)/N_c^2 and identifies Z_phi^{phys}/Z_phi^{lattice} with that connected adjoint-channel fraction, while the runner assigns R_CONN=8/9 and checks downstream numerical consistency. Why this blocks: the claimed Yukawa correction depends on an unratified physical bridge between Fierz channel counting, connected scalar self-energy, and an LSZ external-leg factor; numerical agreement after inserting sqrt(8/9) does not prove the bridge. Repair target: provide a retained theorem or runner that derives R_conn and the physical scalar Z_phi mapping from the lattice correlator/channel decomposition, with the runner failing if the bridge is removed rather than assigning the factor. Claim boundary until fixed: one may say that assuming R_conn=8/9 and assuming the scalar external-leg normalization equals the connected color fraction gives y_t(phys)=y_t(Ward)*sqrt(8/9) and the reported top-mass numerics.
-- **open / conditional deps cited:**
-  - `RCONN_DERIVED_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
 - **auditor confidence:** high
 
 ### `z2_hw1_mass_matrix_parametrization_note`
