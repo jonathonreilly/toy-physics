@@ -100,6 +100,9 @@ def main() -> int:
         "fh_lsz_chunk011_target_timeseries": load(
             "outputs/yt_fh_lsz_chunk011_target_timeseries_checkpoint_2026-05-02.json"
         ),
+        "fh_lsz_chunk011_target_timeseries_generic": load(
+            "outputs/yt_fh_lsz_chunk011_target_timeseries_generic_checkpoint_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_kinematics": load("outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"),
         "fh_lsz_pole_fit_postprocessor": load("outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json"),
         "fh_lsz_finite_shell_identifiability": load(
@@ -530,6 +533,12 @@ def main() -> int:
         "chunk011 target-timeseries production checkpoint"
         in str(statuses["fh_lsz_chunk011_target_timeseries"]),
         statuses["fh_lsz_chunk011_target_timeseries"],
+    )
+    report(
+        "fh-lsz-generic-chunk-target-timeseries-not-closure",
+        "chunk011 generic target-timeseries checkpoint"
+        in str(statuses["fh_lsz_chunk011_target_timeseries_generic"]),
+        statuses["fh_lsz_chunk011_target_timeseries_generic"],
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",

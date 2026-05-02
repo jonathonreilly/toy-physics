@@ -28,6 +28,7 @@
     "fh_lsz_chunk001_checkpoint": "bounded-support / FH-LSZ chunk001 seed-controlled production checkpoint",
     "fh_lsz_chunk002_checkpoint": "bounded-support / FH-LSZ chunk002 seed-controlled production checkpoint",
     "fh_lsz_chunk011_target_timeseries": "bounded-support / FH-LSZ chunk011 target-timeseries production checkpoint",
+    "fh_lsz_chunk011_target_timeseries_generic": "bounded-support / FH-LSZ chunk011 generic target-timeseries checkpoint",
     "fh_lsz_chunk_combiner_gate": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
     "fh_lsz_chunked_production_manifest": "bounded-support / FH-LSZ chunked production manifest",
     "fh_lsz_eight_mode_noise_variance": "open / FH-LSZ eight-mode noise variance gate not passed",
@@ -136,7 +137,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 129,
+  "pass_count": 130,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

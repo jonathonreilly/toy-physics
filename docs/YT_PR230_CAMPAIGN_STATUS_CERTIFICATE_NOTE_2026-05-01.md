@@ -408,3 +408,10 @@ purity gate, canonical-Higgs operator gate, and assumption stress runner.  The
 `source_higgs_cross_correlator` metadata guard is explicitly rejected as
 `O_H`, `C_sH`, or `C_HH` evidence while it remains `enabled: false` /
 `absent_guarded`; no retained/proposed-retained wording is authorized.
+
+Latest generic chunk target-timeseries checkpoint: campaign status now includes
+`scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py` and reports
+`PASS=130 FAIL=0` over 134 certificates.  The reusable runner reproduces the
+chunk011 target-series check and is ready for chunk012 after the combiner,
+ready-set, response-stability, and autocorrelation/ESS gates are refreshed.
+No retained/proposed-retained wording is authorized.

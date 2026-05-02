@@ -535,3 +535,11 @@ the physics gap.  Highest-priority positive work remains: complete/process
 target-timeseries FH/LSZ chunks, implement actual same-surface `O_H/C_sH/C_HH`
 rows, implement W/Z response with identity certificates, or derive a theorem
 forbidding the orthogonal neutral top-coupling loophole.
+
+Generic chunk checkpoint update: chunk011 now has a reusable
+target-timeseries checkpoint runner.  When chunk012 completes, process it by
+refreshing the combiner, ready-set, response-stability, autocorrelation/ESS,
+then run `scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py
+--chunk-index 12`.  This reduces processing friction but does not raise
+partial L12 chunks to evidence; identity/pole/FV/IR gates remain the closure
+bottleneck.

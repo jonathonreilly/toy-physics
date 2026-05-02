@@ -2000,3 +2000,16 @@ The `source_higgs_cross_correlator` metadata block can name the future
 `enabled: false` and `absent_guarded`, it is not a source-Higgs
 cross-correlator, not a canonical-Higgs operator realization, and not
 Gram-purity or retained/proposed-retained evidence.
+
+Generic chunk target-series checkpoints are not production closure:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 11
+# SUMMARY: PASS=14 FAIL=0
+```
+
+The reusable runner can certify that one completed L12 chunk carries target
+time series.  It cannot certify target ESS for the whole ready set, response
+stability, combined L12, L16/L24 scaling, scalar-pole derivative/model-class
+control, FV/IR control, or canonical-Higgs identity.  Do not treat a generic
+chunk checkpoint as retained/proposed-retained evidence.

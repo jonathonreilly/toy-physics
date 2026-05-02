@@ -474,6 +474,12 @@ canonical-Higgs operator gates now distinguish an absent/guarded
 guard-only schemas explicitly.  This is not retained/proposed-retained
 closure.
 
+The generic FH/LSZ chunk target-timeseries runner is bounded support only.  It
+reuses the chunk011 target-series acceptance checks for any completed
+`L12_T24_chunkNNN`, so future chunk012 processing does not need a one-off
+runner.  The retained-route certificate is refreshed at `PASS=104 FAIL=0` and
+still authorizes no retained/proposed-retained wording.
+
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive
 pole-plus-continuum family can be realized by reflection-positive Euclidean

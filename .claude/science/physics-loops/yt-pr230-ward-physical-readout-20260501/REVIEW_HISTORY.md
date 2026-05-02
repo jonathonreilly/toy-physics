@@ -3399,3 +3399,16 @@ Disposition: bounded support / guard repair.  The
 `source_higgs_cross_correlator` metadata guard is now explicitly treated as
 absent/guarded rather than a real `O_H/C_sH/C_HH` measurement path.  No
 retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 153 Generic FH/LSZ Chunk Target-Timeseries Checkpoint
+
+Review stance: production-processing support / claim firewall.
+
+- Added `scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py`.
+- Added `docs/YT_FH_LSZ_CHUNK_TARGET_TIMESERIES_GENERIC_CHECKPOINT_NOTE_2026-05-02.md`.
+- Added `outputs/yt_fh_lsz_chunk011_target_timeseries_generic_checkpoint_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: bounded production support.  The reusable runner validates
+chunk011 target-series rows and is ready for chunk012 processing, but one
+chunk or a partial L12 ready set is not retained/proposed-retained evidence.
