@@ -6,10 +6,11 @@
 
 ## Claim scope (proposed)
 
-> **Given** the retained graph-first SU(3) gauge surface
-> (`graph_first_su3_integration_note`, `retained_bounded`), the
-> Wilson canonical convention `g_bare = 1` (admitted; cycle 6 narrow
-> theorem), and the Cl(3) Clifford identity `D_taste² = d · I` at
+> **Given** the declared graph-first SU(3) gauge surface
+> ([`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)), the
+> Wilson canonical convention `g_bare = 1` (admitted convention; see
+> [`G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`](G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md)),
+> and the Cl(3) Clifford identity `D_taste² = d · I` at
 > mean-field factorization with `N_taste = 16` taste eigenvalues, the
 > dimensionless lattice generating-functional curvature ratio is
 > ```
@@ -31,12 +32,12 @@ of the Clifford-Dirac generating functional at mean-field. The physical-
 side identification with `(m_H / v)²` is the renaming step the parent's
 audit verdict flagged and is excluded here.
 
-## Retained / admitted dependencies (one-hop)
+## Declared / admitted dependencies (one-hop)
 
-| Authority | Effective status | Role |
+| Authority | Audit-lane status | Role |
 |---|---|---|
-| `graph_first_su3_integration_note` | retained_bounded | provides SU(N_c=3) gauge structure on Z³ taste surface |
-| `g_bare = 1` Wilson canonical convention | admitted (cycle 6 narrow, PR #301) | β = 2 N_c / g_bare² = 6 |
+| [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | pipeline-derived | provides SU(N_c=3) gauge structure on Z³ taste surface |
+| [`G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`](G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md) | audit-pending; convention admitted by scope | β = 2 N_c / g_bare² = 6 |
 | Cl(3) Clifford identity `D_taste² = d · I` | admitted standard staggered fermion algebra | gives `|λ_k| = sqrt(d) = 2` (in lattice units, d=4) per taste |
 | Mean-field factorization `U_{ab} → u_0 δ_{ab}` | admitted standard mean-field convention | scales eigenvalues by `u_0` |
 
@@ -49,7 +50,7 @@ admission.
 ```text
 Cl(3)/Z^4 APBC minimal block (L = 2):
   N_sites = 2^4 = 16  =  N_taste                                (admitted: minimal block size)
-  N_c = 3                                                       (retained: graph_first_su3)
+  N_c = 3                                                       (declared: graph_first_su3)
   N_tot = N_c × N_sites = 48                                    (algebraic)
 
 Clifford identity D_taste² = d · I  (admitted standard staggered algebra):
@@ -94,8 +95,8 @@ Verifies, at exact rational precision via Python `Fraction`:
 2. Clifford-identity eigenvalue magnitude `2 u_0` (from `D_taste² = d·I` with `d = 4`).
 3. Generating functional `W(J)` curvature at mean field.
 4. `R_lattice = 4 / (u_0² · 16) = 1 / (4 u_0²)` algebraic identity.
-5. Cited authorities (`graph_first_su3_integration_note`,
-   cycle-6 g_bare convention) verified retained-grade via live ledger
+5. Cited repo authorities are graph-visible in the live ledger and this
+   new row remains effective-unaudited before independent audit
    lookup.
 6. Scope discipline: the physical identification `R_lattice = (m_H/v)²`
    is **not** in the load-bearing chain.
@@ -112,8 +113,10 @@ proposed_load_bearing_step_class: A
 audit_required_before_effective_retained: true
 ```
 
-If ratified, `effective_status = retained_bounded` (bounded_theorem +
-audited_clean + retained_bounded dep + admitted mean-field convention).
+Audit status is set only by the independent audit lane. This note is safe to
+land as an unaudited, graph-visible bounded-theorem candidate; retained-family
+effective status requires independent audit of this row and retained-grade
+closure of its declared dependency chain.
 
 ## What this theorem closes
 
@@ -121,7 +124,8 @@ The lattice-side algebraic content of the parent
 `HIGGS_MASS_FROM_AXIOM_NOTE`'s derivation, freed from the conditional
 physical-matching identification (which is class (F) and was the parent's
 blocking step). The narrow theorem provides a clean retained-bounded
-primitive for the lattice-side curvature that downstream rows can cite.
+primitive for the lattice-side curvature that downstream rows can cite once
+the audit lane ratifies this row and its dependency chain.
 
 ## What this theorem does NOT close
 
@@ -133,10 +137,11 @@ primitive for the lattice-side curvature that downstream rows can cite.
 
 ## Cross-references
 
-- `HIGGS_MASS_FROM_AXIOM_NOTE.md` — parent (`audit_status: audited_conditional`,
-  td=296); this narrow theorem keeps only the lattice-side algebra clean.
-- `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` — cycle 6
-  sister narrow theorem (PR #301).
-- `graph_first_su3_integration_note` — retained_bounded dep.
+- `HIGGS_MASS_FROM_AXIOM_NOTE.md` — parent with a conditional audit verdict;
+  this narrow theorem keeps only the lattice-side algebra clean.
+- [`G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`](G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md) —
+  cycle 6 sister narrow theorem.
+- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) —
+  declared dependency.
 - Cycles 1-5 (PRs #292, #293, #294, #297, #299) — sister narrow theorems
   / synthesis on different lanes.

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Verify the narrow Higgs lattice eigenvalue ratio theorem at mean-field.
 
-Claim scope: GIVEN graph_first_su3 retained_bounded + admitted Wilson
-canonical g_bare=1 + admitted Clifford identity D_taste² = d·I + admitted
-mean-field factorization, the lattice ratio R_lattice = 4/(u_0² N_taste) =
-1/(4 u_0²) at N_taste = 16. NO physical (m_H/v)² identification.
+Claim scope: GIVEN the declared graph_first_su3 surface + admitted Wilson
+canonical g_bare=1 convention + admitted Clifford identity D_taste² = d·I +
+admitted mean-field factorization, the lattice ratio R_lattice =
+4/(u_0² N_taste) = 1/(4 u_0²) at N_taste = 16. NO physical (m_H/v)²
+identification.
 
 Class (A) algebraic identity on admitted mean-field inputs.
 """
@@ -17,6 +18,7 @@ import json
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTE_PATH = ROOT / "docs" / "HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md"
+CLAIM_ID = "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
 
 PASS = 0
 FAIL = 0
@@ -47,7 +49,8 @@ required = [
     "4 / (u_0² · N_taste)",
     "N_taste = 16",
     "NO physical Higgs mass identification",
-    "graph_first_su3_integration_note",
+    "GRAPH_FIRST_SU3_INTEGRATION_NOTE.md",
+    "G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
     "g_bare = 1",
     "class (A)",
     "target_claim_type: bounded_theorem",
@@ -75,7 +78,7 @@ N_taste = 16  # = N_sites at minimal block
 d = 4         # spatial+1 spacetime dim from staggered Cl(3) on Z^4
 N_tot = N_c * N_sites
 
-check("N_c = 3 (retained graph_first_su3)",
+check("N_c = 3 (declared graph_first_su3)",
       N_c == 3)
 check("N_sites = 2^4 = 16 (minimal APBC block)",
       N_sites == 16 and N_sites == 2**4)
@@ -134,18 +137,35 @@ check("per-taste curvature W''/N_tot = 1/(4 u_0²) matches R_lattice",
 
 
 # ============================================================================
-section("Part 6: cited authority retained-grade")
+section("Part 6: declared authorities are graph-visible")
 # ============================================================================
 LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 ledger = json.loads(LEDGER.read_text())
 rows = ledger['rows']
-retained_grade = {'retained', 'retained_bounded', 'retained_no_go'}
 
-dep_id = "graph_first_su3_integration_note"
-dep_es = rows.get(dep_id, {}).get("effective_status")
-check(f"{dep_id} effective_status retained-grade",
-      dep_es in retained_grade,
-      detail=f"observed = {dep_es!r}")
+dep_ids = {
+    "graph_first_su3_integration_note",
+    "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+}
+for dep_id in sorted(dep_ids):
+    dep_row = rows.get(dep_id)
+    check(f"{dep_id} exists in audit ledger",
+          dep_row is not None,
+          detail=f"effective_status={dep_row.get('effective_status') if dep_row else None!r}")
+
+claim_row = rows.get(CLAIM_ID)
+check(f"{CLAIM_ID} seeded by audit pipeline",
+      claim_row is not None,
+      detail="run docs/audit/scripts/run_pipeline.sh after editing the note")
+if claim_row is not None:
+    claim_deps = set(claim_row.get("deps", []))
+    for dep_id in sorted(dep_ids):
+        check(f"{CLAIM_ID} records {dep_id} as declared dependency",
+              dep_id in claim_deps,
+              detail=f"deps={sorted(claim_deps)}")
+    check(f"{CLAIM_ID} remains effective-unaudited before independent audit",
+          claim_row.get("effective_status") == "unaudited",
+          detail=f"effective_status={claim_row.get('effective_status')!r}")
 
 
 print(f"\n{'='*88}\n  TOTAL: PASS={PASS}, FAIL={FAIL}\n{'='*88}")
