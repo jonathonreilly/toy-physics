@@ -132,3 +132,38 @@ Test 6 (Smarr derivative consistency):         PASS
 
 OVERALL: PASS
 ```
+
+## Block 10 — Generalized Second Law
+
+### Branch-local self-review (2026-05-01)
+
+- **theorem note:** [docs/AXIOM_FIRST_GENERALIZED_SECOND_LAW_THEOREM_NOTE_2026-05-01.md](../../../../docs/AXIOM_FIRST_GENERALIZED_SECOND_LAW_THEOREM_NOTE_2026-05-01.md)
+- **runner:** [scripts/axiom_first_gsl_check.py](../../../../scripts/axiom_first_gsl_check.py)
+
+#### Findings
+
+- **F1 (no-issue):** all 6 tests pass first run.
+- **F2 (no-issue):** Bekenstein-saturation gives S_matter = S_BH(M=E)
+  exactly, confirming framework consistency.
+- **F3 (no-issue):** 100-sample random GSL sweep, 0 violations.
+
+#### Disposition
+
+- **disposition:** pass.
+- **proposal-allowed:** false.
+- **branch action:** commit, push, open stacked PR (base = Block 05).
+- **integration action:** completes framework BH thermodynamics
+  program.
+
+#### Runner results summary (2026-05-01)
+
+```text
+Test 1 (Hawking area theorem dA >= 0):              PASS
+Test 2 (Matter Gibbs H-theorem):                    PASS
+Test 3 (GSL combined dS_total >= 0):                PASS
+Test 4 (Bekenstein saturation):                     PASS
+Test 5 (Hawking evaporation respects GSL):          PASS
+Test 6 (100-sample random sweep, 0 violations):     PASS
+
+OVERALL: PASS
+```
