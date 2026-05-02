@@ -1,7 +1,10 @@
 # Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action
 
-**Date:** 2026-04-29
-**Status:** support — branch-local theorem note on A_min; runner passing; audit-pending.
+**Date:** 2026-04-29 (status hint clarified 2026-05-02)
+**Type:** positive_theorem proposal. Audit status is assigned only by the
+independent audit lane; this note does not set or predict a verdict.
+**Status hint (author):** branch-local theorem on A_min; runner passing;
+proof clean; awaiting independent audit.
 **Loop:** `axiom-first-foundations`
 **Cycle:** 2 (Route R2)
 **Runner:** `scripts/axiom_first_reflection_positivity_check.py`
@@ -330,12 +333,13 @@ on tractable small lattices.
 
 ## Citations
 
-- A_min: `docs/MINIMAL_AXIOMS_2026-04-11.md`
-- canonical normalization carriers: `docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`,
-  `docs/G_BARE_RIGIDITY_THEOREM_NOTE.md`,
-  `docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
-- assumption / derivation ledger: `docs/ASSUMPTION_DERIVATION_LEDGER.md`
-- prior cycle: `docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`
+- A_min: [MINIMAL_AXIOMS_2026-04-11](MINIMAL_AXIOMS_2026-04-11.md)
+- canonical normalization carriers:
+  [G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md),
+  [G_BARE_RIGIDITY_THEOREM_NOTE](G_BARE_RIGIDITY_THEOREM_NOTE.md),
+  [G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md)
+- assumption / derivation ledger: [ASSUMPTION_DERIVATION_LEDGER](ASSUMPTION_DERIVATION_LEDGER.md)
+- prior cycle: [AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29](AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md)
   (provides the Grassmann anticommutation used silently in Step 2)
 - standard external proofs (cited as theorem-grade lattice
   references; we do not import any numerical input):

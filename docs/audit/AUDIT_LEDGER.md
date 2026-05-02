@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T20:49:27.741398+00:00
+**Generated:** 2026-05-02T20:51:30.047247+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,46 +21,45 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 136 |
 | **retained_no_go** | 92 |
-| **retained_bounded** | 182 |
-| _retained_pending_chain_ | 3 |
-| unaudited | 575 |
+| **retained_bounded** | 181 |
+| _retained_pending_chain_ | 2 |
+| unaudited | 579 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 23 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 625 |
+| ~~audited_conditional~~ | 624 |
 | ~~audited_failed~~ | 1 |
-| `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 367 |
-| `audited_conditional` | 625 |
-| `audited_decoration` | 7 |
+| `audited_clean` | 365 |
+| `audited_conditional` | 624 |
+| `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 18 |
-| `unaudited` | 611 |
+| `unaudited` | 615 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 520 |
-| `decoration` | 7 |
+| `bounded_theorem` | 525 |
+| `decoration` | 6 |
 | `meta` | 36 |
-| `no_go` | 151 |
+| `no_go` | 155 |
 | `open_gate` | 99 |
-| `positive_theorem` | 864 |
-| `unset` | 19 |
+| `positive_theorem` | 871 |
+| `unset` | 4 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 89 |
-| `high` | 357 |
-| `medium` | 425 |
-| `leaf` | 825 |
+| `critical` | 124 |
+| `high` | 325 |
+| `medium` | 423 |
+| `leaf` | 824 |
 
-- **Retained pending chain closure:** 3
+- **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
 
 ### Runner classification (static heuristic)
@@ -76,31 +75,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 359 | 31.99 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 366 | 32.02 | `audited_clean` | **retained_bounded** |
 | 2 | `alpha_s_derived_note` | bounded_theorem | critical | 238 | 28.90 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 118 | 28.89 | `unaudited` | unaudited |
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `minimal_axioms_2026-04-11` | meta | critical | 339 | 26.91 | `unaudited` | meta |
-| 6 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 183 | 26.52 | `audited_renaming` | ~~audited_renaming~~ |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 341 | 27.42 | `unaudited` | meta |
+| 6 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 335 | 27.39 | `audited_renaming` | ~~audited_renaming~~ |
 | 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 199 | 26.14 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 337 | 23.90 | `audited_clean` | **retained_bounded** |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 344 | 23.93 | `audited_clean` | **retained_bounded** |
 | 9 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
 | 10 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
-| 11 | `three_generation_structure_note` | positive_theorem | critical | 303 | 21.25 | `audited_clean` | **retained** |
-| 12 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `unaudited` | unaudited |
-| 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `left_handed_charge_matching_note` | decoration | critical | 305 | 20.76 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
-| 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_clean` | **retained** |
-| 16 | `anomaly_forces_time_theorem` | positive_theorem | critical | 300 | 19.73 | `unaudited` | unaudited |
-| 17 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 130 | 19.03 | `audited_clean` | **retained** |
-| 19 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | - | critical | 303 | 17.25 | `unaudited` | unaudited |
-| 21 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 125 | 16.98 | `audited_clean` | **retained** |
-| 22 | `cpt_exact_note` | positive_theorem | critical | 304 | 16.75 | `audited_clean` | _retained_pending_chain_ |
-| 23 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 302 | 16.74 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
-| 25 | `s3_taste_cube_decomposition_note` | positive_theorem | high | 125 | 16.48 | `audited_clean` | **retained** |
+| 11 | `three_generation_observable_theorem_note` | positive_theorem | critical | 312 | 21.79 | `audited_clean` | **retained** |
+| 12 | `three_generation_structure_note` | positive_theorem | critical | 303 | 21.25 | `audited_clean` | **retained** |
+| 13 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `unaudited` | unaudited |
+| 14 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
+| 15 | `left_handed_charge_matching_note` | decoration | critical | 305 | 20.76 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
+| 16 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 317 | 20.31 | `audited_clean` | **retained** |
+| 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 300 | 19.73 | `unaudited` | unaudited |
+| 18 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | critical | 314 | 18.30 | `audited_clean` | **retained** |
+| 20 | `s3_taste_cube_decomposition_note` | positive_theorem | critical | 314 | 17.80 | `audited_clean` | **retained** |
+| 21 | `s3_mass_matrix_no_go_note` | no_go | critical | 314 | 17.30 | `audited_clean` | **retained_no_go** |
+| 22 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `plaquette_self_consistency_note` | bounded_theorem | critical | 336 | 16.90 | `unaudited` | unaudited |
+| 24 | `cpt_exact_note` | - | critical | 304 | 16.75 | `unaudited` | unaudited |
+| 25 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 302 | 16.74 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -132,7 +131,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
-| `cpt_exact_note` | positive_theorem | ~~audited_clean~~ | _retained_pending_chain_ | fresh_context | codex-current | A | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -238,7 +236,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
-| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
@@ -743,7 +740,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1105,7 +1101,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_unique_amplitude_slot_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
-| `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -3194,19 +3189,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The previous missing-runner rationale is stale because scripts/coupled_field_generated_family_probe.py is now registered. The row still returns a conditional audit because the live runner emits zero classified A/B/C/D PASS lines, leaving the load-bearing no-go checks outside the audit-loop classifier. The safe boundary remains the note's bounded generated-family diagnostic, not a promoted field-sector theorem.
 - **open / conditional deps cited:**
   - `runner_output_missing_classified_a_b_c_d_pass_lines:scripts/coupled_field_generated_family_probe.py`
-- **auditor confidence:** high
-
-### `cpt_exact_note`
-
-- **Note:** [`CPT_EXACT_NOTE.md`](../../docs/CPT_EXACT_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Exact CPT invariance of the free staggered Cl(3) Hamiltonian on even periodic Z^3 lattices, plus vanishing CPT-odd Hermitian-Hamiltonian SME sector under the retained bridge lift.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** _retained_pending_chain_  (reason: `chain_waiting_on:physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`)
-- **auditor:** `codex-fresh-pr291-cpt-exact-singer-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** CPT * H * (CPT)^{-1} = C * P * H * P * C = C * (-H) * C = -(-H) = H, with the Hermitian Hamiltonian and SME-zero lift supplied by the bridge theorem.  _(class `A`)_
-- **chain closes:** True — The source note proves the D-level C/P/T algebra by exact matrix identities and the one-hop bridge is stated as audited_clean/effective retained for the Hermitian H=iD and SME-zero lift. No unaudited or open dependency is needed for the scoped free-Hamiltonian theorem.
-- **rationale:** The load-bearing step is an algebraic closure: C and P each flip the staggered hopping operator, T is handled through the retained Hermitian bridge, and the combined antiunitary representative preserves H. The source-note runner reran locally with PASS=53 and FAIL=0, checking only internal exact identities and finite-lattice/taste-space consistency, with no external comparator or tuned input. Residual risk is wording scope: the clean verdict applies to the free Hermitian Hamiltonian-sector SME-zero statement, not to interacting or continuum SME sectors beyond the stated assumptions.
 - **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
@@ -7346,37 +7328,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The two analytic strictly increasing witnesses share beta_eff(beta)=beta+beta^5/26244+O(beta^6) but differ at beta=6, hence give different P_1plaq values.  _(class `A`)_
 - **chain closes:** True — The explicit witness pair satisfies the scoped hypotheses and has exact delta beta_eff(6)=0.0046656 with positive delta P, so the stated inputs cannot force a unique framework-point value.
 - **rationale:** Clean as a scoped no-go obstruction, not as analytic closure of canonical P(6). The runner confirms 5 theorem checks and 2 support checks with no failures; the load-bearing step is algebraic counterexample construction rather than support-class propagation. The safe conclusion is that the current onset jet plus analyticity/monotonicity does not force beta_eff(6) or analytic P(6).
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Conditional obstruction to exact finite-order diagonal connected plaquette-hierarchy truncation for the local one-plaquette block and finite periodic Wilson L^4 source surface.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-pr291-gauge-infinite-hierarchy-faraday-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The algebraic contradiction closes only after accepting the asserted endpoint/limit facts P_1plaq(0)=0, P_1plaq(t)->1, P_L(0)=0, P_L(t)->1, and the identification that finite diagonal hierarchy support forces K(t) to be a polynomial.  _(class `B`)_
-- **chain closes:** False — The note contains a valid conditional algebraic skeleton. The pasted evidence does not prove the endpoint/limit properties or the hierarchy-support-to-polynomial equivalence, and the runner restates them rather than independently establishing them.
-- **rationale:** Issue: the proof treats the endpoint/asymptotic plaquette properties and finite-hierarchy-support-to-polynomial-K(t) equivalence as available inputs. Why this blocks: those are load-bearing analytic premises, not closed proof steps in the source note or runner output. Repair target: prove or cite retained lemmas for those premises, including compact Laplace concentration and the exact hierarchy-polynomial correspondence. Claim boundary until fixed: the row is a conditional no-go obstruction, not a retained no-go.
-- **open / conditional deps cited:**
-  - `missing lemma: exact one-plaquette P_1plaq(0)=0 and lim_{t->infinity} P_1plaq(t)=1`
-  - `missing lemma: finite periodic Wilson P_L(0)=0 and lim_{t->infinity} P_L(t)=1 by compact Laplace concentration`
-  - `missing lemma: exact finite connected diagonal hierarchy truncation is equivalent to finite Taylor support and polynomial K(t)`
-  - `missing convention check: whether the polynomial claim is global in real t or only formal/local near t=0`
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** After trivial-channel normalization, the Wilson mixed-kernel compression on the marked-plaquette character sector equals the four marked-link local factor a_(p,q)(beta)^4, with residual environment data and P(6) closure out of scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-fresh-pr291-gauge-plaquette-factorization-cicero-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** After trivial-channel normalization the full mixed-kernel compression on the marked plaquette character sector is exactly D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q).  _(class `C`)_
-- **chain closes:** True — The source note closes the scoped factorization by combining the SU(3) Wilson character coefficient formula, trivial-irrep action of non-marked links, and the four marked links of the plaquette. The current runner independently computes the coefficient sequence at beta=6 and verifies the normalized mixed-kernel spread is zero, without using residual environment or canonical P(6) closure.
-- **rationale:** The bounded theorem closes because the load-bearing step is a local mixed-kernel factorization: marked links contribute the normalized one-link Wilson eigenvalue and non-marked links collapse to a representation-independent trivial-channel scalar. The runner checks the hard bridge inside the scoped theorem, including explicit Wilson coefficients, positivity, local-factor symmetry, and zero normalized spread. Residual risk is limited to the stated convention that the accepted Wilson 3+1 source surface and temporal-gauge mixed-kernel factorization are the scoped inputs; this audit does not promote residual source-sector environment data, beta=6 Perron moments, analytic P(6), or canonical plaquette closure.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
@@ -17364,20 +17315,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_EW_COLOR_PROJECTION_THEOREM.md`
   - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
   - `HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`
-- **auditor confidence:** high
-
-### `yukawa_color_projection_theorem`
-
-- **Note:** [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](../../docs/YUKAWA_COLOR_PROJECTION_THEOREM.md)
-- **claim_type:** `decoration`
-- **claim_scope:** Algebraic restatement of the upstream exact SU(N_c) Fierz/channel-count decomposition giving adjoint q-qbar dimension fraction (N_c^2 - 1)/N_c^2 and 8/9 at N_c=3; excludes Z_phi physical matching and sqrt(8/9) Yukawa correction.
-- **audit_status:** ~~audited_decoration~~
-- **effective_status:** `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01`  (reason: `decoration_parent_retained`)
-- **auditor:** `codex-fresh-agent-confucius-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The scoped claim submitted by this row is only the SU(N_c) Fierz channel-counting result R_conn = (N_c^2 - 1)/N_c^2 = 8/9 for N_c = 3.  _(class `A`)_
-- **chain closes:** True — The narrowed algebraic statement follows from the one-hop EW Fierz-channel decomposition note plus retained-bounded N_c=3 gauge-closure inputs. It adds no independent comparator, compression theorem, or new physical matching content beyond that parent result.
-- **rationale:** Issue: the surviving scoped content is the same exact SU(N_c) Fierz/channel-count identity already carried by EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01. Why this blocks: it has zero independent comparator, compression theorem, or new physical bridge, so it cannot stand as a separate retained theorem under the decoration policy. Repair target: add an independent physical-matching theorem, comparator, or compression surface if this row is meant to be promoted separately. Claim boundary until fixed: cite only the boxed algebraic Fierz fraction under the upstream parent, excluding Z_phi and sqrt(8/9) Yukawa matching.
-- **decoration parent:** `ew_current_fierz_channel_decomposition_note_2026-05-01`
 - **auditor confidence:** high
 
 ### `z2_hw1_mass_matrix_parametrization_note`

@@ -541,6 +541,30 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "g_bare_rigidity_theorem_note"
+    },
+    {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "g_bare_two_ward_closure_note_2026-04-18"
+    },
+    {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "assumption_derivation_ledger"
+    },
+    {
+      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+      "to": "axiom_first_spin_statistics_theorem_note_2026-04-29"
+    },
+    {
       "from": "axiom_first_spectrum_condition_theorem_note_2026-04-29",
       "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
     },
@@ -20057,7 +20081,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:49:24.246991+00:00",
+  "generated_at": "2026-05-02T20:51:26.662890+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -22040,11 +22064,18 @@
     },
     "axiom_first_reflection_positivity_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem proposal. Audit status is assigned only by the",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "d5e0c27fcb2697459a61091181ec8cb122e0e4a24f4e05190fc46b8c102839bb",
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "g_bare_rigidity_theorem_note",
+        "g_bare_two_ward_closure_note_2026-04-18",
+        "assumption_derivation_ledger",
+        "axiom_first_spin_statistics_theorem_note_2026-04-29"
+      ],
+      "note_hash": "b55f90c764bcbc672880ef15551af602e491a54ba61386540c64122166659e7f",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -45516,7 +45547,6 @@
     "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_first_lattice_noether_theorem_note_2026-04-29",
-    "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
@@ -46621,8 +46651,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
       "meta": 1,
-      "none": 1747,
-      "positive_theorem": 36
+      "none": 1746,
+      "positive_theorem": 37
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
@@ -46632,10 +46662,10 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5014,
-    "leaf_count": 760,
+    "edge_count": 5020,
+    "leaf_count": 759,
     "node_count": 1795,
-    "root_count": 1216,
+    "root_count": 1215,
     "runners_with_path": 1363
   }
 }
