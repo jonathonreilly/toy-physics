@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:43:22.648761+00:00
+**Generated:** 2026-05-02T00:44:28.621776+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 155 |
+| bounded | 154 |
 | support | 128 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 963 |
-| ~~audited_failed~~ | 94 |
+| ~~audited_failed~~ | 95 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 349 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 65 |
+| `audited_failed` | 66 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 450 |
+| `unaudited` | 449 |
 
 | criticality | count |
 |---|---:|
@@ -1172,6 +1172,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_results_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_layered_backreaction_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `staggered_layered_loop_threshold_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -15270,6 +15271,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
   - `STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_layered_loop_threshold_note`
+
+- **Note:** [`STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md`](../../docs/STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The minimal nearby positive geometry is a source-connected two-rail layered corridor with one local K2,2 plaquette; that is enough to close gauge/current natively on the retained staggered transport law without losing the retained force battery.  _(class `C`)_
+- **chain closes:** False — The current runner supports the qualitative one-plaquette threshold, but the note's frozen threshold map is stale, especially the sparse-cycle gauge span and below-threshold factor.
+- **rationale:** Issue: The exact threshold map no longer matches scripts/frontier_staggered_layered_loop_threshold.py; the current control_sparse_cycle row reports J_span=5.015e-35 and J_resid=1.451e-35, not the note's 4.769e-06 and 6.748e-20, and the stated about-21x-below-threshold readout is therefore stale. Why this blocks: the claim is a frozen minimal threshold map, so a hostile reviewer cannot rely on the recorded threshold distances or exact gauge-current values even though the qualitative pass/fail pattern survives. Repair target: refresh the table and readout from the current runner, including the sparse-cycle below-threshold factor and one-plaquette J_span/J_resid values, or restore the runner version that generated the frozen map. Claim boundary until fixed: it is safe to say the current runner still finds control_dag and two_rail_no_loop as gauge N/A, sparse_cycle as gauge FAIL, and all tested one-plaquette cases as 8/8 retained with gauge PASS; it is not safe to cite the frozen current-span table or the 21x threshold margin.
 - **auditor confidence:** high
 
 ### `staggered_newton_blocking_sensitivity_note_2026-04-11`

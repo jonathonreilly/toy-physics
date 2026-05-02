@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 9,
     "high": 192,
-    "leaf": 119,
+    "leaf": 118,
     "medium": 130
   },
-  "generated_at": "2026-05-02T00:43:22.390858+00:00",
+  "generated_at": "2026-05-02T00:44:28.356709+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9835,23 +9835,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_layered_loop_threshold_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_staggered_layered_loop_threshold.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "staggered_self_consistent_two_body_note_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -12382,6 +12365,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 39,
-  "total_pending": 450
+  "ready_count": 38,
+  "total_pending": 449
 }
