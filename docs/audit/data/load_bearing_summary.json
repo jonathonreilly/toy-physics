@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-02T14:44:03.084753+00:00",
+  "computed_at": "2026-05-02T14:47:27.534444+00:00",
   "criticality_counts": {
     "critical": 94,
     "high": 341,
@@ -36,12 +36,6 @@
       "transitive_descendants": 116
     },
     {
-      "claim_id": "graph_first_su3_integration_note",
-      "criticality": "critical",
-      "load_bearing_score": 28.426,
-      "transitive_descendants": 343
-    },
-    {
       "claim_id": "yt_ward_identity_derivation_theorem",
       "criticality": "critical",
       "load_bearing_score": 27.65,
@@ -52,6 +46,12 @@
       "criticality": "critical",
       "load_bearing_score": 27.299,
       "transitive_descendants": 314
+    },
+    {
+      "claim_id": "graph_first_su3_integration_note",
+      "criticality": "critical",
+      "load_bearing_score": 24.426,
+      "transitive_descendants": 343
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
