@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:39:12.823478+00:00
+**Generated:** 2026-05-02T23:40:23.452965+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 510 |
+| unaudited | 509 |
 | meta | 38 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 650 |
+| ~~audited_conditional~~ | 651 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 401 |
-| `audited_conditional` | 650 |
+| `audited_conditional` | 651 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 548 |
+| `unaudited` | 547 |
 
 | claim_type | count |
 |---|---:|
@@ -1044,6 +1044,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_tensorized_schur_primitive_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_theta_to_slice_coupling_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_transfer_matrix_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `same_family_3d_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `scalar_selector_cycle13_meta_closure_status_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_cycle1_science_review_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `scalar_selector_proof_chains_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -14574,6 +14575,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `S3_GENERAL_R_DERIVATION_NOTE.md`
   - `ANOMALY_FORCES_TIME_THEOREM.md`
   - `OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
+- **auditor confidence:** high
+
+### `same_family_3d_closure_note`
+
+- **Note:** [`SAME_FAMILY_3D_CLOSURE_NOTE.md`](../../docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Same-family 3D valley-linear closure card, conditional on the frozen core-card, multi-L, and width-companion logs/runs being declared and independently retained or replaced by a live recomputation harness.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** The note's same-family closure card is assembled by replaying frozen h=0.25 W=10 L=12 core rows, L=8/L=10 multi-L rows, and a W=12 width-companion tail rather than recomputing the closure checks live.  _(class `B`)_
+- **chain closes:** False — The source note itself says the wrapper aggregates and prints frozen rows and does not recompute the load-bearing observables. With deps=[] and no retained log/runner dependency chain, the closure card cannot be retained as an independently audited theorem.
+- **rationale:** Issue: the runner prints frozen numerical rows from prior logs rather than recomputing the claimed closure, and the ledger row declares no dependencies on those logs or underlying live per-L/per-W runs. Why this blocks: a retained bounded theorem needs either a live load-bearing computation or explicit retained dependencies for the frozen evidence being replayed. Repair target: declare the actual log/runner dependency chain and audit it, or replace this wrapper with a live recomputation harness for rows 1-10. Claim boundary until fixed: this is a review-facing frozen closure report for the valley-linear same-family configuration, not an independently retained closure theorem.
+- **open / conditional deps cited:**
+  - `logs/2026-04-04-same-family-3d-closure.txt`
+  - `scripts/lattice_3d_valley_linear_card.py`
+  - `scripts/same_family_3d_closure.py`
 - **auditor confidence:** high
 
 ### `scalar_3plus1_temporal_ratio_note`
