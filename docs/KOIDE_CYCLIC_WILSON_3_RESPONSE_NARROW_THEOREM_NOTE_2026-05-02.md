@@ -28,26 +28,28 @@ Wilson first variation on the adjacent-chain image, cyclic projection
 yields exactly three responses and Koide becomes the scalar equation
 2 r₀² = r₁² + r₂²."* This narrow theorem is that exact safe scope.
 
-## Retained dependency (one-hop)
+## Declared audit dependency (one-hop)
 
-| Authority | Effective status | Role |
+| Authority | Audit-lane status | Role |
 |---|---|---|
-| `koide_dweh_cyclic_compression_note_2026-04-18` | retained | supplies the C₃[111]-covariant adjacent-chain path algebra and its cyclic Hermitian basis |
+| [`KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`](KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md) | pipeline-derived; may be audit-pending after dependency-graph strengthening | supplies the C₃[111]-covariant adjacent-chain path algebra and its cyclic Hermitian basis |
 
 No other authority is cited as load-bearing.
 
 ## Load-bearing step (class A)
 
 ```text
-H ∈ span_R(B₀, B₁, B₂)         (cyclic Hermitian sub-algebra of the adjacent-chain image, from retained dep)
+H ∈ span_R(B₀, B₁, B₂)         (cyclic Hermitian sub-algebra of the adjacent-chain image, from declared dep)
 dW(H) = α₀ r₀ + α₁ r₁ + α₂ r₂   (linearity of dW)
 H_cyc reconstruction:
   H_cyc = (r₀/3) B₀ + (r₁/6) B₁ + (r₂/6) B₂
 ```
 
-Verification: `dW(H_cyc) = r₀ + ... ` matches the response data. This is
-class (A) — algebraic identity on retained-grade inputs (the cyclic basis
-from the retained dep + linearity of any first-variation map).
+Verification: the Frobenius-dual pairings `<B_i, H_cyc>` recover the response
+data `(r₀, r₁, r₂)`. This is class (A) algebra once the cyclic-basis dependency
+is accepted. The retained family status is not asserted by this source note; it
+is pipeline-derived after independent audit of this row and its dependency
+chain.
 
 ## Verification
 
@@ -79,19 +81,20 @@ proposed_claim_scope: |
   C₃[111]-covariant adjacent-chain image, cyclic projection yields exactly
   three real responses determining H_cyc; physical-observable identification
   out of scope.
-target_audit_status: audited_clean (subject to fresh-context audit-lane verdict)
 proposed_load_bearing_step_class: A
 audit_required_before_effective_retained: true
 ```
 
-If ratified, `effective_status = retained_bounded` (bounded_theorem +
-audited_clean + retained dep `koide_dweh_cyclic_compression_note`).
+Audit status is set only by the independent audit lane. This note is safe to
+land as an unaudited, graph-visible bounded theorem candidate; retained-family
+effective status requires independent audit of this row and retained-grade
+closure of its declared dependency chain.
 
 ## What this theorem closes
 
 The conditional algebraic reduction the audit named as the safe scope.
-This is a clean stand-alone bounded theorem on the retained Koide cyclic
-compression surface.
+This is a stand-alone bounded theorem candidate on the Koide cyclic compression
+surface. Its audit outcome remains pending.
 
 ## What this theorem does NOT close
 
@@ -103,7 +106,8 @@ compression surface.
 
 ## Cross-references
 
-- `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md` — parent
-  (currently `audit_status: audited_conditional`); this narrow theorem
-  carves out the audit's named safe scope as a standalone claim row.
-- `koide_dweh_cyclic_compression_note_2026-04-18` — retained dep.
+- KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md — parent row with a
+  conditional audit verdict; this narrow theorem carves out the audit's named
+  safe scope as a standalone claim row. The parent is not load-bearing for the
+  narrow lemma.
+- [`KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`](KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md) — declared load-bearing dependency.

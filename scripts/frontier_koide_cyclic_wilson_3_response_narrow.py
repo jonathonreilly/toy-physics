@@ -6,8 +6,9 @@ of the C_3[111]-covariant adjacent-chain path algebra, the cyclic descendant
 is determined by exactly three real responses (r0, r1, r2) via
 H_cyc = (r0/3) B0 + (r1/6) B1 + (r2/6) B2 with (B0, B1, B2) = (I, C+C², i(C-C²)).
 
-Load-bearing step is class (A) algebraic identity on retained-grade input
-(koide_dweh_cyclic_compression_note retained).
+Load-bearing step is class (A) algebra conditional on the declared Koide DWEH
+cyclic-compression dependency. This runner checks graph visibility; it does not
+grant audit verdicts or retained-family status.
 """
 
 from fractions import Fraction
@@ -17,6 +18,7 @@ import json
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTE_PATH = ROOT / "docs" / "KOIDE_CYCLIC_WILSON_3_RESPONSE_NARROW_THEOREM_NOTE_2026-05-02.md"
+CLAIM_ID = "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02"
 
 PASS = 0
 FAIL = 0
@@ -48,7 +50,7 @@ required = [
     "(r₀/3) B₀ + (r₁/6) B₁ + (r₂/6) B₂",
     "2 r₀² = r₁² + r₂²",
     "out of scope",
-    "koide_dweh_cyclic_compression_note_2026-04-18",
+    "KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md",
     "class (A)",
     "target_claim_type: bounded_theorem",
 ]
@@ -147,12 +149,13 @@ check("[C, B2_kernel] = 0 (B2_kernel commutes with C)", commute_with_C(B2_kernel
 section("Part 3: response triple (r0, r1, r2) uniquely determines H_cyc")
 # ============================================================================
 # The cyclic Hermitian sub-algebra is spanned by (B0, B1, B2) over R.
-# Given a real-valued linear functional dW on this subspace, the response
-# triple (r0, r1, r2) = (dW(B0), dW(B1), dW(B2)/i) (treating B2 = i * B2_kernel,
-# so dW(B2) is purely imaginary, and dW(B2)/i is real).
+# Given a real-valued linear functional dW on this Hermitian subspace, the
+# response triple is (r0, r1, r2) = (dW(B0), dW(B1), dW(B2)). In the exact
+# rational model below we replace B2 = i(C-C^2) by its real antisymmetric
+# kernel K = C-C^2; the Frobenius normalization is unchanged.
 #
 # Reconstruction: H_cyc = (r0/3) B0 + (r1/6) B1 + (r2/6) B2.
-# Verify dW(H_cyc) reproduces the response triple via dual-basis duality.
+# Verify the Frobenius-dual pairings <B_i, H_cyc> reproduce the response triple.
 #
 # We exercise this via Frobenius inner product:
 # <A, B>_F := Tr(A^† B)  — for our cyclic Hermitian basis, this gives:
@@ -163,22 +166,30 @@ section("Part 3: response triple (r0, r1, r2) uniquely determines H_cyc")
 def trace(A, n):
     return sum(A[i][i] for i in range(n))
 
+def frobenius_inner_real(A, B):
+    return trace(matmul(transpose_conj(A, n), B, n), n)
+
+def cyclic_representative_kernel(r0, r1, r2):
+    """Riesz representative using K=C-C^2 for the B2 coordinate."""
+    b0_part = matscale(B0, r0 / Fraction(3), n)
+    b1_part = matscale(B1, r1 / Fraction(6), n)
+    b2_part = matscale(B2_kernel, r2 / Fraction(6), n)
+    return matadd(matadd(b0_part, b1_part, n), b2_part, n)
+
 # <B0, B0>
-inner_B0_B0 = trace(matmul(transpose_conj(B0, n), B0, n), n)
+inner_B0_B0 = frobenius_inner_real(B0, B0)
 check("<B0, B0>_F = Tr(I) = 3",
       inner_B0_B0 == Fraction(3),
       detail=f"= {inner_B0_B0}")
 
 # <B1, B1> = Tr( (C+C²)^T (C+C²) ) = Tr( (C²+C) (C+C²) )
-B1_dag_B1 = matmul(transpose_conj(B1, n), B1, n)
-inner_B1_B1 = trace(B1_dag_B1, n)
+inner_B1_B1 = frobenius_inner_real(B1, B1)
 check("<B1, B1>_F = 6",
       inner_B1_B1 == Fraction(6),
       detail=f"= {inner_B1_B1}")
 
 # <B2_kernel, B2_kernel> = Tr( (C-C²)^T (C-C²) ) = Tr( (C²-C)(C-C²) )
-B2k_dag_B2k = matmul(transpose_conj(B2_kernel, n), B2_kernel, n)
-inner_B2k_B2k = trace(B2k_dag_B2k, n)
+inner_B2k_B2k = frobenius_inner_real(B2_kernel, B2_kernel)
 # <B2_kernel, B2_kernel>_F = Tr((C^T - (C^2)^T)(C - C^2)) = Tr((C² - C)(C - C^2))
 # = Tr(C^3 - C^4 - C^2 + C^3) = Tr(2I - C - C^2) = 6 (since Tr(C) = Tr(C^2) = 0)
 # B2 = i (C - C^2) has same Frobenius norm: <B2, B2>_F = 6 (the i factors cancel
@@ -191,15 +202,31 @@ check("<B2_kernel, B2_kernel>_F = 6 (and <B2, B2>_F = 6 since |i|² = 1)",
 # Note: in the note's reconstruction H_cyc = (r0/3) B0 + (r1/6) B1 + (r2/6) B2,
 # the factors 1/3, 1/6, 1/6 match exactly the inverses of <B_i, B_i>_F (for B0, B1)
 # and the cyclic-basis dual normalization for B2. Verify orthogonality:
-inner_B0_B1 = trace(matmul(transpose_conj(B0, n), B1, n), n)
-inner_B0_B2k = trace(matmul(transpose_conj(B0, n), B2_kernel, n), n)
-inner_B1_B2k = trace(matmul(transpose_conj(B1, n), B2_kernel, n), n)
+inner_B0_B1 = frobenius_inner_real(B0, B1)
+inner_B0_B2k = frobenius_inner_real(B0, B2_kernel)
+inner_B1_B2k = frobenius_inner_real(B1, B2_kernel)
 check("<B0, B1>_F = 0", inner_B0_B1 == Fraction(0),
       detail=f"= {inner_B0_B1}")
 check("<B0, B2_kernel>_F = 0", inner_B0_B2k == Fraction(0),
       detail=f"= {inner_B0_B2k}")
 check("<B1, B2_kernel>_F = 0", inner_B1_B2k == Fraction(0),
       detail=f"= {inner_B1_B2k}")
+
+for r0, r1, r2 in [
+    (Fraction(5), Fraction(1), Fraction(7)),
+    (Fraction(-2), Fraction(3), Fraction(-4)),
+    (Fraction(0), Fraction(0), Fraction(0)),
+]:
+    H = cyclic_representative_kernel(r0, r1, r2)
+    reconstructed = (
+        frobenius_inner_real(B0, H),
+        frobenius_inner_real(B1, H),
+        frobenius_inner_real(B2_kernel, H),
+    )
+    expected = (r0, r1, r2)
+    check(f"Frobenius-dual reconstruction recovers responses {expected}",
+          reconstructed == expected,
+          detail=f"got={reconstructed}")
 
 
 # ============================================================================
@@ -209,35 +236,15 @@ section("Part 4: 3-response law has Koide scalar form 2 r0² = r1² + r2²")
 # to hold for physical charged leptons.
 # Verify the constraint defines a 2-dimensional surface in R³ (a quadric).
 
-# At one example point: (r0, r1, r2) = (1, sqrt(2), 0):  2 = 2 + 0 ✓
-# But sqrt(2) isn't rational. Use a Pythagorean-like exact triple.
-# Try r0 = 5, r1 = 6, r2 = 8:  2*25 = 50; 36 + 64 = 100. NO.
-# Try r0 = 3, r1 = 1, r2 = sqrt(17). Not rational.
-# Try r0 = 0, r1 = 1, r2 = -1: 2*0 = 0; 1 + 1 = 2. NO.
-# Try r0² = (r1² + r2²)/2: many integer solutions...
-# r0 = 5, r1 = 1, r2 = 7:  2*25 = 50; 1 + 49 = 50.  ✓
 def koide_scalar(r0, r1, r2):
     return Fraction(2) * r0**2 - r1**2 - r2**2
 
-triples_on_locus = [
-    (Fraction(5), Fraction(1), Fraction(7)),    # 50 = 50
-    (Fraction(5), Fraction(7), Fraction(1)),    # 50 = 50 (swap)
-    (Fraction(0), Fraction(1), Fraction(-1)),   # 0 = 0  ✓ (was wrong above; actually 0=2 is wrong)
-]
-# Fix the third triple: r0=0, r1²+r2²=0 means r1=r2=0, so the only solution there is (0,0,0).
-# Let me verify these manually:
 check("Koide locus example: (5,1,7) satisfies 2 r0² = r1² + r2²",
       koide_scalar(Fraction(5), Fraction(1), Fraction(7)) == Fraction(0),
       detail=f"2*25 - 1 - 49 = {koide_scalar(Fraction(5), Fraction(1), Fraction(7))}")
 check("Koide locus example: (5,7,1) satisfies 2 r0² = r1² + r2² (swap symmetry)",
       koide_scalar(Fraction(5), Fraction(7), Fraction(1)) == Fraction(0))
 
-# Triples NOT on locus
-triples_off_locus = [
-    (Fraction(1), Fraction(1), Fraction(1)),  # 2 - 2 = 0 ?  Yes. So this IS on the locus too. Bad example.
-    (Fraction(2), Fraction(1), Fraction(1)),  # 8 - 2 = 6 ≠ 0
-    (Fraction(0), Fraction(1), Fraction(1)),  # 0 - 2 = -2 ≠ 0
-]
 check("(2,1,1) NOT on Koide locus", koide_scalar(Fraction(2), Fraction(1), Fraction(1)) != Fraction(0))
 check("(0,1,1) NOT on Koide locus", koide_scalar(Fraction(0), Fraction(1), Fraction(1)) != Fraction(0))
 
@@ -248,16 +255,28 @@ check("note flags: scalar equation NOT claimed to hold for physical charged lept
 
 
 # ============================================================================
-section("Part 5: cited authority is retained-grade")
+section("Part 5: declared dependency is graph-visible")
 # ============================================================================
 LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 ledger = json.loads(LEDGER.read_text())
 rows = ledger['rows']
 dep_id = "koide_dweh_cyclic_compression_note_2026-04-18"
-dep_es = rows.get(dep_id, {}).get("effective_status")
-check(f"{dep_id} effective_status = retained",
-      dep_es == "retained",
-      detail=f"observed = {dep_es!r}")
+dep_row = rows.get(dep_id)
+claim_row = rows.get(CLAIM_ID)
+check(f"{dep_id} exists in audit ledger",
+      dep_row is not None,
+      detail=f"effective_status={dep_row.get('effective_status') if dep_row else None!r}")
+check(f"{CLAIM_ID} seeded by audit pipeline",
+      claim_row is not None,
+      detail="run docs/audit/scripts/run_pipeline.sh after editing the note")
+if claim_row is not None:
+    claim_deps = set(claim_row.get("deps", []))
+    check(f"{CLAIM_ID} records Koide DWEH as declared dependency",
+          dep_id in claim_deps,
+          detail=f"deps={sorted(claim_deps)}")
+    check(f"{CLAIM_ID} remains effective-unaudited before independent audit",
+          claim_row.get("effective_status") == "unaudited",
+          detail=f"effective_status={claim_row.get('effective_status')!r}")
 
 
 print(f"\n{'='*88}\n  TOTAL: PASS={PASS}, FAIL={FAIL}\n{'='*88}")

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T16:32:35.571177+00:00
+**Generated:** 2026-05-02T16:40:32.162214+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 147 |
+| **retained** | 146 |
 | **retained_no_go** | 92 |
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 507 |
+| unaudited | 509 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -34,17 +34,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 373 |
+| `audited_clean` | 372 |
 | `audited_conditional` | 646 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 17 |
-| `unaudited` | 542 |
+| `unaudited` | 544 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 509 |
+| `bounded_theorem` | 510 |
 | `decoration` | 5 |
 | `meta` | 35 |
 | `no_go` | 151 |
@@ -54,19 +54,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | criticality | count |
 |---|---:|
 | `critical` | 96 |
-| `high` | 339 |
-| `medium` | 428 |
-| `leaf` | 814 |
+| `high` | 340 |
+| `medium` | 427 |
+| `leaf` | 815 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1267
+- runners classified: 1268
 - runners with (C) first-principles compute hits: 607
 - runners with (D) external comparator hits: 306
-- decoration candidates (no C, no D): 103
+- decoration candidates (no C, no D): 104
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -271,7 +271,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
-| `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `koide_hostile_review_guard_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
@@ -9635,19 +9634,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
   - `scripts/frontier_koide_pointed_origin_exhaustion_theorem.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_hostile_review_guard.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py_not_registered_runner_dependency`
-- **auditor confidence:** high
-
-### `koide_dweh_cyclic_compression_note_2026-04-18`
-
-- **Note:** [`KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`](../../docs/KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-ready-20260430-50`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The cyclic average P_cyc(H_e) keeps exactly the diagonal sum, cyclic symmetric sum, and signed cyclic antisymmetric sum, with H_cyc = (r0/3)B0 + (r1/6)B1 + (r2/6)B2.  _(class `A`)_
-- **chain closes:** True — The note's scoped claim is the finite-dimensional algebraic compression of an already-given Hermitian target H_e. The runner verifies the projection formula, response reconstruction, and observed charged-lepton witness without needing a hidden selector or microscopic source-law derivation.
-- **rationale:** Clean within the note's declared support-level boundary. The compression theorem is an exact algebraic projection from Herm(3) to the cyclic three-channel subspace, and the note explicitly does not claim to derive the microscopic Wilson/lattice source law, the Koide selector, or the final lepton readout. Residual risk is citation hygiene rather than closure: downstream claims must not treat this support audit as a retained derivation of the three responses themselves.
 - **auditor confidence:** high
 
 ### `koide_eigenvalue_q23_surface_theorem_note_2026-04-20`
