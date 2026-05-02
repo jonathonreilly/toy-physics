@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:27:06.941357+00:00",
+  "generated_at": "2026-05-02T18:29:14.959365+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23610,6 +23610,17 @@
       "path": "docs/CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_koide_cross_sector_z3_closure.py",
       "title": "Cross-Sector Closure N_gen = N_color = 3 via Retained Three-Generation Structure and Retained Magnitudes Counts"
+    },
+    "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02": {
+      "claim_id": "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "71600b4a5b5f885f79fbfe016da2454e195bcf94c54d0cb38775ae79d232b127",
+      "path": "docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_ckm_magnitudes_structural_counts_narrow.py",
+      "title": "CKM Magnitudes Structural-Counts Narrow Theorem"
     },
     "ckm_magnitudes_structural_counts_theorem_note_2026-04-25": {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
@@ -45291,6 +45302,7 @@
     "chiral_walk_synthesis_2026-04-09",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_from_mass_hierarchy_note",
+    "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
     "ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26",
     "ckm_schur_complement_theorem",
     "cl3_color_automorphism_theorem",
@@ -46334,7 +46346,7 @@
       "bounded_theorem": 9,
       "meta": 1,
       "none": 1754,
-      "positive_theorem": 17
+      "positive_theorem": 18
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 509,
@@ -46342,12 +46354,12 @@
       "no_go": 106,
       "none": 443,
       "open_gate": 110,
-      "positive_theorem": 612
+      "positive_theorem": 613
     },
     "edge_count": 4990,
-    "leaf_count": 751,
-    "node_count": 1781,
-    "root_count": 1212,
-    "runners_with_path": 1348
+    "leaf_count": 752,
+    "node_count": 1782,
+    "root_count": 1213,
+    "runners_with_path": 1349
   }
 }

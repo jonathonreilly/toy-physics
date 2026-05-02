@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T18:27:11.064645+00:00",
+  "generated_at": "2026-05-02T18:29:18.710072+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -1704,6 +1704,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_ckm_koide_cross_sector_z3_closure.py"
+    },
+    "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_ckm_magnitudes_structural_counts_narrow.py"
     },
     "ckm_magnitudes_structural_counts_theorem_note_2026-04-25": {
       "assert_count": 1,
@@ -19416,6 +19428,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_ckm_magnitudes_structural_counts_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_ckm_mass_basis_nni.py": {
       "assert_count": 0,
       "claims": [
@@ -35594,11 +35621,11 @@
       "A": 9,
       "B": 152,
       "C": 509,
-      "D": 196,
+      "D": 197,
       "none": 410
     },
-    "runners_classified": 1276,
+    "runners_classified": 1277,
     "runners_with_C": 611,
-    "runners_with_D": 309
+    "runners_with_D": 310
   }
 }
