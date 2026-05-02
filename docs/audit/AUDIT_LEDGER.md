@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:52:29.671232+00:00
+**Generated:** 2026-05-02T01:55:30.021864+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 151 |
+| bounded | 150 |
 | support | 121 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 968 |
+| ~~audited_conditional~~ | 969 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 366 |
-| `audited_conditional` | 668 |
+| `audited_conditional` | 669 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 422 |
+| `unaudited` | 421 |
 
 | criticality | count |
 |---|---:|
@@ -1071,6 +1071,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_casimir_block_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_curvature_localization_blocker_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_discrete_global_closure_note` | unknown | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `universal_gr_invariant_frame_obstruction_note` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `universal_gr_invariant_nonlinear_completion_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_glue_operator_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_schur_localization_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -16092,6 +16093,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
   - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
   - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
+- **auditor confidence:** high
+
+### `universal_gr_invariant_frame_obstruction_note`
+
+- **Note:** [`UNIVERSAL_GR_INVARIANT_FRAME_OBSTRUCTION_NOTE.md`](../../docs/UNIVERSAL_GR_INVARIANT_FRAME_OBSTRUCTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-gpt5-fresh-auditor`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The weight-1 complement sectors appear with multiplicity two, the quotient-kernel spectrum is frame-invariant, therefore no representation-theoretic invariant in the current atlas selects a unique universal complement frame.  _(class `A`)_
+- **chain closes:** False — The representation-theoretic implication is plausible, but the note does not exhibit an exhaustive current invariant atlas or a theorem that the listed invariant data are all available selectors. The supplied runner does not execute its checks in this checkout because it fails on a missing POLARIZATION_UNIVERSAL_WEIGHT_DECOMPOSITION_NOTE.md before PASS output.
+- **rationale:** Issue: the no-go rests on the unstated premise that the current invariant tensor atlas is exhausted by the listed SO(3)/SO(2), Pi_A1, weight-decomposition, and quotient-spectrum data, and the runner cannot reproduce the weight-decomposition dependency in the current checkout. Why this blocks: without that exhaustive selector theorem, a hostile reviewer can reject the universal no-canonical-section conclusion while accepting the multiplicity-two algebra. Repair target: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact. Claim boundary until fixed: conditional no-go for the displayed representation data only.
 - **auditor confidence:** high
 
 ### `universal_gr_invariant_nonlinear_completion_note`
