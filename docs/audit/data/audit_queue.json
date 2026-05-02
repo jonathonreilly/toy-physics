@@ -1,35 +1,32 @@
 {
   "by_criticality": {
-    "critical": 29,
+    "critical": 30,
     "high": 229,
     "leaf": 164,
     "medium": 172
   },
-  "generated_at": "2026-05-02T20:12:15.557745+00:00",
+  "generated_at": "2026-05-02T20:26:06.482106+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
+      "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "one_generation_matter_closure_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
+      "claim_id": "anomaly_forces_time_theorem",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "left_handed_charge_matching_note",
-        "anomaly_forces_time_theorem"
-      ],
-      "direct_in_degree": 26,
-      "effective_status": "audited_conditional",
-      "load_bearing_score": 21.022,
-      "note_path": "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
-      "queue_reason": "claim_type_backfill_reaudit",
+      "cross_confirmation_status": "confirmed",
+      "deps": [],
+      "direct_in_degree": 22,
+      "effective_status": "unaudited",
+      "load_bearing_score": 19.229,
+      "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
+      "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/frontier_right_handed_sector.py",
-      "transitive_descendants": 259
+      "runner_path": "scripts/frontier_anomaly_forces_time.py",
+      "transitive_descendants": 299
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -72,6 +69,30 @@
       "ready": true,
       "runner_path": "scripts/frontier_confinement_string_tension.py",
       "transitive_descendants": 54
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "audited_conditional",
+      "blocker": null,
+      "claim_id": "one_generation_matter_closure_note",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "backfilled_pending_reaudit",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "left_handed_charge_matching_note",
+        "anomaly_forces_time_theorem"
+      ],
+      "direct_in_degree": 26,
+      "effective_status": "audited_conditional",
+      "load_bearing_score": 21.022,
+      "note_path": "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
+      "queue_reason": "claim_type_backfill_reaudit",
+      "ready": false,
+      "runner_path": "scripts/frontier_right_handed_sector.py",
+      "transitive_descendants": 259
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1027,35 +1048,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_koide_dweh_cyclic_compression.py",
       "transitive_descendants": 77
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "substrate_to_p_a_forcing_theorem_note_2026-04-30",
-        "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30",
-        "minimal_axioms_2026-04-11",
-        "native_gauge_closure_note",
-        "graph_first_su3_integration_note",
-        "anomaly_forces_time_theorem",
-        "i3_zero_exact_theorem_note"
-      ],
-      "direct_in_degree": 7,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.67,
-      "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
-      "transitive_descendants": 71
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -3390,6 +3382,35 @@
       "ready": false,
       "runner_path": "scripts/frontier_koide_microscopic_scalar_selector_target.py",
       "transitive_descendants": 73
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+        "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30",
+        "minimal_axioms_2026-04-11",
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note",
+        "anomaly_forces_time_theorem",
+        "i3_zero_exact_theorem_note"
+      ],
+      "direct_in_degree": 7,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.67,
+      "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
+      "transitive_descendants": 71
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -6889,34 +6910,6 @@
     },
     {
       "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "minimal_axioms_2026-04-11",
-        "native_gauge_closure_note",
-        "graph_first_su3_integration_note",
-        "anomaly_forces_time_theorem",
-        "i3_zero_exact_theorem_note",
-        "cpt_exact_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.67,
-      "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py",
-      "transitive_descendants": 35
-    },
-    {
-      "audit_independence_required": "any_non_self",
       "audit_status": "audited_decoration",
       "blocker": null,
       "claim_id": "retained_cross_lane_consistency_support_note_2026-04-22",
@@ -8940,6 +8933,34 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_critical_feature_scan.py",
+      "transitive_descendants": 35
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note",
+        "anomaly_forces_time_theorem",
+        "i3_zero_exact_theorem_note",
+        "cpt_exact_note"
+      ],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.67,
+      "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_planck_link_local_first_variation_p_a_forcing.py",
       "transitive_descendants": 35
     },
     {
@@ -15593,6 +15614,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 120,
-  "total_pending": 594
+  "ready_count": 118,
+  "total_pending": 595
 }

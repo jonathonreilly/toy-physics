@@ -1,0 +1,22 @@
+loop_slug: 3plus1d-retained-positive-2026-05-02
+date_started: 2026-05-02
+branch: claude/3plus1d-retained-positive-2026-05-02
+mode: run
+goal: "Drive anomaly_forces_time_theorem to retained-positive closure by deriving each of the 4 admissions from Cl(3)/Z^3 + retained primitives, or showing dispensable, or re-classifying as Cl(3)/Z^3 structural."
+target_status: best-honest-status
+runtime_used: ~2h
+cycles_completed: 5
+active_route: synthesis complete; PR open
+hard_residual: 1 admission remains (ABJ inconsistency for chiral gauge
+  theories in 3+1d). Three of original four discharged.
+files_touched:
+  - docs/ANOMALY_FORCES_TIME_THEOREM.md
+  - .claude/science/physics-loops/3plus1d-retained-positive-2026-05-02/* (loop pack)
+  - docs/audit/* (regenerated)
+open_imports: 1
+no_go_routes: []
+review_findings:
+  - block-local self-review: pass with bounded scope; honest narrowing
+pr_status: ready_to_push
+next_exact_action: "Push branch and open PR for review-lane audit ratification"
+stop_condition: "PR opened with narrowing artifact + handoff complete"

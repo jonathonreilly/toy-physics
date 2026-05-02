@@ -19981,7 +19981,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:05:05.321343+00:00",
+  "generated_at": "2026-05-02T20:26:03.514967+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21349,7 +21349,7 @@
       "claim_type_author_hint_raw": "bounded_theorem proposal. Audit status is assigned only by the",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "003b590b1c7fa0427af690147cb516f7b7b4fb6b0830bc6987550427fcf44ec9",
+      "note_hash": "1ed22f9827e19069d54ffb6ae2564a5a9a9f104e487d7a4c9e3be3c4d5cc2463",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
       "runner_path": "scripts/frontier_anomaly_forces_time.py",
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
