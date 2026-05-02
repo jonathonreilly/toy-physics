@@ -148,8 +148,10 @@ probability.
    every finite witness by `16` and removes all crossings, so unnormalized
    taste multiplicity is load-bearing.  The scalar taste/projector theorem
    attempt derives the unit singlet algebra but not the physical carrier or
-   `K'(x_pole)`.  The retained task is therefore a new taste/scalar-carrier
-   plus continuum/projector theorem for the
+   `K'(x_pole)`.  With that unit projector, the finite ladder has no crossing
+   at retained scout strength and would need an underived scalar-kernel
+   multiplier.  The retained task is therefore a new taste/scalar-carrier plus
+   continuum/projector and interacting-kernel theorem for the
    interacting color-singlet pole and LSZ derivative, not another finite
    crossing witness.
    The refreshed retained-closure route certificate folds these blockers into

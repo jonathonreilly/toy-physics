@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=30 FAIL=0
+# SUMMARY: PASS=31 FAIL=0
 ```
 
 The runner verifies:
@@ -48,6 +48,7 @@ The runner verifies:
 | hidden taste-corner scalar-carrier authority exists | no |
 | normalized taste-singlet source keeps finite crossings | no |
 | unit taste-singlet algebra fixes the physical scalar carrier and pole derivative | no |
+| unit-projector finite ladder crosses at retained kernel strength | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
@@ -125,6 +126,9 @@ so unnormalized taste multiplicity is load-bearing too.  A unit taste singlet
 can be constructed algebraically, but the source functional still permits
 source-coordinate rescaling and the current surface does not identify the
 physical scalar carrier or derive `K'(x_pole)`.
+With that unit projector, the finite ladder has no crossing at the retained
+scout kernel strength; the best row would require an underived scalar-channel
+kernel multiplier of `2.26091440260`.
 
 ### Route 3: New Selector Theorem
 

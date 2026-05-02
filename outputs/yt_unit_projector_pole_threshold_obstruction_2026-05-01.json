@@ -1,0 +1,84 @@
+{
+  "actual_current_surface_status": "exact negative boundary / unit-projector finite-ladder pole-threshold obstruction",
+  "fail_count": 0,
+  "parent_certificates": {
+    "color_singlet_zero_mode_removed_ladder_pole_search": "outputs/yt_color_singlet_zero_mode_removed_ladder_pole_search_2026-05-01.json",
+    "scalar_taste_projector_normalization_attempt": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
+    "taste_singlet_ladder_normalization_boundary": "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json"
+  },
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The unit projector removes the finite crossings; the extra kernel multiplier needed for a pole is not derived.",
+  "remaining_blockers": [
+    "derive an interacting scalar-channel kernel enhancement from retained dynamics, not a fitted pole selector",
+    "derive the physical scalar taste/carrier projection and continuum projector normalization",
+    "derive K'(x_pole) or the inverse-propagator derivative at the scalar pole",
+    "or measure the same-source pole derivative in production FH/LSZ data"
+  ],
+  "rows": [
+    {
+      "crosses_at_retained_kernel_strength": false,
+      "extra_kernel_multiplier_needed_beyond_retained_strength": 1.2609144025966956,
+      "grid_size_4d": 4,
+      "mass": 0.2,
+      "projector": "local",
+      "raw_lambda_max": 7.07678273074989,
+      "required_kernel_multiplier_for_crossing": 2.2609144025966956,
+      "unit_projector_lambda_max": 0.4422989206718681
+    },
+    {
+      "crosses_at_retained_kernel_strength": false,
+      "extra_kernel_multiplier_needed_beyond_retained_strength": 9.75671412249322,
+      "grid_size_4d": 6,
+      "mass": 0.2,
+      "projector": "local",
+      "raw_lambda_max": 1.4874430813906838,
+      "required_kernel_multiplier_for_crossing": 10.75671412249322,
+      "unit_projector_lambda_max": 0.09296519258691774
+    },
+    {
+      "crosses_at_retained_kernel_strength": false,
+      "extra_kernel_multiplier_needed_beyond_retained_strength": 9.933683303750136,
+      "grid_size_4d": 4,
+      "mass": 0.3,
+      "projector": "local",
+      "raw_lambda_max": 1.4633677924905846,
+      "required_kernel_multiplier_for_crossing": 10.933683303750136,
+      "unit_projector_lambda_max": 0.09146048703066154
+    },
+    {
+      "crosses_at_retained_kernel_strength": false,
+      "extra_kernel_multiplier_needed_beyond_retained_strength": 5.690931573981761,
+      "grid_size_4d": 4,
+      "mass": 0.2,
+      "projector": "point_split_zero_momentum_normalized",
+      "raw_lambda_max": 2.391296312492168,
+      "required_kernel_multiplier_for_crossing": 6.690931573981761,
+      "unit_projector_lambda_max": 0.1494560195307605
+    }
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained top-Yukawa closure",
+    "does not set kappa_s = 1",
+    "does not fit a scalar-channel coupling to force a pole",
+    "does not use H_unit, yt_ward_identity, observed top mass, or observed y_t",
+    "does not use alpha_LM, plaquette, u0, reduced pilots, c2 = 1, or Z_match = 1"
+  ],
+  "summary": {
+    "best_row": {
+      "crosses_at_retained_kernel_strength": false,
+      "extra_kernel_multiplier_needed_beyond_retained_strength": 1.2609144025966956,
+      "grid_size_4d": 4,
+      "mass": 0.2,
+      "projector": "local",
+      "raw_lambda_max": 7.07678273074989,
+      "required_kernel_multiplier_for_crossing": 2.2609144025966956,
+      "unit_projector_lambda_max": 0.4422989206718681
+    },
+    "required_kernel_multiplier_max": 10.933683303750136,
+    "required_kernel_multiplier_min": 2.2609144025966956,
+    "unit_lambda_max": 0.4422989206718681,
+    "unit_lambda_min": 0.09146048703066154
+  },
+  "verdict": "With the unit taste projector fixed, the current finite zero-mode-removed ladder witnesses no longer satisfy lambda_max >= 1 at the retained scout kernel strength.  The best row has lambda_max = 0.442298920672, so reaching a finite pole would require multiplying the scalar-channel kernel by 2.2609144026.  No current retained/audit-clean premise derives that enhancement; using it as a fitted selector would import a new scalar normalization.  The analytic route still needs an interacting kernel theorem that derives the pole and K'(x_pole), or production same-source FH/LSZ pole data."
+}

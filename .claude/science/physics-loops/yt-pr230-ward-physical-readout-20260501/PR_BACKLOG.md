@@ -436,3 +436,19 @@ Adds a scalar taste-projector normalization theorem attempt:
   source-to-Higgs normalization, and interacting pole derivative `K'(x_pole)`
   remain open, or must be measured in production same-source FH/LSZ data.
 ```
+
+Latest unit-projector pole-threshold checkpoint text for PR #230:
+
+```text
+Adds a unit-projector pole-threshold obstruction:
+- applies the unit taste-projector normalization to the finite ladder witnesses;
+- validator passes `PASS=6 FAIL=0`; retained-route gate reports
+  `PASS=31 FAIL=0`; campaign status now consumes 61 route certificates and
+  reports `PASS=57 FAIL=0`;
+- all unit-projector eigenvalues are below `lambda_max=1`; the best row is
+  `0.442298920672` and needs an underived scalar-kernel multiplier
+  `2.26091440260` to cross;
+- still no retained/proposed-retained closure: a real interacting kernel
+  theorem deriving the pole and `K'(x_pole)`, or production same-source FH/LSZ
+  pole data, remains required.
+```

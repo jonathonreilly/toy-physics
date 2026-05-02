@@ -385,6 +385,17 @@ canonical scalar source coordinate, physical taste carrier, or pole derivative.
 Those remain imports unless derived from the source functional plus interacting
 LSZ pole, or measured in same-source production data.
 
+Unit-projector pole-threshold boundary:
+
+```text
+max lambda_unit = 0.442298920672
+min extra kernel multiplier for crossing = 2.26091440260
+```
+
+Any route that forces a unit-projector finite pole must derive this additional
+scalar-channel enhancement from retained dynamics.  It cannot be fitted or
+declared as a hidden normalization.
+
 Source-reparametrization gauge boundary:
 
 ```text

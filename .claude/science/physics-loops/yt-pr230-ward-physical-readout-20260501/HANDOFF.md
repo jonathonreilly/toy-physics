@@ -371,4 +371,7 @@ scalar taste/projector theorem attempt now separates the algebraic and
 physical parts: the unit taste singlet `O_singlet=(1/sqrt(16)) sum_t O_t` is
 available, but the source term can absorb the same factor into the source
 coordinate and no current retained authority identifies the physical scalar
-carrier or derives `K'(x_pole)`.
+carrier or derives `K'(x_pole)`.  The unit-projector pole-threshold block then
+shows the normalized finite ladder has no crossing at retained scout strength:
+the best row has `lambda_max=0.442298920672` and would need an underived
+scalar-kernel multiplier `2.26091440260` to reach `lambda_max=1`.

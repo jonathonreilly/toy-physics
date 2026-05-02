@@ -69,6 +69,7 @@ def main() -> int:
         "taste_carrier_import_audit": "outputs/yt_taste_carrier_import_audit_2026-05-01.json",
         "taste_singlet_ladder_normalization": "outputs/yt_taste_singlet_ladder_normalization_boundary_2026-05-01.json",
         "scalar_taste_projector_normalization_attempt": "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json",
+        "unit_projector_pole_threshold": "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -196,6 +197,17 @@ def main() -> int:
             "corner_count"
         )
         == 16
+    )
+    unit_projector_pole_threshold_blocks_finite_ladder = (
+        "unit-projector finite-ladder pole-threshold obstruction"
+        in certificates["unit_projector_pole_threshold"].get("actual_current_surface_status", "")
+        and certificates["unit_projector_pole_threshold"].get("proposal_allowed") is False
+        and float(
+            certificates["unit_projector_pole_threshold"].get("summary", {}).get(
+                "required_kernel_multiplier_min", 0.0
+            )
+        )
+        > 2.0
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -325,6 +337,11 @@ def main() -> int:
         ),
     )
     report(
+        "unit-projector-pole-threshold-blocks-finite-ladder",
+        unit_projector_pole_threshold_blocks_finite_ladder,
+        certificates["unit_projector_pole_threshold"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -410,7 +427,10 @@ def main() -> int:
             "crossing, so unnormalized taste multiplicity is load-bearing.  A "
             "unit taste singlet can be constructed algebraically, but the "
             "source functional still permits source-coordinate rescaling and "
-            "does not identify the physical scalar carrier or K'(x_pole).  The "
+            "does not identify the physical scalar carrier or K'(x_pole).  At "
+            "unit-projector normalization the finite ladder has no crossing; "
+            "forcing one would require an underived scalar-kernel multiplier "
+            "larger than two.  The "
             "actual interacting scalar pole derivative theorem and production "
             "evidence remain open.  "
             "These cannot be assumed."

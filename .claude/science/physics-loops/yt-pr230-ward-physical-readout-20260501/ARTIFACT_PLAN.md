@@ -238,6 +238,9 @@ Completed in block 1:
 - `scripts/frontier_yt_scalar_taste_projector_normalization_attempt.py`
 - `outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json`
 - `docs/YT_SCALAR_TASTE_PROJECTOR_NORMALIZATION_ATTEMPT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_unit_projector_pole_threshold_obstruction.py`
+- `outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json`
+- `docs/YT_UNIT_PROJECTOR_POLE_THRESHOLD_OBSTRUCTION_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
@@ -314,7 +317,9 @@ Next artifact:
   source weighting divides the same finite witnesses by 16 and removes every
   crossing, so the unnormalized taste multiplicity is load-bearing; the unit
   taste-singlet projector can be constructed algebraically, but that does not
-  identify the physical scalar carrier or interacting pole derivative
+  identify the physical scalar carrier or interacting pole derivative; after
+  unit projection the finite ladder has no crossing at retained scout strength
+  and the best row would need an underived scalar-kernel multiplier
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

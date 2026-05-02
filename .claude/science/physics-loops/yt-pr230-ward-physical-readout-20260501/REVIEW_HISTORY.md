@@ -1421,3 +1421,29 @@ corners, but this remains exact support only.  The source coordinate can absorb
 the same normalization factor, and no current retained authority identifies
 the physical scalar carrier or derives the interacting pole derivative
 `K'(x_pole)`.
+
+## Review-Loop Backpressure - Unit-Projector Pole-Threshold Obstruction
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_unit_projector_pole_threshold_obstruction.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_unit_projector_pole_threshold_obstruction.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+With the unit taste projector, no finite ladder witness crosses at the retained
+scout kernel strength.  The best row needs an extra scalar-kernel multiplier
+`2.26091440260`, which is not derived by the current surface.

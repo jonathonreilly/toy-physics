@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-56-scalar-taste-projector-normalization-attempt
-blocks_completed: 70
+current_phase: campaign-rerun-block-57-unit-projector-pole-threshold-obstruction
+blocks_completed: 71
 active_route: "interacting scalar denominator / Ward identity limit attempt"
-active_hard_residual: "unit taste-singlet projector algebra is available but does not identify the physical scalar carrier or interacting pole derivative; continuum projector, scalar LSZ, and production evidence remain open"
+active_hard_residual: "with the unit taste projector fixed, the finite ladder has no pole at retained kernel strength; deriving the interacting scalar kernel enhancement, K'(x_pole), or production FH/LSZ pole data remains open"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -246,6 +246,9 @@ files_touched:
   - "scripts/frontier_yt_scalar_taste_projector_normalization_attempt.py"
   - "docs/YT_SCALAR_TASTE_PROJECTOR_NORMALIZATION_ATTEMPT_NOTE_2026-05-01.md"
   - "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json"
+  - "scripts/frontier_yt_unit_projector_pole_threshold_obstruction.py"
+  - "docs/YT_UNIT_PROJECTOR_POLE_THRESHOLD_OBSTRUCTION_NOTE_2026-05-01.md"
+  - "outputs/yt_unit_projector_pole_threshold_obstruction_2026-05-01.json"
   - "scripts/frontier_yt_retained_closure_route_certificate.py"
   - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
   - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
@@ -340,6 +343,7 @@ claim_state_movement:
   - "proved color-singlet finite-q IR regularity: after q=0 cancellation, d^4q/q^2 is locally integrable and the zero-mode-removed lattice kernel has a finite IR limit"
   - "proved a taste-singlet ladder normalization boundary: normalized singlet weighting over 16 BZ corners rescales the finite ladder witnesses by 1/16 and removes every crossing"
   - "attempted the scalar taste/projector normalization theorem: unit taste-singlet algebra is exact support, but the source functional still allows source-coordinate rescaling and does not identify the physical scalar carrier or K'(x_pole)"
+  - "proved a unit-projector finite-ladder pole-threshold obstruction: after unit taste projection, all finite witnesses are below lambda_max=1 and the best row needs an underived scalar-kernel multiplier 2.26091440260"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -348,5 +352,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Pivot to the next ranked retained-positive route: either derive the interacting scalar pole derivative K'(x_pole) with the now-unit taste projector, or schedule/prepare production same-source FH/LSZ pole data if no theorem is available."
+next_exact_action: "Attempt a true interacting scalar-channel kernel theorem for the unit projector, including the source of any pole-generating enhancement and K'(x_pole); if unavailable, pivot to production same-source FH/LSZ pole data planning."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

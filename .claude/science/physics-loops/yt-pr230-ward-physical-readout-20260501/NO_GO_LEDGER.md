@@ -866,6 +866,19 @@ and canonical Higgs metric still require an LSZ/pole theorem or production
 same-source pole data.  The current taste-carrier audit also still supplies no
 retained authority for non-origin corners as the physical scalar carrier.
 
+Unit-projector finite ladder has no retained-strength pole threshold:
+
+```text
+python3 scripts/frontier_yt_unit_projector_pole_threshold_obstruction.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+After applying the unit taste projector, every finite crossing witness drops
+below `lambda_max = 1`.  The best row has `lambda_max = 0.442298920672`, so a
+finite pole would require a scalar-kernel multiplier `2.26091440260`.  No
+current retained premise derives that enhancement; fitting it to force a pole
+would be a new scalar-channel normalization/selector import.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

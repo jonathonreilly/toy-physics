@@ -30,6 +30,7 @@ plus Feynman-Hellmann production protocol certificate
 plus same-source scalar two-point LSZ measurement primitive
 plus taste-singlet ladder normalization boundary
 plus scalar taste-projector normalization theorem attempt
+plus unit-projector pole-threshold obstruction
 **PR:** #230 draft branch
 
 ```yaml
@@ -109,6 +110,8 @@ Allowed wording:
 - exact negative boundary for treating unit taste-singlet algebra as physical
   scalar-carrier closure; source-coordinate normalization and `K'(x_pole)`
   remain open;
+- exact negative boundary for forcing a unit-projector finite pole without a
+  derived scalar-kernel enhancement;
 - bounded-support scalar-source response harness extension: the production
   harness now emits `dE/ds`, but physical `dE/dh` still requires production
   data and derived `kappa_s`;
