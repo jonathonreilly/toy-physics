@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:42:18.473759+00:00
+**Generated:** 2026-05-02T00:43:22.648761+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 156 |
+| bounded | 155 |
 | support | 128 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
 | ~~audited_conditional~~ | 963 |
-| ~~audited_failed~~ | 93 |
+| ~~audited_failed~~ | 94 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 349 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
-| `audited_failed` | 64 |
+| `audited_failed` | 65 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 451 |
+| `unaudited` | 450 |
 
 | criticality | count |
 |---|---:|
@@ -1171,6 +1171,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_results_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `staggered_layered_backreaction_note` | bounded | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -15228,6 +15229,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The stress runner has no retained-row failures, but the claim strengthens portability by reusing the baseline graph-depth force/current battery before that battery has a retained derivation as the physical gravity observable on arbitrary non-cubic graphs; additionally, the live gauge magnitudes drift slightly from the frozen table while keeping PASS status. Why this blocks: larger stress families test robustness of a selected probe, but they do not close the missing observable/readout theorem or turn finite-family evidence into audit-clean retained portability. Repair target: first audit-clean the baseline graph force/current observable and thresholds, then make the stress note an asserted holdout battery with exact current output or toleranced assertions. Claim boundary until fixed: safe to claim the current stress runner gives 8/8 retained-row PASS/N/A on the four named stress graph families, with current gauge values about 6.193e-04, 1.861e-03, 1.176e-04, and N/A; not safe to claim clean retained graph-portability closure from this stress run alone.
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_layered_backreaction_note`
+
+- **Note:** [`STAGGERED_LAYERED_BACKREACTION_NOTE.md`](../../docs/STAGGERED_LAYERED_BACKREACTION_NOTE.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This note freezes the first retained bridge between the staggered transport law and a source-generated Phi on layered graph families.  _(class `C`)_
+- **chain closes:** False — The current runner supports the qualitative layered backreaction bridge, but its source-on force and source-linearity values differ from the frozen table and no longer justify the note's exact-to-machine-precision R2 statement.
+- **rationale:** Issue: The frozen table is stale relative to scripts/frontier_staggered_layered_backreaction.py: the current rows report F1=+3.116e-01 and +1.978e-01 with R2=0.9999 and 0.9987, rather than +3.064e-01 and +1.849e-01 with R2=1.0000. Why this blocks: the note explicitly freezes a retained numerical bridge and states source-response linearity is exact to machine precision, which is no longer true for the current runner. Repair target: refresh the table and readout from the current runner, or restore the runner version that produced the frozen values; add assertions for F1, R2, Phi residual, norm drift, robustness, and gauge status. Claim boundary until fixed: it is safe to say the current runner still gives exact zero-source control, TOWARD source-on force on both layered families, R2 above 0.99, clean robustness, and one gauge failure; it is not safe to cite the frozen force values or exact machine-precision source linearity.
 - **auditor confidence:** high
 
 ### `staggered_layered_gauge_engineering_note`

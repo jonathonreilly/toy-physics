@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-02T00:42:18.152172+00:00",
+  "computed_at": "2026-05-02T00:43:22.342815+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
@@ -29,10 +29,10 @@
   "effective_status_counts": {
     "audited_conditional": 963,
     "audited_decoration": 5,
-    "audited_failed": 93,
+    "audited_failed": 94,
     "audited_numerical_match": 26,
     "audited_renaming": 47,
-    "bounded": 156,
+    "bounded": 155,
     "open": 6,
     "proposed_retained": 1,
     "retained": 76,
