@@ -6969,6 +6969,10 @@
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
     {
+      "from": "no_per_site_chirality_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
       "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
       "to": "three_generation_structure_note"
     },
@@ -20005,7 +20009,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:11:06.885989+00:00",
+  "generated_at": "2026-05-02T21:12:06.282772+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -34722,6 +34726,19 @@
       "runner_path": "scripts/no_per_site_bosonic_ccr_check.py",
       "title": "No Per-Site Bosonic CCR on Cl(3) Lattice Sites"
     },
+    "no_per_site_chirality_theorem_note_2026-05-02": {
+      "claim_id": "no_per_site_chirality_theorem_note_2026-05-02",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "ff529bb3e0ab5ee86bd5e039fe4e9721268464fdf866bb1e9e9626093266c5eb",
+      "path": "docs/NO_PER_SITE_CHIRALITY_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/no_per_site_chirality_check.py",
+      "title": "No Per-Site \u03b3_5 Chirality Operator on Cl(3) Pauli Rep"
+    },
     "nonlabel_grown_basin_note": {
       "claim_id": "nonlabel_grown_basin_note",
       "claim_type_author_hint": null,
@@ -46580,21 +46597,22 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 12,
       "meta": 1,
+      "no_go": 1,
       "none": 1742,
       "positive_theorem": 42
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 512,
       "meta": 1,
-      "no_go": 106,
+      "no_go": 107,
       "none": 440,
       "open_gate": 109,
       "positive_theorem": 629
     },
-    "edge_count": 5001,
-    "leaf_count": 763,
-    "node_count": 1797,
+    "edge_count": 5002,
+    "leaf_count": 764,
+    "node_count": 1798,
     "root_count": 1217,
-    "runners_with_path": 1365
+    "runners_with_path": 1366
   }
 }
