@@ -2690,3 +2690,17 @@ Disposition: bounded support.  The ready L12 set is now
 `[1, 2, 3, 4, 5, 6]`, or `6/63` chunks.  Response stability still fails, and no
 combined L12, L16/L24, pole-derivative, model-class, FV/IR, or Higgs-identity
 gate is closed.  No retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 122 Effective-Potential Hessian Source-Overlap No-Go
+
+Review stance: analytic shortcut stress test / claim firewall.
+
+- Added `scripts/frontier_yt_effective_potential_hessian_source_overlap_no_go.py`.
+- Added `docs/YT_EFFECTIVE_POTENTIAL_HESSIAN_SOURCE_OVERLAP_NO_GO_NOTE_2026-05-02.md`.
+- Added `outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  SSB radial curvature, canonical VEV,
+W/Z masses, and scalar Hessian eigenvalues do not determine the PR #230 source
+operator direction or source-pole identity.  No retained or proposed-retained
+wording is allowed.

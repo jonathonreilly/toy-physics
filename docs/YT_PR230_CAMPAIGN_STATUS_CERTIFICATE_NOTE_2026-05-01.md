@@ -173,6 +173,7 @@ the visible shortcut routes:
 | scalar denominator theorem closure attempt | current support identifies pole and derivative targets plus singlet zero-mode cancellation/finite-q regularity, but zero-mode prescription, physical scalar carrier/projector, `K'(pole)`, model class, threshold, and seed-controlled production remain open |
 | joint Feynman-Hellmann / scalar-LSZ soft-continuum threshold no-go | color-singlet q=0 cancellation and finite-q IR regularity do not certify a positive threshold gap; locally integrable soft continuum weight can start arbitrarily close to the pole |
 | reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
+| effective-potential Hessian source-overlap no-go | canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the PR #230 source operator direction |
 | scalar carrier/projector closure attempt | color-singlet support and unit taste-singlet algebra are available, but physical carrier authority, unit-projector crossing, kernel enhancement, fitted-kernel legitimacy, and `K'(pole)` remain blocked |
 | `K'(pole)` closure attempt | determinant/eigen-derivative gates and finite derivative scouts name the object, but limiting order, residue envelope, Ward/Feshbach non-identification, carrier/projector, fitted-kernel, and threshold blockers remain |
 | FH/LSZ canonical-Higgs pole identity gate | same-source invariance cancels source scaling, but it does not certify that the measured source pole is the canonical Higgs radial mode used by `v`; production pole derivative and source-to-Higgs identity remain open |
@@ -281,3 +282,7 @@ Latest chunks005-006 ready-set checkpoint: campaign status now includes
 seed-controlled chunks005-006 through the existing combiner/ready-set
 certificates.  The ready set is `[1, 2, 3, 4, 5, 6]`, or `6/63` L12 chunks; response stability
 still fails and no retained/proposed-retained wording is authorized.
+
+Latest effective-potential Hessian checkpoint: campaign status now includes
+the Hessian/source-overlap no-go and reports `PASS=102 FAIL=0` over 106
+certificates.  No retained/proposed-retained wording is authorized.

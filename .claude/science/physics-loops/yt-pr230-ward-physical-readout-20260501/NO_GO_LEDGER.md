@@ -1,5 +1,21 @@
 # No-Go Ledger
 
+## Effective-potential Hessian is not a source-overlap identity
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_effective_potential_hessian_source_overlap_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Canonical SSB data can hold the VEV, W/Z mass algebra, scalar Hessian
+eigenvalues, and canonical top Yukawa fixed while the source operator rotates
+as `O_s(theta)=cos(theta) h + sin(theta) chi`.  The source overlap, source-only
+response, and source susceptibility then change.  Therefore Hessian curvature
+does not set `kappa_s`, prove source-pole purity, or identify the PR #230
+source pole with the canonical Higgs radial mode.
+
 ## Reflection positivity / OS reconstruction is not scalar LSZ closure
 
 Runner:

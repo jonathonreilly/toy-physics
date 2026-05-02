@@ -27,6 +27,7 @@
 | Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |
 | IR / finite-volume kernel limit | needed for ladder eigenvalue crossing | not yet fixed | open import |
 | Reflection positivity / OS reconstruction | possible scalar spectral shortcut | exact negative boundary for PR230 LSZ closure | allowed as positivity support only; does not derive pole saturation, source residue, or canonical-Higgs identity |
+| Effective-potential Hessian / radial curvature | possible canonical-Higgs identity shortcut | exact negative boundary for PR230 source-overlap closure | allowed as canonical-field support only; does not derive the source operator direction |
 | Full-staggered PT formula layer | supplies `D_psi`, `D_gluon`, scalar/gauge kinematics | exact support only | formulas reusable; old alpha/plaquette/H_unit surfaces forbidden |
 | EW/Higgs canonical doublet notes | structural guardrails | proposed/unaudited or conditional parents | may not be used as PR230 source-normalization closure |
 
@@ -272,6 +273,17 @@ reflection-positive pole-plus-continuum families can keep the finite
 same-source shell values fixed while changing the pole residue.  A route that
 uses OS positivity as `kappa_s`, pole saturation, or canonical-Higgs identity
 is importing the missing scalar-denominator theorem.
+
+Effective-potential Hessian boundary:
+
+```text
+O_s(theta) = cos(theta) h + sin(theta) chi
+```
+
+The canonical VEV, W/Z mass algebra, and scalar Hessian eigenvalues can remain
+fixed while the source operator direction rotates.  A route that identifies the
+PR #230 source with the canonical radial Higgs mode from Hessian curvature
+alone is importing the missing source-overlap/source-pole identity.
 
 Scalar zero-mode limit-order boundary:
 

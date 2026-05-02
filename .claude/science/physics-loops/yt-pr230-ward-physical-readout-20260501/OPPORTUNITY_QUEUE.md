@@ -274,7 +274,9 @@ canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.
    the pole.  The reflection-positivity shortcut no-go also blocks using OS
    reconstruction as the missing theorem: the positive spectral family can be
    realized by reflection-positive Euclidean time correlators while the pole
-   residue remains underidentified.
+   residue remains underidentified.  The effective-potential Hessian no-go
+   also blocks the radial-curvature shortcut: canonical VEV, W/Z masses, and
+   Hessian eigenvalues do not fix the source operator direction.
    The scalar carrier/projector closure attempt also blocks the taste/projector
    shortcut.  Color-singlet support and unit taste-singlet algebra do not
    derive physical carrier authority, preserve unit-projector crossings, or

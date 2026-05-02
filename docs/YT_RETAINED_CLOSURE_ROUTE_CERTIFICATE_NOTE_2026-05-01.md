@@ -324,3 +324,10 @@ combiner reports ready indices `[1, 2, 3, 4, 5, 6]`, or `6/63` L12 chunks.  This
 production support only: response stability still fails and the route still
 lacks combined L12, L16/L24 scaling, scalar-pole derivative/model-class,
 FV/IR, and canonical-Higgs identity gates.
+
+The effective-potential Hessian source-overlap no-go closes the radial-
+curvature shortcut.  Canonical VEV, W/Z masses, scalar Hessian eigenvalues,
+and canonical top Yukawa can remain fixed while the PR #230 source operator
+direction rotates in scalar field space.  The retained-route certificate is
+refreshed at `PASS=76 FAIL=0` and still authorizes no retained/proposed-retained
+wording.

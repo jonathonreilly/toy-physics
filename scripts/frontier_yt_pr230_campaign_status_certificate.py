@@ -135,6 +135,9 @@ def main() -> int:
         "reflection_positivity_lsz_shortcut": load(
             "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json"
         ),
+        "effective_potential_hessian_source_overlap": load(
+            "outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -516,6 +519,12 @@ def main() -> int:
         "reflection positivity not scalar LSZ closure"
         in str(statuses["reflection_positivity_lsz_shortcut"]),
         statuses["reflection_positivity_lsz_shortcut"],
+    )
+    report(
+        "effective-potential-hessian-not-source-overlap-identity",
+        "effective-potential Hessian not source-overlap identity"
+        in str(statuses["effective_potential_hessian_source_overlap"]),
+        statuses["effective_potential_hessian_source_overlap"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",
@@ -934,6 +943,10 @@ def main() -> int:
             "OS positivity repair: reflection-positive positive-measure "
             "families can keep the finite shell rows fixed while changing the "
             "same-source pole residue.  "
+            "The effective-potential Hessian/source-overlap no-go blocks using "
+            "SSB radial curvature as the source-pole identity: canonical VEV, "
+            "W/Z masses, and Hessian eigenvalues still leave the source "
+            "operator direction free.  "
             "The scalar carrier/projector closure attempt confirms that the "
             "taste/projector side remains open as well: color-singlet support "
             "and unit taste-singlet algebra do not identify the physical "

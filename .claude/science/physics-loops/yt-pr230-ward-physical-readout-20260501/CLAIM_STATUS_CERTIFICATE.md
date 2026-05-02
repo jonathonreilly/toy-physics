@@ -43,6 +43,7 @@ plus ready chunk-set production checkpoint
 plus ready chunk response-stability diagnostic
 plus FH gauge-response mixed-scalar obstruction
 plus reflection-positivity LSZ shortcut no-go
+plus effective-potential Hessian source-overlap no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -1464,3 +1465,20 @@ saturation.  The tested positive-measure family is reflection-positive and
 keeps finite same-source shell rows fixed while varying the pole residue.
 This does not authorize `kappa_s = 1`, source-pole residue, canonical-Higgs
 identity, retained closure, or `proposed_retained` wording.
+
+Effective-potential Hessian source-overlap checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / effective-potential Hessian not source-overlap identity
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_effective_potential_hessian_source_overlap_no_go.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the
+source operator direction in scalar field space.  The source overlap,
+source-only response, and source susceptibility can change while those
+canonical data remain fixed.  No retained or `proposed_retained` wording is
+authorized.

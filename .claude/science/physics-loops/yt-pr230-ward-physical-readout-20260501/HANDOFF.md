@@ -1,5 +1,21 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 effective-potential Hessian source-overlap no-go:
+
+- Added `scripts/frontier_yt_effective_potential_hessian_source_overlap_no_go.py`,
+  `docs/YT_EFFECTIVE_POTENTIAL_HESSIAN_SOURCE_OVERLAP_NO_GO_NOTE_2026-05-02.md`,
+  and `outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json`.
+- Result: canonical VEV, W/Z masses, scalar Hessian eigenvalues, and canonical
+  top Yukawa can stay fixed while the source operator direction rotates in
+  scalar field space.
+- Retained-route gate is `PASS=76 FAIL=0`; campaign status is
+  `PASS=102 FAIL=0` over 106 certificates.
+- Chunks007-008 are running in sessions `38412` and `78004`.
+
+Next exact action: continue scalar-denominator/canonical-Higgs theorem work
+while chunks007-008 run.  Do not use Hessian/radial curvature as source-pole
+identity or retained/proposed-retained closure.
+
 Latest checkpoint, 2026-05-02 chunks005-006 ready-set update:
 
 - Chunks005-006 completed under production-targeted settings with

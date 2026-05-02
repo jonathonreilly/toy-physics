@@ -1,0 +1,122 @@
+{
+  "actual_current_surface_status": "exact negative boundary / effective-potential Hessian not source-overlap identity",
+  "exact_next_action": "Derive the source operator direction/source-pole identity from the Cl(3)/Z3 source functional, or measure it through same-source production pole data; do not infer it from Hessian curvature alone.",
+  "fail_count": 0,
+  "hessian_family": {
+    "checks": {
+      "canonical_data_fixed": true,
+      "source_only_slope_varies": 0.45969769413186023,
+      "source_overlap_varies": 0.45969769413186023,
+      "source_susceptibility_varies": 2.4157798976392426
+    },
+    "fixed_canonical_data": {
+      "canonical_y_h": 1.0,
+      "g2": 0.65,
+      "gY": 0.36,
+      "m_chi_squared": 1.7,
+      "m_h_squared": 0.25,
+      "m_w": 0.325,
+      "m_z": 0.3715171597651985,
+      "v": 1.0
+    },
+    "rows": [
+      {
+        "canonical_vev": [
+          1.0,
+          0.0
+        ],
+        "m_w": 0.325,
+        "m_z": 0.3715171597651985,
+        "scalar_hessian_diag": [
+          0.25,
+          1.7
+        ],
+        "source_only_top_slope_for_y_chi_zero": 1.0,
+        "source_operator_direction": [
+          1.0,
+          0.0
+        ],
+        "source_overlap_with_canonical_h": 1.0,
+        "source_susceptibility_at_zero": 4.0,
+        "theta": 0.0
+      },
+      {
+        "canonical_vev": [
+          1.0,
+          0.0
+        ],
+        "m_w": 0.325,
+        "m_z": 0.3715171597651985,
+        "scalar_hessian_diag": [
+          0.25,
+          1.7
+        ],
+        "source_only_top_slope_for_y_chi_zero": 0.9800665778412416,
+        "source_operator_direction": [
+          0.9800665778412416,
+          0.19866933079506122
+        ],
+        "source_overlap_with_canonical_h": 0.9800665778412416,
+        "source_susceptibility_at_zero": 3.865339342710804,
+        "theta": 0.2
+      },
+      {
+        "canonical_vev": [
+          1.0,
+          0.0
+        ],
+        "m_w": 0.325,
+        "m_z": 0.3715171597651985,
+        "scalar_hessian_diag": [
+          0.25,
+          1.7
+        ],
+        "source_only_top_slope_for_y_chi_zero": 0.8253356149096783,
+        "source_operator_direction": [
+          0.8253356149096783,
+          0.5646424733950354
+        ],
+        "source_overlap_with_canonical_h": 0.8253356149096783,
+        "source_susceptibility_at_zero": 2.9122573458719727,
+        "theta": 0.6
+      },
+      {
+        "canonical_vev": [
+          1.0,
+          0.0
+        ],
+        "m_w": 0.325,
+        "m_z": 0.3715171597651985,
+        "scalar_hessian_diag": [
+          0.25,
+          1.7
+        ],
+        "source_only_top_slope_for_y_chi_zero": 0.5403023058681398,
+        "source_operator_direction": [
+          0.5403023058681398,
+          0.8414709848078965
+        ],
+        "source_overlap_with_canonical_h": 0.5403023058681398,
+        "source_susceptibility_at_zero": 1.5842201023607574,
+        "theta": 1.0
+      }
+    ]
+  },
+  "parent_certificates": {
+    "gauge_vev_source_overlap": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
+    "higgs_identity_gate": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "renormalization_condition_overlap": "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json",
+    "source_higgs_legendre_ssb": "outputs/yt_source_higgs_legendre_ssb_bridge_2026-05-01.json",
+    "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
+  },
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The source operator direction in scalar field space remains an independent input after canonical VEV and Hessian data are fixed.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit or yt_ward_identity as authority",
+    "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "SSB effective-potential Hessian data do not close the PR #230 source-to-canonical-Higgs bridge.  The witness family keeps the canonical VEV, W/Z mass algebra, scalar Hessian eigenvalues, and canonical top Yukawa fixed while rotating the scalar source operator direction.  The source overlap, source-only top slope, and source susceptibility change.  Therefore radial curvature or effective-potential Hessian data cannot replace a same-source pole-residue measurement, microscopic denominator theorem, or canonical-Higgs source-pole identity certificate."
+}
