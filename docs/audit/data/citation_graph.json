@@ -19985,7 +19985,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:18:46.226420+00:00",
+  "generated_at": "2026-05-02T20:22:40.505804+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23139,6 +23139,17 @@
       "path": "docs/CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_chronology_operational_no_past_signaling.py",
       "title": "Chronology Protection: Operational No-Past-Signaling Support Theorem"
+    },
+    "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02": {
+      "claim_id": "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "e8bc7b792fe0576a27daea1cf8de7151a41b80b6133254c5777f05f3561c817f",
+      "path": "docs/CIRCULANT_PARITY_CP_TENSOR_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_circulant_parity_cp_tensor_narrow.py",
+      "title": "Hermitian Circulant Parity Decomposition + CP-Tensor Narrow Theorem"
     },
     "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25": {
       "claim_id": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
@@ -45447,6 +45458,7 @@
     "chiral_layer_oscillation_2026-04-09",
     "chiral_split_mass_gravity_note",
     "chiral_walk_synthesis_2026-04-09",
+    "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_from_mass_hierarchy_note",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
@@ -46496,7 +46508,7 @@
       "bounded_theorem": 11,
       "meta": 1,
       "none": 1747,
-      "positive_theorem": 33
+      "positive_theorem": 34
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
@@ -46504,12 +46516,12 @@
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 625
+      "positive_theorem": 626
     },
     "edge_count": 4996,
-    "leaf_count": 759,
-    "node_count": 1792,
-    "root_count": 1216,
-    "runners_with_path": 1360
+    "leaf_count": 760,
+    "node_count": 1793,
+    "root_count": 1217,
+    "runners_with_path": 1361
   }
 }
