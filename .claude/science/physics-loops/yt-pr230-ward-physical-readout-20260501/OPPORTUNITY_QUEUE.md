@@ -232,6 +232,10 @@ probability.
    near-pole positive continuum with zero pole-residue lower bound.  The
    remaining analytic route is a microscopic scalar denominator/threshold
    theorem, not another finite-shell interpolation.
+   The scalar denominator theorem closure attempt then checked that stack
+   directly.  It found useful support but not closure: zero-mode prescription,
+   physical scalar carrier/projector, `K'(pole)`, model class, threshold, and
+   seed-controlled production still block a retained scalar LSZ residue.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

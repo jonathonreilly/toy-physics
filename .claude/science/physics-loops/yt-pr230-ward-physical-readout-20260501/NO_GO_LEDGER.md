@@ -1232,3 +1232,18 @@ pole, or `dGamma_ss/dp^2`.
   route remains conditional.
 - Direct correlator route: physically honest but needs production compute and
   cannot be certified by reduced-scope runs.
+
+Scalar denominator theorem closure attempt remains blocked:
+
+```text
+python3 scripts/frontier_yt_scalar_denominator_theorem_closure_attempt.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The present PR #230 artifacts supply pole-condition and derivative targets,
+and the color-singlet q=0 zero-mode plus finite-q IR issues are partially
+controlled.  That support does not assemble into a retained scalar
+denominator/LSZ theorem.  The remaining blockers are zero-mode/flat-sector
+prescription, physical scalar taste/projector carrier, `K'(pole)`,
+finite-shell model class, pole-saturation/uniform-gap control, and
+seed-controlled production pole data.

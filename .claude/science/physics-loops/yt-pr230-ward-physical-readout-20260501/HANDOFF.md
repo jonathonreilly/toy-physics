@@ -514,4 +514,17 @@ certificate, not an inference from finite shell rows.
 
 Current live production action: old-code chunk003 was stopped as non-evidence.
 Seed-controlled replacement chunk001 is running under the patched harness.
-Continue analytic work on the microscopic scalar denominator while it runs.
+
+The scalar-denominator theorem closure attempt has now assembled the current
+support stack and confirmed the theorem is still open.  The pole condition and
+inverse-propagator derivative target are named, and the color-singlet q=0
+zero-mode cancellation plus finite-q IR regularity are useful support.  They
+do not derive the zero-mode/flat-sector prescription, the physical scalar
+taste/projector carrier, the scalar-kernel enhancement or `K'(pole)`, the
+finite-shell model class, a pole-saturation/uniform-gap premise, or
+seed-controlled production pole data.
+
+Next exact action: poll seed-controlled replacement chunk001.  If it completes,
+rerun the chunk combiner, chunk001 checkpoint certificate, retained-route gate,
+and campaign gate.  If it is still running, continue analytic work on the
+physical scalar carrier/projector, `K'(pole)`, or uniform threshold theorem.

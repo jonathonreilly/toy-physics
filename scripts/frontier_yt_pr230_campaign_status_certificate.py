@@ -117,6 +117,9 @@ def main() -> int:
         "fh_lsz_uniform_gap_self_certification": load(
             "outputs/yt_fh_lsz_uniform_gap_self_certification_no_go_2026-05-02.json"
         ),
+        "scalar_denominator_theorem_closure": load(
+            "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -427,6 +430,11 @@ def main() -> int:
         "fh-lsz-uniform-gap-self-certification-blocks",
         "uniform-gap self-certification no-go" in str(statuses["fh_lsz_uniform_gap_self_certification"]),
         statuses["fh_lsz_uniform_gap_self_certification"],
+    )
+    report(
+        "scalar-denominator-theorem-closure-attempt-blocked",
+        "scalar denominator theorem closure attempt blocked" in str(statuses["scalar_denominator_theorem_closure"]),
+        statuses["scalar_denominator_theorem_closure"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -760,7 +768,11 @@ def main() -> int:
             "quality gap before further chunk evidence is counted.  The "
             "uniform-gap self-certification no-go closes the matching analytic "
             "shortcut: finite shell rows do not prove a continuum threshold, "
-            "even when a gapped model could have generated them.  "
+            "even when a gapped model could have generated them.  The scalar "
+            "denominator closure attempt checks the whole theorem stack and "
+            "still finds the zero-mode prescription, scalar carrier/projector, "
+            "K'(pole), model class, threshold, and seed-controlled production "
+            "open.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

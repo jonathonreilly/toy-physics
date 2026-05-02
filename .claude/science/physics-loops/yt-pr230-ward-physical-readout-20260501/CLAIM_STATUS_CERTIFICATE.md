@@ -1072,3 +1072,28 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 
 Finite shell rows do not prove the uniform continuum gap needed by the
 pole-saturation gate.  No retained/proposed-retained wording is authorized.
+
+Scalar denominator theorem closure attempt checkpoint:
+
+```text
+actual_current_surface_status: open / scalar denominator theorem closure attempt blocked
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_scalar_denominator_theorem_closure_attempt.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=57 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=83 FAIL=0
+```
+
+The current support stack identifies the pole condition, inverse-propagator
+derivative, singlet q=0 zero-mode cancellation, and finite-q IR regularity.
+It still does not derive the zero-mode/flat-sector prescription, physical
+scalar taste/projector carrier, scalar-kernel enhancement or `K'(pole)`,
+finite-shell model class, pole-saturation/uniform-gap premise, or
+seed-controlled production pole data.  No retained/proposed-retained wording
+is authorized.
