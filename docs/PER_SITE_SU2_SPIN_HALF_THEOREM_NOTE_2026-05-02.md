@@ -9,17 +9,14 @@ The spin generators S_i := σ_i / 2 satisfy [S_i, S_j] = i ε_{ijk} S_k with
 total Casimir S² = (3/4) I = j(j+1) I for j = 1/2, and S_z eigenvalues lie
 in {-1/2, +1/2}. There is no other half-integer spin representation supported
 on a per-site Hilbert.
-**Status:** awaiting independent audit.
-**Loop:** `positive-only-r5-20260502`
-**Cycle:** 3 (Block 3)
-**Branch:** `physics-loop/positive-only-r5-block03-per-site-spin-half-20260502`
+**Status:** independent audit required.
 **Runner:** `scripts/per_site_su2_spin_half_check.py`
 **Log:** `outputs/per_site_su2_spin_half_check_2026-05-02.txt`
 
 ## Cited authorities (one hop)
 
 - [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
-  — `effective_status: retained`. Provides:
+  provides:
   - **(U2)** Per-site Hilbert is the unique 2-dim faithful irreducible
     Cl(3) representation, unitarily equivalent to Pauli `(σ_1, σ_2, σ_3)`.
 
@@ -71,8 +68,8 @@ j(j+1) = 3/4, hence j = 1/2.
 ±1/2 = ±j, matching the standard m ∈ {-j, ..., +j} ladder for j = 1/2.
 
 **(C4) Irreducibility.** H_x is an irreducible su(2) module: there is no
-nonzero proper invariant subspace. (Established by [S_1, S_2] having rank
-= dim H_x = 2.)
+nonzero proper invariant subspace. (Established by the commutant of
+`{S_1, S_2, S_3}` being exactly the scalar matrices.)
 
 **(C5) Uniqueness on per-site Hilbert.** Combining (C1)–(C4) with (U2):
 the per-site Cl(3) Hilbert H_x is exactly the unique 2-dim spin-1/2 irrep
@@ -82,7 +79,7 @@ of su(2). Per-site matter content cannot carry any other spin label.
 
 ### Step 1 — Pauli rep is the per-site Hilbert (cited)
 
-By the retained per-site uniqueness theorem (U2), H_x ≅ C² with
+By the cited per-site uniqueness theorem (U2), H_x ≅ C² with
 γ_i ↦ σ_i. All subsequent statements are computations in this Pauli basis.
 
 ### Step 2 — su(2) Lie algebra (C1)
@@ -124,11 +121,12 @@ are the m = ±j ladder rungs for j = 1/2 — establishing (C3).
 
 ### Step 5 — Irreducibility (C4)
 
-If H_x had a nonzero proper invariant subspace V, then dim V = 1, and V
-would be a common eigenline of every S_i. But [S_1, S_2] = i S_3 ≠ 0, so
-no such common eigenline exists. Equivalently, the rank of [S_1, S_2] = i S_3
-is 2 (full rank), so the only invariant subspaces of the action are 0 and
-all of H_x — establishing (C4).
+Let A be a 2 × 2 matrix commuting with all three generators S_i. Solving
+`A S_i = S_i A` for i = 1, 2, 3 in the Pauli basis gives
+`A = λ I_2`; equivalently, the commutant has complex dimension 1. By Schur's
+lemma for finite-dimensional complex representations, a nontrivial invariant
+subspace would make the commutant larger than the scalars. Hence the only
+invariant subspaces of the action are 0 and all of H_x — establishing (C4).
 
 ### Step 6 — Uniqueness statement (C5)
 
@@ -140,7 +138,7 @@ spin content at the site level. ∎
 
 ## Hypothesis set used
 
-- `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` (retained):
+- `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`:
   provides Pauli per-site rep.
 - Bivector spin-generator construction (mathematical, admitted-context).
 - Casimir ↔ irrep label correspondence (Lie-algebra, admitted-context).
@@ -177,14 +175,14 @@ single Cl(3) site; all spin-0 content must be multi-particle composites.
 ## Honest status
 
 Positive theorem on the framework's per-site Hilbert space, derived
-from a single retained one-hop dependency by elementary Lie algebra and
+from a single one-hop dependency by elementary Lie algebra and
 finite-dimensional representation-theoretic computation.
 
 ```yaml
 claim_type_author_hint: positive_theorem
 claim_scope: "Per-site Cl(3) Hilbert ≅ unique j=1/2 irrep of su(2); no other per-site spin content possible."
 upstream_dependencies:
-  - axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29 (retained)
+  - axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29
 admitted_context_inputs:
   - bivector → spin generator identification (Clifford → spin Lie algebra)
   - Casimir ↔ irrep label correspondence (Schur / standard Lie algebra)

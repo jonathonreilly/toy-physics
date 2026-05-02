@@ -105,18 +105,21 @@ def main() -> None:
     print(f"  STATUS: {'PASS' if t5_ok else 'FAIL'}")
     print()
 
-    # ----- Test 6: Pauli rep is irreducible (no nontrivial invariant subspace) -----
+    # ----- Test 6: Pauli rep is irreducible (scalar commutant) -----
     print("-" * 72)
-    print("TEST 6: Pauli rep is irreducible — only common eigenvectors of all")
-    print("        three commuting operators are 0 and the full space")
+    print("TEST 6: Pauli rep is irreducible — commutant is only scalars")
     print("-" * 72)
-    # If V ⊂ C² were a nontrivial invariant subspace, dim V = 1 and V would be
-    # a common eigenline of all S_i. But [S_1, S_2] ≠ 0, so no such common
-    # eigenline exists. Verify by checking [S_1, S_2] has rank 2 (full rank).
-    comm12 = S1 @ S2 - S2 @ S1
-    rank = np.linalg.matrix_rank(comm12, tol=1e-10)
-    print(f"  rank([S_1, S_2]) = {rank} (should equal 2 for irreducibility)")
-    t6_ok = rank == 2
+    # Solve A S_i = S_i A for a general 2x2 matrix A. A one-dimensional
+    # commutant means A is scalar, so Schur's lemma gives irreducibility.
+    constraints = []
+    for gen in S:
+        constraints.append(np.kron(gen.T, I2) - np.kron(I2, gen))
+    commutant_matrix = np.vstack(constraints)
+    singular_values = np.linalg.svd(commutant_matrix, compute_uv=False)
+    nullity = int(np.sum(singular_values < 1e-10))
+    print(f"  commutant constraint singular values = {singular_values}")
+    print(f"  dim commutant = {nullity} (should equal 1: scalar matrices only)")
+    t6_ok = nullity == 1
     print(f"  STATUS: {'PASS' if t6_ok else 'FAIL'}")
     print()
 
@@ -137,7 +140,7 @@ def main() -> None:
     print(f"  Test 3 (su(2) Lie algebra):                   {'PASS' if t3_ok else 'FAIL'}")
     print(f"  Test 4 (Casimir = 3/4 ⇒ j=1/2):               {'PASS' if t4_ok else 'FAIL'}")
     print(f"  Test 5 (S_z eigenvalues = ±1/2):              {'PASS' if t5_ok else 'FAIL'}")
-    print(f"  Test 6 (irreducibility via [S_1, S_2] ≠ 0):   {'PASS' if t6_ok else 'FAIL'}")
+    print(f"  Test 6 (irreducibility via scalar commutant): {'PASS' if t6_ok else 'FAIL'}")
     print(f"  Test 7 (dim = 2j+1 with j=1/2):               {'PASS' if t7_ok else 'FAIL'}")
     all_ok = all([t1_ok, t2_ok, t3_ok, t4_ok, t5_ok, t6_ok, t7_ok])
     print(f"  OVERALL: {'PASS' if all_ok else 'FAIL'}")

@@ -36,10 +36,10 @@ TEST 5: S_z eigenvalues = m = ±1/2  (i.e. m ∈ {-j, ..., +j})
   STATUS: PASS
 
 ------------------------------------------------------------------------
-TEST 6: Pauli rep is irreducible — only common eigenvectors of all
-        three commuting operators are 0 and the full space
+TEST 6: Pauli rep is irreducible — commutant is only scalars
 ------------------------------------------------------------------------
-  rank([S_1, S_2]) = 2 (should equal 2 for irreducibility)
+  commutant constraint singular values = [1.41421356 1.41421356 1.41421356 0.        ]
+  dim commutant = 1 (should equal 1: scalar matrices only)
   STATUS: PASS
 
 ------------------------------------------------------------------------
@@ -54,6 +54,6 @@ TEST 7: Per-site Hilbert dim = 2j + 1 = 2 for j = 1/2
   Test 3 (su(2) Lie algebra):                   PASS
   Test 4 (Casimir = 3/4 ⇒ j=1/2):               PASS
   Test 5 (S_z eigenvalues = ±1/2):              PASS
-  Test 6 (irreducibility via [S_1, S_2] ≠ 0):   PASS
+  Test 6 (irreducibility via scalar commutant): PASS
   Test 7 (dim = 2j+1 with j=1/2):               PASS
   OVERALL: PASS
