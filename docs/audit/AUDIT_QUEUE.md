@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T19:57:53.442089+00:00
+**Generated:** 2026-05-02T19:59:24.755302+00:00
 **Total pending:** 596
 **Ready (all deps already at retained-grade or metadata tiers):** 116
 
@@ -16,7 +16,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `anomaly_forces_time_theorem` | bounded_theorem | unaudited | critical | 299 | 19.23 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_anomaly_forces_time.py` |
+| 1 | `anomaly_forces_time_theorem` | bounded_theorem | audit_in_progress | critical | 299 | 19.23 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_anomaly_forces_time.py` |
 | 2 | `yt_ward_identity_derivation_theorem` | positive_theorem | claim_type_backfill_reaudit | critical | 183 | 26.52 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
 | 3 | `cpt_exact_note` | - | unaudited | critical | 63 | 13.50 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 4 | `confinement_string_tension_note` | positive_theorem | claim_type_backfill_reaudit | critical | 54 | 13.28 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_confinement_string_tension.py` |
