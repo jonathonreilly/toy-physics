@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T15:55:11.321342+00:00
+**Generated:** 2026-05-02T15:58:18.410950+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -47,9 +47,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `bounded_theorem` | 506 |
 | `decoration` | 5 |
 | `meta` | 35 |
-| `no_go` | 150 |
+| `no_go` | 151 |
 | `open_gate` | 105 |
-| `positive_theorem` | 875 |
+| `positive_theorem` | 874 |
 
 | criticality | count |
 |---|---:|
@@ -94,7 +94,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 76 | 17.27 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 283 | 16.65 | `unaudited` | unaudited |
 | 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 122 | 16.44 | `unaudited` | unaudited |
-| 21 | `physical_lattice_necessity_note` | positive_theorem | critical | 327 | 16.36 | `audited_conditional` | ~~audited_conditional~~ |
+| 21 | `physical_lattice_necessity_note` | no_go | critical | 327 | 16.36 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `rconn_derived_note` | bounded_theorem | critical | 284 | 16.16 | `unaudited` | unaudited |
 | 23 | `higgs_mass_derived_note` | positive_theorem | critical | 279 | 15.63 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `higgs_vacuum_explicit_systematic_note` | positive_theorem | critical | 278 | 15.62 | `audited_conditional` | ~~audited_conditional~~ |
@@ -950,7 +950,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_exact_lattice_park_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `physical_lattice_necessity_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `physical_lattice_necessity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -12616,14 +12616,14 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 ### `physical_lattice_necessity_note`
 
 - **Note:** [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](../../docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `no_go`
+- **claim_scope:** Conditional no-go against same-stack regulator reinterpretation on the accepted Cl(3)/Z^3 one-axiom Hilbert/locality/information surface.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:2026-05-01-physical_lattice_necessity_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note claims that no same-stack regulator reinterpretation survives on the accepted Cl(3)/Z^3 package surface, that exact observable-sector semantics force the retained hw=1 triplet to be physically distinct species sectors, and that the accepted one-axiom Hilbert/locality/information surface forces substrate physicality.  _(class `B`)_
-- **chain closes:** False — The runner passes, but the load-bearing theorem is assembled from many upstream notes and semantic authorities not declared as ledger dependencies; several are already conditional, unaudited, or failed, so this row cannot close as an independent no-dependency theorem.
-- **rationale:** Issue: the proof and runner depend on an undeclared upstream surface: minimal axioms, plaquette/canonical values, three-generation observable closure, generation/chirality boundary notes, continuum-identification text, single-axiom Hilbert/information notes, one-generation matter closure, anomaly-forced time, and a publication derived-values index. Why this blocks: the ledger row has deps=[], and multiple runner-read authorities are audited_conditional, unaudited/effectively conditional, or effective failed; the runner mostly verifies that those source texts contain the required premises and then performs limited algebra/parameter checks, so the physical-lattice necessity theorem is conditional on those authorities rather than closed by this row. Repair target: declare and audit the actual dependency surface, then re-audit after the one-axiom semantics, retained-generation observable closure, chirality/continuum boundary, and fixed quantitative package authorities are clean or explicitly scoped as conditional support. Claim boundary until fixed: the no-same-stack framing and beta/u0 invariant diagnostics remain useful support checks, but physical-lattice necessity and substrate physicality should be treated as conditional on the accepted upstream semantic and package-contract inputs.
+- **auditor:** `codex-audit-loop:fresh-2026-05-02-physical-lattice-necessity-carson`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note imports accepted Hilbert/locality/information substrate semantics to treat the fixed Z^3 graph/locality object and the hw=1 translation-character triplet as physical state-space/species structure rather than regulator bookkeeping.  _(class `B`)_
+- **chain closes:** False — The obstruction is substantive within the stated accepted framework surface, but it depends on cross-note semantic imports and several authorities that are only audited_conditional or unaudited. The runner checks consistency of the package surface rather than deriving substrate physicality from retained-grade first principles alone.
+- **rationale:** Issue: the load-bearing move is a semantic import from Hilbert/locality/information and generation-boundary notes, with unaudited continuum/chirality inputs in the chain. Why this blocks: audited_clean requires retained-grade inputs and no hidden physical bridge, but this claim relies on accepted-surface semantics to convert fixed graph/locality and character separation into physical-lattice/species necessity. Repair target: promote the Hilbert/information substrate semantics, continuum-boundary exclusion, and chirality/no-quotient dependencies to retained-grade and state them as explicit dependencies. Claim boundary until fixed: conditional no-go against same-stack regulator reinterpretation on the accepted Cl(3)/Z^3 framework surface, not an unconditional derivation of physical lattice necessity.
 - **open / conditional deps cited:**
   - `MINIMAL_AXIOMS_2026-04-11.md`
   - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
@@ -12635,7 +12635,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SINGLE_AXIOM_INFORMATION_NOTE.md`
   - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
   - `ANOMALY_FORCES_TIME_THEOREM.md`
-  - `publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md`
 - **auditor confidence:** high
 
 ### `planck_boundary_density_extension_theorem_note_2026-04-24`

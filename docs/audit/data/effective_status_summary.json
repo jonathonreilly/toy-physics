@@ -3,11 +3,11 @@
     "bounded_theorem": 506,
     "decoration": 5,
     "meta": 35,
-    "no_go": 150,
+    "no_go": 151,
     "open_gate": 105,
-    "positive_theorem": 875
+    "positive_theorem": 874
   },
-  "computed_at": "2026-05-02T15:55:10.940469+00:00",
+  "computed_at": "2026-05-02T15:58:17.974895+00:00",
   "cycle_examples": [
     [
       "alpha_s_derived_note",
