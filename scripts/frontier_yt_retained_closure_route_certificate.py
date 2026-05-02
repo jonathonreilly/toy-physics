@@ -96,6 +96,7 @@ def main() -> int:
         "scalar_denominator_theorem_closure": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
         "fh_lsz_soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
+        "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -416,6 +417,12 @@ def main() -> int:
         and certificates["scalar_carrier_projector_closure"].get("proposal_allowed") is False
         and certificates["scalar_carrier_projector_closure"].get("theorem_closed") is False
     )
+    kprime_closure_blocked = (
+        "K-prime closure attempt blocked"
+        in certificates["kprime_closure"].get("actual_current_surface_status", "")
+        and certificates["kprime_closure"].get("proposal_allowed") is False
+        and certificates["kprime_closure"].get("kprime_closed") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -692,6 +699,11 @@ def main() -> int:
         certificates["scalar_carrier_projector_closure"].get("actual_current_surface_status", ""),
     )
     report(
+        "kprime-closure-attempt-blocked",
+        kprime_closure_blocked,
+        certificates["kprime_closure"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -853,6 +865,11 @@ def main() -> int:
             "remaining taste/carrier side is also open: unit taste algebra and "
             "color-singlet support do not admit non-origin corners, preserve "
             "unit-projector crossings, or derive K'(pole).  "
+            "The K-prime closure attempt then confirms the derivative itself "
+            "is still named but not derived: finite derivative scouts remain "
+            "blocked by limiting order, residue-envelope dependence, "
+            "Ward/Feshbach non-identification, carrier/projector choice, and "
+            "missing threshold control.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "

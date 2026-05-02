@@ -2249,3 +2249,31 @@ carrier/projector premise.  Non-origin taste corners, normalized
 taste-singlet projection, unit-projector crossings, fitted kernel enhancement,
 and `K'(pole)` remain load-bearing blockers.  No retained/proposed-retained
 wording is authorized.
+
+## Review-Loop Backpressure - K'(Pole) Closure Attempt
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN / BLOCKED CLOSURE ATTEMPT
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_kprime_closure_attempt.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_kprime_closure_attempt.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+`K'(pole)` is named and finite derivative proxies exist, but the retained
+derivative is not closed.  Limiting order, residue-envelope dependence,
+Ward/Feshbach non-identification, kernel enhancement, carrier/projector
+choice, fitted-kernel imports, and threshold control remain open.  No
+retained/proposed-retained wording is authorized.

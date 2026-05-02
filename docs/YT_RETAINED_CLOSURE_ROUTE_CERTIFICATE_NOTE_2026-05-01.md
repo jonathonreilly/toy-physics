@@ -241,7 +241,11 @@ threshold premise: IR integrability does not exclude positive continuum
 spectral weight arbitrarily close to the pole.  The scalar carrier/projector
 closure attempt confirms that the taste/projector side is still open:
 color-singlet support and unit taste-singlet algebra do not admit the physical
-carrier, preserve unit-projector finite crossings, or derive `K'(pole)`.  If
+carrier, preserve unit-projector finite crossings, or derive `K'(pole)`.  The
+`K'(pole)` closure attempt then confirms the derivative itself is named but
+unclosed: finite derivative scouts remain blocked by limiting order, residue
+envelope dependence, Ward/Feshbach non-identification, carrier/projector
+choice, fitted-kernel imports, and missing threshold control.  If
 the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not

@@ -1272,3 +1272,16 @@ are support only.  Non-origin taste corners lack retained physical-carrier
 authority; normalized taste-singlet projection removes finite crossings; the
 unit projector needs an underived kernel multiplier; fitting that multiplier
 imports the missing normalization; and `K'(pole)` remains open.
+
+`K'(pole)` closure remains blocked:
+
+```text
+python3 scripts/frontier_yt_kprime_closure_attempt.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The determinant and eigen-derivative gates name the derivative, and finite
+scouts compute proxies.  They do not derive the retained derivative.  The
+load-bearing blockers are limiting order, residue-envelope dependence,
+Ward/Feshbach non-identification, kernel-enhancement authority,
+carrier/projector choice, fitted-kernel imports, and threshold control.

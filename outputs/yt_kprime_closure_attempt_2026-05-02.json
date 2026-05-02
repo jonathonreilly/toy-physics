@@ -1,0 +1,86 @@
+{
+  "actual_current_surface_status": "open / K-prime closure attempt blocked",
+  "blocker_rows": [
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json",
+      "premise": "finite derivative has a retained zero-mode/IR/volume limiting order"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json",
+      "premise": "residue proxy is single-valued across zero-mode/projector/volume surfaces"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
+      "premise": "Ward/Feshbach surfaces fix K'(pole) or common dressing"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
+      "premise": "scalar-kernel enhancement or K'(pole) is imported from a retained authority"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json",
+      "premise": "fitted kernel multiplier is a physical K'(pole) theorem"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
+      "premise": "physical scalar carrier/projector is fixed before differentiating"
+    },
+    {
+      "blocked": true,
+      "certificate": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json; outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+      "premise": "threshold/denominator stack supplies missing K'(pole) control"
+    }
+  ],
+  "blocking_count": 7,
+  "exact_next_action": "Continue seed-controlled FH/LSZ production replacement chunks, or derive K'(pole) together with the physical scalar carrier/projector and zero-mode/IR/volume limiting prescription.",
+  "fail_count": 0,
+  "kprime_closed": false,
+  "parent_certificates": {
+    "carrier_projector": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
+    "derivative_limit": "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json",
+    "determinant_gate": "outputs/yt_scalar_pole_determinant_gate_2026-05-01.json",
+    "eigen_derivative_gate": "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json",
+    "fitted_kernel_selector": "outputs/yt_fitted_kernel_residue_selector_no_go_2026-05-01.json",
+    "kernel_enhancement_import": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
+    "residue_envelope": "outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json",
+    "scalar_denominator_closure": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+    "total_momentum_derivative_scout": "outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json",
+    "ward_identity": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "K'(pole) is named but not derived or measured on a retained current surface.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not treat a finite derivative scout as a retained continuum derivative",
+    "does not fit a scalar-kernel multiplier as proof",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "support_count": 3,
+  "support_rows": [
+    {
+      "available": true,
+      "certificate": "outputs/yt_scalar_pole_determinant_gate_2026-05-01.json",
+      "premise": "determinant formula names K'(pole)"
+    },
+    {
+      "available": true,
+      "certificate": "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json",
+      "premise": "matrix eigen-derivative gate identifies d lambda/dp^2"
+    },
+    {
+      "available": true,
+      "certificate": "outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json",
+      "premise": "finite total-momentum derivative scout is executable"
+    }
+  ],
+  "verdict": "The current PR #230 surface names and computes finite proxies for the required scalar denominator derivative, but it does not close K'(pole).  The determinant and eigen-derivative gates identify the load-bearing object, and the total-momentum derivative scout is executable support.  The derivative remains blocked by zero-mode/IR/volume limiting order, residue-envelope dependence, Ward/Feshbach non-identification, missing scalar-kernel enhancement authority, fitted-kernel selector no-go, open carrier/projector normalization, and the still-open denominator threshold stack."
+}

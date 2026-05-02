@@ -552,3 +552,16 @@ open with `K'(pole)`.
 Next exact action: poll seed-controlled replacement chunk001.  If it is still
 running, attack `K'(pole)` directly or continue preparing seed-controlled
 production; do not count carrier/projector support as scalar LSZ closure.
+
+The `K'(pole)` closure attempt now checks the final named scalar-denominator
+derivative premise.  The determinant and eigen-derivative gates name the
+object, and finite total-momentum derivative scouts are executable support.
+They still do not close the retained derivative: limiting order, residue
+envelope dependence, Ward/Feshbach non-identification, missing kernel
+enhancement authority, fitted-kernel selector, open carrier/projector choice,
+and threshold control all remain load-bearing.
+
+Next exact action: poll seed-controlled replacement chunk001.  If it completes,
+process it through the chunk combiner and checkpoint gates.  If it is still
+running, continue seed-controlled production planning or derive a genuinely new
+scalar-denominator theorem; the current analytic K-prime stack is blocked.

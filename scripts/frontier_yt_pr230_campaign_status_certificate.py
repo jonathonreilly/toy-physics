@@ -126,6 +126,7 @@ def main() -> int:
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
+        "kprime_closure": load("outputs/yt_kprime_closure_attempt_2026-05-02.json"),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -451,6 +452,11 @@ def main() -> int:
         "scalar-carrier-projector-closure-attempt-blocked",
         "scalar carrier-projector closure attempt blocked" in str(statuses["scalar_carrier_projector_closure"]),
         statuses["scalar_carrier_projector_closure"],
+    )
+    report(
+        "kprime-closure-attempt-blocked",
+        "K-prime closure attempt blocked" in str(statuses["kprime_closure"]),
+        statuses["kprime_closure"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -796,7 +802,11 @@ def main() -> int:
             "taste/projector side remains open as well: color-singlet support "
             "and unit taste-singlet algebra do not identify the physical "
             "carrier, preserve finite crossings under unit normalization, or "
-            "derive K'(pole).  "
+            "derive K'(pole).  The K-prime closure attempt confirms the "
+            "derivative itself remains named but unclosed: finite derivative "
+            "proxies are blocked by limiting order, residue-envelope "
+            "dependence, Ward/Feshbach non-identification, carrier/projector "
+            "choice, and missing threshold control.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "

@@ -244,6 +244,10 @@ probability.
    shortcut.  Color-singlet support and unit taste-singlet algebra do not
    derive physical carrier authority, preserve unit-projector crossings, or
    derive `K'(pole)`.
+   The `K'(pole)` closure attempt then checks the derivative premise itself
+   and keeps it open: finite derivative proxies remain blocked by limiting
+   order, residue envelope, Ward/Feshbach non-identification, carrier/projector
+   choice, fitted-kernel imports, and missing threshold control.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

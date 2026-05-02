@@ -1141,3 +1141,26 @@ Color-singlet support and unit taste-singlet algebra are available, but the
 physical scalar carrier, unit-projector finite crossing, kernel enhancement,
 fitted-kernel legitimacy, and `K'(pole)` remain blocked.  No
 retained/proposed-retained wording is authorized.
+
+`K'(pole)` closure attempt checkpoint:
+
+```text
+actual_current_surface_status: open / K-prime closure attempt blocked
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_kprime_closure_attempt.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=60 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=86 FAIL=0
+```
+
+`K'(pole)` is named by determinant/eigen-derivative gates and finite derivative
+proxies exist, but limiting order, residue-envelope dependence,
+Ward/Feshbach non-identification, carrier/projector choice, fitted-kernel
+imports, and threshold control remain open.  No retained/proposed-retained
+wording is authorized.
