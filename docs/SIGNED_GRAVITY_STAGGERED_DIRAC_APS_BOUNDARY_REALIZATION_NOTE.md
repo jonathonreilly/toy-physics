@@ -1,8 +1,8 @@
 # Signed Gravity Staggered-Dirac APS Boundary Realization Note
 
 **Date:** 2026-04-26
-**Status:** retained-compatible staggered-Dirac boundary APS realization no-go;
-not a physical signed-gravity claim
+**Status:** support / retention-compatible staggered-Dirac boundary APS
+realization no-go; not a physical signed-gravity claim
 **Script:** [`../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py`](../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py)
 
 This note follows

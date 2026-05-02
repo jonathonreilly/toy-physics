@@ -1,8 +1,8 @@
 # Signed Gravity Retained Boundary Source-Principle No-Go
 
 **Date:** 2026-04-25
-**Status:** retained APS/Wald/Gauss source-principle no-go for the proposed
-signed source cross term
+**Status:** proposed_retained no-go for the APS/Wald/Gauss source-principle
+test of the proposed signed source cross term
 **Script:** [`../scripts/signed_gravity_retained_boundary_source_principle_nogo.py`](../scripts/signed_gravity_retained_boundary_source_principle_nogo.py)
 
 This note goes after the last high-value target left by

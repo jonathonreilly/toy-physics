@@ -1,5 +1,5 @@
 {
-  "cycle_count": 61,
+  "cycle_count": 87,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -19,7 +19,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 259,
+      "max_transitive_descendants": 278,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -28,7 +28,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 259
+          "transitive_descendants": 278
         },
         {
           "audit_status": "unaudited",
@@ -37,7 +37,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate",
-          "transitive_descendants": 259
+          "transitive_descendants": 278
         },
         {
           "audit_status": "audited_conditional",
@@ -46,7 +46,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
           "title": "Minimal Framework Inputs",
-          "transitive_descendants": 259
+          "transitive_descendants": 278
         }
       ],
       "requires_lemma_extraction": false
@@ -73,7 +73,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 259,
+      "max_transitive_descendants": 278,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -82,7 +82,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 259
+          "transitive_descendants": 278
         },
         {
           "audit_status": "unaudited",
@@ -91,7 +91,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate",
-          "transitive_descendants": 259
+          "transitive_descendants": 278
         },
         {
           "audit_status": "audited_conditional",
@@ -100,7 +100,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
           "title": "Minimal Framework Inputs",
-          "transitive_descendants": 259
+          "transitive_descendants": 278
         },
         {
           "audit_status": "unaudited",
@@ -109,7 +109,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
           "title": "y_t Lane: Zero-Import Authority",
-          "transitive_descendants": 259
+          "transitive_descendants": 278
         }
       ],
       "requires_lemma_extraction": false
@@ -2316,6 +2316,454 @@
       "decision": null,
       "edges": [
         {
+          "from": "signed_gravity_cl3z3_source_character_derivation_note",
+          "to": "signed_gravity_source_character_uniqueness_theorem_note"
+        },
+        {
+          "from": "signed_gravity_source_character_uniqueness_theorem_note",
+          "to": "signed_gravity_cl3z3_source_character_derivation_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_cl3z3_source_character_derivation_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md",
+          "title": "Signed Gravity Cl(3)/Z^3 Source-Character Derivation Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_source_character_uniqueness_theorem_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md",
+          "title": "Signed Gravity Source-Character Uniqueness Theorem Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0043",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_continuum_graded_einstein_localization_note",
+          "to": "signed_gravity_tensor_source_transport_retention_note"
+        },
+        {
+          "from": "signed_gravity_tensor_source_transport_retention_note",
+          "to": "signed_gravity_continuum_graded_einstein_localization_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_continuum_graded_einstein_localization_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md",
+          "title": "Signed Gravity Continuum Graded Einstein Localization Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_tensor_source_transport_retention_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_NOTE.md",
+          "title": "Signed Gravity Tensor-Source Transport And Retention Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0044",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_native_boundary_complex_containment_note",
+          "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
+        },
+        {
+          "from": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
+          "to": "signed_gravity_native_boundary_complex_containment_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_native_boundary_complex_containment_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
+          "title": "Signed Gravity Native Boundary-Complex Containment Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md",
+          "title": "Signed Gravity Staggered-Dirac APS Boundary Realization Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0045",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
+          "to": "signed_gravity_oriented_tensor_source_lift_note"
+        },
+        {
+          "from": "signed_gravity_oriented_tensor_source_lift_note",
+          "to": "signed_gravity_nature_grade_closure_blocker_audit_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_nature_grade_closure_blocker_audit_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md",
+          "title": "Signed Gravity Nature-Grade Closure Blocker Audit Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_oriented_tensor_source_lift_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_NOTE.md",
+          "title": "Signed Gravity Oriented Tensor-Source Lift Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0046",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_remaining_closure_gates_note",
+          "to": "signed_gravity_continuum_graded_einstein_localization_note"
+        },
+        {
+          "from": "signed_gravity_continuum_graded_einstein_localization_note",
+          "to": "signed_gravity_remaining_closure_gates_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_remaining_closure_gates_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md",
+          "title": "Signed Gravity Remaining Closure Gates Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_continuum_graded_einstein_localization_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md",
+          "title": "Signed Gravity Continuum Graded Einstein Localization Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0047",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_remaining_closure_gates_note",
+          "to": "signed_gravity_native_boundary_complex_containment_note"
+        },
+        {
+          "from": "signed_gravity_native_boundary_complex_containment_note",
+          "to": "signed_gravity_remaining_closure_gates_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_remaining_closure_gates_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md",
+          "title": "Signed Gravity Remaining Closure Gates Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_native_boundary_complex_containment_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
+          "title": "Signed Gravity Native Boundary-Complex Containment Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0048",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
+          "to": "signed_gravity_naturally_hosted_orientation_line_note"
+        },
+        {
+          "from": "signed_gravity_naturally_hosted_orientation_line_note",
+          "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md",
+          "title": "Signed Gravity Staggered-Dirac APS Boundary Realization Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_naturally_hosted_orientation_line_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md",
+          "title": "Signed Gravity Naturally Hosted Orientation-Line Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0049",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_native_boundary_complex_containment_note",
+          "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
+        },
+        {
+          "from": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
+          "to": "signed_gravity_naturally_hosted_orientation_line_note"
+        },
+        {
+          "from": "signed_gravity_naturally_hosted_orientation_line_note",
+          "to": "signed_gravity_native_boundary_complex_containment_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_native_boundary_complex_containment_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
+          "title": "Signed Gravity Native Boundary-Complex Containment Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md",
+          "title": "Signed Gravity Staggered-Dirac APS Boundary Realization Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_naturally_hosted_orientation_line_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md",
+          "title": "Signed Gravity Naturally Hosted Orientation-Line Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0050",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_cl3z3_source_character_derivation_note",
+          "to": "signed_gravity_source_character_uniqueness_theorem_note"
+        },
+        {
+          "from": "signed_gravity_source_character_uniqueness_theorem_note",
+          "to": "signed_gravity_nature_grade_closure_blocker_audit_note"
+        },
+        {
+          "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
+          "to": "signed_gravity_oriented_tensor_source_lift_note"
+        },
+        {
+          "from": "signed_gravity_oriented_tensor_source_lift_note",
+          "to": "signed_gravity_cl3z3_source_character_derivation_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_cl3z3_source_character_derivation_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md",
+          "title": "Signed Gravity Cl(3)/Z^3 Source-Character Derivation Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_source_character_uniqueness_theorem_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md",
+          "title": "Signed Gravity Source-Character Uniqueness Theorem Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_nature_grade_closure_blocker_audit_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md",
+          "title": "Signed Gravity Nature-Grade Closure Blocker Audit Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_oriented_tensor_source_lift_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_NOTE.md",
+          "title": "Signed Gravity Oriented Tensor-Source Lift Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0051",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_cl3z3_source_character_derivation_note",
+          "to": "signed_gravity_source_character_uniqueness_theorem_note"
+        },
+        {
+          "from": "signed_gravity_source_character_uniqueness_theorem_note",
+          "to": "signed_gravity_nature_grade_closure_blocker_audit_note"
+        },
+        {
+          "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
+          "to": "signed_gravity_remaining_closure_gates_note"
+        },
+        {
+          "from": "signed_gravity_remaining_closure_gates_note",
+          "to": "signed_gravity_native_boundary_complex_containment_note"
+        },
+        {
+          "from": "signed_gravity_native_boundary_complex_containment_note",
+          "to": "signed_gravity_cl3z3_source_character_derivation_note"
+        }
+      ],
+      "length": 5,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_cl3z3_source_character_derivation_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md",
+          "title": "Signed Gravity Cl(3)/Z^3 Source-Character Derivation Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_source_character_uniqueness_theorem_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md",
+          "title": "Signed Gravity Source-Character Uniqueness Theorem Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_nature_grade_closure_blocker_audit_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md",
+          "title": "Signed Gravity Nature-Grade Closure Blocker Audit Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_remaining_closure_gates_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md",
+          "title": "Signed Gravity Remaining Closure Gates Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_native_boundary_complex_containment_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
+          "title": "Signed Gravity Native Boundary-Complex Containment Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0052",
+      "decision": null,
+      "edges": [
+        {
           "from": "irregular_sign_core_packet_gate_note",
           "to": "irregular_directional_observable_note_2026-04-11"
         },
@@ -2349,7 +2797,703 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0053",
+      "decision": null,
+      "edges": [
+        {
+          "from": "antigravity_sign_selector_boundary_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        },
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "antigravity_sign_selector_boundary_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "antigravity_sign_selector_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
+          "title": "Signed Gravitational Response Selector Boundary Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0054",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
+        },
+        {
+          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
+          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
+          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0055",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_aps_boundary_index_chi_probe_note",
+          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
+        },
+        {
+          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "to": "signed_gravity_aps_boundary_index_chi_probe_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_boundary_index_chi_probe_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
+          "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
+          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0056",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_aps_locked_axiom_extension_note",
+          "to": "signed_gravity_source_line_origin_tensor_lift_note"
+        },
+        {
+          "from": "signed_gravity_source_line_origin_tensor_lift_note",
+          "to": "signed_gravity_aps_locked_axiom_extension_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
+          "title": "Signed Gravity APS-Locked Axiom Extension Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_source_line_origin_tensor_lift_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md",
+          "title": "Signed Gravity Source-Line Origin / Partial Tensor-Lift Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0057",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_aps_locked_source_action_proposal_note",
+          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
+        },
+        {
+          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "to": "signed_gravity_aps_locked_source_action_proposal_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
+          "title": "Signed Gravity APS-Locked Source Action Proposal",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
+          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0058",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "to": "signed_gravity_aps_locked_source_action_proposal_note"
+        },
+        {
+          "from": "signed_gravity_aps_locked_source_action_proposal_note",
+          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
+          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
+          "title": "Signed Gravity APS-Locked Source Action Proposal",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0059",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0060",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "to": "signed_gravity_aps_locked_axiom_extension_note"
+        },
+        {
+          "from": "signed_gravity_aps_locked_axiom_extension_note",
+          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
+          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
+          "title": "Signed Gravity APS-Locked Axiom Extension Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0061",
+      "decision": null,
+      "edges": [
+        {
+          "from": "antigravity_sign_selector_boundary_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        },
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "antigravity_sign_selector_boundary_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "antigravity_sign_selector_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
+          "title": "Signed Gravitational Response Selector Boundary Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0062",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_aps_locked_source_action_proposal_note",
+          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
+        },
+        {
+          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
+        },
+        {
+          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "to": "signed_gravity_aps_locked_source_action_proposal_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
+          "title": "Signed Gravity APS-Locked Source Action Proposal",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
+          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
+          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0063",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "gravity_signed_source_density_boundary_note"
+        },
+        {
+          "from": "gravity_signed_source_density_boundary_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gravity_signed_source_density_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/GRAVITY_SIGNED_SOURCE_DENSITY_BOUNDARY_NOTE.md",
+          "title": "Gravity Signed Source-Density Boundary Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0064",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_aps_boundary_index_chi_probe_note"
+        },
+        {
+          "from": "signed_gravity_aps_boundary_index_chi_probe_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_boundary_index_chi_probe_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
+          "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0065",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_mechanism_separation_note"
+        },
+        {
+          "from": "signed_gravity_mechanism_separation_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_mechanism_separation_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md",
+          "title": "Signed Gravity Mechanism Separation Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0066",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_nonlocal_boundary_chi_target_note"
+        },
+        {
+          "from": "signed_gravity_nonlocal_boundary_chi_target_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_nonlocal_boundary_chi_target_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NONLOCAL_BOUNDARY_CHI_TARGET_NOTE.md",
+          "title": "Signed Gravity Nonlocal / Boundary `chi_g` Target Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0067",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_nonlocal_projector_charge_chi_probe_note"
+        },
+        {
+          "from": "signed_gravity_nonlocal_projector_charge_chi_probe_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_nonlocal_projector_charge_chi_probe_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_NONLOCAL_PROJECTOR_CHARGE_CHI_PROBE_NOTE.md",
+          "title": "Signed Gravity Nonlocal Projector-Charge `chi_g` Probe Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0068",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_aps_boundary_index_chi_probe_note"
+        },
+        {
+          "from": "signed_gravity_aps_boundary_index_chi_probe_note",
+          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
+        },
+        {
+          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_boundary_index_chi_probe_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
+          "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
+          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -2386,7 +3530,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -2423,7 +3567,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -2460,7 +3604,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -2497,7 +3641,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -2547,7 +3691,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -2597,7 +3741,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0075",
       "decision": null,
       "edges": [
         {
@@ -2647,7 +3791,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -2697,7 +3841,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -2760,7 +3904,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -2823,7 +3967,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -2860,7 +4004,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -2897,7 +4041,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -2934,7 +4078,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -2971,7 +4115,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -3008,7 +4152,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -3045,7 +4189,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -3095,7 +4239,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -3108,7 +4252,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 1,
+      "max_transitive_descendants": 2,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -3117,7 +4261,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
           "title": "Kubo Continuum Limit \u2014 Family Portability (Partial, Later Narrowed)",
-          "transitive_descendants": 1
+          "transitive_descendants": 2
         },
         {
           "audit_status": "unaudited",
@@ -3126,13 +4270,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/KUBO_FAM2_REFINEMENT_NOTE.md",
           "title": "Fam2 Single-Family Refinement \u2014 Strong Negative on the Tested Ladder",
-          "transitive_descendants": 1
+          "transitive_descendants": 2
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -3169,12 +4313,12 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-02T12:15:51.487726+00:00",
+  "generated_at": "2026-05-02T14:44:03.410325+00:00",
   "length_counts": {
-    "2": 28,
-    "3": 13,
-    "4": 10,
-    "5": 6,
+    "2": 43,
+    "3": 22,
+    "4": 11,
+    "5": 7,
     "6": 2,
     "7": 1,
     "8": 1
@@ -3184,5 +4328,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-02T12:15:18.085665+00:00"
+  "source_graph_generated_at": "2026-05-02T14:43:59.744897+00:00"
 }
