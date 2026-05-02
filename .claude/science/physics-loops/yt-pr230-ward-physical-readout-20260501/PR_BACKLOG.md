@@ -512,3 +512,21 @@ Adds a fitted scalar-kernel residue selector no-go:
 - still no retained/proposed-retained closure: fitting `g_eff` imports the
   missing scalar-kernel normalization and does not derive `K'(x_pole)`.
 ```
+
+Latest FH/LSZ production checkpoint-granularity checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ production checkpoint-granularity gate:
+- audits the production manifest, resource projection, and current harness
+  resume semantics;
+- validator passes `PASS=9 FAIL=0`; retained-route gate reports
+  `PASS=35 FAIL=0`; campaign status now consumes 65 route certificates and
+  reports `PASS=61 FAIL=0`;
+- current `--resume` loads completed per-volume artifacts only, and
+  `write_volume_artifact` runs after `run_volume` returns;
+- the smallest projected joint shard is `180.069` hours, so a 12-hour
+  foreground launch would not produce safely checkpointed production evidence;
+- still no retained/proposed-retained closure: production needs chunk-level
+  checkpointing, an external scheduler that can finish at least L12_T24, or a
+  new analytic scalar-denominator theorem.
+```

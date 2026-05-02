@@ -75,6 +75,9 @@ def main() -> int:
         "fh_lsz_production_postprocess_gate": load(
             "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json"
         ),
+        "fh_lsz_production_checkpoint_granularity": load(
+            "outputs/yt_fh_lsz_production_checkpoint_granularity_gate_2026-05-01.json"
+        ),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -276,6 +279,12 @@ def main() -> int:
         "postprocess gate" in str(statuses["fh_lsz_production_postprocess_gate"])
         or "open" in str(statuses["fh_lsz_production_postprocess_gate"]),
         statuses["fh_lsz_production_postprocess_gate"],
+    )
+    report(
+        "fh-lsz-production-checkpoint-granularity-not-foreground-safe",
+        "checkpoint granularity gate" in str(statuses["fh_lsz_production_checkpoint_granularity"])
+        or "open" in str(statuses["fh_lsz_production_checkpoint_granularity"]),
+        statuses["fh_lsz_production_checkpoint_granularity"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",
@@ -535,7 +544,10 @@ def main() -> int:
             "production evidence; the postprocess gate now blocks any manifest "
             "or partial output from being used until production phase, same-source "
             "dE/ds, Gamma_ss(q), isolated-pole derivative, and FV/IR/zero-mode "
-            "control are all present.  The refreshed retained-closure route "
+            "control are all present.  The checkpoint-granularity gate also "
+            "shows the current harness resumes only completed per-volume "
+            "artifacts, so a 12-hour foreground launch cannot produce safely "
+            "checkpointed production evidence.  The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "
             "unique LSZ input across current zero-mode, projector, and volume "

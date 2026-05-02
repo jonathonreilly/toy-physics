@@ -921,6 +921,20 @@ production phase, common-ensemble `dE_top/ds`, same-source `Gamma_ss(q)`,
 isolated-pole `dGamma_ss/dp^2`, FV/IR/zero-mode control, no forbidden
 normalization imports, and retained-proposal certification.
 
+FH/LSZ production foreground launch is blocked by checkpoint granularity:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_production_checkpoint_granularity_gate.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The manifest's `--resume` support currently loads completed per-volume
+`ensemble_measurement.json` artifacts only.  The harness writes that artifact
+after `run_volume(...)` returns; no mid-volume configuration checkpoint is
+detected.  Since the smallest joint shard is projected at `180.069` hours, a
+12-hour foreground launch would be a partial run with no safely checkpointed
+production evidence.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

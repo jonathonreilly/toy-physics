@@ -106,7 +106,10 @@ probability.
    gate now requires production-phase output, same-source `dE/ds`,
    same-source `Gamma_ss(q)`, isolated-pole `dGamma_ss/dp^2`, FV/IR/zero-mode
    control, and retained-proposal certification before this route can make a
-   physical `y_t` claim.  The same-source invariant-readout theorem now gives
+   physical `y_t` claim.  The checkpoint-granularity gate shows current
+   `--resume` is only whole-volume resume; the smallest shard is projected at
+   `180.069` hours, so a foreground launch needs chunk-level checkpointing or
+   an external scheduler.  The same-source invariant-readout theorem now gives
    the exact response formula; the remaining blocker is production
    pole/derivative control, not setting `kappa_s`.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic

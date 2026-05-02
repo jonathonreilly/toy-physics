@@ -54,6 +54,7 @@ The runner verifies:
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ production postprocess gate is ready | no |
+| current FH/LSZ resume support makes 12h foreground production launch safe | no |
 | joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
@@ -81,7 +82,10 @@ Current blocker: existing certificates are reduced-scope, pilot, or planning
 manifests.  The new postprocess gate confirms the three production outputs are
 absent and no isolated-pole `dGamma_ss/dp^2` certificate exists.  The joint
 FH/LSZ route projects to about `3630.28` single-worker hours before pole-fit
-and autocorrelation tuning.
+and autocorrelation tuning.  The checkpoint-granularity gate also shows the
+current `--resume` support is whole-volume only, while the smallest projected
+joint shard is `180.069` single-worker hours.  A 12-hour foreground launch
+would not create a safely checkpointed production certificate.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

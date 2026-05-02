@@ -1,0 +1,37 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ production checkpoint granularity gate blocks foreground launch",
+  "campaign_hours": 12.0,
+  "expected_outputs_absent": [
+    "outputs/yt_pr230_fh_lsz_production_L12_T24_2026-05-01.json",
+    "outputs/yt_pr230_fh_lsz_production_L16_T32_2026-05-01.json",
+    "outputs/yt_pr230_fh_lsz_production_L24_T48_2026-05-01.json"
+  ],
+  "fail_count": 0,
+  "harness": "scripts/yt_direct_lattice_correlator_production.py",
+  "manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No safely checkpointed production FH/LSZ output exists, and foreground launch cannot complete the smallest shard.",
+  "required_before_foreground_production_launch": [
+    "add per-configuration or bounded-chunk checkpoint/resume support including gauge/RNG and accumulated FH/LSZ measurements",
+    "or run the manifest under an external scheduler with a walltime budget exceeding the smallest shard",
+    "then run the FH/LSZ production postprocess gate on completed production outputs"
+  ],
+  "resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
+  "resume_semantics": {
+    "foreground_launch_safe": false,
+    "loads_whole_volume_artifacts": true,
+    "mid_volume_checkpoint_detected": false,
+    "writes_artifact_after_run_volume_returns": true
+  },
+  "smallest_joint_mass_scaled_hours": 180.06903305742472,
+  "strict_non_claims": [
+    "not production evidence",
+    "not retained or proposed_retained y_t closure",
+    "does not treat a partial run as production output",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, yt_ward_identity, observed top mass, or observed y_t"
+  ],
+  "total_joint_mass_scaled_hours": 3630.28062941697,
+  "verdict": "The joint FH/LSZ manifest is production-targeted and resumable at the whole-volume artifact level, but the current harness writes the resumable artifact only after run_volume completes.  The smallest projected joint shard is 180.069 single-worker hours, far beyond the 12-hour campaign window.  A foreground launch would therefore be a partial run with no production certificate and no mid-volume checkpointed evidence."
+}

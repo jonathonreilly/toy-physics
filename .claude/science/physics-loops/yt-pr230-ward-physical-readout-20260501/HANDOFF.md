@@ -241,8 +241,13 @@ What changed:
   `dE/ds`, same-source `Gamma_ss(q)`, an isolated scalar-pole derivative,
   FV/IR/zero-mode control, and a retained-proposal certificate before any
   physical `y_t` wording is allowed.
+- The FH/LSZ production checkpoint-granularity gate shows the current harness
+  resumes only completed per-volume artifacts.  The smallest projected joint
+  shard is `180.069` hours, so a 12-hour foreground launch is not safely
+  checkpointed production evidence.
 - The retained-closure route certificate has been refreshed against the new
-  source-unit, derivative-limit, production-manifest, and postprocess-gate
+  source-unit, derivative-limit, production-manifest, postprocess-gate, and
+  checkpoint-granularity
   blocks.  It still reports `proposal_allowed=false`; the remaining positive routes are
   production evidence or a scalar pole/common-dressing theorem.
 - The scalar ladder residue-envelope obstruction normalizes away pole-location

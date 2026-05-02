@@ -34,6 +34,7 @@ plus unit-projector pole-threshold obstruction
 plus scalar-kernel enhancement import audit
 plus FH/LSZ production postprocess gate
 plus fitted scalar-kernel residue selector no-go
+plus FH/LSZ production checkpoint granularity gate
 **PR:** #230 draft branch
 
 ```yaml
@@ -124,6 +125,9 @@ Allowed wording:
   `dE/ds`, same-source `Gamma_ss(q)`, isolated-pole derivative,
   FV/IR/zero-mode control, and retained-proposal certification are required
   before a physical `y_t` claim;
+- open FH/LSZ production checkpoint granularity gate: current resume support
+  is whole-volume only, so a 12-hour foreground launch is not production
+  evidence for a `180.069` hour smallest shard;
 - bounded-support scalar-source response harness extension: the production
   harness now emits `dE/ds`, but physical `dE/dh` still requires production
   data and derived `kappa_s`;

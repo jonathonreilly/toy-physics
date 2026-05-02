@@ -1531,3 +1531,29 @@ The no-go blocks the constant fitted-kernel shortcut.  Setting
 `g_eff = 1/lambda_unit` forces a finite pole only by importing the missing
 scalar normalization, and the resulting residue proxy remains finite-row
 dependent.
+
+## Review-Loop Backpressure - FH/LSZ Production Checkpoint Granularity Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN ACCEPTANCE GATE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_production_checkpoint_granularity_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_production_checkpoint_granularity_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The gate blocks a 12-hour foreground production launch as evidence.  Current
+`--resume` loads only completed per-volume artifacts, and the smallest joint
+FH/LSZ shard is projected at `180.069` hours.

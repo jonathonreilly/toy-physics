@@ -460,6 +460,13 @@ derived premise.  It is therefore forbidden as a retained proof input unless
 the same route derives the momentum-dependent scalar kernel and its pole
 derivative.
 
+The production checkpoint-granularity check extends the reduced-pilot firewall:
+an interrupted or partial foreground production launch is not production
+evidence.  Current `--resume` support loads only completed per-volume artifacts,
+so the FH/LSZ route needs chunk-level checkpointing or an external scheduler
+that can finish the smallest shard before any production certificate can be
+considered.
+
 Positive-closure candidates left after the assumption exercise:
 
 1. production/statistics with momentum modes plus a derived heavy matching
