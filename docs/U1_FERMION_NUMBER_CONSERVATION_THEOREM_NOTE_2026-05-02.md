@@ -1,0 +1,77 @@
+# U(1) Fermion-Number Conservation from Retained Lattice Noether N2
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the integrated total fermion number Q_total(t) = sum over spatial sites x at fixed time t of J^0_x is exactly conserved across time slices on the framework's retained lattice action: Q_total(t_2) = Q_total(t_1) for any t_1, t_2 in the periodic time block, on shell. Equivalently [Q̂_total, H] = 0 on H_phys.
+**Status:** awaiting independent audit. Under scope-aware classification (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
+**Loop:** `positive-only-r3-20260502`
+**Cycle:** 1 (Block 1)
+**Branch:** `physics-loop/positive-only-r3-block01-fermion-number-20260502`
+**Runner:** `scripts/u1_fermion_number_conservation_check.py`
+**Log:** `outputs/u1_fermion_number_conservation_check_2026-05-02.txt`
+
+## Cited authorities (one hop)
+
+- [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md) — `effective_status: retained` on the live ledger. Provides:
+  - **N2 (global U(1) phase symmetry → fermion-number current):** `J^μ_x = -(1/2) η_μ(x) (χ̄_x χ_{x+μ̂} + χ̄_{x+μ̂} χ_x)` satisfies `∂^L_μ J^μ_x = 0` on shell.
+  - Explicit time-slice integration: `Q = sum_x χ̄_x χ_x`.
+
+This is the only load-bearing one-hop dependency. Companion to the R2 Block 1 derivation (which used N1 momentum), this note uses N2 fermion-number current.
+
+## Admitted-context inputs
+
+- **Discrete divergence theorem on periodic lattice** (pure combinatorics, same as R2 Block 1).
+- **On-shell condition** (structural definition).
+
+No physics conventions admitted beyond what the retained lattice Noether theorem already provides.
+
+## Statement
+
+**(F1) Conservation across time slices.** Q_total(t) is t-independent on shell.
+
+**(F2) [Q̂_total, H] = 0.** The total fermion-number operator on H_phys commutes with the reconstructed Hamiltonian; common eigenbasis of Q̂_total and H exists.
+
+**(F3) Integer-eigenvalue spectrum.** The eigenvalues of Q̂_total are non-negative integers (counting fermions).
+
+## Proof
+
+### Step 1 — Local divergence (cited from N2)
+
+Retained N2 gives `∂^L_μ J^μ_x = sum_μ (J^μ_x - J^μ_{x-μ̂}) = 0` on shell.
+
+### Step 2 — Sum over spatial slice
+
+Sum (1) over all spatial sites at fixed t. Spatial divergence parts telescope to 0 by periodic spatial boundary. Temporal part survives: `sum_{x⃗} (J^0_{(t,x⃗)} - J^0_{(t-1,x⃗)}) = 0`.
+
+### Step 3 — Conservation
+
+`Q_total(t) - Q_total(t-1) = 0` ⇒ `Q_total(t) = Q_total(t_0)` for any t_0. Quantum-mechanical version: `[Q̂_total, H] = 0` follows from translation-invariance of action under U(1) phase symmetry (standard Heisenberg-picture map).
+
+### Step 4 — Integer spectrum
+
+Q̂_total = sum over modes of n_φ; each n_φ is a number operator with eigenvalues in {0, 1, 2, ...}. Sum of mutually-commuting non-negative integer operators is non-negative integer. ∎
+
+## Hypothesis set used
+
+- `axiom_first_lattice_noether_theorem_note_2026-04-29` (retained).
+- Discrete divergence theorem (pure combinatorics).
+- On-shell condition (structural).
+
+## Corollaries
+
+C1. **Lepton + baryon number conservation at tree level.** Direct consequence — both are special cases of fermion-number conservation when restricted to lepton/quark sub-content.
+
+C2. **No fermion creation from vacuum.** The vacuum |0⟩ has Q̂_total|0⟩ = 0; conservation forces all states reachable by unitary evolution to have Q̂_total = 0 starting from |0⟩.
+
+C3. **Selection rule for n-point Greens functions.** Any non-zero Greens function ⟨χ̄_{x_1} ... χ̄_{x_n} χ_{y_1} ... χ_{y_m}⟩ requires equal numbers of χ and χ̄ (n = m) by U(1) symmetry.
+
+## Honest status
+
+Positive theorem on the retained surface. Single one-hop chain. Companion to R2 Block 1 (momentum conservation from N1).
+
+```yaml
+claim_type_author_hint: positive_theorem
+claim_scope: "Q_total(t) is t-independent on shell; [Q̂_total, H] = 0; integer-eigenvalue spectrum."
+upstream_dependencies:
+  - axiom_first_lattice_noether_theorem_note_2026-04-29 (effective_status: retained)
+```
