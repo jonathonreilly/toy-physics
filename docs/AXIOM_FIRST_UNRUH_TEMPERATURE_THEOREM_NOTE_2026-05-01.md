@@ -1,7 +1,9 @@
 # Axiom-First Unruh Temperature from KMS + Framework Lorentz Kernel
 
 **Date:** 2026-05-01
-**Status:** support — branch-local theorem note on retained Lorentz kernel + Block 01 KMS support theorem; runner passing; audit-pending. `proposal_allowed: false`.
+**Type:** bounded_theorem
+**Claim scope:** for a uniformly accelerated observer with proper acceleration a in the framework Minkowski-limit Rindler wedge on the retained Lorentz kernel surface, the regular Wick-rotated Rindler period is 2π and the Minkowski vacuum appears as Gibbs at proper-time inverse temperature β_th(a) = 2π/a, i.e. T_Unruh = a/(2π) (U1)-(U4); also the Bisognano-Wichmann modular operator identity Δ_R = exp(-2πK).
+**Status:** awaiting independent audit. Under the scope-aware classification framework (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
 **Loop:** `24h-axiom-first-derivations-20260501`
 **Cycle:** 8 (Block 08; stacked on Block 01 (KMS))
 **Branch:** `physics-loop/24h-axiom-first-block08-unruh-20260501`
