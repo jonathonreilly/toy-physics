@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=22 FAIL=0
+# SUMMARY: PASS=23 FAIL=0
 ```
 
 The runner verifies:
@@ -40,6 +40,7 @@ The runner verifies:
 | zero-mode / IR / finite-volume limiting order is selected | no |
 | hidden repo authority supplies zero-mode prescription | no |
 | compact action selects trivial flat toron sector | no |
+| flat-toron thermodynamic washout closes scalar LSZ | no |
 | Cl(3)/Z3 source unit fixes `kappa_s` | no |
 | joint FH/LSZ production manifest is evidence | no |
 | joint FH/LSZ route is foreground-sized | no |
@@ -96,7 +97,10 @@ the strongest current PT, continuum-identification, manifest, and scalar
 ladder surfaces and finds no hidden authority that selects that prescription.
 The flat-toron check further shows constant commuting gauge zero modes have
 zero plaquette action but change scalar-denominator proxies, so selecting the
-trivial sector is itself a theorem/prescription.
+trivial sector is itself a finite-volume theorem/prescription.  The new
+thermodynamic washout support removes that ambiguity for the local massive
+bubble at fixed physical holonomy, but it does not derive the interacting pole
+denominator, massless IR prescription, or LSZ derivative.
 
 ### Route 3: New Selector Theorem
 

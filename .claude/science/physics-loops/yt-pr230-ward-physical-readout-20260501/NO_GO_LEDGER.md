@@ -737,6 +737,22 @@ charged fermion momenta and change the inverse scalar-denominator proxy by
 the trivial gauge zero mode; a toron/zero-mode prescription remains
 load-bearing.
 
+Flat toron finite-volume ambiguity has thermodynamic washout support, but not
+closure:
+
+```text
+python3 scripts/frontier_yt_flat_toron_thermodynamic_washout.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+For fixed physical holonomy `phi`, the constant link angle is `theta=phi/N`.
+The local massive scalar bubble is a shifted periodic Riemann sum, so it
+converges to the same Brillouin-zone integral as the trivial sector.  The scan
+shows the relative bubble and inverse-denominator shifts are below `1e-4` for
+`N >= 20`.  This retires the flat-toron finite-volume ambiguity for that local
+massive bubble, but not the interacting scalar pole, massless gauge-zero-mode
+IR prescription, finite-`N_c` residue, or production evidence.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

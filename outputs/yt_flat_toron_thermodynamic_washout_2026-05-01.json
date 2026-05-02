@@ -1,0 +1,305 @@
+{
+  "actual_current_surface_status": "exact-support / flat toron thermodynamic washout",
+  "fail_count": 0,
+  "parameters": {
+    "holonomies": [
+      1.5707963267948966,
+      2.0943951023931953,
+      3.141592653589793
+    ],
+    "mass": 0.5,
+    "sizes": [
+      6,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32
+    ]
+  },
+  "parent_certificate": "outputs/yt_flat_toron_scalar_denominator_obstruction_2026-05-01.json",
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Thermodynamic toron washout is support for one finite-volume ambiguity, not retained y_t closure.",
+  "remaining_blockers": [
+    "derive the massless gauge zero-mode and IR prescription for the interacting scalar kernel",
+    "derive the scalar pole and inverse-propagator derivative in that selected limit",
+    "control finite-Nc continuum contributions or measure the pole derivative in production",
+    "run production FH/LSZ evidence with the prescription fixed"
+  ],
+  "scan": [
+    {
+      "grid_size_4d": 6,
+      "holonomy_phi": 1.5707963267948966,
+      "holonomy_scalar_bubble_proxy": 0.425323497159336,
+      "link_angle_theta": 0.2617993877991494,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.10450129160146127,
+      "relative_inverse_denominator_shift": 0.11669619466938777,
+      "trivial_scalar_bubble_proxy": 0.4749571307813067
+    },
+    {
+      "grid_size_4d": 8,
+      "holonomy_phi": 1.5707963267948966,
+      "holonomy_scalar_bubble_proxy": 0.34579454754919303,
+      "link_angle_theta": 0.19634954084936207,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.026522088386129728,
+      "relative_inverse_denominator_shift": 0.02724467403904451,
+      "trivial_scalar_bubble_proxy": 0.3552156072816497
+    },
+    {
+      "grid_size_4d": 10,
+      "holonomy_phi": 1.5707963267948966,
+      "holonomy_scalar_bubble_proxy": 0.32633302775571443,
+      "link_angle_theta": 0.15707963267948966,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.0069201851654386625,
+      "relative_inverse_denominator_shift": 0.0069684078379858485,
+      "trivial_scalar_bubble_proxy": 0.328607049384121
+    },
+    {
+      "grid_size_4d": 12,
+      "holonomy_phi": 1.5707963267948966,
+      "holonomy_scalar_bubble_proxy": 0.3208485628991579,
+      "link_angle_theta": 0.1308996938995747,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.001971833398073402,
+      "relative_inverse_denominator_shift": 0.001975729206909077,
+      "trivial_scalar_bubble_proxy": 0.3214824727758726
+    },
+    {
+      "grid_size_4d": 16,
+      "holonomy_phi": 1.5707963267948966,
+      "holonomy_scalar_bubble_proxy": 0.3186132752873748,
+      "link_angle_theta": 0.09817477042468103,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.00019744740925953206,
+      "relative_inverse_denominator_shift": 0.0001974864024381014,
+      "trivial_scalar_bubble_proxy": 0.31867619707688033
+    },
+    {
+      "grid_size_4d": 20,
+      "holonomy_phi": 1.5707963267948966,
+      "holonomy_scalar_bubble_proxy": 0.31836328122967916,
+      "link_angle_theta": 0.07853981633974483,
+      "mass": 0.5,
+      "relative_bubble_shift": 2.3244933635799897e-05,
+      "relative_inverse_denominator_shift": 2.3245473975250238e-05,
+      "trivial_scalar_bubble_proxy": 0.3183706817350477
+    },
+    {
+      "grid_size_4d": 24,
+      "holonomy_phi": 1.5707963267948966,
+      "holonomy_scalar_bubble_proxy": 0.3183323905037567,
+      "link_angle_theta": 0.06544984694978735,
+      "mass": 0.5,
+      "relative_bubble_shift": 2.9579259173216214e-06,
+      "relative_inverse_denominator_shift": 2.957934666744632e-06,
+      "trivial_scalar_bubble_proxy": 0.3183333321101701
+    },
+    {
+      "grid_size_4d": 32,
+      "holonomy_phi": 1.5707963267948966,
+      "holonomy_scalar_bubble_proxy": 0.31832784719150875,
+      "link_angle_theta": 0.04908738521234052,
+      "mass": 0.5,
+      "relative_bubble_shift": 5.2863941059481e-08,
+      "relative_inverse_denominator_shift": 5.286394386226759e-08,
+      "trivial_scalar_bubble_proxy": 0.3183278640195742
+    },
+    {
+      "grid_size_4d": 6,
+      "holonomy_phi": 2.0943951023931953,
+      "holonomy_scalar_bubble_proxy": 0.40634835082934234,
+      "link_angle_theta": 0.3490658503988659,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.1444525737282912,
+      "relative_inverse_denominator_shift": 0.1688422748903405,
+      "trivial_scalar_bubble_proxy": 0.4749571307813067
+    },
+    {
+      "grid_size_4d": 8,
+      "holonomy_phi": 2.0943951023931953,
+      "holonomy_scalar_bubble_proxy": 0.3415248352018272,
+      "link_angle_theta": 0.2617993877991494,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.03854214679527613,
+      "relative_inverse_denominator_shift": 0.04008719328341617,
+      "trivial_scalar_bubble_proxy": 0.3552156072816497
+    },
+    {
+      "grid_size_4d": 10,
+      "holonomy_phi": 2.0943951023931953,
+      "holonomy_scalar_bubble_proxy": 0.32523565555750417,
+      "link_angle_theta": 0.20943951023931953,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.010259651559318447,
+      "relative_inverse_denominator_shift": 0.010366003139593452,
+      "trivial_scalar_bubble_proxy": 0.328607049384121
+    },
+    {
+      "grid_size_4d": 12,
+      "holonomy_phi": 2.0943951023931953,
+      "holonomy_scalar_bubble_proxy": 0.32053557954728035,
+      "link_angle_theta": 0.17453292519943295,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.0029453961219602924,
+      "relative_inverse_denominator_shift": 0.0029540971081265244,
+      "trivial_scalar_bubble_proxy": 0.3214824727758726
+    },
+    {
+      "grid_size_4d": 16,
+      "holonomy_phi": 2.0943951023931953,
+      "holonomy_scalar_bubble_proxy": 0.31858186329862886,
+      "link_angle_theta": 0.1308996938995747,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.00029601764774639676,
+      "relative_inverse_denominator_shift": 0.0002961053001408918,
+      "trivial_scalar_bubble_proxy": 0.31867619707688033
+    },
+    {
+      "grid_size_4d": 20,
+      "holonomy_phi": 2.0943951023931953,
+      "holonomy_scalar_bubble_proxy": 0.31835958169648887,
+      "link_angle_theta": 0.10471975511965977,
+      "mass": 0.5,
+      "relative_bubble_shift": 3.486514052838107e-05,
+      "relative_inverse_denominator_shift": 3.486635614874547e-05,
+      "trivial_scalar_bubble_proxy": 0.3183706817350477
+    },
+    {
+      "grid_size_4d": 24,
+      "holonomy_phi": 2.0943951023931953,
+      "holonomy_scalar_bubble_proxy": 0.31833191971242936,
+      "link_angle_theta": 0.08726646259971647,
+      "mass": 0.5,
+      "relative_bubble_shift": 4.436851558712596e-06,
+      "relative_inverse_denominator_shift": 4.436871244503085e-06,
+      "trivial_scalar_bubble_proxy": 0.3183333321101701
+    },
+    {
+      "grid_size_4d": 32,
+      "holonomy_phi": 2.0943951023931953,
+      "holonomy_scalar_bubble_proxy": 0.3183278387774801,
+      "link_angle_theta": 0.06544984694978735,
+      "mass": 0.5,
+      "relative_bubble_shift": 7.929589877202868e-08,
+      "relative_inverse_denominator_shift": 7.929590512027068e-08,
+      "trivial_scalar_bubble_proxy": 0.3183278640195742
+    },
+    {
+      "grid_size_4d": 6,
+      "holonomy_phi": 3.141592653589793,
+      "holonomy_scalar_bubble_proxy": 0.3902164967899235,
+      "link_angle_theta": 0.5235987755982988,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.17841743706844546,
+      "relative_inverse_denominator_shift": 0.2171631253124701,
+      "trivial_scalar_bubble_proxy": 0.4749571307813067
+    },
+    {
+      "grid_size_4d": 8,
+      "holonomy_phi": 3.141592653589793,
+      "holonomy_scalar_bubble_proxy": 0.3375156011780572,
+      "link_angle_theta": 0.39269908169872414,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.04982890881131306,
+      "relative_inverse_denominator_shift": 0.05244203835856107,
+      "trivial_scalar_bubble_proxy": 0.3552156072816497
+    },
+    {
+      "grid_size_4d": 10,
+      "holonomy_phi": 3.141592653589793,
+      "holonomy_scalar_bubble_proxy": 0.3241635201602063,
+      "link_angle_theta": 0.3141592653589793,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.013522318624152567,
+      "relative_inverse_denominator_shift": 0.01370767821659468,
+      "trivial_scalar_bubble_proxy": 0.328607049384121
+    },
+    {
+      "grid_size_4d": 12,
+      "holonomy_phi": 3.141592653589793,
+      "holonomy_scalar_bubble_proxy": 0.32022519813626615,
+      "link_angle_theta": 0.2617993877991494,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.00391086527595234,
+      "relative_inverse_denominator_shift": 0.003926220194175454,
+      "trivial_scalar_bubble_proxy": 0.3214824727758726
+    },
+    {
+      "grid_size_4d": 16,
+      "holonomy_phi": 3.141592653589793,
+      "holonomy_scalar_bubble_proxy": 0.318550483834158,
+      "link_angle_theta": 0.19634954084936207,
+      "mass": 0.5,
+      "relative_bubble_shift": 0.0003944858256607907,
+      "relative_inverse_denominator_shift": 0.0003946415061411529,
+      "trivial_scalar_bubble_proxy": 0.31867619707688033
+    },
+    {
+      "grid_size_4d": 20,
+      "holonomy_phi": 3.141592653589793,
+      "holonomy_scalar_bubble_proxy": 0.3183558826428004,
+      "link_angle_theta": 0.15707963267948966,
+      "mass": 0.5,
+      "relative_bubble_shift": 4.6483841309204345e-05,
+      "relative_inverse_denominator_shift": 4.648600215712675e-05,
+      "trivial_scalar_bubble_proxy": 0.3183706817350477
+    },
+    {
+      "grid_size_4d": 24,
+      "holonomy_phi": 3.141592653589793,
+      "holonomy_scalar_bubble_proxy": 0.31833144892902127,
+      "link_angle_theta": 0.1308996938995747,
+      "mass": 0.5,
+      "relative_bubble_shift": 5.9157523227955814e-06,
+      "relative_inverse_denominator_shift": 5.915787319178681e-06,
+      "trivial_scalar_bubble_proxy": 0.3183333321101701
+    },
+    {
+      "grid_size_4d": 32,
+      "holonomy_phi": 3.141592653589793,
+      "holonomy_scalar_bubble_proxy": 0.31832783036345397,
+      "link_angle_theta": 0.09817477042468103,
+      "mass": 0.5,
+      "relative_bubble_shift": 1.0572784863731543e-07,
+      "relative_inverse_denominator_shift": 1.0572785987543916e-07,
+      "trivial_scalar_bubble_proxy": 0.3183278640195742
+    }
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "theorem_prerequisites": {
+    "fixed_physical_holonomy": "theta = phi / N",
+    "mass_positive": true,
+    "minimum_denominator_bound": 0.25,
+    "periodic_smooth_integrand": true,
+    "uniform_grid_riemann_sum": true
+  },
+  "theorem_statement": "For m>0 and fixed holonomy phi, N^-4 sum_k f(k + phi/N) converges to the same Brillouin-zone integral as N^-4 sum_k f(k) for continuous periodic f(k)=1/(m^2+sum_i sin(k_i)^2)^2.",
+  "verdict": "For fixed physical flat holonomy phi, the constant link angle is theta=phi/N.  The massive local scalar bubble is then a shifted periodic Riemann sum with a smooth bounded integrand, so the flat-toron dependence vanishes in the thermodynamic limit.  This retires the finite-volume flat-toron ambiguity for the local massive bubble, but it does not close PR #230: the interacting scalar pole denominator, massless gauge zero-mode/IR prescription, LSZ derivative, and production evidence remain open.",
+  "witnesses": {
+    "decay_ratios": {
+      "phi_1.57079632679_N8_over_N24": 8966.447817646924,
+      "phi_2.09439510239_N8_over_N24": 8686.823592191482,
+      "phi_3.14159265359_N8_over_N24": 8423.089083581786
+    },
+    "max_relative_bubble_shift_N_ge_20": 4.6483841309204345e-05,
+    "max_relative_inverse_denominator_shift_N_ge_20": 4.648600215712675e-05,
+    "monotone_after_n8": {
+      "phi_1.57079632679": true,
+      "phi_2.09439510239": true,
+      "phi_3.14159265359": true
+    }
+  }
+}

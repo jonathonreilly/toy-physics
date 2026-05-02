@@ -32,6 +32,12 @@ Completed in block 1:
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_flat_toron_thermodynamic_washout.py`
+- `outputs/yt_flat_toron_thermodynamic_washout_2026-05-01.json`
+- `docs/YT_FLAT_TORON_THERMODYNAMIC_WASHOUT_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_retained_closure_route_certificate.py`
+- `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
+- `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_flat_toron_scalar_denominator_obstruction.py`
 - `outputs/yt_flat_toron_scalar_denominator_obstruction_2026-05-01.json`
 - `docs/YT_FLAT_TORON_SCALAR_DENOMINATOR_OBSTRUCTION_NOTE_2026-05-01.md`
@@ -264,7 +270,10 @@ Next artifact:
   load-bearing data, since the zero-mode term scales as `1/(V mu_IR^2)`; the
   zero-mode import audit finds no hidden repo authority that supplies the
   required prescription; flat toron sectors show the compact action does not
-  select the trivial zero mode without an extra theorem
+  select the trivial zero mode without an extra theorem; fixed-holonomy
+  flat-toron dependence washes out for the local massive bubble in the
+  thermodynamic limit, leaving the massless gauge-zero-mode/IR and pole
+  derivative theorem as the active analytic blocker
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

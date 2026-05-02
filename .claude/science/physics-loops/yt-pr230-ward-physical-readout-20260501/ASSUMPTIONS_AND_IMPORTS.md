@@ -293,6 +293,18 @@ The compact action does not select the trivial toron sector.  A route that
 uses the trivial zero mode, removes the zero mode, or averages torons must
 derive that prescription before using the scalar denominator as LSZ input.
 
+Flat toron thermodynamic washout support:
+
+```text
+fixed physical holonomy phi => link angle theta = phi/N
+N^-4 sum_k f(k + phi/N) and N^-4 sum_k f(k) have the same thermodynamic limit
+```
+
+For the local massive scalar bubble, the flat-toron finite-volume dependence
+washes out because the integrand is smooth and periodic for `m > 0`.  This is
+support only.  It does not derive the massless gauge-zero-mode/IR prescription,
+interacting pole denominator, or LSZ derivative.
+
 Source-reparametrization gauge boundary:
 
 ```text

@@ -304,3 +304,20 @@ Adds a flat-toron scalar-denominator obstruction:
 - still no retained/proposed-retained closure: the toron/zero-mode sector
   prescription or production pole data remains load-bearing.
 ```
+
+Latest flat-toron thermodynamic washout checkpoint text for PR #230:
+
+```text
+Adds flat-toron thermodynamic washout support:
+- proves fixed physical holonomy corresponds to link angle `theta=phi/N`, so
+  the local massive scalar bubble is a shifted periodic Riemann sum with the
+  same thermodynamic limit as the trivial sector;
+- validator passes `PASS=6 FAIL=0`; retained-route gate reports
+  `PASS=23 FAIL=0`; campaign status now consumes 53 route certificates and
+  reports `PASS=49 FAIL=0`;
+- for `N >= 20`, relative bubble and inverse-denominator shifts are below
+  `1e-4` on the scan;
+- still no retained/proposed-retained closure: the interacting scalar pole,
+  massless gauge-zero-mode/IR prescription, LSZ derivative, and production
+  evidence remain open.
+```

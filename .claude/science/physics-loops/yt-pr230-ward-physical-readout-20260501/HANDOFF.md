@@ -335,4 +335,9 @@ prescription import audit checks the strongest current PT,
 continuum-identification, manifest, and scalar-ladder surfaces; none supplies
 that prescription.  The flat-toron block shows why trivial-sector selection is
 not automatic: constant commuting Cartan links have zero plaquette action but
-change scalar denominator proxies through Polyakov phases.
+change scalar denominator proxies through Polyakov phases.  The flat-toron
+thermodynamic washout block gives positive support: fixed-holonomy flat-sector
+dependence vanishes for the local massive scalar bubble as `N -> infinity`.
+The remaining denominator blocker is therefore the interacting scalar pole and
+massless gauge-zero-mode/IR prescription, not this finite-volume toron artifact
+by itself.

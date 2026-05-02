@@ -15,6 +15,7 @@
     "fh_lsz_production_manifest": "bounded-support / joint FH-LSZ production manifest",
     "fh_production_protocol": "bounded-support / Feynman-Hellmann production protocol",
     "flat_toron_denominator": "exact negative boundary / flat toron scalar-denominator obstruction",
+    "flat_toron_washout": "exact-support / flat toron thermodynamic washout",
     "free_bubble": "exact negative boundary / free source pole absence",
     "free_kinetic": "exact support / free staggered kinetic coefficient",
     "heavy_kinetic": "bounded-support / heavy kinetic-mass route",
@@ -55,7 +56,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 48,
+  "pass_count": 49,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
