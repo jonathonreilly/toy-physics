@@ -1,0 +1,179 @@
+# Radial-Scaling Protected-Angle Narrow Theorem
+
+**Date:** 2026-05-02
+**Type:** positive_theorem
+**Claim scope:** the standalone Euclidean-geometry / similar-triangles
+identity that, for any positive scaling factor `mu > 0` and any point
+`(rho, eta)` with `rho > 0, eta > 0`, the radial scaling
+`(rho_bar, eta_bar) = (mu rho, mu eta)` preserves the angle at the origin
+exactly (and hence the doubled angle) while scaling the radial distance
+by `mu`. This is purely a fact of plane geometry / similar triangles; no
+CKM-specific input is consumed, and no specific physical assignment of
+`(rho, eta, mu)` is claimed.
+**Status:** audit pending. Under the scope-aware classification framework,
+`effective_status` is computed by the audit pipeline from `audit_status` +
+`claim_type` + dependency chain; no author-side tier is asserted in source.
+Audit-lane ratification is required before any retained-grade status applies.
+**Runner:** [`scripts/frontier_radial_scaling_protected_angle_narrow.py`](./../scripts/frontier_radial_scaling_protected_angle_narrow.py)
+**Authority role:** Pattern A narrow rescope of the load-bearing class-(A)
+algebraic core of [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md).
+
+## Statement
+
+Let `(rho, eta)` be any point in the open first quadrant (`rho > 0`,
+`eta > 0`), and let `mu > 0` be any positive scaling factor. Define
+
+```text
+(rho_bar, eta_bar)  =  (mu * rho, mu * eta).                              (1)
+```
+
+**Conclusion (T1).** The slope is preserved exactly:
+
+```text
+eta_bar / rho_bar  =  eta / rho.                                          (2)
+```
+
+**Conclusion (T2).** The angle at the origin is protected:
+
+```text
+arctan(eta_bar / rho_bar)  =  arctan(eta / rho).                          (3)
+```
+
+Equivalently, the doubled angle is protected:
+
+```text
+sin(2 * gamma_bar)  =  sin(2 * gamma),
+cos(2 * gamma_bar)  =  cos(2 * gamma),                                    (4)
+
+with gamma = arctan(eta / rho), gamma_bar = arctan(eta_bar / rho_bar).
+```
+
+**Conclusion (T3).** The radial distance scales linearly with `mu`:
+
+```text
+sqrt(rho_bar^2 + eta_bar^2)  =  mu * sqrt(rho^2 + eta^2).                 (5)
+```
+
+**Conclusion (T4) (counter-protection).** The angle at the point `(1, 0)`
+is **not** in general preserved by the radial scaling. Concretely,
+
+```text
+tan(beta_bar)  =  eta_bar / (1 - rho_bar)  =  mu eta / (1 - mu rho)
+```
+
+is **not equal** to `eta / (1 - rho)` whenever `mu != 1` and
+`(rho, eta) != (0, 0)`. Only the origin-angle and the radial distance
+have the canonical scaling behavior.
+
+## Proof
+
+`(T1)` Direct ratio: `eta_bar / rho_bar = (mu eta) / (mu rho) = eta / rho`,
+since `mu > 0` cancels.
+
+`(T2)` `arctan` is a function of the slope only, so `(T1)` implies `(T2)`.
+
+`(T2) ⇒ (4)` via the standard double-angle identities
+
+```text
+sin(2 gamma)  =  2 t / (1 + t^2),
+cos(2 gamma)  =  (1 - t^2) / (1 + t^2),
+```
+
+with `t = tan(gamma) = eta / rho`. Both formulas depend only on `t`, which
+is preserved by `(T1)`.
+
+`(T3)` `sqrt(rho_bar^2 + eta_bar^2) = sqrt(mu^2 rho^2 + mu^2 eta^2)
+= mu sqrt(rho^2 + eta^2)`.
+
+`(T4)` By substitution: `tan(beta_bar) = mu eta / (1 - mu rho)`, which
+depends on `mu` through both the numerator scaling and the affine
+denominator shift. Setting `tan(beta_bar) = tan(beta) = eta / (1 - rho)`
+gives `mu eta (1 - rho) = eta (1 - mu rho)`, i.e.
+`mu (1 - rho) = 1 - mu rho`, i.e. `mu - mu rho + mu rho = 1`, i.e. `mu = 1`.
+So `tan(beta_bar) = tan(beta)` iff `mu = 1`. ∎
+
+## What this claims
+
+- `(T1)`: slope preservation exactly under radial scaling.
+- `(T2)`: origin-angle preservation exactly.
+- `(4)`: doubled-angle preservation exactly.
+- `(T3)`: radial distance scales linearly as `mu`.
+- `(T4)`: angle at `(1, 0)` is **not** preserved unless `mu = 1`.
+
+## What this does NOT claim
+
+- Does **not** identify `(rho, eta, mu)` with any specific physical
+  CKM / Wolfenstein / NLO assignment. The narrow theorem treats them
+  as abstract real positive symbols.
+- Does **not** consume the upstream Wolfenstein `lambda^2 = alpha_s/2`,
+  CP-phase `rho = 1/6, eta = sqrt(5)/6`, atlas-triangle
+  `alpha_0 = pi/2`, or canonical `alpha_s(v)` authorities that the
+  parent imports.
+- Does **not** consume the textbook NLO Wolfenstein relation
+  `(rho_bar, eta_bar) = (rho, eta)(1 - lambda^2/2)`. That relation is
+  the parent's mechanism for producing the radial scaling `mu = 1 -
+  lambda^2 / 2`; the narrow theorem treats the resulting radial
+  scaling as an abstract `mu`.
+- Does **not** consume any PDG observed value, literature numerical
+  comparator, fitted selector, or admitted unit convention.
+
+## Relation to the parent CKM NLO barred-triangle theorem
+
+[`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md)
+applies this radial-scaling protected-angle identity to the CKM-specific
+case where:
+
+- `(rho, eta) = (1/6, sqrt(5)/6)` from the CP-phase upstream;
+- `mu = 1 - lambda^2 / 2 = 1 - alpha_s(v) / 4` from the textbook NLO
+  Wolfenstein relation between barred and unbarred apex coordinates;
+- `gamma = arctan(sqrt(5))` from the atlas-triangle right-angle theorem.
+
+Per the audit verdict on the parent row, the four upstream authorities
+(Wolfenstein `lambda^2/A^2`; CP-phase `rho/eta`; atlas-triangle
+`alpha_0 = pi/2`; canonical `alpha_s(v)`) are unratified one-hop deps.
+This narrow theorem isolates the underlying radial-scaling /
+similar-triangles geometry from the CKM-specific framing. The
+protected-angle invariant can be ratified independently of any CKM
+upstream.
+
+## Cited dependencies
+
+None. This narrow note has zero ledger dependencies because it states
+only elementary plane geometry on abstract `(rho, eta, mu)` positive
+real symbols.
+
+## Forbidden imports check
+
+- No PDG observed values consumed.
+- No literature numerical comparators consumed.
+- No fitted selectors consumed.
+- No admitted unit conventions load-bearing on retention.
+- No same-surface family arguments.
+
+## Validation
+
+Primary runner: [`scripts/frontier_radial_scaling_protected_angle_narrow.py`](./../scripts/frontier_radial_scaling_protected_angle_narrow.py)
+verifies (PASS=10/0):
+
+1. Slope preservation `eta_bar / rho_bar = eta / rho` symbolic.
+2. `arctan(eta_bar / rho_bar) = arctan(eta / rho)` symbolic.
+3. Doubled-angle preservation `sin(2 gamma_bar) = sin(2 gamma)` and
+   `cos(2 gamma_bar) = cos(2 gamma)` symbolic.
+4. Radial distance scales as `mu` symbolic.
+5. Counter-protection at `(1, 0)`: `tan(beta_bar) != tan(beta)` at
+   `(rho, eta) = (1/6, sqrt(5)/6), mu = 99/100`.
+6. Framework instance `(rho, eta) = (1/6, sqrt(5)/6)` at any `mu = 1 - x`:
+   `eta_bar / rho_bar = sqrt(5)` exact.
+7. Doubled-angle catalog `sin(2 gamma) = sqrt(5)/3`, `cos(2 gamma) = -2/3`
+   at framework instance.
+8. Parent row's `load_bearing_step_class == 'A'` ledger check.
+
+## Cross-references
+
+- [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md) —
+  parent bundled note that applies this narrow protected-angle theorem
+  to the CKM NLO barred-triangle case via the textbook Wolfenstein
+  relation `(rho_bar, eta_bar) = (rho, eta)(1 - lambda^2/2)`.
+- [`THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02`](THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md) —
+  sister Pattern A narrow theorem (cycle 16) carving out the Thales
+  right-angle implication for the same CKM-atlas geometric family.
