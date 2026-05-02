@@ -18,9 +18,9 @@ The following three residuals share an identical structural obstruction:
 
 | Cycle | Residual | Lane | PR |
 |---|---|---|---|
-| 5 | `R_conn = (N_c² − 1)/N_c² = 8/9` exact at finite N_c | yt_ew matching rule M | [#260](https://github.com/jonathonreilly/cl3-lattice-framework/pull/260) |
-| 9 | `⟨P⟩_full = R_O(β_eff)` exact bridge | gauge-scalar observable bridge | [#268](https://github.com/jonathonreilly/cl3-lattice-framework/pull/268) |
-| 11 | `lattice curvature ↔ (m_H/v)²` exact bridge | Higgs mass from axiom | [#271](https://github.com/jonathonreilly/cl3-lattice-framework/pull/271) |
+| 5 | `R_conn = (N_c² − 1)/N_c² = 8/9` exact at finite N_c | yt_ew matching rule M | [`YT_EW_MATCHING_RULE_M_STRETCH_ATTEMPT_NOTE_2026-05-02.md`](YT_EW_MATCHING_RULE_M_STRETCH_ATTEMPT_NOTE_2026-05-02.md) / [#260](https://github.com/jonathonreilly/cl3-lattice-framework/pull/260) |
+| 9 | `⟨P⟩_full = R_O(β_eff)` exact bridge | gauge-scalar observable bridge | [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md) / [#268](https://github.com/jonathonreilly/cl3-lattice-framework/pull/268) |
+| 11 | `lattice curvature ↔ (m_H/v)²` exact bridge | Higgs mass from axiom | [`HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md`](HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md) / [#271](https://github.com/jonathonreilly/cl3-lattice-framework/pull/271) |
 
 Each requires a **lattice/operator-level → physical/observable-level
 matching theorem** that cannot be derived from minimal repo primitives
@@ -44,10 +44,10 @@ O(1/N_c⁴) ≈ 1.2% at N_c = 3, but not exact matching.
 
 | Premise | Class |
 |---|---|
-| graph-first SU(N_c) integration with N_c = 3 | retained (Cl(3)/Z³) |
+| graph-first SU(N_c) integration with N_c = 3 | [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md), retained (Cl(3)/Z³) |
 | Wilson gauge action with `g_bare = 1`, β = 6 | retained framework |
 | 't Hooft 1/N_c topological expansion | standard QFT |
-| Fierz identity (PR #249, retained derived) | exact group theory |
+| Fierz identity ([`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md), PR #249, retained derived) | exact group theory |
 | OZI rule | standard QFT (phenomenological) |
 | ABJ machinery | standard QFT |
 
@@ -117,8 +117,8 @@ After this PR lands:
 
 ## 9. Cross-references
 
-- Cycle 5 / PR [#260](https://github.com/jonathonreilly/cl3-lattice-framework/pull/260) — yt_ew matching rule M stretch
-- Cycle 9 / PR [#268](https://github.com/jonathonreilly/cl3-lattice-framework/pull/268) — gauge-scalar observable bridge stretch
-- Cycle 11 / PR [#271](https://github.com/jonathonreilly/cl3-lattice-framework/pull/271) — Higgs mass status correction
+- Cycle 5 / PR [#260](https://github.com/jonathonreilly/cl3-lattice-framework/pull/260) — [`YT_EW_MATCHING_RULE_M_STRETCH_ATTEMPT_NOTE_2026-05-02.md`](YT_EW_MATCHING_RULE_M_STRETCH_ATTEMPT_NOTE_2026-05-02.md)
+- Cycle 9 / PR [#268](https://github.com/jonathonreilly/cl3-lattice-framework/pull/268) — [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md)
+- Cycle 11 / PR [#271](https://github.com/jonathonreilly/cl3-lattice-framework/pull/271) — [`HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md`](HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md)
 - 't Hooft 1974, Witten 1979, Coleman 1985, Manohar 1998 — standard 1/N_c references
 - Sommer 1993, FLAG 2021, PDG 2025 — admitted standard-correction references

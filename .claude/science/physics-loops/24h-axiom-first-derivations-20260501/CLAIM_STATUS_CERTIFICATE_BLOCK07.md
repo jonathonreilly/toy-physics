@@ -22,30 +22,28 @@ claim_scope: "For any nonempty open lattice region O ⊂ Λ, the local operator 
 admitted_context_inputs:
   - edge-of-the-wedge / Schwarz reflection (basic complex analysis)
 upstream_dependencies:
-  - axiom_first_reflection_positivity_theorem_note_2026-04-29 (Codex audited_clean cross_family)
+  - axiom_first_reflection_positivity_theorem_note_2026-04-29 (Codex clean audit record cross_family)
   - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional — RP dep registration repair pending)
-  - axiom_first_cluster_decomposition_theorem_note_2026-04-29 (Codex audited_clean cross_family)
+  - axiom_first_cluster_decomposition_theorem_note_2026-04-29 (Codex clean audit record cross_family)
   - block_04_microcausality_lieb_robinson (sibling block on PR #263)
 runner_classified_passes: 4 PASS (rank of time-translated A(O)|Ω⟩ = 64 = full dim H_phys exactly)
 ```
 
-## Expected `effective_status` after audit
+## Audit handoff
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-positive_theorem`:
-
-- **Path A** (full upstream chain reaches retained including Block 04):
-  `effective_status = retained` immediately on next pipeline run.
-- **Path B** (any upstream still in audited_conditional / audit-pending):
-  `effective_status = proposed_retained` (transient; auto-resolves).
+Audit status is set only by the independent audit lane. Review-loop does not
+prefill an `audit_status` or promise an `effective_status`; after any clean
+independent audit, the pipeline derives effective status from `claim_type` plus
+dependency closure. If upstream deps remain non-retained-grade, the row remains
+pending/blocked until those deps are repaired and audited.
 
 ## Dependency chain status snapshot (2026-05-02)
 
 | Dep | Today's `effective_status` (post adoption) |
 |---|---|
-| RP | support (Codex audited_clean; awaiting framework-adoption sweep) |
+| RP | support (Codex clean audit record; awaiting framework-adoption sweep) |
 | Spectrum cond | audited_conditional (RP dep registration repair pending) |
-| Cluster decomp | support (Codex audited_clean; awaiting sweep) |
+| Cluster decomp | support (Codex clean audit record; awaiting sweep) |
 | Block 04 microcausality | proposed_retained (sibling, pending) |
 
 ## Review-loop disposition

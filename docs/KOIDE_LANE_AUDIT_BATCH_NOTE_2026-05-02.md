@@ -8,23 +8,23 @@ recommended for each.
 
 ## 0. Notes covered
 
-| Note | Current ledger status | Runner result (this audit) |
+| Note | Current ledger status | Runner result (this review) |
 |---|---|---|
-| `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | `proposed_retained, audited_clean → retained` | PASS=35/0 (`frontier_charged_lepton_koide_ratio_source_selector_firewall.py`) |
-| `koide_berry_phase_theorem_note_2026-04-19` | `proposed_retained, audited_conditional` | PASS=24/0 (`frontier_koide_berry_phase_theorem.py`) |
-| `charged_lepton_koide_cone_algebraic_equivalence_note` | `proposed_retained, unaudited` | runner missing or path mismatch |
+| [`CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md`](CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md) | audit-ratified retained row | PASS=35/0 (`frontier_charged_lepton_koide_ratio_source_selector_firewall.py`) |
+| [`KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md) | `proposed_retained, audited_conditional` | PASS=24/0 (`frontier_koide_berry_phase_theorem.py`) |
+| [`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`](CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md) | `proposed_retained, unaudited` | runner missing or path mismatch |
 
 ## 1. Status assessment per note
 
-### 1.1 `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27`
+### 1.1 [`CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md`](CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md)
 
-Already at **retained** (audited_clean). This audit confirms PASS=35/0
+Already at **retained** (clean audit record). This review confirms PASS=35/0
 on the runner. No action needed.
 
-### 1.2 `koide_berry_phase_theorem_note_2026-04-19`
+### 1.2 [`KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
 
 Currently `proposed_retained, audited_conditional`. The runner passes 24/0.
-The audit verdict: the runner closes the selected-line Berry theorem as an
+Review reading: the runner closes the selected-line Berry theorem as an
 exact mathematical construction, but physical closure depends on an
 **unretained Brannen-phase bridge**.
 
@@ -42,7 +42,7 @@ closure.
 **Net:** no status change; the conditional tier is honest. Cross-check
 audit confirms.
 
-### 1.3 `charged_lepton_koide_cone_algebraic_equivalence_note`
+### 1.3 [`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`](CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md)
 
 Currently `proposed_retained, unaudited`. Runner path mismatch detected
 (no `frontier_charged_lepton_koide_cone_algebraic_equivalence.py` in
@@ -56,9 +56,9 @@ past structural inspection without a working runner.
 
 | Note | Current | Recommended |
 |---|---|---|
-| 1.1 `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | retained ✓ | unchanged (already retained) |
-| 1.2 `koide_berry_phase_theorem_note_2026-04-19` | audited_conditional | unchanged (conditional is honest) |
-| 1.3 `charged_lepton_koide_cone_algebraic_equivalence_note` | unaudited | needs runner path repair |
+| 1.1 [`CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md`](CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md) | retained ✓ | unchanged (already retained) |
+| 1.2 [`KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md) | audited_conditional | unchanged (conditional is honest) |
+| 1.3 [`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`](CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md) | unaudited | needs runner path repair |
 
 ## 3. Cluster observation
 
@@ -90,6 +90,6 @@ bare_retained_allowed: false
 ## 5. Cross-references
 
 - Cycles 5, 9, 11 PRs (#260, #268, #271) — sister structural-pattern
-  obstructions
-- Cycle 13 PR (#274) — cluster obstruction synthesis
+  obstructions in [`LATTICE_PHYSICAL_MATCHING_CLUSTER_OBSTRUCTION_NOTE_2026-05-02.md`](LATTICE_PHYSICAL_MATCHING_CLUSTER_OBSTRUCTION_NOTE_2026-05-02.md)
+- Cycle 13 PR (#274) — [`LATTICE_PHYSICAL_MATCHING_CLUSTER_OBSTRUCTION_NOTE_2026-05-02.md`](LATTICE_PHYSICAL_MATCHING_CLUSTER_OBSTRUCTION_NOTE_2026-05-02.md)
 - User memory: "Brannen CH three-gap closure breakthrough" (2026-04-22)

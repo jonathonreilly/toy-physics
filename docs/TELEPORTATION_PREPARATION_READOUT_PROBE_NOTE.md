@@ -1,7 +1,9 @@
 # Teleportation Preparation/Readout Probe
 
 Status: bounded diagnostic. This note separates the offline Poisson-derived
-teleportation resource extraction from a plausible preparation/readout protocol.
+teleportation resource extraction documented in
+[`TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md`](TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md)
+from a plausible preparation/readout protocol.
 It does not claim dynamic cooling, adiabatic preparation, deterministic branch
 selection, matter transfer, charge transfer, mass transfer, or faster-than-light
 transport.
@@ -14,8 +16,10 @@ Runner:
 python3 scripts/frontier_teleportation_preparation_readout_probe.py
 ```
 
-The runner reuses `scripts/frontier_teleportation_resource_from_poisson.py` as
-context and adds preparation/readout-facing diagnostics:
+The runner reuses
+[`TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md`](TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md)
+and `scripts/frontier_teleportation_resource_from_poisson.py` as context and
+adds preparation/readout-facing diagnostics:
 
 1. Fully diagonalize each small default Hamiltonian and report ground-state
    multiplicity and gap to the next distinct eigenvalue.

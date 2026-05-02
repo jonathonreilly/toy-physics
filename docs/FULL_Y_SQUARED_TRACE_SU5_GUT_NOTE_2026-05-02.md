@@ -5,7 +5,7 @@
 graph-first surface + LHCM closure trio (cycles 1-3) + STANDARD_MODEL_HYPERCHARGE_UNIQUENESS.
 NOT proposed_retained — see CLAIM_STATUS_CERTIFICATE.md.
 **Primary runner:** `scripts/frontier_full_y_squared_trace_su5_gut.py`
-**Authority role:** extends `HYPERCHARGE_IDENTIFICATION_NOTE.md`'s LH-only
+**Authority role:** extends [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md)'s LH-only
 Tr[Y²] = 8/3 result to the full one-generation (LH + RH) content.
 
 ## 0. Statement
@@ -40,7 +40,7 @@ conventions).
 
 ## 1. Comparison with HYPERCHARGE_IDENTIFICATION_NOTE's LH-only result
 
-`HYPERCHARGE_IDENTIFICATION_NOTE.md` gives Tr[Y²] = 8/3 over the LH-only
+[`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) gives Tr[Y²] = 8/3 over the LH-only
 sector:
 
 ```text
@@ -177,6 +177,6 @@ bare_retained_allowed: false
 ## 7. Cross-references
 
 - LHCM atlas: PR [#262](https://github.com/jonathonreilly/cl3-lattice-framework/pull/262) (cycle 6)
-- Sister: `HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md` (audited_renaming)
-- Sister: `HYPERCHARGE_IDENTIFICATION_NOTE.md` (audited_renaming)
+- Sister: [`HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](HYPERCHARGE_SQUARED_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md) (audited_renaming)
+- Sister: [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) (audited_renaming)
 - Cycles 1-15 prior PRs.

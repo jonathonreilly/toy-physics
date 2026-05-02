@@ -13,8 +13,12 @@ from the campaign's EWSB chain.
 **Theorem (M_W²/M_Z² = cos²θ_W).**
 
 Given:
-1. EWSB pattern Q = T_3 + Y/2 (cycle 18, PR #281);
-2. Higgs in (1,2)_{Y=+1} with VEV ⟨H⟩ = (0, v/√2)^T (cycle 15);
+1. EWSB pattern Q = T_3 + Y/2 from
+   [`EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md`](EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md)
+   (cycle 18, PR #281);
+2. Higgs in (1,2)_{Y=+1} with VEV ⟨H⟩ = (0, v/√2)^T from
+   [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md)
+   (cycle 15);
 3. SM admitted standard Higgs kinetic term `(D_μ H)†(D^μ H)` with
    covariant derivative `D_μ = ∂_μ − i g T^a W_μ^a − i g' (Y/2) B_μ`;
 
@@ -87,8 +91,8 @@ Agreement to <0.5%, confirming the SM tree-level prediction.
 
 | Ingredient | Class | Source |
 |---|---|---|
-| EWSB pattern Q = T_3 + Y/2 | exact-support (cycle 18) | PR #281 |
-| Higgs (1,2)_{Y=+1} + neutral-component VEV | exact-support (cycle 15) | PR #278 |
+| EWSB pattern Q = T_3 + Y/2 | exact-support (cycle 18) | [`EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md`](EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md) |
+| Higgs (1,2)_{Y=+1} + neutral-component VEV | exact-support (cycle 15) | [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md) |
 | Standard Higgs kinetic term (D_μ H)†(D^μ H) | admitted SM convention | standard SM |
 | EW gauge-boson mass diagonalization (Weinberg mixing) | admitted SM convention | standard SM |
 
@@ -122,6 +126,6 @@ bare_retained_allowed: false
 
 ## 7. Cross-references
 
-- Cycle 18 / PR [#281](https://github.com/jonathonreilly/cl3-lattice-framework/pull/281) — EWSB pattern
-- Cycle 15 / PR [#278](https://github.com/jonathonreilly/cl3-lattice-framework/pull/278) — Higgs Y_H = +1
-- Cycle 19 / PR [#282](https://github.com/jonathonreilly/cl3-lattice-framework/pull/282) — sin²θ_W^GUT = 3/8 (sister GUT-scale prediction)
+- Cycle 18 / PR [#281](https://github.com/jonathonreilly/cl3-lattice-framework/pull/281) — [`EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md`](EWSB_PATTERN_FROM_HIGGS_Y_NOTE_2026-05-02.md)
+- Cycle 15 / PR [#278](https://github.com/jonathonreilly/cl3-lattice-framework/pull/278) — [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md)
+- Cycle 19 / PR [#282](https://github.com/jonathonreilly/cl3-lattice-framework/pull/282) — [`SIN_SQUARED_THETA_W_GUT_FROM_SU5_NOTE_2026-05-02.md`](SIN_SQUARED_THETA_W_GUT_FROM_SU5_NOTE_2026-05-02.md)

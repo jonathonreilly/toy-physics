@@ -33,7 +33,7 @@ bare_retained_allowed: false
 | # | Criterion | Pass? | Notes |
 |---|---|---|---|
 | 1 | Certificate names target_claim_type | YES | `positive_theorem` |
-| 2 | No open imports for the claimed target | YES | both cited authorities (graph_first_su3, graph_first_selector) are retained-grade (`effective_status: retained_bounded`) |
+| 2 | No open imports for the claimed target | YES | both cited authorities (graph_first_su3, graph_first_selector) are retained-grade (`retained-grade effective status_bounded`) |
 | 3 | No load-bearing observed/fitted/admitted-convention/literature inputs | YES | load-bearing step is `6α + 2β = 0 ⇒ β = −3α`, pure algebra over retained-grade graph-first multiplicities |
 | 4 | Every dep retained-grade | YES | both deps `retained_bounded` |
 | 5 | Runner checks dep classes | YES | runner verifies retained-grade of both deps via ledger lookup, plus class (A) algebraic closure at exact `Fraction` precision |

@@ -60,7 +60,7 @@ assumptions or accept them as admitted-with-narrow-non-derivation-role.
 ```yaml
 # observable_principle_from_axiom_note (parent)
 current_status: bounded support theorem  # was: unknown
-audit_status: audited_conditional          # unchanged
+audit ledger verdict remains conditional; no review-side change
 effective_status: audited_conditional      # unchanged
 proposal_allowed: false
 proposal_allowed_reason: |

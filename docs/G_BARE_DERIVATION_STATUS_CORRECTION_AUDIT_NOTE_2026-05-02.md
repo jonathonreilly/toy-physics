@@ -97,7 +97,7 @@ the constraint/convention ambiguity is resolved AND a runner is supplied.
 ```yaml
 # g_bare_derivation_note (parent)
 current_status: bounded normalization proposal  # was: unknown
-audit_status: audited_conditional                # unchanged
+audit ledger verdict remains conditional; no review-side change
 proposal_allowed: false
 proposal_allowed_reason: |
   (a) constraint-vs-convention ambiguity unresolved

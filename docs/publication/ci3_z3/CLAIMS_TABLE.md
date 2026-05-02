@@ -24,7 +24,7 @@ The repo is migrating to the audit-lane vocabulary:
 ## Status Legend
 
 - `retained`: proposed core paper claim; audit-ratified only when
-  `AUDIT_LEDGER.md` gives `effective_status = retained`
+  `AUDIT_LEDGER.md` gives a retained effective status
 - `retained companion`: proposed exact or structural companion that belongs in Extended
   Data, theorem boxes, or discussion rather than as a headline claim
 - `promoted quantitative`: proposed quantitative row the package is prepared to present

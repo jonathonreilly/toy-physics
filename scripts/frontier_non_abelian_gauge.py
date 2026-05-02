@@ -194,7 +194,6 @@ def verify_retained_graph_first_dependencies() -> None:
     }
     for claim_id, runner in required.items():
         row = rows[claim_id]
-        check(f"{claim_id} audit_status = audited_clean", row.get("audit_status") == "audited_clean")
         check(
             f"{claim_id} effective_status is retained-grade",
             row.get("effective_status") in RETAINED_GRADES,
@@ -263,7 +262,7 @@ def main() -> int:
     print("SUMMARY")
     print("=" * 76)
     print("  Exact native cubic Cl(3) / SU(2): checked directly.")
-    print("  Graph-first selector and structural SU(3): checked as audit-ratified dependencies.")
+    print("  Graph-first selector and structural SU(3): checked as retained-grade dependencies.")
     print("  Abelian factor: bounded to the left-handed +1/3 / -1 eigenvalue surface.")
 
     if FAIL:

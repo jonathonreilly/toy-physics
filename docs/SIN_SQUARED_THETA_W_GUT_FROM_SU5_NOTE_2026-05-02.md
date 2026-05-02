@@ -14,9 +14,12 @@ angle prediction from cycle 16's SU(5) consistency.
 **Theorem (sin²θ_W^GUT = 3/8 from SU(5) embedding).**
 
 Given:
-1. LHCM-derived hypercharges (cycles 1-3, modulo SM-definition convention);
-2. Cycle 16 (PR #279) result: in Convention B, `Tr[Y²]_per-Weyl-family = 10/3`
-   over the SU(5) 5̄ ⊕ 10 representation;
+1. LHCM-derived hypercharges from
+   [`LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md`](LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md)
+   (cycles 1-3, modulo SM-definition convention);
+2. [`FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md`](FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md)
+   (cycle 16, PR #279) result: in Convention B,
+   `Tr[Y²]_per-Weyl-family = 10/3` over the SU(5) 5̄ ⊕ 10 representation;
 3. SU(5) gauge-group embedding admission: at the GUT scale, all three SM
    gauge couplings unify (`g_3 = g_2 = g_1` in GUT normalization);
 4. SU(5) hypercharge normalization: `Y_GUT = √(3/5) · Y_SM`
@@ -80,8 +83,8 @@ boundary condition `sin²θ_W^GUT = 3/8`.
 
 | Ingredient | Class | Source |
 |---|---|---|
-| LHCM-derived Y values | exact-support (cycles 1-3) | PRs #254-256 |
-| Tr[Y²] = 10/3 per Weyl family (Convention B) | exact-support (cycle 16) | PR #279 |
+| LHCM-derived Y values | exact-support (cycles 1-3) | [`LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md`](LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md) |
+| Tr[Y²] = 10/3 per Weyl family (Convention B) | exact-support (cycle 16) | [`FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md`](FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md) |
 | Y_GUT = √(3/5) · Y_SM | admitted SU(5) GUT normalization | standard SU(5) embedding |
 | SU(5) unification at GUT scale | admitted SU(5) GUT structure | standard GUT |
 
@@ -115,7 +118,7 @@ bare_retained_allowed: false
 
 ## 7. Cross-references
 
-- Cycle 16 / PR [#279](https://github.com/jonathonreilly/cl3-lattice-framework/pull/279) — Tr[Y²] = 40/3 + SU(5) GUT consistency
-- Cycles 1-3 LHCM closure: PRs #254, #255, #256
-- Cycle 6 / PR #262 — LHCM atlas
+- Cycle 16 / PR [#279](https://github.com/jonathonreilly/cl3-lattice-framework/pull/279) — [`FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md`](FULL_Y_SQUARED_TRACE_SU5_GUT_NOTE_2026-05-02.md)
+- Cycles 1-3 LHCM closure — [`LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md`](LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md)
+- Cycle 6 / PR #262 — [`LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md`](LHCM_REPAIR_ATLAS_CONSOLIDATION_NOTE_2026-05-02.md)
 - Standard references: Georgi-Glashow SU(5) (1974); Buras-Ellis-Gaillard-Nanopoulos (1978); PDG GUT review.

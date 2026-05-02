@@ -4,7 +4,7 @@
 **Status:** dependency-declaration repair packet for
 [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](PHYSICAL_LATTICE_NECESSITY_NOTE.md)
 which is currently `proposed_retained, audited_conditional` in the audit
-ledger with `deps=[]`. This audit packet identifies the 11 actually-read
+ledger with `deps=[]`. This review packet identifies the 11 actually-read
 upstream notes and 1 sibling runner that the parent note's runner depends
 on, recommends explicit dep declaration, and demotes the parent note to
 the narrowest honest tier under the corrected dep chain.
@@ -59,7 +59,7 @@ regulator-reinterpretation conditions on the accepted Cl(3)/Z³ surface.
 claim_id: physical_lattice_necessity_note
 deps: []
 current_status: proposed_retained
-audit_status: audited_conditional
+audit ledger verdict: conditional
 effective_status: audited_conditional
 
 # After (recommended):
@@ -76,7 +76,7 @@ deps:
   - one_generation_matter_closure_note
   - anomaly_forces_time_theorem
 current_status: bounded support theorem  # demoted from proposed_retained
-audit_status: audited_conditional         # unchanged
+audit ledger verdict remains conditional; no review-side change
 effective_status: audited_conditional     # unchanged
 ```
 
@@ -84,7 +84,7 @@ effective_status: audited_conditional     # unchanged
 
 | # | Criterion | Pass? | Notes |
 |---|---|---|---|
-| 1 | `proposal_allowed: true` | **NO** | This audit sets false. |
+| 1 | `proposal_allowed: true` | **NO** | This review recommends false. |
 | 2 | No open imports for the claimed target | **NO** | At minimum 11 upstream notes are runtime-imports; multiple are conditional. |
 | 3 | No observed values, fitted selectors, admitted unit conventions, or literature values are load-bearing | **PARTIAL** | The runner uses canonical plaquette / α_LM / hierarchy values from `canonical_plaquette_surface` (admitted package values). |
 | 4 | Every dep retained | **NO** | At least 10 of the 11 upstream notes are `audited_conditional` or unaudited. |

@@ -49,17 +49,17 @@ surface (modulo the upstream support classification).
   inverse temperature `β_th = 1 / T` is Planck-distributed for any
   harmonic-oscillator subsector.
 - **Retained emergent Lorentz invariance.** From
-  `EMERGENT_LORENTZ_INVARIANCE_NOTE.md` and
-  `LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`, the framework's
+  [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](EMERGENT_LORENTZ_INVARIANCE_NOTE.md) and
+  [`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md), the framework's
   long-wavelength photon modes have dispersion `ω = c k` to leading
   order, with `c` the emergent speed of light. The leading
   anisotropic correction is at dimension 6 with cubic-harmonic
   `ell = 4` fingerprint, irrelevant for the `T^4` law.
 - **Retained anomaly-forced 3+1 dimensions** (from the retained
-  `ANOMALY_FORCES_TIME_THEOREM.md`): the spatial substrate is
+  [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)): the spatial substrate is
   `Z^3`, so the photon density of states is the standard 3D form.
 - **Retained U(1) photon.** From the retained
-  `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
+  [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
   + EW retained package, the framework has a massless U(1)
   electromagnetic photon with two transverse polarizations.
 - **Spectrum condition** (from retained AXIOM_FIRST_SPECTRUM_CONDITION):
@@ -73,7 +73,7 @@ surface (modulo the upstream support classification).
   in the smooth-limit regime.
 - **Bose-Einstein statistics for photons:** photons are bosons (spin 1
   vector field). This is consistent with the retained
-  `AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`.
+  [`AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md).
 - **Standard integral identity:**
   `∫_0^∞ x^{s-1} / (e^x - 1) dx = Γ(s) ζ(s)`. For `s = 4`:
   `Γ(4) ζ(4) = 6 · π⁴/90 = π⁴/15`. Pure mathematical identity.
@@ -251,7 +251,7 @@ from photon dispersion `ω = c k` and the same Bose-Einstein integral.
 Used in early-universe cosmology.
 
 C4. **Cosmological consistency:** the retained
-`N_eff = 3.046` (`docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`)
+`N_eff = 3.046` ([`N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`](N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md))
 plus this Stefan-Boltzmann formula give the standard
 `ρ_radiation,eq = (π²/30) g_*  T⁴` formula with photon contribution
 exactly (1).
@@ -286,15 +286,15 @@ bare_retained_allowed: false
 
 ## Citations
 
-- A_min: `docs/MINIMAL_AXIOMS_2026-04-11.md`
-- retained EW package: `docs/RCONN_DERIVED_NOTE.md`,
-  `docs/STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
-- retained anomaly-forced 3+1: `docs/ANOMALY_FORCES_TIME_THEOREM.md`
-- retained emergent Lorentz: `docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md`,
-  `docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`
-- retained spin-statistics: `docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`
-- retained spectrum condition: `docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`
-- Block 01 KMS support: `docs/AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`
+- A_min: [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+- retained EW package: [`RCONN_DERIVED_NOTE.md`](RCONN_DERIVED_NOTE.md),
+  [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
+- retained anomaly-forced 3+1: [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
+- retained emergent Lorentz: [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
+  [`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)
+- retained spin-statistics: [`AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md)
+- retained spectrum condition: [`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)
+- Block 01 KMS support: [`AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_KMS_CONDITION_THEOREM_NOTE_2026-05-01.md)
 - standard external references (theorem-grade, no numerical input):
   Stefan (1879) *Sitzungsberichte der Akademie* 79, 391;
   Boltzmann (1884) *Annalen der Physik* 22, 291;

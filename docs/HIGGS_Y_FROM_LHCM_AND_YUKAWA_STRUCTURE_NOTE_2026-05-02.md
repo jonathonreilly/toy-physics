@@ -135,5 +135,5 @@ bare_retained_allowed: false
 
 - LHCM atlas: PR [#262](https://github.com/jonathonreilly/cl3-lattice-framework/pull/262) (cycle 6)
 - LHCM closure trio: PRs [#254](https://github.com/jonathonreilly/cl3-lattice-framework/pull/254), [#255](https://github.com/jonathonreilly/cl3-lattice-framework/pull/255), [#256](https://github.com/jonathonreilly/cl3-lattice-framework/pull/256) (cycles 1-3)
-- `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
+- [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
 - Halzen-Martin SM Yukawa structure

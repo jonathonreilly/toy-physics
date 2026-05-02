@@ -23,7 +23,7 @@ discrete GR action surface:
 This is a classical theorem of GR (Birkhoff 1923) which extends to
 the framework's retained discrete GR action surface via the
 canonical Einstein-Hilbert equivalence
-(`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`).
+([`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)).
 
 After this note, the framework retains:
 - Schwarzschild family is the unique static vacuum spherically
@@ -39,8 +39,8 @@ After this note, the framework retains:
 - **Framework GR action surface.** Einstein vacuum equations
   `R_μν = 0` hold on the retained discrete-Lorentzian Einstein/Regge
   stationary action class
-  (`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`,
-  `UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`).
+  ([`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md),
+  [`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)).
 
 ## Admitted-context inputs
 
@@ -228,9 +228,9 @@ bare_retained_allowed: false
 
 ## Citations
 
-- A_min: `docs/MINIMAL_AXIOMS_2026-04-11.md`
-- retained framework GR: `docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`,
-  `docs/UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`
+- A_min: [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+- retained framework GR: [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md),
+  [`UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)
 - standard external references (theorem-grade, no numerical input):
   Birkhoff (1923) *Relativity and Modern Physics*, Harvard;
   Wald (1984) *General Relativity*, §6.1;

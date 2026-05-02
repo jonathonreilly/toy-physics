@@ -33,18 +33,14 @@ upstream_dependencies:
 runner_classified_passes: 6 PASS, all class-A symbolic / class-C identity (per Test summary)
 ```
 
-## Expected `effective_status` after audit
+## Audit handoff
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-positive_theorem`, the rule from
-[`02_PROPAGATION_RULES.md`](../../../../docs/audit/proposals/scope-aware-classification-20260502/02_PROPAGATION_RULES.md)
-gives `effective_status = retained` immediately, because every dependency
-(framework GR action surface, EH equivalence) is itself already retained.
-
-If the audit returns `claim_type = bounded_theorem` (e.g., the auditor
-judges the smooth-limit admission as substantive enough to bound the
-scope), `effective_status` becomes `retained_bounded` with the smooth-
-limit admission recorded as the boundary.
+Audit status is set only by the independent audit lane. Review-loop does not
+prefill an `audit_status` or promise an `effective_status`; after any clean
+independent audit, the pipeline derives effective status from `claim_type` plus
+dependency closure. If the auditor classifies the smooth-limit admission as a
+bounded premise, the retained-family result should remain bounded rather than
+being promoted by review prose.
 
 ## Dependency chain
 

@@ -13,15 +13,15 @@
 ## Scope
 
 This note records, on the current `A_min`
-(`docs/MINIMAL_AXIOMS_2026-04-11.md`), an axiom-first proof that the
+([`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)), an axiom-first proof that the
 finite-temperature Gibbs state reconstructed from the reflection-
 positivity (RP) transfer matrix on a periodic Euclidean-time block
 satisfies the **Kubo-Martin-Schwinger (KMS) condition** at inverse
 temperature `β_th = L_τ · a_τ`. The companion artifacts are the
 retained RP support note
-(`docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`)
+([`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md))
 and the retained spectrum-condition support note
-(`docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`).
+([`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)).
 
 After this note, the package's thermal-state language can quote a
 branch-local KMS theorem on `A_min` instead of treating the
@@ -51,7 +51,7 @@ temperature.
   fermion-boundary convention
   (anti-periodic in time, periodic in space, "APBC") which is the
   framework's accepted finite-temperature setup
-  (`docs/MINIMAL_AXIOMS_2026-04-11.md`, A4 entry on the "minimal APBC
+  ([`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md), A4 entry on the "minimal APBC
   hierarchy block").
 - **A4 — canonical normalization.** Used only via the fact that
   `β = 2 N_c / g_bare² > 0` is fixed and positive (so `T` is a
@@ -446,11 +446,11 @@ bare_retained_allowed: false
 
 ## Citations
 
-- A_min: `docs/MINIMAL_AXIOMS_2026-04-11.md`
-- retained RP support note: `docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
-- retained spectrum-condition support note: `docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`
-- companion cluster-decomposition note: `docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`
-- companion CPT note: `docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
+- A_min: [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+- retained RP support note: [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- retained spectrum-condition support note: [`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)
+- companion cluster-decomposition note: [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
+- companion CPT note: [`AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`](AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md)
 - standard external proofs (cited as theorem-grade references; we do
   not import any numerical input):
   Kubo (1957) *J. Phys. Soc. Jpn.* 12, 570;

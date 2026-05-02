@@ -27,7 +27,7 @@ upstream_dependencies:
   - rconn_derived_note + standard_model_hypercharge_uniqueness_theorem (retained: U(1) photon)
   - anomaly_forces_time_theorem (retained: 3+1 dimensions)
   - emergent_lorentz_invariance_note + lorentz_kernel_positive_closure_note (retained)
-  - axiom_first_spin_statistics_theorem_note_2026-04-29 (Codex audited_clean)
+  - axiom_first_spin_statistics_theorem_note_2026-04-29 (Codex clean audit record)
   - axiom_first_spectrum_condition_theorem_note_2026-04-29 (Codex audited_conditional)
 runner_classified_passes: 6 PASS (Planck dist from KMS Gibbs at <1e-15; (π²/15) T⁴ at <1e-4 numerical; ζ(4) at <1e-6; Wien displacement; σ_SB matches CODATA 2018 at <1e-9)
 ```
@@ -40,15 +40,13 @@ not a load-bearing physics admission). The auditor should classify as
 `positive_theorem`. This is the **framework's first numerical
 thermodynamic prediction beyond structural identity**.
 
-## Expected `effective_status` after audit
+## Audit handoff
 
-If Codex returns `audit_status = audited_clean` and `claim_type =
-positive_theorem`:
-
-- **Path A** (Block 01 reaches retained): `effective_status = retained`
-  immediately.
-- **Path B** (Block 01 still proposed_retained): `effective_status =
-  proposed_retained` (transient).
+Audit status is set only by the independent audit lane. Review-loop does not
+prefill an `audit_status` or promise an `effective_status`; after any clean
+independent audit, the pipeline derives effective status from `claim_type` plus
+dependency closure. If upstream deps remain non-retained-grade, the row remains
+pending/blocked until those deps are repaired and audited.
 
 ## Dependency chain status snapshot (2026-05-02)
 

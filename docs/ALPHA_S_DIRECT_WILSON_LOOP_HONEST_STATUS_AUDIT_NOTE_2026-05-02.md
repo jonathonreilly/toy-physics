@@ -25,7 +25,7 @@ This is consistent with PDG world average `0.1180 ± 0.0009` within 1σ.
 The note is currently at `proposed_retained, unaudited` (per
 `audit_ledger.json`). Transitive descendants: 259. Load-bearing score: 9.52.
 
-This audit packet does **not** challenge the runner result or the algebra —
+This review packet does **not** challenge the runner result or the algebra —
 both are verified at PASS=18/0 strict mode. It applies the **seven
 retained-proposal certificate criteria** to the note's actual current
 authority surface and recommends an honest status.
@@ -34,12 +34,12 @@ authority surface and recommends an honest status.
 
 | # | Criterion | Pass? | Notes |
 |---|---|---|---|
-| 1 | `proposal_allowed: true` | **NO** | Set false (this audit). |
+| 1 | `proposal_allowed: true` | **NO** | Review recommends false. |
 | 2 | No open imports for the claimed target | **NO** | Sommer scale `r_0 = 0.5 fm` is an external matching number. The QCD running bridge to `M_Z` (4-loop β-function, threshold matching) is an external standard correction. Both are admitted, not derived. |
 | 3 | No observed values, fitted selectors, **admitted unit conventions, or literature values** are load-bearing proof inputs | **NO** | The Sommer scale `r_0 = 0.5 fm` is a literature value — it is the standard convention adopted in Sommer (1993) and FLAG. The α_s(M_Z) extraction depends on it as a load-bearing scale-setting input. The QCD running bridge uses literature 4-loop β-function. Both are admitted standard corrections, but the retention claim depends on them. |
 | 4 | Every dependency is retained, retained corollary, or explicitly allowed exact support | **PARTIAL** | `graph_first_su3_integration_note` is retained (provides Wilson SU(3) gauge surface). `minimal_axioms_2026-04-11` is `audited_conditional`. The minimal_axioms dependency is invoked for `g_bare = 1` canonical normalization — a structural choice, but minimal_axioms itself remains conditional under the audit ledger (its G_BARE_* family is unresolved). |
 | 5 | Runner or proof artifact checks dependency classes, not only numerical output | **YES** | The strict runner (`scripts/frontier_alpha_s_direct_wilson_loop.py`) explicitly verifies **forbidden authority key avoidance** (no `u_0`, `alpha_lm`, `alpha_bare_over_u0_squared`, `mean_link`, `plaquette_authority`, `alpha_s_v_definition`). It enforces `used_as_authority = false` for the existing α_LM/u_0 chain. PASS=18 FAIL=0 verified 2026-05-02. |
-| 6 | Review-loop disposition is `pass` | **PENDING** | This audit packet is the branch-local self-review. Independent audit recommended. |
+| 6 | Review-loop disposition is `pass` | **PENDING** | This review packet is the branch-local self-review. Independent audit recommended. |
 | 7 | PR body explicitly says independent audit is still required | **YES** | The note itself states "It remains `proposed_retained`: the audit ledger, not this note, decides whether the theorem is ratified." |
 
 **Result:** Criteria 1, 2, 3, 6 fail or are partial; Criterion 4 is
@@ -72,7 +72,7 @@ bare_retained_allowed: false
 Recommended audit-ledger row update:
 - `current_status: bounded` (from `proposed_retained`)
 - `effective_status: bounded` (from `audited_conditional`)
-- `audit_status: audited_conditional` (deps + literature imports)
+- `audit ledger verdict: conditional` (deps + literature imports)
 - Mark the Sommer-scale and QCD-running-bridge as admitted standard
   corrections in the assumption/import ledger.
 
@@ -87,7 +87,7 @@ Recommended audit-ledger row update:
 - The numerical agreement with PDG (0.1180 ± 0.0067 inside the 1σ band of
   0.1180 ± 0.0009) is reproducible and statistically defensible.
 
-## 4. What this audit packet is not
+## 4. What this review packet is not
 
 - This is **not** a proof that the route is wrong. The route is correct as
   far as a standard lattice-QCD `α_s(M_Z)` extraction goes.

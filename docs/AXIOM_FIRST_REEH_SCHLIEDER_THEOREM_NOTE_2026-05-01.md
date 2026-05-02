@@ -40,21 +40,21 @@ microcausality (Block 04).
 ## Retained inputs
 
 - **RP transfer matrix and `H_phys`.** From the retained
-  `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`.
+  [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md).
   Defines the global cyclic vector `|Ω⟩` (the GNS vector for the
   RP-positive form).
 - **Spectrum condition.** From the retained
-  `AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`. The
+  [`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md). The
   reconstructed Hamiltonian `H` is bounded below (`H ≥ 0`), with
   `|Ω⟩` the (unique on the canonical surface) ground state with
   energy 0.
 - **Cluster decomposition.** From the retained
-  `AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`.
+  [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md).
   Connected correlators decay exponentially with spatial separation,
   guaranteeing the vacuum is unique (no superselection sectors on
   the canonical surface).
 - **Microcausality / lattice locality.** From Block 04
-  (`AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`).
+  ([`AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md)).
   Used implicitly in the analytic-continuation step (Step 2 below).
 
 ## Admitted-context inputs
@@ -268,11 +268,11 @@ bare_retained_allowed: false
 
 ## Citations
 
-- A_min: `docs/MINIMAL_AXIOMS_2026-04-11.md`
-- retained RP: `docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
-- retained spectrum condition: `docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`
-- retained cluster decomposition: `docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`
-- Block 04 microcausality: `docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`
+- A_min: [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+- retained RP: [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- retained spectrum condition: [`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)
+- retained cluster decomposition: [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
+- Block 04 microcausality: [`AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md`](AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md)
 - standard external references (theorem-grade, no numerical input):
   Reeh-Schlieder (1961) *Nuovo Cim.* 22, 1051;
   Streater-Wightman (1964) *PCT, Spin and Statistics, and All That*,

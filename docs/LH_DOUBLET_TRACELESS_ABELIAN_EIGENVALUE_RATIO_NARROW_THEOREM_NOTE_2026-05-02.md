@@ -99,14 +99,14 @@ proposed_load_bearing_step_class: A
 audit_required_before_effective_retained: true
 ```
 
-If the audit lane ratifies a clean theorem verdict, the pipeline can derive
-`effective_status = retained` because both cited authorities are
+If the audit lane ratifies a clean theorem verdict, the pipeline can derive a
+retained-family effective status because both cited authorities are
 retained-grade and the load-bearing step is a class (A) algebraic closure.
 
 ## Cross-references
 
-- `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` — parent (currently `audit_status:
-  audited_conditional`); this narrow note carves out the audit's named
+- `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` — parent (the audit ledger currently
+  records a conditional verdict); this narrow note carves out the audit's named
   safe scope as a standalone claim row.
 - [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — retained-grade primitive supplying
   the commutant decomposition.

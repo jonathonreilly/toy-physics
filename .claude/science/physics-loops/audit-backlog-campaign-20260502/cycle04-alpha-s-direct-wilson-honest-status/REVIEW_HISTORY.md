@@ -21,7 +21,7 @@
   identified as admitted load-bearing literature imports.
 - **PASS:** The path to full retention (3 hard steps) is documented.
 - **PASS:** No retention overclaim in the audit packet itself.
-- **PASS:** Parent strict runner still passes (PASS=18/0) — this audit
+- **PASS:** Parent strict runner still passes (PASS=18/0) — this review
   does not challenge the algebra or the runner gate.
 
 ### Disposition

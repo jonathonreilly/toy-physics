@@ -65,10 +65,10 @@ cluster-decomposition theorem (which is the *spatial* decay theorem).
 
 ## Retained inputs
 
-- **RP transfer matrix.** From the retained `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`,
+- **RP transfer matrix.** From the retained [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md),
   `T : H_phys → H_phys` is Hermitian, positive, and bounded. The
   Hamiltonian `H = -log(T) / a_τ` is well-defined and bounded below.
-- **Spectrum condition.** From the retained `AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`,
+- **Spectrum condition.** From the retained [`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md),
   `H` on `H_phys` is bounded operator with finite spectral norm
   (since `H_phys` has finite dimension on any finite block, by RP
   reconstruction).
@@ -111,7 +111,7 @@ In particular, when `d(x, y) > v_LR |t|`, the commutator is bounded by
 **(M3) Continuum-limit microcausality.** In the lattice continuum
 limit `a → 0` with `v_LR · a_s / a_τ → c < ∞` fixed (which holds on
 the framework's retained Lorentz kernel surface
-`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`), the bound (5) becomes
+[`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)), the bound (5) becomes
 strict: `[O(x), O(y)] = 0` for any pair of operators at points `x, y`
 with spacelike separation in the asymptotic Lorentzian metric.
 
@@ -220,8 +220,8 @@ decay rate `ξ = 1`. ∎
 
 In the lattice → continuum limit `a → 0` with
 `v_LR · a_s / a_τ  =  c < ∞` (the framework's emergent Lorentz
-velocity, retained on `EMERGENT_LORENTZ_INVARIANCE_NOTE.md` and
-`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`), spatial graph distance
+velocity, retained on [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](EMERGENT_LORENTZ_INVARIANCE_NOTE.md) and
+[`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)), spatial graph distance
 `d_phys = d · a_s` and time `t_phys = t · a_τ` satisfy
 `v_LR |t| = c |t_phys| / a_s`. The Lieb-Robinson exponent in (5)
 becomes
@@ -253,7 +253,7 @@ No fitted parameters. No observed values used as proof inputs.
 ## Corollaries
 
 C1. **Spatial cluster decomposition refinement.** Combined with the
-retained `AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`,
+retained [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md),
 (M1)+(M2) refine the *spacetime* decay rate of connected
 correlators on the framework: `<O_x α_t(O_y)>_c → 0` exponentially in
 `d(x, y) - v_LR |t|`.
@@ -314,16 +314,16 @@ bare_retained_allowed: false
 
 ## Citations
 
-- A_min: `docs/MINIMAL_AXIOMS_2026-04-11.md`
+- A_min: [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
 - retained RP support note:
-  `docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
+  [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
 - retained spectrum-condition support note:
-  `docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`
+  [`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)
 - retained cluster-decomposition note:
-  `docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`
+  [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
 - retained emergent Lorentz invariance:
-  `docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md`,
-  `docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`
+  [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
+  [`LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md`](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)
 - standard external references (theorem-grade, no numerical input):
   Lieb-Robinson (1972) *Comm. Math. Phys.* 28, 251;
   Hastings (2004) *Phys. Rev. B* 69, 104431;

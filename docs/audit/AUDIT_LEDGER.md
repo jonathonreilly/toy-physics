@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T16:01:01.077819+00:00
+**Generated:** 2026-05-02T16:15:45.002843+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,28 +19,28 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 149 |
+| **retained** | 147 |
 | **retained_no_go** | 92 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 500 |
+| unaudited | 507 |
 | meta | 35 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 652 |
+| ~~audited_conditional~~ | 647 |
 | ~~audited_failed~~ | 26 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 374 |
-| `audited_conditional` | 652 |
+| `audited_clean` | 372 |
+| `audited_conditional` | 647 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 16 |
-| `unaudited` | 535 |
+| `unaudited` | 542 |
 
 | claim_type | count |
 |---|---:|
@@ -53,10 +53,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 94 |
-| `high` | 340 |
-| `medium` | 413 |
-| `leaf` | 829 |
+| `critical` | 96 |
+| `high` | 339 |
+| `medium` | 428 |
+| `leaf` | 813 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
@@ -74,31 +74,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `alpha_s_derived_note` | bounded_theorem | critical | 278 | 29.62 | `unaudited` | unaudited |
-| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `unaudited` | unaudited |
-| 3 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 28.87 | `audited_conditional` | ~~audited_conditional~~ |
-| 4 | `graph_first_su3_integration_note` | bounded_theorem | critical | 344 | 27.93 | `audited_clean` | **retained_bounded** |
-| 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 283 | 27.65 | `audited_renaming` | ~~audited_renaming~~ |
-| 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 314 | 27.30 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 281 | 24.14 | `unaudited` | unaudited |
-| 8 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 23.70 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `three_generation_observable_theorem_note` | positive_theorem | critical | 328 | 22.36 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `three_generation_structure_note` | positive_theorem | critical | 290 | 21.18 | `audited_conditional` | ~~audited_conditional~~ |
-| 11 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 278 | 21.12 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `one_generation_matter_closure_note` | positive_theorem | critical | 250 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 115 | 20.86 | `audited_conditional` | ~~audited_conditional~~ |
-| 14 | `left_handed_charge_matching_note` | positive_theorem | critical | 291 | 19.69 | `unaudited` | unaudited |
-| 15 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 95 | 19.59 | `audited_conditional` | ~~audited_conditional~~ |
-| 16 | `native_gauge_closure_note` | bounded_theorem | critical | 339 | 18.91 | `audited_clean` | **retained_bounded** |
-| 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 287 | 18.67 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 76 | 17.27 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 283 | 16.65 | `unaudited` | unaudited |
-| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 122 | 16.44 | `unaudited` | unaudited |
-| 21 | `physical_lattice_necessity_note` | no_go | critical | 327 | 16.36 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `rconn_derived_note` | bounded_theorem | critical | 284 | 16.16 | `unaudited` | unaudited |
-| 23 | `higgs_mass_derived_note` | positive_theorem | critical | 279 | 15.63 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `higgs_vacuum_explicit_systematic_note` | positive_theorem | critical | 278 | 15.62 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 129 | 15.52 | `audited_conditional` | ~~audited_conditional~~ |
+| 1 | `alpha_s_derived_note` | bounded_theorem | critical | 289 | 29.68 | `unaudited` | unaudited |
+| 2 | `graph_first_su3_integration_note` | bounded_theorem | critical | 364 | 29.01 | `audited_clean` | **retained_bounded** |
+| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 118 | 28.89 | `unaudited` | unaudited |
+| 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 294 | 27.70 | `audited_renaming` | ~~audited_renaming~~ |
+| 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 325 | 27.35 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `minimal_axioms_2026-04-11` | positive_theorem | critical | 289 | 26.18 | `audited_conditional` | ~~audited_conditional~~ |
+| 8 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 293 | 24.70 | `unaudited` | unaudited |
+| 9 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
+| 10 | `three_generation_observable_theorem_note` | positive_theorem | critical | 346 | 22.44 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `three_generation_structure_note` | positive_theorem | critical | 302 | 21.24 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `one_generation_matter_closure_note` | positive_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `left_handed_charge_matching_note` | positive_theorem | critical | 304 | 20.75 | `unaudited` | unaudited |
+| 15 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
+| 16 | `anomaly_forces_time_theorem` | positive_theorem | critical | 299 | 19.23 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `native_gauge_closure_note` | bounded_theorem | critical | 358 | 18.99 | `audited_clean` | **retained_bounded** |
+| 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
+| 19 | `rconn_derived_note` | bounded_theorem | critical | 296 | 16.71 | `unaudited` | unaudited |
+| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 294 | 16.70 | `unaudited` | unaudited |
+| 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
+| 22 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
+| 23 | `physical_lattice_necessity_note` | no_go | critical | 345 | 16.43 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | critical | 301 | 15.74 | `unaudited` | unaudited |
+| 25 | `higgs_mass_derived_note` | positive_theorem | critical | 290 | 15.69 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -115,10 +115,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | D | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
-| `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
-| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `background_independence_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -508,8 +506,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `audited_symmetry_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `beyond_lattice_qcd_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -705,7 +701,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `edge_deletion_boundary_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `em_gravity_coexistence_2x2_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `emergent_lorentz_invariance_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `emergent_product_law_audit_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `equivalence_principle_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `evolving_network_prototype_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -842,7 +837,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
-| `koide_berry_phase_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_brannen_phase_reduction_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -1075,7 +1069,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_casimir_block_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_curvature_localization_blocker_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `universal_gr_discrete_global_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `universal_gr_invariant_nonlinear_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1881,19 +1874,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The load-bearing theorem is structural rather than a tuned numerical match: support — branch-local theorem note on A_min; runner passing; audit-pending.. The registered runner completed successfully and its classified PASS surface is {'A': 0, 'B': 0, 'C': 5, 'D': 0, 'total_pass': 5}. Residual risk is limited to the support/branch-local scope stated by the note; this does not promote the row beyond its author-declared tier.
 - **auditor confidence:** high
 
-### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Axiom-First Cluster Decomposition / Lieb–Robinson Bound on Cl(3) ⊗ Z^3: the stated finite-lattice/Cl(3) theorem is proved on the listed A_min objects and checked by the registered runner.  _(class `C`)_
-- **chain closes:** True — Yes. The note gives a self-contained structural proof on the stated A_min objects, and the registered runner completed successfully on the load-bearing algebraic checks.
-- **rationale:** The load-bearing theorem is structural rather than a tuned numerical match: support — branch-local theorem note on A_min; runner passing; audit-pending.. The registered runner completed successfully and its classified PASS surface is {'A': 0, 'B': 0, 'C': 3, 'D': 0, 'total_pass': 3}. Residual risk is limited to the support/branch-local scope stated by the note; this does not promote the row beyond its author-declared tier.
-- **auditor confidence:** high
-
 ### `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29`
 
 - **Note:** [`AXIOM_FIRST_COLEMAN_MERMIN_WAGNER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_COLEMAN_MERMIN_WAGNER_THEOREM_NOTE_2026-04-29.md)
@@ -1907,19 +1887,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The load-bearing theorem is structural rather than a tuned numerical match: support — branch-local theorem note on A_min; runner passing; audit-pending.. The registered runner completed successfully and its classified PASS surface is {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'total_pass': 0}. Residual risk is limited to the support/branch-local scope stated by the note; this does not promote the row beyond its author-declared tier.
 - **auditor confidence:** medium
 
-### `axiom_first_cpt_theorem_stretch_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Axiom-First CPT Theorem (Stretch Attempt) on Cl(3) ⊗ Z^3: bounded — branch-local stretch note on canonical A_min; fermion-sector runner passing; Wilson-plaquette SU(3) lift residual stated; audit-pending.  _(class `B`)_
-- **chain closes:** False — No. The note itself leaves the wilson-plaquette su(3) lift as a residual stretch rather than a closed cpt theorem, so the conclusion cannot be ratified from the source note alone.
-- **rationale:** Issue: the note itself leaves the Wilson-plaquette SU(3) lift as a residual stretch rather than a closed CPT theorem. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
-- **auditor confidence:** high
-
 ### `axiom_first_lattice_noether_theorem_note_2026-04-29`
 
 - **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
@@ -1931,34 +1898,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Axiom-First Lattice Noether's Theorem on Cl(3) ⊗ Z^3: the stated finite-lattice/Cl(3) theorem is proved on the listed A_min objects and checked by the registered runner.  _(class `C`)_
 - **chain closes:** True — Yes. The note gives a self-contained structural proof on the stated A_min objects, and the registered runner completed successfully on the load-bearing algebraic checks.
 - **rationale:** The load-bearing theorem is structural rather than a tuned numerical match: support — branch-local theorem note on A_min; runner passing; audit-pending.. The registered runner completed successfully and its classified PASS surface is {'A': 0, 'B': 0, 'C': 2, 'D': 0, 'total_pass': 2}. Residual risk is limited to the support/branch-local scope stated by the note; this does not promote the row beyond its author-declared tier.
-- **auditor confidence:** high
-
-### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action: the stated finite-lattice/Cl(3) theorem is proved on the listed A_min objects and checked by the registered runner.  _(class `C`)_
-- **chain closes:** True — Yes. The note gives a self-contained structural proof on the stated A_min objects, and the registered runner completed successfully on the load-bearing algebraic checks.
-- **rationale:** The load-bearing theorem is structural rather than a tuned numerical match: support — branch-local theorem note on A_min; runner passing; audit-pending.. The registered runner completed successfully and its classified PASS surface is {'A': 0, 'B': 0, 'C': 21, 'D': 0, 'total_pass': 21}. Residual risk is limited to the support/branch-local scope stated by the note; this does not promote the row beyond its author-declared tier.
-- **auditor confidence:** high
-
-### `axiom_first_spectrum_condition_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-bottomup-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** Axiom-First Spectrum Condition (Lattice Analogue) on Cl(3) ⊗ Z^3: support — branch-local theorem note on A_min; runner passing; audit-pending.  _(class `B`)_
-- **chain closes:** False — No. The proof imports the reflection-positivity companion as a load-bearing premise that is not listed as a ledger dependency for this row, so the conclusion cannot be ratified from the source note alone.
-- **rationale:** Issue: the proof imports the reflection-positivity companion as a load-bearing premise that is not listed as a ledger dependency for this row. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
-- **open / conditional deps cited:**
-  - `AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`
 - **auditor confidence:** high
 
 ### `axiom_first_spin_statistics_theorem_note_2026-04-29`
@@ -6383,23 +6322,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_emergent_geometry.py`
 - **auditor confidence:** high
 
-### `emergent_lorentz_invariance_note`
-
-- **Note:** [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](../../docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** On the assumed CPT/parity-protected hierarchy surface a ~ 1/M_Planck, the runner verifies cubic Z3 staggered and Laplacian dispersion, leading O(a^2 p^4) dimension-6 anisotropy, unique l=4 cubic-harmonic angular structure, and Planck-suppressed observable Lorentz violation.  _(class `B`)_
-- **chain closes:** False — The structural-dispersion and cubic-harmonic checks close, but the observable Lorentz-invariance conclusion depends on unregistered bridge premises: exact CPT, exact/tree-level parity protection against lower-dimension LV, and the hierarchy-scale identification a ~ 1/M_Planck.
-- **rationale:** Issue: the registered runner passes the lattice dispersion and angular-structure checks, but the broad claim remains conditional on symmetry and scale bridges that are asserted rather than imported from audit-clean dependencies. Why this blocks: without one-hop ledger dependencies for CPT exactness, parity/operator-basis protection, and the Planck-scale lattice-spacing theorem, the runner's CPT/P/hierarchy checks are not independent derivations of the contested premises. Repair target: register and clean-audit those bridge notes, then update the runner to fail if any bridge is absent or conditional. Claim boundary until fixed: conditional structural theorem that cubic Z3 dispersions have leading dimension-6 l=4 anisotropy and are Planck-suppressed on the stated symmetry/scale surface, not a standalone Lorentz-invariance theorem from the lattice alone.
-- **open / conditional deps cited:**
-  - `CPT_EXACT_NOTE.md_not_registered_one_hop_dependency`
-  - `parity_operator_basis_dimension5_LV_no_go_theorem_not_registered`
-  - `hierarchy_scale_a_equals_planck_length_theorem_not_registered`
-- **auditor confidence:** high
-
 ### `emergent_product_law_audit_2026-04-11`
 
 - **Note:** [`EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md`](../../docs/EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md)
@@ -9561,19 +9483,6 @@ Claim boundary until fixed: safe to claim explicit positive tensor-transfer stru
 - **load-bearing step:** and write `e_+ = (1,1,1)/sqrt(3)`. By the retained algebraic Koide theorem,  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 7 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
-- **auditor confidence:** high
-
-### `koide_berry_phase_theorem_note_2026-04-19`
-
-- **Note:** [`KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** On the exact charged-lepton selected line, the physical phase offset delta(m) is the tautological CP^1 Berry holonomy of the projective C3 doublet ray from the unique unphased point, so solving delta = 2/9 fixes the first-branch point and kappa_sel.  _(class `C`)_
-- **chain closes:** False — The live runner verifies the exact selected-line Berry geometry and scalar-phase bridge with 24 PASS and 0 FAIL. The clean mathematical route does not yet close as a retained physical Brannen-phase claim because the note itself states that the current package has not adopted this theorem stack and that the physical Brannen-phase bridge remains open.
-- **rationale:** Issue: the runner closes the selected-line Berry theorem as an exact mathematical construction, but the source still conditions physical closure on an unretained Brannen-phase bridge and current-main adoption of the theorem stack. Why this blocks: a Berry holonomy equality on the constructed selected route is not by itself a retained physical charged-lepton phase theorem unless the selected route and Brannen phase observable are themselves retained as the physical carrier. Repair target: audit-retain the selected-line physical bridge and the Brannen phase observable mapping, or reclassify this note explicitly as mathematical/provenance support rather than candidate retained-grade physical closure. Claim boundary until fixed: safely claim the runner-verified exact route facts: the ambient S2 monopole closure is false, the actual selected-line projective C3 doublet has tautological connection A=dtheta, the holonomy from m0 equals delta, delta=2/9 gives m_Berry=-1.160443440065, and the old H_* witness is only near-coincident compatibility data.
 - **auditor confidence:** high
 
 ### `koide_brannen_callan_harvey_candidate_note_2026-04-22`
@@ -16877,25 +16786,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
   - `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_gr_discrete_global_closure_note`
-
-- **Note:** [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-round-2`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** The unregistered capstone runner verifies a finite overlap-covariance/action-stationarity patching calculation for K_GR(D)=H_D otimes Lambda_R and checks by text search that positive-background, Lorentzian, global-atlas, and PL S3 x R authority notes exist.  _(class `B`)_
-- **chain closes:** False — The local patching algebra passes, but the claimed global GR closure depends on several upstream route notes and a non-hermetic runner that reads hard-coded files outside the current worktree; the ledger row records no one-hop dependencies or runner path.
-- **rationale:** Issue: the capstone claim is broader than the auditable artifact. Why this blocks: `scripts/frontier_universal_gr_discrete_global_closure.py` passes 5/5, but it imports authority text from `/Users/jonreilly/Projects/Physics` rather than the audited worktree and only checks substring presence plus a finite chart-overlap algebra toy; it does not independently prove the positive-background, Lorentzian-signature, global-atlas, or PL S3 x R inputs. Repair target: register the runner in the ledger, make it repo-root relative, add audited one-hop dependencies for each route component, and scope the theorem to discrete-global stationary action patching unless/until continuum GR interpretation is separately proved. Claim boundary until fixed: conditional capstone over supplied direct-universal GR route notes, not a standalone audited full-GR closure theorem.
-- **open / conditional deps cited:**
-  - `scripts/frontier_universal_gr_discrete_global_closure.py hard-coded external ROOT`
-  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
-  - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
-  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
-  - `S3_ANOMALY_SPACETIME_LIFT_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_invariant_frame_obstruction_note`

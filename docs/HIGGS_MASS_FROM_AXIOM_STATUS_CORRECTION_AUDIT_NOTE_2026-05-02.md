@@ -63,7 +63,7 @@ non-perturbative input cannot be derived from standard QFT alone.
 ```yaml
 # higgs_mass_from_axiom_note (parent)
 current_status: bounded support theorem  # was: support
-audit_status: audited_conditional          # unchanged
+audit ledger verdict remains conditional; no review-side change
 proposal_allowed: false
 proposal_allowed_reason: |
   Same-shape lattice-physical matching obstruction as cycles 5 and 9.

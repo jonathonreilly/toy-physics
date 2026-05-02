@@ -14,7 +14,7 @@ single audit-graph entry for the LHCM repair chain.
 
 ## 0. Summary
 
-`LEFT_HANDED_CHARGE_MATCHING_NOTE.md` was flagged as `audited_conditional`
+[`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) was flagged as `audited_conditional`
 with three named verdict-residuals (matter assignment, U(1)_Y normalization,
 anomaly-complete chiral completion). The audit-backlog campaign's cycles
 1–5, together with PR #253 and `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS`,
@@ -33,10 +33,10 @@ labelling context", LHCM can lift to retained.
 
 | LHCM item | Closure | Status | Authority |
 |-----|---|---|---|
-| (1) matter assignment Sym²(3) ↔ Q_L, Anti²(1) ↔ L_L | cycle 2 (PR #255) | exact-support modulo SM-definition labels | `LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md` |
-| (2) U(1)_Y normalization α = +1 | cycle 3 (PR #256) | exact-support modulo Q_e = −1 convention | `LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md` |
-| (3) anomaly LH SU(2)²×U(1)_Y | PR #253 | exact-support | `LH_DOUBLET_SU2_SQUARED_HYPERCHARGE_ANOMALY_CANCELLATION_NOTE_2026-05-01.md` (open PR) |
-| (3) anomaly R-A SU(3)²×Y | cycle 1 (PR #254) | exact-support | `RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md` |
+| (1) matter assignment Sym²(3) ↔ Q_L, Anti²(1) ↔ L_L | cycle 2 (PR #255) | exact-support modulo SM-definition labels | [`LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md`](LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md) |
+| (2) U(1)_Y normalization α = +1 | cycle 3 (PR #256) | exact-support modulo Q_e = −1 convention | [`LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md`](LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md) |
+| (3) anomaly LH SU(2)²×U(1)_Y | PR #253 | exact-support | [`LH_DOUBLET_SU2_SQUARED_HYPERCHARGE_ANOMALY_CANCELLATION_NOTE_2026-05-01.md`](LH_DOUBLET_SU2_SQUARED_HYPERCHARGE_ANOMALY_CANCELLATION_NOTE_2026-05-01.md) (open PR) |
+| (3) anomaly R-A SU(3)²×Y | cycle 1 (PR #254) | exact-support | [`RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md`](RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md) |
 | (3) anomaly R-B Y³ | cycle 1 (PR #254) | exact-support | (same) |
 | (3) anomaly R-C grav²×Y | cycle 1 (PR #254) | exact-support | (same) |
 | RH hypercharge uniqueness from (R-A,B,C) + Y(ν_R)=0 + Q(u_R)>0 | `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24` | proposed_retained / unaudited | (same) |
@@ -156,18 +156,18 @@ bare_retained_allowed: false
 
 ### Closure chain
 
-- `LEFT_HANDED_CHARGE_MATCHING_NOTE.md` — parent (audited_conditional)
-- `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md` — retained primitive (td=312)
-- `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md` — retained primitive (td=311)
-- `LH_DOUBLET_SU2_SQUARED_HYPERCHARGE_ANOMALY_CANCELLATION_NOTE_2026-05-01.md` — PR #253 (open)
-- `RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md` — PR #254 (cycle 1)
-- `LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md` — PR #255 (cycle 2)
-- `LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md` — PR #256 (cycle 3)
-- `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md` — proposed_retained, unaudited (sister)
+- [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) — parent (audited_conditional)
+- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — retained primitive (td=312)
+- [`GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md`](GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md) — retained primitive (td=311)
+- [`LH_DOUBLET_SU2_SQUARED_HYPERCHARGE_ANOMALY_CANCELLATION_NOTE_2026-05-01.md`](LH_DOUBLET_SU2_SQUARED_HYPERCHARGE_ANOMALY_CANCELLATION_NOTE_2026-05-01.md) — PR #253 (open)
+- [`RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md`](RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md) — PR #254 (cycle 1)
+- [`LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md`](LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md) — PR #255 (cycle 2)
+- [`LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md`](LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md) — PR #256 (cycle 3)
+- [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md) — proposed_retained, unaudited (sister)
 
 ### Audit chain
 
-- `HYPERCHARGE_IDENTIFICATION_NOTE.md` — audited_renaming (sister algebra)
-- `LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md` — audited_conditional
-- `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md` — audited_conditional
-- `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md` — audited_conditional
+- [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) — audited_renaming (sister algebra)
+- [`LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md) — audited_conditional
+- [`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md) — audited_conditional
+- [`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md) — audited_conditional
