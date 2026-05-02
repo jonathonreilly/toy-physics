@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:21:33.871073+00:00
+**Generated:** 2026-05-02T22:24:15.762023+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 189 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 541 |
+| unaudited | 540 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 641 |
+| ~~audited_conditional~~ | 642 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 386 |
-| `audited_conditional` | 641 |
+| `audited_conditional` | 642 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 577 |
+| `unaudited` | 576 |
 
 | claim_type | count |
 |---|---:|
@@ -522,6 +522,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `audited_symmetry_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `beyond_lattice_qcd_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1861,6 +1862,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Conditional lattice reflection-positivity theorem for the canonical CL3-on-Z3 staggered-Dirac plus Wilson SU(3) plaquette action and its transfer-matrix/Hilbert-space consequences; not retained until the cited canonical-surface, spin-statistics, determinant-positivity, and g_bare authorities are retained-grade and the full-action RP bridge is explicit.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The two factorisations (7) and (10) commute because the gauge sector is integrated against a positive Haar measure and the fermion sector gives a real positive determinant on the canonical surface; the product of two positive measures is a positive measure.  _(class `B`)_
+- **chain closes:** False — The full-action RP conclusion is imported through standard RP factorization references and several cited project authorities that are currently unaudited or conditional. The runner passes only narrower free-fermion/U(1)/Gram-matrix exhibits and does not establish the interacting SU(3) staggered-plus-Wilson theorem or the unsubtracted T <= 1 sentence.
+- **rationale:** Issue: the load-bearing RP step depends on external lattice factorization theorems plus project authorities for A_min/canonical surface, spin-statistics, determinant positivity, and g_bare normalization that are not all retained-grade; the registered runner only exercises structural toy representatives and reports T max > 1 before ground-state subtraction. Why this blocks: the ledger cannot treat the broad interacting SU(3) reflection-positivity theorem as derived from retained inputs when the actual bridge and cited authorities remain outside retained closure. Repair target: retain or explicitly declare the needed one-hop authorities, prove the determinant/crossing-bilinear/full-action RP bridge on the canonical surface, and update the runner/note so the T <= 1 claim is demonstrated only after the stated subtraction. Claim boundary until fixed: the runner provides passing finite structural exhibits of Hermitian/positive transfer matrices and RP-style Gram positivity, but the full canonical action theorem remains conditional.
+- **open / conditional deps cited:**
+  - `ASSUMPTION_DERIVATION_LEDGER.md`
+  - `AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`
+  - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
+  - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
+  - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `axiom_reduction_note`
