@@ -84,6 +84,7 @@ def main() -> int:
         "flat_toron_denominator": load("outputs/yt_flat_toron_scalar_denominator_obstruction_2026-05-01.json"),
         "flat_toron_washout": load("outputs/yt_flat_toron_thermodynamic_washout_2026-05-01.json"),
         "color_singlet_zero_mode": load("outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json"),
+        "color_singlet_finite_q_ir": load("outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json"),
         "ladder_ir_zero_mode": load("outputs/yt_scalar_ladder_ir_zero_mode_obstruction_2026-05-01.json"),
         "heavy_kinetic": load("outputs/yt_heavy_kinetic_mass_route_2026-05-01.json"),
         "nonzero_momentum": load("outputs/yt_nonzero_momentum_correlator_scout_2026-05-01.json"),
@@ -316,6 +317,12 @@ def main() -> int:
         "color-singlet gauge-zero-mode cancellation" in str(statuses["color_singlet_zero_mode"])
         or "exact-support" in str(statuses["color_singlet_zero_mode"]),
         statuses["color_singlet_zero_mode"],
+    )
+    report(
+        "color-singlet-finite-q-ir-regularity-not-closure",
+        "color-singlet finite-q IR regularity" in str(statuses["color_singlet_finite_q_ir"])
+        or "exact-support" in str(statuses["color_singlet_finite_q_ir"]),
+        statuses["color_singlet_finite_q_ir"],
     )
     report(
         "finite-ladder-route-needs-ir-limit",

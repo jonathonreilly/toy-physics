@@ -1,0 +1,243 @@
+{
+  "actual_current_surface_status": "exact-support / color-singlet finite-q IR regularity",
+  "fail_count": 0,
+  "parameters": {
+    "ir_mu_sq_values": [
+      0.1,
+      0.05,
+      0.02,
+      0.01,
+      0.0
+    ],
+    "ir_power_after_measure": 2,
+    "sizes": [
+      8,
+      12,
+      16,
+      20,
+      24,
+      32
+    ]
+  },
+  "parent_certificate": "outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json",
+  "pass_count": 6,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite-q IR regularity removes one obstruction but does not determine the scalar pole derivative.",
+  "remaining_blockers": [
+    "derive the full interacting color-singlet scalar kernel rather than only its finite-q IR regularity",
+    "derive or measure the scalar pole location and inverse-propagator derivative",
+    "derive source/projector normalization and finite-Nc continuum control",
+    "run production FH/LSZ evidence with the color-singlet zero-mode prescription fixed"
+  ],
+  "scan": [
+    {
+      "grid_size_4d": 8,
+      "ir_mu_sq": 0.1,
+      "zero_mode_included_kernel_average": 0.15175654954502782,
+      "zero_mode_removed_kernel_average": 0.14935160608948325
+    },
+    {
+      "grid_size_4d": 8,
+      "ir_mu_sq": 0.05,
+      "zero_mode_included_kernel_average": 0.15588659495904203,
+      "zero_mode_removed_kernel_average": 0.15104065761959365
+    },
+    {
+      "grid_size_4d": 8,
+      "ir_mu_sq": 0.02,
+      "zero_mode_included_kernel_average": 0.16426410284830442,
+      "zero_mode_removed_kernel_average": 0.15209420397232112
+    },
+    {
+      "grid_size_4d": 8,
+      "ir_mu_sq": 0.01,
+      "zero_mode_included_kernel_average": 0.17682952945824576,
+      "zero_mode_removed_kernel_average": 0.15245268685249685
+    },
+    {
+      "grid_size_4d": 8,
+      "ir_mu_sq": 0.0,
+      "zero_mode_included_kernel_average": null,
+      "zero_mode_removed_kernel_average": 0.15281501518930116
+    },
+    {
+      "grid_size_4d": 12,
+      "ir_mu_sq": 0.1,
+      "zero_mode_included_kernel_average": 0.15061846674707055,
+      "zero_mode_removed_kernel_average": 0.15014345437507856
+    },
+    {
+      "grid_size_4d": 12,
+      "ir_mu_sq": 0.05,
+      "zero_mode_included_kernel_average": 0.1529422439083246,
+      "zero_mode_removed_kernel_average": 0.1519850672622628
+    },
+    {
+      "grid_size_4d": 12,
+      "ir_mu_sq": 0.02,
+      "zero_mode_included_kernel_average": 0.15556106040475437,
+      "zero_mode_removed_kernel_average": 0.15315718102498127
+    },
+    {
+      "grid_size_4d": 12,
+      "ir_mu_sq": 0.01,
+      "zero_mode_included_kernel_average": 0.1583763029891658,
+      "zero_mode_removed_kernel_average": 0.15356117766015634
+    },
+    {
+      "grid_size_4d": 12,
+      "ir_mu_sq": 0.0,
+      "zero_mode_included_kernel_average": null,
+      "zero_mode_removed_kernel_average": 0.15397258299063657
+    },
+    {
+      "grid_size_4d": 16,
+      "ir_mu_sq": 0.1,
+      "zero_mode_included_kernel_average": 0.15050606863153715,
+      "zero_mode_removed_kernel_average": 0.150355774987967
+    },
+    {
+      "grid_size_4d": 16,
+      "ir_mu_sq": 0.05,
+      "zero_mode_included_kernel_average": 0.15257331245873784,
+      "zero_mode_removed_kernel_average": 0.15227046014031959
+    },
+    {
+      "grid_size_4d": 16,
+      "ir_mu_sq": 0.02,
+      "zero_mode_included_kernel_average": 0.1542713865658559,
+      "zero_mode_removed_kernel_average": 0.1535107895014867
+    },
+    {
+      "grid_size_4d": 16,
+      "ir_mu_sq": 0.01,
+      "zero_mode_included_kernel_average": 0.15546762896941818,
+      "zero_mode_removed_kernel_average": 0.1539440990637032
+    },
+    {
+      "grid_size_4d": 16,
+      "ir_mu_sq": 0.0,
+      "zero_mode_included_kernel_average": null,
+      "zero_mode_removed_kernel_average": 0.15438929565289747
+    },
+    {
+      "grid_size_4d": 20,
+      "ir_mu_sq": 0.1,
+      "zero_mode_included_kernel_average": 0.1504897745216805,
+      "zero_mode_removed_kernel_average": 0.1504282146980224
+    },
+    {
+      "grid_size_4d": 20,
+      "ir_mu_sq": 0.05,
+      "zero_mode_included_kernel_average": 0.15250327487103776,
+      "zero_mode_removed_kernel_average": 0.15237922724120798
+    },
+    {
+      "grid_size_4d": 20,
+      "ir_mu_sq": 0.02,
+      "zero_mode_included_kernel_average": 0.1539720415576658,
+      "zero_mode_removed_kernel_average": 0.1536605019358029
+    },
+    {
+      "grid_size_4d": 20,
+      "ir_mu_sq": 0.01,
+      "zero_mode_included_kernel_average": 0.15473785582663582,
+      "zero_mode_removed_kernel_average": 0.15411381903800483
+    },
+    {
+      "grid_size_4d": 20,
+      "ir_mu_sq": 0.0,
+      "zero_mode_included_kernel_average": null,
+      "zero_mode_removed_kernel_average": 0.1545841063402967
+    },
+    {
+      "grid_size_4d": 24,
+      "ir_mu_sq": 0.1,
+      "zero_mode_included_kernel_average": 0.1504868977102487,
+      "zero_mode_removed_kernel_average": 0.1504572103826855
+    },
+    {
+      "grid_size_4d": 24,
+      "ir_mu_sq": 0.05,
+      "zero_mode_included_kernel_average": 0.15248674029808693,
+      "zero_mode_removed_kernel_average": 0.15242691808948258
+    },
+    {
+      "grid_size_4d": 24,
+      "ir_mu_sq": 0.02,
+      "zero_mode_included_kernel_average": 0.15388358503408942,
+      "zero_mode_removed_kernel_average": 0.1537333443094569
+    },
+    {
+      "grid_size_4d": 24,
+      "ir_mu_sq": 0.01,
+      "zero_mode_included_kernel_average": 0.1545016531814381,
+      "zero_mode_removed_kernel_average": 0.15420070977597714
+    },
+    {
+      "grid_size_4d": 24,
+      "ir_mu_sq": 0.0,
+      "zero_mode_included_kernel_average": null,
+      "zero_mode_removed_kernel_average": 0.15469043346284586
+    },
+    {
+      "grid_size_4d": 32,
+      "ir_mu_sq": 0.1,
+      "zero_mode_included_kernel_average": 0.15048620542931648,
+      "zero_mode_removed_kernel_average": 0.1504768121920234
+    },
+    {
+      "grid_size_4d": 32,
+      "ir_mu_sq": 0.05,
+      "zero_mode_included_kernel_average": 0.1524809757746474,
+      "zero_mode_removed_kernel_average": 0.1524620476874584
+    },
+    {
+      "grid_size_4d": 32,
+      "ir_mu_sq": 0.02,
+      "zero_mode_included_kernel_average": 0.15384174427608077,
+      "zero_mode_removed_kernel_average": 0.1537942072298459
+    },
+    {
+      "grid_size_4d": 32,
+      "ir_mu_sq": 0.01,
+      "zero_mode_included_kernel_average": 0.15437402965349256,
+      "zero_mode_removed_kernel_average": 0.15427880935358995
+    },
+    {
+      "grid_size_4d": 32,
+      "ir_mu_sq": 0.0,
+      "zero_mode_included_kernel_average": null,
+      "zero_mode_removed_kernel_average": 0.1547965051589086
+    }
+  ],
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use H_unit matrix elements or yt_ward_identity as authority",
+    "does not use observed top mass or observed y_t as selectors",
+    "does not use alpha_LM, plaquette, u0, or reduced pilots as proof inputs",
+    "does not set c2 = 1 or Z_match = 1"
+  ],
+  "theorem_statement": "In d=4, excluding the color-singlet-cancelled q=0 mode, the massless gauge kernel 1/q^2 is locally integrable because d^4q/q^2 ~ q dq near q=0.",
+  "verdict": "After the exact q=0 gauge mode cancels in the color-singlet channel, the remaining finite-q massless kernel is locally integrable in four dimensions.  The zero-mode-removed lattice kernel has a finite mu_IR -> 0 limit and a stable large-volume sequence in the scan.  This supports the color-singlet scalar denominator route, but it does not derive an isolated scalar pole, the inverse-propagator derivative, finite-Nc continuum control, or production FH/LSZ evidence.",
+  "witnesses": {
+    "included_ir_ratios": {
+      "N16_included_mu1e-6_over_mu0_10": 102.40899983196059,
+      "N16_included_mu1e-6_over_removed_mu0": 99.83319045543475,
+      "N32_included_mu1e-6_over_mu0_10": 7.365928437368036,
+      "N32_included_mu1e-6_over_removed_mu0": 7.160824586223661,
+      "N8_included_mu1e-6_over_mu0_10": 1609.771725851813,
+      "N8_included_mu1e-6_over_removed_mu0": 1598.6217216141663
+    },
+    "removed_ratios_fixed_n": {
+      "N12_mu0_over_mu0_10": 1.0255031338628477,
+      "N16_mu0_over_mu0_10": 1.0268265097582934,
+      "N20_mu0_over_mu0_10": 1.02762707548326,
+      "N24_mu0_over_mu0_10": 1.0281357275559824,
+      "N32_mu0_over_mu0_10": 1.0287067017433413,
+      "N8_mu0_over_mu0_10": 1.0231896341157711
+    },
+    "zero_mode_removed_mu0_volume_spread_N_ge_16": 1.0026375501247615
+  }
+}

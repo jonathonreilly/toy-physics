@@ -337,3 +337,19 @@ Adds color-singlet gauge-zero-mode cancellation support:
   interacting pole derivative, source/projector normalization, and production
   FH/LSZ evidence remain open.
 ```
+
+Latest color-singlet finite-q IR regularity checkpoint text for PR #230:
+
+```text
+Adds color-singlet finite-q IR regularity support:
+- after exact q=0 cancellation, proves the remaining massless kernel is
+  locally integrable in four dimensions (`d^4q/q^2 ~ q dq`);
+- validator passes `PASS=6 FAIL=0`; retained-route gate reports
+  `PASS=25 FAIL=0`; campaign status now consumes 55 route certificates and
+  reports `PASS=51 FAIL=0`;
+- zero-mode-removed lattice kernel has a stable `mu_IR -> 0` limit and stable
+  large-volume sequence on the scan;
+- still no retained/proposed-retained closure: interacting scalar pole
+  location, inverse-propagator derivative, finite-`N_c` residue, and
+  production FH/LSZ evidence remain open.
+```

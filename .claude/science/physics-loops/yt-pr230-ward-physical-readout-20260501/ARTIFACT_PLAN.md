@@ -32,6 +32,12 @@ Completed in block 1:
 - `scripts/frontier_yt_retained_closure_route_certificate.py`
 - `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
 - `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_color_singlet_finite_q_ir_regular.py`
+- `outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json`
+- `docs/YT_COLOR_SINGLET_FINITE_Q_IR_REGULAR_NOTE_2026-05-01.md`
+- `scripts/frontier_yt_retained_closure_route_certificate.py`
+- `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
+- `docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md`
 - `scripts/frontier_yt_color_singlet_zero_mode_cancellation.py`
 - `outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json`
 - `docs/YT_COLOR_SINGLET_ZERO_MODE_CANCELLATION_NOTE_2026-05-01.md`
@@ -281,7 +287,9 @@ Next artifact:
   thermodynamic limit, leaving the massless gauge-zero-mode/IR and pole
   derivative theorem as the active analytic blocker; exact color-singlet
   zero-mode cancellation removes the q=0 gauge divergence but leaves finite-q
-  IR and pole derivative control open
+  IR and pole derivative control open; finite-q IR regularity removes the
+  massless IR divergence concern, leaving the interacting pole derivative as
+  the active analytic blocker
 
 Goal for next artifact: either produce physical measurement evidence at a
 suitable scale/heavy-quark treatment, or derive the scalar projector,

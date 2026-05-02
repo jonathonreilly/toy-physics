@@ -63,6 +63,7 @@ def main() -> int:
         "flat_toron_denominator": "outputs/yt_flat_toron_scalar_denominator_obstruction_2026-05-01.json",
         "flat_toron_washout": "outputs/yt_flat_toron_thermodynamic_washout_2026-05-01.json",
         "color_singlet_zero_mode": "outputs/yt_color_singlet_zero_mode_cancellation_2026-05-01.json",
+        "color_singlet_finite_q_ir": "outputs/yt_color_singlet_finite_q_ir_regular_2026-05-01.json",
         "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
         "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
@@ -148,6 +149,10 @@ def main() -> int:
     color_singlet_zero_mode_not_closure = (
         "color-singlet gauge-zero-mode cancellation" in certificates["color_singlet_zero_mode"].get("actual_current_surface_status", "")
         and certificates["color_singlet_zero_mode"].get("proposal_allowed") is False
+    )
+    color_singlet_finite_q_ir_not_closure = (
+        "color-singlet finite-q IR regularity" in certificates["color_singlet_finite_q_ir"].get("actual_current_surface_status", "")
+        and certificates["color_singlet_finite_q_ir"].get("proposal_allowed") is False
     )
     cl3_source_unit_blocks_kappa = (
         "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
@@ -245,6 +250,11 @@ def main() -> int:
         certificates["color_singlet_zero_mode"].get("actual_current_surface_status", ""),
     )
     report(
+        "color-singlet-finite-q-ir-regularity-not-closure",
+        color_singlet_finite_q_ir_not_closure,
+        certificates["color_singlet_finite_q_ir"].get("actual_current_surface_status", ""),
+    )
+    report(
         "cl3-source-unit-does-not-fix-kappa",
         cl3_source_unit_blocks_kappa,
         certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
@@ -318,9 +328,10 @@ def main() -> int:
             "and common dressing.  Flat toron finite-volume dependence washes "
             "out for the local massive bubble in the thermodynamic limit, and "
             "the exact q=0 gauge mode cancels in a color singlet when self and "
-            "exchange terms are included.  The finite-q IR kernel, pole "
-            "derivative theorem, and production evidence remain open.  These "
-            "cannot be assumed."
+            "exchange terms are included.  The remaining finite-q kernel is "
+            "IR-regular in four dimensions.  The actual interacting scalar "
+            "pole derivative theorem and production evidence remain open.  "
+            "These cannot be assumed."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",

@@ -72,7 +72,9 @@ probability.
    the massless gauge-zero-mode/IR prescription or pole derivative.  The
    color-singlet zero-mode theorem now removes the exact `q=0` gauge
    divergence from the singlet kernel, so the remaining analytic target is the
-   finite-`q` IR kernel and pole derivative.
+   finite-`q` IR kernel and pole derivative.  The finite-`q` IR regularity
+   block removes the IR divergence concern too; the hard target is now the
+   interacting pole location and inverse-propagator derivative.
 4. **Feynman-Hellmann scalar-response route.** Energy slopes with respect to a
    uniform scalar source bypass the absolute heavy rest-mass ambiguity.  This
    is a promising alternate measurement design, but it still requires
@@ -134,7 +136,8 @@ probability.
    prescription explicit, while the washout support says only the local
    massive finite-volume toron ambiguity is removable by the thermodynamic
    limit.  The color-singlet cancellation further justifies a q=0-removed
-   singlet kernel, but not the finite-q interacting denominator.
+   singlet kernel, and finite-`q` regularity removes the remaining massless IR
+   divergence concern, but neither gives the interacting pole derivative.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

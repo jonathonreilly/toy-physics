@@ -506,3 +506,20 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=50 FAIL=0
 ```
+
+Color-singlet finite-`q` IR regularity checkpoint:
+
+```text
+actual_current_surface_status: exact-support / color-singlet finite-q IR regularity
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_color_singlet_finite_q_ir_regular.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=25 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=51 FAIL=0
+```

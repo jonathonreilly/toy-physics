@@ -767,6 +767,21 @@ exchange-only finite-ladder `q=0` divergence, but finite-`q` IR behavior,
 the interacting scalar pole derivative, source/projector normalization, and
 production FH/LSZ evidence remain open.
 
+Color-singlet finite-`q` IR divergence concern is removed, but closure remains
+open:
+
+```text
+python3 scripts/frontier_yt_color_singlet_finite_q_ir_regular.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+After the exact color-singlet `q=0` cancellation, the remaining massless kernel
+is locally integrable in four dimensions: `d^4q/q^2 ~ q dq`.  The
+zero-mode-removed finite lattice kernel has a stable `mu_IR -> 0` limit and
+stable large-volume sequence in the scan.  This does not derive the full
+interacting scalar denominator, pole location, LSZ derivative, or production
+evidence.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

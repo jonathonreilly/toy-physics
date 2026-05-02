@@ -344,4 +344,8 @@ by itself.  The color-singlet zero-mode cancellation block then removes the
 exact `q=0` gauge mode from the singlet denominator: total color charge
 annihilates the scalar singlet, and self plus exchange pieces cancel.  The
 live analytic blocker is now finite-`q` IR behavior and the interacting pole
-derivative in that color-singlet kernel.
+derivative in that color-singlet kernel.  The finite-`q` IR regularity block
+then removes the remaining massless IR divergence concern: after `q=0`
+cancellation, `d^4q/q^2` is locally integrable.  The live blocker is now the
+interacting color-singlet scalar pole location and inverse-propagator
+derivative, or production FH/LSZ data.

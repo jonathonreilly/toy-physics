@@ -6,6 +6,7 @@
     "bs_kernel_residue_degeneracy": "exact negative boundary / scalar Bethe-Salpeter pole-residue degeneracy",
     "canonical_scalar_import": "exact negative boundary / canonical scalar normalization import audit",
     "cl3_source_unit": "exact negative boundary / Cl3 source-unit normalization no-go",
+    "color_singlet_finite_q_ir": "exact-support / color-singlet finite-q IR regularity",
     "color_singlet_zero_mode": "exact-support / color-singlet gauge-zero-mode cancellation",
     "direct_scale": "scale requirement / direct measurement route open",
     "feshbach_response": "exact support / Feshbach response boundary",
@@ -57,7 +58,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 50,
+  "pass_count": 51,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

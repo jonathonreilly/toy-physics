@@ -317,6 +317,17 @@ when self and exchange pieces are included together.  This permits a
 zero-mode-removed color-singlet scalar kernel as exact support, but does not
 derive the finite-`q` IR behavior or the pole derivative.
 
+Color-singlet finite-`q` IR regularity:
+
+```text
+d^4q / q^2 ~ q dq near q=0
+```
+
+After the exact `q=0` cancellation, the remaining massless gauge kernel is
+locally integrable in four dimensions.  This removes the finite-`q` IR
+divergence concern but still does not derive the interacting scalar pole or
+inverse-propagator derivative.
+
 Source-reparametrization gauge boundary:
 
 ```text
