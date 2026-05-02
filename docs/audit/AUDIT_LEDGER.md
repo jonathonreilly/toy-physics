@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:43:10.964405+00:00
+**Generated:** 2026-05-02T21:46:03.650837+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 3 |
-| unaudited | 552 |
+| unaudited | 551 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 24 |
+| ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 635 |
 | ~~audited_failed~~ | 1 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 635 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
-| `audited_numerical_match` | 24 |
+| `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 588 |
+| `unaudited` | 587 |
 
 | claim_type | count |
 |---|---:|
@@ -1182,6 +1182,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_coupling_derivation_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
+| `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh | G | - |
 | `mirror_chokepoint_boundary_fit_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -10244,6 +10245,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`
   - `KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`
   - `SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19`
+
+- **Note:** [`KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`](../../docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Whether the Z3 scalar potential note derives a charged-lepton mass tower / Koide mass values, rather than only the local Clifford-trace coefficients of V(m).
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-koide-z3-scalar-tower-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** At the physical m_*, the Koide triplet satisfies Q = 2/3 on the cone; after one overall scale factor, the slot direction reproduces all three charged-lepton masses.  _(class `G`)_
+- **chain closes:** False — The local identities T_m^2 = I_3, Tr(T_m^2)=3, and Tr(T_m^3)=1 close for the displayed matrix, but they do not select m_*, fix the mass scale, or derive the charged-lepton slot-to-generation map. The note itself states that V_eff does not select the physical point and that the overall scale remains to be derived.
+- **rationale:** Issue: the claimed lepton mass tower/Koide mass agreement is obtained at an imported physical m_* with an admitted one-overall-scale fit/readout, not derived from the displayed scalar potential. Why this blocks: V(m) has its minimum at m_V approx -0.433, while the physical m_* approx -1.1605 is selected by external H_* witness/comparator machinery; no mass-unit, Yukawa normalization, scale theorem, or generation assignment is derived here. Repair target: provide a retained theorem and runner deriving m_*, the physical mass scale, and the slot-to-lepton map from lattice primitives without PDG/comparator tuning. Claim boundary until fixed: the note may claim the local Clifford-trace coefficient assignment g_2 = 3/2 and g_3 = 1/6 for the displayed T_m, plus explicitly conditional/numerical observations about Koide mass agreement.
 - **auditor confidence:** high
 
 ### `koide_z3_scalar_potential_support_note_2026-04-19`
