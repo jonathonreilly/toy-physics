@@ -1,0 +1,88 @@
+slug: audit-backlog-campaign-20260502
+mode: campaign
+started_at: 2026-05-02T01:08:29Z
+runtime_budget: 24h
+target_stop_time: 2026-05-03T01:08:29Z
+checkpoint_interval: 30m
+deep_block: 90m
+max_cycles: 30
+target_status: retained
+no_pr: false
+no_review_loop: false
+
+current_cycle: 0
+current_block: pre-cycle-1
+current_route: null
+current_branch: claude/focused-leakey-b7836e
+campaign_base_branch: campaign-base-20260502  # to be created from origin/main
+hard_residual: null
+A_min: null
+forbidden_imports:
+  - PDG observed values for the target lane
+  - literature numerical comparators (only as audit comparators with explicit role label)
+  - fitted selectors
+  - admitted unit conventions when retention claim depends on them
+  - same-surface family arguments (e.g., A^2 conventions for CKM)
+
+retained_primitives_available:
+  - graph_first_su3_integration_note (retained, td=312)
+  - graph_first_selector_derivation_note (retained, td=311)
+  - native_gauge_closure_note (retained, td=308)
+  - cpt_exact_note (retained)
+  - electric_sign_law_note (retained)
+  - electrostatics_card_note (retained)
+  - distance_law_3d_64_closure_note_2026-04-11 (retained)
+  - charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27 (retained)
+  - PR #249 Fierz-channel exact (N_c^2-1)/N_c^2 derivation
+  - PR #253 SU(2)^2*U(1)_Y anomaly cancellation for LH doublets
+
+queue_seed:
+  - candidate: alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30
+    descendants: 259
+    audit_status: unaudited
+    deps_clean: 1/2 (graph_first_su3=retained; minimal_axioms=conditional)
+    likely_route: dependency-firewall theorem (g_bare=1 selection structural-only) + verify runner
+  - candidate: kubo_fam2_refinement_note
+    descendants: 1
+    audit_status: unaudited
+    deps_clean: 0/1 (kubo_continuum_limit_families_note=conditional; cyclic)
+    likely_route: fresh-context cert with cycle resolution
+  - candidate: left_handed_charge_matching_note
+    descendants: 267
+    audit_status: audited_conditional
+    deps_clean: 2/2 retained
+    likely_route: stretch attempt — derive Y normalization on graph-first surface
+  - candidate: yt_ew_color_projection_theorem (matching rule M)
+    descendants: 261
+    audit_status: audited_conditional
+    deps_clean: 0/2 (rconn=conditional; ew_current_matching=conditional)
+    likely_route: stretch attempt — physical EW current to adjoint channel matching theorem
+  - candidate: physical_lattice_necessity_note
+    descendants: 301
+    audit_status: audited_conditional
+    deps_clean: deps=[]; runner imports undeclared
+    likely_route: dependency declaration repair / demotion
+
+cycles_completed:
+  - cycle: 0
+    label: grounding
+    output: loop pack initialized
+    audited: []
+    pr: null
+    pr_status: null
+    next_action: build OPPORTUNITY_QUEUE.md from full audit ledger and pick cycle 1 target
+
+stop_condition: runtime exhausted OR 30 cycles OR refreshed queue globally blocked
+
+review_findings: []
+imports_retired: []
+imports_newly_exposed: []
+artifacts_created: []
+checks_run: []
+
+next_exact_action: |
+  Build OPPORTUNITY_QUEUE.md by mining audit_ledger.json for retained-positive
+  candidates with: (a) high transitive descendants, (b) named-residual
+  tractability, (c) high dep retention fraction, (d) independent of recent
+  no-go ledger. Pick top candidate, write GOAL.md and ROUTE_PORTFOLIO.md for
+  cycle 1, then launch.
