@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T22:46:05.698128+00:00
+**Generated:** 2026-05-02T22:50:36.732490+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 98 |
 | **retained_bounded** | 190 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 4 |
-| unaudited | 530 |
+| open_gate | 5 |
+| unaudited | 529 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 388 |
+| `audited_clean` | 389 |
 | `audited_conditional` | 647 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 566 |
+| `unaudited` | 565 |
 
 | claim_type | count |
 |---|---:|
@@ -451,6 +451,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -16188,6 +16189,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** PASS means only that the bounded harness and the selected child gates passed.  _(class `B`)_
 - **chain closes:** False — The harness-level statement closes only as a wrapper over named child scripts and their emitted gates. It does not close a bounded teleportation theorem because the acceptance gates are imported from preselected child artifacts, and strict-lane output still reports selector/scaling/hardware/nature-grade closure as conditional or on HOLD.
 - **rationale:** Issue: the runner does not independently derive teleportation acceptance criteria; it executes a curated list of child scripts with fixed arguments, parses their PASS/FAIL gates, and summarizes selected metrics. Why this blocks: a PASS is therefore a certificate aggregation over preselected probes, not a theorem that native preparation, durable records, taste-only hardware readout, Bell apparatus dynamics, scaling, or selector closure follows from retained inputs. Repair target: provide a retained theorem and runner that constructs the acceptance criteria and physical bridges directly, with selector/scaling/hardware gates proved rather than accepted as child-script premises. Claim boundary until fixed: the note may claim only bounded telemetry that the current selected harness probes passed and that no matter/object/FTL or hardware closure is established.
+- **auditor confidence:** high
+
+### `teleportation_bell_measurement_circuit_note`
+
+- **Note:** [`TELEPORTATION_BELL_MEASUREMENT_CIRCUIT_NOTE.md`](../../docs/TELEPORTATION_BELL_MEASUREMENT_CIRCUIT_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** An ideal logical/taste Bell-measurement decomposition is verified algebraically, but the native physical gate/readout/apparatus implementation remains an explicit open dependency.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-teleportation-bell-measurement-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The Bell-measurement limitation is narrowed from an undecomposed ideal Bell projector to an ideal logical/taste stabilizer or CNOT-H circuit measurement, while physical implementation of those logical primitives remains open.  _(class `B`)_
+- **chain closes:** True — The scoped algebraic claim closes: the stabilizer projectors and CNOT-H computational readout reproduce the same Bell projectors and teleportation correction records. The remaining physical implementation is not a hidden premise; it is the cited open gate of this artifact.
+- **rationale:** The packet supports the bounded logical decomposition with exact matrix identities up to numerical precision, and all acceptance gates pass. It does not claim a physical native schedule, apparatus Hamiltonian, decoherence model, or durable measurement-record derivation. Because that physical mechanism is explicitly left open, the correct retained object is a clean open gate rather than a theorem about implementable teleportation hardware.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_BELL_MEASUREMENT_CIRCUIT_NOTE.md`
 - **auditor confidence:** high
 
 ### `teleportation_conclusion_boundary_note`
