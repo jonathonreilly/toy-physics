@@ -4773,6 +4773,14 @@
       "to": "global_coherence_off_scaffold_note"
     },
     {
+      "from": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
       "from": "graph_first_selector_derivation_note",
       "to": "graph_first_su3_integration_note"
     },
@@ -5262,6 +5270,10 @@
     },
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
+      "to": "koide_dweh_cyclic_compression_note_2026-04-18"
+    },
+    {
+      "from": "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02",
       "to": "koide_dweh_cyclic_compression_note_2026-04-18"
     },
     {
@@ -7019,6 +7031,10 @@
     {
       "from": "one_generation_matter_closure_note",
       "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
+      "to": "axiom_first_spin_statistics_theorem_note_2026-04-29"
     },
     {
       "from": "periodic_2d_wraparound_fix_note_2026-04-11",
@@ -19985,7 +20001,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T16:21:58.820140+00:00",
+  "generated_at": "2026-05-02T16:53:46.559909+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29149,6 +29165,20 @@
       "runner_path": "scripts/global_coherence_predictor.py",
       "title": "Global Free-Beam Coherence Predictor \u2014 Modest Revival"
     },
+    "gluon_tree_level_masslessness_theorem_note_2026-05-02": {
+      "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "1c43bd220fb99e1fdaf9c1cf8b02cb7607214b5fc782e736155d1393ff1ac0ea",
+      "path": "docs/GLUON_TREE_LEVEL_MASSLESSNESS_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/gluon_tree_level_massless_check.py",
+      "title": "Tree-Level Gluon Masslessness from Retained SU(3) Gauge Invariance"
+    },
     "gr_class_expansion_finite_rank_target_note": {
       "claim_id": "gr_class_expansion_finite_rank_target_note",
       "claim_type_author_hint": null,
@@ -30720,6 +30750,19 @@
       "path": "docs/KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_cyclic_projector_block_democracy.py",
       "title": "Koide Cyclic-Projector Block Democracy"
+    },
+    "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02": {
+      "claim_id": "koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "note_hash": "ac4a7b3a3993c31804b2821ad2c7297c880d88bd63f76498c1dfed9accdd5041",
+      "path": "docs/KOIDE_CYCLIC_WILSON_3_RESPONSE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_koide_cyclic_wilson_3_response_narrow.py",
+      "title": "Koide Cyclic Wilson 3-Response Law \u2014 Narrow Conditional Theorem"
     },
     "koide_cyclic_wilson_descendant_law_note_2026-04-18": {
       "claim_id": "koide_cyclic_wilson_descendant_law_note_2026-04-18",
@@ -34700,6 +34743,19 @@
       "path": "docs/PAPER_OUTLINE_2026-04-12.md",
       "runner_path": null,
       "title": "Paper Outline: \"Physics from Cl(3) on Z\u00b3\""
+    },
+    "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02": {
+      "claim_id": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_spin_statistics_theorem_note_2026-04-29"
+      ],
+      "note_hash": "6888ac34cb1fbdcd2de1a3041d804c305653ffbc8b4b061cc8a8d051d98d1201",
+      "path": "docs/PAULI_EXCLUSION_FROM_SPIN_STATISTICS_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/pauli_exclusion_check.py",
+      "title": "Pauli Exclusion Principle from Retained Spin-Statistics Theorem"
     },
     "periodic_2d_wraparound_fix_note_2026-04-11": {
       "claim_id": "periodic_2d_wraparound_fix_note_2026-04-11",
@@ -46301,21 +46357,21 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 5,
+      "bounded_theorem": 6,
       "none": 1764,
-      "positive_theorem": 7
+      "positive_theorem": 9
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 506,
+      "bounded_theorem": 507,
       "no_go": 106,
       "none": 445,
       "open_gate": 110,
-      "positive_theorem": 609
+      "positive_theorem": 611
     },
-    "edge_count": 4996,
-    "leaf_count": 748,
-    "node_count": 1776,
+    "edge_count": 5000,
+    "leaf_count": 751,
+    "node_count": 1779,
     "root_count": 1213,
-    "runners_with_path": 1338
+    "runners_with_path": 1341
   }
 }
