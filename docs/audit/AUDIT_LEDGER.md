@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T01:04:59.000490+00:00
+**Generated:** 2026-05-02T01:12:54.228816+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -33,13 +33,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 355 |
+| `audited_clean` | 356 |
 | `audited_conditional` | 666 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 437 |
+| `unaudited` | 436 |
 
 | criticality | count |
 |---|---:|
@@ -432,6 +432,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_block_closure_test_note` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded | ~~audited_clean~~ | bounded | cross_family | codex-current | C | - |
+| `third_grown_family_boundary_note` | support | ~~audited_clean~~ | support | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded | ~~audited_clean~~ | bounded | fresh_context | codex-current | D | - |
 | `universal_gr_lorentzian_signature_extension_note` | support | ~~audited_clean~~ | support | fresh_context | codex-gpt-5 | A | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -15728,6 +15729,18 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `GROWING_GRAPH_EXPANSION_CARD_NOTE.md`
   - `SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md`
   - `WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`
+- **auditor confidence:** high
+
+### `third_grown_family_boundary_note`
+
+- **Note:** [`THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md`](../../docs/THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md)
+- **current_status:** support
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** support  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The third grown family has a small signed-source basin centered in the tested drift window, while the edge drifts fall into a clean opposite-sign regime with exact zero and neutral controls.  _(class `C`)_
+- **chain closes:** True — The registered sweep reproduces the archived table: zero-source and neutral +1/-1 controls remain zero, passed rows are 5/15 with drift coverage [0.1, 0.2, 0.3], edge drifts 0.0 and 0.5 are sign-reversed, and the mean exponent among passes is 0.999842.
+- **rationale:** The note's boundary claim is exactly the current runner's safe read: a bounded interior basin exists, the edge drifts are opposite-sign rather than control leakage, and the note does not broaden the result into a family-wide closure. Residual risk is only runtime/process convenience because the full sweep takes several minutes unless run unbuffered.
 - **auditor confidence:** high
 
 ### `third_grown_family_sign_note`
