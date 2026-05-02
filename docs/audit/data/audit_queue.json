@@ -1,17 +1,17 @@
 {
   "by_criticality": {
-    "critical": 36,
+    "critical": 35,
     "high": 230,
     "leaf": 153,
     "medium": 170
   },
-  "generated_at": "2026-05-02T18:07:11.617699+00:00",
+  "generated_at": "2026-05-02T18:10:32.239979+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+      "claim_id": "left_handed_charge_matching_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
       "claim_type_provenance": "author_hint",
@@ -19,17 +19,18 @@
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
+        "graph_first_selector_derivation_note",
         "graph_first_su3_integration_note",
-        "graph_first_selector_derivation_note"
+        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
       ],
-      "direct_in_degree": 1,
+      "direct_in_degree": 25,
       "effective_status": "unaudited",
-      "load_bearing_score": 8.555,
-      "note_path": "docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "load_bearing_score": 20.55,
+      "note_path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py",
-      "transitive_descendants": 265
+      "runner_path": "scripts/frontier_graph_first_su3_integration.py",
+      "transitive_descendants": 264
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -156,31 +157,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
       "transitive_descendants": 46
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "left_handed_charge_matching_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "graph_first_selector_derivation_note",
-        "graph_first_su3_integration_note",
-        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
-      ],
-      "direct_in_degree": 25,
-      "effective_status": "unaudited",
-      "load_bearing_score": 20.55,
-      "note_path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_graph_first_su3_integration.py",
-      "transitive_descendants": 264
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -15501,5 +15477,5 @@
     }
   ],
   "ready_count": 109,
-  "total_pending": 589
+  "total_pending": 588
 }
