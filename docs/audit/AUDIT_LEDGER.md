@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T00:38:10.016418+00:00
+**Generated:** 2026-05-02T00:39:11.961827+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,24 +22,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 76 |
 | **retained_no_go** | 71 |
 | _proposed_retained_ | 1 |
-| bounded | 158 |
+| bounded | 157 |
 | support | 128 |
 | open | 6 |
 | ~~audited_decoration~~ | 5 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 47 |
-| ~~audited_conditional~~ | 962 |
+| ~~audited_conditional~~ | 963 |
 | ~~audited_failed~~ | 92 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 347 |
-| `audited_conditional` | 662 |
+| `audited_conditional` | 663 |
 | `audited_decoration` | 5 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 23 |
 | `audited_renaming` | 17 |
-| `unaudited` | 455 |
+| `unaudited` | 454 |
 
 | criticality | count |
 |---|---:|
@@ -1020,6 +1020,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_wavefield_mechanism_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_v2_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `spectral_symmetry_note` | support | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `spectral_trajectory_theorem_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-11` | bounded | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_failure_map_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -14934,6 +14935,18 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The historical support note's safe current takeaway depends on docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md, whose audit status is conditional, while scripts/ceiling_formal_proof.py only supports the rank-one/CLT ceiling part of the story. Why this blocks: the note cannot be certified as an independently clean symmetry-support claim when its current review-safe authority is conditional and the selected runner does not verify the Z2/Z2xZ2 joint Born/gravity/decoherence claims. Repair target: audit or repair the higher-symmetry joint validation chain and attach the relevant symmetry/joint runners as the row's load-bearing artifacts, with current outputs matching the note's quantitative tables. Claim boundary until fixed: it is safe to treat this as historical exploratory context for symmetry-protected decoherence and as a CLT-ceiling support computation, not as an audit-clean Born/gravity-validated successor.
 - **open / conditional deps cited:**
   - `HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`
+- **auditor confidence:** high
+
+### `spectral_trajectory_theorem_2026-04-11`
+
+- **Note:** [`SPECTRAL_TRAJECTORY_THEOREM_2026-04-11.md`](../../docs/SPECTRAL_TRAJECTORY_THEOREM_2026-04-11.md)
+- **current_status:** bounded
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The split is not gradual. It is a sharp algebraic distinction: spectral observables are traces over the one-body operator, while trajectory observables are expectations in a many-body state.  _(class `B`)_
+- **chain closes:** False — The note has no attached runner and no ledger dependencies, yet it synthesizes many numerical and theoretical inputs into a structural theorem about spectral gravity and many-body trajectory emergence.
+- **rationale:** Issue: The spectral-trajectory dichotomy is presented as a structural theorem, but the row provides no runner and no audited dependency chain for the cited sign-selectivity, boundary-law shift, CDT-like flow, Hartree failures, Penrose/DP/BH failures, or BMV ordering claims. Why this blocks: the conclusion may be a coherent synthesis, but it does not follow from the note alone and imports multiple unratified numerical and physical bridges. Repair target: split the theorem into explicit dependencies on audited spectral-success notes, audited trajectory-failure notes, and a separate derivation of the one-body-trace versus many-body-expectation bridge, with runner or proof artifacts for each load-bearing step. Claim boundary until fixed: it is safe to treat this as a bounded interpretive synthesis and research program, not as an audit-clean theorem that gravity is fundamentally spectral or that trajectory GR emerges from spectral flow plus many-body coarse-graining.
 - **auditor confidence:** high
 
 ### `staggered_backreaction_capture_closure_note`
