@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:29:27.589611+00:00
+**Generated:** 2026-05-02T23:31:36.072997+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 141 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 196 |
+| **retained_bounded** | 197 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 515 |
+| unaudited | 514 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -37,22 +37,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 399 |
+| `audited_clean` | 400 |
 | `audited_conditional` | 649 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 552 |
+| `unaudited` | 551 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 533 |
+| `bounded_theorem` | 534 |
 | `decoration` | 8 |
 | `meta` | 37 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
-| `positive_theorem` | 867 |
+| `positive_theorem` | 866 |
 
 | criticality | count |
 |---|---:|
@@ -274,6 +274,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
+| `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -8870,6 +8871,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `open theorem: physical EWSB order-parameter temporal averaging/normalization`
 - **auditor confidence:** 0.88
+
+### `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A narrow algebraic determinant identity for the staggered Dirac operator on the minimal spatial APBC block L_s = 2 under stated mean-field gauge factorization and standard staggered fermion dispersion/taste-degeneracy assumptions; no physical EWSB, Higgs-mass, temporal-observable, or u_0-value claim is included.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-hierarchy-matsubara-determinant-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** At L_s = 2 with spatial APBC, each spatial momentum has sin^2(k_i)=1, so the spatial contribution is 3. Using the admitted staggered dispersion lambda^2 = u_0^2 sum_mu sin^2(k_mu) and admitted 4-fold taste degeneracy, each temporal Matsubara mode contributes four conjugate eigenvalue pairs m +/- i u_0 sqrt(3+sin^2 omega), giving [m^2+u_0^2(3+sin^2 omega)]^4; multiplying over omega gives the claimed determinant identity.  _(class `B`)_
+- **chain closes:** True — The conclusion follows directly from the stated hypotheses: spatial APBC momentum pinning at L_s = 2, the admitted dispersion relation, mean-field factorization, and 4-fold taste degeneracy. The potentially problematic physical bridge claims are explicitly excluded, so no unratified physical identification is needed for this narrow theorem.
+- **rationale:** Within the declared scope, the proof is a closed algebraic computation from admitted inputs. The runner's symbolic checks support the determinant form and low-L_t products, but the audit verdict rests on the source proof rather than over-crediting the runner stdout labels. The row is not decoration because it has no dependencies and states an independent determinant identity; it is bounded because the dispersion, mean-field factorization, and taste degeneracy are hypotheses rather than outputs of this row.
+- **auditor confidence:** high
 
 ### `hierarchy_spatial_bc_and_u0_scaling_note`
 
