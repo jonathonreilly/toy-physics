@@ -1,0 +1,39 @@
+{
+  "acceptance_requirements": [
+    {
+      "current_status": "absent/nonready",
+      "gate": "postprocessor readiness must be true",
+      "requirement": "combined production same-source FH/LSZ output"
+    },
+    {
+      "current_status": "blocked by finite-shell identifiability no-go",
+      "gate": "model-class, scalar-denominator, pole-saturation, or continuum certificate",
+      "requirement": "finite-shell ambiguity excluded"
+    },
+    {
+      "current_status": "not accepted",
+      "gate": "model_class_gate_passed must be true",
+      "requirement": "pole derivative is load-bearing only after model-class gate"
+    }
+  ],
+  "actual_current_surface_status": "open / FH-LSZ pole-fit model-class gate blocks finite-shell fit as evidence",
+  "exact_next_action": "Either derive the scalar denominator/model-class theorem that excludes shell-vanishing derivative deformations, or wait for production FH/LSZ data and then provide a model-class certificate before rerunning this gate.",
+  "fail_count": 0,
+  "model_class_gate_passed": false,
+  "parent_certificates": {
+    "finite_shell_no_go": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
+    "future_model_class_certificate": "outputs/yt_fh_lsz_pole_fit_model_class_certificate_2026-05-02.json",
+    "postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json"
+  },
+  "pass_count": 6,
+  "postprocess_ready": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No production fit and no model-class/analytic-continuation certificate are present.",
+  "strict_non_claims": [
+    "does not accept finite-shell pole fits as retained evidence",
+    "does not set kappa_s = 1",
+    "does not use observed top mass or observed y_t",
+    "does not use H_unit, Ward authority, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The FH/LSZ pole-fit path now has an explicit model-class gate.  Future finite-shell Gamma_ss fits cannot be used as retained evidence merely because they produce a negative-p^2 pole and a finite derivative.  The branch must also supply a model-class, analytic-continuation, pole-saturation, continuum, or microscopic scalar-denominator certificate that excludes the finite-shell derivative ambiguity."
+}

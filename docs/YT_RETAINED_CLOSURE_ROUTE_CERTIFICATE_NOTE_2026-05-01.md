@@ -212,7 +212,8 @@ manifest and then passing the postprocess pole/LSZ gate, or deriving a real
 scalar two-point residue/common-dressing theorem.  A finite-shell
 analytic-continuation gate is also required before any Euclidean
 `Gamma_ss(p^2)` pole fit can be load-bearing: finite shell rows can share the
-same sampled values and pole while changing `dGamma_ss/dp^2`.  If the
+same sampled values and pole while changing `dGamma_ss/dp^2`.  The executable
+model-class gate now enforces that boundary and remains open.  If the
 eight-mode/x8 foreground option is used, it first needs same-source x8/x16
 variance calibration with noise-subsample diagnostics.  More small pilot MC
 runs do not close PR #230.

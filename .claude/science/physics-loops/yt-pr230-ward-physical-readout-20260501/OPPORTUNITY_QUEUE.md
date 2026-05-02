@@ -134,7 +134,9 @@ probability.
   identifiability no-go also shows a finite Euclidean pole fit needs a
   model-class / analytic-continuation acceptance gate: shell-vanishing
   deformations can preserve all sampled rows and the pole while changing
-  `dGamma_ss/dp^2`.
+  `dGamma_ss/dp^2`.  The model-class gate now makes that boundary executable
+  and blocks finite-shell pole fits until a model-class, pole-saturation,
+  continuum, or scalar-denominator certificate exists.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the
@@ -196,6 +198,7 @@ probability.
    The finite-shell identifiability no-go now folds the postprocessor itself
    into the analytic blocker: even future finite shell rows do not fix the
    LSZ derivative without a model-class theorem or production acceptance gate.
+   The executable gate is now present and open/blocking.
    The refreshed retained-closure route certificate folds these blockers into
    the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is

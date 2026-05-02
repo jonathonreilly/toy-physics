@@ -84,6 +84,7 @@ def main() -> int:
         "fh_lsz_pole_fit_kinematics": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
         "fh_lsz_pole_fit_postprocessor": "outputs/yt_fh_lsz_pole_fit_postprocessor_2026-05-01.json",
         "fh_lsz_finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
+        "fh_lsz_pole_fit_model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -321,6 +322,12 @@ def main() -> int:
         )
         >= 4.0
     )
+    pole_fit_model_class_gate_blocks = (
+        "model-class gate blocks finite-shell fit"
+        in certificates["fh_lsz_pole_fit_model_class_gate"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_pole_fit_model_class_gate"].get("proposal_allowed") is False
+        and certificates["fh_lsz_pole_fit_model_class_gate"].get("model_class_gate_passed") is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -537,6 +544,11 @@ def main() -> int:
         certificates["fh_lsz_finite_shell_identifiability"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-pole-fit-model-class-gate-blocks",
+        pole_fit_model_class_gate_blocks,
+        certificates["fh_lsz_pole_fit_model_class_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
         pole_fit_mode_budget_not_closure,
         certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", ""),
@@ -661,7 +673,11 @@ def main() -> int:
             "future finite shell set and a named pole, finite Euclidean "
             "Gamma_ss rows do not identify the pole derivative by themselves: "
             "analytic deformations can vanish on all sampled shells and at "
-            "the pole while changing dGamma_ss/dp^2.  "
+            "the pole while changing dGamma_ss/dp^2.  The model-class gate "
+            "now makes this executable: a future finite-shell pole fit remains "
+            "non-evidence unless a model-class, analytic-continuation, "
+            "pole-saturation, continuum, or microscopic scalar-denominator "
+            "certificate excludes those deformations.  "
             "A mode/noise budget identifies an eight-mode/eight-noise L12 "
             "option that keeps the foreground estimate, but it needs a "
             "variance gate and cannot be treated as evidence.  The variance "

@@ -751,3 +751,17 @@ Adds an FH/LSZ finite-shell pole-fit identifiability no-go:
   model-class / analytic-continuation gate or scalar denominator theorem before
   the pole derivative can be retained-grade evidence.
 ```
+
+Latest FH/LSZ pole-fit model-class gate checkpoint text for PR #230:
+
+```text
+Adds an FH/LSZ pole-fit model-class gate:
+- consumes the postprocessor scaffold and finite-shell identifiability no-go;
+- blocks future finite-shell Gamma_ss pole fits unless a model-class,
+  analytic-continuation, pole-saturation, continuum, or scalar-denominator
+  certificate excludes shell-vanishing derivative deformations;
+- runner passes `PASS=6 FAIL=0`; retained-route gate reports `PASS=48 FAIL=0`;
+  campaign status consumes 78 certificates and reports `PASS=74 FAIL=0`;
+- still no retained/proposed-retained closure: no production fit and no
+  model-class certificate are present.
+```

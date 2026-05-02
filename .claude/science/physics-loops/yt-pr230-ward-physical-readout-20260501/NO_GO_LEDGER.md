@@ -41,6 +41,16 @@ Therefore a future same-source `Gamma_ss(p^2)` pole fit needs a model-class,
 analytic-continuation, pole-saturation, or scalar-denominator theorem before
 `dGamma_ss/dp^2` can be retained-grade LSZ input.
 
+The executable model-class gate now enforces that boundary:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_pole_fit_model_class_gate.py
+# SUMMARY: PASS=6 FAIL=0
+```
+
+The current gate is open/blocking because no production pole fit and no
+model-class certificate are present.
+
 `R_conn = 8/9` does not by itself derive the scalar pole residue:
 
 ```text

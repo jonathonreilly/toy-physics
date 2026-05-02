@@ -94,6 +94,9 @@ def main() -> int:
         "fh_lsz_finite_shell_identifiability": load(
             "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json"
         ),
+        "fh_lsz_pole_fit_model_class_gate": load(
+            "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -358,6 +361,12 @@ def main() -> int:
         "finite-shell pole-fit identifiability no-go"
         in str(statuses["fh_lsz_finite_shell_identifiability"]),
         statuses["fh_lsz_finite_shell_identifiability"],
+    )
+    report(
+        "fh-lsz-pole-fit-model-class-gate-blocks",
+        "model-class gate blocks finite-shell fit"
+        in str(statuses["fh_lsz_pole_fit_model_class_gate"]),
+        statuses["fh_lsz_pole_fit_model_class_gate"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",
@@ -666,7 +675,10 @@ def main() -> int:
             "evidence.  A finite-shell identifiability no-go now tightens the "
             "same boundary: finite Euclidean Gamma_ss shell rows, even with a "
             "named pole, do not determine dGamma_ss/dp^2 without a model-class "
-            "or analytic-continuation theorem.  "
+            "or analytic-continuation theorem.  The pole-fit model-class gate "
+            "now blocks future finite-shell pole fits from retained use unless "
+            "that missing theorem or an equivalent production acceptance "
+            "certificate is present.  "
             "The mode/noise budget gives a possible eight-mode/eight-noise "
             "foreground launch option, but it is only planning support until "
             "a variance gate and production data exist.  The eight-mode noise "
