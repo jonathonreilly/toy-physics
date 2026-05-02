@@ -19977,7 +19977,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:49:07.899175+00:00",
+  "generated_at": "2026-05-02T19:54:32.208533+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29070,13 +29070,13 @@
     },
     "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
       ],
-      "note_hash": "4f24711fb34563613fee693565e2b99cf7c845148910ec4762a01eff85f29070",
+      "note_hash": "eae797f734883fcbd472dc7a8bc793ee236183fe1195d1accecce51d4d356b47",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Transfer Theorem"
@@ -46461,16 +46461,16 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 11,
       "meta": 1,
-      "none": 1748,
-      "positive_theorem": 30
+      "none": 1747,
+      "positive_theorem": 31
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
       "meta": 1,
       "no_go": 106,
-      "none": 441,
+      "none": 440,
       "open_gate": 109,
-      "positive_theorem": 622
+      "positive_theorem": 623
     },
     "edge_count": 4994,
     "leaf_count": 757,
