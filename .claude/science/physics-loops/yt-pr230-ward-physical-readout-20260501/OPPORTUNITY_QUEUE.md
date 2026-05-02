@@ -156,6 +156,11 @@ probability.
   and no `numba_gauge_seed_v1` marker.  Treat them as diagnostics only until
   rerun under the patched harness or excluded.  Replacement seed-controlled
   chunks are the only production path that can count toward combination.
+  The gauge-normalized response route adds another possible physical-response
+  bypass: a same-source W/Z mass slope can cancel `kappa_s` in the ratio with
+  `dE_top/ds`.  This requires a new same-source electroweak gauge-mass response
+  observable plus the same canonical-Higgs identity certificate; no such
+  production data or harness exists yet.
 5. **Canonical scalar normalization / LSZ theorem.** This is the main analytic
    blocker after the source-reparametrization audit. Existing EW/Higgs
    structural notes do not provide it; a new theorem must derive the

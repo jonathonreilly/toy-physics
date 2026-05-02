@@ -130,6 +130,9 @@ def main() -> int:
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
+        "fh_gauge_normalized_response": load(
+            "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -465,6 +468,11 @@ def main() -> int:
         "fh-lsz-higgs-pole-identity-gate-blocks",
         "canonical-Higgs pole identity gate blocking" in str(statuses["fh_lsz_higgs_pole_identity"]),
         statuses["fh_lsz_higgs_pole_identity"],
+    )
+    report(
+        "fh-gauge-normalized-response-needs-gauge-mass-slope",
+        "FH gauge-normalized response route" in str(statuses["fh_gauge_normalized_response"]),
+        statuses["fh_gauge_normalized_response"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

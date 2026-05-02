@@ -1299,3 +1299,16 @@ mode used by `v`.  Existing EW/Higgs notes assume canonical `H`; the
 source-to-Higgs bridge, production pole derivative, gauge-VEV shortcut,
 renormalization-condition shortcut, contact-scheme shortcut, denominator
 theorem, and `K'(pole)` remain open.
+
+FH gauge-normalized response is a route, not current evidence:
+
+```text
+python3 scripts/frontier_yt_fh_gauge_normalized_response_route.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+The same-source ratio `(dE_top/ds)/(dM_W/ds)` would cancel `kappa_s` if the
+source moves the same canonical Higgs radial mode in both sectors.  No current
+W/Z mass-response harness or production certificate exists, and the shared
+canonical-Higgs identity remains blocked.  Observed W/Z masses cannot be used
+as proof selectors.

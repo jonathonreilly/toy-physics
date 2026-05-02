@@ -250,7 +250,9 @@ the FH/LSZ same-source invariant formula is used, it still needs the
 canonical-Higgs pole identity gate: source-coordinate scaling cancels, but the
 measured scalar source pole is not certified as the canonical Higgs radial mode
 used by `v`.  Production pole derivative data and the source-to-Higgs identity
-remain open.  If
+remain open.  A same-source gauge-normalized response ratio could also cancel
+`kappa_s` using a W/Z mass slope, but the W/Z response observable and shared
+Higgs identity certificate are absent.  If
 the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not

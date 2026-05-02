@@ -580,3 +580,16 @@ Next exact action: poll seed-controlled replacement chunks001/002/003.  If any
 replacement output completes, process it through the combiner and checkpoint
 gates.  If they are still running, continue either seed-controlled production
 planning or a new scalar-denominator/Higgs-pole-identity theorem attempt.
+
+The FH gauge-normalized response route is now recorded as a possible physical
+response bypass.  If the same scalar source moves the same canonical Higgs
+radial mode in both the top and electroweak gauge sectors, then
+`(dE_top/ds)/(dM_W/ds)` cancels `kappa_s` and reconstructs `y_t` from retained
+`g2`.  This is not closure: no same-source W/Z mass-response harness or
+production certificate exists, and the shared canonical-Higgs identity remains
+blocked.  It identifies a concrete measurement to build if the scalar LSZ pole
+route remains blocked.
+
+Next exact action: poll seed-controlled replacement chunks001/002/003.  If no
+chunk completes, either design the same-source gauge-mass response observable
+or continue the scalar-denominator/Higgs-pole identity theorem route.

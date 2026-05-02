@@ -1,0 +1,80 @@
+{
+  "acceptance_requirements": [
+    "same-source production dE_top/ds",
+    "same-source production dM_W/ds or dM_Z/ds under the same scalar source",
+    "retained electroweak coupling normalization for g2 or the neutral-sector equivalent",
+    "certificate that the scalar source moves the same canonical Higgs radial mode in top and gauge sectors",
+    "no use of observed top mass, observed y_t, observed W/Z mass, H_unit, or Ward authority as proof selectors"
+  ],
+  "actual_current_surface_status": "bounded-support / FH gauge-normalized response route",
+  "exact_next_action": "Add a same-source electroweak gauge-mass response observable or derive the canonical-Higgs identity; then combine it with production dE_top/ds and retained g2 normalization.",
+  "fail_count": 0,
+  "formula": {
+    "ratio": "y_t = (g2 / sqrt(2)) * (dE_top/ds) / (dM_W/ds)",
+    "top_response": "dE_top/ds = kappa_s * y_t / sqrt(2)",
+    "w_response": "dM_W/ds = kappa_s * g2 / 2"
+  },
+  "gauge_normalized_response_gate_passed": false,
+  "missing_gauge_response_certificate": "outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json",
+  "parent_certificates": {
+    "feynman_hellmann_source_response": "outputs/yt_feynman_hellmann_source_response_route_2026-05-01.json",
+    "fh_production_protocol": "outputs/yt_fh_production_protocol_certificate_2026-05-01.json",
+    "gauge_vev_source_overlap_no_go": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
+    "higgs_pole_identity_gate": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "scalar_source_response_harness": "outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The same-source gauge-mass response data and canonical-Higgs identity certificate are absent.",
+  "rows": [
+    {
+      "dE_top_ds": 0.16440232662587229,
+      "dM_W_ds": 0.08125,
+      "forbidden_kappa_one_top_slope_readout": 0.16440232662587229,
+      "kappa_s": 0.25,
+      "ratio_dE_over_dMW": 2.0234132507799667,
+      "y_reconstructed_from_ratio": 0.93
+    },
+    {
+      "dE_top_ds": 0.32880465325174457,
+      "dM_W_ds": 0.1625,
+      "forbidden_kappa_one_top_slope_readout": 0.32880465325174457,
+      "kappa_s": 0.5,
+      "ratio_dE_over_dMW": 2.0234132507799667,
+      "y_reconstructed_from_ratio": 0.93
+    },
+    {
+      "dE_top_ds": 0.6576093065034891,
+      "dM_W_ds": 0.325,
+      "forbidden_kappa_one_top_slope_readout": 0.6576093065034891,
+      "kappa_s": 1.0,
+      "ratio_dE_over_dMW": 2.0234132507799667,
+      "y_reconstructed_from_ratio": 0.93
+    },
+    {
+      "dE_top_ds": 1.3152186130069783,
+      "dM_W_ds": 0.65,
+      "forbidden_kappa_one_top_slope_readout": 1.3152186130069783,
+      "kappa_s": 2.0,
+      "ratio_dE_over_dMW": 2.0234132507799667,
+      "y_reconstructed_from_ratio": 0.93
+    },
+    {
+      "dE_top_ds": 2.6304372260139566,
+      "dM_W_ds": 1.3,
+      "forbidden_kappa_one_top_slope_readout": 2.6304372260139566,
+      "kappa_s": 4.0,
+      "ratio_dE_over_dMW": 2.0234132507799667,
+      "y_reconstructed_from_ratio": 0.93
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not use observed top mass, observed y_t, or observed W/Z mass",
+    "does not use H_unit matrix-element readout or yt_ward_identity",
+    "does not use alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "A same-source gauge-normalized Feynman-Hellmann ratio can cancel the scalar source normalization: if the source moves the same canonical Higgs radial mode, then (dE_top/ds)/(dM_W/ds) equals sqrt(2) y_t/g2.  This identifies a physical-response bypass for kappa_s that does not use observed top mass or set kappa_s = 1.  It is not PR #230 closure because no same-source W/Z mass-response observable or production certificate exists, and the current Higgs-pole/source-to-Higgs identity gates remain blocked."
+}

@@ -2305,3 +2305,31 @@ source-coordinate scaling but does not prove the measured scalar source pole is
 the canonical Higgs radial mode whose kinetic normalization defines `v`.
 Production pole derivative data and the source-to-Higgs identity remain open.
 No retained/proposed-retained wording is authorized.
+
+## Review-Loop Backpressure - FH Gauge-Normalized Response Route
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / OPEN ROUTE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+Audit Compatibility: PASS
+```
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_gauge_normalized_response_route.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_gauge_normalized_response_route.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
+The route gives a concrete same-source physical response measurement that
+would cancel `kappa_s` by comparing top and W/Z mass slopes.  It is not current
+evidence: the W/Z response harness and production certificate are absent, and
+the shared canonical-Higgs identity gate remains open.  No retained/proposed-
+retained wording is authorized.
