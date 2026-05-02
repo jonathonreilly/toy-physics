@@ -37,14 +37,15 @@ Evaluating the standard anomaly traces:
 | Witten SU(2) (doublets) | 4 (even)| OK        |
 
 The Witten row is the nonperturbative global `SU(2)` anomaly count; its
-standalone retained packaging is
-[`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md).
+standalone retained packaging is `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
+(cross-reference, not a load-bearing upstream dep — the anomaly traces above
+are computed inline in this note).
 The pure color `SU(3)^3` row is the nontrivial cubic gauge anomaly; its
-standalone retained packaging is
-[`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md).
+standalone retained packaging is `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
+(cross-reference).
 The four perturbative left-handed traces and the LH-only Witten count are
-now also packaged as the standalone retained subtheorem
-[`LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md).
+also packaged as the standalone retained subtheorem
+`LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md` (cross-reference).
 
 Three anomaly coefficients are nonzero. By the Adler--Bell--Jackiw theorem
 [1,2], the gauge theory violates unitarity: Ward identities break and

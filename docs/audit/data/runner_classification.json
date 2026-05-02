@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T17:21:05.671664+00:00",
+  "generated_at": "2026-05-02T18:22:12.085003+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -67,7 +67,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 2
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -7105,6 +7105,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_matsubara_decomposition.py"
     },
+    "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py"
+    },
     "hierarchy_spatial_bc_and_u0_scaling_note": {
       "assert_count": 0,
       "counts": {
@@ -11101,18 +11113,6 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_hw1_source_transfer_boundary.py"
     },
-    "pmns_intrinsic_completion_boundary_note": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 4,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_pmns_intrinsic_completion_boundary.py"
-    },
     "pmns_minimal_branch_nonselection_note": {
       "assert_count": 1,
       "counts": {
@@ -11256,18 +11256,6 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_pmns_selector_current_stack_zero_law.py"
-    },
-    "pmns_selector_minimal_microscopic_extension_note": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": true,
-      "dominant_class": "B",
-      "runner": "scripts/frontier_pmns_selector_minimal_microscopic_extension.py"
     },
     "pmns_selector_nonuniversal_support_reduction_note": {
       "assert_count": 1,
@@ -12613,6 +12601,30 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_axioms_16card.py"
     },
+    "seventh_family_diagonal_boundary_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py"
+    },
+    "seventh_family_diagonal_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py"
+    },
     "shapiro_complex_interaction_note": {
       "assert_count": 0,
       "counts": {
@@ -13873,7 +13885,7 @@
       "dominant_class": null,
       "runner": "scripts/structured_chokepoint_bridge.py"
     },
-    "structured_mirror_joint_validation_note": {
+    "structureless_dag_gravity_note": {
       "assert_count": 0,
       "counts": {
         "A": 0,
@@ -13883,7 +13895,7 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
-      "runner": "scripts/structured_mirror_joint_validation.py"
+      "runner": "scripts/structureless_dag_gravity_harness.py"
     },
     "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26": {
       "assert_count": 1,
@@ -13944,6 +13956,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/symmetry_spectrum_mirror_compare.py"
+    },
+    "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_taste_scalar_fermion_cw_isotropy_narrow.py"
     },
     "taste_scalar_isotropy_theorem_note": {
       "assert_count": 2,
@@ -14532,6 +14556,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_tensor_support_center_excess_law.py"
+    },
+    "thales_right_angle_narrow_theorem_note_2026-05-02": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_thales_right_angle_narrow.py"
     },
     "third_grown_family_boundary_note": {
       "assert_count": 0,
@@ -16298,16 +16334,16 @@
       "runner": "scripts/frontier_yt_zero_import_chain.py"
     },
     "yukawa_color_projection_theorem": {
-      "assert_count": 0,
+      "assert_count": 2,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 4,
-        "D": 24
+        "B": 1,
+        "C": 0,
+        "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": "D",
-      "runner": "scripts/frontier_yt_color_projection_correction.py"
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_ew_current_fierz_channel_decomposition.py"
     },
     "z2_hw1_mass_matrix_parametrization_note": {
       "assert_count": 1,
@@ -16778,6 +16814,22 @@
       "assert_count": 0,
       "claims": [
         "second_grown_family_complex_boundary_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py": {
+      "assert_count": 0,
+      "claims": [
+        "seventh_family_diagonal_boundary_note",
+        "seventh_family_diagonal_note"
       ],
       "counts": {
         "A": 0,
@@ -18199,7 +18251,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 2
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -23063,7 +23115,8 @@
     "scripts/frontier_ew_current_fierz_channel_decomposition.py": {
       "assert_count": 2,
       "claims": [
-        "ew_current_fierz_channel_decomposition_note_2026-05-01"
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "yukawa_color_projection_theorem"
       ],
       "counts": {
         "A": 0,
@@ -24276,6 +24329,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hierarchy_matsubara_determinant_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_hierarchy_observable_principle_from_axiom.py": {
@@ -27561,21 +27629,6 @@
       "dominant_class": "C",
       "exists": true
     },
-    "scripts/frontier_pmns_intrinsic_completion_boundary.py": {
-      "assert_count": 1,
-      "claims": [
-        "pmns_intrinsic_completion_boundary_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 4,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
-    },
     "scripts/frontier_pmns_minimal_branch_nonselection.py": {
       "assert_count": 1,
       "claims": [
@@ -27768,21 +27821,6 @@
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": "B",
-      "exists": true
-    },
-    "scripts/frontier_pmns_selector_minimal_microscopic_extension.py": {
-      "assert_count": 1,
-      "claims": [
-        "pmns_selector_minimal_microscopic_extension_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": true,
       "dominant_class": "B",
       "exists": true
     },
@@ -29626,6 +29664,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_taste_scalar_fermion_cw_isotropy_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_taste_scalar_isotropy.py": {
       "assert_count": 2,
       "claims": [
@@ -30347,6 +30400,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_thales_right_angle_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "thales_right_angle_narrow_theorem_note_2026-05-02"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py": {
       "assert_count": 1,
       "claims": [
@@ -30891,8 +30959,7 @@
     "scripts/frontier_yt_color_projection_correction.py": {
       "assert_count": 0,
       "claims": [
-        "yt_color_projection_correction_note",
-        "yukawa_color_projection_theorem"
+        "yt_color_projection_correction_note"
       ],
       "counts": {
         "A": 0,
@@ -34918,10 +34985,10 @@
       "dominant_class": null,
       "exists": true
     },
-    "scripts/structured_mirror_joint_validation.py": {
+    "scripts/structureless_dag_gravity_harness.py": {
       "assert_count": 0,
       "claims": [
-        "structured_mirror_joint_validation_note"
+        "structureless_dag_gravity_note"
       ],
       "counts": {
         "A": 0,
@@ -35522,16 +35589,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 105,
+    "decoration_candidates": 104,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 151,
-      "C": 510,
-      "D": 195,
-      "none": 409
+      "B": 152,
+      "C": 509,
+      "D": 196,
+      "none": 410
     },
-    "runners_classified": 1274,
+    "runners_classified": 1276,
     "runners_with_C": 611,
-    "runners_with_D": 307
+    "runners_with_D": 309
   }
 }

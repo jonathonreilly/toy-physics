@@ -133,18 +133,6 @@
       "to": "emergent_lorentz_invariance_note"
     },
     {
-      "from": "anomaly_forces_time_theorem",
-      "to": "su2_witten_z2_anomaly_theorem_note_2026-04-24"
-    },
-    {
-      "from": "anomaly_forces_time_theorem",
-      "to": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
-    },
-    {
-      "from": "anomaly_forces_time_theorem",
-      "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
-    },
-    {
       "from": "antigravity_sign_selector_boundary_note",
       "to": "frontier_extension_lane_opening_note_2026-04-25"
     },
@@ -483,6 +471,10 @@
     {
       "from": "axiom_first_reeh_schlieder_theorem_note_2026-05-01",
       "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
     },
     {
       "from": "axiom_first_stefan_boltzmann_theorem_note_2026-05-01",
@@ -5689,6 +5681,10 @@
       "to": "graph_first_su3_integration_note"
     },
     {
+      "from": "left_handed_charge_matching_note",
+      "to": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
+    },
+    {
       "from": "lensing_adjoint_kernel_note",
       "to": "lensing_long_path_test_note"
     },
@@ -6015,78 +6011,6 @@
     {
       "from": "minimal_absorbing_horizon_probe_note",
       "to": "gate_b_farfield_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "g_bare_rigidity_theorem_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "g_bare_two_ward_closure_note_2026-04-18"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "g_bare_dynamical_fixation_obstruction_note_2026-04-18"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "physical_lattice_necessity_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "generation_axiom_boundary_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "observable_principle_from_axiom_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "alpha_s_derived_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "rconn_derived_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "yt_ew_color_projection_theorem"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "yt_ward_identity_derivation_theorem"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "yt_zero_import_authority_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "yt_color_projection_correction_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "yt_explicit_systematic_budget_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "yt_qfp_insensitivity_support_note"
-    },
-    {
-      "from": "minimal_axioms_2026-04-11",
-      "to": "higgs_vacuum_explicit_systematic_note"
     },
     {
       "from": "minimal_bidirectional_trapping_probe_note",
@@ -8569,14 +8493,6 @@
       "to": "generation_axiom_boundary_note"
     },
     {
-      "from": "three_generation_structure_note",
-      "to": "three_generation_observable_theorem_note"
-    },
-    {
-      "from": "three_generation_structure_note",
-      "to": "physical_lattice_necessity_note"
-    },
-    {
       "from": "unified_program_note",
       "to": "mirror_chokepoint_note"
     },
@@ -10079,6 +9995,18 @@
     {
       "from": "yt_zero_import_authority_note",
       "to": "yt_explicit_systematic_budget_note"
+    },
+    {
+      "from": "yukawa_color_projection_theorem",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "yukawa_color_projection_theorem",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "yukawa_color_projection_theorem",
+      "to": "graph_first_su3_integration_note"
     },
     {
       "from": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -20033,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T17:21:02.356585+00:00",
+  "generated_at": "2026-05-02T18:22:08.597005+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -20111,10 +20039,10 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "aa323875151f1dff61e10debb58ba4a1fbac49b9ad395592911f3894cab5ecab",
+      "note_hash": "b65106069786a76138ded4e77f2495230e70f030239fdb6f6834337efa965497",
       "path": "docs/ACTION_NORMALIZATION_NOTE.md",
       "runner_path": "scripts/frontier_action_normalization.py",
-      "title": "Action Normalization: Self-Consistency Fixes the Coupling Coefficient"
+      "title": "Action Normalization: Convention-Locked Coupling Coefficient"
     },
     "action_power_3d_gravity_sign_closure_note": {
       "claim_id": "action_power_3d_gravity_sign_closure_note",
@@ -21400,12 +21328,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [
-        "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-        "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
-      ],
-      "note_hash": "a2619b7cd9a73cc4e5b4c486d62c001cd90ed84490411e9b5af56a26a233e4e9",
+      "deps": [],
+      "note_hash": "c147743d4cd9e87b710b496712fe587e8c143c64efee94345485f1c43233ea76",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
       "runner_path": null,
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
@@ -22004,8 +21928,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "a6c511cccd69ada362439478689749a06530030ca03d117799dd719ef965a0c7",
+      "deps": [
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+      ],
+      "note_hash": "f59d1bfee215b9ccf139339c74b4a2b4152f3507fcffceca5ea5aad2058c19d9",
       "path": "docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_spectrum_condition_check.py",
       "title": "Axiom-First Spectrum Condition (Lattice Analogue) on Cl(3) \u2297 Z^3"
@@ -24592,7 +24518,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "b8a6a3d00374fe212b519042f787eb4dcb54fc62646c9563e1362189748e9055",
+      "note_hash": "ea379ed024a452799ac86acc36790a5e40a8bc741a9e5cdff0936cfb48c2614a",
       "path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
       "runner_path": null,
       "title": "Dimensional Gravity Table"
@@ -29154,11 +29080,11 @@
     },
     "generation_axiom_boundary_note": {
       "claim_id": "generation_axiom_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1bef781440d3e9d8758df2c6db5f0dd3e9d65d2b069441580edd6550a969132b",
+      "note_hash": "334a5e3363e9f5252d547a9f228f0f2527a32445e7306e0feea36c199931c5ec",
       "path": "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_generation_axiom_boundary.py",
       "title": "Generation Axiom Boundary Note"
@@ -29899,6 +29825,17 @@
       "path": "docs/HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_matsubara_decomposition.py",
       "title": "Hierarchy Matsubara Decomposition Note"
+    },
+    "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02": {
+      "claim_id": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "5fe80803813e1534c4aba0b01232374bdb6ccc8c4ef19a5df1c22ee5a0fd8df7",
+      "path": "docs/HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py",
+      "title": "Hierarchy Matsubara Determinant \u2014 Narrow Algebraic Theorem"
     },
     "hierarchy_spatial_bc_and_u0_scaling_note": {
       "claim_id": "hierarchy_spatial_bc_and_u0_scaling_note",
@@ -30656,7 +30593,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "f4c943eeb761f7c1baf3ba112397200cfc043c2f2ef2903fefdfe9e0332c34db",
+      "note_hash": "e186d46b352fdc4dee45f7f9faba48f5e17a9702d0d50ce2679f57d396c87c97",
       "path": "docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md",
       "runner_path": null,
       "title": "Koide April 22 Axiom-Native Support Batch"
@@ -32509,14 +32446,15 @@
     },
     "left_handed_charge_matching_note": {
       "claim_id": "left_handed_charge_matching_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "graph_first_selector_derivation_note",
-        "graph_first_su3_integration_note"
+        "graph_first_su3_integration_note",
+        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
       ],
-      "note_hash": "28f7ea2e62d8f4ff540838e8bd9eaee4f85e26b597301fd57dee3e930ada7279",
+      "note_hash": "59b54bd795a2785fb43d485dabbf8577c43140df9417c9961fff22c68a0079be",
       "path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "title": "Left-Handed Charge Matching on the Selected-Axis Surface"
@@ -32927,7 +32865,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "311236909cbb13b7ad4e97f1d98943f292cac883179a258cf2a217a13ac62303",
+      "note_hash": "4b2dd1041bec6f0aa53eac99ef2ff99bd5dd6c28dd0bd6ccba4102fdda81ed33",
       "path": "docs/LORENTZ_VIOLATION_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_violation.py",
       "title": "Lorentz Violation Derived from Cubic Lattice Structure"
@@ -33198,30 +33136,11 @@
     },
     "minimal_axioms_2026-04-11": {
       "claim_id": "minimal_axioms_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
-      "deps": [
-        "g_bare_structural_normalization_theorem_note_2026-04-18",
-        "g_bare_rigidity_theorem_note",
-        "g_bare_two_ward_closure_note_2026-04-18",
-        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
-        "g_bare_dynamical_fixation_obstruction_note_2026-04-18",
-        "physical_lattice_necessity_note",
-        "generation_axiom_boundary_note",
-        "observable_principle_from_axiom_note",
-        "alpha_s_derived_note",
-        "rconn_derived_note",
-        "yt_ew_color_projection_theorem",
-        "yt_ward_identity_derivation_theorem",
-        "yt_zero_import_authority_note",
-        "yt_color_projection_correction_note",
-        "yt_explicit_systematic_budget_note",
-        "yt_qfp_insensitivity_support_note",
-        "higgs_vacuum_explicit_systematic_note"
-      ],
-      "note_hash": "b3af3af78cb351f23f54e09336a28431f84f581490a62d66347f54b0b9846473",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "5700d7727f62c12deb09f576d288e942f92d8e7878b1414f53f5afd5781e3ff6",
       "path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
       "runner_path": null,
       "title": "Minimal Framework Inputs"
@@ -33397,7 +33316,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "37acc5f884c4f26d551de7d89b6390dffefce3a00063656e35586e3e184695fb",
+      "note_hash": "388b8e2a7cabb4bbf3ba9addad191dadf828284c43acce06cbdfb70ab8e26e89",
       "path": "docs/MONOPOLE_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_monopole_derived.py",
       "title": "Magnetic Monopole Mass: First-Principles Derivation"
@@ -35522,17 +35441,6 @@
       "runner_path": "scripts/frontier_pmns_hw1_source_transfer_boundary.py",
       "title": "PMNS HW1 Source-Transfer Boundary"
     },
-    "pmns_intrinsic_completion_boundary_note": {
-      "claim_id": "pmns_intrinsic_completion_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "74e59b0ce025978897faaeca413760c1b5cae30194e0f6dcfd724d70bf20b594",
-      "path": "docs/PMNS_INTRINSIC_COMPLETION_BOUNDARY_NOTE.md",
-      "runner_path": "scripts/frontier_pmns_intrinsic_completion_boundary.py",
-      "title": "PMNS Intrinsic Completion Boundary"
-    },
     "pmns_lower_level_end_to_end_closure_note": {
       "claim_id": "pmns_lower_level_end_to_end_closure_note",
       "claim_type_author_hint": null,
@@ -35675,17 +35583,6 @@
       "path": "docs/PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md",
       "runner_path": "scripts/frontier_pmns_selector_current_stack_zero_law.py",
       "title": "PMNS Selector Current-Stack Zero Law"
-    },
-    "pmns_selector_minimal_microscopic_extension_note": {
-      "claim_id": "pmns_selector_minimal_microscopic_extension_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "cd9653ff51766cb908a2cd5d260c1ba11d2e1980e02a2d1bf3751b156cc9888f",
-      "path": "docs/PMNS_SELECTOR_MINIMAL_MICROSCOPIC_EXTENSION_NOTE.md",
-      "runner_path": "scripts/frontier_pmns_selector_minimal_microscopic_extension.py",
-      "title": "PMNS Selector Minimal Microscopic Extension"
     },
     "pmns_selector_nonuniversal_support_reduction_note": {
       "claim_id": "pmns_selector_nonuniversal_support_reduction_note",
@@ -38953,7 +38850,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d7d266d8a73e29548f1668f115d6be7485c3f3444a3abc6e79b63b82ebec997a",
+      "note_hash": "58001eb25d06e0d04c4046d525d71b1da0e02a9687e476472433db32b75fd2de",
       "path": "docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_up_amplitude_rpsr_conditional.py",
       "title": "Quark Up-Amplitude Reduced Projector-Ray Sum Rule (RPSR)"
@@ -39505,7 +39402,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "6ab3435bf9d54881b20df5214d47f3219d43d457ab333e793a7919eccd19093a",
+      "note_hash": "546943b6139d859fe35226c632b579e04e0b4d22527cfb3c769c4d6111c6f70d",
       "path": "docs/SAME_FAMILY_3D_CLOSURE_NOTE.md",
       "runner_path": "scripts/same_family_3d_closure.py",
       "title": "Same-Family 3D Closure: Valley-Linear"
@@ -39577,7 +39474,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "de937d8e8e35be16b3f885fbf1d64afc7e35ef3cc2e5d2b61b16ed3c28a0e347",
+      "note_hash": "b7a21c96ce0ca0e30351786d71b9b85228344142f8ab1971fde3dea851c4bc92",
       "path": "docs/SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_koide_berry_phase_theorem.py",
       "title": "Scalar-Selector Full-Stack Recovery \u2014 Per-Lane Audit"
@@ -39755,7 +39652,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "20ea2304ec9941bfea5f407043bf26855fb6056736025cf47e39e413d0561503",
+      "note_hash": "3646b166d19a58a702fc65ccf682de3561d501d77a6eff68518ae95d811c4d9b",
       "path": "docs/SELF_GRAVITY_BACKREACTION_CLOSURE_NOTE.md",
       "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
       "title": "Self-Gravity Backreaction Closure Note"
@@ -39876,9 +39773,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "b2be77369c8ccb23495d98d32aa75edef5ef40989f664190880df774a5cb6501",
+      "note_hash": "68a72fdc2994feb2449f424c7636c4ca73c10e0d1b54aeb48de1eff71281cc3c",
       "path": "docs/SEVENTH_FAMILY_DIAGONAL_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py",
       "title": "Seventh Family Diagonal Boundary Note"
     },
     "seventh_family_diagonal_note": {
@@ -39887,9 +39784,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "9e5a3cf9f3b6dabf640e5742d6e96be92c24e2b0f67c5236be58c5ba77c12ff8",
+      "note_hash": "f4426406c80ec7d504c281ba7b6e761b8dec83856aeed1956da962988889b671",
       "path": "docs/SEVENTH_FAMILY_DIAGONAL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py",
       "title": "Seventh Family Diagonal Note"
     },
     "shapiro_delay_note": {
@@ -39935,17 +39832,6 @@
       "path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
       "runner_path": null,
       "title": "Shapiro QA Retest Note"
-    },
-    "shapiro_scaling_note": {
-      "claim_id": "shapiro_scaling_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "4e061e8419d3cb5871a71a0fcd1dcc07a53a9cc7125c46f1b718eb60b2d150b6",
-      "path": "docs/SHAPIRO_SCALING_NOTE.md",
-      "runner_path": null,
-      "title": "Shapiro Scaling Note"
     },
     "shapiro_static_discriminator_note": {
       "claim_id": "shapiro_static_discriminator_note",
@@ -40604,7 +40490,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "72e4c5fb91910f2dbc8c66c386e5f13ae81b7a365bddf5d0ad4a97af0d5ab224",
+      "note_hash": "970064a35ae0b5bb33b1e30094d0410224f7afed09297019a8a914e14c199f06",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md",
       "runner_path": "scripts/source_resolved_exact_green_h025_pocket.py",
       "title": "Source-Resolved Exact Green h=0.25 Pocket"
@@ -40637,7 +40523,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d36acfc86af22a6452d10ce1207729d428e2a7a244ff1c5255fbddcf9e6b0efe",
+      "note_hash": "e0fe47e8229bc47f997510c7a6434e2f1fd31266f81b09c27ef010d78b7a0a70",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md",
       "runner_path": "scripts/source_resolved_exact_green_self_consistent.py",
       "title": "Source-Resolved Exact Green Self-Consistent Pocket"
@@ -40714,7 +40600,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "034a99c635ef12c6808a45068c2e6a24c939b75675865a2304693caabfc80ca7",
+      "note_hash": "9c3343243be2d9d1699103f1c936d7ce9f151ffc382622f56efd44f01c12706c",
       "path": "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md",
       "runner_path": "scripts/source_resolved_generated_support_mass_scaling.py",
       "title": "Source-Resolved Generated Support + Mass Scaling"
@@ -40824,7 +40710,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c16d6089f01853f355d76a85fd4be8067dd195af0862c9b9b06d46fe98a09e46",
+      "note_hash": "908735e564951c04918530aa8dc868bbd2a0adc1bf9444bd8ce8f1cab6ea5215",
       "path": "docs/SOURCE_RESOLVED_SELF_CONSISTENT_GENERATED_TRANSFER_NOTE.md",
       "runner_path": "scripts/source_resolved_self_consistent_generated_transfer.py",
       "title": "Source-Resolved Self-Consistent Generated Transfer"
@@ -40934,7 +40820,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "539e91fd8f71384296529a6a5e16367be08a06f0f4aa18a7742f7addb76b4486",
+      "note_hash": "155fd8e0abb6127300c3fc44f150716622f934be3a8463344c31f4a4e668d8d5",
       "path": "docs/STAGGERED_BACKREACTION_NOTE.md",
       "runner_path": "scripts/frontier_staggered_backreaction_prototype.py",
       "title": "Staggered Backreaction Prototype"
@@ -41066,7 +40952,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "50a64c51ec0e66921be6796eaa2ac0e599ca78872c79914a12feb23d2e8a0fd6",
+      "note_hash": "e03bbab93af3695d966a8e480b1df11177be7571d97d391934834afe622a8ae0",
       "path": "docs/STAGGERED_LAYERED_BACKREACTION_NOTE.md",
       "runner_path": "scripts/frontier_staggered_layered_backreaction.py",
       "title": "Staggered Layered Backreaction Note"
@@ -41101,7 +40987,7 @@
       "deps": [
         "graph_dirac_requirements_2026-04-10"
       ],
-      "note_hash": "500350d8c5d25fe9c44068b230574029e227f3eeba1cafa6443a4ceb876464b4",
+      "note_hash": "7b0e457969aab071494adb0a7e19e837a875dbd3c164ad77bb7b08bb849bfceb",
       "path": "docs/STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md",
       "runner_path": "scripts/frontier_staggered_layered_loop_threshold.py",
       "title": "Staggered Layered Loop Threshold Note"
@@ -41291,17 +41177,6 @@
       "runner_path": null,
       "title": "Structured Mirror Born-Safe Scan Note"
     },
-    "structured_mirror_joint_validation_note": {
-      "claim_id": "structured_mirror_joint_validation_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "5c097372cd6c2e6e5ce1e13c06d3ecfe27e664d0121bb3df5802202a7cdf3aa8",
-      "path": "docs/STRUCTURED_MIRROR_JOINT_VALIDATION_NOTE.md",
-      "runner_path": "scripts/structured_mirror_joint_validation.py",
-      "title": null
-    },
     "structured_mirror_reconciliation_note": {
       "claim_id": "structured_mirror_reconciliation_note",
       "claim_type_author_hint": null,
@@ -41330,9 +41205,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0c4397eef05e092c3b680b408197cffb93076c74f13747e8d281db86358061d8",
+      "note_hash": "110ff332e4cdd86e72d3cc3461dbefe6ab99b21c57617169578c25bb742a2ad1",
       "path": "docs/STRUCTURELESS_DAG_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structureless_dag_gravity_harness.py",
       "title": "Gravity on Structureless Causal DAGs"
     },
     "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26": {
@@ -41435,7 +41310,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "df98834ec762c22e0caa8eb2fd6e0249452ba6adf7d7d870590aa6c11048159e",
+      "note_hash": "e8ec555d98b036b6360a28e92275c55242bc9f354c10ebb7323b03457b973441",
       "path": "docs/SYNTHESIS_NOTE.md",
       "runner_path": null,
       "title": "Synthesis Note: Emergent Physics on Discrete Causal DAGs"
@@ -41450,6 +41325,17 @@
       "path": "docs/SYNTHESIS_NOTE_3D.md",
       "runner_path": null,
       "title": "Synthesis Note: 3D Extension of Discrete Causal DAG Model"
+    },
+    "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02": {
+      "claim_id": "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "e39371f874a033d26e29cee72e3c3fbb0fbff7bb24740e14cd2d04f2fb57f300",
+      "path": "docs/TASTE_SCALAR_FERMION_CW_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_taste_scalar_fermion_cw_isotropy_narrow.py",
+      "title": "Taste-Scalar Fermion Coleman-Weinberg Isotropy \u2014 Narrow Theorem"
     },
     "taste_scalar_isotropy_theorem_note": {
       "claim_id": "taste_scalar_isotropy_theorem_note",
@@ -42011,6 +41897,17 @@
       "runner_path": "scripts/frontier_tensor_support_center_excess_law.py",
       "title": "Exact Support-Side `A1` Center-Excess Law and the Remaining Tensor Gap"
     },
+    "thales_right_angle_narrow_theorem_note_2026-05-02": {
+      "claim_id": "thales_right_angle_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "b769e5aa9a786d106d524fb7a27cfb73065861d5af3f1076fc9866d4fd6153e1",
+      "path": "docs/THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_thales_right_angle_narrow.py",
+      "title": "Thales Right-Angle Narrow Theorem"
+    },
     "third_grown_family_boundary_note": {
       "claim_id": "third_grown_family_boundary_note",
       "claim_type_author_hint": null,
@@ -42124,11 +42021,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "three_generation_observable_theorem_note",
-        "physical_lattice_necessity_note"
-      ],
-      "note_hash": "308ca6f60e4a77379eb283a4d36c898085ec9b96931e574aa7cb19c577b1b3fe",
+      "deps": [],
+      "note_hash": "4d4cbba029fac84e829c79c7619006c3926b548341c52348d0bcbf1b428f9644",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
@@ -42139,21 +42033,10 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "6c32f50597c518b6e124e26322d3cf4eb34c3b862d9d37cc594627cc4f5c626e",
+      "note_hash": "74fa798d502b1491dd91d2b626e2503d0d4cfe176a76ff8d756d35b29f8de0ef",
       "path": "docs/TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md",
       "runner_path": "scripts/triple_stack_collapse_scaling.py",
       "title": "Triple-Stack Collapse Scaling Note"
-    },
-    "two_body_mutual_attraction_note_2026-04-11": {
-      "claim_id": "two_body_mutual_attraction_note_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "7c6c9340a3675596b2d843f1f10a63feeeaffbb61817d46f6e2676bcf002fc87",
-      "path": "docs/TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md",
-      "runner_path": null,
-      "title": "Two-Body Mutual Attraction Note"
     },
     "two_field_retarded_family_closure_note_2026-04-10": {
       "claim_id": "two_field_retarded_family_closure_note_2026-04-10",
@@ -45206,13 +45089,17 @@
     },
     "yukawa_color_projection_theorem": {
       "claim_id": "yukawa_color_projection_theorem",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "3f2580c217dddc126afc4d33742fa7a1a760ad2e79b227df64e6017b332dff03",
+      "deps": [
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "a77d1a2b4cc2caa5073ee1348d3aba0344326e2df0bac06161342cf8e351db77",
       "path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
-      "runner_path": "scripts/frontier_yt_color_projection_correction.py",
+      "runner_path": "scripts/frontier_ew_current_fierz_channel_decomposition.py",
       "title": "Yukawa Color-Singlet Projection Theorem"
     },
     "z2_hw1_mass_matrix_parametrization_note": {
@@ -45322,6 +45209,7 @@
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
+    "anomaly_forces_time_theorem",
     "architecture_note_directional_measure",
     "architecture_options",
     "architecture_portability_sweep_note",
@@ -45346,7 +45234,6 @@
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_first_lattice_noether_theorem_note_2026-04-29",
     "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-    "axiom_first_spectrum_condition_theorem_note_2026-04-29",
     "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
@@ -45755,6 +45642,7 @@
     "hierarchy_dimensional_compression_note",
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_matsubara_decomposition_note",
+    "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
     "hierarchy_spatial_bc_and_u0_scaling_note",
     "higgs_from_lattice_note",
     "higgs_mass_from_axiom_note",
@@ -45924,6 +45812,7 @@
     "mesoscopic_surrogate_source_2d_note",
     "mesoscopic_surrogate_threshold_2d_note",
     "mesoscopic_surrogate_two_stage_2d_note",
+    "minimal_axioms_2026-04-11",
     "minimal_source_driven_field_probe_note",
     "mirror_2d_gravity_law_note",
     "mirror_2d_validation_note",
@@ -46032,7 +45921,6 @@
     "pmns_graph_first_axis_alignment_note",
     "pmns_graph_first_cycle_frame_support_note",
     "pmns_hw1_source_transfer_boundary_note",
-    "pmns_intrinsic_completion_boundary_note",
     "pmns_lower_level_end_to_end_closure_note",
     "pmns_minimal_branch_nonselection_note",
     "pmns_oriented_cycle_channel_value_law_note",
@@ -46046,7 +45934,6 @@
     "pmns_selector_bank_nonrealization_note",
     "pmns_selector_class_space_uniqueness_note",
     "pmns_selector_current_stack_zero_law_note",
-    "pmns_selector_minimal_microscopic_extension_note",
     "pmns_selector_nonuniversal_support_reduction_note",
     "pmns_selector_sector_odd_reduction_note",
     "pmns_selector_sign_to_branch_reduction_note",
@@ -46170,7 +46057,6 @@
     "shapiro_experimental_card",
     "shapiro_family_portability_note",
     "shapiro_qa_retest_note",
-    "shapiro_scaling_note",
     "shapiro_static_discriminator_note",
     "shapiro_unique_discriminator_v2_note",
     "sigma_hier_uniqueness_theorem_note_2026-04-19",
@@ -46245,7 +46131,6 @@
     "structured_chokepoint_bridge_extension_note",
     "structured_chokepoint_bridge_note",
     "structured_mirror_bornsafe_scan_note",
-    "structured_mirror_joint_validation_note",
     "structured_mirror_reconciliation_note",
     "structureless_dag_gravity_harness_note",
     "structureless_dag_gravity_note",
@@ -46255,6 +46140,7 @@
     "symmetry_spectrum_mirror_compare_note",
     "synthesis_note",
     "synthesis_note_3d",
+    "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02",
     "taste_scalar_isotropy_theorem_note",
     "teleportation_3d1_causal_record_channel_note",
     "teleportation_3d_initial_ramp_probe_note",
@@ -46302,12 +46188,13 @@
     "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
     "tensor_source_map_eta_note",
     "tensor_support_center_excess_law_note",
+    "thales_right_angle_narrow_theorem_note_2026-05-02",
     "third_grown_family_boundary_note",
     "third_grown_family_complex_boundary_note",
     "third_grown_family_complex_note",
     "third_grown_family_sign_note",
+    "three_generation_structure_note",
     "triple_stack_collapse_scaling_note",
-    "two_body_mutual_attraction_note_2026-04-11",
     "two_field_retarded_family_closure_note_2026-04-10",
     "two_field_retarded_probe_note_2026-04-10",
     "two_sign_comparison_note_2026-04-10",
@@ -46439,27 +46326,28 @@
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
     "yt_ward_identity_derivation_theorem",
     "yt_zero_import_chain_note",
-    "yukawa_color_projection_theorem",
     "z2_hw1_mass_matrix_parametrization_note"
   ],
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 8,
-      "none": 1764,
-      "positive_theorem": 11
+      "bounded_theorem": 9,
+      "meta": 1,
+      "none": 1755,
+      "positive_theorem": 16
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 509,
+      "meta": 1,
       "no_go": 106,
-      "none": 445,
+      "none": 444,
       "open_gate": 110,
-      "positive_theorem": 613
+      "positive_theorem": 611
     },
-    "edge_count": 5008,
-    "leaf_count": 754,
-    "node_count": 1783,
-    "root_count": 1213,
-    "runners_with_path": 1345
+    "edge_count": 4990,
+    "leaf_count": 751,
+    "node_count": 1781,
+    "root_count": 1212,
+    "runners_with_path": 1348
   }
 }

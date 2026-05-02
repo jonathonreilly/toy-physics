@@ -309,17 +309,21 @@ frontier_koide_mru_weight_class_obstruction.py                    PASS=*   FAIL=
 
 ## §5 Honest axiom accounting after recovery
 
-| Gate | Pre-recovery | Post-recovery | Residue |
-|---|---|---|---|
-| Koide `kappa` | MRU support | MRU + SO(2)-quotient real-isotype closure (`6458529d`) + operator bridge + block Frobenius (four converging routes) | **none** (quotient closure discharges the former measure convention) |
-| Koide `theta` | Ambient-`S^2` model, bundle obstruction | + actual-route Pancharatnam–Berry closure on selected line (`f6b5ce6c` content) | **none** (the Brannen–Zenczykowski phase offset is geometrically identified on the actual route) |
-| DM A-BCC | Chamber bound `∩` DPLE `F_4` | + cycles 11/12/13 alternative routes + 5-route assumptions audit | **none** |
-| Quark `a_u` | ISSR1 + NORM + shell-norm | + JTS-affine-physical-carrier (`dd865ced`) + JTS physical-point (`3d344e47`) + STRC *derived* from `1(+)5` channel completeness (`37c4f2bf`) | **none** |
+This section previously asserted "all four gates closed, zero named
+residues, zero new axioms this cycle." That summary statement is
+**withdrawn** as superseded by the package-facing read in
+`publication/ci3_z3/CLAIMS_TABLE.md` and
+`publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md`, and by §0 of this
+note. The recovered route theorems remain useful and individually
+runner-clean, but the cross-lane "all four gates closed" rollup is not
+the current public statement: the Koide-`Q` and Koide-`δ` gates retain
+named open residues, the quark gate stays bounded rather than promoted,
+and the DM gate is closed only on the routes specified by the
+April-21 theorem stack.
 
-Meta-axiom: STRC derived (`37c4f2bf`) and MRU's measure residue discharged
-(`6458529d`) collapse the earlier "4 → 2 DIM-UNIQ + STRC" layer to
-**4 → Cl(3)/Z³ framework axioms**. Reviewer-bar: **all four gates
-closed, zero named residues, zero new axioms this cycle.**
+Read this section as **per-route inventory**, not as a closure summary.
+For the current package-level closure status, use the package-facing
+documents listed in §0.
 
 ---
 

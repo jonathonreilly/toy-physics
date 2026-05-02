@@ -44,14 +44,16 @@ retained graph families:
 
 | Family | n | `F_ext` | `F_solve` | force gap | source `R²` | two-body resid | self-force | self-gap | norm |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| bipartite random geometric | 36 | `+3.247e-01` | `+4.002e-02` | `8.767e-01` | `1.0000` | `1.862e-16` | `+1.184e-02` | `7.041e-01` | `4.44e-16` |
-| bipartite growing | 48 | `+5.232e-01` | `+5.066e-02` | `9.032e-01` | `1.0000` | `2.874e-16` | `+1.782e-02` | `6.482e-01` | `7.77e-16` |
-| layered bipartite DAG-compatible | 36 | `+1.714e+00` | `+2.127e-01` | `8.759e-01` | `1.0000` | `2.703e-16` | `+2.097e-01` | `1.453e-02` | `0.00e+00` |
+| bipartite random geometric | 36 | `+1.488e+00` | `+5.593e-02` | `9.624e-01` | `0.9830` | `1.264e-16` | `+3.382e-02` | `3.953e-01` | `4.44e-16` |
+| bipartite growing | 48 | `+1.750e+00` | `+6.788e-02` | `9.612e-01` | `0.9864` | `2.046e-16` | `+4.282e-02` | `3.692e-01` | `7.77e-16` |
+| layered bipartite DAG-compatible | 36 | `+1.852e+00` | `+2.183e-01` | `8.822e-01` | `0.9998` | `6.561e-16` | `+2.405e-01` | `1.016e-01` | `0.00e+00` |
 
 ## Readout
 
 - Zero-source reduction is exact on all three families.
-- Source-response linearity is exact at the tested strength scan.
+- Source-response linearity holds with `R^2 >= 0.98` (1/3 families
+  cross the `R^2 > 0.99` near-exactness threshold; the layered DAG-
+  compatible family at `R^2 = 0.9998`).
 - Two-body additivity is exact to machine precision.
 - Force stays TOWARD on every tested family.
 - The remaining gap is not the sign or stability, but the mismatch between the
