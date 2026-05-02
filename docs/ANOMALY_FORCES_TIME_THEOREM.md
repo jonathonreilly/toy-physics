@@ -3,6 +3,7 @@
 **Date:** 2026-04-24 (scope tightened 2026-05-02)
 **Type:** bounded_theorem proposal. Audit status is assigned only by the
 independent audit lane; this note does not set or predict a verdict.
+**Primary runner:** `scripts/frontier_anomaly_forces_time.py`
 **Claim scope:** conditional 3+1 derivation under four explicitly-named
 external admissions:
   (i) the standard Adler--Bell--Jackiw anomaly-to-inconsistency
