@@ -19977,7 +19977,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T19:40:01.793707+00:00",
+  "generated_at": "2026-05-02T19:49:07.899175+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21341,13 +21341,13 @@
     },
     "anomaly_forces_time_theorem": {
       "claim_id": "anomaly_forces_time_theorem",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem proposal. Audit status is assigned only by the",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c147743d4cd9e87b710b496712fe587e8c143c64efee94345485f1c43233ea76",
+      "note_hash": "003b590b1c7fa0427af690147cb516f7b7b4fb6b0830bc6987550427fcf44ec9",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_anomaly_forces_time.py",
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
     },
     "antigravity_sign_selector_boundary_note": {
@@ -46459,16 +46459,16 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 10,
+      "bounded_theorem": 11,
       "meta": 1,
-      "none": 1749,
+      "none": 1748,
       "positive_theorem": 30
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 510,
+      "bounded_theorem": 511,
       "meta": 1,
       "no_go": 106,
-      "none": 442,
+      "none": 441,
       "open_gate": 109,
       "positive_theorem": 622
     },
@@ -46476,6 +46476,6 @@
     "leaf_count": 757,
     "node_count": 1790,
     "root_count": 1216,
-    "runners_with_path": 1357
+    "runners_with_path": 1358
   }
 }

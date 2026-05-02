@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T19:46:03.115554+00:00
+**Generated:** 2026-05-02T19:49:12.986511+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,33 +24,33 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 177 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 7 |
-| unaudited | 552 |
+| unaudited | 553 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 634 |
+| ~~audited_conditional~~ | 633 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 376 |
-| `audited_conditional` | 634 |
+| `audited_conditional` | 633 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 588 |
+| `unaudited` | 589 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 518 |
+| `bounded_theorem` | 519 |
 | `decoration` | 6 |
 | `meta` | 36 |
 | `no_go` | 155 |
 | `open_gate` | 106 |
-| `positive_theorem` | 870 |
+| `positive_theorem` | 869 |
 
 | criticality | count |
 |---|---:|
@@ -64,8 +64,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1285
-- runners with (C) first-principles compute hits: 614
+- runners classified: 1286
+- runners with (C) first-principles compute hits: 615
 - runners with (D) external comparator hits: 312
 - decoration candidates (no C, no D): 106
 
@@ -91,15 +91,15 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 14 | `left_handed_charge_matching_note` | decoration | critical | 264 | 20.55 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
 | 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_clean` | **retained** |
 | 16 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
-| 17 | `anomaly_forces_time_theorem` | positive_theorem | critical | 299 | 19.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 18 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
-| 20 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
-| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 244 | 16.44 | `unaudited` | unaudited |
-| 22 | `graph_first_selector_derivation_note` | bounded_theorem | critical | 336 | 16.40 | `audited_clean` | **retained_bounded** |
-| 23 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 131 | 15.54 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | critical | 51 | 15.20 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 130 | 15.03 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 299 | 19.23 | `unaudited` | unaudited |
+| 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 130 | 19.03 | `audited_clean` | **retained** |
+| 19 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 125 | 16.98 | `audited_clean` | **retained** |
+| 21 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
+| 22 | `s3_taste_cube_decomposition_note` | positive_theorem | high | 125 | 16.48 | `audited_clean` | **retained** |
+| 23 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
+| 24 | `plaquette_self_consistency_note` | bounded_theorem | critical | 244 | 16.44 | `unaudited` | unaudited |
+| 25 | `graph_first_selector_derivation_note` | bounded_theorem | critical | 336 | 16.40 | `audited_clean` | **retained_bounded** |
 
 
 ## Applied audits
@@ -499,7 +499,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_complex_failure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alt_connectivity_family_failure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alternative_coupled_field_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `anomaly_forces_time_theorem` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `architecture_portability_sweep_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `asymmetry_persistence_born_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1562,24 +1561,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At mu2 = 0.001, the unscreened corrected periodic phase-map replay strengthens the boundary-law separation and changes the interpretation qualitatively.  _(class `C`)_
 - **chain closes:** True — Yes. The claim is a bounded companion replay on a fixed corrected harness, and the registered runner completed successfully for that finite phase-map check.
 - **rationale:** The note makes a bounded finite-harness claim, not a universal theorem. The current runner completed successfully and supports the replay surface classified as {'A': 0, 'B': 0, 'C': 6, 'D': 0, 'total_pass': 6}. Residual risk is generalization outside the stated mu2 and periodic-torus setup.
-- **auditor confidence:** high
-
-### `anomaly_forces_time_theorem`
-
-- **Note:** [`ANOMALY_FORCES_TIME_THEOREM.md`](../../docs/ANOMALY_FORCES_TIME_THEOREM.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Conditional derivation that Cl(3) gauge content plus anomaly cancellation, Clifford chirality, and single-clock codimension-1 evolution force exactly one temporal dimension.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-pr291-anomaly-forces-time-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Step 4 excludes all d_t > 1 by invoking the single-clock codimension-1 Cauchy requirement and the ultrahyperbolic/multi-time nonlocal-support obstruction.  _(class `B`)_
-- **chain closes:** False — The anomaly arithmetic and explicit Clifford parity checks are supported, but the final 3+1 conclusion still depends on unclosed framework and external theorem inputs: anomaly-to-inconsistency, mandatory opposite-chirality SU(2)-singlet completion, Clifford-volume-element chirality as the only allowed grading, and the general d_t > 1 codimension-1 obstruction.
-- **rationale:** Issue: the load-bearing exclusion of d_t > 1 and several anomaly/chirality bridge premises are stated or externally cited, not closed by retained one-hop dependencies or by the runner. Why this blocks: the theorem cannot claim that 3+1 spacetime is forced from current audited inputs while those premises remain unratified. Repair target: provide retained dependency notes or self-contained proofs for anomaly-to-inconsistency, the framework-specific singlet-completion requirement, Clifford-volume chirality as the only chirality mechanism, and the general ultrahyperbolic codimension-1 no-go. Claim boundary until fixed: the note is a coherent conditional derivation under those assumptions, with checked anomaly and Clifford arithmetic.
-- **open / conditional deps cited:**
-  - `missing retained proof: anomaly-to-inconsistency implication for this exact gauge content and conventions`
-  - `missing retained proof: acceptable anomaly cancellation in the framework requires an opposite-chirality SU(2)-singlet completion rather than another anomaly-free extension`
-  - `missing retained proof: the only allowed chirality grading in the framework is Clifford volume-element chirality`
-  - `missing retained proof: general continuum exclusion of arbitrary codimension-1 deterministic evolution for all d_t > 1 under the stated graph semantics`
 - **auditor confidence:** high
 
 ### `architecture_note_directional_measure`

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T19:40:05.342854+00:00",
+  "generated_at": "2026-05-02T19:49:11.997754+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -276,6 +276,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_angular_kernel_underdetermination_nogo.py"
+    },
+    "anomaly_forces_time_theorem": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_anomaly_forces_time.py"
     },
     "antigravity_sign_selector_boundary_note": {
       "assert_count": 0,
@@ -18441,6 +18453,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_anomaly_forces_time.py": {
+      "assert_count": 0,
+      "claims": [
+        "anomaly_forces_time_theorem"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -35836,12 +35863,12 @@
     "dominant_class_distribution": {
       "A": 9,
       "B": 155,
-      "C": 512,
+      "C": 513,
       "D": 198,
       "none": 411
     },
-    "runners_classified": 1285,
-    "runners_with_C": 614,
+    "runners_classified": 1286,
+    "runners_with_C": 615,
     "runners_with_D": 312
   }
 }
