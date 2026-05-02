@@ -105,6 +105,8 @@ probability.
    production pole derivative, not another finite witness.  The limiting-order
    obstruction confirms that the zero-mode and IR prescription is load-bearing
    for both the derivative and the pole crossing.
+   The refreshed retained-closure route certificate folds these blockers into
+   the claim firewall and still authorizes no proposed-retained wording.
 6. **Clean parent repair for chirality selector.** The selector arithmetic is
    isolated, but the matter/hypercharge/chirality parents remain non-clean.
 7. **Planck stationarity selector theorem.** Only useful if `beta_lambda(M_Pl)=0`

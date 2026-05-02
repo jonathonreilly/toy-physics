@@ -215,3 +215,15 @@ Adds a joint Feynman-Hellmann / scalar-LSZ production manifest:
 - still no retained closure: this is launch planning, not production evidence,
   and `kappa_s`/pole-derivative control remains open.
 ```
+
+Latest retained-closure route refresh checkpoint text for PR #230:
+
+```text
+Refreshes the retained-closure route certificate:
+- now includes same-source invariant readout, scalar ladder derivative-limit,
+  Cl(3)/Z3 source-unit, production-manifest, and joint resource blockers;
+- validator passes `PASS=17 FAIL=0`; campaign status now consumes 47 route
+  certificates and reports `PASS=43 FAIL=0`;
+- still no retained/proposed-retained closure: remaining routes are strict
+  production physical-response data or a scalar pole/common-dressing theorem.
+```

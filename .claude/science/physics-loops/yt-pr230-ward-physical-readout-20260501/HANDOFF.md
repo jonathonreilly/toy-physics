@@ -235,6 +235,10 @@ What changed:
 - The joint FH/LSZ production manifest now gives exact three-volume commands
   for the production route.  It is a launch surface only: no production output,
   pole fit, or retained proposal certificate exists.
+- The retained-closure route certificate has been refreshed against the new
+  source-unit, derivative-limit, and production-manifest blocks.  It still
+  reports `proposal_allowed=false`; the remaining positive routes are
+  production evidence or a scalar pole/common-dressing theorem.
 
 The scientific result is narrower than closure:
 
@@ -307,3 +311,6 @@ unit conventions alone do not turn the additive source coordinate into the
 canonical Higgs field.
 The production-manifest block makes the empirical route resumable; running it
 is a multi-day compute action, not a foreground proof.
+The refreshed retained-closure gate is the current claim firewall: no retained
+or proposed-retained wording is allowed until production or theorem evidence
+changes that certificate.

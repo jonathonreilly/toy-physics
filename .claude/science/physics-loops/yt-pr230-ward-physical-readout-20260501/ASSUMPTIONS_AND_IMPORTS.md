@@ -221,6 +221,16 @@ The manifest is allowed as planning support only.  The load-bearing inputs
 remain production certificates, correlated response fits, scalar pole
 derivative, and finite-volume/IR/zero-mode control.
 
+Retained-closure route refresh:
+
+```text
+proposal_allowed = false
+```
+
+The refreshed gate includes the current source-unit and production-manifest
+blocks.  It remains forbidden to promote PR #230 until that certificate is
+changed by production evidence or a new theorem.
+
 Source-reparametrization gauge boundary:
 
 ```text

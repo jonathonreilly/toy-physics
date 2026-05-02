@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-42-fh-lsz-production-manifest
-blocks_completed: 56
-active_route: "joint Feynman-Hellmann / scalar-LSZ production manifest"
-active_hard_residual: "exact launch commands now exist, but retained closure still needs production output, correlated dE/ds, scalar pole derivative, and finite-volume/IR control"
+current_phase: campaign-rerun-block-43-retained-closure-route-refresh
+blocks_completed: 57
+active_route: "retained-closure route certificate refresh"
+active_hard_residual: "new source-unit, derivative-limit, and production-manifest blocks still do not satisfy proposed-retained conditions; remaining routes are production evidence or scalar pole theorem"
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -198,6 +198,9 @@ files_touched:
   - "scripts/frontier_yt_fh_lsz_production_manifest.py"
   - "docs/YT_FH_LSZ_PRODUCTION_MANIFEST_NOTE_2026-05-01.md"
   - "outputs/yt_fh_lsz_production_manifest_2026-05-01.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/*"
 open_imports:
   - "source/HS/Legendre normalization"
@@ -275,6 +278,7 @@ claim_state_movement:
   - "proved the scalar ladder derivative limiting-order obstruction: keeping versus removing the gauge zero mode changes the IR behavior of d lambda/dp^2 and the pole crossing, so the derivative is not retained LSZ input without a limiting theorem"
   - "proved the Cl(3)/Z3 source-unit normalization no-go: unit lattice/Clifford/source conventions define the source coordinate s but do not derive the canonical Higgs metric or kappa_s"
   - "created a resumable joint FH/LSZ production manifest with exact three-volume launch commands; this is planning support only and not production evidence"
+  - "refreshed the retained-closure route certificate with the new source-unit, derivative-limit, and production-manifest blocks; proposed-retained wording remains disallowed"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null

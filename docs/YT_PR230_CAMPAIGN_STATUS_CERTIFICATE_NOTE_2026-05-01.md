@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=42 FAIL=0
+# SUMMARY: PASS=43 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -76,7 +76,8 @@ The certificate consumes the PR-local route certificates for:
 - assumption/import stress certificate;
 - free staggered kinetic-coefficient support;
 - interacting kinetic background sensitivity;
-- direct measurement scale requirements.
+- direct measurement scale requirements;
+- retained-closure route certificate refresh.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
 proposal.
@@ -131,6 +132,7 @@ the visible shortcut routes:
 | assumption/import stress | no shortcut authorizes retained proposal wording |
 | free kinetic coefficient | free `c2` fixed, interacting matching still open |
 | interacting kinetic sensitivity | fixed gauge backgrounds change kinetic proxy |
+| retained-closure route certificate | refreshed gate includes new source-unit, derivative-limit, and manifest blocks; still no proposed-retained authorization |
 
 ## Remaining Honest Routes
 

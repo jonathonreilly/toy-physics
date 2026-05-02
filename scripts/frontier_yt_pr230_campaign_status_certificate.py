@@ -87,6 +87,7 @@ def main() -> int:
         "free_kinetic": load("outputs/yt_free_staggered_kinetic_coefficient_2026-05-01.json"),
         "interacting_kinetic": load("outputs/yt_interacting_kinetic_background_sensitivity_2026-05-01.json"),
         "direct_scale": load("outputs/yt_direct_measurement_scale_requirements_2026-05-01.json"),
+        "retained_closure_route": load("outputs/yt_retained_closure_route_certificate_2026-05-01.json"),
     }
 
     all_present = all(isinstance(cert, dict) for cert in certificates.values())
@@ -316,6 +317,11 @@ def main() -> int:
         "interacting kinetic" in str(statuses["interacting_kinetic"]),
         statuses["interacting_kinetic"],
     )
+    report(
+        "retained-closure-route-certificate-still-open",
+        "retained closure not yet reached" in str(statuses["retained_closure_route"]),
+        statuses["retained_closure_route"],
+    )
 
     remaining_routes = [
         {
@@ -392,7 +398,8 @@ def main() -> int:
             "source unit fixes the additive source coordinate but not the "
             "canonical Higgs field normalization.  The joint FH/LSZ production "
             "path now has exact launch commands, but the manifest is not "
-            "production evidence."
+            "production evidence.  The refreshed retained-closure route "
+            "certificate still authorizes no proposed-retained wording."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",

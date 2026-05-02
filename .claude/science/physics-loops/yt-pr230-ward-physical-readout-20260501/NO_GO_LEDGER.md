@@ -651,6 +651,17 @@ physical-response route, but it does not run those commands, produce
 correlators, fit `dE/ds`, fit `Gamma_ss(q)`, or derive a scalar pole
 derivative.  It cannot authorize retained or proposed-retained wording.
 
+Retained-closure route certificate remains open after refresh:
+
+```text
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=17 FAIL=0
+```
+
+The refreshed gate includes same-source invariant readout, scalar ladder
+derivative limiting-order, Cl(3)/Z3 source-unit, production-manifest, and joint
+resource blocks.  It still authorizes no proposed-retained wording.
+
 ## Inherited No-Gos And Boundaries
 
 - `YT_TOP_MASS_SUBSTRATE_PIN_NO_GO_NOTE_2026-04-30.md`: no direct substrate

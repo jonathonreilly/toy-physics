@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=12 FAIL=0
+# SUMMARY: PASS=17 FAIL=0
 ```
 
 The runner verifies:
@@ -33,29 +33,35 @@ The runner verifies:
 | key-blocker closure attempt found retained authority | no |
 | LSZ source-normalization cancellation is closure | no |
 | Feshbach response preservation proves common dressing | no |
+| same-source FH/LSZ invariant readout is production evidence | no |
+| scalar ladder derivative limiting order is derived | no |
+| Cl(3)/Z3 source unit fixes `kappa_s` | no |
+| joint FH/LSZ production manifest is evidence | no |
+| joint FH/LSZ route is foreground-sized | no |
 | interacting kinetic route has ensemble/matching evidence | no |
 | Planck beta-stationarity route is derived | no |
 | prior non-MC queue is exhausted | yes |
 
 ## Shortest Honest Closure Routes
 
-### Route 1: Direct Physical Measurement
+### Route 1: Direct Or Joint Physical Measurement
 
-Run the strict production correlator route on a physically suitable scale or
-heavy-quark treatment, produce a production certificate, and pass:
+Run the strict production correlator route or the joint Feynman-Hellmann /
+scalar-LSZ production route on a physically suitable scale or heavy-quark
+treatment, produce production certificates, derive the scalar pole derivative
+and any matching bridge, and pass a retained-proposal gate such as:
 
 ```text
 scripts/frontier_yt_direct_lattice_correlator.py
 ```
 
-This route bypasses the Ward/H-unit definition trap and does not require the
-analytic scalar-residue theorem.  It is the cleanest retained-closure route if
-the compute and scale problem are solved.
+This route bypasses the Ward/H-unit definition trap.  The joint manifest now
+gives exact launch commands, but it is not evidence until the production run,
+pole/LSZ analysis, finite-volume/IR control, and audit gate complete.
 
-Current blocker: existing certificates are reduced-scope or pilot, the
-mass-bracket run exposed a current-scale cutoff obstruction, and the
-interacting kinetic coefficient/matching bridge still needs ensemble evidence
-or a theorem.
+Current blocker: existing certificates are reduced-scope, pilot, or planning
+manifests.  The joint FH/LSZ route projects to about `3630.28` single-worker
+hours before pole-fit and autocorrelation tuning.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
@@ -70,9 +76,11 @@ Then re-run the Ward physical-readout repair audit.  This is the direct
 analytic repair of the audit's physical-readout objection.
 
 Current blocker: the current algebraic surface underdetermines the pole
-residue and dressing.  Source-normalization covariance and exact Feshbach
-response preservation are now controlled, but neither derives the microscopic
-interacting scalar denominator, pole residue, or scalar/gauge equality.
+residue and dressing.  Source-normalization covariance, exact Feshbach response
+preservation, same-source invariant readout, and Cl(3)/Z3 source-unit checks
+are now controlled, but none derives the microscopic interacting scalar
+denominator, zero-mode/IR limiting order, pole residue, or scalar/gauge
+equality.
 
 ### Route 3: New Selector Theorem
 
@@ -90,6 +98,7 @@ open / retained closure not yet reached
 ```
 
 No route currently satisfies retained-proposal conditions.  The next useful
-action is either a physically suitable strict measurement plan or a real scalar
-two-point residue/common-dressing theorem.  More small pilot MC runs do not
-close PR #230.
+action is either running the strict production physical-response manifest and
+then fitting pole/LSZ data, or deriving a real scalar two-point
+residue/common-dressing theorem.  More small pilot MC runs do not close PR
+#230.

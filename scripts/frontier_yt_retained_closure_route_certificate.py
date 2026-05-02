@@ -54,6 +54,11 @@ def main() -> int:
         "lsz_normalization_cancellation": "outputs/yt_scalar_lsz_normalization_cancellation_2026-05-01.json",
         "feshbach_response_boundary": "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json",
         "interacting_kinetic_sensitivity": "outputs/yt_interacting_kinetic_background_sensitivity_2026-05-01.json",
+        "fh_lsz_invariant_readout": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
+        "scalar_ladder_derivative_limit": "outputs/yt_scalar_ladder_derivative_limit_obstruction_2026-05-01.json",
+        "cl3_source_unit": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json",
+        "fh_lsz_production_manifest": "outputs/yt_fh_lsz_production_manifest_2026-05-01.json",
+        "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
     }
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
 
@@ -101,6 +106,26 @@ def main() -> int:
         == "exact support / Feshbach response boundary"
         and certificates["feshbach_response_boundary"].get("proposal_allowed") is False
     )
+    invariant_readout_not_closure = (
+        "invariant readout" in certificates["fh_lsz_invariant_readout"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_invariant_readout"].get("proposal_allowed") is False
+    )
+    derivative_limit_blocks_ladder = (
+        "limiting-order obstruction" in certificates["scalar_ladder_derivative_limit"].get("actual_current_surface_status", "")
+        and certificates["scalar_ladder_derivative_limit"].get("proposal_allowed") is False
+    )
+    cl3_source_unit_blocks_kappa = (
+        "source-unit normalization no-go" in certificates["cl3_source_unit"].get("actual_current_surface_status", "")
+        and certificates["cl3_source_unit"].get("proposal_allowed") is False
+    )
+    production_manifest_not_evidence = (
+        "production manifest" in certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_production_manifest"].get("proposal_allowed") is False
+    )
+    joint_resource_multiday = (
+        float(certificates["joint_resource_projection"].get("projection", {}).get("joint_mass_scaled_hours", 0.0)) > 1000.0
+        and certificates["joint_resource_projection"].get("proposal_allowed") is False
+    )
     interacting_kinetic_still_open = (
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status")
         == "bounded-support / interacting kinetic background sensitivity"
@@ -140,6 +165,31 @@ def main() -> int:
         certificates["feshbach_response_boundary"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-lsz-invariant-readout-not-closure",
+        invariant_readout_not_closure,
+        certificates["fh_lsz_invariant_readout"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "scalar-ladder-derivative-limit-blocks-lsz",
+        derivative_limit_blocks_ladder,
+        certificates["scalar_ladder_derivative_limit"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "cl3-source-unit-does-not-fix-kappa",
+        cl3_source_unit_blocks_kappa,
+        certificates["cl3_source_unit"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-production-manifest-not-evidence",
+        production_manifest_not_evidence,
+        certificates["fh_lsz_production_manifest"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "joint-fh-lsz-resource-is-multiday",
+        joint_resource_multiday,
+        f"hours={certificates['joint_resource_projection'].get('projection', {}).get('joint_mass_scaled_hours')}",
+    )
+    report(
         "interacting-kinetic-route-still-needs-ensemble-or-theorem",
         interacting_kinetic_still_open,
         certificates["interacting_kinetic_sensitivity"].get("actual_current_surface_status", ""),
@@ -149,15 +199,16 @@ def main() -> int:
 
     closure_routes = [
         {
-            "route": "direct_measurement",
+            "route": "direct_or_joint_physical_measurement",
             "retained_closure_condition": (
-                "run strict production correlator evidence on a physically suitable "
-                "scale/heavy-quark treatment, derive or measure the interacting "
-                "kinetic/matching bridge, produce a production certificate, and "
-                "pass scripts/frontier_yt_direct_lattice_correlator.py"
+                "run strict production correlator or joint FH/LSZ evidence on a "
+                "physically suitable scale/heavy-quark treatment, derive or "
+                "measure the scalar pole derivative and any interacting "
+                "kinetic/matching bridge, produce production certificates, and "
+                "pass a retained-proposal gate"
             ),
             "why_shortest": "It bypasses Ward/H_unit and scalar-pole analytic normalization.",
-            "current_blocker": "existing certificates are reduced-scope/pilot; mass-bracket shows current scale cutoff obstruction",
+            "current_blocker": "existing certificates are reduced-scope/pilot or manifests; the joint route projects to multi-day single-worker compute",
         },
         {
             "route": "analytic_scalar_residue",
@@ -185,14 +236,14 @@ def main() -> int:
         "verdict": (
             "The current PR #230 surface has no retained top-Yukawa closure.  "
             "All tested non-MC shortcuts are blocked or conditional.  The shortest "
-            "honest retained routes are: strict direct physical measurement, a new "
-            "scalar pole-residue/common-dressing theorem, or a newly derived "
-            "Planck stationarity selector.  Newer support shows source-scaling "
-            "and Feshbach projection are not the hard blockers; the hard blockers "
-            "are the microscopic interacting scalar residue/common dressing and "
-            "heavy kinetic/matching evidence.  The first two preserve the current "
-            "claim posture; the third requires a new theorem and cannot be merely "
-            "assumed."
+            "honest retained routes are: strict direct or joint FH/LSZ physical "
+            "measurement, a new scalar pole-residue/common-dressing theorem, or "
+            "a newly derived Planck stationarity selector.  Newer support shows "
+            "source-scaling, Feshbach projection, same-source invariant readout, "
+            "and substrate source units are not the hard blockers.  The hard "
+            "blockers are production pole/matching evidence or the microscopic "
+            "interacting scalar denominator, zero-mode/IR limiting order, pole "
+            "residue, and common dressing.  These cannot be assumed."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",
@@ -200,11 +251,10 @@ def main() -> int:
         "required_certificates": required_certificates,
         "closure_routes": closure_routes,
         "exact_next_action": (
-            "Do not run more small pilot MC for closure.  Either implement a "
-            "physically suitable strict measurement plan with interacting kinetic "
-            "matching, or start the microscopic interacting scalar denominator / "
-            "residue theorem from the retained action and expect that it may "
-            "require real correlator data."
+            "Do not run more small pilot MC for closure.  Either run the strict "
+            "production physical-response manifest and follow it with pole/LSZ "
+            "and matching analysis, or derive the microscopic interacting scalar "
+            "denominator/residue theorem from the retained action."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
