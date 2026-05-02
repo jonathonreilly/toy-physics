@@ -24,11 +24,11 @@ DERIVATION CHAIN:
   4. m_t(pole) from MSbar-to-pole conversion
   5. m_H from lambda(M_Pl) = 0 stability boundary with corrected y_t
 
-FRAMEWORK INPUTS (ALL DERIVED, zero imports):
+FRAMEWORK INPUTS (mixed authority; nonlocal bridge/running items are external):
   alpha_s(v) = alpha_bare / u_0^2 = 0.1033  [CMT]
   v = 246.28 GeV                              [hierarchy theorem]
   Ward BC: y_t(M_Pl) = g_3(M_Pl) / sqrt(6)   [lattice Ward identity]
-  R_conn = (N_c^2 - 1) / N_c^2 = 8/9          [color projection, COMPUTED]
+  R_conn = (N_c^2 - 1) / N_c^2 = 8/9          [Fierz/channel counting]
   g_1(v), g_2(v) from taste staircase + color projection
   lambda(M_Pl) = 0  [taste condensate = no tree-level quartic]
 
@@ -1016,7 +1016,8 @@ log("    2. Moves m_H toward the observed value (lower y_t -> lower m_H)")
 log("    3. Is the OPPOSITE correction to the EW sqrt(9/8) -- consistent")
 log("    4. Uses the SAME R_conn = 8/9 already computed from the axiom")
 log("    5. Does NOT double-count with the Ward matching correction")
-log("    6. Is a ZERO-IMPORT correction: pure group theory from the axiom")
+log("    6. Has an in-scope Fierz/channel-counting core; the full physical")
+log("       chain still depends on separately reviewed bridge/running/matching rows")
 log()
 
 
