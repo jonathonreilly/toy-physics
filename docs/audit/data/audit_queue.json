@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 36,
-    "high": 230,
+    "critical": 37,
+    "high": 231,
     "leaf": 153,
-    "medium": 170
+    "medium": 171
   },
-  "generated_at": "2026-05-02T17:44:19.538018+00:00",
+  "generated_at": "2026-05-02T18:15:25.913804+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -72,6 +72,27 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "observable_principle_from_axiom_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 37,
+      "effective_status": "unaudited",
+      "load_bearing_score": 26.144,
+      "note_path": "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_hierarchy_observable_principle_from_axiom.py",
+      "transitive_descendants": 199
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audited_renaming",
       "blocker": null,
       "claim_id": "yt_ward_identity_derivation_theorem",
@@ -90,6 +111,32 @@
       "ready": true,
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "transitive_descendants": 183
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "three_generation_observable_theorem_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "site_phase_cube_shift_intertwiner_note",
+        "s3_taste_cube_decomposition_note",
+        "s3_mass_matrix_no_go_note",
+        "z2_hw1_mass_matrix_parametrization_note"
+      ],
+      "direct_in_degree": 27,
+      "effective_status": "unaudited",
+      "load_bearing_score": 20.454,
+      "note_path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
+      "transitive_descendants": 123
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -401,33 +448,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_r_base_group_theory_derivation.py",
       "transitive_descendants": 124
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audited_conditional",
-      "blocker": null,
-      "claim_id": "three_generation_observable_theorem_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "site_phase_cube_shift_intertwiner_note",
-        "s3_taste_cube_decomposition_note",
-        "s3_mass_matrix_no_go_note",
-        "z2_hw1_mass_matrix_parametrization_note",
-        "generation_axiom_boundary_note"
-      ],
-      "direct_in_degree": 27,
-      "effective_status": "audited_conditional",
-      "load_bearing_score": 20.454,
-      "note_path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
-      "queue_reason": "claim_type_backfill_reaudit",
-      "ready": false,
-      "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
-      "transitive_descendants": 123
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1197,6 +1217,27 @@
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 69
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "physical_lattice_necessity_note",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 14,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.858,
+      "note_path": "docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_physical_lattice_necessity.py",
+      "transitive_descendants": 57
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -7023,6 +7064,27 @@
       "ready": true,
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "transitive_descendants": 44
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "generation_axiom_boundary_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.822,
+      "note_path": "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_generation_axiom_boundary.py",
+      "transitive_descendants": 39
     },
     {
       "audit_independence_required": "any_non_self",
@@ -15492,6 +15554,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 108,
-  "total_pending": 589
+  "ready_count": 112,
+  "total_pending": 592
 }
