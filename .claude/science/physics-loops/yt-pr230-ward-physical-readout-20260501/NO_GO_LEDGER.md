@@ -1827,3 +1827,18 @@ The ratio `(dE_top/ds)/(dM_W/ds)` could cancel `kappa_s` only after a real W/Z
 mass-response harness, correlated production slopes, and sector-overlap /
 Higgs-pole identity certificates exist.  A manifest without those artifacts is
 planning support only.
+
+Canonical-Higgs operator realization gate is not passed:
+
+```text
+python3 scripts/frontier_yt_canonical_higgs_operator_realization_gate.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+The `C_sH` / Gram-purity route needs a concrete same-surface canonical-Higgs
+operator `O_H` or radial `H` observable on the PR #230 Cl(3)/Z3 source
+surface.  Existing EW gauge-mass artifacts assume canonical `H` after it is
+supplied and verify object-level mass algebra; they do not provide `O_H`,
+`C_sH`, or `C_HH` pole residues in the production harness.  Do not use static
+EW algebra, observed W/Z masses, D17 carrier support, source-only `C_ss`, or
+`H_unit` as that operator realization.

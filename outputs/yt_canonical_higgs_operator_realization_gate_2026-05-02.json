@@ -1,0 +1,41 @@
+{
+  "acceptance_schema": {
+    "canonical_higgs_operator": "explicit same-surface operator O_H or H_radial on Cl(3)/Z3 fields",
+    "correlators": [
+      "C_HH pole residue",
+      "C_sH cross residue",
+      "C_ss same-source residue"
+    ],
+    "forbidden_substitutes": [
+      "static electroweak v",
+      "observed W/Z masses",
+      "EW gauge-mass algebra after canonical H is assumed",
+      "H_unit matrix-element readout",
+      "D17 carrier support without source overlap"
+    ],
+    "normalization": "canonical kinetic/LSZ normalization certificate for H",
+    "purity_gate": "Res(C_sH)^2 = Res(C_ss) Res(C_HH) at isolated pole"
+  },
+  "actual_current_surface_status": "open / canonical-Higgs operator realization gate not passed",
+  "canonical_higgs_operator_realization_gate_passed": false,
+  "exact_next_action": "Construct a same-surface canonical-Higgs operator with C_HH and C_sH residues, derive rank-one purity, implement W/Z response with identity certificates, or continue seed-controlled FH/LSZ production.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "brst_nielsen_higgs_identity": "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json",
+    "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+    "effective_potential_hessian": "outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json",
+    "neutral_scalar_rank_one_purity": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No same-surface canonical-Higgs operator or C_sH/C_HH residue certificate exists.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat EW gauge-mass algebra as source-Higgs operator realization",
+    "does not use observed W/Z masses, static v, H_unit, or yt_ward_identity",
+    "does not set kappa_s = 1 or cos(theta)=1"
+  ],
+  "verdict": "The C_sH / Gram-purity route needs a concrete same-surface canonical-Higgs operator.  Current EW Higgs gauge-mass artifacts assume canonical H and derive object-level mass algebra after that assumption; they do not realize O_H on the PR #230 Cl(3)/Z3 source surface.  The production harness has scalar-source response and C_ss support, but no C_sH or C_HH operator path."
+}

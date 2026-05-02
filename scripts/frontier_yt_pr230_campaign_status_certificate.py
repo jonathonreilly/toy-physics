@@ -181,6 +181,9 @@ def main() -> int:
         "source_higgs_gram_purity_gate": load(
             "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
         ),
+        "canonical_higgs_operator_realization_gate": load(
+            "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json"
+        ),
         "neutral_scalar_rank_one_purity_gate": load(
             "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json"
         ),
@@ -658,6 +661,12 @@ def main() -> int:
         "source-Higgs Gram purity gate not passed"
         in str(statuses["source_higgs_gram_purity_gate"]),
         statuses["source_higgs_gram_purity_gate"],
+    )
+    report(
+        "canonical-higgs-operator-realization-gate-not-passed",
+        "canonical-Higgs operator realization gate not passed"
+        in str(statuses["canonical_higgs_operator_realization_gate"]),
+        statuses["canonical_higgs_operator_realization_gate"],
     )
     report(
         "neutral-scalar-rank-one-purity-gate-not-passed",
@@ -1161,6 +1170,10 @@ def main() -> int:
             "a same-source pole readout is the top coupling to the source pole, "
             "not physical y_t, unless the source pole is proved to be the "
             "canonical Higgs radial mode with no orthogonal scalar admixture.  "
+            "The canonical-Higgs operator realization gate now records the "
+            "missing object on the same surface: EW gauge-mass algebra assumes "
+            "canonical H after it is supplied, but the PR #230 source harness "
+            "does not yet implement O_H, C_sH, or C_HH pole residues.  "
             "The refreshed retained-closure route "
             "certificate still authorizes no proposed-retained wording.  A "
             "pole-tuned finite ladder residue envelope also fails to select a "

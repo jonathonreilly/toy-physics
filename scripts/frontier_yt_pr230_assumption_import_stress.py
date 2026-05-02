@@ -65,6 +65,9 @@ def main() -> int:
         "same_source_wz_response_certificate_gate": load(
             "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
         ),
+        "canonical_higgs_operator_realization_gate": load(
+            "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json"
+        ),
     }
 
     required_terms = [
@@ -81,6 +84,8 @@ def main() -> int:
         "Source-Higgs cross-correlator `C_sH`",
         "Static EW W/Z algebra is not a source-response certificate",
         "Slope-only W/Z outputs",
+        "same-surface PR #230 operator",
+        "`O_H`",
         "Reduced cold-gauge momentum pilots",
     ]
     missing_terms = [term for term in required_terms if term not in text]
@@ -147,6 +152,16 @@ def main() -> int:
         is False,
         certificates["same_source_wz_response_certificate_gate"].get("actual_current_surface_status"),
     )
+    report(
+        "canonical-higgs-operator-not-realized",
+        "canonical-Higgs operator realization gate not passed"
+        in str(certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status"))
+        and certificates["canonical_higgs_operator_realization_gate"].get(
+            "canonical_higgs_operator_realization_gate_passed"
+        )
+        is False,
+        certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -161,7 +176,9 @@ def main() -> int:
             "single finite source-shift radius also does not derive the zero-source "
             "Feynman-Hellmann derivative.  A C_sH source-Higgs cross-correlator "
             "is not hidden in the current harness or EW/Higgs notes; it remains "
-            "an open observable/theorem.  Static EW W/Z algebra is not dM_W/ds, "
+            "an open observable/theorem.  Current EW gauge-mass algebra also "
+            "does not realize a same-surface canonical-Higgs operator O_H or "
+            "C_HH/C_sH pole residues.  Static EW W/Z algebra is not dM_W/ds, "
             "and slope-only W/Z outputs need production mass fits plus sector-"
             "overlap and canonical-Higgs identity certificates.  No current route "
             "certificate authorizes retained proposal wording.  Positive "

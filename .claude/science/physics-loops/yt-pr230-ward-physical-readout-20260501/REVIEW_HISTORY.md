@@ -3224,3 +3224,17 @@ Disposition: exact support plus open gate.  Same-source
 PR surface lacks complete production chunks, response stability, accepted
 postprocess/model-class/FV/IR pole data, and canonical-Higgs pole identity.  No
 retained or proposed-retained wording is allowed.
+
+## 2026-05-02 - Block 141 Canonical-Higgs Operator Realization Gate
+
+Review stance: source-Higgs observable gate / claim firewall.
+
+- Added `scripts/frontier_yt_canonical_higgs_operator_realization_gate.py`.
+- Added `docs/YT_CANONICAL_HIGGS_OPERATOR_REALIZATION_GATE_NOTE_2026-05-02.md`.
+- Added `outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: open gate.  Current EW gauge-mass artifacts assume canonical
+`H` after it is supplied, and the PR #230 source harness has no same-surface
+`O_H`, `C_sH`, or `C_HH` pole-residue path.  The Gram-purity route therefore
+remains future work, not retained or proposed-retained closure.

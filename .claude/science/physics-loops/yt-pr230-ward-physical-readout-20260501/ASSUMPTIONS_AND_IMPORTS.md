@@ -654,3 +654,12 @@ as `dM_W/ds` for the Cl(3)/Z3 source.  Slope-only W/Z outputs are also
 forbidden as proof input unless they come from production W/Z correlator mass
 fits under the same source and are paired with sector-overlap and
 canonical-Higgs identity certificates.
+
+2026-05-02 canonical-Higgs operator realization gate:
+
+EW gauge-mass diagonalization, scalar Hessian algebra, or any note that begins
+after canonical `H` is supplied is not a same-surface PR #230 operator
+realization.  The route needs an explicit `O_H` or radial `H` observable on the
+Cl(3)/Z3 source surface, with `C_sH` and `C_HH` pole residues or an equivalent
+identity theorem.  Do not treat source-only `C_ss`, static EW algebra, D17
+carrier support, or `H_unit` matrix-element readout as that missing operator.

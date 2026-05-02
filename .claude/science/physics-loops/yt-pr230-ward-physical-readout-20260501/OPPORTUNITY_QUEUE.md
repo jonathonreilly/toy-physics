@@ -443,3 +443,12 @@ Same-source W/Z response manifest update: the kappa_s-canceling physical
 response ratio now has a concrete output schema, but the route still ranks
 behind active FH/LSZ chunk processing and scalar-denominator theorem work until
 a real W/Z mass-response harness and Higgs/sector identity certificates exist.
+
+Canonical-Higgs operator realization update: the source-Higgs Gram-purity
+route now has a prior gate.  Before `C_sH^2 = C_ss C_HH` can be evaluated, the
+repo needs a same-surface canonical-Higgs operator `O_H` or radial observable
+with `C_HH` and `C_sH` pole residues.  Current EW gauge-mass algebra assumes
+canonical `H` and cannot be used as source-response evidence.  Highest-ranked
+actions remain: process target-series FH/LSZ chunks as they complete; design a
+real `O_H`/`C_sH`/`C_HH` harness; or implement W/Z response only with
+sector-overlap and canonical-Higgs identity certificates.
