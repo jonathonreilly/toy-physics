@@ -2,7 +2,7 @@
 
 **Block:** physics-loop/ckm-bernoulli-2-9-audit-companion-block29-20260502
 **Runner:** scripts/audit_companion_ckm_bernoulli_two_ninths_exact.py (PASS=14/0)
-**Target row:** ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25 (claim_type=positive_theorem, audit_status=audited_conditional, td=85, load_bearing_step_class=A)
+**Target row:** ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25 (claim_type=positive_theorem, load_bearing_step_class=A)
 
 ## Block type
 
@@ -33,13 +33,13 @@ at the retained counts. This Pattern B companion adds:
 ## Claim-Type Certificate (Pattern B)
 
 ```yaml
-target_claim_type: meta  # audit-companion runner; not a claim row
+artifact_type: meta_companion  # audit-companion runner; not a claim row
 proposed_load_bearing_step_class: A
 introduces_new_claim_row: false
 introduces_new_source_note: false
-modifies_parent_audit_status: false  # audit-lane decides
-audit_required_before_effective_retained: true  # parent row only; companion is meta
-bare_retained_allowed: false
+modifies_parent_status: false
+status_authority: independent_audit_lane
+source_sets_audit_outcome: false
 ```
 
 ## 7-criteria check (adapted for Pattern B)
@@ -72,21 +72,17 @@ bare_retained_allowed: false
 ## Audit-graph effect
 
 This companion is **meta** — it does not move the parent row by itself. The
-parent's `audited_conditional` verdict identifies the upstream Wolfenstein,
-CP-phase, and magnitudes-counts authorities (each itself audited_conditional)
-as the unratified deps that prevent retained-grade status. None of those
-upstream gaps are addressed by this companion; the companion only verifies
-that the parent's local class-(A) algebraic content holds at exact symbolic
-precision and that the K3 converse is rigorously closed via sympy `solve`,
-useful when audit-lane reviewers revisit the conditional verdict on the
-local-algebra portion of the row.
+upstream Wolfenstein, CP-phase, and magnitudes-counts authorities remain
+outside this companion. The companion only verifies that the parent's local
+class-(A) algebraic content holds at exact symbolic precision and that the K3
+converse is rigorously closed via sympy `solve`.
 
 ## Forbidden imports check
 
 - No PDG observed values consumed.
 - No literature numerical comparators consumed.
 - No fitted selectors consumed.
-- No admitted unit conventions load-bearing on retention.
+- No admitted unit conventions load-bearing on the companion checks.
 - No same-surface family arguments.
 
 The companion is pure symbolic algebra + integer enumeration, with K3

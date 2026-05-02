@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Pattern B audit-companion runner for
 `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25`
-(claim_type=positive_theorem, audit_status=audited_conditional, td=85,
-load_bearing_step_class=A).
+(claim_type=positive_theorem, load_bearing_step_class=A).
 
 The parent's load-bearing content is five algebraic identities (K1, K2,
 K3, K5, K6) that all give 2/9 under the retained framework counts
@@ -27,7 +26,7 @@ precision under the retained counts. This Pattern B companion adds:
 Companion role: not a new claim row; not a new source note. Provides
 audit-friendly evidence that the parent's class-(A) consistency K3
 holds at exact symbolic precision over the integer count space.
-Does not modify the parent's audit_status; that decision belongs to
+Does not modify the parent's audit outcome; that decision belongs to
 the audit lane.
 """
 
@@ -221,7 +220,6 @@ ledger = json.loads(LEDGER.read_text())
 parent = ledger['rows'].get('ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25', {})
 print(f"\n  ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25 current ledger state:")
 print(f"    claim_type: {parent.get('claim_type')}")
-print(f"    audit_status: {parent.get('audit_status')}")
 print(f"    transitive_descendants: {parent.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent.get('load_bearing_step_class')}")
 print(f"    deps: {parent.get('deps')}")
@@ -255,11 +253,9 @@ print("""
     positive-integer pair/color counts. No external observed/fitted/
     literature input.
 
-  This audit-companion does NOT introduce a new claim row, a new source
-  note, or any modification of the parent's audit_status. The parent
-  remains audited_conditional pending audit-lane review of the
-  upstream Wolfenstein, CP-phase, and magnitudes-counts authorities the
-  verdict identifies.
+  This companion does NOT introduce a new claim row, a new source note, or
+  any modification of the parent's audit outcome. The upstream Wolfenstein,
+  CP-phase, and magnitudes-counts authorities remain outside this companion.
 """)
 
 
