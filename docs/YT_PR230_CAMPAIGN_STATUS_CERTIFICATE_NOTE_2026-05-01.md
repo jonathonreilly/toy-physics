@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=105 FAIL=0
+# SUMMARY: PASS=106 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -114,6 +114,7 @@ The certificate consumes the PR-local route certificates for:
 - BRST/Nielsen Higgs-identity no-go.
 - Cl(3)/Z3 automorphism source-identity no-go.
 - same-source pole-data sufficiency gate.
+- short-distance/OPE LSZ shortcut no-go.
 
 All loaded runner certificates have `FAIL=0`.  None authorizes a retained
 proposal.
@@ -178,6 +179,7 @@ the visible shortcut routes:
 | joint Feynman-Hellmann / scalar-LSZ uniform-gap self-certification no-go | finite shell rows cannot certify the continuum gap; a gapped positive model's shell values are also fit by a near-pole positive continuum model with zero residue lower bound |
 | scalar denominator theorem closure attempt | current support identifies pole and derivative targets plus singlet zero-mode cancellation/finite-q regularity, but zero-mode prescription, physical scalar carrier/projector, `K'(pole)`, model class, threshold, and seed-controlled production remain open |
 | joint Feynman-Hellmann / scalar-LSZ soft-continuum threshold no-go | color-singlet q=0 cancellation and finite-q IR regularity do not certify a positive threshold gap; locally integrable soft continuum weight can start arbitrarily close to the pole |
+| short-distance/OPE LSZ shortcut no-go | finite UV/operator-normalization coefficients can stay fixed while the isolated IR same-source pole residue varies |
 | reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
 | effective-potential Hessian source-overlap no-go | canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the PR #230 source operator direction |
 | scalar carrier/projector closure attempt | color-singlet support and unit taste-singlet algebra are available, but physical carrier authority, unit-projector crossing, kernel enhancement, fitted-kernel legitimacy, and `K'(pole)` remain blocked |

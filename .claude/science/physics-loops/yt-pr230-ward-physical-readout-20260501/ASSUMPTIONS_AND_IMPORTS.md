@@ -28,6 +28,7 @@
 | Scalar-channel Bethe-Salpeter kernel | interacting pole route | not yet retained | open import after ladder scout |
 | IR / finite-volume kernel limit | needed for ladder eigenvalue crossing | not yet fixed | open import |
 | Reflection positivity / OS reconstruction | possible scalar spectral shortcut | exact negative boundary for PR230 LSZ closure | allowed as positivity support only; does not derive pole saturation, source residue, or canonical-Higgs identity |
+| Short-distance/OPE source normalization | possible scalar LSZ shortcut | exact negative boundary for PR230 LSZ closure | allowed as UV/operator support only; finite OPE coefficients do not derive the IR source-pole residue or canonical-Higgs identity |
 | Effective-potential Hessian / radial curvature | possible canonical-Higgs identity shortcut | exact negative boundary for PR230 source-overlap closure | allowed as canonical-field support only; does not derive the source operator direction |
 | BRST/ST/Nielsen gauge identities | possible canonical-Higgs identity shortcut | exact negative boundary for PR230 source-pole identity closure | allowed as gauge-consistency support only; does not derive neutral scalar source direction or source-pole purity |
 | Cl(3)/Z3 finite automorphism/orbit data | possible substrate source selector | exact negative boundary for PR230 source-Higgs identity closure | allowed as structural support only; does not derive continuous LSZ overlap, `D'(pole)`, or pole residue |

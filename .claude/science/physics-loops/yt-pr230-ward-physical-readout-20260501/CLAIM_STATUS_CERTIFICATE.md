@@ -47,6 +47,7 @@ plus effective-potential Hessian source-overlap no-go
 plus BRST/Nielsen Higgs-identity no-go
 plus Cl(3)/Z3 automorphism source-identity no-go
 plus same-source pole-data sufficiency gate
+plus short-distance/OPE LSZ shortcut no-go
 **PR:** #230 draft branch
 
 ```yaml
@@ -59,6 +60,22 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+Short-distance/OPE LSZ shortcut no-go:
+
+```text
+actual_current_surface_status: exact negative boundary / short-distance OPE not scalar LSZ closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_short_distance_ope_lsz_no_go.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+Finite UV/operator-normalization data do not fix the isolated IR same-source
+pole residue.  The witness preserves the first four large-`Q` coefficients
+while varying the pole residue by a factor of ten, so it cannot authorize
+retained or proposed-retained `y_t` closure.
 
 FH/LSZ ready chunk-set production checkpoint:
 

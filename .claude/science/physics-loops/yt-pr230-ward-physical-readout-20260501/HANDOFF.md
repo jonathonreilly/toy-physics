@@ -1,5 +1,23 @@
 # Handoff
 
+Latest checkpoint, 2026-05-02 short-distance/OPE LSZ shortcut no-go:
+
+- Added `scripts/frontier_yt_short_distance_ope_lsz_no_go.py`,
+  `docs/YT_SHORT_DISTANCE_OPE_LSZ_NO_GO_NOTE_2026-05-02.md`, and
+  `outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json`.
+- Result: UV source/operator normalization and any finite set of OPE
+  coefficients are not the missing scalar LSZ theorem.  Positive
+  pole-plus-continuum models can preserve the fixed large-`Q` coefficients
+  while changing the isolated IR source-pole residue by a factor of ten.
+- Retained-route gate is `PASS=80 FAIL=0`; campaign status is
+  `PASS=106 FAIL=0` over 110 certificates.
+- Chunks007-008 are still running in sessions `38412` and `78004`.
+
+Next exact action: process chunks007-008 if they finish; otherwise continue
+with a genuinely IR scalar-denominator/threshold or source-pole-to-canonical
+Higgs identity theorem.  Do not use UV operator normalization, finite OPE
+coefficients, or source matching as `kappa_s`.
+
 Latest checkpoint, 2026-05-02 same-source pole-data sufficiency gate:
 
 - Added `scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py`,

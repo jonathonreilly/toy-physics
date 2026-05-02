@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-125-same-source-pole-data-sufficiency-gate
-blocks_completed: 125
-active_route: "same-source FH/LSZ pole-data sufficiency gate"
-active_hard_residual: "The positive same-source readout (dE/ds)*sqrt(D'_ss) is source-rescaling invariant, but current PR230 data are only 6/63 ready L12 chunks and still fail production response stability, postprocess, model-class/FV/IR, and canonical-Higgs identity gates."
+current_phase: campaign-rerun-block-126-short-distance-ope-lsz-no-go
+blocks_completed: 126
+active_route: "short-distance/OPE scalar LSZ shortcut test"
+active_hard_residual: "Finite UV/OPE source-normalization data do not determine the isolated IR same-source scalar pole residue; positive pole-plus-continuum families keep finite large-Q coefficients fixed while moving the pole residue. PR230 still needs production pole data or a microscopic scalar-denominator/source-pole-to-canonical-Higgs identity theorem."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"

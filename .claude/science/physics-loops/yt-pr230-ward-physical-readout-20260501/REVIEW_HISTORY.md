@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - Short-Distance/OPE LSZ Shortcut
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- finite OPE coefficients and UV operator matching are treated as support
+  only, not as an IR scalar-pole residue theorem;
+- the witness keeps the first four large-`Q` coefficients fixed while the
+  same-source pole residue and fixed-`dE/ds` Yukawa proxy vary;
+- `kappa_s=1`, observed target values, `H_unit`, Ward authority,
+  alpha/plaquette/u0, `c2=1`, and `Z_match=1` remain forbidden;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_short_distance_ope_lsz_no_go.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_short_distance_ope_lsz_no_go.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Chunk002 Checkpoint Runner
 
 Local review-loop disposition:

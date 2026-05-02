@@ -115,6 +115,7 @@ def main() -> int:
         "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
         "d17_source_pole_identity_closure": "outputs/yt_d17_source_pole_identity_closure_attempt_2026-05-02.json",
         "source_overlap_sum_rule_no_go": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
+        "short_distance_ope_lsz_no_go": "outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
@@ -602,6 +603,13 @@ def main() -> int:
         in certificates["source_overlap_sum_rule_no_go"].get("actual_current_surface_status", "")
         and certificates["source_overlap_sum_rule_no_go"].get("proposal_allowed") is False
     )
+    short_distance_ope_lsz_no_go_blocks = (
+        "short-distance OPE not scalar LSZ closure"
+        in certificates["short_distance_ope_lsz_no_go"].get("actual_current_surface_status", "")
+        and certificates["short_distance_ope_lsz_no_go"].get("proposal_allowed") is False
+        and certificates["short_distance_ope_lsz_no_go"].get("short_distance_ope_shortcut_closed")
+        is False
+    )
     higgs_pole_identity_latest_blocker_blocks = (
         "latest Higgs-pole identity blocker certificate"
         in certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", "")
@@ -981,6 +989,11 @@ def main() -> int:
         certificates["source_overlap_sum_rule_no_go"].get("actual_current_surface_status", ""),
     )
     report(
+        "short-distance-ope-lsz-no-go-blocks",
+        short_distance_ope_lsz_no_go_blocks,
+        certificates["short_distance_ope_lsz_no_go"].get("actual_current_surface_status", ""),
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         higgs_pole_identity_latest_blocker_blocks,
         certificates["higgs_pole_identity_latest_blocker"].get("actual_current_surface_status", ""),
@@ -1147,6 +1160,10 @@ def main() -> int:
             "positivity repair too: a reflection-positive positive-measure "
             "family can preserve the same finite shell rows while moving the "
             "same-source pole residue.  "
+            "The short-distance/OPE shortcut no-go blocks the UV-operator "
+            "normalization repair as well: finite large-Q coefficients and "
+            "operator matching can stay fixed while the isolated IR source-pole "
+            "residue varies by a factor of ten.  "
             "The effective-potential Hessian/source-overlap no-go blocks the "
             "radial-curvature repair: canonical VEV, W/Z masses, and scalar "
             "Hessian eigenvalues do not fix the source operator direction.  "

@@ -1,5 +1,22 @@
 # No-Go Ledger
 
+## Short-distance/OPE normalization is not scalar LSZ closure
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_short_distance_ope_lsz_no_go.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+Finite short-distance/OPE source data determine finitely many large-momentum
+spectral moments, not the isolated same-source scalar pole residue.  The
+runner keeps the first four large-`Q` coefficients fixed with a positive
+pole-plus-continuum family while varying the IR pole residue by a factor of
+ten.  Therefore UV operator normalization cannot replace a scalar denominator
+theorem, pole-saturation/threshold certificate, production pole-residue
+measurement, or source-pole-to-canonical-Higgs identity.
+
 ## Same-source pole-data sufficiency gate is support, not closure
 
 Runner:

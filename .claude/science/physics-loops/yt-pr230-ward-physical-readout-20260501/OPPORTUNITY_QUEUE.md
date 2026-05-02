@@ -26,6 +26,11 @@ The same-source pole-data sufficiency gate now states the positive route:
 `(dE_top/ds)*sqrt(D'_ss(pole))` is source-rescaling invariant, but it becomes
 retained-grade only after completed production chunks, response stability,
 postprocess/model-class/FV/IR gates, and canonical-Higgs pole identity pass.
+The short-distance/OPE shortcut is now blocked as well: finite large-`Q`
+source/operator coefficients can stay fixed while the isolated IR source-pole
+residue varies.  This does not change the ranked queue; the positive routes
+remain production pole data or a genuinely IR scalar-denominator/source-pole
+identity theorem.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

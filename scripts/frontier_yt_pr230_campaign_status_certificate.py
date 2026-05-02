@@ -181,6 +181,9 @@ def main() -> int:
         "source_overlap_sum_rule_no_go": load(
             "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json"
         ),
+        "short_distance_ope_lsz_no_go": load(
+            "outputs/yt_short_distance_ope_lsz_no_go_2026-05-02.json"
+        ),
         "higgs_pole_identity_latest_blocker": load(
             "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json"
         ),
@@ -621,6 +624,12 @@ def main() -> int:
         statuses["source_overlap_sum_rule_no_go"],
     )
     report(
+        "short-distance-ope-lsz-no-go-blocks",
+        "short-distance OPE not scalar LSZ closure"
+        in str(statuses["short_distance_ope_lsz_no_go"]),
+        statuses["short_distance_ope_lsz_no_go"],
+    )
+    report(
         "higgs-pole-identity-latest-blocker-blocks",
         "latest Higgs-pole identity blocker certificate"
         in str(statuses["higgs_pole_identity_latest_blocker"]),
@@ -969,7 +978,10 @@ def main() -> int:
             "The reflection-positivity shortcut no-go also blocks the broader "
             "OS positivity repair: reflection-positive positive-measure "
             "families can keep the finite shell rows fixed while changing the "
-            "same-source pole residue.  "
+            "same-source pole residue.  The short-distance/OPE shortcut no-go "
+            "also blocks UV operator normalization as LSZ closure: finite "
+            "large-Q coefficients can stay fixed while the isolated IR "
+            "source-pole residue varies.  "
             "The effective-potential Hessian/source-overlap no-go blocks using "
             "SSB radial curvature as the source-pole identity: canonical VEV, "
             "W/Z masses, and Hessian eigenvalues still leave the source "
