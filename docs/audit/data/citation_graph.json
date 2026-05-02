@@ -5845,14 +5845,6 @@
       "to": "native_gauge_closure_note"
     },
     {
-      "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "to": "su2_witten_z2_anomaly_theorem_note_2026-04-24"
-    },
-    {
-      "from": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "to": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
-    },
-    {
       "from": "lh_doublet_su2_squared_hypercharge_anomaly_cancellation_note_2026-05-01",
       "to": "graph_first_su3_integration_note"
     },
@@ -20013,7 +20005,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T21:18:42.016374+00:00",
+  "generated_at": "2026-05-02T21:32:00.329757+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32790,18 +32782,16 @@
     },
     "lh_anomaly_trace_catalog_theorem_note_2026-04-25": {
       "claim_id": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (algebraic-identity catalog on the assumed",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "left_handed_charge_matching_note",
         "hypercharge_identification_note",
         "graph_first_su3_integration_note",
-        "native_gauge_closure_note",
-        "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
+        "native_gauge_closure_note"
       ],
-      "note_hash": "4bd0d8dc2e6b7dcb9167af5531b8359318da12ca3baffd7fa11e10cbe237b12f",
+      "note_hash": "5187e8f38202c6d0c7c65b5e04f530cb6f32742bd355407976e329f2180e8cf1",
       "path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_lh_anomaly_trace_catalog.py",
       "title": "Left-Handed-Content Anomaly Trace Catalog Theorem"
@@ -41460,32 +41450,32 @@
     },
     "su2_witten_z2_anomaly_theorem_note_2026-04-24": {
       "claim_id": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (Witten Z_2 parity arithmetic on the assumed",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "native_gauge_closure_note",
         "left_handed_charge_matching_note",
         "graph_first_su3_integration_note",
         "three_generation_structure_note"
       ],
-      "note_hash": "b3b13e7ac1fbc890770ea58d020ebef4254715a996a492596c8ed7df69e00e0f",
+      "note_hash": "e0ad01c4cf5f5452583be08e250454f04299e22230c2974ffda02955fe1e2d58",
       "path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su2_witten_z2_anomaly.py",
       "title": "SU(2) Witten Z_2 Global Anomaly Cancellation Theorem"
     },
     "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24": {
       "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (cubic SU(3) gauge anomaly arithmetic on the",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "graph_first_su3_integration_note",
         "left_handed_charge_matching_note"
       ],
-      "note_hash": "d80d25858cff4c761d4b8bd64a98c986adf626306df193f25868c36a32709195",
+      "note_hash": "6ceb5bead1d3c7b9963f08e7aed266215932ba8dba3ca3c883f5570d3117f90c",
       "path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su3_cubic_anomaly_cancellation.py",
       "title": "SU(3)^3 Cubic Gauge Anomaly Cancellation Theorem"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
@@ -46612,24 +46602,24 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 12,
+      "bounded_theorem": 15,
       "meta": 1,
       "no_go": 1,
-      "none": 1742,
+      "none": 1739,
       "positive_theorem": 43
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 512,
+      "bounded_theorem": 515,
       "meta": 1,
       "no_go": 107,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 630
+      "positive_theorem": 627
     },
-    "edge_count": 5003,
+    "edge_count": 5001,
     "leaf_count": 765,
     "node_count": 1799,
     "root_count": 1217,
-    "runners_with_path": 1367
+    "runners_with_path": 1369
   }
 }

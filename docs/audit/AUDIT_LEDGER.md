@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T21:18:46.542025+00:00
+**Generated:** 2026-05-02T21:32:04.177070+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 1 |
-| unaudited | 556 |
+| unaudited | 558 |
 | meta | 36 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 633 |
+| ~~audited_conditional~~ | 631 |
 | ~~audited_failed~~ | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -37,21 +37,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 633 |
+| `audited_conditional` | 631 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 592 |
+| `unaudited` | 594 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 527 |
+| `bounded_theorem` | 530 |
 | `decoration` | 7 |
 | `meta` | 36 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
-| `positive_theorem` | 873 |
+| `positive_theorem` | 870 |
 
 | criticality | count |
 |---|---:|
@@ -65,10 +65,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1295
+- runners classified: 1297
 - runners with (C) first-principles compute hits: 622
 - runners with (D) external comparator hits: 312
-- decoration candidates (no C, no D): 107
+- decoration candidates (no C, no D): 109
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -87,7 +87,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
 | 10 | `native_gauge_closure_note` | bounded_theorem | critical | 257 | 22.51 | `audited_clean` | **retained_bounded** |
 | 11 | `one_generation_matter_closure_note` | bounded_theorem | critical | 259 | 21.02 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `three_generation_structure_note` | positive_theorem | critical | 248 | 20.96 | `audited_clean` | **retained** |
+| 12 | `three_generation_structure_note` | positive_theorem | critical | 247 | 20.95 | `audited_clean` | **retained** |
 | 13 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 14 | `left_handed_charge_matching_note` | decoration | critical | 264 | 20.55 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
 | 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_clean` | **retained** |
@@ -1053,8 +1053,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_extension_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `symmetry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -15672,41 +15670,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On this bounded random-causal-DAG pocket, valley-linear propagation produces TOWARD shifts in the majority of seeds, and the TOWARD rows retain approximately linear mass scaling (F~M ~= 1.0).  _(class `C`)_
 - **chain closes:** True — The matching harness script constructs the random causal DAG pocket, source/mass/detector roles, valley-linear propagator, and seed sweep directly, and a fresh run reproduces the note's 28/32, 21/32, combined 49/64, F~M ~= 1.00, R^2 ~= 1.000, and no-field zero readouts. The note's stated boundary is narrow and does not claim graph universality.
 - **rationale:** The load-bearing bounded result is reproduced by the current harness for both tested sizes and the note states the correct caveats: sign is seed-sensitive, the 1000-node unstable pocket is excluded, and no graph-universality theorem is claimed. The only residual process risk is that the ledger has no registered runner path even though scripts/structureless_dag_gravity_harness.py exists and matches the note.
-- **auditor confidence:** high
-
-### `su2_witten_z2_anomaly_theorem_note_2026-04-24`
-
-- **Note:** [`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](../../docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Conditional audit of the SU(2) Witten Z2 parity cancellation count for fundamental Weyl doublets on the retained matter surface, assuming the one-generation Q_L/L_L SU(2) Weyl-doublet content and three-generation replication.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-pr291-su2-witten-lagrange-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** On the retained one-generation content, Q_L is three color copies of one SU(2) doublet and L_L is one lepton SU(2) doublet, so N_D(one generation)=3+1=4 and N_D(three generations)=3*4=12.  _(class `B`)_
-- **chain closes:** False — The parity arithmetic closes if the Q_L/L_L Weyl-doublet content is granted, but that content is not closed by the retained-grade one-hop authorities provided. The left-handed charge note is an audited decoration/narrow eigenvalue-pattern restatement with SM/matter identification out of scope, and the remaining needed matter-completion inputs are imported as unregistered/plaintext references rather than retained-grade one-hop authorities.
-- **rationale:** Issue: the theorem's load-bearing premise identifies the retained chiral matter fields Q_L and L_L as SU(2) Weyl doublets with multiplicities 3 and 1, while treating RH fields as singlets. Why this blocks retained status: the supplied retained-grade authorities close native SU(2), graph-first 3+1 structure, and three-generation algebra, but they do not ratify the full one-generation chiral field identification; the runner hard-codes that premise and then checks parity. Repair target: add or cite a retained-grade one-generation matter theorem deriving the Q_L/L_L SU(2) Weyl-doublet content and singlet completion from the retained graph/gauge surface, or make it an explicit assumption. Claim boundary until fixed: the note may state the exact Witten parity consequence of an assumed 3+1 fundamental-doublet generation, giving 4 per generation and 12 for three generations.
-- **open / conditional deps cited:**
-  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
-  - `ANOMALY_FORCES_TIME_THEOREM.md`
-  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
-  - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
-- **auditor confidence:** high
-
-### `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24`
-
-- **Note:** [`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](../../docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Pure SU(3)^3 cubic anomaly cancellation for one-generation color-charged Weyl content in the left-handed conjugate frame, assuming Q_L is a weak doublet color 3 and u_R^c,d_R^c are color 3bar singlets.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-pr291-su3-cubic-anomaly-newton-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The only SU(3)-charged retained fields are Q_L, u_R^c, and d_R^c, giving SU(3)^3 anomaly index = 2 - 1 - 1 = 0.  _(class `B`)_
-- **chain closes:** False — The arithmetic cancellation closes once the one-generation color-charged matter content is assumed. The restricted inputs provided do not establish the retained right-handed anti-triplet completion u_R^c,d_R^c, and the left-handed dependency is only an audited decoration of a narrow traceless abelian ratio.
-- **rationale:** Issue: the cancellation relies on the retained presence and SU(3) representations of u_R^c and d_R^c, but those right-handed anti-triplets are not established by the provided retained one-hop dependencies. The note's reproduction runner passes 33 checks, but it checks the hand-entered content table rather than deriving the missing matter-content authority. Why this blocks: without that matter-content input, the load-bearing +2 - 1 - 1 = 0 sum is only conditional algebra, not a theorem from the restricted chain. Repair target: add or retain a one-hop audited theorem deriving the one-generation color-charged completion, including u_R^c,d_R^c as left-handed 3bar fields, and optionally a runner that checks the anomaly from that derived content rather than a hand-entered table. Claim boundary until fixed: if the stated one-generation SU(3) representations are assumed, the standard cubic-index arithmetic cancels exactly.
-- **open / conditional deps cited:**
-  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
-  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
-  - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
 ### `substrate_to_p_a_forcing_theorem_note_2026-04-30`

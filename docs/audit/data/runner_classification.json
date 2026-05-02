@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T21:18:45.487312+00:00",
+  "generated_at": "2026-05-02T21:32:03.370615+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -9338,15 +9338,15 @@
       "runner": "scripts/frontier_lepton_single_higgs_pmns_triviality.py"
     },
     "lh_anomaly_trace_catalog_theorem_note_2026-04-25": {
-      "assert_count": 1,
+      "assert_count": 11,
       "counts": {
-        "A": 0,
+        "A": 11,
         "B": 5,
         "C": 0,
         "D": 0
       },
       "decoration_candidate": true,
-      "dominant_class": "B",
+      "dominant_class": "A",
       "runner": "scripts/frontier_lh_anomaly_trace_catalog.py"
     },
     "lh_doublet_su2_squared_hypercharge_anomaly_cancellation_note_2026-05-01": {
@@ -14088,6 +14088,30 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_su2_weak_beta_coefficient_structural_closed_form.py"
+    },
+    "su2_witten_z2_anomaly_theorem_note_2026-04-24": {
+      "assert_count": 8,
+      "counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_su2_witten_z2_anomaly.py"
+    },
+    "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24": {
+      "assert_count": 12,
+      "counts": {
+        "A": 12,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_su3_cubic_anomaly_cancellation.py"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "assert_count": 2,
@@ -26507,18 +26531,18 @@
       "exists": true
     },
     "scripts/frontier_lh_anomaly_trace_catalog.py": {
-      "assert_count": 1,
+      "assert_count": 11,
       "claims": [
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
       ],
       "counts": {
-        "A": 0,
+        "A": 11,
         "B": 5,
         "C": 0,
         "D": 0
       },
       "decoration_candidate": true,
-      "dominant_class": "B",
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/frontier_lh_doublet_su2_squared_hypercharge_anomaly.py": {
@@ -30025,6 +30049,36 @@
       },
       "decoration_candidate": false,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_su2_witten_z2_anomaly.py": {
+      "assert_count": 8,
+      "claims": [
+        "su2_witten_z2_anomaly_theorem_note_2026-04-24"
+      ],
+      "counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/frontier_su3_cubic_anomaly_cancellation.py": {
+      "assert_count": 12,
+      "claims": [
+        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
+      ],
+      "counts": {
+        "A": 12,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/frontier_substrate_to_p_a_forcing.py": {
@@ -36102,15 +36156,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 107,
+    "decoration_candidates": 109,
     "dominant_class_distribution": {
-      "A": 10,
-      "B": 155,
+      "A": 13,
+      "B": 154,
       "C": 520,
       "D": 198,
       "none": 412
     },
-    "runners_classified": 1295,
+    "runners_classified": 1297,
     "runners_with_C": 622,
     "runners_with_D": 312
   }

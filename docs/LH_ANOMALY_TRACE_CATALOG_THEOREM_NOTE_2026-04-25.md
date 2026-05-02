@@ -121,9 +121,10 @@ N_D(Witten, LH)  =  N_c (Q_L color copies of one weak doublet) + 1 (L_L)
                  =  4.
 ```
 
-The Witten Z_2 cancellation condition is `N_D mod 2 = 0`, which is
-verified in
-[`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md);
+The Witten Z_2 cancellation condition is `N_D mod 2 = 0`, which is a
+companion claim handled by
+`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md` (sibling theorem,
+not a load-bearing input here);
 this catalog only records the LH-only contribution `4`.
 
 ## Role In The Anomaly System
@@ -236,17 +237,41 @@ exact `fractions.Fraction` arithmetic.
 
 ## Cross-References
 
-- `ANOMALY_FORCES_TIME_THEOREM.md`
-  - parent theorem citing these LH trace values inline.
-- `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
-  - companion solving the RH hypercharges using these LH inputs.
-- [`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md)
-  - companion verifying the Witten cancellation across the full content.
-- [`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md)
-  - companion handling the cubic SU(3) gauge anomaly.
-- `BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`
-  - companion handling the B-L gauge-extension anomaly closure.
+### Load-bearing inputs (cited as authority)
+
 - [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md)
-  - retained left-handed content authority.
+  - retained left-handed content authority (currently
+    `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02`,
+    retained).
 - [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md)
-  - retained `Y(Q_L) = 1/3`, `Y(L_L) = -1` identification.
+  - retained `Y(Q_L) = 1/3`, `Y(L_L) = -1` identification (currently
+    `audited_renaming`).
+- [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+  - retained `N_c = 3` color count.
+- [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md)
+  - retained `SU(2)_L` weak-doublet structure.
+
+### Logical siblings (NOT load-bearing inputs)
+
+These notes share the same anomaly cancellation backbone but are
+independent companion theorems; this catalog does not import their
+results, and they do not import this catalog's results. They are
+referenced here as cross-readers for the broader anomaly system and
+for the human reader, not as upstream authority.
+
+- `ANOMALY_FORCES_TIME_THEOREM.md` (parent theorem citing these LH
+  trace values inline; the values here are the inputs the parent
+  uses, but the parent's claim — that anomaly cancellation forces
+  d_t = 1 — is not imported here).
+- `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`
+  (companion solving the RH hypercharges using these LH inputs).
+- `SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`
+  (companion verifying the Witten Z_2 cancellation across the full
+  content; this catalog only computes the LH-only contribution
+  `N_D = 4`).
+- `SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`
+  (companion handling the SU(3)^3 cubic gauge anomaly cancellation
+  on the LH+RH content; this catalog only computes the LH-only
+  C3 trace `1/3`).
+- `BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`
+  (companion handling the B-L gauge-extension anomaly closure).

@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 27,
-    "high": 221,
+    "high": 223,
     "leaf": 172,
     "medium": 175
   },
-  "generated_at": "2026-05-02T21:18:46.233970+00:00",
+  "generated_at": "2026-05-02T21:32:03.946222+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -998,6 +998,56 @@
       "ready": true,
       "runner_path": "scripts/frontier_yt_qfp_insensitivity.py",
       "transitive_descendants": 53
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "native_gauge_closure_note",
+        "left_handed_charge_matching_note",
+        "graph_first_su3_integration_note",
+        "three_generation_structure_note"
+      ],
+      "direct_in_degree": 13,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.055,
+      "note_path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_su2_witten_z2_anomaly.py",
+      "transitive_descendants": 46
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "graph_first_su3_integration_note",
+        "left_handed_charge_matching_note"
+      ],
+      "direct_in_degree": 12,
+      "effective_status": "unaudited",
+      "load_bearing_score": 11.492,
+      "note_path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_su3_cubic_anomaly_cancellation.py",
+      "transitive_descendants": 44
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -2113,8 +2163,8 @@
       "blocker": null,
       "claim_id": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
       "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
@@ -2122,9 +2172,7 @@
         "left_handed_charge_matching_note",
         "hypercharge_identification_note",
         "graph_first_su3_integration_note",
-        "native_gauge_closure_note",
-        "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
+        "native_gauge_closure_note"
       ],
       "direct_in_degree": 11,
       "effective_status": "unaudited",
@@ -15609,6 +15657,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 119,
-  "total_pending": 595
+  "ready_count": 121,
+  "total_pending": 597
 }
