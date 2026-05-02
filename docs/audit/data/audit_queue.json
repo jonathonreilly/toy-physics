@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 27,
-    "high": 225,
+    "high": 226,
     "leaf": 169,
     "medium": 174
   },
-  "generated_at": "2026-05-02T20:57:20.096060+00:00",
+  "generated_at": "2026-05-02T21:00:09.630498+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -849,6 +849,30 @@
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "transitive_descendants": 245
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "graph_first_su3_integration_note",
+        "minimal_axioms_2026-04-11"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.913,
+      "note_path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
+      "transitive_descendants": 240
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -15603,6 +15627,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 120,
-  "total_pending": 595
+  "ready_count": 121,
+  "total_pending": 596
 }

@@ -20001,7 +20001,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:57:15.272896+00:00",
+  "generated_at": "2026-05-02T21:00:05.050045+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21243,14 +21243,14 @@
     },
     "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30": {
       "claim_id": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "graph_first_su3_integration_note",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "1849c0f3a377926ac38ac38a8c4fdf911b5ae94206386bf2a934521683600295",
+      "note_hash": "29202ae82052a809b7d5a6e5ed48b82568184c70f52e1d91df16d572d3deafa0",
       "path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
       "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate"
@@ -46561,18 +46561,18 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 11,
+      "bounded_theorem": 12,
       "meta": 1,
-      "none": 1744,
+      "none": 1743,
       "positive_theorem": 40
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 511,
+      "bounded_theorem": 512,
       "meta": 1,
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 629
+      "positive_theorem": 628
     },
     "edge_count": 5000,
     "leaf_count": 762,

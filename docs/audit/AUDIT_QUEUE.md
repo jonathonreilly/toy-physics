@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-05-02T20:57:20.096060+00:00
-**Total pending:** 595
-**Ready (all deps already at retained-grade or metadata tiers):** 120
+**Generated:** 2026-05-02T21:00:09.630498+00:00
+**Total pending:** 596
+**Ready (all deps already at retained-grade or metadata tiers):** 121
 
 By criticality:
 - `critical`: 27
-- `high`: 225
+- `high`: 226
 - `medium`: 174
 - `leaf`: 169
 
@@ -48,23 +48,23 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 30 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py` |
 | 31 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
 | 32 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
-| 33 | `yt_explicit_systematic_budget_note` | positive_theorem | claim_type_backfill_reaudit | high | 174 | 8.95 | Y | fresh_context_or_stronger | `scripts/frontier_yt_explicit_systematic_budget.py` |
-| 34 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 119 | 13.41 | Y | fresh_context_or_stronger | - |
-| 35 | `pmns_selector_unique_amplitude_slot_note` | decoration | claim_type_backfill_reaudit | high | 112 | 9.32 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_unique_amplitude_slot.py` |
-| 36 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | high | 112 | 8.82 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_derivation.py` |
-| 37 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded_theorem | unaudited | high | 69 | 8.63 | Y | fresh_context_or_stronger | - |
-| 38 | `physical_lattice_necessity_note` | no_go | unaudited | high | 57 | 12.86 | Y | fresh_context_or_stronger | `scripts/frontier_physical_lattice_necessity.py` |
-| 39 | `complex_action_note` | bounded_theorem | unaudited | high | 57 | 8.36 | Y | fresh_context_or_stronger | `scripts/complex_action_harness.py` |
-| 40 | `lensing_k_sweep_note` | bounded_theorem | unaudited | high | 57 | 8.36 | Y | fresh_context_or_stronger | `scripts/lensing_k_sweep.py` |
-| 41 | `cl3_sm_embedding_theorem` | positive_theorem | unaudited | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
-| 42 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/frontier_universal_theta_induced_edm_vanishing.py` |
-| 43 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | high | 53 | 8.76 | Y | fresh_context_or_stronger | `scripts/frontier_yt_qfp_insensitivity.py` |
-| 44 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | claim_type_backfill_reaudit | high | 44 | 11.49 | Y | fresh_context_or_stronger | `scripts/frontier_taste_scalar_isotropy.py` |
-| 45 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 37 | 7.75 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_rigidity_theorem.py` |
-| 46 | `teleportation_conclusion_boundary_note` | open_gate | unaudited | high | 36 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_conclusion_boundary.py` |
-| 47 | `monopole_derived_note` | positive_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_monopole_derived.py` |
-| 48 | `teleportation_acceptance_suite_note` | bounded_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_acceptance_suite.py` |
-| 49 | `teleportation_native_axioms_theory_note` | open_gate | unaudited | high | 35 | 7.67 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_axiom_closure_checks.py` |
-| 50 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | unaudited | high | 247 | 10.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
+| 33 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | unaudited | high | 240 | 9.91 | Y | fresh_context_or_stronger | `scripts/frontier_alpha_s_direct_wilson_loop.py` |
+| 34 | `yt_explicit_systematic_budget_note` | positive_theorem | claim_type_backfill_reaudit | high | 174 | 8.95 | Y | fresh_context_or_stronger | `scripts/frontier_yt_explicit_systematic_budget.py` |
+| 35 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 119 | 13.41 | Y | fresh_context_or_stronger | - |
+| 36 | `pmns_selector_unique_amplitude_slot_note` | decoration | claim_type_backfill_reaudit | high | 112 | 9.32 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_unique_amplitude_slot.py` |
+| 37 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | high | 112 | 8.82 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_derivation.py` |
+| 38 | `koide_axiom_native_support_batch_note_2026-04-22` | bounded_theorem | unaudited | high | 69 | 8.63 | Y | fresh_context_or_stronger | - |
+| 39 | `physical_lattice_necessity_note` | no_go | unaudited | high | 57 | 12.86 | Y | fresh_context_or_stronger | `scripts/frontier_physical_lattice_necessity.py` |
+| 40 | `complex_action_note` | bounded_theorem | unaudited | high | 57 | 8.36 | Y | fresh_context_or_stronger | `scripts/complex_action_harness.py` |
+| 41 | `lensing_k_sweep_note` | bounded_theorem | unaudited | high | 57 | 8.36 | Y | fresh_context_or_stronger | `scripts/lensing_k_sweep.py` |
+| 42 | `cl3_sm_embedding_theorem` | positive_theorem | unaudited | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/verify_cl3_sm_embedding.py` |
+| 43 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/frontier_universal_theta_induced_edm_vanishing.py` |
+| 44 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | high | 53 | 8.76 | Y | fresh_context_or_stronger | `scripts/frontier_yt_qfp_insensitivity.py` |
+| 45 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | claim_type_backfill_reaudit | high | 44 | 11.49 | Y | fresh_context_or_stronger | `scripts/frontier_taste_scalar_isotropy.py` |
+| 46 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 37 | 7.75 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_rigidity_theorem.py` |
+| 47 | `teleportation_conclusion_boundary_note` | open_gate | unaudited | high | 36 | 8.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_conclusion_boundary.py` |
+| 48 | `monopole_derived_note` | positive_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_monopole_derived.py` |
+| 49 | `teleportation_acceptance_suite_note` | bounded_theorem | unaudited | high | 36 | 7.71 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_acceptance_suite.py` |
+| 50 | `teleportation_native_axioms_theory_note` | open_gate | unaudited | high | 35 | 7.67 | Y | fresh_context_or_stronger | `scripts/frontier_teleportation_axiom_closure_checks.py` |
 
 Full queue lives in `data/audit_queue.json`.

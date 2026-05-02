@@ -13,13 +13,9 @@ bridge. These are explicitly **out of scope** of this note's
 load-bearing claim. The PDG comparator
 `alpha_s(M_Z) = 0.1180 +/- 0.0009` is **never** consumed as a
 derivation input; it appears only in the audit-comparator role.
-**Status:** audit pending. Under the scope-aware classification framework,
-`effective_status` is computed by the audit pipeline from `audit_status` +
-`claim_type` + dependency chain; no author-side tier is asserted in source.
-The current audit verdict is `audited_conditional` and audit-lane
-ratification is required before any retained-grade status applies. The
-verdict identifies the four external/admitted-context items above as the
-load-bearing gaps preventing retained-grade status.
+**Status:** independent audit required. Under the scope-aware classification
+framework, ratified status is computed by the audit pipeline from audit lane
+data and the dependency chain; no author-side tier is asserted in source.
 **Primary runner:** `scripts/frontier_alpha_s_direct_wilson_loop.py`
 
 ## Theorem Statement
@@ -97,13 +93,12 @@ PDG QCD review world-average treatment:
 
 ## Decoration-Trap Avoidance
 
-The audit ledger flags
-`alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` as
-`audited_decoration` because the load-bearing step is algebra from the
-definitions `alpha_LM = alpha_bare/u_0` and
+The older `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24`
+route is not authority for this note because its load-bearing step is
+algebra from the definitions `alpha_LM = alpha_bare/u_0` and
 `alpha_s(v) = alpha_bare/u_0^2`.
 
-The ledger also flags `alpha_s_derived_note` as `audited_conditional` because
+The older `alpha_s_derived_note` route is also not authority here because
 the `0.1181` value is reproducible only after supplying the plaquette
 dependency and an unsupplied low-energy running bridge.
 
@@ -155,7 +150,7 @@ alpha_s(M_Z) = 0.1179962733 +/- 0.0067923686
 
 This is inside the runner's one-PDG-sigma central-value window around
 `0.1180 +/- 0.0009`, but the direct uncertainty is still dominated by
-fixed-substrate scale-setting residuals.  No pre-audit retained status is
+fixed-substrate scale-setting residuals.  No ratified source status is
 claimed.
 
 Production inputs used by the certificate:
@@ -444,20 +439,16 @@ certificate (the lattice static-potential extraction at `beta = 6` on the
 
 Unsafe current claim:
 
-That the theorem is retained at the `alpha_s(M_Z)` level. The current
-audit status is `audited_conditional` per the verdict cited above;
-audit-lane ratification is required and the four
-external/admitted-context items must be resolved (or explicitly
-ratified as audit-pending external authorities) before retained-grade
-status applies.
+That the theorem is ratified at the `alpha_s(M_Z)` level. Independent
+audit is required, and the four external/admitted-context items must be
+resolved or explicitly accepted by the audit lane before the repository
+can treat the full `alpha_s(M_Z)` bridge as closed.
 
 ## Out of scope (admitted-context to this note)
 
 The following items are explicitly **NOT** load-bearing claims of this
 note. They depend on external authorities / open derivations and enter
-only as admitted-context. Per the audit verdict on this row, items
-(1)-(4) below are the **specific** unclosed dependencies the audit
-lane identifies as preventing retained-grade `alpha_s(M_Z)` status:
+only as admitted-context:
 
 1. **External Sommer scale setting.** The Sommer parameter `r_0`
    provides the lattice-to-physical length-scale calibration. This
@@ -477,8 +468,7 @@ lane identifies as preventing retained-grade `alpha_s(M_Z)` status:
 4. **Sea-quark / full-QCD bridge.** The bridge from the framework's
    pure-gauge Wilson surface to full-QCD physics including dynamical
    sea quarks is **not** closed by the cited authorities or
-   constructed by the runner. This is the audit lane's principal
-   identified gap.
+   constructed by the runner.
 
 5. **PDG comparator `alpha_s(M_Z) = 0.1180 +/- 0.0009`.** The PDG 2025
    world average appears only in the audit-comparator role. It is
