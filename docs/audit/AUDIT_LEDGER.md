@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:11:13.099833+00:00
+**Generated:** 2026-05-02T23:14:55.048943+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 140 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 193 |
+| **retained_bounded** | 194 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 522 |
+| unaudited | 521 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,22 +36,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 395 |
+| `audited_clean` | 396 |
 | `audited_conditional` | 647 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 559 |
+| `unaudited` | 558 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 530 |
+| `bounded_theorem` | 531 |
 | `decoration` | 7 |
 | `meta` | 37 |
 | `no_go` | 157 |
 | `open_gate` | 100 |
-| `positive_theorem` | 871 |
+| `positive_theorem` | 870 |
 
 | criticality | count |
 |---|---:|
@@ -133,6 +133,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
+| `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | C | - |
 | `claude_complex_action_carryover_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -3131,6 +3132,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** The Cl(3)/Z^3 taste-cube construction has a 3D symmetric base subspace carrying SU(3), commuting with fiber SU(2) and hypercharge, with N_c=3 and R_conn=(N_c^2-1)/N_c^2=8/9 from the SU(3) Fierz identity.  _(class `C`)_
 - **chain closes:** True — The runner constructs the Cl(3) taste-space matrices, the symmetric-base SU(3) embedding, the commuting SU(2)/Y structure, and the Fierz/R_conn algebra directly. The source note limits the result to an algebraic support packet and explicitly leaves continuum color matching and running to separate lanes.
 - **rationale:** The support-tier algebraic color-structure claim closes on its own scoped surface: the runner verifies the Cl(3) generators, even-subalgebra su(2), hypercharge projectors, S3/Z3 taste decomposition, symmetric-base SU(3) embedding, commutators with weak/Y, N_c=3, Fierz identity, R_conn=8/9, and sqrt(9/8) factor. This clean audit is limited to the finite taste-cube support theorem; it does not ratify continuum QCD color matching, alpha_s running, or the critical native-gauge/EW-color projection lanes. Residual risk is downstream citation as a full physical gauge-closure theorem rather than as algebraic support.
+- **auditor confidence:** high
+
+### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
+
+- **Note:** [`CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the retained Cl(3) color structure with N_c=3 and SU(3)_c, the quark-antiquark product 3 tensor 3bar decomposes as one canonical singlet plus an eight-dimensional adjoint complement, with the normalized trace-channel projector.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-cl3-quark-antiquark-singlet-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** Apply the standard SU(N) tensor product rule with N=3: N tensor Nbar = 1 plus adj(N), so 3 tensor 3bar = 1 plus 8.  _(class `C`)_
+- **chain closes:** True — The retained one-hop dependency supplies N_c=3 and SU(3)_c color structure. Together with admitted standard SU(N) representation theory and the trace singlet projector, the scoped algebraic decomposition closes without a hidden physical bridge.
+- **rationale:** The claim is a narrow exact representation-theory result on an already retained SU(3)_c color structure. The runner verifies the dimension split, singlet normalization, invariance under all eight generators, projector idempotence and trace, and rank-eight complement. No confinement, meson-existence, or continuum-physics statement is needed for the scoped theorem.
 - **auditor confidence:** high
 
 ### `cl3_sm_embedding_theorem`
