@@ -43,12 +43,32 @@ Zero-source sanity:
 - baseline max `|zero-source shift| = 0.000e+00`
 - tweak max `|zero-source shift| = 0.000e+00`
 
-Aggregated detector / scaling readout:
+Per-`s` detector / scaling readout (baseline):
 
-| case | centroid shift | sign rows | `N_eff` | fitted exponent |
+| `s` | `delta_mean` | sign | `N_eff` |
+| --- | ---: | :---: | ---: |
+| `0.0010` | `-8.435233e-02` | `AWAY` | `2.57` |
+| `0.0020` | `-8.893522e-02` | `AWAY` | `2.60` |
+| `0.0040` | `-7.117551e-02` | `AWAY` | `2.71` |
+| `0.0080` | `-4.548761e-02` | `AWAY` | `2.78` |
+
+Per-`s` detector / scaling readout (baseline + `kNN` floor):
+
+| `s` | `delta_mean` | sign | `N_eff` |
+| --- | ---: | :---: | ---: |
+| `0.0010` | `-4.028207e-01` | `AWAY` | `4.67` |
+| `0.0020` | `-2.911836e-01` | `AWAY` | `4.86` |
+| `0.0040` | `+9.461983e-02` | `TOWARD` | `5.49` |
+| `0.0080` | `+4.128727e-01` | `TOWARD` | `5.97` |
+
+Aggregated readout (one row per case; centroid-shift column is the
+arithmetic mean of per-`s` `delta_mean` values across the four source
+strengths):
+
+| case | mean centroid shift | sign rows | mean `N_eff` | fitted F~M exponent |
 | --- | ---: | ---: | ---: | ---: |
-| baseline generated family | `-4.357340e-02` | `0/4` TOWARD | `2.66` | `-0.299` |
-| baseline + `kNN` floor | `+3.850909e-01` | `2/4` TOWARD | `5.25` | `-0.152` |
+| baseline generated family | `-7.249e-02` | `0/4` TOWARD | `2.66` | `-0.299` |
+| baseline + `kNN` floor | `-4.658e-02` | `2/4` TOWARD | `5.25` | `-0.152` |
 
 ## Safe read
 

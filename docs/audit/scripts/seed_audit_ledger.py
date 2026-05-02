@@ -304,7 +304,10 @@ def seed() -> dict:
             row["claim_type_author_hint"] = node.get("claim_type_author_hint")
             row["runner_path"] = node["runner_path"]
             row["deps"] = deps
-            if prior.get("note_hash") != node["note_hash"]:
+            if prior.get("note_hash") != node["note_hash"] and prior.get("audit_status") in {None, "unaudited"}:
+                row["note_hash"] = node["note_hash"]
+                preserved += 1
+            elif prior.get("note_hash") != node["note_hash"]:
                 row = archive_prior_audit(row)
                 row["note_hash"] = node["note_hash"]
                 re_audit_required += 1

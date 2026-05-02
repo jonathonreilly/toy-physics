@@ -1,7 +1,13 @@
 # Same-Family 3D Closure: Valley-Linear
 
 **Date:** 2026-04-04
-**Status:** bounded same-family multi-size closure note; script and log are tracked
+**Status:** bounded same-family multi-size closure note; script prints the
+frozen card and the same-`h` multi-`L` rows but does **not** itself recompute
+the load-bearing closure checks live (rows 1-7 are replayed from the retained
+core-card logs; rows 8-9 are replayed from the dedicated `L=8` and `L=10`
+runs on 2026-04-04; row 10 is replayed from the W=12 width-companion log).
+The script is therefore a print-aggregation wrapper for an already-frozen
+multi-log core, not a live re-derivation harness.
 
 ## Current on-disk artifacts
 
@@ -59,6 +65,10 @@ a width companion for the far tail.
 - Properties 8-9 use multiple `L` values (necessary for scaling checks).
   This is a same-family multi-size test, not a single-instance card.
 - The wrapper is partly replayed and partly frozen by design: it is a review-
-  facing closure note, not a new heavyweight all-live card harness.
+  facing closure note, not a new heavyweight all-live card harness. The
+  script `scripts/same_family_3d_closure.py` aggregates and prints the
+  frozen rows but does not itself recompute the underlying closure
+  observables; live recomputation lives in the per-`L` and per-`W` runs
+  cited above.
 - The action is selected, not derived (though the universality-class result
   shows it's the simplest member of the Newtonian family).
