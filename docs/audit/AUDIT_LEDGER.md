@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:31:36.072997+00:00
+**Generated:** 2026-05-02T23:33:52.111729+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 141 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 197 |
+| **retained_bounded** | 198 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 514 |
+| unaudited | 513 |
 | meta | 37 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -37,13 +37,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 400 |
+| `audited_clean` | 401 |
 | `audited_conditional` | 649 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 551 |
+| `unaudited` | 550 |
 
 | claim_type | count |
 |---|---:|
@@ -276,6 +276,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
+| `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
@@ -8911,6 +8912,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the note's bounded quantitative posture is routed through HIGGS_MASS_DERIVED_NOTE.md rather than through an audit-clean, non-circular bounded-Higgs theorem. Why this blocks: the source statement is appropriately limited, but the cited authority is still audited-conditional and the shared runner exits nonzero with failures on alpha_s running, y_t crossing, and full m_H derivation; the audit can verify bounded support, not closed quantitative authority. Repair target: separate a bounded-Higgs support theorem/runner whose PASS/FAIL surface matches only the bounded claim, and register the non-circular dependencies needed for that boundary. Claim boundary until fixed: this remains bounded quantitative Higgs support and should not be used as an exact Higgs-mass or retained flagship surface.
 - **open / conditional deps cited:**
   - `HIGGS_MASS_DERIVED_NOTE.md`
+- **auditor confidence:** high
+
+### `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given the retained graph-first SU(3) gauge surface, admitted Wilson canonical convention g_bare = 1, admitted Cl(3) Clifford identity D_taste^2 = d*I with d = 4, admitted mean-field factorization U_ab -> u_0 delta_ab, and N_taste = 16 taste eigenvalues, the lattice-side dimensionless curvature ratio is R_lattice = 4/(u_0^2*N_taste) = 1/(4u_0^2). This does not identify the ratio with (m_H/v)^2, fix u_0, derive m_H = v/(2u_0), or imply a Standard Model Higgs-mass prediction.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-higgs-lattice-ratio-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** From the admitted Clifford identity with d = 4, the mean-field-scaled eigenvalues have magnitude 2u_0, so W(J) = (N_tot/2) log(J^2 + 4u_0^2) has W''(0) = N_tot/(4u_0^2); dividing by N_tot gives 1/(4u_0^2), matching the declared scaled lattice ratio 4/(u_0^2*N_taste) at N_taste = 16.  _(class `B`)_
+- **chain closes:** True — The derivation closes as a narrow algebraic theorem from retained/admitted inputs: the structural counts, Clifford eigenvalue magnitude, mean-field scaling, generating-functional curvature, and N_taste = 16 substitution are sufficient. No hidden physical Higgs-matching bridge is needed for the stated lattice-side ratio.
+- **rationale:** The claim is properly bounded and explicitly excludes the physical identification and Higgs-mass prediction. Although many runner checks are scope and ledger checks, the row adds an independent lattice-side curvature-ratio identity beyond merely restating its retained dependencies. Residual risk is downstream misuse: any identification with physical (m_H/v)^2 or u_0 selection must be audited separately.
 - **auditor confidence:** high
 
 ### `higgs_mass_derived_note`
