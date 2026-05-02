@@ -842,3 +842,25 @@ same-source color-singlet scalar continuum threshold approaches the pole.
 Next exact action: poll chunks005-006.  If neither has finished, continue
 scalar-denominator/threshold theorem work or wait for production pole-residue
 data; do not import generic confinement-gap language as scalar LSZ closure.
+
+Block 119 added the same-source W/Z gauge-mass response manifest:
+
+```text
+python3 scripts/frontier_yt_fh_gauge_mass_response_manifest.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=74 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=100 FAIL=0
+```
+
+Result: the kappa_s-canceling physical-response ratio now has an explicit
+minimum production schema.  This is not evidence: the current harness has no
+W/Z mass-response implementation or gauge-response certificate, and the
+sector-overlap and Higgs-pole identity gates remain blocking.
+
+Next exact action: poll chunks005-006.  If neither has finished, continue
+scalar-denominator/threshold work or implement a real W/Z response harness;
+do not treat the manifest as retained/proposed-retained support.

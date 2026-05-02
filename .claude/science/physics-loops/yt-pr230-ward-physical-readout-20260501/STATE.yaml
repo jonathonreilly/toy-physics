@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-118-confinement-gap-threshold-import-audit
-blocks_completed: 118
-active_route: "confinement/mass-gap threshold import audit"
-active_hard_residual: "Qualitative confinement or mass-gap statements do not supply the same-source scalar continuum threshold, pole saturation, source residue, or D'(pole) required by the FH/LSZ gate."
+current_phase: campaign-rerun-block-119-fh-gauge-mass-response-manifest
+blocks_completed: 119
+active_route: "same-source W/Z gauge-mass response manifest"
+active_hard_residual: "The W/Z response ratio gives a concrete kappa_s-canceling observable, but the production harness has no W/Z mass-response path and the sector-overlap/Higgs-pole identity gates remain blocking."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -540,6 +540,7 @@ claim_state_movement:
   - "proved a mixed-scalar obstruction for the gauge-response bypass: the same top/W response slopes and source-pole overlap can leave the physical canonical-Higgs Yukawa underdetermined if an orthogonal scalar also couples to the top"
   - "added the latest Higgs-pole identity blocker certificate: a fixed same-source pole readout can coexist with different physical canonical-Higgs Yukawas unless source-pole purity, no-orthogonal-top-coupling/sector-overlap, source residue, and D'(pole) are derived or measured"
   - "audited the confinement/mass-gap threshold shortcut: qualitative substrate mass-gap language is not a uniform same-source scalar LSZ continuum threshold and cannot replace the scalar denominator/threshold theorem"
+  - "added a same-source W/Z gauge-mass response manifest: it specifies the production observable and minimum schema for a kappa_s-canceling ratio, while confirming the current QCD top harness has no W/Z response path and the route is not evidence"
 actual_current_surface_status: "open / conditional-support"
 conditional_surface_status: "tree-level normalization agrees at 1/sqrt(6) if the listed physical-readout bridges are later repaired"
 hypothetical_axiom_status: null
@@ -548,5 +549,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Poll seed-controlled chunks005-006. If either has finished, rerun the combiner, dynamic ready-set checkpoint, response-stability diagnostic, retained-route gate, and campaign gate; otherwise continue scalar-denominator/threshold theorem work or wait for production pole-residue data. Do not import generic confinement-gap language as the scalar LSZ threshold premise."
+next_exact_action: "Poll seed-controlled chunks005-006. If either has finished, rerun the combiner, dynamic ready-set checkpoint, response-stability diagnostic, retained-route gate, and campaign gate; otherwise continue scalar-denominator/threshold theorem work or wait for production pole-residue data. Do not treat the W/Z response manifest as evidence until a real W/Z harness and identity certificates exist."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

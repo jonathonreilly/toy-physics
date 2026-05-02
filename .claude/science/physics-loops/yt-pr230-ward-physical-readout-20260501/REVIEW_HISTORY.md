@@ -2648,3 +2648,16 @@ Disposition: exact negative boundary.  Qualitative confinement or mass-gap
 statements cannot be imported as the uniform same-source scalar threshold
 needed for pole saturation.  No retained or proposed-retained wording is
 allowed.
+
+## 2026-05-02 - Block 119 Same-Source W/Z Response Manifest
+
+Review stance: physical-response design / claim firewall.
+
+- Added `scripts/frontier_yt_fh_gauge_mass_response_manifest.py`.
+- Added `docs/YT_FH_GAUGE_MASS_RESPONSE_MANIFEST_NOTE_2026-05-02.md`.
+- Added `outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: bounded support.  The manifest records a concrete future W/Z
+mass-response observable and schema, but the harness and identity certificates
+are absent.  No retained or proposed-retained wording is allowed.

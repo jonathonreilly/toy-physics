@@ -103,6 +103,7 @@ def main() -> int:
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+        "fh_gauge_mass_response_manifest": "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
@@ -478,6 +479,12 @@ def main() -> int:
         and certificates["fh_gauge_mass_response_observable_gap"].get("proposal_allowed") is False
         and certificates["fh_gauge_mass_response_observable_gap"].get("gauge_mass_response_observable_ready") is False
     )
+    gauge_mass_response_manifest_not_evidence = (
+        "same-source WZ gauge-mass response manifest"
+        in certificates["fh_gauge_mass_response_manifest"].get("actual_current_surface_status", "")
+        and certificates["fh_gauge_mass_response_manifest"].get("proposal_allowed") is False
+        and certificates["fh_gauge_mass_response_manifest"].get("manifest_is_evidence") is False
+    )
     same_source_sector_overlap_identity_blocks = (
         "same-source sector-overlap identity obstruction"
         in certificates["same_source_sector_overlap_identity"].get("actual_current_surface_status", "")
@@ -831,6 +838,11 @@ def main() -> int:
         "fh-gauge-mass-response-observable-gap-blocks",
         gauge_mass_response_observable_gap_blocks,
         certificates["fh_gauge_mass_response_observable_gap"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-gauge-mass-response-manifest-not-evidence",
+        gauge_mass_response_manifest_not_evidence,
+        certificates["fh_gauge_mass_response_manifest"].get("actual_current_surface_status", ""),
     )
     report(
         "same-source-sector-overlap-identity-blocks",

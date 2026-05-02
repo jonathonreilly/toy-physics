@@ -145,6 +145,9 @@ def main() -> int:
         "fh_gauge_mass_response_observable_gap": load(
             "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json"
         ),
+        "fh_gauge_mass_response_manifest": load(
+            "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json"
+        ),
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
@@ -529,6 +532,12 @@ def main() -> int:
         "fh-gauge-mass-response-observable-gap-blocks",
         "FH gauge-mass response observable gap" in str(statuses["fh_gauge_mass_response_observable_gap"]),
         statuses["fh_gauge_mass_response_observable_gap"],
+    )
+    report(
+        "fh-gauge-mass-response-manifest-not-evidence",
+        "same-source WZ gauge-mass response manifest"
+        in str(statuses["fh_gauge_mass_response_manifest"]),
+        statuses["fh_gauge_mass_response_manifest"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

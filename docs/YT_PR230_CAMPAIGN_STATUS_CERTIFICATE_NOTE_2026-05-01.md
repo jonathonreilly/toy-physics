@@ -177,6 +177,7 @@ the visible shortcut routes:
 | FH/LSZ canonical-Higgs pole identity gate | same-source invariance cancels source scaling, but it does not certify that the measured source pole is the canonical Higgs radial mode used by `v`; production pole derivative and source-to-Higgs identity remain open |
 | FH gauge-normalized response route | same-source `(dE_top/ds)/(dM_W/ds)` would cancel `kappa_s`, but no W/Z mass-response harness or production certificate exists and the Higgs-identity gate remains open |
 | FH gauge-mass response observable gap | the current production harness is QCD top-only and has no `dM_W/ds` or `dM_Z/ds` path; EW gauge-mass algebra starts after canonical `H` is supplied |
+| same-source W/Z gauge-mass response manifest | concrete production observable and minimum schema are recorded, but the W/Z response harness and identity certificates are absent |
 | same-source sector-overlap identity obstruction | a shared source coordinate cancels common rescaling but does not prove `k_top = k_gauge`; the gauge-normalized ratio reads `y_t * k_top/k_gauge` until that identity is derived or directly measured |
 | source-pole canonical-Higgs mixing obstruction | a completed same-source pole readout is a coupling to the source-created scalar pole; it is physical `y_t` only if that pole is proved to be the canonical Higgs radial mode with no orthogonal scalar admixture |
 | no-orthogonal-top-coupling import audit | no-retained-2HDM/no-second-scalar authority is support only; it does not derive LSZ source-pole purity or zero top coupling for an orthogonal response component |
@@ -266,3 +267,7 @@ certificates.  No retained/proposed-retained wording is authorized.
 Latest confinement-gap threshold checkpoint: campaign status now includes the
 confinement/mass-gap import audit and reports `PASS=99 FAIL=0` over 103
 certificates.  No retained/proposed-retained wording is authorized.
+
+Latest W/Z response manifest checkpoint: campaign status now includes the
+same-source gauge-mass response manifest and reports `PASS=100 FAIL=0` over
+104 certificates.  No retained/proposed-retained wording is authorized.

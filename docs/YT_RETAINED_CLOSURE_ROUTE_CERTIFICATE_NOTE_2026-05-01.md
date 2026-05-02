@@ -302,3 +302,9 @@ shortcut.  Generic substrate confinement or mass-gap statements are qualitative
 sector constraints, not a same-source scalar continuum-threshold theorem and
 not a pole-residue bound.  The retained-route certificate is refreshed at
 `PASS=73 FAIL=0` and still authorizes no retained/proposed-retained wording.
+
+The same-source W/Z gauge-mass response manifest records a concrete physical
+response observable that could cancel `kappa_s`, but it is not evidence.  The
+current harness has top `dE/ds` support only; no W/Z response path or identity
+certificate exists.  The retained-route certificate is refreshed at
+`PASS=74 FAIL=0` and still authorizes no retained/proposed-retained wording.

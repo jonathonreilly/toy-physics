@@ -1480,3 +1480,15 @@ patterns, but they do not derive a uniform same-source scalar continuum gap
 above the Higgs pole.  A colored confinement gap can stay fixed while the
 color-singlet scalar continuum starts arbitrarily close to the pole, so this
 route cannot supply pole saturation or a source-pole residue bound.
+
+Same-source W/Z response manifest is not evidence:
+
+```text
+python3 scripts/frontier_yt_fh_gauge_mass_response_manifest.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+The ratio `(dE_top/ds)/(dM_W/ds)` could cancel `kappa_s` only after a real W/Z
+mass-response harness, correlated production slopes, and sector-overlap /
+Higgs-pole identity certificates exist.  A manifest without those artifacts is
+planning support only.

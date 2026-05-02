@@ -1,0 +1,77 @@
+{
+  "actual_current_surface_status": "bounded-support / same-source WZ gauge-mass response manifest",
+  "exact_next_action": "Either implement the W/Z response harness named here together with sector-overlap and Higgs-pole identity certificates, or continue the scalar-denominator/production FH-LSZ route.",
+  "fail_count": 0,
+  "gauge_response_certificate_present": false,
+  "manifest": {
+    "evidence_rejection_rules": [
+      "observed W/Z masses cannot be used as proof selectors",
+      "static electroweak v cannot identify the substrate source",
+      "reduced/cold pilots cannot count as production evidence",
+      "same-source labels do not prove equal top/gauge overlap",
+      "no retained or proposed_retained wording until the retained-route gate passes"
+    ],
+    "implementation_gaps": [
+      "production harness is QCD top-only",
+      "no SU(2)xU(1) gauge-boson correlator path is implemented",
+      "no gauge_mass_response_analysis JSON field is emitted",
+      "no same-source W/Z response certificate exists",
+      "Higgs-pole identity and sector-overlap gates remain blocking"
+    ],
+    "minimum_output_schema": {
+      "claim_gate": "proposal_allowed only after retained-route certificate passes",
+      "correlation": [
+        "cov_dE_dMW",
+        "jackknife_blocks"
+      ],
+      "gauge_response": [
+        "slope_dM_W_ds",
+        "slope_dM_W_ds_err"
+      ],
+      "identity_certificates": [
+        "same_source_sector_overlap_identity_certificate",
+        "canonical_higgs_pole_identity_certificate"
+      ],
+      "phase": "production",
+      "source_shifts": [
+        "-delta",
+        "0",
+        "+delta"
+      ],
+      "top_response": [
+        "slope_dE_top_ds",
+        "slope_dE_top_ds_err"
+      ]
+    },
+    "observable": "same-source electroweak gauge-boson mass response",
+    "ratio_formula": "y_t = (g2 / sqrt(2)) * (dE_top/ds) / (dM_W/ds)",
+    "required_measurements": [
+      "top correlator energies E_top(s=-delta,0,+delta) on common gauge/source ensembles",
+      "W-boson correlator masses M_W(s=-delta,0,+delta) under the same scalar source",
+      "optional Z-boson correlator masses M_Z(s=-delta,0,+delta) as neutral-sector cross-check",
+      "correlated symmetric slopes dE_top/ds and dM_W/ds with jackknife/bootstrap covariance",
+      "retained g2 normalization or explicitly certified electroweak coupling normalization",
+      "same-source canonical-Higgs identity or direct sector-overlap certificate"
+    ],
+    "source_coordinate": "the same scalar source s used in the top dE_top/ds FH run"
+  },
+  "manifest_is_evidence": false,
+  "parent_certificates": {
+    "gauge_normalized_route": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
+    "higgs_pole_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+    "sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "source_response_harness": "outputs/yt_scalar_source_response_harness_certificate_2026-05-01.json"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The W/Z response harness and identity certificates are absent; this manifest is not evidence.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use observed W/Z masses, observed top mass, or observed y_t",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit or yt_ward_identity as authority",
+    "does not treat a manifest as production evidence"
+  ],
+  "verdict": "The same-source W/Z mass-response route has a concrete production observable and acceptance schema, but it remains planning support. The current production harness can measure top dE/ds under scalar source shifts, but it has no electroweak W/Z correlator response path and no same-source gauge-response certificate.  The sector-overlap and Higgs-pole identity gates remain blocking."
+}

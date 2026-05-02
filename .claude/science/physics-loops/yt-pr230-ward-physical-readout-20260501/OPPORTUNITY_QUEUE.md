@@ -337,3 +337,8 @@ now explicitly blocked as the FH/LSZ threshold premise.  The next scalar
 denominator work must derive a same-source scalar spectral threshold or pole
 residue directly; broad colored-sector gap statements should be treated as
 non-load-bearing support only.
+
+Same-source W/Z response manifest update: the kappa_s-canceling physical
+response ratio now has a concrete output schema, but the route still ranks
+behind active FH/LSZ chunk processing and scalar-denominator theorem work until
+a real W/Z mass-response harness and Higgs/sector identity certificates exist.

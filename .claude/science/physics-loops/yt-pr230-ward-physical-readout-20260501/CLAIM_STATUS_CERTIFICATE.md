@@ -1423,3 +1423,25 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 Generic confinement or mass-gap language is not the same-source scalar
 continuum-threshold premise.  It does not authorize pole saturation, source
 residue, or retained/proposed-retained wording.
+
+Same-source W/Z gauge-mass response manifest checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / same-source WZ gauge-mass response manifest
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_gauge_mass_response_manifest.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=74 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=100 FAIL=0
+```
+
+The manifest records a possible future kappa_s-canceling observable, but no
+W/Z response harness, production response certificate, sector-overlap identity,
+or Higgs-pole identity certificate exists.  No retained or `proposed_retained`
+wording is authorized.

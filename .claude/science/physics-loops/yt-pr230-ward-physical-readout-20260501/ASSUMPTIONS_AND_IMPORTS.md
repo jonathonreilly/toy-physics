@@ -590,3 +590,11 @@ Qualitative confinement/mass-gap language is support for broad sector
 structure only.  It must not be used as a uniform same-source scalar continuum
 threshold, pole-saturation certificate, or pole-residue bound unless a
 current-surface scalar denominator theorem supplies that exact bridge.
+
+2026-05-02 same-source W/Z response manifest:
+
+The formula using `(dE_top/ds)/(dM_W/ds)` may be used only as a future
+measurement design.  It must not be treated as evidence without a real W/Z
+mass-response harness, correlated production slopes, retained electroweak
+coupling normalization, and same-source sector-overlap / Higgs-pole identity
+certificates.  Observed W/Z masses remain forbidden proof selectors.
