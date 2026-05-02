@@ -133,6 +133,38 @@
       "to": "emergent_lorentz_invariance_note"
     },
     {
+      "from": "anomaly_forces_time_theorem",
+      "to": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "staggered_fermion_card_2026-04-10"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
       "from": "antigravity_sign_selector_boundary_note",
       "to": "frontier_extension_lane_opening_note_2026-04-25"
     },
@@ -427,6 +459,42 @@
     {
       "from": "axiom_first_kms_condition_theorem_note_2026-05-01",
       "to": "axiom_first_cpt_theorem_stretch_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "staggered_fermion_card_2026-04-10"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "to": "anomaly_forces_time_theorem"
     },
     {
       "from": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
@@ -19989,7 +20057,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T20:33:48.340531+00:00",
+  "generated_at": "2026-05-02T20:49:24.246991+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21353,11 +21421,20 @@
     },
     "anomaly_forces_time_theorem": {
       "claim_id": "anomaly_forces_time_theorem",
-      "claim_type_author_hint": "bounded_theorem",
-      "claim_type_author_hint_raw": "bounded_theorem proposal. Audit status is assigned only by the",
-      "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "003b590b1c7fa0427af690147cb516f7b7b4fb6b0830bc6987550427fcf44ec9",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem proposal. Audit status is assigned only by the",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+        "cpt_exact_note",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "staggered_fermion_card_2026-04-10",
+        "native_gauge_closure_note",
+        "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+      ],
+      "note_hash": "a0f84ac86d96c981e709a0c3cd0cdc9fd2aaa5f1252b9ab12e36ff8b7e2da7a9",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
       "runner_path": "scripts/frontier_anomaly_forces_time.py",
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
@@ -21904,6 +21981,27 @@
       "path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "title": "Axiom-First Lattice Noether's Theorem on Cl(3) \u2297 Z^3"
+    },
+    "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02": {
+      "claim_id": "axiom_first_lattice_wess_zumino_fujikawa_theorem_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem proposal. Audit status is assigned only by the",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "cpt_exact_note",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "staggered_fermion_card_2026-04-10",
+        "native_gauge_closure_note",
+        "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "anomaly_forces_time_theorem"
+      ],
+      "note_hash": "6a72e80e48371e58f98d1693f09e93e8f7507aa83a81ebdabf3f796a11b934ad",
+      "path": "docs/AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/axiom_first_lattice_wess_zumino_check.py",
+      "title": "Axiom-First Lattice Wess-Zumino / Fujikawa Theorem on Cl(3)/Z^3"
     },
     "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01": {
       "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
@@ -45395,7 +45493,6 @@
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
-    "anomaly_forces_time_theorem",
     "architecture_note_directional_measure",
     "architecture_options",
     "architecture_portability_sweep_note",
@@ -46525,7 +46622,7 @@
       "bounded_theorem": 11,
       "meta": 1,
       "none": 1747,
-      "positive_theorem": 35
+      "positive_theorem": 36
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 511,
@@ -46533,12 +46630,12 @@
       "no_go": 106,
       "none": 440,
       "open_gate": 109,
-      "positive_theorem": 627
+      "positive_theorem": 628
     },
-    "edge_count": 4997,
+    "edge_count": 5014,
     "leaf_count": 760,
-    "node_count": 1794,
-    "root_count": 1217,
-    "runners_with_path": 1362
+    "node_count": 1795,
+    "root_count": 1216,
+    "runners_with_path": 1363
   }
 }
