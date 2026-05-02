@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 30,
-    "high": 231,
+    "high": 232,
     "leaf": 157,
     "medium": 170
   },
-  "generated_at": "2026-05-02T18:52:14.106101+00:00",
+  "generated_at": "2026-05-02T18:54:40.253660+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -819,6 +819,27 @@
       "ready": false,
       "runner_path": "scripts/frontier_matter_radiation_equality_structural_identity.py",
       "transitive_descendants": 42
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": "third_confirmed_first",
+      "deps": [],
+      "direct_in_degree": 6,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.954,
+      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py",
+      "transitive_descendants": 247
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -15472,6 +15493,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 112,
-  "total_pending": 588
+  "ready_count": 113,
+  "total_pending": 589
 }

@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:50:04.495888+00:00",
+  "generated_at": "2026-05-02T18:54:36.258811+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28916,11 +28916,11 @@
     },
     "gauge_vacuum_plaquette_local_environment_factorization_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "3093688393831480fb86ba7ecac7dd11b81d801e12a9a5c62094388b281cc7fa",
+      "note_hash": "ef05a3f9e4c4044a77f355239a88ac5229982419274beda3be6d9c3ac928629b",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py",
       "title": "Gauge-Vacuum Plaquette Local / Environment Factorization Theorem"
@@ -46367,17 +46367,17 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 9,
+      "bounded_theorem": 10,
       "meta": 1,
-      "none": 1752,
+      "none": 1751,
       "positive_theorem": 22
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 509,
+      "bounded_theorem": 510,
       "meta": 1,
       "no_go": 106,
       "none": 443,
-      "open_gate": 110,
+      "open_gate": 109,
       "positive_theorem": 615
     },
     "edge_count": 4990,
