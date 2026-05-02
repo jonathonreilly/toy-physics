@@ -19961,7 +19961,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-02T18:14:02.179962+00:00",
+  "generated_at": "2026-05-02T19:03:31.254474+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23611,6 +23611,17 @@
       "runner_path": "scripts/frontier_ckm_koide_cross_sector_z3_closure.py",
       "title": "Cross-Sector Closure N_gen = N_color = 3 via Retained Three-Generation Structure and Retained Magnitudes Counts"
     },
+    "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02": {
+      "claim_id": "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "71600b4a5b5f885f79fbfe016da2454e195bcf94c54d0cb38775ae79d232b127",
+      "path": "docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_ckm_magnitudes_structural_counts_narrow.py",
+      "title": "CKM Magnitudes Structural-Counts Narrow Theorem"
+    },
     "ckm_magnitudes_structural_counts_theorem_note_2026-04-25": {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "claim_type_author_hint": null,
@@ -24357,6 +24368,17 @@
       "path": "docs/CYCLE_BREAK_SLICE_NOTE_2026-04-10.md",
       "runner_path": "scripts/frontier_staggered_cycle_break_slice.py",
       "title": "Cycle-Break Frontier Slice Note"
+    },
+    "cyclic_projector_compression_narrow_theorem_note_2026-05-02": {
+      "claim_id": "cyclic_projector_compression_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "8e2b809f407c0c8ccbb6c0ee4a2b0b1c110445a3a1905128fc179242c280fd23",
+      "path": "docs/CYCLIC_PROJECTOR_COMPRESSION_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_cyclic_projector_compression_narrow.py",
+      "title": "Cyclic-Projector Compression Narrow Theorem on Herm(3)"
     },
     "dark_energy_eos_note": {
       "claim_id": "dark_energy_eos_note",
@@ -28696,16 +28718,16 @@
     },
     "gauge_vacuum_plaquette_bridge_support_note": {
       "claim_id": "gauge_vacuum_plaquette_bridge_support_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "no_go",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (bridge-support stack)",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "gauge_scalar_temporal_completion_theorem_note",
         "scalar_3plus1_temporal_ratio_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
       ],
-      "note_hash": "937a69d024b5ba8a0b372bdb96f740805994c422ee81f966752c249cd8332e26",
+      "note_hash": "4bb4612cdd000f0bdd93b85ffdddb1249a0859e83fedc3d4ac58c923e952ff25",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
       "title": "Gauge-Vacuum Plaquette Scalar-Bridge Support"
@@ -28905,11 +28927,11 @@
     },
     "gauge_vacuum_plaquette_local_environment_factorization_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_local_environment_factorization_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "3093688393831480fb86ba7ecac7dd11b81d801e12a9a5c62094388b281cc7fa",
+      "note_hash": "ef05a3f9e4c4044a77f355239a88ac5229982419274beda3be6d9c3ac928629b",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py",
       "title": "Gauge-Vacuum Plaquette Local / Environment Factorization Theorem"
@@ -29080,11 +29102,11 @@
     },
     "generation_axiom_boundary_note": {
       "claim_id": "generation_axiom_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1bef781440d3e9d8758df2c6db5f0dd3e9d65d2b069441580edd6550a969132b",
+      "note_hash": "334a5e3363e9f5252d547a9f228f0f2527a32445e7306e0feea36c199931c5ec",
       "path": "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_generation_axiom_boundary.py",
       "title": "Generation Axiom Boundary Note"
@@ -29748,6 +29770,17 @@
       "path": "docs/HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md",
       "runner_path": null,
       "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap"
+    },
+    "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02": {
+      "claim_id": "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "547ff7393d0e348616ca5b4527205841189ccf147a47ad7d31bb79d1695dc645",
+      "path": "docs/HALF_PLANE_CHART_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_half_plane_chart_equivalence_narrow.py",
+      "title": "Half-Plane Chart Equivalence Narrow Theorem"
     },
     "hard_geometry_gravity_window_note": {
       "claim_id": "hard_geometry_gravity_window_note",
@@ -34589,11 +34622,11 @@
     },
     "observable_principle_from_axiom_note": {
       "claim_id": "observable_principle_from_axiom_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "5881b9d9836968f3c365c72622bcf51efff0e54568505d9e6451a2c9e4360394",
+      "note_hash": "3c2104ec67e632088845788e36e7af027d7f627a272ef0e18799d90f6e5a83ec",
       "path": "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_observable_principle_from_axiom.py",
       "title": "Observable Principle From Axiom Note"
@@ -41897,6 +41930,17 @@
       "runner_path": "scripts/frontier_tensor_support_center_excess_law.py",
       "title": "Exact Support-Side `A1` Center-Excess Law and the Remaining Tensor Gap"
     },
+    "thales_right_angle_narrow_theorem_note_2026-05-02": {
+      "claim_id": "thales_right_angle_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "b769e5aa9a786d106d524fb7a27cfb73065861d5af3f1076fc9866d4fd6153e1",
+      "path": "docs/THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_thales_right_angle_narrow.py",
+      "title": "Thales Right-Angle Narrow Theorem"
+    },
     "third_grown_family_boundary_note": {
       "claim_id": "third_grown_family_boundary_note",
       "claim_type_author_hint": null,
@@ -42007,11 +42051,11 @@
     },
     "three_generation_structure_note": {
       "claim_id": "three_generation_structure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4d4cbba029fac84e829c79c7619006c3926b548341c52348d0bcbf1b428f9644",
+      "note_hash": "2092de74928fc4ba3038d3f13dc9472a9e79d2210daae743ed41bf35fccc2c7a",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
@@ -42116,6 +42160,17 @@
       "path": "docs/UNIFIED_PROGRAM_NOTE.md",
       "runner_path": null,
       "title": "Unified Program Note"
+    },
+    "unit_singlet_overlap_narrow_theorem_note_2026-05-02": {
+      "claim_id": "unit_singlet_overlap_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "878727a00dd60c7b1bf58542ea3fa74658b1ef00babcf0194f9a5820d5a52fc8",
+      "path": "docs/UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_unit_singlet_overlap_narrow.py",
+      "title": "Unit-Singlet Overlap Narrow Theorem"
     },
     "universal_gr_a1_invariant_section_note": {
       "claim_id": "universal_gr_a1_invariant_section_note",
@@ -44275,11 +44330,11 @@
     },
     "yt_color_projection_correction_note": {
       "claim_id": "yt_color_projection_correction_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "9dc31ddb23288df333ae80890b605d7c74fff6f16392abe67ecde5d1d3348fc5",
+      "note_hash": "88174f3229cd3f7575f1c5572e29f12b6d1670ed3836c441870320c7a6983782",
       "path": "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
       "runner_path": "scripts/frontier_yt_color_projection_correction.py",
       "title": "Color-Singlet Projection Correction to y_t"
@@ -45280,6 +45335,7 @@
     "chiral_walk_synthesis_2026-04-09",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_from_mass_hierarchy_note",
+    "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
     "ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26",
     "ckm_schur_complement_theorem",
     "cl3_color_automorphism_theorem",
@@ -45306,6 +45362,7 @@
     "cross_family_universality_note",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
+    "cyclic_projector_compression_narrow_theorem_note_2026-05-02",
     "dark_energy_eos_note",
     "decoherence_action_independence_note",
     "decoherence_decision_note",
@@ -45624,6 +45681,7 @@
     "hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30",
     "hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27",
     "hadron_mass_lane1_theorem_plan_support_note_2026-04-27",
+    "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02",
     "hard_geometry_gravity_window_note",
     "hard_geometry_head_to_head_note",
     "hard_geometry_local_note",
@@ -46177,6 +46235,7 @@
     "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
     "tensor_source_map_eta_note",
     "tensor_support_center_excess_law_note",
+    "thales_right_angle_narrow_theorem_note_2026-05-02",
     "third_grown_family_boundary_note",
     "third_grown_family_complex_boundary_note",
     "third_grown_family_complex_note",
@@ -46188,6 +46247,7 @@
     "two_sign_comparison_note_2026-04-10",
     "unification_basin_failure_note",
     "unified_basin_signed_source_control_support_note_2026-04-30",
+    "unit_singlet_overlap_narrow_theorem_note_2026-05-02",
     "universal_gr_a1_invariant_section_note",
     "universal_gr_block_constraint_interpretation_note",
     "universal_gr_block_ident_note",
@@ -46319,23 +46379,23 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 8,
+      "bounded_theorem": 10,
       "meta": 1,
-      "none": 1756,
-      "positive_theorem": 15
+      "none": 1750,
+      "positive_theorem": 24
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 508,
+      "bounded_theorem": 510,
       "meta": 1,
-      "no_go": 106,
-      "none": 444,
-      "open_gate": 110,
-      "positive_theorem": 611
+      "no_go": 105,
+      "none": 443,
+      "open_gate": 109,
+      "positive_theorem": 617
     },
     "edge_count": 4990,
-    "leaf_count": 750,
-    "node_count": 1780,
-    "root_count": 1211,
-    "runners_with_path": 1347
+    "leaf_count": 755,
+    "node_count": 1785,
+    "root_count": 1216,
+    "runners_with_path": 1352
   }
 }
