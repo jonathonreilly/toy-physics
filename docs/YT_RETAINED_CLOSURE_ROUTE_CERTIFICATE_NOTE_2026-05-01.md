@@ -266,3 +266,11 @@ the eight-mode/x8
 foreground option is used, it first needs same-source x8/x16 variance
 calibration with noise-subsample diagnostics.  More small pilot MC runs do not
 close PR #230.
+
+The no-orthogonal-top-coupling import audit now closes another shortcut.  The
+existing Class #3 SUSY/2HDM authority excludes a retained fundamental second
+scalar, retained 2HDM species split, and second D17 `Q_L` scalar, but it does
+not derive LSZ source-pole purity.  It cannot be used to set an orthogonal top
+coupling to zero or to identify the measured source pole with the canonical
+Higgs radial mode.  The retained-route certificate is refreshed at
+`PASS=69 FAIL=0` and still authorizes no retained/proposed-retained wording.

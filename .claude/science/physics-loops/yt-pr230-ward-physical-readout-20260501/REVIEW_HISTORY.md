@@ -2564,3 +2564,17 @@ varying the physical canonical-Higgs Yukawa through an orthogonal top-coupled
 scalar.  The response route still needs a source-pole/canonical-Higgs identity
 or no-orthogonal-top-coupling theorem.  No retained/proposed-retained wording
 is authorized.
+
+## 2026-05-02 - Block 113 No-Orthogonal-Top-Coupling Import Audit
+
+Review stance: claim firewall / source-pole purity.
+
+- Added `scripts/frontier_yt_no_orthogonal_top_coupling_import_audit.py`.
+- Added `docs/YT_NO_ORTHOGONAL_TOP_COUPLING_IMPORT_AUDIT_NOTE_2026-05-02.md`.
+- Added `outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json`.
+- Updated retained-route and campaign certificates.
+
+Disposition: exact negative boundary.  The Class #3 no-2HDM/no-second-scalar
+support does not contain the LSZ/source-pole purity theorem required to turn a
+same-source gauge-response ratio into physical `y_t`.  No retained or
+proposed-retained wording is allowed.

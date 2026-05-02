@@ -1408,3 +1408,20 @@ gauge-mass theorem supplies `dM_W/dh` only after canonical `H` is supplied.
 Sector-overlap countermodels keep the same static `v` and `M_W` while changing
 the inferred ratio unless the top and gauge responses are certified to share
 the same canonical Higgs radial mode.
+
+No hidden no-orthogonal-top-coupling theorem:
+
+```text
+python3 scripts/frontier_yt_no_orthogonal_top_coupling_import_audit.py
+# SUMMARY: PASS=14 FAIL=0
+```
+
+The Class #3 SUSY/2HDM authority remains useful support against a retained
+fundamental second scalar, retained 2HDM split, and second D17 `Q_L` scalar.
+It is not a source-pole residue or LSZ purity certificate.  It does not prove
+that the measured source pole is the canonical Higgs radial mode, that no
+orthogonal response component is present, or that any orthogonal response
+component has zero top coupling.  Therefore the same-source gauge-response
+route still needs a source-pole identity/no-orthogonal-top-coupling theorem or
+direct production response certificate before it can be physical `y_t`
+evidence.

@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-rerun-block-112-fh-gauge-response-mixed-scalar-obstruction
-blocks_completed: 112
-active_route: "FH gauge-response physical bypass purity test"
-active_hard_residual: "A same-source W/Z response ratio cancels common source normalization but still reads a source-pole top coupling unless orthogonal top-coupled scalar admixtures are excluded or the source pole is identified as the canonical Higgs."
+current_phase: campaign-rerun-block-113-no-orthogonal-top-coupling-import-audit
+blocks_completed: 113
+active_route: "source-pole purity / no-orthogonal-top-coupling theorem audit"
+active_hard_residual: "The no-retained-2HDM/no-second-scalar authority excludes a retained extra fundamental scalar or species split, but it does not derive the LSZ/source-pole purity theorem needed to rule out orthogonal top-coupled response components."
 files_touched:
   - "scripts/frontier_yt_pr230_global_proof_audit.py"
   - "scripts/frontier_yt_ward_physical_readout_repair_audit.py"
@@ -546,5 +546,5 @@ proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Continue seed-controlled chunks005-006 in the background and rerun the combiner/ready-set/stability gates when they finish; in foreground, attempt a canonical-Higgs/source-pole identity theorem or a no-orthogonal-top-coupling theorem. Do not claim retained/proposed-retained from a gauge-normalized response ratio without those purity premises."
+next_exact_action: "Continue seed-controlled chunks005-006 in the background and rerun the combiner/ready-set/stability gates when they finish; in foreground, either derive the source-pole-to-canonical-Higgs identity directly or pivot to the next scalar-denominator/threshold theorem attempt. Do not claim retained/proposed-retained from no-2HDM/no-second-scalar authority or a gauge-normalized response ratio without the missing LSZ purity premise."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

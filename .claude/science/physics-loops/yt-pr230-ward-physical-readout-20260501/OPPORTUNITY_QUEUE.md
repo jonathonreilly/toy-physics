@@ -293,3 +293,18 @@ canonical-Higgs Yukawa underdetermined even when top and W slopes are measured.
 8. **Existing bridge-stack promotion.** Closed negatively for PR230 retained
    closure.  The bridge stack is bounded transport support and imports accepted
    endpoints/surfaces.
+
+## 2026-05-02 Queue Refresh
+
+The no-orthogonal-top-coupling import audit checked whether the existing
+no-retained-2HDM/no-second-scalar authority already supplies the needed
+source-pole purity premise.  It does not.  The highest-ranked routes remain:
+
+1. process seed-controlled FH/LSZ chunks as they finish, then require
+   combiner, response-stability, pole-fit, model-class, FV/IR, and
+   Higgs-identity gates;
+2. derive the source-pole-to-canonical-Higgs identity directly;
+3. derive a scalar-denominator/threshold theorem that fixes the pole residue
+   and excludes finite-shell ambiguity;
+4. build a same-source W/Z response harness only if paired with a purity or
+   sector-overlap identity certificate.

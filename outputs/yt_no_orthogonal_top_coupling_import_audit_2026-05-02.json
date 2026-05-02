@@ -1,0 +1,75 @@
+{
+  "actual_current_surface_status": "exact negative boundary / no-orthogonal-top-coupling import audit",
+  "exact_next_action": "Either derive the source-pole-to-canonical-Higgs/no-orthogonal-top-coupling theorem directly, or keep accumulating seed-controlled FH/LSZ production chunks and require a separate pole-identity acceptance gate before any physical y_t claim.",
+  "fail_count": 0,
+  "no_orthogonal_top_coupling_theorem_found": false,
+  "parent_certificates": {
+    "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+    "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
+    "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No current-surface authority proves the required no-orthogonal-top-coupling/source-pole-purity premise.",
+  "response_level_counterfamily": [
+    {
+      "d17_q_l_scalar_singlet_dimension": 1.0,
+      "fixed_measured_source_pole_top_coupling": 1.0,
+      "orthogonal_effective_top_coupling": -0.4,
+      "physical_canonical_higgs_yukawa": 1.4987139126098379,
+      "retained_2hdm_present": false,
+      "retained_fundamental_second_scalar_present": false,
+      "source_pole_canonical_higgs_overlap_cos_theta": 0.82,
+      "source_pole_orthogonal_response_overlap_sin_theta": 0.5723635208501675
+    },
+    {
+      "d17_q_l_scalar_singlet_dimension": 1.0,
+      "fixed_measured_source_pole_top_coupling": 1.0,
+      "orthogonal_effective_top_coupling": 0.0,
+      "physical_canonical_higgs_yukawa": 1.2195121951219512,
+      "retained_2hdm_present": false,
+      "retained_fundamental_second_scalar_present": false,
+      "source_pole_canonical_higgs_overlap_cos_theta": 0.82,
+      "source_pole_orthogonal_response_overlap_sin_theta": 0.5723635208501675
+    },
+    {
+      "d17_q_l_scalar_singlet_dimension": 1.0,
+      "fixed_measured_source_pole_top_coupling": 1.0,
+      "orthogonal_effective_top_coupling": 0.4,
+      "physical_canonical_higgs_yukawa": 0.9403104776340646,
+      "retained_2hdm_present": false,
+      "retained_fundamental_second_scalar_present": false,
+      "source_pole_canonical_higgs_overlap_cos_theta": 0.82,
+      "source_pole_orthogonal_response_overlap_sin_theta": 0.5723635208501675
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not import H_unit matrix-element readout",
+    "does not use yt_ward_identity as authority",
+    "does not use observed top mass, observed y_t, W/Z, or Higgs values as proof selectors",
+    "does not use alpha_LM, plaquette, u0, c2 = 1, Z_match = 1, or kappa_s = 1",
+    "does not promote no-2HDM/no-second-scalar authority into LSZ source-pole purity"
+  ],
+  "support_separated_from_missing_premise": {
+    "available_support": [
+      "no retained fundamental second scalar in the bare action",
+      "no retained 2HDM species split",
+      "D17 one-dimensional Q_L scalar-singlet support"
+    ],
+    "still_missing": [
+      "source pole equals the canonical Higgs radial mode",
+      "orthogonal response component is absent from the source pole",
+      "orthogonal response component has zero top coupling",
+      "production or theorem fixes the source-pole scalar residue and purity"
+    ]
+  },
+  "text_authorities": {
+    "class3_note": "docs/YT_CLASS_3_SUSY_2HDM_ANALYSIS_NOTE_2026-04-18.md",
+    "class3_script": "scripts/frontier_yt_class_3_susy_2hdm.py"
+  },
+  "verdict": "The existing Class #3 SUSY/2HDM authority is useful support: it excludes a retained fundamental second scalar, a retained 2HDM species split, and a second D17 Q_L scalar.  It is not the stronger LSZ/source-pole purity theorem needed by PR #230.  It does not derive that the measured source pole is the canonical Higgs radial mode, that every orthogonal response component is absent, or that such a component has zero top coupling.  The same-source gauge-response route therefore still needs a genuine source-pole identity/no-orthogonal-top-coupling theorem or a direct production response certificate."
+}

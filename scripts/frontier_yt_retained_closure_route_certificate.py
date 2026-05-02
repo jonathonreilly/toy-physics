@@ -105,6 +105,7 @@ def main() -> int:
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
+        "no_orthogonal_top_coupling_import": "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
@@ -485,6 +486,15 @@ def main() -> int:
         in certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", "")
         and certificates["fh_gauge_response_mixed_scalar"].get("proposal_allowed") is False
     )
+    no_orthogonal_top_coupling_import_blocks = (
+        "no-orthogonal-top-coupling import audit"
+        in certificates["no_orthogonal_top_coupling_import"].get("actual_current_surface_status", "")
+        and certificates["no_orthogonal_top_coupling_import"].get("proposal_allowed") is False
+        and certificates["no_orthogonal_top_coupling_import"].get(
+            "no_orthogonal_top_coupling_theorem_found"
+        )
+        is False
+    )
     pole_fit_mode_budget_not_closure = (
         "pole-fit mode-noise budget"
         in certificates["fh_lsz_pole_fit_mode_budget"].get("actual_current_surface_status", "")
@@ -804,6 +814,11 @@ def main() -> int:
         "fh-gauge-response-mixed-scalar-blocks",
         fh_gauge_response_mixed_scalar_blocks,
         certificates["fh_gauge_response_mixed_scalar"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "no-orthogonal-top-coupling-import-blocks",
+        no_orthogonal_top_coupling_import_blocks,
+        certificates["no_orthogonal_top_coupling_import"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

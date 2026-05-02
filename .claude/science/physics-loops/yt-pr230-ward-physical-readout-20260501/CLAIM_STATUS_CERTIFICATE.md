@@ -1299,3 +1299,24 @@ The current harness has top scalar-source response support but no same-source
 W/Z mass-response observable.  The EW gauge-mass theorem assumes canonical
 `H`; it does not provide `dM_W/ds`.  No retained/proposed-retained wording is
 authorized.
+
+No-orthogonal-top-coupling import-audit checkpoint:
+
+```text
+actual_current_surface_status: exact negative boundary / no-orthogonal-top-coupling import audit
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_no_orthogonal_top_coupling_import_audit.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=69 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=95 FAIL=0
+```
+
+The current no-retained-second-scalar/no-2HDM authority is support only.  It
+does not derive source-pole purity or zero top coupling for an orthogonal
+response component.  No retained/proposed-retained wording is authorized.

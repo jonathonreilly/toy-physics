@@ -151,6 +151,9 @@ def main() -> int:
         "fh_gauge_response_mixed_scalar": load(
             "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json"
         ),
+        "no_orthogonal_top_coupling_import": load(
+            "outputs/yt_no_orthogonal_top_coupling_import_audit_2026-05-02.json"
+        ),
         "fh_lsz_pole_fit_mode_budget": load("outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"),
         "fh_lsz_eight_mode_noise_variance": load(
             "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
@@ -526,6 +529,12 @@ def main() -> int:
         "FH gauge-response mixed-scalar obstruction"
         in str(statuses["fh_gauge_response_mixed_scalar"]),
         statuses["fh_gauge_response_mixed_scalar"],
+    )
+    report(
+        "no-orthogonal-top-coupling-import-blocks",
+        "no-orthogonal-top-coupling import audit"
+        in str(statuses["no_orthogonal_top_coupling_import"]),
+        statuses["no_orthogonal_top_coupling_import"],
     )
     report(
         "fh-lsz-pole-fit-mode-budget-not-closure",

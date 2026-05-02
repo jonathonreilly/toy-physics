@@ -545,3 +545,17 @@ Positive-closure candidates left after the assumption exercise:
    eigenvalue crossing, and residue;
 3. an independent retained parent repair for the chirality/scalar carrier
    bridge.
+
+2026-05-02 no-orthogonal-top-coupling import audit:
+
+The current Class #3 SUSY/2HDM authority may be used only as support for no
+retained fundamental second scalar, no retained 2HDM species split, and D17
+one-dimensional `Q_L` scalar-singlet structure.  It must not be promoted into
+the stronger LSZ/source-pole premise needed by PR #230.
+
+Still forbidden unless derived or measured on the current surface:
+
+- source pole equals canonical Higgs radial mode;
+- no orthogonal response component in the source pole;
+- zero top coupling for every orthogonal scalar response component;
+- `kappa_s = 1`, `Z_match = 1`, or `c2 = 1`.
