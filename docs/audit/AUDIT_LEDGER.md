@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:40:54.325884+00:00
+**Generated:** 2026-05-03T13:43:36.870528+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 764 |
+| unaudited | 763 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
-| ~~audited_renaming~~ | 17 |
+| ~~audited_renaming~~ | 18 |
 | ~~audited_conditional~~ | 523 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 25 |
-| `audited_renaming` | 17 |
-| `unaudited` | 806 |
+| `audited_renaming` | 18 |
+| `unaudited` | 805 |
 
 | claim_type | count |
 |---|---:|
@@ -51,8 +51,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 42 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 861 |
-| `unset` | 2 |
+| `positive_theorem` | 863 |
 
 | criticality | count |
 |---|---:|
@@ -77,18 +76,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 386 | 33.10 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 386 | 32.10 | `audited_clean` | **retained_bounded** |
 | 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 127 | 29.50 | `unaudited` | unaudited |
 | 3 | `alpha_s_derived_note` | bounded_theorem | critical | 259 | 29.02 | `unaudited` | unaudited |
 | 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.01 | `unaudited` | unaudited |
-| 5 | `minimal_axioms_2026-05-03` | meta | critical | 363 | 27.51 | `unaudited` | meta |
-| 6 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 363 | 27.51 | `unaudited` | unaudited |
-| 7 | `minimal_axioms_2026-04-11` | meta | critical | 326 | 27.35 | `unaudited` | meta |
-| 8 | `observable_principle_from_axiom_note` | positive_theorem | critical | 209 | 26.71 | `audited_conditional` | ~~audited_conditional~~ |
-| 9 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 193 | 26.60 | `unaudited` | unaudited |
-| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 376 | 25.56 | `audited_clean` | **retained_bounded** |
-| 11 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 224 | 24.81 | `unaudited` | unaudited |
-| 12 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 326 | 27.35 | `unaudited` | meta |
+| 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 209 | 26.71 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 193 | 26.60 | `unaudited` | unaudited |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 376 | 25.56 | `audited_clean` | **retained_bounded** |
+| 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 224 | 24.81 | `unaudited` | unaudited |
+| 10 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `minimal_axioms_2026-05-03` | meta | critical | 363 | 23.51 | `unaudited` | meta |
+| 12 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 363 | 23.51 | `unaudited` | unaudited |
 | 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 312 | 22.79 | `unaudited` | unaudited |
 | 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 285 | 22.16 | `unaudited` | unaudited |
 | 15 | `one_generation_matter_closure_note` | positive_theorem | critical | 241 | 21.92 | `unaudited` | unaudited |
@@ -97,11 +96,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 124 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 19.70 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 139 | 19.13 | `audited_clean` | **retained** |
-| 21 | `g_bare_derivation_note` | positive_theorem | critical | 279 | 18.63 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 267 | 18.57 | `unaudited` | unaudited |
-| 23 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 69 | 17.63 | `unaudited` | unaudited |
-| 24 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 84 | 17.41 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `cpt_exact_note` | positive_theorem | critical | 291 | 17.19 | `unaudited` | unaudited |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 267 | 18.57 | `unaudited` | unaudited |
+| 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 69 | 17.63 | `unaudited` | unaudited |
+| 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 84 | 17.41 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `cpt_exact_note` | positive_theorem | critical | 291 | 17.19 | `unaudited` | unaudited |
+| 25 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | critical | 288 | 17.18 | `audited_clean` | **retained_no_go** |
 
 
 ## Applied audits
@@ -1030,6 +1029,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_ew_coupling_bridge_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | D | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
+| `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -2536,6 +2536,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `cl3_color_automorphism_theorem`
+
+- **Note:** [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](../../docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the asserted derivation that Z^3 forces N_c=3, realizes SU(3)_c on the 3D symmetric base subspace commuting with fiber SU(2) and Y, and gives R_conn=8/9 and sqrt(9/8) from the SU(3) Fierz identity.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-audit-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** N_c = |hw=1 states| = dim(Z^3) = 3; this is not an input, it is the algebraic image of the spatial dimension.  _(class `F`)_
+- **chain closes:** False — The runner verifies the constructed SU(3) embedding and Fierz algebra, but the theorem's physical-color step identifies the hw=1/symmetric-base structure with N_c and SU(3)_c rather than deriving that identification. The script sets N_c=3 and installs Gell-Mann generators on the selected 3D block, then checks consistency.
+- **rationale:** Issue: the load-bearing step equates the three hw=1/Z^3 axis states and the selected symmetric-base SU(3) representation with physical color N_c and SU(3)_c. Why this blocks: the algebra proves a valid 3D SU(3) construction and Fierz factor once that identification is made, but it does not force the physical color interpretation from the restricted inputs. Repair target: derive an independent theorem mapping the taste-cube symmetric-base sector to continuum color carriers/gauge fields and make the runner compute that bridge rather than construct the chosen block. Claim boundary until fixed: the note supports an exact SU(3) representation on the 3D symmetric base, its commutation with fiber SU(2) and Y, and the SU(3) Fierz value R_conn=8/9 under the color identification.
 - **auditor confidence:** high
 
 ### `cl3_sm_embedding_theorem`

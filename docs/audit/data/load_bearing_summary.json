@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-03T13:40:52.992906+00:00",
+  "computed_at": "2026-05-03T13:43:35.027827+00:00",
   "criticality_counts": {
     "critical": 115,
     "high": 364,
@@ -20,7 +20,7 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 33.096,
+      "load_bearing_score": 32.096,
       "transitive_descendants": 386
     },
     {
@@ -40,18 +40,6 @@
       "criticality": "critical",
       "load_bearing_score": 29.011,
       "transitive_descendants": 128
-    },
-    {
-      "claim_id": "minimal_axioms_2026-05-03",
-      "criticality": "critical",
-      "load_bearing_score": 27.508,
-      "transitive_descendants": 363
-    },
-    {
-      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
-      "criticality": "critical",
-      "load_bearing_score": 27.508,
-      "transitive_descendants": 363
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
@@ -88,6 +76,18 @@
       "criticality": "critical",
       "load_bearing_score": 23.82,
       "transitive_descendants": 112
+    },
+    {
+      "claim_id": "minimal_axioms_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 23.508,
+      "transitive_descendants": 363
+    },
+    {
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 23.508,
+      "transitive_descendants": 363
     },
     {
       "claim_id": "left_handed_charge_matching_note",
@@ -138,12 +138,6 @@
       "transitive_descendants": 139
     },
     {
-      "claim_id": "g_bare_derivation_note",
-      "criticality": "critical",
-      "load_bearing_score": 18.629,
-      "transitive_descendants": 279
-    },
-    {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
       "load_bearing_score": 18.566,
@@ -166,6 +160,12 @@
       "criticality": "critical",
       "load_bearing_score": 17.19,
       "transitive_descendants": 291
+    },
+    {
+      "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
+      "criticality": "critical",
+      "load_bearing_score": 17.175,
+      "transitive_descendants": 288
     }
   ]
 }
