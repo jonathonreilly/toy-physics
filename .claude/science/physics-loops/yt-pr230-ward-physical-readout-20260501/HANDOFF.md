@@ -1,5 +1,35 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 direct positivity-improving stretch attempt:
+
+- Added
+  `scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py`,
+  `docs/YT_NEUTRAL_SCALAR_POSITIVITY_IMPROVING_DIRECT_CLOSURE_ATTEMPT_NOTE_2026-05-03.md`,
+  and
+  `outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json`.
+- Ran the direct stretch attempt requested by the physics-loop rules: can the
+  current Cl(3)/Z3 substrate prove neutral-scalar positivity improvement
+  directly, rather than importing it from gauge Perron or reflection
+  positivity?
+- Result: no current-surface theorem.  Reflection positivity and positive
+  semidefinite transfer support do not prove irreducibility / primitive-cone
+  positivity improvement in the neutral scalar response sector.  A reducible
+  positive neutral transfer witness keeps source-only data fixed while
+  canonical-Higgs overlap varies.
+- The note records the assumption test and five-frame stuck fan-out:
+  OS positivity, gauge heat-kernel positivity, fermion transfer positivity,
+  source cyclicity, and canonical-Higgs identity all hit named blockers.
+- Verification: direct positivity attempt `PASS=14 FAIL=0`; retained-route
+  `PASS=127 FAIL=0`; campaign status `PASS=153 FAIL=0`.
+- Background production support: chunks023-024 are still running and remain
+  non-evidence until completed and postprocessed.
+
+Next exact action: pivot to a non-source rank-repair route or scalar-pole
+denominator route: certified `O_H/C_sH/C_HH` production pole rows,
+same-source W/Z response rows with identity certificates, or scalar
+denominator / `K'(pole)` theorem.  Keep polling chunks023-024 as background
+support.
+
 Latest checkpoint, 2026-05-03 gauge-Perron import audit:
 
 - Added

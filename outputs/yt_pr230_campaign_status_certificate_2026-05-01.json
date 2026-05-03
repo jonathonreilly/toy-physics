@@ -123,6 +123,7 @@
     "momentum_pilot": "bounded-support / momentum pilot scaling",
     "neutral_scalar_commutant_rank_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
     "neutral_scalar_dynamical_rank_one_closure": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
+    "neutral_scalar_positivity_improving_direct_closure": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
     "neutral_scalar_rank_one_purity_gate": "open / neutral scalar rank-one purity gate not passed",
     "neutral_scalar_top_coupling_tomography_gate": "open / neutral scalar top-coupling tomography gate not passed",
     "no_orthogonal_top_coupling_import": "exact negative boundary / no-orthogonal-top-coupling import audit",
@@ -183,7 +184,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 152,
+  "pass_count": 153,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

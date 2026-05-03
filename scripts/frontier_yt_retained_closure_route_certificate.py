@@ -129,6 +129,7 @@ def main() -> int:
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
         "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
         "gauge_perron_neutral_scalar_rank_one_import": "outputs/yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_2026-05-03.json",
+        "neutral_scalar_positivity_improving_direct_closure": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -741,6 +742,21 @@ def main() -> int:
             "gauge_perron_import_closes_neutral_rank_one"
         )
         is False
+    )
+    neutral_scalar_positivity_improving_direct_blocks = (
+        "neutral-scalar positivity-improving direct theorem not derived"
+        in certificates["neutral_scalar_positivity_improving_direct_closure"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["neutral_scalar_positivity_improving_direct_closure"].get("proposal_allowed") is False
+        and certificates["neutral_scalar_positivity_improving_direct_closure"].get(
+            "direct_positivity_improving_theorem_derived"
+        )
+        is False
+        and certificates["neutral_scalar_positivity_improving_direct_closure"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
     )
     scalar_carrier_projector_closure_blocked = (
         "scalar carrier-projector closure attempt blocked"
@@ -1496,6 +1512,11 @@ def main() -> int:
         "gauge-perron-neutral-scalar-rank-one-import-blocked",
         gauge_perron_neutral_scalar_import_blocks,
         certificates["gauge_perron_neutral_scalar_rank_one_import"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "neutral-scalar-positivity-improving-direct-theorem-not-derived",
+        neutral_scalar_positivity_improving_direct_blocks,
+        certificates["neutral_scalar_positivity_improving_direct_closure"].get("actual_current_surface_status", ""),
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

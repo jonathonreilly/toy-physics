@@ -590,3 +590,11 @@ imported as the missing neutral-scalar rank-one premise: plaquette-source
 Perron uniqueness does not prove neutral-scalar positivity improvement,
 `O_sp = O_H`, or source-pole purity.  No retained/proposed-retained wording is
 authorized.
+
+Latest direct positivity-improvement checkpoint: campaign status now includes
+`scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py`
+and reports `PASS=153 FAIL=0`.  The stretch attempt blocks the direct
+positivity-improvement shortcut on the current surface: OS positivity,
+positive semidefinite transfer, and gauge heat-kernel positivity still do not
+prove neutral-sector irreducibility or source-Higgs purity.  No
+retained/proposed-retained wording is authorized.

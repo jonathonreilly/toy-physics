@@ -193,6 +193,9 @@ def main() -> int:
         "gauge_perron_neutral_scalar_rank_one_import": load(
             "outputs/yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_2026-05-03.json"
         ),
+        "neutral_scalar_positivity_improving_direct_closure": load(
+            "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -823,6 +826,20 @@ def main() -> int:
         )
         is False,
         statuses["gauge_perron_neutral_scalar_rank_one_import"],
+    )
+    report(
+        "neutral-scalar-positivity-improving-direct-theorem-not-derived",
+        "neutral-scalar positivity-improving direct theorem not derived"
+        in str(statuses["neutral_scalar_positivity_improving_direct_closure"])
+        and certificates["neutral_scalar_positivity_improving_direct_closure"].get(
+            "direct_positivity_improving_theorem_derived"
+        )
+        is False
+        and certificates["neutral_scalar_positivity_improving_direct_closure"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["neutral_scalar_positivity_improving_direct_closure"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

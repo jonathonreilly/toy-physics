@@ -1,5 +1,28 @@
 # Claim Status Certificate
 
+Direct neutral-scalar positivity-improving closure attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / neutral-scalar positivity-improving direct theorem not derived
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=127 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=153 FAIL=0
+```
+
+The direct theorem is blocked on the current surface.  The support-level
+reflection-positivity note remains useful structural context, but OS
+positivity, positive semidefinite transfer, and gauge heat-kernel positivity
+do not prove neutral-sector irreducibility / primitive-cone positivity
+improvement.  No retained or `proposed_retained` wording is authorized.
+
 Gauge-Perron to neutral-scalar rank-one import audit:
 
 ```text

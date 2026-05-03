@@ -672,3 +672,11 @@ gauge-vacuum Perron theorem is not a neutral-scalar rank-one certificate: it
 is scoped to the gauge transfer state and plaquette source `J`, and a
 same-gauge counterfamily changes the neutral scalar lowest-pole residue rank
 from one to two.  No retained/proposed-retained wording is authorized.
+
+Latest direct positivity-improvement checkpoint: the retained-route
+certificate now includes
+`scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py`
+and is refreshed at `PASS=127 FAIL=0`.  The current surface does not derive
+neutral-sector irreducibility / primitive-cone positivity improvement from
+reflection positivity, positive semidefinite transfer, or gauge heat-kernel
+positivity.  No retained/proposed-retained wording is authorized.

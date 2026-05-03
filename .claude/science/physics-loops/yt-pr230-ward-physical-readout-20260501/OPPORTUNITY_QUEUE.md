@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the direct neutral-scalar positivity-improvement stretch
+attempt is now blocked on the current surface.  Reflection positivity,
+positive semidefinite transfer support, and gauge heat-kernel positivity do
+not prove irreducibility / primitive-cone positivity improvement in the
+neutral scalar response sector.  The queue therefore pivots away from more
+positivity shortcuts unless a genuinely new irreducibility theorem is found.
+Highest-value remaining actions are direct rank-repair data
+(`O_H/C_sH/C_HH` pole rows or same-source W/Z response rows with identity
+certificates) or the scalar denominator / `K'(pole)` theorem.
+
 2026-05-03 update: the existing gauge-vacuum Perron theorem has now been
 audited as a possible import for the neutral-scalar rank-one premise.  It does
 not import.  The finite Wilson plaquette theorem proves uniqueness of the gauge

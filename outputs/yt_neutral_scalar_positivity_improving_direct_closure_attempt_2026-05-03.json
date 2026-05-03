@@ -1,0 +1,149 @@
+{
+  "actual_current_surface_status": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "A future same-surface proof of neutral-sector irreducibility and positivity improvement would activate the existing Perron/isolated-pole rank-one support theorem.",
+  "direct_positivity_improving_theorem_derived": false,
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "The direct positivity-improvement proof is blocked on neutral-sector irreducibility.  Continue with direct rank-repair data (certified O_H/C_sH/C_HH or same-source W/Z rows), or attack the scalar denominator / K'(pole) theorem.",
+  "fail_count": 0,
+  "fanout_frames": [
+    {
+      "attempt": "Use positive spectral reconstruction as the primitive cone.",
+      "blocked_by": "Positive spectral weights do not force a single neutral scalar pole or fixed residue.",
+      "frame": "OS/reflection positivity"
+    },
+    {
+      "attempt": "Import strict positivity of the finite Wilson gauge kernel.",
+      "blocked_by": "The gauge theorem is scoped to plaquette-source J and leaves the neutral block free.",
+      "frame": "gauge heat-kernel strict positivity"
+    },
+    {
+      "attempt": "Use positive semidefinite exp(-H) for staggered fermions.",
+      "blocked_by": "Positive semidefinite transfer does not imply positivity improvement inside the composite neutral scalar response sector.",
+      "frame": "fermion transfer positivity"
+    },
+    {
+      "attempt": "Treat the scalar source as cyclic for the neutral sector.",
+      "blocked_by": "Current source-only spectrum is compatible with an orthogonal neutral top-coupled direction.",
+      "frame": "source operator cyclicity"
+    },
+    {
+      "attempt": "Identify the source pole with the canonical Higgs radial mode.",
+      "blocked_by": "The source-pole/canonical-Higgs mixing obstruction leaves the overlap angle open.",
+      "frame": "canonical-Higgs identity"
+    }
+  ],
+  "forbidden_imports": [
+    "H_unit or yt_ward_identity matrix-element readout",
+    "observed m_t/y_t/W/Z values as proof selectors",
+    "alpha_LM, plaquette value, u0, or fitted scalar-kernel multipliers",
+    "gauge-vacuum Perron uniqueness as a neutral-scalar theorem"
+  ],
+  "minimal_allowed_premises": [
+    "Cl(3)/Z3 Wilson-staggered substrate with g_bare=1",
+    "support-level reflection positivity note as structural context",
+    "current PR230 source/FH/LSZ certificates and no-go ledger"
+  ],
+  "parent_certificates": {
+    "gauge_perron_neutral_scalar_rank_one_import": "outputs/yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_2026-05-03.json",
+    "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_scalar_dynamical_rank_one_closure": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "orthogonal_neutral_decoupling_no_go": "outputs/yt_orthogonal_neutral_decoupling_no_go_2026-05-02.json",
+    "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+    "reflection_positivity_lsz_shortcut": "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json",
+    "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Current authorities prove support-level reflection positivity and conditional Perron consequences, but not positivity improvement or irreducibility in the neutral scalar response sector.",
+  "reducible_positive_transfer_witness": {
+    "canonical_higgs_factor_span": 0.5,
+    "degenerate_lowest_neutral_states": 2,
+    "positive_semidefinite": true,
+    "positivity_improving": false,
+    "positivity_preserving": true,
+    "reason_not_improving": "off-diagonal neutral-sector communication is absent",
+    "reflection_positive_correlator_weights": [
+      1.0,
+      1.0
+    ],
+    "same_source_rows": [
+      {
+        "canonical_higgs_vector": [
+          1.0,
+          0.0
+        ],
+        "canonical_higgs_yukawa_factor": 1.0,
+        "neutral_basis": [
+          "source_pole_direction",
+          "orthogonal_neutral_direction"
+        ],
+        "source_higgs_overlap": 1.0,
+        "source_pole_readout_factor": 1.0,
+        "source_vector": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "canonical_higgs_vector": [
+          0.8,
+          0.6
+        ],
+        "canonical_higgs_yukawa_factor": 0.8,
+        "neutral_basis": [
+          "source_pole_direction",
+          "orthogonal_neutral_direction"
+        ],
+        "source_higgs_overlap": 0.8,
+        "source_pole_readout_factor": 1.0,
+        "source_vector": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "canonical_higgs_vector": [
+          0.5,
+          0.8660254037844386
+        ],
+        "canonical_higgs_yukawa_factor": 0.5,
+        "neutral_basis": [
+          "source_pole_direction",
+          "orthogonal_neutral_direction"
+        ],
+        "source_higgs_overlap": 0.5,
+        "source_pole_readout_factor": 1.0,
+        "source_vector": [
+          1.0,
+          0.0
+        ]
+      }
+    ],
+    "transfer_matrix": [
+      [
+        0.91,
+        0.0
+      ],
+      [
+        0.0,
+        0.91
+      ]
+    ]
+  },
+  "reflection_positivity_audit": {
+    "audit_status": "audited_clean",
+    "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+    "current_status": "support",
+    "effective_status": "support",
+    "intrinsic_status": "support"
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not upgrade reflection positivity into positivity improvement",
+    "does not import the gauge-vacuum Perron theorem into the neutral scalar sector",
+    "does not identify O_sp with O_H",
+    "does not remove orthogonal neutral scalar top couplings"
+  ]
+}

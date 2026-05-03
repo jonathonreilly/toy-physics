@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Direct Positivity-Improving Stretch Attempt
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / DIRECT THEOREM NOT DERIVED
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- support-level reflection positivity is not neutral-scalar positivity
+  improvement;
+- positive semidefinite transfer and gauge heat-kernel positivity do not prove
+  irreducibility of the neutral scalar response sector;
+- a reducible positive neutral transfer witness preserves source-only rows
+  while canonical-Higgs overlap varies;
+- the assumption test and five-frame stuck fan-out were recorded;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Gauge-Perron Import Audit
 
 Local review-loop disposition:
