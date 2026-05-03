@@ -12,7 +12,7 @@
 > ingredients, not independent primitive axioms**. The 2026-05-03 restoration
 > backs this out: only the algebraic core (`Cl(3)` and `Z^3`) is treated as
 > framework axioms; the staggered/Grassmann realization and `g_bare = 1`
-> normalization are recategorized as named open derivation targets (G1, G2)
+> normalization are recategorized as named open gates
 > with explicit closure paths in flight. See
 > [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) for the
 > restored axiom set and per-lane bookkeeping rules.

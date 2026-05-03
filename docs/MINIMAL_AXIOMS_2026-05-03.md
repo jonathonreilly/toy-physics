@@ -5,18 +5,18 @@
 **Type:** meta
 **Supersedes:** [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md) (the
 2026-04-11 file as it existed up to commit `0267ef09f`; the 2026-04-15
-rewrite that silently inserted A3, A4, A5 axioms is being backed out by
-this note).
+rewrite that introduced A3, A4, A5 as additional axioms is being backed
+out by this note).
 
 ## What this note does
 
-This note **restores the framework's axiom set to the two true axioms** that
+This note **restores the framework's axiom set to the two axioms** that
 were originally approved (A1, A2 in the language of the April 15 rewrite —
 which corresponded to the algebraic core of the April 11 "bundled modeling
 ingredients" framing).
 
 The April 15 rewrite (`24d698d94`, bundled into a YT/EW Higgs documentation
-commit, not surfaced as a separate decision) silently promoted three
+commit and not surfaced as a separate axiom-set decision) promoted three
 modeling-ingredient items to the status of framework axioms:
 
 - the staggered-Dirac/Grassmann fermion realization,
@@ -25,10 +25,10 @@ modeling-ingredient items to the status of framework axioms:
 
 The physical-lattice reading was later derived
 (`PHYSICAL_LATTICE_NECESSITY_NOTE.md`) and removed (April 16). This note
-removes the remaining two by recategorizing them as **open derivation
-targets**, not framework axioms.
+removes the remaining two by recategorizing them as **open gates**, not
+framework axioms.
 
-## The two framework axioms (true axioms)
+## The two framework axioms
 
 1. **A1 — Local algebra:** the physical local algebra is `Cl(3)`.
 2. **A2 — Spatial substrate:** the physical spatial substrate is the cubic
@@ -36,17 +36,18 @@ targets**, not framework axioms.
 
 These two are self-contained, mathematically minimal, and have zero upstream
 dependencies. Everything below the framework's surface is either:
-- a closed derivation chain from A1+A2 (positive_theorem at retained tier),
-- a bounded result with explicit named imports (bounded_theorem at
-  retained_bounded tier), or
-- an open derivation target with explicit closure path (open_gate).
+- a closed derivation chain from A1+A2 (`claim_type: positive_theorem`,
+  `effective_status: retained`),
+- a bounded result with explicit named admissions (`claim_type:
+  bounded_theorem`, `effective_status: retained_bounded`), or
+- an open gate with explicit closure path (`claim_type: open_gate`).
 
-## Items recategorized from "axiom" to open derivation target
+## Items recategorized from "axiom" to open gate
 
 These two items were previously listed as axioms A3 and A4. They are
-now recategorized as **open derivation targets**, with `claim_type:
-open_gate` for the canonical parent note (where one exists) and the
-in-flight supporting work named explicitly.
+now recategorized as **open gates**, using the existing `claim_type:
+open_gate` machinery, with the canonical parent note (where one exists)
+identified explicitly and the supporting derivation chain enumerated.
 
 The naming convention follows the existing repo pattern: refer to each
 gate by its canonical parent note name. No new abstract gate labels are
@@ -101,8 +102,8 @@ packaging — see in-flight supporting work above)" listed in
 — `claim_type: positive_theorem`, `audit_status: audited_conditional`.
 Codex-named repair targets: missing primary runner, A → A/g rescaling
 freedom, constraint-vs-convention ambiguity. The April 15 rewrite
-mislabeled this as "by fiat with consilience" — in fact the framework
-was actively deriving this via the chain below.
+labeled this as "by fiat with consilience"; the derivation chain
+below was already in progress at that time.
 
 **In-flight supporting work** (the existing g_bare derivation chain):
 - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md` — Cl(3)
@@ -182,26 +183,24 @@ derivation target (canonical parent: `G_BARE_DERIVATION_NOTE.md`):
 
 When both gates close, these upgrade back to `positive_theorem`.
 
-## Reception story
+## Comparison with prior framing
 
-**Old framing (April 15 → May 2):**
+**Prior framing (April 15 → May 2):**
 > "Framework has 4 axioms (Cl(3), Z³, Grassmann staggered Dirac, g_bare = 1)."
-> Reviewer reaction: regulator choices presented as axioms.
 
-**New framing (this note, restoring April 11 intent):**
+**Restored framing (this note, restoring April 11 intent):**
 > "Framework has 2 axioms (Cl(3), Z³). The fermion realization and gauge
-> normalization are explicit open derivation targets (the staggered-Dirac
-> realization target and the g_bare = 1 derivation target with parent
-> `G_BARE_DERIVATION_NOTE.md`) with partial closure already in flight
+> normalization are open gates (the staggered-Dirac realization gate and
+> the g_bare = 1 derivation gate with parent
+> `G_BARE_DERIVATION_NOTE.md`) with partial closure already in progress
 > via 6+ notes. Every quantitative prediction is typed `bounded_theorem`
-> with the open targets named as admitted context inputs. Closing those
-> targets promotes those lanes to `positive_theorem`."
-> Reviewer reaction: framework is honest about what's open; structural
-> results don't depend on regulator choices.
+> with the open gates named in `admitted_context_inputs`. Closing those
+> gates promotes those lanes to `positive_theorem` automatically via
+> the audit pipeline's recompute."
 
-This makes the framework's actual reduction visible: **19 SM numerical
-parameters → 2 framework axioms + 2 named open derivation targets**, with
-explicit closure paths for each open target.
+The framework's parameter reduction under this framing:
+**19 SM numerical parameters → 2 framework axioms + 2 named open
+gates**, with explicit closure paths for each gate.
 
 ## Mathematical infrastructure (ordinary)
 
