@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:04:34.822309+00:00
+**Generated:** 2026-05-03T18:05:20.529661+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 76 |
-| **retained_no_go** | 100 |
+| **retained_no_go** | 101 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 749 |
+| unaudited | 748 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 314 |
+| `audited_clean` | 315 |
 | `audited_conditional` | 535 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 795 |
+| `unaudited` | 794 |
 
 | claim_type | count |
 |---|---:|
@@ -418,6 +418,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | B | - |
 | `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `yt_schur_stability_gap_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -15109,6 +15110,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The no-go closure sharpens this paragraph: the retained Fierz/CMT/OZI packet permits the conditional family alpha_EW(physical; kappa_EW) / alpha_EW(CMT) = 1 / (8/9 + kappa_EW/9).  _(class `A`)_
 - **chain closes:** True — The chain closes only for the bounded parameterized theorem: the exact F_adj=8/9 input is retained_bounded, and the matching-rule no-go is retained_no_go. The chain does not close for kappa_EW=0 or for an unconditional 9/8 EW correction.
 - **rationale:** Clean at the bounded conditional scope only. The source note no longer claims that kappa_EW=0 follows from retained primitives; it explicitly carries kappa_EW as the disconnected-current readout coefficient and confines 9/8 to the kappa_EW=0 specialization. The small runner passed, but it checks the SU(3) plaquette/R_conn consistency surface, not an exact physical derivation of kappa_EW.
+- **auditor confidence:** high
+
+### `yt_ew_m_residual_stretch_attempt_note_2026-05-02`
+
+- **Note:** [`YT_EW_M_RESIDUAL_STRETCH_ATTEMPT_NOTE_2026-05-02.md`](../../docs/YT_EW_M_RESIDUAL_STRETCH_ATTEMPT_NOTE_2026-05-02.md)
+- **claim_type:** `no_go`
+- **claim_scope:** For the scalar mean-field/CMT rescaling G_full = u_0 G_V, the singlet and adjoint Fierz channels both scale by u_0^2, so that rescaling alone cannot select the adjoint channel.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-audit-2026-05-03-yt-ew-m-residual`  (codex-current; independence=fresh_context)
+- **load-bearing step:** G_full = u_0 · G_V implies S(G_full) = u_0² · S(G_V) and C(G_full) = u_0² · C(G_V), so CMT factorization acts uniformly on both Fierz channels.  _(class `A`)_
+- **chain closes:** True — The cited Fierz decomposition supplies S and C, and the source note's no-go only needs the algebraic consequence of scalar multiplication of G. The broader EW-current matching rule M remains explicitly outside the audited claim boundary.
+- **rationale:** The audited no-go is narrow and closes: once G is multiplied by a scalar u_0, both quadratic channel functionals S and C necessarily acquire the same u_0^2 factor. The runner directly checks the Fierz identity, channel decomposition, diagonal and random-channel cases, and the load-bearing uniform u_0^2 scaling with 7/7 PASS. This does not derive the physical EW current projection or close M; it cleanly rules out the naive claim that scalar CMT factorization by itself distinguishes singlet from adjoint.
 - **auditor confidence:** high
 
 ### `yt_exact_coarse_grained_bridge_operator_note`

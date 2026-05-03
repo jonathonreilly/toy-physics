@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 201,
-    "medium": 304
+    "medium": 303
   },
-  "generated_at": "2026-05-03T18:04:34.408437+00:00",
+  "generated_at": "2026-05-03T18:05:20.134950+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7596,29 +7596,6 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_ew_m_residual_stretch_attempt_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "no_go",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "ew_current_fierz_channel_decomposition_note_2026-05-01"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.492,
-      "note_path": "docs/YT_EW_M_RESIDUAL_STRETCH_ATTEMPT_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/yt_ew_m_residual_channel_check.py",
       "transitive_descendants": 44
     },
     {
@@ -20279,6 +20256,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 87,
-  "total_pending": 778
+  "ready_count": 86,
+  "total_pending": 777
 }
