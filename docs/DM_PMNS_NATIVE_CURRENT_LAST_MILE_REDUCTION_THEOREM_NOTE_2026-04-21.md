@@ -10,6 +10,28 @@ theorems complete the physical native/source last mile
 **Primary runner:**
 `scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py`
 
+## Cited authorities (one hop)
+
+The 2026-05-03 citation-graph repair registers the load-bearing one-hop deps
+referenced in plain text below as proper markdown links so the audit-graph
+builder picks up the edges.
+
+- [`DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`](DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+  — supplies the exact target-surface source-cubic theorem used in §1.1.
+- [`DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`](DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md)
+  — supplies the exact local `2`-real PMNS source-manifold theorem used in §1.2.
+- [`PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md`](PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md),
+  [`PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md`](PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md),
+  [`PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md`](PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md)
+  — supply the native `C_3` character holonomy / mode reduction / nontrivial-current
+  boundary used in §1.3.
+- [`DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`](DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md)
+  — same-day positive activation theorem on the reduced object identified here.
+- [`DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`](DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md)
+  — later same-day affine sharpening of the complex current to one real coordinate.
+- [`DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`](DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+  — later same-day closure of the affine scalar by the ordered-chain graded current.
+
 ---
 
 ## 0. Executive summary

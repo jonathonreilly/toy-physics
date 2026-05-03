@@ -2,6 +2,12 @@
 
 **Status:** support / historical synthesis note (downgraded 2026-04-28 per audit-lane verdict). The current staggered status is tracked by the force-based card and corrected full-suite baseline, not by the older `frontier_staggered_fermion.py` successor framing alone. The runner declared in this note is a legacy proxy harness and does not function as a current-main evidence surface.
 
+## Cited authorities (one hop)
+
+- [`STAGGERED_FERMION_CARD_2026-04-10.md`](STAGGERED_FERMION_CARD_2026-04-10.md)
+  — current-main staggered force-based card whose row semantics are
+  contrasted with this session's rows in §3D dense fermion centroid.
+
 ## What happened
 
 This session started from the chiral walk's 3 gravity blockers (chromaticity,
