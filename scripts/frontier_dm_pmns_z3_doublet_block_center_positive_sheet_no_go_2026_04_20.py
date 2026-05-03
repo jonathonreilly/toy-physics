@@ -265,7 +265,7 @@ def part4_note_records_the_correct_status() -> None:
     print("=" * 88)
 
     note = read("docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md")
-    register = read("docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md")
+    i5_status_note = read("docs/DM_PMNS_LOCAL_SELECTOR_FAMILY_NO_GO_THEOREM_NOTE_2026-04-20.md")
 
     check(
         "The new note states that center law + I12 does not close I5",
@@ -276,8 +276,8 @@ def part4_note_records_the_correct_status() -> None:
         "local `3`-real" in note or "local 3-real" in note,
     )
     check(
-        "The register still treats I5 as open after the center-law test",
-        "| I5 |" in register and "point-selection law" in register and "retained observational input" in register,
+        "The current authoritative I5 status note still treats I5 as open",
+        "I5 is still open positively" in i5_status_note,
     )
 
 
