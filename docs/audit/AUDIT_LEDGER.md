@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:27:50.327028+00:00
+**Generated:** 2026-05-03T17:28:34.003366+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 766 |
+| unaudited | 765 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 28 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 524 |
+| ~~audited_conditional~~ | 525 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 524 |
+| `audited_conditional` | 525 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 28 |
 | `audited_renaming` | 22 |
-| `unaudited` | 812 |
+| `unaudited` | 811 |
 
 | claim_type | count |
 |---|---:|
@@ -623,6 +623,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_farfield_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_grown_propagating_field_radical_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_poisson_self_gravity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
@@ -6036,6 +6037,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** But Theorem 1 gives P(beta) = beta / 18 + O(beta^2), so exact equality forces Gamma = 1; since Gamma_cand = 1.554921974442116 != 1, P(beta) = P_1plaq(Gamma_cand beta) cannot be true.  _(class `A`)_
 - **chain closes:** True — The note compares the same normalized plaquette observable on both sides and derives identical beta=0 slopes 1/18 for the full Wilson plaquette and local one-plaquette block. An exact constant rescaling would change the local slope to Gamma/18, so equality near beta=0 forces Gamma=1, contradicting the stated Gamma_cand.
 - **rationale:** The retained claim is a no-go, not support for the remaining beta-dependent program. The obstruction closes by exact small-beta algebra: equal analytic expansions of the same plaquette observable require equal first derivatives at beta=0, and the candidate constant lift has the wrong derivative. The runner hard-codes the elementary Haar slope rather than independently deriving Haar integration, but the source derivation is explicit enough and the runner checks the decisive slope mismatch for the scoped no-go. Residual risk is limited to normalization conventions for the plaquette/action; within the conventions stated in the note, the conclusion follows.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_FULL_PACKET_NO_GO_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_FULL_PACKET_NO_GO_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go for exact full sparse-face 9-channel packet reproduction by any real or complex 3d compression of the selected retained 4x4 Wilson block, conditional on the imported selected ambient and target-packet constructions.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The full sparse-face target Hermitian block violates compression interlacing against the selected retained 4x4 Wilson block, so no real or complex 3d compression can reproduce the full target packet exactly.  _(class `A`)_
+- **chain closes:** False — The Cauchy interlacing obstruction closes as linear algebra for the matrices printed by the runner. The audit packet does not close the provenance of the selected retained 4x4 block or the full sparse-face target block, because those are imported from upstream scripts but no retained-grade dependencies are cited in the ledger row.
+- **rationale:** Issue: the no-go's interlacing step is valid for the runner's imported matrices, but the note/ledger provides no retained-grade dependency chain for the selected retained Wilson block or the full sparse-face target construction. Why this blocks: a clean no-go would require the audited packet to establish that these are the exact admissible ambient and target objects, not merely matrices supplied by uncited upstream code. Repair target: cite and audit the upstream retained-block selection, reduced-packet selector, sparse-face target preimage, and projected-source packet construction, or inline enough derivation for those inputs to be independently checked. Claim boundary until fixed: the runner demonstrates a conditional linear-algebra obstruction for its computed matrices, not a retained-grade full-packet no-go for the physical construction.
+- **open / conditional deps cited:**
+  - `scripts/frontier_dm_leptogenesis_dweh_even_split_transfer_layer.py`
+  - `scripts/frontier_dm_leptogenesis_k00_sparse_face_target_preimage_theorem.py`
+  - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19.py`
+  - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_2026_04_20.py`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19`
