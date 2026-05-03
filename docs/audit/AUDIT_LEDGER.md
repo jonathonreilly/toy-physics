@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:44:17.907592+00:00
+**Generated:** 2026-05-03T02:47:53.868284+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,7 +19,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 148 |
+| **retained** | 149 |
 | **retained_no_go** | 99 |
 | **retained_bounded** | 217 |
 | _retained_pending_chain_ | 2 |
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 667 |
+| ~~audited_conditional~~ | 666 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 434 |
-| `audited_conditional` | 667 |
+| `audited_clean` | 435 |
+| `audited_conditional` | 666 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 27 |
@@ -289,6 +289,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `koide_axiom_native_support_batch_note_2026-04-22` | open_gate | ~~audited_clean~~ | open_gate | judicial_review | codex-current | B | - |
 | `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
@@ -905,7 +906,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_brannen_phase_reduction_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_eigenvalue_q23_surface_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -9858,17 +9858,13 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 - **Note:** [`KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`](../../docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-ready-20260430-51`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Any local Wilson first variation on the adjacent-chain image descends canonically, after cyclic projection, to exactly three real cyclic responses (r0, r1, r2), and those three responses reconstruct the unique cyclic charged-lepton target H_cyc.  _(class `A`)_
-- **chain closes:** False — The finite projection/reconstruction algebra closes, and the runner verifies it with classified A/D checks. The full constructive Wilson-descendant claim still imports a support dependency plus unregistered/unknown DM Wilson path-algebra authorities for the local Wilson first-variation premise.
-- **rationale:** Issue: the exact three-response cyclic reconstruction is verified, but the note's constructive Wilson-descendant framing depends on the support-scoped Koide cyclic compression note and on generic DM Wilson path-algebra target/minimal-certificate authorities that are not one-hop retained inputs for this row. Why this blocks: the runner checks the algebra after assuming a local Wilson first-variation target exists on the adjacent-chain image; it does not derive that Wilson law or make the imported DM Wilson authorities retained. Repair target: register the DM Wilson local chain target and local minimal-certificate notes as dependencies, audit or repair them to retained/clean status where needed, and make the runner fail if the local Wilson first-variation premise is absent. Claim boundary until fixed: it is safe to claim the conditional algebraic reduction: given a local Wilson first variation on the adjacent-chain image, cyclic projection yields exactly three responses and Koide becomes the scalar equation 2 r0^2 = r1^2 + r2^2.
-- **open / conditional deps cited:**
-  - `KOIDE_DWEH_CYCLIC_COMPRESSION_NOTE_2026-04-18.md`
-  - `DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md`
-  - `DM_WILSON_TO_DWEH_LOCAL_PATH_ALGEBRA_MINIMAL_CERTIFICATE_NOTE_2026-04-18.md`
+- **claim_scope:** The adjacent-chain cyclic sector is a three-real-dimensional Hermitian carrier with canonical response reconstruction, and the Koide cone on that carrier is equivalently the scalar response equation 2*r0^2 = r1^2 + r2^2.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-laplace-3rd-019debbb-6abe-72e2-a3c1-13e50668a00f`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The cyclic basis B0, B1, B2 is orthogonal with trace norms 3, 6, 6, so three real responses r0, r1, r2 reconstruct H_cyc = (r0/3)B0 + (r1/6)B1 + (r2/6)B2 and translate the Koide cone to 2*r0^2 = r1^2 + r2^2.  _(class `A`)_
+- **chain closes:** True — The retained one-hop cyclic compression dependency supplies the same canonical P_cyc carrier and reconstruction, and the present runner verifies adjacent-chain containment, orthogonality, reconstruction, and scalar-equation translation algebraically. The scoped theorem does not claim to derive the microscopic Wilson responses, selector mechanism, or final physical readout.
+- **rationale:** Within the conservative claim boundary, this is an algebraic structural theorem: the cyclic carrier is present in the adjacent-chain algebra, three trace responses reconstruct its unique projected Hermitian target, and Koide is exactly one scalar equation in those responses. The PDG charged-lepton witness is illustrative rather than load-bearing, so the D checks are not needed for closure. The note explicitly excludes microscopic Wilson-law production, selector enforcement, and readout interpretation, so those are not credited as derived.
 - **auditor confidence:** high
 
 ### `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24`

@@ -5,7 +5,7 @@
     "leaf": 95,
     "medium": 156
   },
-  "generated_at": "2026-05-03T02:44:17.608143+00:00",
+  "generated_at": "2026-05-03T02:47:53.555880+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6491,6 +6491,30 @@
     },
     {
       "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
+        "koide_dweh_cyclic_compression_note_2026-04-18"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.322,
+      "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
+      "transitive_descendants": 39
+    },
+    {
+      "audit_independence_required": "any_non_self",
       "audit_status": "audited_decoration",
       "blocker": null,
       "claim_id": "koide_q_eq_3delta_identity_note_2026-04-21",
@@ -7516,30 +7540,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_koide_circulant_character_bridge.py",
-      "transitive_descendants": 39
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-        "koide_dweh_cyclic_compression_note_2026-04-18"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.322,
-      "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "transitive_descendants": 39
     },
     {
@@ -13425,6 +13425,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 19,
+  "ready_count": 20,
   "total_pending": 493
 }
