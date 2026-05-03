@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T22:56:50.905515+00:00
+**Generated:** 2026-05-03T22:57:49.802149+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 109 |
-| **retained_bounded** | 208 |
+| **retained_bounded** | 209 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 668 |
+| unaudited | 667 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
@@ -36,22 +36,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 377 |
+| `audited_clean` | 378 |
 | `audited_conditional` | 553 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 715 |
+| `unaudited` | 714 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 597 |
+| `bounded_theorem` | 598 |
 | `decoration` | 8 |
 | `meta` | 47 |
 | `no_go` | 167 |
 | `open_gate` | 93 |
-| `positive_theorem` | 853 |
+| `positive_theorem` | 852 |
 
 | criticality | count |
 |---|---:|
@@ -477,6 +477,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_single_source_compare_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `weak_coupling_retention_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
+| `wide_lattice_h2t_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | B | - |
 | `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -16016,6 +16017,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** Across G in {5, 10} and three graph families with seeds 42..46, attractive coupling produces w_asym < 1 in 14/15 runs with mean width effects 9.5% and 13.5%; one growing run flips with w_asym = 1.0725.  _(class `C`)_
 - **chain closes:** True — The bounded claim is purely numerical from the runner: counts of w_asym < 1 across 15 runs, mean width effects, and shell-force counts. The note correctly does NOT promote this to closure of the off-lattice blocker; the bounded scope here is exactly the regime-finding fact that weak-coupling is the strongest currently observed sign-sensitive regime.
 - **rationale:** Within the stated 14/15 numerical scope on the named graph battery, the chain closes by direct measurement. The note explicitly enumerates what it does not close (universal sign-selection, clean 0/40 repulsive shell-force, frozen retained semantics), so the bounded interpretation matches the source's safe read. No upgrade to retained closure is implied.
+- **auditor confidence:** high
+
+### `wide_lattice_h2t_distance_law_note`
+
+- **Note:** [`WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`](../../docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite wide-lattice replay at h=0.25, W=12, L=12 for the ordered 3D 1/L^2 h^2+T family: all ten tested distance rows are attractive, the far tail fits near b^-1, and the field-strength response is linear; no continuum or exact-exponent theorem is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-wide-lattice-h2t-distance`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Independent wide replay at h = 0.25, W = 12, L = 12 gives Born=4.82e-15, k=0=0.000000, distance support 10/10 TOWARD, peak-tail b^(-0.95) with R^2=0.980, far-tail b^(-1.05) with R^2=0.990, and F~M exponent 1.000.  _(class `C`)_
+- **chain closes:** True — The cited completed log matches the source note's frozen finite-lattice numbers, and the runner constructs the W=12, h=0.25 lattice replay and reports the distance rows, tail fits, and mass-scaling sweep. The note explicitly limits the conclusion to a finite-lattice frontier, so no continuum-limit or exact -1 exponent proof is needed for this scoped claim.
+- **rationale:** The scoped claim is bounded to one frozen finite-lattice replay, not a universal continuum theorem. The completed log closes the load-bearing numerical replay: it reproduces every headline value in the note and includes the stated sanity checks. Residual risk is confined to the upstream harness/normalization assumptions imported by the replay, but within the provided restricted packet the finite replay result itself is not a renaming, decoration, tuned external comparator, or stale numerical claim.
 - **auditor confidence:** high
 
 ### `wilson_mu2_distance_sweep_note_2026-04-11`

@@ -3,9 +3,9 @@
     "critical": 62,
     "high": 215,
     "leaf": 177,
-    "medium": 243
+    "medium": 242
   },
-  "generated_at": "2026-05-03T22:56:49.272452+00:00",
+  "generated_at": "2026-05-03T22:57:48.889686+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7765,27 +7765,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wide_lattice_h2t_distance_law_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.585,
-      "note_path": "docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_wilson_to_dweh_adjacent_chain_normal_form_theorem_note_2026-04-18",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -14015,6 +13994,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wide_lattice_h2t_skeptic_audit_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wide_lattice_h2t_distance_law_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -18367,29 +18369,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wide_lattice_h2t_skeptic_audit_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wide_lattice_h2t_distance_law_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/WIDE_LATTICE_H2T_SKEPTIC_AUDIT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/wide_lattice_h2t_distance_replay.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "wilson_two_body_open_refined_note_2026-04-11",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -18561,5 +18540,5 @@
     }
   ],
   "ready_count": 16,
-  "total_pending": 697
+  "total_pending": 696
 }
