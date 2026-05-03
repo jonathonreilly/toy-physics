@@ -1,5 +1,29 @@
 # No-Go Ledger
 
+## FH/LSZ chunks019-020 v2 multi-tau wave is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 19
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 20
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 19
+# SUMMARY: PASS=19 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 20
+# SUMMARY: PASS=19 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=116 FAIL=0
+```
+
+Chunks019-020 increase the seed-controlled L12 ready set to `20/63` chunks and
+`320/1000` saved configurations.  They carry v2 multi-tau rows and improve
+target ESS, but they do not pass response stability, finite-source-linearity,
+scalar-pole model-class/FV/IR, W/Z response, or canonical-Higgs/source-overlap
+identity gates.  Do not treat the chunk wave, target ESS, or v2 multi-tau rows
+as retained/proposed-retained evidence.
+
 ## Current O_H substitutes fail the canonical-Higgs operator certificate gate
 
 Runners:

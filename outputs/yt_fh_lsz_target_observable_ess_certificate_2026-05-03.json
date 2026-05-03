@@ -217,18 +217,42 @@
         "1,0,0"
       ],
       "source_slope_rows": 16
+    },
+    {
+      "chunk_index": 19,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk019_2026-05-01.json",
+      "phase": "production",
+      "scalar_lsz_modes": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "source_slope_rows": 16
+    },
+    {
+      "chunk_index": 20,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk020_2026-05-01.json",
+      "phase": "production",
+      "scalar_lsz_modes": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "source_slope_rows": 16
     }
   ],
   "exact_next_action": "Rerun the autocorrelation ESS gate; target-observable ESS is no longer the active blocker.",
   "fail_count": 0,
-  "limiting_target_ess": 242.7849819291294,
+  "limiting_target_ess": 268.13169763211454,
   "limiting_target_ess_observable": "source_slope_tau1",
   "minimum_ready_chunks_for_gate": 8,
   "minimum_target_ess_per_volume": 200.0,
   "pass_count": 8,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Target ESS does not identify the scalar source with the canonical Higgs and does not supply pole derivative/model-class/FV/IR closure.",
-  "ready_chunk_count": 18,
+  "ready_chunk_count": 20,
   "ready_chunk_indices": [
     1,
     2,
@@ -247,15 +271,17 @@
     15,
     16,
     17,
-    18
+    18,
+    19,
+    20
   ],
   "scalar_lsz_summaries": {
     "0,0,0": {
       "C_ss_real": {
         "available": true,
-        "block_count": 18,
-        "chunk_block_mean": 0.12236491939134944,
-        "chunk_block_stderr": 2.213784360152464e-05,
+        "block_count": 20,
+        "chunk_block_mean": 0.1223642935243341,
+        "chunk_block_stderr": 1.9945570939973802e-05,
         "chunk_rows": [
           {
             "block_index": 1,
@@ -533,18 +559,49 @@
               "tau_int_initial_positive": 0.9628750639709358,
               "window_lag": 3
             }
+          },
+          {
+            "block_index": 19,
+            "mean": 0.12238250978636431,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 11.886807143062748,
+              "n": 16,
+              "rho_first_lags": [
+                0.1730150412736253,
+                -0.22872026160242667
+              ],
+              "tau_int_initial_positive": 0.6730150412736253,
+              "window_lag": 2
+            }
+          },
+          {
+            "block_index": 20,
+            "mean": 0.12233481165602783,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 16.0,
+              "n": 16,
+              "rho_first_lags": [
+                -0.31829554578356856
+              ],
+              "tau_int_initial_positive": 0.5,
+              "window_lag": 1
+            }
           }
         ],
-        "mean": 0.12236491939134944,
+        "mean": 0.1223642935243341,
         "min_chunk_ess_initial_positive": 8.308450700766594,
-        "raw_sample_count": 288,
-        "total_ess_initial_positive": 270.1163742498648
+        "raw_sample_count": 320,
+        "total_ess_initial_positive": 298.00318139292756
       },
       "Gamma_ss_real": {
         "available": true,
-        "block_count": 18,
-        "chunk_block_mean": 8.172284701869598,
-        "chunk_block_stderr": 0.001475383172266497,
+        "block_count": 20,
+        "chunk_block_mean": 8.172326977756269,
+        "chunk_block_stderr": 0.0013292943011255951,
         "chunk_rows": [
           {
             "block_index": 1,
@@ -822,20 +879,51 @@
               "tau_int_initial_positive": 0.959495395655095,
               "window_lag": 3
             }
+          },
+          {
+            "block_index": 19,
+            "mean": 8.171116866636153,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 11.864396245817675,
+              "n": 16,
+              "rho_first_lags": [
+                0.1742863129525099,
+                -0.23149947149160705
+              ],
+              "tau_int_initial_positive": 0.6742863129525098,
+              "window_lag": 2
+            }
+          },
+          {
+            "block_index": 20,
+            "mean": 8.174298054836443,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 16.0,
+              "n": 16,
+              "rho_first_lags": [
+                -0.31610730998070363
+              ],
+              "tau_int_initial_positive": 0.5,
+              "window_lag": 1
+            }
           }
         ],
-        "mean": 8.172284701869598,
+        "mean": 8.172326977756269,
         "min_chunk_ess_initial_positive": 8.33771588298035,
-        "raw_sample_count": 288,
-        "total_ess_initial_positive": 270.1072226851954
+        "raw_sample_count": 320,
+        "total_ess_initial_positive": 297.97161893101304
       }
     },
     "0,0,1": {
       "C_ss_real": {
         "available": true,
-        "block_count": 18,
-        "chunk_block_mean": 0.1253026827023594,
-        "chunk_block_stderr": 2.2015734637738187e-05,
+        "block_count": 20,
+        "chunk_block_mean": 0.12530215302524045,
+        "chunk_block_stderr": 1.9778754554413884e-05,
         "chunk_rows": [
           {
             "block_index": 1,
@@ -1109,18 +1197,49 @@
               "tau_int_initial_positive": 0.6414929297598275,
               "window_lag": 3
             }
+          },
+          {
+            "block_index": 19,
+            "mean": 0.12530941179330854,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 11.11046792810997,
+              "n": 16,
+              "rho_first_lags": [
+                0.22004168067122093,
+                -0.16445520989906914
+              ],
+              "tau_int_initial_positive": 0.7200416806712209,
+              "window_lag": 2
+            }
+          },
+          {
+            "block_index": 20,
+            "mean": 0.12528536006903182,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 16.0,
+              "n": 16,
+              "rho_first_lags": [
+                -0.17060359507900677
+              ],
+              "tau_int_initial_positive": 0.5,
+              "window_lag": 1
+            }
           }
         ],
-        "mean": 0.1253026827023594,
-        "min_chunk_ess_initial_positive": 12.470909076106528,
-        "raw_sample_count": 288,
-        "total_ess_initial_positive": 282.27698756625426
+        "mean": 0.12530215302524045,
+        "min_chunk_ess_initial_positive": 11.11046792810997,
+        "raw_sample_count": 320,
+        "total_ess_initial_positive": 309.38745549436425
       },
       "Gamma_ss_real": {
         "available": true,
-        "block_count": 18,
-        "chunk_block_mean": 7.980675422274945,
-        "chunk_block_stderr": 0.001400934007209413,
+        "block_count": 20,
+        "chunk_block_mean": 7.980711200100279,
+        "chunk_block_stderr": 0.0012585939278362147,
         "chunk_rows": [
           {
             "block_index": 1,
@@ -1394,20 +1513,51 @@
               "tau_int_initial_positive": 0.6391516649447302,
               "window_lag": 3
             }
+          },
+          {
+            "block_index": 19,
+            "mean": 7.980274463832434,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 11.096759194395561,
+              "n": 16,
+              "rho_first_lags": [
+                0.2209312070176682,
+                -0.16664853583110778
+              ],
+              "tau_int_initial_positive": 0.7209312070176682,
+              "window_lag": 2
+            }
+          },
+          {
+            "block_index": 20,
+            "mean": 7.981791937224134,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 16.0,
+              "n": 16,
+              "rho_first_lags": [
+                -0.16808733005537257
+              ],
+              "tau_int_initial_positive": 0.5,
+              "window_lag": 1
+            }
           }
         ],
-        "mean": 7.980675422274945,
-        "min_chunk_ess_initial_positive": 12.516591035856552,
-        "raw_sample_count": 288,
-        "total_ess_initial_positive": 282.36070150699084
+        "mean": 7.980711200100279,
+        "min_chunk_ess_initial_positive": 11.096759194395561,
+        "raw_sample_count": 320,
+        "total_ess_initial_positive": 309.4574607013864
       }
     },
     "0,1,0": {
       "C_ss_real": {
         "available": true,
-        "block_count": 18,
-        "chunk_block_mean": 0.12533549803675803,
-        "chunk_block_stderr": 2.3301492805416818e-05,
+        "block_count": 20,
+        "chunk_block_mean": 0.12533269337149894,
+        "chunk_block_stderr": 2.1023495896179167e-05,
         "chunk_rows": [
           {
             "block_index": 1,
@@ -1689,18 +1839,49 @@
               "tau_int_initial_positive": 1.4269726645477616,
               "window_lag": 4
             }
+          },
+          {
+            "block_index": 19,
+            "mean": 0.1253214811791749,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 14.668765312683423,
+              "n": 16,
+              "rho_first_lags": [
+                0.04537650780210918,
+                -0.19102073413441914
+              ],
+              "tau_int_initial_positive": 0.5453765078021092,
+              "window_lag": 2
+            }
+          },
+          {
+            "block_index": 20,
+            "mean": 0.1252934215891596,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 16.0,
+              "n": 16,
+              "rho_first_lags": [
+                -0.2804528182013289
+              ],
+              "tau_int_initial_positive": 0.5,
+              "window_lag": 1
+            }
           }
         ],
-        "mean": 0.12533549803675803,
+        "mean": 0.12533269337149894,
         "min_chunk_ess_initial_positive": 5.606274176622278,
-        "raw_sample_count": 288,
-        "total_ess_initial_positive": 259.7453968769723
+        "raw_sample_count": 320,
+        "total_ess_initial_positive": 290.4141621896557
       },
       "Gamma_ss_real": {
         "available": true,
-        "block_count": 18,
-        "chunk_block_mean": 7.978597076456119,
-        "chunk_block_stderr": 0.0014815811088704494,
+        "block_count": 20,
+        "chunk_block_mean": 7.978777151110433,
+        "chunk_block_stderr": 0.0013368546742410353,
         "chunk_rows": [
           {
             "block_index": 1,
@@ -1982,20 +2163,51 @@
               "tau_int_initial_positive": 1.4236491050819504,
               "window_lag": 4
             }
+          },
+          {
+            "block_index": 19,
+            "mean": 7.979504388370669,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 14.638855028269479,
+              "n": 16,
+              "rho_first_lags": [
+                0.0464908276331031,
+                -0.1917494043797139
+              ],
+              "tau_int_initial_positive": 0.5464908276331031,
+              "window_lag": 2
+            }
+          },
+          {
+            "block_index": 20,
+            "mean": 7.981291257627824,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 16.0,
+              "n": 16,
+              "rho_first_lags": [
+                -0.2797489421893876
+              ],
+              "tau_int_initial_positive": 0.5,
+              "window_lag": 1
+            }
           }
         ],
-        "mean": 7.978597076456119,
+        "mean": 7.978777151110432,
         "min_chunk_ess_initial_positive": 5.619362223066541,
-        "raw_sample_count": 288,
-        "total_ess_initial_positive": 259.75654317313104
+        "raw_sample_count": 320,
+        "total_ess_initial_positive": 290.3953982014005
       }
     },
     "1,0,0": {
       "C_ss_real": {
         "available": true,
-        "block_count": 18,
-        "chunk_block_mean": 0.12531371000749428,
-        "chunk_block_stderr": 2.0445591200541293e-05,
+        "block_count": 20,
+        "chunk_block_mean": 0.12531447550882285,
+        "chunk_block_stderr": 1.838387321672328e-05,
         "chunk_rows": [
           {
             "block_index": 1,
@@ -2275,18 +2487,49 @@
               "tau_int_initial_positive": 1.0385002049644014,
               "window_lag": 3
             }
+          },
+          {
+            "block_index": 19,
+            "mean": 0.12533563229487477,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 9.76375089777511,
+              "n": 16,
+              "rho_first_lags": [
+                0.3193572412650328,
+                -0.26403954198945634
+              ],
+              "tau_int_initial_positive": 0.8193572412650327,
+              "window_lag": 2
+            }
+          },
+          {
+            "block_index": 20,
+            "mean": 0.1253070977466853,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 16.0,
+              "n": 16,
+              "rho_first_lags": [
+                -0.22643610614809587
+              ],
+              "tau_int_initial_positive": 0.5,
+              "window_lag": 1
+            }
           }
         ],
-        "mean": 0.12531371000749428,
+        "mean": 0.12531447550882285,
         "min_chunk_ess_initial_positive": 7.7034168715202425,
-        "raw_sample_count": 288,
-        "total_ess_initial_positive": 264.66218118674925
+        "raw_sample_count": 320,
+        "total_ess_initial_positive": 290.42593208452433
       },
       "Gamma_ss_real": {
         "available": true,
-        "block_count": 18,
-        "chunk_block_mean": 7.9799737289102755,
-        "chunk_block_stderr": 0.001299030361576041,
+        "block_count": 20,
+        "chunk_block_mean": 7.979926626895557,
+        "chunk_block_stderr": 0.0011680628374359033,
         "chunk_rows": [
           {
             "block_index": 1,
@@ -2566,20 +2809,51 @@
               "tau_int_initial_positive": 1.0346800769521407,
               "window_lag": 3
             }
+          },
+          {
+            "block_index": 19,
+            "mean": 7.978582733300767,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 9.756557793797569,
+              "n": 16,
+              "rho_first_lags": [
+                0.31996131925603444,
+                -0.26514792459124753
+              ],
+              "tau_int_initial_positive": 0.8199613192560344,
+              "window_lag": 2
+            }
+          },
+          {
+            "block_index": 20,
+            "mean": 7.980422684225419,
+            "n": 16,
+            "tau_int": {
+              "available": true,
+              "ess_initial_positive": 16.0,
+              "n": 16,
+              "rho_first_lags": [
+                -0.22511670440058415
+              ],
+              "tau_int_initial_positive": 0.5,
+              "window_lag": 1
+            }
           }
         ],
-        "mean": 7.9799737289102755,
+        "mean": 7.979926626895557,
         "min_chunk_ess_initial_positive": 7.731858550486076,
-        "raw_sample_count": 288,
-        "total_ess_initial_positive": 264.56969896664356
+        "raw_sample_count": 320,
+        "total_ess_initial_positive": 290.32625676044114
       }
     }
   },
   "source_response_summary": {
     "available": true,
-    "block_count": 18,
-    "chunk_block_mean": 1.247313146935161,
-    "chunk_block_stderr": 0.001787371786742374,
+    "block_count": 20,
+    "chunk_block_mean": 1.2462287498601774,
+    "chunk_block_stderr": 0.0017707086364944628,
     "chunk_rows": [
       {
         "block_index": 1,
@@ -2861,12 +3135,43 @@
           "tau_int_initial_positive": 0.5,
           "window_lag": 1
         }
+      },
+      {
+        "block_index": 19,
+        "mean": 1.237521038124071,
+        "n": 16,
+        "tau_int": {
+          "available": true,
+          "ess_initial_positive": 16.0,
+          "n": 16,
+          "rho_first_lags": [
+            -0.1769643271255591
+          ],
+          "tau_int_initial_positive": 0.5,
+          "window_lag": 1
+        }
+      },
+      {
+        "block_index": 20,
+        "mean": 1.2354173142465805,
+        "n": 16,
+        "tau_int": {
+          "available": true,
+          "ess_initial_positive": 9.346715702985138,
+          "n": 16,
+          "rho_first_lags": [
+            0.35591562365002427,
+            -0.26259289206338016
+          ],
+          "tau_int_initial_positive": 0.8559156236500243,
+          "window_lag": 2
+        }
       }
     ],
-    "mean": 1.247313146935161,
+    "mean": 1.2462287498601774,
     "min_chunk_ess_initial_positive": 5.776917250396496,
-    "raw_sample_count": 288,
-    "total_ess_initial_positive": 242.7849819291294
+    "raw_sample_count": 320,
+    "total_ess_initial_positive": 268.13169763211454
   },
   "strict_non_claims": [
     "does not treat plaquette ESS as target FH/LSZ ESS",

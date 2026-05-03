@@ -3,11 +3,11 @@
   "autocorrelation_certificate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
   "combiner_certificate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
   "combiner_summary": {
-    "available_saved_configurations": 288,
+    "available_saved_configurations": 320,
     "expected_chunks": 63,
-    "missing_chunks": 45,
-    "present_chunks": 18,
-    "ready_chunks": 18,
+    "missing_chunks": 43,
+    "present_chunks": 20,
+    "ready_chunks": 20,
     "target_saved_configurations": 1000
   },
   "complete_target_timeseries_indices": [
@@ -28,7 +28,9 @@
     15,
     16,
     17,
-    18
+    18,
+    19,
+    20
   ],
   "exact_next_action": "No replacement queue is currently open. Continue response stability, scalar-pole derivative/model-class/FV/IR, and canonical-Higgs identity gates.",
   "fail_count": 0,
@@ -54,7 +56,9 @@
     15,
     16,
     17,
-    18
+    18,
+    19,
+    20
   ],
   "replacement_commands": {},
   "replacement_queue": [],
@@ -70,7 +74,7 @@
     "does not set kappa_s = 1 or identify the source pole as canonical Higgs"
   ],
   "target_timeseries_summary": {
-    "complete_count": 18,
+    "complete_count": 20,
     "complete_for_all_ready_chunks": true,
     "complete_indices": [
       1,
@@ -90,10 +94,12 @@
       15,
       16,
       17,
-      18
+      18,
+      19,
+      20
     ],
     "incomplete_indices": [],
-    "ready_count": 18
+    "ready_count": 20
   },
-  "verdict": "The ready L12 set has reached the minimum size for target ESS checks, with target-series complete for chunk001, chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010, chunk011, chunk012, chunk013, chunk014, chunk015, chunk016, chunk017, chunk018 and no current replacement queue. The target-observable ESS gate is now separately accepted for the ready set, but response stability, scalar-pole derivative/model-class/FV/IR control, and canonical-Higgs identity remain open."
+  "verdict": "The ready L12 set has reached the minimum size for target ESS checks, with target-series complete for chunk001, chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010, chunk011, chunk012, chunk013, chunk014, chunk015, chunk016, chunk017, chunk018, chunk019, chunk020 and no current replacement queue. The target-observable ESS gate is now separately accepted for the ready set, but response stability, scalar-pole derivative/model-class/FV/IR control, and canonical-Higgs identity remain open."
 }

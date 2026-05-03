@@ -1,5 +1,49 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Chunks019-020 V2 Multi-Tau Wave
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED PRODUCTION SUPPORT / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- chunks019-020 completed with fixed seeds, no `--resume`, chunk-isolated
+  outputs, selected-mass-only scalar FH/LSZ, and normal-equation caching;
+- both chunks preserve legacy tau1 target rows and add v2 multi-tau target
+  rows with `numba_gauge_seed_v1` seed control;
+- the ready L12 set is now `20/63`, target ESS passes, and replacement queue is
+  empty for the current ready set;
+- response stability, response-window acceptance, finite-source-linearity,
+  scalar-pole/FV/IR/model-class, W/Z response, and canonical-Higgs identity
+  remain open;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 19
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 20
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 19
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 20
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Canonical-Higgs Operator Candidate Stress
 
 Local review-loop disposition:

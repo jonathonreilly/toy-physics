@@ -1,5 +1,38 @@
 # Claim Status Certificate
 
+FH/LSZ chunks019-020 v2 multi-tau target wave:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ chunks019-020 v2 multi-tau production support
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 19
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 20
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 19
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 20
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=116 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=142 FAIL=0
+```
+
+The current ready set is `20/63` L12 chunks and `320/1000` saved
+configurations; target-observable ESS passes with limiting ESS
+`268.13169763211454`.  This authorizes no response readout switch and no
+retained or `proposed_retained` wording because response stability,
+finite-source-linearity, scalar-pole model-class/FV/IR, W/Z response, and
+canonical-Higgs/source-overlap identity remain open.
+
 Canonical-Higgs operator candidate stress:
 
 ```text

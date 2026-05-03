@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-03 update: chunks019-020 now extend the v2 FH/LSZ production-support
+set.  Ready L12 coverage is `20/63` chunks and `320/1000` saved
+configurations; v2 multi-tau rows are present for chunks017-020; target ESS
+passes with limiting ESS `268.13169763211454`; replacement queue is empty for
+the current ready set.  This does not change the closure ranking because
+response stability still fails and the canonical-Higgs/source-overlap,
+W/Z-response, scalar-pole/FV/IR/model-class, and finite-source-linearity gates
+remain open.  New chunks are useful background support, but the highest-value
+foreground move remains a genuine same-surface `O_H/C_sH/C_HH` identity,
+same-source W/Z response with sector-overlap identity, or a microscopic
+rank-one neutral-scalar theorem.
+
 2026-05-03 update: the canonical-Higgs operator certificate gate now rejects
 all current tempting `O_H` substitutes under stricter local-artifact reference
 rules.  The raw and schema-padded unratified source-Higgs smoke operator,

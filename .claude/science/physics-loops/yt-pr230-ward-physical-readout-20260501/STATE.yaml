@@ -13,11 +13,20 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-168-canonical-higgs-operator-candidate-stress
-blocks_completed: 168
-active_route: "same-surface source-Higgs Gram-purity route"
-active_hard_residual: "The canonical-Higgs operator certificate gate is now hardened and stress-tested against the current tempting substitutes.  identity_certificate and normalization_certificate references must point to existing local docs/outputs/scripts artifacts.  The raw unratified source-Higgs smoke operator, a schema-padded unratified version, static EW algebra as O_H, H_unit by fiat, and observed-target selection are all rejected by the candidate stress runner, PASS=6 FAIL=0.  Retained-route is PASS=116 FAIL=0 and campaign status is PASS=142 FAIL=0.  This closes a claim-firewall loophole but does not derive O_H: the active hard residual remains a genuinely derived same-surface canonical-Higgs operator identity plus normalization certificate, followed by production C_sH/C_HH pole residues and Gram-purity postprocessing.  No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-169-fh-lsz-chunks019-020-v2-wave
+blocks_completed: 169
+active_route: "FH/LSZ production support while same-surface identity remains open"
+active_hard_residual: "Chunks019-020 completed with fixed seeds 2026051019 and 2026051020, no resume, two-worker concurrency, selected-mass-only scalar FH/LSZ, normal-equation caching, and v2 multi-tau target rows.  Chunk-local generic checkpoints are PASS=14 FAIL=0 each; v2 multi-tau checkpoints are PASS=19 FAIL=0 each.  The ready L12 set is now 20/63 chunks and 320/1000 saved configurations; target ESS passes with limiting ESS 268.13169763211454.  Response stability still fails with relative_stdev=0.8885692945249242 and spread_ratio=5.476535332624479.  Response-window acceptance remains open because v2 rows exist only for chunks017-020, chunks001-016 lack v2 rows, multiple source radii are absent, and canonical-Higgs/source-overlap identity is still absent.  Retained-route is PASS=116 FAIL=0 and campaign status is PASS=142 FAIL=0.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk019_2026-05-01.json"
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk020_2026-05-01.json"
+  - "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk019/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk020/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_fh_lsz_chunk019_target_timeseries_generic_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_chunk020_target_timeseries_generic_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_chunk019_multitau_target_timeseries_checkpoint_2026-05-03.json"
+  - "outputs/yt_fh_lsz_chunk020_multitau_target_timeseries_checkpoint_2026-05-03.json"
+  - "docs/YT_FH_LSZ_CHUNKS019_020_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-03.md"
   - "scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py"
   - "scripts/frontier_yt_canonical_higgs_operator_candidate_stress.py"
   - "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json"

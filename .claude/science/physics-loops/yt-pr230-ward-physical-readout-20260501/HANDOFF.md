@@ -1,5 +1,34 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ chunks019-020 v2 multi-tau wave:
+
+- Ran chunks019-020 with the selected-mass-only / normal-cache production
+  harness, fixed seeds `2026051019` and `2026051020`, no `--resume`,
+  chunk-isolated output paths, and two concurrent workers.
+- Outputs:
+  `outputs/yt_pr230_fh_lsz_production_L12_T24_chunk019_2026-05-01.json`
+  and
+  `outputs/yt_pr230_fh_lsz_production_L12_T24_chunk020_2026-05-01.json`.
+- Chunk-local generic target-timeseries checkpoints are `PASS=14 FAIL=0`
+  for each chunk; v2 multi-tau checkpoints are `PASS=19 FAIL=0` for each
+  chunk.
+- The ready L12 set is now `20/63` chunks with `320/1000` saved
+  configurations.  Target-observable ESS passes with limiting ESS
+  `268.13169763211454`.
+- Response stability still fails (`relative_stdev=0.8885692945249242`,
+  `spread_ratio=5.476535332624479`).  Response-window acceptance remains open:
+  v2 rows are present only for chunks017-020, chunks001-016 still lack v2 rows,
+  multiple source radii are absent, and canonical-Higgs/source-overlap identity
+  is still absent.
+- Retained-route is `PASS=116 FAIL=0`; campaign status is `PASS=142 FAIL=0`.
+  No retained or proposed-retained closure is authorized.
+
+Next exact action: continue v2 production chunks or rerun older chunks with v2
+multi-tau rows only as production support, while the foreground closure route
+remains a real same-surface canonical-Higgs/source-overlap certificate, a W/Z
+response identity, or a scalar-pole identity theorem.  PR #230 remains
+draft/open.
+
 Latest checkpoint, 2026-05-03 canonical-Higgs operator candidate stress:
 
 - Added `scripts/frontier_yt_canonical_higgs_operator_candidate_stress.py`,
