@@ -13,10 +13,10 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-172-fh-lsz-chunks021-022-postprocess
+current_phase: campaign-block-172-fh-lsz-chunks021-022-v2-wave
 blocks_completed: 172
 active_route: "FH/LSZ v2 production support while foreground closure remains O_H/C_sH/C_HH or W/Z response"
-active_hard_residual: "Chunks021-022 were completed in the sibling worktree and imported/postprocessed locally.  Ready L12 coverage is now 22/63 chunks and 352/1000 saved configurations.  Target-observable ESS passes with limiting ESS 296.09790071733823 and autocorrelation ESS passes for target observables, but response stability still fails after the chunk022 outlier (relative_stdev=0.9050778118183592, spread_ratio=5.920283844112204).  Response-window acceptance remains open because v2 rows exist only for chunks017-022, chunks001-016 still lack v2 rows, multiple source radii and finite-source-linearity are absent, and production response stability is still open.  Retained-route PASS=121 FAIL=0, campaign status PASS=147 FAIL=0.  No retained/proposed_retained closure is authorized."
+active_hard_residual: "Chunks021-022 completed with selected-mass-only and normal-equation-cache FH/LSZ production support.  Ready L12 coverage is now 22/63 chunks and 352/1000 saved configurations; target ESS passes with limiting ESS 296.09790071733823 and autocorrelation ESS passes for target observables, but response stability remains open with relative_stdev=0.9050778118183592 and spread_ratio=5.920283844112204.  Response-window acceptance remains open because v2 multi-tau rows cover only chunks017-022, chunks001-016 lack v2 rows, multiple source radii and finite-source-linearity are absent, production response stability is still open, and source-Higgs/W/Z identity gates remain open.  Retained-route PASS=121 FAIL=0; campaign status PASS=147 FAIL=0.  No retained/proposed_retained closure is authorized."
 files_touched:
   - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk021_2026-05-01.json"
   - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk022_2026-05-01.json"
@@ -26,7 +26,17 @@ files_touched:
   - "outputs/yt_fh_lsz_chunk022_target_timeseries_generic_checkpoint_2026-05-02.json"
   - "outputs/yt_fh_lsz_chunk021_multitau_target_timeseries_checkpoint_2026-05-03.json"
   - "outputs/yt_fh_lsz_chunk022_multitau_target_timeseries_checkpoint_2026-05-03.json"
+  - "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"
+  - "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json"
+  - "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
+  - "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json"
+  - "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json"
+  - "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json"
+  - "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json"
   - "docs/YT_FH_LSZ_CHUNKS021_022_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-03.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - "scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py"
   - "docs/YT_FH_GAUGE_MASS_RESPONSE_CERTIFICATE_BUILDER_NOTE_2026-05-03.md"
   - "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json"

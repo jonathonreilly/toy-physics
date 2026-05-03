@@ -13,6 +13,9 @@ Chunks021-022 were completed by the active PR #230 worker in the sibling
 worktree `/Users/jonBridger/CI3Z2-pr230-status-20260503`, then the raw chunk
 outputs were imported into this checkout and all post-run gates were rerun
 locally.
+The run used the selected-mass-only and normal-equation-cache FH/LSZ production
+harness, two concurrent workers, fixed seeds, no `--resume`, and
+chunk-isolated output directories.
 
 Both chunks carry the v2 multi-tau source-response target schema:
 
@@ -34,6 +37,7 @@ Chunk021:
 - output: `outputs/yt_pr230_fh_lsz_production_L12_T24_chunk021_2026-05-01.json`
 - artifact: `outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk021/L12xT24/ensemble_measurement.json`
 - seed: `2026051021`
+- runtime: `1933.169635772705` seconds
 - source slope: `1.4293075844724867`
 - finite multi-tau slope values: `368`
 
@@ -42,6 +46,7 @@ Chunk022:
 - output: `outputs/yt_pr230_fh_lsz_production_L12_T24_chunk022_2026-05-01.json`
 - artifact: `outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk022/L12xT24/ensemble_measurement.json`
 - seed: `2026051022`
+- runtime: `1937.7863900661469` seconds
 - source slope: `7.3549193842802785`
 - finite multi-tau slope values: `368`
 
@@ -90,3 +95,5 @@ multi-tau rows only as production support, while the foreground closure route
 remains a real same-surface canonical-Higgs/source-overlap certificate, a W/Z
 response identity, or a scalar-pole identity theorem.  PR #230 remains
 draft/open.
+Additional source-only chunks can continue as background production support
+but must not be treated as physical `y_t` evidence.

@@ -18,8 +18,26 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=113 FAIL=0
+# SUMMARY: PASS=121 FAIL=0
 ```
+
+## 2026-05-03 FH/LSZ Chunks021-022 V2 Production-Support Update
+
+Chunks021 and 022 extend the selected-mass FH/LSZ production-support surface
+with v2 multi-tau target rows, fixed seeds `2026051021` and `2026051022`, no
+`--resume`, and chunk-isolated output directories.  Generic target-timeseries
+checkpoints pass for both chunks (`PASS=14 FAIL=0` each), and v2 multi-tau
+checkpoints pass for both chunks (`PASS=19 FAIL=0` each).
+
+The ready L12 set is now `22/63` chunks and `352/1000` saved configurations.
+Target-observable ESS passes with limiting ESS `296.09790071733823`, and the
+replacement queue is empty for the current ready set.
+
+This is bounded production support only.  Response stability remains open
+(`relative_stdev=0.9050778118183592`, `spread_ratio=5.920283844112204`),
+response-window acceptance remains open, and no scalar-pole/FV/IR/model-class,
+W/Z response, or canonical-Higgs/source-overlap identity closure is available.
+No retained or `proposed_retained` closure is authorized.
 
 ## 2026-05-03 FH/LSZ Production-Support Update
 

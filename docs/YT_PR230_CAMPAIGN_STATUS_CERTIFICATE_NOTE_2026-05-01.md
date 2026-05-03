@@ -26,8 +26,29 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=139 FAIL=0
+# SUMMARY: PASS=147 FAIL=0
 ```
+
+## 2026-05-03 FH/LSZ Chunks021-022 V2 Production-Support Update
+
+The campaign now includes v2 multi-tau target rows for chunks021 and 022,
+produced with fixed seeds `2026051021` and `2026051022`, selected-mass-only
+scalar FH/LSZ, normal-equation caching, no `--resume`, and chunk-isolated
+output directories.  Chunk-local generic target-timeseries checkpoints are
+`PASS=14 FAIL=0` for each chunk; v2 multi-tau checkpoints are
+`PASS=19 FAIL=0` for each chunk.
+
+The current ready L12 set is `22/63` chunks with `352/1000` saved
+configurations.  Target-observable ESS passes with limiting ESS
+`296.09790071733823`, the replacement queue is empty, and the downstream
+autocorrelation/ESS gate passes for bounded support.
+
+The retained boundary is unchanged.  Response stability remains open
+(`relative_stdev=0.9050778118183592`, `spread_ratio=5.920283844112204`), and
+response-window acceptance remains open because v2 rows cover only
+chunks017-022, chunks001-016 lack v2 rows, multiple source radii are absent,
+and the source-Higgs/W/Z identity gates remain open.  No retained or
+`proposed_retained` closure is authorized.
 
 ## 2026-05-03 FH/LSZ Production-Support Update
 

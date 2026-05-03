@@ -1,5 +1,30 @@
 # No-Go Ledger
 
+## FH/LSZ chunks021-022 v2 multi-tau wave is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 21
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 22
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 21
+# SUMMARY: PASS=19 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 22
+# SUMMARY: PASS=19 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=121 FAIL=0
+```
+
+Chunks021-022 increase the seed-controlled L12 ready set to `22/63` chunks and
+`352/1000` saved configurations.  They carry v2 multi-tau rows and improve
+target ESS to `296.09790071733823`, but they do not pass response stability,
+response-window acceptance, finite-source-linearity, scalar-pole
+model-class/FV/IR, W/Z response, or canonical-Higgs/source-overlap identity
+gates.  Do not treat the chunk wave, target ESS, or v2 multi-tau rows as
+retained/proposed-retained evidence.
+
 ## Same-source W/Z response builder is not closure
 
 Runners:
