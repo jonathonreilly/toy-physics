@@ -10897,6 +10897,34 @@
       "to": "cl3_color_automorphism_theorem"
     },
     {
+      "from": "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+      "to": "su3_tensor_network_engine_roadmap_note_2026-05-03"
+    },
+    {
+      "from": "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "su3_fusion_engine_pr1_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
       "from": "symmetry_head_to_head_note",
       "to": "mirror_chokepoint_note"
     },
@@ -23165,7 +23193,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T19:59:54.007547+00:00",
+  "generated_at": "2026-05-03T20:15:29.565595+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -46157,6 +46185,37 @@
       "runner_path": "scripts/su3_dabc_symmetric_check.py",
       "title": "SU(3) Symmetric Structure Constants d^{abc} from Anticommutator"
     },
+    "su3_fusion_engine_pr1_theorem_note_2026-05-03": {
+      "claim_id": "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "su3_tensor_network_engine_roadmap_note_2026-05-03",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+      ],
+      "note_hash": "8572a7c29bf3060b19a91ed3aec5179974130b75cccb634f11e6cf65b8bd84e0",
+      "path": "docs/SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_fusion_engine.py",
+      "title": "SU(3) Fusion Engine via Cartan-Torus Character Orthogonality (PR 1)"
+    },
+    "su3_tensor_network_engine_roadmap_note_2026-05-03": {
+      "claim_id": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+        "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+      ],
+      "note_hash": "1965321235fa8948f1c43df26bf84c0ff73d3fe080b37b28ca41464577fdb588",
+      "path": "docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_fusion_engine.py",
+      "title": "SU(3) Tensor-Network Engine Roadmap (5-PR Plan)"
+    },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
       "claim_type_author_hint": null,
@@ -51345,24 +51404,24 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 49,
-      "meta": 7,
+      "meta": 8,
       "no_go": 6,
       "none": 1727,
       "open_gate": 5,
-      "positive_theorem": 71
+      "positive_theorem": 72
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 551,
-      "meta": 7,
+      "meta": 8,
       "no_go": 112,
       "none": 454,
       "open_gate": 112,
-      "positive_theorem": 629
+      "positive_theorem": 630
     },
-    "edge_count": 5791,
+    "edge_count": 5798,
     "leaf_count": 598,
-    "node_count": 1865,
+    "node_count": 1867,
     "root_count": 1055,
-    "runners_with_path": 1425
+    "runners_with_path": 1427
   }
 }

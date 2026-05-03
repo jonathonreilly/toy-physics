@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T20:00:01.599616+00:00",
+  "generated_at": "2026-05-03T20:15:32.462385+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14676,6 +14676,30 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/su3_dabc_symmetric_check.py"
+    },
+    "su3_fusion_engine_pr1_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_fusion_engine.py"
+    },
+    "su3_tensor_network_engine_roadmap_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_fusion_engine.py"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "assert_count": 2,
@@ -31256,6 +31280,22 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_su3_fusion_engine.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+        "su3_tensor_network_engine_roadmap_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_substrate_to_p_a_forcing.py": {
       "assert_count": 2,
       "claims": [
@@ -37590,12 +37630,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 162,
-      "C": 553,
+      "C": 554,
       "D": 207,
       "none": 417
     },
-    "runners_classified": 1349,
-    "runners_with_C": 659,
+    "runners_classified": 1350,
+    "runners_with_C": 660,
     "runners_with_D": 335
   }
 }
