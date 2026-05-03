@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:20:22.186052+00:00
+**Generated:** 2026-05-03T18:21:12.517759+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 737 |
+| unaudited | 736 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
-| ~~audited_renaming~~ | 22 |
+| ~~audited_renaming~~ | 23 |
 | ~~audited_conditional~~ | 540 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
-| `audited_renaming` | 22 |
-| `unaudited` | 783 |
+| `audited_renaming` | 23 |
+| `unaudited` | 782 |
 
 | claim_type | count |
 |---|---:|
@@ -1074,6 +1074,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | definition_as_derivation | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
+| `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `s3_time_bilinear_tensor_primitive_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
@@ -11019,6 +11020,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The k-sweep verifies flat alpha_crit only for the hand-inserted absorbing proxy inherited from the minimal absorbing-horizon probe, whose retained horizon/trapping interpretation has already failed audit. Why this blocks: the result can kill a stronger wavelength-dependent story for this proxy observable, but it cannot be retained as a quantum-horizon or retained-absorbing-family statement until the underlying absorption law and family claim are repaired. Repair target: either demote this note to a bounded proxy no-go, or first derive and audit the absorption/horizon law in the minimal probe, then rerun the k-sweep as a retained-family observable. Claim boundary until fixed: it is safe to say the live proxy sweep gives alpha_crit around 0.08 to 0.09 with exponent about 0.03 across the tested k values; it is not safe to claim a retained quantum-horizon law or retained absorbing-horizon mechanism.
 - **open / conditional deps cited:**
   - `MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audit of the asserted theorem that exact unit shell carrier normalization plus retained a_d = rho forces kappa = 1 and hence BICAC / STRC-LO at LO.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-quark-bimodule-lo-shell-normalization-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** If one tried to keep a separate bridge factor kappa, the LO down action would be D_LO(x) = rho * kappa * x; but on the shell-normalized slot this would assign shell coefficient rho * kappa instead of the retained shell coefficient rho, so only kappa = 1 preserves the retained shell coefficient exactly.  _(class `F`)_
+- **chain closes:** False — The algebra rho*kappa = rho implies kappa = 1 for nonzero rho, but the note does not derive the physical-observable bridge identifying the retained down amplitude a_d = rho with the shell-normalized LO down-action coefficient on I. The runner verifies the arithmetic after that identification is imposed, not a retained theorem constructing the identification.
+- **rationale:** Issue: the proof's load-bearing move identifies the retained down amplitude a_d = rho with the physical LO shell coefficient of D_LO on the exact carrier, then rejects kappa != 1 by coefficient preservation. Why this blocks: exact unit shell columns plus the algebra rho*kappa = rho do not by themselves construct the physical readout/action map from the retained amplitude to D_LO; the contested bridge is being asserted as the same coefficient. Repair target: add a retained theorem and runner check deriving the shell readout/action map from the carrier and projector inputs without setting D_LO = rho*kappa Id_I or the retained shell coefficient by hand. Claim boundary until fixed: the runner supports exact carrier-column normalization and algebraic discrimination among the enumerated kappa coefficients conditional on the shell-coefficient identification, but not an independent derivation that physical LO kappa is forced to 1.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28`
