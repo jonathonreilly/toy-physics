@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:03:48.991909+00:00
+**Generated:** 2026-05-03T19:12:23.102945+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 721 |
+| unaudited | 723 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 546 |
-| ~~audited_failed~~ | 13 |
+| ~~audited_failed~~ | 11 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 331 |
 | `audited_conditional` | 546 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 57 |
+| `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 767 |
+| `unaudited` | 769 |
 
 | claim_type | count |
 |---|---:|
@@ -1001,9 +1001,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `bh_entropy_derived_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
-| `complete_prediction_chain_2026_04_15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -2472,19 +2470,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The scoped object is a narrow exact theorem, not a broad physical theorem: it proves a residual-Z2 parity split and one scalar identity inside a fixed 3-parameter 3x3 Hermitian-circulant family. No hidden numerical, phenomenological, or external authority premise is needed. The runner output independently checks the matrix identities, Hermiticity, parity action, and scalar formula exactly.
 - **auditor confidence:** high
 
-### `circulant_response_master_identity_narrow_theorem_note_2026-05-02`
-
-- **Note:** [`CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Standalone Hermitian-circulant linear-algebra identity for G(g_0,g_1), the cyclic-basis Frobenius responses, the master identity, and the stated Koide-cone reduction including kappa = g_0^2/|g_1|^2 = 2.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-current-fresh-context-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** From (T2), 2 r_0^2 = r_1^2 + r_2^2 iff 18(g_0^2 - 2 |g_1|^2) = 0 iff g_0^2 = 2 |g_1|^2, i.e. to kappa := g_0^2 / |g_1|^2 = 2.  _(class `A`)_
-- **chain closes:** False — The trace-response formulas and master identity close exactly, and the runner verifies 16 A-class algebra checks. The full scoped claim does not close as stated because the kappa reformulation divides by |g_1|^2 without restricting to g_1 != 0; at g_1 = 0 the cone reduces to g_0 = 0 but kappa is undefined.
-- **rationale:** Issue: The T3 sentence upgrades the exact equation g_0^2 = 2 |g_1|^2 to the one-scalar equation kappa := g_0^2 / |g_1|^2 = 2 while the theorem also claims all real g_0 and complex g_1, including g_1 = 0. Why this blocks: the kappa expression is undefined at |g_1| = 0, so the advertised exact equivalence is not globally true on the stated domain even though T1, T2, and the non-divided cone equation are correct. Repair target: add an explicit domain condition g_1 != 0 for the kappa formulation, or state T3 only as the globally valid equation g_0^2 = 2 |g_1|^2 with kappa = 2 as a nonzero-g_1 corollary; update the note and runner to test the singular boundary. Claim boundary until fixed: the standalone trace identities, master identity, and cone equivalence to g_0^2 = 2 |g_1|^2 may be safely claimed, but not the unrestricted equivalence to kappa = 2.
-- **auditor confidence:** high
-
 ### `ckm_atlas_axiom_closure_note`
 
 - **Note:** [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](../../docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
@@ -2803,19 +2788,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
-- **auditor confidence:** high
-
-### `complete_prediction_chain_2026_04_15`
-
-- **Note:** [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](../../docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** The complete Cl(3) on Z^3 prediction package is claimed to yield seven observables and vacuum stability from one axiom plus the single computed plaquette input.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-context-auditor-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Seven independent observables (v, alpha_s, sin^2(theta_W), 1/alpha_EM, y_t, m_t, m_H) plus one qualitative prediction (vacuum stability) from one axiom and one computed number.  _(class `B`)_
-- **chain closes:** False — The source note is a synthesis wrapper that explicitly depends on upstream proposed/audited rows while the ledger metadata exposes no deps for this claim. The current runner also disagrees with the note on the full 3-loop Higgs value: the note repeatedly says 129.7 GeV, while the runner prints 125.10 GeV.
-- **rationale:** Issue: The complete-package claim does not close from the provided note plus runner, and the note is stale relative to the runner for the headline m_H(full 3-loop) number. Why this blocks: A complete prediction-chain theorem cannot be retained when its support stack is not registered as auditable dependencies and one promoted observable has conflicting current values, 129.7 GeV in the note versus 125.10 GeV in the runner. Repair target: Register and audit the one-hop theorem dependencies, make the runner compute rather than hard-code the load-bearing bridges, and reconcile the Higgs full-3-loop route so source note and runner agree. Claim boundary until fixed: This may be treated only as an unaudited package inventory listing promoted component outputs, not as an independently closed zero-import prediction chain.
 - **auditor confidence:** high
 
 ### `complex_action_note`

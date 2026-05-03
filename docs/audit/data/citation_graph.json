@@ -23089,7 +23089,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T19:03:42.884706+00:00",
+  "generated_at": "2026-05-03T19:12:15.662912+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26460,7 +26460,7 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "3c63b5af18b1e4cdf0293ca8203ba1c80370737d53052976e22a5da693422a94",
+      "note_hash": "e69fff175ab6931b909165df9f3ce4ecd6799461f8467b43d676206b47114aca",
       "path": "docs/CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_circulant_response_master_identity_narrow.py",
       "title": "Hermitian-Circulant Response Master Identity Narrow Theorem"
@@ -27350,7 +27350,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "21c95806ea15fa032fdd73475c2d86a1f930e05d635df2cb7e72e11faf96db97",
+      "note_hash": "616009c4e9b5f64a84568f0945cb29d98168ffc890d5ac27d2bc75cdaeb46b24",
       "path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
       "runner_path": "scripts/frontier_complete_prediction_chain.py",
       "title": "Complete Prediction Chain: Cl(3) on Z^3"
