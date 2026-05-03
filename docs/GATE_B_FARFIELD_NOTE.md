@@ -9,10 +9,12 @@
 - [`logs/2026-04-05-gate-b-farfield-harness.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-farfield-harness.txt)
 - [`scripts/gate_b_grown_distance_law.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_grown_distance_law.py)
 - [`logs/2026-04-05-gate-b-grown-distance-law.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-grown-distance-law.txt)
-- [`docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md)
+- `docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md` (sibling artifact in same Gate B
+  lane; cross-reference only — not a one-hop dep of this note)
 - [`scripts/gate_b_grown_joint_package.py`](/Users/jonreilly/Projects/Physics/scripts/gate_b_grown_joint_package.py)
 - [`logs/2026-04-05-gate-b-grown-joint-package.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-gate-b-grown-joint-package.txt)
-- [`docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md)
+- `docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md` (sibling artifact in same Gate B
+  lane; cross-reference only — not a one-hop dep of this note)
 
 ## Result
 
@@ -84,9 +86,12 @@ survives one refinement step to `h = 0.25`.
 
 Read it through:
 
-- [`docs/GATE_B_H025_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_FARFIELD_NOTE.md)
-- [`docs/GATE_B_H025_DISTANCE_LAW_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_DISTANCE_LAW_NOTE.md)
-- [`docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md)
+- `docs/GATE_B_H025_FARFIELD_NOTE.md` (sibling refinement artifact;
+  cross-reference only — not a one-hop dep of this note)
+- `docs/GATE_B_H025_DISTANCE_LAW_NOTE.md` (sibling refinement artifact;
+  cross-reference only — not a one-hop dep of this note)
+- `docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md` (sibling refinement artifact;
+  cross-reference only — not a one-hop dep of this note)
 
 Safe read:
 
