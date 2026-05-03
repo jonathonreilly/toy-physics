@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:25:32.818119+00:00
+**Generated:** 2026-05-03T21:26:00.471017+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 685 |
+| unaudited | 684 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 552 |
-| ~~audited_failed~~ | 13 |
+| ~~audited_failed~~ | 14 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,19 +39,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 363 |
 | `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 57 |
+| `audited_failed` | 58 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 732 |
+| `unaudited` | 731 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 596 |
+| `bounded_theorem` | 597 |
 | `decoration` | 8 |
 | `meta` | 47 |
 | `no_go` | 164 |
 | `open_gate` | 92 |
-| `positive_theorem` | 857 |
+| `positive_theorem` | 856 |
 
 | criticality | count |
 |---|---:|
@@ -1051,6 +1051,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fifth_family_radial_fm_transfer_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-context | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
@@ -6540,6 +6541,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** But Theorem 1 gives P(beta) = beta / 18 + O(beta^2), so exact equality forces Gamma = 1; since Gamma_cand = 1.554921974442116 != 1, P(beta) = P_1plaq(Gamma_cand beta) cannot be true.  _(class `A`)_
 - **chain closes:** True — The note compares the same normalized plaquette observable on both sides and derives identical beta=0 slopes 1/18 for the full Wilson plaquette and local one-plaquette block. An exact constant rescaling would change the local slope to Gamma/18, so equality near beta=0 forces Gamma=1, contradicting the stated Gamma_cand.
 - **rationale:** The retained claim is a no-go, not support for the remaining beta-dependent program. The obstruction closes by exact small-beta algebra: equal analytic expansions of the same plaquette observable require equal first derivatives at beta=0, and the candidate constant lift has the wrong derivative. The runner hard-codes the elementary Haar slope rather than independently deriving Haar integration, but the source derivation is explicit enough and the runner checks the decisive slope mismatch for the scoped no-go. Residual risk is limited to normalization conventions for the plaquette/action; within the conventions stated in the note, the conclusion follows.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Whether the current audited beta = 6 spatial_pair transfer-family parameter box fails to realize the explicit completed first-sector triple Zmin exactly, with the reported best scaled fit at the parameter-box boundary.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-gauge-triple-transfer-boundary`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The best audited scaled fit on the current spatial_pair witness family to the explicit completed triple is still far, with ||c_best Zhat_best - Zmin||_2 = 0.007578536496..., so the completed triple is not realized exactly inside the audited current explicit witness family.  _(class `C`)_
+- **chain closes:** False — The runner completes with PASS=10 and reproduces the reported boundary-corner numbers, but it hard-codes the asserted active boundary values and optimizes only linear_decay there. It does not provide a global optimization certificate or exhaustive/sound search over the full audited parameter box needed to justify the source note's best-fit and not-realized-exactly conclusion.
+- **rationale:** Issue: the load-bearing global non-realization claim rests on the assertion that the reported boundary corner is the best fit over the current spatial_pair family, but the runner fixes that contested corner and checks only local inward perturbations plus the resulting positive gap. Why this blocks: a positive residual at one preselected boundary corner does not rule out an exact or smaller-gap realization elsewhere in the audited parameter box. Repair target: provide a proof-level global optimizer/certificate, interval bound, exhaustive deterministic search with certified lower bound, or an analytic theorem showing the stated corner is globally minimizing and the minimum gap is strictly positive. Claim boundary until fixed: the completed run supports only the reduced statement that the reported boundary-corner fit has residual norm about 0.007578536497 and nearby tested inward edge relaxations increase the gap.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19`
