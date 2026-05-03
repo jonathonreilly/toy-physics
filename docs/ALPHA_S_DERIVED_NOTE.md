@@ -16,7 +16,8 @@
 **Current package carrier:** `scripts/frontier_complete_prediction_chain.py`
 **Historical support runner:** `scripts/frontier_alpha_s_determination.py`
 
-**Audit replacement gate:** [ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md](ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+**Audit replacement gate (plain-text pointer, not a one-hop authority for this
+bounded lane):** `ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md`
 with runner `scripts/frontier_alpha_s_direct_wilson_loop.py`.
 
 ## Status amendment 2026-05-01 (audit-driven scope sharpening)
@@ -72,8 +73,9 @@ standard-infrastructure running bridge, but it does not produce an
 audit-clean framework-native closed derivation of `alpha_s(M_Z)`.
 
 The audit-clean replacement target is the direct Wilson-loop route in
-[ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md](ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md).
-That route measures `alpha_s` from Wilson-loop expectation values, the
+`ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md`.
+That route is a future replacement gate, not a load-bearing authority for this
+bounded same-surface lane. It measures `alpha_s` from Wilson-loop expectation values, the
 static potential, Sommer-scale setting, and the standard QCD running
 bridge. It explicitly forbids using the `alpha_LM/u_0` or
 `alpha_bare/u_0^2` chain as authority.

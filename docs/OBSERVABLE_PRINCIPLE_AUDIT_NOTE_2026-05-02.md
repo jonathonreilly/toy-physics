@@ -1,12 +1,13 @@
 # Observable-Principle From-Axiom Note — Status Correction Audit
 
 **Date:** 2026-05-02
-**Status:** demotion / status correction packet for
+**Type:** meta
+**Status:** metadata-only demotion / status correction packet for
 [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
 which has audit verdict `audited_conditional` with td=294, lbs=26.70.
 **Primary runner:** `scripts/frontier_observable_principle_audit.py`
-**Authority role:** dep-declaration / status-correction packet for
-parent's load-bearing assumption chain.
+**Authority role:** metadata / dep-declaration packet for the parent's
+load-bearing assumption chain; not an independently auditable theorem row.
 
 ## 0. Audit context
 

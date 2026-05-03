@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """
-Ward-Identity Derivation Verifier: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)
-==================================================================
+Top-Yukawa Structural Identification Verifier: y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6)
+================================================================================
 
-Independently reconstructs every load-bearing coefficient of the retained
-theorem YT_WARD_IDENTITY_DERIVATION_THEOREM.md via direct computation.
+Independently reconstructs every load-bearing coefficient of the support /
+open-gate note YT_WARD_IDENTITY_DERIVATION_THEOREM.md via direct computation.
 No hard-coded y_t/g_s = 1/sqrt(6) assumptions anywhere; every pass is an
 arithmetic check of a computed quantity against a predicted value.
 
 STRUCTURE:
 
-  Block 1:  Q_L block dimensions (retained rep content from
+  Block 1:  Q_L block dimensions (cited rep content from
             LEFT_HANDED_CHARGE_MATCHING_NOTE.md:13, CKM_ATLAS:56).
   Block 2:  Canonical Higgs Z = sqrt(6) from unit-residue 2-point function.
             Computes the 2-point function residue by enumerating all
             (alpha, a, beta, b) index contractions on the Q_L block.
-  Block 3:  Cross-check against retained YCP:112 free-theory singlet value
+  Block 3:  Cross-check against the YCP:112 free-theory singlet value
             (Tr[M M^dag]_singlet = N_c |G_0|^2); our formula reproduces it.
   Block 4:  Color Fierz identity SU(3), verified by explicit computation
             of sum_A T^A_{ab} T^A_{cd} from Gell-Mann matrices against the
@@ -42,7 +42,9 @@ STRUCTURE:
             y_t(M_Pl) = g_s(M_Pl)/sqrt(6) computed from inputs only, compared
             to the downstream-chain-consistent number 0.4358.
 
-Every load-bearing coefficient is COMPUTED, not assumed.
+Every algebraic coefficient checked by this support runner is COMPUTED, not
+assumed. The runner does not certify the physical top-Yukawa readout map as a
+first-principles closure.
 """
 
 from __future__ import annotations
@@ -62,9 +64,9 @@ from canonical_plaquette_surface import (
 
 np.set_printoptions(precision=12, linewidth=120)
 
-# Retained inputs (none of these are the claimed ratio)
-N_c = 3                           # SU(3) color, retained (NATIVE_GAUGE_CLOSURE)
-N_iso = 2                         # SU(2)_L doublet, retained (CKM_ATLAS:56 n_pair=2)
+# Cited inputs (none of these are the claimed ratio)
+N_c = 3                           # SU(3) color, cited from NATIVE_GAUGE_CLOSURE
+N_iso = 2                         # SU(2)_L doublet, cited from CKM_ATLAS:56 n_pair=2
 DIM_Q_L = N_c * N_iso             # Q_L = (2,3) rep dimension (group theory)
 PI = math.pi
 PLAQ = CANONICAL_PLAQUETTE
@@ -92,7 +94,7 @@ def check(name: str, condition: bool, detail: str = "", cls: str = "C") -> None:
 # BLOCK 1: Q_L block dimensions
 # ============================================================
 log("=" * 72)
-log("BLOCK 1: Q_L = (2,3) rep dimension (retained)")
+log("BLOCK 1: Q_L = (2,3) rep dimension (cited framework input)")
 log("=" * 72)
 check("N_c = 3 (SU(3) color fundamental)", N_c == 3, f"LEFT_HANDED_CHARGE_MATCHING:13")
 check("N_iso = 2 (SU(2)_L doublet)", N_iso == 2, f"CKM_ATLAS:56 n_pair = 2")
@@ -304,7 +306,8 @@ log("BLOCK 7: One-gluon-exchange 4-fermion coefficient (perturbative)")
 log("=" * 72)
 log()
 log("  From Fierz (Block 4): color-singlet channel coefficient = 1/(2 N_c)")
-log("  Multiplying by the one-gluon-exchange -g_s^2/M^2 gives (Step 3 of theorem):")
+log("  Multiplying by the one-gluon-exchange -g_s^2/M^2 gives the")
+log("  scalar-singlet coefficient used by the support note:")
 log("    L_exchange|_{color-singlet} = (g_s^2 / (2 N_c M^2)) * j^mu j_mu")
 
 C_pert_color_singlet = 1.0 / (2.0 * N_c)
@@ -452,7 +455,7 @@ log()
 # Known result (cf. Itzykson-Zuber, Peskin-Schroeder conventions): the
 # standard Fierz coefficients are (S, P, V, A, T) = (1, 1, -1/2, -1/2, 0)
 # times a sign depending on fermion spinor convention.  The KEY claim used
-# in the theorem is that c_S and c_P both have magnitude O(1) (not zero),
+# in the support note is that c_S and c_P both have magnitude O(1) (not zero),
 # allowing projection onto the complex-Higgs channel.
 check(
     "c_S has magnitude close to 1 (scalar channel nonzero)",
@@ -472,14 +475,14 @@ check(
 
 
 # ============================================================
-# BLOCK 9: Perturbative NLO (SUPPORT-ONLY — not part of theorem)
+# BLOCK 9: Perturbative NLO (SUPPORT-ONLY — not part of core identification)
 # ============================================================
 log()
 log("=" * 72)
 log("BLOCK 9: Perturbative 1-loop vertex correction (SUPPORT-ONLY)")
 log("This block documents the perturbative 1-loop vertex correction")
-log("magnitude; it is NOT part of the authority theorem's certification.")
-log("The authority theorem makes no precision claim; see bridge note.")
+log("magnitude; it is NOT part of the core identification surface.")
+log("The support note makes no precision claim; see bridge note.")
 log("=" * 72)
 
 # Independent computation from inputs (not from the claimed ratio)
@@ -526,8 +529,8 @@ log("=" * 72)
 log("BLOCK 10: y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6) via framework-native chain")
 log("=" * 72)
 log()
-log("  Theorem Steps 1-4 derive the EXACT tree-level identity via a")
-log("  same-1PI-function residue theorem in the SAME retained theory")
+log("  The source note checks the exact tree-level algebraic identity via a")
+log("  same-1PI-function residue calculation in the same cited framework surface")
 log("  (no UV-vs-EFT matching, no second theory).")
 log()
 log("  Step 3 (same-1PI-function residue identity, scalar-singlet only):")
@@ -666,9 +669,9 @@ check(
 )
 
 log()
-log("  === Theorem-certifying chain (same-1PI-function residue identity) ===")
+log("  === Support chain (same-1PI-function residue identity) ===")
 log()
-log("  The authority theorem now makes NO quantitative precision claim.")
+log("  The support note makes NO quantitative precision claim.")
 log("  It states only the exact same-1PI-function residue identity")
 log("  on the scalar-singlet channel:")
 log()
@@ -691,7 +694,7 @@ log("    Canonical tadpole [D15]: y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6) (exact)")
 log()
 log("  Quantitative NLO / precision / systematic discussion is SUPPORT-ONLY")
 log("  (see Block 9 and docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md).")
-log("  It is NOT part of the theorem-certifying chain.")
+log("  It is NOT part of the core support chain.")
 
 
 # ============================================================
@@ -704,8 +707,8 @@ log("=" * 72)
 log()
 log("  This block audits ONLY the load-bearing scalar-singlet channel.")
 log()
-log("  The theorem proves y_t_bare = 1/sqrt(6) by TWO INDEPENDENT")
-log("  computations within the SAME retained theory:")
+log("  The support runner evaluates y_t_bare = 1/sqrt(6) by TWO")
+log("  computations within the same cited framework surface:")
 log()
 log("    Representation A (OGE in bare action, Block 7 + 4 + 8):")
 log("        Gamma^(4)(q^2) = -c_S * g_bare^2 / (2 N_c * q^2) * O_S")
@@ -802,14 +805,14 @@ check(
 
 
 # ============================================================
-# BLOCK 12: Two-gluon color traces (SUPPORT-ONLY — not part of theorem)
+# BLOCK 12: Two-gluon color traces (SUPPORT-ONLY — not part of core support)
 # ============================================================
 log()
 log("=" * 72)
 log("BLOCK 12: Two-gluon color-trace algebra (SUPPORT-ONLY)")
 log("This block explicitly computes SU(3) color traces for 2-gluon")
-log("topologies.  It is SUPPORT-ONLY and is NOT part of the authority")
-log("theorem's certification; it documents SU(N_c) algebraic facts.")
+log("topologies.  It is SUPPORT-ONLY and is NOT part of the core")
+log("identification surface; it documents SU(N_c) algebraic facts.")
 log("=" * 72)
 log()
 
@@ -931,29 +934,29 @@ log("  - Block 7a: C_strong = 1/N_c^2 from Haar-sampled one-link integral")
 log("  - Block 8: Dirac Fierz c_S, c_P, ... computed from 4x4 Clifford matrices")
 log("  - Block 9: SUPPORT-ONLY — perturbative 1-loop vertex correction")
 log("             magnitude from alpha_LM, C_F inputs.  Not part of the")
-log("             theorem-certifying chain.")
+log("             core support chain.")
 log("  - Block 10: computes the OGE-side coefficient (Representation A) of")
 log("             the same-1PI-function identity using D12 + S2; uses the")
 log("             y_t_bare value derived independently in Block 11 to drive")
 log("             the canonical-surface tadpole continuum;")
 log("             gives y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6).  Block 10 does NOT")
 log("             derive y_t_bare itself (that lives in Block 11).")
-log("  - Block 11: derives y_t_bare = 1/sqrt(6) INDEPENDENTLY from the")
+log("  - Block 11: evaluates y_t_bare = 1/sqrt(6) INDEPENDENTLY from the")
 log("             H_unit operator matrix element (Clebsch-Gordan + canonical")
 log("             normalization, no OGE input); then verifies the value")
 log("             agrees with Block 10's OGE-side coefficient as a")
 log("             same-1PI-function consistency check.")
 log("  - Block 9, Block 12: SUPPORT-ONLY (perturbative NLO discussion")
 log("             and 2-gluon color-trace algebra). Not part of the")
-log("             theorem-certifying chain. Documented in the bridge note.")
+log("             core support chain. Documented in the bridge note.")
 log()
-log("  Retained result (EXACT tree-level algebraic identity):")
+log("  Support result (exact tree-level algebraic identity on the stated surface):")
 log("    y_t_bare = g_bare / sqrt(6)")
 log("    y_t(M_Pl) / g_s(M_Pl) = 1/sqrt(6) on canonical surface")
 log()
-log("  No precision bound is attached to this theorem.")
+log("  No precision bound is attached to this support note.")
 log("  Quantitative corrections are out of scope (support note).")
-log("  See docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md for the theorem.")
+log("  See docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md for the source note.")
 
 if COUNTS["FAIL"] > 0:
     sys.exit(1)

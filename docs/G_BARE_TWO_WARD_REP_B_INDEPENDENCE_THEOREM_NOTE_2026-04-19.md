@@ -1,8 +1,11 @@
 # Rep-B Bare-Scale Independence Theorem for the Two-Ward `g_bare` Route
 
 **Date:** 2026-04-19
-**Status:** DERIVED — load-bearing support theorem for the two-Ward `g_bare` route
-**Role:** proves the missing Rep-B independence step on the retained block
+**Type:** bounded_theorem
+**Status authority:** independent audit lane only.
+**Role:** bounded Rep-B independence step for the two-Ward `g_bare` route,
+scoped to the retained narrow overlap authority rather than the terminal
+top-Yukawa Ward-identification row.
 
 ---
 
@@ -46,31 +49,21 @@ is genuinely independent of the preselected canonical surface.
 
 ## Proof
 
-### 1. The operator content of `H_unit` is fixed without `g_bare`
+### 1. The narrow `H_unit` overlap authority is independent of `g_bare`
 
-From Step 1 of
-[YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md),
-the scalar-singlet composite normalization is obtained from the free-theory
-two-point function:
-
-```
-<phi(x) phi(y)>_conn,free = -(N_c N_iso / Z^2) G_0(x,y)^2
-```
-
-on the `Q_L` block. Since `G_0` is the free staggered propagator, no gauge
-coupling enters. Unit residue therefore forces
+The retained narrow authority
+[UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md](UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md)
+states the unit-normalized scalar-singlet operator as
 
 ```
-Z^2 = N_c N_iso = 6.
+H_unit = (1 / sqrt(N_c N_iso)) sum_{alpha,a} psibar_{alpha,a} psi_{alpha,a}
 ```
 
-So the operator content
-
-```
-H_unit = (1 / sqrt(6)) sum psibar psi
-```
-
-is fixed by the retained block structure, not by any choice of `g_bare`.
+and proves that its tree-level matrix element with any single basis pair is
+`1 / sqrt(N_c N_iso)`, with no gauge-coupling parameter in the calculation.
+This note consumes that narrow overlap identity only. It does not consume the
+broader `YT_WARD_IDENTITY_DERIVATION_THEOREM.md` identification of the same
+matrix element with the Standard Model top-Yukawa readout.
 
 ### 2. The top-channel overlap is pure group theory
 
