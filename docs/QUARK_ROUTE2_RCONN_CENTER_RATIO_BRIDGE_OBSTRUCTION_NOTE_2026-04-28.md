@@ -1,6 +1,8 @@
 # Quark Route-2 R_conn Center-Ratio Bridge Obstruction
 
 **Date:** 2026-04-28
+**Type:** bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)
+**Admitted context inputs:** (1) staggered-Dirac realization derivation target (canonical parent: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)); (2) g_bare = 1 derivation target (canonical parent: [`G_BARE_DERIVATION_NOTE.md`](G_BARE_DERIVATION_NOTE.md)).
 
 **Status:** support / exact conditional bridge plus exact import-boundary obstruction for
 Lane 3 target 3B. This note records a block-02 stretch attempt on the
@@ -216,3 +218,15 @@ TOTAL: PASS=26, FAIL=0
 VERDICT: -R_conn is a sharp conditional bridge to rho_E=21/4,
 but the source-domain identification is still missing.
 ```
+
+
+## Hypothesis set used (axiom-reset 2026-05-03)
+
+Per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), this note depends on **both** open derivation gates:
+
+1. **Staggered-Dirac realization derivation target** — canonical parent note: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md) (`claim_type: open_gate`); in-flight supporting work: `PHYSICAL_LATTICE_NECESSITY_NOTE.md`, `THREE_GENERATION_STRUCTURE_NOTE.md`, `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`, `scripts/frontier_generation_rooting_undefined.py`, `GENERATION_AXIOM_BOUNDARY_NOTE.md`.
+2. **`g_bare = 1` derivation target** — canonical parent: [`G_BARE_DERIVATION_NOTE.md`](G_BARE_DERIVATION_NOTE.md) (`claim_type: positive_theorem`, `audit_status: audited_conditional`); in-flight supporting work: `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`, `G_BARE_RIGIDITY_THEOREM_NOTE.md`, `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md`, `G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`, `G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`, `G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md`, `G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`.
+
+The note produces (or directly supports) a quantitative gauge prediction (Wilson plaquette content, `α_s`, `v`, `sin²θ_W`, `m_t`, `m_H`, `g_1`, `g_2`, `β = 6`, CKM/quark/hadron mass hierarchy, action-unit metrology, etc.) by fixing `g_bare = 1` without independently deriving it — therefore both gates must close for the lane to upgrade.
+
+Therefore `claim_type: bounded_theorem` until both gates close; when they close the lane upgrades back to `positive_theorem` automatically via the audit pipeline's recompute (per the `CLAIM_TYPE_TO_RETAINED` mapping in `docs/audit/scripts/compute_effective_status.py`). The substantive science content of this note is unchanged by this retag.

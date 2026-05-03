@@ -1,6 +1,8 @@
 # Quark Lane 3 Bounded-Companion Retention Firewall
 
 **Date:** 2026-04-27
+**Type:** bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)
+**Admitted context inputs:** staggered-Dirac realization derivation target (canonical parent: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)).
 **Status:** proposed_retained exact negative boundary for Lane 3 dependency
 accounting. This is not a retained derivation of `m_u`, `m_d`, `m_s`, `m_c`,
 or `m_b`.
@@ -156,3 +158,18 @@ Cannot claim:
 - the `5/6` bridge is theorem-core retained;
 - the top Ward identity applies uniformly to all quark species as a physical
   Yukawa boundary condition.
+
+
+## Hypothesis set used (axiom-reset 2026-05-03)
+
+Per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), this note depends on the **staggered-Dirac realization derivation target**, which is currently an open derivation gate. The note's load-bearing claim defines or relies on fermion fields, fermion-number operators, fermion correlators, fermion bilinears, the staggered Dirac action, the BZ-corner doubler structure, the `hw=1` triplet, charged-lepton sector content, neutrino sector content, quark / hadron content, the Koide / PMNS / CKM observable surfaces, or the Grassmann CAR boundary structure — all of which depend on the staggered-Dirac realization derivation target listed in `MINIMAL_AXIOMS_2026-05-03.md`.
+
+Canonical parent note: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md) (`claim_type: open_gate`). In-flight supporting work (see `MINIMAL_AXIOMS_2026-05-03.md`):
+
+- `PHYSICAL_LATTICE_NECESSITY_NOTE.md` (retained)
+- `THREE_GENERATION_STRUCTURE_NOTE.md` (retained)
+- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` (retained)
+- `scripts/frontier_generation_rooting_undefined.py` (retained no-go)
+- `GENERATION_AXIOM_BOUNDARY_NOTE.md` (preserved)
+
+Therefore `claim_type: bounded_theorem` until that gate closes; when it closes the lane upgrades back to `positive_theorem` automatically via the audit pipeline's recompute (per the `CLAIM_TYPE_TO_RETAINED` mapping in `docs/audit/scripts/compute_effective_status.py`). The substantive science content of this note is unchanged by this retag.

@@ -1,7 +1,8 @@
 # Taste-Scalar Fermion Coleman-Weinberg Isotropy — Narrow Theorem
 
 **Date:** 2026-05-02
-**Type:** positive_theorem (proposed; audit-lane to ratify)
+**Type:** bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)
+**Admitted context inputs:** staggered-Dirac realization derivation target (canonical parent: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)).
 **Primary runner:** `scripts/frontier_taste_scalar_fermion_cw_isotropy_narrow.py`
 
 ## Claim scope (proposed)
@@ -131,3 +132,18 @@ as the safe algebraic scope.
   verdict; this narrow theorem carves out the fermion CW isotropy half
   cleanly.
 - Cycles 1-7 (PRs #292-302) — sister narrow theorems on different lanes.
+
+
+## Hypothesis set used (axiom-reset 2026-05-03)
+
+Per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), this note depends on the **staggered-Dirac realization derivation target**, which is currently an open derivation gate. The note's load-bearing claim defines or relies on fermion fields, fermion-number operators, fermion correlators, fermion bilinears, the staggered Dirac action, the BZ-corner doubler structure, the `hw=1` triplet, charged-lepton sector content, neutrino sector content, quark / hadron content, the Koide / PMNS / CKM observable surfaces, or the Grassmann CAR boundary structure — all of which depend on the staggered-Dirac realization derivation target listed in `MINIMAL_AXIOMS_2026-05-03.md`.
+
+Canonical parent note: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md) (`claim_type: open_gate`). In-flight supporting work (see `MINIMAL_AXIOMS_2026-05-03.md`):
+
+- `PHYSICAL_LATTICE_NECESSITY_NOTE.md` (retained)
+- `THREE_GENERATION_STRUCTURE_NOTE.md` (retained)
+- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` (retained)
+- `scripts/frontier_generation_rooting_undefined.py` (retained no-go)
+- `GENERATION_AXIOM_BOUNDARY_NOTE.md` (preserved)
+
+Therefore `claim_type: bounded_theorem` until that gate closes; when it closes the lane upgrades back to `positive_theorem` automatically via the audit pipeline's recompute (per the `CLAIM_TYPE_TO_RETAINED` mapping in `docs/audit/scripts/compute_effective_status.py`). The substantive science content of this note is unchanged by this retag.
