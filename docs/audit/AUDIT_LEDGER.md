@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:33:52.853959+00:00
+**Generated:** 2026-05-03T20:34:48.813426+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 184 |
+| **retained_bounded** | 185 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 16 |
-| unaudited | 702 |
+| unaudited | 701 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 346 |
+| `audited_clean` | 347 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 749 |
+| `unaudited` | 748 |
 
 | claim_type | count |
 |---|---:|
@@ -285,6 +285,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_field_strength_unification_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lattice_kernel_transfer_norm_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lattice_nn_continuum_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | C | - |
+| `lattice_nn_deterministic_rescale_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -9299,6 +9300,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The runner completed and reproduced the note's table through h = 0.25, including Born residuals below 1e-10, k=0 equal to zero, and the stated positive refinement trend. It also returned FAIL at h = 0.125, matching the note's open-gate boundary rather than supporting a continuum theorem.
 - **rationale:** The scoped claim is deliberately bounded: it asserts the retained finite-spacing window and explicitly leaves the continuum limit unresolved. The current runner output matches the note's numerical rows through h = 0.25 and cleanly reports failure at h = 0.125, so the open gate is supported on its own terms. Residual risk is confined to any future continuum or finer-spacing claim, which this note explicitly does not make.
 - **auditor confidence:** high
+
+### `lattice_nn_deterministic_rescale_note`
+
+- **Note:** [`LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md`](../../docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A fixed geometry-only nearest-neighbor rescale schedule reaches h = 0.0625 in the cited finite computation with Born |I3|/P at machine precision and k=0 zero on the listed rows.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-lattice-nn-rescale`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The canonical claim is that a deterministic, Born-clean refinement path exists on the raw NN lattice through the tested sub-0.25 regime, with the fixed spacing/sqrt(3) rescale schedule.  _(class `C`)_
+- **chain closes:** True — The cited script implements a raw 3-edge NN lattice and a fixed step_scale = spacing/sqrt(3) schedule that does not inspect amplitudes or slit configuration. The cited completed log reproduces the note's rows through h = 0.0625, including Born values 7.86e-16 at h = 0.125 and 3.00e-16 at h = 0.0625.
+- **rationale:** The bounded computational claim closes from the note plus its one-hop cited script/log: the schedule is deterministic and geometry-only, and the completed finite output matches the canonical table. No continuum-limit theorem or physical interpretation of the vanishing gravity scale is being granted. Residual risk is limited to reproducibility/versioning of the cited absolute-path artifacts rather than a missing load-bearing derivation in the restricted packet.
+- **auditor confidence:** medium
 
 ### `lattice_nn_light_cone_note`
 

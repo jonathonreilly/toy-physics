@@ -3,9 +3,9 @@
     "critical": 62,
     "high": 215,
     "leaf": 201,
-    "medium": 253
+    "medium": 252
   },
-  "generated_at": "2026-05-03T20:33:52.527261+00:00",
+  "generated_at": "2026-05-03T20:34:47.774026+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7804,27 +7804,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lattice_nn_deterministic_rescale_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.0,
-      "note_path": "docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "poisson_self_gravity_loop_v3_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -14330,6 +14309,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lattice_nn_rg_alpha_sweep_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "lattice_nn_deterministic_rescale_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/LATTICE_NN_RG_ALPHA_SWEEP_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/lattice_nn_rg_alpha_sweep.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "su3_fusion_engine_pr1_theorem_note_2026-05-03",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -15470,29 +15472,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/kubo_fam2_refinement.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lattice_nn_rg_alpha_sweep_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_nn_deterministic_rescale_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/LATTICE_NN_RG_ALPHA_SWEEP_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_nn_rg_alpha_sweep.py",
       "transitive_descendants": 1
     },
     {
@@ -19297,5 +19276,5 @@
     }
   ],
   "ready_count": 45,
-  "total_pending": 731
+  "total_pending": 730
 }
