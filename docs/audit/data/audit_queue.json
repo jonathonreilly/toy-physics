@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 203,
-    "medium": 284
+    "medium": 283
   },
-  "generated_at": "2026-05-03T18:31:15.157425+00:00",
+  "generated_at": "2026-05-03T18:32:02.392714+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7602,27 +7602,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "action_power_scaling_sweep_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.807,
-      "note_path": "docs/ACTION_POWER_SCALING_SWEEP_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/action_power_scaling_sweep.py",
-      "transitive_descendants": 27
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "newton_derivation_note",
       "claim_scope": null,
       "claim_type": "open_gate",
@@ -7663,6 +7642,29 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/signed_gravity_continuum_graded_einstein_localization.py",
+      "transitive_descendants": 26
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "action_uniqueness_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "action_power_scaling_sweep_note"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 5.755,
+      "note_path": "docs/ACTION_UNIQUENESS_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/action_universality_probe.py",
       "transitive_descendants": 26
     },
     {
@@ -12232,29 +12234,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/gate_b_no_restore_farfield.py",
-      "transitive_descendants": 26
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "action_uniqueness_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "action_power_scaling_sweep_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.755,
-      "note_path": "docs/ACTION_UNIQUENESS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/action_universality_probe.py",
       "transitive_descendants": 26
     },
     {
@@ -19902,5 +19881,5 @@
     }
   ],
   "ready_count": 69,
-  "total_pending": 760
+  "total_pending": 759
 }

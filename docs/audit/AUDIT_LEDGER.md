@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:31:15.606589+00:00
+**Generated:** 2026-05-03T18:32:02.941544+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 81 |
 | **retained_no_go** | 103 |
-| **retained_bounded** | 171 |
+| **retained_bounded** | 172 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 731 |
+| unaudited | 730 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 324 |
+| `audited_clean` | 325 |
 | `audited_conditional` | 542 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 777 |
+| `unaudited` | 776 |
 
 | claim_type | count |
 |---|---:|
@@ -108,6 +108,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
+| `action_power_scaling_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -1148,6 +1149,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The transformation (c, G) -> (c/a, a*G) leaves the dynamics invariant because the self-consistent loop depends only on the product c*G; after the f/Phi and source-normalization conventions are stipulated, matching g_tt algebraically fixes the corresponding c.  _(class `A`)_
 - **chain closes:** True — The narrowed note does not claim to derive the physical f/Phi map or a convention-free value of c. Its load-bearing bounded claim is that c is degenerate before conventions and algebraically determined after named conventions; that closes from the displayed rescaling argument and metric matching. The current runner output supports the bounded claim by showing convergence across c, approximate c*phi invariance under fixed c*G rescaling, and explicit withdrawal of the null-ray/light-bending test. Stale top-level runner docstrings and unused comments still contain older unique-c language, but they are not used by the current note, current runner output, or ratified scope.
 - **rationale:** The narrowed note does not claim to derive the physical f/Phi map or a convention-free value of c. Its load-bearing bounded claim is that c is degenerate before conventions and algebraically determined after named conventions; that closes from the displayed rescaling argument and metric matching. The current runner output supports the bounded claim by showing convergence across c, approximate c*phi invariance under fixed c*G rescaling, and explicit withdrawal of the null-ray/light-bending test. Stale top-level runner docstrings and unused comments still contain older unique-c language, but they are not used by the current note, current runner output, or ratified scope.
+- **auditor confidence:** high
+
+### `action_power_scaling_sweep_note`
+
+- **Note:** [`ACTION_POWER_SCALING_SWEEP_NOTE.md`](../../docs/ACTION_POWER_SCALING_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded replay on the fixed 3D ordered dense lattice with h=0.5, W=10, L=12, kernel 1/L^2 with h^2 measure, field s/r, and S=L(1-f^p), showing F∝M=p for p in {0.5, 0.75, 1.0, 1.5, 2.0} and monotonic tail steepening without promoting a universal tail law.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-current`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On this fixed family, the mass-scaling law is clean: F∝M = p across the tested sweep.  _(class `C`)_
+- **chain closes:** True — The note's bounded claim is exactly the fixed-family replay produced by the runner: the current output reproduces Born 2.18e-15, F~M equal to each tested p, 7/7 TOWARD rows, and the listed tail slopes. The note explicitly does not claim a universal architecture-independent tail theorem or derivation of p=1.
+- **rationale:** The load-bearing claim is bounded to one fixed lattice family and five tested powers, with no cited dependencies and no external comparator bridge. The runner computes the fixed-family sweep rather than importing an observational target, and its current output matches the source note's frozen replay. Residual risk is limited to the runner's upstream implementation of measure_action, which was outside the permitted one-hop packet; the audited note itself avoids overclaiming a universal tail formula.
 - **auditor confidence:** high
 
 ### `action_uniqueness_audit_2026-04-11`
