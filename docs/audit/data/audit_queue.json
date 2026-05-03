@@ -1,33 +1,12 @@
 {
   "by_criticality": {
-    "critical": 64,
+    "critical": 63,
     "high": 222,
     "leaf": 203,
     "medium": 271
   },
-  "generated_at": "2026-05-03T13:06:40.782852+00:00",
+  "generated_at": "2026-05-03T13:08:15.251874+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30",
-      "claim_scope": "Under the listed finite event-cell substrate data, spin/time/CPT equivariance, complex Hilbert/Born surface, and tensor-local number algebra do not force the first-order projector P_1 over the Hodge-dual third-order projector P_3.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 8.655,
-      "note_path": "docs/FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_first_order_coframe_unconditionality_no_go.py",
-      "transitive_descendants": 284
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -19746,6 +19725,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 107,
-  "total_pending": 760
+  "ready_count": 106,
+  "total_pending": 759
 }

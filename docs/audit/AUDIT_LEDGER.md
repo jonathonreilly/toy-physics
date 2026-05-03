@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:06:41.186040+00:00
+**Generated:** 2026-05-03T13:08:15.604501+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,12 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 111 |
-| **retained_no_go** | 100 |
+| **retained_no_go** | 101 |
 | **retained_bounded** | 172 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
 | unaudited | 725 |
-| audit_in_progress | 1 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -38,8 +37,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 353 |
+| `audited_clean` | 354 |
 | `audited_conditional` | 520 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
@@ -110,7 +108,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
@@ -208,6 +205,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -5701,6 +5699,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The finite-rank Woodbury/Dyson identity produces the exact renormalized exterior field, the same shell trace is stationary for the Schur boundary action, and shell averaging gives only a bounded scalar/isotropic metric reduction with the tensorial 3+1 map explicitly left open.  _(class `C`)_
 - **chain closes:** True — For the bounded claim actually made, the runner verifies the exact finite-rank field reconstruction, exterior harmonicity, Schur boundary-action stationarity, and a strongly improved coarse scalar/isotropic residual while preserving the stated blocker that full tensorial 3+1 closure is missing. The note does not overclaim full nonlinear GR.
 - **rationale:** The scoped architecture closes at the grade stated in the note: exact finite-rank source-to-exterior and exact boundary-action stationarity, followed by bounded coarse scalar/isotropic metric evidence. The runner exits 0 and reproduces the stated R_match=5.0 residual improvement while explicitly reporting the nonzero direct 3+1 residual as a blocker. Residual risk is the acknowledged missing tensorial matching/completion principle, which is outside this row's bounded claim boundary.
+- **auditor confidence:** high
+
+### `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30`
+
+- **Note:** [`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md`](../../docs/FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Within the granted Boolean event-cell substrate structure, spatial Cl(3) spin-lift equivariance, time parity, CPT grading, complex Hilbert/Born surface, and tensor-local number algebra do not force the first-order sector P_1 over the Hodge-dual third-order sector P_3.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-2026-05-03-first-order-coframe-no-go-second-independent`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The load-bearing witness is the Hodge-complement identity * P_1 *^{-1} = P_3, with P_3 distinct from P_1 while preserving the listed substrate tests.  _(class `A`)_
+- **chain closes:** True — The chain closes because a single explicit algebraic witness produces a symmetry-equivalent but distinct allowed carrier under exactly the listed substrate tests. No unaudited dependency or external physical bridge is needed for the scoped negative result.
+- **rationale:** The no-go is scoped to the listed substrate structures and supplies a concrete countermodel: the Hodge-complement map exchanges P_1 and P_3, while the runner verifies preservation of spatial spin-lift equivariance, time parity/CPT behavior, tensor-local number algebra, and rank-four carrier isomorphism. This is sufficient for the negative claim that those assumptions alone do not distinguish first-order from dual third-order coframe carriers. The result should not be read as excluding stronger boundary, orientation, incidence, or dynamical laws; the note itself correctly treats those as possible repair targets outside the audited assumptions.
 - **auditor confidence:** high
 
 ### `flagship_paper_contribution_statement_note`
