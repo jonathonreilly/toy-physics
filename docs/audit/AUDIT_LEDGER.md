@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:13:18.305359+00:00
+**Generated:** 2026-05-03T18:14:02.630139+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 743 |
+| unaudited | 742 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 537 |
+| ~~audited_conditional~~ | 538 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 317 |
-| `audited_conditional` | 537 |
+| `audited_conditional` | 538 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 789 |
+| `unaudited` | 788 |
 
 | claim_type | count |
 |---|---:|
@@ -532,6 +532,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_candidate_mass_window_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `dm_chamber_signature_structure_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -3527,6 +3528,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `retained_affine_Hermitian_source_family_and_H_base_J_basin_coordinates_not_registered`
   - `five_route_assumptions_audit_boundary_for_pure_algebraic_A_BCC_not_registered_here`
   - `right_sensitive_microscopic_selector_law_later_same_day_stack_not_audited_in_this_claim`
+- **auditor confidence:** high
+
+### `dm_abcc_signature_forcing_theorem_note_2026-04-19`
+
+- **Note:** [`DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`](../../docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Sylvester path-forcing for continuous Herm_3 paths from H_base to an endpoint whose signature is independently established as (2,0,1), with A-BCC closure conditional on PNS and the C_neg endpoint-signature identification.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-auditor`  (codex-current; independence=fresh_context)
+- **load-bearing step:** By Lemma 3, gamma(0) has signature (1, 0, 2) and gamma(1) has signature (2, 0, 1); these are distinct connected components of GL(Herm_3), so gamma must exit GL(Herm_3) at det(gamma(t*)) = 0.  _(class `A`)_
+- **chain closes:** False — The Sylvester component argument closes once the endpoint signature (2,0,1) is supplied, but the note does not prove globally that every det<0 chi^2=0 DM A-BCC endpoint has that signature. The A-BCC corollary also explicitly remains conditional on PNS.
+- **rationale:** Issue: The proof's load-bearing endpoint step depends on Lemma 3 identifying C_neg = {det(H_base + J) < 0} with signature (2,0,1), but the note supports that global chamber claim by finite scans plus a one-axis formula, not a full theorem over the chi^2=0 source family. Why this blocks: Sylvester forces a det=0 crossing only between distinct inertia components; det<0 alone for a 3x3 Hermitian matrix does not by itself exclude other signatures, and PNS is explicitly left as an external physical input. Repair target: prove the full C_neg endpoint-signature theorem over the retained DM A-BCC parameter domain, and separately retain or state PNS as an explicit open gate; update the runner/note mismatch because the current runner reports PASS=43 FAIL=0 while the note says PASS=54 FAIL=0. Claim boundary until fixed: The note may safely claim the conditional Sylvester fact for any endpoint already proven to have signature (2,0,1), including the checked Basin 2 and Basin X instances, but not an unconditional retained A-BCC theorem for all det<0 physical endpoints.
+- **open / conditional deps cited:**
+  - `DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `dm_candidate_mass_window_theorem_note_2026-04-19`
