@@ -3,8 +3,8 @@
 Verifies the discrimination claims of
 `docs/HIGGS_VACUUM_STABILITY_NEW_PHYSICS_DISCRIMINATION_NOTE_2026-05-03.md`:
 
-1. Framework's y_t(v) = 0.918 vs SM extraction 0.940; compute current
-   tension level (sigma).
+1. Framework's bounded internal y_t(v) = 0.918 vs SM extraction 0.940;
+   compute current tension level including the stated framework systematic.
 2. Framework's m_H predictions (119.8/125.1/129.7 GeV) vs PDG 125.25 GeV;
    identify which versions are within bounded systematic.
 3. Vacuum stability framework prediction vs SM metastability; identify
@@ -23,7 +23,6 @@ from __future__ import annotations
 
 import math
 import sys
-from typing import List, Tuple
 
 
 def main() -> int:
@@ -38,20 +37,28 @@ def main() -> int:
     yt_framework_systematic = 0.03  # ~3% QFP/RGE-surrogate per ASSUMPTION_DERIVATION_LEDGER
     yt_sm_central = 0.940
     yt_sm_uncertainty = 0.010  # current PDG-extraction uncertainty
+    yt_stability_boundary = 0.93  # Buttazzo 2013 NNLO: stability boundary at fixed m_H=125.25
     delta_yt = yt_sm_central - yt_framework
     combined_sigma = math.sqrt(yt_sm_uncertainty**2 + (yt_framework * yt_framework_systematic)**2)
     tension_sigma = delta_yt / combined_sigma
+    stability_boundary_sigma = (yt_sm_central - yt_stability_boundary) / yt_sm_uncertainty
+    future_uncertainty_for_5sigma_boundary = (yt_sm_central - yt_stability_boundary) / 5.0
 
     print(f"  Framework y_t(v) = {yt_framework} ± {yt_framework * yt_framework_systematic:.4f}")
     print(f"  SM extraction y_t(v) = {yt_sm_central} ± {yt_sm_uncertainty}")
     print(f"  Difference: {delta_yt:.4f}")
     print(f"  Combined uncertainty: {combined_sigma:.4f}")
-    print(f"  Current tension: {tension_sigma:.2f}σ")
+    print(f"  Current framework-vs-observation tension: {tension_sigma:.2f}σ")
+    print(f"  Current distance above stability boundary y_t≈{yt_stability_boundary}: "
+          f"{stability_boundary_sigma:.2f}σ on the observational error alone")
     print()
     print("  Discrimination thresholds:")
-    print(f"    Framework FALSIFIED if y_t > {yt_framework + 5*combined_sigma:.4f} at 5σ "
-          f"(δy_t needed: {5*combined_sigma:.4f})")
-    print(f"    Framework SUPPORTED if y_t < {yt_framework + 1*combined_sigma:.4f} consistently")
+    print("    Stability claim falsified if the measured y_t lower 5σ bound exceeds "
+          f"the stability boundary y_t≈{yt_stability_boundary}.")
+    print(f"    If the central value remains {yt_sm_central}, this needs σ_y_t < "
+          f"{future_uncertainty_for_5sigma_boundary:.4f}.")
+    print("    Direct y_t=0.918 discrimination also requires narrowing the current "
+          "3% framework-side transport systematic.")
 
     # ----- Section 2: m_H discrimination -----
     print("\n--- Section 2: m_H discrimination ---")
@@ -80,15 +87,14 @@ def main() -> int:
 
     # ----- Section 3: vacuum stability -----
     print("\n--- Section 3: Vacuum stability discrimination ---")
-    yt_stability_boundary = 0.93  # Buttazzo 2013 NNLO: stability boundary at fixed m_H=125.25
     print(f"  SM stability boundary (Buttazzo et al 2013, NNLO): y_t ≲ {yt_stability_boundary}")
     print(f"  Framework y_t(v) = {yt_framework}: {'STABLE' if yt_framework < yt_stability_boundary else 'METASTABLE'}")
     print(f"  SM extraction y_t = {yt_sm_central}: {'STABLE' if yt_sm_central < yt_stability_boundary else 'METASTABLE'}")
     print()
-    print("  Framework PREDICTS absolutely stable EW vacuum.")
+    print("  Bounded framework package predicts an absolutely stable EW vacuum.")
     print("  SM with current y_t extraction predicts METASTABLE (lifetime >> Hubble; observationally OK).")
-    print("  Discrimination: precision y_t measurement that confirms y_t > 0.93 at >5σ would")
-    print("  FALSIFY the framework's stability claim.")
+    print("  Discrimination: a precision y_t measurement whose lower 5σ bound exceeds")
+    print("  y_t≈0.93 would falsify the framework's stability claim.")
 
     # ----- Section 4: Experimental timeline -----
     print("\n--- Section 4: Discrimination experiment timeline ---")
@@ -107,27 +113,31 @@ def main() -> int:
     print("  Framework's distinguishing claims (relative to SM):")
     print()
     print(f"  D1. Vacuum is absolutely stable (vs SM metastable)")
-    print(f"  D2. y_t(v) = 0.918 (vs SM extraction 0.940; current ~2σ)")
+    print(f"  D2. y_t(v) = 0.918 (vs SM extraction 0.940; current {tension_sigma:.2f}σ "
+          "including framework systematic)")
     print(f"  D3. m_H ∈ [119.8, 129.7] GeV (vs SM free param; PDG 125.25)")
-    print(f"  D4. λ(M_Pl) = 0 EXACTLY (vs SM extracted ~ 0)")
+    print("  D4. λ(M_Pl) = 0 on the conditional CW-boundary surface (vs SM extracted ~ 0)")
     print()
-    print("  Currently: ~2σ tension between framework y_t(v) and SM extraction.")
-    print("  Near-term (HL-LHC): tension or confirmation at >3σ likely.")
-    print("  Long-term (FCC-ee): definitive at >5σ.")
+    print(f"  Currently: {tension_sigma:.2f}σ tension between framework y_t(v) and SM extraction")
+    print("  after including the stated 3% framework systematic.")
+    print("  Near-term precision can falsify the stability claim if the lower 5σ")
+    print("  observational bound rises above the y_t≈0.93 stability boundary.")
+    print("  Direct y_t discrimination also needs a narrower audited framework-side systematic.")
     print()
-    print("  This LANE provides a current-testable discrimination from the SM.")
+    print("  This lane provides a bounded, current-testable discrimination surface against the SM.")
 
     print("\n" + "=" * 78)
     print("Block 01 discrimination tests complete.")
     print()
     print("Honest assessment:")
     print("  - Framework has 4 distinguishing predictions in this lane")
-    print("  - Currently ~2σ tension on y_t (not yet smoking gun)")
-    print("  - Near-future precision experiments will discriminate at 3-5σ")
+    print(f"  - Currently {tension_sigma:.2f}σ tension on y_t once framework systematic is included")
+    print("  - Future precision can falsify the stability boundary claim if observational")
+    print("    errors shrink enough while the central value stays above y_t≈0.93")
     print("  - Vacuum stability is the binary claim with cleanest discrimination")
     print()
-    print("This makes the Higgs/y_t/stability lane a testable 'new physics' lane,")
-    print("contingent on near-future precision improvements at HL-LHC and beyond.")
+    print("This makes the Higgs/y_t/stability lane a bounded beyond-SM discrimination")
+    print("surface, contingent on future precision and a narrower framework transport bound.")
     print("=" * 78)
     return 0
 

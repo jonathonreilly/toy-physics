@@ -10,8 +10,8 @@
 ## Status
 
 ```yaml
-actual_current_surface_status: discrimination-test sharpening note
-target_claim_type: open_gate (m_H value), positive_theorem (vacuum stability framing)
+actual_current_surface_status: bounded discrimination-test sharpening note
+target_claim_type: bounded_theorem
 proposal_allowed: false
 proposal_allowed_reason: |
   Reframing-and-sharpening note; not a derivation. Audit ratification of
@@ -25,7 +25,7 @@ bare_retained_allowed: false
 - **V1**: Reframes cycle 11 verdict on `HIGGS_MASS_FROM_AXIOM_NOTE` (PR [#271](https://github.com/jonathonreilly/cl3-lattice-framework/pull/271)) from "lattice curvature ↔ (m_H/v)² matching theorem missing" — instead of attempting matching theorem (cluster obstruction), the note REFRAMES the lane as discrimination tests vs SM. PASS.
 - **V2**: NEW content: 4-prediction discrimination table + tension calculation + experimental timeline. Not in any existing framework note.
 - **V3**: marginal — audit lane could compile this; the framing as "new-physics discrimination" is the marginal new content.
-- **V4**: non-trivial — quantifies current 2σ tension and identifies specific future-experiment discrimination thresholds.
+- **V4**: non-trivial — quantifies the current 0.75σ tension after the stated framework systematic and identifies specific future-experiment falsification thresholds.
 - **V5**: NO — distinct from prior cycles (cycle 11 was demotion; this is reframing for testability).
 
 **Disposition: PASS** for sharpening-note purposes.
@@ -37,12 +37,12 @@ bare_retained_allowed: false
 | 1 | proposal_allowed | NO (sharpening note) |
 | 2 | No open imports | NO (inherits cycle 11 obstruction; SM running admitted bridge) |
 | 3 | No load-bearing observed/fitted | YES (PDG values are comparators only) |
-| 4 | Every dep retained | PARTIAL (y_t lane retained; HIGGS_MASS_FROM_AXIOM is support tier) |
+| 4 | Every dep retained | NO (y_t Ward identity is currently an open-gate / bounded input; HIGGS_MASS_FROM_AXIOM is support tier) |
 | 5 | Runner checks dep classes | YES |
 | 6 | Review-loop pass | self-review PASS |
 | 7 | PR body says independent audit required | YES |
 
-**Honest tier: discrimination-test sharpening note.**
+**Honest tier: bounded discrimination-test sharpening note.**
 
 ## Cluster cap
 
@@ -52,8 +52,14 @@ bare_retained_allowed: false
 
 ## Imports
 
-None retired. None newly admitted (uses inherited admissions from y_t lane + standard SM running).
+None retired. The note explicitly admits comparator/literature inputs
+(PDG-style `m_t`, `m_H`, `alpha_s`; SM stability-boundary literature; future
+experiment precision targets) and inherits the y_t lane / standard SM-running
+bridge admissions.
 
 ## Honest classification
 
-**Discrimination-test sharpening note**: reframes the cluster-obstructed m_H lane as a testable discrimination lane, with 4 distinguishing claims, current tension levels, and experimental timeline.
+**Bounded discrimination-test sharpening note**: reframes the
+cluster-obstructed m_H lane as a testable discrimination lane, with four
+conditional distinguishing claims, current tension levels, and experimental
+timeline.

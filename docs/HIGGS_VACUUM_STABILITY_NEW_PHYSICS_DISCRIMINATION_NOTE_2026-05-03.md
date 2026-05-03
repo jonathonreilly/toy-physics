@@ -1,7 +1,8 @@
 # Higgs Mass + Vacuum Stability — New-Physics Discrimination Tests
 
 **Date:** 2026-05-03
-**Type:** discrimination-test sharpening note
+**Type:** bounded_theorem
+**Role:** discrimination-test sharpening note
 **Claim scope:** identify the framework's specific discriminating predictions
 in the Higgs / y_t / vacuum-stability lane, frame them as **falsification
 tests vs the SM**, compute current and near-future experimental
@@ -22,14 +23,40 @@ research), this note **reframes the lane as a discrimination test**:
 what does the framework predict that the SM doesn't, and how testable is
 that distinction?
 
+## Cited authorities (one hop)
+
+- [`HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md`](HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md)
+  — records the cycle 11 demotion and the missing
+  lattice-curvature ↔ `(m_H/v)^2` matching theorem.
+- [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md)
+  — historical Higgs-mass target note being reframed here as bounded
+  discrimination rather than exact closure.
+- [`HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md`](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
+  — carries the existing vacuum-stability / CW-boundary systematic surface.
+- [`HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md`](HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md)
+  — carries the hierarchy-correction route whose value spread is treated
+  here as bounded systematic.
+- [`YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+  — current open-gate parent for the y_t Ward identity surface.
+- [`YT_ZERO_IMPORT_CHAIN_NOTE.md`](YT_ZERO_IMPORT_CHAIN_NOTE.md)
+  — prior y_t chain surface used here only as a bounded internal input.
+- [`LATTICE_PHYSICAL_MATCHING_CLUSTER_OBSTRUCTION_NOTE_2026-05-02.md`](LATTICE_PHYSICAL_MATCHING_CLUSTER_OBSTRUCTION_NOTE_2026-05-02.md)
+  — records the matching-cluster obstruction that prevents exact m_H closure.
+
+External comparators and literature inputs are admitted as comparators, not
+framework derivations: PDG-style `m_t`, `m_H`, `α_s` extractions; Buttazzo et
+al. 2013 and Bednyakov et al. 2015 SM stability-boundary calculations; and
+published/future collider precision targets. These imports are used only to
+state falsification thresholds.
+
 ## 1. Framework's distinguishing predictions in this lane
 
 | # | Prediction | Framework value | SM/PDG | Distinguishability |
 |---|---|---|---|---|
 | D1 | Vacuum stability | **absolutely stable** | metastable (with current y_t) | binary YES/NO test |
-| D2 | y_t(v) | **0.918** (zero-import) | 0.94 ± 0.01 (extracted from m_t) | continuous (current ~2σ tension) |
+| D2 | y_t(v) | **0.918** (bounded internal value; no PDG fit for y_t) | 0.94 ± 0.01 (extracted from m_t) | continuous (current ~0.75σ with the stated 3% framework systematic) |
 | D3 | m_H value | 119.8–129.7 GeV (bounded systematic) | 125.25 ± 0.17 GeV (PDG free param) | tight central value, framework's range overlaps |
-| D4 | λ(M_Pl) | exactly 0 (CW boundary) | varies by extraction | precision λ at high scale |
+| D4 | λ(M_Pl) | conditionally 0 on the CW-boundary surface | varies by extraction | precision λ at high scale |
 
 ## 2. The KEY discrimination: vacuum stability
 
@@ -43,23 +70,33 @@ The strongest single distinguishing claim is **absolute vacuum stability**.
 
 **Framework prediction:**
 - y_t(v) = 0.918 (below the stability boundary)
-- λ(M_Pl) = 0 EXACTLY (CW boundary condition is a derived requirement, not a fit)
+- λ(M_Pl) = 0 on the conditional CW-boundary surface (not a fit, but still
+  bounded by the open bridge chain listed above)
 - Vacuum is **absolutely stable**
 
-**Discrimination test:** any precision measurement that confirms y_t > 0.93 (or equivalently m_t > 172 GeV with m_H = 125.25) at >5σ would FALSIFY the framework's stability claim. Current PDG y_t extraction sits at ~0.94 ± 0.01, ~2σ above the framework's value.
+**Discrimination test:** any precision measurement whose lower 5σ bound is
+above the stability boundary `y_t ≈ 0.93` (or equivalently the corresponding
+top-mass boundary at fixed `m_H = 125.25`) would falsify the framework's
+stability claim. Current PDG-style y_t extraction sits at ~0.94 ± 0.01,
+about 1σ above the stability boundary and about 0.75σ above the framework's
+bounded internal value once the stated 3% framework systematic is included.
 
 | Quantity | Framework | SM / PDG | Tension |
 |---|---|---|---|
-| y_t(v) | 0.918 | 0.940 ± 0.010 | ~2σ |
+| y_t(v) | 0.918 ± 3% systematic | 0.940 ± 0.010 | ~0.75σ including framework systematic |
 | m_t (pole) | 172.57–173.10 GeV (2L–3L) | 172.69 ± 0.30 GeV | <1σ (within bounded systematic) |
 | Stability | absolutely stable | metastable (98% confidence per Buttazzo et al) | binary, currently weakly favoring SM |
 
-**Critical experiment:** ATLAS/CMS top mass program at HL-LHC (2030+) targets δm_t ~ 100 MeV (vs current 300 MeV). FCC-ee Z-pole would give δy_t ~ 10⁻³. Either could resolve the y_t = 0.918 vs 0.940 distinction at >3σ.
+**Critical experiment:** ATLAS/CMS top mass program at HL-LHC (2030+) targets
+δm_t ~ 100 MeV (vs current 300 MeV). FCC-ee threshold measurements would
+sharpen the observational side further. Direct resolution of the y_t = 0.918
+vs 0.940 distinction at >3σ also requires narrowing the current 3%
+framework-side transport systematic.
 
 ## 3. The KEY tension: y_t(v) = 0.918 vs 0.940
 
 The framework's y_t(v) = 0.918 is derived from:
-- y_t(M_Pl) / g_s(M_Pl) = 1/√6 (exact lattice-scale Ward theorem; retained)
+- y_t(M_Pl) / g_s(M_Pl) = 1/√6 (existing Ward-identity surface; currently an open-gate / bounded input under the audit ledger)
 - Standard SM running from M_Pl to v (admitted bridge)
 - Bounded ~3% QFP/RGE-surrogate systematic
 
@@ -68,13 +105,19 @@ The SM extraction y_t = 0.94 ± 0.01 uses:
 - αs(M_Z) (PDG, observed)
 - Standard Higgs sector
 
-The framework prediction is a **zero-import** value (no PDG inputs); the SM
-extraction is **observation-driven** (uses m_t).
+The framework value is an internal framework value rather than a PDG fit for
+y_t, but it is not a repo-wide retained theorem here: the comparison is
+bounded by the y_t Ward-identity gate, the SM-running bridge, and the 3%
+QFP/RGE-surrogate systematic. The SM extraction is observation-driven
+(uses `m_t`, `m_H`, and `α_s` inputs).
 
-**Net discrimination:** if precision-LHC + future colliders establish y_t > 0.94
-at >3σ with reduced systematic, the framework's y_t(v) = 0.918 is falsified.
+**Net discrimination:** if precision-LHC + future colliders establish that
+`y_t` lies above the stability boundary with a lower 5σ bound above ~0.93,
+the framework's stability claim is falsified. A direct falsification of the
+central `y_t(v)=0.918` value also requires reducing the current framework-side
+3% systematic or replacing it with a narrower audited transport bound.
 
-## 4. Why this is "new physics" not just "the SM written in lattice notation"
+## 4. Why this is a beyond-SM discrimination surface
 
 The user's net-call required: "anything that distinguishes the framework
 from 'the SM, written in lattice notation.'"
@@ -84,13 +127,15 @@ The framework's y_t(v) = 0.918 + vacuum stability prediction satisfies this:
 - The SM does NOT predict stability — m_H, y_t are free parameters and
   the stability conclusion depends on those input values
 - A SM-with-correct-fits matches observation; a FRAMEWORK that predicts
-  these values DIFFERENTLY (specifically, y_t lower than SM extraction)
-  is making a NON-TRIVIAL CLAIM beyond SM
+  these values differently (specifically, y_t lower than SM extraction)
+  is making a bounded claim beyond SM
 
 **Honest caveat:** the framework's y_t(v) = 0.918 vs SM extraction 0.94 is
-within ~2σ; not currently a smoking-gun discrimination. But the FRAMEWORK
-doesn't have y_t as a free parameter, so future precision either
-confirms or falsifies it.
+only ~0.75σ once the stated 3% framework systematic is included; it is not
+currently a smoking-gun discrimination. Future precision can falsify the
+stability claim if it pushes the lower error bar above the stability boundary,
+but direct y_t discrimination also needs a narrower framework-side transport
+systematic.
 
 ## 5. Discrimination experiment timeline
 
@@ -104,17 +149,18 @@ confirms or falsifies it.
 ## 6. Honest status
 
 ```yaml
-actual_current_surface_status: discrimination-test sharpening note + named-obstruction stretch
-target_claim_type: open_gate (m_H value), positive_theorem (vacuum stability framing)
+actual_current_surface_status: bounded discrimination-test sharpening note + named-obstruction stretch
+target_claim_type: bounded_theorem
 conditional_surface_status: bounded by HIGGS_MASS_FROM_AXIOM cycle 11 demotion (PR #271)
 hypothetical_axiom_status: null
-admitted_observation_status: standard SM running from M_Pl to v (admitted bridge)
+admitted_observation_status: PDG-style m_t/m_H/alpha_s comparators, literature stability-boundary calculations, and standard SM running from M_Pl to v (admitted bridge)
 claim_type_reason: |
   This note REFRAMES the m_H lane as a falsification test rather than
   attempting m_H closure (which faces the cluster obstruction documented
   in cycle 13 / PR #274). The framework's distinguishing predictions
   (vacuum stability, y_t(v) = 0.918, λ(M_Pl) = 0) remain conditional on
-  prior bridges, but they ARE specific testable claims.
+  prior bridges, open gates, and comparator imports, but they define
+  specific falsification thresholds.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 proposal_allowed: false
@@ -128,7 +174,8 @@ proposal_allowed_reason: |
 
 - **Reframes** the m_H lane: from "predict m_H exactly" (cluster-obstructed)
   to "predict discriminating signatures vs SM" (testable now and near-term)
-- Identifies y_t(v) = 0.918 vs SM 0.940 as a current ~2σ discrimination
+- Identifies y_t(v) = 0.918 vs SM 0.940 as a current ~0.75σ discrimination
+  once the stated framework systematic is included
 - Identifies vacuum stability vs metastability as a binary discrimination
 - Connects to specific experiments (HL-LHC, FCC-ee, FCC-hh, linear collider)
 - Provides quantitative falsification thresholds
@@ -137,8 +184,9 @@ proposal_allowed_reason: |
 
 - The m_H value version conflict (119.8/125.1/129.7) — bounded systematic
 - The lattice-curvature ↔ (m_H/v)² matching theorem (cluster obstruction)
-- The y_t(v) = 0.918 derivation (already retained; cited)
-- A claim that the framework currently FALSIFIES SM (it doesn't; only
+- The y_t(v) = 0.918 derivation (carried by existing y_t surfaces; not
+  re-ratified here)
+- A claim that the framework currently falsifies SM (it doesn't; only
   identifies what would)
 
 ## 9. Cross-references

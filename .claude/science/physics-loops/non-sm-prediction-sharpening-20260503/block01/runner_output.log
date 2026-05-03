@@ -8,11 +8,13 @@ Source: docs/HIGGS_VACUUM_STABILITY_NEW_PHYSICS_DISCRIMINATION_NOTE_2026-05-03.m
   SM extraction y_t(v) = 0.94 ± 0.01
   Difference: 0.0220
   Combined uncertainty: 0.0293
-  Current tension: 0.75σ
+  Current framework-vs-observation tension: 0.75σ
+  Current distance above stability boundary y_t≈0.93: 1.00σ on the observational error alone
 
   Discrimination thresholds:
-    Framework FALSIFIED if y_t > 1.0645 at 5σ (δy_t needed: 0.1465)
-    Framework SUPPORTED if y_t < 0.9473 consistently
+    Stability claim falsified if the measured y_t lower 5σ bound exceeds the stability boundary y_t≈0.93.
+    If the central value remains 0.94, this needs σ_y_t < 0.0020.
+    Direct y_t=0.918 discrimination also requires narrowing the current 3% framework-side transport systematic.
 
 --- Section 2: m_H discrimination ---
   PDG m_H = 125.25 ± 0.17 GeV
@@ -31,10 +33,10 @@ Source: docs/HIGGS_VACUUM_STABILITY_NEW_PHYSICS_DISCRIMINATION_NOTE_2026-05-03.m
   Framework y_t(v) = 0.918: STABLE
   SM extraction y_t = 0.94: METASTABLE
 
-  Framework PREDICTS absolutely stable EW vacuum.
+  Bounded framework package predicts an absolutely stable EW vacuum.
   SM with current y_t extraction predicts METASTABLE (lifetime >> Hubble; observationally OK).
-  Discrimination: precision y_t measurement that confirms y_t > 0.93 at >5σ would
-  FALSIFY the framework's stability claim.
+  Discrimination: a precision y_t measurement whose lower 5σ bound exceeds
+  y_t≈0.93 would falsify the framework's stability claim.
 
 --- Section 4: Discrimination experiment timeline ---
   HL-LHC (2030+): δm_t ~ 100 MeV; λ_3 to 50%
@@ -50,25 +52,28 @@ Source: docs/HIGGS_VACUUM_STABILITY_NEW_PHYSICS_DISCRIMINATION_NOTE_2026-05-03.m
   Framework's distinguishing claims (relative to SM):
 
   D1. Vacuum is absolutely stable (vs SM metastable)
-  D2. y_t(v) = 0.918 (vs SM extraction 0.940; current ~2σ)
+  D2. y_t(v) = 0.918 (vs SM extraction 0.940; current 0.75σ including framework systematic)
   D3. m_H ∈ [119.8, 129.7] GeV (vs SM free param; PDG 125.25)
-  D4. λ(M_Pl) = 0 EXACTLY (vs SM extracted ~ 0)
+  D4. λ(M_Pl) = 0 on the conditional CW-boundary surface (vs SM extracted ~ 0)
 
-  Currently: ~2σ tension between framework y_t(v) and SM extraction.
-  Near-term (HL-LHC): tension or confirmation at >3σ likely.
-  Long-term (FCC-ee): definitive at >5σ.
+  Currently: 0.75σ tension between framework y_t(v) and SM extraction
+  after including the stated 3% framework systematic.
+  Near-term precision can falsify the stability claim if the lower 5σ
+  observational bound rises above the y_t≈0.93 stability boundary.
+  Direct y_t discrimination also needs a narrower audited framework-side systematic.
 
-  This LANE provides a current-testable discrimination from the SM.
+  This lane provides a bounded, current-testable discrimination surface against the SM.
 
 ==============================================================================
 Block 01 discrimination tests complete.
 
 Honest assessment:
   - Framework has 4 distinguishing predictions in this lane
-  - Currently ~2σ tension on y_t (not yet smoking gun)
-  - Near-future precision experiments will discriminate at 3-5σ
+  - Currently 0.75σ tension on y_t once framework systematic is included
+  - Future precision can falsify the stability boundary claim if observational
+    errors shrink enough while the central value stays above y_t≈0.93
   - Vacuum stability is the binary claim with cleanest discrimination
 
-This makes the Higgs/y_t/stability lane a testable 'new physics' lane,
-contingent on near-future precision improvements at HL-LHC and beyond.
+This makes the Higgs/y_t/stability lane a bounded beyond-SM discrimination
+surface, contingent on future precision and a narrower framework transport bound.
 ==============================================================================
