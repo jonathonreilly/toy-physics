@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:07:52.896653+00:00
+**Generated:** 2026-05-03T18:08:35.470978+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 77 |
+| **retained** | 78 |
 | **retained_no_go** | 101 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 747 |
+| unaudited | 746 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 316 |
+| `audited_clean` | 317 |
 | `audited_conditional` | 535 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 793 |
+| `unaudited` | 792 |
 
 | claim_type | count |
 |---|---:|
@@ -117,6 +117,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | D | - |
 | `background_independence_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
+| `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
@@ -1737,6 +1738,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Finite-L free-fermion RT ratio near 1/4 is used as the BH-comparison surface, while asymptotic behavior is assigned to the Widom coefficient rather than a derived BH coefficient.  _(class `G`)_
 - **chain closes:** False — The chain does not close because the BH-facing step is a finite-L numerical match to an external comparator and chosen scale, while the runner simultaneously reports failed component checks and an aggregate 6/6 pass. The asymptotic no-go statement may be directionally consistent with the note, but it is not closed by the supplied runner output.
 - **rationale:** Issue: the chain is a finite-size numerical comparator to the BH coefficient, not a first-principles derivation, and the current runner is internally inconsistent: it prints failed subchecks for 2D area-law thresholding and 3D RT-within-15%, yet still reports CHECKS PASSED: 6/6. The runner's own finite-size extrapolation also gives 2D RT(inf)=0.2168 and 3D RT(inf)=0.0575, not the note's stated asymptotic 1/6 closure. Why this blocks: under the hostile rubric, selected finite-L agreement with 1/4 at a chosen normalization is class G numerical matching, and stale/inconsistent runner pass accounting prevents the bounded theorem from closing on its own terms. Repair target: split the claim into explicit numerical observations with exact thresholds, make runner pass/fail accounting match the subchecks, and separately cite or prove the Widom asymptotic coefficient used for the no-go boundary. Claim boundary until fixed: usable only as a bounded numerical companion showing approximate finite-L 2D ratios near 1/4 and non-derivation of BH entropy, not as an audited theorem deriving or validating the BH coefficient.
+- **auditor confidence:** high
+
+### `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`BLOCK_GAUSSIAN_SCHUR_MARGINALIZATION_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/BLOCK_GAUSSIAN_SCHUR_MARGINALIZATION_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone real symmetric positive-definite block-matrix Schur complement identities for Gaussian quadratic marginalization, the effective source, symmetry/positive-definiteness, determinant factorization, and sequential elimination associativity, with no YT/Cl(3)/Grassmann/coarse-graining import.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-context-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Substituting q_F^*(q_U) = C^{-1}(xi - B^T q_U) back into Q gives K_eff = A - B C^{-1} B^T and J_eff = eta - B C^{-1} xi.  _(class `A`)_
+- **chain closes:** True — The claim is pure finite-dimensional linear algebra: completing the square gives the Schur complement and effective source, standard block factorization gives the determinant identity, and PD of K gives PD of the Schur complement. Sequential marginalization is the same repeated Schur complement operation on a strictly convex quadratic, so no physical or external dependency is imported.
+- **rationale:** The load-bearing equations are algebraic consequences of a real symmetric positive-definite block matrix with invertible C. The runner reports PASS=10, FAIL=0, with all checks in class A: concrete exact Schur complement/source checks, symmetry/PD consistency, determinant identity, completing-the-square residual zero, and symbolic 2+1 determinant/formula verification. There are no cited dependencies, no numerical comparator, no tuned scale, and no physical observable identification. Residual risk is limited to the note's terse treatment of sequential associativity, but it follows from the already-established Schur/completing-square operation rather than from an extra premise.
 - **auditor confidence:** high
 
 ### `bmv_bounded_negative_note`
