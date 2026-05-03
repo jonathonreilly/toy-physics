@@ -230,7 +230,8 @@ the signed-gravity claim surface remains blocked.
 ## Follow-Up Audit
 
 The origin, superselection, and stability gates are audited in
-[`SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md`](SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md)
+`SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md`
+(downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py`](../scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py).
 

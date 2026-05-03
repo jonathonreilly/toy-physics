@@ -180,7 +180,8 @@ conditional.
 ## Continuum/Graded Follow-Up
 
 The continuum-family and graded nonlinear pass is now recorded in
-[`SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md`](SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md)
+`SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md` (sibling
+artifact; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_continuum_graded_einstein_localization.py`](../scripts/signed_gravity_continuum_graded_einstein_localization.py).
 

@@ -63,7 +63,7 @@ The active main-branch Cabibbo surface is instead:
 - current CKM magnitude package:
   [CKM_MASS_BASIS_NNI_NOTE.md](CKM_MASS_BASIS_NNI_NOTE.md)
 - current bounded Jarlskog companion:
-  [JARLSKOG_PHASE_BOUND_NOTE.md](JARLSKOG_PHASE_BOUND_NOTE.md)
+  `JARLSKOG_PHASE_BOUND_NOTE.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
 - historical combined route note:
   [work_history/CABIBBO_JARLSKOG_ROUTE_NOTE_2026-04-12.md](work_history/CABIBBO_JARLSKOG_ROUTE_NOTE_2026-04-12.md)
 

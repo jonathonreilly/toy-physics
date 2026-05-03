@@ -6,8 +6,8 @@ either reruns or full experiment redesign before any further promotion.
 Use this together with:
 
 - [`docs/CODE_REVIEW_LAST_WEEK_2026-04-11.md`](CODE_REVIEW_LAST_WEEK_2026-04-11.md)
-- [`docs/repo/RETEST_PLAYBOOK.md`](../../../repo/RETEST_PLAYBOOK.md)
-- [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../LANE_STATUS_BOARD.md)
+- `docs/repo/RETEST_PLAYBOOK.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
+- `docs/work_history/repo/LANE_STATUS_BOARD.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
 
 ## A. Fix And Rerun On The Same Lane
 

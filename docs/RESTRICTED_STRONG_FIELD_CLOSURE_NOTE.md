@@ -69,7 +69,8 @@ This does **not** justify claiming:
 3. fully general non-`O_h` strong-field closure
 4. no-horizon / no-echo as theorem-level downstream consequences
    (a NARROWER retained pair is now available in
-   [EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md](./EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md):
+   `EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md` (sibling
+   artifact; cross-reference only — not a one-hop dep of this note):
    (A) a rigorous discrete-Schroedinger lattice transfer-matrix amplitude
    bound on `Cl(3)/Z^3` with `a = l_Planck` and (B) the exact
    Schwarzschild-interior tortoise-length identity.  These do NOT

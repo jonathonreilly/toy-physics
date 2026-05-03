@@ -67,7 +67,8 @@ Proposed sections:
 Use these surfaces as the primary source material:
 
 - lane front door: [`README.md`](./README.md)
-- curated overview: [`../AI_METHODOLOGY_NOTE_2026-04-25.md`](../AI_METHODOLOGY_NOTE_2026-04-25.md)
+- curated overview: `../AI_METHODOLOGY_NOTE_2026-04-25.md` (sibling
+  artifact; cross-reference only — not a one-hop dep of this note)
 - accountability note:
   [`AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md`](./AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md)
 - raw annex: [`raw/README.md`](./raw/README.md)
