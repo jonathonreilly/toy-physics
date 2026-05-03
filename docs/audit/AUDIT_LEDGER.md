@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:03:00.352345+00:00
+**Generated:** 2026-05-03T14:04:59.672005+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,46 +19,47 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 77 |
+| **retained** | 75 |
 | **retained_no_go** | 101 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 762 |
+| unaudited | 767 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 523 |
+| ~~audited_conditional~~ | 520 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 317 |
-| `audited_conditional` | 523 |
+| `audited_clean` | 315 |
+| `audited_conditional` | 520 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 18 |
-| `unaudited` | 804 |
+| `unaudited` | 809 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 585 |
+| `bounded_theorem` | 584 |
 | `decoration` | 7 |
 | `meta` | 42 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 863 |
+| `positive_theorem` | 859 |
+| `unset` | 5 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 115 |
 | `high` | 363 |
-| `medium` | 544 |
-| `leaf` | 723 |
+| `medium` | 552 |
+| `leaf` | 715 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
@@ -136,7 +137,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_3d_64_closure_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dm_abcc_assumptions_audit_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
-| `dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -169,7 +169,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
-| `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
@@ -531,7 +530,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -554,7 +552,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
-| `dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -578,7 +575,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_triplet_normalization_target_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -3293,19 +3289,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
-### `dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21`
-
-- **Note:** [`DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** **Boundary:** this does **not** contradict the global sign-blindness audit.  _(class `B`)_
-- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
-- **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified B-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
-- **auditor confidence:** high
-
 ### `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`
 
 - **Note:** [`DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md)
@@ -3539,22 +3522,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The exact taste-spectrum count gives g_* = 28 + (7/8)*90 = 106.75, after which the equilibrium abundance and late entropy-to-photon factors are algebraic/statistical-mechanics conversions.  _(class `B`)_
 - **chain closes:** False — The conversion formulas close once g_* = 106.75 and the late entropy count are admitted, but the source note has no cited authority or derivation for the load-bearing 28 bosonic and 90 fermionic degrees of freedom. The runner reuses those same constants rather than deriving the spectrum count from retained inputs.
 - **rationale:** Issue: the theorem depends on the exact relativistic spectrum count g_* = 28 + (7/8)*90, but the note provides no cited theorem or derivation for the 28 and 90 counts. Why this blocks: the runner verifies downstream arithmetic and standard equilibrium integrals only after those constants are already set, so it does not independently close the authority path. Repair target: cite or add a theorem-grade spectrum-count note/runner that derives the bosonic and fermionic counts from the framework inputs, then keep this note as the conversion corollary. Claim boundary until fixed: conditional on the spectrum count, the d_N, s/n_gamma, and product arithmetic are internally consistent and runner-checked.
-- **auditor confidence:** high
-
-### `dm_leptogenesis_exact_kernel_closure_note_2026-04-15`
-
-- **Note:** [`DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** With K00 = 2 propagated consistently, the exact coherent kernel gives epsilon_1/epsilon_DI = 0.9276209209 and eta/eta_obs = 0.5578749661 on the retained benchmark, so the earlier percent-level eta closure does not hold.  _(class `C`)_
-- **chain closes:** False — The runner reproduces the corrected epsilon and eta arithmetic with classified C/D PASS lines. The chain still imports the exact source package and retained washout benchmark as already closed atlas inputs, but the ledger row lists no one-hop dependencies for those upstream closures.
-- **rationale:** Issue: the corrected arithmetic is runner-confirmed, but the note relies on uncited upstream closures for gamma, E1/E2, K00, the staircase benchmark, and the retained washout law. Why this blocks: a hostile reviewer can accept the internal calculation while rejecting the source-and-benchmark package as an uncited hidden premise rather than a closed consequence of the single axiom. Repair target: cite or register the exact source-package, diagonal-normalization, and retained-benchmark rows as dependencies, or narrow this note to a conditional calculation given those inputs. Claim boundary until fixed: given the imported exact package and benchmark, the exact kernel is near the DI ceiling but undershoots eta_obs by about 44%; percent-level eta closure is not retained.
-- **open / conditional deps cited:**
-  - `scripts/dm_leptogenesis_exact_common.py`
-  - `DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16`
@@ -4139,19 +4106,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `open theorem: neutrino-sector base normalization`
 - **auditor confidence:** 0.91
 
-### `dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15`
-
-- **Note:** [`DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** **Script:** `scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py`  _(class `C`)_
-- **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
-- **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
-- **auditor confidence:** medium
-
 ### `dm_neutrino_dirac_bridge_theorem_note_2026-04-15`
 
 - **Note:** [`DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
@@ -4207,19 +4161,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md`
   - `DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md`
-- **auditor confidence:** high
-
-### `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15`
-
-- **Note:** [`DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** **Script:** `scripts/frontier_dm_neutrino_k00_bosonic_normalization_theorem.py`  _(class `C`)_
-- **chain closes:** True — Yes. The registered runner exits cleanly and exposes 5 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
-- **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
 ### `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15`
@@ -4756,19 +4697,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
-
-### `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15`
-
-- **Note:** [`DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** **Script:** `scripts/frontier_dm_neutrino_veven_bosonic_normalization_theorem.py`  _(class `C`)_
-- **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
-- **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
-- **auditor confidence:** medium
 
 ### `dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15`
 
