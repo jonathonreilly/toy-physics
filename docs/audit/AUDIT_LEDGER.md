@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:20:08.766238+00:00
+**Generated:** 2026-05-03T01:23:53.518839+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 212 |
+| **retained_bounded** | 213 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 477 |
+| unaudited | 476 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 422 |
+| `audited_clean` | 423 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 517 |
+| `unaudited` | 516 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 544 |
+| `bounded_theorem` | 545 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 89 |
+| `open_gate` | 88 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -486,6 +486,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_initial_state_preparation_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_measurement_record_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_microscopic_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
@@ -16900,6 +16901,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** After premeasurement into the inaccessible record register, Bob's reduced density matrix is obtained by tracing out A,R,M, remains I/2 to numerical precision, and when a record label is delivered applying U_zx reconstructs the original input state.  _(class `C`)_
 - **chain closes:** True — The scoped claim is confined to the ideal record-register model with orthogonal labels and standard Bell projectors/corrections. The runner directly constructs that model and verifies the stated marginal-independence and delivered-record correction properties without importing dependencies.
 - **rationale:** The note explicitly bounds the result to an ideal premeasurement/isometry plus branch-conditioning model and does not claim a physical apparatus, decoherence, durable endogenous records, Born-weight derivation, matter transport, or faster-than-light signaling. Within that boundary, the runner checks the Bell-record construction, input-independent inaccessible marginals, and conditioned correction behavior to numerical precision. Residual risk is only that a later claim might overuse this as a physical measurement derivation, which this audited scope does not support.
+- **auditor confidence:** high
+
+### `teleportation_microscopic_closure_note`
+
+- **Note:** [`TELEPORTATION_MICROSCOPIC_CLOSURE_NOTE.md`](../../docs/TELEPORTATION_MICROSCOPIC_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the retained-axis taste-apparatus model, ordinary quantum state teleportation has a computed stabilizer-Hamiltonian Bell-record write, an exponential pointer+bath decoherence bound for the candidate family, and a native conservation-ledger commutation class; uniqueness, hardware construction, resource preparation, retained readout/correction scaling, object transport, and FTL transport are outside scope.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Beauvoir-the-2nd-019deb6d-079c-7aa1-804d-e23ad3cfdcc5`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note's working step is that the runner verifies native retained-axis stabilizers factor into logical Pauli stabilizers, their commuting projector-controlled Hamiltonian writes Bell record codewords, the pointer+bath overlap obeys epsilon_N <= exp(-kappa N), and native taste-apparatus generators commute with support ledgers.  _(class `C`)_
+- **chain closes:** True — The chain closes for the bounded model object because the note states the apparatus family and the live runner passes all native stabilizer, transducer, finite-time write, thermodynamic bound, ledger, and state-only boundary gates. It does not close any stronger nature-grade uniqueness, detector-engineering, or readout/preparation claim, but those are explicitly excluded from the audited scope.
+- **rationale:** The audited claim is best treated as a bounded theorem, not the seeded open_gate, because it presents a computed scoped apparatus result with explicit limitations rather than a standalone blocker. The C-class runner checks produce the relevant residuals, commutators, codeword-write property, distance/bound values, and ledger-class commutators, and all acceptance gates pass. The clean verdict applies only to the bounded retained-axis state-teleportation apparatus claim; it must not be read as nature-grade uniqueness, hardware detector closure, resource/readout scaling closure, matter transport, object transport, or FTL transport.
 - **auditor confidence:** high
 
 ### `teleportation_native_axioms_theory_note`
