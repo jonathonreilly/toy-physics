@@ -7,7 +7,7 @@
     "open_gate": 88,
     "positive_theorem": 889
   },
-  "computed_at": "2026-05-03T12:41:25.493743+00:00",
+  "computed_at": "2026-05-03T12:43:16.300090+00:00",
   "cycle_examples": [
     [
       "restricted_strong_field_closure_note",
@@ -38,7 +38,6 @@
   ],
   "cycles_detected": 105,
   "effective_status_counts": {
-    "audit_in_progress": 1,
     "audited_conditional": 519,
     "audited_decoration": 3,
     "audited_failed": 8,
@@ -49,7 +48,7 @@
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
     "meta": 41,
     "open_gate": 14,
-    "retained": 110,
+    "retained": 111,
     "retained_bounded": 171,
     "retained_no_go": 100,
     "retained_pending_chain": 2,
