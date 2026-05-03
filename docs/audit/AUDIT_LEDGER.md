@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:08:14.858939+00:00
+**Generated:** 2026-05-03T01:12:19.120456+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 211 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 481 |
+| unaudited | 480 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 656 |
+| ~~audited_conditional~~ | 657 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,20 +39,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 420 |
-| `audited_conditional` | 656 |
+| `audited_conditional` | 657 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 521 |
+| `unaudited` | 520 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 542 |
+| `bounded_theorem` | 543 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 91 |
+| `open_gate` | 90 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -1122,6 +1122,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `teleportation_3d_resource_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_acceptance_suite_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
+| `teleportation_end_to_end_poisson_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -16826,6 +16827,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** The correct scoped object is a clean open_gate: it identifies a standalone operator-targeting gap in the current fixed pair-hop X, not a retained broad teleportation theorem. The runner confirms the bounded failure for all non-last logical axes in dimensions 2 and 3 and confirms that retargeting X removes the obstruction across the surveyed cases. The note also preserves the finite, idealized boundary and does not overclaim physical teleportation, matter transfer, or larger lattices.
 - **open / conditional deps cited:**
   - `TELEPORTATION_ENCODING_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `teleportation_end_to_end_poisson_note`
+
+- **Note:** [`TELEPORTATION_END_TO_END_POISSON_NOTE.md`](../../docs/TELEPORTATION_END_TO_END_POISSON_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A bounded small-case integration check of Poisson-derived logical resources, ideal Bell teleportation, Bob no-record independence, and classical Bell-record delivery for the default Poisson cases.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Mendel-the-2nd-019deb62-96a7-7a81-acda-9d411bc930e7`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** For each default case the runner extracts the traced logical resource, applies the Bell-measurement and Pauli-correction teleportation channel to 134 input states, and reports that both positive Poisson cases pass the integrated gate set while the G=0 null control does not.  _(class `B`)_
+- **chain closes:** False — The runner output supports the integrated bounded check, but the note expressly depends on multiple component rows rather than a single decoration parent. At least two implied components are unaudited, and the current ledger row has deps=[], so the audit chain cannot close from the declared one-hop inputs.
+- **rationale:** Issue: the row packages multiple protocol components, including unaudited teleportation resource fidelity and protocol pieces, while declaring no dependencies. Why this blocks: the integration cannot be represented as decoration with a single parent and cannot be cleanly retained until the implied component claims are either declared as dependencies and audited or absorbed into this row's scoped proof. Repair target: add the actual one-hop dependencies and close or audit the resource-fidelity/protocol components, or restate this as a purely local runner artifact with all assumptions explicit. Claim boundary until fixed: the live runner demonstrates a small finite integration test under ideal logical operations, not an independently closed retained teleportation theorem.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_RESOURCE_FIDELITY_NOTE.md`
+  - `TELEPORTATION_PROTOCOL_NOTE.md`
 - **auditor confidence:** high
 
 ### `teleportation_logical_readout_audit`
