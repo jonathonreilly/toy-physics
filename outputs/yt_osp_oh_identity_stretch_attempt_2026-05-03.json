@@ -1,0 +1,142 @@
+{
+  "actual_current_surface_status": "exact negative boundary / O_sp-to-O_H identity not derived on current surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future C_sH/C_HH Gram-purity row, W/Z response row, or rank-one neutral-scalar theorem closes the overlap",
+  "counterfamily": [
+    {
+      "Res_C_sp_sp": 1.0,
+      "canonical_higgs_overlap_cos_theta": 1.0,
+      "canonical_higgs_y_t": 0.82,
+      "orthogonal_neutral_top_coupling": 0.0,
+      "orthogonal_overlap_sin_theta": 0.0,
+      "same_source_y_readout": 0.82,
+      "source_higgs_gram_determinant_if_measured": 0.0,
+      "source_readout_reconstructed": 0.82,
+      "would_certify_O_sp_equals_O_H": true
+    },
+    {
+      "Res_C_sp_sp": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.9,
+      "canonical_higgs_y_t": 0.7,
+      "orthogonal_neutral_top_coupling": 0.43588989435406733,
+      "orthogonal_overlap_sin_theta": 0.4358898943540673,
+      "same_source_y_readout": 0.82,
+      "source_higgs_gram_determinant_if_measured": 0.18999999999999995,
+      "source_readout_reconstructed": 0.82,
+      "would_certify_O_sp_equals_O_H": false
+    },
+    {
+      "Res_C_sp_sp": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.75,
+      "canonical_higgs_y_t": 0.58,
+      "orthogonal_neutral_top_coupling": 0.5820652884342099,
+      "orthogonal_overlap_sin_theta": 0.6614378277661477,
+      "same_source_y_readout": 0.82,
+      "source_higgs_gram_determinant_if_measured": 0.4375,
+      "source_readout_reconstructed": 0.82,
+      "would_certify_O_sp_equals_O_H": false
+    },
+    {
+      "Res_C_sp_sp": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.6,
+      "canonical_higgs_y_t": 0.48,
+      "orthogonal_neutral_top_coupling": 0.665,
+      "orthogonal_overlap_sin_theta": 0.8,
+      "same_source_y_readout": 0.82,
+      "source_higgs_gram_determinant_if_measured": 0.64,
+      "source_readout_reconstructed": 0.8200000000000001,
+      "would_certify_O_sp_equals_O_H": false
+    }
+  ],
+  "exact_next_action": "Stop trying source-only or static-Higgs shortcuts.  The next positive route must add one independent non-source row or theorem: source-Higgs C_sH/C_HH pole residues with Gram purity, same-source W/Z response with sector-overlap identity, or a dynamical rank-one neutral-scalar theorem that excludes O_chi.",
+  "fail_count": 0,
+  "forbidden_imports": [
+    "H_unit matrix-element readout",
+    "yt_ward_identity as authority",
+    "observed m_t or y_t selector",
+    "alpha_LM, plaquette, u0",
+    "kappa_s = 1, cos(theta) = 1, c2 = 1, Z_match = 1 by assumption"
+  ],
+  "hypothetical_axiom_status": null,
+  "identity_derived": false,
+  "minimal_allowed_premises_A_min": [
+    "Cl(3)/Z3 substrate and uniform additive scalar source s",
+    "Legendre/LSZ source-pole construction O_sp with unit pole residue",
+    "existing canonical Higgs H/v surfaces only after H is supplied",
+    "exact taste-scalar isotropy support",
+    "existing one-Higgs gauge-monomial selection support",
+    "no H_unit matrix-element readout, no yt_ward authority, no observed targets"
+  ],
+  "parent_certificates": {
+    "candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_higgs_repo_authority_audit": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+    "gauge_vev_source_overlap": "outputs/yt_gauge_vev_source_overlap_no_go_2026-05-01.json",
+    "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "neutral_scalar_commutant": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_scalar_dynamical_rank_one": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "neutral_scalar_tomography": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
+    "no_orthogonal_top_coupling": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "same_source_wz_response": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
+  },
+  "pass_count": 21,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The Legendre source-pole operator is derived, but no current-surface premise forces its overlap with canonical O_H to be unity.",
+  "stretch_attempt_frames": [
+    {
+      "current_surface_result": "blocked",
+      "frame": "v_order_parameter_identity",
+      "loaded_blocker": "exact negative boundary / gauge-VEV source-overlap no-go",
+      "positive_target": "derive O_sp = O_H because v uses the same scalar direction",
+      "reason": "static v or gauge masses do not fix the Cl(3)/Z3 additive source overlap"
+    },
+    {
+      "current_surface_result": "blocked",
+      "evidence": false,
+      "frame": "taste_scalar_isotropy",
+      "loaded_blocker": "taste isotropy proves Hessian degeneracy, not PR230 source-axis selection",
+      "positive_target": "derive O_sp = O_H from exact taste-block scalar isotropy",
+      "reason": "an isotropic scalar block admits rotations; it does not set the source-Higgs angle"
+    },
+    {
+      "current_surface_result": "blocked",
+      "evidence": true,
+      "frame": "one_higgs_gauge_selection",
+      "loaded_blocker": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived",
+      "positive_target": "derive no orthogonal neutral scalar top coupling from one-Higgs SM monomial selection",
+      "reason": "SM monomial selection assumes canonical H after supplied; it is not a scalar source-pole purity theorem"
+    },
+    {
+      "current_surface_result": "blocked",
+      "frame": "neutral_scalar_rank_one",
+      "loaded_blocker": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
+      "positive_target": "derive a rank-one neutral scalar response theorem",
+      "reason": "current dynamics permit a finite orthogonal neutral scalar pole witness"
+    },
+    {
+      "current_surface_result": "open",
+      "frame": "observable_overlap_measurement",
+      "loaded_blocker": "open / source-Higgs Gram purity gate not passed",
+      "positive_target": "measure or certify the O_sp/O_H overlap directly",
+      "reason": "C_sH/C_HH pole residues or same-source W/Z response are the exact next non-source rows, but they are absent"
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H by fiat",
+    "does not identify O_sp with O_H",
+    "does not set kappa_s = 1 or cos(theta) = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "support_docs": {
+    "ew_higgs_gauge_mass": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+    "sm_one_higgs": "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md",
+    "taste_scalar_isotropy": "docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md"
+  },
+  "verdict": "The first-principles stretch does not derive O_sp = O_H from the current PR #230 surface.  O_sp is a valid LSZ-normalized source-pole operator, but current Higgs/taste/EW support does not fix the source-pole/canonical-Higgs angle.  A positive counterfamily holds Res(C_sp,sp)=1 and the same-source top readout fixed while varying the canonical-Higgs component and a finite orthogonal neutral top coupling.  The family would be distinguished by C_sH/C_HH Gram purity, a same-source W/Z response row, or a genuine rank-one neutral-scalar theorem.  Those are absent, so retained or proposed_retained closure is not authorized."
+}

@@ -18,6 +18,11 @@ Legendre/LSZ construction derives a normalized source-pole operator `O_sp`.
 The remaining blocker is the identity or measured overlap between `O_sp` and
 canonical `O_H`.
 
+`YT_OSP_OH_IDENTITY_STRETCH_ATTEMPT_NOTE_2026-05-03.md` tried to derive that
+identity from the current source-only, taste, EW, and rank-one surfaces.  It
+did not close: a counterfamily keeps `O_sp` normalized and the same-source top
+readout fixed while changing the `O_sp/O_H` overlap.
+
 ## Selection
 
 The selected primary lane is the same-surface source-Higgs Gram-purity route:

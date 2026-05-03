@@ -1,0 +1,36 @@
+loop_slug: yt-pr230-osp-oh-retained-closure-20260503
+mode: campaign
+requested_runtime: 12h
+start_utc: "2026-05-03T20:32:11Z"
+branch: claude/yt-direct-lattice-correlator-2026-04-30
+target_status: retained-positive-closure
+actual_current_surface_status: exact-negative-boundary
+active_residual: "O_sp/O_H identity"
+lock_status:
+  repo_lock_attempted: true
+  repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
+  fallback_lock_mode: "branch-local loop pack"
+cycle: 1
+block: 1
+files_touched:
+  - scripts/frontier_yt_osp_oh_identity_stretch_attempt.py
+  - docs/YT_OSP_OH_IDENTITY_STRETCH_ATTEMPT_NOTE_2026-05-03.md
+  - outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json
+  - scripts/frontier_yt_pr230_source_overlap_route_selection.py
+  - docs/YT_PR230_SOURCE_OVERLAP_ROUTE_SELECTION_NOTE_2026-05-03.md
+  - outputs/yt_pr230_source_overlap_route_selection_2026-05-03.json
+  - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
+commands_run:
+  - "python3 scripts/frontier_yt_osp_oh_identity_stretch_attempt.py # PASS=21 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_source_overlap_route_selection.py # PASS=15 FAIL=0"
+current_result: >
+  O_sp is derived and unit-normalized, but the current PR230 surface does not
+  derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
+  readout fixed while changing the canonical-Higgs overlap and a finite
+  orthogonal neutral top coupling.
+proposal_allowed: false
+proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
+next_exact_action: >
+  Build the next positive route: either implement source-Higgs C_sH/C_HH pole
+  residue rows using O_sp as the normalized source side, implement same-source
+  W/Z response, or find a genuine dynamical rank-one neutral scalar theorem.

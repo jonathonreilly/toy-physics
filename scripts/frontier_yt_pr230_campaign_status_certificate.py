@@ -209,6 +209,9 @@ def main() -> int:
         "source_pole_canonical_higgs_mixing": load(
             "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
         ),
+        "osp_oh_identity_stretch": load(
+            "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json"
+        ),
         "source_pole_purity_cross_correlator": load(
             "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json"
         ),
@@ -796,6 +799,14 @@ def main() -> int:
         "source-pole canonical-Higgs mixing obstruction"
         in str(statuses["source_pole_canonical_higgs_mixing"]),
         statuses["source_pole_canonical_higgs_mixing"],
+    )
+    osp_oh = certificates["osp_oh_identity_stretch"]
+    report(
+        "osp-oh-identity-stretch-blocks",
+        "O_sp-to-O_H identity not derived" in str(statuses["osp_oh_identity_stretch"])
+        and osp_oh.get("proposal_allowed") is False
+        and osp_oh.get("identity_derived") is False,
+        statuses["osp_oh_identity_stretch"],
     )
     report(
         "source-pole-purity-cross-correlator-gate-blocks",

@@ -135,6 +135,7 @@ def main() -> int:
         "wz_response_harness_absence_guard": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+        "osp_oh_identity_stretch": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
         "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
         "source_higgs_cross_correlator_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
         "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
@@ -739,6 +740,12 @@ def main() -> int:
         and certificates["source_pole_canonical_higgs_mixing"].get("proposal_allowed") is False
         and certificates["source_pole_canonical_higgs_mixing"].get("source_pole_canonical_identity_gate_passed")
         is False
+    )
+    osp_oh_identity_stretch_blocks = (
+        "O_sp-to-O_H identity not derived"
+        in certificates["osp_oh_identity_stretch"].get("actual_current_surface_status", "")
+        and certificates["osp_oh_identity_stretch"].get("proposal_allowed") is False
+        and certificates["osp_oh_identity_stretch"].get("identity_derived") is False
     )
     source_pole_purity_cross_correlator_gate_blocks = (
         "source-pole purity cross-correlator gate not passed"
@@ -1421,6 +1428,11 @@ def main() -> int:
         "source-pole-canonical-higgs-mixing-blocks",
         source_pole_canonical_higgs_mixing_blocks,
         certificates["source_pole_canonical_higgs_mixing"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "osp-oh-identity-stretch-blocks",
+        osp_oh_identity_stretch_blocks,
+        certificates["osp_oh_identity_stretch"].get("actual_current_surface_status", ""),
     )
     report(
         "source-pole-purity-cross-correlator-gate-blocks",

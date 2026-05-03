@@ -25,6 +25,7 @@
     "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
     "neutral_scalar_rank_one": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
     "neutral_scalar_tomography": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
+    "osp_oh_identity_stretch": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "same_source_pole_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -35,7 +36,7 @@
     "source_higgs_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
     "wz_harness_absence": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
   },
-  "pass_count": 14,
+  "pass_count": 15,
   "proposal_allowed": false,
   "proposal_allowed_reason": "This is a route-selection certificate; no O_H/C_sH/C_HH or W/Z production evidence has been supplied.",
   "route_rows": [
@@ -124,5 +125,5 @@
     "does not set cos(theta) = 1",
     "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
   ],
-  "verdict": "The best next PR #230 overlap lane is the same-surface source-Higgs Gram-purity route.  It directly targets the missing source-pole/canonical-Higgs overlap.  The source pole now has a Legendre/LSZ normalized operator O_sp, so the remaining object is the O_sp/O_H overlap.  The route reuses the existing same-source C_ss and dE_top/ds production stream and has a sharp acceptance condition.  The W/Z response lane remains the fallback physical observable route, but it requires a new electroweak gauge-response harness plus sector-overlap certificates.  Source-only FH/LSZ and symmetry-only rank-one routes are not closure routes on the current surface."
+  "verdict": "The best next PR #230 overlap lane is the same-surface source-Higgs Gram-purity route.  It directly targets the missing source-pole/canonical-Higgs overlap.  The source pole now has a Legendre/LSZ normalized operator O_sp, so the remaining object is the O_sp/O_H overlap.  A first-principles stretch attempt did not derive that identity from current source-only, taste, EW, or rank-one surfaces.  The route reuses the existing same-source C_ss and dE_top/ds production stream and has a sharp acceptance condition.  The W/Z response lane remains the fallback physical observable route, but it requires a new electroweak gauge-response harness plus sector-overlap certificates.  Source-only FH/LSZ and symmetry-only rank-one routes are not closure routes on the current surface."
 }

@@ -118,6 +118,7 @@
     "no_orthogonal_top_coupling_selection_rule": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived",
     "nonzero_momentum": "bounded-support / nonzero-momentum correlator scout",
     "orthogonal_neutral_decoupling_no_go": "exact negative boundary / orthogonal neutral decoupling shortcut not derived",
+    "osp_oh_identity_stretch": "exact negative boundary / O_sp-to-O_H identity not derived on current surface",
     "production_resource": "bounded support / production resource projection",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
     "reflection_positivity_lsz_shortcut": "exact negative boundary / reflection positivity not scalar LSZ closure",
@@ -165,7 +166,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 142,
+  "pass_count": 143,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
