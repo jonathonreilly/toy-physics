@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 27,
     "high": 215,
-    "leaf": 109,
+    "leaf": 108,
     "medium": 156
   },
-  "generated_at": "2026-05-03T01:46:15.759515+00:00",
+  "generated_at": "2026-05-03T01:48:44.642528+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10876,29 +10876,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "teleportation_preparation_readout_probe_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "teleportation_resource_from_poisson_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/TELEPORTATION_PREPARATION_READOUT_PROBE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_teleportation_preparation_readout_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "teleportation_record_field_closure_note",
       "claim_scope": null,
       "claim_type": "open_gate",
@@ -13728,6 +13705,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 32,
-  "total_pending": 507
+  "ready_count": 31,
+  "total_pending": 506
 }

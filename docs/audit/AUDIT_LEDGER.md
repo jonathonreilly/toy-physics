@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:46:16.242862+00:00
+**Generated:** 2026-05-03T01:48:44.928169+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 215 |
+| **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 468 |
+| unaudited | 467 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 426 |
+| `audited_clean` | 427 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 508 |
+| `unaudited` | 507 |
 
 | claim_type | count |
 |---|---:|
@@ -491,6 +491,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_native_transport_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_no_signaling_audit` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | B | - |
 | `teleportation_noise_fault_controls_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_preparation_readout_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -17041,6 +17042,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: The bounded sweep reuses scripts/frontier_teleportation_resource_from_poisson.py for AuditCase, ground_state_resource, factor_sites, reduced_logical_resource, Bell overlap, CHSH, negativity, postselected scan, teleportation statistics, and convention verification, but the claim declares no dependencies. Why this blocks: The positive parameter-window conclusion is only as sound as that imported Poisson-resource construction and logical readout; without declaring and closing that premise, the sweep cannot independently establish the physical or numerical bridge. Repair target: Add the Poisson-resource construction as an explicit dependency, ensure its audit status closes for the ground-state construction, logical extraction, and teleportation-resource metrics, then re-audit this sweep as a bounded finite-grid corollary. Claim boundary until fixed: The note may be retained only as a conditional bounded sweep report over the imported construction, not as a self-closing bounded theorem.
 - **open / conditional deps cited:**
   - `scripts/frontier_teleportation_resource_from_poisson.py`
+- **auditor confidence:** high
+
+### `teleportation_preparation_readout_probe_note`
+
+- **Note:** [`TELEPORTATION_PREPARATION_READOUT_PROBE_NOTE.md`](../../docs/TELEPORTATION_PREPARATION_READOUT_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded small-surface diagnostic for the default 1d_null, 1d_poisson_chsh, and 2d_poisson_chsh cases: offline diagonalization plus logical trace diagnostics reproduce Poisson resource positives, spectral/projection/postselection diagnostics are reported, and dynamic preparation/readout remains open.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Heisenberg-the-2nd-019deb85-00b9-7592-a4e9-4e99ba2ed20d`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note's operative claim is limited to the diagnostic conclusion that the default Poisson cases still yield high-fidelity offline traced logical resources while the preparation/readout protocol is explicitly not demonstrated.  _(class `C`)_
+- **chain closes:** True — The source note, clean retained dependency status, and rerun primary runner agree on the scoped diagnostic: Poisson cases pass the offline traced-resource threshold, the null case does not, and every operational preparation/readout bridge is explicitly excluded rather than claimed.
+- **rationale:** Clean only within the bounded diagnostic boundary. The runner computes diagonalization, projection probabilities, traced logical-resource metrics, postselected branch diagnostics, and prints preparation/readout as not demonstrated. The note does not promote tracing, fixed-environment branch scans, finite gaps, or ideal Bell operations into physical preparation, hardware readout, deterministic branch selection, matter transfer, or FTL. The one listed dependency is supplied as audited_clean/effective retained, and the live rerun matches the note numerics closely enough to rule out stale-output concern for this scope.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
