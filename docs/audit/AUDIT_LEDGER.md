@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:52:49.887157+00:00
+**Generated:** 2026-05-03T11:54:09.538041+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 742 |
+| unaudited | 741 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 514 |
+| ~~audited_conditional~~ | 515 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 345 |
-| `audited_conditional` | 514 |
+| `audited_conditional` | 515 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 783 |
+| `unaudited` | 782 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 553 |
+| `bounded_theorem` | 554 |
 | `decoration` | 8 |
 | `meta` | 42 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 891 |
+| `positive_theorem` | 890 |
 
 | criticality | count |
 |---|---:|
@@ -803,6 +803,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_inertial_response_readiness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -9958,6 +9959,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/persistent_record_matched_compare.py`
   - `scripts/persistent_record_overlap_kernel.py`
+- **auditor confidence:** high
+
+### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
+
+- **Note:** [`PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`](../../docs/PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Clean only as a bounded free staggered lattice Hamiltonian statement: D anti-Hermitian implies H=iD Hermitian, naive CP K flips H, and Theta_H=P K preserves H with zero Theta_H-odd lattice Hamiltonian sectors on the checked even periodic lattices. Not clean as an unconditional physical SME-zero theorem beyond the explicitly defined lattice odd-sector proxy.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-heisenberg-019dedae-15a7-77e3-8c94-5b89bd4f1cc4`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The algebraic Hermitian lift Theta_H=P K preserves H=iD using K(i)=-i and P D P=-D; the additional SME conclusion depends on identifying the vanishing Theta_H-odd lattice hopping sector and direction-resolved traces with all CPT-odd SME bilinear coefficients sourced by this substrate.  _(class `D`)_
+- **chain closes:** False — The internal H=iD algebra closes from the stated D-level C/P identities and antiunitary conjugation. The SME bridge does not fully close because the packet only states that CPT-odd SME bilinears would appear as the Theta_H-odd Hamiltonian sector or direction-resolved hopping traces; it does not derive a complete SME operator-to-lattice-sector map or prove that no CPT-odd SME bilinear source lies outside those proxies.
+- **rationale:** Issue: The Hermitian-lift algebra is supported, but the final SME-zero statement relies on an asserted physical bridge from vanishing Theta_H-odd lattice Hamiltonian sectors and direction-resolved trace coefficients to all CPT-odd SME bilinear coefficients sourced by the substrate. Why this blocks: a Nature-grade audit cannot treat a lattice symmetry-odd matrix projection as a complete SME coefficient derivation unless the note proves the operator dictionary, basis completeness, normalization, and exclusion of other CPT-odd bilinear structures. The runner can verify zero odd matrices for L=4 and L=6, but it cannot by itself establish the physical SME mapping. Repair target: add a first-principles or cited-but-contained derivation of the SME bilinear operator basis represented on the staggered Hamiltonian substrate, prove that the checked full and direction-resolved sectors span every CPT-odd bilinear source in the stated boundary, and separate finite-runner checks from all-even-lattice symbolic closure. Claim boundary until fixed: retain only the conditional lattice theorem that the free staggered H=iD has a valid antiunitary Theta_H=P K symmetry and zero Theta_H-odd Hamiltonian-sector proxy; phrase SME coefficients as zero only under the explicitly proven proxy/dictionary assumptions.
 - **auditor confidence:** high
 
 ### `planck_boundary_density_extension_theorem_note_2026-04-24`
