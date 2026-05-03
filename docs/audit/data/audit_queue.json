@@ -1,33 +1,12 @@
 {
   "by_criticality": {
-    "critical": 73,
+    "critical": 72,
     "high": 222,
     "leaf": 203,
     "medium": 271
   },
-  "generated_at": "2026-05-03T12:18:52.299676+00:00",
+  "generated_at": "2026-05-03T12:21:01.012854+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "holographic_probe_note_2026-04-11",
-      "claim_scope": "Audited the bounded claim that the fixed 2D periodic staggered-lattice Dirac-sea correlation-matrix probe shows entropy and Schmidt-rank scaling more cleanly with BFS-region boundary size than volume for sides 8,10,12,14, in both G=0 and G=10, with G=10 reducing the fitted boundary coefficient by about 12%.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.665,
-      "note_path": "docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_holographic_probe.py",
-      "transitive_descendants": 286
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -70,6 +49,29 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
+      "transitive_descendants": 285
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "boundary_law_robustness_note_2026-04-11",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "holographic_probe_note_2026-04-11"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.16,
+      "note_path": "docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_boundary_law_robustness.py",
       "transitive_descendants": 285
     },
     {
@@ -479,29 +481,6 @@
       "ready": false,
       "runner_path": "scripts/axiom_first_spectrum_condition_check.py",
       "transitive_descendants": 289
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "boundary_law_robustness_note_2026-04-11",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "holographic_probe_note_2026-04-11"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.16,
-      "note_path": "docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_boundary_law_robustness.py",
-      "transitive_descendants": 285
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -19940,5 +19919,5 @@
     }
   ],
   "ready_count": 115,
-  "total_pending": 769
+  "total_pending": 768
 }

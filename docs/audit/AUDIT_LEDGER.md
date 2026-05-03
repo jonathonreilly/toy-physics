@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T12:18:52.792393+00:00
+**Generated:** 2026-05-03T12:21:01.414221+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,11 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 110 |
 | **retained_no_go** | 97 |
-| **retained_bounded** | 170 |
+| **retained_bounded** | 171 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
 | unaudited | 734 |
-| audit_in_progress | 1 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -38,8 +37,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 347 |
+| `audited_clean` | 348 |
 | `audited_conditional` | 517 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
@@ -110,7 +108,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `holographic_probe_note_2026-04-11` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -249,6 +246,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
+| `holographic_probe_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `hubble_lane5_c1_a2_action_unit_metrology_obstruction_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
@@ -7118,6 +7116,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The listed scripts verify a bundle of structural no-go and support calculations: Higgs-dressed transport no-match, no retained variational Koide principle, real-irrep-block democracy only as a non-retained/partial primitive, fourth-order mixed-Gamma cancellation, an S2-breaking survey with only post-hoc ambiguity, and a bounded charged-lepton observational pin.  _(class `C`)_
 - **chain closes:** False — The bundle closes several candidate routes negatively, but it does not derive the charged-lepton hierarchy or Koide relation from retained inputs; the final charged-lepton closure remains bounded by an explicit PDG observational pin and named missing primitives.
 - **rationale:** Issue: the note's structural runners pass, but the headline overstates closure and the runner manifest is stale. Why this blocks: the note advertises Runners (8) while listing seven scripts, and those seven currently report 140 PASS rather than the advertised 133 PASS; more importantly, the passing scripts rule out or bound routes rather than supply a retained S2-breaking/Koide-generating primitive. Repair target: update the runner inventory/pass counts and split the exact no-go/support theorems from the bounded observational-pin closure, or add a retained primitive that derives the hierarchy without the PDG pin. Claim boundary until fixed: structural no-go/support bundle for charged-lepton Koide routes, not an exact retained charged-lepton hierarchy theorem.
+- **auditor confidence:** high
+
+### `holographic_probe_note_2026-04-11`
+
+- **Note:** [`HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md`](../../docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the fixed finite 2D periodic staggered-lattice Dirac-sea correlation-matrix probe for sides 8, 10, 12, and 14, entropy and Schmidt rank fit boundary size better than volume for G=0 and G=10, with the G=10 boundary coefficient about 12.0% lower than the free coefficient.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-holographic-boundary-auditor-2026-05-03`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The current runner computes the stated correlation-matrix entropies/ranks and reports boundary-fit R^2 exceeding volume-fit R^2 for both G=0 and G=10 globally and per side, with boundary slopes 0.186053 and 0.211399 giving ratio 0.8801.  _(class `C`)_
+- **chain closes:** True — The finite-model computation directly evaluates the claimed observable and fit comparison under the stated parameters; the conclusion is only the bounded numerical boundary-preference statement and coefficient shift.
+- **rationale:** The audited claim is tightly bounded to the finite-lattice runner's fixed model, observable, regions, and fit criterion. The provided runner output matches the note's numerical values, including global entropy fits, rank fits, per-side boundary preference, and the gravity/free coefficient ratio. No stronger holographic, continuum, Bekenstein-Hawking, AdS/CFT, or quantum-gravity conclusion is needed for the scoped statement.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29`
