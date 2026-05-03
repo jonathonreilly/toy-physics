@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:34:28.343396+00:00
+**Generated:** 2026-05-03T02:39:59.409489+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 217 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 455 |
+| unaudited | 454 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 668 |
-| ~~audited_failed~~ | 5 |
+| ~~audited_failed~~ | 6 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -41,10 +41,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 433 |
 | `audited_conditional` | 668 |
 | `audited_decoration` | 9 |
-| `audited_failed` | 49 |
+| `audited_failed` | 50 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 495 |
+| `unaudited` | 494 |
 
 | claim_type | count |
 |---|---:|
@@ -1268,6 +1268,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `triage_no_promotion_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | A | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
@@ -19222,4 +19223,17 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** Every Z2-invariant Hermitian operator on the axis-selected hw=1 carrier has the five-real-parameter normal form M(a,b,c,d)=[[a,d,d],[d*,b,c],[d*,c,b]].  _(class `A`)_
 - **chain closes:** True — Scoped to the stated carrier and Z2 action, the result is finite-dimensional invariant Hermitian linear algebra. No physical mass hierarchy or parameter selection is needed for the theorem to close.
 - **rationale:** Issue checked: whether the residual Z2 normal form is an exact theorem rather than a mass-hierarchy claim. The load-bearing statement is a finite-dimensional Hermitian invariant-space parametrization for an explicitly given Z2 action, and the runner checks the dimension count, sign eigenvector, block reduction, closed-form spectrum, generic distinctness, and S3-locus degeneracy. The carrier/residual-subgroup identification is part of the scoped theorem, not an independently derived physical hierarchy.
+- **auditor confidence:** high
+
+### `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`Z3_CONJUGATE_SUPPORT_TRICHOTOMY_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/Z3_CONJUGATE_SUPPORT_TRICHOTOMY_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone finite Z_3 arithmetic: for any permutation q_L of Z_3 and q_R=-q_L pointwise, the supports of q_L_i+q_H+q_R_j==0 form permutation patterns that are disjoint and cover the 3x3 grid over q_H in Z_3, with the three translated matchings claimed to equal the diagonal/forward/backward cyclic patterns in fixed labels.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-plato-3rd-019debb3-8872-7083-99c1-20fa1df2ef9c`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** For each row i, the equation q_R_j == -(q_L_i + q_H) mod 3 has exactly one solution because q_R is a permutation of Z_3; varying q_H gives exactly one support membership for every grid point.  _(class `A`)_
+- **chain closes:** False — T1 and T2 close from the finite arithmetic. T3 as written is not supported by the note's proof, because a disjoint cover by three permutation patterns is not by itself enough to force the fixed diagonal/forward/backward cyclic triple.
+- **rationale:** Issue: the proof of T3 relies on the false general statement that exactly three permutation patterns whose union covers the 3x3 grid must be the fixed diagonal/forward/backward cyclic patterns. Why this blocks: the stated theorem includes T3 for arbitrary q_L over the fixed index grid, but the written derivation does not prove that fixed-label conclusion. Repair target: replace the invalid partition-count step with a direct derivation j=q_L^{-1}(q_L_i+q_H), or narrow the statement to the q_L-induced cyclic ordering and make the fixed-label convention explicit. Claim boundary until fixed: T1 and T2 are clean elementary Z_3 arithmetic; T3 is not certified as written by the provided proof.
 - **auditor confidence:** high
