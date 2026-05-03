@@ -7,7 +7,7 @@
     "open_gate": 90,
     "positive_theorem": 858
   },
-  "computed_at": "2026-05-03T19:58:00.854781+00:00",
+  "computed_at": "2026-05-03T19:59:04.648149+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -42,7 +42,7 @@
   "effective_status_counts": {
     "audited_conditional": 551,
     "audited_decoration": 3,
-    "audited_failed": 11,
+    "audited_failed": 12,
     "audited_numerical_match": 30,
     "audited_renaming": 22,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
@@ -53,7 +53,7 @@
     "retained_bounded": 181,
     "retained_no_go": 105,
     "retained_pending_chain": 3,
-    "unaudited": 709
+    "unaudited": 708
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [

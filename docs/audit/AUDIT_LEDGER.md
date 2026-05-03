@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:58:01.782429+00:00
+**Generated:** 2026-05-03T19:59:05.930289+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 181 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 709 |
+| unaudited | 708 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 551 |
-| ~~audited_failed~~ | 11 |
+| ~~audited_failed~~ | 12 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 339 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 55 |
+| `audited_failed` | 56 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 755 |
+| `unaudited` | 754 |
 
 | claim_type | count |
 |---|---:|
@@ -1007,6 +1007,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
+| `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | A | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | D | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `bh_entropy_derived_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
@@ -1711,6 +1712,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the fermion-sector identities close on the bounded runner surface, but the full-action CPT theorem imports a deferred SU(3) Wilson-plaquette operator lift and prior physical-Hilbert/partition-function consequences. Why this blocks: the ledger cannot retain the broader canonical action invariance or CPT-even Observable Principle discharge from a runner that explicitly excludes the gauge-sector algebraic lift. Repair target: construct the CPT action on SU(3) Wilson links/plaquettes and tie it to S_G, Z, H_phys, and CP-odd observables. Claim boundary until fixed: pure-staggered finite-block fermion-sector CPT identities are runner-backed, while full canonical action CPT remains conditional.
 - **open / conditional deps cited:**
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
+- **auditor confidence:** high
+
+### `axiom_first_lattice_noether_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** A lattice Noether theorem on the stated A_min surface for (2Z)^3 sublattice momentum and global U(1) fermion-number currents.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-turing`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The proof claims that substituting the two-site translation generator and the U(1) phase generator into equation (5) gives the currents (3) and (4).  _(class `A`)_
+- **chain closes:** False — Equation (5) does not algebraically specialize to the stated currents: as written, the y-sum multiplies a bilinear independent of y, so the two-site translation generator has zero row sum rather than producing (3). The cited A_min dependency is also marked superseded and says the staggered/Grassmann realization used here is no longer a current primitive axiom.
+- **rationale:** Issue: the load-bearing specialization of the general current formula (5) to (N1) and (N2) does not close algebraically, and the runner passes only symmetry/current exhibits rather than checking that (5) derives (3) and (4). Why this blocks: the theorem claims explicit conserved currents follow from the presented general identity, but the identity as written cannot yield the stated sublattice-momentum current. Repair target: provide a corrected local-parameter variation deriving the actual currents, add a runner check for the corrected derivation/divergence of (3), and cite a retained/current dependency for the staggered surface. Claim boundary until fixed: the runner supports U(1) commutation, two-step shift invariance, and a finite-lattice U(1) current exhibit on the pure staggered model, not the full stated theorem.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
