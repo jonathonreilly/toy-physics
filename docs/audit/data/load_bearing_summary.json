@@ -1,9 +1,9 @@
 {
-  "computed_at": "2026-05-03T13:39:30.679122+00:00",
+  "computed_at": "2026-05-03T13:40:52.992906+00:00",
   "criticality_counts": {
-    "critical": 112,
-    "high": 365,
-    "leaf": 811,
+    "critical": 115,
+    "high": 364,
+    "leaf": 809,
     "medium": 558
   },
   "flagship_signal_used": false,
@@ -40,6 +40,18 @@
       "criticality": "critical",
       "load_bearing_score": 29.011,
       "transitive_descendants": 128
+    },
+    {
+      "claim_id": "minimal_axioms_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 27.508,
+      "transitive_descendants": 363
+    },
+    {
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 27.508,
+      "transitive_descendants": 363
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
@@ -126,6 +138,12 @@
       "transitive_descendants": 139
     },
     {
+      "claim_id": "g_bare_derivation_note",
+      "criticality": "critical",
+      "load_bearing_score": 18.629,
+      "transitive_descendants": 279
+    },
+    {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
       "load_bearing_score": 18.566,
@@ -148,24 +166,6 @@
       "criticality": "critical",
       "load_bearing_score": 17.19,
       "transitive_descendants": 291
-    },
-    {
-      "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
-      "criticality": "critical",
-      "load_bearing_score": 17.175,
-      "transitive_descendants": 288
-    },
-    {
-      "claim_id": "emergent_lorentz_invariance_note",
-      "criticality": "critical",
-      "load_bearing_score": 17.17,
-      "transitive_descendants": 287
-    },
-    {
-      "claim_id": "z2_hw1_mass_matrix_parametrization_note",
-      "criticality": "high",
-      "load_bearing_score": 17.077,
-      "transitive_descendants": 134
     }
   ]
 }
