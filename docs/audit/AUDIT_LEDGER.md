@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:35:23.856051+00:00
+**Generated:** 2026-05-03T17:36:11.938171+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 761 |
+| unaudited | 760 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 528 |
-| ~~audited_failed~~ | 9 |
+| ~~audited_failed~~ | 10 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,19 +39,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 312 |
 | `audited_conditional` | 528 |
 | `audited_decoration` | 7 |
-| `audited_failed` | 53 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 807 |
+| `unaudited` | 806 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 591 |
+| `bounded_theorem` | 592 |
 | `decoration` | 7 |
 | `meta` | 46 |
 | `no_go` | 163 |
 | `open_gate` | 90 |
-| `positive_theorem` | 861 |
+| `positive_theorem` | 860 |
 
 | criticality | count |
 |---|---:|
@@ -969,6 +969,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
+| `ew_coupling_derivation_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | stale_runner_configured_numerical_sweep | - |
 | `fifth_family_radial_fm_transfer_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -5558,6 +5559,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** This v3 pass improves the *control design* relative to v2: the imposed  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 4 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `ew_coupling_derivation_note`
+
+- **Note:** [`EW_COUPLING_DERIVATION_NOTE.md`](../../docs/EW_COUPLING_DERIVATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audit of the note's claim that g_1(v) is obtained by one-loop Planck-to-v running while g_2(v) and lambda(v) remain only bounded inputs for the y_t sensitivity analysis.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-ew-coupling-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Since U(1) running is perturbative from M_Pl to v: alpha_1_GUT(v) = 1/(11.03 + 25.08) = 0.02769, so g_1_GUT(v) = 0.5899 and g_1_SM(v) = 0.4569.  _(class `A`)_
+- **chain closes:** False — The source note's g_1 estimate is an algebraic one-loop calculation over asserted framework inputs, but the EW package claim does not close because g_2(v) and lambda(v) are explicitly left to future non-perturbative/Higgs derivations and the primary runner no longer reproduces the note's stated calculation.
+- **rationale:** Issue: the note presents an EW-coupling derivation package, but only a one-loop g_1 estimate is computed, while g_2(v) and lambda(v) are explicitly not derived; the current primary runner instead scans a taste_weight parameter to fit sin^2(theta_W) and reports different g_1(v), g_2(v) outputs than the note. Why this blocks: the claim cannot be retained as a closed EW-coupling derivation when its required SU(2) and Higgs-sector bridges are open and its runner is stale/mismatched relative to the source note. Repair target: provide a source note and runner that compute the same scoped quantities, derive the SU(2) non-perturbative matching and lambda(v) from retained inputs, and avoid selecting a fitted taste_weight from the target observable. Claim boundary until fixed: the note may be cited only as a support scan showing that the original EW imports are not yet closed and that g_2/lambda remain bounded or open inputs.
 - **auditor confidence:** high
 
 ### `ew_current_fierz_channel_decomposition_note_2026-05-01`
