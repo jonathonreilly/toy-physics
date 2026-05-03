@@ -1,33 +1,12 @@
 {
   "by_criticality": {
-    "critical": 62,
+    "critical": 61,
     "high": 222,
     "leaf": 203,
     "medium": 271
   },
-  "generated_at": "2026-05-03T13:12:15.297345+00:00",
+  "generated_at": "2026-05-03T13:14:33.636550+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 7,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.571,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py",
-      "transitive_descendants": 268
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -19704,6 +19683,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 105,
-  "total_pending": 758
+  "ready_count": 104,
+  "total_pending": 757
 }
