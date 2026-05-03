@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:37:14.726686+00:00
+**Generated:** 2026-05-03T16:40:58.707197+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| **retained_no_go** | 99 |
+| **retained_no_go** | 100 |
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 782 |
+| unaudited | 781 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 306 |
+| `audited_clean` | 307 |
 | `audited_conditional` | 517 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 828 |
+| `unaudited` | 827 |
 
 | claim_type | count |
 |---|---:|
@@ -192,6 +192,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5443,6 +5444,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The q-qbar color space decomposes as N_c tensor N_c-bar = 1 + adjoint, so the adjoint channel-count fraction is (N_c^2 - 1)/N_c^2, giving 8/9 at N_c=3 and reciprocal 9/8.  _(class `A`)_
 - **chain closes:** True — The scoped group-theory result follows from SU(N_c) Fierz completeness and the representation dimension count, with retained upstreams supplying the bounded gauge/color setting and N_c=3. The broader physical EW 9/8 matching correction does not close here because the projection/matching rule is explicitly outside scope.
 - **rationale:** Within the stated boundary, the derivation closes: the Fierz identity supplies the singlet/adjoint decomposition and the Hilbert-space dimension count gives the exact ratio without numerical tuning or an asymptotic correction. The note correctly separates this bounded theorem from the unproved matching rule M and does not claim to derive the full EW coupling correction. The retained upstream dependencies are sufficient for the scoped color/gauge context and no forbidden cycle dependency is load-bearing.
+- **auditor confidence:** high
+
+### `ew_current_matching_rule_open_gate_note_2026-05-03`
+
+- **Note:** [`EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`](../../docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go that the connected-trace EW selector kappa_EW = 0, and hence unconditional K_EW = 9/8, is underdetermined by N_c = 3, the retained Fierz channel fraction, color-blind CMT scaling, and bounded OZI-class suppression.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-ew-current-no-go-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Since they agree on all retained premises but disagree on the package-level EW matching factor, the matching rule is underdetermined by those premises.  _(class `A`)_
+- **chain closes:** True — The two-completion witness closes: kappa_EW = 0 and kappa_EW = 1 share F_adj = 8/9, S = 1/9, the same CMT u0^2 scaling, and bounded OZI-class disconnected size, but yield K_EW = 9/8 and K_EW = 1. The retained-bounded Fierz dependency fixes only the channel fraction and explicitly does not fix the physical readout selector.
+- **rationale:** The no-go is a genuine underdetermination argument rather than a positive derivation of a new EW coefficient. The runner verifies the exact rational arithmetic, CMT cancellation, OZI boundedness for multiple kappa values, and the decisive fact that two completions agree on the supplied primitive data while disagreeing on K_EW. No supplied retained primitive excludes the full-trace completion or derives kappa_EW = 0, so the connected-trace selector remains an extra matching premise.
 - **auditor confidence:** high
 
 ### `field_equation_derivation_note`
