@@ -116,6 +116,12 @@ identified in prior review of the parent row.
   (separate downstream).
 - The value of `u_0` (admitted external lattice mean-field input).
 
+## Cited authorities (one hop)
+
+- [`HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md`](HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md)
+  — parent decomposition note; this narrow theorem carves out its
+  algebraic determinant identity at minimal block size.
+
 ## Cross-references
 
 - `HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md` — parent; this narrow

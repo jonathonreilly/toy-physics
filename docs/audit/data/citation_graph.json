@@ -4457,6 +4457,26 @@
       "to": "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15"
     },
     {
+      "from": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
+      "to": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21"
+    },
+    {
+      "from": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
+      "to": "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16"
+    },
+    {
+      "from": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
+      "to": "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
+      "to": "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20"
+    },
+    {
+      "from": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
+      "to": "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21"
+    },
+    {
       "from": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
       "to": "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20"
     },
@@ -4475,6 +4495,38 @@
     {
       "from": "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20",
       "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
+    },
+    {
+      "from": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+      "to": "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21"
+    },
+    {
+      "from": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+      "to": "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20"
+    },
+    {
+      "from": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+      "to": "pmns_c3_character_holonomy_closure_note"
+    },
+    {
+      "from": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+      "to": "pmns_c3_character_mode_reduction_note"
+    },
+    {
+      "from": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+      "to": "pmns_c3_nontrivial_current_boundary_note"
+    },
+    {
+      "from": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+      "to": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21"
+    },
+    {
+      "from": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+      "to": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21"
+    },
+    {
+      "from": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+      "to": "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21"
     },
     {
       "from": "dm_selector_branch_conclusion_note_2026-04-17",
@@ -6045,6 +6097,10 @@
       "to": "asymmetry_persistence_mass_window_note"
     },
     {
+      "from": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+      "to": "hierarchy_matsubara_decomposition_note"
+    },
+    {
       "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
       "to": "graph_first_su3_integration_note"
     },
@@ -6351,6 +6407,14 @@
     {
       "from": "koide_a1_brannen_plancherel_identity_support_note_2026-04-25",
       "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_axiom_native_support_batch_note_2026-04-22",
+      "to": "koide_brannen_geometry_dirac_support_note_2026-04-22"
+    },
+    {
+      "from": "koide_axiom_native_support_batch_note_2026-04-22",
+      "to": "koide_q_second_order_support_batch_note_2026-04-22"
     },
     {
       "from": "koide_c3_constant_singlet_reparameterization_theorem_note_2026-04-20",
@@ -8945,6 +9009,10 @@
       "to": "pmns_oriented_cycle_reduced_channel_nonselection_note"
     },
     {
+      "from": "pmns_selector_bank_nonrealization_note",
+      "to": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17"
+    },
+    {
       "from": "pmns_selector_three_identity_support_proposal_readme_2026-04-21",
       "to": "pmns_selector_three_identity_support_note_2026-04-21"
     },
@@ -9501,6 +9569,10 @@
       "to": "self_gravity_backreaction_closure_note"
     },
     {
+      "from": "session_synthesis_2026-04-10_graph_axioms",
+      "to": "staggered_fermion_card_2026-04-10"
+    },
+    {
       "from": "shapiro_delay_note",
       "to": "diamond_phase_ramp_bridge_card_note"
     },
@@ -9515,6 +9587,18 @@
     {
       "from": "shapiro_family_portability_note",
       "to": "diamond_phase_ramp_bridge_card_note"
+    },
+    {
+      "from": "shapiro_qa_retest_note",
+      "to": "shapiro_delay_note"
+    },
+    {
+      "from": "shapiro_qa_retest_note",
+      "to": "shapiro_static_discriminator_note"
+    },
+    {
+      "from": "shapiro_qa_retest_note",
+      "to": "shapiro_family_portability_note"
     },
     {
       "from": "shapiro_unique_discriminator_v2_note",
@@ -22157,7 +22241,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:16:54.674036+00:00",
+  "generated_at": "2026-05-03T13:19:09.934484+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -29276,8 +29360,14 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "9690a847707848cfbe6f6982bd809a0135a49436c282c63ef9324e41e8ba7d0d",
+      "deps": [
+        "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
+        "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
+        "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
+        "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20",
+        "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21"
+      ],
+      "note_hash": "34aac9933a871aadc687cefc192981b54214a9be532ca8c96d10adc44a01f79f",
       "path": "docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_dm_pmns_affine_current_coordinate_reduction_2026_04_21.py",
       "title": "DM PMNS Affine Current-Coordinate Reduction Theorem"
@@ -29349,8 +29439,17 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "da445dad044e8dc3d7435fc1d2941c084ccbda6713d931fac095d23d243e9497",
+      "deps": [
+        "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21",
+        "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20",
+        "pmns_c3_character_holonomy_closure_note",
+        "pmns_c3_character_mode_reduction_note",
+        "pmns_c3_nontrivial_current_boundary_note",
+        "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
+        "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
+        "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21"
+      ],
+      "note_hash": "57563639b5ba46263455f4d4f3bcf3427d40e4c7ff0ceea3fa11cae94e425c4d",
       "path": "docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py",
       "title": "DM PMNS Native Current Last-Mile Reduction Theorem"
@@ -32644,8 +32743,10 @@
       "claim_type_author_hint": "positive_theorem",
       "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "5fe80803813e1534c4aba0b01232374bdb6ccc8c4ef19a5df1c22ee5a0fd8df7",
+      "deps": [
+        "hierarchy_matsubara_decomposition_note"
+      ],
+      "note_hash": "abc03add15ae9fe50708e8bee8822d99053f8891109044c97172a1a2433a17b0",
       "path": "docs/HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py",
       "title": "Hierarchy Matsubara Determinant \u2014 Narrow Algebraic Theorem"
@@ -33457,8 +33558,11 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "e186d46b352fdc4dee45f7f9faba48f5e17a9702d0d50ce2679f57d396c87c97",
+      "deps": [
+        "koide_brannen_geometry_dirac_support_note_2026-04-22",
+        "koide_q_second_order_support_batch_note_2026-04-22"
+      ],
+      "note_hash": "43d4061139c8e2657362bed5d637068626a69b906b006eaa26c4a8bc220ec698",
       "path": "docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md",
       "runner_path": null,
       "title": "Koide April 22 Axiom-Native Support Batch"
@@ -38780,8 +38884,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "9fb2f5dee254ecc1e9cf9c5cabc6ba18b86466c3a1c3599e200a07d857273702",
+      "deps": [
+        "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17"
+      ],
+      "note_hash": "13ac9d27472e99dd139ad4bcec1fcc2fbe76af19a622964839e4093f35bb8694",
       "path": "docs/PMNS_SELECTOR_BANK_NONREALIZATION_NOTE.md",
       "runner_path": "scripts/frontier_pmns_selector_bank_nonrealization.py",
       "title": "PMNS Selector-Bank Nonrealization"
@@ -43070,8 +43176,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "f10bbaa5bbcd241853598017fa2d50c29b06fbe0458e30b4da57d564ae38fe21",
+      "deps": [
+        "staggered_fermion_card_2026-04-10"
+      ],
+      "note_hash": "c9875cdd5b069abe48f66682c09630cc9072cf2a46fdd07a2c5e742e7658f7bb",
       "path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md",
       "runner_path": "scripts/frontier_axioms_16card.py",
       "title": "Session Synthesis: Graph Laplacian Axioms (2026-04-10)"
@@ -43153,8 +43261,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "e4cd19656bf9f8d7b35b601584f769667b4357db73aaea2526ca6846dc922970",
+      "deps": [
+        "shapiro_delay_note",
+        "shapiro_static_discriminator_note",
+        "shapiro_family_portability_note"
+      ],
+      "note_hash": "fd6ecfa6b496196c87d78dc1d5e9efc2ae77ffcd4c396b1f8cc571647c0e2cdc",
       "path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
       "runner_path": null,
       "title": "Shapiro QA Retest Note"
@@ -49078,11 +49190,9 @@
     "dm_neutrino_weak_vector_theorem_note_2026-04-15",
     "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
     "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15",
-    "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
     "dm_pmns_asymptotic_source_no_go_note_2026-04-20",
     "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20",
     "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
-    "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
     "dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20",
     "dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21",
     "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20",
@@ -49227,7 +49337,6 @@
     "hierarchy_dimensional_compression_note",
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_matsubara_decomposition_note",
-    "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
     "hierarchy_spatial_bc_and_u0_scaling_note",
     "higgs_from_lattice_note",
     "higgs_mass_from_axiom_note",
@@ -49271,7 +49380,6 @@
     "koide_a1_physical_bridge_attempt_2026-04-22",
     "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
     "koide_aps_block_by_block_forcing_note_2026-04-21",
-    "koide_axiom_native_support_batch_note_2026-04-22",
     "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
     "koide_berry_phase_theorem_note_2026-04-19",
     "koide_brannen_callan_harvey_candidate_note_2026-04-22",
@@ -49480,7 +49588,6 @@
     "pmns_scalar_bridge_nonrealization_note",
     "pmns_sector_exchange_nonforcing_note",
     "pmns_sector_orientation_orbit_note",
-    "pmns_selector_bank_nonrealization_note",
     "pmns_selector_class_space_uniqueness_note",
     "pmns_selector_current_stack_zero_law_note",
     "pmns_selector_nonuniversal_support_reduction_note",
@@ -49585,12 +49692,10 @@
     "session_summary_2026-04-04",
     "session_synthesis_2026-04-09",
     "session_synthesis_2026-04-10_final",
-    "session_synthesis_2026-04-10_graph_axioms",
     "session_synthesis_2026-04-11",
     "seventh_family_diagonal_boundary_note",
     "seventh_family_diagonal_note",
     "shapiro_experimental_card",
-    "shapiro_qa_retest_note",
     "shapiro_static_discriminator_note",
     "sigma_hier_uniqueness_theorem_note_2026-04-19",
     "sigma_mnu_f3_dm_cross_bound_audit_note_2026-04-28",
@@ -49859,10 +49964,10 @@
       "open_gate": 112,
       "positive_theorem": 654
     },
-    "edge_count": 5539,
-    "leaf_count": 651,
+    "edge_count": 5560,
+    "leaf_count": 647,
     "node_count": 1845,
-    "root_count": 1075,
+    "root_count": 1068,
     "runners_with_path": 1409
   }
 }

@@ -3,6 +3,22 @@
 **Date:** 2026-04-06  
 **Status:** bounded - bounded or caveated result note
 
+## Cited authorities (one hop)
+
+The 2026-05-03 citation-graph repair registers the load-bearing one-hop deps
+listed under §Scope as proper markdown links. The two archive_unlanded
+references in §Scope are intentionally not registered as audit-graph
+authorities (archived narrative, no active claim).
+
+- [`SHAPIRO_DELAY_NOTE.md`](SHAPIRO_DELAY_NOTE.md)
+  — retained Shapiro-phase delay reference whose canonical replay this
+  note QA-confirms.
+- [`SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md`](SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md)
+  — retained static-discriminator boundary reference whose smallest
+  control this note replays.
+- [`SHAPIRO_FAMILY_PORTABILITY_NOTE.md`](SHAPIRO_FAMILY_PORTABILITY_NOTE.md)
+  — portable-family scope used in the QA replay control.
+
 ## Scope
 
 Focused QA pass on the Shapiro-phase lane:

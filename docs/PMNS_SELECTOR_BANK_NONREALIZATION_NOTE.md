@@ -7,6 +7,16 @@ the remaining PMNS selector gap
 `docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_selector_bank_nonrealization.py` (PASS=10 FAIL=0 on current main; the runner now reads `HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md` for the q_H datum, accepts both ASCII and unicode q_H notation)
 
+## Cited authorities (one hop)
+
+The 2026-05-03 citation-graph repair registers the load-bearing one-hop
+deps referenced in plain text above as proper markdown links so the
+audit-graph builder picks up the edges.
+
+- [`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md`](HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md)
+  — supplies the Higgs `Z_3` datum `q_H ∈ {0, +1, -1}` that the
+  nonrealization runner reads for its primary check.
+
 ## Question
 
 After checking the atlas bank axiom-first, do the existing exact selector tools
