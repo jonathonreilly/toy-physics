@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T11:48:52.657019+00:00",
+  "generated_at": "2026-05-03T13:00:47.979104+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -7861,6 +7861,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_industrial_sdp_bootstrap_block01.py"
     },
+    "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 18,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_industrial_sdp_bootstrap_block02.py"
+    },
     "inverse_problem_graph_requirements_note": {
       "assert_count": 0,
       "counts": {
@@ -9936,6 +9948,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/minimal_absorbing_horizon_probe.py"
+    },
+    "minimal_axioms_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_generation_rooting_undefined.py"
     },
     "minimal_bidirectional_trapping_probe_note": {
       "assert_count": 0,
@@ -24947,6 +24971,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_generation_rooting_undefined.py": {
+      "assert_count": 1,
+      "claims": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_geometry_superposition.py": {
       "assert_count": 0,
       "claims": [
@@ -25848,6 +25887,21 @@
         "B": 0,
         "C": 16,
         "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_industrial_sdp_bootstrap_block02.py": {
+      "assert_count": 0,
+      "claims": [
+        "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 18,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -37186,12 +37240,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 542,
+      "C": 544,
       "D": 203,
       "none": 420
     },
-    "runners_classified": 1335,
-    "runners_with_C": 647,
-    "runners_with_D": 327
+    "runners_classified": 1337,
+    "runners_with_C": 649,
+    "runners_with_D": 328
   }
 }
