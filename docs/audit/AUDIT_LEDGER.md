@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:40:59.832906+00:00
+**Generated:** 2026-05-03T21:44:21.253983+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 203 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 675 |
+| unaudited | 674 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 30 |
+| ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 552 |
 | ~~audited_failed~~ | 15 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
-| `audited_numerical_match` | 30 |
+| `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 722 |
+| `unaudited` | 721 |
 
 | claim_type | count |
 |---|---:|
@@ -1125,6 +1125,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_operator_closure_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_uv_class_uniqueness_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_constructive_uv_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
+| `yt_ew_coupling_bridge_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-context | G | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -16218,6 +16219,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The no-go closure sharpens this paragraph: the retained Fierz/CMT/OZI packet permits the conditional family alpha_EW(physical; kappa_EW) / alpha_EW(CMT) = 1 / (8/9 + kappa_EW/9).  _(class `A`)_
 - **chain closes:** True — The chain closes only for the bounded parameterized theorem: the exact F_adj=8/9 input is retained_bounded, and the matching-rule no-go is retained_no_go. The chain does not close for kappa_EW=0 or for an unconditional 9/8 EW correction.
 - **rationale:** Clean at the bounded conditional scope only. The source note no longer claims that kappa_EW=0 follows from retained primitives; it explicitly carries kappa_EW as the disconnected-current readout coefficient and confines 9/8 to the kappa_EW=0 specialization. The small runner passed, but it checks the SU(3) plaquette/R_conn consistency surface, not an exact physical derivation of kappa_EW.
+- **auditor confidence:** high
+
+### `yt_ew_coupling_bridge_note`
+
+- **Note:** [`YT_EW_COUPLING_BRIDGE_NOTE.md`](../../docs/YT_EW_COUPLING_BRIDGE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the bridge note's claim that electroweak coupling inputs for the y_t chain are derived or bounded sufficiently to support the backward Ward prediction.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-yt-ew-bridge`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The EW coupling boundary claim relies on deriving or bounding the electroweak inputs for the y_t chain, but the note states that g_2(v) remains blocked by SU(2) non-perturbative matching and lambda(v) remains imported/bounded.  _(class `G`)_
+- **chain closes:** False — The chain does not close as a positive theorem because the source note explicitly leaves g_2(v) imported/blocked and lambda(v) imported or only CW-bounded. The runner's successful sin^2(theta_W) match is obtained by scanning taste_weight to the observed value, not by deriving that threshold coefficient.
+- **rationale:** Issue: the runner closes the sin^2(theta_W) gap by fitting taste_weight = 0.390 against the observed comparator, and then notes that this parameter still requires a physical derivation from taste-gauge coupling structure. Why this blocks: the electroweak bridge is therefore not a first-principles positive theorem in this note; the load-bearing coefficient is selected by numerical matching while g_2 and lambda remain unclosed. Repair target: derive the SU(2)/hypercharge taste-threshold coefficient or SU(2) non-perturbative matching independently, and provide a runner that computes taste_weight without using the observed sin^2 target. Claim boundary until fixed: the note may be cited as a sensitivity/route-history scan showing EW inputs are subdominant, not as a retained derivation of the EW coupling bridge.
 - **auditor confidence:** high
 
 ### `yt_ew_m_residual_stretch_attempt_note_2026-05-02`
