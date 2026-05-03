@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-Bounded positive structural closure for the gauge-scalar temporal observable
-bridge:
+Bounded implicit response-coordinate theorem for the gauge-scalar temporal
+observable bridge:
 
     <P>_full = R_O(beta_eff)
 
 The runner verifies the proof obligations for the implicit response-flow
-theorem. It does not evaluate the physical beta=6 plaquette, fit beta_eff, use
-Monte-Carlo/PDG values, or import perturbative running as a derivation.
+coordinate theorem. It does not evaluate the physical beta=6 plaquette, fit
+beta_eff, use Monte-Carlo/PDG values, or import perturbative running as a
+derivation.
 """
 
 from __future__ import annotations
@@ -184,7 +185,7 @@ def main() -> int:
     stretch = read(STRETCH)
 
     print("=" * 78)
-    print("GAUGE-SCALAR TEMPORAL OBSERVABLE BRIDGE IMPLICIT-FLOW THEOREM")
+    print("GAUGE-SCALAR TEMPORAL OBSERVABLE BRIDGE IMPLICIT-COORDINATE THEOREM")
     print("=" * 78)
     print()
 
@@ -243,9 +244,10 @@ def main() -> int:
         "beta_eff,Lambda(beta) := R_O^(-1)(P_Lambda(beta))",
         "P_Lambda(beta) = R_O(beta_eff,Lambda(beta))",
         "beta_eff,Lambda'(beta)",
-        "does not evaluate the full plaquette at `beta = 6`",
+        "parent observable bridge gate",
+        "does not evaluate the full\nplaquette at `beta = 6`",
         "does not fit",
-        "does not import Monte-Carlo, PDG, or perturbative running data",
+        "does not import\nMonte-Carlo, PDG, or perturbative running data",
     ]
     for phrase in required_note_phrases:
         print(f"  note phrase present: {phrase!r} -> {phrase in note}")
@@ -291,7 +293,7 @@ def main() -> int:
         detail=f"max |target - R_O(R_O^-1(target))|={inverse_error:.3e}",
     )
     check(
-        "the exact bridge identity is the inverse-response corollary, not a data fit",
+        "the exact coordinate identity is the inverse-response corollary, not a data fit",
         "P_Lambda(beta) = R_O(beta_eff,Lambda(beta))" in note
         and "beta_eff,Lambda(beta) := R_O^(-1)(P_Lambda(beta))" in note,
         detail="the note defines beta_eff as a Wilson partition-function response coordinate",
@@ -323,9 +325,9 @@ def main() -> int:
         bucket="SUPPORT",
     )
     check(
-        "the theorem leaves explicit beta=6 plaquette and rho_(p,q)(6) evaluation open",
+        "the theorem leaves independent beta=6 plaquette and rho_(p,q)(6) evaluation open",
         "closed-form evaluation of `<P>(6)`" in note and "rho_(p,q)(6)" in note,
-        detail="bounded closure is bridge equality only, not environment Perron evaluation",
+        detail="bounded coordinate identity only, not environment Perron evaluation",
         bucket="SUPPORT",
     )
     check(

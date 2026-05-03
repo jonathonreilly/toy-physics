@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:06:17.346262+00:00
+**Generated:** 2026-05-03T16:20:57.735184+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,14 +21,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 72 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 168 |
+| **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 14 |
-| unaudited | 774 |
+| open_gate | 15 |
+| unaudited | 773 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 27 |
-| ~~audited_renaming~~ | 21 |
+| ~~audited_numerical_match~~ | 28 |
+| ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 520 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -36,21 +36,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 309 |
+| `audited_clean` | 308 |
 | `audited_conditional` | 520 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
-| `audited_numerical_match` | 27 |
-| `audited_renaming` | 21 |
-| `unaudited` | 820 |
+| `audited_numerical_match` | 28 |
+| `audited_renaming` | 22 |
+| `unaudited` | 819 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 588 |
+| `bounded_theorem` | 587 |
 | `decoration` | 7 |
 | `meta` | 46 |
 | `no_go` | 160 |
-| `open_gate` | 90 |
+| `open_gate` | 91 |
 | `positive_theorem` | 865 |
 
 | criticality | count |
@@ -65,9 +65,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1345
-- runners with (C) first-principles compute hits: 656
-- runners with (D) external comparator hits: 334
+- runners classified: 1346
+- runners with (C) first-principles compute hits: 657
+- runners with (D) external comparator hits: 335
 - decoration candidates (no C, no D): 112
 
 ## Top 25 by load-bearing score (topology only)
@@ -207,8 +207,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_trapping_transport_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
-| `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
-| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -1009,6 +1008,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-agent | D | - |
 | `source_resolved_wavefield_escalation_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
+| `source_resolved_wavefield_v2_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_numerical_proxy | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -1025,6 +1025,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
+| `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `g_bare_derivation_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -4206,6 +4207,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
+### `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claim that isospectral bosonic source-response normalization canonically fixes the heavy-basis diagonal normalization as K00 = 2 tau_+ and hence K00 = 2 on the sharp source-oriented branch.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-restricted-input-audit-agent-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Since F00 and (1/2) J2 have the same nonzero spectrum {+1}, they have identical exact bosonic response on scalar baselines; therefore the target coefficient must compensate the factor of 2 between J2 and (1/2) J2, forcing K00 = 2 tau_+.  _(class `F`)_
+- **chain closes:** False — The algebraic facts about F00, J2, and scalar-baseline determinant responses check out, but the packet does not derive the physical observable map that identifies the source-side J2 amplitude with the target heavy-basis K00 coefficient. The tau_E = tau_T = 1/2 inputs are also asserted in this packet rather than derived from a provided retained authority.
+- **rationale:** Issue: The proof identifies the target K00 channel with the source-side row-sum mode through isospectral scalar bosonic responses, then fixes K00 = 2 tau_+, but no provided theorem derives that source-to-target observable bridge or its normalization. Why this blocks: Isospectrality of generators is an algebraic fact, not by itself a physical identification of coefficients across different source and target sectors. Repair target: Add a retained theorem and runner that construct the bosonic source-response map from the framework inputs and derive the factor-of-2 normalization and tau_E = tau_T = 1/2 without hard-coding them. Claim boundary until fixed: The note may claim the exact algebraic identities K00 = Tr(H J3/3), triplet-independence of K00, and isospectrality/response equality of F00 and (1/2)J2 on scalar baselines, but not the canonical physical normalization K00 = 2 tau_+ or K00 = 2.
+- **auditor confidence:** high
+
 ### `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15`
 
 - **Note:** [`DM_NEUTRINO_ODD_CIRCULANT_CURRENT_STACK_ZERO_LAW_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_ODD_CIRCULANT_CURRENT_STACK_ZERO_LAW_NOTE_2026-04-15.md)
@@ -5910,31 +5924,20 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
 - **auditor confidence:** high
 
-### `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03`
-
-- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Exact bounded implicit-response bridge on finite Wilson evaluation surfaces, with infinite-volume passage conditional on existence of the plaquette limit; no explicit beta_eff(6), P(6), or rho_(p,q)(6) evaluation.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-physics-loop-bridge-implicit-flow-20260503`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Since R_O is a strict bijective local response coordinate on [0,1) and P_Lambda(beta) lies in [0,1), beta_eff,Lambda(beta)=R_O^(-1)(P_Lambda(beta)) exists uniquely and P_Lambda(beta)=R_O(beta_eff,Lambda(beta)).  _(class `A`)_
-- **chain closes:** True — The finite-volume bridge equality follows from compact Haar calculus, strict positivity of the local susceptibility, the finite Wilson plaquette range bound, and the inverse-function theorem. The theorem deliberately does not claim an explicit evaluated plaquette or environment Perron solve.
-- **rationale:** The scoped claim is clean as a bounded structural bridge: it proves existence and uniqueness of the completed response coordinate and the exact finite-volume bridge identity without importing observed plaquette data, fitted beta_eff, or perturbative running. The load-bearing move is an algebraic/analysis closure over the Wilson integral and local response map, not a numerical match. Residual explicit-evaluation work is correctly left out of scope.
-- **auditor confidence:** medium
-
 ### `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02`
 
 - **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Historical stretch obstruction packet plus bounded discharge certificate for the observable bridge equality via the implicit-flow theorem; not an independent P(6) evaluation.
+- **claim_type:** `open_gate`
+- **claim_scope:** Open gate documenting that the observable-level bridge <P>_full = R_O(beta_eff) from the full interacting Wilson plaquette expectation to the completed local one-plaquette response is not derived from A_min and remains a blocker; does not establish that bridge or any positive theorem.
 - **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-physics-loop-bridge-stretch-discharge-20260503`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The added branch-local discharge section cites the implicit-flow theorem and narrows the old obstruction to explicit beta_eff(6), P(6), and rho_(p,q)(6) evaluation rather than the bridge equality.  _(class `A`)_
-- **chain closes:** True — The row no longer claims an open gate: the current source explicitly points to the bounded implicit-flow theorem for the bridge equality and preserves the original O1/O2/O3 obstruction only for closed-form evaluation. It depends on the new bounded theorem and the parent temporal-completion theorem.
-- **rationale:** The old source remains a valid obstruction packet and now explicitly records its bounded positive supersession. The current claim is not that O1/O2/O3 themselves became positive routes; it is that the open bridge row is discharged by the cited implicit-flow theorem while explicit nonperturbative evaluation remains open. This is clean only under that bounded handoff scope.
-- **auditor confidence:** medium
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-gauge-scalar-observable-bridge-auditor`  (codex-fresh; independence=fresh_context)
+- **load-bearing step:** The bridge <P>_full = R_O(beta_eff) cannot be derived analytically from A_min alone with the current retained primitives; O1/O2/O3 identify the Schwinger-Dyson, effective-action, and RG obstruction routes.  _(class `B`)_
+- **chain closes:** True — The chain closes for the open-gate scope because the note explicitly documents the missing observable bridge, forbidden imports, and concrete obstruction routes, and the runner verifies that obstruction packet. The chain does not close for any positive theorem asserting <P>_full = R_O(beta_eff).
+- **rationale:** Clean only as an open gate, not as a positive theorem. The source note repeatedly states that the bridge remains open and that exact beta_eff(beta) is not analytically available from A_min; the runner checks obstruction documentation rather than computing the bridge. Residual risk: the phrase non-analytically-derivable should be cited as the documented unresolved bridge from current premises, not as a proved impossibility theorem.
+- **open / conditional deps cited:**
+  - `GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`
 
@@ -12119,6 +12122,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `derivation/justification of detector-line phase-ramp as the promoted physical readout`
   - `current runner-output verification for the note's numeric values`
 - **auditor confidence:** 0.82
+
+### `source_resolved_wavefield_v2_note`
+
+- **Note:** [`SOURCE_RESOLVED_WAVEFIELD_V2_NOTE.md`](../../docs/SOURCE_RESOLVED_WAVEFIELD_V2_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claim that the frozen larger exact-lattice wavefield family establishes a source-strength detector-line phase-ramp law, with exact zero-source reduction, TOWARD sign, and near-linear phase-ramp slope/span scaling on the listed source-strength ladder.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-source-v2-hostile-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note promotes the fitted detector-line phase-ramp slope/span exponents, approximately 1.02 and 1.01 over five configured source strengths, into a retained exact-lattice phase-ramp source-strength law.  _(class `configured_numerical_proxy`)_
+- **chain closes:** False — The runner reproduces the frozen zero-source check, TOWARD sign, table values, and near-unit fitted exponents, but this closes only a configured finite numerical proxy. It does not derive the phase-ramp observable, source law, normalization, or wavefield update as a theorem from independent retained inputs.
+- **rationale:** Issue: The load-bearing theorem step is the promotion of a five-point fitted detector-line phase-ramp proxy on one frozen exact-lattice family into a retained exact-lattice phase-ramp law. Why this blocks: A positive_theorem requires the law to follow from retained inputs, but the available packet only shows configured numerical consistency for selected parameters and readouts; the runner checks the proxy after constructing the wavefield candidate rather than proving the hard bridge. Repair target: Provide an exact derivation that the detector-line phase-ramp slope/span scale with source strength for the stated family, including the observable/readout, normalization, source law, and wavefield update, plus a runner that verifies the derived theorem or fails when the bridge is removed. Claim boundary until fixed: The note may safely claim a frozen-run numerical observation: on the listed parameter family and source-strength ladder, zero-source reduction holds and the computed phase-ramp slope/span fits are close to linear.
+- **open / conditional deps cited:**
+  - `missing retained theorem deriving the detector-line phase-ramp source-strength law from exact-lattice primitives and the finite-speed wavefield construction`
+- **auditor confidence:** 0.84
 
 ### `spectral_closure_2026-04-09`
 

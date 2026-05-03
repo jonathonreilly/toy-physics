@@ -5798,10 +5798,6 @@
     },
     {
       "from": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
-      "to": "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03"
-    },
-    {
-      "from": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
       "to": "gauge_scalar_temporal_completion_theorem_note"
     },
     {
@@ -23017,7 +23013,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T16:06:16.669138+00:00",
+  "generated_at": "2026-05-03T16:20:50.927361+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32385,21 +32381,20 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "f3e13d4fdb2f1a3b59e9fd92939fe566ba0d8855165b5b345015a28ed7288214",
+      "note_hash": "9dcc289ca05b0b2729a34e379efc8c430bea3bb7b1227f0c5b0087fbec3fa869",
       "path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_implicit_flow.py",
-      "title": "Gauge-Scalar Temporal Observable Bridge Implicit-Flow Theorem"
+      "title": "Gauge-Scalar Temporal Observable Bridge Implicit-Coordinate Bounded Theorem"
     },
     "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02": {
       "claim_id": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
-      "claim_type_author_hint": "bounded_theorem",
-      "claim_type_author_hint_raw": "bounded_theorem",
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
       "deps": [
-        "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
         "gauge_scalar_temporal_completion_theorem_note"
       ],
-      "note_hash": "4a8fcc4a1e0f5c7a0a0db53fde68cba88e14b62a7575f579722dda0ab6ead2a5",
+      "note_hash": "255334384722bd77dc3d753b2bd82a9fcf810a1a8d304ae6b6fb0e668b7d79fa",
       "path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
       "title": "Gauge-Scalar Temporal Observable Bridge Stretch Attempt"
@@ -51087,23 +51082,23 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 50,
+      "bounded_theorem": 49,
       "meta": 7,
       "no_go": 3,
-      "none": 1726,
+      "none": 1727,
       "open_gate": 5,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 551,
+      "bounded_theorem": 550,
       "meta": 7,
       "no_go": 109,
-      "none": 452,
+      "none": 453,
       "open_gate": 112,
       "positive_theorem": 628
     },
-    "edge_count": 5754,
-    "leaf_count": 596,
+    "edge_count": 5753,
+    "leaf_count": 597,
     "node_count": 1859,
     "root_count": 1059,
     "runners_with_path": 1418

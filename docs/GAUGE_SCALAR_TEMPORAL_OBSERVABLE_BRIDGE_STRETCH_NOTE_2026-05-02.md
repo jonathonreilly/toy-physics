@@ -1,7 +1,6 @@
 # Gauge-Scalar Temporal Observable Bridge Stretch Attempt
 
 **Date:** 2026-05-02
-**Type:** bounded_theorem
 **Status:** stretch-attempt note + named obstruction packet on the
 observable-level reduction residual flagged in the audit verdict for
 `gauge_scalar_temporal_completion_theorem_note` (current_status: support,
@@ -11,14 +10,6 @@ and isolates the named obstruction.
 **Primary runner:** `scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py`
 **Authority role:** stretch attempt deliverable + named obstruction on the
 interacting-plaquette → local-response observable bridge.
-
-**2026-05-03 branch-local supersession:** this note remains the historical
-obstruction packet for `A_min` and the forbidden-import firewall. The positive
-bridge authority is now the bounded implicit-flow theorem
-[`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md),
-which closes the bridge equality by the exact Wilson response inverse /
-susceptibility-flow construction while leaving explicit `beta_eff(6)`, `<P>(6)`,
-and `rho_(p,q)(6)` unevaluated.
 
 ## 0. The named residual
 
@@ -181,20 +172,3 @@ bare_retained_allowed: false
 - Parent: [`GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md`](GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - Sister: `PLAQUETTE_SELF_CONSISTENCY_NOTE.md` (parent of plaquette family)
 - Parent of cycle 5 sister M residual: similar shape (kernel-level → observable-level bridge requires non-perturbative input)
-- Positive bounded bridge lift:
-  [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md)
-
-## 8. Branch-local discharge status
-
-The obstruction statement above should now be read narrowly:
-
-- It remains correct that `A_min` plus the three attempted routes O1/O2/O3 did
-  not supply a closed-form value for `beta_eff(6)` or `<P>(6)`.
-- It is no longer the branch-local status of the bridge equality itself. The
-  implicit-flow theorem derives the exact bounded bridge
-  `P_Lambda(beta) = R_O(beta_eff,Lambda(beta))` with
-  `beta_eff,Lambda(beta) = R_O^(-1)(P_Lambda(beta))` and the equivalent
-  nonperturbative susceptibility flow.
-- The still-open object after the positive lift is explicit evaluation of the
-  Wilson susceptibility/environment data, not the existence of the bridge
-  equality.

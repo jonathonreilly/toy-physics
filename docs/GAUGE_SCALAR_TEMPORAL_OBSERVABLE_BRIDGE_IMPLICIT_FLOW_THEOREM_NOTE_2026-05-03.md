@@ -1,11 +1,12 @@
-# Gauge-Scalar Temporal Observable Bridge Implicit-Flow Theorem
+# Gauge-Scalar Temporal Observable Bridge Implicit-Coordinate Bounded Theorem
 
 **Date:** 2026-05-03
-**Type:** bounded_theorem
-**Status:** candidate positive structural closure of the observable-level
-bridge, bounded to the exact implicit Wilson response-flow surface. This note
-does not evaluate the full plaquette at `beta = 6`, does not fit
-`beta_eff`, and does not import Monte-Carlo, PDG, or perturbative running data.
+**Claim type:** bounded_theorem
+**Status:** bounded response-coordinate theorem proposal. This note proves an
+exact implicit coordinate identity for Wilson plaquette expectations; it does
+not discharge the parent observable bridge gate, does not evaluate the full
+plaquette at `beta = 6`, does not fit `beta_eff`, and does not import
+Monte-Carlo, PDG, or perturbative running data.
 **Primary runner:** `scripts/frontier_gauge_scalar_temporal_observable_bridge_implicit_flow.py`
 **Parent gate:** `docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`
 
@@ -20,16 +21,18 @@ The parent stretch note isolated the residual
 between the full interacting Wilson plaquette expectation and the local
 one-plaquette response at the completed effective coupling.
 
-The positive lift here is not a numerical evaluation of `<P>_full`. It is the
-structural bridge theorem:
+The bounded lift here is not a numerical evaluation of `<P>_full`. It is the
+implicit response-coordinate theorem:
 
 > On each finite Wilson evaluation surface, and on any infinite-volume limit
 > where the full plaquette expectation exists, there is one unique
-> nonperturbative completed response coupling `beta_eff` determined by the
-> Wilson partition function itself, and the bridge (BRIDGE) holds exactly.
+> nonperturbative response coordinate `beta_eff` determined by the Wilson
+> partition function itself, and the identity `P = R_O(beta_eff)` holds by
+> construction.
 
-This is a bounded theorem because the retained content is the exact implicit
-response-flow law, not an explicit closed-form value for `beta_eff(6)` or
+This is a bounded theorem proposal because the content is the exact implicit
+response-coordinate and susceptibility-flow law. It is not a proof that the
+current primitives independently derive an evaluated `beta_eff(6)` or
 `<P>(6)`.
 
 ## 1. Allowed premises
@@ -77,14 +80,15 @@ Z_Lambda(beta)
   = int DU exp[beta sum_p X(U_p)].
 ```
 
-The completed response coupling is defined structurally, not fitted:
+The response coordinate is defined structurally, not fitted:
 
 ```text
 beta_eff,Lambda(beta) := R_O^(-1)(P_Lambda(beta)).
 ```
 
-This is a definition by the exact Wilson partition function and the exact local
-response map. It does not consume a measured target value.
+This definition uses the exact Wilson partition function and the exact local
+response map. It does not consume a measured target value, but it also should
+not be read as an independently evaluated coupling.
 
 ## 3. Theorem 1: the local response is a bijective response coordinate
 
@@ -130,23 +134,24 @@ strictly positive. Therefore
 for finite `beta >= 0`. Thus `P_Lambda(beta)` is in the range of the local
 response coordinate `R_O`.
 
-## 5. Corollary: exact observable bridge
+## 5. Corollary: exact implicit coordinate identity
 
 Since `R_O` is bijective onto `[0,1)` and `P_Lambda(beta)` lies in `[0,1)`,
-the completed response coupling
+the response coordinate
 
 ```text
 beta_eff,Lambda(beta) = R_O^(-1)(P_Lambda(beta))
 ```
 
-exists and is unique. Substituting the definition gives the exact bridge:
+exists and is unique. Substituting the definition gives the exact coordinate
+identity:
 
 ```text
 P_Lambda(beta) = R_O(beta_eff,Lambda(beta)).
 ```
 
-At the framework point `beta = 6`, this is precisely the parent residual
-bridge on the finite Wilson surface:
+At the framework point `beta = 6`, this has the same formal shape as the parent
+residual bridge on the finite Wilson surface:
 
 ```text
 <P>_full,Lambda = R_O(beta_eff,Lambda(6)).
@@ -165,7 +170,7 @@ limit coupling
 beta_eff(beta) = lim_Lambda beta_eff,Lambda(beta)
 ```
 
-and the full-limit bridge
+and the full-limit coordinate identity
 
 ```text
 <P>_full = R_O(beta_eff).
@@ -173,7 +178,8 @@ and the full-limit bridge
 
 ## 6. Nonperturbative flow form
 
-Differentiating the exact bridge yields the susceptibility transport law:
+Differentiating the exact coordinate identity yields the susceptibility
+transport law:
 
 ```text
 beta_eff,Lambda'(beta)
@@ -204,21 +210,21 @@ susceptibility identity derived from the Wilson path integral.
 
 ## 7. Relationship to the stretch obstruction routes
 
-| Stretch route | Obstruction in stretch note | How this theorem bypasses it |
+| Stretch route | Obstruction in stretch note | What this theorem contributes |
 |---|---|---|
-| O1 Schwinger-Dyson | hierarchy does not collapse to local response | no hierarchy collapse is assumed; the response coordinate is the exact inverse of the local response map |
-| O2 effective action | full effective action is not computed in closed form | the theorem needs only the exact expectation as a Wilson partition-function derivative, not a closed effective action |
-| O3 RG | perturbative running cannot derive the bridge | the transport law is an exact susceptibility flow, not perturbative RG running |
+| O1 Schwinger-Dyson | hierarchy does not collapse to local response | records an exact inverse-response coordinate once the full expectation is known |
+| O2 effective action | full effective action is not computed in closed form | avoids a closed effective action but still depends on the exact Wilson expectation |
+| O3 RG | perturbative running cannot derive the bridge | records an exact susceptibility flow, not perturbative RG running |
 
-The cost is explicit and bounded: the theorem closes the bridge as an implicit
-structural identity but does not evaluate the nonperturbative susceptibility
-profile or the environment Perron data.
+The cost is explicit and bounded: this theorem gives an implicit coordinate
+identity but does not evaluate the nonperturbative susceptibility profile or
+the environment Perron data, and it does not close the parent gate by itself.
 
-## 8. What this closes
+## 8. What this supports
 
 - exact existence and uniqueness of the completed local response coupling on
   finite Wilson evaluation surfaces;
-- exact observable bridge
+- exact implicit coordinate identity
   `P_Lambda(beta) = R_O(beta_eff,Lambda(beta))`;
 - exact nonperturbative susceptibility-flow law for `beta_eff`;
 - proof that no fitted, PDG, Monte-Carlo, perturbative-running, or numeric
@@ -228,11 +234,14 @@ profile or the environment Perron data.
 
 - closed-form evaluation of `beta_eff(6)`;
 - closed-form evaluation of `<P>(6)`;
+- an independent derivation of `beta_eff(6)` from current primitives rather
+  than defining it as `R_O^(-1)(P(6))`;
 - explicit `rho_(p,q)(6)` / `Z_6^env(W)` environment Perron data;
 - numerical migration of the canonical plaquette package.
 
-This distinction is the bounded status: the bridge equality is structurally
-closed, while the evaluated plaquette and environment data are not.
+This distinction is the bounded status: the implicit coordinate identity is
+closed, while the evaluated plaquette, independent completed-coupling
+derivation, and environment data are not.
 
 ## 10. Commands
 
