@@ -1,13 +1,13 @@
 # Kubo Continuum Limit — Family Portability (Partial, Later Narrowed)
 
 **Date:** 2026-04-07
-**Status:** proposed_retained partial snapshot, later narrowed by Lane α++ — at H=0.25, Fam1=+5.986 and Fam3=+5.955 agree to 0.5%, while Fam2=+7.088 is a 12% outlier. This note still captures the pre-α++ portability snapshot. The later Fam2 H=0.20 refinement in [`KUBO_FAM2_REFINEMENT_NOTE.md`](KUBO_FAM2_REFINEMENT_NOTE.md) rejects the easy "Fam2 just needs finer H" rescue, so the current program-level read is narrower than the original 2/3-family partial positive.
+**Status:** proposed_retained partial snapshot, later narrowed by Lane α++ — at H=0.25, Fam1=+5.986 and Fam3=+5.955 agree to 0.5%, while Fam2=+7.088 is a 12% outlier. This note still captures the pre-α++ portability snapshot. The later Fam2 H=0.20 refinement in `KUBO_FAM2_REFINEMENT_NOTE.md` (sibling artifact; cross-reference only — not a one-hop dep of this note) rejects the easy "Fam2 just needs finer H" rescue, so the current program-level read is narrower than the original 2/3-family partial positive.
 
 ## Artifact chain
 
 - [`scripts/kubo_continuum_limit_families.py`](../scripts/kubo_continuum_limit_families.py)
 - [`logs/2026-04-07-kubo-continuum-limit-families.txt`](../logs/2026-04-07-kubo-continuum-limit-families.txt)
-- [`docs/KUBO_FAM2_REFINEMENT_NOTE.md`](./KUBO_FAM2_REFINEMENT_NOTE.md)
+- `docs/KUBO_FAM2_REFINEMENT_NOTE.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
 
 ## Later update
 

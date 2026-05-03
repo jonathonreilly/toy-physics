@@ -124,4 +124,5 @@ based on the standard-strength slice alone.
 
 For the later weak-field reopening, see:
 
-- [`docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md)
+- `docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md` (sibling artifact;
+  cross-reference only — not a one-hop dep of this note)

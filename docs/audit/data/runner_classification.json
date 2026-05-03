@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T13:58:18.333031+00:00",
+  "generated_at": "2026-05-03T15:10:52.797349+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -996,6 +996,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_boundary_law_robustness.py"
+    },
+    "branch_cleanup_recommendation_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/inventory_remote_branches.py"
     },
     "branch_entanglement_robustness_note_2026-04-11": {
       "assert_count": 0,
@@ -5401,6 +5413,18 @@
       "dominant_class": null,
       "runner": "scripts/equivalence_principle_harness.py"
     },
+    "eta_188_structural_origin_partial_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_eta_188_structural_origin.py"
+    },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "assert_count": 1,
       "counts": {
@@ -6362,27 +6386,27 @@
       "runner": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py"
     },
     "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19": {
-      "assert_count": 0,
+      "assert_count": 2,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 9,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19": {
-      "assert_count": 0,
+      "assert_count": 2,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20": {
@@ -6518,15 +6542,15 @@
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 4,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
@@ -11329,6 +11353,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_physical_lattice_necessity.py"
     },
+    "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 22,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pl_s3_atlas_refinement_compatibility.py"
+    },
     "planck_boundary_density_extension_theorem_note_2026-04-24": {
       "assert_count": 0,
       "counts": {
@@ -11508,6 +11544,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py"
+    },
+    "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_pmns_branch_selector.py"
     },
     "pmns_c3_character_holonomy_closure_note": {
       "assert_count": 1,
@@ -15552,6 +15600,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_ward_identity_derivation.py"
+    },
+    "v_even_theorem_retention_stretch_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 16,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_v_even_theorem_retention.py"
     },
     "vacuum_critical_stability_note": {
       "assert_count": 0,
@@ -24111,6 +24171,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_eta_188_structural_origin.py": {
+      "assert_count": 1,
+      "claims": [
+        "eta_188_structural_origin_partial_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_evanescent_barrier_amplitude_suppression.py": {
       "assert_count": 1,
       "claims": [
@@ -24503,34 +24578,34 @@
       "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py": {
-      "assert_count": 0,
+      "assert_count": 2,
       "claims": [
         "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 9,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
+      "dominant_class": "C",
+      "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py": {
-      "assert_count": 0,
+      "assert_count": 2,
       "claims": [
         "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
+      "dominant_class": "C",
+      "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_2026_04_20.py": {
       "assert_count": 1,
@@ -24698,19 +24773,19 @@
       "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py": {
-      "assert_count": 0,
+      "assert_count": 1,
       "claims": [
         "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 4,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
+      "dominant_class": "C",
+      "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py": {
       "assert_count": 1,
@@ -28507,6 +28582,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_pl_s3_atlas_refinement_compatibility.py": {
+      "assert_count": 2,
+      "claims": [
+        "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 22,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_planck_boundary_density_extension.py": {
       "assert_count": 0,
       "claims": [
@@ -28730,6 +28820,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_pmns_branch_selector.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_pmns_c3_character_holonomy_closure.py": {
@@ -31925,6 +32030,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_v_even_theorem_retention.py": {
+      "assert_count": 1,
+      "claims": [
+        "v_even_theorem_retention_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 16,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_vector_gauge_field_kk_tower.py": {
       "assert_count": 1,
       "claims": [
@@ -33840,6 +33960,21 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "exists": true
+    },
+    "scripts/inventory_remote_branches.py": {
+      "assert_count": 0,
+      "claims": [
+        "branch_cleanup_recommendation_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": false
     },
     "scripts/inverse_problem_graph_requirements.py": {
       "assert_count": 0,
@@ -37267,12 +37402,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 544,
-      "D": 204,
-      "none": 420
+      "C": 549,
+      "D": 206,
+      "none": 418
     },
-    "runners_classified": 1338,
-    "runners_with_C": 649,
-    "runners_with_D": 329
+    "runners_classified": 1343,
+    "runners_with_C": 655,
+    "runners_with_D": 333
   }
 }

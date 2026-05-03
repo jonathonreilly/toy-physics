@@ -204,7 +204,8 @@ No physical signed-gravity claim follows from this note.
 ## Staggered-Dirac Boundary Follow-Up
 
 The most natural escape hatch is now audited in
-[`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md`](SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md)
+`SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md` (sibling
+artifact; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py`](../scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py).
 
@@ -224,7 +225,8 @@ unless an extra rule fixes the line as physical boundary data.
 ## Naturally Hosted Orientation-Line Follow-Up
 
 The hosted-versus-selected distinction is now audited in
-[`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`](SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md)
+`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`
+(downstream follow-up; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_naturally_hosted_orientation_line.py`](../scripts/signed_gravity_naturally_hosted_orientation_line.py).
 

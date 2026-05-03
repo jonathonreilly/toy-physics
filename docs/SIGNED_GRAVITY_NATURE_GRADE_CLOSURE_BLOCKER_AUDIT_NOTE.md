@@ -187,8 +187,8 @@ Interpretation:
   source.
 
 The decisive follow-up is recorded in
-[`SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_NOTE.md`](SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_NOTE.md)
-with runner
+`SIGNED_GRAVITY_ORIENTED_TENSOR_SOURCE_LIFT_NOTE.md` (sibling artifact;
+cross-reference only — not a one-hop dep of this note) with runner
 [`../scripts/signed_gravity_oriented_tensor_source_lift.py`](../scripts/signed_gravity_oriented_tensor_source_lift.py).
 
 It uses the derived orientation line as a local system twisting the ordinary

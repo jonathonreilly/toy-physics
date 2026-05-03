@@ -133,7 +133,7 @@ That is real progress, even though it still does not produce one unique
 theorem-grade `a_u` law.
 
 The follow-on resolution note now closes the next cycle on this same surface:
-[QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md](./QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md)
+`QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 shows that no exact identity `|b_E / b_T| = sqrt(7)` lands, and that the
 restricted exact endpoint grammar still does not force one unique anchored
 denominator. So this bridge note remains the right pre-resolution structural
@@ -163,7 +163,7 @@ not retained closure.
 - This note is the endpoint-derivation follow-on: it shows that the two
   surviving affine winners are already organized by current tensor endpoint
   data.
-- [QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md](./QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md)
+- `QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
   closes the next theorem attempt with the bounded no-go endpoint on the
   current exact endpoint grammar.
 

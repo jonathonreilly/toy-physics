@@ -8,7 +8,8 @@ Use alongside:
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
-- [SCIENCE_MAP.md](./SCIENCE_MAP.md)
+- `SCIENCE_MAP.md` (sibling artifact; cross-reference only — not a
+  one-hop dep of this note)
 - [REPRODUCE.md](./REPRODUCE.md)
 
 ## Retained Core
