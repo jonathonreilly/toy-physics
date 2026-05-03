@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T15:31:19.842738+00:00",
+  "generated_at": "2026-05-03T15:35:10.062604+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -2172,6 +2172,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py"
+    },
+    "composite_higgs_mechanism_stretch_attempt_note_2026-05-03": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_composite_higgs_mechanism.py"
     },
     "composite_source_additivity_2d_note": {
       "assert_count": 0,
@@ -20730,6 +20742,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_composite_higgs_mechanism.py": {
+      "assert_count": 2,
+      "claims": [
+        "composite_higgs_mechanism_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_confinement_string_tension.py": {
       "assert_count": 1,
       "claims": [
@@ -37430,11 +37457,11 @@
       "A": 10,
       "B": 160,
       "C": 550,
-      "D": 206,
+      "D": 207,
       "none": 418
     },
-    "runners_classified": 1344,
+    "runners_classified": 1345,
     "runners_with_C": 656,
-    "runners_with_D": 333
+    "runners_with_D": 334
   }
 }

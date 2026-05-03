@@ -3213,6 +3213,42 @@
       "to": "fifth_family_complex_boundary_note"
     },
     {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "lhcm_y_normalization_from_anomaly_and_convention_note_2026-05-02"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "higgs_mechanism_note"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "neutrino_majorana_native_gaussian_no_go_note"
+    },
+    {
       "from": "composite_source_additivity_2d_note",
       "to": "composite_source_additivity_note"
     },
@@ -22761,7 +22797,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:31:13.682623+00:00",
+  "generated_at": "2026-05-03T15:35:03.920999+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -27070,6 +27106,27 @@
       "path": "docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md",
       "runner_path": "scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py",
       "title": "Complex Selectivity Predictor Note"
+    },
+    "composite_higgs_mechanism_stretch_attempt_note_2026-05-03": {
+      "claim_id": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "native_gauge_closure_note",
+        "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+        "lhcm_y_normalization_from_anomaly_and_convention_note_2026-05-02",
+        "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
+        "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02",
+        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "higgs_mechanism_note",
+        "neutrino_majorana_native_gaussian_no_go_note"
+      ],
+      "note_hash": "e1222949f58c2e59bf11bc193c0c1524e320b2e41c5c2a5e93a51bc97be64203",
+      "path": "docs/COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_composite_higgs_mechanism.py",
+      "title": "Composite-Higgs Candidate \u2014 Multi-Channel Z3-Phased Composite Scalar (Stretch Attempt with 3 Named Residual Obstructions)"
     },
     "composite_source_additivity_2d_note": {
       "claim_id": "composite_source_additivity_2d_note",
@@ -50735,7 +50792,7 @@
       "meta": 6,
       "no_go": 3,
       "none": 1727,
-      "open_gate": 4,
+      "open_gate": 5,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
@@ -50743,13 +50800,13 @@
       "meta": 6,
       "no_go": 109,
       "none": 453,
-      "open_gate": 111,
+      "open_gate": 112,
       "positive_theorem": 628
     },
-    "edge_count": 5690,
-    "leaf_count": 603,
-    "node_count": 1856,
+    "edge_count": 5699,
+    "leaf_count": 604,
+    "node_count": 1857,
     "root_count": 1058,
-    "runners_with_path": 1416
+    "runners_with_path": 1417
   }
 }
