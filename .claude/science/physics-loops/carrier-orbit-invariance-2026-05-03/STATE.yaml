@@ -1,0 +1,41 @@
+loop_slug: carrier-orbit-invariance-2026-05-03
+campaign: retained-promotion-2026-05-02
+cycle: 22
+date: 2026-05-03
+branch: physics-loop/carrier-orbit-invariance-2026-05-03
+goal: |
+  Close (or precisely sharpen) the cycle 17 named residual — the
+  swap-reduction theorem's structural-exhaustion premise that NO exact
+  E/T-distinguishing operator exists on the K_R(q) carrier — via
+  representation-theoretic / group-theoretic exhaustion.
+target_status: bounded-support
+runtime_used: 2h
+cycles_completed: 1
+active_route: B (Group-theoretic / Z_2-equivariant)
+hard_residual_attacked: |
+  Carrier Orbit Invariance Lemma residual: "no exact E/T-distinguishing
+  operator on the K_R(q) carrier" — established for Theta_R^(0) and
+  Xi_R^(0) (each bounded), but NOT exhaustively.
+files_touched:
+  - docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md
+  - scripts/frontier_carrier_orbit_invariance.py
+  - .claude/science/physics-loops/carrier-orbit-invariance-2026-05-03/*
+open_imports:
+  - "retained primitive registry closure (meta-mathematical)"
+no_go_routes: []
+review_findings: pending self-review at runner completion
+pr_status: pending
+next_exact_action: |
+  After the runner completes with PASS=N/0 (target N>=15), commit the
+  branch, push to origin, and open the review PR.
+stop_condition: |
+  PR opened OR runner FAIL (in which case demote to no-go output type b
+  and continue).
+status_fields:
+  actual_current_surface_status: open
+  target_claim_type: bounded_theorem
+  conditional_surface_status: bounded-support
+  hypothetical_axiom_status: null
+  admitted_observation_status: null
+  audit_required_before_effective_retained: true
+  bare_retained_allowed: false
