@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 201,
-    "medium": 308
+    "medium": 307
   },
-  "generated_at": "2026-05-03T17:59:25.500817+00:00",
+  "generated_at": "2026-05-03T18:00:12.502429+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7596,27 +7596,6 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.492,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19.py",
       "transitive_descendants": 44
     },
     {
@@ -20363,6 +20342,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 91,
-  "total_pending": 782
+  "ready_count": 90,
+  "total_pending": 781
 }

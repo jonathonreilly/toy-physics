@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:59:25.880976+00:00
+**Generated:** 2026-05-03T18:00:12.974295+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 753 |
+| unaudited | 752 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 534 |
+| ~~audited_conditional~~ | 535 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 534 |
+| `audited_conditional` | 535 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 799 |
+| `unaudited` | 798 |
 
 | claim_type | count |
 |---|---:|
@@ -631,6 +631,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -6250,6 +6251,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
 - **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims that the supplied first-sector packet rho_ret admits a zero higher-weight extension inside the canonical Wilson factorized class, yielding a self-adjoint conjugation-symmetric PSD operator that reconstructs the retained three-sample sector.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Extend it by zero to all higher weights on the dominant-weight box: keep the retained entries above, set rho_(p,q) = 0 for every other weight.  _(class `A`)_
+- **chain closes:** False — The zero-extension PSD/reconstruction step closes algebraically for the supplied vector, and the runner reports PASS=6 FAIL=0. The stronger retained-grade claim imports the retained first-sector packet and canonical Wilson factorized-class admissibility from upstream notes/scripts that are not declared as dependencies for this ledger row.
+- **rationale:** Issue: The theorem's algebraic zero-extension check is valid for the supplied rho_ret, but the note's retained-grade conclusion relies on upstream claims that the first-sector packet is retained and that nonnegative conjugation-symmetric normalized coefficient data are the canonical Wilson boundary-class description. Why this blocks: those premises are not closed inside the source note and the ledger metadata for this claim lists no dependency paths, while the runner's PASS lines explicitly perform cross-note substring/input checks for those premises. Repair target: add and audit the upstream dependency paths, or restate this as a conditional algebraic existence lemma for the supplied packet and make the runner separate algebraic checks from dependency-status checks. Claim boundary until fixed: it is safe to claim that the displayed rho_ret has a numerically verified zero higher-weight factorized extension on the truncated box with PSD/symmetry checks and three-sample reconstruction to runner tolerance, not that retained factorized-class existence is independently closed.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md`
+  - `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`
+- **auditor confidence:** medium
 
 ### `gauge_vacuum_plaquette_framework_point_underdetermination_note`
 
