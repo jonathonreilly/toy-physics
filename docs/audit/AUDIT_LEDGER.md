@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:15:29.229936+00:00
+**Generated:** 2026-05-03T18:21:12.517759+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,38 +20,38 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| **retained_no_go** | 102 |
+| **retained_no_go** | 103 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 740 |
+| unaudited | 736 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
-| ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 538 |
+| ~~audited_renaming~~ | 23 |
+| ~~audited_conditional~~ | 540 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 318 |
-| `audited_conditional` | 538 |
+| `audited_clean` | 319 |
+| `audited_conditional` | 540 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
-| `audited_renaming` | 22 |
-| `unaudited` | 786 |
+| `audited_renaming` | 23 |
+| `unaudited` | 782 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 593 |
 | `decoration` | 8 |
 | `meta` | 46 |
-| `no_go` | 163 |
+| `no_go` | 164 |
 | `open_gate` | 90 |
-| `positive_theorem` | 858 |
+| `positive_theorem` | 857 |
 
 | criticality | count |
 |---|---:|
@@ -242,6 +242,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `i3_zero_exact_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
+| `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
@@ -713,6 +714,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_eigenvalue_q23_surface_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `koide_explicit_calculations_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
+| `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1071,6 +1074,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | definition_as_derivation | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
+| `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `s3_time_bilinear_tensor_primitive_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
@@ -7866,6 +7870,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** The executable support claim closes on its own boundary: the ambient APS eta=2/9 route is structurally fixed by the retained C3[111] kinematics and ABSS fixed-point computation, and the runner reproduces every listed block. This audit does not promote the missing physical bridge delta_physical = eta_APS; the note states that as the remaining open issue.
 - **auditor confidence:** high
 
+### `koide_berry_bundle_obstruction_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the obstruction claim that the actual positive projectivized Koide cone has interval quotient under C3, so equivariant line bundles and U(1) connections there are trivial and cannot force a nonzero Chern/Berry phase; the sign-relaxed S1 variant has only arbitrary flat holonomy.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-audit-loop-2026-05-03-koide-berry-bundle-obstruction`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The C3 action on K_norm^+ is free, so equivariant complex line bundles on K_norm^+ are equivalent to complex line bundles on the quotient K_norm^+ / C3; by Theorem 1 that quotient is an interval, hence contractible, so complex line bundles over it are trivial.  _(class `A`)_
+- **chain closes:** True — The source note reduces the physical base to three C3-permuted open arcs and an interval quotient, then applies standard free-action descent and contractibility of intervals to rule out nontrivial line bundles, Chern class, and loop holonomy. The runner independently checks the normalized Koide circle geometry, C3 action, positive-arc structure, quotient Betti numbers, fixed-point freeness, and flat-holonomy non-uniqueness with PASS=30 FAIL=0.
+- **rationale:** The load-bearing step is a standard topology/algebra closure over the explicitly presented Koide-locus geometry: free finite-group quotient to an interval, contractible-base line-bundle triviality, and absence of gauge-invariant loop holonomy on a simply connected one-dimensional interval. The sign-relaxed S1 extension also closes because H2(S1; Z)=0 rules out nonzero first Chern class while flat U(1) holonomy remains a continuous parameter. No tuned comparator, symbol renaming, or open dependency is needed for the audited no-go scope; residual risk is limited to the source note's cited Koide-locus setup, but the row metadata lists no open dependencies.
+- **auditor confidence:** high
+
 ### `koide_berry_phase_theorem_note_2026-04-19`
 
 - **Note:** [`KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
@@ -8187,6 +8204,35 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The hostile-review guard mechanically verifies that the current Koide no-go packet names residuals and does not promote failed Q or delta routes as closure.  _(class `C`)_
 - **chain closes:** True — The support artifact closes on its own automation boundary: the runner finds the no-go note/script sets, verifies residual labels, verifies explicit negative CLOSES flags, and verifies no closure flag is promoted, with 8/8 passes.
 - **rationale:** The guard's support claim is audit-clean: it checks packet hygiene for Koide no-go artifacts and reports negative closure flags for Q and delta. This verdict does not treat the guard as physics evidence or as closure of either constant; the source note states that boundary explicitly.
+- **auditor confidence:** high
+
+### `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Block-total Frobenius energies on Herm_circ(3) are asserted to supply the MRU 1:1 real-isotype measure and an operator-side kappa=2 route, with E_+ = 3 a^2, E_perp = 6 |b|^2, and d=3 multiplicity uniqueness.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note asserts that the MRU law follows as the equal-weight extremum on the geometrically unique quotient carrier, leaving no remaining measure choice.  _(class `B`)_
+- **chain closes:** False — The runner closes the algebra after the block-total energy functional and equal-weight log-law are selected. It does not derive why that quotient carrier/log-law is the canonical physical choice rather than the determinant/rank-weighted law, and the note itself later records this as a remaining extremal-convention residue.
+- **rationale:** Issue: the algebraic checks prove E_+ = 3 a^2, E_perp = 6 |b|^2, d=3 uniqueness, and kappa=2 conditional on choosing the block-total 1:1 law, but the load-bearing physical/canonical selection of that law is imported rather than derived in this row. Why this blocks: the conclusion that the measure choice is resolved with no residue does not follow from the runner or the self-contained proof, especially because the note acknowledges a competing natural determinant law with kappa=1. Repair target: add or cite a retained dependency theorem that derives the quotient carrier and equal-weight block-total log-law as the canonical scalar-lane extremal principle, or narrow this claim to the conditional algebraic theorem. Claim boundary until fixed: if the block-total Frobenius law is selected, the formulas, equal-weight extremum kappa=2, and d=3 multiplicity uniqueness are runner-supported.
+- **open / conditional deps cited:**
+  - `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact Herm_circ(3) Fourier identity a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2) and the consequent equivalence of spectrum-side Koide and operator-side kappa under the stated cyclic-compression/P1 dictionary.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The following identity holds identically on Herm_circ(3): a_0^2 - 2 |z|^2 = 3 (a^2 - 2 |b|^2).  _(class `A`)_
+- **chain closes:** False — The algebraic identity itself closes exactly on Herm_circ(3), and the runner verifies it. The broader retained-physics conclusion imports the cyclic-compression bridge, P1 square-root eigenvalue identification, MRU Frobenius readout, and spectrum-side Koide closure without supplied retained dependency rows.
+- **rationale:** Issue: the note proves the Herm_circ(3) Fourier identity after assuming the cyclic-compression/P1 dictionary, but the physical bridge from charged-lepton sqrt masses to operator eigenvalues and the spectrum-side Koide closure are imported rather than closed in the provided dependency chain. Why this blocks: the runner computes the hard algebra correctly, but it does not derive the physical carrier/readout identifications or the upstream spectrum closure needed for retained operator-side kappa = 2. Repair target: add retained dependency rows or an in-note theorem and runner that construct the cyclic-compression bridge, P1 sqrt-mass eigenvalue map, MRU Frobenius readout, and spectrum-side Q = 2/3 closure without assuming the target bridge. Claim boundary until fixed: the exact Herm_circ(3) identity and lockstep numerical translation are valid conditional algebra, not a standalone retained physical closure.
 - **auditor confidence:** high
 
 ### `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19`
@@ -10974,6 +11020,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The k-sweep verifies flat alpha_crit only for the hand-inserted absorbing proxy inherited from the minimal absorbing-horizon probe, whose retained horizon/trapping interpretation has already failed audit. Why this blocks: the result can kill a stronger wavelength-dependent story for this proxy observable, but it cannot be retained as a quantum-horizon or retained-absorbing-family statement until the underlying absorption law and family claim are repaired. Repair target: either demote this note to a bounded proxy no-go, or first derive and audit the absorption/horizon law in the minimal probe, then rerun the k-sweep as a retained-family observable. Claim boundary until fixed: it is safe to say the live proxy sweep gives alpha_crit around 0.08 to 0.09 with exponent about 0.03 across the tested k values; it is not safe to claim a retained quantum-horizon law or retained absorbing-horizon mechanism.
 - **open / conditional deps cited:**
   - `MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audit of the asserted theorem that exact unit shell carrier normalization plus retained a_d = rho forces kappa = 1 and hence BICAC / STRC-LO at LO.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-quark-bimodule-lo-shell-normalization-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** If one tried to keep a separate bridge factor kappa, the LO down action would be D_LO(x) = rho * kappa * x; but on the shell-normalized slot this would assign shell coefficient rho * kappa instead of the retained shell coefficient rho, so only kappa = 1 preserves the retained shell coefficient exactly.  _(class `F`)_
+- **chain closes:** False — The algebra rho*kappa = rho implies kappa = 1 for nonzero rho, but the note does not derive the physical-observable bridge identifying the retained down amplitude a_d = rho with the shell-normalized LO down-action coefficient on I. The runner verifies the arithmetic after that identification is imposed, not a retained theorem constructing the identification.
+- **rationale:** Issue: the proof's load-bearing move identifies the retained down amplitude a_d = rho with the physical LO shell coefficient of D_LO on the exact carrier, then rejects kappa != 1 by coefficient preservation. Why this blocks: exact unit shell columns plus the algebra rho*kappa = rho do not by themselves construct the physical readout/action map from the retained amplitude to D_LO; the contested bridge is being asserted as the same coefficient. Repair target: add a retained theorem and runner check deriving the shell readout/action map from the carrier and projector inputs without setting D_LO = rho*kappa Id_I or the retained shell coefficient by hand. Claim boundary until fixed: the runner supports exact carrier-column normalization and algebraic discrimination among the enumerated kappa coefficients conditional on the shell-coefficient identification, but not an independent derivation that physical LO kappa is forced to 1.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28`
