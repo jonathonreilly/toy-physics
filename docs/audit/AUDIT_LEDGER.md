@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T22:39:28.235252+00:00
+**Generated:** 2026-05-03T22:54:53.616944+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 109 |
-| **retained_bounded** | 205 |
+| **retained_bounded** | 206 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 671 |
+| unaudited | 670 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 374 |
+| `audited_clean` | 375 |
 | `audited_conditional` | 553 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 718 |
+| `unaudited` | 717 |
 
 | claim_type | count |
 |---|---:|
@@ -460,6 +460,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_constraint_action_stationarity_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `universal_gr_lambda_bypass_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `universal_gr_lorentzian_signature_extension_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `valley_linear_action_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `valley_linear_mirror_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `valley_linear_repro_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `valley_linear_wide_tail_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
@@ -15611,6 +15612,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md`
   - `DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`
+- **auditor confidence:** high
+
+### `valley_linear_action_note`
+
+- **Note:** [`VALLEY_LINEAR_ACTION_NOTE.md`](../../docs/VALLEY_LINEAR_ACTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded same-harness comparison of spent-delay versus valley-linear action on the fixed 3D ordered dense lattice 1/L^2 family at h=0.25, limited to Born, k=0, F~M exponent, gravity sign/TOWARD count, and distance-tail slope in the cited completed run.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-valley-linear-action`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** On the fixed 3D ordered-lattice 1/L^2 family at h = 0.25, the valley-linear action S = L(1-f) improves the tested mass-law exponent and distance-tail slope relative to spent-delay while preserving Born and the TOWARD gravity sign on the retained window.  _(class `C`)_
+- **chain closes:** True — The source note makes a bounded same-family action-fork claim, and the cited script holds the lattice family, kernel, slit geometry, detector readout, field construction, and measurement code fixed while switching only the action branch. The completed log reports the same values quoted in the note, including valley-linear F~M alpha 1.00 versus 0.50, tail slope -0.93 versus -0.52, Born 4.20e-15 for both, k=0 +0.00e+00 for both, and TOWARD 8/8 for both.
+- **rationale:** The scoped claim is not a convergence theorem, flagship replacement, or derivation of the valley-linear action; it is only a finite same-harness comparison. Within that boundary, the runner computes both actions through the same propagation and measurement functions and changes only the action law, so the comparison is not a renaming, tuned external match, or stale wrapper. Residual risk is limited to the usual finite-run and implementation-trust boundary: the audit accepts the completed log as evidence for this fixed harness and does not promote the result beyond that family/window.
 - **auditor confidence:** high
 
 ### `valley_linear_mirror_transfer_note`
