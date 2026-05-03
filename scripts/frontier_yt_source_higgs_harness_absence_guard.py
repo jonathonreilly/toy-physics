@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-PR #230 source-Higgs harness absence guard certificate.
+PR #230 source-Higgs harness default-off guard certificate.
 
 This is an instrumentation firewall, not evidence.  It verifies that the
 production certificate now explicitly marks the source-Higgs cross-correlator
-route as absent unless a same-surface canonical-Higgs operator and C_sH/C_HH
-rows are implemented.
+route as disabled unless a same-surface canonical-Higgs operator certificate
+and C_sH/C_HH rows are supplied.
 """
 
 from __future__ import annotations
@@ -54,7 +54,7 @@ def status(cert: dict[str, Any]) -> str:
 
 
 def main() -> int:
-    print("PR #230 source-Higgs harness absence guard")
+    print("PR #230 source-Higgs harness default-off guard")
     print("=" * 72)
 
     source = HARNESS.read_text(encoding="utf-8")
@@ -86,11 +86,15 @@ def main() -> int:
     retained_still_open = "retained closure not yet reached" in status(parents["retained_route"])
 
     guard_present = '"source_higgs_cross_correlator"' in source
-    disabled_by_default = '"enabled": False' in source and '"implementation_status": "absent_guarded"' in source
+    disabled_by_default = '"enabled": source_higgs_enabled' in source and '"absent_guarded"' in source
     required_objects_named = all(token in source for token in ("C_sH(q)", "C_HH(q)", "O_H or radial canonical-Higgs"))
     no_yukawa_readout = '"used_as_physical_yukawa_readout": False' in source
-    absent_operator_named = '"canonical_higgs_operator_realization": "absent"' in source
-    strict_limit_present = "must not be treated as source-Higgs Gram purity" in source
+    operator_certificate_gated = (
+        '"canonical_higgs_operator_realization": (' in source
+        and '"certificate_supplied_unratified"' in source
+        and '"absent"' in source
+    )
+    strict_limit_present = "source-Higgs certificate builder, Gram-purity postprocessor" in source
 
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
@@ -100,41 +104,41 @@ def main() -> int:
     report("hunit-still-rejected", hunit_blocks, status(parents["hunit_candidate_gate"]))
     report("retained-route-still-open", retained_still_open, status(parents["retained_route"]))
     report("harness-guard-present", guard_present, "source_higgs_cross_correlator metadata block")
-    report("guard-disabled-by-default", disabled_by_default, "enabled False / absent_guarded")
+    report("guard-disabled-by-default", disabled_by_default, "enabled only when certificate + modes/noises are present")
     report("required-cross-objects-named", required_objects_named, "O_H, C_sH, C_HH named")
     report("not-yukawa-readout", no_yukawa_readout, "used_as_physical_yukawa_readout False")
-    report("canonical-operator-absent", absent_operator_named, "canonical_higgs_operator_realization absent")
-    report("strict-limit-present", strict_limit_present, "C_ss/source-response cannot be Gram purity")
+    report("canonical-operator-certificate-gated", operator_certificate_gated, "certificate supplied but unratified / absent default")
+    report("strict-limit-present", strict_limit_present, "finite rows require downstream gates")
 
     result = {
-        "actual_current_surface_status": "bounded-support / source-Higgs harness absence guard",
+        "actual_current_surface_status": "bounded-support / source-Higgs harness default-off guard",
         "verdict": (
             "The production certificate now explicitly records that the "
-            "source-Higgs cross-correlator route is absent unless a same-surface "
-            "canonical-Higgs operator plus C_sH/C_HH/covariance rows are "
-            "implemented.  This is an instrumentation guard only; it supplies no "
-            "O_H, C_sH, C_HH, pole residue, Gram-purity data, or retained closure."
+            "source-Higgs cross-correlator route is disabled unless a same-surface "
+            "canonical-Higgs operator certificate plus C_sH/C_HH finite-mode rows "
+            "are supplied.  This is an instrumentation guard only; it supplies no "
+            "canonical-Higgs identity, pole residue, Gram-purity data, or retained closure."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "The guard marks missing source-Higgs evidence; it is not evidence.",
+        "proposal_allowed_reason": "The guard and default-off harness extension are instrumentation only; they are not evidence.",
         "harness_file": str(HARNESS.relative_to(ROOT)),
         "guard_fields": {
             "source_higgs_cross_correlator": guard_present,
             "enabled_false": disabled_by_default,
             "required_objects_named": required_objects_named,
             "used_as_physical_yukawa_readout_false": no_yukawa_readout,
-            "canonical_higgs_operator_absent": absent_operator_named,
+            "canonical_higgs_operator_certificate_gated": operator_certificate_gated,
         },
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",
-            "does not implement O_H, C_sH, or C_HH measurements",
-            "does not treat C_ss/source response as source-Higgs Gram purity",
+            "does not supply a canonical O_H identity certificate",
+            "does not treat finite C_ss/C_sH/C_HH rows as source-Higgs Gram purity",
             "does not use H_unit, observed values, yt_ward_identity, alpha_LM, plaquette, u0, or reduced pilots as proof selectors",
         ],
         "exact_next_action": (
-            "Implement an actual same-surface O_H observable and C_sH/C_HH rows, "
-            "derive a source-Higgs identity theorem, implement W/Z response with "
-            "identity certificates, or process FH/LSZ chunks."
+            "Supply or derive an audit-acceptable canonical-Higgs operator "
+            "certificate, run source-Higgs cross-correlator measurements, extract "
+            "pole residues, then pass the Gram-purity and retained-route gates."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

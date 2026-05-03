@@ -95,11 +95,16 @@ def validate_measurement_input(data: dict[str, Any]) -> tuple[dict[str, bool], l
         "has_source_coordinate": isinstance(data.get("source_coordinate"), str) and bool(data.get("source_coordinate")),
         "canonical_higgs_operator_identity": operator.get("canonical_higgs_operator_identity_passed") is True,
         "canonical_higgs_operator_named": isinstance(operator.get("operator_id"), str) and bool(operator.get("operator_id")),
+        "has_identity_certificate": isinstance(operator.get("identity_certificate"), str)
+        and bool(operator.get("identity_certificate")),
+        "has_normalization_certificate": isinstance(operator.get("normalization_certificate"), str)
+        and bool(operator.get("normalization_certificate")),
         "not_hunit_by_fiat": operator.get("hunit_used_as_operator") is False,
         "not_static_ew_algebra": operator.get("static_ew_algebra_used_as_operator") is False,
         "no_observed_target_selectors": firewall.get("used_observed_targets_as_selectors") is False,
         "no_prior_ward_authority": firewall.get("used_yt_ward_identity") is False,
         "no_alpha_lm_or_plaquette_authority": firewall.get("used_alpha_lm_or_plaquette") is False,
+        "no_hunit_matrix_element_readout": firewall.get("used_hunit_matrix_element_readout") is False,
         "has_pole_rows": bool(rows),
         "has_selected_res_c_ss": finite(row.get("Res_C_ss")),
         "has_selected_res_c_sh": finite(row.get("Res_C_sH")),

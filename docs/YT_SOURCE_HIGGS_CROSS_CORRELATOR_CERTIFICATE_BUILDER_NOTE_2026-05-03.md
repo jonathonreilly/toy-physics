@@ -22,11 +22,12 @@ The input row file must provide:
 - same-ensemble and same-source-coordinate flags;
 - a source coordinate shared by `C_ss`, `C_sH`, and `C_HH`;
 - a named certified canonical-Higgs operator, not `H_unit` by fiat;
+- nonempty identity and normalization certificate references for that operator;
 - pole residue rows containing `Res_C_ss`, `Res_C_sH`, and `Res_C_HH`;
 - isolated-pole or model-class/pole-saturation evidence;
 - finite-volume, infrared, and zero-mode control;
 - firewall flags showing no observed-target selectors, no `yt_ward_identity`,
-  and no `alpha_LM` or plaquette authority.
+  no `H_unit` matrix-element readout, and no `alpha_LM` or plaquette authority.
 
 ## Computed Quantities
 

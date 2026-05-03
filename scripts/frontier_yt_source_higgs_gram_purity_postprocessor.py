@@ -114,13 +114,22 @@ def compute_gate(candidate: dict[str, Any], tolerance: float, sigma: float) -> d
 def validate_candidate(candidate: dict[str, Any]) -> dict[str, bool]:
     matrix = candidate.get("residue_matrix", {})
     firewall = candidate.get("firewall", {})
+    operator = candidate.get("canonical_higgs_operator", {})
     return {
         "production_phase": candidate.get("phase") == "production",
         "same_ensemble": candidate.get("same_ensemble") is True,
         "same_source_coordinate": candidate.get("same_source_coordinate") is True,
         "canonical_higgs_operator_identity": candidate.get("canonical_higgs_operator_identity_passed") is True,
+        "has_identity_certificate": isinstance(operator.get("identity_certificate"), str)
+        and bool(operator.get("identity_certificate")),
+        "has_normalization_certificate": isinstance(operator.get("normalization_certificate"), str)
+        and bool(operator.get("normalization_certificate")),
         "not_hunit_by_fiat": candidate.get("hunit_used_as_operator") is False,
         "no_observed_selectors": firewall.get("used_observed_targets_as_selectors") is False,
+        "no_prior_ward_authority": firewall.get("used_yt_ward_identity") is False,
+        "no_alpha_lm_or_plaquette_authority": firewall.get("used_alpha_lm_or_plaquette") is False,
+        "no_hunit_matrix_element_readout": firewall.get("used_hunit_matrix_element_readout") is False,
+        "no_static_ew_algebra_as_operator": firewall.get("used_static_ew_algebra_as_operator") is False,
         "has_res_c_ss": finite(matrix.get("Res_C_ss")),
         "has_res_c_sh": finite(matrix.get("Res_C_sH")),
         "has_res_c_hh": finite(matrix.get("Res_C_HH")),

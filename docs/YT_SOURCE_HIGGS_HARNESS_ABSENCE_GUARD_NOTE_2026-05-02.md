@@ -1,7 +1,7 @@
-# Source-Higgs Harness Absence Guard
+# Source-Higgs Harness Default-Off Guard
 
-**Status:** bounded-support / source-Higgs harness absence guard  
-**Runner:** `scripts/frontier_yt_source_higgs_harness_absence_guard.py`  
+**Status:** bounded-support / source-Higgs harness default-off guard
+**Runner:** `scripts/frontier_yt_source_higgs_harness_absence_guard.py`
 **Certificate:** `outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json`
 
 ## Purpose
@@ -14,15 +14,17 @@ evidence.
 
 ## Result
 
-The production harness certificate now has a `source_higgs_cross_correlator`
-metadata block with `enabled: false`, `implementation_status:
-absent_guarded`, and a required-object list naming `O_H`, `C_sH(q)`,
-`C_HH(q)`, and same-ensemble covariance.  It also records that the canonical
-Higgs operator realization is absent and that the output must not be used as a
-physical Yukawa readout.
+The production harness certificate now has a default-off
+`source_higgs_cross_correlator` metadata block.  The block is enabled only when
+`--source-higgs-cross-modes`, `--source-higgs-cross-noises`, and
+`--source-higgs-operator-certificate` are all supplied.  The required-object
+list names `O_H`, `C_sH(q)`, `C_HH(q)`, and same-ensemble covariance, and the
+certificate still records that finite rows must not be used as a physical
+Yukawa readout.
 
-This is instrumentation support only.  It does not implement `O_H`, `C_sH`,
-`C_HH`, pole residues, covariance, Gram-purity data, or retained closure.
+This is instrumentation support only.  It does not supply a canonical `O_H`
+identity certificate, pole residues, covariance, Gram-purity data, or retained
+closure.
 
 ## Verification
 
@@ -31,6 +33,6 @@ python3 scripts/frontier_yt_source_higgs_harness_absence_guard.py
 # SUMMARY: PASS=13 FAIL=0
 ```
 
-Next action: implement an actual same-surface `O_H` observable and
-`C_sH`/`C_HH` rows, derive a source-Higgs identity theorem, implement W/Z
-response with identity certificates, or process FH/LSZ chunks.
+Next action: supply or derive an audit-acceptable canonical-Higgs operator
+certificate, run source-Higgs cross-correlator measurements, extract pole
+residues, then pass the Gram-purity and retained-route gates.

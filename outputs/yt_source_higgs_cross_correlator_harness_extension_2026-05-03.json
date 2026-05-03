@@ -1,0 +1,30 @@
+{
+  "actual_current_surface_status": "bounded-support / source-Higgs cross-correlator harness extension",
+  "current_missing_for_retention": [
+    "canonical-Higgs operator identity certificate accepted by audit",
+    "production source-Higgs cross-correlator rows",
+    "isolated pole residues Res_C_ss/Res_C_sH/Res_C_HH",
+    "Gram purity pass at the isolated pole",
+    "FV/IR/zero-mode/model-class control",
+    "retained-route certificate authorization"
+  ],
+  "exact_next_action": "Supply or derive an audit-acceptable canonical-Higgs operator certificate, run the harness with --source-higgs-cross-modes and --source-higgs-cross-noises, then build pole-residue rows for the source-Higgs certificate builder.",
+  "fail_count": 0,
+  "harness_file": "scripts/yt_direct_lattice_correlator_production.py",
+  "measurement_objects_enabled_by_certificate": [
+    "C_ss(q)",
+    "C_sH(q)",
+    "C_HH(q)"
+  ],
+  "pass_count": 17,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Harness instrumentation is support only; it does not supply a production O_H/C_sH/C_HH pole-residue certificate.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H by fiat",
+    "does not treat H_unit or static EW algebra as O_H",
+    "does not set kappa_s = 1 or cos(theta) = 1",
+    "does not use yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The production harness now has a default-off same-ensemble source-Higgs measurement path.  With a supplied operator certificate it can emit finite-mode C_ss/C_sH/C_HH rows for the selected FH/LSZ mass.  This is not retained closure: the current surface still lacks an accepted canonical-Higgs operator identity, pole residues, Gram purity, FV/IR control, and retained route authorization."
+}
