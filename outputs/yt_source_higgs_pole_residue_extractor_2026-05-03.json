@@ -1,0 +1,90 @@
+{
+  "acceptance_schema": {
+    "output_contract": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json for the existing builder",
+    "phase": "production",
+    "required_controls": [
+      "model_class_or_pole_saturation_certificate_passed",
+      "fv_ir_zero_mode_control_passed",
+      "forbidden-import firewall false",
+      "used_as_physical_yukawa_readout false"
+    ],
+    "required_modes": "at least four distinct p_hat_sq source-Higgs modes",
+    "required_operator": "canonical_higgs_operator_identity_passed with identity and normalization certificates",
+    "required_statistics": "at least eight configurations per mode before bootstrap/jackknife production use"
+  },
+  "actual_current_surface_status": "open / source-Higgs pole-residue extractor awaiting valid production rows",
+  "exact_next_action": "Run a production source-Higgs cross-correlator artifact with a ratified canonical-Higgs operator certificate, at least four momentum modes, and FV/IR/model-class controls; rerun this extractor, then rerun the source-Higgs builder and Gram-purity postprocessor.",
+  "fail_count": 0,
+  "gate_checks": {
+    "artifact_present": true,
+    "canonical_higgs_operator_identity": false,
+    "enough_configurations_for_errors": false,
+    "enough_distinct_momentum_modes": false,
+    "finite_mode_rows_complete": true,
+    "forbidden_import_firewall": true,
+    "fv_ir_zero_mode_control": false,
+    "identity_certificate_present": false,
+    "model_class_or_pole_saturation_control": false,
+    "normalization_certificate_present": false,
+    "not_hunit_by_fiat": false,
+    "not_physical_yukawa_readout": true,
+    "not_static_ew_algebra": true,
+    "production_phase": false,
+    "production_targets": false,
+    "same_ensemble": true,
+    "same_source_coordinate": true,
+    "seed_control_version_recorded": true,
+    "source_coordinate_named": true,
+    "source_higgs_enabled": true
+  },
+  "gate_passed": false,
+  "input_artifact": "outputs/yt_source_higgs_unratified_operator_smoke_run_2026-05-03.json",
+  "input_summary": {
+    "canonical_higgs_operator_identity_passed": false,
+    "distinct_p_hat_sq_count": 2,
+    "metadata_phase": "reduced_scope",
+    "min_configuration_count": 2,
+    "mode_count": 2,
+    "operator_id": "unratified_constant_diagonal_smoke_operator_v1",
+    "p_hat_sq_values": [
+      0.0,
+      2.0
+    ],
+    "production_targets": false
+  },
+  "missing_or_failed_checks": [
+    "production_phase",
+    "production_targets",
+    "canonical_higgs_operator_identity",
+    "identity_certificate_present",
+    "normalization_certificate_present",
+    "not_hunit_by_fiat",
+    "enough_distinct_momentum_modes",
+    "enough_configurations_for_errors",
+    "model_class_or_pole_saturation_control",
+    "fv_ir_zero_mode_control"
+  ],
+  "parent_certificates": {
+    "builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "canonical_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
+    "postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "rank_repair": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+    "unratified_smoke_checkpoint": "outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json"
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Pole-residue extraction is an input bridge only; Gram-purity and retained-route gates remain authoritative.",
+  "residue_row": {},
+  "rows_output": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+  "rows_written": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not use reduced smoke rows as production evidence",
+    "does not treat finite-mode C_sH/C_HH rows as pole residues before the pole gate",
+    "does not define O_H by fiat or use H_unit as O_H",
+    "does not set kappa_s = 1, cos(theta) = 1, c2 = 1, or Z_match = 1",
+    "does not use yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "A source-Higgs pole-residue extractor gate is now executable.  The current input is intentionally rejected: it is the reduced unratified-operator smoke artifact, not production data with a ratified canonical-Higgs operator, enough momentum modes, model-class pole saturation, and FV/IR control.  Therefore no C_sH/C_HH pole-residue row file is written and no closure wording is authorized."
+}

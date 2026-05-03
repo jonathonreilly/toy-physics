@@ -1,5 +1,28 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 source-Higgs pole-residue extractor:
+
+- Added `scripts/frontier_yt_source_higgs_pole_residue_extractor.py`,
+  `docs/YT_SOURCE_HIGGS_POLE_RESIDUE_EXTRACTOR_NOTE_2026-05-03.md`, and
+  `outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json`.
+- This fills the bridge between finite-mode `C_ss/C_sH/C_HH` rows emitted by
+  the source-Higgs harness and the pole-residue row file consumed by the
+  source-Higgs builder / O_sp-Higgs Gram-purity postprocessor.
+- Current default input is deliberately rejected: it is the reduced
+  unratified-operator smoke artifact, not production; it has an unratified
+  canonical-Higgs operator, two momentum modes, two configurations, and no
+  model-class pole-saturation or FV/IR control.  No measurement-row file is
+  written.
+- Runners: extractor `PASS=9 FAIL=0`, retained-route `PASS=123 FAIL=0`,
+  campaign status `PASS=149 FAIL=0`.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: produce a production source-Higgs artifact with a ratified
+same-surface canonical `O_H` operator certificate, at least four momentum
+modes, sufficient configurations, and FV/IR/model-class controls; rerun the
+extractor, source-Higgs builder, O_sp-Higgs Gram-purity postprocessor, and
+retained-route gate.  PR #230 remains draft/open.
+
 Latest checkpoint, 2026-05-03 non-source response rank-repair sufficiency:
 
 - Added `scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py`,

@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the source-Higgs route now has an explicit pole-residue
+extractor gate between finite-mode `C_ss/C_sH/C_HH` harness rows and the
+builder input.  The current reduced unratified-operator smoke is correctly
+rejected and no pole-residue row file is written.  This narrows the next
+source-Higgs action to a concrete production artifact: ratified same-surface
+`O_H`, at least four momentum modes, enough configurations for errors,
+model-class pole saturation, and FV/IR control.  After that, rerun the
+extractor, source-Higgs builder, O_sp-Higgs Gram-purity postprocessor, and
+retained gate.
+
 2026-05-03 update: the non-source response rank-repair sufficiency theorem now
 pinpoints the positive closure inputs.  Source-only FH/LSZ remains rank one in
 the neutral-scalar top-coupling space.  The shortest high-value actions are

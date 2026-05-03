@@ -26,8 +26,24 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=148 FAIL=0
+# SUMMARY: PASS=149 FAIL=0
 ```
+
+## 2026-05-03 Source-Higgs Pole-Residue Extractor Update
+
+The campaign status certificate now consumes the source-Higgs pole-residue
+extractor gate.  This is the executable bridge from finite-mode
+`C_ss/C_sH/C_HH` rows to the future
+`yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json` builder
+input.
+
+The current default input remains the reduced unratified-operator smoke
+artifact, so the extractor writes no pole-residue rows.  It correctly requires
+production phase, a ratified same-surface canonical-Higgs operator, at least
+four momentum modes, sufficient configurations, model-class pole-saturation
+control, FV/IR control, and the forbidden-import firewall.  This is
+infrastructure support only; no retained or `proposed_retained` closure is
+authorized.
 
 ## 2026-05-03 Non-Source Response Rank-Repair Update
 

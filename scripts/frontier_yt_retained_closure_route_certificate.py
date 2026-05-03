@@ -143,6 +143,7 @@ def main() -> int:
         "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
         "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
         "source_higgs_cross_correlator_harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
+        "source_higgs_pole_residue_extractor": "outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json",
         "source_higgs_cross_correlator_certificate_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
         "source_higgs_gram_purity_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
         "canonical_higgs_operator_candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
@@ -806,6 +807,13 @@ def main() -> int:
         "source-Higgs cross-correlator harness extension"
         in certificates["source_higgs_cross_correlator_harness_extension"].get("actual_current_surface_status", "")
         and certificates["source_higgs_cross_correlator_harness_extension"].get("proposal_allowed") is False
+    )
+    source_higgs_pole_residue_extractor_not_evidence = (
+        "source-Higgs pole-residue extractor"
+        in certificates["source_higgs_pole_residue_extractor"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_pole_residue_extractor"].get("proposal_allowed") is False
+        and certificates["source_higgs_pole_residue_extractor"].get("rows_written") is False
+        and certificates["source_higgs_pole_residue_extractor"].get("gate_passed") is False
     )
     source_higgs_builder_rows_absent = (
         "source-Higgs cross-correlator rows absent"
@@ -1512,6 +1520,11 @@ def main() -> int:
         "source-higgs-cross-correlator-harness-extension-not-evidence",
         source_higgs_harness_extension_not_evidence,
         certificates["source_higgs_cross_correlator_harness_extension"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "source-higgs-pole-residue-extractor-awaits-valid-production-rows",
+        source_higgs_pole_residue_extractor_not_evidence,
+        certificates["source_higgs_pole_residue_extractor"].get("actual_current_surface_status", ""),
     )
     report(
         "source-higgs-cross-correlator-builder-rows-absent",

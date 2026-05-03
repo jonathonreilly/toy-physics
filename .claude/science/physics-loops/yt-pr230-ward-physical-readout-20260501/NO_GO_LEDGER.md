@@ -1,5 +1,25 @@
 # No-Go Ledger
 
+## Source-Higgs pole-residue extractor is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_source_higgs_pole_residue_extractor.py
+# SUMMARY: PASS=9 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=123 FAIL=0
+```
+
+The extractor is an input bridge only.  It rejects the current reduced
+unratified-operator smoke artifact and writes no
+`yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json` file.
+Finite-mode `C_sH/C_HH` rows are not pole residues without production phase,
+a ratified same-surface `O_H`, enough momentum modes/configurations,
+model-class pole saturation, and FV/IR controls.  Do not treat the extractor,
+the smoke rows, or finite-mode Gram values as retained or `proposed_retained`
+evidence.
+
 ## Non-source response rank-repair theorem is not closure
 
 Runners:
@@ -8,7 +28,7 @@ Runners:
 python3 scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py
 # SUMMARY: PASS=17 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=122 FAIL=0
+# SUMMARY: PASS=123 FAIL=0
 ```
 
 The theorem is exact support for the positive route, not current closure.  It

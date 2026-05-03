@@ -13,11 +13,20 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-173-non-source-response-rank-repair-sufficiency
-blocks_completed: 173
-active_route: "non-source response rank-repair sufficiency theorem"
-active_hard_residual: "The rank-repair theorem now states the exact positive acceptance surface after O_sp/O_H identity failed: source-only FH/LSZ has rank one and leaves a neutral-scalar top-coupling null direction; pole-level O_sp-Higgs Gram purity or an independent non-source row with sector-overlap/canonical-Higgs identity repairs the rank.  Current closure remains open because no certified O_H/C_sH/C_HH pole rows and no same-source W/Z mass-response rows are present.  Rank-repair theorem PASS=17 FAIL=0, retained-route PASS=122 FAIL=0, campaign status PASS=148 FAIL=0.  No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-174-source-higgs-pole-residue-extractor
+blocks_completed: 174
+active_route: "source-Higgs pole-residue extraction bridge"
+active_hard_residual: "The finite-mode source-Higgs harness now has an executable pole-residue extractor gate for future C_ss/C_sH/C_HH production artifacts.  The current default input is rejected because it is reduced-scope, uses an unratified operator, has only two momentum modes and two configurations, and lacks model-class pole-saturation plus FV/IR controls.  No pole-residue row file is written.  Extractor PASS=9 FAIL=0, retained-route PASS=123 FAIL=0, campaign status PASS=149 FAIL=0.  Closure still requires a ratified O_H plus production C_sH/C_HH pole rows passing O_sp-Higgs Gram purity, or same-source W/Z rows with identity certificates.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_source_higgs_pole_residue_extractor.py"
+  - "docs/YT_SOURCE_HIGGS_POLE_RESIDUE_EXTRACTOR_NOTE_2026-05-03.md"
+  - "outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - "scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py"
   - "docs/YT_NON_SOURCE_RESPONSE_RANK_REPAIR_SUFFICIENCY_NOTE_2026-05-03.md"
   - "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json"

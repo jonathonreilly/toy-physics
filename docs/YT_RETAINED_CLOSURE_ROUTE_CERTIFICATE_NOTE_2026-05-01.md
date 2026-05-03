@@ -18,8 +18,23 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=122 FAIL=0
+# SUMMARY: PASS=123 FAIL=0
 ```
+
+## 2026-05-03 Source-Higgs Pole-Residue Extractor Update
+
+The retained-route certificate now consumes
+`outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json`.
+This adds the missing bridge between finite-mode source-Higgs
+`C_ss/C_sH/C_HH` harness rows and the pole-residue row file required by the
+source-Higgs builder.
+
+The extractor currently rejects the reduced unratified-operator smoke
+artifact: it is not production data, the canonical-Higgs operator is not
+ratified, only two momentum modes and two configurations are present, and
+model-class pole-saturation plus FV/IR controls are absent.  No
+`C_sH/C_HH` pole-residue row file is written, and no retained or
+`proposed_retained` closure is authorized.
 
 ## 2026-05-03 Non-Source Response Rank-Repair Update
 

@@ -233,6 +233,9 @@ def main() -> int:
         "source_higgs_cross_correlator_harness_extension": load(
             "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json"
         ),
+        "source_higgs_pole_residue_extractor": load(
+            "outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json"
+        ),
         "source_higgs_cross_correlator_certificate_builder": load(
             "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json"
         ),
@@ -874,6 +877,14 @@ def main() -> int:
         in str(statuses["source_higgs_cross_correlator_harness_extension"])
         and certificates["source_higgs_cross_correlator_harness_extension"].get("proposal_allowed") is False,
         statuses["source_higgs_cross_correlator_harness_extension"],
+    )
+    report(
+        "source-higgs-pole-residue-extractor-awaits-valid-production-rows",
+        "source-Higgs pole-residue extractor"
+        in str(statuses["source_higgs_pole_residue_extractor"])
+        and certificates["source_higgs_pole_residue_extractor"].get("proposal_allowed") is False
+        and certificates["source_higgs_pole_residue_extractor"].get("rows_written") is False,
+        statuses["source_higgs_pole_residue_extractor"],
     )
     report(
         "source-higgs-cross-correlator-builder-rows-absent",
