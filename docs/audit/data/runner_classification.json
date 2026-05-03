@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:32:04.459580+00:00",
+  "generated_at": "2026-05-03T14:33:23.247763+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -11352,6 +11352,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_physical_lattice_necessity.py"
+    },
+    "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 22,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pl_s3_atlas_refinement_compatibility.py"
     },
     "planck_boundary_density_extension_theorem_note_2026-04-24": {
       "assert_count": 0,
@@ -28546,6 +28558,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_pl_s3_atlas_refinement_compatibility.py": {
+      "assert_count": 2,
+      "claims": [
+        "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 22,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_planck_boundary_density_extension.py": {
       "assert_count": 0,
       "claims": [
@@ -37321,12 +37348,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 544,
+      "C": 545,
       "D": 205,
       "none": 421
     },
-    "runners_classified": 1340,
-    "runners_with_C": 650,
-    "runners_with_D": 330
+    "runners_classified": 1341,
+    "runners_with_C": 651,
+    "runners_with_D": 331
   }
 }
