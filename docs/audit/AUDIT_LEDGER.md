@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:56:43.618631+00:00
+**Generated:** 2026-05-03T21:01:51.335012+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 188 |
+| **retained_bounded** | 189 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 698 |
+| unaudited | 697 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 351 |
+| `audited_clean` | 352 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 745 |
+| `unaudited` | 744 |
 
 | claim_type | count |
 |---|---:|
@@ -380,6 +380,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | E | - |
+| `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_layered_backreaction_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `staggered_layered_loop_threshold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
@@ -13465,6 +13466,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** This note's load-bearing content is identity assignment only.  _(class `E`)_
 - **chain closes:** True — The scoped claim closes only as an audit-ledger parent identity for an explicitly open gate. The note does not claim to prove the staggered-Dirac realization; it explicitly records the missing proof steps and open obstructions.
 - **rationale:** The note is clean only under the open_gate scope: it defines a canonical parent object for an unresolved derivation target and repeatedly states that the substantive A1+A2-to-staggered-Dirac chain is not closed. There is no hidden theorem promotion, no runner-bearing numerical match, and no decoration claim. Residual risk is governance-only: a future theorem audit must not cite this clean open-gate verdict as proof of the staggered-Dirac realization itself.
+- **auditor confidence:** high
+
+### `staggered_fermion_card_2026-04-10`
+
+- **Note:** [`STAGGERED_FERMION_CARD_2026-04-10.md`](../../docs/STAGGERED_FERMION_CARD_2026-04-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite repo-local reproduction of the force-based staggered-fermion 17-card at mass=0.3, g=50.0, S=5e-4, dt=0.15 for 1D n=61 and 3D n=9/11/13, including the explicit C17 4/6-family qualifier for 3D n>9.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-staggered-fermion-card`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The current retained harness reproduces the force-based staggered card surface: 1D n=61 and 3D n=9/11/13 all score 17/17, with the documented n>9 C17 family-coverage gate.  _(class `C`)_
+- **chain closes:** True — The source note scopes the result to the force-based card and states the weaker row semantics and family-coverage caveats. The repo-local runner completed and reproduced the stated 17/17 outputs without external imports or stale numerical mismatch.
+- **rationale:** The load-bearing claim is bounded to a fixed finite runner and operating point, not a repo-wide centroid-gravity claim or a universal physical theorem. The runner computes the card rows and reproduces the note's listed values for 1D n=61 and 3D n=9/11/13, including the documented C17 limitation at n=11 and n=13. Residual risk is scope leakage: this clean verdict should not be read as validating centroid-based card semantics, dynamic/cosmological extensions, or full six-family 3D coverage above n=9.
 - **auditor confidence:** high
 
 ### `staggered_fermion_card_2026-04-11`
