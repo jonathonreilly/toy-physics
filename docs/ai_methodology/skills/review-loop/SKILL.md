@@ -9,6 +9,9 @@ Run a local review/fix/re-review loop for this physics repo. This is not a
 generic software review. Its job is to protect the live claim boundary:
 retained/Nature-grade claims must have artifact support, imported values must
 be explicit, and support-only results must not be promoted by prose.
+It also protects the repo's authority language: reviewers must reject
+unapproved axiom-set changes and noncanonical theory/status/claim vocabulary
+instead of normalizing those changes during review.
 
 This skill is **review only**. It may make branch/package hygiene changes that
 allow the independent audit system to parse and queue claims, but it must not
@@ -39,6 +42,9 @@ Parse:
    - `docs/repo/CONTROLLED_VOCABULARY.md`
    - `docs/CANONICAL_HARNESS_INDEX.md`
    - `docs/audit/README.md`
+   - current `docs/MINIMAL_AXIOMS_*.md` surfaces when a branch touches
+     axioms, foundations, primitive assumptions, minimal inputs, or framework
+     authority wording
    - `docs/publication/ci3_z3/` when publication-facing files changed
    - `docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md` when
      quantitative or imported-value claims changed
@@ -57,6 +63,35 @@ Parse:
    the requested scope except PRs the user explicitly excluded. Closed-but-
    unmerged PR heads can be inspected with `gh pr view` and
    `git fetch origin pull/<N>/head:refs/tmp/pr-<N>`.
+
+## Axiom And Vocabulary Gate
+
+This gate applies before any reviewer can mark a branch PASS.
+
+1. A branch must not add, remove, rename, split, merge, elevate, demote, or
+   reinterpret axioms, primitive assumptions, postulates, minimal inputs, or
+   foundational framework items unless the user explicitly approved that exact
+   axiom-set change in the current task, or a landed governance document
+   already authorizes the change.
+2. If a branch touches axiom/foundation language, reviewers must identify the
+   approved authority for the change. If no authority exists, classify it as
+   `AXIOM_GOVERNANCE` and block landing. Do not repair an unapproved axiom
+   change by inventing a softer label unless the user approved the new
+   framing.
+3. Review-loop fixes must not introduce new theory names, status labels, claim
+   classes, lane labels, authority surfaces, review categories, or informal
+   synonyms when existing repo language covers the case. Use
+   `docs/repo/CONTROLLED_VOCABULARY.md`, `docs/audit/README.md`, and the
+   canonical audit `claim_type` set:
+   `positive_theorem`, `bounded_theorem`, `no_go`, `open_gate`,
+   `decoration`, `meta`.
+4. If new vocabulary is genuinely needed, do not land it as an incidental
+   review-loop fix. Require explicit user approval or record a
+   `REPO_GOVERNANCE` item in `docs/repo/ACTIVE_REVIEW_QUEUE.md`.
+5. PRs that introduce phrases like "new theory", "new axiom",
+   "additional primitive", "framework postulate", "retained by construction",
+   or new claim/status labels require explicit approval and repo-vocabulary
+   placement before review-loop may land them.
 
 Useful commands:
 
@@ -96,7 +131,9 @@ locally and report that limitation.
 - `PhysicsClaimReviewer`
   Attack theorem notes, claims tables, publication surfaces, and prose. Check
   semantic bridges, selector assumptions, status labels, exact/bounded/support
-  boundaries, and code/prose drift.
+  boundaries, axiom/foundation wording, and code/prose drift. Block PASS when
+  a branch changes the axiom set or minimal-input story without explicit user
+  approval.
 
 - `ImportSupportReviewer`
   Inventory every measured, fitted, literature, PDG, cosmological,
@@ -123,7 +160,9 @@ locally and report that limitation.
   `docs/repo/CONTROLLED_VOCABULARY.md`, and changed claim notes are compatible
   with the audit lane's propose/ratify split. Also verify that load-bearing
   dependencies are real markdown links that seed the citation graph, not just
-  code-formatted file names in prose.
+  code-formatted file names in prose. Check that no new theory/status/claim
+  vocabulary or authority surface is introduced without explicit approval and
+  a canonical repo placement.
 
 ### Optional Reviewer
 
@@ -167,6 +206,9 @@ Rules:
   hidden.
 - Do not apply audit verdicts. Review only whether the branch is ready for the
   independent audit worker.
+- Do not approve unapproved axiom-set changes or invented repo vocabulary.
+  Use existing controlled vocabulary and audit claim types unless the user
+  explicitly approved the new term/change.
 ````
 
 ## Consolidate Findings
@@ -193,6 +235,8 @@ Classify every finding:
 - `SUPPORT_ONLY_DEMOTION`
 - `MISSING_ARTIFACT`
 - `SEMANTIC_BRIDGE`
+- `AXIOM_GOVERNANCE`
+- `VOCABULARY_GOVERNANCE`
 - `REPO_GOVERNANCE`
 - `AUDIT_COMPATIBILITY`
 - `NIT`
@@ -229,7 +273,10 @@ lowering the review bar.
      non-load-bearing siblings can be kept out of the citation graph;
    - the salvage does not rely on a closed, unlanded, unaudited, or rejected
      sibling PR unless the dependency is copied in as a self-contained
-     derivation and reviewed in the same salvage branch.
+     derivation and reviewed in the same salvage branch;
+   - the salvage does not add or reframe axioms, primitive assumptions, theory
+     names, claim classes, status labels, or authority surfaces without
+     explicit user approval.
 3. Do not salvage by papering over missing science. If the durable part is
    only an obstruction or failed route, salvage it as a narrow `open_gate` or
    `no_go` only when the runner directly supports that negative boundary.

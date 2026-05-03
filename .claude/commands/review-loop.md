@@ -22,23 +22,39 @@ Run the repo-native physics review loop from:
    no bare `retained` / `promoted` status lines, seed changed claims through
    `docs/audit/scripts/run_pipeline.sh`, and require
    `python3 docs/audit/scripts/audit_lint.py --strict` to pass.
-6. Treat review as the canonical science gate: the independent audit should be
+6. Enforce the axiom and vocabulary governance gates: do not add, remove,
+   rename, split, merge, or promote axioms / primitive assumptions unless the
+   user explicitly approved that axiom-set change in the current task or a
+   landed governance document already authorizes it. Do not introduce new
+   theory names, claim classes, status labels, lane labels, or authority
+   wording when existing repo vocabulary covers the case.
+7. Treat review as the canonical science gate: the independent audit should be
    mostly confirmatory. Block PASS when a changed claim has missing graph
    dependencies, author-prewritten audit verdicts, stale retained-status
-   assumptions, or a runner that does not test the load-bearing bridge.
-7. Re-review only files changed by the fix pass, plus interacting files that
+   assumptions, unapproved axiom-set changes, noncanonical vocabulary, or a
+   runner that does not test the load-bearing bridge.
+8. Re-review only files changed by the fix pass, plus interacting files that
    were already in the original changed-file set.
-8. Before closing or rejecting a non-landable PR, run the skill's salvage pass:
+9. Before closing or rejecting a non-landable PR, run the skill's salvage pass:
    preserve any durable, runner-backed lemma as a source-only salvage PR with a
    canonical claim type, and explicitly reject only the pieces that cannot be
    salvaged without new science.
-9. End with a concise report covering imports/support status, retained/bounded
+10. End with a concise report covering imports/support status, retained/bounded
    disposition, salvage disposition, audit-readiness, commits, checks, and
    remaining manual science.
 
 ## Non-Negotiables
 
 - Every imported or measured value must be identified.
+- No new axiom, primitive, postulate, foundational assumption, or minimal-input
+  item may be added or elevated without explicit user approval for that exact
+  change. A PR that changes the axiom set without that approval is not
+  landable under `/review-loop`.
+- No new theory name, status label, claim class, lane label, authority surface,
+  or review category may be invented when existing repo conventions apply.
+  Use `docs/repo/CONTROLLED_VOCABULARY.md`, `docs/audit/README.md`, and the
+  current `claim_type` set; if new vocabulary is genuinely needed, require
+  explicit user approval or queue it as governance work instead of landing it.
 - Support-only results must not be promoted to retained claims.
 - Source-note `Status:` lines may not contain bare `retained` or `promoted`;
   use `proposed_retained`, `proposed_promoted`, `support`, `bounded`, or
