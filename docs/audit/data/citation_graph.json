@@ -23089,7 +23089,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T19:12:15.662912+00:00",
+  "generated_at": "2026-05-03T19:26:20.296875+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24932,7 +24932,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "c0ede1499e224cdc7db5ba20c005122d1023fd6a04c5903f394d9decb0e71c27",
+      "note_hash": "d3963a70facd26cce9814622c30ba4ff85a145de7d332542ebaffcbb2c15cd29",
       "path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
       "title": "Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module"
@@ -25047,7 +25047,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "48830647401175ba36d084ecb66f06c1e67b5e4f20128ce376cb38807ddf1ad2",
+      "note_hash": "2f2fb4bc9d37fc3239e0ca08fe8f117b0b049c1360c26f3f040bb4e2086c1765",
       "path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "title": "Axiom-First Lattice Noether's Theorem on Cl(3) \u2297 Z^3"
@@ -25163,7 +25163,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "cf781bfad36f6f4c9820886f5e4982b2d8776aab5dda3c93064bf09ce6674de4",
+      "note_hash": "f72049b44dbd0c0aea444a32babce198b1e8e161421d9918757c2434d9c5ce67",
       "path": "docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_spin_statistics_check.py",
       "title": "Axiom-First Spin-Statistics Theorem on Cl(3) \u2297 Z^3"

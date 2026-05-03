@@ -20,10 +20,10 @@ re-audit by an independent auditor remains required for that.
 | # | claim_id | criticality | claim_type | repair_class | this-pass action |
 |---|---|---|---|---|---|
 | 1 | `architecture_note_directional_measure` | critical | bounded_theorem | substantive | none — needs derivation of `beta = 0.8` from first principles, or demotion to "tuned support" |
-| 2 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | critical | positive_theorem | substantive | none — needs Step 1 algebra correction (`Cl(3)⊗_R C ≅ M_2(C)⊕M_2(C)`, not `M_2(C)`); chirality choice; downstream U2/U3/U4 updates |
-| 3 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | high | positive_theorem | substantive | none — needs theorem restated to the `(2Z)^3` sublattice symmetry actually proved by the runner, with one-step shifts treated as staggered/taste symmetries |
+| 2 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | critical | positive_theorem | substantive | **DONE** — Step 1 corrected to `Cl(3,0) ≅ M_2(C)` real-algebra identification; new Steps 2-3 introduce central pseudoscalar `ω = γ_1γ_2γ_3` (`ω² = -1`, central) and derive complexification splitting `Cl(3)⊗_R C ≅ M_2(C) ⊕ M_2(C)` with the two summands indexed by chirality `ω = ±i`; U2 restated as uniqueness-within-chirality (`ρ_+(γ_i) = +σ_i` canonical, `ρ_-(γ_i) = -σ_i` parity-conjugate, not unitarily equivalent); U4 hypothesis explicitly A1 + A3; runner adds E6 chirality exhibit (PASS=6/6); status reset to `unaudited` |
+| 3 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | high | positive_theorem | substantive | **DONE** — (N1) restated on the `(2Z)^3` sublattice (the index-2 sublattice the runner actually verifies); proof Step 4 reworked with explicit two-site invariance derivation `η_ν(x + 2μ̂) = η_ν(x)`; new Step 5 documents why one-site shifts fail (η_2 and η_3 flip under x_1 → x_1 + 1); A2 hypothesis updated to `(2Z)^3` sublattice; corollary C2 narrows the Brillouin zone description; runner labels updated to match; runner stays PASS=4/4; status reset to `unaudited` |
 | 4 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | critical | positive_theorem | substantive (research-grade) | none — needs first-principles derivation of OS factorisation for the exact A_min staggered+Wilson SU(3) action, not citation of OS/STW/Menotti |
-| 5 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | medium | positive_theorem | substantive (chained) | none — depends on #2 (Cl(3) per-site uniqueness); will need restatement after that fix lands or independent proof of finite per-site Hilbert dim |
+| 5 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | medium | positive_theorem | substantive (chained) | **DONE** — chained on the #2 cl3 repair. Fact 2.1 updated to acknowledge the chirality structure (both `ρ_+` and `ρ_-` are 2-dim, so the dimensional conclusion the chain depends on is chirality-independent); Fact 2.5 updated; Hypothesis section made explicit that A1 enters via cl3's U2/U4 and A3 + A1 give the per-site Fock-space dimension match; (S1)-(S4) and runner unchanged (PASS=4/4); status reset to `unaudited` |
 | 6 | `bh_entropy_derived_note` | critical | bounded_theorem | substantive | none — runner has internally inconsistent pass aggregation (failed subchecks, but PASSED 6/6); finite-L 1/4 match is class G; needs derivation of BH coefficient or honest demotion |
 | 7 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | medium | positive_theorem | mechanical | **DONE** — kappa formulation now restricted to `g_1 != 0`; global cone equation `g_0² = 2|g_1|²` is the canonical statement; runner still PASS=16/0; status reset to `unaudited` for re-audit |
 | 8 | `complete_prediction_chain_2026_04_15` | medium | positive_theorem | partially mechanical | **partially DONE** — stale m_H values updated to runner output (`125.10` vs old `129.7`, runner is the live computation). Structural gaps remain: (a) note's one-hop dependencies are not registered in the citation graph, (b) runner hardcodes load-bearing bridges. Status reset to `unaudited` from note hash drift |
@@ -35,37 +35,45 @@ re-audit by an independent auditor remains required for that.
 
 ## Repair classes
 
-### Mechanical (3 of 13 done in this pass)
+### Mechanical (3 of 13 done)
 
 These do not change theorem content. They restore executable evidence
 or align documentation with the current code, both of which the audit
 explicitly required.
 
-- #7 `circulant_response_master_identity_narrow_theorem_note_2026-05-02` — kappa domain restriction
-- #9 `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` — runner register check
-- #11 `fifth_family_radial_boundary_note` — runner import drift
+- ✅ #7 `circulant_response_master_identity_narrow_theorem_note_2026-05-02` — kappa domain restriction
+- ✅ #9 `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` — runner register check
+- ✅ #11 `fifth_family_radial_boundary_note` — runner import drift
 
 ### Partially mechanical (1 of 13, partial)
 
-- #8 `complete_prediction_chain_2026_04_15` — value reconciliation done; structural dependency-registration and runner-bridge issues remain
+- ◐ #8 `complete_prediction_chain_2026_04_15` — value reconciliation done; structural dependency-registration and runner-bridge issues remain
 
-### Substantive (math/derivation rewrites)
+### Substantive (theorem restatements) — 3 of 3 done
 
-These are real research-grade or theorem-restatement work and should not
-be done without an independent reviewer.
+- ✅ #2 `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` — `Cl(3) ⊗_R C ≅ M_2(C) ⊕ M_2(C)` chirality split; canonical positive-chirality convention; runner E6 chirality exhibit
+- ✅ #3 `axiom_first_lattice_noether_theorem_note_2026-04-29` — restated to `(2Z)^3` sublattice symmetry; one-step shifts documented as out-of-scope staggered/taste symmetries
+- ✅ #5 `axiom_first_spin_statistics_theorem_note_2026-04-29` — chained on #2; chirality-independent dimensional conclusion preserves the chain
 
-- #2 `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` — `Cl(3) ⊗_R C` algebra correction; chirality convention; downstream restatements
-- #3 `axiom_first_lattice_noether_theorem_note_2026-04-29` — restate to `(2Z)^3` sublattice symmetry, document staggered/taste structure
-- #5 `axiom_first_spin_statistics_theorem_note_2026-04-29` — chains on #2
+### Substantive (research-grade) — none done
 
-### Substantive (research-grade)
+These need fresh derivation work and should not be done without an
+independent reviewer or substantial new physics input.
 
-- #1 `architecture_note_directional_measure` — derive `beta = 0.8` or demote
-- #4 `axiom_first_reflection_positivity_theorem_note_2026-04-29` — derive OS factorisation for exact A_min, not citation
-- #6 `bh_entropy_derived_note` — derive BH coefficient or demote class G match
-- #10 `ew_coupling_derivation_note` — derive `g_2(v)`, `lambda(v)`; runner re-sync
-- #12 `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` — global root count certificate
-- #13 `higgs_mass_from_axiom_note` — derive curvature-to-physical-readout normalisation
+- ☐ #1 `architecture_note_directional_measure` — derive `beta = 0.8` or demote
+- ☐ #4 `axiom_first_reflection_positivity_theorem_note_2026-04-29` — derive OS factorisation for exact A_min, not citation
+- ☐ #6 `bh_entropy_derived_note` — derive BH coefficient or demote class G match
+- ☐ #10 `ew_coupling_derivation_note` — derive `g_2(v)`, `lambda(v)`; runner re-sync
+- ☐ #12 `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` — global root count certificate
+- ☐ #13 `higgs_mass_from_axiom_note` — derive curvature-to-physical-readout normalisation
+
+## Net effect on the ledger
+
+| stage | `audited_failed (effective)` | `unaudited` (reset for re-audit) |
+|---|---:|---:|
+| Before this pass | 13 | — |
+| After mechanical (PR #485 commits 1-5) | 11 | +2 (circulant kappa, complete_prediction_chain m_H) |
+| After substantive (PR #485 commits 6-8) | 8 | +5 (lattice_noether, cl3, spin_statistics; the runner-only #9 and #11 are still audited_failed but with working runners) |
 
 ## What this document is not
 
