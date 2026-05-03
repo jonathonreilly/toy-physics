@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T12:27:23.021372+00:00
+**Generated:** 2026-05-03T12:29:43.015826+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 171 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 732 |
+| unaudited | 731 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 518 |
+| ~~audited_conditional~~ | 519 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 349 |
-| `audited_conditional` | 518 |
+| `audited_conditional` | 519 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 773 |
+| `unaudited` | 772 |
 
 | claim_type | count |
 |---|---:|
@@ -99,9 +99,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 20 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 69 | 17.63 | `unaudited` | unaudited |
 | 21 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 84 | 17.41 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `cpt_exact_note` | positive_theorem | critical | 289 | 17.18 | `unaudited` | unaudited |
-| 23 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 285 | 17.16 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 134 | 17.08 | `audited_clean` | **retained** |
-| 25 | `universal_gr_discrete_global_closure_note` | positive_theorem | critical | 71 | 16.67 | `audited_conditional` | ~~audited_conditional~~ |
+| 23 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | critical | 286 | 17.16 | `audited_clean` | **retained_no_go** |
+| 24 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 285 | 17.16 | `audited_conditional` | ~~audited_conditional~~ |
+| 25 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 134 | 17.08 | `audited_clean` | **retained** |
 
 
 ## Applied audits
@@ -485,6 +485,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
+| `boundary_law_robustness_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `broad_gravity_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_field_canonical_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1723,6 +1724,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `scripts/frontier_bound_state_selection.py`
 - **auditor confidence:** high
+
+### `boundary_law_robustness_note_2026-04-11`
+
+- **Note:** [`BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md`](../../docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded numerical claim that the fixed runner configuration reports highly linear entropy-versus-boundary-size fits across the stated BFS-ball sweep, with all 100 counted fits above R^2=0.95, plus small side=10,G=10 partition checks above R^2=0.95.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-cl3-auditor-2026-05-03`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The boundary-law robustness conclusion is inferred from selected finite-run R^2 linear fits of entropy against boundary size under fixed model parameters, sides, seeds, couplings, and partition choices.  _(class `C`)_
+- **chain closes:** False — The runner summary is internally consistent with the source-note numbers and supports the exact fixed-grid numerical claim, but the proof chain does not close as an audited_clean bounded theorem because the physical/readout generalization rests on finite numerical sampling and selected observables rather than algebraic closure or independently forced first-principles derivation.
+- **rationale:** Issue: The packet supports a bounded finite-run numerical robustness statement, but not a clean bounded theorem-level boundary-law result. Why this blocks: The conclusion depends on finite selected observables, fixed parameters, selected sizes/seeds/couplings/partitions, and R^2 readout; 20/100 counted fits are automatic two-point R^2=1 side=6 cases, and partition-family evidence is only a separate small side=10,G=10 check. This is enough for conditional numerical support, but not Nature-grade clean closure of a theorem-style claim without stronger justification that the readout, finite sampling surface, and parameter choices are forced by retained inputs. Repair target: Recast as a bounded numerical robustness result, exclude or separately report two-point R^2 fits, pre-register/justify the audited parameter and partition surface, and add broader independent partition and size checks or analytic closure if theorem status is intended. Claim boundary until fixed: The retained statement should be limited to the exact fixed-run numerical observation that this script/parameter grid reports high R^2 boundary-size linearity for the audited BFS-ball sweep and the stated small partition check; it should not be cited as a general boundary-law theorem or holography proof.
+- **auditor confidence:** medium
 
 ### `branch_entanglement_robustness_note_2026-04-11`
 
