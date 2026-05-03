@@ -1,11 +1,43 @@
 # Axiom-First Spin-Statistics Theorem on Cl(3) ⊗ Z^3
 
-**Date:** 2026-04-29
-**Status:** support — branch-local theorem note on A_min; runner passing; audit-pending.
+**Date:** 2026-04-29 (originally); 2026-05-03 (audit-driven repair of upstream chain)
+**Status:** support — branch-local theorem note on A_min; runner passing; awaiting re-audit after upstream repair.
 **Loop:** `axiom-first-foundations`
 **Cycle:** 1 (Route R1)
 **Runner:** `scripts/axiom_first_spin_statistics_check.py`
 **Log:** `outputs/axiom_first_spin_statistics_check_2026-04-29.txt`
+
+## Audit-driven repair (2026-05-03)
+
+The 2026-05-03 audit (codex-audit-loop) recorded `audited_failed`
+because Step 2's load-bearing input — "the per-site Cl(3) module is
+finite-dimensional with dim 2" — depended on the upstream
+`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29` row,
+which itself failed audit on a Step 1 algebra error (`Cl(3) ⊗_R C`
+was misidentified as `M_2(C)` rather than `M_2(C) ⊕ M_2(C)`).
+
+The 2026-05-03 cl3 repair restructures the proof to identify the
+chirality split and proves uniqueness **within each chirality
+summand**. Crucially, **U4's dimensional conclusion (per-site
+Hilbert dim = 2) is the same in both summands**, so the Fact 2.1
+input that this spin-statistics note relies on remains valid: a
+faithful complex Cl(3) representation has dimension 2 regardless of
+which chirality is selected.
+
+This note's repair is therefore narrow:
+
+- Acknowledge that Fact 2.1's "minimal complex spinor representation
+  of dimension 2" is now established by the chirality-aware U2/U4
+  of the upstream cl3 note. The dimensional conclusion is
+  chirality-independent; this note's logic is unaffected.
+- Acknowledge that Fact 2.5's "unique" Grassmann implementation
+  refers to the canonical positive-chirality choice; the
+  parity-conjugate negative chirality gives the same per-site Fock
+  dimension and therefore the same anticommutation conclusion.
+- Update the hypothesis set to include A1 + A3 dependency through
+  U4 (was already implicit; now explicit).
+
+(S1)-(S4) are unchanged in content. The runner is unchanged.
 
 ## Scope
 
@@ -138,13 +170,18 @@ Build the corresponding bosonic Fock space `F_B = ⊕_{n_1, n_2, …}
 |n_1 n_2 …⟩` over the modes indexed by `Λ`. We show that this Fock
 space is incompatible with `A1`.
 
-Fact 2.1 (single-site Cl(3) module dimension). The local algebra `Cl(3)`
-has minimal complex spinor representation of dimension `2`. On `A_min`
-the matter Hilbert space at a single staggered site is a Cl(3)-module,
-hence finite-dimensional, and in the package's canonical staggered
-convention has dimension `2` per single-component Grassmann pair
-(occupied / empty), aggregating to the standard `4`-dim Dirac spinor
-across the staggered cube.
+Fact 2.1 (single-site Cl(3) module dimension). The local algebra
+`Cl(3)` has faithful complex spinor representations of dimension
+`2`. After the 2026-05-03 cl3 repair (`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29`,
+U2 and U4) there are exactly two non-isomorphic such irreps,
+distinguished by the central pseudoscalar `ω = γ_1γ_2γ_3`:
+positive chirality `ρ_+(γ_i) = σ_i` (canonical) and
+negative chirality `ρ_-(γ_i) = -σ_i`. **Both have dimension 2**;
+the dimensional conclusion used here is independent of the chirality
+choice. On `A_min` the matter Hilbert space at a single staggered
+site is therefore a Cl(3)-module of dimension exactly `2` per
+single-component Grassmann pair (occupied / empty), aggregating
+to the standard `4`-dim Dirac spinor across the staggered cube.
 
 Fact 2.2 (single-site bosonic dimension is infinite). The canonical
 single-mode bosonic Fock space spanned by `(a^†)^n |0⟩`, `n ∈ Z_{≥0}`,
@@ -168,9 +205,13 @@ Fact 2.4 (per-mode dimension match). Per-mode Hilbert space dimensions:
     bosonic   (commuting)     :  dim F_x = ℵ_0   ←   incompatible with A1
 ```
 
-Fact 2.5 (closure). The Grassmann implementation is the *unique*
-canonical-quantisation choice on `A_min` that gives a finite-dim
-per-site Hilbert space matching the Cl(3) spinor module. Hence (S1) is
+Fact 2.5 (closure). The Grassmann implementation is the canonical-
+quantisation choice on `A_min` that gives a finite-dim per-site
+Hilbert space matching a Cl(3) spinor module. The match holds in
+either chirality (both `ρ_+` and `ρ_-` are 2-dim); the package
+convention selects positive chirality `ρ_+`, but the anticommutation
+conclusion (S1) is the same in either case. The bosonic alternative
+is excluded by Fact 2.3 regardless of chirality. Hence (S1) is
 forced. Equation (3) follows.
 
 This is the content of (S2). The key load-bearing step is the per-site
@@ -227,13 +268,23 @@ reflection-positivity argument of route R2 will operate. R2 assumes
 
 ## Hypothesis set used
 
-The proof uses *exactly*: A1 (Cl(3) site algebra, only via the form of
-`M`), A2 (Z^3 for the finite block `Λ`, only via finiteness), A3
-(Grassmann partition with action `S_F = χ̄ M χ`), and A4 (only to fix
+The proof uses *exactly*: A1 (Cl(3) site algebra, via the upstream
+per-site uniqueness theorem's U2/U4 — both chirality summands are
+2-dim, so the dimensional Fact 2.1 used here is chirality-independent),
+A2 (Z^3 for the finite block `Λ`, only via finiteness), A3 (Grassmann
+partition with action `S_F = χ̄ M χ`, providing the canonical
+2-dim per-site Fock space that matches U4), and A4 (only to fix
 that `M` is the *canonical* staggered Dirac–Wilson operator at
 `g_bare = 1`). It uses *only* finite-dimensional linear algebra and
 finite Berezin calculus from the permitted infrastructure list. It
 imports nothing from the forbidden-imports list.
+
+**Chain dependency note.** Step 2 explicitly chains on the upstream
+`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29` U4
+result. After the 2026-05-03 cl3 repair, U4 holds on A1 + A3 (not
+A1 alone) with the chirality-independent dimensional conclusion the
+spin-statistics chain depends on. This note is honest about that
+dependency.
 
 ## Honest status
 
