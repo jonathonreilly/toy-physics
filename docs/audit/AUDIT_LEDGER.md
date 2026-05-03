@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:40:58.707197+00:00
+**Generated:** 2026-05-03T16:45:57.301039+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 72 |
 | **retained_no_go** | 100 |
-| **retained_bounded** | 166 |
+| **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 781 |
+| unaudited | 780 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 307 |
+| `audited_clean` | 308 |
 | `audited_conditional` | 517 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 827 |
+| `unaudited` | 826 |
 
 | claim_type | count |
 |---|---:|
@@ -75,16 +75,16 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 384 | 32.09 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 384 | 33.09 | `audited_clean` | **retained_bounded** |
 | 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 130 | 29.53 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 131 | 29.04 | `unaudited` | unaudited |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 262 | 29.04 | `unaudited` | unaudited |
 | 5 | `minimal_axioms_2026-04-11` | meta | critical | 323 | 27.34 | `unaudited` | meta |
-| 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 212 | 26.73 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 374 | 26.05 | `audited_clean` | **retained_bounded** |
+| 6 | `native_gauge_closure_note` | bounded_theorem | critical | 374 | 27.05 | `audited_clean` | **retained_bounded** |
+| 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 212 | 26.73 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 85 | 24.93 | `unaudited` | unaudited |
 | 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 368 | 24.53 | `audited_clean` | open_gate |
-| 10 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 130 | 24.03 | `unaudited` | unaudited |
+| 10 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 130 | 24.03 | `audited_clean` | **retained_bounded** |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 114 | 23.84 | `audited_conditional` | ~~audited_conditional~~ |
 | 12 | `minimal_axioms_2026-05-03` | meta | critical | 368 | 23.53 | `unaudited` | meta |
 | 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 310 | 23.28 | `unaudited` | unaudited |
@@ -410,6 +410,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_retention_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | B | - |
+| `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `yt_microscopic_schur_class_admissibility_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `yt_schur_stability_gap_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -14656,6 +14657,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** Independent logistic, erf, and smoothstep UV-localized bridge families can be tuned in the same narrow UV window to reproduce the accepted y_t(v)=0.9176 endpoint within 0.0252%.  _(class `G`)_
 - **chain closes:** False — The constructive class is endpoint-conditioned curve construction; the bridge profile or UV window is not derived from the microscopic operator.
 - **rationale:** Re-audit confirms the original numerical-match verdict: endpoint-conditioned construction across three families. Scope narrowed from the migration backfill to bounded numerical evidence.
+- **auditor confidence:** high
+
+### `yt_ew_color_projection_theorem`
+
+- **Note:** [`YT_EW_COLOR_PROJECTION_THEOREM.md`](../../docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded conditional EW normalization family at N_c=3: K_EW(kappa_EW)=1/(8/9+kappa_EW/9), with K_EW(0)=9/8 only as an explicit connected-trace specialization, not an unconditional theorem.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-yt-ew-color-b-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The no-go closure sharpens this paragraph: the retained Fierz/CMT/OZI packet permits the conditional family alpha_EW(physical; kappa_EW) / alpha_EW(CMT) = 1 / (8/9 + kappa_EW/9).  _(class `A`)_
+- **chain closes:** True — The chain closes only for the bounded parameterized theorem: the exact F_adj=8/9 input is retained_bounded, and the matching-rule no-go is retained_no_go. The chain does not close for kappa_EW=0 or for an unconditional 9/8 EW correction.
+- **rationale:** Clean at the bounded conditional scope only. The source note no longer claims that kappa_EW=0 follows from retained primitives; it explicitly carries kappa_EW as the disconnected-current readout coefficient and confines 9/8 to the kappa_EW=0 specialization. The small runner passed, but it checks the SU(3) plaquette/R_conn consistency surface, not an exact physical derivation of kappa_EW.
 - **auditor confidence:** high
 
 ### `yt_exact_coarse_grained_bridge_operator_note`
