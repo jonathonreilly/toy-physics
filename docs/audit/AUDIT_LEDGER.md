@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:02:27.390988+00:00
+**Generated:** 2026-05-03T01:05:52.784181+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 209 |
+| **retained_bounded** | 210 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 483 |
+| unaudited | 482 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 418 |
+| `audited_clean` | 419 |
 | `audited_conditional` | 656 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 523 |
+| `unaudited` | 522 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 540 |
+| `bounded_theorem` | 541 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 93 |
+| `open_gate` | 92 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -480,6 +480,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_causal_channel_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
+| `teleportation_cross_encoding_maps_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
@@ -16783,6 +16784,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** This is the honest conclusion of the current in-repo evidence. The lane is closed as a conditional planning artifact with precise remaining obligations. It is not closed as unconditional nature-grade theory.  _(class `A`)_
 - **chain closes:** True — The note does not claim an unconditional teleportation theorem; it explicitly records three unresolved obligations and restricts the claim to ordinary quantum state teleportation. The runner checks that the boundary remains a HOLD rather than certifying the closed physical claim.
 - **rationale:** Clean as an open gate, not as a positive theorem. The runner hard-codes the present boundary data, but its PASS gates are directed at preserving the obstruction boundary: selector not bare-derived, scaling finite only through side 12 with side 14 unresolved, hardware thresholds not measured, and nature-grade promotion false. No matter, mass, charge, energy, object transport, FTL transport, all-even-side induction, fabricated hardware, or unconditional teleportation closure is promoted.
+- **auditor confidence:** high
+
+### `teleportation_cross_encoding_maps_note`
+
+- **Note:** [`TELEPORTATION_CROSS_ENCODING_MAPS_NOTE.md`](../../docs/TELEPORTATION_CROSS_ENCODING_MAPS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** In the ideal encoded taste-qubit model for dimensions 1,2,3 and side lengths 2,4, the runner surveys 9637 Alice/Bob cross-encoding maps and finds that axis-adapted teleportation passes while fixed/nonmatching controls fail as classified.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Leibniz-the-2nd-019deb5d-e299-7421-a0ba-34c7222ae5af`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** With axis-adapted logical X on Alice's Bell measurement and Bob's correction, every surveyed Alice/Bob pair passes the Bell-outcome, random-state fidelity, and Bob pre-message input-independence checks.  _(class `C`)_
+- **chain closes:** True — The runner explicitly enumerates the scoped KS geometries and cross-encoding pairs, constructs the adapted logical operators and conversion maps, and checks the teleportation/no-signaling metrics and controls against the stated tolerance. The note also keeps the claim bounded to ideal quantum-state teleportation and excludes physical resource preparation, apparatus, matter transfer, and FTL claims.
+- **rationale:** The scoped finite model claim closes on the supplied runner output: all 9637 axis-adapted cross maps pass with numerical errors at roundoff scale, and the fixed-axis and wrong-conversion controls fail in the expected regions. There are no one-hop dependencies, and the note does not import unsupported physical carrier, readout, apparatus, or transport claims. Residual risk is limited to the stated numerical/planning boundary: random trials per map and default finite geometries, not a proof for all lattices or physical implementations.
 - **auditor confidence:** high
 
 ### `teleportation_encoding_portability_note`
