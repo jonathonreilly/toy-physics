@@ -1872,3 +1872,61 @@ is chunks002-010.
 Next exact action after block 158: rerun chunk002 with target-timeseries
 serialization if completing the current ready-set target ESS gate is
 prioritized, or continue new target-series chunks toward the full L12 set.
+
+Block 168 processed v2 multi-tau FH/LSZ chunks017-018:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 17
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 18
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 17
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 18
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=114 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=140 FAIL=0
+```
+
+Result: chunks017-018 completed with production metadata, numba seed control,
+selected-mass-only scalar FH/LSZ, legacy tau1 target rows, v2 multi-tau target
+rows, and scalar LSZ `C_ss_timeseries`.  The ready set is now 18/63 L12 chunks
+and 288/1000 saved configurations.  Target-observable ESS remains passed with
+limiting ESS `242.7849819291294`; response stability still fails and the
+response-window acceptance gate is still open because only chunks017-018 have
+v2 multi-tau rows, multiple source radii are absent, and canonical-Higgs
+identity remains open.  No retained/proposed-retained wording is authorized.
+
+Next exact action: commit/push/update PR #230, then either continue future
+chunks with the v2 schema, backfill v2 rows for the full ready set if
+multi-tau covariance is prioritized, run multi-radius source-response
+calibration, or pursue actual same-surface `O_H/C_sH/C_HH` or W/Z response
+identity rows.

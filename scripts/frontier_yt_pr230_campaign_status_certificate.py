@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "outputs" / "yt_pr230_campaign_status_certificate_2026-05-01.json"
 GENERIC_CHUNK_TARGET_PATTERN = "yt_fh_lsz_chunk*_target_timeseries_generic_checkpoint_2026-05-02.json"
+MULTITAU_CHUNK_TARGET_PATTERN = "yt_fh_lsz_chunk*_multitau_target_timeseries_checkpoint_2026-05-03.json"
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -42,6 +43,13 @@ def generic_chunk_target_key(path: Path) -> str:
         "_target_timeseries_generic_checkpoint_2026-05-02.json"
     )
     return f"fh_lsz_{stem}_target_timeseries_generic"
+
+
+def multitau_chunk_target_key(path: Path) -> str:
+    stem = path.name.removeprefix("yt_fh_lsz_").removesuffix(
+        "_multitau_target_timeseries_checkpoint_2026-05-03.json"
+    )
+    return f"fh_lsz_{stem}_multitau_target_timeseries"
 
 
 def main() -> int:
@@ -350,6 +358,8 @@ def main() -> int:
     }
     for path in sorted((ROOT / "outputs").glob(GENERIC_CHUNK_TARGET_PATTERN)):
         certificates[generic_chunk_target_key(path)] = load(str(path.relative_to(ROOT)))
+    for path in sorted((ROOT / "outputs").glob(MULTITAU_CHUNK_TARGET_PATTERN)):
+        certificates[multitau_chunk_target_key(path)] = load(str(path.relative_to(ROOT)))
 
     all_present = all(isinstance(cert, dict) for cert in certificates.values())
     all_no_fail = all(int(cert.get("fail_count", 0)) == 0 for cert in certificates.values())
@@ -361,6 +371,11 @@ def main() -> int:
         name: status
         for name, status in statuses.items()
         if name.startswith("fh_lsz_chunk") and name.endswith("_target_timeseries_generic")
+    }
+    multitau_chunk_target_statuses = {
+        name: status
+        for name, status in statuses.items()
+        if name.startswith("fh_lsz_chunk") and name.endswith("_multitau_target_timeseries")
     }
 
     report("campaign-certificates-present", all_present, f"count={len(certificates)}")
@@ -595,6 +610,15 @@ def main() -> int:
         f"count={len(generic_chunk_target_statuses)}",
     )
     report(
+        "fh-lsz-v2-multitau-chunk-target-checkpoints-discovered",
+        bool(multitau_chunk_target_statuses)
+        and all(
+            "v2 multi-tau target-timeseries checkpoint" in str(status)
+            for status in multitau_chunk_target_statuses.values()
+        ),
+        f"count={len(multitau_chunk_target_statuses)}",
+    )
+    report(
         "fh-lsz-pole-fit-kinematics-not-closure",
         "scalar-pole kinematics gate" in str(statuses["fh_lsz_pole_fit_kinematics"])
         or "open" in str(statuses["fh_lsz_pole_fit_kinematics"]),
@@ -803,10 +827,28 @@ def main() -> int:
         in str(statuses["hunit_canonical_higgs_operator_candidate_gate"]),
         statuses["hunit_canonical_higgs_operator_candidate_gate"],
     )
+    source_higgs_guard_status = str(statuses["source_higgs_harness_absence_guard"])
+    source_higgs_guard_cert = certificates["source_higgs_harness_absence_guard"]
+    source_higgs_guard_fields = source_higgs_guard_cert.get("guard_fields", {})
+    source_higgs_operator_guarded = (
+        source_higgs_guard_fields.get("canonical_higgs_operator_absent") is True
+        or (
+            source_higgs_guard_fields.get("canonical_higgs_operator_certificate_gated")
+            is True
+            and source_higgs_guard_fields.get("enabled_false") is True
+            and source_higgs_guard_fields.get("used_as_physical_yukawa_readout_false")
+            is True
+        )
+    )
     report(
         "source-higgs-harness-absence-guard-not-evidence",
-        "source-Higgs harness absence guard"
-        in str(statuses["source_higgs_harness_absence_guard"]),
+        (
+            "source-Higgs harness absence guard" in source_higgs_guard_status
+            or "source-Higgs harness default-off guard" in source_higgs_guard_status
+        )
+        and source_higgs_guard_cert.get("proposal_allowed") is False
+        and source_higgs_guard_fields.get("source_higgs_cross_correlator") is True
+        and source_higgs_operator_guarded,
         statuses["source_higgs_harness_absence_guard"],
     )
     report(

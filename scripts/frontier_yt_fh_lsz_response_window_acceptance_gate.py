@@ -8,8 +8,9 @@ the predeclared acceptance gate for any future response-window switch and
 checks the current chunks against the parts that are actually available.
 
 The current surface has stable chunk-level source-shift effective-mass slopes
-over several tau windows, but it lacks per-configuration multi-tau covariance
-and multiple source radii.  Therefore the gate remains open.
+over several tau windows, but a readout switch still requires full ready-set
+per-configuration multi-tau target rows, multiple source radii, and production
+response stability.  Therefore the gate remains open unless all subgates pass.
 """
 
 from __future__ import annotations
@@ -32,6 +33,7 @@ TAU_WINDOW_MAX = 9
 STABLE_REL_STDEV_MAX = 0.05
 STABLE_SPREAD_MAX = 1.10
 TAU_WINDOW_MEAN_SPREAD_MAX = 1.05
+EXPECTED_SCHEMA_VERSION = "fh_lsz_target_timeseries_v2_multitau"
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -109,6 +111,44 @@ def chunk_tau_slopes(index: int) -> dict[int, float]:
     return slopes
 
 
+def chunk_multi_tau_target_summary(index: int) -> dict[str, Any]:
+    data = load_json(chunk_path(index))
+    metadata = data.get("metadata", {})
+    run_control = metadata.get("run_control", {}) if isinstance(metadata, dict) else {}
+    source = first_ensemble(data).get("scalar_source_response_analysis", {})
+    rows = source.get("per_configuration_multi_tau_slopes", []) if isinstance(source, dict) else []
+    measurements = int(run_control.get("measurement_sweeps") or 16)
+    finite_values = 0
+    tau_keys: set[str] = set()
+    if isinstance(rows, list):
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            slopes = row.get("slope_effective_energy_by_tau", {})
+            if not isinstance(slopes, dict):
+                continue
+            for key, value in slopes.items():
+                tau_keys.add(str(key))
+                if finite(value):
+                    finite_values += 1
+    schema_version = source.get("target_timeseries_schema_version") if isinstance(source, dict) else None
+    present = (
+        schema_version == EXPECTED_SCHEMA_VERSION
+        and isinstance(rows, list)
+        and len(rows) == measurements
+        and finite_values > 0
+    )
+    return {
+        "chunk_index": index,
+        "schema_version": schema_version,
+        "row_count": len(rows) if isinstance(rows, list) else 0,
+        "expected_rows": measurements,
+        "finite_multi_tau_slope_values": finite_values,
+        "tau_keys": sorted(tau_keys, key=lambda value: int(value) if value.isdigit() else value),
+        "multi_tau_target_rows_present": present,
+    }
+
+
 def summary(values: list[float]) -> dict[str, Any]:
     if not values:
         return {"available": False}
@@ -149,8 +189,11 @@ def main() -> int:
     ]
     chunk_rows = []
     tau_values: dict[int, list[float]] = {tau: [] for tau in range(0, TAU_WINDOW_MAX + 1)}
+    multi_tau_target_rows = []
     for index in ready_indices:
         slopes = chunk_tau_slopes(index)
+        multi_tau_summary = chunk_multi_tau_target_summary(index)
+        multi_tau_target_rows.append(multi_tau_summary)
         for tau, value in slopes.items():
             tau_values[tau].append(value)
         chunk_rows.append(
@@ -159,6 +202,7 @@ def main() -> int:
                 "path": str(chunk_path(index).relative_to(ROOT)),
                 "available_tau_windows": sorted(slopes),
                 "tau_window_slopes": {str(tau): value for tau, value in sorted(slopes.items())},
+                "multi_tau_target_summary": multi_tau_summary,
             }
         )
     tau_summaries = {str(tau): summary(values) for tau, values in sorted(tau_values.items())}
@@ -185,10 +229,22 @@ def main() -> int:
         and tau_mean_spread < TAU_WINDOW_MEAN_SPREAD_MAX
     )
 
-    # Current target serialization records per-configuration tau1 slopes only.
-    # Multiple tau covariance and multiple source radii are required before a
-    # production readout switch can be accepted.
-    per_configuration_multi_tau_covariance_present = False
+    multi_tau_ready_indices = [
+        int(row["chunk_index"])
+        for row in multi_tau_target_rows
+        if row.get("multi_tau_target_rows_present") is True
+    ]
+    multi_tau_missing_indices = [
+        int(row["chunk_index"])
+        for row in multi_tau_target_rows
+        if row.get("multi_tau_target_rows_present") is not True
+    ]
+    # The rows are the minimum serialized data needed to compute a same-chunk
+    # multi-tau covariance.  The acceptance gate requires full ready-set
+    # coverage, not just partial v2 chunks.
+    per_configuration_multi_tau_covariance_present = (
+        bool(ready_indices) and len(multi_tau_ready_indices) == len(ready_indices)
+    )
     multiple_source_radii_present = (
         finite_source_linearity.get("finite_source_linearity_gate_passed") is True
     )
@@ -211,9 +267,12 @@ def main() -> int:
         f"tau_mean_spread={tau_mean_spread}",
     )
     report(
-        "per-configuration-multi-tau-covariance-missing",
-        not per_configuration_multi_tau_covariance_present,
-        "current target rows serialize tau1 only",
+        "per-configuration-multi-tau-covariance-state-recorded",
+        True,
+        (
+            f"complete={per_configuration_multi_tau_covariance_present}, "
+            f"v2_indices={multi_tau_ready_indices}, missing={multi_tau_missing_indices}"
+        ),
     )
     report(
         "multiple-source-radii-missing",
@@ -231,9 +290,10 @@ def main() -> int:
             "The current chunks give stable chunk-level symmetric source-shift "
             "effective-mass slopes across tau windows 0-9, so the forensics "
             "diagnostic is reproducible beyond tau=1.  The acceptance gate still "
-            "does not pass: the target rows do not serialize per-configuration "
-            "multi-tau covariance, the finite-source-linearity gate is not passed, "
-            "and the production fitted-slope response-stability gate remains open."
+            "does not pass: per-configuration multi-tau target rows are not yet "
+            "complete for the full ready set, the finite-source-linearity gate is "
+            "not passed, and the production fitted-slope response-stability gate "
+            "remains open."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -247,6 +307,10 @@ def main() -> int:
         "stable_tau_windows": stable_tau_windows,
         "tau_window_mean_spread_ratio": tau_mean_spread,
         "per_configuration_multi_tau_covariance_present": per_configuration_multi_tau_covariance_present,
+        "multi_tau_target_timeseries_schema_version": EXPECTED_SCHEMA_VERSION,
+        "multi_tau_ready_indices": multi_tau_ready_indices,
+        "multi_tau_missing_indices": multi_tau_missing_indices,
+        "multi_tau_target_rows": multi_tau_target_rows,
         "multiple_source_radii_present": multiple_source_radii_present,
         "response_stability_passed": response_stability_passed,
         "chunk_rows": chunk_rows,
@@ -259,9 +323,9 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "Extend target serialization to per-configuration multi-tau response "
-            "rows and run a multi-radius source-response calibration, or continue "
-            "the non-source-only canonical-Higgs identity routes."
+            "Complete v2 multi-tau production rows for the full ready set and run "
+            "a multi-radius source-response calibration, or continue the "
+            "non-source-only canonical-Higgs identity routes."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

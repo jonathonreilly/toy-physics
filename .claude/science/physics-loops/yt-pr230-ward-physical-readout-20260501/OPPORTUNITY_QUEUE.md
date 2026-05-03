@@ -652,3 +652,20 @@ remain the replacement queue.  The next production choice is therefore
 explicit: keep filling new chunks toward 63/63, or rerun chunk002 (then 003,
 etc.) with target-timeseries serialization if completing the current ready-set
 target ESS gate is prioritized.
+
+Chunks017-018 v2 multi-tau wave update: the ready set is now 18/63 L12 chunks
+with 288/1000 saved configurations, and the first production v2 multi-tau rows
+exist for chunks017-018.  The next useful production choices are:
+
+1. Continue future chunks with the v2 schema to grow same-schema covariance
+   support.
+2. Backfill v2 rows for chunks001-016 only if full-ready-set multi-tau
+   covariance is prioritized over new chunk count.
+3. Run multi-radius source-response calibration so finite-source-linearity can
+   be tested rather than assumed.
+4. Prefer non-source-only identity work when available: actual same-surface
+   `O_H/C_sH/C_HH` rows, W/Z response rows with sector-overlap certificates,
+   or a theorem excluding orthogonal neutral top coupling.
+
+Do not spend a foreground block claiming closure from chunks017-018; the
+response-window acceptance gate remains open.

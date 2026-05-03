@@ -1,0 +1,112 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ chunk017 generic target-timeseries checkpoint",
+  "autocorrelation_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
+  "chunk_artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk017/L12xT24/ensemble_measurement.json",
+  "chunk_index": 17,
+  "chunk_output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk017_2026-05-01.json",
+  "chunk_summary": {
+    "expected_chunks": 63,
+    "expected_seed": 2026051017,
+    "phase": "production",
+    "ready_chunks": 18,
+    "ready_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "scalar_lsz_target_timeseries_modes": [
+      "0,0,0",
+      "0,0,1",
+      "0,1,0",
+      "1,0,0"
+    ],
+    "seed": 2026051017,
+    "seed_control_version": "numba_gauge_seed_v1",
+    "seed_independence_valid": true,
+    "slope_dE_ds_lat": 1.425822667545628,
+    "slope_dE_ds_lat_err": 24.305344174908086,
+    "source_higgs_guard": {
+      "canonical_higgs_operator_realization": "absent",
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "O_H or radial canonical-Higgs observable on the same Cl3/Z3 source surface",
+        "C_sH(q)=<O_s(q) O_H(-q)> pole rows",
+        "C_HH(q)=<O_H(q) O_H(-q)> pole rows",
+        "same-ensemble C_ss/C_sH/C_HH covariance"
+      ],
+      "strict_limit": "Current harness output is C_ss/source-response only.  It must not be treated as source-Higgs Gram purity or canonical-Higgs normalization evidence.",
+      "used_as_physical_yukawa_readout": false
+    },
+    "source_response_target_series_count": 16,
+    "target_timeseries_summary": {
+      "complete_count": 18,
+      "complete_for_all_ready_chunks": true,
+      "complete_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "incomplete_indices": [],
+      "ready_count": 18
+    },
+    "wz_response_guard": {
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "same-source W/Z correlator mass fits",
+        "fitted dM_W/ds or dM_Z/ds under the same scalar source",
+        "covariance with dE_top/ds",
+        "sector-overlap and canonical-Higgs identity certificates"
+      ],
+      "strict_limit": "This QCD top-correlator harness does not measure W/Z mass response.  Static EW algebra or absent W/Z slopes must not be used as dM_W/ds evidence.",
+      "used_as_physical_yukawa_readout": false
+    }
+  },
+  "combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
+  "exact_next_action": "After each future chunk completes, rerun the combiner, ready-set, response-stability, autocorrelation/ESS, and this generic checkpoint; do not use a partial chunk as physical y_t evidence.",
+  "fail_count": 0,
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A single L12 chunk is partial support; target ESS, response stability, pole/FV/IR/model-class, and Higgs identity gates remain open.",
+  "ready_set": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
+  "strict_non_claims": [
+    "does not use one chunk as retained evidence",
+    "does not treat partial L12 chunks as combined L12 evidence",
+    "does not set kappa_s = 1",
+    "does not treat target time series as canonical-Higgs identity",
+    "does not treat absent or guarded source-Higgs/WZ rows as evidence",
+    "does not use H_unit, Ward authority, observed target values, alpha_LM, plaquette, or u0 as proof input"
+  ],
+  "verdict": "L12_T24 chunk017 is audited by the reusable target-timeseries checkpoint.  A passing row means the chunk has production-phase metadata, numba_gauge_seed_v1 seed control, same-source dE/ds, same-source C_ss(q), and per-configuration target series.  It remains partial L12 support only, not retained closure."
+}

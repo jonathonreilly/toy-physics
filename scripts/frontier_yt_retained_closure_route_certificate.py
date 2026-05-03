@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "outputs" / "yt_retained_closure_route_certificate_2026-05-01.json"
 GENERIC_CHUNK_TARGET_PATTERN = "yt_fh_lsz_chunk*_target_timeseries_generic_checkpoint_2026-05-02.json"
+MULTITAU_CHUNK_TARGET_PATTERN = "yt_fh_lsz_chunk*_multitau_target_timeseries_checkpoint_2026-05-03.json"
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -45,6 +46,13 @@ def generic_chunk_target_key(path: Path) -> str:
         "_target_timeseries_generic_checkpoint_2026-05-02.json"
     )
     return f"fh_lsz_{stem}_target_timeseries_generic"
+
+
+def multitau_chunk_target_key(path: Path) -> str:
+    stem = path.name.removeprefix("yt_fh_lsz_").removesuffix(
+        "_multitau_target_timeseries_checkpoint_2026-05-03.json"
+    )
+    return f"fh_lsz_{stem}_multitau_target_timeseries"
 
 
 def main() -> int:
@@ -165,6 +173,8 @@ def main() -> int:
     }
     for path in sorted((ROOT / "outputs").glob(GENERIC_CHUNK_TARGET_PATTERN)):
         required_certificates[generic_chunk_target_key(path)] = str(path.relative_to(ROOT))
+    for path in sorted((ROOT / "outputs").glob(MULTITAU_CHUNK_TARGET_PATTERN)):
+        required_certificates[multitau_chunk_target_key(path)] = str(path.relative_to(ROOT))
     certificates = {name: load_json(path) for name, path in required_certificates.items()}
 
     direct_certificates = [
@@ -448,6 +458,16 @@ def main() -> int:
         "generic target-timeseries checkpoint" in cert.get("actual_current_surface_status", "")
         and cert.get("proposal_allowed") is False
         for cert in generic_chunk_target_certificates.values()
+    )
+    multitau_chunk_target_certificates = {
+        name: cert
+        for name, cert in certificates.items()
+        if name.startswith("fh_lsz_chunk") and name.endswith("_multitau_target_timeseries")
+    }
+    multitau_chunk_targets_not_closure = bool(multitau_chunk_target_certificates) and all(
+        "v2 multi-tau target-timeseries checkpoint" in cert.get("actual_current_surface_status", "")
+        and cert.get("proposal_allowed") is False
+        for cert in multitau_chunk_target_certificates.values()
     )
     pole_fit_kinematics_not_closure = (
         "scalar-pole kinematics gate"
@@ -765,18 +785,30 @@ def main() -> int:
         )
         is False
     )
+    source_higgs_guard_status = certificates["source_higgs_harness_absence_guard"].get(
+        "actual_current_surface_status", ""
+    )
+    source_higgs_guard_fields = certificates["source_higgs_harness_absence_guard"].get(
+        "guard_fields", {}
+    )
+    source_higgs_operator_guarded = (
+        source_higgs_guard_fields.get("canonical_higgs_operator_absent") is True
+        or (
+            source_higgs_guard_fields.get("canonical_higgs_operator_certificate_gated")
+            is True
+            and source_higgs_guard_fields.get("enabled_false") is True
+            and source_higgs_guard_fields.get("used_as_physical_yukawa_readout_false")
+            is True
+        )
+    )
     source_higgs_harness_absence_guard_not_evidence = (
-        "source-Higgs harness absence guard"
-        in certificates["source_higgs_harness_absence_guard"].get("actual_current_surface_status", "")
+        (
+            "source-Higgs harness absence guard" in source_higgs_guard_status
+            or "source-Higgs harness default-off guard" in source_higgs_guard_status
+        )
         and certificates["source_higgs_harness_absence_guard"].get("proposal_allowed") is False
-        and certificates["source_higgs_harness_absence_guard"].get("guard_fields", {}).get(
-            "source_higgs_cross_correlator"
-        )
-        is True
-        and certificates["source_higgs_harness_absence_guard"].get("guard_fields", {}).get(
-            "canonical_higgs_operator_absent"
-        )
-        is True
+        and source_higgs_guard_fields.get("source_higgs_cross_correlator") is True
+        and source_higgs_operator_guarded
     )
     neutral_scalar_rank_one_purity_gate_blocks = (
         "neutral scalar rank-one purity gate not passed"
@@ -1195,6 +1227,11 @@ def main() -> int:
         "fh-lsz-generic-chunk-target-checkpoints-discovered",
         generic_chunk_targets_not_closure,
         f"count={len(generic_chunk_target_certificates)}",
+    )
+    report(
+        "fh-lsz-v2-multitau-chunk-target-checkpoints-discovered",
+        multitau_chunk_targets_not_closure,
+        f"count={len(multitau_chunk_target_certificates)}",
     )
     report(
         "fh-lsz-pole-fit-kinematics-not-closure",

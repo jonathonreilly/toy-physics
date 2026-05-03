@@ -3757,3 +3757,26 @@ Disposition: bounded scheduling support.  Chunks001-010 are the current
 target-timeseries replacement queue; new chunks alone cannot make target ESS
 complete for the current ready set.  No retained or proposed-retained wording
 is allowed.
+
+## 2026-05-03 - Block 168 FH/LSZ Chunks017-018 V2 Multi-Tau Wave
+
+Review stance: production-output checkpoint / claim firewall.
+
+- Added `scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py`.
+- Added `docs/YT_FH_LSZ_CHUNKS017_018_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-03.md`.
+- Added chunks017-018 production outputs and volume artifacts.
+- Added generic and v2 chunk checkpoint certificates for chunks017-018.
+- Updated response-window acceptance to record partial v2 coverage instead of
+  treating multi-tau rows as categorically absent.
+- Updated retained-route and campaign-status dynamic discovery for v2 chunk
+  certificates.
+- Updated combiner, ready-set, response-stability, target ESS,
+  autocorrelation, response-window, replacement queue, retained-route, and
+  campaign certificates.
+
+Disposition: bounded production/infrastructure support.  The ready set is now
+18/63 L12 chunks and 288/1000 saved configurations; target-observable ESS
+passes with limiting ESS `242.7849819291294`.  Response stability still fails,
+v2 rows cover only chunks017-018, multiple source radii are absent, and no
+source-Higgs/WZ/canonical-Higgs identity has been supplied.  No retained or
+proposed-retained wording is allowed.

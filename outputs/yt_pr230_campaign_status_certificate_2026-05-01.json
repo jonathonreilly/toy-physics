@@ -44,6 +44,10 @@
     "fh_lsz_chunk014_target_timeseries_generic": "bounded-support / FH-LSZ chunk014 generic target-timeseries checkpoint",
     "fh_lsz_chunk015_target_timeseries_generic": "bounded-support / FH-LSZ chunk015 generic target-timeseries checkpoint",
     "fh_lsz_chunk016_target_timeseries_generic": "bounded-support / FH-LSZ chunk016 generic target-timeseries checkpoint",
+    "fh_lsz_chunk017_multitau_target_timeseries": "bounded-support / FH-LSZ chunk017 v2 multi-tau target-timeseries checkpoint",
+    "fh_lsz_chunk017_target_timeseries_generic": "bounded-support / FH-LSZ chunk017 generic target-timeseries checkpoint",
+    "fh_lsz_chunk018_multitau_target_timeseries": "bounded-support / FH-LSZ chunk018 v2 multi-tau target-timeseries checkpoint",
+    "fh_lsz_chunk018_target_timeseries_generic": "bounded-support / FH-LSZ chunk018 generic target-timeseries checkpoint",
     "fh_lsz_chunk_combiner_gate": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
     "fh_lsz_chunked_production_manifest": "bounded-support / FH-LSZ chunked production manifest",
     "fh_lsz_eight_mode_noise_variance": "open / FH-LSZ eight-mode noise variance gate not passed",
@@ -142,7 +146,7 @@
     "source_higgs_cross_correlator_import": "exact negative boundary / source-Higgs cross-correlator import audit",
     "source_higgs_cross_correlator_manifest": "bounded-support / source-Higgs cross-correlator production manifest",
     "source_higgs_gram_purity_gate": "open / source-Higgs Gram purity gate not passed",
-    "source_higgs_harness_absence_guard": "bounded-support / source-Higgs harness absence guard",
+    "source_higgs_harness_absence_guard": "bounded-support / source-Higgs harness default-off guard",
     "source_overlap_sum_rule_no_go": "exact negative boundary / source-overlap spectral sum-rule no-go",
     "source_pole_canonical_higgs_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction",
     "source_pole_purity_cross_correlator": "open / source-pole purity cross-correlator gate not passed",
@@ -159,7 +163,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 139,
+  "pass_count": 140,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

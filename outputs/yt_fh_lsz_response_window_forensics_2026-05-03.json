@@ -208,38 +208,64 @@
       "tau1_target_rows": 16,
       "tau1_target_slope_mean": 1.2544834788450996,
       "tau1_target_slope_stderr": 0.008531161504110792
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.18607437831637408,
+      "chunk_index": 17,
+      "fit_minus_tau1_mean": 0.18607437831637408,
+      "fit_slope_dE_ds_lat": 1.425822667545628,
+      "fit_slope_dE_ds_lat_err": 24.305344174908086,
+      "fit_tau1_discrepancy_sigma": 0.007655697399476293,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk017_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.239748289229254,
+      "tau1_target_slope_stderr": 0.010727299517703827
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.19298651325774419,
+      "chunk_index": 18,
+      "fit_minus_tau1_mean": 0.19298651325774419,
+      "fit_slope_dE_ds_lat": 1.4324757674234831,
+      "fit_slope_dE_ds_lat_err": 24.638631226349005,
+      "fit_tau1_discrepancy_sigma": 0.007832679774225972,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk018_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.239489254165739,
+      "tau1_target_slope_stderr": 0.005487537378516407
     }
   ],
   "exact_next_action": "Add a predeclared FH response-window acceptance gate that compares multiple effective-mass tau windows, fit windows, and source radii with covariance, then rerun response stability.  In parallel, keep the scalar-pole/FV/IR/model-class and canonical-Higgs identity gates as separate blockers.",
   "fail_count": 0,
   "fit_slope_outliers": {
     "available": true,
-    "mad": 0.0076722261067477815,
+    "mad": 0.00621338278766681,
     "median": 1.4280799416149008,
     "outliers": [
       {
         "chunk_index": 2,
-        "robust_z": 457.32082508483,
+        "robust_z": 564.6954152478363,
         "value": 6.629960999250584
       },
       {
         "chunk_index": 4,
-        "robust_z": 472.5896685280947,
+        "robust_z": 583.5492382438681,
         "value": 6.80363930805008
       },
       {
         "chunk_index": 6,
-        "robust_z": -16.330513751382,
+        "robust_z": -20.164763418190248,
         "value": 1.2423254657958398
       },
       {
         "chunk_index": 13,
-        "robust_z": -16.01379878854547,
+        "robust_z": -19.77368678742233,
         "value": 1.2459279992373107
       },
       {
         "chunk_index": 14,
-        "robust_z": 463.1195611290834,
+        "robust_z": 571.8556394904452,
         "value": 6.6959198043875165
       }
     ]
@@ -247,13 +273,13 @@
   "fit_slope_summary": {
     "available": true,
     "max": 6.80363930805008,
-    "mean": 2.394872441560054,
+    "mean": 2.287569861107221,
     "median": 1.4280799416149008,
     "min": 1.2423254657958398,
-    "n": 16,
-    "relative_stdev": 0.8943920916391181,
+    "n": 18,
+    "relative_stdev": 0.8900751406619184,
     "spread_ratio": 5.476535332624479,
-    "stdev": 2.1419549722157787
+    "stdev": 2.036109065898975
   },
   "pass_count": 10,
   "proposal_allowed": false,
@@ -275,7 +301,9 @@
     13,
     14,
     15,
-    16
+    16,
+    17,
+    18
   ],
   "response_window_forensics_passed": true,
   "strict_non_claims": [
@@ -287,20 +315,20 @@
   ],
   "tau1_target_outliers": {
     "available": true,
-    "mad": 0.006047132772331154,
-    "median": 1.2482671382627446,
+    "mad": 0.006745771365329611,
+    "median": 1.2473364433100782,
     "outliers": []
   },
   "tau1_target_slope_summary": {
     "available": true,
     "max": 1.2595939633054922,
-    "mean": 1.248274943839869,
-    "median": 1.2482671382627446,
+    "mean": 1.247313146935161,
+    "median": 1.2473364433100782,
     "min": 1.2313499688634217,
-    "n": 16,
-    "relative_stdev": 0.006010378980783995,
+    "n": 18,
+    "relative_stdev": 0.006079609025267883,
     "spread_ratio": 1.0229374224682368,
-    "stdev": 0.00750260548469447
+    "stdev": 0.00758317626544229
   },
   "verdict": "The accepted target time series expose a stable tau=1 effective-energy response diagnostic across chunks001-016, while the current fitted dE/ds response-stability surface remains unstable.  This identifies a response-window/readout-selection blocker, not a replacement physical readout.  Switching from the production fit slope to the tau=1 target diagnostic would require a predeclared response-window acceptance gate with covariance, multiple tau windows, source-radius control, and the existing scalar-LSZ/canonical-Higgs gates."
 }

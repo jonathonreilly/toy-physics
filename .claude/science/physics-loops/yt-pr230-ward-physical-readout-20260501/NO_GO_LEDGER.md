@@ -2235,3 +2235,24 @@ chunks002-010.  It does not certify target ESS, response stability, pole
 derivative, or canonical-Higgs identity.  Do not treat the replacement queue,
 rerun command templates, or future scheduling intent as retained/proposed-
 retained evidence.
+
+Chunks017-018 v2 multi-tau target rows are not canonical-Higgs closure:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 17
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 18
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+```
+
+Chunks017-018 prove that production chunks can now carry v2 multi-tau
+source-response rows.  They do not prove a physical response readout:
+full-ready-set v2 covariance is incomplete, multiple source radii are absent,
+the fitted response-stability gate still fails, and no source-Higgs or W/Z
+identity row is present.  Do not treat chunks017-018, `C_ss`, multi-tau rows,
+target ESS, or tau-window central stability as retained/proposed-retained
+top-Yukawa evidence.
