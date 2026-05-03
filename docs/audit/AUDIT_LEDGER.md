@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:18:41.474196+00:00
+**Generated:** 2026-05-03T18:19:32.781898+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 739 |
+| unaudited | 738 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 538 |
+| ~~audited_conditional~~ | 539 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 319 |
-| `audited_conditional` | 538 |
+| `audited_conditional` | 539 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 785 |
+| `unaudited` | 784 |
 
 | claim_type | count |
 |---|---:|
@@ -714,6 +714,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_eigenvalue_q23_surface_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `koide_explicit_calculations_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
+| `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -8201,6 +8202,22 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The hostile-review guard mechanically verifies that the current Koide no-go packet names residuals and does not promote failed Q or delta routes as closure.  _(class `C`)_
 - **chain closes:** True — The support artifact closes on its own automation boundary: the runner finds the no-go note/script sets, verifies residual labels, verifies explicit negative CLOSES flags, and verifies no closure flag is promoted, with 8/8 passes.
 - **rationale:** The guard's support claim is audit-clean: it checks packet hygiene for Koide no-go artifacts and reports negative closure flags for Q and delta. This verdict does not treat the guard as physics evidence or as closure of either constant; the source note states that boundary explicitly.
+- **auditor confidence:** high
+
+### `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Block-total Frobenius energies on Herm_circ(3) are asserted to supply the MRU 1:1 real-isotype measure and an operator-side kappa=2 route, with E_+ = 3 a^2, E_perp = 6 |b|^2, and d=3 multiplicity uniqueness.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note asserts that the MRU law follows as the equal-weight extremum on the geometrically unique quotient carrier, leaving no remaining measure choice.  _(class `B`)_
+- **chain closes:** False — The runner closes the algebra after the block-total energy functional and equal-weight log-law are selected. It does not derive why that quotient carrier/log-law is the canonical physical choice rather than the determinant/rank-weighted law, and the note itself later records this as a remaining extremal-convention residue.
+- **rationale:** Issue: the algebraic checks prove E_+ = 3 a^2, E_perp = 6 |b|^2, d=3 uniqueness, and kappa=2 conditional on choosing the block-total 1:1 law, but the load-bearing physical/canonical selection of that law is imported rather than derived in this row. Why this blocks: the conclusion that the measure choice is resolved with no residue does not follow from the runner or the self-contained proof, especially because the note acknowledges a competing natural determinant law with kappa=1. Repair target: add or cite a retained dependency theorem that derives the quotient carrier and equal-weight block-total log-law as the canonical scalar-lane extremal principle, or narrow this claim to the conditional algebraic theorem. Claim boundary until fixed: if the block-total Frobenius law is selected, the formulas, equal-weight extremum kappa=2, and d=3 multiplicity uniqueness are runner-supported.
+- **open / conditional deps cited:**
+  - `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19`
