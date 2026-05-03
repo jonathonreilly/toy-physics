@@ -3,11 +3,11 @@
     "bounded_theorem": 535,
     "decoration": 9,
     "meta": 40,
-    "no_go": 157,
-    "open_gate": 99,
+    "no_go": 158,
+    "open_gate": 98,
     "positive_theorem": 862
   },
-  "computed_at": "2026-05-03T00:38:44.566799+00:00",
+  "computed_at": "2026-05-03T00:41:54.739521+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -46,9 +46,9 @@
     "open_gate": 10,
     "retained": 144,
     "retained_bounded": 204,
-    "retained_no_go": 98,
+    "retained_no_go": 99,
     "retained_pending_chain": 2,
-    "unaudited": 490
+    "unaudited": 489
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

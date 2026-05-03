@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:38:45.000297+00:00
+**Generated:** 2026-05-03T00:41:55.140595+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 144 |
-| **retained_no_go** | 98 |
+| **retained_no_go** | 99 |
 | **retained_bounded** | 204 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 490 |
+| unaudited | 489 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 412 |
+| `audited_clean` | 413 |
 | `audited_conditional` | 655 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 530 |
+| `unaudited` | 529 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 535 |
 | `decoration` | 9 |
 | `meta` | 40 |
-| `no_go` | 157 |
-| `open_gate` | 99 |
+| `no_go` | 158 |
+| `open_gate` | 98 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -472,6 +472,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_3d1_causal_record_channel_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | A | - |
 | `teleportation_3d_initial_ramp_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_3d_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_3d_readout_convention_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
@@ -16645,6 +16646,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** True — The scoped conclusion follows from the supplied runner output: retained-axis Z/X factorization passes, raw xi_5 controls fail as intended, null and fixed-Phi+ controls do not pass, and the non-null framed row passes all acceptance gates. Closure is bounded to the stated finite side=2 resource and ideal logical operations.
 - **rationale:** Within the note's explicit boundary, the runner computes the finite-resource bridge rather than merely asserting a Bell-frame label: it reports the raw best Bell state, applies the known Bob-side retained-axis frame, and checks exact/sample/branch fidelities, no-record independence, outcome coverage, and causal-record behavior. The note does not promote raw xi_5 as a retained readout and does not claim hardware teleportation, matter transport, larger 3D surfaces, or faster-than-light signaling.
 - **auditor confidence:** medium
+
+### `teleportation_3d_readout_convention_note`
+
+- **Note:** [`TELEPORTATION_3D_READOUT_CONVENTION_NOTE.md`](../../docs/TELEPORTATION_3D_READOUT_CONVENTION_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Finite side=2 and side=4 3D taste-operator audit showing that raw xi_5 cannot be used as traced retained-axis Z or Bell Z control, while retained-axis Z_r/X_r and fixed-branch signed xi_5 restrictions behave as stated.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `fresh-agent-Herschel-019deb47-16f2-77a2-a628-e4294872a2d1`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Raw xi_5 = Z_r * product_{a != r} Z_a, so it is a signed logical Z_r only after fixing spectator taste bits and is not the traced retained-bit operator Z_r tensor I_spectator.  _(class `A`)_
+- **chain closes:** True — The conclusion follows from the explicit Pauli tensor identity and the finite runner checks: retained Z_r/X_r factor as logical operators tensored with spectator identity, raw xi_5 fails traced factorization, and fixed spectator branches reduce raw xi_5 to signed Z_r. The note keeps the claim bounded to side=2/4 operator algebra and does not claim hardware readout or end-to-end teleportation resource closure.
+- **rationale:** The runner's seven acceptance gates are A-class algebraic/factorization checks and directly test the contested observable distinction rather than importing an external comparator or hidden dependency. Within the stated finite side=2/4 scope, the no-go for substituting raw xi_5 into traced retained-axis Z/Bell measurements closes. The note also preserves the valid reduced use: raw xi_5 remains allowed only in explicitly fixed spectator-branch algebra or in a future branch-conditioned workflow.
+- **auditor confidence:** high
 
 ### `teleportation_acceptance_suite_note`
 
