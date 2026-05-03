@@ -192,11 +192,22 @@ becomes a structural prediction, not a numerical match.
 | Closure | Status | Effort to land |
 |---|---|---|
 | H2 (V-orbit-measure correction) | closed by this note (audit-pending) | 0 (already done) |
-| H1 Route 1A (onset-jet extension to N >= 22) | path corrected and specified | ~8-9 months |
+| H1 Route 1A (onset-jet extension or resummation) | path corrected; numerical diagnostic landed | 6-12 months (Borel/Pade resummation more promising than direct extension) |
 | H1 Route 1B (spectral-moment Hausdorff bracket) | path specified | ~6 months |
 | H1 Route 2 (beta = 6 convention chain) | closed by this note (audit-pending) | 0 (already done) |
 | H1 Route 3 (V-invariant Wilson bootstrap) | path specified | ~6 months |
 | Audit ratification of H2 + Route 2 | pending | ~4 weeks |
+
+Numerical diagnostic from
+`HIERARCHY_H1_ROUTE_1B_HAAR_KERNEL_NOTE_2026-05-03.md` (this commit):
+direct Haar integration of the framework's single-plaquette block gives
+`P_1plaq(6) = 0.4225317396` exactly matching the framework's existing
+`P_triv(6)` reference Perron solve. Inverting `P_1plaq(beta_eff) = 0.5934`
+yields `beta_eff(6) = 9.33`, i.e., the 5th-order onset jet (which gives
+`6.30`) underestimates the actual reduction parameter by ~50%. The
+canonical-vs-bridge 0.022% window is therefore not the right baseline
+for Route 1A scoping; the actual onset-jet residual is much larger and
+needs Borel/Pade resummation, not direct order-by-order extension.
 
 Best case: H2 + Route 2 ratified in audit (4 weeks), Route 1B lands
 via spectral-moment SDP (additional 6 months). Total: ~7 months from
