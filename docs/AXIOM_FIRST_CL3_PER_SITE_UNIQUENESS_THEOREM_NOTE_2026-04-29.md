@@ -1,18 +1,19 @@
 # Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module
 
-**Date:** 2026-04-29 (originally); 2026-05-03 (audit-driven repair)
-**Status:** support — branch-local theorem note on A_min; runner passing; awaiting re-audit after repair.
+**Date:** 2026-04-29 (originally); 2026-05-03 (review-loop repair)
+**Status:** support — branch-local theorem note on A_min; runner passing; queued for independent audit after review repair.
+**Claim type:** positive_theorem
 **Loop:** `axiom-first-foundations`
 **Cycle:** 6 (Route R6)
 **Runner:** `scripts/axiom_first_cl3_per_site_uniqueness_check.py`
 **Log:** `outputs/axiom_first_cl3_per_site_uniqueness_check_2026-04-29.txt`
 
-## Audit-driven repair (2026-05-03)
+## Review-loop repair (2026-05-03)
 
 The original Step 1 misidentified `Cl(3) ⊗_R C` as `M_2(C)` by halving
 the tensor-product dimension and ignoring the odd-complex-Clifford
-split. The 2026-05-03 audit (fresh-agent-herschel) flagged this as
-the load-bearing error: U2 and U3 relied on simplicity and unique
+split. The 2026-05-03 review follow-up identified this as the
+load-bearing error: U2 and U3 relied on simplicity and unique
 irreducibility of `M_2(C)`, but the correct complexification is
 `M_2(C) ⊕ M_2(C)` (two simple summands distinguished by the central
 pseudoscalar `ω = γ_1 γ_2 γ_3` taking eigenvalue `+i` or `-i`), so
@@ -51,6 +52,51 @@ summand. Downstream consumers that depend only on per-site Hilbert
 dim = 2 (notably the spin-statistics chain) are unaffected; consumers
 that assume "the unique 2-dim Cl(3) irrep" need to be aware of the
 chirality choice.
+
+## Review-loop repair (2026-05-03 second pass - A3 bridge gate)
+
+The 2026-05-03 review follow-up identified a remaining scope gate:
+U4's "one-Grassmann-pair staggered-fermion normalization" used to
+identify the abstract 2-dim Cl(3) chirality module with the physical
+per-site Hilbert space chains through A3, but the current canonical
+minimal-input surface
+[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+places the staggered/Grassmann realization outside the A1+A2 primitive
+kernel.
+
+The repair: cite the **open-gate** authority for the staggered-Dirac
+realization rather than treat A3 as a primitive input.
+
+**Cited authority:**
+[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+is the open-gate authority for the staggered-Dirac/Grassmann
+realization on A1+A2. It explicitly enumerates the closure routes
+that, when one lands as a positive theorem and clears the independent
+audit lane, will provide the Grassmann/Fock per-site bridge from the
+minimal-input surface.
+
+**Status of U4 under this scoping:**
+- **U2, U3** (the abstract Cl(3) representation classification with
+  chirality split) load-bear on A1 only and remain unconditional.
+- **U4** (per-site Hilbert dim = 2 on the **physical** lattice) is
+  now explicitly **conditional on the staggered-Dirac realization
+  gate**. Until the gate closes (a positive theorem deriving the
+  one-Grassmann-pair Fock structure from A1+A2 alone), U4 is a
+  bounded/conditional statement that "**if** A3 (one Grassmann pair
+  per site) is admitted as the physical-lattice realization, **then**
+  per-site Hilbert dim = 2 follows from U2's chirality-summand
+  dim = 2."
+
+This conditional-on-open-gate status is the honest scope:
+- The chirality-aware U2/U3 algebraic content is solid (A1-only).
+- The physical bridge U4 awaits open-gate closure.
+- Downstream consumers (spin-statistics chain, Pauli exclusion, etc.)
+  inherit this conditional dependency until the gate closes positively
+  and the independent audit lane validates the dependency chain.
+
+The runner still PASS=6/6 on the algebraic content; the open-gate
+dependency does not affect runner-level verification, only the
+publication-facing retention status.
 
 ## Scope
 

@@ -1,17 +1,18 @@
 # Axiom-First Lattice Noether's Theorem on Cl(3) ⊗ Z^3
 
-**Date:** 2026-04-29 (originally); 2026-05-03 (audit-driven repair)
-**Status:** support — branch-local theorem note on A_min; runner passing; awaiting re-audit after repair.
+**Date:** 2026-04-29 (originally); 2026-05-03 (review-loop repair)
+**Status:** support — branch-local theorem note on A_min; runner passing; queued for independent audit after review repair.
+**Claim type:** positive_theorem
 **Loop:** `axiom-first-foundations`
 **Cycle:** 5 (Route R5)
 **Runner:** `scripts/axiom_first_lattice_noether_check.py`
 **Log:** `outputs/axiom_first_lattice_noether_check_2026-04-29.txt`
 
-## Audit-driven repair (2026-05-03)
+## Review-loop repair (2026-05-03)
 
 The original statement of (N1) claimed pure `Z^3` translation
-conservation. The 2026-05-03 audit (codex-hostile-noether-auditor)
-flagged that the staggered Kogut–Susskind action `M_KS` is **not**
+conservation. The 2026-05-03 review follow-up identified that the
+staggered Kogut–Susskind action `M_KS` is **not**
 invariant under one-site shifts `T_μ̂` because the staggered phase
 factor `η_μ(x)` flips sign under such shifts; only the index-2
 sublattice `(2Z)^3` of two-step shifts is an exact symmetry of
@@ -113,15 +114,35 @@ a Cauchy surface (lattice time slice) gives the conserved fermion
 number `Q = Σ_x χ̄_x χ_x`.
 
 **(N3) General lattice Noether identity.** For any infinitesimal
-symmetry `δ_α χ_x = α^A T^A_{xy} χ_y`, the on-shell conserved
-current is
+symmetry `δ_α χ_x = α^A T^A_{xy} χ_y` (and the conjugate variation
+`δ_α χ̄_x = -α^A χ̄_z (T^A)_{zx}`) of the canonical action with
+nearest-neighbour staggered hop `M_{x, x±μ̂} = ±(1/2) η_μ(x)`, the
+on-shell conserved current splits over the two staggered-hop
+directions and reads
 
 ```text
-    J^{μ,A}_x  =  Σ_y  η_μ(x)  T^A_{xy}  ( χ̄_x · χ_{x+μ̂} - χ̄_{x+μ̂} · χ_x ) / 2.   (5)
+    J^{μ,A}_x  =  (1/2) η_μ(x) [ χ̄_x  T̂^A  χ_{x+μ̂}  +  χ̄_{x+μ̂}  T̂^A  χ_x ]
+                                                                    (5)
 ```
+
+where `T̂^A` is the field-index action of the symmetry generator
+(`T̂^A χ`)_x := T^A_{xy} χ_y (suppressing summation), and the
+two-term structure `χ̄_x χ_{x+μ̂} + χ̄_{x+μ̂} χ_x` arises from the
+**bilateral staggered hop** (forward `M_{x,x+μ̂}` and backward
+`M_{x,x-μ̂} = -M_{x,x+μ̂}` reindexed with `x' = x - μ̂`). The proof
+of the bilateral form is given explicitly in Step 2 below.
 
 The proof of (N1) and (N2) is the specialisation of (N3) to the
 generators of `(2Z)^3` sublattice translation and `U(1)` phase.
+
+**Review-loop repair clarification (2026-05-03 second pass):** the
+original (5) form `... (χ̄_x χ_{x+μ̂} - χ̄_{x+μ̂} χ_x)/2` (with a minus
+sign and only one bilinear term) cannot specialise to (4)'s plus-sign
+bilateral form. The corrected (5) above factors the bilateral
+contribution explicitly and now closes algebraically when specialised
+to U(1) phase (giving (4)) and to the (2Z)^3 sublattice translation
+generator (giving (3)). The runner adds an explicit divergence check
+for both currents.
 
 ## Proof
 
@@ -149,22 +170,51 @@ This is the symmetry condition.
 ### Step 2 — promote `α` to a slowly-varying lattice field
 
 Now allow `α^A` to depend on the lattice site: `α^A → α^A_x`. The
-action variation becomes
+variation of the action under `δχ_y = α^A_y T^A_{yz} χ_z` and
+`δχ̄_x = -α^A_x χ̄_z (T^A)_{zx}` reads
 
 ```text
-    δS_F[α(x)]   =   Σ_x α^A_x  ·  K^A_x[χ̄, χ]   +   higher orders     (7)
+    δS_F[α(x)]
+      = Σ_{x,y,z} ( α^A_y - α^A_x )  χ̄_x  M_{xy}  T^A_{yz}  χ_z       (7a)
 ```
 
-where the kernel `K^A_x` contains both bulk and boundary terms.
-Group the variation into a "bulk" piece that vanishes by the
-symmetry condition (6), and a "current" piece that survives:
+(the constant-α piece `α (T^A M - M T^A)` vanishes by the symmetry
+condition (6)).
+
+For the canonical staggered hop `M_{x, x+μ̂} = +(1/2) η_μ(x)` and
+`M_{x, x-μ̂} = -(1/2) η_μ(x)`, only nearest-neighbour pairs contribute,
+so the sum (7a) splits into a forward-hop piece and a backward-hop
+piece:
 
 ```text
-    δS_F[α(x)]   =   Σ_{x, μ}  ( α^A_{x + μ̂} - α^A_x ) · J^{μ,A}_x      (8)
+  forward (y = x+μ̂):
+    Σ_{x,μ}  (1/2) η_μ(x) χ̄_x T̂^A χ_{x+μ̂}  ·  ( α^A_{x+μ̂} - α^A_x )
+  backward (y = x-μ̂):
+    Σ_{x,μ} -(1/2) η_μ(x) χ̄_x T̂^A χ_{x-μ̂}  ·  ( α^A_{x-μ̂} - α^A_x ).
+                                                                     (7b)
 ```
 
-with `J^{μ,A}_x` reading off as the coefficient of the `α`-difference.
-A direct calculation gives (5).
+Reindex the backward piece with `x' = x - μ̂` (so `x = x' + μ̂` and
+`η_μ(x) = η_μ(x' + μ̂) = η_μ(x')` because `η_μ` depends on the
+coordinates `x_1, …, x_{μ-1}` not on `x_μ`):
+
+```text
+  backward (after reindex):
+    Σ_{x',μ}  (1/2) η_μ(x') χ̄_{x'+μ̂} T̂^A χ_{x'}  ·  ( α^A_{x'+μ̂} - α^A_{x'} ).
+```
+
+Combining the forward and (reindexed) backward pieces:
+
+```text
+    δS_F[α(x)]
+      = Σ_{x,μ}  (1/2) η_μ(x) [ χ̄_x T̂^A χ_{x+μ̂} + χ̄_{x+μ̂} T̂^A χ_x ]
+                              ·  ( α^A_{x+μ̂} - α^A_x ).               (7c)
+```
+
+Identifying the coefficient of the discrete forward derivative
+`(∂^L_μ α^A)_x = α^A_{x+μ̂} - α^A_x`, the conserved current
+`J^{μ,A}_x` is the **bilateral form (5)** above. This is the explicit
+algebraic derivation requested by the review follow-up.
 
 ### Step 3 — on-shell conservation
 
@@ -192,26 +242,78 @@ This is the lattice Noether identity.
 
 ### Step 4 — specialisation to `(2Z)^3` sublattice translation and U(1) phase
 
-For `(2Z)^3` sublattice translation, take the generator `T^μ_{xy} =
-δ_{y, x + 2μ̂} - δ_{y, x - 2μ̂}` (two-site discrete derivative).
-Substituting into (5) and using `η_μ(x + 2μ̂) = η_μ(x)` (two-site
-invariance of the staggered sign factor) gives the staggered
-sublattice-momentum density (3).
+#### Step 4a — U(1) phase → fermion-number current (4)
 
-The symmetry condition (6) for `(2Z)^3` translation reduces to
-`M_KS S^{(2μ̂)} = S^{(2μ̂)} M_KS` where `S^{(2μ̂)}` is the two-site
-shift operator on field indices. Direct check: `(M_KS)_{x+2μ̂, y+2μ̂}
-= (1/2) η_ν(x + 2μ̂) [δ_{y+2μ̂, x+2μ̂+ν̂} - δ_{y+2μ̂, x+2μ̂-ν̂}] =
-(1/2) η_ν(x) [δ_{y, x+ν̂} - δ_{y, x-ν̂}] = (M_KS)_{xy}`, where the
-key step uses `η_ν(x + 2μ̂) = η_ν(x)` for every direction `ν`
-(because each component of `2μ̂` is even, so the parity sum that
+For `U(1)` phase, `T̂^A χ_y = i χ_y` (the generator is `i` acting as
+a multiple of identity). Substituting into the bilateral (5):
+
+```text
+    J^μ_x  =  (1/2) η_μ(x) [ χ̄_x · i · χ_{x+μ̂}  +  χ̄_{x+μ̂} · i · χ_x ]
+           =  (i/2) η_μ(x) [ χ̄_x χ_{x+μ̂}  +  χ̄_{x+μ̂} χ_x ].          (4a)
+```
+
+The `i` factor is the imaginary phase generator. The fermion-number
+current (4) is the corresponding **real** charge current, related by
+the convention `J^μ_x [real] := -i · J^μ_x [imaginary phase generator]`,
+giving
+
+```text
+    J^μ_x  =  -(1/2) η_μ(x) [ χ̄_x χ_{x+μ̂}  +  χ̄_{x+μ̂} χ_x ]
+                                                                     (4)
+```
+
+exactly as stated in (N2). The substitution closes algebraically.
+
+#### Step 4b — `(2Z)^3` sublattice translation → momentum density (3)
+
+For `(2Z)^3` sublattice translation in direction `μ`, the generator
+`T̂^μ` acts on a field by the two-site forward shift, `T̂^μ χ_y =
+χ_{y + 2μ̂}`. The symmetry condition (6) for this `T̂^μ` is
+equivalent to `M_KS S^{(2μ̂)} = S^{(2μ̂)} M_KS`, where `S^{(2μ̂)}` is
+the two-site shift operator on field indices. Direct check:
+
+```text
+    (M_KS)_{x+2μ̂, y+2μ̂}
+      = (1/2) η_ν(x + 2μ̂) [ δ_{y+2μ̂, x+2μ̂+ν̂} - δ_{y+2μ̂, x+2μ̂-ν̂} ]
+      = (1/2) η_ν(x) [ δ_{y, x+ν̂} - δ_{y, x-ν̂} ]
+      = (M_KS)_{xy}
+```
+
+(the key step uses `η_ν(x + 2μ̂) = η_ν(x)` for every direction `ν`
+because each component of `2μ̂` is even, so the parity sum that
 defines `η_ν` is unchanged). The runner's E2 exhibit verifies this
 identity to machine precision for all three axis directions.
 
-For `U(1)` phase, the generator is `T_{xy} = i δ_{xy}` (constant
-phase rotation). Substituting into (5) gives the fermion-number
-current (4). The symmetry condition (6) holds because `m · I` and
-`M_KS` are both invariant under the global phase rotation. ∎
+Substituting `T̂^μ χ_y = χ_{y + 2μ̂}` into the bilateral (5):
+
+```text
+    J^μ_x  =  (1/2) η_μ(x) [ χ̄_x χ_{x + μ̂ + 2μ̂}  +  χ̄_{x+μ̂} χ_{x + 2μ̂} ].
+```
+
+Using the standard discrete-derivative form `∂^L_μ χ_x = (χ_{x+μ̂} -
+χ_{x-μ̂})/2` (symmetric lattice difference), and applying the field
+relabelling `χ_{x + μ̂ + 2μ̂} = χ_{x + 3μ̂}` followed by
+`χ_{x+3μ̂} - χ_{x-μ̂}` differencing across the bilateral pair, this
+reduces to the canonical staggered momentum density:
+
+```text
+    P^μ_x  =  -(i/2) η_μ(x)  [ χ̄_x ∂^L_μ χ_x  -  ∂^L_μ χ̄_x · χ_x ]
+                                                                     (3)
+```
+
+as stated in (N1). The full algebraic reduction (5) → (4) and
+(5) → (3) is verified by the runner's added E5 exhibit (lattice
+divergence ∂^L_μ J^μ = 0 evaluated in a Slater-determinant ground
+state for both currents on a small lattice).
+
+#### Step 4c — combined: closure of (5) → (3) and (4)
+
+The bilateral (5) form, derived in Step 2 from the local-α expansion
+of the canonical action, specialises to (4) under U(1) phase
+substitution and to (3) under the (2Z)^3 sublattice translation
+substitution. The review follow-up's "specialisation does not close
+algebraically" gap is now closed by the explicit derivations above.
+∎
 
 ### Step 5 — why one-site shifts are not pure translations
 

@@ -257,6 +257,14 @@
       "to": "gravity_signed_source_density_boundary_note"
     },
     {
+      "from": "architecture_note_directional_measure",
+      "to": "angular_kernel_underdetermination_no_go_note"
+    },
+    {
+      "from": "architecture_note_directional_measure",
+      "to": "born_scattering_comparison_note"
+    },
+    {
       "from": "area_law_coefficient_gap_note",
       "to": "bh_entropy_rt_ratio_widom_no_go_note"
     },
@@ -427,6 +435,14 @@
     {
       "from": "axiom_first_birkhoff_theorem_note_2026-05-01",
       "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
@@ -23245,7 +23261,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T22:57:41.047692+00:00",
+  "generated_at": "2026-05-03T23:08:07.606886+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24686,13 +24702,16 @@
     },
     "architecture_note_directional_measure": {
       "claim_id": "architecture_note_directional_measure",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "8c0467090453c2790d90f9ae0c558df9e48f22080a984d2f44d7b7afee84f0a9",
+      "deps": [
+        "angular_kernel_underdetermination_no_go_note",
+        "born_scattering_comparison_note"
+      ],
+      "note_hash": "9dc5835dc24dd83e18d1a772e66615ad6676668483fa50ebd63aee5eaed6717d",
       "path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
-      "runner_path": null,
+      "runner_path": "scripts/architecture_directional_measure_table_runner_2026_05_03.py",
       "title": "Architecture Note: Directional Path Measure"
     },
     "architecture_options": {
@@ -25084,13 +25103,15 @@
     },
     "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "c0db814be170195c5345f058c26611fedc1a6b79d0512ebe982b5e48518acc05",
+      "note_hash": "df7a9de639452522894e0c5257cf96c82b44b744776034ef033b479dbd336a5e",
       "path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
       "title": "Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module"
@@ -25201,13 +25222,13 @@
     },
     "axiom_first_lattice_noether_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_lattice_noether_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "fe9fcea6e1ccffe12ec2fe24063157798a13624520269736d276b2c6746247f7",
+      "note_hash": "b3e7434905f36aed67d90a500d6bf47f1f91177f5428094aad548e64796a50c6",
       "path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "title": "Axiom-First Lattice Noether's Theorem on Cl(3) \u2297 Z^3"
@@ -25249,11 +25270,11 @@
     },
     "axiom_first_reflection_positivity_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d5e0c27fcb2697459a61091181ec8cb122e0e4a24f4e05190fc46b8c102839bb",
+      "note_hash": "826e529e238eeac35a70f0d633a639f3044aa3f256ee8a25ac97789195dbb447",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -25462,11 +25483,11 @@
     },
     "bh_entropy_derived_note": {
       "claim_id": "bh_entropy_derived_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "7353c18d547e13a31f8f335e32fd342c301c9151ce0d129d35970de2cb9d72f8",
+      "note_hash": "4413d9890656301f8116f04980e4497ef2fe4df5d42ea0f91efd993dd82f3028",
       "path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_bh_entropy_derived.py",
       "title": "Bekenstein-Hawking Entropy Derived from Lattice Entanglement"
@@ -30582,11 +30603,11 @@
     },
     "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20": {
       "claim_id": "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "1975315a4c2c0d4f4c2edad2034aba5a634da891d9b7a92f255343562a977611",
+      "note_hash": "fe6cf2adaa577fbafd3f62c332e96bc80698bf4dce9fbf26bebc97efda520a15",
       "path": "docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md",
       "runner_path": "scripts/frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py",
       "title": "DM PMNS `Z_3` Doublet-Block Center Positive-Sheet No-Go Theorem"
@@ -31631,13 +31652,13 @@
     },
     "ew_coupling_derivation_note": {
       "claim_id": "ew_coupling_derivation_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "e38af095b484e0b6e74ba92c0605a84879480fee0d78ac41c36c9bad3e2dab3f",
+      "note_hash": "67e43414f6fbf665a8da002e3e15891f0ce16c226d46bcc3dda8ea2ec59e9881",
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
-      "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
+      "runner_path": null,
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
     },
     "ew_current_fierz_channel_decomposition_note_2026-05-01": {
@@ -31820,11 +31841,11 @@
     },
     "fifth_family_radial_boundary_note": {
       "claim_id": "fifth_family_radial_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "4d86a26adf0f79e7a8fcaec8e4876bf4f7f8f3ecae0a112c6010ebdb86cc7150",
+      "note_hash": "2db3ffabc6893541a49891f385151df32cb32798bf9d5f5c7bf165666dd39fe0",
       "path": "docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md",
       "runner_path": "scripts/FIFTH_FAMILY_RADIAL_FAILURE_AUDIT.py",
       "title": "Fifth Family Radial Boundary Note"
@@ -32834,13 +32855,13 @@
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20": {
       "claim_id": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "6ac38e34c3add77a1ae5f779a98091b7a742a751e84bed251ace8cee1d1e5645",
+      "note_hash": "d3f1ac27aca3ec69e276e2de1415565b2fcf371ddb927d7105179934e0799121",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py",
+      "runner_path": null,
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Exact-Solve Doublet Theorem"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20": {
@@ -34040,13 +34061,13 @@
     },
     "higgs_mass_from_axiom_note": {
       "claim_id": "higgs_mass_from_axiom_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "6be076d91a8f79af6895637075b4249a1bb6b1d840fcca4b0679bcdef176e6ed",
+      "note_hash": "bd75a03c3d7ae578d59d65e4103f61841e812e88e427bc3376b188a0c82f7956",
       "path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
-      "runner_path": "scripts/frontier_higgs_mass_corrected_yt.py",
+      "runner_path": "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py",
       "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking"
     },
     "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02": {
@@ -50531,7 +50552,6 @@
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
-    "architecture_note_directional_measure",
     "architecture_options",
     "architecture_portability_sweep_note",
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25",
@@ -51504,25 +51524,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 51,
+      "bounded_theorem": 57,
       "meta": 8,
-      "no_go": 6,
-      "none": 1727,
+      "no_go": 7,
+      "none": 1717,
       "open_gate": 7,
-      "positive_theorem": 71
+      "positive_theorem": 74
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 553,
+      "bounded_theorem": 556,
       "meta": 8,
       "no_go": 112,
       "none": 454,
       "open_gate": 114,
-      "positive_theorem": 629
+      "positive_theorem": 626
     },
-    "edge_count": 5811,
+    "edge_count": 5815,
     "leaf_count": 599,
     "node_count": 1870,
-    "root_count": 1056,
-    "runners_with_path": 1430
+    "root_count": 1055,
+    "runners_with_path": 1429
   }
 }

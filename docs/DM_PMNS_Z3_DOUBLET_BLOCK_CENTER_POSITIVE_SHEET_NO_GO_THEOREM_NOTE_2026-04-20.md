@@ -1,10 +1,34 @@
 # DM PMNS `Z_3` Doublet-Block Center Positive-Sheet No-Go Theorem
 
-**Date:** 2026-04-20  
-**Lane:** DM A-BCC / remaining open import `I5`  
-**Status:** honest no-go on the current theorem stack  
-**Primary runner:**  
+**Date:** 2026-04-20 (originally); 2026-05-03 (review-loop runner repair via PR #485)
+**Lane:** DM A-BCC / remaining open import `I5`
+**Status:** honest no-go on the current theorem stack; runner PASS=12/0 after PR #485 register-check repair
+**Claim type:** no_go
+**Primary runner:**
 `scripts/frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py`
+
+## Review-loop repair (2026-05-03)
+
+The 2026-05-03 review follow-up recorded the runner at PASS=11/1: the
+geometric no-go content (PARTS 1-3) passed cleanly, but PART 4's
+register-consistency check looked for a `| I5 |` row plus
+`point-selection law` and `retained observational input` strings in
+`SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`. That register
+has since been refactored to focus on Koide-related imports and no
+longer enumerates an explicit I5 row.
+
+The 2026-05-03 runner repair (landed in PR #485, commit `46d9fda67`)
+points the PART 4 check at the current authoritative I5 status note
+(`DM_PMNS_LOCAL_SELECTOR_FAMILY_NO_GO_THEOREM_NOTE_2026-04-20.md`),
+which carries the literal `I5 is still open positively` line. Runner
+now PASS=12/0. This clears the brittle string-match block while leaving
+the independent audit lane to decide the row's claim type, audit
+verdict, and effective status.
+
+The substantive content of the no-go (positive-sheet center locus has
+many distinct exact solutions; PMNS angle triple varies macroscopically
+across it; center law is conditional on the exact PMNS target, not a
+native I5 closure) is unchanged by this repair.
 
 ## Summary
 
