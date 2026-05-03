@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:44:47.564395+00:00
+**Generated:** 2026-05-03T18:45:45.558078+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 82 |
-| **retained_no_go** | 104 |
+| **retained_no_go** | 105 |
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 723 |
+| unaudited | 722 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 330 |
+| `audited_clean` | 331 |
 | `audited_conditional` | 544 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 769 |
+| `unaudited` | 768 |
 
 | claim_type | count |
 |---|---:|
@@ -235,6 +235,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `growing_graph_dynamic_limit_diagnostic_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | C | - |
 | `growing_graph_frontier_expansion_proxy_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `h0125_scalable_scout_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | B | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | D | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
@@ -7061,6 +7062,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — The source note has no runner, no artifact chain, and no cited authority for the transfer norms, beam widths, detector probabilities, or SNR. Its stated probability formula also fails internally: retention^nl gives about 8.18e-4, 1.14e-11, and 4.26e-34 for the three rows, not 3.7e-59, 1.1e-88, and 1.6e-136.
 - **rationale:** Issue: the note's load-bearing numerical diagnosis is unsupported by any declared runner or one-hop derivation, and the explicit formula `P_det = (retention)^nl` is inconsistent with the printed P_det table by tens to more than one hundred orders of magnitude. Why this blocks: the retained negative claim depends on those numbers to distinguish boundary leakage, beam spreading, compounded loss, and statistical-noise AWAY behavior; without a reproducible computation or internally consistent formula, the diagnosis is not auditable. Repair target: add an executable h=0.125 failure diagnostic that computes T_interior/T_corner, beam sigma, detector probability including any geometric-spreading factor, and centroid SNR from the same propagation model, then update the note so every table entry follows from that runner. Claim boundary until fixed: safely claim only that boundary leakage and beam spreading are plausible failure hypotheses and that h=0.125 has not been retained by this note; do not retain the quantified root-cause diagnosis or SNR=0.5 noise conclusion.
 - **auditor confidence:** high
+
+### `h0125_scalable_scout_note`
+
+- **Note:** [`H0125_SCALABLE_SCOUT_NOTE.md`](../../docs/H0125_SCALABLE_SCOUT_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that the cited h=0.125 phys_l=4, phys_w=3 full-window scout rows do not provide a wider or more scalable rescue relative to the cited phys_l=6, phys_w=4 full-window comparator.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `fresh-agent-ramanujan`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The retained width-4 comparator stays pinned at alpha = 0.499, while the shorter-scale scout only reaches alpha = 0.501, 0.501, 0.502.  _(class `B`)_
+- **chain closes:** True — The cited scout log matches the note's Born, k, gravity, and alpha values, and the cited comparator log reports alpha = 0.499 for phys_l=6, phys_w=4. The closure is bounded to those observed full-window rows and does not exclude untested geometries.
+- **rationale:** The note's load-bearing comparison is a direct read from the two cited logs, and the numeric values match. Under the stated bounded scope, the conclusion does not require an additional physical bridge, tuned comparator, or algebraic decoration. Residual risk is limited to lack of a provided runner rerun; this audit ratifies only the recorded observed rows.
+- **auditor confidence:** medium
 
 ### `h0125_wider_w4_probe_note`
 

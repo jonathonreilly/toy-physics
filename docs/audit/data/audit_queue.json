@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 203,
-    "medium": 276
+    "medium": 275
   },
-  "generated_at": "2026-05-03T18:44:47.071783+00:00",
+  "generated_at": "2026-05-03T18:45:45.047493+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7602,22 +7602,24 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "h0125_scalable_scout_note",
+      "claim_id": "h0125_wider_replay_note",
       "claim_scope": null,
-      "claim_type": "no_go",
+      "claim_type": "bounded_theorem",
       "claim_type_provenance": "migration_hint",
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
-      "deps": [],
+      "deps": [
+        "h0125_scalable_scout_note"
+      ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 5.085,
-      "note_path": "docs/H0125_SCALABLE_SCOUT_NOTE.md",
+      "load_bearing_score": 5.024,
+      "note_path": "docs/H0125_WIDER_REPLAY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 23
+      "runner_path": "scripts/lattice_3d_l2_wide_h0125_replay.py",
+      "transitive_descendants": 22
     },
     {
       "audit_independence_required": "any_non_self",
@@ -12382,29 +12384,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 22
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "h0125_wider_replay_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "h0125_scalable_scout_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.024,
-      "note_path": "docs/H0125_WIDER_REPLAY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_3d_l2_wide_h0125_replay.py",
       "transitive_descendants": 22
     },
     {
@@ -19728,5 +19707,5 @@
     }
   ],
   "ready_count": 63,
-  "total_pending": 752
+  "total_pending": 751
 }
