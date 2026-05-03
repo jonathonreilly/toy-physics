@@ -1,33 +1,12 @@
 {
   "by_criticality": {
-    "critical": 75,
+    "critical": 74,
     "high": 222,
     "leaf": 203,
     "medium": 271
   },
-  "generated_at": "2026-05-03T12:12:17.973040+00:00",
+  "generated_at": "2026-05-03T12:14:02.121156+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
-      "claim_scope": "Carrier data alone do not force Schur/event scalar equality for the parent-source scalar route, because an affine hidden character can leave the carrier fixed while shifting the Schur scalar.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 10,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 13.165,
-      "note_path": "docs/PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_parent_source_hidden_character_nogo.py",
-      "transitive_descendants": 286
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -89,6 +68,29 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": null,
+      "transitive_descendants": 285
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "planck_finite_response_no_go_note_2026-04-24",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.66,
+      "note_path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
       "transitive_descendants": 285
     },
     {
@@ -498,29 +500,6 @@
       "ready": false,
       "runner_path": "scripts/axiom_first_spectrum_condition_check.py",
       "transitive_descendants": 289
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "planck_finite_response_no_go_note_2026-04-24",
-      "claim_scope": null,
-      "claim_type": "no_go",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
-      ],
-      "direct_in_degree": 9,
-      "effective_status": "unaudited",
-      "load_bearing_score": 12.66,
-      "note_path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
-      "transitive_descendants": 285
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -19982,5 +19961,5 @@
     }
   ],
   "ready_count": 116,
-  "total_pending": 771
+  "total_pending": 770
 }
