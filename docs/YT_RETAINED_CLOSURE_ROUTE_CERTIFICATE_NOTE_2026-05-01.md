@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=111 FAIL=0
+# SUMMARY: PASS=112 FAIL=0
 ```
 
 ## 2026-05-03 FH/LSZ Production-Support Update
@@ -47,6 +47,12 @@ tau=1 target diagnostic is stable (`relative_stdev=0.006010378980783995`,
 `spread_ratio=1.0229374224682368`).  This is diagnostic support only; no
 readout switch is authorized without a predeclared response-window acceptance
 gate.
+
+The response-window acceptance gate now exists and remains open.  Chunk-level
+tau-window central values are stable across tau windows 0-9
+(`tau_window_mean_spread=1.00497773596142`), but per-configuration multi-tau
+covariance and multiple source radii are absent.  No production readout switch
+or retained/proposed-retained closure is authorized.
 
 The runner verifies:
 
@@ -87,6 +93,7 @@ The runner verifies:
 | finite-source-linearity gate is passed for current FH chunks | no |
 | autocorrelation/ESS gate is passed for target FH/LSZ observables | bounded support only; yes for current target ESS, not closure |
 | response-window forensics authorizes a new response readout | no |
+| response-window acceptance gate is passed | no |
 | chunk011 target time series make the ready set production evidence | no |
 | target time-series harness extension is production evidence | no |
 | target time series identify the canonical Higgs radial mode | no |
@@ -541,6 +548,11 @@ Latest FH/LSZ response-window forensics checkpoint: retained-route is
 refreshed at `PASS=111 FAIL=0`.  The tau=1 target response is stable across
 chunks001-016, but the fitted response surface remains unstable and no
 production readout switch is authorized.
+
+Latest FH/LSZ response-window acceptance checkpoint: retained-route is
+refreshed at `PASS=112 FAIL=0`.  Stable chunk-level tau windows are bounded
+support only; the gate is not passed because multi-tau covariance and multiple
+source radii are missing.
 This is scheduling support only and authorizes no retained/proposed-retained
 wording.
 

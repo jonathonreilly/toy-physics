@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-03 update: response-window acceptance gate now exists and is not
+passed.  Stable chunk-level tau-window central values across tau windows 0-9
+are useful support, but the gate needs per-configuration multi-tau covariance
+and multiple source radii.  The next production-support move is therefore a
+target-serialization extension plus multi-radius calibration, unless the
+foreground route pivots back to the higher retained-positive identity work:
+same-surface `O_H/C_sH/C_HH`, real W/Z response with sector-overlap identity,
+or an orthogonal-neutral exclusion theorem.
+
 2026-05-03 update: response-window forensics now shows the tau=1 target
 diagnostic is stable across chunks001-016, but the fitted `dE/ds` response
 surface remains unstable and no readout switch is authorized.  The next

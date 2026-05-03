@@ -51,6 +51,11 @@ the same chunks has `relative_stdev=0.006010378980783995` and
 does not authorize switching the production response readout without a
 predeclared response-window acceptance gate.
 
+The response-window acceptance gate now records the next acceptance boundary.
+Chunk-level tau-window central values are stable across tau windows 0-9, but
+the gate remains open because per-configuration multi-tau covariance and
+multiple source radii are absent.
+
 ## Claim Boundary
 
 This diagnostic does not authorize retained or proposed-retained wording.  It
@@ -70,4 +75,7 @@ python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
 
 python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
 # SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
 ```

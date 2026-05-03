@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Response-Window Acceptance Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN ACCEPTANCE GATE / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- chunk-level source-shift effective-mass slopes are stable across tau windows
+  0-9 for chunks001-016;
+- per-configuration multi-tau covariance is absent because current target rows
+  serialize tau1 only;
+- the finite-source-linearity gate is not passed, so multiple source radii are
+  absent;
+- no response readout switch, retained closure, or proposed-retained wording
+  is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Response-Window Forensics
 
 Local review-loop disposition:

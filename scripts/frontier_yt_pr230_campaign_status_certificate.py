@@ -270,6 +270,9 @@ def main() -> int:
         "fh_lsz_response_window_forensics": load(
             "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json"
         ),
+        "fh_lsz_response_window_acceptance_gate": load(
+            "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json"
+        ),
         "fh_lsz_target_timeseries_replacement_queue": load(
             "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json"
         ),
@@ -897,6 +900,12 @@ def main() -> int:
         "fh-lsz-response-window-forensics-not-closure",
         "response-window forensics" in str(statuses["fh_lsz_response_window_forensics"]),
         statuses["fh_lsz_response_window_forensics"],
+    )
+    report(
+        "fh-lsz-response-window-acceptance-gate-blocks",
+        "response-window acceptance gate not passed"
+        in str(statuses["fh_lsz_response_window_acceptance_gate"]),
+        statuses["fh_lsz_response_window_acceptance_gate"],
     )
     report(
         "fh-lsz-target-timeseries-replacement-queue-not-closure",

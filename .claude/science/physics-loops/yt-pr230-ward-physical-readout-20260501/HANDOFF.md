@@ -1,5 +1,26 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ response-window acceptance gate:
+
+- Added `scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py` and
+  `outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json`.
+- Chunk-level symmetric source-shift effective-mass slopes are stable across
+  tau windows 0-9 for chunks001-016:
+  `stable_tau_windows=[0,1,2,3,4,5,6,7,8,9]`,
+  `tau_window_mean_spread=1.00497773596142`.
+- The gate is not passed.  Current target rows serialize per-configuration
+  tau1 slopes only, so multi-tau covariance is absent; the
+  finite-source-linearity gate is not passed, so only one source radius is
+  available; the fitted response-stability gate remains open.
+- Retained-route is `PASS=112 FAIL=0`; campaign status is `PASS=138 FAIL=0`.
+  No readout switch, retained closure, or proposed-retained closure is
+  authorized.
+
+Next exact action: extend target serialization to per-configuration multi-tau
+response rows and run a multi-radius source-response calibration, or prioritize
+same-surface `C_sH/C_HH`, a same-surface `O_H` identity theorem, or real W/Z
+response rows with sector-overlap identity.
+
 Latest checkpoint, 2026-05-03 FH/LSZ response-window forensics:
 
 - Added `scripts/frontier_yt_fh_lsz_response_window_forensics.py` and

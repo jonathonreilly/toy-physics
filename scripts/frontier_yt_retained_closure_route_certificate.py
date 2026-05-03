@@ -150,6 +150,7 @@ def main() -> int:
         "fh_lsz_target_observable_ess": "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json",
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
         "fh_lsz_response_window_forensics": "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json",
+        "fh_lsz_response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
         "fh_lsz_target_timeseries_replacement_queue": "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json",
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
         "fh_lsz_selected_mass_normal_cache_speedup": "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json",
@@ -895,6 +896,15 @@ def main() -> int:
         and certificates["fh_lsz_response_window_forensics"].get("proposal_allowed") is False
         and certificates["fh_lsz_response_window_forensics"].get("readout_switch_authorized") is False
     )
+    response_window_acceptance_gate_blocks = (
+        "response-window acceptance gate not passed"
+        in certificates["fh_lsz_response_window_acceptance_gate"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_response_window_acceptance_gate"].get("proposal_allowed") is False
+        and certificates["fh_lsz_response_window_acceptance_gate"].get(
+            "response_window_acceptance_gate_passed"
+        )
+        is False
+    )
     target_timeseries_replacement_queue_cert = certificates[
         "fh_lsz_target_timeseries_replacement_queue"
     ]
@@ -1449,6 +1459,11 @@ def main() -> int:
         "fh-lsz-response-window-forensics-not-closure",
         response_window_forensics_not_closure,
         certificates["fh_lsz_response_window_forensics"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-response-window-acceptance-gate-blocks",
+        response_window_acceptance_gate_blocks,
+        certificates["fh_lsz_response_window_acceptance_gate"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-target-timeseries-replacement-queue-not-closure",

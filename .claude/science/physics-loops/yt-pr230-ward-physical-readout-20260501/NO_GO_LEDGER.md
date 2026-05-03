@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## FH/LSZ response-window acceptance gate is not passed
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=112 FAIL=0
+```
+
+Chunk-level effective-mass source-shift slopes are stable across tau windows
+0-9, but the current target rows do not provide per-configuration multi-tau
+covariance and the finite-source-linearity gate is not passed.  Stable central
+tau-window slopes are not a production response readout, not a zero-source FH
+derivative certificate, and not canonical-Higgs identity.  Do not treat this
+as retained/proposed-retained evidence.
+
 ## FH/LSZ tau1 response-window stability is not closure
 
 Runners:

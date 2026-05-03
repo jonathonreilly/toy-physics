@@ -1,0 +1,615 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ response-window acceptance gate not passed",
+  "chunk_rows": [
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 1,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2429367921404477,
+        "1": 1.2433612009068118,
+        "2": 1.2291256640039716,
+        "3": 1.2515564181276528,
+        "4": 1.2408372366208842,
+        "5": 1.2414873854278197,
+        "6": 1.2490981520194122,
+        "7": 1.2526147065245463,
+        "8": 1.2523955700835754,
+        "9": 1.2448317501186135
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 2,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2503776865598448,
+        "1": 1.260020882653523,
+        "2": 1.2352842010605714,
+        "3": 1.2473209209990954,
+        "4": 1.2395971527106475,
+        "5": 1.2452963055075927,
+        "6": 1.2354992086168526,
+        "7": 1.2481334943395872,
+        "8": 1.232317086618695,
+        "9": 1.2532938044642505
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 3,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk003_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2585791387909828,
+        "1": 1.2407839657344044,
+        "2": 1.2467898420265522,
+        "3": 1.2418801104818855,
+        "4": 1.241172975969329,
+        "5": 1.2433220951860724,
+        "6": 1.237296777816721,
+        "7": 1.2557105626260667,
+        "8": 1.2444399513057647,
+        "9": 1.2548947179689462
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 4,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk004_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2374952850880305,
+        "1": 1.249300030196776,
+        "2": 1.2604738655169978,
+        "3": 1.234680465468263,
+        "4": 1.2503765442500314,
+        "5": 1.2424403637089076,
+        "6": 1.2441829921755798,
+        "7": 1.2477276299484807,
+        "8": 1.2504099320358897,
+        "9": 1.2492720892375186
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 5,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk005_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2451343854026797,
+        "1": 1.2421877847742957,
+        "2": 1.2437081588711707,
+        "3": 1.2422728986876685,
+        "4": 1.2450421297282355,
+        "5": 1.2432258816464814,
+        "6": 1.2431461768669716,
+        "7": 1.2498300403608997,
+        "8": 1.2436296226936872,
+        "9": 1.2421728144146327
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 6,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk006_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2524599062342934,
+        "1": 1.2317402681361944,
+        "2": 1.2323507129931688,
+        "3": 1.2370975765247927,
+        "4": 1.252433828245636,
+        "5": 1.2451200614342461,
+        "6": 1.247067954470782,
+        "7": 1.2385159714850213,
+        "8": 1.2396614666460137,
+        "9": 1.253804591197849
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 7,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk007_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.241324527340315,
+        "1": 1.2547745645930641,
+        "2": 1.2421403211745896,
+        "3": 1.244216758126604,
+        "4": 1.2397192251563327,
+        "5": 1.2444197411664915,
+        "6": 1.2539956769985205,
+        "7": 1.2405355853944533,
+        "8": 1.249713867513269,
+        "9": 1.248805223515903
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 8,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk008_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2268673943758301,
+        "1": 1.254823317171072,
+        "2": 1.2483288111535207,
+        "3": 1.2447163358206725,
+        "4": 1.2498611006175775,
+        "5": 1.2562148890248537,
+        "6": 1.2484470371942669,
+        "7": 1.2401833306590837,
+        "8": 1.2358508652422828,
+        "9": 1.2469245888748093
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 9,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk009_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.240861017777295,
+        "1": 1.2454375723835232,
+        "2": 1.2486947921775293,
+        "3": 1.250447135488364,
+        "4": 1.251752873432177,
+        "5": 1.2481093946769217,
+        "6": 1.2378708169903163,
+        "7": 1.2422123046323619,
+        "8": 1.2525239174839498,
+        "9": 1.2466484602307815
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 10,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2382731815641645,
+        "1": 1.2510741642341339,
+        "2": 1.2402354007656657,
+        "3": 1.2500836751909827,
+        "4": 1.246322576183756,
+        "5": 1.2393923169378263,
+        "6": 1.2443349204226406,
+        "7": 1.250452316269246,
+        "8": 1.2541002493852482,
+        "9": 1.2438921916200663
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 11,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk011_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2459029667399757,
+        "1": 1.247197173751835,
+        "2": 1.2556951988733633,
+        "3": 1.2402903014404054,
+        "4": 1.2487632271517057,
+        "5": 1.2472138827156476,
+        "6": 1.2504561504212863,
+        "7": 1.2284472866817997,
+        "8": 1.2430985038140996,
+        "9": 1.2468844978162696
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 12,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk012_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2440317615031504,
+        "1": 1.2456069029690209,
+        "2": 1.2463092197446901,
+        "3": 1.2437664994476627,
+        "4": 1.24124867454527,
+        "5": 1.2435970654124828,
+        "6": 1.2411527755215146,
+        "7": 1.24333544215679,
+        "8": 1.2458898556785614,
+        "9": 1.248904060402567
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 13,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk013_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.252503010075956,
+        "1": 1.2522535577162985,
+        "2": 1.2361601384898724,
+        "3": 1.2569774219987284,
+        "4": 1.2513056706534464,
+        "5": 1.2356350093899793,
+        "6": 1.248938703334057,
+        "7": 1.239843839355792,
+        "8": 1.2461613492861678,
+        "9": 1.2535273751355214
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 14,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk014_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.254364941701125,
+        "1": 1.2474793361004766,
+        "2": 1.2393852185858756,
+        "3": 1.2401462707267719,
+        "4": 1.2428297589317183,
+        "5": 1.2436924292052565,
+        "6": 1.2454762075464254,
+        "7": 1.2369065172467497,
+        "8": 1.2366795080091753,
+        "9": 1.252781421333471
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 15,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk015_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2588626435599215,
+        "1": 1.2600494005788554,
+        "2": 1.2412212464736005,
+        "3": 1.2522670771500155,
+        "4": 1.2388523325390643,
+        "5": 1.2483593715095775,
+        "6": 1.2454149952493943,
+        "7": 1.2530929587596051,
+        "8": 1.25006262636419,
+        "9": 1.2480911701069797
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 16,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk016_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.248105720392756,
+        "1": 1.2555386146916203,
+        "2": 1.2418659647496,
+        "3": 1.2529283114972811,
+        "4": 1.240495703663702,
+        "5": 1.246346416400823,
+        "6": 1.2493487204332077,
+        "7": 1.2342553282098434,
+        "8": 1.2334456920865655,
+        "9": 1.2520360619549975
+      }
+    }
+  ],
+  "exact_next_action": "Extend target serialization to per-configuration multi-tau response rows and run a multi-radius source-response calibration, or continue the non-source-only canonical-Higgs identity routes.",
+  "fail_count": 0,
+  "multiple_source_radii_present": false,
+  "pass_count": 12,
+  "per_configuration_multi_tau_covariance_present": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No production response readout switch is authorized, and scalar LSZ/canonical-Higgs gates remain separate blockers.",
+  "readout_switch_authorized": false,
+  "ready_chunk_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "response_stability_passed": false,
+  "response_window_acceptance_gate_passed": false,
+  "stable_tau_windows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not replace the production response readout",
+    "does not treat chunk-level tau-window stability as covariance",
+    "does not treat one source radius as the zero-source FH derivative",
+    "does not set kappa_s = 1 or identify the source pole with canonical Higgs",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0"
+  ],
+  "tau_window_mean_spread_ratio": 1.00497773596142,
+  "tau_window_summaries": {
+    "0": {
+      "available": true,
+      "max": 1.2588626435599215,
+      "mean": 1.246130022452923,
+      "min": 1.2268673943758301,
+      "n": 16,
+      "relative_stdev": 0.006750344382690203,
+      "spread_ratio": 1.0260788161220709,
+      "stable_by_rule": true,
+      "stdev": 0.008411806797166705
+    },
+    "1": {
+      "available": true,
+      "max": 1.2600494005788554,
+      "mean": 1.248851796036994,
+      "min": 1.2317402681361944,
+      "n": 16,
+      "relative_stdev": 0.0059977036059693685,
+      "spread_ratio": 1.0229830372319457,
+      "stable_by_rule": true,
+      "stdev": 0.007490242920412402
+    },
+    "2": {
+      "available": true,
+      "max": 1.2604738655169978,
+      "mean": 1.2429855472912963,
+      "min": 1.2291256640039716,
+      "n": 16,
+      "relative_stdev": 0.006540076464368585,
+      "spread_ratio": 1.0255044723506195,
+      "stable_by_rule": true,
+      "stdev": 0.008129220523390112
+    },
+    "3": {
+      "available": true,
+      "max": 1.2569774219987284,
+      "mean": 1.2456655110735528,
+      "min": 1.234680465468263,
+      "n": 16,
+      "relative_stdev": 0.005034746143719472,
+      "spread_ratio": 1.0180588882338955,
+      "stable_by_rule": true,
+      "stdev": 0.006271609628241915
+    },
+    "4": {
+      "available": true,
+      "max": 1.252433828245636,
+      "mean": 1.2450381881499697,
+      "min": 1.2388523325390643,
+      "n": 16,
+      "relative_stdev": 0.004015772845995831,
+      "spread_ratio": 1.0109629657626231,
+      "stable_by_rule": true,
+      "stdev": 0.004999790548200496
+    },
+    "5": {
+      "available": true,
+      "max": 1.2562148890248537,
+      "mean": 1.2446170380844364,
+      "min": 1.2356350093899793,
+      "n": 16,
+      "relative_stdev": 0.003588472787291639,
+      "spread_ratio": 1.0166553063635146,
+      "stable_by_rule": true,
+      "stdev": 0.004466274371765521
+    },
+    "6": {
+      "available": true,
+      "max": 1.2539956769985205,
+      "mean": 1.2451079541298717,
+      "min": 1.2354992086168526,
+      "n": 16,
+      "relative_stdev": 0.004137343816893123,
+      "spread_ratio": 1.0149708459970401,
+      "stable_by_rule": true,
+      "stdev": 0.0051514396953836715
+    },
+    "7": {
+      "available": true,
+      "max": 1.2557105626260667,
+      "mean": 1.2438623321656455,
+      "min": 1.2284472866817997,
+      "n": 16,
+      "relative_stdev": 0.006105237952823223,
+      "spread_ratio": 1.022193281095446,
+      "stable_by_rule": true,
+      "stdev": 0.007594075518424904
+    },
+    "8": {
+      "available": true,
+      "max": 1.2541002493852482,
+      "mean": 1.244398754015446,
+      "min": 1.232317086618695,
+      "n": 16,
+      "relative_stdev": 0.005679269571936139,
+      "spread_ratio": 1.0176765890882218,
+      "stable_by_rule": true,
+      "stdev": 0.007067275979035166
+    },
+    "9": {
+      "available": true,
+      "max": 1.2548947179689462,
+      "mean": 1.2491728011495735,
+      "min": 1.2421728144146327,
+      "n": 16,
+      "relative_stdev": 0.003101394433382391,
+      "spread_ratio": 1.0102416535015772,
+      "stable_by_rule": true,
+      "stdev": 0.0038741775718179757
+    }
+  },
+  "verdict": "The current chunks give stable chunk-level symmetric source-shift effective-mass slopes across tau windows 0-9, so the forensics diagnostic is reproducible beyond tau=1.  The acceptance gate still does not pass: the target rows do not serialize per-configuration multi-tau covariance, the finite-source-linearity gate is not passed, and the production fitted-slope response-stability gate remains open."
+}

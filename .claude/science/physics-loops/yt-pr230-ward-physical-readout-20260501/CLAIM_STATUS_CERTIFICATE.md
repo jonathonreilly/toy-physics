@@ -1,5 +1,28 @@
 # Claim Status Certificate
 
+FH/LSZ response-window acceptance gate:
+
+```text
+actual_current_surface_status: open / FH-LSZ response-window acceptance gate not passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=112 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=138 FAIL=0
+```
+
+Stable chunk-level tau windows are bounded support only.  The gate is open
+because multi-tau covariance, multiple source radii, scalar-pole/FV/IR
+model-class control, and canonical-Higgs/source-overlap identity remain
+missing.  This authorizes no readout switch and no retained or
+`proposed_retained` wording.
+
 FH/LSZ response-window forensics:
 
 ```text

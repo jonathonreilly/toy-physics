@@ -59,3 +59,10 @@ Add a predeclared FH response-window acceptance gate that compares multiple
 effective-mass tau windows, fit windows, and source radii with covariance, then
 rerun response stability.  In parallel, keep the scalar-pole/FV/IR/model-class
 and canonical-Higgs identity gates as separate blockers.
+
+## Follow-Up
+
+The response-window acceptance gate now exists and is not passed.  Chunk-level
+tau-window central values are stable across tau windows 0-9, but
+per-configuration multi-tau covariance and multiple source radii are absent, so
+no production readout switch is authorized.
