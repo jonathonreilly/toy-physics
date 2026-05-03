@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:48:53.843342+00:00
+**Generated:** 2026-05-03T11:50:05.790798+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 742 |
+| unaudited | 741 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 513 |
+| ~~audited_conditional~~ | 514 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 345 |
-| `audited_conditional` | 513 |
+| `audited_conditional` | 514 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 783 |
+| `unaudited` | 782 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 552 |
+| `bounded_theorem` | 553 |
 | `decoration` | 8 |
 | `meta` | 42 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 891 |
+| `positive_theorem` | 890 |
 
 | criticality | count |
 |---|---:|
@@ -803,6 +803,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_inertial_response_readiness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_c3_character_holonomy_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -9957,6 +9958,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `scripts/persistent_record_matched_compare.py`
   - `scripts/persistent_record_overlap_kernel.py`
+- **auditor confidence:** high
+
+### `planck_boundary_density_extension_theorem_note_2026-04-24`
+
+- **Note:** [`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`](../../docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional finite-face-union extension only: given locality, additivity, cubic-frame orientation symmetry, primitive normalization c_cell=1/4, and the separate gravitational-carrier premise, the primitive coefficient extends uniquely to finite tiled boundary patches. It does not derive the carrier premise or an unconditional Planck-scale identification.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-sagan-019dedaa-5b6e-74b0-9134-4b587a08c833`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Finite additivity plus unit primitive-face normalization c_cell=1/4 implies N_A(P)=n*c_cell for any finite disjoint union of primitive faces, with A(P)=n*a^2 giving N_A(P)=c_cell*A(P)/a^2.  _(class `A`)_
+- **chain closes:** False — The algebraic finite-boundary extension closes inside the stated assumptions, but the full Planck boundary/action claim does not close because the microscopic gravitational carrier premise is explicitly assumed rather than derived. Equating the extended count to A/(4 l_P^2) is conditional on that unsupported physical bridge.
+- **rationale:** Issue: The finite additivity theorem is algebraically valid under its assumptions, but the Planck-normalization consequence depends on accepting that the primitive boundary/worldtube count is the microscopic gravitational boundary/action carrier. Why this blocks: without that physical bridge, the derivation of a/l_P=1 is only an internal conditional normalization, not a first-principles Planck result. The runner verifies arithmetic, example invariance, orientation symmetry, and explicit non-identification of the carrier premise, but it cannot establish the carrier premise itself. Repair target: provide an independent derivation that the primitive one-step boundary/worldtube count is the gravitational boundary/action carrier, or demote all Planck-normalization language to a conditional corollary. Claim boundary until fixed: retain only the bounded theorem that a local additive primitive-face rule normalized by c_cell=1/4 uniquely extends to finite primitive-face unions with density c_cell/a^2.
+- **open / conditional deps cited:**
+  - `derive primitive one-step boundary/worldtube count as microscopic carrier of gravitational boundary/action density`
 - **auditor confidence:** high
 
 ### `planck_boundary_orientation_incidence_no_go_note_2026-04-30`
