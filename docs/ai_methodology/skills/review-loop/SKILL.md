@@ -17,7 +17,10 @@ apply audit verdicts, write `audited_clean`, or run the audit worker.
 The bar is intentionally high: if review-loop is doing its job, the later
 fresh-context audit should be mostly confirmatory. Do not pass branches that
 leave the audit lane to discover basic claim-boundary, dependency-graph,
-status-vocabulary, or runner-validity defects.
+status-vocabulary, or runner-validity defects. Do not lose durable science
+when a PR fails that bar: before closing or rejecting a branch, run the
+salvage pass below and preserve any narrow, runner-backed lemma that can be
+made canonical without changing the science.
 
 ## Arguments
 
@@ -50,6 +53,10 @@ Parse:
 5. Record whether the worktree was initially clean. If it was dirty, do not
    auto-commit without explicit user permission unless the slash-command
    invocation clearly requested commit-producing fixes.
+6. If the task is to review open/non-landed PRs, include all non-merged PRs in
+   the requested scope except PRs the user explicitly excluded. Closed-but-
+   unmerged PR heads can be inspected with `gh pr view` and
+   `git fetch origin pull/<N>/head:refs/tmp/pr-<N>`.
 
 Useful commands:
 
@@ -189,8 +196,73 @@ Classify every finding:
 - `REPO_GOVERNANCE`
 - `AUDIT_COMPATIBILITY`
 - `NIT`
+- `SALVAGE_CANDIDATE`
+- `SALVAGE_REJECT`
 
 Stop immediately when all applicable reviewers are clean.
+
+## Salvage Pass
+
+Run this pass before closing a PR, marking it non-landable, or discarding a
+stretch/campaign packet. The goal is to preserve meaningful science without
+lowering the review bar.
+
+1. Inventory the branch into these buckets:
+   - canonical source candidates: theorem/no-go/open-gate notes and paired
+     runners;
+   - useful negative results: failed routes that name a durable obstruction and
+     have a runner or exact calculation;
+   - support-only calculations: exact algebra or bookkeeping that may be useful
+     as bounded support but not as retained/Nature-grade science;
+   - non-source material: claim-status certificates, handoffs, campaign state,
+     generated audit files, expected audit verdicts, and branch-local logs.
+2. For each source candidate, decide whether it can be salvaged with only
+   review-level edits:
+   - the claim can be narrowed to a canonical `claim_type`:
+     `positive_theorem`, `bounded_theorem`, `no_go`, `open_gate`,
+     `decoration`, or `meta`;
+   - all imported physics, textbook machinery, observations, fitted values,
+     and conventions are explicitly labelled;
+   - the runner tests the actual load-bearing bridge, not just downstream
+     arithmetic after the premise is assumed;
+   - load-bearing dependencies can be represented as markdown links and
+     non-load-bearing siblings can be kept out of the citation graph;
+   - the salvage does not rely on a closed, unlanded, unaudited, or rejected
+     sibling PR unless the dependency is copied in as a self-contained
+     derivation and reviewed in the same salvage branch.
+3. Do not salvage by papering over missing science. If the durable part is
+   only an obstruction or failed route, salvage it as a narrow `open_gate` or
+   `no_go` only when the runner directly supports that negative boundary.
+4. Strip all non-source material from salvage branches:
+   claim-status certificates, handoffs, campaign state, expected audit
+   verdicts, `target_effective_status_*`, `audit_status = ...`, generated audit
+   verdict payloads, and branch-local logs.
+5. Prefer small salvage PRs grouped by coherent topic. Split unrelated lemmas
+   rather than bundling them only because they came from the same failed PR.
+6. Run the normal audit-system compatibility gate on every salvage branch.
+   The resulting rows must remain `unaudited`; the independent audit lane owns
+   all verdicts.
+7. If no salvage is possible, leave a concise PR comment or review summary
+   saying why, for example: "runner only rechecks assumed premise",
+   "claim depends on closed sibling", "noncanonical stretch packet with no
+   theorem-grade boundary", or "overbroad theorem not supported by runner".
+
+Salvageable examples:
+
+- a parity/counting/no-go lemma with a decisive finite algebra runner;
+- a conditional textbook lemma that is useful only when explicitly marked as
+  bounded support;
+- a negative route that conclusively rules out one proposed mechanism and
+  narrows the remaining open gate.
+
+Not salvageable without a new research task:
+
+- audit-hygiene or graph-registration packages;
+- branch-local certificates and handoffs with no source theorem;
+- broad "closing derivations" whose runner assumes the missing bridge;
+- expected audit verdicts or status-elevation packages;
+- stretch-attempt notes that document research direction but do not define a
+  canonical theorem/no-go/open-gate boundary.
 
 ## Fix Policy
 
@@ -211,6 +283,10 @@ Otherwise apply the narrowest honest fix:
 6. Update `docs/repo/ACTIVE_REVIEW_QUEUE.md` for live unresolved findings.
 7. Route detailed resolved packets to
    `docs/work_history/repo/review_feedback/` only when a long packet is needed.
+8. When a PR is non-landable but salvageable, create a new source-only salvage
+   branch or PR rather than editing the rejected branch in place if the rejected
+   branch contains substantial non-source packet material. Preserve only the
+   durable note/runner content and make the claim boundary canonical.
 
 Skip:
 
