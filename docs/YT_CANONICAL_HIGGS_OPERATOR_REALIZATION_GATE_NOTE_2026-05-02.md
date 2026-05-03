@@ -17,15 +17,17 @@ The gate is not passed.  The existing EW Higgs gauge-mass artifacts verify
 object-level tree algebra after a canonical Higgs doublet is supplied.  They do
 not realize a canonical-Higgs operator on the Cl(3)/Z3 scalar-source surface.
 
-The production harness currently supports explicit scalar-source shifts and
-same-source `C_ss` diagnostics.  It does not yet provide `O_H`, `C_sH`, or
-`C_HH` observables, so the Gram-purity acceptance condition cannot be evaluated
-from current artifacts.
+The production harness now supports default-off source-Higgs finite-row
+instrumentation behind an explicit operator-certificate input.  That is support
+infrastructure only: the current PR surface still lacks an accepted same-surface
+canonical-Higgs operator certificate, `C_sH`/`C_HH` pole-residue certificate, and
+Gram-purity closure, so the acceptance condition cannot be evaluated from
+current artifacts.
 
 The refreshed runner treats the `source_higgs_cross_correlator` production
-metadata as an absence guard unless the block is enabled and no longer marked
-`absent_guarded`.  Naming the future `O_H`, `C_sH`, and `C_HH` rows in metadata
-does not realize a canonical-Higgs operator.
+metadata as a default-off guard unless an accepted canonical-Higgs operator
+certificate exists.  Finite `C_ss`, `C_sH`, and `C_HH` rows do not realize a
+canonical-Higgs operator by themselves.
 
 ## Claim Boundary
 
@@ -39,7 +41,7 @@ realization.  It does not set `kappa_s = 1`, `cos(theta)=1`, `c2 = 1`, or
 
 ```bash
 python3 scripts/frontier_yt_canonical_higgs_operator_realization_gate.py
-# SUMMARY: PASS=13 FAIL=0
+# SUMMARY: PASS=17 FAIL=0
 ```
 
 Next action: construct a same-surface canonical-Higgs operator with `C_HH` and

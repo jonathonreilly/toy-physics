@@ -24,6 +24,8 @@ PRODUCTION_HARNESS = ROOT / "scripts" / "yt_direct_lattice_correlator_production
 
 CERTS = {
     "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
+    "source_higgs_harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
+    "canonical_higgs_operator_certificate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
     "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
     "effective_potential_hessian": "outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json",
@@ -68,22 +70,23 @@ def source_higgs_guard_status(harness_text: str) -> dict[str, bool]:
     if start >= 0:
         end = harness_text.find("},", start)
         block = harness_text[start : end + 2] if end >= 0 else harness_text[start:]
-    guarded_absence = (
-        '"enabled": False' in block
-        and '"implementation_status": "absent_guarded"' in block
-        and '"canonical_higgs_operator_realization": "absent"' in block
+    default_off_guard = (
+        '"enabled": source_higgs_enabled' in block
+        and '"absent_guarded"' in block
+        and '"certificate_supplied_unratified"' in block
     )
     required_objects_named = all(token in block for token in ("O_H or radial canonical-Higgs", "C_sH(q)", "C_HH(q)"))
-    real_canonical_h_operator = (
-        '"enabled": True' in block
-        and '"absent_guarded"' not in block
-        and '"canonical_higgs_operator_realization": "absent"' not in block
+    source_higgs_instrumentation = (
+        "--source-higgs-cross-modes" in harness_text
+        and "stochastic_source_higgs_cross_correlator" in harness_text
+        and "source_higgs_cross_correlator_analysis" in harness_text
     )
     return {
         "guard_present": bool(block),
-        "guarded_absence": guarded_absence,
+        "default_off_guard": default_off_guard,
         "required_objects_named": required_objects_named,
-        "real_canonical_h_operator": real_canonical_h_operator,
+        "source_higgs_instrumentation": source_higgs_instrumentation,
+        "real_canonical_h_operator": False,
     }
 
 
@@ -114,7 +117,13 @@ def main() -> int:
         and "scalar_source_response_analysis" in harness_text
     )
     source_higgs_guard = source_higgs_guard_status(harness_text)
-    harness_has_canonical_h_operator = source_higgs_guard["real_canonical_h_operator"]
+    harness_has_source_higgs_instrumentation = source_higgs_guard["source_higgs_instrumentation"]
+    operator_certificate_valid = (
+        certs["canonical_higgs_operator_certificate"].get("candidate_valid") is True
+    )
+    harness_has_canonical_h_operator = (
+        source_higgs_guard["real_canonical_h_operator"] and operator_certificate_valid
+    )
     cross_import_blocks = (
         "source-Higgs cross-correlator import audit"
         in status(certs["source_higgs_cross_correlator_import"])
@@ -146,6 +155,14 @@ def main() -> int:
         )
         is False
     )
+    harness_extension_support = (
+        "source-Higgs cross-correlator harness extension"
+        in status(certs["source_higgs_harness_extension"])
+    )
+    operator_certificate_absent = (
+        "canonical-Higgs operator certificate absent"
+        in status(certs["canonical_higgs_operator_certificate"])
+    )
 
     acceptance_schema = {
         "canonical_higgs_operator": "explicit same-surface operator O_H or H_radial on Cl(3)/Z3 fields",
@@ -175,11 +192,30 @@ def main() -> int:
     report("ew-note-assumes-canonical-h", ew_assumes_canonical_h, str(EW_NOTE.relative_to(ROOT)))
     report("ew-runner-is-object-level-after-h-supplied", ew_runner_object_level, str(EW_RUNNER.relative_to(ROOT)))
     report("harness-has-pr-scalar-source", harness_has_scalar_source, str(PRODUCTION_HARNESS.relative_to(ROOT)))
-    report("harness-lacks-canonical-h-operator", not harness_has_canonical_h_operator, "no C_sH/O_H path")
     report(
-        "source-higgs-absence-guard-not-evidence",
-        source_higgs_guard["guard_present"] and source_higgs_guard["guarded_absence"],
-        "guard names required rows but keeps enabled false",
+        "harness-has-source-higgs-instrumentation",
+        harness_has_source_higgs_instrumentation,
+        "default-off C_ss/C_sH/C_HH finite-row path exists",
+    )
+    report(
+        "harness-lacks-accepted-canonical-h-operator",
+        not harness_has_canonical_h_operator,
+        "no accepted O_H certificate",
+    )
+    report(
+        "source-higgs-default-off-guard-not-evidence",
+        source_higgs_guard["guard_present"] and source_higgs_guard["default_off_guard"],
+        "guard names required rows but requires certificate before enabling",
+    )
+    report(
+        "source-higgs-harness-extension-support-only",
+        harness_extension_support,
+        status(certs["source_higgs_harness_extension"]),
+    )
+    report(
+        "canonical-operator-certificate-absent",
+        operator_certificate_absent,
+        status(certs["canonical_higgs_operator_certificate"]),
     )
     report("cross-correlator-import-blocks", cross_import_blocks, status(certs["source_higgs_cross_correlator_import"]))
     report("gram-purity-gate-blocks", gram_gate_blocks, status(certs["source_higgs_gram_purity"]))
@@ -196,11 +232,13 @@ def main() -> int:
             "canonical-Higgs operator.  Current EW Higgs gauge-mass artifacts "
             "assume canonical H and derive object-level mass algebra after "
             "that assumption; they do not realize O_H on the PR #230 Cl(3)/Z3 "
-            "source surface.  The production harness has scalar-source "
-            "response and C_ss support, but no C_sH or C_HH operator path."
+            "source surface.  The production harness now has default-off "
+            "source-Higgs finite-row instrumentation, but no accepted O_H "
+            "identity/normalization certificate, C_sH/C_HH pole-residue "
+            "certificate, or Gram-purity closure exists."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "No same-surface canonical-Higgs operator or C_sH/C_HH residue certificate exists.",
+        "proposal_allowed_reason": "Instrumentation exists, but no same-surface canonical-Higgs operator or C_sH/C_HH residue certificate exists.",
         "canonical_higgs_operator_realization_gate_passed": gate_passed,
         "current_harness_source_higgs_status": source_higgs_guard,
         "acceptance_schema": acceptance_schema,

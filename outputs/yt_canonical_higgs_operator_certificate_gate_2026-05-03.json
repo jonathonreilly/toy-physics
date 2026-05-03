@@ -1,0 +1,57 @@
+{
+  "acceptance_schema": [
+    "certificate_kind == canonical_higgs_operator",
+    "same_surface_cl3z3 and same_source_coordinate are true",
+    "operator_id and operator_definition are nonempty",
+    "canonical_higgs_operator_identity_passed is true",
+    "identity_certificate and normalization_certificate are nonempty references",
+    "diagonal_vertex.kind is supported by the production harness",
+    "hunit_used_as_operator and static_ew_algebra_used_as_operator are false",
+    "firewall flags reject observed targets, yt_ward, alpha_LM/plaquette, and H_unit matrix-element readout"
+  ],
+  "actual_current_surface_status": "open / canonical-Higgs operator certificate absent",
+  "candidate_checks": {},
+  "candidate_input": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+  "candidate_missing_or_failed_checks": [],
+  "candidate_present": false,
+  "candidate_valid": false,
+  "exact_next_action": "Derive or supply a real same-surface canonical-Higgs operator certificate satisfying this schema, then run source-Higgs C_sH/C_HH measurements and pole-residue/Gram-purity gates.",
+  "fail_count": 0,
+  "known_surface_audit": {
+    "canonical_scalar_import": {
+      "classification": "no hidden source-to-canonical-Higgs normalization import",
+      "status": "exact negative boundary / canonical scalar normalization import audit",
+      "usable_as_operator_certificate": false
+    },
+    "ew_higgs_gauge_mass": {
+      "classification": "assumes canonical H after supplied",
+      "evidence": true,
+      "usable_as_operator_certificate": false
+    },
+    "hunit_candidate_gate": {
+      "classification": "explicitly rejected unless purity/normalization certificates are supplied",
+      "status": "exact negative boundary / H_unit not canonical-Higgs operator realization",
+      "usable_as_operator_certificate": false
+    },
+    "sm_one_higgs_yukawa_selection": {
+      "classification": "gauge monomial selection; leaves Yukawa matrices free",
+      "evidence": true,
+      "usable_as_operator_certificate": false
+    },
+    "source_higgs_harness_extension": {
+      "classification": "measurement instrumentation only",
+      "status": "bounded-support / source-Higgs cross-correlator harness extension",
+      "usable_as_operator_certificate": false
+    }
+  },
+  "pass_count": 9,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Operator certificate validation is support only; it does not authorize retained/proposed-retained y_t wording.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H by fiat",
+    "does not treat H_unit or static EW algebra as O_H",
+    "does not use observed targets, yt_ward_identity, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "No canonical-Higgs O_H operator certificate is present. Existing EW/Higgs/YT surfaces either assume canonical H after it is supplied, select allowed monomials, reject H_unit as a substitute, or provide measurement instrumentation. They do not supply the same-surface operator identity and normalization certificate required by PR #230."
+}
