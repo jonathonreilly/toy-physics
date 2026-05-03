@@ -1,15 +1,10 @@
 # Left-Handed-Content Anomaly Trace Catalog Theorem
 
 **Date:** 2026-04-25
-
-**Status:** proposed_retained structural-arithmetic subtheorem on the proposed_retained
-left-handed matter surface. Catalogues, names, and regression-tests the
-five specific anomaly-trace identities on the retained left-handed
-content `Q_L + L_L` already used in the body of
-`ANOMALY_FORCES_TIME_THEOREM.md`.
-The numerical values are the explicit inputs to the right-handed
-hypercharge solve packaged by
-`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`.
+**Type:** positive_theorem
+**Claim type:** structural-arithmetic catalog theorem (exact rational/integer evaluation of LH-only anomaly traces)
+**Claim scope:** for the retained left-handed content `Q_L : (2,3)_{+1/3}` (6 LH Weyl states) plus `L_L : (2,1)_{-1}` (2 LH Weyl states) with the doubled-hypercharge convention `Q = T_3 + Y/2`, the five LH-only trace identities `Tr[Y]_LH = 0`, `Tr[Y^3]_LH = -16/9`, `Tr[SU(3)^2 Y]_LH = 1/3`, `Tr[SU(2)^2 Y]_LH = 0`, and `N_D(Witten, LH) = 4` evaluate exactly via Fraction arithmetic with standard Dynkin factors `T(3) = T(2) = 1/2`. Conditional on retained Q_L, L_L LH content, retained N_c = 3, and retained SU(2)_L weak-doublet structure as upstream inputs.
+**Status:** awaiting independent audit. Under the scope-aware classification framework, ratified status is computed by the audit pipeline from audit-lane data; no author-side retained tier is asserted in source.
 
 **Primary runner:** `scripts/frontier_lh_anomaly_trace_catalog.py`
 
@@ -196,3 +191,18 @@ exact `fractions.Fraction` arithmetic.
   - retained left-handed content authority.
 - [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md)
   - retained `Y(Q_L) = 1/3`, `Y(L_L) = -1` identification.
+
+## Honest claim-status
+
+```yaml
+proposed_claim_type: positive_theorem
+status_authority: independent audit lane only
+audit_required_before_effective_retained: true
+actual_current_surface_status: structural-arithmetic catalog theorem on retained left-handed content
+conditional_surface_status: exact LH-only trace values (C1)-(C5) verified at exact Fraction precision; values are the explicit rational right-hand-side targets of the RH-side cancellation equations solved by STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24
+hypothetical_axiom_status: null
+admitted_observation_status: "Standard ABJ anomaly-trace formulae and Dynkin index normalization T(3) = T(2) = 1/2 admitted as textbook QFT input."
+proposal_allowed: false
+proposal_allowed_reason: "Source note records the catalog of LH-only anomaly trace values. Effective retained tier is set by the independent audit lane based on retained-grade upstream availability of LEFT_HANDED_CHARGE_MATCHING_NOTE (Q_L, L_L content), GRAPH_FIRST_SU3_INTEGRATION_NOTE (N_c = 3), and NATIVE_GAUGE_CLOSURE_NOTE (SU(2)_L weak-doublet structure); not asserted by author."
+bare_retained_allowed: false
+```

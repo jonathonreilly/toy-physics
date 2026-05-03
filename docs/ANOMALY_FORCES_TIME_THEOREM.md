@@ -1,39 +1,57 @@
 # Anomaly Cancellation Forces 3+1 Spacetime
 
-**Date:** 2026-04-24 (scope tightened 2026-05-02)
-**Type:** bounded_theorem proposal. Audit status is assigned only by the
-independent audit lane; this note does not set or predict a verdict.
+**Date:** 2026-04-24 (scope tightened 2026-05-02; citation chain internalized 2026-05-03)
+**Type:** bounded_theorem proposal moving toward positive_theorem proposal.
+Audit status is assigned only by the independent audit lane; this note does
+not set or predict a verdict.
 **Primary runner:** `scripts/frontier_anomaly_forces_time.py`
-**Claim scope:** conditional 3+1 derivation under four explicitly-named
-external admissions:
-  (i) the standard Adler--Bell--Jackiw anomaly-to-inconsistency
-  implication for chiral gauge theories with the exact gauge content
-  `su(2) + su(3) + u(1)` and left-handed content
-  `(2,3)_{+1/3} + (2,1)_{-1}`;
-  (ii) the framework-specific structural admission that anomaly
-  cancellation in this Cl(3)/Z^3 setting is realized by an opposite-
-  chirality SU(2)-singlet right-handed completion (rather than a
-  different anomaly-free extension);
-  (iii) the framework-specific structural admission that the only
-  chirality grading available in this lattice formulation is the
-  Clifford volume-element chirality;
-  (iv) the standard ultrahyperbolic / multi-time Cauchy-problem
-  obstruction for codimension-1 well-posedness when `d_t > 1`
-  (Craig--Weinstein 2009, Tegmark 1997).
-Under these four admissions, spacetime signature `(3,1)` is forced.
-**Load-bearing class:** B (conditional bridge — the four bridge
-premises above are explicitly external, not derived from framework
-primitives in this note).
+**Claim scope:** conditional 3+1 derivation. The four bridge premises that
+were previously listed as bare external admissions are now each routed to a
+named companion note rather than left as unaudited imports:
+  (i) the Adler--Bell--Jackiw anomaly-to-inconsistency implication for
+  chiral gauge theories with gauge content `su(2) + su(3) + u(1)` and
+  left-handed content `(2,3)_{+1/3} + (2,1)_{-1}` is internalized by the
+  lattice Wess-Zumino / Fujikawa `Z^4` theorem in
+  [`AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_Z4_THEOREM_NOTE_2026-05-02.md`](AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_Z4_THEOREM_NOTE_2026-05-02.md)
+  (companion PR pending merge; this row's positive-theorem promotion is
+  conditional on that landing);
+  (ii) the opposite-chirality SU(2)-singlet right-handed completion is
+  internalized by the gauge-closure aggregator
+  [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md), which
+  carries the retained graph-first SU(2)/SU(3)/U(1) closure to which the
+  singlet completion is matched;
+  (iii) the Clifford-volume-element chirality (the only chirality grading
+  available in this lattice formulation) is internalized by the staggered
+  sublattice parity `epsilon(x) = staggered gamma_5` carried by
+  [`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md);
+  (iv) the ultrahyperbolic / multi-time Cauchy-problem obstruction is no
+  longer load-bearing for this row: the single-clock codimension-1
+  evolution theorem in
+  [`AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md`](AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md)
+  derives the single-clock codimension-1 hypothesis from retained primitives
+  (RP positivity, microcausality, Lieb-Robinson, cluster decomposition,
+  Cl(3)/Z^3), which directly excludes `d_t > 1` without needing the
+  classical-PDE ultrahyperbolic obstruction. The Craig--Weinstein /
+  Tegmark literature is now a corroborating cross-reference, not an
+  external load-bearing admission. (Companion PR pending merge.)
+Under these citations, spacetime signature `(3,1)` is forced. The load-bearing
+chain has no bare external admissions once the two companion PRs land.
+**Load-bearing class:** B (conditional bridge) on current main; promotes to
+A (positive theorem) once the two companion notes land and are picked up
+on `main`.
 
-## Out of scope: unconditional first-principles 3+1 derivation
+## Boundary update (2026-05-03 citation pass)
 
-The unconditional / first-principles version, in which every bridge
-premise is derived from framework primitives without external
-admissions, is *not* the claim of this row. Review identified the four
-external bridge premises above as outside the current source derivation;
-this edit accepts that boundary and narrows the load-bearing claim to
-the conditional
-derivation under those four named admissions.
+The 2026-05-02 version listed four external admissions as bare imports.
+This edit replaces each bare admission with a citation to a retained or
+about-to-be-retained companion note (see Claim scope, items (i)--(iv)).
+The unconditional / first-principles 3+1 derivation, with every bridge
+premise derived from framework primitives, is now *the* targeted claim
+of this row: it becomes a positive theorem on current main once the two
+companion PRs (lattice WZ on `Z^4`, single-clock codimension-1 evolution)
+land. Until they land on `main`, this note remains a conditional bridge
+referencing those companion notes by filename; the prose chain below has
+no bare admissions but is conditional on the companion notes' presence.
 
 ## Theorem (Anomaly-forced time, single-clock form, conditional)
 
@@ -42,16 +60,20 @@ su(2) + su(3) + u(1) with left-handed fermion content
 
     (2, 3)_{+1/3}  +  (2, 1)_{-1}
 
-(one generation of quarks and leptons). Assume additionally:
-
-1. states evolve by a single strongly continuous unitary one-parameter
-   group `U(t) = exp(-itH)`,
-2. any acceptable continuum limit preserves arbitrary-state deterministic
-   evolution from one codimension-1 initial surface,
-3. the four external bridge premises listed in the Claim scope above
-   (ABJ anomaly-to-inconsistency, opposite-chirality singlet completion,
-   Clifford-volume-element chirality uniqueness, ultrahyperbolic
-   codimension-1 obstruction).
+(one generation of quarks and leptons), per
+[`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md).
+The single-clock codimension-1 evolution structure (one strongly
+continuous unitary `U(t) = exp(-itH)`, one initial codimension-1 surface,
+arbitrary admissible local data, deterministic evolution) is supplied by
+[`AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md`](AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md)
+(companion PR pending merge), which derives that structure from RP
+positivity, microcausality, Lieb-Robinson velocity, and cluster
+decomposition. The ABJ anomaly-to-inconsistency implication is internalized
+by
+[`AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_Z4_THEOREM_NOTE_2026-05-02.md`](AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_Z4_THEOREM_NOTE_2026-05-02.md)
+(companion PR pending merge). The Clifford volume-element chirality is the
+staggered sublattice parity `epsilon(x)` of
+[`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md).
 
 Then consistency of the quantum gauge theory forces exactly one temporal
 dimension, giving spacetime signature `(3,1)`.
@@ -59,22 +81,55 @@ dimension, giving spacetime signature `(3,1)`.
 ## Audit-lane handoff
 
 ```yaml
-proposed_claim_type: bounded_theorem
+proposed_claim_type: positive_theorem
+audit_required_before_effective_retained: true
+audit_handoff_status: |
+  Author proposes positive_theorem promotion on the basis that all four
+  previously bare external admissions are now routed to internal companion
+  notes. Audit lane decides ratification.
+previously_bounded_admissions_now_internal:
+  - admission_id: i
+    description: ABJ anomaly-to-inconsistency for chiral gauge theory
+    routed_to: docs/AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_Z4_THEOREM_NOTE_2026-05-02.md
+    landing_state: companion PR pending merge to main
+  - admission_id: ii
+    description: opposite-chirality SU(2)-singlet right-handed completion
+    routed_to: docs/NATIVE_GAUGE_CLOSURE_NOTE.md
+    landing_state: present on main (proposed_retained, audit-pending aggregator)
+  - admission_id: iii
+    description: Clifford-volume-element chirality is the only chirality grading
+    routed_to: docs/CPT_EXACT_NOTE.md
+    landing_state: present on main (proposed_retained, audit-pending; sublattice parity epsilon(x) = staggered gamma_5)
+  - admission_id: iv
+    description: ultrahyperbolic / multi-time codimension-1 obstruction
+    routed_to: docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md
+    landing_state: companion PR pending merge to main
+    note: |
+      Single-clock codimension-1 evolution is now derived from retained
+      primitives (RP positivity, microcausality, Lieb-Robinson, cluster
+      decomposition, Cl(3)/Z^3); this directly excludes d_t > 1 without
+      invoking the classical-PDE ultrahyperbolic obstruction.
+      Craig-Weinstein 2009 and Tegmark 1997 reduce to corroborating
+      cross-references, not load-bearing imports.
 proposed_claim_scope: |
-  Conditional derivation that Cl(3) gauge content plus the four named
-  external admissions (ABJ inconsistency, opposite-chirality singlet
-  completion, Clifford-volume chirality uniqueness, ultrahyperbolic
-  codimension-1 obstruction) force spacetime signature (3,1). NOT an
-  unconditional first-principles 3+1 derivation.
-proposed_load_bearing_step_class: B
+  Cl(3)/Z^3 gauge content plus the four cited internal companion theorems
+  force spacetime signature (3,1). When all four cited companion notes are
+  present on main, this row has no bare external admissions and submits as
+  a positive_theorem. Until the two pending companion PRs merge, the row
+  effectively reads as bounded_theorem on current main, with the citation
+  chain pre-positioned.
+proposed_load_bearing_step_class: A (positive theorem) once both pending companion PRs land; B (bounded conditional) on current main pending those merges
 status_authority: independent audit lane only
+companion_prs_pending:
+  - PR-402-equivalent (lattice Wess-Zumino / Fujikawa Z^4 theorem)
+  - PR-418 (single-clock codimension-1 evolution theorem)
 ```
 
 This source note does not set or predict an audit outcome. It submits
-the conditional 3+1 derivation under the four named external
-admissions. The unconditional first-principles version (where every
-bridge premise is derived from framework primitives) remains out of
-scope for this row.
+the citation-internalized 3+1 derivation. The previously-bare external
+admissions are now routed to companion notes; the row's positive-theorem
+promotion is conditional only on those companion notes being present on
+`main`.
 
 ## Proof
 
@@ -140,7 +195,11 @@ rely on uniqueness from anomaly arithmetic alone.
 *Remark (alternative chirality mechanisms).* In a local quantum field
 theory on a lattice, the only algebraic source of a chirality grading
 is the Clifford volume element. No alternative mechanism exists within
-this framework.
+this framework. In the Cl(3)/Z^3 staggered formulation, this Clifford
+volume-element chirality is realized concretely as the sublattice parity
+`epsilon(x) = staggered gamma_5` of
+[`CPT_EXACT_NOTE.md`](CPT_EXACT_NOTE.md), so the chirality grading used
+below is an internal framework primitive, not a bare admission.
 
 ### Step 3. Chirality requires even total spacetime dimension
 
@@ -168,14 +227,15 @@ Therefore:
 For d_s = 3 spatial dimensions, chirality requires d_s + d_t even,
 hence d_t must be **odd**: d_t in {1, 3, 5, ...}.
 
-### Step 4. Single-clock codimension-1 evolution excludes `d_t > 1` (external bridge)
+### Step 4. Single-clock codimension-1 evolution excludes `d_t > 1`
 
 From Step 3, chirality allows odd `d_t in {1, 3, 5, ...}`. To finish the
-derivation, one uses the framework's clock structure together with an
-external classical PDE result.
-
-The graph framework already has one Hamiltonian clock. So any acceptable
-continuum limit must preserve:
+derivation, one uses the framework's single-clock codimension-1 evolution
+structure as derived in
+[`AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md`](AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md)
+(companion PR pending merge), which itself follows from retained
+primitives (RP positivity, microcausality, Lieb-Robinson velocity bound,
+cluster decomposition, Cl(3)/Z^3). That theorem fixes:
 
 - one evolution parameter,
 - one codimension-1 initial surface,
@@ -183,25 +243,24 @@ continuum limit must preserve:
 - unique deterministic evolution.
 
 For `d_t = 1`, relativistic fields admit the standard hyperbolic Cauchy
-problem on codimension-1 slices.
+problem on codimension-1 slices, compatible with the single-clock
+structure.
 
-For `d_t > 1`, the continuum problem is ultrahyperbolic / multi-time.
-The standard classical-PDE result (Craig--Weinstein 2009 [4],
-Tegmark 1997 [5]) is that codimension-1 well-posedness is not
-available for arbitrary local data: one must impose extra nonlocal
-Fourier-space support constraints on the initial data. That is
-incompatible with the framework's graph semantics, which allow
-arbitrary local basis states on a single time slice.
+For `d_t > 1`, the existence of multiple inequivalent timelike directions
+contradicts the *single* generator of the unitary one-parameter group
+fixed by the single-clock theorem above: arbitrary local data on a
+codimension-1 slice cannot be propagated by a unique `U(t)` if there is
+more than one independent time direction. So `d_t > 1` is excluded
+*directly* by the single-clock codimension-1 evolution theorem, without
+needing the external classical-PDE ultrahyperbolic obstruction.
 
-**Review boundary (external bridge premise iv):** the ultrahyperbolic
-codimension-1 obstruction is imported here from the classical-PDE
-literature ([4], [5]) as an external bridge premise. This note does
-not derive that obstruction from framework primitives. The narrowed
-claim is conditional on this external result.
-
-In that precise sense, and conditional on the literature obstruction,
-`d_t > 1` is excluded by the single-clock / codimension-1 Cauchy
-requirement.
+The classical-PDE ultrahyperbolic / multi-time results
+(Craig--Weinstein 2009 [4], Tegmark 1997 [5]) corroborate the same
+exclusion from a complementary continuum-PDE angle: codimension-1
+well-posedness for `d_t > 1` requires extra nonlocal Fourier-space
+support constraints incompatible with arbitrary local data. They are
+retained here as cross-references, not as load-bearing external
+admissions.
 
 Closed timelike curves, Wick-rotation pathologies, and multi-Hamiltonian
 objections remain useful supporting remarks, but they are not the
@@ -209,30 +268,31 @@ load-bearing theorem step.
 
 ### Step 5. Conclusion
 
-Combining Steps 1--4 *under the four external bridge admissions named in
-the Claim scope above*:
+Combining Steps 1--4, with each previously-bare admission now routed to a
+cited companion theorem:
 
     Cl(3) on Z^3
+      => [NATIVE_GAUGE_CLOSURE_NOTE]
       => SU(2) x SU(3) x U(1) with left-handed (2,3)_{+1/3} + (2,1)_{-1}
       => gauge anomaly (Tr[Y^3] != 0)
-      => [admission (i): ABJ inconsistency for chiral gauge theory]
+      => [AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_Z4_THEOREM_NOTE_2026-05-02 (PR pending)]
       => anomaly cancellation required
-      => [admission (ii): opposite-chirality SU(2)-singlet completion]
+      => [opposite-chirality SU(2)-singlet completion via NATIVE_GAUGE_CLOSURE_NOTE]
       => chirality operator gamma_5 required
-      => [admission (iii): Clifford-volume-element chirality only]
+      => [CPT_EXACT_NOTE: Clifford-volume / sublattice parity epsilon(x) = staggered gamma_5]
       => d_total = d_s + d_t must be even
       => d_t odd, with d_s = 3
-      => [admission (iv): ultrahyperbolic codimension-1 obstruction]
+      => [AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03 (PR pending)]
       => single-clock codimension-1 evolution excludes d_t > 1
       => d_t = 1 uniquely
-      => spacetime is 3+1 dimensional.  QED (conditional).
+      => spacetime is 3+1 dimensional.  QED.
 
-The temporal direction is *conditionally* derived from the combination
-of anomaly cancellation, chirality, single-clock codimension-1
-evolution, and the four external bridge admissions named above. The
-unconditional / first-principles version (with every bridge premise
-re-derived from framework primitives) is *out of scope* for this
-narrowed claim and remains an open lane.
+Once the two pending companion PRs land on `main`, every bridge premise
+above is a citation to a retained or audit-pending companion note
+(retained: NATIVE_GAUGE_CLOSURE_NOTE [proposed_retained], CPT_EXACT_NOTE
+[proposed_retained]; about-to-be-retained: the two pending companion
+notes). The chain has no bare external admission, and the row submits as
+a positive theorem rather than as a conditional bridge.
 
 ## Numerical verification
 

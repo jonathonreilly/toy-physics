@@ -1,17 +1,32 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 549,
-    "decoration": 9,
+    "bounded_theorem": 550,
+    "decoration": 8,
     "meta": 41,
-    "no_go": 159,
-    "open_gate": 85,
-    "positive_theorem": 859
+    "no_go": 160,
+    "open_gate": 86,
+    "positive_theorem": 888,
+    "unset": 6
   },
-  "computed_at": "2026-05-03T10:55:32.652927+00:00",
+  "computed_at": "2026-05-03T11:34:14.738900+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
       "lorentz_boost_covariance_3plus1d_theorem_note"
+    ],
+    [
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+      "lorentz_kernel_positive_closure_note",
+      "lorentz_boost_covariance_2d_theorem_note",
+      "lorentz_boost_covariance_3plus1d_theorem_note",
+      "planck_scale_lane_status_note_2026-04-23",
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+    ],
+    [
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ],
     [
       "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
@@ -20,35 +35,25 @@
     [
       "publication.ci3_z3.quantitative_summary_table",
       "publication.ci3_z3.publication_matrix"
-    ],
-    [
-      "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas"
-    ],
-    [
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas"
     ]
   ],
-  "cycles_detected": 83,
+  "cycles_detected": 85,
   "effective_status_counts": {
-    "audited_conditional": 663,
+    "audited_conditional": 646,
     "audited_decoration": 3,
-    "audited_failed": 6,
-    "audited_numerical_match": 27,
-    "audited_renaming": 21,
-    "decoration_under_cpt_exact_note": 1,
+    "audited_failed": 4,
+    "audited_numerical_match": 26,
+    "audited_renaming": 20,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
     "meta": 40,
     "open_gate": 14,
-    "retained": 149,
-    "retained_bounded": 221,
-    "retained_no_go": 100,
+    "retained": 141,
+    "retained_bounded": 214,
+    "retained_no_go": 95,
     "retained_pending_chain": 2,
-    "unaudited": 452
+    "unaudited": 531
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

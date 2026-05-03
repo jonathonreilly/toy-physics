@@ -1,0 +1,49 @@
+slug: plaquette-bootstrap-closure-20260503
+date_launched: 2026-05-03
+mode: campaign
+runtime_budget: 12h
+literature: allowed
+checkpoint_interval: 30m
+deep_block: 90m
+max_cycles: 6
+volume_cap_per_24h: 5
+cluster_cap: 2
+
+current_block: 01
+current_block_branch: physics-loop/plaquette-bootstrap-closure-block01-20260503
+current_block_target: |
+  Bootstrap framework integration + smallest non-trivial analytical bound
+  on ⟨P⟩(β=6) using framework's retained RP theorem + 2x2 Wilson-loop
+  Gram matrix PSD + Migdal-Makeenko loop equation.
+current_block_status: in_progress
+
+cycles_completed: 0
+prs_opened: 0
+
+assumption_ledger_built: false
+route_portfolio_built: false
+opportunity_queue_built: false
+no_go_ledger_built: false
+literature_bridges_built: false
+artifact_plan_built: false
+
+active_route: bootstrap-via-RP-and-small-truncation
+active_residual: |
+  Derive a NEW analytical lower bound on ⟨P⟩(β=6) using small-truncation
+  bootstrap on the framework's V-invariant minimal Klein-four block,
+  with the framework's AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM as the
+  load-bearing positivity input.
+
+files_touched_this_block: []
+new_imports_added: []
+imports_retired: []
+no_go_routes_recorded: []
+review_findings: pending
+
+next_exact_action: |
+  Build loop pack scaffold (ASSUMPTIONS, ROUTES, QUEUE, NO_GO,
+  LITERATURE_BRIDGES, ARTIFACT_PLAN, HANDOFF, PR_BACKLOG).
+  Then write the H1 Route 3 framework-integration theorem note +
+  analytical-bound runner.
+
+stop_condition: none yet

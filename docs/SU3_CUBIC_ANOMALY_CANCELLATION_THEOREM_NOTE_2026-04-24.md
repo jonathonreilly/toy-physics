@@ -1,9 +1,10 @@
 # SU(3)^3 Cubic Gauge Anomaly Cancellation Theorem
 
-Date: 2026-04-24
-
-Status: proposed_retained structural-anomaly theorem on the accepted one-generation
-matter/gauge surface.
+**Date:** 2026-04-24
+**Type:** positive_theorem
+**Claim type:** structural-anomaly cancellation theorem (exact rational arithmetic on retained colour-charged content)
+**Claim scope:** for the retained one-generation colour-charged content in the left-handed conjugate frame `Q_L : 3` (with weak multiplicity 2), `u_R^c : 3bar`, `d_R^c : 3bar`, the SU(3)^3 cubic gauge-anomaly trace evaluates to `sum_i m_i A(R_i) = +2 - 1 - 1 = 0` exactly via standard SU(3) cubic anomaly indices `A(3) = +1`, `A(3bar) = -1`. Conditional on retained graph-first SU(3) gauge sector, retained left-handed Q_L content, and retained one-generation right-handed completion as upstream inputs.
+**Status:** awaiting independent audit. Under the scope-aware classification framework, ratified status is computed by the audit pipeline from audit-lane data; no author-side retained tier is asserted in source.
 
 ## Statement
 
@@ -159,3 +160,18 @@ The runner checks the retained content, the exact `+2 - 1 - 1 = 0` anomaly
 sum, extension scenarios, the `SU(2)^3` zero tensor, and the nonzero
 `SU(3)` symmetric tensor that makes the color anomaly a genuine matter-content
 condition.
+
+## Honest claim-status
+
+```yaml
+proposed_claim_type: positive_theorem
+status_authority: independent audit lane only
+audit_required_before_effective_retained: true
+actual_current_surface_status: structural-anomaly cancellation theorem on retained one-generation colour-charged content
+conditional_surface_status: SU(3)^3 cubic gauge anomaly vanishes exactly as Fraction equality on the retained `Q_L + u_R^c + d_R^c` content; cancellation is a real matter-content condition (the symmetric d^{abc} tensor for SU(3) is nonzero and the anti-fundamental indices A(3bar) = -1 must balance the fundamental indices A(3) = +1)
+hypothetical_axiom_status: null
+admitted_observation_status: "Standard SU(3) cubic anomaly indices A(1)=0, A(3)=+1, A(3bar)=-1, A(8)=0, A(6)=+7, A(6bar)=-7 admitted as Lie-algebra input."
+proposal_allowed: false
+proposal_allowed_reason: "Source note records the structural cancellation theorem. Effective retained tier is set by the independent audit lane based on retained-grade upstream availability of GRAPH_FIRST_SU3_INTEGRATION_NOTE (SU(3) gauge sector and N_c = 3), LEFT_HANDED_CHARGE_MATCHING_NOTE (retained Q_L content), and ONE_GENERATION_MATTER_CLOSURE_NOTE (retained u_R^c, d_R^c completion); not asserted by author."
+bare_retained_allowed: false
+```
