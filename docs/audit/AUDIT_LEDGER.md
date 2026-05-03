@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:17:02.967716+00:00
+**Generated:** 2026-05-03T02:20:18.336760+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 459 |
+| unaudited | 458 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 668 |
-| ~~audited_failed~~ | 4 |
+| ~~audited_failed~~ | 5 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -41,19 +41,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 430 |
 | `audited_conditional` | 668 |
 | `audited_decoration` | 9 |
-| `audited_failed` | 48 |
+| `audited_failed` | 49 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 499 |
+| `unaudited` | 498 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 548 |
 | `decoration` | 9 |
-| `meta` | 40 |
+| `meta` | 41 |
 | `no_go` | 158 |
 | `open_gate` | 85 |
-| `positive_theorem` | 862 |
+| `positive_theorem` | 861 |
 
 | criticality | count |
 |---|---:|
@@ -1261,6 +1261,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_scale_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `testable_predictions_map_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `three_generation_observable_dep_chain_audit_note_2026-05-02` | meta | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | B | - |
 | `triage_no_promotion_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -17379,6 +17380,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Three independent grown families produce quantitatively identical physics on all 9 measurable properties to within 5%.  _(class `B`)_
 - **chain closes:** False — The source table itself leaves Family 3 Distance alpha as '(not yet)', and no runner is provided to recompute the 9-property comparison, so the headline 9/9 three-family match does not close.
 - **rationale:** Issue: The note claims three families match on all 9 measurable properties, but the table explicitly has Family 3 Distance alpha marked '(not yet)' and the note provides no runner or log artifact to verify the cross-family card. Why this blocks: the load-bearing 9/9 statement is false on the face of the supplied table, and the broader inference that observables are geometry-independent cannot follow from a partial, hand-entered comparison. Repair target: add a runner that recomputes every listed property for all three families, including Family 3 Distance alpha, with explicit <5% assertions and at least one holdout check. Claim boundary until fixed: safe to cite this as a partial comparison of three selected drift/restore rows with eight populated properties and distance-alpha data only for Families 1 and 2; not safe to claim 9/9 three-family equality or geometry-independence.
+- **auditor confidence:** high
+
+### `three_generation_observable_dep_chain_audit_note_2026-05-02`
+
+- **Note:** [`THREE_GENERATION_OBSERVABLE_DEP_CHAIN_AUDIT_NOTE_2026-05-02.md`](../../docs/THREE_GENERATION_OBSERVABLE_DEP_CHAIN_AUDIT_NOTE_2026-05-02.md)
+- **claim_type:** `meta`
+- **claim_scope:** Dep-chain/status audit packet asserting that three_generation_observable_theorem_note remains blocked by generation_axiom_boundary_note and recommending dependency/status cleanup for generation_axiom_boundary_note and physical_lattice_necessity_note.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-euclid-2nd-019deba1-836a-7c12-bbb6-303a7c5009d6`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Parent note has 5 deps; only generation_axiom_boundary_note is conditional, blocking the parent's effective retention.  _(class `B`)_
+- **chain closes:** False — The packet's load-bearing dependency/status statement is stale against the current operational parent row: the parent is retained with four declared deps, and generation_axiom_boundary_note is not a current declared dependency. The runner proves the parent algebra theorem but does not validate this dep-chain packet.
+- **rationale:** Issue: the source note's central dep-chain claim says the parent has five deps and is blocked by generation_axiom_boundary_note, while the current operational parent row is retained with four deps and excludes generation_axiom_boundary_note. Why this blocks: the packet's recommended cleanup and retention-path conclusion depend on a non-current dependency graph, so the claimed blocker and repair path cannot be recorded as closing the scoped current claim. Repair target: replace this packet with a current metadata repair note, or update the operational ledger dependency declaration first and then re-audit the revised scoped claim from current rows. Claim boundary until fixed: the parent theorem runner may still support the retained algebra theorem, but this dep-chain audit packet itself should not be treated as a valid current theorem or status certificate.
 - **auditor confidence:** high
 
 ### `three_generation_observable_theorem_note`
