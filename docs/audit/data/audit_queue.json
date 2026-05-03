@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 203,
-    "medium": 282
+    "medium": 281
   },
-  "generated_at": "2026-05-03T18:34:51.033866+00:00",
+  "generated_at": "2026-05-03T18:35:55.616749+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7597,29 +7597,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
       "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "signed_gravity_continuum_graded_einstein_localization_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "signed_gravity_tensor_source_transport_retention_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.755,
-      "note_path": "docs/SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/signed_gravity_continuum_graded_einstein_localization.py",
-      "transitive_descendants": 26
     },
     {
       "audit_independence_required": "any_non_self",
@@ -19857,6 +19834,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 68,
-  "total_pending": 758
+  "ready_count": 67,
+  "total_pending": 757
 }

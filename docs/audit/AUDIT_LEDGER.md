@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:34:52.106804+00:00
+**Generated:** 2026-05-03T18:35:56.140185+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 172 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 729 |
+| unaudited | 728 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 23 |
-| ~~audited_conditional~~ | 542 |
+| ~~audited_conditional~~ | 543 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 326 |
-| `audited_conditional` | 542 |
+| `audited_conditional` | 543 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 775 |
+| `unaudited` | 774 |
 
 | claim_type | count |
 |---|---:|
@@ -878,6 +878,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_static_discriminator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `sigma_hier_uniqueness_theorem_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `sigma_mnu_f3_dm_cross_bound_audit_note_2026-04-28` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `signed_gravity_continuum_graded_einstein_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `single_axiom_hilbert_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `single_axiom_information_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -12301,6 +12302,28 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Across all 5 enumerated F3 routes, the table of independent-cross-bound? answers is (No, No, Yes-but-tension, No, No); the only positive route (F3-gamma) gives Sigma m_nu approx 0.056 eV, ~0.003 eV below the NO oscillation floor 0.0586 eV; and the framework current-bank Omega_DM excess by ~0.003 over Planck-derived ~0.265 is the structural-tension source.  _(class `C`)_
 - **chain closes:** True — The no-go is structural and arithmetic: each of the 5 routes is shown not to supply an independent cross-bound producing positive Sigma m_nu within the NO oscillation floor under the framework's no-fitted-parameter posture. The runner check breakdown (A=3, B=10, C=4, D=3) verifies the route-by-route enumeration and the ~0.003 eV magnitude of the residual tension.
 - **rationale:** Within the stuck-fan-out scope, the chain closes as a clean no-go for single-cycle Sigma m_nu retention. The structural-tension residue (framework Omega_DM vs. observation) is sharp and identified, and the three pivots forward (Omega_DM tightening, alt-admission bypass, Lane 5 C1 closure) are flagged as research-level moves beyond the cycle. This is a ratified negative result, not an active failure.
+- **auditor confidence:** high
+
+### `signed_gravity_continuum_graded_einstein_localization_note`
+
+- **Note:** [`SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md`](../../docs/SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Formal/local continuum-family transport of the signed tensor source as an APS orientation-line twist plus odd/even graded Einstein-jet localization, excluding global nonlinear PDE existence and physical signed-gravity claims.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-context`  (codex-current; independence=fresh_context)
+- **load-bearing step:** With invertible linearized operator K on the retained constrained slice, the recursion h_1 = K^-1 J and h_n = -K^-1[coefficient of eps^n in nonlinear terms] gives a unique formal graded solution order by order.  _(class `A`)_
+- **chain closes:** False — The algebraic jet recursion closes only after assuming the continuum GR stack, the retained constrained slice, and invertibility of K for the analytic gauge-fixed Einstein operator. Those inputs are not supplied by the single one-hop dependency, so the claimed formal/local theorem is conditional on hidden/unlisted authorities.
+- **rationale:** Issue: the note's continuum-stack availability and K-invertible analytic Einstein-slice assumptions are load-bearing but are not closed by the declared one-hop dependency. Why this blocks: the runner reads and checks additional continuum-stack documents and then verifies a finite algebraic toy/formal recursion, so the contested bridge is assumed rather than derived from the provided dependency. Repair target: add the needed continuum-stack and tensor-map authorities as audited dependencies, and provide a retained theorem or runner computation establishing the relevant constrained-slice K invertibility for the actual gauge-fixed Einstein operator. Claim boundary until fixed: the note may state a conditional formal/local graded-recursion construction given those assumptions, with no global PDE or physical signed-gravity consequence.
+- **open / conditional deps cited:**
+  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
+  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md`
+  - `UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`
+  - `UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md`
+  - `UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md`
+  - `UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`
+  - `TENSOR_SOURCE_MAP_ETA_NOTE.md`
 - **auditor confidence:** high
 
 ### `signed_gravity_response_lane_status_note_2026-04-26`
