@@ -19,7 +19,7 @@ publication tables phrase it.
 |---|---|---:|
 | high | `unaudited` | 135 |
 | medium | `audited_conditional` | 118 |
-| medium | `unaudited` | 84 |
+| medium | `unaudited` | 83 |
 | high | `audited_conditional` | 77 |
 | critical | `unaudited` | 38 |
 | critical | `audited_conditional` | 28 |
@@ -37,7 +37,7 @@ publication tables phrase it.
 | high | `audited_decoration` | 1 |
 | medium | `retained_pending_chain` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 531
+**Total non-retained-grade rows in publication tables:** 530
 
 ## Per-row breakdown
 
@@ -350,7 +350,6 @@ publication tables phrase it.
 | medium | `axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `baryon_charge_integrality_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `bound_state_selection_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
-| medium | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `ckm_five_sixths_bridge_support_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | medium | `cosmological_constant_vacuum_energy_audit_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | medium | `cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
