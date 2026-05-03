@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:15:44.923324+00:00
+**Generated:** 2026-05-03T14:18:27.476717+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 75 |
 | **retained_no_go** | 100 |
-| **retained_bounded** | 165 |
+| **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 774 |
+| unaudited | 773 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -36,23 +36,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 311 |
+| `audited_clean` | 312 |
 | `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 816 |
+| `unaudited` | 815 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 581 |
+| `bounded_theorem` | 585 |
 | `decoration` | 7 |
 | `meta` | 42 |
-| `no_go` | 159 |
+| `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 861 |
-| `unset` | 7 |
+| `positive_theorem` | 863 |
 
 | criticality | count |
 |---|---:|
@@ -202,6 +201,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `gate_b_grown_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_grown_propagating_field_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_v3_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -5693,6 +5693,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** In the far field (z >= 3, well past the slits), the grown-geometry lattice gives 100% TOWARD gravity with Newtonian F proportional to M = 1.00 at all tested drift/restore levels including the noisiest drift=0.3, restore=0.5 row.  _(class `C`)_
 - **chain closes:** False — The harness table supports the note's bounded far-field claim, but the physical Gate B reading depends on accepting the harness's chosen source law, propagation kernel, barrier/readout, and TOWARD/F~M criteria as the gravity observable. Those bridges are premises in the runner, not derived in the source packet.
 - **rationale:** Issue: the load-bearing result is a numerical harness success under an imposed growth rule, 1/r field, valley-linear action, 1/L^2 kernel, and z-centroid TOWARD readout, then interpreted as Newtonian gravity/Gate B far-field passage. Why this blocks: the current packet verifies the bounded simulation table but does not derive that these modeling choices are the retained physical gravity observable or source law. Repair target: add a retained theorem deriving the source law, propagation/readout map, and far-field Gate B criterion from accepted primitives, with a runner that constructs rather than assumes that bridge. Claim boundary until fixed: the harness-output statement for the specified h=0.5 seeds, z_masses, and drift/restore rows is supported; full physical far-field Gate B closure remains conditional.
+- **auditor confidence:** high
+
+### `gate_b_grown_distance_law_note`
+
+- **Note:** [`GATE_B_GROWN_DISTANCE_LAW_NOTE.md`](../../docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded runner replay showing exact-grid and grown drift=0.2/restore=0.7 h=0.5 families both give 20/20 TOWARD distance tails over seeds 0..3 and z=3..7, with comparable declining fitted tails.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-audit-loop-2026-05-03-gate-b-grown-distance-law`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The distance-law tail transfers from the exact grid to the retained moderate-drift grown geometry on this tested family.  _(class `C`)_
+- **chain closes:** True — The source note's bounded numerical statement matches the current runner output exactly: exact grid 20/20 TOWARD with tail b^(-0.90), R^2=0.855, peak_z=4, and grown drift=0.2 20/20 TOWARD with tail b^(-0.83), R^2=0.884, peak_z=4. The audited scope is limited to this runner-defined family and does not require Gate B-wide physical closure.
+- **rationale:** The runner computes the exact-grid and grown-geometry propagation, mean deltas, tail fit, R^2, and peak location rather than hard-coding the reported slopes. The note states the result conservatively as bounded tail transfer and comparable decline, not exact Newtonian equality or full Gate B closure. Within that narrowed scope, the computed output supports the claim without open dependencies or a hidden comparator.
 - **auditor confidence:** high
 
 ### `gate_b_grown_propagating_field_note`
