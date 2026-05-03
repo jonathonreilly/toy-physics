@@ -140,6 +140,36 @@ def main() -> int:
         if ind not in ALLOWED_INDEPENDENCE:
             errors.append(f"{cid}: independence={ind!r} not in allowed set")
 
+        xc = row.get("cross_confirmation") or {}
+        if isinstance(xc, dict) and xc.get("status") in {"third_confirmed_first", "third_confirmed_second"}:
+            xc_status = xc.get("status")
+            expected_side = "first" if xc_status == "third_confirmed_first" else "second"
+            first = xc.get("first_audit") or {}
+            second = xc.get("second_audit") or {}
+            winning = first if expected_side == "first" else second
+            third = xc.get("third_audit") or {}
+            if not third:
+                errors.append(f"{cid}: {xc_status} requires third_audit")
+            else:
+                side = third.get("sided_with")
+                if side is not None and side != expected_side:
+                    errors.append(
+                        f"{cid}: {xc_status} conflicts with third_audit.sided_with={side!r}"
+                    )
+                if third.get("verdict") and winning.get("verdict") and third.get("verdict") != winning.get("verdict"):
+                    errors.append(
+                        f"{cid}: {xc_status} third_audit verdict={third.get('verdict')!r} "
+                        f"does not match winning audit {winning.get('verdict')!r}"
+                    )
+                if row.get("claim_type_provenance") == "judicial_review":
+                    for key in ("verdict", "claim_type", "load_bearing_step_class"):
+                        row_key = "audit_status" if key == "verdict" else key
+                        if third.get(key) is not None and row.get(row_key) != third.get(key):
+                            errors.append(
+                                f"{cid}: judicial_review row {row_key}={row.get(row_key)!r} "
+                                f"does not match third_audit {key}={third.get(key)!r}"
+                            )
+
         if a == "audited_clean":
             if not row.get("auditor"):
                 errors.append(f"{cid}: audited_clean requires non-empty auditor")

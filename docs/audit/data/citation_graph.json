@@ -201,6 +201,18 @@
       "to": "emergent_lorentz_invariance_note"
     },
     {
+      "from": "anomaly_forces_time_theorem",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "anomaly_forces_time_theorem",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
       "from": "antigravity_sign_selector_boundary_note",
       "to": "frontier_extension_lane_opening_note_2026-04-25"
     },
@@ -561,6 +573,98 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "axiom_first_spectrum_condition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "emergent_lorentz_invariance_note"
+    },
+    {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "lorentz_kernel_positive_closure_note"
+    },
+    {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "hypercharge_identification_note"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "one_generation_matter_closure_note"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "lh_anomaly_trace_catalog_theorem_note_2026-04-25"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "su2_witten_z2_anomaly_theorem_note_2026-04-24"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "rh_sector_anomaly_cancellation_identities_note_2026-05-02"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "bminusl_anomaly_freedom_theorem_note_2026-04-24"
+    },
+    {
+      "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
       "from": "axiom_first_spectrum_condition_theorem_note_2026-04-29",
       "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
     },
@@ -643,6 +747,14 @@
     {
       "from": "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29",
       "to": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30"
+    },
+    {
+      "from": "baryon_charge_integrality_note_2026-05-02",
+      "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
+    },
+    {
+      "from": "baryon_charge_integrality_note_2026-05-02",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
     {
       "from": "bh_entropy_rt_ratio_widom_no_go_note",
@@ -2901,6 +3013,10 @@
       "to": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
     },
     {
+      "from": "cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
       "from": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -4945,6 +5061,26 @@
       "to": "w_z_mass_ratio_from_ewsb_note_2026-05-02"
     },
     {
+      "from": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16"
+    },
+    {
+      "from": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+      "to": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15"
+    },
+    {
+      "from": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+      "to": "pmns_selector_three_identity_support_note_2026-04-21"
+    },
+    {
       "from": "evanescent_barrier_amplitude_suppression_theorem_note",
       "to": "restricted_strong_field_closure_note"
     },
@@ -5049,6 +5185,10 @@
       "to": "second_grown_family_complex_note"
     },
     {
+      "from": "fermion_parity_z2_grading_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
       "from": "fixed_field_complex_grown_basin_v2_note",
       "to": "claude_complex_action_grown_companion_note"
     },
@@ -5151,6 +5291,14 @@
     {
       "from": "frozen_stars_rigorous_note",
       "to": "work_history.gw_echo_timing_route_note"
+    },
+    {
+      "from": "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
+      "from": "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03",
+      "to": "universal_gr_discrete_global_closure_note"
     },
     {
       "from": "full_y_squared_trace_su5_gut_note_2026-05-02",
@@ -5459,6 +5607,10 @@
     {
       "from": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
       "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+    },
+    {
+      "from": "gellmann_completeness_theorem_note_2026-05-02",
+      "to": "cl3_color_automorphism_theorem"
     },
     {
       "from": "global_coherence_held_out2_note",
@@ -5837,8 +5989,48 @@
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "ew_coupling_derivation_note"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14"
+    },
+    {
       "from": "h0125_wider_replay_note",
       "to": "h0125_scalable_scout_note"
+    },
+    {
+      "from": "hadronic_charges_from_quark_y_note_2026-05-02",
+      "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
+    },
+    {
+      "from": "hadronic_charges_from_quark_y_note_2026-05-02",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
     {
       "from": "hard_geometry_gravity_window_note",
@@ -5947,6 +6139,10 @@
     {
       "from": "higher_symmetry_joint_validation_note",
       "to": "mirror_chokepoint_note"
+    },
+    {
+      "from": "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
     },
     {
       "from": "hubble_lane5_c1_cl4c_conditional_derivation_chain_construction_note_2026-04-30",
@@ -6729,6 +6925,18 @@
       "to": "lensing_finite_path_explanation_note"
     },
     {
+      "from": "lepton_charge_universality_note_2026-05-02",
+      "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
+    },
+    {
+      "from": "lepton_charge_universality_note_2026-05-02",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
+      "from": "lepton_charge_universality_note_2026-05-02",
+      "to": "three_generation_structure_note"
+    },
+    {
       "from": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
       "to": "graph_first_selector_derivation_note"
     },
@@ -6973,6 +7181,14 @@
       "to": "matter_inertial_closure_note"
     },
     {
+      "from": "meson_charges_from_quark_y_note_2026-05-02",
+      "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
+    },
+    {
+      "from": "meson_charges_from_quark_y_note_2026-05-02",
+      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+    },
+    {
       "from": "mesoscopic_surrogate_annular_tapered_sweep_note",
       "to": "mesoscopic_surrogate_localization_sweep_note"
     },
@@ -7201,6 +7417,10 @@
       "to": "lattice_synthesis_guard_note"
     },
     {
+      "from": "momentum_charge_commute_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
       "from": "moonshot_diamond_sensor_brainstorm_note",
       "to": "diamond_sensor_prediction_note"
     },
@@ -7243,6 +7463,10 @@
     {
       "from": "moving_source_cross_family_replay_note",
       "to": "vector_magnetic_extension_note"
+    },
+    {
+      "from": "multisite_pauli_group_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
     {
       "from": "native_gauge_closure_note",
@@ -8233,8 +8457,28 @@
       "to": "ordered_lattice_quasi_persistent_relaunch_2d_note"
     },
     {
+      "from": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "patched_stationary_system_pl_s3_theorem_note_2026-05-03",
+      "to": "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03"
+    },
+    {
+      "from": "patched_stationary_system_pl_s3_theorem_note_2026-05-03",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
+      "from": "patched_stationary_system_pl_s3_theorem_note_2026-05-03",
+      "to": "universal_gr_discrete_global_closure_note"
+    },
+    {
       "from": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
       "to": "axiom_first_spin_statistics_theorem_note_2026-04-29"
+    },
+    {
+      "from": "pauli_group_order_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
     {
       "from": "periodic_2d_wraparound_fix_note_2026-04-11",
@@ -8465,6 +8709,38 @@
       "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
     },
     {
+      "from": "plaquette_bootstrap_framework_integration_note_2026-05-03",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "plaquette_bootstrap_framework_integration_note_2026-05-03",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "plaquette_bootstrap_framework_integration_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_framework_point_underdetermination_note"
+    },
+    {
+      "from": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_framework_point_underdetermination_note"
+    },
+    {
+      "from": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
       "from": "plaquette_self_consistency_note",
       "to": "gauge_vacuum_plaquette_bridge_support_note"
     },
@@ -8551,6 +8827,38 @@
     {
       "from": "plaquette_self_consistency_note",
       "to": "scalar_3plus1_temporal_ratio_note"
+    },
+    {
+      "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "to": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16"
+    },
+    {
+      "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15"
+    },
+    {
+      "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_source_amplitude_theorem_note_2026-04-15"
+    },
+    {
+      "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "to": "pmns_selector_three_identity_support_note_2026-04-21"
+    },
+    {
+      "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "to": "koide_gamma_orbit_selector_bridge_note_2026-04-18"
     },
     {
       "from": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
@@ -9027,6 +9335,10 @@
     {
       "from": "quasi_persistent_relaunch_probe_note",
       "to": "ordered_lattice_quasi_persistent_relaunch_2d_note"
+    },
+    {
+      "from": "q_integer_spectrum_theorem_note_2026-05-02",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
     {
       "from": "rconn_derived_note",
@@ -9969,6 +10281,10 @@
       "to": "three_generation_structure_note"
     },
     {
+      "from": "su3_adjoint_casimir_theorem_note_2026-05-02",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
       "from": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
       "to": "left_handed_charge_matching_note"
     },
@@ -9977,12 +10293,20 @@
       "to": "anomaly_forces_time_theorem"
     },
     {
+      "from": "su3_casimir_fundamental_theorem_note_2026-05-02",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
       "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
       "to": "graph_first_su3_integration_note"
     },
     {
       "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
       "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "su3_dabc_symmetric_theorem_note_2026-05-02",
+      "to": "cl3_color_automorphism_theorem"
     },
     {
       "from": "symmetry_head_to_head_note",
@@ -10105,6 +10429,18 @@
       "to": "z2_hw1_mass_matrix_parametrization_note"
     },
     {
+      "from": "three_gen_z3_fourier_diagonalization_theorem_note_2026-05-03",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "translation_abelian_composition_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "translation_covariance_local_op_theorem_note_2026-05-02",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
       "from": "u1_fermion_number_conservation_theorem_note_2026-05-02",
       "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
     },
@@ -10119,6 +10455,34 @@
     {
       "from": "unification_basin_failure_note",
       "to": "fixed_field_family_unification_note"
+    },
+    {
+      "from": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+      "to": "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+      "to": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02"
+    },
+    {
+      "from": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+      "to": "sm_hypercharge_uniqueness_without_nu_r_input_theorem_note_2026-05-02"
+    },
+    {
+      "from": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+      "to": "neutrino_majorana_operator_axiom_first_note"
+    },
+    {
+      "from": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+      "to": "higgs_mechanism_note"
     },
     {
       "from": "unified_program_note",
@@ -11087,6 +11451,10 @@
     {
       "from": "yt_ew_matching_rule_m_stretch_attempt_note_2026-05-02",
       "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+    },
+    {
+      "from": "yt_ew_m_residual_stretch_attempt_note_2026-05-02",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
     },
     {
       "from": "yt_exact_schur_normal_form_uniqueness_note",
@@ -21765,7 +22133,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T11:31:04.233295+00:00",
+  "generated_at": "2026-05-03T11:37:15.902561+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -21926,6 +22294,17 @@
       "path": "docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md",
       "runner_path": "scripts/node_placement_emergence.py",
       "title": "Adaptive / Coevolving Geometry Scout No-Go"
+    },
+    "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02": {
+      "claim_id": "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "810a6664f534f87e01c231250df4c9f469f4dd0555afa3c2672b220805109f61",
+      "path": "docs/AFFINE_IMAGINARY_SLOT_INVARIANCE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_affine_imaginary_slot_invariance_narrow.py",
+      "title": "Affine Imaginary-Slot Invariance Narrow Theorem on Herm(3)"
     },
     "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25": {
       "claim_id": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -22954,7 +23333,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "59d3f1a7cb3baf4d9554d323efe24d74ccda6594ec937b4bd6d6f48bfa85c45f",
+      "note_hash": "9a87955362f89edf6ee26056b314abbf5cc9f9b8d7dc6c5e1762f6440336849b",
       "path": "docs/ai_methodology/skills/review-loop/SKILL.md",
       "runner_path": null,
       "title": "Review Loop"
@@ -23161,10 +23540,14 @@
     "anomaly_forces_time_theorem": {
       "claim_id": "anomaly_forces_time_theorem",
       "claim_type_author_hint": "bounded_theorem",
-      "claim_type_author_hint_raw": "bounded_theorem proposal. Audit status is assigned only by the",
+      "claim_type_author_hint_raw": "bounded_theorem proposal moving toward positive_theorem proposal.",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "003b590b1c7fa0427af690147cb516f7b7b4fb6b0830bc6987550427fcf44ec9",
+      "deps": [
+        "native_gauge_closure_note",
+        "cpt_exact_note",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+      ],
+      "note_hash": "34a4a17a24f951dfec58f8df059a9b67e76d9b9a754ef4b9060828560ff95253",
       "path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
       "runner_path": "scripts/frontier_anomaly_forces_time.py",
       "title": "Anomaly Cancellation Forces 3+1 Spacetime"
@@ -23764,6 +24147,53 @@
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
     },
+    "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03": {
+      "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (lattice form); bounded_theorem (continuum-limit",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "emergent_lorentz_invariance_note",
+        "lorentz_kernel_positive_closure_note",
+        "minimal_axioms_2026-04-11",
+        "anomaly_forces_time_theorem"
+      ],
+      "note_hash": "c4de74d8fe749fe1a4752c5a78f3b3cd5f30e5aad6a8013e4b0165f004394ff7",
+      "path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/axiom_first_single_clock_codimension1_evolution_check.py",
+      "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3"
+    },
+    "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03": {
+      "claim_id": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note",
+        "three_generation_observable_theorem_note",
+        "three_generation_structure_note",
+        "left_handed_charge_matching_note",
+        "hypercharge_identification_note",
+        "one_generation_matter_closure_note",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
+        "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
+        "su2_witten_z2_anomaly_theorem_note_2026-04-24",
+        "rh_sector_anomaly_cancellation_identities_note_2026-05-02",
+        "bminusl_anomaly_freedom_theorem_note_2026-04-24",
+        "anomaly_forces_time_theorem"
+      ],
+      "note_hash": "d2d5373c60bc6a69086366c32e6dfd961164d7d3667419a7c2f50e4585d6a8e9",
+      "path": "docs/AXIOM_FIRST_SM_ANOMALY_CANCELLATION_COMPLETE_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/axiom_first_sm_anomaly_cancellation_complete_check.py",
+      "title": "Axiom-First SM Anomaly Cancellation Complete on Cl(3)/Z\u00b3 Left-Handed Surface"
+    },
     "axiom_first_spectrum_condition_theorem_note_2026-04-29": {
       "claim_id": "axiom_first_spectrum_condition_theorem_note_2026-04-29",
       "claim_type_author_hint": null,
@@ -23877,6 +24307,20 @@
       "runner_path": "scripts/frontier_background_independence.py",
       "title": "Background Independence: Effective Geometry Differs from Input Graph"
     },
+    "baryon_charge_integrality_note_2026-05-02": {
+      "claim_id": "baryon_charge_integrality_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "ewsb_pattern_from_higgs_y_note_2026-05-02",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+      ],
+      "note_hash": "e16f89fc362320f0f502f2b70c7ba9c7d0353ce7ec24820e334a16537e0a2d2f",
+      "path": "docs/BARYON_CHARGE_INTEGRALITY_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_baryon_charge_integrality.py",
+      "title": "Baryon Charge Integrality Q_baryon = N_u \u2212 1 from Quark Hypercharges"
+    },
     "bell_inequality_derived_note": {
       "claim_id": "bell_inequality_derived_note",
       "claim_type_author_hint": null,
@@ -23940,6 +24384,17 @@
       "path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_bh_quarter_wald_noether_framework_carrier.py",
       "title": "BH 1/4 Carrier from Framework Wald-Noether Charge Boundary Note (V1)"
+    },
+    "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02": {
+      "claim_id": "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "24181a30526dd443ad4ecb98027b304c5fd8da326dd7db43d83365217581177e",
+      "path": "docs/BLOCK_GAUSSIAN_SCHUR_MARGINALIZATION_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_block_gaussian_schur_narrow.py",
+      "title": "Block-Gaussian Schur Marginalization Narrow Theorem"
     },
     "bminusl_anomaly_freedom_theorem_note_2026-04-24": {
       "claim_id": "bminusl_anomaly_freedom_theorem_note_2026-04-24",
@@ -24994,6 +25449,17 @@
       "runner_path": "scripts/frontier_circulant_parity_cp_tensor_narrow.py",
       "title": "Hermitian Circulant Parity Decomposition + CP-Tensor Narrow Theorem"
     },
+    "circulant_response_master_identity_narrow_theorem_note_2026-05-02": {
+      "claim_id": "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "3c63b5af18b1e4cdf0293ca8203ba1c80370737d53052976e22a5da693422a94",
+      "path": "docs/CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_circulant_response_master_identity_narrow.py",
+      "title": "Hermitian-Circulant Response Master Identity Narrow Theorem"
+    },
     "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25": {
       "claim_id": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
       "claim_type_author_hint": null,
@@ -25722,6 +26188,19 @@
       "path": "docs/CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_ckm_wolfenstein_eta_inverse_square_gap.py",
       "title": "CKM Wolfenstein `eta^2` Inverse-Square Structural Reading Theorem"
+    },
+    "cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02": {
+      "claim_id": "cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "note_hash": "a7278f02cf9ffc2764646320799e4e6a7128985cf043ab0c8b7e0e104bbfbb7e",
+      "path": "docs/CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/cl3_baryon_qqq_color_singlet_check.py",
+      "title": "Three-Quark Baryon Color Singlet from Cited Cl(3) Color Structure"
     },
     "cl3_color_automorphism_theorem": {
       "claim_id": "cl3_color_automorphism_theorem",
@@ -29771,6 +30250,23 @@
       "runner_path": "scripts/frontier_emergent_product_law.py",
       "title": "Emergent M1*M2 Product Law via Self-Consistent Poisson Field"
     },
+    "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03": {
+      "claim_id": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "stretch_attempt (output type c)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+        "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
+        "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
+        "pmns_selector_three_identity_support_note_2026-04-21"
+      ],
+      "note_hash": "596e0925b88e8a5b9e88a43d0a0737b8e24d5a1c5d85d256e7d148f2014c57cf",
+      "path": "docs/EPSILON1_FROM_CP_CHAIN_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_epsilon1_from_cp_chain.py",
+      "title": "\u03b5_1 from CP Chain \u2014 Stretch Attempt with Named Obstructions"
+    },
     "equivalence_principle_harness_note": {
       "claim_id": "equivalence_principle_harness_note",
       "claim_type_author_hint": null,
@@ -30001,6 +30497,19 @@
       "path": "docs/FAMILY_COMPANION_COMPARE_NOTE.md",
       "runner_path": "scripts/FAMILY_COMPANION_COMPARE.py",
       "title": "Family Companion Compare Note"
+    },
+    "fermion_parity_z2_grading_theorem_note_2026-05-02": {
+      "claim_id": "fermion_parity_z2_grading_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "59d2538cb2deaa2101b48926a32d136a544f25694720cb426cc72d4b3886d5c7",
+      "path": "docs/FERMION_PARITY_Z2_GRADING_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/fermion_parity_z2_grading_check.py",
+      "title": "Fermion Parity (-1)^Q\u0302 and Z_2 Grading on Framework Fock Space"
     },
     "field_equation_derivation_note": {
       "claim_id": "field_equation_derivation_note",
@@ -30233,6 +30742,20 @@
       "runner_path": "scripts/frontier_frozen_stars_rigorous.py",
       "title": "Frozen Stars Rigorous: Bounded Hartree Note"
     },
+    "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03": {
+      "claim_id": "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "closing_derivation (output type a)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "universal_gr_lorentzian_global_atlas_closure_note",
+        "universal_gr_discrete_global_closure_note"
+      ],
+      "note_hash": "e8fa5b4a7706eca9f307e95a5f4b6f9e2af1a58b97e88f01b773f33f80edd1f7",
+      "path": "docs/FULL_PL_S3_ATLAS_COCYCLE_CLOSURE_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_full_pl_s3_atlas_cocycle_closure.py",
+      "title": "Full PL S^3 Atlas Cocycle Closure on the 4-Simplex Boundary \u2014 Theorem Note"
+    },
     "full_y_squared_trace_su5_gut_note_2026-05-02": {
       "claim_id": "full_y_squared_trace_su5_gut_note_2026-05-02",
       "claim_type_author_hint": null,
@@ -30370,6 +30893,26 @@
       "path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route"
+    },
+    "g_weak_from_framework_stretch_attempt_note_2026-05-03": {
+      "claim_id": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "stretch_attempt (output type c) WITH closing partial at lattice scale",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+        "yt_ew_color_projection_theorem",
+        "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
+        "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
+        "native_gauge_closure_note",
+        "ew_coupling_derivation_note",
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+        "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14"
+      ],
+      "note_hash": "ab6b6c9aad36f1b85682642a524421f67a22afb07ae28a4456d355cba967d08b",
+      "path": "docs/G_WEAK_FROM_FRAMEWORK_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_g_weak_from_framework.py",
+      "title": "G_weak / y_0\u00b2 from Framework Primitives \u2014 Stretch Attempt with Lattice-Scale Closing Derivation"
     },
     "gap_physics_note": {
       "claim_id": "gap_physics_note",
@@ -31207,6 +31750,19 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py",
       "title": "Gauge-Vacuum Plaquette Transfer-Operator / Character-Recurrence Theorem"
     },
+    "gellmann_completeness_theorem_note_2026-05-02": {
+      "claim_id": "gellmann_completeness_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "note_hash": "fc565b59ade4c11a9235c459c2532638673bb10ad41138b828cab9cda0313aa6",
+      "path": "docs/GELLMANN_COMPLETENESS_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/gellmann_completeness_check.py",
+      "title": "Gell-Mann Completeness: {T^a} Is an R-Basis for su(3)"
+    },
     "generated_geometry_synthesis_note": {
       "claim_id": "generated_geometry_synthesis_note",
       "claim_type_author_hint": null,
@@ -31941,6 +32497,20 @@
       "runner_path": null,
       "title": "Lane 1 Hadron Mass Theorem Plan: Lane-3 Dependency Audit and Closure Roadmap"
     },
+    "hadronic_charges_from_quark_y_note_2026-05-02": {
+      "claim_id": "hadronic_charges_from_quark_y_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "ewsb_pattern_from_higgs_y_note_2026-05-02",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+      ],
+      "note_hash": "f8ad5d87aec24d35e5c6cefe3eae88eb5e42f0fb54609b21e373016070347795",
+      "path": "docs/HADRONIC_CHARGES_FROM_QUARK_Y_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_hadronic_charges_from_quark_y.py",
+      "title": "Hadronic Electric Charges Q_p = +1, Q_n = 0 from Quark Hypercharges"
+    },
     "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02": {
       "claim_id": "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -32261,6 +32831,19 @@
       "path": "docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_holographic_probe.py",
       "title": "Holographic Boundary-Law Probe (Bounded Companion Note)"
+    },
+    "hopping_bilinear_hermiticity_theorem_note_2026-05-02": {
+      "claim_id": "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "1108053b695457640373966ff1e77b1385a67a76e5d1d167476246de36b6c8ef",
+      "path": "docs/HOPPING_BILINEAR_HERMITICITY_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/hopping_bilinear_hermiticity_check.py",
+      "title": "Hopping Bilinear H_{xy} = a_x^\u2020 a_y + h.c. Is Hermitian and Translation-Covariant"
     },
     "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29": {
       "claim_id": "hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29",
@@ -32968,6 +33551,28 @@
       "path": "docs/KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md",
       "runner_path": "scripts/frontier_higgs_dressed_propagator_v1.py",
       "title": "Atlas Issues Flagged During Koide Support Review"
+    },
+    "koide_cone_completing_root_narrow_theorem_note_2026-05-02": {
+      "claim_id": "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "a7f769d038b1f0fd1e4bcd4e3e33cd7a42f55b6c987b2f13ebec2577f91015be",
+      "path": "docs/KOIDE_CONE_COMPLETING_ROOT_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_koide_cone_completing_root_narrow.py",
+      "title": "Koide-Cone Completing-Root Narrow Theorem"
+    },
+    "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02": {
+      "claim_id": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "a478097f141f0cae6abb4749ab8ac1236970595bcdc580e579826b0ef681ce95",
+      "path": "docs/KOIDE_CONE_THREE_FORM_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_koide_cone_three_form_equivalence_narrow.py",
+      "title": "Koide-Cone Three-Form Equivalence Narrow Theorem"
     },
     "koide_cyclic_projector_block_democracy_note_2026-04-18": {
       "claim_id": "koide_cyclic_projector_block_democracy_note_2026-04-18",
@@ -34849,6 +35454,21 @@
       "runner_path": "scripts/lensing_long_path_test.py",
       "title": "Lensing Long-Path Test \u2014 Falsifies the Finite-Path Explanation"
     },
+    "lepton_charge_universality_note_2026-05-02": {
+      "claim_id": "lepton_charge_universality_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "ewsb_pattern_from_higgs_y_note_2026-05-02",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
+        "three_generation_structure_note"
+      ],
+      "note_hash": "7ded8f68a8bedb92bb8a4d6f482993c7ad2b7bc90982ba70aab65fc5d113e6da",
+      "path": "docs/LEPTON_CHARGE_UNIVERSALITY_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_lepton_charge_universality.py",
+      "title": "Charged-Lepton Charge Universality Q_e = Q_\u03bc = Q_\u03c4 = \u22121"
+    },
     "lepton_shared_higgs_universality_collapse_note": {
       "claim_id": "lepton_shared_higgs_universality_collapse_note",
       "claim_type_author_hint": null,
@@ -34884,8 +35504,8 @@
     },
     "lh_anomaly_trace_catalog_theorem_note_2026-04-25": {
       "claim_id": "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "left_handed_charge_matching_note",
@@ -34895,7 +35515,7 @@
         "su2_witten_z2_anomaly_theorem_note_2026-04-24",
         "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24"
       ],
-      "note_hash": "4bd0d8dc2e6b7dcb9167af5531b8359318da12ca3baffd7fa11e10cbe237b12f",
+      "note_hash": "9c60dcaf6f8026b104ddb9e944cdbf6dc278a9c749978d4076ecb539cd79578e",
       "path": "docs/LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_lh_anomaly_trace_catalog.py",
       "title": "Left-Handed-Content Anomaly Trace Catalog Theorem"
@@ -35253,6 +35873,20 @@
       "path": "docs/MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_memory_mu2_size_sweep.py",
       "title": "Memory `mu^2` / Geometry Sweep Note"
+    },
+    "meson_charges_from_quark_y_note_2026-05-02": {
+      "claim_id": "meson_charges_from_quark_y_note_2026-05-02",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "ewsb_pattern_from_higgs_y_note_2026-05-02",
+        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+      ],
+      "note_hash": "94372138342b7d260bd30d54c0410ee4526d3892b5043f91363b6403c8f76855",
+      "path": "docs/MESON_CHARGES_FROM_QUARK_Y_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_meson_charges_from_quark_y.py",
+      "title": "Meson Electric Charge Integrality from Quark Hypercharges"
     },
     "mesoscopic_surrogate_alternate_family_scout_note": {
       "claim_id": "mesoscopic_surrogate_alternate_family_scout_note",
@@ -35623,6 +36257,19 @@
       "runner_path": null,
       "title": "Mirror vs Lattice Program Note"
     },
+    "momentum_charge_commute_theorem_note_2026-05-02": {
+      "claim_id": "momentum_charge_commute_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "d2204b8e97f23dd547ea8fef3f43869a80601d7d9c198fdca8f133c62de1dc26",
+      "path": "docs/MOMENTUM_CHARGE_COMMUTE_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/momentum_charge_commute_check.py",
+      "title": "Total Momentum and Total U(1) Charge Commute on Framework Lattice"
+    },
     "monopole_derived_note": {
       "claim_id": "monopole_derived_note",
       "claim_type_author_hint": null,
@@ -35813,6 +36460,19 @@
       "path": "docs/MULTIPOLE_TIDAL_RESPONSE_NOTE.md",
       "runner_path": "scripts/multipole_tidal_response_probe.py",
       "title": "Multipole Tidal Response Note"
+    },
+    "multisite_pauli_group_theorem_note_2026-05-02": {
+      "claim_id": "multisite_pauli_group_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "98531fac922f46470e9b33289a4eb77d0702590e88398791a59ce42868428bee",
+      "path": "docs/MULTISITE_PAULI_GROUP_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/multisite_pauli_group_check.py",
+      "title": "Multi-Site Pauli Group P_N Has Order 4^{N+1} on N-Site Cl(3) Fock Space"
     },
     "n_eff_from_three_generations_theorem_note_2026-04-24": {
       "claim_id": "n_eff_from_three_generations_theorem_note_2026-04-24",
@@ -37107,6 +37767,34 @@
       "runner_path": null,
       "title": "Paper Outline: \"Physics from Cl(3) on Z\u00b3\""
     },
+    "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02": {
+      "claim_id": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "cpt_exact_note"
+      ],
+      "note_hash": "0c42bb779400360b861b22ead2ec0dabbe4a23f36673e3b3729027f00ef846f7",
+      "path": "docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py",
+      "title": "Parity-Operator Basis: Dimension-5 Lorentz-Violating Operator No-Go Theorem on Z^3"
+    },
+    "patched_stationary_system_pl_s3_theorem_note_2026-05-03": {
+      "claim_id": "patched_stationary_system_pl_s3_theorem_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "closing_derivation (output type a)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03",
+        "universal_gr_lorentzian_global_atlas_closure_note",
+        "universal_gr_discrete_global_closure_note"
+      ],
+      "note_hash": "214d403def004116d18b933884d9bf00eb5853818b85f095f77e424cb0ff7f94",
+      "path": "docs/PATCHED_STATIONARY_SYSTEM_PL_S3_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_patched_stationary_system_pl_s3.py",
+      "title": "Patched Stationary System on PL S^3 \u2014 Theorem Note"
+    },
     "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02": {
       "claim_id": "pauli_exclusion_from_spin_statistics_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -37119,6 +37807,19 @@
       "path": "docs/PAULI_EXCLUSION_FROM_SPIN_STATISTICS_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/pauli_exclusion_check.py",
       "title": "Pauli Exclusion Principle from Retained Spin-Statistics Theorem"
+    },
+    "pauli_group_order_theorem_note_2026-05-02": {
+      "claim_id": "pauli_group_order_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "53c67556048051c4da53db0d8b881c46885336a90aa52cda68d09328eb09b3bb",
+      "path": "docs/PAULI_GROUP_ORDER_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/pauli_group_order_check.py",
+      "title": "Pauli Group P_1 = \u27e8\u03c3_i\u27e9 Has Order 16 on Per-Site Cl(3) Hilbert"
     },
     "per_site_su2_spin_half_theorem_note_2026-05-02": {
       "claim_id": "per_site_su2_spin_half_theorem_note_2026-05-02",
@@ -37641,6 +38342,38 @@
       "runner_path": "scripts/frontier_planck_target3_phase_unit_edge_statistics.py",
       "title": "Planck Target 3 Phase-Unit / Edge-Statistics Boundary Note"
     },
+    "plaquette_bootstrap_framework_integration_note_2026-05-03": {
+      "claim_id": "plaquette_bootstrap_framework_integration_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "framework-integration support theorem + named-obstruction stretch",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "plaquette_self_consistency_note",
+        "gauge_vacuum_plaquette_framework_point_underdetermination_note"
+      ],
+      "note_hash": "4dae29e39663cedc069bb2ecf90d40b22729d4d493a7a0a53116ce307b4a5711",
+      "path": "docs/PLAQUETTE_BOOTSTRAP_FRAMEWORK_INTEGRATION_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_plaquette_bootstrap_framework_integration.py",
+      "title": "Plaquette Bootstrap \u2014 Framework-Integration Theorem Note"
+    },
+    "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03": {
+      "claim_id": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "framework-specific positivity refinement support theorem + named-obstruction stretch",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "observable_principle_from_axiom_note",
+        "plaquette_self_consistency_note",
+        "gauge_vacuum_plaquette_framework_point_underdetermination_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+      ],
+      "note_hash": "7d3b287fea966a50d1b6c3ce0ed820b8e65301eff6eaa976f7b1bbc3d2ac3a4a",
+      "path": "docs/PLAQUETTE_BOOTSTRAP_FRAMEWORK_SPECIFIC_POSITIVITY_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_plaquette_bootstrap_framework_specific_positivity.py",
+      "title": "Plaquette Bootstrap \u2014 Framework-Specific Positivity (3x3 Extension)"
+    },
     "plaquette_self_consistency_note": {
       "claim_id": "plaquette_self_consistency_note",
       "claim_type_author_hint": null,
@@ -37729,6 +38462,26 @@
       "path": "docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md",
       "runner_path": null,
       "title": "PMNS `C3` Nontrivial-Character Current Boundary"
+    },
+    "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03": {
+      "claim_id": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "stretch_attempt (output type c)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+        "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
+        "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15",
+        "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
+        "pmns_selector_three_identity_support_note_2026-04-21",
+        "koide_gamma_orbit_selector_bridge_note_2026-04-18"
+      ],
+      "note_hash": "dfdbb73f7627ca3f5af5209b6d7320907fc62c7e62a75660e64bea82c3381dbc",
+      "path": "docs/PMNS_CHART_CONSTANTS_RETENTION_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_pmns_chart_constants_retention.py",
+      "title": "PMNS Chart Constants \u03b3, E\u2081, E\u2082 Retention \u2014 Stretch Attempt with Named Obstructions"
     },
     "pmns_commutant_eigenoperator_selector_note": {
       "claim_id": "pmns_commutant_eigenoperator_selector_note",
@@ -40709,6 +41462,19 @@
       "runner_path": null,
       "title": "What This Paper Does Not Claim"
     },
+    "q_integer_spectrum_theorem_note_2026-05-02": {
+      "claim_id": "q_integer_spectrum_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "8cdee38cec613f2e240ba086899ddd6df8c5231639d790cdd2c5a5437d405e9e",
+      "path": "docs/Q_INTEGER_SPECTRUM_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/q_integer_spectrum_check.py",
+      "title": "Per-Site n\u0302 \u2208 {0, 1} \u21d2 Total Q\u0302 Integer Spectrum on Framework Fock Space"
+    },
     "qcd_low_energy_running_bridge_note_2026-05-01": {
       "claim_id": "qcd_low_energy_running_bridge_note_2026-05-01",
       "claim_type_author_hint": null,
@@ -41394,6 +42160,17 @@
       "runner_path": "scripts/frontier_r_base_group_theory_derivation.py",
       "title": "R_base = 31/9 Group-Theory Derivation Theorem"
     },
+    "radial_scaling_protected_angle_narrow_theorem_note_2026-05-02": {
+      "claim_id": "radial_scaling_protected_angle_narrow_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "f960cf8c78782a87f96501a9e4a2b261232ac482ee5fea7e11a2fbde4d679b6e",
+      "path": "docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/frontier_radial_scaling_protected_angle_narrow.py",
+      "title": "Radial-Scaling Protected-Angle Narrow Theorem"
+    },
     "rconn_derived_note": {
       "claim_id": "rconn_derived_note",
       "claim_type_author_hint": null,
@@ -41456,6 +42233,17 @@
       "path": "docs/repo/CONTROLLED_VOCABULARY.md",
       "runner_path": null,
       "title": "Controlled Vocabulary"
+    },
+    "repo.python_venv_setup": {
+      "claim_id": "repo.python_venv_setup",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "e833e5d18f1ce7341153f0a0f48b6e7983ca28daab1e9079bf75d4cb0c23674a",
+      "path": "docs/repo/PYTHON_VENV_SETUP.md",
+      "runner_path": null,
+      "title": "Python Virtual Environment Setup"
     },
     "repo.repo_organization": {
       "claim_id": "repo.repo_organization",
@@ -43752,8 +44540,8 @@
     },
     "su2_witten_z2_anomaly_theorem_note_2026-04-24": {
       "claim_id": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "native_gauge_closure_note",
@@ -43761,10 +44549,23 @@
         "graph_first_su3_integration_note",
         "three_generation_structure_note"
       ],
-      "note_hash": "b3b13e7ac1fbc890770ea58d020ebef4254715a996a492596c8ed7df69e00e0f",
+      "note_hash": "12fd7ef6374d06440447bcab675a44b6736448e402a8e00dee78cf29bf24b429",
       "path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": null,
       "title": "SU(2) Witten Z_2 Global Anomaly Cancellation Theorem"
+    },
+    "su3_adjoint_casimir_theorem_note_2026-05-02": {
+      "claim_id": "su3_adjoint_casimir_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "note_hash": "cdd1da918b37749c02ac42dbcbb6fc75aa08c6540f0c49c92090f5f36ae4270d",
+      "path": "docs/SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/su3_adjoint_casimir_check.py",
+      "title": "SU(3) Quadratic Casimir on Adjoint Equals N = 3"
     },
     "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02": {
       "claim_id": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
@@ -43780,19 +44581,45 @@
       "runner_path": "scripts/frontier_su3_anomaly_forced_3bar_completion.py",
       "title": "SU(3) Anomaly-Forced 3\u0304 Singlet Completion Theorem"
     },
+    "su3_casimir_fundamental_theorem_note_2026-05-02": {
+      "claim_id": "su3_casimir_fundamental_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "note_hash": "afcbcc86bf5421acba418befd41807cb6786f88c98a9f1634e566f1d5a1dc0b1",
+      "path": "docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/su3_casimir_fundamental_check.py",
+      "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3"
+    },
     "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24": {
       "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "graph_first_su3_integration_note",
         "left_handed_charge_matching_note"
       ],
-      "note_hash": "d80d25858cff4c761d4b8bd64a98c986adf626306df193f25868c36a32709195",
+      "note_hash": "89085dde243dd69e8cd4adb9ce663291652c1283152e79d3a4e9450c34286478",
       "path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
       "runner_path": null,
       "title": "SU(3)^3 Cubic Gauge Anomaly Cancellation Theorem"
+    },
+    "su3_dabc_symmetric_theorem_note_2026-05-02": {
+      "claim_id": "su3_dabc_symmetric_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "note_hash": "116a5b78ed33a9833dddc0fd37799cb65792054e95e641b95a23e15f2f3d635e",
+      "path": "docs/SU3_DABC_SYMMETRIC_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/su3_dabc_symmetric_check.py",
+      "title": "SU(3) Symmetric Structure Constants d^{abc} from Anticommutator"
     },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
@@ -44499,6 +45326,19 @@
       "runner_path": "scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py",
       "title": "Third Grown Family Sign Note"
     },
+    "three_gen_z3_fourier_diagonalization_theorem_note_2026-05-03": {
+      "claim_id": "three_gen_z3_fourier_diagonalization_theorem_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "three_generation_observable_theorem_note"
+      ],
+      "note_hash": "4b5c4b1bba0ea9a69cd0cf6d97c648f94407bbf80d6094ffcb195e74e22bc0aa",
+      "path": "docs/THREE_GEN_Z3_FOURIER_DIAGONALIZATION_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/three_gen_z3_fourier_diagonalization_check.py",
+      "title": "Z_3 Fourier Diagonalization of C3[111] on Framework hw=1 Triplet"
+    },
     "three_generation_chirality_boundary_note": {
       "claim_id": "three_generation_chirality_boundary_note",
       "claim_type_author_hint": null,
@@ -44516,6 +45356,17 @@
       "path": "docs/THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation / Chirality Boundary Note"
+    },
+    "three_generation_observable_count_corollary_note_2026-05-03": {
+      "claim_id": "three_generation_observable_count_corollary_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (corollary)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "9ec850895c5a3066b691378c510ab7df4ec193f91e70984c6a16458a15179770",
+      "path": "docs/THREE_GENERATION_OBSERVABLE_COUNT_COROLLARY_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_three_generation_observable_count_corollary.py",
+      "title": "Three-Generation Observable Count Corollary Note"
     },
     "three_generation_observable_dep_chain_audit_note_2026-05-02": {
       "claim_id": "three_generation_observable_dep_chain_audit_note_2026-05-02",
@@ -44572,6 +45423,32 @@
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
+    },
+    "translation_abelian_composition_theorem_note_2026-05-02": {
+      "claim_id": "translation_abelian_composition_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "950c7679b545ee7c194a4b21f36b864f8c6e161d81e1f1e82deb9bca7011656a",
+      "path": "docs/TRANSLATION_ABELIAN_COMPOSITION_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/translation_abelian_composition_check.py",
+      "title": "Translation Group Composition T_a T_b = T_{a+b} on Z^3 Lattice"
+    },
+    "translation_covariance_local_op_theorem_note_2026-05-02": {
+      "claim_id": "translation_covariance_local_op_theorem_note_2026-05-02",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "5f49fd3c06e7f0570e625004584156d594906b9ef068198e750af5416c1b1c67",
+      "path": "docs/TRANSLATION_COVARIANCE_LOCAL_OP_THEOREM_NOTE_2026-05-02.md",
+      "runner_path": "scripts/translation_covariance_local_op_check.py",
+      "title": "Translation Covariance of Local Operators: T_a O(x) T_a^\u2020 = O(x + a)"
     },
     "triple_stack_collapse_scaling_note": {
       "claim_id": "triple_stack_collapse_scaling_note",
@@ -44655,6 +45532,25 @@
       "path": "docs/UNIFIED_BASIN_SIGNED_SOURCE_CONTROL_SUPPORT_NOTE_2026-04-30.md",
       "runner_path": null,
       "title": "Unified Basin Signed-Source Control Support Note"
+    },
+    "unified_matter_content_ewsb_harness_theorem_note_2026-05-03": {
+      "claim_id": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (synthesis)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+        "native_gauge_closure_note",
+        "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
+        "sm_hypercharge_uniqueness_without_nu_r_input_theorem_note_2026-05-02",
+        "neutrino_majorana_operator_axiom_first_note",
+        "higgs_mechanism_note"
+      ],
+      "note_hash": "e6df8c9cc0a7ff7acb883fd832887f6a4a9aca144800acc7f5e1f2fce8299be4",
+      "path": "docs/UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_unified_matter_content_ewsb_harness.py",
+      "title": "Unified End-to-End Matter-Content + EWSB Harness \u2014 Synthesis Closing Derivation"
     },
     "unified_program_note": {
       "claim_id": "unified_program_note",
@@ -46531,6 +47427,17 @@
       "runner_path": null,
       "title": "Claude Frontier Retain Audit \u2014 2026-04-11"
     },
+    "work_history.repo.review_feedback.closed_pr_science_salvage_sweep_2026-05-03": {
+      "claim_id": "work_history.repo.review_feedback.closed_pr_science_salvage_sweep_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "c09b1f39e267b1b0a7285fb8404115a9e26e1b5bca5347e0bfae8963b46e7e83",
+      "path": "docs/work_history/repo/review_feedback/CLOSED_PR_SCIENCE_SALVAGE_SWEEP_2026-05-03.md",
+      "runner_path": null,
+      "title": "Closed PR Science Salvage Sweep 2026-05-03"
+    },
     "work_history.repo.review_feedback.code_review_last_week_2026-04-11": {
       "claim_id": "work_history.repo.review_feedback.code_review_last_week_2026-04-11",
       "claim_type_author_hint": null,
@@ -46994,6 +47901,19 @@
       "path": "docs/YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_ew_delta_r_retention.py",
       "title": "YT EW \u0394_R Retention Analysis Note (Lattice-to-MSbar Matching for g_1(v), g_2(v))"
+    },
+    "yt_ew_m_residual_stretch_attempt_note_2026-05-02": {
+      "claim_id": "yt_ew_m_residual_stretch_attempt_note_2026-05-02",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "ew_current_fierz_channel_decomposition_note_2026-05-01"
+      ],
+      "note_hash": "4bec1f3539b06d52c1f129a80156fd3858872e0121848627c2071dfb41eb9c30",
+      "path": "docs/YT_EW_M_RESIDUAL_STRETCH_ATTEMPT_NOTE_2026-05-02.md",
+      "runner_path": "scripts/yt_ew_m_residual_channel_check.py",
+      "title": "yt_ew M-Residual Stretch Attempt: Sharpened Obstruction Note"
     },
     "yt_ew_matching_rule_m_stretch_attempt_note_2026-05-02": {
       "claim_id": "yt_ew_matching_rule_m_stretch_attempt_note_2026-05-02",
@@ -47766,6 +48686,7 @@
     "action_power_scaling_sweep_note",
     "action_uniqueness_audit_2026-04-11",
     "adaptive_coevolving_geometry_no_go",
+    "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02",
     "ai_methodology.methodology_case_studies_2026-04-25",
     "ai_methodology.methodology_evidence_ledger_2026-04-25",
     "ai_methodology.methodology_paper_draft_2026-04-25",
@@ -47842,7 +48763,6 @@
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
-    "anomaly_forces_time_theorem",
     "architecture_note_directional_measure",
     "architecture_options",
     "architecture_portability_sweep_note",
@@ -47873,6 +48793,7 @@
     "bell_inequality_derived_note",
     "beyond_lattice_qcd_note",
     "bh_entropy_derived_note",
+    "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
     "bmv_bounded_negative_note",
     "bmv_entanglement_note_2026-04-11",
     "bmv_threebody_note_2026-04-11",
@@ -47915,6 +48836,7 @@
     "chiral_split_mass_gravity_note",
     "chiral_walk_synthesis_2026-04-09",
     "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
+    "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_from_mass_hierarchy_note",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
@@ -48268,6 +49190,8 @@
     "koide_brannen_phase_reduction_theorem_note_2026-04-20",
     "koide_cl3_selector_gap_note_2026-04-19",
     "koide_closure_atlas_issues_flagged",
+    "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
+    "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
     "koide_cyclic_projector_block_democracy_note_2026-04-18",
     "koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24",
     "koide_delta_marked_relative_cobordism_no_go_note_2026-04-24",
@@ -48523,8 +49447,10 @@
     "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
     "quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28",
     "quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19",
+    "radial_scaling_protected_angle_narrow_theorem_note_2026-05-02",
     "reopened_lane_checklist",
     "replay_environment_note",
+    "repo.python_venv_setup",
     "repo_submission_consolidation_plan_2026-04-12",
     "retained_cross_lane_consistency_support_note_2026-04-22",
     "retardation_discriminator_note",
@@ -48698,6 +49624,7 @@
     "tensor_source_map_eta_note",
     "tensor_support_center_excess_law_note",
     "thales_right_angle_narrow_theorem_note_2026-05-02",
+    "three_generation_observable_count_corollary_note_2026-05-03",
     "three_generation_structure_note",
     "triple_stack_collapse_scaling_note",
     "two_field_retarded_family_closure_note_2026-04-10",
@@ -48783,6 +49710,7 @@
     "work_history.repo.backlog.readme",
     "work_history.repo.review_feedback.adversarial_review_2026_04_05",
     "work_history.repo.review_feedback.claim_audit_note_2026-04-01",
+    "work_history.repo.review_feedback.closed_pr_science_salvage_sweep_2026-05-03",
     "work_history.repo.review_feedback.code_review_last_week_2026-04-11",
     "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11",
     "work_history.repo.review_feedback.readme",
@@ -48826,24 +49754,24 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 12,
+      "bounded_theorem": 16,
       "meta": 1,
-      "no_go": 1,
-      "none": 1742,
-      "positive_theorem": 45
+      "no_go": 3,
+      "none": 1748,
+      "positive_theorem": 72
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 512,
+      "bounded_theorem": 516,
       "meta": 1,
-      "no_go": 107,
-      "none": 440,
+      "no_go": 109,
+      "none": 449,
       "open_gate": 109,
-      "positive_theorem": 632
+      "positive_theorem": 656
     },
-    "edge_count": 5441,
-    "leaf_count": 620,
-    "node_count": 1801,
-    "root_count": 1066,
-    "runners_with_path": 1369
+    "edge_count": 5533,
+    "leaf_count": 648,
+    "node_count": 1840,
+    "root_count": 1074,
+    "runners_with_path": 1406
   }
 }

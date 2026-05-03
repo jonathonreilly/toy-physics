@@ -1,14 +1,14 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 424,
-    "decoration": 9,
+    "bounded_theorem": 426,
+    "decoration": 8,
     "meta": 41,
-    "no_go": 156,
-    "open_gate": 82,
-    "positive_theorem": 780,
-    "unset": 210
+    "no_go": 158,
+    "open_gate": 83,
+    "positive_theorem": 815,
+    "unset": 208
   },
-  "computed_at": "2026-05-03T11:31:07.044747+00:00",
+  "computed_at": "2026-05-03T11:37:21.380146+00:00",
   "cycle_examples": [
     [
       "restricted_strong_field_closure_note",
@@ -19,36 +19,41 @@
       "gw_echo_null_result_note"
     ],
     [
-      "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
-      "n_eff_from_three_generations_theorem_note_2026-04-24"
-    ],
-    [
       "lorentz_boost_covariance_2d_theorem_note",
       "lorentz_boost_covariance_3plus1d_theorem_note"
     ],
     [
-      "irregular_sign_core_packet_gate_note",
-      "irregular_directional_observable_note_2026-04-11"
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+      "lorentz_kernel_positive_closure_note",
+      "lorentz_boost_covariance_2d_theorem_note",
+      "lorentz_boost_covariance_3plus1d_theorem_note",
+      "planck_scale_lane_status_note_2026-04-23",
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+    ],
+    [
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ]
   ],
-  "cycles_detected": 102,
+  "cycles_detected": 104,
   "effective_status_counts": {
-    "audited_conditional": 530,
+    "audited_conditional": 515,
     "audited_decoration": 3,
-    "audited_failed": 6,
-    "audited_numerical_match": 26,
-    "audited_renaming": 19,
-    "decoration_under_cpt_exact_note": 1,
+    "audited_failed": 4,
+    "audited_numerical_match": 25,
+    "audited_renaming": 18,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
     "meta": 40,
     "open_gate": 14,
-    "retained": 119,
-    "retained_bounded": 176,
-    "retained_no_go": 100,
+    "retained": 111,
+    "retained_bounded": 170,
+    "retained_no_go": 95,
     "retained_pending_chain": 3,
-    "unaudited": 662
+    "unaudited": 738
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [

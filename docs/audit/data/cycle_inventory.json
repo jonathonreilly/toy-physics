@@ -1,8 +1,197 @@
 {
-  "cycle_count": 103,
+  "cycle_count": 105,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
+      "decision": null,
+      "edges": [
+        {
+          "from": "anomaly_forces_time_theorem",
+          "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+        },
+        {
+          "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "to": "anomaly_forces_time_theorem"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 320,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "anomaly_forces_time_theorem",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
+          "title": "Anomaly Cancellation Forces 3+1 Spacetime",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
+          "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
+          "transitive_descendants": 320
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0002",
+      "decision": null,
+      "edges": [
+        {
+          "from": "lorentz_boost_covariance_2d_theorem_note",
+          "to": "lorentz_boost_covariance_3plus1d_theorem_note"
+        },
+        {
+          "from": "lorentz_boost_covariance_3plus1d_theorem_note",
+          "to": "lorentz_boost_covariance_2d_theorem_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 320,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "lorentz_boost_covariance_2d_theorem_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
+          "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "lorentz_boost_covariance_3plus1d_theorem_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
+          "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
+          "transitive_descendants": 320
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0003",
+      "decision": null,
+      "edges": [
+        {
+          "from": "anomaly_forces_time_theorem",
+          "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+        },
+        {
+          "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+        },
+        {
+          "from": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+          "to": "lorentz_kernel_positive_closure_note"
+        },
+        {
+          "from": "lorentz_kernel_positive_closure_note",
+          "to": "lorentz_boost_covariance_2d_theorem_note"
+        },
+        {
+          "from": "lorentz_boost_covariance_2d_theorem_note",
+          "to": "lorentz_boost_covariance_3plus1d_theorem_note"
+        },
+        {
+          "from": "lorentz_boost_covariance_3plus1d_theorem_note",
+          "to": "planck_scale_lane_status_note_2026-04-23"
+        },
+        {
+          "from": "planck_scale_lane_status_note_2026-04-23",
+          "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "to": "anomaly_forces_time_theorem"
+        }
+      ],
+      "length": 8,
+      "max_transitive_descendants": 320,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "anomaly_forces_time_theorem",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
+          "title": "Anomaly Cancellation Forces 3+1 Spacetime",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
+          "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
+          "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "lorentz_kernel_positive_closure_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
+          "title": "Lorentz Kernel Positive Closure Note",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "lorentz_boost_covariance_2d_theorem_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
+          "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "lorentz_boost_covariance_3plus1d_theorem_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
+          "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_scale_lane_status_note_2026-04-23",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
+          "title": "Planck-Scale Lane Status Note",
+          "transitive_descendants": 320
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
+          "transitive_descendants": 320
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0004",
       "decision": null,
       "edges": [
         {
@@ -39,7 +228,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0002",
+      "cycle_id": "cycle-0005",
       "decision": null,
       "edges": [
         {
@@ -76,7 +265,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0003",
+      "cycle_id": "cycle-0006",
       "decision": null,
       "edges": [
         {
@@ -126,7 +315,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0004",
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -176,7 +365,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0005",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -226,7 +415,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -276,7 +465,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -339,7 +528,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -402,7 +591,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -465,7 +654,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -528,7 +717,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -585,195 +774,6 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
           "title": "Gate B Non-Label Connectivity V2 Note",
-          "transitive_descendants": 81
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0012",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gate_b_farfield_note",
-          "to": "gate_b_grown_distance_law_note"
-        },
-        {
-          "from": "gate_b_grown_distance_law_note",
-          "to": "gate_b_dynamics_note"
-        },
-        {
-          "from": "gate_b_dynamics_note",
-          "to": "gate_b_nonlabel_connectivity_v3_note"
-        },
-        {
-          "from": "gate_b_nonlabel_connectivity_v3_note",
-          "to": "gate_b_farfield_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 81,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
-          "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
-          "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
-          "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_nonlabel_connectivity_v3_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
-          "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 81
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0013",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gate_b_grown_distance_law_note",
-          "to": "gate_b_dynamics_note"
-        },
-        {
-          "from": "gate_b_dynamics_note",
-          "to": "gate_b_nonlabel_connectivity_v3_note"
-        },
-        {
-          "from": "gate_b_nonlabel_connectivity_v3_note",
-          "to": "gate_b_no_restore_farfield_note"
-        },
-        {
-          "from": "gate_b_no_restore_farfield_note",
-          "to": "gate_b_grown_distance_law_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 81,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
-          "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
-          "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_nonlabel_connectivity_v3_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
-          "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_no_restore_farfield_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
-          "title": "Gate B No-Restore Far-Field Note",
-          "transitive_descendants": 81
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0014",
-      "decision": null,
-      "edges": [
-        {
-          "from": "gate_b_weak_connectivity_note",
-          "to": "gate_b_farfield_note"
-        },
-        {
-          "from": "gate_b_farfield_note",
-          "to": "gate_b_grown_distance_law_note"
-        },
-        {
-          "from": "gate_b_grown_distance_law_note",
-          "to": "gate_b_dynamics_note"
-        },
-        {
-          "from": "gate_b_dynamics_note",
-          "to": "gate_b_weak_connectivity_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 81,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_weak_connectivity_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
-          "title": "Gate B Weak-Connectivity Note",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
-          "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
-          "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
-          "effective_status": "unaudited",
-          "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
-          "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
           "transitive_descendants": 81
         }
       ],
@@ -797,6 +797,195 @@
         },
         {
           "from": "gate_b_nonlabel_connectivity_v3_note",
+          "to": "gate_b_farfield_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 81,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_farfield_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
+          "title": "Gate B Far-Field: Grown Geometry at h=0.5",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_grown_distance_law_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
+          "title": "Gate B Grown-Geometry Distance-Law Note",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_dynamics_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
+          "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_nonlabel_connectivity_v3_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
+          "title": "Gate B Non-Label Connectivity V3 Note",
+          "transitive_descendants": 81
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0016",
+      "decision": null,
+      "edges": [
+        {
+          "from": "gate_b_grown_distance_law_note",
+          "to": "gate_b_dynamics_note"
+        },
+        {
+          "from": "gate_b_dynamics_note",
+          "to": "gate_b_nonlabel_connectivity_v3_note"
+        },
+        {
+          "from": "gate_b_nonlabel_connectivity_v3_note",
+          "to": "gate_b_no_restore_farfield_note"
+        },
+        {
+          "from": "gate_b_no_restore_farfield_note",
+          "to": "gate_b_grown_distance_law_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 81,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_grown_distance_law_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
+          "title": "Gate B Grown-Geometry Distance-Law Note",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_dynamics_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
+          "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_nonlabel_connectivity_v3_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
+          "title": "Gate B Non-Label Connectivity V3 Note",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_no_restore_farfield_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
+          "title": "Gate B No-Restore Far-Field Note",
+          "transitive_descendants": 81
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0017",
+      "decision": null,
+      "edges": [
+        {
+          "from": "gate_b_weak_connectivity_note",
+          "to": "gate_b_farfield_note"
+        },
+        {
+          "from": "gate_b_farfield_note",
+          "to": "gate_b_grown_distance_law_note"
+        },
+        {
+          "from": "gate_b_grown_distance_law_note",
+          "to": "gate_b_dynamics_note"
+        },
+        {
+          "from": "gate_b_dynamics_note",
+          "to": "gate_b_weak_connectivity_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 81,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_weak_connectivity_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
+          "title": "Gate B Weak-Connectivity Note",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_farfield_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
+          "title": "Gate B Far-Field: Grown Geometry at h=0.5",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_grown_distance_law_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
+          "title": "Gate B Grown-Geometry Distance-Law Note",
+          "transitive_descendants": 81
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gate_b_dynamics_note",
+          "claim_type": null,
+          "effective_status": "unaudited",
+          "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
+          "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
+          "transitive_descendants": 81
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0018",
+      "decision": null,
+      "edges": [
+        {
+          "from": "gate_b_farfield_note",
+          "to": "gate_b_grown_distance_law_note"
+        },
+        {
+          "from": "gate_b_grown_distance_law_note",
+          "to": "gate_b_dynamics_note"
+        },
+        {
+          "from": "gate_b_dynamics_note",
+          "to": "gate_b_nonlabel_connectivity_v3_note"
+        },
+        {
+          "from": "gate_b_nonlabel_connectivity_v3_note",
           "to": "gate_b_no_restore_farfield_note"
         },
         {
@@ -856,7 +1045,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -932,7 +1121,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1008,7 +1197,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -1045,44 +1234,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
-      "decision": null,
-      "edges": [
-        {
-          "from": "lorentz_boost_covariance_2d_theorem_note",
-          "to": "lorentz_boost_covariance_3plus1d_theorem_note"
-        },
-        {
-          "from": "lorentz_boost_covariance_3plus1d_theorem_note",
-          "to": "lorentz_boost_covariance_2d_theorem_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 51,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "lorentz_boost_covariance_2d_theorem_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
-          "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 51
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "lorentz_boost_covariance_3plus1d_theorem_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
-          "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 51
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1119,7 +1271,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -1156,7 +1308,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1193,7 +1345,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1230,7 +1382,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1267,7 +1419,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1304,7 +1456,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1341,7 +1493,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1378,7 +1530,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -1415,7 +1567,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -1452,7 +1604,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -1489,7 +1641,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -1526,7 +1678,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -1563,7 +1715,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -1600,7 +1752,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -1650,7 +1802,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -1700,7 +1852,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -1750,7 +1902,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -1800,7 +1952,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -1850,7 +2002,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -1913,7 +2065,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -1976,7 +2128,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -2039,7 +2191,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -2102,7 +2254,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -2165,7 +2317,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -2241,7 +2393,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -2317,7 +2469,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -2393,7 +2545,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -2482,7 +2634,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -2584,7 +2736,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -2621,7 +2773,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -2658,7 +2810,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -2695,7 +2847,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0054",
       "decision": null,
       "edges": [
         {
@@ -2732,7 +2884,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0055",
       "decision": null,
       "edges": [
         {
@@ -2769,7 +2921,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0056",
       "decision": null,
       "edges": [
         {
@@ -2806,7 +2958,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0057",
       "decision": null,
       "edges": [
         {
@@ -2843,7 +2995,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -2880,7 +3032,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0059",
       "decision": null,
       "edges": [
         {
@@ -2917,7 +3069,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0060",
       "decision": null,
       "edges": [
         {
@@ -2967,7 +3119,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0061",
       "decision": null,
       "edges": [
         {
@@ -3030,7 +3182,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0062",
       "decision": null,
       "edges": [
         {
@@ -3106,7 +3258,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0063",
       "decision": null,
       "edges": [
         {
@@ -3143,7 +3295,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0064",
       "decision": null,
       "edges": [
         {
@@ -3180,7 +3332,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0065",
       "decision": null,
       "edges": [
         {
@@ -3217,7 +3369,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0066",
       "decision": null,
       "edges": [
         {
@@ -3254,7 +3406,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0067",
       "decision": null,
       "edges": [
         {
@@ -3291,7 +3443,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0068",
       "decision": null,
       "edges": [
         {
@@ -3328,7 +3480,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -3378,7 +3530,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -3428,7 +3580,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -3478,7 +3630,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -3541,7 +3693,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -3578,7 +3730,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0072",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -3615,7 +3767,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0073",
+      "cycle_id": "cycle-0075",
       "decision": null,
       "edges": [
         {
@@ -3652,7 +3804,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0074",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -3689,7 +3841,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0075",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -3726,7 +3878,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0076",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -3763,7 +3915,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0077",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -3800,7 +3952,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0078",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -3837,7 +3989,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0079",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -3887,7 +4039,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0080",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -3937,7 +4089,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -3987,7 +4139,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -4037,7 +4189,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -4087,7 +4239,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -4137,7 +4289,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -4187,7 +4339,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0088",
       "decision": null,
       "edges": [
         {
@@ -4237,7 +4389,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0089",
       "decision": null,
       "edges": [
         {
@@ -4274,7 +4426,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0090",
       "decision": null,
       "edges": [
         {
@@ -4311,7 +4463,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0091",
       "decision": null,
       "edges": [
         {
@@ -4348,7 +4500,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0092",
       "decision": null,
       "edges": [
         {
@@ -4385,7 +4537,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0093",
       "decision": null,
       "edges": [
         {
@@ -4435,7 +4587,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0094",
       "decision": null,
       "edges": [
         {
@@ -4472,7 +4624,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0095",
       "decision": null,
       "edges": [
         {
@@ -4509,7 +4661,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0096",
       "decision": null,
       "edges": [
         {
@@ -4546,7 +4698,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0097",
       "decision": null,
       "edges": [
         {
@@ -4583,7 +4735,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0096",
+      "cycle_id": "cycle-0098",
       "decision": null,
       "edges": [
         {
@@ -4620,7 +4772,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0099",
       "decision": null,
       "edges": [
         {
@@ -4670,7 +4822,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0100",
       "decision": null,
       "edges": [
         {
@@ -4707,7 +4859,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0101",
       "decision": null,
       "edges": [
         {
@@ -4744,7 +4896,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0100",
+      "cycle_id": "cycle-0102",
       "decision": null,
       "edges": [
         {
@@ -4781,7 +4933,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0101",
+      "cycle_id": "cycle-0103",
       "decision": null,
       "edges": [
         {
@@ -4831,7 +4983,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0102",
+      "cycle_id": "cycle-0104",
       "decision": null,
       "edges": [
         {
@@ -4868,7 +5020,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0103",
+      "cycle_id": "cycle-0105",
       "decision": null,
       "edges": [
         {
@@ -4905,19 +5057,20 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T11:31:07.093611+00:00",
+  "generated_at": "2026-05-03T11:37:21.461316+00:00",
   "length_counts": {
-    "2": 55,
+    "2": 56,
     "3": 24,
     "4": 15,
     "5": 7,
     "6": 1,
-    "7": 1
+    "7": 1,
+    "8": 1
   },
   "sort": [
     "max_transitive_descendants descending",
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T11:31:04.233295+00:00"
+  "source_graph_generated_at": "2026-05-03T11:37:15.902561+00:00"
 }

@@ -138,6 +138,13 @@ For critical claims:
 - Disagreement on `claim_type` or `load_bearing_step_class` promotes the
   claim to a third-auditor review and logs the disagreement in
   `cross_confirmation.status = disagreement`.
+- The third-auditor review is judicial, not a blind retry. The third
+  auditor receives the restricted source packet plus the two prior audit
+  arguments, decides whether the first, second, or neither audit is
+  correct, and records `sided_with` plus a ratified verdict/class/scope.
+  The ledger status must match that decision
+  (`third_confirmed_first` or `third_confirmed_second`); a third auditor
+  that cannot ratify either side leaves the row blocked for human review.
 
 Claims at `criticality = high` (`transitive_descendants >= 30`)
 require `independence != weak` but do not require cross-confirmation by

@@ -369,7 +369,11 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
             f"{chosen_label}_audit verdict {chosen.get('verdict')!r}"
         )
     chosen_claim_type = chosen.get("claim_type")
-    if ratified_claim_type is not None and ratified_claim_type != chosen_claim_type:
+    if (
+        ratified_claim_type is not None
+        and chosen_claim_type is not None
+        and ratified_claim_type != chosen_claim_type
+    ):
         return False, (
             f"ratified_claim_type {ratified_claim_type!r} does not match "
             f"{chosen_label}_audit claim_type {chosen_claim_type!r}"
