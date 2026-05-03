@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:26:18.726108+00:00
+**Generated:** 2026-05-03T00:29:01.846627+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 143 |
+| **retained** | 144 |
 | **retained_no_go** | 98 |
 | **retained_bounded** | 203 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 494 |
+| unaudited | 493 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 408 |
+| `audited_clean` | 409 |
 | `audited_conditional` | 655 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 534 |
+| `unaudited` | 533 |
 
 | claim_type | count |
 |---|---:|
@@ -468,6 +468,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
@@ -16569,6 +16570,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** On 3D discrete causal DAGs, gravity, decoherence, Born compliance, and interference coexist on the same corrected path-sum model, with the large-N table and chokepoint Born fix supporting the claim.  _(class `C`)_
 - **chain closes:** False — The key large-N and Born chokepoint scripts reproduce the quoted tables, but the row has no registered primary runner or manifest tying the multi-script suite to the single synthesis claim, and the all-four coexistence claim is broader than any one runner output.
 - **rationale:** Issue: the note's core numerical tables are reproducible from the named 3D scripts, but the audited row itself has no runner path, dependency list, or manifest proving the full multi-script synthesis as a single claim. Why this blocks: a hostile reader can verify pieces such as the large-N gravity/decoherence table and chokepoint Born check, but cannot certify the broader all-four coexistence and 3D-extension synthesis from this row alone. Repair target: add a registered synthesis runner or manifest that invokes the required 3D scripts, records the exact commands, and asserts the combined gravity, decoherence, Born, and interference predicates. Claim boundary until fixed: treat this as conditional support for the 3D program, with reproducible component results but no audit-clean packaged synthesis.
+- **auditor confidence:** high
+
+### `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`TASTE_SCALAR_FERMION_CW_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/TASTE_SCALAR_FERMION_CW_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Pure algebraic isotropy identity for V_f(phi)=Sum_s f(lambda_s(phi)^2) on C^8=(C^2)^{tensor 3} with commuting sigma_x taste shifts, evaluated at the axis-aligned point phi=(v,0,0), v != 0.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-Volta-019deb3b-e174-7580-a5fe-b7ee13d26496`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** At phi=(v,0,0), lambda_s^2=v^2 is uniform, so the Hessian equals a common coefficient times Sum_s (-1)^{s_i}(-1)^{s_j}=8 delta_ij.  _(class `A`)_
+- **chain closes:** True — The simultaneous sigma_x eigenbasis gives lambda_s(phi)=Sum_i phi_i (-1)^{s_i}; at the axis-aligned point all lambda_s^2 equal v^2, making the Hessian coefficient independent of s. Binary orthogonality then gives exactly 8 delta_ij, with no external physical bridge or Standard Model claim imported.
+- **rationale:** The claim is confined to a defined finite-dimensional binary taste block and the load-bearing Hessian isotropy follows by exact simultaneous diagonalization plus the binary orthogonality sum. The runner checks the same class-A algebra at exact rational precision and reports 31 passes with no hidden comparator, tuned numerical input, or physical sector identification. This does not audit or imply gauge-loop, scalar-loop, electroweak, Higgs-sector, or Standard Model phenomenology.
 - **auditor confidence:** high
 
 ### `taste_scalar_isotropy_theorem_note`
