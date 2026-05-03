@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:14:39.372253+00:00
+**Generated:** 2026-05-03T16:18:12.763165+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 773 |
+| unaudited | 772 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 28 |
-| ~~audited_renaming~~ | 21 |
+| ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 520 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 28 |
-| `audited_renaming` | 21 |
-| `unaudited` | 819 |
+| `audited_renaming` | 22 |
+| `unaudited` | 818 |
 
 | claim_type | count |
 |---|---:|
@@ -1025,6 +1025,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
+| `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `g_bare_derivation_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -4204,6 +4205,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md`
   - `DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claim that isospectral bosonic source-response normalization canonically fixes the heavy-basis diagonal normalization as K00 = 2 tau_+ and hence K00 = 2 on the sharp source-oriented branch.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-restricted-input-audit-agent-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Since F00 and (1/2) J2 have the same nonzero spectrum {+1}, they have identical exact bosonic response on scalar baselines; therefore the target coefficient must compensate the factor of 2 between J2 and (1/2) J2, forcing K00 = 2 tau_+.  _(class `F`)_
+- **chain closes:** False — The algebraic facts about F00, J2, and scalar-baseline determinant responses check out, but the packet does not derive the physical observable map that identifies the source-side J2 amplitude with the target heavy-basis K00 coefficient. The tau_E = tau_T = 1/2 inputs are also asserted in this packet rather than derived from a provided retained authority.
+- **rationale:** Issue: The proof identifies the target K00 channel with the source-side row-sum mode through isospectral scalar bosonic responses, then fixes K00 = 2 tau_+, but no provided theorem derives that source-to-target observable bridge or its normalization. Why this blocks: Isospectrality of generators is an algebraic fact, not by itself a physical identification of coefficients across different source and target sectors. Repair target: Add a retained theorem and runner that construct the bosonic source-response map from the framework inputs and derive the factor-of-2 normalization and tau_E = tau_T = 1/2 without hard-coding them. Claim boundary until fixed: The note may claim the exact algebraic identities K00 = Tr(H J3/3), triplet-independence of K00, and isospectrality/response equality of F00 and (1/2)J2 on scalar baselines, but not the canonical physical normalization K00 = 2 tau_+ or K00 = 2.
 - **auditor confidence:** high
 
 ### `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15`
