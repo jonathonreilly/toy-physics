@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:21:40.035903+00:00
+**Generated:** 2026-05-03T15:31:21.230420+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 776 |
+| unaudited | 775 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 517 |
+| ~~audited_conditional~~ | 518 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 311 |
-| `audited_conditional` | 517 |
+| `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 821 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
@@ -426,6 +426,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ai_methodology.raw.prompts_session_04c820e1` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ai_methodology.raw.prompts_session_9fc3990b_jonreilly` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `ai_methodology.raw.prompts_session_current` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `alt_connectivity_family_basin_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | configured_numerical_sweep_to_basin_inference | - |
 | `alternative_coupled_field_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `architecture_portability_sweep_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `asymmetry_persistence_born_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1203,6 +1204,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `accepted_plaquette_coupling_chain_parent_not_registered`
 - **auditor confidence:** high
+
+### `alt_connectivity_family_basin_note`
+
+- **Note:** [`ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md`](../../docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The parity-rotated sector-transition alternative connectivity family, on the no-restore grown slice, has 32 passing rows out of the configured 45 drift/seed cases, with exact zero/neutral controls, retained sign orientation on passing rows, and near-linear charge response on those rows.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-basin-auditor-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The note infers that the configured 9-drift by 5-seed sweep, with 32/45 passing rows and coverage at every tested drift, establishes a real bounded basin rather than only a larger finite set of passing numerical rows.  _(class `configured_numerical_sweep_to_basin_inference`)_
+- **chain closes:** False — The retained one-hop dependency supplies the bounded sign-family premise, and the runner reproduces the finite configured sweep. The chain does not close for the stronger basin/theorem wording because no argument proves that the sampled drift/seed grid implies an actual basin beyond the enumerated cases.
+- **rationale:** Issue: The load-bearing step treats a finite configured sweep with 32/45 passing rows as a real bounded basin. Why this blocks: A bounded theorem may claim the enumerated drift/seed results, but the current note and runner do not derive any basin criterion, interpolation theorem, open-neighborhood guarantee, or independently justified sampling measure that turns those rows into a basin rather than a larger finite numerical pass set. Repair target: Add a theorem or certified computation defining the basin boundary/measure and proving that the sampled passing set implies that bounded basin, or demote the claim to the exact finite sweep result. Also fix the runner summary indexing for mean exponent. Claim boundary until fixed: It is safe to say that, for the configured 45 drift/seed rows, 32 pass the listed controls and every tested drift has at least one passing seed.
+- **auditor confidence:** 0.84
 
 ### `alt_connectivity_family_sign_note`
 
