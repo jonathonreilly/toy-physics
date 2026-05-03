@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:07:13.656688+00:00
+**Generated:** 2026-05-03T14:08:07.236786+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 768 |
+| unaudited | 767 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 520 |
+| ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 315 |
-| `audited_conditional` | 520 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 810 |
+| `unaudited` | 809 |
 
 | claim_type | count |
 |---|---:|
@@ -619,6 +619,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gap_physics_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gate_b_farfield_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_grown_propagating_field_radical_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_poisson_self_gravity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -5674,6 +5675,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `gate_b_farfield_note`
+
+- **Note:** [`GATE_B_FARFIELD_NOTE.md`](../../docs/GATE_B_FARFIELD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** At h=0.5, the named grown-geometry far-field harness reports 36/36 TOWARD and mean F~M=1.00 for z_masses 3,4,5 across the listed drift/restore rows, supporting only the bounded far-field Gate B readout.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-independent-gate-b-farfield-note`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** In the far field (z >= 3, well past the slits), the grown-geometry lattice gives 100% TOWARD gravity with Newtonian F proportional to M = 1.00 at all tested drift/restore levels including the noisiest drift=0.3, restore=0.5 row.  _(class `C`)_
+- **chain closes:** False — The harness table supports the note's bounded far-field claim, but the physical Gate B reading depends on accepting the harness's chosen source law, propagation kernel, barrier/readout, and TOWARD/F~M criteria as the gravity observable. Those bridges are premises in the runner, not derived in the source packet.
+- **rationale:** Issue: the load-bearing result is a numerical harness success under an imposed growth rule, 1/r field, valley-linear action, 1/L^2 kernel, and z-centroid TOWARD readout, then interpreted as Newtonian gravity/Gate B far-field passage. Why this blocks: the current packet verifies the bounded simulation table but does not derive that these modeling choices are the retained physical gravity observable or source law. Repair target: add a retained theorem deriving the source law, propagation/readout map, and far-field Gate B criterion from accepted primitives, with a runner that constructs rather than assumes that bridge. Claim boundary until fixed: the harness-output statement for the specified h=0.5 seeds, z_masses, and drift/restore rows is supported; full physical far-field Gate B closure remains conditional.
+- **auditor confidence:** high
 
 ### `gate_b_grown_propagating_field_note`
 

@@ -8,7 +8,7 @@
     "positive_theorem": 862,
     "unset": 1
   },
-  "computed_at": "2026-05-03T14:07:12.933549+00:00",
+  "computed_at": "2026-05-03T14:08:05.845747+00:00",
   "cycle_examples": [
     [
       "restricted_strong_field_closure_note",
@@ -39,7 +39,7 @@
   ],
   "cycles_detected": 85,
   "effective_status_counts": {
-    "audited_conditional": 520,
+    "audited_conditional": 521,
     "audited_decoration": 3,
     "audited_failed": 7,
     "audited_numerical_match": 24,
@@ -52,7 +52,7 @@
     "retained_bounded": 169,
     "retained_no_go": 101,
     "retained_pending_chain": 2,
-    "unaudited": 768
+    "unaudited": 767
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
