@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:05:52.784181+00:00
+**Generated:** 2026-05-03T01:08:14.858939+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 210 |
+| **retained_bounded** | 211 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 482 |
+| unaudited | 481 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 419 |
+| `audited_clean` | 420 |
 | `audited_conditional` | 656 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 522 |
+| `unaudited` | 521 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 541 |
+| `bounded_theorem` | 542 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 92 |
+| `open_gate` | 91 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -481,6 +481,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_causal_channel_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_cross_encoding_maps_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_dynamical_resource_generation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
@@ -16797,6 +16798,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** With axis-adapted logical X on Alice's Bell measurement and Bob's correction, every surveyed Alice/Bob pair passes the Bell-outcome, random-state fidelity, and Bob pre-message input-independence checks.  _(class `C`)_
 - **chain closes:** True — The runner explicitly enumerates the scoped KS geometries and cross-encoding pairs, constructs the adapted logical operators and conversion maps, and checks the teleportation/no-signaling metrics and controls against the stated tolerance. The note also keeps the claim bounded to ideal quantum-state teleportation and excludes physical resource preparation, apparatus, matter transfer, and FTL claims.
 - **rationale:** The scoped finite model claim closes on the supplied runner output: all 9637 axis-adapted cross maps pass with numerical errors at roundoff scale, and the fixed-axis and wrong-conversion controls fail in the expected regions. There are no one-hop dependencies, and the note does not import unsupported physical carrier, readout, apparatus, or transport claims. Residual risk is limited to the stated numerical/planning boundary: random trials per map and default finite geometries, not a proof for all lattices or physical implementations.
+- **auditor confidence:** high
+
+### `teleportation_dynamical_resource_generation_note`
+
+- **Note:** [`TELEPORTATION_DYNAMICAL_RESOURCE_GENERATION_NOTE.md`](../../docs/TELEPORTATION_DYNAMICAL_RESOURCE_GENERATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Default 1D N=8 exact-diagonalization product-state scans under H = H1 x I + I x H1 + G V_Poisson find useful but low-fidelity logical taste-qubit teleportation resources for interacting cases, no Bell-overlap >= 0.90 windows, non-useful G=0 controls, and input-independent Bob no-record states.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Hubble-the-2nd-019deb60-0b7b-7d63-b378-7dbadcbd7cc4`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** No high-fidelity Bell-resource window appears in this bounded product-state scan at the 0.90 Bell-overlap threshold, while interacting cases open only useful low-fidelity windows after fixed Bell-frame alignment.  _(class `C`)_
+- **chain closes:** True — The runner directly computes the stated finite model, extraction, Bell overlaps, teleportation fidelity estimates, null control, and Bob no-record input-independence for the default bounded cases. The note keeps the claim within ordinary quantum state teleportation and explicitly states the small-surface, sampled-time, ideal-logical-operation limits.
+- **rationale:** The scoped result is a bounded finite/model computation, not a no-go theorem and not merely an open obligation. The live output supports the note's numerical boundary: interacting cases exceed the useful Bell-overlap threshold but remain far below the 0.90 high-fidelity threshold, with null and no-signaling diagnostics passing. No hidden carrier, matter-transfer, FTL, or protocol-readout claim is needed for the bounded statement.
 - **auditor confidence:** high
 
 ### `teleportation_encoding_portability_note`
