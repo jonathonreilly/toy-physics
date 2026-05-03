@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 203,
-    "medium": 280
+    "medium": 279
   },
-  "generated_at": "2026-05-03T18:37:31.959850+00:00",
+  "generated_at": "2026-05-03T18:38:21.605043+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7597,27 +7597,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
       "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gate_b_nonlabel_sign_grown_transfer_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.2,
-      "note_path": "docs/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER.py",
-      "transitive_descendants": 25
     },
     {
       "audit_independence_required": "any_non_self",
@@ -19811,6 +19790,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 66,
-  "total_pending": 756
+  "ready_count": 65,
+  "total_pending": 755
 }
