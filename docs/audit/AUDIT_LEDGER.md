@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:38:27.754755+00:00
+**Generated:** 2026-05-03T19:39:23.887734+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 177 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 714 |
+| unaudited | 713 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 29 |
+| ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 548 |
 | ~~audited_failed~~ | 15 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 548 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
-| `audited_numerical_match` | 29 |
+| `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 760 |
+| `unaudited` | 759 |
 
 | claim_type | count |
 |---|---:|
@@ -1065,6 +1065,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh | G | - |
+| `lattice_distance_law_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-agent | G | - |
 | `mirror_chokepoint_boundary_fit_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `quark_cp_carrier_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -9150,6 +9151,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The ordered lattice supports a continuous tradeoff between decoherence/which-slit structure and distance-law quality, with a bounded sweet spot where both are simultaneously present.  _(class `C`)_
 - **chain closes:** False — The runner reproduces the finite canonical sweep, but the promoted complementarity claim depends on selected proxy observables, the chosen sweet-spot guard, and a Born check on a same-family companion aperture rather than the same two-slit card.
 - **rationale:** Issue: the note promotes a bounded complementarity sweet spot from a finite N=40, half_width=20 slit-gap sweep with chosen centroid, mass-placement, distance-fit, and threshold guards, while Born cleanliness is checked only on a same-family companion aperture. Why this blocks: those choices demonstrate an internally reproducible scenario, but they do not by themselves establish a retained lattice complementarity theorem or same-card coexistence of Born, which-slit/decoherence, distance-law quality, and attractive gravity. Repair target: provide a theorem or registered runner proving the observable/readout and guard selection from retained primitives, and compute Born plus the distance-law/decoherence observables on the same aperture card or explicitly prove the companion-aperture transfer. Claim boundary until fixed: the current runner safely supports the reported canonical finite sweep, the monotone MI/d_TV rise, the R^2 degradation, the gap=2 thresholded sweet-spot row, clean companion Born residuals, zero k=0 response, and away-signed same-card gravity.
+- **auditor confidence:** high
+
+### `lattice_distance_law_note`
+
+- **Note:** [`LATTICE_DISTANCE_LAW_NOTE.md`](../../docs/LATTICE_DISTANCE_LAW_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** No-barrier ordered 2D lattice rows at N=40, half-width 20, k=5.0, using centroid-magnitude readout |delta|, fit over b>=7 to |delta| ~= 23.5071 b^-1.052 with R^2=0.9850 as a distance-law claim.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-hardy`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The ordered lattice gives a clean distance-dependent magnitude law on the far-field window b >= 7: |delta| ~= 23.5071 * b^(-1.052), R^2 = 0.9850.  _(class `G`)_
+- **chain closes:** False — The saved rows reproduce the stated log-log fit, but the note supplies only a selected finite-window numerical regression. It does not derive that the chosen lattice geometry, k value, readout, and b>=7 window constitute a retained gravity distance law.
+- **rationale:** Issue: the load-bearing distance law is a finite numerical fit on a selected no-barrier harness, selected k=5.0, selected |delta| readout, and selected far-field window, not a structural theorem. Why this blocks: the positive theorem claims a retained gravity magnitude distance law, but the restricted packet only establishes that the listed rows fit an approximate power law over five b values. Repair target: provide a theorem or retained deterministic runner that derives the readout, parameter/window selection, and asymptotic law from the ordered-lattice primitives with sensitivity checks. Claim boundary until fixed: the note may safely state a finite numerical observation that the listed b>=7 rows fit |delta| ~= 23.5071 b^-1.052 with R^2=0.9850 in this harness.
 - **auditor confidence:** high
 
 ### `lattice_field_strength_unification_note`
