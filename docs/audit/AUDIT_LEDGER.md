@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:04:42.043525+00:00
+**Generated:** 2026-05-03T13:17:00.927621+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,17 +20,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 111 |
-| **retained_no_go** | 100 |
-| **retained_bounded** | 171 |
+| **retained_no_go** | 102 |
+| **retained_bounded** | 172 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 728 |
-| audit_in_progress | 1 |
-| meta | 41 |
+| unaudited | 724 |
+| meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 519 |
+| ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,20 +37,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 352 |
-| `audited_conditional` | 519 |
+| `audited_clean` | 355 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 769 |
+| `unaudited` | 766 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 554 |
 | `decoration` | 8 |
-| `meta` | 42 |
+| `meta` | 43 |
 | `no_go` | 161 |
 | `open_gate` | 89 |
 | `positive_theorem` | 889 |
@@ -61,14 +59,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 111 |
 | `high` | 364 |
 | `medium` | 520 |
-| `leaf` | 748 |
+| `leaf` | 749 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 105
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1336
+- runners classified: 1337
 - runners with (C) first-principles compute hits: 649
 - runners with (D) external comparator hits: 328
 - decoration candidates (no C, no D): 112
@@ -110,7 +108,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `action_normalization_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
@@ -207,6 +205,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -399,6 +398,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `substrate_to_p_a_forcing_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
@@ -671,6 +671,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -772,6 +773,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lepton_shared_higgs_universality_collapse_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `lepton_shared_higgs_universality_underdetermination_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lepton_single_higgs_pmns_triviality_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `light_cone_framing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | F | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
@@ -1129,6 +1131,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `action_normalization_note`
+
+- **Note:** [`ACTION_NORMALIZATION_NOTE.md`](../../docs/ACTION_NORMALIZATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the stated propagator-Poisson model, c in S=L(1-c*f) is not selected by self-consistency or by PPN gamma alone; c is fixed only after an explicit f/Phi identification and Poisson source-normalization convention are chosen.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-judicial-action-normalization-note-20260503`  (codex-gpt-5; independence=judicial_review)
+- **load-bearing step:** The transformation (c, G) -> (c/a, a*G) leaves the dynamics invariant because the self-consistent loop depends only on the product c*G; after the f/Phi and source-normalization conventions are stipulated, matching g_tt algebraically fixes the corresponding c.  _(class `A`)_
+- **chain closes:** True — The narrowed note does not claim to derive the physical f/Phi map or a convention-free value of c. Its load-bearing bounded claim is that c is degenerate before conventions and algebraically determined after named conventions; that closes from the displayed rescaling argument and metric matching. The current runner output supports the bounded claim by showing convergence across c, approximate c*phi invariance under fixed c*G rescaling, and explicit withdrawal of the null-ray/light-bending test. Stale top-level runner docstrings and unused comments still contain older unique-c language, but they are not used by the current note, current runner output, or ratified scope.
+- **rationale:** The narrowed note does not claim to derive the physical f/Phi map or a convention-free value of c. Its load-bearing bounded claim is that c is degenerate before conventions and algebraically determined after named conventions; that closes from the displayed rescaling argument and metric matching. The current runner output supports the bounded claim by showing convergence across c, approximate c*phi invariance under fixed c*G rescaling, and explicit withdrawal of the null-ray/light-bending test. Stale top-level runner docstrings and unused comments still contain older unique-c language, but they are not used by the current note, current runner output, or ratified scope.
 - **auditor confidence:** high
 
 ### `action_uniqueness_audit_2026-04-11`
@@ -5688,6 +5703,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** The scoped architecture closes at the grade stated in the note: exact finite-rank source-to-exterior and exact boundary-action stationarity, followed by bounded coarse scalar/isotropic metric evidence. The runner exits 0 and reproduces the stated R_match=5.0 residual improvement while explicitly reporting the nonzero direct 3+1 residual as a blocker. Residual risk is the acknowledged missing tensorial matching/completion principle, which is outside this row's bounded claim boundary.
 - **auditor confidence:** high
 
+### `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30`
+
+- **Note:** [`FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md`](../../docs/FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Within the granted Boolean event-cell substrate structure, spatial Cl(3) spin-lift equivariance, time parity, CPT grading, complex Hilbert/Born surface, and tensor-local number algebra do not force the first-order sector P_1 over the Hodge-dual third-order sector P_3.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-2026-05-03-first-order-coframe-no-go-second-independent`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The load-bearing witness is the Hodge-complement identity * P_1 *^{-1} = P_3, with P_3 distinct from P_1 while preserving the listed substrate tests.  _(class `A`)_
+- **chain closes:** True — The chain closes because a single explicit algebraic witness produces a symmetry-equivalent but distinct allowed carrier under exactly the listed substrate tests. No unaudited dependency or external physical bridge is needed for the scoped negative result.
+- **rationale:** The no-go is scoped to the listed substrate structures and supplies a concrete countermodel: the Hodge-complement map exchanges P_1 and P_3, while the runner verifies preservation of spatial spin-lift equivariance, time parity/CPT behavior, tensor-local number algebra, and rank-four carrier isomorphism. This is sufficient for the negative claim that those assumptions alone do not distinguish first-order from dual third-order coframe carriers. The result should not be read as excluding stronger boundary, orientation, incidence, or dynamical laws; the note itself correctly treats those as possible repair targets outside the audited assumptions.
+- **auditor confidence:** high
+
 ### `flagship_paper_contribution_statement_note`
 
 - **Note:** [`FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md`](../../docs/FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md)
@@ -6300,6 +6328,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The residual environment operator is asserted to have the same normalized coefficients rho_(p,q)(beta) as the boundary class function, so R_beta^env=C_(Z_beta^env).  _(class `F`)_
 - **chain closes:** False — Centrality and formal character expansion of the constructed boundary function are plausible, but equality between the pre-existing residual operator and that convolution is asserted by coefficient identification. The runner injects a generic positive conjugation-symmetric rho_env witness and verifies packaging, not actual Wilson environment data.
 - **rationale:** Issue: the load-bearing closure is an asserted identity between the residual operator and the newly constructed convolution operator. Why this blocks: the runner confirms algebraic consistency once a rho_env sequence is supplied, but it does not compute rho_(p,q)(6) from the unmarked spatial Wilson integral or independently verify that the residual operator spectrum equals those coefficients. Repair target: compute or independently verify the beta=6 boundary character coefficients from the unmarked spatial Wilson environment. Claim boundary until fixed: safe to cite this as an open-gate reformulation of the residual environment datum, not as a retained positive theorem.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Structural identification of the spatial-environment boundary character data with a positive character-tensor transfer built from Wilson character coefficients and SU(3) fusion/intertwiner primitives, with only finite NMAX=4 and one tensor-word support checked by the runner.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-agent-20260503-gauge-vacuum-tensor-transfer-01`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Then the unmarked spatial boundary character coefficients satisfy z_(p,q)^env(beta) = <chi_(p,q), (T_beta^env,tensor)^(L_perp-1) eta_beta^env>, and hence rho_(p,q)(beta) is the normalized tensor-transfer boundary amplitude sequence of this explicit positive operator.  _(class `A`)_
+- **chain closes:** False — The chain does not close because the load-bearing bridge from local character/fusion ingredients to the actual spatial-environment boundary amplitudes is assumed. The source note itself leaves the full construction and multi-word generalization out of scope, while the positive_theorem claim needs that bridge.
+- **rationale:** Issue: the note asserts that the actual residual spatial-environment boundary coefficients are generated by a compressed positive tensor-transfer operator, but the construction of that operator and the equality to the boundary coefficients are not derived inside the audited packet. Why this blocks: the runner computes Wilson coefficients, fundamental fusion matrices, and one artificial positive tensor word; it does not construct the spatial-environment transfer matrix, prove the compression to the marked class-function sector, or check the boundary-coefficient equality. Repair target: provide an explicit finite-volume slice construction with Haar integrations yielding the actual transfer matrix elements and boundary state, plus a runner that constructs those objects rather than testing one chosen word. Claim boundary until fixed: the local Wilson coefficient stack and fundamental SU(3) fusion primitives are consistent and positive on the audited truncated box.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spectral_measure_theorem_note`
@@ -9057,6 +9098,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Using retained multiplicities 6 for the symmetric weak-doublet block and 2 for the antisymmetric weak-doublet block, tracelessness gives 6*alpha + 2*beta = 0, hence beta = -3*alpha and the scale-independent ratio alpha:beta = 1:(-3).  _(class `A`)_
 - **chain closes:** True — The retained authorities supply the selected-axis surface, residual swap decomposition, gl(3)+gl(1) commutant setting, and the 6+2 LH-doublet multiplicities. The source note derives the ratio by exact tracelessness algebra and needs no Standard Model hypercharge identification, charge formula, normalization choice, or anomaly-cancellation premise.
 - **rationale:** Clean as a narrow structural ratio theorem. The claimed ratio is a direct algebraic consequence of the supplied 6 and 2 multiplicities plus tracelessness, and the runner confirms both the exact rational calculation and the note's scope discipline. Residual risk is limited to future expansion beyond the audited ratio-only boundary.
+- **auditor confidence:** high
+
+### `light_cone_framing_note`
+
+- **Note:** [`LIGHT_CONE_FRAMING_NOTE.md`](../../docs/LIGHT_CONE_FRAMING_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audit of the claim that the observed finite-spacing Crank-Nicolson Lieb-Robinson cone is standard lattice-QFT behavior and not a blocker, supported by the 1+1d staggered Dirac dispersion bound.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-agent-light-cone-20260503T000000Z`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The 97% containment seen at finite lattice spacing in the Crank-Nicolson evolution is the standard discretization artifact.  _(class `F`)_
+- **chain closes:** False — The runner closes the corrected staggered-dispersion formula, but the note explicitly states that it does not derive the Lieb-Robinson constant for the specific Crank-Nicolson operator. Therefore the architecture-level framing conclusion does not follow from the provided inputs alone.
+- **rationale:** Issue: the note validates the staggered Dirac dispersion formula v_max(m)=sqrt(m^2+1)-m, but the load-bearing bridge identifies the observed Crank-Nicolson containment behavior with standard lattice-QFT Lieb-Robinson behavior without deriving the LR constant for the actual Crank-Nicolson hopping kernel. Why this blocks: the positive theorem needs the architecture-specific operator-norm/source-kernel calculation, not just an analogy to staggered lattice QFT. Repair target: add a retained theorem and runner that compute the Lieb-Robinson/operator-norm bound for the specific Crank-Nicolson operator used elsewhere. Claim boundary until fixed: the exact 1+1d staggered dispersion maximum is numerically validated and subluminal, but the architecture-level no-blocker conclusion remains conditional.
 - **auditor confidence:** high
 
 ### `linear_response_derivation_note`
@@ -13152,6 +13206,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The safe read is that structureless causal DAGs can show TOWARD rows, and when they do the source-strength response stays close to linear on this pocket.  _(class `C`)_
 - **chain closes:** True — The runner directly constructs the stated random DAG pocket, propagates with the stated valley-linear field and kernel, and reports the TOWARD counts, local power-law fits, and no-field controls. No external dependency or graph-universality claim is needed for the narrowed harness-level statement.
 - **rationale:** The bounded claim closes as a direct numerical harness result: n=200 gives 28/32 TOWARD rows and n=500 gives 21/32 TOWARD rows, with F~M median 1.00 and zero no-field controls in both reported sizes. The source note's n=500 table value is stale relative to current runner output, but this does not change the load-bearing majority-TOWARD and near-linear positive-row conclusion. Exact-count citation should use the current runner values until the note table is refreshed.
+- **auditor confidence:** high
+
+### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
+
+- **Note:** [`SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md`](../../docs/SUBSTRATE_TO_P_A_FORCING_THEOREM_NOTE_2026-04-30.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Within the modeled local event cell H_cell = Lambda^* span(t,x,y,z) with spatial so(3) exterior-power lift, time parity, CPT grading, complex Hilbert structure, and tensor-local number operators, those constraints do not uniquely force P_A because P_3 is a distinct rank-four local equivariant projector.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-agent-substrate-pa-2026-05-03-b`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** P_3 violates none of the stated constraints (a)-(e). It is not P_A, so uniqueness fails.  _(class `A`)_
+- **chain closes:** True — The chain closes because a single admissible non-P_A witness defeats uniqueness under the granted constraints. It does not close any stronger claim that P_A can never be selected by additional first-order boundary or orientation structure.
+- **rationale:** The no-go is a finite-dimensional counterexample, not a positive substrate selection theorem. The note and runner explicitly construct P_A and the distinct Hamming-weight-three projector P_3 in the same 16-dimensional local model, then verify rank four, locality, complex-linearity, and commutation with the listed spin/time/CPT actions. This is enough to refute the scoped uniqueness implication, provided the claim is kept to the stated local symmetry list and does not assert that every possible stronger boundary or orientation law is excluded.
 - **auditor confidence:** high
 
 ### `symmetry_generated_paired_chokepoint_note`

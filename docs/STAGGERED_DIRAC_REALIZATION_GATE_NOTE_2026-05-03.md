@@ -127,11 +127,11 @@ This parent note:
 - **does** provide a single citeable open-gate parent identity for
   downstream `admitted_context_inputs` references.
 
-When the in-flight chain closes, the parent identity here can be
-upgraded to a `positive_theorem`-typed retained theorem note (or
-replaced by a single canonical proof packet that runs (1)-(4)
-end-to-end on A1+A2). Until then, this note remains `open_gate` in the
-audit ledger.
+When the in-flight chain closes, the parent identity here can become
+eligible for independent audit/governance retagging as a
+`positive_theorem`-typed theorem note (or be replaced by a single
+canonical proof packet that runs (1)-(4) end-to-end on A1+A2). Until
+then, this note remains `open_gate` in the audit ledger.
 
 ## Explicit named obstructions / repair targets remaining open
 
@@ -189,9 +189,10 @@ named in the 2026-05-03 minimal-axioms memo:
   `Q̂` integer spectrum, hopping bilinear, etc.
 
 Those lanes are typed `bounded_theorem` with this gate's parent identity
-listed in `admitted_context_inputs` until the gate closes. When the
-gate closes, those lanes upgrade back to `positive_theorem` via the
-audit pipeline's recompute.
+listed in `admitted_context_inputs` until the gate closes. When the gate
+closes, those lanes become eligible for independent audit/governance
+retagging as `positive_theorem`; the audit pipeline recomputes
+`effective_status`, but it does not silently invent a new `claim_type`.
 
 ## Citation-graph note
 

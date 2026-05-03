@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T13:04:41.307458+00:00",
+  "generated_at": "2026-05-03T13:16:59.579577+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -5837,12 +5837,12 @@
       "assert_count": 0,
       "counts": {
         "A": 0,
-        "B": 1,
-        "C": 22,
+        "B": 0,
+        "C": 0,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": "C",
+      "dominant_class": null,
       "runner": "scripts/frontier_g_bare_derivation.py"
     },
     "g_bare_derivation_status_correction_audit_note_2026-05-02": {
@@ -9948,6 +9948,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/minimal_absorbing_horizon_probe.py"
+    },
+    "minimal_axioms_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_generation_rooting_undefined.py"
     },
     "minimal_bidirectional_trapping_probe_note": {
       "assert_count": 0,
@@ -24305,13 +24317,13 @@
       ],
       "counts": {
         "A": 0,
-        "B": 1,
-        "C": 22,
+        "B": 0,
+        "C": 0,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
+      "dominant_class": null,
+      "exists": false
     },
     "scripts/frontier_g_bare_derivation_status_audit.py": {
       "assert_count": 1,
@@ -24953,6 +24965,21 @@
         "A": 0,
         "B": 0,
         "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_generation_rooting_undefined.py": {
+      "assert_count": 1,
+      "claims": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
         "D": 0
       },
       "decoration_candidate": false,
@@ -37215,9 +37242,9 @@
       "B": 160,
       "C": 544,
       "D": 203,
-      "none": 419
+      "none": 420
     },
-    "runners_classified": 1336,
+    "runners_classified": 1337,
     "runners_with_C": 649,
     "runners_with_D": 328
   }
