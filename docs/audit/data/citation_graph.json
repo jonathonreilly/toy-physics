@@ -22641,7 +22641,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:59:55.715723+00:00",
+  "generated_at": "2026-05-03T15:00:41.997855+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32010,7 +32010,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "dbc1ecdd1e9f2eacada3e0bb7b569a67f86a71df434878aade6aa8c697e262b8",
+      "note_hash": "e17619a84d07469c195c457cebfb02a3d3053a561528dea76a852a313114022b",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
@@ -36930,7 +36930,7 @@
       "claim_type_author_hint_raw": "meta",
       "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "b801ebc2cbd6dd15eac116436368b1de9932f332359f8c939bee816813447061",
+      "note_hash": "868dc20d2ee4a73266eae15daf9d732066f5dd94df4cba80445f55b404933b41",
       "path": "docs/MISSING_RUNNER_INVENTORY_2026-05-03.md",
       "runner_path": null,
       "title": "Missing Runner Inventory \u2014 2026-05-03 Audit-Repair Scan"
