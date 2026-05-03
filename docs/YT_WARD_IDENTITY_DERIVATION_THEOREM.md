@@ -1,7 +1,12 @@
 # Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)
 
 **Date:** 2026-04-17
-**Status:** support: structural identification of the unit-normalized H_unit-to-top matrix element with the Standard Model top Yukawa readout within A_min; audit_status=audited_renaming. This note is an identification, not a first-principles derivation of the Standard Model top Yukawa value.
+**Status:** support / open identification gate. This note records the
+structural identification of the unit-normalized H_unit-to-top matrix element
+with the Standard Model top Yukawa readout within A_min; it is not a
+first-principles derivation of the Standard Model top Yukawa value.
+**Claim type:** open_gate author hint; independent audit lane sets the actual
+`claim_type`, `audit_status`, and pipeline-derived `effective_status`.
 **Primary runner:** `scripts/frontier_yt_ward_identity_derivation.py`
 **Support (NOT part of the authority chain):**
 `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
@@ -24,10 +29,11 @@ Yukawa value from first principles, to derive the existence of the SM
 Yukawa construct independent of this identification, or to supply a
 precision prediction after RG running and matching.
 
-Audit history: the audit lane records `audit_status=audited_renaming`
-for `yt_ward_identity_derivation_theorem`, cross-confirmed as class E
-by `codex-audit-loop-round-2` and
-`codex-fresh-context-20260430-01-yt-ward`.
+Prior audit history: the audit lane previously recorded
+`audit_status=audited_renaming` for `yt_ward_identity_derivation_theorem`,
+cross-confirmed as class E by `codex-audit-loop-round-2` and
+`codex-fresh-context-20260430-01-yt-ward`. This edit keeps that boundary
+visible and re-queues the changed source for independent audit authority.
 
 ---
 
@@ -79,27 +85,27 @@ on the same surface.
 |---|-------|--------|--------|
 | **AX1** | **Cl(3) local algebra** | **AXIOM** | framework axiom |
 | **AX2** | **Z³ spatial substrate** | **AXIOM** | framework axiom |
-| D1 | Z³ bipartite → Z₂ parity ε = (-1)^{x+y+z} | DERIVED from AX2 | NATIVE_GAUGE_CLOSURE:14-18 |
-| D2 | Staggered fermion η phases on Z³ | DERIVED from D1 | NATIVE_GAUGE_CLOSURE:14-18 |
-| D3 | Taste doubling: 2³ = 8 internal species | DERIVED from D2 | NATIVE_GAUGE_CLOSURE:16 |
-| D4 | η phases → Cl(3) action in taste space | DERIVED from D3 + AX1 | NATIVE_GAUGE_CLOSURE:17 |
-| D5 | Cl(3) ⊃ su(2) → SU(2) weak gauge symmetry | DERIVED from D4 | NATIVE_GAUGE_CLOSURE:18, "retained exact native SU(2)" |
-| D6 | Graph-first axis selector on taste cube {0,1}³ | DERIVED from D3 | NATIVE_GAUGE_CLOSURE:52-66 |
-| D7 | Residual swap on complementary axes → `su(3)` closure | DERIVED from D6 | NATIVE_GAUGE_CLOSURE:69-75 |
-| D8 | Left-handed quark block `Q_L : (2,3)_{+1/3}`, dim 6 | DERIVED from D7 + graph-first selector | NATIVE_GAUGE_CLOSURE:93-95 ("+1/3 on 6-dim symmetric/weak-doublet block"); LEFT_HANDED_CHARGE_MATCHING:13 |
-| D9 | Composite Higgs `phi = (1/N_c) psi-bar_a psi_a` (taste condensate of quark bilinear, no independent Higgs field) | DERIVED from D3 + D8 | YUKAWA_COLOR_PROJECTION_THEOREM:33-40 |
-| D10 | Composite 2-point function `<phi^† phi> = (1/N_c²) Tr_color[G G]` | DERIVED from D9 | YUKAWA_COLOR_PROJECTION_THEOREM:46-56 |
-| D11 | Free-theory singlet `Tr[M M^†]_singlet = N_c |G_0|²` | DERIVED from D10 | YUKAWA_COLOR_PROJECTION_THEOREM:105-114 |
-| D12 | Exact SU(N_c) Fierz identity on fundamental generators | DERIVED structural | YT_EW_COLOR_PROJECTION_THEOREM:169-172 (proof at :78-94) |
+| D1 | Z³ bipartite → Z₂ parity ε = (-1)^{x+y+z} | DERIVED from AX2 | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md):14-18 |
+| D2 | Staggered fermion η phases on Z³ | DERIVED from D1 | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md):14-18 |
+| D3 | Taste doubling: 2³ = 8 internal species | DERIVED from D2 | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md):16 |
+| D4 | η phases → Cl(3) action in taste space | DERIVED from D3 + AX1 | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md):17 |
+| D5 | Cl(3) ⊃ su(2) → SU(2) weak gauge symmetry | DERIVED from D4 | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md):18 |
+| D6 | Graph-first axis selector on taste cube {0,1}³ | DERIVED from D3 | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md):52-66 |
+| D7 | Residual swap on complementary axes → `su(3)` closure | DERIVED from D6 | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md):69-75 |
+| D8 | Left-handed quark block `Q_L : (2,3)_{+1/3}`, dim 6 | DERIVED from D7 + graph-first selector | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md):93-95; [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md):13 |
+| D9 | Composite Higgs `phi = (1/N_c) psi-bar_a psi_a` (taste condensate of quark bilinear, no independent Higgs field) | DERIVED from D3 + D8 | [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):33-40 |
+| D10 | Composite 2-point function `<phi^† phi> = (1/N_c²) Tr_color[G G]` | DERIVED from D9 | [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):46-56 |
+| D11 | Free-theory singlet `Tr[M M^†]_singlet = N_c |G_0|²` | DERIVED from D10 | [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):105-114 |
+| D12 | Exact SU(N_c) Fierz identity on fundamental generators | DERIVED structural | [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md):169-172 (proof at :78-94) |
 | D13 | Wilson plaquette coupling `β = 2 N_c/g_bare²` at canonical surface | DERIVED from D5 + D7 + standard Wilson action | standard lattice QFT applied to D5, D7 |
-| D14 | CMT exact identity `<O(U)> = u_0^{n_link} <O_V(V)>_eff` (change-of-variables `U = u_0 V`) | DERIVED structural | YT_EW_COLOR_PROJECTION_THEOREM:213-221 |
-| D15 | `n_link = 1` per single vertex, `n_link = 2` per vacuum polarization | DERIVED structural | YT_VERTEX_POWER_DERIVATION:29-38 |
-| C1 | Canonical plaquette / `u_0 = ⟨P⟩^{1/4}` evaluation surface | CANONICAL NORM CHOICE | MINIMAL_AXIOMS:18-20 |
-| C2 | `g_bare = 1` on canonical surface | CANONICAL NORM CHOICE | MINIMAL_AXIOMS:18-20 |
+| D14 | CMT exact identity `<O(U)> = u_0^{n_link} <O_V(V)>_eff` (change-of-variables `U = u_0 V`) | DERIVED structural | [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md):213-221 |
+| D15 | `n_link = 1` per single vertex, `n_link = 2` per vacuum polarization | DERIVED structural | [`YT_VERTEX_POWER_DERIVATION.md`](YT_VERTEX_POWER_DERIVATION.md):29-38 |
+| C1 | Canonical plaquette / `u_0 = ⟨P⟩^{1/4}` evaluation surface | CANONICAL NORM CHOICE | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20 |
+| C2 | `g_bare = 1` on canonical surface | CANONICAL NORM CHOICE | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20 |
 | S1 | SU(3) fundamental Casimir `C_F = (N_c²-1)/(2N_c) = 4/3` | STANDARD Lie-algebra fact | applied to D7 |
 | S2 | Lorentz-group Fierz: `(γ^μ)(γ_μ) = c_S(1)(1) + c_P(iγ_5)(iγ_5) + c_V(γ^μ)(γ_μ) + c_A(γ^μγ_5)(γ_μγ_5) + 0·σσ`, with `|c_S| = 1` | STANDARD Clifford-algebra identity | Itzykson-Zuber §2-5; verified by Block 8 of runner |
-| D16 | Tree-level Feynman-rule completeness of the bare action on the scalar-singlet channel: at O(α_LM), the bare Cl(3) × Z³ action (Wilson plaquette + staggered Dirac, MINIMAL_AXIOMS:18-20) yields exactly ONE tree diagram contributing to `Γ⁽⁴⁾(q²)` on the color-singlet × iso-singlet × Dirac-scalar channel — the single-gluon-exchange diagram, projected via D12 + S2 with coefficient (3.5) | DERIVED from tree-level Feynman rules of the retained action + the absence of any fundamental scalar field or bare contact 4-fermion vertex in the bare action (D9 composite-Higgs) | framework-native; follows from MINIMAL_AXIOMS_2026-04-11.md:18-20 + D9 |
-| D17 | Scalar-singlet composite uniqueness on the Q_L block: the unique unit-normalized (Z² = 6) color-singlet × iso-singlet × Dirac-scalar composite operator on Q_L = (2,3) is `H_unit = (1/√(N_c · N_iso)) Σ ψ̄ψ`. Other (1,8), (3,1), (8,3) irreps give `Z² = 8, 9/2, 24` respectively (Block 5 verified) — each distinct from `Z² = 6`, hence none are the framework's scalar singlet on this block | DERIVED and numerically verified (Block 5) | YCP:33-40 (D9); Block 5 of runner |
+| D16 | Tree-level Feynman-rule completeness of the bare action on the scalar-singlet channel: at O(α_LM), the bare Cl(3) × Z³ action (Wilson plaquette + staggered Dirac, C1-C2) yields exactly ONE tree diagram contributing to `Γ⁽⁴⁾(q²)` on the color-singlet × iso-singlet × Dirac-scalar channel — the single-gluon-exchange diagram, projected via D12 + S2 with coefficient (3.5) | DERIVED from tree-level Feynman rules of the cited action + the absence of any fundamental scalar field or bare contact 4-fermion vertex in the bare action (D9 composite-Higgs) | framework-native; follows from [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20 + D9 |
+| D17 | Scalar-singlet composite uniqueness on the Q_L block: the unique unit-normalized (Z² = 6) color-singlet × iso-singlet × Dirac-scalar composite operator on Q_L = (2,3) is `H_unit = (1/√(N_c · N_iso)) Σ ψ̄ψ`. Other (1,8), (3,1), (8,3) irreps give `Z² = 8, 9/2, 24` respectively (Block 5 verified) — each distinct from `Z² = 6`, hence none are the framework's scalar singlet on this block | DERIVED and numerically verified (Block 5) | [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):33-40 (D9); Block 5 of runner |
 
 The only AXIOMS are AX1 (Cl(3)) and AX2 (Z³). The remaining inputs are
 the framework chain (D1-D17), a CANONICAL NORM CHOICE (C1, C2), or a
@@ -108,7 +114,7 @@ framework content. S1 and S2 are properties any SU(N_c) gauge theory in
 4D with Dirac fermions must respect — they are not framework axioms.
 **There is no separate "matching axiom" in this note.** The bare-action
 1PI Green's function `Γ⁽⁴⁾` on the scalar-singlet channel is computed two
-algebraically equivalent ways within the SAME retained theory:
+algebraically equivalent ways within the same cited framework surface:
 directly from Feynman rules (D16 → OGE only at O(α_LM)) and via
 the composite operator `H_unit` (D17 → unique scalar singlet on
 Q_L). The two evaluations of the same Green's function must agree;
@@ -122,7 +128,7 @@ The identification uses one piece of structural content that
 deserves explicit attention: **the Cl(3) × Z³ lattice action has NO
 independent Yukawa parameter**. This follows framework-natively from D9:
 
-**D9 (retained, YUKAWA_COLOR_PROJECTION_THEOREM:33-40)**: the framework's
+**D9 ([`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):33-40)**: the framework's
 Higgs is the composite taste condensate `phi = (1/N_c) psi-bar_a psi_a`,
 NOT an independent fundamental scalar field.
 
@@ -194,7 +200,7 @@ has overlap
 ### Step 3: Same-1PI-function residue check (scalar-singlet channel)
 
 This step records the load-bearing identity entirely within the
-retained Cl(3) × Z³ theory, as a single 1PI Green's function
+cited Cl(3) × Z³ framework surface, as a single 1PI Green's function
 computed two ways. There is no UV-vs-EFT matching, no second
 "effective theory" to be defined; only one theory, one Green's
 function, two algebraically equivalent representations of it.
@@ -215,8 +221,8 @@ claimed.**
 
 **Representation A — direct OGE computation in the bare action.**
 
-The retained bare action contains only the Wilson plaquette and the
-staggered Dirac operator (D16, MINIMAL_AXIOMS:18-20) — no
+The cited bare action contains only the Wilson plaquette and the
+staggered Dirac operator (D16, [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20) — no
 fundamental scalar field, no contact 4-fermion operator. At tree
 order in α_LM, the only Feynman diagram contributing to `Γ⁽⁴⁾(q²)` is
 single-gluon exchange:
@@ -227,13 +233,13 @@ single-gluon exchange:
 ```
 
 Project onto `O_S`: apply the exact SU(N_c) color-singlet Fierz
-identity (D12, retained, verified machine-precision by Block 4):
+identity (D12, verified machine-precision by Block 4):
 
 ```
     Σ_a (T^a)_{ij}(T^a)_{kl}|_{δ_{ij}δ_{kl} channel} = -1/(2 N_c)  (3.3)
 ```
 
-and the exact Lorentz-Clifford scalar projection (S2, retained,
+and the exact Lorentz-Clifford scalar projection (S2,
 verified machine-precision by Block 8: `|c_S| = 1`):
 
 ```
@@ -248,12 +254,12 @@ Substituting (3.3) and (3.4) into (3.2):
 
 This is the COMPLETE tree-order value of `Γ⁽⁴⁾` from the bare
 action: no other tree diagram contributes (D16 = Feynman-rule
-completeness of the retained Wilson-staggered + plaquette action).
+completeness of the cited Wilson-staggered + plaquette action).
 
 **Representation B — direct matrix-element computation of y_t_bare
 from the H_unit operator content.**
 
-The composite-Higgs structural axiom (D9, retained) defines `H_unit`
+The composite-Higgs structural input (D9) defines `H_unit`
 as a composite local operator on the Q_L block:
 
 ```
@@ -294,7 +300,7 @@ not a dynamical input.
 
 **This evaluation uses ONLY:**
 - the explicit operator content of H_unit (3.6) — Clebsch-Gordan
-  weight 1/√(N_c · N_iso), retained from D17 + Steps 1-2;
+  weight 1/√(N_c · N_iso), from D17 + Steps 1-2;
 - canonical fermion-state normalization;
 - canonical scalar-composite normalization (Step 1, Z = √6).
 
@@ -320,7 +326,7 @@ physical fact about the IR spectrum, not a convention).
 **The same-1PI-function consistency identity.**
 
 Representations (A) and (B) are now two INDEPENDENT computations
-of the same Green's function `Γ⁽⁴⁾(q²)` in the SAME retained theory:
+of the same Green's function `Γ⁽⁴⁾(q²)` in the same cited framework surface:
 - (A) is computed from gauge-theory Feynman rules (OGE diagram
   + color/Dirac Fierz projection).
 - (B) is computed from the H_unit operator's matrix element with
@@ -337,7 +343,7 @@ Each is computed WITHOUT reference to the other. Comparing:
 ```
 
 The two values agree at the canonical surface (g_bare = 1). This
-agreement is a non-trivial CONSISTENCY of the retained framework:
+agreement is a non-trivial consistency check of the cited framework surface:
 the bare action's gauge dynamics (Representation A) and the
 operator content of the composite Higgs (Representation B) give
 the same Green's function on the load-bearing scalar-singlet
@@ -348,13 +354,13 @@ from H_unit operator content (3.7-3.8). The
 agreement (3.10 = 3.11) confirms internal consistency of the
 framework but is not the source of the value.
 
-**Inputs used (all retained or exact group-theoretic identities):**
+**Inputs used (cited framework inputs plus exact group-theoretic identities):**
 
-1. The bare Cl(3) × Z³ lattice action (retained,
-   MINIMAL_AXIOMS:18-20) — contains exactly Wilson plaquette and
+1. The bare Cl(3) × Z³ lattice action
+   ([`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md):18-20) — contains exactly Wilson plaquette and
    staggered Dirac, no fundamental scalar, no contact 4-fermion.
 2. D9: composite-Higgs structural axiom, no independent fundamental
-   Yukawa parameter (YCP:33-40, retained).
+   Yukawa parameter ([`YUKAWA_COLOR_PROJECTION_THEOREM.md`](YUKAWA_COLOR_PROJECTION_THEOREM.md):33-40).
 3. D16: Feynman-rule completeness of the bare action — at O(α_LM)
    only the OGE diagram contributes to `Γ⁽⁴⁾`.
 4. D17: scalar-uniqueness of `H_unit` on the Q_L block (Z² = 6 is

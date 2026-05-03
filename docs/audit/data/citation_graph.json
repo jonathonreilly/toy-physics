@@ -10053,6 +10053,30 @@
       "to": "yt_zero_import_authority_note"
     },
     {
+      "from": "yt_ward_identity_derivation_theorem",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "yt_ward_identity_derivation_theorem",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "yt_ward_identity_derivation_theorem",
+      "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "yt_ward_identity_derivation_theorem",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "yt_ward_identity_derivation_theorem",
+      "to": "yt_vertex_power_derivation"
+    },
+    {
+      "from": "yt_ward_identity_derivation_theorem",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
       "from": "yt_zero_import_authority_note",
       "to": "yt_ward_identity_derivation_theorem"
     },
@@ -20033,7 +20057,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T03:19:11.949519+00:00",
+  "generated_at": "2026-05-03T10:45:15.046046+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -45365,11 +45389,18 @@
     },
     "yt_ward_identity_derivation_theorem": {
       "claim_id": "yt_ward_identity_derivation_theorem",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "64a274d7be60121a2acb17eb9a36d1c7fb5cc356b505f38d9792157d32b1ed92",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate author hint; independent audit lane sets the actual",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "native_gauge_closure_note",
+        "left_handed_charge_matching_note",
+        "yukawa_color_projection_theorem",
+        "yt_ew_color_projection_theorem",
+        "yt_vertex_power_derivation",
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "1fe82661fe62c41b584b66168afbc1261b235287982cc66298fe66bc0da946a0",
       "path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)"
@@ -46653,7 +46684,6 @@
     "yt_retention_master_manifest_2026-04-18",
     "yt_schur_stability_gap_note",
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
-    "yt_ward_identity_derivation_theorem",
     "yt_zero_import_chain_note",
     "z2_hw1_mass_matrix_parametrization_note",
     "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02"
@@ -46664,7 +46694,8 @@
       "bounded_theorem": 12,
       "meta": 1,
       "no_go": 1,
-      "none": 1742,
+      "none": 1741,
+      "open_gate": 1,
       "positive_theorem": 45
     },
     "claim_type_seed_hint_counts": {
@@ -46672,13 +46703,13 @@
       "meta": 1,
       "no_go": 107,
       "none": 440,
-      "open_gate": 109,
-      "positive_theorem": 632
+      "open_gate": 110,
+      "positive_theorem": 631
     },
-    "edge_count": 5008,
+    "edge_count": 5014,
     "leaf_count": 767,
     "node_count": 1801,
-    "root_count": 1217,
+    "root_count": 1216,
     "runners_with_path": 1369
   }
 }
