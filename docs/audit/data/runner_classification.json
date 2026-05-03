@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T15:10:52.797349+00:00",
+  "generated_at": "2026-05-03T15:18:26.028804+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -1044,6 +1044,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/broken_graph_action_power_robustness.py"
+    },
+    "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_carrier_orbit_invariance.py"
     },
     "causal_cone_speed_map_note": {
       "assert_count": 0,
@@ -19737,6 +19749,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_carrier_orbit_invariance.py": {
+      "assert_count": 1,
+      "claims": [
+        "carrier_orbit_invariance_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -37402,12 +37429,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 549,
+      "C": 550,
       "D": 206,
       "none": 418
     },
-    "runners_classified": 1343,
-    "runners_with_C": 655,
+    "runners_classified": 1344,
+    "runners_with_C": 656,
     "runners_with_D": 333
   }
 }
