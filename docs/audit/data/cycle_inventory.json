@@ -4200,7 +4200,7 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T00:04:23.104917+00:00",
+  "generated_at": "2026-05-03T00:06:41.455952+00:00",
   "length_counts": {
     "2": 43,
     "3": 21,
@@ -4215,5 +4215,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T00:04:18.829871+00:00"
+  "source_graph_generated_at": "2026-05-03T00:06:36.143098+00:00"
 }

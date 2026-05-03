@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:04:23.522207+00:00
+**Generated:** 2026-05-03T00:06:41.914567+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 142 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 199 |
+| **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 502 |
+| unaudited | 501 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 403 |
+| `audited_clean` | 404 |
 | `audited_conditional` | 653 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 541 |
+| `unaudited` | 540 |
 
 | claim_type | count |
 |---|---:|
@@ -447,6 +447,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_green_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_propagating_generated_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_radical_geometry_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `source_resolved_self_consistent_generated_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `source_resolved_support_localization_split_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `spectral_closure_2026-04-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -15731,6 +15732,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
   - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_self_consistent_generated_transfer_note`
+
+- **Note:** [`SOURCE_RESOLVED_SELF_CONSISTENT_GENERATED_TRANSFER_NOTE.md`](../../docs/SOURCE_RESOLVED_SELF_CONSISTENT_GENERATED_TRANSFER_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded generated-family negative for the specified compact generated DAG family, source strengths, kernel, calibration gain, and one self-consistency update.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Aquinas-019deb27-dc2e-7491-a8cc-c5693e51da48`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** On the compact generated DAG family with seeds 0..3, one source-resolved self-consistent Green update gives exact zero-source reduction but 0/4 TOWARD rows and a self-consistent F~M exponent of -0.30, so the exact-lattice pocket does not transfer in the retained weak-field linear class.  _(class `C`)_
+- **chain closes:** True — The runner output directly reports the reduction check, sign count, mean shifts, ratios, and fitted exponents used by the source note's bounded conclusion. The note also correctly limits the inference to family-level transfer failure rather than a general self-consistent no-go theorem.
+- **rationale:** The load-bearing bounded claim is exactly what the runner output checks: zero-source recovery, wrong weak-field sign, and non-Newtonian mass scaling on the frozen compact generated family. The calibration gain is disclosed and does not create a positive numerical match; the conclusion is a negative readout that survives even under the stated calibration. Claim boundary: this is clean only as a bounded generated-family transfer result, not as an architecture-isolation theorem or broader no-go theorem.
 - **auditor confidence:** high
 
 ### `source_resolved_support_localization_split_note`
