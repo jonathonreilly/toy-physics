@@ -22761,7 +22761,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:10:44.772243+00:00",
+  "generated_at": "2026-05-03T15:18:18.983741+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25523,6 +25523,17 @@
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
+    },
+    "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
+      "claim_id": "carrier_orbit_invariance_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [],
+      "note_hash": "cfd3c06e41ba9dc3691b90d5fec94eb785c6a1377e14ca3a5dffb9ec56d9fe34",
+      "path": "docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_carrier_orbit_invariance.py",
+      "title": "Carrier Orbit Invariance \u2014 Stretch Attempt with Partial Structural Insight"
     },
     "causal_cone_speed_map_note": {
       "claim_id": "causal_cone_speed_map_note",
@@ -49785,6 +49796,7 @@
     "branch_cleanup_recommendation_2026-05-03",
     "breakthrough_direction_memo_2026-04-10",
     "broad_gravity_derivation_note",
+    "carrier_orbit_invariance_stretch_attempt_note_2026-05-03",
     "causal_escape_window_note",
     "causal_field_canonical_chain_note",
     "causal_field_portability_note",
@@ -50723,7 +50735,7 @@
       "meta": 6,
       "no_go": 3,
       "none": 1727,
-      "open_gate": 3,
+      "open_gate": 4,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
@@ -50731,13 +50743,13 @@
       "meta": 6,
       "no_go": 109,
       "none": 453,
-      "open_gate": 110,
+      "open_gate": 111,
       "positive_theorem": 628
     },
     "edge_count": 5690,
-    "leaf_count": 602,
-    "node_count": 1855,
-    "root_count": 1057,
-    "runners_with_path": 1415
+    "leaf_count": 603,
+    "node_count": 1856,
+    "root_count": 1058,
+    "runners_with_path": 1416
   }
 }

@@ -1,7 +1,8 @@
-# Carrier Orbit Invariance — Stretch Attempt with Partial Closing-Derivation
+# Carrier Orbit Invariance — Stretch Attempt with Partial Structural Insight
 
 **Date:** 2026-05-03  
-**Type:** stretch_attempt (output type c) with PARTIAL structural-insight  
+**Claim type:** open_gate
+**Output type:** stretch_attempt (output type c) with PARTIAL structural-insight
 **Claim scope:** documents a worked stretch attempt at closing the
 cycle 17 named residual — the swap-reduction theorem's structural-
 exhaustion premise that NO exact `E/T`-distinguishing operator exists
