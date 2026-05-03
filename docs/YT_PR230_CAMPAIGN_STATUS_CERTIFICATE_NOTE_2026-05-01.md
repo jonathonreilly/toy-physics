@@ -458,3 +458,11 @@ L12 set remains `12/63` chunks with `192/1000` saved configurations; chunks003
 through 010 still lack target time series, target ESS is not certified,
 response stability still fails, and no retained/proposed-retained wording is
 authorized.
+
+Latest chunk003 target-timeseries replacement checkpoint: campaign status now
+discovers chunk001, chunk002, chunk003, chunk011, and chunk012 generic
+target-timeseries certificates and reports `PASS=134 FAIL=0` over 140
+certificates.  The ready L12 set remains `12/63` chunks with `192/1000` saved
+configurations; chunks004 through 010 still lack target time series, target
+ESS is not certified, response stability still fails, and no
+retained/proposed-retained wording is authorized.

@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: chunk003 is now target-timeseries complete, so the current
+target ESS replacement queue is chunks004-010.  The next production-support
+step is chunk004 if completing the current ready-set target ESS gate is still
+prioritized, but the foreground campaign clock is exhausted after this block.
+Neither five target-series chunks nor the shorter queue touches the
+canonical-Higgs identity gap; the stronger closure route remains actual
+same-surface `O_H/C_sH/C_HH` rows, real W/Z response rows with sector-overlap
+identity, or a theorem forbidding the orthogonal neutral top-coupling
+loophole.
+
 2026-05-03 update: chunk002 is now target-timeseries complete, so the current
 target ESS replacement queue is chunks003-010.  The production path has two
 honest next choices: rerun chunk003 next if completing the current ready-set

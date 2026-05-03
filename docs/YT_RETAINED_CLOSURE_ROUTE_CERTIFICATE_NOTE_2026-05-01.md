@@ -517,6 +517,13 @@ stability still fails, and the retained-route certificate remains
 `PASS=108 FAIL=0`.  This is bounded production support only and authorizes no
 retained/proposed-retained wording.
 
+Chunk003 is now also reprocessed as a target-timeseries replacement.  The
+generic checkpoint discovery row sees chunks001, 002, 003, 011, and 012;
+target-series coverage is still incomplete for chunks004-010, response
+stability still fails, and the retained-route certificate remains
+`PASS=108 FAIL=0`.  This is bounded production support only and authorizes no
+retained/proposed-retained wording.
+
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive
 pole-plus-continuum family can be realized by reflection-positive Euclidean

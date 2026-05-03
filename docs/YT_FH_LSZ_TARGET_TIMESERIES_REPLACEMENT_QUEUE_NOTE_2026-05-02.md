@@ -8,8 +8,8 @@
 
 The autocorrelation/ESS gate now has a ready set large enough for target
 statistics. The current target-series complete ready chunks are chunks001,
-002, 011, and 012. Chunks003-010 are ready production chunks, but they predate
-target-timeseries serialization.
+002, 003, 011, and 012. Chunks004-010 are ready production chunks, but they
+predate target-timeseries serialization.
 
 This runner derives the replacement queue from the current autocorrelation
 certificate. It prevents the campaign from mistaking more new chunks for a
@@ -22,9 +22,9 @@ python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
 # SUMMARY: PASS=8 FAIL=0
 ```
 
-The current replacement queue is chunks003-010. Chunk013 and later can add new
+The current replacement queue is chunks004-010. Chunk013 and later can add new
 target-timeseries support, but `complete_for_all_ready_chunks` remains false
-while chunks003-010 stay in the ready set without target-series replacement.
+while chunks004-010 stay in the ready set without target-series replacement.
 
 ## Claim Boundary
 
@@ -35,7 +35,7 @@ control, or canonical-Higgs identity. It authorizes no retained or
 
 ## Next Action
 
-Rerun chunk003 with target-timeseries serialization if completing the current
+Rerun chunk004 with target-timeseries serialization if completing the current
 ready-set target ESS gate is prioritized; otherwise continue new target-series
 chunks toward the full L12 set. Do not claim complete target ESS while the
 replacement queue is nonempty.

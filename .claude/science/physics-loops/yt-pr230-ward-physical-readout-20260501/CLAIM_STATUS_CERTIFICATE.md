@@ -1,5 +1,33 @@
 # Claim Status Certificate
 
+FH/LSZ chunk003 target-timeseries rerun:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ chunk003 target-timeseries replacement checkpoint
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 3
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=108 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=134 FAIL=0
+```
+
+Chunk003 is now target-timeseries complete, but the ready L12 set is still
+`12/63`, target ESS remains open for chunks004-010, response stability fails,
+and canonical-Higgs identity is absent.  This authorizes no retained or
+`proposed_retained` wording.
+
 FH/LSZ chunk002 target-timeseries rerun:
 
 ```text

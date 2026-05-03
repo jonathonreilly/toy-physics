@@ -25,8 +25,8 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=134 FAIL=0
 ```
 
-The aggregate discovery row currently sees four generic target-timeseries
-chunk certificates: chunk001, chunk002, chunk011, and chunk012.
+The aggregate discovery row currently sees five generic target-timeseries
+chunk certificates: chunk001, chunk002, chunk003, chunk011, and chunk012.
 
 ## Claim Boundary
 

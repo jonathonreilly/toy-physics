@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ chunk003 target-timeseries rerun:
+
+- Reran `L12_T24_chunk003` without `--resume`, replacing the old artifact that
+  lacked target time series.
+- Added `docs/YT_FH_LSZ_CHUNK003_TARGET_TIMESERIES_RERUN_CHECKPOINT_NOTE_2026-05-03.md`
+  and `outputs/yt_fh_lsz_chunk003_target_timeseries_generic_checkpoint_2026-05-02.json`.
+- Result: chunk003 is production-phase, seed-controlled, and target-timeseries
+  complete.  The target-series complete set is now chunks001, 002, 003, 011,
+  and 012; replacement queue is chunks004-010.
+- Retained-route remains `PASS=108 FAIL=0`; campaign status remains
+  `PASS=134 FAIL=0` over 140 certificates.  No retained or proposed-retained
+  closure is authorized.
+
+Next exact action: stop this over-budget foreground campaign block after
+commit/PR update, or rerun chunk004 with target-timeseries serialization in a
+fresh work window if completing the current ready-set target ESS gate remains
+prioritized.  The stronger closure route remains same-surface `C_sH` / `C_HH`,
+a same-surface `O_H` identity theorem, or real W/Z response rows with
+sector-overlap identity.
+
 Latest checkpoint, 2026-05-03 FH/LSZ chunk002 target-timeseries rerun:
 
 - Reran `L12_T24_chunk002` without `--resume`, replacing the old artifact that
