@@ -1,5 +1,24 @@
 # No-Go Ledger
 
+## Same-source W/Z response builder is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py
+# SUMMARY: PASS=2 FAIL=0
+python3 scripts/frontier_yt_same_source_wz_response_certificate_gate.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=121 FAIL=0
+```
+
+The builder is an executable contract for future production W/Z mass-response
+rows.  It does not create W/Z mass fits, does not turn static EW algebra into
+`dM_W/ds`, and does not bypass sector-overlap or canonical-Higgs identity.
+Current rows are absent, so do not treat the builder, manifest, or W/Z gate as
+retained/proposed-retained evidence.
+
 ## O_sp-normalized source-Higgs Gram-purity postprocessor is not closure
 
 Runners:

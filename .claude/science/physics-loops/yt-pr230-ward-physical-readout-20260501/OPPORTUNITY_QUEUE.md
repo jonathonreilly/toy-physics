@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the fallback same-source W/Z physical-response route now
+has a candidate certificate builder.  This reduces implementation ambiguity
+for future production rows: the required surface is same-source W/Z mass fits,
+top/WZ response covariance, `g2` authority, sector-overlap identity,
+canonical-Higgs identity, and retained-route gating.  It does not change the
+current closure status because W/Z rows are absent and static EW algebra is
+still not `dM_W/ds`.  The highest-value next action remains either real
+`O_H/C_sH/C_HH` pole rows or real same-source W/Z response rows; source-only
+FH/LSZ production remains support.
+
 2026-05-03 update: the selected source-Higgs Gram-purity lane is now
 O_sp-normalized.  The builder attaches the Legendre/LSZ source-pole operator
 as the unit-residue source side, and the postprocessor's future acceptance

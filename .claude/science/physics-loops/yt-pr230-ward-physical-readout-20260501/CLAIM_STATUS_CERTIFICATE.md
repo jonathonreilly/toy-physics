@@ -1,5 +1,31 @@
 # Claim Status Certificate
 
+Same-source W/Z response certificate builder:
+
+```text
+actual_current_surface_status: open / same-source WZ response rows absent
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py
+# SUMMARY: PASS=2 FAIL=0
+
+python3 scripts/frontier_yt_same_source_wz_response_certificate_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=121 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=147 FAIL=0
+```
+
+The physical-response fallback now has a builder for future production W/Z
+mass-response rows and the gauge-normalized ratio.  Current rows are absent,
+static EW algebra is still rejected as `dM_W/ds`, sector-overlap and
+canonical-Higgs identity gates remain open, and no retained or
+`proposed_retained` wording is authorized.
+
 O_sp-normalized source-Higgs Gram-purity acceptance:
 
 ```text

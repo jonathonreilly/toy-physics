@@ -197,6 +197,9 @@ def main() -> int:
         "fh_gauge_mass_response_manifest": load(
             "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json"
         ),
+        "fh_gauge_mass_response_certificate_builder": load(
+            "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json"
+        ),
         "same_source_wz_response_certificate_gate": load(
             "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
         ),
@@ -784,6 +787,13 @@ def main() -> int:
         "same-source WZ gauge-mass response manifest"
         in str(statuses["fh_gauge_mass_response_manifest"]),
         statuses["fh_gauge_mass_response_manifest"],
+    )
+    report(
+        "fh-gauge-mass-response-builder-rows-absent",
+        "same-source WZ response rows absent"
+        in str(statuses["fh_gauge_mass_response_certificate_builder"])
+        and certificates["fh_gauge_mass_response_certificate_builder"].get("input_present") is False,
+        statuses["fh_gauge_mass_response_certificate_builder"],
     )
     report(
         "same-source-wz-response-certificate-gate-not-passed",
@@ -1476,9 +1486,10 @@ def main() -> int:
             "source-coordinate scaling cancels, but the ratio is physical y_t "
             "only after k_top/k_gauge is derived or measured.  A same-source "
             "label alone is not that theorem.  The W/Z response certificate "
-            "gate now defines the future acceptance schema and rejects static "
-            "EW algebra or slope-only W/Z outputs without production mass fits "
-            "and identity certificates.  The W/Z harness absence guard now "
+            "builder now defines the candidate certificate and records absent "
+            "same-source W/Z rows.  The gate rejects static EW algebra or "
+            "slope-only W/Z outputs without production mass fits and identity "
+            "certificates.  The W/Z harness absence guard now "
             "records missing W/Z response rows directly in future production "
             "certificates; that guard is not evidence.  The source-pole/canonical-Higgs "
             "mixing obstruction now blocks the adjacent pole-identity shortcut: "

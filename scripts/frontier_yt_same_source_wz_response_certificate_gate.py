@@ -23,6 +23,7 @@ FUTURE_WZ_CERTIFICATE = ROOT / "outputs" / "yt_fh_gauge_mass_response_certificat
 CERTS = {
     "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
     "fh_gauge_mass_response_manifest": "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json",
+    "fh_gauge_mass_response_builder": "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json",
     "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
     "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
@@ -189,6 +190,11 @@ def main() -> int:
         and certs["fh_gauge_mass_response_observable_gap"].get("gauge_mass_response_observable_ready")
         is False
     )
+    builder_rows_absent = (
+        "same-source WZ response rows absent" in status(certs["fh_gauge_mass_response_builder"])
+        and certs["fh_gauge_mass_response_builder"].get("input_present") is False
+        and certs["fh_gauge_mass_response_builder"].get("proposal_allowed") is False
+    )
     sector_overlap_blocks = (
         "same-source sector-overlap identity obstruction"
         in status(certs["same_source_sector_overlap_identity"])
@@ -219,6 +225,7 @@ def main() -> int:
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_allowed, f"proposal_allowed={proposal_allowed}")
     report("manifest-is-support-only", manifest_support_only, status(certs["fh_gauge_mass_response_manifest"]))
+    report("builder-records-rows-absent", builder_rows_absent, status(certs["fh_gauge_mass_response_builder"]))
     report("observable-gap-currently-blocks", observable_gap_blocks, status(certs["fh_gauge_mass_response_observable_gap"]))
     report("sector-overlap-currently-blocks", sector_overlap_blocks, status(certs["same_source_sector_overlap_identity"]))
     report("mixed-scalar-currently-blocks", mixed_scalar_blocks, status(certs["fh_gauge_response_mixed_scalar"]))
@@ -234,9 +241,10 @@ def main() -> int:
         "verdict": (
             "The future same-source W/Z response route now has an executable "
             "certificate gate.  Current PR #230 does not pass it: no W/Z "
-            "mass-response certificate exists, static EW gauge-mass algebra "
-            "is not a dM_W/ds measurement, and even real same-source W/Z "
-            "slopes would remain support-only until sector-overlap and "
+            "mass-response certificate exists; the certificate builder records "
+            "that same-source W/Z rows are absent.  Static EW gauge-mass "
+            "algebra is not a dM_W/ds measurement, and even real same-source "
+            "W/Z slopes would remain support-only until sector-overlap and "
             "canonical-Higgs identity certificates pass."
         ),
         "proposal_allowed": False,
@@ -254,10 +262,10 @@ def main() -> int:
             "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1",
         ],
         "exact_next_action": (
-            "Implement a real same-source electroweak W/Z mass-response "
-            "harness that emits the certificate schema, or derive the "
-            "sector-overlap/canonical-Higgs identity; otherwise continue "
-            "seed-controlled FH/LSZ production and scalar-pole purity work."
+            "Produce same-source W/Z mass-response rows, run the W/Z response "
+            "certificate builder, then rerun this gate; or derive the "
+            "sector-overlap/canonical-Higgs identity before treating any "
+            "gauge-normalized ratio as physical y_t evidence."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

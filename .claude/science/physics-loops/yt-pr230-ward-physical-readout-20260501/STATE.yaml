@@ -13,11 +13,21 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-170-osp-higgs-gram-purity-acceptance
-blocks_completed: 170
-active_route: "O_sp-normalized source-Higgs Gram-purity acceptance path"
-active_hard_residual: "The source-Higgs cross-correlator builder and Gram-purity postprocessor now attach the Legendre/LSZ source-pole operator O_sp as the unit-residue source side.  A future production O_H/C_sH/C_HH pole certificate must pass Delta_spH = Res(C_HH) - Res(C_sp,H)^2 = 0 and |rho_spH| = 1 before O_sp can be identified with canonical O_H.  Current status remains open because no certified canonical-Higgs operator or production C_sH/C_HH pole rows exist.  Builder PASS=3 FAIL=0, postprocessor PASS=2 FAIL=0, harness extension PASS=17 FAIL=0, retained-route PASS=120 FAIL=0, campaign status PASS=146 FAIL=0.  No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-171-wz-response-certificate-builder
+blocks_completed: 171
+active_route: "same-source W/Z physical-response certificate builder"
+active_hard_residual: "The W/Z physical-response fallback now has a candidate certificate builder.  It consumes future production same-source W/Z mass-response rows, checks source shifts, top/WZ covariance, g2 authority, sector-overlap, canonical-Higgs identity, and all forbidden-import firewalls, then writes the candidate consumed by the same-source W/Z response gate.  Current status remains open because no W/Z mass-response rows exist and the gate still rejects static EW algebra or slope-only outputs.  Builder PASS=2 FAIL=0, W/Z gate PASS=13 FAIL=0, retained-route PASS=121 FAIL=0, campaign status PASS=147 FAIL=0.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py"
+  - "docs/YT_FH_GAUGE_MASS_RESPONSE_CERTIFICATE_BUILDER_NOTE_2026-05-03.md"
+  - "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json"
+  - "scripts/frontier_yt_same_source_wz_response_certificate_gate.py"
+  - "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
+  - "docs/YT_SAME_SOURCE_WZ_RESPONSE_CERTIFICATE_GATE_NOTE_2026-05-02.md"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - "scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py"
   - "scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py"
   - "docs/YT_SOURCE_HIGGS_GRAM_PURITY_POSTPROCESSOR_NOTE_2026-05-03.md"

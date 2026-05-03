@@ -35,7 +35,7 @@
     "required_status": "bounded-support or exact-support until retained-route gate passes"
   },
   "actual_current_surface_status": "open / same-source WZ response certificate gate not passed",
-  "exact_next_action": "Implement a real same-source electroweak W/Z mass-response harness that emits the certificate schema, or derive the sector-overlap/canonical-Higgs identity; otherwise continue seed-controlled FH/LSZ production and scalar-pole purity work.",
+  "exact_next_action": "Produce same-source W/Z mass-response rows, run the W/Z response certificate builder, then rerun this gate; or derive the sector-overlap/canonical-Higgs identity before treating any gauge-normalized ratio as physical y_t evidence.",
   "fail_count": 0,
   "future_certificate_validation": {
     "present": false,
@@ -45,6 +45,7 @@
     "valid": false
   },
   "parent_certificates": {
+    "fh_gauge_mass_response_builder": "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json",
     "fh_gauge_mass_response_manifest": "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json",
     "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
     "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
@@ -54,7 +55,7 @@
     "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
   },
-  "pass_count": 12,
+  "pass_count": 13,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No valid same-source W/Z response certificate exists, and identity gates remain open.",
   "rejection_witnesses": {
@@ -106,5 +107,5 @@
     "does not use H_unit matrix-element readout or yt_ward_identity",
     "does not use observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
   ],
-  "verdict": "The future same-source W/Z response route now has an executable certificate gate.  Current PR #230 does not pass it: no W/Z mass-response certificate exists, static EW gauge-mass algebra is not a dM_W/ds measurement, and even real same-source W/Z slopes would remain support-only until sector-overlap and canonical-Higgs identity certificates pass."
+  "verdict": "The future same-source W/Z response route now has an executable certificate gate.  Current PR #230 does not pass it: no W/Z mass-response certificate exists; the certificate builder records that same-source W/Z rows are absent.  Static EW gauge-mass algebra is not a dM_W/ds measurement, and even real same-source W/Z slopes would remain support-only until sector-overlap and canonical-Higgs identity certificates pass."
 }

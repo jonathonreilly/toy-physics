@@ -1,0 +1,21 @@
+{
+  "actual_current_surface_status": "open / same-source WZ response rows absent",
+  "candidate_checks": {},
+  "candidate_missing_or_failed_checks": [],
+  "candidate_output": "outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json",
+  "candidate_written": false,
+  "exact_next_action": "Produce production same-source W/Z mass-response rows with top response covariance and identity certificates, rerun this builder, then rerun the same-source W/Z response gate.",
+  "fail_count": 0,
+  "input_present": false,
+  "input_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+  "pass_count": 2,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Builder output is support only; retained-route gate remains authoritative.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not manufacture W/Z response data",
+    "does not treat static EW algebra or observed masses as dM_W/ds",
+    "does not set kappa_s = 1, k_top = k_gauge, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "No same-source W/Z mass-response measurement rows are present, so no candidate response certificate was written."
+}

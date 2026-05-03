@@ -27,6 +27,8 @@ masses, static `v`, `H_unit`, and Ward authority were not used as selectors.
 The current surface does not pass:
 
 - no `outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json` exists;
+- the W/Z response certificate builder records that same-source W/Z response
+  rows are absent;
 - static EW algebra gives `dM_W/dh = g2/2` after canonical `H` is assumed, not
   `dM_W/ds`;
 - even real same-source W/Z slopes remain support-only until
@@ -43,9 +45,10 @@ top, observed `y_t`, observed W/Z masses, `H_unit`, `yt_ward_identity`,
 
 ```bash
 python3 scripts/frontier_yt_same_source_wz_response_certificate_gate.py
-# SUMMARY: PASS=12 FAIL=0
+# SUMMARY: PASS=13 FAIL=0
 ```
 
-Next action: implement a real same-source electroweak W/Z mass-response
-harness that emits this certificate schema, or derive the sector-overlap /
-canonical-Higgs identity directly.
+Next action: produce real same-source electroweak W/Z mass-response rows, run
+`scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py`, then
+rerun this gate; or derive the sector-overlap / canonical-Higgs identity
+directly.

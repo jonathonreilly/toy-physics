@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 same-source W/Z response certificate builder:
+
+- Added `scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py`
+  and `outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json`.
+- The builder defines the future W/Z physical-response input contract:
+  production W/Z mass fits under the same scalar source, top response slope,
+  W/Z response slope, covariance, `g2` authority, sector-overlap identity,
+  canonical-Higgs identity, retained-route gate, and forbidden-import
+  firewalls.
+- The real repo state remains open because no W/Z mass-response rows are
+  present; no `outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json`
+  candidate was written.
+- The same-source W/Z response gate now records the builder's absent-row state
+  and still rejects static EW algebra or slope-only W/Z outputs.
+- A temporary synthetic row file exercised the positive builder path
+  (`PASS=3 FAIL=0`) without writing repo evidence.
+- Runners: builder `PASS=2 FAIL=0`, W/Z gate `PASS=13 FAIL=0`,
+  retained-route `PASS=121 FAIL=0`, campaign status `PASS=147 FAIL=0`.
+- No retained or proposed-retained closure is authorized.
+
 Latest checkpoint, 2026-05-03 O_sp-normalized source-Higgs Gram-purity acceptance:
 
 - Updated the source-Higgs cross-correlator certificate builder so future

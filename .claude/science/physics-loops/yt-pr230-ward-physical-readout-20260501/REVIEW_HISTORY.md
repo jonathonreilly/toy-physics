@@ -1,5 +1,39 @@
 # Review History
 
+## Review-Loop Backpressure - Same-Source W/Z Response Builder
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN W/Z RESPONSE ROWS / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- the W/Z response route now has an executable builder for future production
+  measurement rows;
+- the builder computes the gauge-normalized response ratio only after
+  production W/Z mass fits, top response, covariance, `g2` authority, and
+  identity certificates are supplied;
+- the real repo state remains absent rows and open gates;
+- a temporary synthetic row file exercised the positive builder path without
+  writing repo evidence;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py scripts/frontier_yt_same_source_wz_response_certificate_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py
+python3 scripts/frontier_yt_same_source_wz_response_certificate_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - O_sp-Higgs Gram-Purity Acceptance
 
 Local review-loop disposition:

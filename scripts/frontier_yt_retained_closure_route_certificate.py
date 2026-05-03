@@ -131,6 +131,7 @@ def main() -> int:
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
         "fh_gauge_mass_response_manifest": "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json",
+        "fh_gauge_mass_response_certificate_builder": "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json",
         "same_source_wz_response_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
         "wz_response_harness_absence_guard": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -713,6 +714,12 @@ def main() -> int:
         in certificates["fh_gauge_mass_response_manifest"].get("actual_current_surface_status", "")
         and certificates["fh_gauge_mass_response_manifest"].get("proposal_allowed") is False
         and certificates["fh_gauge_mass_response_manifest"].get("manifest_is_evidence") is False
+    )
+    gauge_mass_response_builder_rows_absent = (
+        "same-source WZ response rows absent"
+        in certificates["fh_gauge_mass_response_certificate_builder"].get("actual_current_surface_status", "")
+        and certificates["fh_gauge_mass_response_certificate_builder"].get("proposal_allowed") is False
+        and certificates["fh_gauge_mass_response_certificate_builder"].get("input_present") is False
     )
     same_source_wz_response_certificate_gate_blocks = (
         "same-source WZ response certificate gate not passed"
@@ -1431,6 +1438,11 @@ def main() -> int:
         certificates["fh_gauge_mass_response_manifest"].get("actual_current_surface_status", ""),
     )
     report(
+        "fh-gauge-mass-response-builder-rows-absent",
+        gauge_mass_response_builder_rows_absent,
+        certificates["fh_gauge_mass_response_certificate_builder"].get("actual_current_surface_status", ""),
+    )
+    report(
         "same-source-wz-response-certificate-gate-blocks",
         same_source_wz_response_certificate_gate_blocks,
         certificates["same_source_wz_response_certificate_gate"].get("actual_current_surface_status", ""),
@@ -1855,8 +1867,10 @@ def main() -> int:
             "same-source W/Z mass slope, but that gauge response observable and "
             "the shared canonical-Higgs identity are absent.  The observable-gap "
             "gate confirms the present production harness is QCD top-only and "
-            "does not emit dM_W/ds or dM_Z/ds.  The W/Z response certificate "
-            "gate now rejects static EW algebra and any slope-only certificate "
+            "does not emit dM_W/ds or dM_Z/ds.  The W/Z response builder now "
+            "defines the future candidate certificate and records that no "
+            "same-source W/Z rows are present.  The W/Z response certificate "
+            "gate rejects static EW algebra and any slope-only certificate "
             "without production W/Z mass fits, sector-overlap, and canonical-"
             "Higgs identity.  The W/Z harness absence guard now records that "
             "missing response path directly in future production certificates; "
