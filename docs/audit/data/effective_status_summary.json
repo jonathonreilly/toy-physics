@@ -1,13 +1,14 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 555,
+    "bounded_theorem": 553,
     "decoration": 8,
-    "meta": 42,
-    "no_go": 160,
+    "meta": 43,
+    "no_go": 161,
     "open_gate": 88,
-    "positive_theorem": 889
+    "positive_theorem": 887,
+    "unset": 4
   },
-  "computed_at": "2026-05-03T12:00:30.700457+00:00",
+  "computed_at": "2026-05-03T13:19:15.214995+00:00",
   "cycle_examples": [
     [
       "restricted_strong_field_closure_note",
@@ -38,21 +39,21 @@
   ],
   "cycles_detected": 105,
   "effective_status_counts": {
-    "audited_conditional": 517,
+    "audited_conditional": 519,
     "audited_decoration": 3,
-    "audited_failed": 6,
+    "audited_failed": 8,
     "audited_numerical_match": 25,
     "audited_renaming": 17,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
-    "meta": 41,
-    "open_gate": 14,
-    "retained": 110,
-    "retained_bounded": 170,
-    "retained_no_go": 95,
+    "meta": 42,
+    "open_gate": 13,
+    "retained": 106,
+    "retained_bounded": 169,
+    "retained_no_go": 102,
     "retained_pending_chain": 2,
-    "unaudited": 739
+    "unaudited": 735
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

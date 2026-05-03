@@ -6,6 +6,19 @@ review package.
 **Status:** Bounded support batch. This note does **not** promote charged-lepton
 Koide closure.
 
+## Cited authorities (one hop)
+
+The 2026-05-03 citation-graph repair registers the load-bearing one-hop
+addendum deps referenced below as proper markdown links so the audit-graph
+builder picks up the edges.
+
+- [`KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`](KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md)
+  — Brannen-geometry / Dirac support addendum referenced from this batch's
+  selected-line Brannen geometry section.
+- [`KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`](KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md)
+  — second-order `Q` support addendum referenced from this batch's
+  second-order `Q` support layer.
+
 ## What this batch adds
 
 This batch adds new executable support tools and bridge-targeting diagnostics
