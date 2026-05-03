@@ -5,9 +5,9 @@
     "meta": 41,
     "no_go": 160,
     "open_gate": 86,
-    "positive_theorem": 893
+    "positive_theorem": 894
   },
-  "computed_at": "2026-05-03T11:38:59.968502+00:00",
+  "computed_at": "2026-05-03T11:40:34.132860+00:00",
   "cycle_examples": [
     [
       "restricted_strong_field_closure_note",
@@ -40,7 +40,7 @@
   "effective_status_counts": {
     "audited_conditional": 515,
     "audited_decoration": 3,
-    "audited_failed": 4,
+    "audited_failed": 5,
     "audited_numerical_match": 25,
     "audited_renaming": 18,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,

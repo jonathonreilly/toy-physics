@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T11:38:59.334429+00:00",
+  "generated_at": "2026-05-03T11:40:33.505779+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -7848,6 +7848,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/independent_generators_heldout.py"
+    },
+    "industrial_sdp_bootstrap_infrastructure_note_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 16,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_industrial_sdp_bootstrap_block01.py"
     },
     "inverse_problem_graph_requirements_note": {
       "assert_count": 0,
@@ -25826,6 +25838,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_industrial_sdp_bootstrap_block01.py": {
+      "assert_count": 0,
+      "claims": [
+        "industrial_sdp_bootstrap_infrastructure_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 16,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_irregular_directional_observable.py": {
       "assert_count": 0,
       "claims": [
@@ -37159,12 +37186,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 541,
+      "C": 542,
       "D": 203,
       "none": 420
     },
-    "runners_classified": 1334,
-    "runners_with_C": 646,
-    "runners_with_D": 326
+    "runners_classified": 1335,
+    "runners_with_C": 647,
+    "runners_with_D": 327
   }
 }

@@ -6281,6 +6281,10 @@
       "to": "impact_parameter_portability_extension_note"
     },
     {
+      "from": "industrial_sdp_bootstrap_infrastructure_note_2026-05-03",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
       "from": "inverse_problem_graph_requirements_note",
       "to": "newton_derivation_note"
     },
@@ -22133,7 +22137,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T11:38:54.270737+00:00",
+  "generated_at": "2026-05-03T11:40:28.919833+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -33193,6 +33197,19 @@
       "path": "docs/INDEPENDENT_GENERATORS_HELDOUT_NOTE.md",
       "runner_path": "scripts/independent_generators_heldout.py",
       "title": "Independent-Generator Held-Out Test of the Universality Classifier \u2014 NEGATIVE RESULT"
+    },
+    "industrial_sdp_bootstrap_infrastructure_note_2026-05-03": {
+      "claim_id": "industrial_sdp_bootstrap_infrastructure_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "infrastructure + validation support theorem",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "plaquette_self_consistency_note"
+      ],
+      "note_hash": "bae3f71710d5f8619369d3c5d6cf3873f66b8b92afd8a5216b00a536f3d99207",
+      "path": "docs/INDUSTRIAL_SDP_BOOTSTRAP_INFRASTRUCTURE_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_industrial_sdp_bootstrap_block01.py",
+      "title": "Industrial SDP Bootstrap \u2014 Infrastructure + SU(2)/SU(3) Single-Plaquette Validation"
     },
     "interest_map": {
       "claim_id": "interest_map",
@@ -49757,21 +49774,21 @@
       "bounded_theorem": 16,
       "meta": 1,
       "no_go": 3,
-      "none": 1748,
+      "none": 1749,
       "positive_theorem": 72
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 516,
       "meta": 1,
       "no_go": 109,
-      "none": 449,
+      "none": 450,
       "open_gate": 109,
       "positive_theorem": 656
     },
-    "edge_count": 5533,
-    "leaf_count": 648,
-    "node_count": 1840,
+    "edge_count": 5534,
+    "leaf_count": 649,
+    "node_count": 1841,
     "root_count": 1074,
-    "runners_with_path": 1406
+    "runners_with_path": 1407
   }
 }

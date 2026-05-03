@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-03T11:38:59.586041+00:00",
+  "computed_at": "2026-05-03T11:40:33.732204+00:00",
   "criticality_counts": {
     "critical": 111,
     "high": 365,
-    "leaf": 811,
+    "leaf": 812,
     "medium": 553
   },
   "flagship_signal_used": false,
-  "node_count": 1840,
+  "node_count": 1841,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -134,8 +134,8 @@
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 17.506,
-      "transitive_descendants": 256
+      "load_bearing_score": 18.011,
+      "transitive_descendants": 257
     },
     {
       "claim_id": "ckm_atlas_axiom_closure_note",
