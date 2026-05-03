@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:20:18.336760+00:00
+**Generated:** 2026-05-03T02:24:43.357267+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 145 |
+| **retained** | 146 |
 | **retained_no_go** | 99 |
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 458 |
+| unaudited | 457 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 430 |
+| `audited_clean` | 431 |
 | `audited_conditional` | 668 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 49 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 498 |
+| `unaudited` | 497 |
 
 | claim_type | count |
 |---|---:|
@@ -503,6 +503,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_boundary_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `third_grown_family_complex_boundary_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `third_grown_family_complex_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `three_generation_observable_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `three_generation_structure_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -17393,6 +17394,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Parent note has 5 deps; only generation_axiom_boundary_note is conditional, blocking the parent's effective retention.  _(class `B`)_
 - **chain closes:** False — The packet's load-bearing dependency/status statement is stale against the current operational parent row: the parent is retained with four declared deps, and generation_axiom_boundary_note is not a current declared dependency. The runner proves the parent algebra theorem but does not validate this dep-chain packet.
 - **rationale:** Issue: the source note's central dep-chain claim says the parent has five deps and is blocked by generation_axiom_boundary_note, while the current operational parent row is retained with four deps and excludes generation_axiom_boundary_note. Why this blocks: the packet's recommended cleanup and retention-path conclusion depend on a non-current dependency graph, so the claimed blocker and repair path cannot be recorded as closing the scoped current claim. Repair target: replace this packet with a current metadata repair note, or update the operational ledger dependency declaration first and then re-audit the revised scoped claim from current rows. Claim boundary until fixed: the parent theorem runner may still support the retained algebra theorem, but this dep-chain audit packet itself should not be treated as a valid current theorem or status certificate.
+- **auditor confidence:** high
+
+### `three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** On the retained hw=1 triplet H_hw=1 ~= C^3, the three sector projectors P_X1, P_X2, P_X3 together with the induced C3[111] cycle generate M_3(C), so no nontrivial proper quotient preserves both the sector separation and the C3 cycle.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-wegener-2nd-019deba4-6fc1-7cb0-838b-f84ffe92171d`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The diagonal projectors generate D_3, and D_3 together with the cyclic permutation C3 generates all matrix units E_ij and hence the full M_3(C); C3 transitivity then leaves only {0} and C^3 as common invariant subspaces.  _(class `A`)_
+- **chain closes:** True — The cited retained-grade inputs provide the hw=1 triplet, sector labels/projectors, and axis-cycle action needed for the finite-dimensional algebra statement. The proof then closes by exact matrix-unit generation and invariant-subspace enumeration, with the physical-species and Standard Model identifications explicitly excluded.
+- **rationale:** The scoped theorem is a genuine finite-dimensional algebra closure over retained inputs, not a numerical match or a physical identification. The runner verifies the relevant exact matrices, projectors, C3 cycle, matrix-unit generation, common invariant subspaces, and retained-grade dependency visibility. No open substrate-physicality bridge is used because generation_axiom_boundary_note is explicitly outside the dependency set. Residual risk is notation-level only: the verdict treats 'proper quotient' as quotient by a common invariant subspace of the stated operators.
 - **auditor confidence:** high
 
 ### `three_generation_observable_theorem_note`
