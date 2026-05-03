@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T03:02:27.717831+00:00
+**Generated:** 2026-05-03T03:05:03.479946+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 149 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 219 |
+| **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
 | unaudited | 454 |
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 664 |
+| ~~audited_conditional~~ | 663 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 437 |
-| `audited_conditional` | 664 |
+| `audited_clean` | 438 |
+| `audited_conditional` | 663 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 27 |
@@ -124,6 +124,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `causal_distance_tail_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `causal_field_portability_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -591,7 +592,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `broad_surrogate_point_source_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `broken_graph_action_power_robustness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_cone_speed_map_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `causal_distance_tail_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_field_canonical_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_field_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2326,16 +2326,14 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 - **Note:** [`CAUSAL_DISTANCE_TAIL_NOTE.md`](../../docs/CAUSAL_DISTANCE_TAIL_NOTE.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** further and acts as the clean boundary.  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (causal_field_portability_note=support), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (causal_field_portability_note=support). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `CAUSAL_FIELD_PORTABILITY_NOTE.md`
-- **auditor confidence:** high
+- **claim_scope:** Finite bounded diagnostic that, on the three listed grown families, exact zero-source controls stay zero, broad instantaneous/forward-only/dynamic c=1 field variants retain steep recognizable fitted tails, and dynamic c=0.5 is the diagnosed finite-cone boundary.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-newton-3rd-019debcb-10e1-7960-b379-8c3da4be0171`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The runner recomputes the finite distance-tail table over the three retained grown families and field variants, showing exact zero controls, broad-variant tail exponents near -1.85 to -1.96 with high R2, and dynamic c=0.5 collapse near -8.6 to -8.7 with toward=3/5.  _(class `C`)_
+- **chain closes:** True — The one-hop causal-field portability dependency is now retained, and the provided runner output reproduces the finite table used by the source note. The audited claim is limited to this generated bounded diagnostic, not a universal causal-field theorem or Newtonian distance law.
+- **rationale:** The dependency block is resolved, and the scoped bounded computation closes from the retained one-hop context plus the provided runner output. The load-bearing step is numerical computation over the stated finite protocol, not a renaming, tuned match, or external comparator. Clean status applies only to the narrow table-level diagnostic and boundary call, not to any broader portability law or physical distance-law identification.
+- **auditor confidence:** medium
 
 ### `causal_escape_window_note`
 
