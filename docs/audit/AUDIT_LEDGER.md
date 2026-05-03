@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:14:46.508966+00:00
+**Generated:** 2026-05-03T18:15:29.229936+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| **retained_no_go** | 101 |
+| **retained_no_go** | 102 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 741 |
+| unaudited | 740 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 317 |
+| `audited_clean` | 318 |
 | `audited_conditional` | 538 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 787 |
+| `unaudited` | 786 |
 
 | claim_type | count |
 |---|---:|
@@ -186,6 +186,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_selector_first_shoulder_exit_threshold_support_note_2026-04-21` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
+| `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | A | - |
@@ -5260,6 +5261,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner returned nonzero, so the current executable chain is not cleanly reproducible.
 - **rationale:** Issue: the primary runner returned nonzero in the restricted audit environment. Why this blocks: a nonzero runner leaves either stale artifact/import drift or an explicit open-burden FAIL in the executable witness, so the chain cannot be ratified cleanly. Repair target: repair the runner's missing artifact/import path or narrow the note around the runner-reported burden, then rerun. Claim boundary until fixed: safe to cite as a support note with non-clean executable support.
 - **auditor confidence:** medium
+
+### `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20`
+
+- **Note:** [`DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md`](../../docs/DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `no_go`
+- **claim_scope:** At the pinned H_pin, the two displayed PMNS candidates P_(2,0,1) and P_(2,1,0) differ only by the mu<->tau row swap, so H-only and mu<->tau-even scalar selectors cannot distinguish those branches; the Jarlskog sign is mu<->tau-odd.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-current-fresh-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** "Hence every scalar of H_pin is identical on the two branches, because H_pin itself is identical. Likewise any PMNS scalar F(P) satisfying F(S_(mu tau) P) = F(P) is identical on the two branches."  _(class `A`)_
+- **chain closes:** True — The scoped no-go is an algebraic invariance statement: the two candidate matrices are related by a single mu<->tau row swap after diagonalizing the same H_pin, so H-intrinsic data and mu<->tau-even PMNS scalars are identical on the pair while the Jarlskog sign flips. No open dependency is needed for this scoped indistinguishability result.
+- **rationale:** The load-bearing step closes as ordinary algebra over the two displayed candidates and the same pinned Hermitian matrix. The runner verifies both candidates pass the magnitude-band filter, verifies the row-swap relation, checks representative H-intrinsic invariants and mu<->tau-even magnitude data, and confirms the CP-odd Jarlskog sign flip. The audit scope is the no-go for H-intrinsic or mu<->tau-even scalar selectors on the displayed surviving pair, not an independent audit of a broader sigma_hier uniqueness theorem.
+- **auditor confidence:** high
 
 ### `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21`
 
