@@ -7,7 +7,7 @@
     "open_gate": 92,
     "positive_theorem": 857
   },
-  "computed_at": "2026-05-03T20:56:42.998520+00:00",
+  "computed_at": "2026-05-03T21:01:18.207427+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
