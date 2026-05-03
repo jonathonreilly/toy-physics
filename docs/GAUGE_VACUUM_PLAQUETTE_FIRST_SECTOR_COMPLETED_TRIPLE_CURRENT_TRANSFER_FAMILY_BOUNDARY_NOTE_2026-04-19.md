@@ -1,11 +1,54 @@
 # Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary
 
-**Date:** 2026-04-19  
-**Status:** support - structural or confirmatory support note
-completion; on the audited current explicit `beta = 6`
-`spatial_pair` witness family, even the best scaled fit still does not realize
-the completed triple `Z^min` exactly  
-**Script:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py`
+**Date:** 2026-04-19 (originally); 2026-05-03 (dense-grid global certificate added)
+**Status:** support — on the audited current explicit `beta = 6` `spatial_pair` witness family, dense-grid global search confirms even the best scaled fit does not realize the completed triple `Z^min` exactly
+**Original runner:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py`
+**Dense-grid global certificate (2026-05-03 audit repair):** `scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py`
+
+## Audit-driven repair (2026-05-03)
+
+The 2026-05-03 audit (fresh-agent-gauge-triple-transfer-boundary)
+flagged that the original runner fixes the boundary corner
+(`tau_transfer = 10^-4, tau_boundary = 4.0, asym_decay = 10^-8`) and
+checks only local inward perturbations: "a positive residual at one
+preselected boundary corner does not rule out an exact or smaller-gap
+realization elsewhere in the audited parameter box."
+
+This repair adds a **dense parameter-box global gap certificate**
+[`scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py`](../scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py)
+that sweeps a `6 × 6 × 5 × 8 = 1440`-point structured grid across
+the full audited parameter box (`tau_transfer × tau_boundary ×
+asym_decay × linear_decay`) and reports the global minimum gap.
+
+Result of the certificate run (PASS=3/3):
+
+```text
+swept 1440 grid points in 0.4 s
+min gap                     = 7.791551e-03
+median gap                  = 2.039034e-01
+max gap                     = 2.856130e-01
+fraction below stated gap   = 0.0000
+argmin grid point:
+  tau_transfer = 1.0000e-04   (lower edge of box)
+  tau_boundary = 4.0000        (upper edge of box)
+  asym_decay   = 1.0000e-08    (lower edge of box)
+  linear_decay = 0.3214        (interior)
+```
+
+The dense-grid argmin coincides with the stated boundary corner
+(lower `tau_transfer`, upper `tau_boundary`, lower `asym_decay`),
+the minimum gap `7.79e-03` reproduces the original 1D-search result
+`7.58e-03` within rounding/grid-resolution, and **no grid point
+yields a smaller gap**. The "boundary corner is globally minimizing"
+claim is now backed by a 1440-point dense-grid empirical certificate,
+not just a local-perturbation check.
+
+The dense grid is **not** a symbolic / interval-arithmetic global
+certificate (which would be a stronger guarantee); that remains
+genuine open work. The empirical confidence is: dense-grid argmin
+coincides with the stated boundary corner across 4 dimensions of
+the parameter box, and the minimum gap is strictly positive
+(`> 1e-6 ≫ 0`).
 
 ## Question
 
