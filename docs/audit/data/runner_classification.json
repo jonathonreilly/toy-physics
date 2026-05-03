@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:55:50.218429+00:00",
+  "generated_at": "2026-05-03T14:56:48.665235+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -6398,15 +6398,15 @@
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19": {
-      "assert_count": 0,
+      "assert_count": 2,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20": {
@@ -10128,18 +10128,6 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/mirror_vs_central_head_to_head.py"
-    },
-    "missing_runner_inventory_2026-05-03": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 4,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py"
     },
     "momentum_charge_commute_theorem_note_2026-05-02": {
       "assert_count": 0,
@@ -24605,19 +24593,19 @@
       "exists": false
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py": {
-      "assert_count": 0,
+      "assert_count": 2,
       "claims": [
         "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
+      "dominant_class": "C",
+      "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_2026_04_20.py": {
       "assert_count": 1,
@@ -24787,8 +24775,7 @@
     "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py": {
       "assert_count": 1,
       "claims": [
-        "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
-        "missing_runner_inventory_2026-05-03"
+        "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19"
       ],
       "counts": {
         "A": 0,
@@ -37415,12 +37402,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 547,
+      "C": 548,
       "D": 206,
-      "none": 420
+      "none": 419
     },
     "runners_classified": 1343,
-    "runners_with_C": 653,
+    "runners_with_C": 654,
     "runners_with_D": 333
   }
 }
