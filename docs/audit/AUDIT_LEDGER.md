@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T12:14:02.555793+00:00
+**Generated:** 2026-05-03T12:16:31.494233+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 736 |
+| unaudited | 735 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 517 |
-| ~~audited_failed~~ | 7 |
+| ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -40,10 +40,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 347 |
 | `audited_conditional` | 517 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 51 |
+| `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 777 |
+| `unaudited` | 776 |
 
 | claim_type | count |
 |---|---:|
@@ -986,6 +986,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | D | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `bh_entropy_derived_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1619,6 +1620,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Beyond Lattice Gauge Theory: Two Concrete Results: Demonstrated numerically  _(class `C`)_
 - **chain closes:** False — No. The numerical comparisons demonstrate a distinction, but the physical interpretation still imports the framework source/readout bridge rather than deriving it here, so the conclusion cannot be ratified from the source note alone.
 - **rationale:** Issue: the numerical comparisons demonstrate a distinction, but the physical interpretation still imports the framework source/readout bridge rather than deriving it here. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
+- **auditor confidence:** high
+
+### `bh_entropy_derived_note`
+
+- **Note:** [`BH_ENTROPY_DERIVED_NOTE.md`](../../docs/BH_ENTROPY_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded claim that the free-fermion lattice half-space calculation supports only a finite-L BH-like entropy comparison near S=A/(4 l_P^2), while the retained/asymptotic coefficient is not 1/4.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-cl3-auditor-2026-05-03`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Finite-L free-fermion RT ratio near 1/4 is used as the BH-comparison surface, while asymptotic behavior is assigned to the Widom coefficient rather than a derived BH coefficient.  _(class `G`)_
+- **chain closes:** False — The chain does not close because the BH-facing step is a finite-L numerical match to an external comparator and chosen scale, while the runner simultaneously reports failed component checks and an aggregate 6/6 pass. The asymptotic no-go statement may be directionally consistent with the note, but it is not closed by the supplied runner output.
+- **rationale:** Issue: the chain is a finite-size numerical comparator to the BH coefficient, not a first-principles derivation, and the current runner is internally inconsistent: it prints failed subchecks for 2D area-law thresholding and 3D RT-within-15%, yet still reports CHECKS PASSED: 6/6. The runner's own finite-size extrapolation also gives 2D RT(inf)=0.2168 and 3D RT(inf)=0.0575, not the note's stated asymptotic 1/6 closure. Why this blocks: under the hostile rubric, selected finite-L agreement with 1/4 at a chosen normalization is class G numerical matching, and stale/inconsistent runner pass accounting prevents the bounded theorem from closing on its own terms. Repair target: split the claim into explicit numerical observations with exact thresholds, make runner pass/fail accounting match the subchecks, and separately cite or prove the Widom asymptotic coefficient used for the no-go boundary. Claim boundary until fixed: usable only as a bounded numerical companion showing approximate finite-L 2D ratios near 1/4 and non-derivation of BH entropy, not as an audited theorem deriving or validating the BH coefficient.
 - **auditor confidence:** high
 
 ### `bmv_bounded_negative_note`
