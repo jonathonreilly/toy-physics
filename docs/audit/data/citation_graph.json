@@ -4733,6 +4733,94 @@
       "to": "cl3_color_automorphism_theorem"
     },
     {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "assumption_derivation_ledger"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "work_history.repo.dm_lane_weave_triage_2026-05-03"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "publication.ci3_z3.derivation_atlas"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_local_schur_source_family_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_microscopic_value_frontier_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_leptogenesis_pmns_projector_interface_note_2026-04-16"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_parent_correctness_audit_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "work_history.repo.canonical_weave_audit_2026-05-03"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "repo.controlled_vocabulary"
+    },
+    {
       "from": "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19",
       "to": "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
     },
@@ -15962,6 +16050,62 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_local_schur_source_family_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_microscopic_value_frontier_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_flagship_closure_review_note_2026-04-17"
     },
     {
@@ -22797,7 +22941,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:40:54.173218+00:00",
+  "generated_at": "2026-05-03T15:41:22.063510+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -30305,6 +30449,40 @@
       "path": "docs/DM_SU3_GAUGE_LOOP_OBSTRUCTION_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_dm_su3_gauge_loop_derivation_attempt.py",
       "title": "SU(3) Gauge-Loop Derivation of the 8/3 Enhancement -- Obstruction Note"
+    },
+    "dm_wilson_direct_descendant_batch_authority_note_2026-05-03": {
+      "claim_id": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "assumption_derivation_ledger",
+        "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
+        "work_history.repo.dm_lane_weave_triage_2026-05-03",
+        "publication.ci3_z3.derivation_atlas",
+        "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_local_schur_source_family_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_microscopic_value_frontier_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
+        "dm_leptogenesis_pmns_projector_interface_note_2026-04-16",
+        "left_handed_charge_matching_note",
+        "dm_wilson_parent_correctness_audit_note_2026-04-18",
+        "work_history.repo.canonical_weave_audit_2026-05-03",
+        "repo.controlled_vocabulary"
+      ],
+      "note_hash": "1a7f894c5bfb18e724772c955eb63ff33556be5663d5e150d08b902a21d9f27b",
+      "path": "docs/DM_WILSON_DIRECT_DESCENDANT_BATCH_AUTHORITY_NOTE_2026-05-03.md",
+      "runner_path": null,
+      "title": "DM Wilson Direct-Descendant Bounded Support Batch Note"
     },
     "dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19": {
       "claim_id": "dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19",
@@ -40569,6 +40747,20 @@
         "dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16",
         "dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17",
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
+        "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+        "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_local_schur_source_family_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_microscopic_value_frontier_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
         "dm_flagship_closure_review_note_2026-04-17",
         "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
         "sigma_hier_uniqueness_theorem_note_2026-04-19",
@@ -40695,7 +40887,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "f4ed62ff365a1ac53621497eb6a15c468c8243dda14f1367eb19a9f34a8e80b0",
+      "note_hash": "04961e1734bfd92f069424456466c3b11363a4ca06e7021f8170c244fda2ea27",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50789,7 +50981,7 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 48,
-      "meta": 6,
+      "meta": 7,
       "no_go": 3,
       "none": 1727,
       "open_gate": 5,
@@ -50797,15 +50989,15 @@
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 549,
-      "meta": 6,
+      "meta": 7,
       "no_go": 109,
       "none": 453,
       "open_gate": 112,
       "positive_theorem": 628
     },
-    "edge_count": 5699,
-    "leaf_count": 604,
-    "node_count": 1857,
+    "edge_count": 5735,
+    "leaf_count": 603,
+    "node_count": 1858,
     "root_count": 1058,
     "runners_with_path": 1417
   }
