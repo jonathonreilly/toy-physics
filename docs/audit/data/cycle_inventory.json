@@ -208,7 +208,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 192,
+      "max_transitive_descendants": 193,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -217,7 +217,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 192
+          "transitive_descendants": 193
         },
         {
           "audit_status": "unaudited",
@@ -226,7 +226,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 192
+          "transitive_descendants": 193
         },
         {
           "audit_status": "unaudited",
@@ -235,7 +235,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
           "title": "y_t Lane: Zero-Import Authority",
-          "transitive_descendants": 192
+          "transitive_descendants": 193
         }
       ],
       "requires_lemma_extraction": false
@@ -5107,7 +5107,7 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T13:26:45.094417+00:00",
+  "generated_at": "2026-05-03T13:27:44.287641+00:00",
   "length_counts": {
     "2": 56,
     "3": 25,
@@ -5122,5 +5122,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T13:26:38.518020+00:00"
+  "source_graph_generated_at": "2026-05-03T13:27:37.852607+00:00"
 }
