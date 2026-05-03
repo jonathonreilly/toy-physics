@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-03T18:15:28.079527+00:00",
+  "computed_at": "2026-05-03T18:40:01.250276+00:00",
   "criticality_counts": {
     "critical": 113,
-    "high": 367,
-    "leaf": 763,
-    "medium": 618
+    "high": 368,
+    "leaf": 762,
+    "medium": 619
   },
   "flagship_signal_used": false,
-  "node_count": 1861,
+  "node_count": 1862,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -68,8 +68,8 @@
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 24.527,
-      "transitive_descendants": 368
+      "load_bearing_score": 24.531,
+      "transitive_descendants": 369
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
@@ -86,8 +86,8 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 23.527,
-      "transitive_descendants": 368
+      "load_bearing_score": 23.531,
+      "transitive_descendants": 369
     },
     {
       "claim_id": "left_handed_charge_matching_note",
@@ -140,8 +140,8 @@
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 18.587,
-      "transitive_descendants": 271
+      "load_bearing_score": 18.593,
+      "transitive_descendants": 272
     },
     {
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",

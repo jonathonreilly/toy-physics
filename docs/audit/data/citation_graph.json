@@ -5809,6 +5809,30 @@
       "to": "three_generation_structure_note"
     },
     {
+      "from": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
+      "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+    },
+    {
+      "from": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02"
+    },
+    {
+      "from": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
+      "to": "gauge_scalar_temporal_completion_theorem_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
+      "to": "plaquette_bootstrap_framework_integration_note_2026-05-03"
+    },
+    {
       "from": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
       "to": "gauge_scalar_temporal_completion_theorem_note"
     },
@@ -23073,7 +23097,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T18:15:22.012544+00:00",
+  "generated_at": "2026-05-03T18:39:58.801223+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32438,6 +32462,24 @@
       "path": "docs/GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md",
       "runner_path": null,
       "title": "Gauge/Matter Closure Gates"
+    },
+    "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03": {
+      "claim_id": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
+        "plaquette_bootstrap_framework_integration_note_2026-05-03"
+      ],
+      "note_hash": "f03d999a6dca3a00badead23aff0864300a9835c2b7e53e0e381f73d9df7e5ee",
+      "path": "docs/GAUGE_SCALAR_BRIDGE_KZ_EXTERNAL_LIFT_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_gauge_scalar_bridge_kz_external_lift.py",
+      "title": "Gauge-Scalar Bridge K-Z External Lift Theorem"
     },
     "gauge_scalar_temporal_completion_theorem_note": {
       "claim_id": "gauge_scalar_temporal_completion_theorem_note",
@@ -51181,7 +51223,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 49,
+      "bounded_theorem": 50,
       "meta": 7,
       "no_go": 6,
       "none": 1726,
@@ -51189,17 +51231,17 @@
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 551,
+      "bounded_theorem": 552,
       "meta": 7,
       "no_go": 112,
       "none": 453,
       "open_gate": 112,
       "positive_theorem": 626
     },
-    "edge_count": 5768,
-    "leaf_count": 598,
-    "node_count": 1861,
+    "edge_count": 5774,
+    "leaf_count": 599,
+    "node_count": 1862,
     "root_count": 1059,
-    "runners_with_path": 1421
+    "runners_with_path": 1422
   }
 }

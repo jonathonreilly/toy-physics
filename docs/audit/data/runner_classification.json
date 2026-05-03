@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T18:15:27.797811+00:00",
+  "generated_at": "2026-05-03T18:40:01.122855+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -6360,6 +6360,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/gate_b_weak_connectivity_harness.py"
+    },
+    "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 28,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_scalar_bridge_kz_external_lift.py"
     },
     "gauge_scalar_temporal_completion_theorem_note": {
       "assert_count": 1,
@@ -24619,6 +24631,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_gauge_scalar_bridge_kz_external_lift.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 28,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_scalar_temporal_completion_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -37564,12 +37591,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 162,
-      "C": 552,
+      "C": 553,
       "D": 207,
       "none": 418
     },
-    "runners_classified": 1349,
-    "runners_with_C": 658,
-    "runners_with_D": 335
+    "runners_classified": 1350,
+    "runners_with_C": 659,
+    "runners_with_D": 336
   }
 }
