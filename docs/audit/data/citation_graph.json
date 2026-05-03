@@ -10913,6 +10913,26 @@
       "to": "cl3_color_automorphism_theorem"
     },
     {
+      "from": "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
+      "to": "su3_fusion_engine_pr1_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
+      "to": "su3_tensor_network_engine_roadmap_note_2026-05-03"
+    },
+    {
+      "from": "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
+      "from": "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+    },
+    {
       "from": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
       "to": "graph_first_su3_integration_note"
     },
@@ -23213,7 +23233,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T20:34:39.287493+00:00",
+  "generated_at": "2026-05-03T20:40:29.194688+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -46197,6 +46217,23 @@
       "runner_path": "scripts/su3_casimir_fundamental_check.py",
       "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3"
     },
+    "su3_cube_perron_solve_combined_theorem_note_2026-05-03": {
+      "claim_id": "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+        "su3_tensor_network_engine_roadmap_note_2026-05-03",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+      ],
+      "note_hash": "246d5640038b68d5ccbe4f672d1d72eb4276c53ac66c8038ac7ab298172c8fa1",
+      "path": "docs/SU3_CUBE_PERRON_SOLVE_COMBINED_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_cube_perron_solve.py",
+      "title": "SU(3) Tensor-Network Engine + L_s=2 Cube Perron Solve (Combined PR)"
+    },
     "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24": {
       "claim_id": "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
       "claim_type_author_hint": "positive_theorem",
@@ -51440,7 +51477,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 50,
+      "bounded_theorem": 51,
       "meta": 8,
       "no_go": 6,
       "none": 1727,
@@ -51448,17 +51485,17 @@
       "positive_theorem": 71
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 552,
+      "bounded_theorem": 553,
       "meta": 8,
       "no_go": 112,
       "none": 454,
       "open_gate": 113,
       "positive_theorem": 629
     },
-    "edge_count": 5803,
+    "edge_count": 5808,
     "leaf_count": 599,
-    "node_count": 1868,
+    "node_count": 1869,
     "root_count": 1056,
-    "runners_with_path": 1428
+    "runners_with_path": 1429
   }
 }

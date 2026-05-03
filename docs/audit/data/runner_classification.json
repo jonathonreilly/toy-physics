@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T20:34:46.610937+00:00",
+  "generated_at": "2026-05-03T20:40:34.419704+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -14676,6 +14676,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/su3_casimir_fundamental_check.py"
+    },
+    "su3_cube_perron_solve_combined_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 79,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_cube_perron_solve.py"
     },
     "su3_dabc_symmetric_theorem_note_2026-05-02": {
       "assert_count": 0,
@@ -31307,6 +31319,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_su3_cube_perron_solve.py": {
+      "assert_count": 1,
+      "claims": [
+        "su3_cube_perron_solve_combined_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 79,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_su3_fusion_engine.py": {
       "assert_count": 1,
       "claims": [
@@ -37657,12 +37684,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 162,
-      "C": 555,
+      "C": 556,
       "D": 207,
       "none": 417
     },
-    "runners_classified": 1351,
-    "runners_with_C": 661,
-    "runners_with_D": 336
+    "runners_classified": 1352,
+    "runners_with_C": 662,
+    "runners_with_D": 337
   }
 }
