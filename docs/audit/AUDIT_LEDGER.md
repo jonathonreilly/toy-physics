@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:49:51.057255+00:00
+**Generated:** 2026-05-03T16:55:27.601684+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 779 |
+| unaudited | 778 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 517 |
+| ~~audited_conditional~~ | 518 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 308 |
-| `audited_conditional` | 517 |
+| `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 825 |
+| `unaudited` | 824 |
 
 | claim_type | count |
 |---|---:|
@@ -811,6 +811,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `restricted_strong_field_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unratified_physical_bridge_and_definition_as_closure | - |
 | `retardation_discriminator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -10806,6 +10807,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
   - `QUARK_UP_AMPLITUDE_PROVENANCE_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `rconn_derived_note`
+
+- **Note:** [`RCONN_DERIVED_NOTE.md`](../../docs/RCONN_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the claim that R_conn equals (N_c^2 - 1)/N_c^2 with a controlled O(1/N_c^4) dynamical correction from the 1/N_c topological expansion at N_c = 3.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-rconn-derived-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** If the dynamics populates the color channels according to their dimensionality, then Pi_singlet/Pi_total = 1/N_c^2 and Pi_adjoint/Pi_total = (N_c^2 - 1)/N_c^2.  _(class `C`)_
+- **chain closes:** False — The Fierz parent closes the exact representation-theoretic 8/9 channel fraction, but this note does not derive the dynamical premise h(lambda)/f(lambda) = 1 or the claimed O(1/N_c^4) correction bound from planar dominance. The MC runner checks consistency with a hard-coded 8/9 target; it does not compute the load-bearing theorem.
+- **rationale:** Issue: The note equates dynamical channel weights with representation dimensions and then treats the residual as O(1/N_c^4), but the presented 1/N_c expansion only supplies topology scaling and leaves the coefficients h(lambda), f(lambda), and higher-genus terms undetermined. Why this blocks: Without a retained theorem forcing uniform channel population and bounding the correction coefficients, the row cannot stand as an independent bounded dynamical-correction theorem; the passing MC run only gives a numerical consistency check around the already-supplied 8/9 ratio. Repair target: Derive the channel-population theorem and correction bound from the lattice SU(N_c) partition function, with a runner that computes the coefficient/bound rather than comparing to 8/9. Claim boundary until fixed: The exact 8/9 fraction may be cited only as the Fierz parent's representation-theoretic channel fraction, not as an independently derived R_conn dynamical correction theorem.
+- **open / conditional deps cited:**
+  - `YUKAWA_COLOR_PROJECTION_THEOREM.md`
 - **auditor confidence:** high
 
 ### `replay_environment_note`
