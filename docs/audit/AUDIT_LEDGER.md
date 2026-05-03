@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:01:58.705248+00:00
+**Generated:** 2026-05-03T00:04:23.522207+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 199 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 503 |
+| unaudited | 502 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 652 |
+| ~~audited_conditional~~ | 653 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 403 |
-| `audited_conditional` | 652 |
+| `audited_conditional` | 653 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 542 |
+| `unaudited` | 541 |
 
 | claim_type | count |
 |---|---:|
@@ -1072,6 +1072,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `source_resolved_generated_bridge_failure_audit` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `source_resolved_generated_support_recovery_basin_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_propagating_green_pocket_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_escalation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -15574,6 +15575,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The split-shell fixed-weight wavefield improves the weak-field-law fit relative to the self-consistent wavefield, reaching F~M = 0.500, but remains far from generated-family closure.  _(class `C`)_
 - **chain closes:** True — The runner reproduces all six aggregate rows and the law comparison in the source note. The note explicitly frames the result as a bounded partial improvement rather than a closure theorem.
 - **rationale:** The current runner output matches the frozen table: bridge modes give 7/16, 6/16, and 5/16 TOWARD with F~M values 0.058, 0.098, and 0.230; split-shell modes give 8/16 for all three with F~M values 0.424, 0.381, and 0.500. The LAW COMPARISON also matches and supports the note's bounded read that fixed weights help the law but do not recover a near-linear class. Residual risk is limited to the chosen split-shell family and mode definitions.
+- **auditor confidence:** high
+
+### `source_resolved_generated_support_mass_scaling_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Frozen finite-run comparison of baseline generated DAG family versus kNN-floor augmentation for seeds 0..3, four source strengths, detector N_eff, sign rows, and fitted centroid-shift exponent.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Meitner-019deb25-d511-73a2-bbc4-120e1724bce2`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** For the frozen compact generated DAG probe, the kNN-floor tweak increases mean N_eff and improves TOWARD sign rows, while the fitted centroid-shift exponent remains far from the retained linear mass-scaling class.  _(class `C`)_
+- **chain closes:** False — The runner output supports the stated finite numerical readout, but the runner has no explicit PASS/FAIL assertions and the claim relies on interpreting 'far from linear' and 'mass-scaling class' without a closed threshold or independent comparator in the provided material.
+- **rationale:** Issue: the numerical output matches the source note's partial-recovery narrative, but the decisive mass-scaling failure criterion is interpretive rather than formally asserted. Why this blocks: the runner reports exponents -0.299 and -0.152 plus support/sign changes, yet no threshold defines when the retained linear class is recovered. Repair target: add explicit acceptance/rejection bounds and executable assertions for support broadening, sign rescue, and mass-scaling failure. Claim boundary until fixed: valid only as a bounded diagnostic readout for the frozen generated-family probe, not as a closed generated-family theorem.
+- **open / conditional deps cited:**
+  - `scripts/source_resolved_generated_support_mass_scaling.py`
 - **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_basin_note`
