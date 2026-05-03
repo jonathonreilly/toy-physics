@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:50:33.994804+00:00
+**Generated:** 2026-05-03T15:56:17.506279+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 779 |
+| unaudited | 778 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 26 |
+| ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 516 |
 | ~~audited_failed~~ | 8 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 516 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
-| `audited_numerical_match` | 26 |
+| `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 825 |
+| `unaudited` | 824 |
 
 | claim_type | count |
 |---|---:|
@@ -992,6 +992,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `claude_complex_action_carryover_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_finite_lattice_numerical_replay | - |
 | `fourth_family_quadrant_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_numerical_sweep_to_retained_basin | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -2617,6 +2618,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The active map is tied to the stale Axiom* carrier-axiom narrative and should not remain in docs after the failed wrapper frame is retired.
 - **rationale:** Issue: the consequence map depends on the stale carrier-axiom wrapper frame and presents an active downstream cascade from that frame. Why this blocks: after the forced/minimal Axiom* narrative failed audit, leaving this map in active docs would keep a failed closure story available as support. Repair target: if Axiom* is later adopted or reintroduced, rebuild a new consequence map from the audited extension decision and current dependencies. Claim boundary until fixed: the 2026-04-28 map is archive-only recovery material, not an active claim note.
 - **auditor confidence:** high
+
+### `claude_complex_action_carryover_note`
+
+- **Note:** [`CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md`](../../docs/CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Narrow fixed finite-lattice carryover: at h=0.5, W=6, L=30, source strength 0.1, z_src=3.0, and stipulated S = L(1-f) + i*gamma*L*f, the current runner shows gamma=0 reduction, machine-small Born I3/P on the frozen field, and a configured gamma sweep crossing from TOWARD to AWAY between gamma=0.05 and 0.10.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-lattice-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note's retained claim rests on treating the fixed exact-lattice replay of the stipulated complex-action harness as a positive theorem-level carryover.  _(class `configured_finite_lattice_numerical_replay`)_
+- **chain closes:** False — The finite replay itself is internally checked against the current runner output, but the theorem chain does not close as a positive theorem: the instantaneous field family, complex-action ansatz, gamma parameter, lattice geometry, and detector readout are stipulated rather than derived from retained inputs.
+- **rationale:** Issue: The source note elevates a fixed finite-lattice replay of S = L(1-f) + i*gamma*L*f on one instantaneous field family into retained positive-theorem carryover. Why this blocks: The runner verifies configured numerical behavior after the action, field family, gamma sweep, and readout have been selected; it does not prove the hard bridge that these choices follow from retained CL3 inputs or constitute a structural theorem. Repair target: Provide a retained theorem deriving the complex-action form, field carrier, gamma selection/sweep rule, and detector observable from upstream primitives, plus a runner that constructs those objects rather than stipulating them. Claim boundary until fixed: It is safe to state only the bounded numerical replay: this exact finite-lattice harness, with these fixed parameters, has gamma=0 reduction, machine-small Born residuals, and the reported TOWARD-to-AWAY crossover.
+- **auditor confidence:** 0.82
 
 ### `claude_complex_action_grown_companion_note`
 

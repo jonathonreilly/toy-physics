@@ -3,9 +3,9 @@
     "critical": 60,
     "high": 215,
     "leaf": 196,
-    "medium": 337
+    "medium": 336
   },
-  "generated_at": "2026-05-03T15:50:33.540912+00:00",
+  "generated_at": "2026-05-03T15:56:16.928839+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7581,27 +7581,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "transitive_descendants": 56
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "claude_complex_action_carryover_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.807,
-      "note_path": "docs/CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/exact_lattice_complex_action_carryover.py",
-      "transitive_descendants": 55
     },
     {
       "audit_independence_required": "any_non_self",
@@ -20906,6 +20885,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 117,
-  "total_pending": 808
+  "ready_count": 116,
+  "total_pending": 807
 }
