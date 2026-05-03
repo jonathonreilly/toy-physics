@@ -1058,6 +1058,34 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "three_generation_observable_count_corollary_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "hadronic_charges_from_quark_y_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "meson_charges_from_quark_y_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "baryon_charge_integrality_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "lepton_charge_universality_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "q_integer_spectrum_theorem_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "cl3_sm_embedding_master_note"
     },
     {
@@ -14462,6 +14490,34 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "three_generation_observable_count_corollary_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hadronic_charges_from_quark_y_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "meson_charges_from_quark_y_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "baryon_charge_integrality_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "lepton_charge_universality_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "q_integer_spectrum_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "site_phase_cube_shift_intertwiner_note"
     },
     {
@@ -22597,7 +22653,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:54:41.494283+00:00",
+  "generated_at": "2026-05-03T13:58:10.846229+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25106,6 +25162,13 @@
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
         "z2_hw1_mass_matrix_parametrization_note",
+        "three_generation_observable_count_corollary_note_2026-05-03",
+        "hadronic_charges_from_quark_y_note_2026-05-02",
+        "meson_charges_from_quark_y_note_2026-05-02",
+        "baryon_charge_integrality_note_2026-05-02",
+        "lepton_charge_universality_note_2026-05-02",
+        "q_integer_spectrum_theorem_note_2026-05-02",
+        "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
         "cl3_sm_embedding_master_note",
         "cl3_sm_embedding_theorem",
         "cl3_color_automorphism_theorem",
@@ -25323,7 +25386,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "031cf5099fe14ab680af8b4d111202148041c8b604cd2812b5feeb3494a9ab16",
+      "note_hash": "d7f47b166f9867d2ba71c21435c448f3fc6899aade40cf05b61b42eef34de6e8",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -39896,6 +39959,13 @@
         "three_generation_structure_note",
         "staggered_dirac_realization_gate_note_2026-05-03",
         "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
+        "three_generation_observable_count_corollary_note_2026-05-03",
+        "hadronic_charges_from_quark_y_note_2026-05-02",
+        "meson_charges_from_quark_y_note_2026-05-02",
+        "baryon_charge_integrality_note_2026-05-02",
+        "lepton_charge_universality_note_2026-05-02",
+        "q_integer_spectrum_theorem_note_2026-05-02",
+        "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
@@ -40339,7 +40409,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "9b53d66850f23166f26e0a3fb6bcb8db71567ddb818d3adbd8167f56b8833cbf",
+      "note_hash": "ac015987dead3dc49512e74c52dc14c69e76beee1699472683635e066a5b1080",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50433,8 +50503,8 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5649,
-    "leaf_count": 640,
+    "edge_count": 5663,
+    "leaf_count": 633,
     "node_count": 1847,
     "root_count": 1047,
     "runners_with_path": 1410
