@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:53:56.352070+00:00
+**Generated:** 2026-05-03T17:57:34.587006+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 756 |
+| unaudited | 755 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 531 |
+| ~~audited_conditional~~ | 532 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 531 |
+| `audited_conditional` | 532 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 802 |
+| `unaudited` | 801 |
 
 | claim_type | count |
 |---|---:|
@@ -627,6 +627,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_propagating_field_radical_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gate_b_poisson_self_gravity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
@@ -6138,6 +6139,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** On the selected least-positive-bulk Wilson branch, the retained `3d+1` complement-line problem is solved on the bounded positive-angle chart by an audited exact target equation whose isolated solution set contains exactly two nondegenerate retained-line roots.  _(class `C`)_
 - **chain closes:** False — The runner finds two nondegenerate numerical roots with small residuals, but the presented chain does not certify that the bounded chart has no additional roots. The exact equation, target, and selected branch are also imported by code rather than supplied as retained cited inputs in the note.
 - **rationale:** Issue: The theorem-level step is the assertion that the bounded chart solution set contains exactly two roots, but the runner uses a finite seeded least-squares search and then counts the roots it found. Why this blocks: small residuals and nonsingular local Jacobians certify two local solutions, not global exhaustiveness of the bounded positive-angle chart or the retained status of the imported target/branch definitions. Repair target: provide a retained derivation of the selected target equation and branch plus an interval, subdivision, symbolic elimination, degree/counting, or otherwise rigorous global root-exclusion certificate for the bounded chart. Claim boundary until fixed: the runner supports that its finite seed search finds two distinct nondegenerate target-hitting numerical roots with residuals below 1e-10.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_RHO1_LEAST_DISTORTION_SELECTOR_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_RHO1_LEAST_DISTORTION_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given the runner-produced exact rho1/rho2 target-hitting doublet, the note verifies that a stipulated rho1-reference least-projection-distortion key uniquely selects one member, with the stated boundary-anchor tie-breaker agreeing and the selected member still hitting the imported live DM target.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** choose the member of the exact `rho1/rho2` orientation doublet with least projector-Frobenius distortion to the `rho1` reference slice, breaking any tie by the smallest loss of the preferred `(1,0)` boundary anchor.  _(class `E`)_
+- **chain closes:** False — The runner closes the finite minimization over the solved two-line set, but the note explicitly stipulates the least-distortion selector as the canonicity law and leaves why that selector is physically forced to a separate limits note. Thus the bounded algebra closes only after importing the selector premise.
+- **rationale:** Issue: the load-bearing selector is introduced as the canonicity law rather than derived from retained inputs; the note itself says the deeper question of why this least-distortion selector should be physically forced is left to a separate limits note. Why this blocks: a hostile reviewer can accept the runner's finite minimization while rejecting the claim that the selected branch is physically canonical, because the physical selection principle is an external premise. Repair target: provide a retained theorem deriving the rho1-reference projection-Frobenius selector and boundary-anchor tie-breaker from the allowed bulk/boundary structure, with a runner that constructs the selector rather than stipulating it. Claim boundary until fixed: the safe statement is that, conditional on this stipulated selector and the imported exact-solve doublet, line 0 is the unique least-distortion member and still hits the imported target.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20`
