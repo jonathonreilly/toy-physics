@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T03:07:49.218930+00:00
+**Generated:** 2026-05-03T03:11:33.724772+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -669,7 +669,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dimensional_gravity_table` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_decoherence_probe_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_field_smoothing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `dirac_source_smoothing_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_v4_convergence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_weak_coupling_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4009,15 +4009,13 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 - **Note:** [`DIRAC_OBSERVABLE_PANEL_NOTE.md`](../../docs/DIRAC_OBSERVABLE_PANEL_NOTE.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Audited only the bounded claim that the Dirac 3+1D v3 observable panel provides a concrete multi-readout bottleneck test for sign alignment and readout disagreement, supported by the retained core-card dependency and the supplied runner output.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** from each other before they become a paper-level claim.  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (dirac_core_card_note=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (dirac_core_card_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `DIRAC_CORE_CARD_NOTE.md`
+- **auditor:** `fresh-agent-epicurus-3rd-019debd0-070a-71a3-81ef-60b516ca56cc`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The panel is supposed to compare centroid shift, peak shift, first-arrival layer, early mass-side accumulation, projected current, and shell imbalance on the same v3 harness to test whether gravity-readout signs align at a clean operating point.  _(class `C`)_
+- **chain closes:** False — The dependency now closes for retained bounded core results, including multi-observable gravity under primary readouts, but the supplied runner output does not report the observable-panel-specific readouts listed in this note. The missing step is a panel run or retained summary tying centroid, peak, first-arrival, early accumulation, current, and shell imbalance to the stated default sweep and sign-alignment questions.
+- **rationale:** Issue: the runner output is a mixed KG/convergence/AB harness summary, not the declared multi-readout observable panel result. Why this blocks: audited_clean would require the bounded panel computation to close on the named readouts without substituting a broader core-card closure or KG/AB successes for the panel-specific claim. Repair target: provide the actual panel output for the stated default sweep, including sign agreement/disagreement by readout and recurrence-window interpretation. Claim boundary until fixed: retained only as a conditional implementation-target note connected to the retained core card, not as a clean standalone observable-panel theorem.
 - **auditor confidence:** high
 
 ### `dirac_source_smoothing_note`
