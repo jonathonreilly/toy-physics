@@ -269,6 +269,9 @@ def main() -> int:
         "canonical_higgs_operator_realization_gate": load(
             "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json"
         ),
+        "canonical_higgs_repo_authority_audit": load(
+            "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json"
+        ),
         "hunit_canonical_higgs_operator_candidate_gate": load(
             "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json"
         ),
@@ -1020,6 +1023,15 @@ def main() -> int:
         "canonical-Higgs operator realization gate not passed"
         in str(statuses["canonical_higgs_operator_realization_gate"]),
         statuses["canonical_higgs_operator_realization_gate"],
+    )
+    report(
+        "canonical-higgs-repo-authority-audit-blocks-hidden-oh",
+        "repo-wide canonical-Higgs O_H authority audit"
+        in str(statuses["canonical_higgs_repo_authority_audit"])
+        and certificates["canonical_higgs_repo_authority_audit"].get("proposal_allowed") is False
+        and certificates["canonical_higgs_repo_authority_audit"].get("repo_authority_found") is False
+        and certificates["canonical_higgs_repo_authority_audit"].get("exact_negative_boundary_passed") is True,
+        statuses["canonical_higgs_repo_authority_audit"],
     )
     candidate_stress = certificates["canonical_higgs_operator_candidate_stress"]
     report(

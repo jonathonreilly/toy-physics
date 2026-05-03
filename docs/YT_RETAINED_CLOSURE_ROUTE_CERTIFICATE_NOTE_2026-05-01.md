@@ -18,8 +18,27 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=130 FAIL=0
+# SUMMARY: PASS=131 FAIL=0
 ```
+
+## 2026-05-03 Canonical-Higgs Repo Authority Audit Update
+
+The retained-route certificate now consumes
+`outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json`.
+This answers the existing-work question for the current `O_H` blocker: no
+repo surface already supplies the same-surface canonical-Higgs radial operator
+identity and normalization certificate needed by PR #230.
+
+The audit classifies the Higgs/taste/EW stack as useful support only: those
+notes either assume canonical `H` after it is supplied, propagate Higgs-sector
+consequences, or inherit YT residuals.  The `H_unit` route remains blocked by
+the audited-renaming verdict, and the Legendre/LSZ source-pole operator is the
+normalized source side of a future overlap test, not a proof that
+`O_sp = O_H`.
+
+No retained or `proposed_retained` closure is authorized.  The live positive
+target remains either a same-surface `O_H` identity/normalization theorem or
+production `C_sH/C_HH` pole-residue rows passing Gram purity.
 
 ## 2026-05-03 Legacy Schur Bridge Import Audit Update
 

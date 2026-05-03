@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 canonical-Higgs repo authority audit wiring:
+
+- Wired `outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json`
+  into the retained-route and campaign status certificates.
+- Updated the existing repo-wide audit runner to emit explicit
+  `repo_authority_audit_passed` / `exact_negative_boundary_passed` flags.
+- Result: exact negative boundary.  No existing Higgs/taste/EW/source/Ward
+  surface supplies the PR #230 same-surface canonical-Higgs `O_H`
+  identity/normalization certificate.  `H_unit` remains forbidden by the
+  audited-renaming verdict; `O_sp` is source-pole support only and does not
+  prove `O_sp = O_H`.
+- Verification: repo-authority audit `PASS=13 FAIL=0`; retained-route
+  `PASS=131 FAIL=0`; campaign status `PASS=157 FAIL=0`.
+
+Next exact action: stop searching for an existing hidden `O_H` import unless a
+new artifact appears.  Pursue a new same-surface `O_H` identity,
+source-Higgs `C_sH/C_HH` pole rows passing Gram purity, same-source W/Z
+response rows with identity certificates, or honest production evidence.
+
 Latest checkpoint, 2026-05-03 legacy Schur bridge import audit:
 
 - Added `scripts/frontier_yt_legacy_schur_bridge_import_audit.py`,

@@ -574,6 +574,7 @@
       "usable_as_pr230_oh_certificate": false
     }
   ],
+  "exact_negative_boundary_passed": true,
   "exact_next_action": "Derive a same-surface canonical-Higgs operator identity and normalization certificate from the Cl(3)/Z3 substrate, or run source-Higgs C_sH/C_HH pole-residue production and pass Gram purity.",
   "fail_count": 0,
   "pass_count": 13,
@@ -586,8 +587,9 @@
   ],
   "proposal_allowed": false,
   "proposal_allowed_reason": "No existing repo surface satisfies the canonical-Higgs O_H certificate schema.",
+  "repo_authority_audit_passed": true,
   "repo_authority_found": false,
-  "repo_keyword_hit_count": 437,
+  "repo_keyword_hit_count": 473,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not promote Higgs/taste support to O_H authority",

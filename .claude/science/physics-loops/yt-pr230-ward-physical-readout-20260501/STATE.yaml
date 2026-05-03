@@ -13,11 +13,25 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-183-legacy-schur-bridge-import-audit
-blocks_completed: 183
-active_route: "legacy Schur bridge import audit for PR230 physical-readout closure"
-active_hard_residual: "Legacy Schur bridge import audit is an exact negative boundary, not closure. Runner PASS=13 FAIL=0; retained-route PASS=130 FAIL=0; campaign status PASS=156 FAIL=0. Existing Schur normal-form/stability/microscopic-admissibility work is bounded/conditional support for the older UV-transport bridge and uses the legacy alpha_LM / plaquette / y_t=g3/sqrt(6) surface; it supplies no PR230 Schur A/B/C rows, D_eff'(pole), certified O_H/C_sH/C_HH, or same-source W/Z response rows. Positive closure still requires actual row evidence or a same-surface theorem producing those rows. No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-184-canonical-higgs-repo-authority-audit-wiring
+blocks_completed: 184
+active_route: "repo-wide canonical-Higgs O_H authority audit wired into PR230 closure gates"
+active_hard_residual: "Canonical-Higgs repo authority audit is an exact negative boundary, not closure. Runner PASS=13 FAIL=0; retained-route PASS=131 FAIL=0; campaign status PASS=157 FAIL=0. No existing repo surface supplies the PR230 same-surface canonical-Higgs O_H identity/normalization certificate. Higgs/taste/EW artifacts remain support or downstream dictionaries; H_unit remains forbidden; O_sp is normalized source-pole support only and does not prove O_sp=O_H. Positive closure still requires a same-surface O_H theorem, source-Higgs C_sH/C_HH pole rows passing Gram purity, same-source W/Z response rows with identity certificates, or honest production evidence. No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_canonical_higgs_repo_authority_audit.py"
+  - "docs/YT_CANONICAL_HIGGS_REPO_AUTHORITY_AUDIT_NOTE_2026-05-03.md"
+  - "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_legacy_schur_bridge_import_audit.py"
   - "docs/YT_LEGACY_SCHUR_BRIDGE_IMPORT_AUDIT_NOTE_2026-05-03.md"
   - "outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json"

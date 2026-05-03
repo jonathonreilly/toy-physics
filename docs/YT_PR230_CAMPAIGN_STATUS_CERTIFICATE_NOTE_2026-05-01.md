@@ -26,8 +26,25 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=156 FAIL=0
+# SUMMARY: PASS=157 FAIL=0
 ```
+
+## 2026-05-03 Canonical-Higgs Repo Authority Audit Update
+
+The campaign status certificate now consumes the repo-wide canonical-Higgs
+authority audit.  This closes the “maybe the auditor missed an existing
+`O_H` proof” branch of the physics-loop queue.
+
+The audit passes with `PASS=13 FAIL=0` and finds no existing same-surface
+canonical-Higgs `O_H` certificate for PR #230.  The current Higgs/taste/EW
+artifacts remain support or downstream dictionaries; `H_unit` remains
+forbidden as a load-bearing shortcut; and the Legendre source-pole operator
+does not prove `O_sp = O_H`.
+
+The retained boundary is unchanged.  PR #230 still needs a new same-surface
+`O_H` identity/normalization certificate, source-Higgs `C_sH/C_HH` pole rows
+passing Gram purity, same-source W/Z response rows with identity certificates,
+or enough production evidence to honestly close or fail the measurement lane.
 
 ## 2026-05-03 Legacy Schur Bridge Import Audit Update
 

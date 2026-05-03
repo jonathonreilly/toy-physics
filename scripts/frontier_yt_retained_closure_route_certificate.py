@@ -155,6 +155,7 @@ def main() -> int:
         "source_higgs_gram_purity_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
         "canonical_higgs_operator_candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+        "canonical_higgs_repo_authority_audit": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
         "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
         "source_higgs_unratified_operator_smoke": "outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json",
@@ -924,6 +925,20 @@ def main() -> int:
         )
         is False
     )
+    canonical_higgs_repo_authority_audit_blocks_hidden_oh = (
+        "repo-wide canonical-Higgs O_H authority audit"
+        in certificates["canonical_higgs_repo_authority_audit"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["canonical_higgs_repo_authority_audit"].get("proposal_allowed")
+        is False
+        and certificates["canonical_higgs_repo_authority_audit"].get("repo_authority_found")
+        is False
+        and certificates["canonical_higgs_repo_authority_audit"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+    )
     canonical_higgs_operator_candidate_stress_blocks = (
         "canonical-Higgs operator candidate stress rejects current substitutes"
         in certificates["canonical_higgs_operator_candidate_stress"].get(
@@ -1662,6 +1677,11 @@ def main() -> int:
         "canonical-higgs-operator-realization-gate-blocks",
         canonical_higgs_operator_realization_gate_blocks,
         certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "canonical-higgs-repo-authority-audit-blocks-hidden-oh",
+        canonical_higgs_repo_authority_audit_blocks_hidden_oh,
+        certificates["canonical_higgs_repo_authority_audit"].get("actual_current_surface_status", ""),
     )
     report(
         "canonical-higgs-operator-candidate-stress-blocks",

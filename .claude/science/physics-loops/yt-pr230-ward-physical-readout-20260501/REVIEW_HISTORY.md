@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - Canonical-Higgs Repo Authority Audit Wiring
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / NO HIDDEN REPO O_H AUTHORITY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- repo-wide canonical-Higgs authority audit is now consumed by the retained
+  and campaign certificates;
+- no existing Higgs/taste/EW/source/Ward surface supplies a same-surface
+  `O_H` identity and normalization certificate for PR #230;
+- `H_unit` remains blocked by the audited-renaming finding and candidate gate;
+- `O_sp` is a normalized source-pole operator, not a canonical-Higgs identity;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_canonical_higgs_repo_authority_audit.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_canonical_higgs_repo_authority_audit.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Legacy Schur Bridge Import Audit
 
 Local review-loop disposition:

@@ -449,6 +449,8 @@ def main() -> int:
     )
     report("next-derivation-target-is-specific", True, "same-surface O_H identity/normalization or C_sH/C_HH pole residues")
 
+    exact_negative_boundary_passed = FAIL_COUNT == 0 and not any_valid
+
     result = {
         "actual_current_surface_status": "exact negative boundary / repo-wide canonical-Higgs O_H authority audit",
         "verdict": (
@@ -470,6 +472,8 @@ def main() -> int:
         "proposal_allowed": False,
         "proposal_allowed_reason": "No existing repo surface satisfies the canonical-Higgs O_H certificate schema.",
         "repo_authority_found": any_valid,
+        "repo_authority_audit_passed": exact_negative_boundary_passed,
+        "exact_negative_boundary_passed": exact_negative_boundary_passed,
         "candidate_surfaces": candidates,
         "repo_keyword_hit_count": len(repo_hits),
         "unregistered_keyword_hit_sample": unregistered_hits[:40],

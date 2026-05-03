@@ -1,5 +1,31 @@
 # Claim Status Certificate
 
+Canonical-Higgs repo authority audit:
+
+```text
+actual_current_surface_status: exact negative boundary / repo-wide canonical-Higgs O_H authority audit
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_canonical_higgs_repo_authority_audit.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=131 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=157 FAIL=0
+```
+
+The repo-wide audit finds no existing same-surface canonical-Higgs radial
+operator certificate that can close PR #230.  Higgs/taste/EW notes are support
+or downstream dictionaries, `H_unit` remains the forbidden audited-renaming
+shortcut, and the Legendre/LSZ `O_sp` construction remains source-side support
+only.  The positive closure target is still a derived `O_H` identity, measured
+`C_sH/C_HH` pole rows passing Gram purity, same-source W/Z response rows with
+identity certificates, or honest production evidence.  No retained or
+`proposed_retained` wording is authorized.
+
 Legacy Schur bridge import audit:
 
 ```text

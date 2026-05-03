@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-03 update: the repo-wide canonical-Higgs `O_H` authority audit is now
+wired into the retained-route and campaign gates.  It finds no hidden
+same-surface `O_H` proof in the Higgs/taste/EW/Ward/source surfaces.  EW and
+SM one-Higgs notes are dictionaries after canonical `H` is supplied; Higgs
+mass/mechanism notes inherit YT or bounded upstreams; taste isotropy does not
+select the PR230 scalar source direction; `H_unit` remains forbidden; and the
+Legendre/LSZ `O_sp` operator does not prove `O_sp = O_H`.  Do not spend more
+loop time looking for a repo import unless a new artifact appears.  Highest
+ranked actions remain a genuine same-surface `O_H` identity, production
+`C_sH/C_HH` pole rows passing Gram purity, same-source W/Z response rows with
+identity certificates, or the production measurement lane.
+
 2026-05-03 update: the legacy Schur bridge import audit is now landed.  The
 older Schur normal-form / stability / microscopic-admissibility stack is not a
 hidden PR #230 closure proof: it is bounded/conditional support for the older
