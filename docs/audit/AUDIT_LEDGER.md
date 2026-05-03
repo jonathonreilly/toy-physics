@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:19:15.709700+00:00
+**Generated:** 2026-05-03T13:23:28.325637+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 735 |
+| unaudited | 734 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 519 |
+| ~~audited_conditional~~ | 520 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,22 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 346 |
-| `audited_conditional` | 519 |
+| `audited_conditional` | 520 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 777 |
+| `unaudited` | 776 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 553 |
+| `bounded_theorem` | 554 |
 | `decoration` | 8 |
 | `meta` | 43 |
 | `no_go` | 161 |
 | `open_gate` | 88 |
-| `positive_theorem` | 887 |
-| `unset` | 4 |
+| `positive_theorem` | 890 |
 
 | criticality | count |
 |---|---:|
@@ -79,30 +78,30 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 385 | 33.09 | `audited_clean` | **retained_bounded** |
-| 2 | `alpha_s_derived_note` | bounded_theorem | critical | 258 | 33.02 | `unaudited` | unaudited |
-| 3 | `minimal_axioms_2026-04-11` | meta | critical | 325 | 31.35 | `unaudited` | meta |
-| 4 | `observable_principle_from_axiom_note` | positive_theorem | critical | 209 | 30.71 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 192 | 30.09 | `unaudited` | unaudited |
-| 6 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 127 | 29.50 | `unaudited` | unaudited |
-| 7 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.01 | `unaudited` | unaudited |
-| 8 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 223 | 28.81 | `unaudited` | unaudited |
-| 9 | `left_handed_charge_matching_note` | decoration | critical | 311 | 26.79 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
-| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 375 | 26.55 | `audited_clean` | **retained_bounded** |
-| 11 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 285 | 26.16 | `unaudited` | unaudited |
-| 12 | `one_generation_matter_closure_note` | positive_theorem | critical | 241 | 25.92 | `unaudited` | unaudited |
-| 13 | `three_generation_structure_note` | positive_theorem | critical | 203 | 25.67 | `audited_clean` | **retained** |
-| 14 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
-| 15 | `plaquette_self_consistency_note` | bounded_theorem | critical | 266 | 22.56 | `unaudited` | unaudited |
-| 16 | `three_generation_observable_theorem_note` | positive_theorem | critical | 132 | 21.55 | `audited_clean` | **retained** |
-| 17 | `cpt_exact_note` | positive_theorem | critical | 291 | 21.19 | `unaudited` | unaudited |
-| 18 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 287 | 21.17 | `audited_conditional` | ~~audited_conditional~~ |
-| 19 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 124 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 19.70 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 140 | 19.64 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 139 | 19.63 | `audited_conditional` | ~~audited_conditional~~ |
-| 23 | `dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16` | positive_theorem | critical | 135 | 19.59 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `physical_lattice_necessity_note` | no_go | critical | 290 | 19.18 | `audited_clean` | **retained_no_go** |
-| 25 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 139 | 19.13 | `audited_clean` | **retained** |
+| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 127 | 29.50 | `unaudited` | unaudited |
+| 3 | `alpha_s_derived_note` | bounded_theorem | critical | 258 | 29.02 | `unaudited` | unaudited |
+| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.01 | `unaudited` | unaudited |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 325 | 27.35 | `unaudited` | meta |
+| 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 209 | 26.71 | `audited_conditional` | ~~audited_conditional~~ |
+| 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 192 | 26.09 | `unaudited` | unaudited |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 375 | 25.55 | `audited_clean` | **retained_bounded** |
+| 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 223 | 24.81 | `unaudited` | unaudited |
+| 10 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `left_handed_charge_matching_note` | decoration | critical | 311 | 22.79 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 285 | 22.16 | `unaudited` | unaudited |
+| 13 | `one_generation_matter_closure_note` | positive_theorem | critical | 241 | 21.92 | `unaudited` | unaudited |
+| 14 | `three_generation_structure_note` | positive_theorem | critical | 203 | 21.67 | `audited_clean` | **retained** |
+| 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 132 | 21.55 | `audited_clean` | **retained** |
+| 16 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 124 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
+| 17 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 19.70 | `audited_conditional` | ~~audited_conditional~~ |
+| 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 139 | 19.13 | `audited_clean` | **retained** |
+| 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 266 | 18.56 | `unaudited` | unaudited |
+| 20 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 69 | 17.63 | `unaudited` | unaudited |
+| 21 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 84 | 17.41 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `cpt_exact_note` | positive_theorem | critical | 291 | 17.19 | `unaudited` | unaudited |
+| 23 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | critical | 288 | 17.18 | `audited_clean` | **retained_no_go** |
+| 24 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 287 | 17.17 | `audited_conditional` | ~~audited_conditional~~ |
+| 25 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 134 | 17.08 | `audited_clean` | **retained** |
 
 
 ## Applied audits
@@ -662,6 +661,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6185,6 +6185,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The explicit witness pair satisfies the scoped hypotheses and has exact delta beta_eff(6)=0.0046656 with positive delta P, so the stated inputs cannot force a unique framework-point value.
 - **rationale:** Clean as a scoped no-go obstruction, not as analytic closure of canonical P(6). The runner confirms 5 theorem checks and 2 support checks with no failures; the load-bearing step is algebraic counterexample construction rather than support-class propagation. The safe conclusion is that the current onset jet plus analyticity/monotonicity does not force beta_eff(6) or analytic P(6).
 - **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** After trivial-channel normalization, the Wilson mixed-kernel compression on the marked-plaquette character sector equals the four marked-link factor a_(p,q)(beta)^4, excluding residual source-sector environment data and P(6) closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-agent-20260503-gvplftn`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** After the temporal-gauge mixed-kernel factorization and accepted Wilson 3+1 marked-plaquette source surface are granted, trivial-channel normalization makes the mixed-kernel compression on the marked plaquette character sector D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
+- **chain closes:** False — The internal representation-theoretic algebra closes only after the mixed-kernel factorization and marked-surface geometry are assumed. The restricted packet does not prove those premises, so the theorem remains conditional.
+- **rationale:** Issue: the note's algebraic factorization depends on asserted inputs that are not proved inside the restricted packet, especially exact temporal-gauge mixed-kernel factorization over spatial links and the accepted Wilson 3+1 source surface with exactly four marked mixed links. Why this blocks: the bounded conclusion follows only after those operator/surface premises are granted, and the runner constructs diag(a_link^4) and c00/c00 rather than deriving the mixed-kernel compression from the underlying link operator. Repair target: supply retained one-hop theorem inputs or an expanded proof/runner that constructs the mixed kernel on the marked plaquette sector and verifies non-marked-link scalar collapse without hard-coding the contested compression. Claim boundary until fixed: conditional on the accepted source-surface and link-factorization premises, the local algebra supports the normalized a_(p,q)^4 factor and does not address residual environment data or P(6).
+- **auditor confidence:** medium
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
 
