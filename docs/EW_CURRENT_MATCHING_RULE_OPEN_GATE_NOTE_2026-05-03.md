@@ -1,9 +1,9 @@
-# EW Current Matching Rule No-Go Closure Note
+# EW Current Matching Rule No-Go Proposal Note
 
 **Date:** 2026-05-03
-**Type:** no_go
-**Status:** proposed_retained no-go closure of the former open gate. The
-retained Fierz/channel-count theorem fixes the exact adjoint fraction
+**Claim type:** no_go
+**Status:** no-go proposal for independent audit-lane review. The retained
+Fierz/channel-count theorem fixes the exact adjoint fraction
 `F_adj = (N_c^2 - 1) / N_c^2 = 8/9` at `N_c = 3`, but the current retained
 framework primitives do not fix the physical EW readout functional that
 weights the singlet/disconnected current after CMT factorization.
@@ -179,9 +179,10 @@ retained primitives alone. A future positive theorem would need to add an
 actual lattice-current selector argument that fixes `kappa_EW = 0`, or an
 exact disconnected-current computation that fixes the same value.
 
-## Consequences
+## Proposed Consequences
 
-The former open gate is closed negatively:
+If ratified by the independent audit lane, this would close the former open
+gate negatively:
 
 - exact Fierz/channel-count arithmetic remains retained-bounded support for
   `F_adj = 8/9`;
@@ -212,3 +213,9 @@ PYTHONPATH=scripts python3 scripts/frontier_ew_current_matching_rule_no_go.py
 The runner verifies the exact rational arithmetic, the CMT invariance of the
 free coefficient, the OZI boundedness class, the two-completion independence
 witness, and the direct downstream wording guardrails.
+
+## Audit-Lane Status
+
+This review-loop pass does not apply an audit verdict. The note should seed
+as `claim_type=no_go` and remain `unaudited` until a fresh independent audit
+ratifies or rejects the proposal.

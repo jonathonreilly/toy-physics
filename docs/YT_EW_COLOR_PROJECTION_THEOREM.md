@@ -24,7 +24,7 @@ EW readout coefficient is conditional on the disconnected-current coefficient
   dynamical-correction sibling of the Fierz route, not a one-hop authority
   for the exact coefficient.
 - [EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md](EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md)
-  — retained no-go closure for the load-bearing **matching route**. It proves
+  — no-go proposal for the load-bearing **matching route**. It argues
   that the current retained Fierz/CMT/OZI packet underdetermines the physical
   EW readout and must be parameterized by `kappa_EW`; the package-level
   `9/8` coefficient is the special case `kappa_EW = 0`, not an unconditional

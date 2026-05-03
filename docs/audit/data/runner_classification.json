@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:34:31.629331+00:00",
+  "generated_at": "2026-05-03T16:06:00.124058+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -5544,6 +5544,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_color_projection_mc.py"
+    },
+    "ew_current_matching_rule_open_gate_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_ew_current_matching_rule_no_go.py"
     },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "assert_count": 1,
@@ -24193,6 +24205,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_ew_current_matching_rule_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "ew_current_matching_rule_open_gate_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py": {
       "assert_count": 1,
       "claims": [
@@ -37344,15 +37371,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 112,
+    "decoration_candidates": 113,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 160,
+      "B": 161,
       "C": 545,
       "D": 205,
       "none": 421
     },
-    "runners_classified": 1341,
+    "runners_classified": 1342,
     "runners_with_C": 651,
     "runners_with_D": 331
   }
