@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 201,
-    "medium": 303
+    "medium": 302
   },
-  "generated_at": "2026-05-03T18:05:20.134950+00:00",
+  "generated_at": "2026-05-03T18:07:52.026937+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7596,27 +7596,6 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.992,
-      "note_path": "docs/AFFINE_IMAGINARY_SLOT_INVARIANCE_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_affine_imaginary_slot_invariance_narrow.py",
       "transitive_descendants": 44
     },
     {
@@ -20256,6 +20235,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 86,
-  "total_pending": 777
+  "ready_count": 85,
+  "total_pending": 776
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:05:20.529661+00:00
+**Generated:** 2026-05-03T18:07:52.896653+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 76 |
+| **retained** | 77 |
 | **retained_no_go** | 101 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 748 |
+| unaudited | 747 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 315 |
+| `audited_clean` | 316 |
 | `audited_conditional` | 535 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 794 |
+| `unaudited` | 793 |
 
 | claim_type | count |
 |---|---:|
@@ -108,6 +108,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
+| `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
@@ -1159,6 +1160,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`AFFINE_IMAGINARY_SLOT_INVARIANCE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/AFFINE_IMAGINARY_SLOT_INVARIANCE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Pure Hermitian 3x3 matrix algebra: the explicit real symmetric generators T_m, T_delta, and T_q are linearly independent, give Tr(H)=Tr(H_base)+m, and leave every imaginary entry of H_base unchanged under real affine parameters.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-current-fresh-context-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Since T_m, T_delta, T_q are all real, Im(T_m_ij)=Im(T_delta_ij)=Im(T_q_ij)=0 for all entries, hence Im(H_ij)=Im(H_base_ij).  _(class `A`)_
+- **chain closes:** True — The note has no cited dependencies and the conclusions follow directly from the displayed matrices and real affine parameters. The framework instance is only a specialization of the same algebra, not a physical source-surface identification.
+- **rationale:** The load-bearing step is exact linear algebra: adding real matrices with real coefficients cannot change entrywise imaginary parts, and the trace and rank claims are directly checked from the explicit matrices. The runner independently verifies all stated algebraic claims at exact symbolic precision with PASS=23 and FAIL=0. No hidden physics bridge, comparator, fitted selector, or upstream dependency is needed for the scoped narrow theorem.
 - **auditor confidence:** high
 
 ### `ai_methodology.raw.prompts_session_04c820e1`
