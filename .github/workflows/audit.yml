@@ -115,11 +115,20 @@ jobs:
             msg="audit: workflow_dispatch pipeline refresh (automated) [skip ci]"
           fi
           git commit -m "$msg"
-          git push
+          # Race-condition safety: main may have moved while pipeline ran;
+          # rebase + retry once before giving up.
+          for attempt in 1 2 3; do
+            if git push; then
+              break
+            fi
+            echo "Push attempt $attempt failed; refetching and rebasing..."
+            git fetch origin main
+            git rebase origin/main || { echo "Rebase failed; aborting auto-commit"; exit 1; }
+          done
 
       - name: Upload audit queue artifact
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: audit-queue-${{ github.run_id }}
           path: |
