@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:57:34.587006+00:00
+**Generated:** 2026-05-03T17:58:38.410655+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 755 |
+| unaudited | 754 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 532 |
+| ~~audited_conditional~~ | 533 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 532 |
+| `audited_conditional` | 533 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 801 |
+| `unaudited` | 800 |
 
 | claim_type | count |
 |---|---:|
@@ -628,6 +628,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_poisson_self_gravity_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
@@ -6152,6 +6153,22 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** choose the member of the exact `rho1/rho2` orientation doublet with least projector-Frobenius distortion to the `rho1` reference slice, breaking any tie by the smallest loss of the preferred `(1,0)` boundary anchor.  _(class `E`)_
 - **chain closes:** False — The runner closes the finite minimization over the solved two-line set, but the note explicitly stipulates the least-distortion selector as the canonicity law and leaves why that selector is physically forced to a separate limits note. Thus the bounded algebra closes only after importing the selector premise.
 - **rationale:** Issue: the load-bearing selector is introduced as the canonicity law rather than derived from retained inputs; the note itself says the deeper question of why this least-distortion selector should be physically forced is left to a separate limits note. Why this blocks: a hostile reviewer can accept the runner's finite minimization while rejecting the claim that the selected branch is physically canonical, because the physical selection principle is an external premise. Repair target: provide a retained theorem deriving the rho1-reference projection-Frobenius selector and boundary-anchor tie-breaker from the allowed bulk/boundary structure, with a runner that constructs the selector rather than stipulating it. Claim boundary until fixed: the safe statement is that, conditional on this stipulated selector and the imported exact-solve doublet, line 0 is the unique least-distortion member and still hits the imported target.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_RHO1_ORIENTATION_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_RHO1_ORIENTATION_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given the imported solved retained-line doublet and helper-defined boundary/rho reference geometry, the runner verifies that one member is closer to the rho1 slice and loses much less of the preferred (1,0) slot while the mirror member is rho2-oriented.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** One member loses far less of the preferred `(1,0)` boundary slot and is closer, in projector Frobenius distance, to the corresponding `rho1` reference slice; the other is the mirror `rho2`-anchored member.  _(class `A`)_
+- **chain closes:** False — The primary runner verifies the stated inequalities after importing the solved doublet and helper-defined boundary/rho geometry, but the note has no cited retained authority for those imported inputs, the selected Wilson branch, or the rho1 preference. The orientation split is therefore conditional on uncited upstream constructions.
+- **rationale:** Issue: The note's load-bearing orientation claim relies on `solved_target_hitting_lines()`, `BOUNDARY_FIRST_WEIGHTS`, and rho1/rho2 projector definitions imported by the runner, but the source note lists no retained upstream theorem closing the exact doublet, selected Wilson branch, or preferred rho1 boundary orientation. Why this blocks: The runner output shows the inequalities for those imported objects, but a hostile reviewer can reject retained status because the physical/structural selection inputs are assumed rather than audited from cited authorities. Repair target: Add explicit cited retained dependencies, or a self-contained runner proof, deriving the exact retained-line doublet, boundary-first order, rho reference slices, and Wilson-side rho1 preference before applying the inequality checks. Claim boundary until fixed: It is safe to say that the current runner, using its imported solver/helper inputs, orders the two computed lines into asymmetric rho1/rho2-oriented members.
+- **open / conditional deps cited:**
+  - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py`
+  - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19.py`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20`
