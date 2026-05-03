@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:45:45.558078+00:00
+**Generated:** 2026-05-03T18:48:36.163407+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 722 |
+| unaudited | 723 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
-| ~~audited_renaming~~ | 23 |
+| ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 544 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
-| `audited_renaming` | 23 |
-| `unaudited` | 768 |
+| `audited_renaming` | 22 |
+| `unaudited` | 769 |
 
 | claim_type | count |
 |---|---:|
@@ -55,10 +55,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 113 |
+| `critical` | 115 |
 | `high` | 365 |
 | `medium` | 583 |
-| `leaf` | 699 |
+| `leaf` | 697 |
 
 - **Retained pending chain closure:** 3
 - **Citation cycles detected:** 42
@@ -1080,7 +1080,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
-| `g_bare_derivation_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -6003,19 +6002,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Given g_bare := 1, N_c = 3, and beta = 2 N_c / g_bare^2, beta = 2 * 3 / 1 = 6; with F^lattice = (1/g_bare) Omega^Cl(3), at g_bare = 1 F^lattice = Omega^Cl(3).  _(class `A`)_
 - **chain closes:** False — The arithmetic closes once the Wilson beta relation and the Cl(3)-to-lattice curvature normalization are assumed, and the cited graph-first SU(3) dependency is retained_bounded. The restricted one-hop packet does not derive or cite the Wilson beta relation or the physical bridge identifying lattice field strength with Cl(3) curvature, so the full theorem is conditional on those admitted normalization premises.
 - **rationale:** Issue: The note's beta=6 and F^lattice=Omega^Cl(3) conclusions require the Wilson beta relation and the Cl(3)-to-lattice curvature normalization as admitted premises rather than deriving them from the retained graph-first SU(3) dependency. Why this blocks: A hostile reviewer can accept the arithmetic while rejecting retained theorem status because the physical normalization bridge is imported, not closed by the allowed authority. Repair target: Add a retained-grade theorem or cited retained dependency deriving the Wilson action normalization and the Cl(3) curvature-to-lattice-field map under the stated convention, with a runner that constructs that bridge rather than text-checking it. Claim boundary until fixed: It is safe to state the conditional algebraic corollary: if standard Wilson beta/curvature normalization is assumed and g_bare=1 is chosen as convention, then beta=6 and the rescaling factor is 1.
-- **auditor confidence:** high
-
-### `g_bare_derivation_note`
-
-- **Note:** [`G_BARE_DERIVATION_NOTE.md`](../../docs/G_BARE_DERIVATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** The claim that g_bare = 1 is uniquely forced by Cl(3) generator normalization, a = l_Planck as the single scale, and absence of a continuum limit.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-fresh-g-bare-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The Cl(3) normalization identifies g = 1 so that the lattice field strength is the Cl(3) curvature without a rescaling factor.  _(class `F`)_
-- **chain closes:** False — The source note does not derive the removal of gauge-field rescaling freedom; it identifies the unit coefficient convention with the physical bare coupling. The note itself leaves open whether Cl(3) normalization is a constraint or a convention.
-- **rationale:** Issue: the load-bearing step identifies the canonical Cl(3) connection normalization with the physical bare gauge coupling g_bare = 1 rather than deriving that identification. Why this blocks: fixed generator normalization and a single lattice scale do not by themselves prove that no independent coupling/rescaling parameter remains; the note explicitly acknowledges this as an open foundational question. Repair target: a theorem showing that the concrete Cl(3)-derived gauge connection and trace/holonomy normalization eliminate all independent coupling rescalings, with a runner that tests this obstruction rather than setting g = 1. Claim boundary until fixed: the note may state a unit-coupling normalization convention and its downstream consequences, not an audited positive theorem deriving g_bare = 1.
 - **auditor confidence:** high
 
 ### `g_bare_rigidity_theorem_note`

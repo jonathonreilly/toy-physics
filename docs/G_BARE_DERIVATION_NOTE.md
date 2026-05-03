@@ -1,29 +1,33 @@
-# Derivation of g_bare = 1 from Cl(3) Framework Axioms
+# Derivation of g_bare = 1 from Canonical Cl(3) Normalization
 
 **Date:** 2026-04-12
 **Branch:** `claude/youthful-neumann`
 **Lane:** DM relic mapping (Objection 1 from CODEX_DM_RESPONSE.md)
-**Script:** `scripts/frontier_g_bare_derivation.py` (**MISSING — flagged for re-audit**)
+**Claim type:** positive_theorem
+**Script:** `scripts/frontier_g_bare_derivation.py`
 
-> **Missing primary runner (2026-05-03 audit-repair scan):**
-> `scripts/frontier_g_bare_derivation.py` is referenced as this note's
-> primary runner but does not exist in the current `scripts/` tree. The
-> 2026-05-02 status-correction audit note
-> `G_BARE_DERIVATION_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md`
-> already documents this gap and identifies repair targets (restore the
-> runner; supply a theorem removing the `A → A/g` rescaling freedom). The
-> audit verdict on this note will be redone once a working runner is
-> registered.
+> **Parent dependency-chain gate:**
+> This note now declares the repaired parent dependency chain. It must not be
+> cited as retained or as closing the old `g_bare = 1` repair target until
+> independent audit retains both
+> [`G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md`](G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md)
+> and
+> [`G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md`](G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md),
+> with retained-grade dependency closure, and this parent row is re-audited on
+> the changed source and dependency surface.
 
 ---
 
 ## Status
 
-**BOUNDED** -- g_bare = 1 follows from the Cl(3) framework axioms as a
-normalization argument. Not a dynamical calculation, not a fit, not a
-fixed-point condition. It is a bounded normalization argument within the
-framework; whether Cl(3) normalization is a constraint or a convention
-remains an open foundational question.
+**open main gate — parent re-audit required.** `g_bare = 1` is the intended
+parent theorem only relative to the canonical Cl(3) connection normalization
+and only after the two 2026-05-03 repair candidates above are independently
+retained. This edit is a dependency-chain correction, not a retained-status
+promotion. The claim is not a dynamical calculation, not a fit, and not a
+fixed-point condition. The canonical normalization itself remains the admitted
+upstream convention layer; this note does not derive that convention from
+`A1 + A2` alone.
 
 This note is the **older bounded normalization route**. For the sharper
 operator-algebra response to the old rescaling objection, see
@@ -32,11 +36,12 @@ That newer note does not claim a dynamical fixed-point selection of `g = 1`;
 it argues instead that, once the concrete `su(3)` operator algebra is fixed,
 there is no independent bare coupling parameter left.
 
-The claim is:
+The parent claim, once the audit gate above is satisfied, is:
 
-> g_bare = 1 is the unique value consistent with the Cl(3) normalization
-> axiom, the single-scale assumption a = l_Planck, and the absence of a
-> continuum limit.
+> On the accepted Wilson surface with canonical Cl(3) connection
+> normalization `Tr(T_a T_b) = delta_ab / 2`, the bare gauge coupling has no
+> independent rescaling freedom, and the unique compatible normalization is
+> `g_bare = 1`, hence `beta = 2 N_c = 6` for `N_c = 3`.
 
 ---
 
@@ -47,60 +52,57 @@ The claim is:
 Given:
 
 1. The Cl(3) algebra generators satisfy {G_mu, G_nu} = 2 delta_{mu,nu}
-2. The lattice spacing a = l_Planck is the unique length scale
-3. The lattice is the UV completion (no continuum limit)
+2. The canonical Cl(3) connection normalization
+   `Tr(T_a T_b) = delta_ab / 2`
+3. The accepted Wilson plaquette small-a matching
+   `beta = 2 N_c / g_bare^2`
+4. Retention of the two 2026-05-03 repair candidates linked above
 
 Then the bare gauge coupling g_bare = 1.
 
 **Proof sketch:**
 
-- Axiom (3) means g does not run.  It is a fixed pure number, not a
-  parameter to be tuned toward a continuum limit.
-
-- Axiom (2) means g cannot depend on any ratio of scales (there is only one).
-  It must be a pure number determined by algebraic structure.
-
-- Axiom (1) fixes the normalization of the gauge connection.  The Cl(3)
-  framework defines the holonomy as U = exp(i A_mu^a T^a a) where A_mu^a
-  has the canonical Cl(3) normalization.  The coupling g multiplies A inside
-  the holonomy: U = exp(i g A_mu^a T^a a).  The Cl(3) normalization
-  identifies g = 1 so that the lattice field strength IS the Cl(3)
-  curvature without a rescaling factor.
-
-- This is the absorbed-coupling convention, but in the Cl(3) framework it
-  is not a convention -- the algebra generators have FIXED normalization
-  (from axiom 1), so the connection normalization is determined.
+- The canonical Cl(3) generator normalization fixes the operator basis used
+  for the Wilson connection.
+- The rescaling-freedom candidate proves that a nontrivial
+  `T_a -> c T_a` / `A -> c A` rescaling shifts the matched Wilson coefficient
+  `beta` by `c^2` rather than producing a second independent `g_bare`
+  convention layer.
+- The constraint-vs-convention candidate locates the honest convention layer
+  at the canonical normalization itself. Relative to that admitted
+  normalization, `g_bare = 1` follows from `beta = 2 N_c / g_bare^2` with
+  `N_c = 3` and `beta = 6`.
 
 **Consequence:** beta = 2*N_c/g^2 = 6 for SU(3) at the Planck scale.
 
 ---
 
-## Assumptions
+## Inputs
 
-1. **Cl(3) normalization:** {G_mu, G_nu} = 2 delta_{mu,nu}.
-   This is the foundational axiom of the Cl(3) theory.
+1. **Cl(3) algebra:** `{G_mu, G_nu} = 2 delta_{mu,nu}`.
+2. **Canonical connection normalization:**
+   `Tr(T_a T_b) = delta_ab / 2`.
+3. **Wilson matching surface:** `beta = 2 N_c / g_bare^2`.
+4. **Audit-gated repair inputs:** the two 2026-05-03 repair candidates linked
+   above must be retained before this parent row can close.
 
-2. **Single scale:** a = l_Planck is the unique length in the framework.
-   This is the Planck-lattice hypothesis.
-
-3. **No continuum limit:** The lattice IS the fundamental structure, per
-   the taste-physicality theorem.
-
-4. **Gauge group from Cl(3):** The gauge group is determined by Cl(3)
-   automorphisms, not introduced independently.
-
-All four are framework axioms, not external imports or fits.
+The first input is the local algebraic starting point. The second is the
+admitted canonical normalization surface. The third is the Wilson matching
+surface. The fourth is the explicit audit gate; it is not a new axiom.
 
 ---
 
 ## What Is Actually Proved
 
-**Exact results (given the axioms above):**
+**Exact results after the audit gate is satisfied:**
 
-- g_bare = 1 by Cl(3) algebraic normalization (Argument A + D)
-- beta = 2*N_c = 6 for SU(3) at the Planck scale
-- The staggered Dirac hopping parameter 1/(2a) with Cl(3) Gamma
-  normalization is consistent with g = 1 (Argument E)
+- `g_bare = 1` by canonical Cl(3) connection normalization plus Wilson
+  matching
+- `beta = 2*N_c = 6` for SU(3) on the accepted Wilson surface
+- The old `A -> A/g` rescaling objection is routed into `beta`, not an
+  independent `g_bare` convention layer
+- The convention layer is explicitly at canonical normalization, not at a
+  separate `g_bare` choice
 
 **Bounded results (supporting but not standalone derivations):**
 
@@ -119,24 +121,20 @@ All four are framework axioms, not external imports or fits.
 
 ## What Remains Open
 
-1. **Is Cl(3) normalization a constraint or a convention?**
-   The strongest objection: in continuum gauge theory, one can always
-   rescale A -> A/g to change the coupling.  The defense: in the Cl(3)
-   framework, the connection normalization is determined by the algebra,
-   so the rescaling freedom is removed.  A skeptic may still object that
-   this is a definitional choice.  This is a foundational question about
-   the Cl(3) framework, not a gap in the derivation.
+1. **Audit gate for this parent re-audit.**
+   This parent update must wait for independent clean audit of the two
+   2026-05-03 repair candidates and retained-grade dependency closure.
 
-   **Update:** the newer rigidity theorem note attacks this objection in a
-   stronger way by working with the concrete derived `su(3)` operator algebra
-   and the fixed Hilbert-space trace form, rather than the older
-   absorbed-coupling language used here.
+2. **Absolute derivation of canonical normalization remains open.**
+   The canonical normalization is the admitted upstream convention layer.
+   This note does not prove that the normalization itself follows from
+   `A1 + A2` alone.
 
-2. **The other two DM imports still stand:**
+3. **The other two DM imports still stand:**
    - sigma_v = pi * alpha_s^2 / m^2 (perturbative QFT cross-section)
    - V(r) = -C_F * alpha_s / r (one-gluon exchange potential)
 
-3. **Approaches that do NOT work:**
+4. **Approaches that do NOT work:**
    - Strong-coupling fixed point: SU(3) has no nontrivial fixed point
    - Maximum entropy: selects g -> infinity, not g = 1
    - Mean-field iteration: diverges, does not converge to g = 1
@@ -149,17 +147,16 @@ All four are framework axioms, not external imports or fits.
 **Before:** g_bare = 1 was ASSUMED (Objection 1 in CODEX_DM_RESPONSE.md).
 The DM provenance was: 7 NATIVE, 5 DERIVED, 1 ASSUMED, 2 IMPORTED.
 
-**After:** g_bare = 1 is BOUNDED (normalization argument from framework axioms).
-The DM provenance is: 7 NATIVE, 5 DERIVED, 1 BOUNDED (normalization), 2 IMPORTED.
+**After the audit gate is satisfied:** `g_bare = 1` is a retained structural
+constraint relative to the canonical Cl(3) normalization. The DM provenance is
+7 NATIVE, 6 DERIVED, 2 IMPORTED.
 
 **Paper-safe wording:**
 
-> The bare gauge coupling g = 1 is fixed by the Cl(3) algebraic
-> normalization: the holonomy U = exp(i A_mu^a T^a a) uses the
-> canonical Cl(3) connection with unit coefficient.  On the
-> Planck-scale lattice with no continuum limit, this normalization
-> is a constraint, not a convention.  The resulting coupling chain
-> gives alpha_plaq = 0.092, yielding R = 5.48.
+> Relative to the retained canonical Cl(3) connection normalization
+> `Tr(T_a T_b)=delta_ab/2`, the Wilson surface has no independent
+> `A -> A/g` rescaling freedom. The accepted Wilson matching fixes
+> `g_bare=1` and `beta=6` for `N_c=3`.
 
 **What the paper should NOT say:**
 
@@ -174,19 +171,23 @@ not dynamical.
 
 ## Commands Run
 
+The original 2026-04-12 note recorded an older diagnostic runner with one
+expected bounded failure from the mean-field fixed-point route. That historical
+diagnostic is not the parent re-audit surface.
+
+**2026-05-03 parent re-audit runner:**
+
 ```
 python3 scripts/frontier_g_bare_derivation.py
 ```
 
-Exit code: 1 (one BOUNDED FAIL: B.2 mean-field iteration diverges, as expected)
+Expected summary on the current parent re-audit surface:
 
-EXACT checks: 8 pass, 0 fail
-BOUNDED checks: 4 pass, 1 fail (B.2, expected)
-TOTAL: PASS=12 FAIL=1
-
-The single FAIL is the mean-field fixed-point test, which correctly
-identifies that this approach does NOT yield g = 1.  This is an honest
-negative result, not a bug.
+```
+EXACT   : PASS = 51, FAIL = 0
+BOUNDED : PASS = 4, FAIL = 0
+TOTAL   : PASS = 55, FAIL = 0
+```
 
 ---
 
@@ -194,7 +195,7 @@ negative result, not a bug.
 
 | Input | Value | Status (before) | Status (after) |
 |-------|-------|-----------------|----------------|
-| g_bare | 1.0 | ASSUMED | BOUNDED (Cl(3) normalization argument) |
+| g_bare | 1.0 | stale bounded-normalization claim | open main gate; parent re-audit required |
 | sigma_v = pi*alpha^2/m^2 | -- | IMPORTED | IMPORTED (unchanged) |
 | V(r) = -alpha/r | -- | IMPORTED | IMPORTED (unchanged) |
 
@@ -206,6 +207,6 @@ negative result, not a bug.
 |----------|--------|--------|
 | (1) Unitarity bound | g=1 makes U unitary but so does any g | Not selecting |
 | (2) Strong-coupling fixed point | SU(3) has no nontrivial fixed point | Does not work |
-| (3) Dimensional analysis + Cl(3) normalization | **g = 1 forced** | **EXACT given axioms** |
+| (3) Canonical Cl(3) normalization + Wilson matching | **g = 1 candidate after audit gate** | **open main gate; parent re-audit required** |
 | (4) Maximum entropy | Selects g -> infinity | Does not work |
 | (5) Staggered Dirac normalization | Consistent with g = 1 | Supporting, not standalone |
