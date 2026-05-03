@@ -1,0 +1,77 @@
+{
+  "actual_current_surface_status": "exact negative boundary / legacy Schur bridge stack is not PR230 y_t closure",
+  "bare_retained_allowed": false,
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Continue with actual PR230 positive evidence: explicit same-surface Schur A/B/C rows, certified O_H/C_sH/C_HH pole rows, or same-source W/Z response rows with identity certificates.",
+  "fail_count": 0,
+  "legacy_rows": {
+    "yt_exact_schur_normal_form_uniqueness_note": {
+      "audit_status": "audited_conditional",
+      "current_status_raw": "bounded support theorem",
+      "effective_status": "audited_conditional",
+      "runner_path": "scripts/frontier_yt_exact_schur_normal_form_uniqueness.py",
+      "verdict_rationale": "Issue: normal-form uniqueness is proved only inside the current tested Schur coarse-operator class and its intrinsic local/nonlocal remainder budgets. Why this blocks: the runner samples 300 admissible SPD perturbations and verifies affine/budget stability, but it imports the bounded coarse bridge object and does not derive microscopic membership of the interacting bridge in that admissible class. Repair target: audit/retain the exact coarse-grained bridge operator and add an analytic or exhaustive theorem that the true microscopic bridge lies in the admissible Schur class. Claim boundary until fixed: bounded normal-form stability of the tested Schur coarse class on the forced UV window, not full microscopic YT bridge uniqueness or unbounded y_t closure."
+    },
+    "yt_microscopic_schur_class_admissibility_note": {
+      "audit_status": "unaudited",
+      "current_status_raw": "bounded support theorem",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_microscopic_schur_class_admissibility.py",
+      "verdict_rationale": null
+    },
+    "yt_schur_stability_gap_note": {
+      "audit_status": "unaudited",
+      "current_status_raw": "bounded support theorem",
+      "effective_status": "bounded",
+      "runner_path": "scripts/frontier_yt_schur_stability_gap.py",
+      "verdict_rationale": null
+    }
+  },
+  "legacy_schur_import_closes_pr230": false,
+  "parent_certificates": {
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "schur_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The legacy Schur bridge stack is bounded/conditional support for the older UV-transport bridge and does not supply PR230 physical observable rows.",
+  "source_audits": {
+    "yt_exact_schur_normal_form_uniqueness_note": {
+      "forbidden_as_pr230_input_tokens_present": [
+        "ALPHA_LM",
+        "PLAQ",
+        "U0",
+        "YT_PL = G3_PL / np.sqrt(6.0)",
+        "V_DERIVED"
+      ],
+      "note": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+      "note_says_bounded_support": true,
+      "note_says_retained_closure": false,
+      "pr230_evidence_tokens_present": [],
+      "runner": "scripts/frontier_yt_exact_schur_normal_form_uniqueness.py"
+    },
+    "yt_microscopic_schur_class_admissibility_note": {
+      "forbidden_as_pr230_input_tokens_present": [],
+      "note": "docs/YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md",
+      "note_says_bounded_support": true,
+      "note_says_retained_closure": false,
+      "pr230_evidence_tokens_present": [],
+      "runner": "scripts/frontier_yt_microscopic_schur_class_admissibility.py"
+    },
+    "yt_schur_stability_gap_note": {
+      "forbidden_as_pr230_input_tokens_present": [],
+      "note": "docs/YT_SCHUR_STABILITY_GAP_NOTE.md",
+      "note_says_bounded_support": true,
+      "note_says_retained_closure": false,
+      "pr230_evidence_tokens_present": [],
+      "runner": "scripts/frontier_yt_schur_stability_gap.py"
+    }
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not import alpha_LM, plaquette, u0, or y_t=g3/sqrt(6) transport as PR230 evidence",
+    "does not treat Schur normal-form/stability/admissibility support as Schur A/B/C kernel rows",
+    "does not use H_unit, yt_ward_identity, observed targets, or reduced pilots"
+  ]
+}

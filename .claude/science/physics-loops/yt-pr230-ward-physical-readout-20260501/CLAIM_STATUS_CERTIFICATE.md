@@ -1,5 +1,29 @@
 # Claim Status Certificate
 
+Legacy Schur bridge import audit:
+
+```text
+actual_current_surface_status: exact negative boundary / legacy Schur bridge stack is not PR230 y_t closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_legacy_schur_bridge_import_audit.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=130 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=156 FAIL=0
+```
+
+The existing Schur normal-form / stability / microscopic-admissibility stack is
+bounded/conditional support for the older UV-transport bridge.  It is not the
+missing PR #230 physical readout: it uses the legacy `alpha_LM` / plaquette /
+`y_t = g3/sqrt(6)` transport surface and supplies no Schur `A/B/C`,
+`D_eff'(pole)`, `O_H/C_sH/C_HH`, or same-source W/Z response rows.  No
+retained or `proposed_retained` wording is authorized.
+
 Schur K-prime row absence guard:
 
 ```text

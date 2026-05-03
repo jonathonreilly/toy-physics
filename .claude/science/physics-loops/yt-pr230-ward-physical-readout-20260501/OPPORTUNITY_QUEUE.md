@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-03 update: the legacy Schur bridge import audit is now landed.  The
+older Schur normal-form / stability / microscopic-admissibility stack is not a
+hidden PR #230 closure proof: it is bounded/conditional support for the older
+UV-transport bridge, uses the legacy `alpha_LM` / plaquette /
+`y_t = g3/sqrt(6)` transport surface, and supplies no PR #230 rows (`A/B/C`,
+`D_eff'(pole)`, certified `O_H/C_sH/C_HH`, or W/Z response).  Do not spend
+more loop time trying to import that stack as closure unless a new same-surface
+row-producing theorem is added.
+
 2026-05-03 update: the Schur K-prime row absence guard is now landed.  It
 blocks the tempting source-only import: finite `C_ss(q)` rows and same-source
 FH slopes are not same-surface Schur `A/B/C` kernel rows, and a counterfamily

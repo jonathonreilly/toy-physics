@@ -120,6 +120,7 @@
     "ladder_ir_zero_mode": "exact negative boundary / scalar ladder IR zero-mode obstruction",
     "ladder_scout": "bounded-support / ladder-kernel scout",
     "large_nc": "exact negative boundary / large-Nc pole dominance not PR230 closure",
+    "legacy_schur_bridge_import_audit": "exact negative boundary / legacy Schur bridge stack is not PR230 y_t closure",
     "legendre": "exact negative boundary / Legendre normalization freedom",
     "lsz_norm": "conditional-support / scalar LSZ normalization cancellation",
     "mass_response": "bounded-support / reduced mass-response bracket",
@@ -190,7 +191,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 155,
+  "pass_count": 156,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

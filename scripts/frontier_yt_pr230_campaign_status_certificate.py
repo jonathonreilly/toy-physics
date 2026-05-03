@@ -206,6 +206,9 @@ def main() -> int:
         "schur_kprime_row_absence_guard": load(
             "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json"
         ),
+        "legacy_schur_bridge_import_audit": load(
+            "outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json"
+        ),
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
@@ -884,6 +887,20 @@ def main() -> int:
         )
         is False,
         statuses["schur_kprime_row_absence_guard"],
+    )
+    report(
+        "legacy-schur-bridge-import-audit-blocks-hidden-closure",
+        "legacy Schur bridge stack is not PR230 y_t closure"
+        in str(statuses["legacy_schur_bridge_import_audit"])
+        and certificates["legacy_schur_bridge_import_audit"].get(
+            "legacy_schur_import_closes_pr230"
+        )
+        is False
+        and certificates["legacy_schur_bridge_import_audit"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["legacy_schur_bridge_import_audit"],
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

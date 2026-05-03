@@ -26,8 +26,24 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=155 FAIL=0
+# SUMMARY: PASS=156 FAIL=0
 ```
+
+## 2026-05-03 Legacy Schur Bridge Import Audit Update
+
+The campaign status certificate now consumes the legacy Schur bridge import
+audit.  This answers the existing-work question directly: the older Schur
+normal-form / stability / microscopic-admissibility stack is useful bounded
+support, but it is not the missing PR #230 proof.
+
+The audit passes with `PASS=13 FAIL=0`.  It verifies that the legacy Schur
+stack is not audit-clean retained closure for PR #230, uses the older
+`alpha_LM` / plaquette / `y_t = g3/sqrt(6)` transport setup, and emits none of
+the required physical-observable rows: Schur `A/B/C`, `D_eff'(pole)`,
+certified `O_H/C_sH/C_HH`, or same-source W/Z response.
+
+The retained boundary is unchanged.  PR #230 still needs actual physical
+readout rows or a same-surface theorem supplying them.
 
 ## 2026-05-03 Schur K-Prime Row Absence Guard Update
 

@@ -18,8 +18,24 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=129 FAIL=0
+# SUMMARY: PASS=130 FAIL=0
 ```
+
+## 2026-05-03 Legacy Schur Bridge Import Audit Update
+
+The retained-route certificate now consumes
+`outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json`.
+This checks the existing YT Schur normal-form, stability-gap, and
+microscopic-admissibility stack as a possible hidden PR #230 closure route.
+
+The audit blocks that import.  The legacy stack is bounded/conditional support
+for the older UV-transport bridge, includes the legacy `alpha_LM` / plaquette
+/ `y_t = g3/sqrt(6)` transport setup, and does not supply PR #230 physical
+observable rows: no Schur `A/B/C` kernel rows, no `D_eff'(pole)` certificate,
+no certified `O_H/C_sH/C_HH` rows, and no same-source W/Z response rows.
+
+No retained or `proposed_retained` closure is authorized by the legacy Schur
+stack.
 
 ## 2026-05-03 Schur K-Prime Row Absence Guard Update
 

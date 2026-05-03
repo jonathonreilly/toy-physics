@@ -1,5 +1,24 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 legacy Schur bridge import audit:
+
+- Added `scripts/frontier_yt_legacy_schur_bridge_import_audit.py`,
+  `docs/YT_LEGACY_SCHUR_BRIDGE_IMPORT_AUDIT_NOTE_2026-05-03.md`, and
+  `outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json`.
+- Audited the existing Schur normal-form / stability / microscopic-
+  admissibility stack as a possible hidden PR #230 closure route.
+- Result: exact negative boundary.  That stack is bounded/conditional support
+  for the older UV-transport bridge; it uses the legacy `alpha_LM` /
+  plaquette / `y_t = g3/sqrt(6)` transport setup and supplies no PR #230
+  physical-observable rows (`A/B/C`, `D_eff'(pole)`, certified
+  `O_H/C_sH/C_HH`, or W/Z response).
+- Verification: legacy Schur import audit `PASS=13 FAIL=0`; retained-route
+  `PASS=130 FAIL=0`; campaign status `PASS=156 FAIL=0`.
+
+Next exact action: continue with actual PR #230 positive evidence: explicit
+same-surface Schur rows, certified source-Higgs pole rows, or same-source W/Z
+response rows with identity certificates.
+
 Latest checkpoint, 2026-05-03 Schur K-prime row absence guard:
 
 - Added `scripts/frontier_yt_schur_kprime_row_absence_guard.py`,

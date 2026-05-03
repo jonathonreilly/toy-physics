@@ -1,5 +1,38 @@
 # Review History
 
+## Review-Loop Backpressure - Legacy Schur Bridge Import Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / LEGACY SCHUR STACK NOT PR230 CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- existing Schur normal-form / stability / microscopic-admissibility work was
+  checked as a possible hidden closure route;
+- audit ledger status remains bounded/conditional or bounded/unaudited, not
+  audit-clean retained PR #230 closure;
+- legacy runners use the older `alpha_LM` / plaquette /
+  `y_t = g3/sqrt(6)` transport setup;
+- legacy runners do not emit Schur `A/B/C`, `D_eff'(pole)`,
+  `O_H/C_sH/C_HH`, or W/Z response rows;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_legacy_schur_bridge_import_audit.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_legacy_schur_bridge_import_audit.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Schur K-Prime Row Absence Guard
 
 Local review-loop disposition:

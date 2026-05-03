@@ -13,11 +13,23 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-182-schur-kprime-row-absence-guard
-blocks_completed: 182
-active_route: "scalar denominator route via Schur-complement K-prime row contract and source-only row firewall"
-active_hard_residual: "Schur K-prime row absence guard is bounded support, not closure. Runner PASS=14 FAIL=0; retained-route PASS=129 FAIL=0; campaign status PASS=155 FAIL=0. Current finite source-only C_ss(q) rows and FH slopes are not same-surface Schur A/B/C kernel rows; a counterfamily keeps finite source-only rows and pole location fixed while changing Schur rows and D_eff'(pole). Future certificates now mark schur_kprime_kernel_rows absent_guarded. K'(pole), scalar LSZ, explicit Schur rows, and canonical-Higgs identity remain open. The remote chunks023-024 block is preserved as bounded production support: ready L12 is 24/63 chunks, target ESS passes, but response stability and identity gates remain open. No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-183-legacy-schur-bridge-import-audit
+blocks_completed: 183
+active_route: "legacy Schur bridge import audit for PR230 physical-readout closure"
+active_hard_residual: "Legacy Schur bridge import audit is an exact negative boundary, not closure. Runner PASS=13 FAIL=0; retained-route PASS=130 FAIL=0; campaign status PASS=156 FAIL=0. Existing Schur normal-form/stability/microscopic-admissibility work is bounded/conditional support for the older UV-transport bridge and uses the legacy alpha_LM / plaquette / y_t=g3/sqrt(6) surface; it supplies no PR230 Schur A/B/C rows, D_eff'(pole), certified O_H/C_sH/C_HH, or same-source W/Z response rows. Positive closure still requires actual row evidence or a same-surface theorem producing those rows. No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_legacy_schur_bridge_import_audit.py"
+  - "docs/YT_LEGACY_SCHUR_BRIDGE_IMPORT_AUDIT_NOTE_2026-05-03.md"
+  - "outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_schur_kprime_row_absence_guard.py"
   - "docs/YT_SCHUR_KPRIME_ROW_ABSENCE_GUARD_NOTE_2026-05-03.md"
   - "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json"
