@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:15:45.392169+00:00
+**Generated:** 2026-05-03T19:16:34.077116+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 720 |
+| unaudited | 719 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 547 |
-| ~~audited_failed~~ | 13 |
+| ~~audited_failed~~ | 14 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 331 |
 | `audited_conditional` | 547 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 57 |
+| `audited_failed` | 58 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 766 |
+| `unaudited` | 765 |
 
 | claim_type | count |
 |---|---:|
@@ -1011,6 +1011,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `ew_coupling_derivation_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
+| `fifth_family_complex_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | stale_runner_configured_numerical_sweep | - |
 | `fifth_family_radial_fm_transfer_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -5825,6 +5826,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `fifth_family_complex_boundary_note`
+
+- **Note:** [`FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims that the fifth-family radial-shell slice has a narrow complex-action companion on the anchor row while sampled outer rows diagnose a response-sign boundary rather than a control leak.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-lovelace`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** the radial-shell fifth-family slice really does carry a complex companion on the anchor row; the companion is selective, not family-wide; the outer sampled rows show a clear response-sign boundary, not a control leak  _(class `C`)_
+- **chain closes:** False — The claim is runner-supported, but the current targeted runner does not execute because it fails importing _field_from_sources from CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP. With no current runner output and no independent derivation in the note, the boundary and anchor-row companion claims do not close.
+- **rationale:** Issue: the current runner fails at import before producing the sampled boundary rows or SAFE READ counts. Why this blocks: the source note contains only summarized runner conclusions, so the positive theorem depends on current executable support that is absent. Repair target: update the targeted runner or its imported helper API so it recomputes the anchor row, outer rows, Born/F~M gates, and TOWARD -> AWAY crossover checks from retained inputs. Claim boundary until fixed: this can be cited only as an unverified diagnostic note tied to stale runner output, not as a retained positive theorem about a fifth-family complex boundary.
+- **auditor confidence:** high
 
 ### `fifth_family_complex_note`
 
