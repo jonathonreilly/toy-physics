@@ -22,7 +22,8 @@ For one-place reusable numeric values on the package surface, use:
 
 For paper claims and release evidence, use:
 
-- [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+- `DERIVATION_VALIDATION_MAP.md` (sibling artifact; cross-reference only —
+  not a one-hop dep of this note)
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 

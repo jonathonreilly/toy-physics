@@ -288,8 +288,9 @@ strong-field boundary.
   — exact microscopic Schur boundary action for the shell law
 - [STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md](./STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md)
   — `O_h` source family on which the restricted closure is exact
-- [GW_ECHO_NULL_RESULT_NOTE.md](./GW_ECHO_NULL_RESULT_NOTE.md)
-  — bounded downstream companion that consumes this theorem
+- `GW_ECHO_NULL_RESULT_NOTE.md` (sibling artifact; cross-reference only —
+  not a one-hop dep of this note) — bounded downstream companion that
+  consumes this theorem
 
 ## Primary reruns
 

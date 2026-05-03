@@ -4,7 +4,8 @@ This is the current manuscript figure map. It is intentionally conservative:
 only figures that strengthen the retained backbone or cleanly illustrate bounded
 secondary lanes belong in the first public package.
 
-Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
+Companion captions live in `FIGURE_CAPTIONS.md` (sibling artifact;
+cross-reference only — not a one-hop dep of this note).
 
 ## Core arXiv figure set
 
