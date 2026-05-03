@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:18:28.619777+00:00
+**Generated:** 2026-05-03T15:21:40.035903+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 777 |
+| unaudited | 776 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 516 |
+| ~~audited_conditional~~ | 517 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 311 |
-| `audited_conditional` | 516 |
+| `audited_conditional` | 517 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 822 |
+| `unaudited` | 821 |
 
 | claim_type | count |
 |---|---:|
@@ -879,6 +879,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_unconditional_closure_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `third_grown_family_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | finite_configured_numerical_sweep_to_positive_theorem | - |
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_a1_invariant_section_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -13330,6 +13331,23 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** True — The source note's explicit premise eta^2 = rho(1-rho) makes the Euclidean dot product of the two incident edge vectors exactly zero. The assumptions 0 < rho < 1 and eta > 0 keep the vectors nonzero and the arctan angles positive, so the right-angle and arctan-sum conclusions follow without any ledger dependency.
 - **rationale:** The audited claim is only the narrow pure Euclidean implication, not the CKM-specific choice rho=1/6, eta=sqrt(5)/6 and not a physical CKM right-angle prediction. The load-bearing step is a direct algebraic identity over the stated premises, with no hidden PDG, fitted, literature, unit, or upstream-value import. The parent and CKM value rows are cross-references only; they are not needed for this scoped theorem. Residual risk is only scope creep: this clean verdict must not be cited as auditing any CKM-specific parameter derivation.
 - **auditor confidence:** high
+
+### `third_grown_family_boundary_note`
+
+- **Note:** [`THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md`](../../docs/THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The third no-restore grown-family, with cross-quadrant load-balanced connectivity, has a narrow signed-source basin in the tested interior drift window while edge drifts enter an opposite-sign regime, with zero-source and neutral +1/-1 controls remaining zero.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-hostile-boundary-auditor-20260503`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note moves from the finite configured sweep over DRIFTS=[0.0,0.1,0.2,0.3,0.5] and SEEDS=[0,1,2] to the theorem-level statement that a retained bounded signed-source basin exists and that its edge failure is structural rather than a harness artifact.  _(class `finite_configured_numerical_sweep_to_positive_theorem`)_
+- **chain closes:** False — The source note and runner support a configured numerical observation over selected drifts, seeds, source law, detector readout, and connectivity rule. They do not prove a continuous basin boundary, a retained structural theorem, or seed/window robustness from retained inputs.
+- **rationale:** Issue: The load-bearing step treats a finite configured sweep as a positive theorem that a retained bounded basin exists and that the edge reversal is structural. The completed local runner output is useful but narrower: it reports 5/15 passing rows, with all edge rows reversed and interior rows mixed by seed. Why this blocks: A hostile reviewer can accept the zero/neutral controls and still reject theorem closure because the runner checks only selected drifts, seeds, source placement, source strength, field law, propagation rule, and centroid readout; it does not derive or certify the basin boundary from retained inputs. Repair target: Provide either an analytic retained theorem deriving the basin and boundary for the stated family, or a certified interval/seed/window computation with explicit quantified domain, error bounds, and independently justified source/readout/connectivity choices. Claim boundary until fixed: The safe claim is a numerical diagnostic: under the runner's configured parameters, the third grown-family slice has exact controls, all tested edge-drift rows reverse sign, and 5/15 configured rows pass in the interior drift set; it is not yet a retained positive theorem.
+- **open / conditional deps cited:**
+  - `Derive or certify the continuous drift-domain basin boundary for the third grown-family slice.`
+  - `Justify the selected source law, detector centroid readout, and cross-quadrant load-balanced connectivity as retained inputs rather than configured choices.`
+  - `Supply a reproducible certified sweep with runtime bounds and error tolerances if theorem proof is not available.`
+- **auditor confidence:** 0.86
 
 ### `three_family_card_note`
 

@@ -3,9 +3,9 @@
     "critical": 60,
     "high": 210,
     "leaf": 195,
-    "medium": 341
+    "medium": 340
   },
-  "generated_at": "2026-05-03T15:18:27.864074+00:00",
+  "generated_at": "2026-05-03T15:21:39.436870+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7435,27 +7435,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_bottom_yukawa_retention.py",
       "transitive_descendants": 7
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "third_grown_family_boundary_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 7.285,
-      "note_path": "docs/THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py",
-      "transitive_descendants": 77
     },
     {
       "audit_independence_required": "any_non_self",
@@ -20850,6 +20829,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 118,
-  "total_pending": 806
+  "ready_count": 117,
+  "total_pending": 805
 }
