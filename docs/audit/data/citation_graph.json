@@ -22629,7 +22629,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:35:38.360051+00:00",
+  "generated_at": "2026-05-03T16:05:53.965746+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25387,7 +25387,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "d26789f256c2bb090b8973c725ab2a4337abde5816816de42011175f6928f4c9",
+      "note_hash": "d3ab83097f583b05622af6a022c4aeb74a51b87ee02ba0724ed62b0164cc7413",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -30976,10 +30976,10 @@
       "deps": [
         "ew_current_fierz_channel_decomposition_note_2026-05-01"
       ],
-      "note_hash": "addb67189b2d24338b9b36d582b797bca8969fade4f3e4de4fb465efcf191909",
+      "note_hash": "177b44c2cfc8d3c90c98e09cd5a17192a158b88e7ee369c0e24ad384b809ce77",
       "path": "docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_ew_current_matching_rule_no_go.py",
-      "title": "EW Current Matching Rule No-Go Closure Note"
+      "title": "EW Current Matching Rule No-Go Proposal Note"
     },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
@@ -40448,7 +40448,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "6a88040fd57778f52823cc42a7d2f75bd0b8bde9f6192bd65b21d7ef8add644c",
+      "note_hash": "e6780832b6e2536e8a1a32ffa31af5909e34d78963201d6cffea49d2742e0b5c",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -42158,7 +42158,7 @@
         "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
       ],
-      "note_hash": "1f3c7c5331e5d05724cdfe8f218da30d0f249dfa0907816818a5c0e5a50f2e63",
+      "note_hash": "53e5b7d087df1579c87a2eb758b63f68dcd78dc9e478f9911d4badd7f210d60c",
       "path": "docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md",
       "runner_path": null,
       "title": "Usable Derived Values Index"
@@ -48644,7 +48644,7 @@
         "ew_current_fierz_channel_decomposition_note_2026-05-01",
         "ew_current_matching_rule_open_gate_note_2026-05-03"
       ],
-      "note_hash": "d079c9a583caa5ce1445d94f183c12f79dbdb54e4a7ad0ecded9170ce9591d1a",
+      "note_hash": "67b8ab12b7b6118e73a2ef121b4005f8dec792c865a70c4a63b6183c02d5a505",
       "path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Color-Singlet Projection Theorem for EW Couplings"

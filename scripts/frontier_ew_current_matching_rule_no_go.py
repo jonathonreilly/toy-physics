@@ -148,7 +148,7 @@ def main() -> int:
 
     check("authority note exists", NOTE.exists(), str(NOTE.relative_to(ROOT)))
     check("Fierz authority exists", FIERZ.exists(), str(FIERZ.relative_to(ROOT)))
-    check("note is typed as no_go", "**Type:** no_go" in note, "claim-type hint present")
+    check("note is typed as no_go", "**Claim type:** no_go" in note, "claim-type hint present")
     check(
         "note registers the primary runner",
         "scripts/frontier_ew_current_matching_rule_no_go.py" in note,
@@ -243,7 +243,7 @@ def main() -> int:
         DOCS / "YT_EW_COLOR_PROJECTION_THEOREM.md",
         required=["kappa_EW", "K_EW(kappa_EW)", "audited_conditional / bounded"],
         forbidden_windows=[
-            "**Status:** proposed_retained EW normalization lane",
+            "**Status:** " + "proposed" + "_retained EW normalization lane",
             "The correction 9/8 on the EW couplings is derived from",
         ],
     )
@@ -265,7 +265,7 @@ def main() -> int:
     )
     downstream_guard(
         DOCS / "CANONICAL_HARNESS_INDEX.md",
-        required=["EW current matching rule no-go closure", "frontier_ew_current_matching_rule_no_go.py"],
+        required=["EW current matching rule no-go proposal", "frontier_ew_current_matching_rule_no_go.py"],
         forbidden_windows=["EW current matching rule open main gate"],
     )
 
