@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:37:29.662787+00:00
+**Generated:** 2026-05-03T19:38:27.754755+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 177 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 715 |
+| unaudited | 714 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 548 |
-| ~~audited_failed~~ | 14 |
+| ~~audited_failed~~ | 15 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 334 |
 | `audited_conditional` | 548 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 58 |
+| `audited_failed` | 59 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 761 |
+| `unaudited` | 760 |
 
 | claim_type | count |
 |---|---:|
@@ -1027,6 +1027,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `grown_transfer_basin_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `higgs_mass_from_axiom_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | F | - |
+| `higher_symmetry_gravity_probe_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `if_program_closing_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -7512,6 +7513,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The listed scripts verify a bundle of structural no-go and support calculations: Higgs-dressed transport no-match, no retained variational Koide principle, real-irrep-block democracy only as a non-retained/partial primitive, fourth-order mixed-Gamma cancellation, an S2-breaking survey with only post-hoc ambiguity, and a bounded charged-lepton observational pin.  _(class `C`)_
 - **chain closes:** False — The bundle closes several candidate routes negatively, but it does not derive the charged-lepton hierarchy or Koide relation from retained inputs; the final charged-lepton closure remains bounded by an explicit PDG observational pin and named missing primitives.
 - **rationale:** Issue: the note's structural runners pass, but the headline overstates closure and the runner manifest is stale. Why this blocks: the note advertises Runners (8) while listing seven scripts, and those seven currently report 140 PASS rather than the advertised 133 PASS; more importantly, the passing scripts rule out or bound routes rather than supply a retained S2-breaking/Koide-generating primitive. Repair target: update the runner inventory/pass counts and split the exact no-go/support theorems from the bounded observational-pin closure, or add a retained primitive that derives the hierarchy without the PDG pin. Claim boundary until fixed: structural no-go/support bundle for charged-lepton Koide routes, not an exact retained charged-lepton hierarchy theorem.
+- **auditor confidence:** high
+
+### `higher_symmetry_gravity_probe_note`
+
+- **Note:** [`HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md`](../../docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Dense Z2xZ2 finite gravity probe at N=80,100,120 with 16 seeds, fixed-anchor mass windows, and fixed-mass distance sweeps; no asymptotic gravity law is audited.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-germain`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The dense Z2 x Z2 extension survives as a review-safe coexistence lane, and it does not lose Born safety at N = 120.  _(class `C`)_
+- **chain closes:** False — The current runner log supports some selected positive finite responses, but it contradicts the note's prose that the mass window stays positive. The runner also does not test the Born-safety/coexistence part of the conclusion.
+- **rationale:** Issue: the note claims a positive mass response/coexistence lane, but the current runner output has negative fixed-anchor mass deltas in declared rows, including N=80 M=1,2; N=100 M=1,3; and N=120 M=16, and it does not check Born safety. Why this blocks: a bounded theorem can only retain the finite statement actually computed, and the presented conclusion asserts positivity and coexistence beyond that evidence. Repair target: narrow the claim to the specific positive fixed-distance bump/plateau and selected positive fit subset, or add a completed runner/dependency proving full mass-window positivity and Born-safety retention. Claim boundary until fixed: the log supports a weak parameter-specific gravity-side bump with poor tail fits, not a globally positive mass window, Born-safety result, or clean gravity law.
 - **auditor confidence:** high
 
 ### `holographic_probe_note_2026-04-11`
