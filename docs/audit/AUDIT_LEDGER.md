@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T10:48:18.730626+00:00
+**Generated:** 2026-05-03T10:55:33.499514+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -48,12 +48,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 548 |
+| `bounded_theorem` | 549 |
 | `decoration` | 9 |
 | `meta` | 41 |
 | `no_go` | 159 |
 | `open_gate` | 85 |
-| `positive_theorem` | 860 |
+| `positive_theorem` | 859 |
 
 | criticality | count |
 |---|---:|
@@ -641,7 +641,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complex_selectivity_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | G | - |
 | `complex_selectivity_predictor_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | D | - |
 | `composite_source_additivity_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `confinement_string_tension_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `confinement_string_tension_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `connectivity_family_v2_elliptical_duplicate_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_convergence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3398,18 +3398,14 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 ### `confinement_string_tension_note`
 
 - **Note:** [`CONFINEMENT_STRING_TENSION_NOTE.md`](../../docs/CONFINEMENT_STRING_TENSION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded claim that, conditional on the framework gauge sector being standard SU(3) Yang-Mills at g_bare = 1 (beta = 6) and on the framework alpha_s(M_Z) = 0.1181 input, standard low-energy QCD/lattice inputs imply T=0 confinement and a physical-range string tension.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The framework's graph-first SU(3) gauge sector is SU(3) Yang-Mills at beta = 6.0, SU(3) YM confines at T = 0, and the string tension follows from the framework alpha_s(M_Z) = 0.1181 through standard lattice/EFT inputs.  _(class `B`)_
-- **chain closes:** False — The note and runner combine unregistered upstream framework claims with external lattice-QCD and EFT inputs; the runner checks consistency after setting those premises rather than deriving the physical bridge from the allowed audit packet.
-- **rationale:** Issue: The failed step is claiming retained confinement/string-tension closure from graph-first SU(3), alpha_s(M_Z), Wilson confinement, Sommer-scale lattice inputs, and quark-screening corrections while none of those load-bearing authorities are registered one-hop dependencies for this row; several runner PASS lines are hard-coded `True` physical premises or external comparator checks. Why this blocks: The current packet demonstrates a bounded consistency story, not a derivation that the framework gauge sector is the relevant SU(3) YM theory with a computed string tension; the numerical match depends on imported lattice/EFT constants and a screening factor. Repair target: Register clean dependencies for graph-first SU(3), g_bare/beta normalization, the alpha_s lane, and the lattice/EFT string-tension bridge, and replace hard-coded True checks with a runner that computes only the bridge quantities from declared inputs while labeling external comparators separately. Claim boundary until fixed: It is safe to say that, conditional on the framework gauge sector being SU(3) YM at beta = 6.0 and on the standard lattice/EFT bridge, the numbers are consistent with confinement and a 435-484 MeV string-tension range; it is not audit-retained as a zero-parameter confinement theorem.
-- **open / conditional deps cited:**
-  - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
-  - `scripts/canonical_plaquette_surface.py`
-  - `standard_lattice_qcd_sommer_and_string_tension_inputs`
+- **auditor:** `fresh-agent-james-019ded76-7ee4-7330-a8c8-b17a1abd109f`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** From the framework's alpha_s(M_Z) = 0.1181 and the asserted framework-gauge-sector = SU(3) Yang-Mills identification, standard QCD running and lattice string-tension inputs give sqrt(sigma) in a range overlapping experiment.  _(class `B`)_
+- **chain closes:** False — The source and runner check arithmetic, running, imported lattice comparisons, and a small qualitative MC test, but they do not close the framework-to-SU(3)-YM identification or the alpha_s(M_Z) input from provided one-hop authorities. No cited authorities were registered for this row, so the load-bearing bridge remains unratified in this audit context.
+- **rationale:** Issue: the result depends on unprovided retained inputs: the graph-first gauge sector = standard SU(3) Yang-Mills identification, the alpha_s(M_Z) = 0.1181 theorem, and the standard low-energy EFT/lattice bridge for sqrt(sigma). Why this blocks: the runner hard-codes several contested physical premises as true and verifies downstream consistency after importing QCD/lattice constants, so the scoped claim cannot be retained from the provided source alone. Repair target: register and cite retained authorities for the SU(3) YM equivalence and alpha_s theorem, and state the bounded EFT/lattice bridge as an audited dependency or explicit bounded premise. Claim boundary until fixed: a conditional consistency check showing that standard SU(3) YM at beta = 6 with the imported alpha_s input gives qualitative confinement signals and a plausible string-tension range.
 - **auditor confidence:** high
 
 ### `connectivity_family_v2_elliptical_duplicate_note`
