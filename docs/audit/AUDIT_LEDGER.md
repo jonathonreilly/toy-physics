@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:14:02.630139+00:00
+**Generated:** 2026-05-03T18:14:46.508966+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 742 |
+| unaudited | 741 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 538 |
-| ~~audited_failed~~ | 12 |
+| ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 317 |
 | `audited_conditional` | 538 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 56 |
+| `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 788 |
+| `unaudited` | 787 |
 
 | claim_type | count |
 |---|---:|
@@ -986,6 +986,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
+| `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `ew_coupling_derivation_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | stale_runner_configured_numerical_sweep | - |
@@ -5149,6 +5150,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — The selector calculation closes only after importing the chamber threshold, exact chamber-root set, parity-reduction identity, and target PMNS triple. Those authorities are asserted in the note but are not present as ledger one-hop dependencies for this restricted audit.
 - **rationale:** Issue: the proof relies on unprovided upstream chamber-closure, chamber-completeness, and source-cubic parity-reduction facts, while the runner hardcodes the chamber roots and imports the chamber/PMNS machinery. Why this blocks: the physical branch selector is not derived from the restricted source note plus deps=0; it is a conditional combination of prior results. Repair target: record the actual one-hop dependency notes and ensure their audit status closes the threshold, root set, and I_src orientation law. Claim boundary until fixed: given the stated root set and laws, I_src > 0 selects Basin 1 among upper-octant survivors.
 - **auditor confidence:** medium
+
+### `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20`
+
+- **Note:** [`DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md`](../../docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `no_go`
+- **claim_scope:** On the fixed native N_e seed surface, the system delta_db(H)=1, q_+(H)=0, and I_src(H)>0 does not force the PMNS angle triple and leaves a positive-sheet center locus.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-context-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The PMNS angle triple varies macroscopically along the resulting positive-sheet center locus, so the current center proposal cannot derive the PMNS target on its own.  _(class `A`)_
+- **chain closes:** False — The runner supports the main geometric no-go checks but exits nonzero: current output is PASS=11 FAIL=1 while the note expects PASS=12 FAIL=0. The failed check is the registry/status consistency check that I5 is still treated as open after the center-law test.
+- **rationale:** Issue: the note's reproduction claim is stale against the current runner, which returns FAIL=1 on the check that the register still treats I5 as open after the center-law test. Why this blocks: a Nature-grade clean no-go cannot rely on a nonzero runner whose expected PASS=12 FAIL=0 is false, especially when the failed check concerns whether the claimed open-I5 consequence is consistently represented in the retained register. Repair target: either update the register/status source so the runner's I5-open check passes, or narrow the theorem note and runner so the no-go claim does not depend on that external register consistency check. Claim boundary until fixed: the runner still verifies multiple positive-sheet center solutions, rank-2 center constraints, a local 3-real locus, macroscopic PMNS variation, and the conditional two-sheet target cut, but the present audited claim cannot be marked clean while its own reproduction fails.
+- **auditor confidence:** high
 
 ### `dm_pns_attack_cascade_note_2026-04-19`
 
