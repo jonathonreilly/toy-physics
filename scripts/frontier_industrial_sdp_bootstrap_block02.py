@@ -43,6 +43,11 @@ import cvxpy as cp
 # Section 1: Bootstrap problem builder
 # ---------------------------------------------------------------------------
 
+def scalar_expr(expr):
+    """Return a CVXPY scalar as a 1x1 block with explicit reshape order."""
+    return cp.reshape(expr, (1, 1), order="F")
+
+
 def lattice_bootstrap_problem(
     beta: float = 6.0,
     N_c: int = 3,
@@ -73,16 +78,16 @@ def lattice_bootstrap_problem(
     # ----- Hausdorff-bounded moment problem on plaquette -----
     # m_0 = 1, m_1 = p1, m_2 = p2, m_3 = p3, m_4 = p4
     # Hankel matrix [[1, p1, p2], [p1, p2, p3], [p2, p3, p4]] PSD
-    H = cp.bmat([[np.array([[1.0]]), cp.reshape(p1, (1, 1)), cp.reshape(p2, (1, 1))],
-                 [cp.reshape(p1, (1, 1)), cp.reshape(p2, (1, 1)), cp.reshape(p3, (1, 1))],
-                 [cp.reshape(p2, (1, 1)), cp.reshape(p3, (1, 1)), cp.reshape(p4, (1, 1))]])
+    H = cp.bmat([[np.array([[1.0]]), scalar_expr(p1), scalar_expr(p2)],
+                 [scalar_expr(p1), scalar_expr(p2), scalar_expr(p3)],
+                 [scalar_expr(p2), scalar_expr(p3), scalar_expr(p4)]])
     constraints.append(H >> 0)
 
     # Hausdorff PSD for [a, b] support: 2x2 shifted Hankel matrices PSD
-    H1 = cp.bmat([[cp.reshape(p1 - a, (1, 1)), cp.reshape(p2 - a * p1, (1, 1))],
-                  [cp.reshape(p2 - a * p1, (1, 1)), cp.reshape(p3 - a * p2, (1, 1))]])
-    H2 = cp.bmat([[cp.reshape(b - p1, (1, 1)), cp.reshape(b * p1 - p2, (1, 1))],
-                  [cp.reshape(b * p1 - p2, (1, 1)), cp.reshape(b * p2 - p3, (1, 1))]])
+    H1 = cp.bmat([[scalar_expr(p1 - a), scalar_expr(p2 - a * p1)],
+                  [scalar_expr(p2 - a * p1), scalar_expr(p3 - a * p2)]])
+    H2 = cp.bmat([[scalar_expr(b - p1), scalar_expr(b * p1 - p2)],
+                  [scalar_expr(b * p1 - p2), scalar_expr(b * p2 - p3)]])
     constraints.append(H1 >> 0)
     constraints.append(H2 >> 0)
 
@@ -100,10 +105,10 @@ def lattice_bootstrap_problem(
     rq = cp.Variable()  # ⟨R · Q⟩
     q2 = cp.Variable()  # ⟨Q²⟩
 
-    G = cp.bmat([[np.array([[1.0]]), cp.reshape(p1, (1, 1)), cp.reshape(r1, (1, 1)), cp.reshape(q1, (1, 1))],
-                 [cp.reshape(p1, (1, 1)), cp.reshape(p2, (1, 1)), cp.reshape(pr, (1, 1)), cp.reshape(pq, (1, 1))],
-                 [cp.reshape(r1, (1, 1)), cp.reshape(pr, (1, 1)), cp.reshape(r2, (1, 1)), cp.reshape(rq, (1, 1))],
-                 [cp.reshape(q1, (1, 1)), cp.reshape(pq, (1, 1)), cp.reshape(rq, (1, 1)), cp.reshape(q2, (1, 1))]])
+    G = cp.bmat([[np.array([[1.0]]), scalar_expr(p1), scalar_expr(r1), scalar_expr(q1)],
+                 [scalar_expr(p1), scalar_expr(p2), scalar_expr(pr), scalar_expr(pq)],
+                 [scalar_expr(r1), scalar_expr(pr), scalar_expr(r2), scalar_expr(rq)],
+                 [scalar_expr(q1), scalar_expr(pq), scalar_expr(rq), scalar_expr(q2)]])
     constraints.append(G >> 0)
 
     # Support bounds for Wilson loops (compact group, |W| ≤ 1)

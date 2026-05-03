@@ -6281,6 +6281,14 @@
       "to": "plaquette_self_consistency_note"
     },
     {
+      "from": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_framework_point_underdetermination_note"
+    },
+    {
       "from": "inverse_problem_graph_requirements_note",
       "to": "newton_derivation_note"
     },
@@ -22149,7 +22157,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T11:47:05.510607+00:00",
+  "generated_at": "2026-05-03T11:49:46.147498+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -33233,6 +33241,20 @@
       "path": "docs/INDUSTRIAL_SDP_BOOTSTRAP_INFRASTRUCTURE_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_industrial_sdp_bootstrap_block01.py",
       "title": "Industrial SDP Bootstrap \u2014 Infrastructure + SU(2)/SU(3) Single-Plaquette Validation"
+    },
+    "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03": {
+      "claim_id": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "numerical CVXPY bracket attempt + named-obstruction stretch",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "plaquette_self_consistency_note",
+        "gauge_vacuum_plaquette_framework_point_underdetermination_note"
+      ],
+      "note_hash": "c6e67f12f150045c5645e55e0dd95493aaa02d85908c92647436e5850e7679cc",
+      "path": "docs/INDUSTRIAL_SDP_BOOTSTRAP_LATTICE_BRACKET_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_industrial_sdp_bootstrap_block02.py",
+      "title": "Industrial SDP Bootstrap \u2014 Lattice \u27e8P\u27e9(\u03b2=6) Bracket Attempt"
     },
     "interest_map": {
       "claim_id": "interest_map",
@@ -49801,7 +49823,7 @@
       "bounded_theorem": 17,
       "meta": 2,
       "no_go": 3,
-      "none": 1746,
+      "none": 1747,
       "open_gate": 2,
       "positive_theorem": 72
     },
@@ -49809,14 +49831,14 @@
       "bounded_theorem": 517,
       "meta": 2,
       "no_go": 109,
-      "none": 449,
+      "none": 450,
       "open_gate": 111,
       "positive_theorem": 654
     },
-    "edge_count": 5537,
-    "leaf_count": 648,
-    "node_count": 1842,
+    "edge_count": 5539,
+    "leaf_count": 649,
+    "node_count": 1843,
     "root_count": 1073,
-    "runners_with_path": 1407
+    "runners_with_path": 1408
   }
 }
