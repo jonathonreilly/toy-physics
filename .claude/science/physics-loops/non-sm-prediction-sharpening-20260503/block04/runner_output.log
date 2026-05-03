@@ -1,0 +1,108 @@
+==============================================================================
+New-Physics Discrimination Package — Cross-Lane Synthesis
+Source: docs/NEW_PHYSICS_DISCRIMINATION_PACKAGE_SYNTHESIS_NOTE_2026-05-03.md
+==============================================================================
+
+--- Section 1: Three discrimination lanes ---
+  Block 01 (PR #436): Higgs + vacuum stability
+    D1: vacuum stable
+    D2: y_t=0.918
+    D3: m_H∈[119.8,129.7]
+    D4: λ(M_Pl)=0
+  Block 02 (PR #437): Lorentz violation cubic harmonic
+    L1: no linear E/E_Pl
+    L2: no CPT-odd
+    L3: K_4 angular
+    L4: quadratic 1/12
+  Block 03 (PR #438): Strong CP + universal EDM vanishing
+    E1: θ_eff=0 exact
+    E2: d_n(QCD)=0
+    E3: all theta-EDMs=0
+
+--- Section 2: Single-experiment falsification triggers ---
+  Experiment                                     Falsifies      Block
+  Precision m_t/y_t (HL-LHC)                     D2, D1            01
+  FCC-hh λ_3 self-coupling                       D1                01
+  GRB time-of-flight (Fermi-LAT, MAGIC, CTA)     L1                02
+  Vacuum birefringence (GRB polarization)        L3                02
+  UHECR angular distribution (AugerPrime)        L3                02
+  Hughes-Drever / atomic clocks                  L2                02
+  n2EDM @ PSI                                    E1, E2            03
+  Axion direct detection (ADMX, IAXO)            (E1 motivation)      03
+  ACME-III electron EDM                          E3                03
+
+--- Section 3: Joint scenarios across lanes ---
+  S1 (CONSISTENT)
+    Observation: All falsification tests fail
+    Status: Framework SUPPORTED (no contradicting signals)
+
+  S2 (PARTIAL FALSIFY)
+    Observation: Single lane falsified
+    Status: Framework needs revision in that lane; specific axiom challenged
+
+  S3 (COMPREHENSIVE FALSIFY)
+    Observation: Multiple lanes falsified
+    Status: Framework abandoned; multiple axioms wrong
+
+  S4 (SMOKING GUN)
+    Observation: K_4 LV detected + stable vacuum + CKM-only d_n
+    Status: Framework STRONGLY VINDICATED
+
+
+--- Section 4: Best near-term experiments by lane coverage ---
+  Experiment                                  Timeline  Lanes touched
+  HL-LHC                                         2030+  01
+  CTA                                        2026-2030  02
+  AugerPrime                                  now-2030  02
+  n2EDM @ PSI                                2027-2029  03
+  ACME-III                                   2025-2030  03
+  ADMX-EFR / IAXO                            2025-2030  03
+  FCC-ee (proposed)                              2040s  01
+
+--- Section 5: Framework's overall testability profile ---
+
+  STRONG-TEST predictions (testable now or near-term):
+    - y_t / m_t precision via HL-LHC (block 01)
+    - Linear LV via CTA TeV photon dispersion (block 02)
+    - CPT-odd LV via atomic clocks (block 02)
+    - BSM CP source via n2EDM detection >10⁻³⁰ (block 03)
+    - Axion existence via ADMX-EFR/IAXO (block 03)
+
+  LONG-HORIZON predictions (need future-future experiments):
+    - m_H precision to <0.1% via FCC-ee (block 01)
+    - Direct LV detection (~16 orders below current sensitivity)
+    - d_n at CKM-only ~10⁻³² (beyond all proposed)
+
+  PURE STRUCTURAL predictions (no near-term probe):
+    - λ(M_Pl) = 0 EXACTLY
+    - K_4 cubic harmonic at predicted level
+    - All theta-induced EDM components vanish universally
+
+--- Section 6: Verdict update vs original net call ---
+
+  Original net call required:
+    'Produce one non-SM prediction. ... anything that distinguishes
+     the framework from the SM, written in lattice notation.'
+
+  After this campaign, framework has THREE INDEPENDENT non-SM packages:
+    Block 01: D1-D4 (Higgs/y_t/stability/λ)
+    Block 02: L1-L4 (Lorentz violation)
+    Block 03: E1-E3 (strong CP + EDM vanishing)
+
+  All three pass the 'non-SM prediction' bar of the original net call.
+  Each is independently testable; multiple cross-lane experiments hit each.
+
+  Combined with H1 (rigorous bracketing of ⟨P⟩(β=6)) and H2 (f_vac V-singlet
+  retires 3 of 5 bridges, PR #408), the framework now meets the conditions
+  the original net call set out for 'yes, new physics' status.
+
+==============================================================================
+Block 04 cross-lane synthesis complete.
+
+Campaign-level summary:
+  - 3 distinguishing prediction packages identified and sharpened
+  - Joint falsification scenarios mapped
+  - Best near-term experiments cataloged
+  - Framework's overall testability profile is BROAD (multiple sectors)
+  - All three original net-call conditions now met
+==============================================================================
