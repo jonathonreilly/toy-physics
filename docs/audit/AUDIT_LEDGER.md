@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:36:11.938171+00:00
+**Generated:** 2026-05-03T17:42:56.754140+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 760 |
+| unaudited | 759 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 528 |
+| ~~audited_conditional~~ | 529 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 528 |
+| `audited_conditional` | 529 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 806 |
+| `unaudited` | 805 |
 
 | claim_type | count |
 |---|---:|
@@ -775,6 +775,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
 | `persistent_inertial_response_readiness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -9783,6 +9784,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The registered runner reproduces the zero-source reduction and the frozen no-go table: frontier-shell TOWARD=2/12, F~M=0.74,1.78,1.78, capture=0.003, support fraction=0.241, and mean delta=-8.877e-04. Those current outputs support the bounded negative claim.
 - **rationale:** The note is a bounded no-go, and the current runner verifies exactly why v2 fails: localization improves, but the sign, mass-scaling class, and capture collapse. The note does not claim inertial-mass closure or a successful field equation; it preserves v1 as the better detector-side bridge and freezes v2 as too selective. Residual risk is limited to future readout architectures, which the source explicitly leaves open.
 - **auditor confidence:** high
+
+### `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_BLENDED_READOUT_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded exact-lattice sweep claim that fixed top3 plus blend=0.25 survives 4/5 second-ring transfer cases and has an inward-source boundary between source_z=1.25 and 1.50 on the baseline family, without claiming persistent inertial-mass closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The boundary probe then shows that this is not a one-row fluke: source0.75, source1.00, and source1.25 are closed, while source1.50 is open, so the widened regime has a real inward-source boundary between 1.25 and 1.50.  _(class `C`)_
+- **chain closes:** False — The source note's full scoped conclusion depends on both the outer second-ring sweep and a follow-up inward-source boundary probe. The allowed primary runner covers only the outer cases and did not complete to stdout in this audit attempt, while the boundary probe artifact needed for the mapped-boundary subclaim is outside the permitted inspectable context.
+- **rationale:** Issue: the load-bearing mapped-boundary statement relies on a separate boundary probe artifact, and the allowed primary runner covers only the five outer transfer cases; the primary runner was attempted but produced no stdout before being stopped after several minutes. Why this blocks: the note's audited scope is stronger than the inspectable executable evidence, so a hostile reviewer cannot verify the claimed inward-source boundary or current outer-sweep numerics from the permitted packet. Repair target: provide and run the boundary probe as the primary or companion runner, or narrow the claim scope to only the completed outer-sweep rows with current runner stdout. Claim boundary until fixed: it may be described as an intended bounded computational sweep under fixed top3 plus blend=0.25, but not as an audited clean widened regime with a mapped inward-source boundary.
+- **open / conditional deps cited:**
+  - `scripts/persistent_object_blended_readout_inner_source_boundary_probe.py`
+  - `logs/2026-04-16-persistent-object-blended-readout-inner-source-boundary-probe.txt`
+- **auditor confidence:** medium
 
 ### `persistent_object_blended_readout_transfer_sweep_note_2026-04-16`
 
