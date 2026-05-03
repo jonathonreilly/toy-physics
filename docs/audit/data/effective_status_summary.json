@@ -2,12 +2,12 @@
   "claim_type_counts": {
     "bounded_theorem": 552,
     "decoration": 8,
-    "meta": 42,
+    "meta": 43,
     "no_go": 160,
     "open_gate": 88,
     "positive_theorem": 891
   },
-  "computed_at": "2026-05-03T11:48:53.335336+00:00",
+  "computed_at": "2026-05-03T12:35:17.684851+00:00",
   "cycle_examples": [
     [
       "restricted_strong_field_closure_note",
@@ -22,6 +22,10 @@
       "lorentz_boost_covariance_3plus1d_theorem_note"
     ],
     [
+      "minimal_axioms_2026-04-11",
+      "minimal_axioms_2026-05-03"
+    ],
+    [
       "anomaly_forces_time_theorem",
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
       "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
@@ -30,13 +34,9 @@
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
       "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
-    ],
-    [
-      "anomaly_forces_time_theorem",
-      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ]
   ],
-  "cycles_detected": 105,
+  "cycles_detected": 106,
   "effective_status_counts": {
     "audited_conditional": 513,
     "audited_decoration": 3,
@@ -46,7 +46,7 @@
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
-    "meta": 41,
+    "meta": 42,
     "open_gate": 14,
     "retained": 110,
     "retained_bounded": 170,

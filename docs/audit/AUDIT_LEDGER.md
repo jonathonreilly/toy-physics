@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:48:53.843342+00:00
+**Generated:** 2026-05-03T12:35:17.772758+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -25,7 +25,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
 | unaudited | 742 |
-| meta | 41 |
+| meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
@@ -43,26 +43,26 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 783 |
+| `unaudited` | 784 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 552 |
 | `decoration` | 8 |
-| `meta` | 42 |
+| `meta` | 43 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
 | `positive_theorem` | 891 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 111 |
+| `critical` | 112 |
 | `high` | 364 |
 | `medium` | 520 |
 | `leaf` | 746 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 105
+- **Citation cycles detected:** 106
 
 ### Runner classification (static heuristic)
 
@@ -81,7 +81,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 127 | 29.50 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.01 | `unaudited` | unaudited |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 256 | 29.01 | `unaudited` | unaudited |
-| 5 | `minimal_axioms_2026-04-11` | meta | critical | 323 | 27.34 | `unaudited` | meta |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 324 | 27.84 | `unaudited` | meta |
 | 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 207 | 26.70 | `audited_conditional` | ~~audited_conditional~~ |
 | 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 190 | 26.08 | `unaudited` | unaudited |
 | 8 | `native_gauge_closure_note` | bounded_theorem | critical | 373 | 25.55 | `audited_clean` | **retained_bounded** |
