@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 62,
     "high": 215,
-    "leaf": 183,
+    "leaf": 182,
     "medium": 247
   },
-  "generated_at": "2026-05-03T21:36:11.446216+00:00",
+  "generated_at": "2026-05-03T21:39:04.898679+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14123,32 +14123,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_generated_bridge_failure_audit",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_resolved_generated_discriminator_probe_note",
-        "source_resolved_generated_wavefield_transfer_v2_note",
-        "source_resolved_geometry_rule_repair_note",
-        "source_resolved_radical_geometry_probe_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_GENERATED_BRIDGE_FAILURE_AUDIT.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "source_resolved_green_robustness_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -18781,6 +18755,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 25,
-  "total_pending": 707
+  "ready_count": 24,
+  "total_pending": 706
 }

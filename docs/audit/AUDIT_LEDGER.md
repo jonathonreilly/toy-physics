@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:36:11.864603+00:00
+**Generated:** 2026-05-03T21:39:05.465886+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 86 |
-| **retained_no_go** | 107 |
+| **retained_no_go** | 108 |
 | **retained_bounded** | 202 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 678 |
+| unaudited | 677 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,22 +36,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 369 |
+| `audited_clean` | 370 |
 | `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 725 |
+| `unaudited` | 724 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 597 |
 | `decoration` | 8 |
 | `meta` | 47 |
-| `no_go` | 165 |
+| `no_go` | 166 |
 | `open_gate` | 92 |
-| `positive_theorem` | 855 |
+| `positive_theorem` | 854 |
 
 | criticality | count |
 |---|---:|
@@ -380,6 +380,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `source_resolved_exact_green_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `source_resolved_generated_bridge_failure_audit` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-context | B | - |
 | `source_resolved_generated_discriminator_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `source_resolved_generated_new_family_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -13219,6 +13220,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** Support recovery plus a causal parent-averaged field is better, but the weak-field mass law improves without fully closing.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the note's exact zero-source, TOWARD-count, N_eff, and fitted-exponent table; the source note keeps the result bounded and does not claim generated-family closure.
 - **rationale:** The bounded bridge claim closes against the current runner. scripts/source_resolved_generated_architecture_bridge.py reproduces baseline/static 4/16 TOWARD, F~M=0.199, N_eff=2.69; baseline/causal 3/16, -0.308, 2.50; tweak/static 9/16, -0.316, 5.31; and tweak/causal 9/16, 0.444, 5.67, with all zero-source shifts at 0. The note's limitation that the weak-field mass law does not cleanly close is explicit, so the clean audit only certifies the bounded bridge result.
+- **auditor confidence:** high
+
+### `source_resolved_generated_bridge_failure_audit`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_BRIDGE_FAILURE_AUDIT.md`](../../docs/SOURCE_RESOLVED_GENERATED_BRIDGE_FAILURE_AUDIT.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that the current compact generated-family bridge remains geometry-limited across the four retained generated-family probes and tested bridge/geometry variants, without ruling out genuinely new geometry rules, generated families, or field architectures.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `fresh-agent-source-generated-bridge-failure`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** Taken together, these are not one-off misses. They are four separate attempts at the same bottleneck from different angles.  _(class `B`)_
+- **chain closes:** True — The source note synthesizes four retained-grade one-hop results: one discriminator, two bounded geometry-rule no-gos, and one bounded repair probe. Within the audited scope of the tested compact generated family and tested variants, the conclusion follows from those dependencies without needing a runner for this synthesis note.
+- **rationale:** The load-bearing step is a cross-note synthesis over retained-grade dependencies, not a fresh numerical computation or an unsupported physical bridge. The note's own boundary preserves the required limitation: it treats small variants of the same compact generated-family bridge as closed, while leaving genuinely different geometry rules, families, or field architectures open. Residual risk is only scope drift if downstream users quote this as a universal generated-family no-go rather than the bounded no-go audited here.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_discriminator_probe_note`
