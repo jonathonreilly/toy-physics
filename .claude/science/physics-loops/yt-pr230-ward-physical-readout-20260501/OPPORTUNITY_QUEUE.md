@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-03 update: the existing gauge-vacuum Perron theorem has now been
+audited as a possible import for the neutral-scalar rank-one premise.  It does
+not import.  The finite Wilson plaquette theorem proves uniqueness of the gauge
+Perron state for the plaquette source `J`, but a same-gauge counterfamily keeps
+that gauge block fixed while changing the neutral scalar block from rank-one
+to rank-two.  The next positive route must therefore prove neutral-scalar
+positivity improvement directly or provide non-source rank-repair data
+(`O_H/C_sH/C_HH` pole rows or same-source W/Z response rows with identity
+certificates).  Do not treat gauge-vacuum Perron uniqueness as source-Higgs
+purity.
+
 2026-05-03 update: the microscopic rank-one route now has a sharper
 conditional support theorem.  Positivity-improving neutral-scalar transfer
 dynamics would give a unique lowest scalar pole by Perron-Frobenius, and then

@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - Gauge-Perron Import Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / IMPORT BLOCKED / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- finite Wilson gauge-vacuum Perron uniqueness is scoped to the gauge transfer
+  state and plaquette source `J`;
+- the theorem does not supply neutral-scalar positivity improvement or an
+  `O_sp = O_H` identity;
+- a same-gauge counterfamily changes the neutral scalar residue rank from
+  one to two, so the import shortcut is blocked;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_gauge_perron_to_neutral_scalar_rank_one_import_audit.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_gauge_perron_to_neutral_scalar_rank_one_import_audit.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Positivity-Improving Neutral-Scalar Rank-One Support
 
 Local review-loop disposition:

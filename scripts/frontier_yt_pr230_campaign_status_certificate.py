@@ -190,6 +190,9 @@ def main() -> int:
         "positivity_improving_neutral_scalar_rank_one": load(
             "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json"
         ),
+        "gauge_perron_neutral_scalar_rank_one_import": load(
+            "outputs/yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_2026-05-03.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -806,6 +809,20 @@ def main() -> int:
         )
         is False,
         statuses["positivity_improving_neutral_scalar_rank_one"],
+    )
+    report(
+        "gauge-perron-neutral-scalar-rank-one-import-blocked",
+        "gauge-vacuum Perron theorem does not certify neutral-scalar rank-one purity"
+        in str(statuses["gauge_perron_neutral_scalar_rank_one_import"])
+        and certificates["gauge_perron_neutral_scalar_rank_one_import"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["gauge_perron_neutral_scalar_rank_one_import"].get(
+            "gauge_perron_import_closes_neutral_rank_one"
+        )
+        is False,
+        statuses["gauge_perron_neutral_scalar_rank_one_import"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

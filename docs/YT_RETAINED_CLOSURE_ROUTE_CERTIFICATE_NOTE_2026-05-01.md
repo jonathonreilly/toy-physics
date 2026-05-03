@@ -663,3 +663,12 @@ and canonical top Yukawa can remain fixed while the PR #230 source operator
 direction rotates in scalar field space.  The retained-route certificate is
 refreshed at `PASS=76 FAIL=0` and still authorizes no retained/proposed-retained
 wording.
+
+Latest gauge-Perron import checkpoint: the retained-route certificate now
+includes
+`scripts/frontier_yt_gauge_perron_to_neutral_scalar_rank_one_import_audit.py`
+and is refreshed at `PASS=126 FAIL=0`.  The existing finite Wilson
+gauge-vacuum Perron theorem is not a neutral-scalar rank-one certificate: it
+is scoped to the gauge transfer state and plaquette source `J`, and a
+same-gauge counterfamily changes the neutral scalar lowest-pole residue rank
+from one to two.  No retained/proposed-retained wording is authorized.

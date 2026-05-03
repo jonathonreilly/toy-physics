@@ -1,5 +1,29 @@
 # Claim Status Certificate
 
+Gauge-Perron to neutral-scalar rank-one import audit:
+
+```text
+actual_current_surface_status: exact negative boundary / gauge-vacuum Perron theorem does not certify neutral-scalar rank-one purity
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_gauge_perron_to_neutral_scalar_rank_one_import_audit.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=126 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=152 FAIL=0
+```
+
+The import shortcut from the finite Wilson gauge-vacuum Perron theorem is now
+closed.  That theorem is scoped to the gauge transfer state and plaquette
+source `J`; it does not prove neutral-scalar positivity improvement, `O_sp =
+O_H`, or source-pole purity.  A same-gauge counterfamily changes the neutral
+lowest-pole residue rank while preserving the gauge Perron block.  No retained
+or `proposed_retained` wording is authorized.
+
 Positivity-improving neutral-scalar rank-one support:
 
 ```text

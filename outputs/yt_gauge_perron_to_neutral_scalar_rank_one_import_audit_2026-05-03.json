@@ -1,0 +1,102 @@
+{
+  "actual_current_surface_status": "exact negative boundary / gauge-vacuum Perron theorem does not certify neutral-scalar rank-one purity",
+  "bare_retained_allowed": false,
+  "conditional_surface_status": null,
+  "counterfamily": {
+    "common_gauge_block": {
+      "gauge_plaquette_source_scope": "J = (chi_(1,0) + chi_(0,1)) / 6",
+      "leading_eigenvalue": 0.9669194080680591,
+      "perron_gap": 0.483838816136118,
+      "strictly_positive_kernel": true,
+      "subleading_eigenvalue": 0.4830805919319411,
+      "transfer_matrix": [
+        [
+          0.81,
+          0.27
+        ],
+        [
+          0.19,
+          0.64
+        ]
+      ]
+    },
+    "interpretation": "The gauge Perron block is identical in both extensions.  The neutral sector can still be rank one or rank two depending on a separate neutral transfer premise, so the gauge-vacuum theorem is not a neutral-scalar rank-one certificate.",
+    "neutral_rank_one_extension": {
+      "gram_determinant": -2.7755575615628914e-17,
+      "leading_eigenvalue": 0.9033072900770152,
+      "lowest_pole_residue": [
+        [
+          0.5476,
+          0.34040000000000004
+        ],
+        [
+          0.34040000000000004,
+          0.2116
+        ]
+      ],
+      "neutral_gap": 0.4266145801540305,
+      "neutral_transfer_matrix": [
+        [
+          0.77,
+          0.23
+        ],
+        [
+          0.17,
+          0.61
+        ]
+      ],
+      "strictly_positive_kernel": true,
+      "subleading_eigenvalue": 0.4766927099229847
+    },
+    "neutral_rank_two_extension": {
+      "gram_determinant": 1.0,
+      "leading_eigenvalue": 0.89,
+      "lowest_pole_residue": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "neutral_gap": 0.0,
+      "neutral_transfer_matrix": [
+        [
+          0.89,
+          0.0
+        ],
+        [
+          0.0,
+          0.89
+        ]
+      ],
+      "strictly_positive_kernel": false,
+      "subleading_eigenvalue": 0.89
+    }
+  },
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "The gauge-Perron import route is closed.  Continue on either a same-surface proof of neutral-scalar positivity improvement, direct O_H/C_sH/C_HH rank-repair production data, same-source W/Z response rows with identity certificates, or the scalar denominator/K'(pole) theorem.",
+  "fail_count": 0,
+  "gauge_perron_import_closes_neutral_rank_one": false,
+  "gauge_perron_note": "docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md",
+  "parent_certificates": {
+    "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_scalar_dynamical_rank_one_closure": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "orthogonal_neutral_decoupling_no_go": "outputs/yt_orthogonal_neutral_decoupling_no_go_2026-05-02.json",
+    "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+    "reflection_positivity_lsz_shortcut": "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json",
+    "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The imported theorem is scoped to the gauge vacuum and plaquette source J.  PR #230 still lacks a neutral-scalar positivity-improving transfer certificate, certified O_H, production C_sH/C_HH rows, or same-source W/Z response rows.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not import plaquette Perron uniqueness as neutral-scalar positivity improvement",
+    "does not infer O_sp = O_H from a gauge-vacuum theorem",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette value, or u0",
+    "does not manufacture source-Higgs or W/Z response rows"
+  ]
+}

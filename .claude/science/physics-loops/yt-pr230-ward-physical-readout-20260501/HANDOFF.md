@@ -1,5 +1,33 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 gauge-Perron import audit:
+
+- Added
+  `scripts/frontier_yt_gauge_perron_to_neutral_scalar_rank_one_import_audit.py`,
+  `docs/YT_GAUGE_PERRON_TO_NEUTRAL_SCALAR_RANK_ONE_IMPORT_AUDIT_NOTE_2026-05-03.md`,
+  and
+  `outputs/yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_2026-05-03.json`.
+- Tested the tempting import from
+  `docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`.
+  That theorem proves a unique gauge-vacuum Perron state for the finite Wilson
+  plaquette-source problem, but it is scoped to the gauge block and local
+  plaquette source `J`.
+- The import route is now blocked explicitly: the same gauge Perron block can
+  be paired with a positivity-improving rank-one neutral scalar block or a
+  non-improving degenerate rank-two neutral scalar block.  The gauge theorem
+  therefore does not certify neutral-scalar positivity improvement,
+  `O_sp = O_H`, or source-pole purity.
+- Verification: gauge-Perron import audit `PASS=14 FAIL=0`; retained-route
+  `PASS=126 FAIL=0`; campaign status `PASS=152 FAIL=0`.
+- Background production support: chunks023-024 are still running and remain
+  non-evidence until completed and postprocessed.
+
+Next exact action: continue with a real closure input, not the gauge-Perron
+import: prove same-surface neutral-scalar positivity improvement directly, or
+produce certified `O_H/C_sH/C_HH` pole rows, same-source W/Z response rows with
+identity certificates, or the scalar denominator / `K'(pole)` theorem.  Keep
+polling chunks023-024 as background production support.
+
 Latest checkpoint, 2026-05-03 positivity-improving neutral-scalar rank-one support:
 
 - Added

@@ -128,6 +128,7 @@ def main() -> int:
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
         "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+        "gauge_perron_neutral_scalar_rank_one_import": "outputs/yt_gauge_perron_to_neutral_scalar_rank_one_import_audit_2026-05-03.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -723,6 +724,21 @@ def main() -> int:
         is False
         and certificates["positivity_improving_neutral_scalar_rank_one"].get(
             "current_closure_gate_passed"
+        )
+        is False
+    )
+    gauge_perron_neutral_scalar_import_blocks = (
+        "gauge-vacuum Perron theorem does not certify neutral-scalar rank-one purity"
+        in certificates["gauge_perron_neutral_scalar_rank_one_import"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["gauge_perron_neutral_scalar_rank_one_import"].get("proposal_allowed") is False
+        and certificates["gauge_perron_neutral_scalar_rank_one_import"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["gauge_perron_neutral_scalar_rank_one_import"].get(
+            "gauge_perron_import_closes_neutral_rank_one"
         )
         is False
     )
@@ -1475,6 +1491,11 @@ def main() -> int:
         "positivity-improving-neutral-scalar-rank-one-conditional-support-not-closure",
         positivity_improving_neutral_scalar_rank_one_conditional,
         certificates["positivity_improving_neutral_scalar_rank_one"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "gauge-perron-neutral-scalar-rank-one-import-blocked",
+        gauge_perron_neutral_scalar_import_blocks,
+        certificates["gauge_perron_neutral_scalar_rank_one_import"].get("actual_current_surface_status", ""),
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

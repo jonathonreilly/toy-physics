@@ -582,3 +582,11 @@ includes `scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py` and
 reports `PASS=138 FAIL=0`.  The gate is not passed; multi-tau covariance,
 multiple source radii, scalar-pole/FV/IR/model-class control, and
 canonical-Higgs identity remain open.
+
+Latest gauge-Perron import checkpoint: campaign status now includes
+`scripts/frontier_yt_gauge_perron_to_neutral_scalar_rank_one_import_audit.py`
+and reports `PASS=152 FAIL=0`.  The gauge-vacuum Perron theorem cannot be
+imported as the missing neutral-scalar rank-one premise: plaquette-source
+Perron uniqueness does not prove neutral-scalar positivity improvement,
+`O_sp = O_H`, or source-pole purity.  No retained/proposed-retained wording is
+authorized.

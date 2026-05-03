@@ -100,6 +100,7 @@
     "flat_toron_washout": "exact-support / flat toron thermodynamic washout",
     "free_bubble": "exact negative boundary / free source pole absence",
     "free_kinetic": "exact support / free staggered kinetic coefficient",
+    "gauge_perron_neutral_scalar_rank_one_import": "exact negative boundary / gauge-vacuum Perron theorem does not certify neutral-scalar rank-one purity",
     "gauge_vev_source_overlap": "exact negative boundary / gauge-VEV source-overlap no-go",
     "heavy_kinetic": "bounded-support / heavy kinetic-mass route",
     "heavy_matching": "exact negative boundary / heavy kinetic matching obstruction",
@@ -182,7 +183,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 151,
+  "pass_count": 152,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
