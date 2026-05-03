@@ -534,8 +534,9 @@ bare_retained_allowed: false
 - retained Cl(3) per-site uniqueness:
   [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
 - downstream consumer of this discharge:
-  [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
-  (Step 4 single-clock codimension-1 hypothesis)
+  `ANOMALY_FORCES_TIME_THEOREM.md`
+  (Step 4 single-clock codimension-1 hypothesis; cross-reference only,
+  not a one-hop dep — the consumer cites this note, not vice versa)
 - emergent-Lorentz / continuum program (bounding the
   continuum-limit corollary):
   [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
