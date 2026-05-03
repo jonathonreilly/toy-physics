@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:59:22.947955+00:00
+**Generated:** 2026-05-03T15:00:47.721832+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 774 |
+| unaudited | 773 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
-| ~~audited_renaming~~ | 19 |
+| ~~audited_renaming~~ | 20 |
 | ~~audited_conditional~~ | 518 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
-| `audited_renaming` | 19 |
-| `unaudited` | 819 |
+| `audited_renaming` | 20 |
+| `unaudited` | 818 |
 
 | claim_type | count |
 |---|---:|
@@ -1031,6 +1031,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `monopole_derived_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
+| `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | definition_as_derivation | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
@@ -9440,6 +9441,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `non_Oh_strong_field_closure_missing`
   - `fully_nonlinear_GR_closure_missing`
 - **auditor confidence:** high
+
+### `oh_static_constraint_lift_note`
+
+- **Note:** [`OH_STATIC_CONSTRAINT_LIFT_NOTE.md`](../../docs/OH_STATIC_CONSTRAINT_LIFT_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims that on the exact local O_h source class, the exact shell source and same-charge bridge admit an exact local static conformal constraint lift on the current bridge surface.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-restricted-static-lift-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** After setting psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi, the note defines rho = sigma_R / (2 pi psi^5) and S = 0.5 rho (1/alpha - 1), then concludes that H_0 psi = 2 pi psi^5 rho and H_0 chi = -2 pi alpha psi^5 (rho + 2S) hold identically.  _(class `definition_as_derivation`)_
+- **chain closes:** False — The algebraic residuals close only after rho and S are defined to make the two static constraints true. The note does not derive these matter variables, source law, or 3+1 physical lift independently from retained inputs, and ledger deps=[] leaves the cited shell source and same-charge bridge outside the audited chain.
+- **rationale:** Issue: The load-bearing shell-to-3+1 lift is introduced by defining rho and S from the desired static conformal constraints, while the note's retained dependency list is empty despite relying on the exact shell source and same-charge bridge. The local runner passed all eight checks and reproduced machine-precision residuals, but it uses the same rho/S definitions that make the residual identities true. Why this blocks: A hostile reviewer can accept the residual identities and still reject the advertised positive theorem, because the runner verifies consistency after the bridge variables have been set rather than deriving the physical matter lift from independent retained premises. Repair target: Add retained dependencies for the exact shell source and same-charge bridge, and prove or run a bridge theorem that constructs rho and S as physical 3+1 shell density/stress-trace from those inputs without solving the target constraints by definition. Claim boundary until fixed: The safe claim is an exact algebraic parametrization: given sigma_R, psi, chi, alpha, and the stated definitions of rho and S, the two discrete static conformal residuals vanish on the tested O_h lattice class.
+- **open / conditional deps cited:**
+  - `exact shell source on the sewing band`
+  - `unique same-charge bridge psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi`
+  - `independent physical interpretation theorem for rho and S as 3+1 shell density and stress trace`
+- **auditor confidence:** 0.86
 
 ### `ollivier_einstein_proxy_note_2026-04-11`
 

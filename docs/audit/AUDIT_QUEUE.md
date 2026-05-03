@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T14:59:22.488695+00:00
-**Total pending:** 803
-**Ready (all deps already at retained-grade or metadata tiers):** 115
+**Generated:** 2026-05-03T15:00:47.372684+00:00
+**Total pending:** 802
+**Ready (all deps already at retained-grade or metadata tiers):** 114
 
 By criticality:
 - `critical`: 60
-- `high`: 214
+- `high`: 213
 - `medium`: 327
 - `leaf`: 202
 
