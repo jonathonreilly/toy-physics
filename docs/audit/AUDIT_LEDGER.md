@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:51:49.692975+00:00
+**Generated:** 2026-05-03T20:56:43.618631+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 187 |
+| **retained_bounded** | 188 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 699 |
+| unaudited | 698 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 350 |
+| `audited_clean` | 351 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 746 |
+| `unaudited` | 745 |
 
 | claim_type | count |
 |---|---:|
@@ -362,6 +362,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_driven_field_recovery_h025_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_driven_field_recovery_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
+| `source_resolved_exact_green_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_generated_discriminator_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -12923,6 +12924,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** For the fixed small exact lattice, clipped cross5 source cluster, Green-like kernel, source ladder, and calibration gain, the frozen readout shows zero-source reduction, TOWARD sign for all four source strengths, and green-kernel F~M exponent 1.00.  _(class `C`)_
 - **chain closes:** True — The runner completed and reproduced the note's frozen values exactly, including zero-source dynamic shift +0.000000e+00, green-kernel exponent 1.00, TOWARD rows 4/4, and mean |green/inst| ratio 1.235. The closure is only for the explicitly fixed finite construction, not for size transfer or a self-consistent dynamical field equation.
 - **rationale:** The note states a narrow bounded feasibility pocket, and the current runner completes in-budget with output matching the frozen table and safe-read quantities. No prior dependencies are required for the audited finite statement, and the note explicitly disclaims full-size transfer and self-consistent dynamics. Residual risk is scope-related: the calibrated finite construction does not by itself prove a general exact-lattice gravity theory.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_scaling_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_SCALING_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_SCALING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the fixed exact lattice h=0.5, W=3, L=24, fixed four-node source cluster, source strengths 0.001 through 0.008, kernel parameters mu=0.08 and eps=0.5, and calibration gain 2.131774, the source-resolved Green replay has exact zero-source reduction, TOWARD sign in all four rows, near-linear F~M scaling, and mean |green/inst| ratio 1.111.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-source-green-scaling`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The strongest bounded statement is that zero-source reduction survives, the Green-kernel field keeps the weak-field TOWARD sign on the larger exact lattice family, the mass-scaling class stays essentially linear, and mean |green/inst| = 1.111.  _(class `C`)_
+- **chain closes:** True — The one-hop source-resolved Green pocket dependency is effective retained_bounded, and the current runner completed and reproduced the frozen L=24 table, zero-source shift, exponents, and mean ratio. Closure is bounded to this fixed lattice family, kernel, source cluster, gain, and readout; it does not establish a self-consistent field theory or generated-geometry transfer.
+- **rationale:** The load-bearing finite computation completed under the current runner and matches the source note's frozen values: zero-source dynamic shift +0.000000e+00, TOWARD rows 4/4, instantaneous and Green-kernel F~M exponents 1.01, and mean |green/inst| ratio 1.111. The result is not algebraic decoration of the upstream pocket because it performs a distinct larger-lattice replay rather than deriving an identity from the parent. The calibrated gain and fixed kernel/source choices are part of the bounded claim scope, so they limit but do not block the audited statement.
 - **auditor confidence:** high
 
 ### `source_resolved_exact_green_self_consistent_note`

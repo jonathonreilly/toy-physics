@@ -3,9 +3,9 @@
     "critical": 62,
     "high": 215,
     "leaf": 201,
-    "medium": 250
+    "medium": 249
   },
-  "generated_at": "2026-05-03T20:51:49.331350+00:00",
+  "generated_at": "2026-05-03T20:56:43.198378+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7825,29 +7825,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_exact_green_scaling_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_resolved_exact_green_pocket_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.585,
-      "note_path": "docs/SOURCE_RESOLVED_EXACT_GREEN_SCALING_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/source_resolved_exact_green_scaling.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "staggered_fermion_card_2026-04-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -14534,6 +14511,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "source_resolved_exact_green_h025_pocket_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "source_resolved_exact_green_pocket_note",
+        "source_resolved_exact_green_scaling_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/source_resolved_exact_green_h025_pocket.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "source_resolved_generated_bridge_failure_audit",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -14554,6 +14555,30 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "source_resolved_green_robustness_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "source_resolved_exact_green_pocket_note",
+        "source_resolved_exact_green_scaling_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/source_resolved_green_robustness.py",
       "transitive_descendants": 0
     },
     {
@@ -18483,54 +18508,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_exact_green_h025_pocket_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_resolved_exact_green_pocket_note",
-        "source_resolved_exact_green_scaling_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_EXACT_GREEN_H025_POCKET_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/source_resolved_exact_green_h025_pocket.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "source_resolved_green_robustness_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_resolved_exact_green_pocket_note",
-        "source_resolved_exact_green_scaling_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/source_resolved_green_robustness.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "spectral_symmetry_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -19239,6 +19216,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 43,
-  "total_pending": 728
+  "ready_count": 44,
+  "total_pending": 727
 }
