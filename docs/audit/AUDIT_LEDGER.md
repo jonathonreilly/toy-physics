@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:00:50.956693+00:00
+**Generated:** 2026-05-03T16:02:48.109945+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 776 |
+| unaudited | 775 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 518 |
+| ~~audited_conditional~~ | 519 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 308 |
-| `audited_conditional` | 518 |
+| `audited_conditional` | 519 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 822 |
+| `unaudited` | 821 |
 
 | claim_type | count |
 |---|---:|
@@ -503,6 +503,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `decoherence_decision_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `decoherence_failure_analysis` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dense_prune_guard_seed_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `diamond_sensor_protocol_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unratified_physical_observable_bridge | - |
 | `dimension_selection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_decoherence_probe_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dirac_field_smoothing_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3051,6 +3052,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
+
+### `diamond_sensor_protocol_note`
+
+- **Note:** [`DIAMOND_SENSOR_PROTOCOL_NOTE.md`](../../docs/DIAMOND_SENSOR_PROTOCOL_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A bounded lab-facing NV/diamond discriminator protocol: measure lock-in quadrature Y, phase lag phi, and optional widefield spatial phase ramp for a driven source, with the retained wavefield expectation qualitatively increasing with drive frequency and source-detector separation against a quasi-static null.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-nature-auditor-2026-05-03-diamond-sensor`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note asserts that the retained retarded/wavefield lane predicts nonzero Y, nonzero phi, a coherent spatial phase ramp, and strengthening of the phase/quadrature signal with increasing drive frequency and source-detector separation.  _(class `unratified_physical_observable_bridge`)_
+- **chain closes:** False — The note is explicitly a lab-facing discriminator protocol and does not derive the NV lock-in observables from retained primitives. It also makes an ideal-detector forward model a required precondition rather than providing it.
+- **rationale:** Issue: The theorem-level claim depends on the assertion that the retained retarded/wavefield lane maps to NV lock-in observables Y, phi, and a spatial phase ramp with qualitative frequency/separation ordering, but the source note supplies this as protocol expectation rather than a derivation. Why this blocks: A bounded theorem cannot close from the retained inputs shown here because the physical readout bridge, source model, boundary conditions, and ideal-detector forward model are not constructed in the note or checked by a runner. Repair target: Provide a retained theorem or ideal-detector forward model deriving X, Y, phi, and the spatial phase profile from the same driven source history, plus a runner that computes the qualitative ordering without hard-coding the phase-lag premise. Claim boundary until fixed: The note may stand as a bounded experimental discriminator proposal, not as an audited theorem that the retained lane predicts an NV-measurable nonzero quadrature or spatial phase ramp.
+- **auditor confidence:** 0.86
 
 ### `dimension_selection_note`
 
