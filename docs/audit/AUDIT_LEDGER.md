@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:43:34.075456+00:00
+**Generated:** 2026-05-03T01:46:16.242862+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 215 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 469 |
+| unaudited | 468 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 662 |
+| ~~audited_conditional~~ | 663 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 426 |
-| `audited_conditional` | 662 |
+| `audited_conditional` | 663 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 509 |
+| `unaudited` | 508 |
 
 | claim_type | count |
 |---|---:|
@@ -1134,6 +1134,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_nature_grade_push_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_open_item_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `teleportation_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
+| `teleportation_poisson_resource_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -17025,6 +17026,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The note's finite retained-axis teleportation conclusion depends on imported Poisson resource construction/end-to-end teleportation machinery and the retained-taste operator-model factorization machinery: the runner imports evaluate_case/passes_protocol/probe_states, DEFAULT_CASES/AuditCase resource definitions, and factorization_audit/pair_factorization_audit/operator builders rather than deriving those bridges inside this claim with declared dependencies.  _(class `B`)_
 - **chain closes:** False — The note and runner are internally consistent with the supplied live output, but the scoped check does not close from declared inputs because the runner's decisive resource construction, teleportation-channel evaluation, and operator-factorization guards are imported from undeclared upstream modules/results while this claim declares no dependencies.
 - **rationale:** Issue: The finite end-to-end result is presented with deps=[] even though the primary runner load-bearingly imports the Poisson resource/end-to-end teleportation implementation and the retained taste-readout operator-model implementation. Why this blocks: A hostile audit cannot treat the PASS table as an independent closed theorem from this note and runner alone; the retained-resource and operator-model bridges are upstream premises, not rederived here, and their status is not declared. Repair target: Declare the exact upstream dependency claims for the Poisson resource construction/end-to-end evaluator and retained-axis operator factorization, or inline a self-contained derivation/computation in this runner that removes those imports as scientific premises. Claim boundary until fixed: The note may be cited as a conditional finite numerical/operator-consistency artifact: if the imported Poisson-resource and retained-axis operator-model premises are retained, then the selected 1D and 2D non-null cases pass the stated ideal logical teleportation gates while raw xi_5 controls are rejected in 2D/3D.
+- **auditor confidence:** high
+
+### `teleportation_poisson_resource_sweep_note`
+
+- **Note:** [`TELEPORTATION_POISSON_RESOURCE_SWEEP_NOTE.md`](../../docs/TELEPORTATION_POISSON_RESOURCE_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded default-grid numerical sweep for ordinary quantum state teleportation using the deterministic traced encoded two-qubit Poisson-derived resource on surfaces 1d_N8 and 2d_4x4, masses 0, 0.1, 0.5, 1, and G values 0, 1, 10, 50, 100, 500, 1000; postselected branches are diagnostic only.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Lagrange-the-2nd-019deb82-9456-7873-b978-384cc4026fbb`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note's conclusion that high coupling and low mass produce deterministic high-fidelity encoded Bell resources over the bounded 1d_N8/2d_4x4 sweep relies on the imported Poisson ground-state construction, logical extraction, Bell/CHSH/negativity metrics, and teleportation convention from scripts/frontier_teleportation_resource_from_poisson.py.  _(class `B`)_
+- **chain closes:** False — The sweep runner appears to summarize the stated finite grid and the note's numerics match the supplied runner output, but the load-bearing construction and observables are imported from an undeclared upstream Poisson-resource module while the ledger row declares deps=[]. The finite sweep therefore does not close as an independent bounded theorem from the declared inputs.
+- **rationale:** Issue: The bounded sweep reuses scripts/frontier_teleportation_resource_from_poisson.py for AuditCase, ground_state_resource, factor_sites, reduced_logical_resource, Bell overlap, CHSH, negativity, postselected scan, teleportation statistics, and convention verification, but the claim declares no dependencies. Why this blocks: The positive parameter-window conclusion is only as sound as that imported Poisson-resource construction and logical readout; without declaring and closing that premise, the sweep cannot independently establish the physical or numerical bridge. Repair target: Add the Poisson-resource construction as an explicit dependency, ensure its audit status closes for the ground-state construction, logical extraction, and teleportation-resource metrics, then re-audit this sweep as a bounded finite-grid corollary. Claim boundary until fixed: The note may be retained only as a conditional bounded sweep report over the imported construction, not as a self-closing bounded theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_teleportation_resource_from_poisson.py`
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
