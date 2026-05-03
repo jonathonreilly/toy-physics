@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:07:32.231099+00:00
+**Generated:** 2026-05-03T20:08:20.204268+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 182 |
+| **retained_bounded** | 183 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 705 |
+| unaudited | 704 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 342 |
+| `audited_clean` | 343 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 751 |
+| `unaudited` | 750 |
 
 | claim_type | count |
 |---|---:|
@@ -107,6 +107,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `action_power_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
@@ -1147,6 +1148,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — No. The rho=|psi|^2 gravitational-source law and born-gravity cross-constraint are used as framework premises rather than derived in this audit packet, so the conclusion cannot be ratified from the source note alone.
 - **rationale:** Issue: the rho=|psi|^2 gravitational-source law and Born-gravity cross-constraint are used as framework premises rather than derived in this audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **auditor confidence:** high
+
+### `action_crossover_note`
+
+- **Note:** [`ACTION_CROSSOVER_NOTE.md`](../../docs/ACTION_CROSSOVER_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The scoped runner reproduces the finite DAG-slice crossover table for spent-delay versus valley-linear at regularities 0.0, 0.2, 0.4, 0.6, 0.8, and 0.95, with best observed valley-minus-spent delta at regularity 0.40.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-yang`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The tested DAG family shows that the better-performing action switches from spent-delay to valley-linear as graph geometry becomes more regular.  _(class `C`)_
+- **chain closes:** True — The runner completed and reproduced the table in the note exactly. The clean scope is only the frozen finite replay, not the lattice limit or any universal UV/IR bridge.
+- **rationale:** The bounded claim is exactly the finite deterministic replay table, and the scoped runner computes the DAG family, both action scores, and the reported crossover rather than hard-coding the winner table. The note repeatedly limits the interpretation to a branch-specific tested slice, so no unaudited physical bridge is needed for this scoped claim.
+- **auditor confidence:** medium
 
 ### `action_geometry_bridge_note`
 
