@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:41:29.266996+00:00
+**Generated:** 2026-05-03T15:42:51.868704+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 775 |
+| unaudited | 774 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 518 |
-| ~~audited_failed~~ | 7 |
+| ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 311 |
 | `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
-| `audited_failed` | 51 |
+| `audited_failed` | 52 |
 | `audited_numerical_match` | 26 |
 | `audited_renaming` | 21 |
-| `unaudited` | 821 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
@@ -958,6 +958,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `fifth_family_radial_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | stale_runner_configured_numerical_sweep | - |
 | `fifth_family_radial_fm_transfer_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
@@ -5537,6 +5538,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `FIFTH_FAMILY_RADIAL_NOTE.md_unaudited_base_family`
   - `live_runner_output_not_reproducible`
 - **auditor confidence:** high
+
+### `fifth_family_radial_boundary_note`
+
+- **Note:** [`FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md`](../../docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims a local radial-shell fifth-family boundary: at drift 0.20, seed 0 the zero-source baseline and neutral cancellation remain exact while plus/minus sign orientation flips, so this shell rule has a narrow local boundary and broader fifth-family claims remain unsafe.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-radial-boundary-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The sentence 'The interior test row at drift 0.20, seed 0 keeps zero-source baseline exact and neutral cancellation exact, but flips sign orientation with plus < 0 and minus > 0' is load-bearing, because the claimed boundary is entirely supported by that concrete executable row.  _(class `stale_runner_configured_numerical_sweep`)_
+- **chain closes:** False — The chain does not close from retained inputs: the note gives no derivation beyond the named runner, and the current runner fails at import time before producing the claimed row.
+- **rationale:** Issue: The only load-bearing support is a runner-backed numerical row, but the current runner cannot import _build_radial_shell_connectivity and produces no row values. Why this blocks: A positive theorem cannot rest on stale executable support, and the note contains no independent derivation of the zero/neutral exactness or plus/minus sign flip from retained inputs. Repair target: Restore or replace the runner so it constructs the radial-shell connectivity from current retained APIs, emits the claimed rows, and, if theorem status is intended, add a derivation showing why the boundary follows rather than merely observing selected drift/seed cases. Claim boundary until fixed: At most, this remains a historical/stale support note saying an earlier radial-shell audit reportedly found a local sign-orientation miss; it cannot be retained as a current positive theorem.
+- **auditor confidence:** 0.93
 
 ### `fifth_family_radial_fm_transfer_note`
 
