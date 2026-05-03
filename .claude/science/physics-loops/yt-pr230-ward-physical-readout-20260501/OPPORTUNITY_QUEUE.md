@@ -1,13 +1,22 @@
 # Opportunity Queue
 
+2026-05-03 update: target-observable ESS now passes for the current ready set
+after chunks013-016 completed (`16/63` L12 chunks, `256/1000` saved
+configurations, limiting ESS `210.7849819291294`).  This retires the target
+ESS instrumentation blocker but not the physics blockers.  The next
+production-support step is response stability and pole postprocessing; the
+highest retained-positive routes remain same-surface `O_H/C_sH/C_HH` rows,
+real W/Z response rows with sector-overlap identity, or a theorem forbidding
+the orthogonal neutral top-coupling loophole.
+
 2026-05-03 update: selected-mass scalar FH/LSZ plus normal-equation caching is
-now landed, and the target-timeseries replacement queue is empty for ready
-chunks001-012.  The next production-support step is not another replacement
-rerun; it is a target-observable blocking/bootstrap ESS certificate for
-same-source `dE/ds` and `C_ss(q)/Gamma_ss(q)`.  The stronger closure routes
-remain same-surface `O_H/C_sH/C_HH` rows, real W/Z response rows with
-sector-overlap identity, or a theorem forbidding the orthogonal neutral
-top-coupling loophole.
+now landed, the target-timeseries replacement queue is empty, and the later
+chunk013-016 wave has moved target-series completion to chunks001-016.  The
+target-observable ESS certificate now passes for the current ready set, so the
+next production-support step is response stability and pole postprocessing.
+The stronger closure routes remain same-surface `O_H/C_sH/C_HH` rows, real W/Z
+response rows with sector-overlap identity, or a theorem forbidding the
+orthogonal neutral top-coupling loophole.
 
 2026-05-03 update: chunk003 is now target-timeseries complete, so the current
 target ESS replacement queue is chunks004-010.  The next production-support

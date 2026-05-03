@@ -8,8 +8,9 @@
 
 The autocorrelation/ESS gate now has a ready set large enough for target
 statistics. The current target-series complete ready chunks are chunks001
-through 012. The earlier replacement queue, chunks004-010, has been consumed
-with fixed seeds and chunk-isolated artifact paths.
+through 016. The earlier replacement queue, chunks004-010, has been consumed
+with fixed seeds and chunk-isolated artifact paths, and chunks013-016 were
+added as target-ESS support chunks.
 
 This runner derives the replacement queue from the current autocorrelation
 certificate. It prevents the campaign from mistaking more new chunks for a
@@ -25,14 +26,13 @@ python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
 The current replacement queue is empty for the ready set:
 
 ```text
-complete_target_timeseries_indices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+complete_target_timeseries_indices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 replacement_queue = []
 ```
 
-Chunk013 and later can add new target-timeseries support, but they are no
-longer a repair for a missing ready-set target-series queue. Target ESS still
-needs its own predeclared blocking/bootstrap or integrated-autocorrelation
-certificate.
+The target-observable ESS certificate now passes separately for the current
+ready set with limiting ESS `210.7849819291294`, but this queue runner remains
+scheduling support only.
 
 ## Claim Boundary
 
@@ -43,6 +43,6 @@ control, or canonical-Higgs identity. It authorizes no retained or
 
 ## Next Action
 
-Rerun the autocorrelation/ESS gate with a target-observable blocking/bootstrap
-certificate before treating the ready set as production evidence. Continue new
+No replacement queue is open. Continue response stability, scalar-pole
+derivative/model-class/FV/IR, and canonical-Higgs identity gates. Continue new
 target-series chunks toward the full L12 set only as production support.

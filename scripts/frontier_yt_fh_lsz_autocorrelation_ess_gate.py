@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 READY_SET = ROOT / "outputs" / "yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json"
 RESPONSE_STABILITY = ROOT / "outputs" / "yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json"
 COMBINER = ROOT / "outputs" / "yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"
+TARGET_OBSERVABLE_ESS = ROOT / "outputs" / "yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json"
 OUTPUT = ROOT / "outputs" / "yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
 
 MIN_READY_CHUNKS_FOR_GATE = 8
@@ -162,6 +163,7 @@ def main() -> int:
     ready_set = load_json(READY_SET)
     response_stability = load_json(RESPONSE_STABILITY)
     combiner = load_json(COMBINER)
+    target_observable_ess = load_json(TARGET_OBSERVABLE_ESS)
     ready_indices = [
         int(index)
         for index in ready_set.get("ready_chunk_indices", [])
@@ -185,13 +187,29 @@ def main() -> int:
         if finite(row.get("plaquette_tau_int", {}).get("ess_initial_positive"))
     ]
     min_plaquette_ess = min(plaquette_ess_values) if plaquette_ess_values else None
-    target_ess_available = False
-    autocorrelation_gate_passed = False
+    ready_count_reaches_threshold = len(ready_indices) >= MIN_READY_CHUNKS_FOR_GATE
+    target_ess_available = bool(target_observable_ess)
+    target_observable_ess_gate_passed = (
+        target_observable_ess.get("target_observable_ess_gate_passed") is True
+    )
+    autocorrelation_gate_passed = (
+        ready_count_reaches_threshold
+        and target_series_complete
+        and target_observable_ess_gate_passed
+    )
 
     report("ready-set-loaded", bool(ready_set), str(READY_SET.relative_to(ROOT)))
     report("response-stability-loaded", bool(response_stability), str(RESPONSE_STABILITY.relative_to(ROOT)))
     report("combiner-gate-loaded", bool(combiner), str(COMBINER.relative_to(ROOT)))
-    ready_count_reaches_threshold = len(ready_indices) >= MIN_READY_CHUNKS_FOR_GATE
+    report(
+        "target-observable-ess-certificate-state-recorded",
+        True,
+        (
+            str(TARGET_OBSERVABLE_ESS.relative_to(ROOT))
+            if target_ess_available
+            else "target-observable ESS certificate absent"
+        ),
+    )
     report(
         "ready-chunk-count-threshold-state-recorded",
         True,
@@ -215,19 +233,33 @@ def main() -> int:
             f"incomplete_indices={target_incomplete_indices}"
         ),
     )
+    if target_observable_ess_gate_passed:
+        report(
+            "target-observable-ess-threshold-passed",
+            True,
+            f"limiting_target_ess={target_observable_ess.get('limiting_target_ess')}",
+        )
+    else:
+        report(
+            "target-observable-ess-threshold-not-passed",
+            True,
+            (
+                "target time series are still incomplete for the ready set"
+                if not target_series_complete
+                else (
+                    "target-observable ESS certificate is absent"
+                    if not target_ess_available
+                    else (
+                        "limiting_target_ess="
+                        f"{target_observable_ess.get('limiting_target_ess')}"
+                    )
+                )
+            ),
+        )
     report(
-        "target-ess-not-available",
-        not target_ess_available,
-        (
-            "target time series are still incomplete for the ready set"
-            if not target_series_complete
-            else "target time series are complete for the ready set, but no predeclared target blocking/bootstrap ESS certificate is available"
-        ),
-    )
-    report(
-        "autocorrelation-ess-gate-not-passed",
-        not autocorrelation_gate_passed,
-        "target ESS cannot be certified from current outputs",
+        "autocorrelation-ess-gate-state-recorded",
+        True,
+        f"autocorrelation_ess_gate_passed={autocorrelation_gate_passed}",
     )
     report(
         "does-not-authorize-production-evidence",
@@ -239,20 +271,42 @@ def main() -> int:
 
     complete_label = ", ".join(f"chunk{index:03d}" for index in target_complete_indices) or "none"
     incomplete_label = ", ".join(f"chunk{index:03d}" for index in target_incomplete_indices) or "none"
+    status = (
+        "bounded-support / FH-LSZ autocorrelation ESS gate passed for target observables"
+        if autocorrelation_gate_passed
+        else "open / FH-LSZ autocorrelation ESS gate not passed"
+    )
     result = {
-        "actual_current_surface_status": "open / FH-LSZ autocorrelation ESS gate not passed",
+        "actual_current_surface_status": status,
         "verdict": (
             "The current ready chunks include plaquette histories, so a "
             "diagnostic plaquette autocorrelation can be estimated.  Target-series "
             f"coverage state: complete={complete_label}; incomplete={incomplete_label}.  "
-            "The load-bearing FH/LSZ target effective sample size still cannot be "
-            "certified for the ready set until target-observable blocking/bootstrap "
-            "data or an equivalent autocorrelation certificate is available for the "
-            "production set."
+            "The load-bearing FH/LSZ target effective sample size is accepted only "
+            "when the target-observable ESS certificate reaches the configured "
+            "threshold; plaquette ESS is diagnostic only."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "Target-observable autocorrelation and effective sample size are not certified.",
+        "proposal_allowed_reason": (
+            "Target ESS is only a production-evidence gate. Response stability, "
+            "scalar-pole derivative/model-class/FV/IR, and canonical-Higgs identity "
+            "remain separate blockers."
+        ),
         "autocorrelation_ess_gate_passed": autocorrelation_gate_passed,
+        "target_ess_available": target_ess_available,
+        "target_observable_ess_certificate": (
+            str(TARGET_OBSERVABLE_ESS.relative_to(ROOT)) if target_ess_available else None
+        ),
+        "target_observable_ess_summary": {
+            "target_observable_ess_gate_passed": target_observable_ess_gate_passed,
+            "limiting_target_ess": target_observable_ess.get("limiting_target_ess"),
+            "minimum_target_ess_per_volume": target_observable_ess.get(
+                "minimum_target_ess_per_volume", MIN_TARGET_ESS_PER_VOLUME
+            ),
+            "additional_chunks_estimate_at_current_rate": target_observable_ess.get(
+                "additional_chunks_estimate_at_current_rate"
+            ),
+        },
         "ready_chunk_indices": ready_indices,
         "ready_count_reaches_threshold": ready_count_reaches_threshold,
         "target_timeseries_summary": {
@@ -279,11 +333,15 @@ def main() -> int:
             "does not set kappa_s = 1",
         ],
         "exact_next_action": (
-            "Continue future chunks with target time-series serialization, "
-            "rerun or replace older chunks if target ESS is required for the "
-            "ready set, or emit a predeclared blocking/bootstrap certificate; "
-            "then rerun this gate before using chunked FH/LSZ output as "
-            "production evidence."
+            "Continue future chunks with target time-series serialization until "
+            "the target-observable ESS certificate passes; then rerun this gate "
+            "before using chunked FH/LSZ output as production evidence."
+            if not autocorrelation_gate_passed
+            else (
+                "Target-observable ESS is accepted for the current ready set; "
+                "response stability, scalar-pole derivative/model-class/FV/IR, "
+                "and canonical-Higgs identity remain open."
+            )
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

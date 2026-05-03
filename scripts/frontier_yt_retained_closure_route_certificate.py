@@ -147,6 +147,7 @@ def main() -> int:
         "effective_mass_plateau_residue_no_go": "outputs/yt_effective_mass_plateau_residue_no_go_2026-05-02.json",
         "finite_source_shift_derivative_no_go": "outputs/yt_finite_source_shift_derivative_no_go_2026-05-02.json",
         "fh_lsz_finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
+        "fh_lsz_target_observable_ess": "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json",
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
         "fh_lsz_target_timeseries_replacement_queue": "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json",
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
@@ -877,12 +878,15 @@ def main() -> int:
         )
         is False
     )
-    autocorrelation_ess_gate_blocks = (
-        "autocorrelation ESS gate not passed"
+    target_observable_ess_not_closure = (
+        "target-observable ESS certificate"
+        in certificates["fh_lsz_target_observable_ess"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_target_observable_ess"].get("proposal_allowed") is False
+    )
+    autocorrelation_ess_gate_not_closure = (
+        "autocorrelation ESS gate"
         in certificates["fh_lsz_autocorrelation_ess_gate"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_autocorrelation_ess_gate"].get("proposal_allowed") is False
-        and certificates["fh_lsz_autocorrelation_ess_gate"].get("autocorrelation_ess_gate_passed")
-        is False
     )
     target_timeseries_replacement_queue_cert = certificates[
         "fh_lsz_target_timeseries_replacement_queue"
@@ -1425,8 +1429,13 @@ def main() -> int:
         certificates["fh_lsz_finite_source_linearity_gate"].get("actual_current_surface_status", ""),
     )
     report(
-        "fh-lsz-autocorrelation-ess-gate-blocks",
-        autocorrelation_ess_gate_blocks,
+        "fh-lsz-target-observable-ess-certificate-not-closure",
+        target_observable_ess_not_closure,
+        certificates["fh_lsz_target_observable_ess"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-autocorrelation-ess-gate-not-closure",
+        autocorrelation_ess_gate_not_closure,
         certificates["fh_lsz_autocorrelation_ess_gate"].get("actual_current_surface_status", ""),
     )
     report(

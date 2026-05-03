@@ -1,5 +1,31 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ target-observable ESS support:
+
+- Added `scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py` and
+  `outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json`.
+- Initial chunks001-012 target ESS was below threshold
+  (`limiting_target_ess=150.2439730312628 < 200`), so chunks013-016 were
+  launched with fixed seeds, no `--resume`, distinct output directories, and
+  concurrency capped at four workers.
+- Chunks013-016 completed and pass the generic target-timeseries checkpoint.
+  The ready set is now chunks001-016, `16/63` L12 chunks and `256/1000` saved
+  configurations.
+- Target-observable ESS now passes for the current ready set
+  (`limiting_target_ess=210.7849819291294 >= 200`), and the autocorrelation ESS
+  gate reports `PASS=11 FAIL=0`.
+- Response stability still fails (`relative_stdev=0.8943920916391181`,
+  `spread_ratio=5.476535332624479`, `relative_fit_error=8.121324509664896`).
+  Scalar-pole/FV/IR/model-class and canonical-Higgs identity gates remain
+  open.
+- Retained-route is `PASS=110 FAIL=0`; campaign status is `PASS=136 FAIL=0`.
+  No retained or proposed-retained closure is authorized.
+
+Next exact action: do not spend more foreground time on replacement queue
+work.  Continue response-stability/pole postprocessing only as support, and
+prioritize same-surface `C_sH/C_HH`, a same-surface `O_H` identity theorem, or
+real W/Z response rows with sector-overlap identity.
+
 Latest checkpoint, 2026-05-03 FH/LSZ selected-mass normal-cache speedup and replacement queue completion:
 
 - Optimized `scripts/yt_direct_lattice_correlator_production.py` so the
@@ -15,17 +41,18 @@ Latest checkpoint, 2026-05-03 FH/LSZ selected-mass normal-cache speedup and repl
 - Chunk004 finished as an already-running pre-optimization replacement.
   Chunks005-010 were rerun with the optimized harness, no `--resume`, fixed
   seeds, distinct chunk output paths, and concurrency 3.
-- Generic target-timeseries checkpoints now pass for chunks001-012.  The
-  target-timeseries replacement queue is empty; autocorrelation/ESS remains
-  open because a target-observable blocking/bootstrap certificate is absent.
+- Generic target-timeseries checkpoints passed for chunks001-012 at this
+  checkpoint.  The later chunk013-016 target-ESS wave supersedes this state:
+  chunks001-016 are now target-timeseries complete, and target ESS passes for
+  the current ready set.
 - Retained-route is `PASS=109 FAIL=0`; campaign status is
   `PASS=135 FAIL=0` over 148 certificates. No retained or proposed-retained
   closure is authorized.
 
-Next exact action: emit a target-observable blocking/bootstrap ESS certificate
-for same-source `dE/ds` and `C_ss(q)/Gamma_ss(q)` if continuing production
-support, or attack same-surface `C_sH` / `C_HH`, a same-surface `O_H` identity
-theorem, or real W/Z response rows with sector-overlap identity.
+Next exact action from the superseding target-ESS checkpoint: response
+stability and pole postprocessing only as support, or attack same-surface
+`C_sH` / `C_HH`, a same-surface `O_H` identity theorem, or real W/Z response
+rows with sector-overlap identity.
 
 Latest checkpoint, 2026-05-03 FH/LSZ chunk003 target-timeseries rerun:
 

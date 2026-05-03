@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=109 FAIL=0
+# SUMMARY: PASS=110 FAIL=0
 ```
 
 ## 2026-05-03 FH/LSZ Production-Support Update
@@ -30,13 +30,16 @@ replacement workload moves from 411 to 143 RHS solves per configuration
 physics evidence.
 
 The target-timeseries replacement queue for the current ready L12 set is now
-empty: chunks001 through 012 have target time series, with generic chunk
-checkpoints passing for all twelve discovered chunks.  The ready set remains
-only `12/63` L12 chunks and `192/1000` saved configurations, response
-stability still fails (`relative_stdev=0.9004518435028103`,
-`spread_ratio=5.476535332624479`, `relative_fit_error=9.042293381614297`),
-and target ESS still lacks a target-observable blocking/bootstrap certificate.
-No retained or `proposed_retained` closure is authorized.
+empty: chunks001 through 016 have target time series, with generic chunk
+checkpoints passing for all sixteen discovered chunks.  The target-observable
+ESS certificate now passes for the current ready set
+(`limiting_target_ess=210.7849819291294 >= 200.0`), and the downstream
+autocorrelation/ESS gate passes as bounded support.  The ready set remains
+only `16/63` L12 chunks and `256/1000` saved configurations, response
+stability still fails (`relative_stdev=0.8943920916391181`,
+`spread_ratio=5.476535332624479`, `relative_fit_error=8.121324509664896`),
+and no scalar-pole/FV/IR/model-class or canonical-Higgs identity closure is
+available. No retained or `proposed_retained` closure is authorized.
 
 The runner verifies:
 
@@ -75,7 +78,7 @@ The runner verifies:
 | finite effective-mass plateau window fixes the source-pole residue | no |
 | single finite source-shift radius certifies the zero-source FH derivative | no |
 | finite-source-linearity gate is passed for current FH chunks | no |
-| autocorrelation/ESS gate is passed for target FH/LSZ observables | no |
+| autocorrelation/ESS gate is passed for target FH/LSZ observables | bounded support only; yes for current target ESS, not closure |
 | chunk011 target time series make the ready set production evidence | no |
 | target time-series harness extension is production evidence | no |
 | target time series identify the canonical Higgs radial mode | no |
@@ -248,14 +251,15 @@ heavy orthogonal mass gap alone does not set `cos(theta)=1` or zero the
 orthogonal top coupling.  A scaling/decoupling theorem or source-Higgs
 Gram-purity data is still required.
 The chunked FH/LSZ route has also advanced only as bounded support:
-chunks001-012 are seed-controlled, combiner-ready, and target-timeseries
-complete, raising the current L12 ready set to `12/63` chunks and `192/1000`
-saved configurations.  Response stability still fails
-(`relative_stdev=0.9004518435028103`, `spread_ratio=5.476535332624479`,
-`relative_fit_error=9.042293381614297`), and target-observable ESS remains
-open because no target-observable blocking/bootstrap certificate exists.  The
-selected-mass normal-cache speedup and completed replacement queue are
-performance/infrastructure support only, not retained evidence.
+chunks001-016 are seed-controlled, combiner-ready, and target-timeseries
+complete, raising the current L12 ready set to `16/63` chunks and `256/1000`
+saved configurations.  Target-observable ESS now passes for the current ready
+set (`limiting_target_ess=210.7849819291294`), but response stability still
+fails (`relative_stdev=0.8943920916391181`,
+`spread_ratio=5.476535332624479`, `relative_fit_error=8.121324509664896`).
+The selected-mass normal-cache speedup, completed replacement queue, and
+target ESS certificate are performance/processing support only, not retained
+evidence.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
@@ -500,11 +504,11 @@ reuses the chunk011 target-series acceptance checks for any completed
 runner.  The retained-route certificate is refreshed at `PASS=104 FAIL=0` and
 still authorizes no retained/proposed-retained wording.
 
-Chunk012 is now processed through that generic runner.  The ready set is
-`12/63` L12 chunks with `192/1000` saved configurations.  Response stability
-still fails, target ESS is not available for the whole ready set, and the
-retained-route certificate is refreshed at `PASS=105 FAIL=0` with no
-retained/proposed-retained authorization.
+Chunk012 was processed through that generic runner.  Later replacement and
+target-ESS waves supersede that checkpoint: the current ready set is
+`16/63` L12 chunks with `256/1000` saved configurations.  Response stability
+still fails, and the retained-route certificate now reports `PASS=110 FAIL=0`
+with no retained/proposed-retained authorization.
 
 Generic chunk target-timeseries certificates are now discovered dynamically by
 the retained-route runner.  The discovery row currently sees chunks011-012 and
@@ -514,6 +518,13 @@ processing support only and authorizes no retained/proposed-retained wording.
 The FH/LSZ target-timeseries replacement queue is now included.  It derives
 chunks001-010 as the current rerun queue from the autocorrelation/ESS
 certificate and refreshes the retained-route certificate at `PASS=107 FAIL=0`.
+
+Latest FH/LSZ target-observable ESS checkpoint: chunks001-016 are now
+target-timeseries complete, the replacement queue is empty, and the
+target-observable ESS certificate passes with limiting ESS
+`210.7849819291294`.  This retires the current target-ESS blocker only; the
+route remains open because response stability, scalar-pole/FV/IR/model-class,
+and canonical-Higgs identity gates are not closed.
 This is scheduling support only and authorizes no retained/proposed-retained
 wording.
 

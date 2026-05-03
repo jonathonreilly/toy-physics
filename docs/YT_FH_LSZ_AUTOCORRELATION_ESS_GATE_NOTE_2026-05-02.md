@@ -1,6 +1,6 @@
 # PR #230 FH/LSZ Autocorrelation ESS Gate
 
-**Status:** open / FH-LSZ autocorrelation ESS gate not passed  
+**Status:** bounded-support / FH-LSZ autocorrelation ESS gate passed for target observables
 **Runner:** `scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py`  
 **Certificate:** `outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json`
 
@@ -23,18 +23,29 @@ The gate requires:
 - scalar LSZ, FV/IR/model-class, finite-source-linearity, and
   canonical-Higgs identity gates after target ESS is accepted.
 
-After the chunk001 through chunk010 target-series replacements and existing
-chunk011/chunk012 target-series chunks, the ready set is
-`[1,2,3,4,5,6,7,8,9,10,11,12]`, so it remains above the eight-chunk count
-threshold used by this gate.  The earlier partial target-series coverage
-blocker is repaired for the ready set: all twelve ready chunks expose
-per-configuration target time series for same-source `dE/ds` and
-`C_ss(q)/Gamma_ss(q)`.
+After the chunk001 through chunk010 target-series replacements, existing
+chunk011/chunk012 target-series chunks, and the chunk013-016 target-ESS wave,
+the ready set is `[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]`.  All sixteen
+ready chunks expose per-configuration target time series for same-source
+`dE/ds` and `C_ss(q)/Gamma_ss(q)`.
 
-The gate still does not pass because no predeclared target-observable
-blocking/bootstrap or integrated-autocorrelation certificate has been emitted.
-Plaquette ESS remains diagnostic only and is not a substitute for
-target-observable ESS.
+The target-observable ESS certificate now passes:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+# limiting_target_ess=210.7849819291294 >= 200.0
+```
+
+The autocorrelation/ESS gate therefore passes as bounded support:
+
+```text
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+```
+
+Plaquette ESS remains diagnostic only and is still not a substitute for target
+ESS.
 
 ## Claim Firewall
 
@@ -45,6 +56,7 @@ mass, observed `y_t`, `alpha_LM`, plaquette, or `u0` as proof authority.
 
 ## Next Action
 
-Emit a predeclared blocking/bootstrap ESS certificate for the same-source
-`dE/ds` and `C_ss(q)/Gamma_ss(q)` target observables, then rerun this gate
-before using chunked FH/LSZ output as production evidence.
+Continue the response-stability, scalar-pole derivative/model-class/FV/IR,
+and canonical-Higgs identity gates.  The target-observable ESS blocker is
+retired for the current ready set, but chunked FH/LSZ output is still not
+production evidence or retained closure.

@@ -28,8 +28,9 @@ python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
 # SUMMARY: PASS=9 FAIL=0
 ```
 
-The current ready target-timeseries set is chunks001-012. The replacement
-queue is empty.
+This checkpoint made the ready target-timeseries set chunks001-012 and emptied
+the replacement queue.  The later chunk013-016 target-ESS wave supersedes this
+as the current ready set, raising it to chunks001-016.
 
 ## Claim Boundary
 
@@ -41,8 +42,8 @@ Higgs radial mode, and authorizes no retained or `proposed_retained` wording.
 
 ## Next Action
 
-Emit a target-observable blocking/bootstrap or integrated-autocorrelation
-certificate for same-source `dE/ds` and `C_ss(q)/Gamma_ss(q)`, then rerun the
-autocorrelation/ESS gate. In parallel, continue the higher-closure-probability
-identity routes: same-surface `C_sH`/`C_HH`, a canonical-Higgs source identity
-theorem, or real W/Z response rows with sector-overlap identity.
+The target-observable ESS certificate has since passed for chunks001-016.
+Continue response stability and scalar-pole postprocessing only as support. In
+parallel, continue the higher-closure-probability identity routes:
+same-surface `C_sH`/`C_HH`, a canonical-Higgs source identity theorem, or real
+W/Z response rows with sector-overlap identity.

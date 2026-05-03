@@ -261,6 +261,9 @@ def main() -> int:
         "fh_lsz_finite_source_linearity_gate": load(
             "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json"
         ),
+        "fh_lsz_target_observable_ess": load(
+            "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json"
+        ),
         "fh_lsz_autocorrelation_ess_gate": load(
             "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
         ),
@@ -876,8 +879,14 @@ def main() -> int:
         statuses["fh_lsz_finite_source_linearity_gate"],
     )
     report(
-        "fh-lsz-autocorrelation-ess-gate-blocks",
-        "autocorrelation ESS gate not passed"
+        "fh-lsz-target-observable-ess-certificate-not-closure",
+        "target-observable ESS certificate"
+        in str(statuses["fh_lsz_target_observable_ess"]),
+        statuses["fh_lsz_target_observable_ess"],
+    )
+    report(
+        "fh-lsz-autocorrelation-ess-gate-not-closure",
+        "autocorrelation ESS gate"
         in str(statuses["fh_lsz_autocorrelation_ess_gate"]),
         statuses["fh_lsz_autocorrelation_ess_gate"],
     )

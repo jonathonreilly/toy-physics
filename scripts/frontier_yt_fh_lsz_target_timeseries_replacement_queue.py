@@ -65,6 +65,7 @@ def main() -> int:
     combiner = load_json(COMBINER)
     summary = autocorr.get("target_timeseries_summary", {}) if isinstance(autocorr, dict) else {}
     combiner_summary = combiner.get("chunk_summary", {}) if isinstance(combiner, dict) else {}
+    target_ess_gate_passed = autocorr.get("autocorrelation_ess_gate_passed") is True
     ready_indices = [
         int(index)
         for index in autocorr.get("ready_chunk_indices", [])
@@ -111,7 +112,11 @@ def main() -> int:
         (
             f"complete={complete_indices}, incomplete={incomplete_indices}"
             if replacement_queue
-            else "replacement queue is empty for the current ready set; target ESS still needs its own gate"
+            else (
+                "replacement queue is empty for the current ready set; target ESS has its own passing gate"
+                if target_ess_gate_passed
+                else "replacement queue is empty for the current ready set; target ESS still needs its own gate"
+            )
         ),
     )
     report(
@@ -147,6 +152,15 @@ def main() -> int:
             f"{replacement_label}. Therefore later new chunks can increase the "
             "target-series subset, but cannot make complete_for_all_ready_chunks true "
             "while the replacement queue remains nonempty."
+        )
+    elif target_ess_gate_passed:
+        verdict = (
+            "The ready L12 set has reached the minimum size for target ESS checks, "
+            f"with target-series complete for {complete_label} and no current "
+            "replacement queue. The target-observable ESS gate is now separately "
+            "accepted for the ready set, but response stability, scalar-pole "
+            "derivative/model-class/FV/IR control, and canonical-Higgs identity "
+            "remain open."
         )
     else:
         verdict = (
@@ -196,7 +210,12 @@ def main() -> int:
             "continue new target-series chunks toward the full L12 set. Do not claim "
             "complete target ESS while the replacement queue is nonempty."
             if next_replacement is not None
-            else "Rerun the autocorrelation/ESS gate; no replacement queue is currently open."
+            else (
+                "No replacement queue is currently open. Continue response stability, "
+                "scalar-pole derivative/model-class/FV/IR, and canonical-Higgs identity gates."
+                if target_ess_gate_passed
+                else "Rerun the autocorrelation/ESS gate; no replacement queue is currently open."
+            )
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

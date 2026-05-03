@@ -1,5 +1,25 @@
 # No-Go Ledger
 
+## FH/LSZ target-observable ESS pass is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=110 FAIL=0
+```
+
+Chunks001-016 now carry target time series, and target-observable ESS passes
+for the current ready set with limiting ESS `210.7849819291294`.  This retires
+the current target-ESS blocker only.  It does not certify response stability,
+completed L12/L16/L24 production, scalar-pole derivative/model-class/FV/IR
+control, or canonical-Higgs identity.  Do not treat the ESS pass, chunks013-016,
+or the empty replacement queue as retained/proposed-retained evidence.
+
 ## FH/LSZ speedup and completed replacement queue are not closure
 
 Runners:
@@ -14,12 +34,13 @@ python3 scripts/frontier_yt_retained_closure_route_certificate.py
 ```
 
 Selected-mass scalar FH/LSZ and normal-equation caching materially reduce the
-replacement workload, and chunks001-012 are now target-timeseries complete.
-This remains infrastructure and production-processing support only.  It does
-not certify target ESS, response stability, completed L12/L16/L24 production,
-scalar-pole derivative/model-class/FV/IR control, or canonical-Higgs identity.
-Do not treat the speedup, empty replacement queue, or twelve ready
-target-series chunks as retained/proposed-retained evidence.
+replacement workload.  This remains infrastructure and production-processing
+support only, including after the later target-observable ESS pass for
+chunks001-016.  It does not certify response stability, completed L12/L16/L24
+production, scalar-pole derivative/model-class/FV/IR control, or
+canonical-Higgs identity.  Do not treat the speedup, empty replacement queue,
+target ESS pass, or sixteen ready target-series chunks as
+retained/proposed-retained evidence.
 
 ## FH/LSZ chunk003 target-timeseries rerun is not closure
 

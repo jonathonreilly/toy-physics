@@ -1,5 +1,40 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Target-Observable ESS Support
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED PRODUCTION SUPPORT / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- target-observable ESS is computed from same-source `dE/ds` and
+  `C_ss(q)/Gamma_ss(q)` target series, not plaquette ESS;
+- chunks013-016 completed with fixed seeds, no `--resume`, chunk-isolated
+  outputs, and concurrency 4;
+- chunks001-016 are now target-timeseries complete, and target ESS passes for
+  the current ready set with limiting ESS `210.7849819291294`;
+- response stability still fails, and scalar-pole/FV/IR/model-class plus
+  canonical-Higgs identity gates remain open;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Selected-Mass Normal-Cache Speedup
 
 Local review-loop disposition:
@@ -22,10 +57,12 @@ Findings applied:
 - chunks005-010 completed with optimized fixed-seed reruns, no `--resume`,
   chunk-isolated outputs, and concurrency 3; chunk004 was already running and
   completed as a pre-optimization replacement;
-- chunks001-012 now pass generic target-timeseries checkpoints and the
-  replacement queue is empty;
-- target ESS, response stability, scalar pole/FV/IR, and canonical-Higgs
-  identity remain open; no retained or proposed-retained wording is authorized.
+- chunks001-012 passed generic target-timeseries checkpoints and the
+  replacement queue became empty at this checkpoint;
+- the later chunk013-016 target-ESS wave supersedes this state with
+  chunks001-016 target-timeseries complete and target ESS passing;
+- response stability, scalar pole/FV/IR, and canonical-Higgs identity remain
+  open; no retained or proposed-retained wording is authorized.
 
 Checks:
 

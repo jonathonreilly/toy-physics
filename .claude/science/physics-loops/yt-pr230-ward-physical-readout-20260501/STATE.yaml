@@ -13,11 +13,23 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-161-fh-lsz-selected-mass-normal-cache-and-target-replacement-complete
-blocks_completed: 161
+current_phase: campaign-block-162-fh-lsz-target-observable-ess-pass
+blocks_completed: 162
 active_route: "Feynman-Hellmann physical-response route"
-active_hard_residual: "Selected-mass scalar FH/LSZ plus normal-equation caching is landed and the target-timeseries replacement queue for ready chunks001-012 is empty.  The ready set is still only 12/63 L12 chunks and 192/1000 saved configurations; target ESS still lacks a target-observable blocking/bootstrap certificate, response stability fails, and canonical-Higgs identity remains absent.  Exact next action is emit the target-observable ESS certificate or attack same-surface C_sH/C_HH, an O_H identity theorem, or real W/Z response rows with sector-overlap identity.  No retained/proposed_retained closure is authorized."
+active_hard_residual: "Selected-mass scalar FH/LSZ plus normal-equation caching is landed, chunks001-016 are target-timeseries complete, and target-observable ESS now passes for the current ready set with limiting ESS 210.7849819291294 >= 200.  The ready set is still only 16/63 L12 chunks and 256/1000 saved configurations; response stability fails, scalar-pole derivative/model-class/FV/IR gates remain open, and canonical-Higgs identity remains absent.  Exact next action is response stability plus same-surface C_sH/C_HH, an O_H identity theorem, or real W/Z response rows with sector-overlap identity.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py"
+  - "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json"
+  - "docs/YT_FH_LSZ_TARGET_OBSERVABLE_ESS_CERTIFICATE_NOTE_2026-05-03.md"
+  - "docs/YT_FH_LSZ_CHUNKS013_016_TARGET_ESS_WAVE_CHECKPOINT_NOTE_2026-05-03.md"
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk013_2026-05-01.json"
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk014_2026-05-01.json"
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk015_2026-05-01.json"
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk016_2026-05-01.json"
+  - "outputs/yt_fh_lsz_chunk013_target_timeseries_generic_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_chunk014_target_timeseries_generic_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_chunk015_target_timeseries_generic_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_chunk016_target_timeseries_generic_checkpoint_2026-05-02.json"
   - "scripts/yt_direct_lattice_correlator_production.py"
   - "scripts/frontier_yt_fh_lsz_selected_mass_normal_cache_speedup_certificate.py"
   - "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json"
@@ -835,13 +847,15 @@ claim_state_movement:
   - "processed the chunk001 target-timeseries replacement: generic checkpoint now passes for chunk001, target-series complete indices are [1,11,12], replacement queue is chunks002-010, retained-route remains PASS=108 FAIL=0, campaign status remains PASS=134 FAIL=0, and no retained/proposed-retained closure is authorized"
   - "processed the chunk003 target-timeseries replacement: generic checkpoint now passes for chunk003, target-series complete indices are [1,2,3,11,12], replacement queue is chunks004-010, retained-route remains PASS=108 FAIL=0, campaign status remains PASS=134 FAIL=0 over 140 certificates, and no retained/proposed-retained closure is authorized"
   - "processed the chunk002 target-timeseries replacement: generic checkpoint now passes for chunk002, target-series complete indices are [1,2,11,12], replacement queue is chunks003-010, retained-route remains PASS=108 FAIL=0, campaign status remains PASS=134 FAIL=0 over 139 certificates, and no retained/proposed-retained closure is authorized"
+  - "landed selected-mass scalar FH/LSZ plus normal-equation caching and completed the replacement queue for chunks001-012; this is performance support only and no retained/proposed-retained closure was authorized"
+  - "added a target-observable ESS certificate, launched chunks013-016 with fixed seeds/no resume/concurrency 4 after chunks001-012 were below threshold, and reached target ESS PASS with limiting ESS 210.7849819291294 for chunks001-016; response stability still fails and no retained/proposed-retained closure was authorized"
 actual_current_surface_status: "open / exact negative boundary plus bounded production support"
-conditional_surface_status: "future production evidence remains conditional on completed chunks, target-observable autocorrelation/ESS certification, passed finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity"
+conditional_surface_status: "future production evidence remains conditional on completed chunks, response stability, passed finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity; current target-observable ESS is bounded support only"
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Stop this over-budget foreground campaign block after commit/push/PR update; in a fresh work window, rerun chunk004 with target-timeseries serialization if completing the current ready-set target ESS gate is prioritized, otherwise continue new target-series chunks toward the full L12 set. In parallel, pursue same-surface O_H/C_sH/C_HH rows, W/Z response observables with sector-overlap identity certificates, or a theorem forbidding orthogonal neutral top coupling. Do not treat reduced smokes, plaquette ESS, missing target ESS, source-coordinate target statistics, target-timeseries replacement commands, complete source-only C_ss(p), rank-one source-only response matrices, D17 carrier support, symmetry-only commutant rank arguments, finite orthogonal neutral-pole assumptions, finite/heavy orthogonal mass gaps, source-only pole purity, the source-Higgs absence guard, the W/Z response absence guard, guard-only source_higgs_cross_correlator metadata, generic chunk target-series support, automatic generic checkpoint discovery, 12/63 L12 chunks, five target-series-complete chunks, missing C_sH/C_HH authority, missing O_H realization, missing W/Z response rows, C_sH manifest support, H_unit-as-O_H substitution, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Commit/push/PR-update this checkpoint, then in a fresh work window continue response stability and pole postprocessing only as support while prioritizing same-surface O_H/C_sH/C_HH rows, W/Z response observables with sector-overlap identity certificates, or a theorem forbidding orthogonal neutral top coupling. Do not treat reduced smokes, plaquette ESS, target-observable ESS, source-coordinate target statistics, target-timeseries replacement commands, complete source-only C_ss(p), rank-one source-only response matrices, D17 carrier support, symmetry-only commutant rank arguments, finite orthogonal neutral-pole assumptions, finite/heavy orthogonal mass gaps, source-only pole purity, the source-Higgs absence guard, the W/Z response absence guard, guard-only source_higgs_cross_correlator metadata, generic chunk target-series support, automatic generic checkpoint discovery, 16/63 L12 chunks, sixteen target-series-complete chunks, missing C_sH/C_HH authority, missing O_H realization, missing W/Z response rows, C_sH manifest support, H_unit-as-O_H substitution, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

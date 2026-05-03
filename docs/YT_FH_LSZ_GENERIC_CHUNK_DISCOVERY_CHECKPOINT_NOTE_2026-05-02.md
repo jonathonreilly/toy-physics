@@ -19,19 +19,19 @@ discovery check.
 
 ```text
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=109 FAIL=0
+# SUMMARY: PASS=110 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=135 FAIL=0
+# SUMMARY: PASS=136 FAIL=0
 ```
 
-The aggregate discovery row currently sees twelve generic target-timeseries
-chunk certificates: chunk001 through chunk012.
+The aggregate discovery row currently sees sixteen generic target-timeseries
+chunk certificates: chunk001 through chunk016.
 
 ## Claim Boundary
 
 Automatic discovery is claim hygiene and processing support only.  It does not
-promote generic chunk checkpoints, 12/63 L12 chunks, target-series presence,
+promote generic chunk checkpoints, 16/63 L12 chunks, target-series presence,
 or partial production rows to retained or `proposed_retained` evidence.  The
 route still requires target-observable ESS, response stability, completed
 L12/L16/L24 production, scalar-pole derivative/model-class/FV/IR gates, and

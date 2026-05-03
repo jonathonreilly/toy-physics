@@ -1,5 +1,33 @@
 # Claim Status Certificate
 
+FH/LSZ target-observable ESS support:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ target-observable ESS certificate passed
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=110 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=136 FAIL=0
+```
+
+Chunks001-016 are target-timeseries complete and the target-observable ESS
+certificate passes for the current ready set
+(`limiting_target_ess=210.7849819291294 >= 200`).  This is not retained
+evidence: the ready L12 set is only `16/63`, response stability fails,
+scalar-pole derivative/model-class/FV/IR gates remain open, and
+canonical-Higgs/source-overlap identity is absent.  This authorizes no
+retained or `proposed_retained` wording.
+
 FH/LSZ selected-mass normal-cache speedup and replacement queue completion:
 
 ```text
@@ -20,12 +48,13 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=135 FAIL=0
 ```
 
-Chunks001-012 are now target-timeseries complete and the replacement queue is
-empty for the ready set.  This is not retained evidence: the ready L12 set is
-only `12/63`, target ESS lacks a target-observable blocking/bootstrap
-certificate, response stability fails, and canonical-Higgs/source-overlap
-identity is absent.  This authorizes no retained or `proposed_retained`
-wording.
+At this checkpoint chunks001-012 were target-timeseries complete and the
+replacement queue was empty.  The later chunk013-016 target-ESS wave supersedes
+that state: chunks001-016 are target-timeseries complete and target ESS passes
+for the current ready set.  This is still not retained evidence because
+response stability fails, scalar-pole/FV/IR/model-class gates remain open, and
+canonical-Higgs/source-overlap identity is absent.  This authorizes no
+retained or `proposed_retained` wording.
 
 FH/LSZ chunk003 target-timeseries rerun:
 

@@ -89,10 +89,14 @@ a pre-optimization replacement and was not rerun. Generic target-timeseries
 checkpoints for chunks004-010 now pass (`PASS=14 FAIL=0` each), and the
 current replacement queue is empty for ready chunks001-012.
 
+The later chunk013-016 target-ESS wave used the optimized harness and raised
+the ready set to chunks001-016.  Target-observable ESS now passes for that
+current ready set, but the result remains production-processing support only.
+
 ## Claim Boundary
 
-This optimization does not certify target ESS, response stability, full
-L12/L16/L24 production, scalar-pole derivative/model-class/FV/IR control, or
+This optimization does not certify response stability, full L12/L16/L24
+production, scalar-pole derivative/model-class/FV/IR control, or
 canonical-Higgs identity.  It does not derive or set `kappa_s`, and it
 authorizes no retained or `proposed_retained` wording.  Source-only FH/LSZ
 target time series remain instrumentation until a same-surface
