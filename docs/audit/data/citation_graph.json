@@ -5917,6 +5917,10 @@
       "to": "graph_first_su3_integration_note"
     },
     {
+      "from": "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
+      "to": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
+    },
+    {
       "from": "g_bare_derivation_status_correction_audit_note_2026-05-02",
       "to": "g_bare_derivation_note"
     },
@@ -5927,6 +5931,10 @@
     {
       "from": "g_bare_dynamical_fixation_obstruction_note_2026-04-18",
       "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
+      "to": "cl3_color_automorphism_theorem"
     },
     {
       "from": "g_bare_structural_normalization_theorem_note_2026-04-18",
@@ -22157,7 +22165,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T12:47:17.993514+00:00",
+  "generated_at": "2026-05-03T13:13:42.390879+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -30818,6 +30826,19 @@
       "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
       "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem"
     },
+    "g_bare_constraint_vs_convention_theorem_note_2026-05-03": {
+      "claim_id": "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
+      ],
+      "note_hash": "e07e0d800acc180d7c77fc90620d37d79bac8dbf86c90537d94edf8efe9ae7f4",
+      "path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_g_bare_derivation.py",
+      "title": "g_bare Constraint vs Convention Disambiguation Theorem"
+    },
     "g_bare_derivation_note": {
       "claim_id": "g_bare_derivation_note",
       "claim_type_author_hint": null,
@@ -30855,6 +30876,19 @@
       "path": "docs/G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_g_bare_critical_feature_scan.py",
       "title": "g_bare = 1 Dynamical Fixation Obstruction \u2014 Path 3 Scan"
+    },
+    "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03": {
+      "claim_id": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "note_hash": "bd90fde9e5f75ce785ba66ad3d4b59339862bfa4320f351cb4ea57b835603fa3",
+      "path": "docs/G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_g_bare_derivation.py",
+      "title": "g_bare Rescaling-Freedom Removal Theorem (Cl(3) Canonical Normalization)"
     },
     "g_bare_rigidity_theorem_note": {
       "claim_id": "g_bare_rigidity_theorem_note",
@@ -49825,7 +49859,7 @@
       "no_go": 3,
       "none": 1747,
       "open_gate": 2,
-      "positive_theorem": 72
+      "positive_theorem": 74
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 517,
@@ -49833,12 +49867,12 @@
       "no_go": 109,
       "none": 450,
       "open_gate": 111,
-      "positive_theorem": 654
+      "positive_theorem": 656
     },
-    "edge_count": 5539,
-    "leaf_count": 649,
-    "node_count": 1843,
+    "edge_count": 5541,
+    "leaf_count": 650,
+    "node_count": 1845,
     "root_count": 1073,
-    "runners_with_path": 1408
+    "runners_with_path": 1410
   }
 }
