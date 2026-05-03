@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:51:37.275812+00:00
+**Generated:** 2026-05-03T19:52:17.865886+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 83 |
 | **retained_no_go** | 105 |
-| **retained_bounded** | 180 |
+| **retained_bounded** | 181 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 712 |
+| unaudited | 711 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 338 |
+| `audited_clean` | 339 |
 | `audited_conditional` | 550 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 758 |
+| `unaudited` | 757 |
 
 | claim_type | count |
 |---|---:|
@@ -286,6 +286,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `mirror_2d_gravity_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | A | - |
 | `mirror_2d_validation_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -9599,6 +9600,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`
 - **auditor confidence:** high
+
+### `mirror_2d_gravity_law_note`
+
+- **Note:** [`MIRROR_2D_GRAVITY_LAW_NOTE.md`](../../docs/MIRROR_2D_GRAVITY_LAW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The exact 2D mirror cleanup, as summarized in the note, yields only weak bounded gravity-side fits and no promoted mass or distance law on the searched N=60,80,100 windows.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-orsted`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The wider gravity-law cleanup confirmed that the best fitted windows are still bounded rather than law-like.  _(class `A`)_
+- **chain closes:** True — The note's listed best mass and distance fits stay below the stated clean-law threshold, with weak or absent distance-tail support. The conclusion is bounded to the searched windows and does not assert a global no-law theorem.
+- **rationale:** The note makes a bounded null-result claim rather than promoting a gravity law. Given the stated cleanup results, the R^2 values and missing/weak distance-tail fits support the limited conclusion that no clean mass or distance law was promoted on those windows. Residual risk is limited to independent reproduction of the cleanup sweep, not to the logical boundary of the note's claim.
+- **auditor confidence:** medium
 
 ### `mirror_2d_validation_note`
 
