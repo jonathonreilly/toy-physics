@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:23:58.591825+00:00
+**Generated:** 2026-05-03T18:24:46.334101+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 735 |
+| unaudited | 734 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 23 |
-| ~~audited_conditional~~ | 540 |
+| ~~audited_conditional~~ | 541 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 320 |
-| `audited_conditional` | 540 |
+| `audited_conditional` | 541 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 781 |
+| `unaudited` | 780 |
 
 | claim_type | count |
 |---|---:|
@@ -834,6 +834,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quantum_horizon_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_endpoint_denominator_admissibility_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `quark_issr1_bicac_forcing_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `quark_jts_affine_physical_carrier_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_jts_residue_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -11173,6 +11174,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_jts_affine_physical_carrier_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note proves that, assuming the asserted physical carrier H_(1+5)=span{e_1,e_5} and projector ray p=cos_d e_1+sin_d e_5, Pert(p)=H_(1+5) and affine-section 1-jets at p identify with tangent vectors in that plane.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because H_(1+5) is the exact retained physical reduced carrier, this affine plane is a canonical affine subspace of the bimodule: A_p subset B.  _(class `B`)_
+- **chain closes:** False — The internal linear algebra closes after H_(1+5), p, and the physical-route carrier are assumed. The audit packet/ledger row supplies no retained-grade dependency chain for the physical-carrier provenance, and the runner hard-codes the carrier and projector constants rather than deriving them.
+- **rationale:** Issue: the note imports the exact physical carrier H_(1+5), projector ray p, bimodule B, and retained atoms as already retained physical inputs, while the ledger row has no dependency paths and the runner only checks downstream algebra with those objects hard-coded. Why this blocks: the claimed physical-carrier JTS derivation cannot be granted from the provided row without a retained theorem establishing that this carrier and route section functor are the physical ones. Repair target: add/restore explicit retained-grade dependency paths for the carrier, projector, and bimodule provenance, and use a runner that constructs or verifies those inputs rather than merely checking affine tangent algebra after insertion. Claim boundary until fixed: the note supports a conditional linear-algebra lemma that Pert(p) is the tangent/1-jet plane of A_p once the physical carrier and p are assumed.
+- **open / conditional deps cited:**
+  - `CL3_SM_EMBEDDING_THEOREM.md`
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_jts_residue_note_2026-04-19`
