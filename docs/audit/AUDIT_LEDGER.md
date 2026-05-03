@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:22:58.598611+00:00
+**Generated:** 2026-05-03T17:23:39.941844+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 769 |
+| unaudited | 768 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 28 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 522 |
+| ~~audited_conditional~~ | 523 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 311 |
-| `audited_conditional` | 522 |
+| `audited_conditional` | 523 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 28 |
 | `audited_renaming` | 22 |
-| `unaudited` | 815 |
+| `unaudited` | 814 |
 
 | claim_type | count |
 |---|---:|
@@ -613,6 +613,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `flagship_paper_contribution_statement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `g_bare_rigidity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | F | - |
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -5721,6 +5722,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `g_bare_canonical_convention_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given graph-first SU(3) with N_c=3 plus an explicitly admitted Wilson canonical-normalization convention g_bare=1 and the standard Wilson beta/curvature normalization formulas, the note obtains beta=6 and no curvature rescaling; no derivation of g_bare=1 is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-context-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Given g_bare := 1, N_c = 3, and beta = 2 N_c / g_bare^2, beta = 2 * 3 / 1 = 6; with F^lattice = (1/g_bare) Omega^Cl(3), at g_bare = 1 F^lattice = Omega^Cl(3).  _(class `A`)_
+- **chain closes:** False — The arithmetic closes once the Wilson beta relation and the Cl(3)-to-lattice curvature normalization are assumed, and the cited graph-first SU(3) dependency is retained_bounded. The restricted one-hop packet does not derive or cite the Wilson beta relation or the physical bridge identifying lattice field strength with Cl(3) curvature, so the full theorem is conditional on those admitted normalization premises.
+- **rationale:** Issue: The note's beta=6 and F^lattice=Omega^Cl(3) conclusions require the Wilson beta relation and the Cl(3)-to-lattice curvature normalization as admitted premises rather than deriving them from the retained graph-first SU(3) dependency. Why this blocks: A hostile reviewer can accept the arithmetic while rejecting retained theorem status because the physical normalization bridge is imported, not closed by the allowed authority. Repair target: Add a retained-grade theorem or cited retained dependency deriving the Wilson action normalization and the Cl(3) curvature-to-lattice-field map under the stated convention, with a runner that constructs that bridge rather than text-checking it. Claim boundary until fixed: It is safe to state the conditional algebraic corollary: if standard Wilson beta/curvature normalization is assumed and g_bare=1 is chosen as convention, then beta=6 and the rescaling factor is 1.
+- **auditor confidence:** high
 
 ### `g_bare_derivation_note`
 
