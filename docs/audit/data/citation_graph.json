@@ -15942,6 +15942,18 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "shapiro_qa_retest_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "shapiro_static_discriminator_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "shapiro_family_portability_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "ckm_neutron_edm_bound_note"
     },
     {
@@ -22585,7 +22597,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:51:27.553168+00:00",
+  "generated_at": "2026-05-03T13:53:00.948417+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40254,6 +40266,9 @@
         "grav_decoherence_derived_note",
         "shapiro_delay_note",
         "shapiro_unique_discriminator_v2_note",
+        "shapiro_qa_retest_note",
+        "shapiro_static_discriminator_note",
+        "shapiro_family_portability_note",
         "ckm_neutron_edm_bound_note",
         "ckm_down_type_scale_convention_support_note_2026-04-22",
         "proton_lifetime_derived_note",
@@ -40324,7 +40339,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "f720e9f8025ea7deceb0467decc09f4c93b42bc203772b2c97f8c6ce5e15568f",
+      "note_hash": "9b53d66850f23166f26e0a3fb6bcb8db71567ddb818d3adbd8167f56b8833cbf",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50418,8 +50433,8 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5646,
-    "leaf_count": 641,
+    "edge_count": 5649,
+    "leaf_count": 640,
     "node_count": 1847,
     "root_count": 1047,
     "runners_with_path": 1410

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 64,
     "high": 229,
-    "leaf": 220,
-    "medium": 281
+    "leaf": 219,
+    "medium": 282
   },
-  "generated_at": "2026-05-03T13:51:37.866428+00:00",
+  "generated_at": "2026-05-03T13:53:08.406555+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -8263,9 +8263,9 @@
       "criticality_rank": 1,
       "cross_confirmation_status": null,
       "deps": [],
-      "direct_in_degree": 2,
+      "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 6.492,
+      "load_bearing_score": 6.992,
       "note_path": "docs/SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
@@ -11019,6 +11019,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "shapiro_family_portability_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "shapiro_delay_note",
+        "diamond_phase_ramp_bridge_card_note"
+      ],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.992,
+      "note_path": "docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/shapiro_family_portability.py",
+      "transitive_descendants": 44
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -11036,30 +11060,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "shapiro_family_portability_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "shapiro_delay_note",
-        "diamond_phase_ramp_bridge_card_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.492,
-      "note_path": "docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/shapiro_family_portability.py",
       "transitive_descendants": 44
     },
     {
@@ -11776,6 +11776,31 @@
       "effective_status": "unaudited",
       "load_bearing_score": 5.926,
       "note_path": "docs/S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 42
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "shapiro_qa_retest_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "shapiro_delay_note",
+        "shapiro_static_discriminator_note",
+        "shapiro_family_portability_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 5.926,
+      "note_path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
@@ -19727,31 +19752,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_axioms_16card.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "shapiro_qa_retest_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "shapiro_delay_note",
-        "shapiro_static_discriminator_note",
-        "shapiro_family_portability_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": null,
       "transitive_descendants": 0
     },
     {
