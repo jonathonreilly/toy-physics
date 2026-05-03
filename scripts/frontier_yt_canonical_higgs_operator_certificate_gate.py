@@ -29,6 +29,7 @@ TEXTS = {
 }
 
 CERTS = {
+    "repo_authority_audit": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
     "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
     "hunit_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
     "source_higgs_harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
@@ -141,6 +142,11 @@ def known_surface_audit(texts: dict[str, str], certs: dict[str, dict[str, Any]])
             "usable_as_operator_certificate": False,
             "status": status(certs["source_higgs_harness_extension"]),
         },
+        "repo_authority_audit": {
+            "classification": "repo-wide scan found no hidden O_H certificate",
+            "usable_as_operator_certificate": False,
+            "status": status(certs["repo_authority_audit"]),
+        },
     }
 
 
@@ -180,6 +186,7 @@ def main() -> int:
     report("no-hidden-existing-operator-certificate", not hidden_surface_found, "known EW/Higgs/YT surfaces are not O_H certificates")
     report("hunit-still-not-certificate", "H_unit not canonical-Higgs" in status(certs["hunit_candidate_gate"]), status(certs["hunit_candidate_gate"]))
     report("harness-extension-is-instrumentation-only", "harness extension" in status(certs["source_higgs_harness_extension"]), status(certs["source_higgs_harness_extension"]))
+    report("repo-authority-audit-finds-no-hidden-certificate", certs["repo_authority_audit"].get("repo_authority_found") is False, status(certs["repo_authority_audit"]))
     report("gram-purity-still-open", "not passed" in status(certs["source_higgs_gram_purity"]), status(certs["source_higgs_gram_purity"]))
 
     result = {

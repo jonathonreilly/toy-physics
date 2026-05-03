@@ -1,0 +1,847 @@
+{
+  "actual_current_surface_status": "exact negative boundary / repo-wide canonical-Higgs O_H authority audit",
+  "audit_ledger_status_snapshot": {
+    "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
+      "audit_status": "unaudited",
+      "effective_status": "proposed_retained",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "higgs_from_lattice_note": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "load_bearing_step": "Use HIGGS_MASS_DERIVED_NOTE for the current Higgs authority boundary; this note exists only to summarize the current bounded quantitative posture.",
+      "verdict_rationale": "Issue: the bounded Higgs support claim delegates its authority to HIGGS_MASS_DERIVED_NOTE and a runner whose quantitative behavior depends on accepted y_t(v) and comparison inputs. Why this blocks: the note supports bounded consistency studies but does not derive a Higgs mass or a standalone lattice-to-Higgs quantitative theorem from retained inputs. Repair target: make the Higgs authority boundary and accepted y_t(v) route explicit retained dependencies, or restrict this row to bounded/support scaffolding without theorem-surface language. Claim boundary until fixed: bounded quantitative Higgs-support posture only, not an audited Higgs-from-lattice closure."
+    },
+    "higgs_mass_derived_note": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "load_bearing_step": "For the accepted central input y_t(v)=0.9176, the full 3-loop runner gives m_H=125.1 GeV and the exact Higgs lane inherits the current YT-lane precision.",
+      "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MECHANISM_NOTE.md, HIGGS_FROM_LATTICE_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row."
+    },
+    "higgs_mechanism_note": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "load_bearing_step": "Use HIGGS_MASS_DERIVED_NOTE for the current Higgs authority boundary; this note exists only to support the mechanism-level claim.",
+      "verdict_rationale": "Issue: the mechanism note depends on HIGGS_MASS_DERIVED_NOTE and the bounded Higgs runner's comparison-input machinery, while explicitly disclaiming exact Higgs-mass closure. Why this blocks: the mechanism-level statements are support claims conditional on an external Higgs authority boundary and do not independently derive EWSB or hierarchy closure from retained one-hop inputs. Repair target: make the Higgs authority note a retained dependency and provide a runner that isolates the mechanism-level theorem from SM-input consistency checks. Claim boundary until fixed: this remains support for a possible Higgs mechanism route, not an audited retained Higgs mechanism theorem."
+    },
+    "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26": {
+      "audit_status": "unaudited",
+      "effective_status": "proposed_retained",
+      "load_bearing_step": null,
+      "verdict_rationale": null
+    },
+    "taste_scalar_isotropy_theorem_note": {
+      "audit_status": "audited_conditional",
+      "effective_status": "audited_conditional",
+      "load_bearing_step": "At phi=(v,0,0), the Hessian reduces to the binary orthogonality sum sum_s (-1)^{s_i}(-1)^{s_j}=8 delta_ij, so the fermion Coleman-Weinberg curvature is isotropic.",
+      "verdict_rationale": "Issue: the exact isotropy theorem closes for the fermion Coleman-Weinberg block, but the note's scalar-spectrum and electroweak-transition consequences depend on a gauge-only leading split and a scalar-only thermal-cubic estimate that the note explicitly labels bounded.\nWhy this blocks: downstream proposed-retained/promoted claims cannot use this row as a theorem-grade Higgs/taste spectrum, y_b, generation-splitting, or electroweak-transition closure; they only inherit the no-fermion-CW-splitting boundary.\nRepair target: supply and audit a full scalar-sector theorem, including gauge/taste-breaking and thermal dynamics, with a runner that derives the spectrum or transition result rather than checking the bounded companion model.\nClaim boundary until fixed: safe to claim exact fermion-CW isotropy and the resulting exclusion of scalar-CW-only splitting on the stated taste block, not full scalar-spectrum or finite-temperature electroweak closure."
+    },
+    "yt_ward_identity_derivation_theorem": {
+      "audit_status": "audited_renaming",
+      "effective_status": "audited_renaming",
+      "load_bearing_step": "On the canonical surface (g_bare = 1), the framework's bare Yukawa coupling y_t_bare is DEFINED as the unit-norm-state matrix element of the H_unit operator between the vacuum and a single top-pair state.",
+      "verdict_rationale": "Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling."
+    }
+  },
+  "candidate_surfaces": [
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": false,
+        "normalization_hint": true,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "forbidden H_unit matrix-element readout / audited_renaming",
+      "id": "yt_ward_identity_derivation_theorem",
+      "ledger": {
+        "audit_status": "audited_renaming",
+        "effective_status": "audited_renaming",
+        "load_bearing_step": "On the canonical surface (g_bare = 1), the framework's bare Yukawa coupling y_t_bare is DEFINED as the unit-norm-state matrix element of the H_unit operator between the vacuum and a single top-pair state.",
+        "verdict_rationale": "Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling."
+      },
+      "missing_or_blocking": [
+        "defines y_t_bare through H_unit matrix element",
+        "does not derive physical canonical-Higgs source operator",
+        "explicitly forbidden as PR230 O_H authority"
+      ],
+      "path_presence": {
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md": true
+      },
+      "paths": [
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md"
+      ],
+      "positive_reuse": "algebraic H_unit normalization history only",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": true,
+        "ledger_not_renaming_or_conditional": false,
+        "normalization_hint": false,
+        "operator_definition_hint": false,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "Higgs quantitative lane with inherited YT residuals",
+      "id": "higgs_mass_derived_note",
+      "ledger": {
+        "audit_status": "audited_conditional",
+        "effective_status": "audited_conditional",
+        "load_bearing_step": "For the accepted central input y_t(v)=0.9176, the full 3-loop runner gives m_H=125.1 GeV and the exact Higgs lane inherits the current YT-lane precision.",
+        "verdict_rationale": "Issue: The load-bearing step still imports unratified direct authority: TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md, HIGGS_MECHANISM_NOTE.md, HIGGS_FROM_LATTICE_NOTE.md. Why this blocks: Under the restricted one-hop audit context, those authorities are not retained/audited-clean, so the critical claim cannot be ratified as closed even when its local algebra or runner checks pass. Repair target: ratify or repair the listed upstream theorem/bridge rows and rerun the local runner so it computes the disputed bridge rather than only checking consequences. Claim boundary until fixed: the note may be cited as conditional/supporting local structure, but no retained or promoted audit status propagates through this row."
+      },
+      "missing_or_blocking": [
+        "does not name a PR230 source coordinate",
+        "does not provide O_H identity or normalization certificate",
+        "inherits YT residual rather than closing it"
+      ],
+      "path_presence": {
+        "docs/HIGGS_MASS_DERIVED_NOTE.md": true
+      },
+      "paths": [
+        "docs/HIGGS_MASS_DERIVED_NOTE.md"
+      ],
+      "positive_reuse": "Higgs-sector context and lambda(M_Pl) / RGE machinery",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": false,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "historical proposed chain using old Ward/H_unit route",
+      "id": "complete_prediction_chain_2026_04_15",
+      "ledger": {},
+      "missing_or_blocking": [
+        "top-Yukawa section routes through Ward identity and color projection",
+        "does not provide independent PR230 O_H identity or C_sH/C_HH residues",
+        "superseded by the audited_renaming finding on yt_ward_identity"
+      ],
+      "path_presence": {
+        "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md": true
+      },
+      "paths": [
+        "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md"
+      ],
+      "positive_reuse": "historical map of the intended quantitative cascade",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": true
+      },
+      "classification": "repo index, not proof authority",
+      "id": "canonical_harness_index",
+      "ledger": {},
+      "missing_or_blocking": [
+        "indexes the YT/Higgs lanes but does not prove O_H",
+        "contains no source-coordinate identity or normalization certificate"
+      ],
+      "path_presence": {
+        "docs/CANONICAL_HARNESS_INDEX.md": true
+      },
+      "paths": [
+        "docs/CANONICAL_HARNESS_INDEX.md"
+      ],
+      "positive_reuse": "locates current note/runner pairs",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": true,
+        "ledger_not_renaming_or_conditional": false,
+        "normalization_hint": false,
+        "operator_definition_hint": false,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "Higgs uncertainty propagation inheriting YT systematics",
+      "id": "higgs_mass_retention_analysis",
+      "ledger": {
+        "audit_status": "unaudited",
+        "effective_status": "audited_failed",
+        "load_bearing_step": null,
+        "verdict_rationale": null
+      },
+      "missing_or_blocking": [
+        "propagates YT uncertainty rather than closing YT",
+        "does not supply a PR230 source-Higgs operator identity"
+      ],
+      "path_presence": {
+        "docs/HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md": true
+      },
+      "paths": [
+        "docs/HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md"
+      ],
+      "positive_reuse": "Higgs error-budget context",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": true,
+        "ledger_not_renaming_or_conditional": false,
+        "normalization_hint": false,
+        "operator_definition_hint": false,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "mechanism-level support only",
+      "id": "higgs_mechanism_note",
+      "ledger": {
+        "audit_status": "audited_conditional",
+        "effective_status": "audited_conditional",
+        "load_bearing_step": "Use HIGGS_MASS_DERIVED_NOTE for the current Higgs authority boundary; this note exists only to support the mechanism-level claim.",
+        "verdict_rationale": "Issue: the mechanism note depends on HIGGS_MASS_DERIVED_NOTE and the bounded Higgs runner's comparison-input machinery, while explicitly disclaiming exact Higgs-mass closure. Why this blocks: the mechanism-level statements are support claims conditional on an external Higgs authority boundary and do not independently derive EWSB or hierarchy closure from retained one-hop inputs. Repair target: make the Higgs authority note a retained dependency and provide a runner that isolates the mechanism-level theorem from SM-input consistency checks. Claim boundary until fixed: this remains support for a possible Higgs mechanism route, not an audited retained Higgs mechanism theorem."
+      },
+      "missing_or_blocking": [
+        "delegates authority to Higgs mass boundary notes",
+        "does not define same-surface source-Higgs pole identity"
+      ],
+      "path_presence": {
+        "docs/HIGGS_MECHANISM_NOTE.md": true
+      },
+      "paths": [
+        "docs/HIGGS_MECHANISM_NOTE.md"
+      ],
+      "positive_reuse": "qualitative Higgs-mechanism support",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": true,
+        "ledger_not_renaming_or_conditional": false,
+        "normalization_hint": false,
+        "operator_definition_hint": false,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "bounded quantitative support only",
+      "id": "higgs_from_lattice_note",
+      "ledger": {
+        "audit_status": "audited_conditional",
+        "effective_status": "audited_conditional",
+        "load_bearing_step": "Use HIGGS_MASS_DERIVED_NOTE for the current Higgs authority boundary; this note exists only to summarize the current bounded quantitative posture.",
+        "verdict_rationale": "Issue: the bounded Higgs support claim delegates its authority to HIGGS_MASS_DERIVED_NOTE and a runner whose quantitative behavior depends on accepted y_t(v) and comparison inputs. Why this blocks: the note supports bounded consistency studies but does not derive a Higgs mass or a standalone lattice-to-Higgs quantitative theorem from retained inputs. Repair target: make the Higgs authority boundary and accepted y_t(v) route explicit retained dependencies, or restrict this row to bounded/support scaffolding without theorem-surface language. Claim boundary until fixed: bounded quantitative Higgs-support posture only, not an audited Higgs-from-lattice closure."
+      },
+      "missing_or_blocking": [
+        "summarizes bounded posture",
+        "does not provide operator identity, source coordinate, or C_sH/C_HH rows"
+      ],
+      "path_presence": {
+        "docs/HIGGS_FROM_LATTICE_NOTE.md": true
+      },
+      "paths": [
+        "docs/HIGGS_FROM_LATTICE_NOTE.md"
+      ],
+      "positive_reuse": "historical bounded lattice-Higgs support",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": true,
+        "ledger_not_renaming_or_conditional": false,
+        "normalization_hint": false,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": true
+      },
+      "classification": "exact taste-block CW isotropy support",
+      "id": "taste_scalar_isotropy_theorem_note",
+      "ledger": {
+        "audit_status": "audited_conditional",
+        "effective_status": "audited_conditional",
+        "load_bearing_step": "At phi=(v,0,0), the Hessian reduces to the binary orthogonality sum sum_s (-1)^{s_i}(-1)^{s_j}=8 delta_ij, so the fermion Coleman-Weinberg curvature is isotropic.",
+        "verdict_rationale": "Issue: the exact isotropy theorem closes for the fermion Coleman-Weinberg block, but the note's scalar-spectrum and electroweak-transition consequences depend on a gauge-only leading split and a scalar-only thermal-cubic estimate that the note explicitly labels bounded.\nWhy this blocks: downstream proposed-retained/promoted claims cannot use this row as a theorem-grade Higgs/taste spectrum, y_b, generation-splitting, or electroweak-transition closure; they only inherit the no-fermion-CW-splitting boundary.\nRepair target: supply and audit a full scalar-sector theorem, including gauge/taste-breaking and thermal dynamics, with a runner that derives the spectrum or transition result rather than checking the bounded companion model.\nClaim boundary until fixed: safe to claim exact fermion-CW isotropy and the resulting exclusion of scalar-CW-only splitting on the stated taste block, not full scalar-spectrum or finite-temperature electroweak closure."
+      },
+      "missing_or_blocking": [
+        "isotropy does not select the PR230 scalar source direction",
+        "does not supply canonical-Higgs LSZ normalization",
+        "does not emit source-Higgs pole residues"
+      ],
+      "path_presence": {
+        "docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md": true
+      },
+      "paths": [
+        "docs/TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md"
+      ],
+      "positive_reuse": "exact scalar/taste degree-counting and isotropy lemma",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": true,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": true,
+        "same_surface_cl3z3_hint": true
+      },
+      "classification": "unit taste-singlet projector algebra; blocked as O_H",
+      "id": "scalar_taste_projector_normalization_attempt",
+      "ledger": {},
+      "missing_or_blocking": [
+        "projector normalization can be moved into source coordinate",
+        "physical scalar carrier and interacting pole derivative remain open",
+        "canonical Higgs metric used by v is not fixed"
+      ],
+      "path_presence": {
+        "docs/YT_SCALAR_TASTE_PROJECTOR_NORMALIZATION_ATTEMPT_NOTE_2026-05-01.md": true,
+        "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json": true
+      },
+      "paths": [
+        "docs/YT_SCALAR_TASTE_PROJECTOR_NORMALIZATION_ATTEMPT_NOTE_2026-05-01.md",
+        "outputs/yt_scalar_taste_projector_normalization_attempt_2026-05-01.json"
+      ],
+      "positive_reuse": "unit taste-singlet normalization boundary",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": true,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "assumes canonical H after supplied",
+      "id": "ew_higgs_gauge_mass_diagonalization",
+      "ledger": {
+        "audit_status": "unaudited",
+        "effective_status": "proposed_retained",
+        "load_bearing_step": null,
+        "verdict_rationale": null
+      },
+      "missing_or_blocking": [
+        "starts with a supplied Higgs doublet and vacuum",
+        "does not derive PR230 source overlap or O_H from Cl(3)/Z3"
+      ],
+      "path_presence": {
+        "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md": true
+      },
+      "paths": [
+        "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md"
+      ],
+      "positive_reuse": "tree-level W/Z mass dictionary once H is given",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": true,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "gauge monomial selection; Yukawa entries free",
+      "id": "sm_one_higgs_yukawa_gauge_selection",
+      "ledger": {
+        "audit_status": "unaudited",
+        "effective_status": "proposed_retained",
+        "load_bearing_step": null,
+        "verdict_rationale": null
+      },
+      "missing_or_blocking": [
+        "does not select numerical Yukawa entries",
+        "does not identify PR230 scalar source with canonical H"
+      ],
+      "path_presence": {
+        "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md": true
+      },
+      "paths": [
+        "docs/SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md"
+      ],
+      "positive_reuse": "confirms allowed one-Higgs Yukawa operator pattern",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": true,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": true,
+        "same_surface_cl3z3_hint": true
+      },
+      "classification": "exact negative boundary; identifies missing overlap",
+      "id": "source_functional_lsz_identifiability",
+      "ledger": {},
+      "missing_or_blocking": [
+        "source-only pole data do not determine canonical-Higgs overlap",
+        "orthogonal neutral top coupling remains independent"
+      ],
+      "path_presence": {
+        "docs/YT_SOURCE_FUNCTIONAL_LSZ_IDENTIFIABILITY_THEOREM_NOTE_2026-05-03.md": true,
+        "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json": true
+      },
+      "paths": [
+        "docs/YT_SOURCE_FUNCTIONAL_LSZ_IDENTIFIABILITY_THEOREM_NOTE_2026-05-03.md",
+        "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+      ],
+      "positive_reuse": "source-coordinate invariant LSZ source-pole coupling",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": true,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "default-off measurement instrumentation only",
+      "id": "source_higgs_harness_extension",
+      "ledger": {},
+      "missing_or_blocking": [
+        "does not derive O_H",
+        "finite rows are not pole residues or Gram-purity evidence by themselves"
+      ],
+      "path_presence": {
+        "docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_HARNESS_EXTENSION_NOTE_2026-05-03.md": true,
+        "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json": true
+      },
+      "paths": [
+        "docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_HARNESS_EXTENSION_NOTE_2026-05-03.md",
+        "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json"
+      ],
+      "positive_reuse": "can emit C_ss/C_sH/C_HH rows after a valid O_H certificate",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": true,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": true,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "explicit negative boundary for H_unit as O_H",
+      "id": "hunit_canonical_higgs_operator_candidate_gate",
+      "ledger": {},
+      "missing_or_blocking": [
+        "H_unit can enter only after purity and normalization certificates",
+        "old matrix-element readout is the audited trap"
+      ],
+      "path_presence": {
+        "docs/YT_HUNIT_CANONICAL_HIGGS_OPERATOR_CANDIDATE_GATE_NOTE_2026-05-02.md": true,
+        "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json": true
+      },
+      "paths": [
+        "docs/YT_HUNIT_CANONICAL_HIGGS_OPERATOR_CANDIDATE_GATE_NOTE_2026-05-02.md",
+        "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json"
+      ],
+      "positive_reuse": "records the exact H_unit firewall",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": true,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": true,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "future acceptance gate; not current authority",
+      "id": "source_higgs_gram_purity_gate",
+      "ledger": {},
+      "missing_or_blocking": [
+        "current C_sH and C_HH residues absent",
+        "requires same-surface canonical-Higgs operator first"
+      ],
+      "path_presence": {
+        "docs/YT_SOURCE_HIGGS_GRAM_PURITY_GATE_NOTE_2026-05-02.md": true,
+        "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json": true
+      },
+      "paths": [
+        "docs/YT_SOURCE_HIGGS_GRAM_PURITY_GATE_NOTE_2026-05-02.md",
+        "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
+      ],
+      "positive_reuse": "sharp pole-level purity condition",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": true,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": false,
+        "same_source_coordinate_hint": false,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "chiral-sector bilinear/Kramers support, not EW radial O_H",
+      "id": "cl3_sm_embedding_h_l_sector",
+      "ledger": {},
+      "missing_or_blocking": [
+        "H_L support is not the PR230 scalar source coordinate",
+        "does not provide source-Higgs pole identity or LSZ normalization"
+      ],
+      "path_presence": {
+        "docs/CL3_SM_EMBEDDING_THEOREM.md": true
+      },
+      "paths": [
+        "docs/CL3_SM_EMBEDDING_THEOREM.md"
+      ],
+      "positive_reuse": "Cl(3) representation context",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": false,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": false,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": true,
+        "same_surface_cl3z3_hint": false
+      },
+      "classification": "SSB bookkeeping after canonical doublet coefficient supplied",
+      "id": "source_higgs_legendre_ssb_bridge",
+      "ledger": {},
+      "missing_or_blocking": [
+        "does not derive kappa_H or source-to-canonical-Higgs normalization",
+        "does not provide O_H identity or C_sH/C_HH residues"
+      ],
+      "path_presence": {
+        "docs/YT_SOURCE_HIGGS_LEGENDRE_SSB_BRIDGE_NOTE_2026-05-01.md": true,
+        "outputs/yt_source_higgs_legendre_ssb_bridge_2026-05-01.json": true
+      },
+      "paths": [
+        "docs/YT_SOURCE_HIGGS_LEGENDRE_SSB_BRIDGE_NOTE_2026-05-01.md",
+        "outputs/yt_source_higgs_legendre_ssb_bridge_2026-05-01.json"
+      ],
+      "positive_reuse": "confirms v division adds no extra factor once canonical H is known",
+      "usable_as_pr230_oh_certificate": false
+    }
+  ],
+  "exact_next_action": "Derive a same-surface canonical-Higgs operator identity and normalization certificate from the Cl(3)/Z3 substrate, or run source-Higgs C_sH/C_HH pole-residue production and pass Gram purity.",
+  "fail_count": 0,
+  "pass_count": 12,
+  "positive_reuse": [
+    "Use EW/SM one-Higgs notes only after canonical H is supplied.",
+    "Use taste-scalar isotropy as scalar/taste support, not source identity.",
+    "Use source-functional LSZ for source-pole invariant readout, not overlap closure.",
+    "Use the default-off source-Higgs harness once a real O_H certificate exists."
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No existing repo surface satisfies the canonical-Higgs O_H certificate schema.",
+  "repo_authority_found": false,
+  "repo_keyword_hit_count": 435,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not promote Higgs/taste support to O_H authority",
+    "does not treat H_unit as O_H",
+    "does not set kappa_s = 1, cos(theta) = 1, c2 = 1, or Z_match = 1",
+    "does not use observed targets, yt_ward_identity, alpha_LM, plaquette, or u0 as proof authority"
+  ],
+  "unregistered_keyword_hit_sample": [
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/DM_NEUTRINO_CANONICAL_TWO_HIGGS_SLOT_NO_GO_NOTE_2026-04-15.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/DM_NEUTRINO_POSTCANONICAL_EXTENSION_CLASS_NOTE_2026-04-15.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_BIFUNDAMENTAL_INVARIANCE_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md"
+    },
+    {
+      "keywords": [
+        "canonical Higgs"
+      ],
+      "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/DM_NEUTRINO_TWO_HIGGS_23_SYMMETRIC_SLOT_NO_GO_NOTE_2026-04-15.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md"
+    },
+    {
+      "keywords": [
+        "taste condensate"
+      ],
+      "path": "docs/HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md"
+    },
+    {
+      "keywords": [
+        "O_H"
+      ],
+      "path": "docs/UNIFIED_PROGRAM_NOTE.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/YT_BETA_LAMBDA_PLANCK_STATIONARITY_NO_GO_NOTE_2026-05-01.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/YT_BRIDGE_STACK_IMPORT_AUDIT_NOTE_2026-05-01.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "canonical Higgs",
+        "H_unit"
+      ],
+      "path": "docs/YT_BRST_NIELSEN_HIGGS_IDENTITY_NO_GO_NOTE_2026-05-02.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "O_H",
+        "C_sH",
+        "C_HH",
+        "source-Higgs",
+        "H_unit"
+      ],
+      "path": "docs/YT_CANONICAL_HIGGS_OPERATOR_CANDIDATE_STRESS_NOTE_2026-05-03.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "O_H",
+        "C_sH",
+        "C_HH",
+        "source-Higgs",
+        "H_unit"
+      ],
+      "path": "docs/YT_CANONICAL_HIGGS_OPERATOR_CERTIFICATE_GATE_NOTE_2026-05-03.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "canonical Higgs",
+        "O_H",
+        "C_sH",
+        "C_HH",
+        "source-Higgs",
+        "H_unit"
+      ],
+      "path": "docs/YT_CANONICAL_HIGGS_OPERATOR_REALIZATION_GATE_NOTE_2026-05-02.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "canonical Higgs",
+        "O_H",
+        "C_sH",
+        "C_HH",
+        "H_unit"
+      ],
+      "path": "docs/YT_CANONICAL_HIGGS_REPO_AUTHORITY_AUDIT_NOTE_2026-05-03.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "source-to-Higgs",
+        "H_unit"
+      ],
+      "path": "docs/YT_CANONICAL_SCALAR_NORMALIZATION_IMPORT_AUDIT_NOTE_2026-05-01.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/YT_CHIRALITY_SELECTOR_BRIDGE_NOTE_2026-05-01.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "source-Higgs",
+        "H_unit"
+      ],
+      "path": "docs/YT_CL3_AUTOMORPHISM_SOURCE_IDENTITY_NO_GO_NOTE_2026-05-02.md"
+    },
+    {
+      "keywords": [
+        "canonical Higgs",
+        "H_unit"
+      ],
+      "path": "docs/YT_CL3_SOURCE_UNIT_NORMALIZATION_NO_GO_NOTE_2026-05-01.md"
+    },
+    {
+      "keywords": [
+        "O_H",
+        "taste condensate",
+        "H_unit"
+      ],
+      "path": "docs/YT_CLASS_3_SUSY_2HDM_ANALYSIS_NOTE_2026-04-18.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md"
+    },
+    {
+      "keywords": [
+        "taste condensate",
+        "H_unit"
+      ],
+      "path": "docs/YT_CLASS_7_SPONTANEOUS_C3_BREAKING_NOTE_2026-04-18.md"
+    },
+    {
+      "keywords": [
+        "taste condensate"
+      ],
+      "path": "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/YT_COLOR_SINGLET_ZERO_MODE_REMOVED_LADDER_POLE_SEARCH_NOTE_2026-05-01.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "C_sH",
+        "C_HH",
+        "H_unit"
+      ],
+      "path": "docs/YT_COMPLETE_SOURCE_SPECTRUM_IDENTITY_NO_GO_NOTE_2026-05-02.md"
+    },
+    {
+      "keywords": [
+        "canonical-Higgs",
+        "canonical Higgs",
+        "H_unit"
+      ],
+      "path": "docs/YT_D17_SOURCE_POLE_IDENTITY_CLOSURE_ATTEMPT_NOTE_2026-05-02.md"
+    },
+    {
+      "keywords": [
+        "H_unit"
+      ],
+      "path": "docs/YT_DIRECT_CORRELATOR_MOMENTUM_HARNESS_EXTENSION_NOTE_2026-05-01.md"
+    }
+  ],
+  "verdict": "A repo-wide check found no existing artifact that can be used as the PR #230 same-surface canonical-Higgs radial operator O_H certificate.  The Higgs/taste stack supplies useful support, but it either assumes canonical H after it is supplied, proves bounded Higgs-sector consequences, or gives taste/projector algebra without the PR230 source-coordinate identity and LSZ normalization.  The old H_unit route is explicitly audited_renaming and the H_unit candidate gate rejects it without pole-purity and normalization certificates.  The current positive target is therefore not hidden in the repo: it must be derived as a same-surface O_H identity or measured through C_sH/C_HH pole residues and Gram purity."
+}

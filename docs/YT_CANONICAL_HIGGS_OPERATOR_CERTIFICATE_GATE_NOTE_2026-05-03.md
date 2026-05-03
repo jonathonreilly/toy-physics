@@ -12,7 +12,9 @@ measure finite-mode `C_ss/C_sH/C_HH` rows, but only after such a certificate is
 supplied.
 
 This gate defines the acceptance schema for that future certificate and audits
-the current repository surfaces for a hidden existing authority.
+the current repository surfaces for a hidden existing authority.  The broader
+repo-wide authority audit is recorded in
+`outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json`.
 
 ## Acceptance Schema
 
@@ -40,6 +42,8 @@ surfaces are not hidden certificates:
 - the `H_unit` candidate gate rejects using `H_unit` as `O_H` without purity
   and normalization certificates;
 - the source-Higgs harness extension is measurement instrumentation only.
+- the repo-wide authority audit finds no hidden accepted `O_H` certificate in
+  the Higgs/taste/Ward/source/EW surfaces.
 
 ## Claim Boundary
 
@@ -53,3 +57,10 @@ plaquette, or `u0`.
 Derive or supply a real same-surface canonical-Higgs operator certificate
 satisfying this schema, then run source-Higgs `C_sH/C_HH` measurements and the
 pole-residue / Gram-purity gates.
+
+## Verification
+
+```bash
+python3 scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py
+# SUMMARY: PASS=10 FAIL=0
+```

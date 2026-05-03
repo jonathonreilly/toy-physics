@@ -33,6 +33,11 @@
       "status": "exact negative boundary / H_unit not canonical-Higgs operator realization",
       "usable_as_operator_certificate": false
     },
+    "repo_authority_audit": {
+      "classification": "repo-wide scan found no hidden O_H certificate",
+      "status": "exact negative boundary / repo-wide canonical-Higgs O_H authority audit",
+      "usable_as_operator_certificate": false
+    },
     "sm_one_higgs_yukawa_selection": {
       "classification": "gauge monomial selection; leaves Yukawa matrices free",
       "evidence": true,
@@ -44,7 +49,7 @@
       "usable_as_operator_certificate": false
     }
   },
-  "pass_count": 9,
+  "pass_count": 10,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Operator certificate validation is support only; it does not authorize retained/proposed-retained y_t wording.",
   "strict_non_claims": [
