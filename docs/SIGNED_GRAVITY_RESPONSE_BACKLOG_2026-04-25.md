@@ -227,7 +227,8 @@ First result:
 - [`../scripts/frontier_signed_gravity_chi_selector_algebra.py`](../scripts/frontier_signed_gravity_chi_selector_algebra.py)
   scans all non-identity local Pauli-string involutions on the 8D KS taste
   cell
-- [`SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md`](SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md)
+- `SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md` (sibling artifact;
+  cross-reference only — not a one-hop dep of this note)
   records the first local/taste-cell no-go
 - strict selector candidates found: `0`
 - conserved neutral taste labels found: `IXY`, `XYI`, `XZY`

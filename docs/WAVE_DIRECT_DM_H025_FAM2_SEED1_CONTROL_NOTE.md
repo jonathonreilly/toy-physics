@@ -50,7 +50,7 @@ What remains open:
 
 - the complementary `Fam2`, seed `0`, `H = 0.25` row is now also controlled
   in
-  [`WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md`](./WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md),
+  `WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md` (sibling artifact in same lane; cross-reference only — not a one-hop dep of this note),
   but the family pair still does not support a stable amplitude law
 - `Fam1`/`Fam2` together still do not have a full same-resolution control
   ladder on all four fine-`H` points

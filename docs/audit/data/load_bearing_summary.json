@@ -1,10 +1,10 @@
 {
-  "computed_at": "2026-05-03T13:49:57.181488+00:00",
+  "computed_at": "2026-05-03T14:13:39.832624+00:00",
   "criticality_counts": {
-    "critical": 115,
-    "high": 364,
-    "leaf": 813,
-    "medium": 555
+    "critical": 114,
+    "high": 359,
+    "leaf": 781,
+    "medium": 593
   },
   "flagship_signal_used": false,
   "node_count": 1847,
@@ -72,6 +72,12 @@
       "transitive_descendants": 224
     },
     {
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 24.512,
+      "transitive_descendants": 364
+    },
+    {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "criticality": "critical",
       "load_bearing_score": 23.82,
@@ -79,12 +85,6 @@
     },
     {
       "claim_id": "minimal_axioms_2026-05-03",
-      "criticality": "critical",
-      "load_bearing_score": 23.512,
-      "transitive_descendants": 364
-    },
-    {
-      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
       "load_bearing_score": 23.512,
       "transitive_descendants": 364

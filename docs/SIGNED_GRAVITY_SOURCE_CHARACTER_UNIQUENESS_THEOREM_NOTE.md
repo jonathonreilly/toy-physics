@@ -263,7 +263,8 @@ element, while keeping the original-axiom and full tensor gaps explicit.
 ## Original-Stack Derivation Follow-Up
 
 The finite original-stack derivation is recorded in
-[`SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md`](SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md)
+`SIGNED_GRAVITY_CL3Z3_SOURCE_CHARACTER_DERIVATION_NOTE.md` (sibling artifact;
+cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_cl3z3_source_character_derivation.py`](../scripts/signed_gravity_cl3z3_source_character_derivation.py).
 

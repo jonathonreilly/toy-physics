@@ -77,9 +77,9 @@ This is a diagnostic control, not a persistent-particle result.
 ## Relation to the 3D control
 
 This note is the second-family companion to
-[`ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md)
-and
-[`ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md).
+`ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md` and
+`ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md` (sibling artifacts;
+cross-reference only — not one-hop deps of this note).
 
 Together they say:
 

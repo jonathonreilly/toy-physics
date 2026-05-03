@@ -105,7 +105,7 @@ Do not reopen a wider denominator search from this result.
 
 That direct overlap map has now landed as:
 
-- [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md)
+- `docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 
 The sharpened read is:
 
