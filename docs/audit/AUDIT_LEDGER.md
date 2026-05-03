@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:40:39.402072+00:00
+**Generated:** 2026-05-03T11:42:03.933501+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 743 |
+| unaudited | 742 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 18 |
 | ~~audited_conditional~~ | 513 |
-| ~~audited_failed~~ | 4 |
+| ~~audited_failed~~ | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -40,10 +40,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 345 |
 | `audited_conditional` | 513 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 48 |
+| `audited_failed` | 49 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 18 |
-| `unaudited` | 784 |
+| `unaudited` | 783 |
 
 | claim_type | count |
 |---|---:|
@@ -975,6 +975,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1431,6 +1432,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite-dimensional complex representations of the real Cl(3) site algebra, including uniqueness of faithful irreducible representation, decomposition, odd-dimensional exclusion, and per-site Hilbert dimension exactly 2 on A_min.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-herschel-019ded9f-0cbc-7d71-b27e-1ce7957cbd6e`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Step 1 asserts Cl(3) ⊗_R C has complex dimension 4 and is isomorphic to M_2(C), then uses that asserted simple complex algebra to derive unique irreducible Pauli representation and U2-U4.  _(class `C`)_
+- **chain closes:** False — The chain does not close because the central algebraic identification is wrong: a real 8-dimensional algebra tensored with C remains 8-dimensional over C, and odd complex Clifford algebra splits into two M_2(C) summands rather than M_2(C). U4 also imports the staggered-fermion one-mode Fock-space bridge while claiming A1 only.
+- **rationale:** Issue: Step 1 misidentifies Cl(3) ⊗_R C as M_2(C) by halving the tensor-product dimension and ignoring the odd-complex-Clifford split. Why this blocks: U2 and U3 rely on simplicity and unique irreducibility of M_2(C); with two simple summands, the claimed unique Pauli irrep and universal decomposition into that single irrep are not established. The runner exhibits Pauli relations, no scalar model, random failed 3x3 searches, constructed unitary conjugates, and Pauli direct sums, but it does not verify the Artin-Wedderburn identification or rule out the second central-character irrep. Repair target: replace Step 1 with the correct representation category for real Cl_{3,0} ~= M_2(C) as a real algebra, state any fixed central-character convention explicitly, prove classification under that convention, and separately prove or cite the Grassmann one-mode Fock-space bridge needed for U4. Claim boundary until fixed: Pauli matrices give a 2-dimensional faithful irreducible model and no 1-dimensional faithful complex model; this packet does not prove uniqueness of all faithful irreducible complex Cl(3) representations, the full decomposition theorem, or per-site Hilbert dimension exactly 2 from A1 alone.
 - **auditor confidence:** high
 
 ### `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29`
