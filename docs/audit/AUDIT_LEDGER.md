@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:15:10.606495+00:00
+**Generated:** 2026-05-03T01:17:58.160090+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 99 |
 | **retained_bounded** | 211 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 10 |
-| unaudited | 479 |
+| open_gate | 11 |
+| unaudited | 478 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 420 |
+| `audited_clean` | 421 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 519 |
+| `unaudited` | 518 |
 
 | claim_type | count |
 |---|---:|
@@ -483,6 +483,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_cross_encoding_maps_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_dynamical_resource_generation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
+| `teleportation_initial_state_preparation_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
@@ -16857,6 +16858,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The important result is mixed: two explicit nonuniqueness obstructions, one side-6 sparse scaling warning, and two bounded ideal mechanisms, while ordinary state teleportation is not promoted to nature-grade closure.  _(class `C`)_
 - **chain closes:** False — The runner supports the individual component gates, but the row does not close as one clean ledger claim because it combines no-go-style obstructions, a finite negative scaling control, and positive ideal mechanisms. The missing step is a split or narrowed theorem that selects one citeable claim surface.
 - **rationale:** Issue: the audited object is a mixed row rather than a single closed theorem, no-go, or bounded finite result. Why this blocks: assigning audited_clean to one claim_type would either overstate the bounded positive mechanisms or blur the obstruction/open-gate content. Repair target: split into separate ledger rows for the apparatus no-go, amplitude no-go, sparse side-6 scaling control, ideal pulse schedule, and spin-bath detector model, each with its own scoped claim_type. Claim boundary until fixed: this may be cited only as a planning/open-gate blocker inventory for ordinary state teleportation, with no matter, energy, object, or FTL transport claim.
+- **auditor confidence:** high
+
+### `teleportation_initial_state_preparation_probe_note`
+
+- **Note:** [`TELEPORTATION_INITIAL_STATE_PREPARATION_PROBE_NOTE.md`](../../docs/TELEPORTATION_INITIAL_STATE_PREPARATION_PROBE_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** For the default 1D N=8 and 2D 4x4 G=0 teleportation probes, the initial state is unique, separable, exactly an H1-ground tensor product, and maximally native-site delocalized; operational preparation beyond that finite diagnostic remains open.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-agent-Erdos-the-2nd-019deb68-ba2d-7461-b657-aa2880ba8885`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The assumed G=0 state is a unique separable H1-ground tensor product on the default small surfaces, but it is fully delocalized in the native site basis and the artifact supplies no cooling/control/readout protocol, noise model, or scaling proof.  _(class `C`)_
+- **chain closes:** True — The live runner output directly supports the finite spectral, product, separability, and localization diagnostics stated in the note. The conclusion is bounded to an unresolved preparation obligation and does not claim a no-go, matter transport, readout theorem, or scaling protocol.
+- **rationale:** The scoped open gate closes cleanly: the note records finite diagnostic facts and a bounded operational gap, not a claimed physical implementation. The runner verifies the load-bearing properties on both default small G=0 surfaces, including uniqueness, exact product structure, separability, and failure of native-basis localization by the stated threshold. Residual risk is explicit in the claim boundary: scaling, noise, cooling/control, and readout remain unaudited open work.
 - **auditor confidence:** high
 
 ### `teleportation_logical_readout_audit`
