@@ -8,6 +8,26 @@ the closure theorem
 **Primary runner:**
 `scripts/frontier_dm_pmns_affine_current_coordinate_reduction_2026_04_21.py`
 
+## Cited authorities (one hop)
+
+The 2026-05-03 citation-graph repair registers the load-bearing one-hop deps
+already enumerated in §1 (Inputs) as proper markdown links so the audit-graph
+builder picks up the edges.
+
+- [`DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`](DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md)
+  — supplies one explicit sole-axiom nonzero-current law on the retained `hw=1`
+  response family (input 1).
+- [`DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
+  — supplies the exact affine Hermitian chart `H(m, δ, q_+)` (input 2).
+- [`DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`](DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md)
+  — supplies the exact `Z_3` doublet-block readout for `q_+` and `δ` (input 3).
+- [`DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`](DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md)
+  — supplies the exact local `2`-real PMNS source manifold on the native `N_e`
+  seed surface (input 4).
+- [`DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`](DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+  — same-day closure theorem that completes the remaining `δ`-direction selector
+  identified by this reduction.
+
 ---
 
 ## 0. Executive summary
