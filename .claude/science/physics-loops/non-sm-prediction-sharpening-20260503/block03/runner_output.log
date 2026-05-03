@@ -1,0 +1,79 @@
+==============================================================================
+Strong CP + CKM Neutron EDM — Discrimination Tests vs SM and BSM
+Source: docs/STRONG_CP_EDM_NEW_PHYSICS_DISCRIMINATION_NOTE_2026-05-03.md
+==============================================================================
+
+--- Section 1: Framework's three sharp claims ---
+  #    Framework                                 SM                              BSM (typical)                 
+  E1   θ_eff = 0 EXACTLY                         free param ≤ 10⁻¹⁰              varies; often non-zero        
+  E2   d_n(QCD) = 0 EXACTLY                      ≤ 10⁻²⁶ e·cm × θ/10⁻¹⁰          typically larger if θ ≠ 0     
+  E3   All theta-induced EDMs = 0 (universal)    individual untested at θ→0      distinct from BSM             
+
+--- Section 2: d_n predicted vs n2EDM sensitivity ---
+  Source                       d_n (e·cm)    Detectable by n2EDM (~1e-28)?
+  Framework: CKM-only             1.00e-32    NO (4 orders below)
+  SM (free θ ≤ 10⁻¹⁰)             1.00e-26    YES (potentially)
+  SUSY (MSSM, generic)            1.00e-27    YES
+  Multi-Higgs                     1.00e-27    YES
+  Axion (Peccei-Quinn)            1.00e-32    NO
+
+  Current bound: d_n < 1.8 × 10⁻²⁶ e·cm (PSI 2020, Abel et al)
+  n2EDM target (2027+): σ(d_n) ≈ 10⁻²⁸ e·cm
+
+--- Section 3: Three n2EDM discrimination scenarios ---
+  E-1   n2EDM detects d_n at 10⁻²⁸ to 10⁻²⁶ e·cm
+        Framework: STRONGLY DISFAVORED to FALSIFIED
+        Interpretation: Signal too large for CKM-only; BSM CP source
+
+  E-2   n2EDM sets bound d_n < 10⁻²⁸ with no detection
+        Framework: CONSISTENT
+        Interpretation: Constrains BSM; doesn't discriminate framework from SM-axion
+
+  E-3   n2EDM (or successor) detects d_n at CKM level (~10⁻³²)
+        Framework: NEUTRAL / WEAKLY SUPPORTED
+        Interpretation: Beyond n2EDM precision; future-future experiments
+
+
+--- Section 4: Axion null test ---
+  Framework predicts NO axion mechanism needed (θ_eff = 0 structural).
+
+  Discrimination via axion experiments:
+    Axion DETECTED (ADMX, IAXO, BabyIAXO):
+      → Framework's 'no axion needed' loses motivation but not strictly falsified
+    Axion NOT DETECTED at projected ADMX-EFR/IAXO sensitivity:
+      → Framework's 'no axion needed' claim STRENGTHENED
+
+--- Section 5: Universal EDM vanishing — multi-species tests ---
+  EDM species              Framework prediction      Experiments
+  neutron d_n                0 (CKM-only ~10⁻³²)        n2EDM, future
+  electron d_e               0 (CKM contribution)       ACME-III, future
+  199-Hg atomic              0 (nuclear/atomic CP)      Hg EDM experiments
+  muon d_μ                   0 (weak-sector CKM)        muon EDM proposals
+
+  Multi-species correlated detection consistent with single θ-source
+  would be inconsistent with framework's universal vanishing claim.
+
+--- Section 6: Honest discrimination assessment ---
+  Distinguishing power vs SM-CKM-only: LOW (both predict same ~10⁻³²)
+  Distinguishing power vs SM-without-axion: MODERATE
+    (framework structurally forbids what SM allows)
+  Distinguishing power vs BSM with new CP sources: HIGH
+    (n2EDM detection >10⁻³⁰ would falsify framework's CKM-only)
+
+  Best near-term discrimination: n2EDM @ PSI 2027+
+  - Detection at 10⁻²⁸: framework FALSIFIED (BSM source confirmed)
+  - Null result at 10⁻²⁸: framework CONSISTENT, BSM constrained
+  - n2EDM cannot reach the predicted CKM-only ~10⁻³²
+
+==============================================================================
+Block 03 strong-CP + EDM discrimination tests complete.
+
+Key insight: framework's strong-CP + universal-EDM-vanishing predictions
+provide STRONG discrimination against BSM CP-source models, MODERATE
+discrimination against SM-with-axion, and LOW discrimination against
+SM-CKM-only (which makes the same d_n prediction).
+
+n2EDM @ PSI 2027+ is the primary near-term test:
+  - Detection: framework FALSIFIED via E-1
+  - Null: framework CONSISTENT via E-2; BSM space tightened
+==============================================================================
