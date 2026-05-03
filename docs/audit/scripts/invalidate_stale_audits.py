@@ -50,6 +50,14 @@ RANK = {
 }
 
 CRITICALITY_RANK = {"leaf": 0, "medium": 1, "high": 2, "critical": 3}
+CLAIM_TYPES = {
+    "positive_theorem",
+    "bounded_theorem",
+    "no_go",
+    "open_gate",
+    "decoration",
+    "meta",
+}
 
 # Audit fields archived on invalidation (mirrors seed_audit_ledger.py).
 ARCHIVED_FIELDS = [
@@ -171,6 +179,10 @@ def archive_and_reset(row: dict, reason: str) -> dict:
             new_row[k] = dict(v)
         else:
             new_row[k] = v
+    source_hint = row.get("claim_type_author_hint")
+    if source_hint in CLAIM_TYPES:
+        new_row["claim_type"] = source_hint
+        new_row["claim_type_provenance"] = "author_hint_after_invalidation"
     return new_row
 
 

@@ -1,55 +1,58 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 548,
-    "decoration": 9,
-    "meta": 41,
-    "no_go": 158,
-    "open_gate": 87,
-    "positive_theorem": 859
+    "bounded_theorem": 552,
+    "decoration": 8,
+    "meta": 42,
+    "no_go": 160,
+    "open_gate": 88,
+    "positive_theorem": 891
   },
-  "computed_at": "2026-05-03T10:45:17.806821+00:00",
+  "computed_at": "2026-05-03T11:45:32.014365+00:00",
   "cycle_examples": [
     [
-      "yt_zero_import_authority_note",
-      "yt_ward_identity_derivation_theorem",
-      "yt_vertex_power_derivation"
+      "restricted_strong_field_closure_note",
+      "evanescent_barrier_amplitude_suppression_theorem_note"
+    ],
+    [
+      "evanescent_barrier_amplitude_suppression_theorem_note",
+      "gw_echo_null_result_note"
     ],
     [
       "lorentz_boost_covariance_2d_theorem_note",
       "lorentz_boost_covariance_3plus1d_theorem_note"
     ],
     [
-      "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
-      "n_eff_from_three_generations_theorem_note_2026-04-24"
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+      "lorentz_kernel_positive_closure_note",
+      "lorentz_boost_covariance_2d_theorem_note",
+      "lorentz_boost_covariance_3plus1d_theorem_note",
+      "planck_scale_lane_status_note_2026-04-23",
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
     ],
     [
-      "publication.ci3_z3.quantitative_summary_table",
-      "publication.ci3_z3.publication_matrix"
-    ],
-    [
-      "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas"
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ]
   ],
-  "cycles_detected": 84,
+  "cycles_detected": 105,
   "effective_status_counts": {
-    "audited_conditional": 661,
+    "audited_conditional": 513,
     "audited_decoration": 3,
-    "audited_failed": 6,
-    "audited_numerical_match": 27,
-    "audited_renaming": 20,
-    "decoration_under_cpt_exact_note": 1,
+    "audited_failed": 5,
+    "audited_numerical_match": 25,
+    "audited_renaming": 17,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
-    "meta": 40,
+    "meta": 41,
     "open_gate": 14,
-    "retained": 149,
-    "retained_bounded": 220,
-    "retained_no_go": 100,
+    "retained": 110,
+    "retained_bounded": 170,
+    "retained_no_go": 95,
     "retained_pending_chain": 2,
-    "unaudited": 456
+    "unaudited": 743
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

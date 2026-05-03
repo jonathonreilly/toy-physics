@@ -1,0 +1,28 @@
+# SDP-extended requirements for industrial bootstrap work
+# (lattice Yang-Mills bootstrap, semidefinite-programming-based bounds, etc.)
+#
+# These are NOT in requirements.txt because they're heavy (~50MB+ of solvers
+# + numba + LLVM) and only needed for the SDP-bootstrap lane. Most repo
+# runners only need numpy + scipy.
+#
+# Setup: see docs/repo/PYTHON_VENV_SETUP.md
+#
+# Install order:
+#   python3 -m venv .venv
+#   .venv/bin/python3 -m pip install -r requirements.txt -r requirements-sdp.txt
+
+# Core (also in requirements.txt)
+numpy>=1.24
+scipy>=1.10
+
+# CVXPY: convex modeling layer.
+# Pulls in default open-source SDP solvers (SCS, CLARABEL).
+# HIGHS for LP, OSQP for QP also installed automatically.
+cvxpy>=1.8
+
+# Note: commercial-grade SDP solvers (Mosek, SDPA-GMP) are NOT included here.
+# For published-precision lattice bootstrap (e.g., Kazakov-Zheng 2022 at
+# L_max=16), Mosek is recommended:
+#   .venv/bin/python3 -m pip install mosek    # requires academic/commercial license
+# CLARABEL + SCS are sufficient for small-to-medium SDP problems
+# (L_max <= 8, matrices up to ~100x100).
