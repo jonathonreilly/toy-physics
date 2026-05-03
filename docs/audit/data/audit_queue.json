@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 79,
     "high": 196,
-    "leaf": 136,
+    "leaf": 135,
     "medium": 156
   },
-  "generated_at": "2026-05-03T11:34:14.891652+00:00",
+  "generated_at": "2026-05-03T11:35:39.359683+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -454,8 +454,8 @@
       "blocker": null,
       "claim_id": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
       "claim_scope": null,
-      "claim_type": "open_gate",
-      "claim_type_provenance": "migration_hint",
+      "claim_type": null,
+      "claim_type_provenance": "needs_reaudit_after_invalidation",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
@@ -475,8 +475,8 @@
       "blocker": null,
       "claim_id": "gauge_vacuum_plaquette_perron_reduction_theorem_note",
       "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
+      "claim_type": null,
+      "claim_type_provenance": "needs_reaudit_after_invalidation",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
@@ -7278,8 +7278,8 @@
       "blocker": null,
       "claim_id": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
       "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
+      "claim_type": null,
+      "claim_type_provenance": "needs_reaudit_after_invalidation",
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
@@ -7288,7 +7288,7 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 2.585,
+      "load_bearing_score": 5.585,
       "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": true,
@@ -13502,30 +13502,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": null,
-      "claim_type_provenance": "needs_reaudit_after_invalidation",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "graph_first_su3_integration_note",
-        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15146,5 +15122,5 @@
     }
   ],
   "ready_count": 53,
-  "total_pending": 567
+  "total_pending": 566
 }

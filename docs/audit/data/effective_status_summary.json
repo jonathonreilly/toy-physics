@@ -4,11 +4,11 @@
     "decoration": 8,
     "meta": 41,
     "no_go": 160,
-    "open_gate": 86,
-    "positive_theorem": 888,
-    "unset": 6
+    "open_gate": 85,
+    "positive_theorem": 887,
+    "unset": 8
   },
-  "computed_at": "2026-05-03T11:34:14.738900+00:00",
+  "computed_at": "2026-05-03T11:35:39.178695+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -52,11 +52,12 @@
     "retained": 141,
     "retained_bounded": 214,
     "retained_no_go": 95,
-    "retained_pending_chain": 2,
-    "unaudited": 531
+    "retained_pending_chain": 3,
+    "unaudited": 530
   },
-  "retained_pending_chain_count": 2,
+  "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [
+    "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
     "pmns_selector_unique_amplitude_slot_note",
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24"
   ]
