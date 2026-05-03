@@ -1,0 +1,30 @@
+slug: industrial-sdp-bootstrap-20260503
+date_launched: 2026-05-03
+mode: campaign
+runtime_budget: 12h
+literature: allowed
+checkpoint_interval: 30m
+deep_block: 90m
+max_cycles: 4
+volume_cap_per_24h: 5
+cluster_cap: 2
+
+current_block: 01
+current_block_branch: physics-loop/industrial-sdp-bootstrap-block01-20260503
+current_block_target: |
+  CVXPY-based moment bootstrap infrastructure + SU(2) validation against
+  Bessel single-plaquette reference. First real SDP-bootstrap on this
+  framework using CLARABEL/SCS via venv (unblocked by PR #430).
+
+current_block_status: in_progress
+
+cycles_completed: 0
+prs_opened: 0
+
+next_exact_action: |
+  Build CVXPY-based moment bootstrap runner. Validate on SU(2) at
+  single-plaquette with Bessel reference. Extend to small Wilson-loop
+  set with strong-coupling expansion as soft loop relations. Get
+  CVXPY-derived bracket and compare to Bessel exact value.
+
+stop_condition: none yet
