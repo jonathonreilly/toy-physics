@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:19:55.638814+00:00
+**Generated:** 2026-05-03T21:20:32.613163+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 106 |
 | **retained_bounded** | 197 |
 | _retained_pending_chain_ | 3 |
-| open_gate | 17 |
-| unaudited | 689 |
+| open_gate | 18 |
+| unaudited | 688 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 360 |
+| `audited_clean` | 361 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 736 |
+| `unaudited` | 735 |
 
 | claim_type | count |
 |---|---:|
@@ -126,6 +126,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | A | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -2026,6 +2027,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `H_plus_phi_potential_coupling_theorem`
   - `eikonal_WKB_action_bridge`
   - `phase_clock_readout_identification`
+- **auditor confidence:** high
+
+### `carrier_orbit_invariance_stretch_attempt_note_2026-05-03`
+
+- **Note:** [`CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md`](../../docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited the narrow open-gate claim that the carrier swap problem admits a Z_2 isotypic decomposition and that the remaining obstruction is registry closure of antisymmetric carrier primitives, not closure of the upstream swap-reduction theorem.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-agent-carrier-orbit-stretch`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The structural-exhaustion question reduces to: does the retained primitive registry contain any (V*)^- element, with registry closure named as the remaining meta-mathematical residual.  _(class `A`)_
+- **chain closes:** True — The algebraic carrier decomposition and the note's narrow residual-naming conclusion close within the stated open-gate scope. This does not prove exhaustive future registry closure or promote the downstream swap-reduction/v_even claims.
+- **rationale:** The runner completed with SUMMARY: PASS=52 FAIL=0 and checks the Z_2 carrier action, isotypic/operator decompositions, current-surface bounded-primitive/textual registry checks, and explicit naming of registry closure. The audited scope is an open gate: it cleanly narrows the residual to registry closure, while explicitly refusing to claim absolute structural exhaustion. Residual risk is that parts of the registry enumeration are textual/current-surface checks, so this verdict must not be read as proving no future retained primitive can add an antisymmetric component.
 - **auditor confidence:** high
 
 ### `causal_escape_window_note`
