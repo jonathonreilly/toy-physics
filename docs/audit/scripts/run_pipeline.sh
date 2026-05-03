@@ -65,11 +65,18 @@ python3 docs/audit/scripts/compute_reaudit_candidates.py
 echo "==> 11/12 audit_lint.py"
 python3 docs/audit/scripts/audit_lint.py
 
-echo "==> 12/12 render_audit_ledger.py"
+echo "==> 12/13 render_audit_ledger.py"
 python3 docs/audit/scripts/render_audit_ledger.py
+
+echo "==> 13/13 render_publication_effective_status.py"
+python3 docs/audit/scripts/render_publication_effective_status.py
 
 echo
 echo "Pipeline complete."
 echo "  Read docs/audit/AUDIT_LEDGER.md for the rendered ledger."
 echo "  Read docs/audit/AUDIT_QUEUE.md   for the next-up audit queue."
 echo "  Read docs/audit/data/reaudit_candidates.json for unblocked re-audit candidates."
+echo "  Read docs/publication/ci3_z3/PUBLICATION_AUDIT_DIVERGENCE.md for the"
+echo "    audit-vs-publication-tables gap report."
+echo "  Read docs/publication/ci3_z3/<NAME>_EFFECTIVE_STATUS.md for the audit-"
+echo "    derived view of each publication table."
