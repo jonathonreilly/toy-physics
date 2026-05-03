@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:47:04.821801+00:00
+**Generated:** 2026-05-03T22:32:29.746860+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 86 |
-| **retained_no_go** | 108 |
+| **retained_no_go** | 109 |
 | **retained_bounded** | 205 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 671 |
+| unaudited | 670 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
@@ -36,22 +36,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 373 |
+| `audited_clean` | 374 |
 | `audited_conditional` | 553 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 718 |
+| `unaudited` | 717 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 597 |
 | `decoration` | 8 |
 | `meta` | 47 |
-| `no_go` | 166 |
+| `no_go` | 167 |
 | `open_gate` | 92 |
-| `positive_theorem` | 854 |
+| `positive_theorem` | 853 |
 
 | criticality | count |
 |---|---:|
@@ -213,6 +213,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `fourth_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | C | - |
 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gate_b_connectivity_tolerance_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `gate_b_grown_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -6132,6 +6133,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Mass-law transfer agrees within uncertainty on the retained grown-row neighborhood (drift=0.2, restore=0.7).  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the fixed-lattice F~M exponent, six grown-seed F~M exponents at drift=0.2 and restore=0.7, their mean/spread, and the fixed-grown sigma comparison. The note explicitly excludes geometry-generic transfer, other drift/restore values, and other observables.
 - **rationale:** The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check.
+- **auditor confidence:** high
+
+### `fourth_family_complex_boundary_note`
+
+- **Note:** [`FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** On the tested fourth-family quadrant-reflection grown slice with drifts 0.0, 0.2, 0.5 and seeds 0, 1, 2, the complex-action companion fails the clean anchor-row TOWARD@0.1 -> AWAY@0.5 crossover despite retaining the gamma=0/Born anchor guard.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-fourth-family-complex-boundary`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The complex-action signature does not produce a retained TOWARD -> AWAY crossover on this family, so the fourth-family quadrant basin does not retain the complex-action companion cleanly.  _(class `C`)_
+- **chain closes:** True — The completed runner directly computes the anchor guards and crossover counts on the scoped grown family. It reports anchor gamma=0 plus Born proxy true, but anchor TOWARD@0.1 -> AWAY@0.5 false, matching the note's narrow boundary/no-go conclusion.
+- **rationale:** The scoped claim is a negative boundary result, not a broad family theorem. The load-bearing runner evidence is completed and current: the baseline/Born guard passes, while the required complex-action directional crossover fails on the anchor row and is not seed-robust across the tested drifts. This closes the narrow no-go that the fourth-family quadrant-reflection basin does not carry the clean complex-action companion on the tested slice.
 - **auditor confidence:** high
 
 ### `fourth_family_quadrant_note`
