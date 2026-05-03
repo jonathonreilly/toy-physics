@@ -251,6 +251,84 @@ def exhibit_E5(tol=1e-12):
 
 
 # ---------------------------------------------------------------------------
+# Exhibit E6: central pseudoscalar omega = gamma_1 gamma_2 gamma_3
+#             omega^2 = -I, omega central, with eigenvalues +i, -i in
+#             the complexification (chirality split, 2026-05-03 repair)
+# ---------------------------------------------------------------------------
+
+def exhibit_E6(tol=1e-12):
+    print("\n--- Exhibit E6: central pseudoscalar omega and chirality split ---")
+    omega = PAULI[0] @ PAULI[1] @ PAULI[2]
+    # omega = i I in the positive-chirality (canonical Pauli) representation
+    err_omega_def = float(np.max(np.abs(omega - 1j * I2)))
+    print(f"  omega := sigma_1 sigma_2 sigma_3 = i I  err = {err_omega_def:.3e}")
+    err_sq = float(np.max(np.abs(omega @ omega + I2)))
+    print(f"  omega^2 = -I  err = {err_sq:.3e}")
+    # Centrality: omega commutes with each sigma_i
+    central_err = 0.0
+    for i, s in enumerate(PAULI):
+        c = float(np.max(np.abs(omega @ s - s @ omega)))
+        central_err = max(central_err, c)
+    print(f"  max ||[omega, sigma_i]|| = {central_err:.3e}  (omega is central)")
+    # Build positive- and negative-chirality irreps and verify omega-eigenvalues
+    rho_plus = list(PAULI)                                 # gamma_i = +sigma_i
+    rho_minus = [-s for s in PAULI]                        # gamma_i = -sigma_i
+    omega_plus = rho_plus[0] @ rho_plus[1] @ rho_plus[2]   # should be +i I
+    omega_minus = rho_minus[0] @ rho_minus[1] @ rho_minus[2]  # should be -i I
+    err_plus = float(np.max(np.abs(omega_plus - 1j * I2)))
+    err_minus = float(np.max(np.abs(omega_minus + 1j * I2)))
+    print(f"  rho_+ chirality: omega -> +i I  err = {err_plus:.3e}")
+    print(f"  rho_- chirality: omega -> -i I  err = {err_minus:.3e}")
+    # Both chiralities satisfy Cl(3) defining relations
+    plus_rels = max(
+        float(np.max(np.abs(anticommute(rho_plus[i], rho_plus[j]) -
+                            2 * (1.0 if i == j else 0.0) * I2)))
+        for i in range(3) for j in range(3)
+    )
+    minus_rels = max(
+        float(np.max(np.abs(anticommute(rho_minus[i], rho_minus[j]) -
+                            2 * (1.0 if i == j else 0.0) * I2)))
+        for i in range(3) for j in range(3)
+    )
+    print(f"  rho_+ Cl(3) defining relations err = {plus_rels:.3e}")
+    print(f"  rho_- Cl(3) defining relations err = {minus_rels:.3e}")
+    # rho_+ and rho_- are NOT unitarily equivalent (they have different
+    # omega-eigenvalues). Sanity: check no unitary U conjugates rho_+ into rho_-.
+    # If U sigma_i U^dagger = -sigma_i for all i, then U omega_plus U^dagger
+    # = (-1)^3 omega_plus = -omega_plus. But omega_plus = +iI is a scalar,
+    # so U(+iI)U^dagger = +iI, not -iI. Contradiction — so no such U.
+    # We exhibit by trying random unitaries and confirming none give rho_-.
+    rng = np.random.default_rng(20260503)
+    found_inequivalent = False
+    closest = float("inf")
+    for _ in range(200):
+        H = rng.standard_normal((2, 2)) + 1j * rng.standard_normal((2, 2))
+        H = 0.5 * (H + H.conj().T)
+        from scipy.linalg import expm
+        U = expm(1j * H)
+        diff = max(float(np.max(np.abs(U @ rho_plus[i] @ U.conj().T - rho_minus[i])))
+                   for i in range(3))
+        closest = min(closest, diff)
+    # Argument: the obstruction is exactly the omega-eigenvalue mismatch
+    print(f"  closest random unitary distance from rho_+ to rho_-: {closest:.3e}")
+    print(f"    (positive distance confirms rho_+ and rho_- are NOT unitarily")
+    print(f"     equivalent; the obstruction is the omega-eigenvalue difference)")
+    e6_pass = (
+        err_omega_def < tol
+        and err_sq < tol
+        and central_err < tol
+        and err_plus < tol
+        and err_minus < tol
+        and plus_rels < tol
+        and minus_rels < tol
+        and closest > 0.5  # well above noise; chiralities are distinct
+    )
+    verdict = "PASS" if e6_pass else "FAIL"
+    print(f"  E6 verdict: {verdict}")
+    return e6_pass
+
+
+# ---------------------------------------------------------------------------
 # Driver
 # ---------------------------------------------------------------------------
 
@@ -259,6 +337,7 @@ def main():
     print(" axiom_first_cl3_per_site_uniqueness_check.py")
     print(" Loop: axiom-first-foundations, Cycle 6 / Route R6")
     print(" Stone-von Neumann uniqueness for Cl(3) site representations.")
+    print(" 2026-05-03 repair: explicit chirality split via central pseudoscalar.")
     print("=" * 72)
 
     e1 = exhibit_E1()
@@ -266,12 +345,14 @@ def main():
     e3 = exhibit_E3()
     e4 = exhibit_E4()
     e5 = exhibit_E5()
+    e6 = exhibit_E6()
 
     results = {"E1 (Pauli satisfies Cl(3))": e1,
                "E2 (no 1-dim faithful rep)": e2,
                "E3 (no 3-dim faithful rep)": e3,
-               "E4 (2-dim reps unitary-equivalent to Pauli)": e4,
-               "E5 (4-dim rep decomposes as 2×Pauli)": e5}
+               "E4 (2-dim reps unitary-equivalent to Pauli within chirality)": e4,
+               "E5 (4-dim rep decomposes as 2*Pauli)": e5,
+               "E6 (central pseudoscalar + chirality split rho_+, rho_-)": e6}
     print()
     print("=" * 72)
     print(" SUMMARY")
@@ -283,7 +364,8 @@ def main():
     print(f"\n   PASSED: {n_pass}/{n_total}")
     print()
     if n_pass == n_total:
-        print(" verdict: per-site uniqueness (U1)–(U4) exhibited on Cl(3).")
+        print(" verdict: per-site uniqueness (U1)-(U4) exhibited on Cl(3) with")
+        print("          chirality split rho_+ (canonical) / rho_- (parity-conjugate).")
         return 0
     else:
         print(" verdict: at least one structural exhibit failed.")
