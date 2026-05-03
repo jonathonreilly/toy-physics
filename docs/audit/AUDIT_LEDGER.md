@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:18:12.763165+00:00
+**Generated:** 2026-05-03T16:21:27.489862+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 772 |
+| unaudited | 771 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 28 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 520 |
+| ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 308 |
-| `audited_conditional` | 520 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 28 |
 | `audited_renaming` | 22 |
-| `unaudited` | 818 |
+| `unaudited` | 817 |
 
 | claim_type | count |
 |---|---:|
@@ -526,6 +526,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3575,6 +3576,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The exact taste-spectrum count gives g_* = 28 + (7/8)*90 = 106.75, after which the equilibrium abundance and late entropy-to-photon factors are algebraic/statistical-mechanics conversions.  _(class `B`)_
 - **chain closes:** False — The conversion formulas close once g_* = 106.75 and the late entropy count are admitted, but the source note has no cited authority or derivation for the load-bearing 28 bosonic and 90 fermionic degrees of freedom. The runner reuses those same constants rather than deriving the spectrum count from retained inputs.
 - **rationale:** Issue: the theorem depends on the exact relativistic spectrum count g_* = 28 + (7/8)*90, but the note provides no cited theorem or derivation for the 28 and 90 counts. Why this blocks: the runner verifies downstream arithmetic and standard equilibrium integrals only after those constants are already set, so it does not independently close the authority path. Repair target: cite or add a theorem-grade spectrum-count note/runner that derives the bosonic and fermionic counts from the framework inputs, then keep this note as the conversion corollary. Claim boundary until fixed: conditional on the spectrum count, the d_N, s/n_gamma, and product arithmetic are internally consistent and runner-checked.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_exact_kernel_closure_note_2026-04-15`
+
+- **Note:** [`DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the conditional coherent-heavy-basis leptogenesis arithmetic: given gamma=1/2, E1=sqrt(8/3), E2=sqrt(8)/3, K00=2, and the retained benchmark constants, the runner gives epsilon_1/epsilon_DI=0.9276209209 and eta/eta_obs=0.5578749661, with no percent-level eta closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-restricted-audit-2026-05-03-dm-leptogenesis`  (codex-current; independence=fresh_context)
+- **load-bearing step:** After the refreshed branch closes c_odd=+1, v_even=(sqrt(8/3), sqrt(8)/3), a_sel=1/2, tau_E=tau_T=1/2, K00=2, what does the standard coherent leptogenesis kernel predict on the retained benchmark?  _(class `B`)_
+- **chain closes:** False — The downstream arithmetic from the imported constants is internally consistent and the runner reproduces the corrected epsilon and eta ratios. The bounded exact-package claim does not close from the restricted packet because gamma, E1, E2, K00, and the retained washout benchmark are imported as closed inputs rather than derived or supported by provided retained-grade authorities.
+- **rationale:** Issue: The note and runner import gamma=1/2, E1=sqrt(8/3), E2=sqrt(8)/3, K00=2, and benchmark washout inputs as already closed; the runner hard-codes these values and checks downstream consistency. Why this blocks: The claim includes exact source-and-CP-channel package closure, but the provided inputs do not derive those source values or the diagonal normalization from Cl(3) or retained one-hop authorities, so a clean verdict would ratify unsupported upstream premises. Repair target: Provide retained-grade one-hop derivations for the source package, K00 diagonal normalization, and retained washout benchmark, and update the runner to consume or compute those values rather than setting them directly. Claim boundary until fixed: It is safe only as conditional arithmetic: if the imported exact package and benchmark are granted, epsilon_1/epsilon_DI=0.9276209209 and eta/eta_obs=0.5578749661, so percent-level eta closure is not retained.
+- **open / conditional deps cited:**
+  - `missing retained-grade derivations for gamma=1/2, E1=sqrt(8/3), E2=sqrt(8)/3, K00=2, and the retained washout benchmark used by the runner`
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16`
