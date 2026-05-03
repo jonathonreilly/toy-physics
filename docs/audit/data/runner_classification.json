@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T13:05:32.941159+00:00",
+  "generated_at": "2026-05-03T13:06:40.171351+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -9948,6 +9948,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/minimal_absorbing_horizon_probe.py"
+    },
+    "minimal_axioms_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_generation_rooting_undefined.py"
     },
     "minimal_bidirectional_trapping_probe_note": {
       "assert_count": 0,
@@ -24959,6 +24971,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_generation_rooting_undefined.py": {
+      "assert_count": 1,
+      "claims": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_geometry_superposition.py": {
       "assert_count": 0,
       "claims": [
@@ -37213,12 +37240,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 543,
+      "C": 544,
       "D": 203,
       "none": 420
     },
-    "runners_classified": 1336,
-    "runners_with_C": 648,
+    "runners_classified": 1337,
+    "runners_with_C": 649,
     "runners_with_D": 328
   }
 }

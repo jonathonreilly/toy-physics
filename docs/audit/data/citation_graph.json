@@ -22157,7 +22157,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:05:29.194548+00:00",
+  "generated_at": "2026-05-03T13:06:36.510967+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -36136,10 +36136,21 @@
       "claim_type_author_hint_raw": "meta",
       "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "5700d7727f62c12deb09f576d288e942f92d8e7878b1414f53f5afd5781e3ff6",
+      "note_hash": "06805b8b8e2d6291762dc925504540e86ab95d494211800ca5e85ada2cc1ca1c",
       "path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
       "runner_path": null,
-      "title": "Minimal Framework Inputs"
+      "title": "Minimal Framework Inputs (SUPERSEDED)"
+    },
+    "minimal_axioms_2026-05-03": {
+      "claim_id": "minimal_axioms_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "dd2c308e52b06fcd5c4edf740a7a19712639311d06af86e2792a5fb0817d922c",
+      "path": "docs/MINIMAL_AXIOMS_2026-05-03.md",
+      "runner_path": "scripts/frontier_generation_rooting_undefined.py",
+      "title": "Minimal Framework Axioms (Restored)"
     },
     "minimal_bidirectional_trapping_probe_note": {
       "claim_id": "minimal_bidirectional_trapping_probe_note",
@@ -49354,6 +49365,7 @@
     "mesoscopic_surrogate_localization_sweep_note",
     "mesoscopic_surrogate_threshold_2d_note",
     "minimal_axioms_2026-04-11",
+    "minimal_axioms_2026-05-03",
     "mirror_2d_gravity_law_note",
     "mirror_2d_validation_note",
     "mirror_chokepoint_boundary_fit_note",
@@ -49821,7 +49833,7 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 17,
-      "meta": 2,
+      "meta": 3,
       "no_go": 3,
       "none": 1747,
       "open_gate": 2,
@@ -49829,16 +49841,16 @@
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 517,
-      "meta": 2,
+      "meta": 3,
       "no_go": 109,
       "none": 450,
       "open_gate": 111,
       "positive_theorem": 654
     },
     "edge_count": 5539,
-    "leaf_count": 649,
-    "node_count": 1843,
-    "root_count": 1073,
-    "runners_with_path": 1408
+    "leaf_count": 650,
+    "node_count": 1844,
+    "root_count": 1074,
+    "runners_with_path": 1409
   }
 }
