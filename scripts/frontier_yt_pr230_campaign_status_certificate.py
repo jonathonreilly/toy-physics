@@ -209,6 +209,9 @@ def main() -> int:
         "legacy_schur_bridge_import_audit": load(
             "outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json"
         ),
+        "schur_kernel_row_contract_gate": load(
+            "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json"
+        ),
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
@@ -904,6 +907,20 @@ def main() -> int:
         )
         is True,
         statuses["legacy_schur_bridge_import_audit"],
+    )
+    report(
+        "schur-kernel-row-contract-gate-not-passed",
+        "Schur kernel row contract gate not passed"
+        in str(statuses["schur_kernel_row_contract_gate"])
+        and certificates["schur_kernel_row_contract_gate"].get(
+            "schur_kernel_row_contract_gate_passed"
+        )
+        is False
+        and certificates["schur_kernel_row_contract_gate"].get(
+            "current_closure_gate_passed"
+        )
+        is False,
+        statuses["schur_kernel_row_contract_gate"],
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

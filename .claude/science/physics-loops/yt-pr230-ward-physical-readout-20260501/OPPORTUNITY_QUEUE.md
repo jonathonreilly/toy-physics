@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-03 update: the scalar denominator route now has an executable Schur
+kernel row contract gate layered after the remote row-absence, legacy bridge
+import, and canonical-Higgs authority guards.  Future same-surface rows must
+provide `A/B/C` and pole derivatives, or equivalent precontracted matrix
+Schur rows, with neutral scalar partition, pole-control, and firewall
+certificates.  The gate validates a positive witness and rejects source-only
+`C_ss` plus `kappa_s=1` shortcuts, but the current row file is absent, so
+closure remains open.  Highest-value foreground actions are now concrete:
+produce those Schur rows, produce certified `O_H/C_sH/C_HH` pole rows, or
+produce same-source W/Z response rows with identity certificates.
+
 2026-05-03 update: the repo-wide canonical-Higgs `O_H` authority audit is now
 wired into the retained-route and campaign gates.  It finds no hidden
 same-surface `O_H` proof in the Higgs/taste/EW/Ward/source surfaces.  EW and

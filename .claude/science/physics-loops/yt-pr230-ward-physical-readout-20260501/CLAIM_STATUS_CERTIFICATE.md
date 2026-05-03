@@ -1,5 +1,28 @@
 # Claim Status Certificate
 
+Schur kernel row contract gate:
+
+```text
+actual_current_surface_status: open / Schur kernel row contract gate not passed; current rows absent
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_schur_kernel_row_contract_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=132 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=158 FAIL=0
+```
+
+The gate defines and tests the future Schur row input contract but does not
+provide the rows.  The current surface still lacks
+`outputs/yt_schur_scalar_kernel_rows_2026-05-03.json`, canonical-Higgs/source
+identity, and physical-response bridge rows.  It authorizes no response
+readout switch and no retained or `proposed_retained` wording.
+
 Canonical-Higgs repo authority audit:
 
 ```text

@@ -2472,3 +2472,23 @@ the fitted response-stability gate still fails, and no source-Higgs or W/Z
 identity row is present.  Do not treat chunks017-018, `C_ss`, multi-tau rows,
 target ESS, or tau-window central stability as retained/proposed-retained
 top-Yukawa evidence.
+
+Schur row contract gate is not a Schur row:
+
+```text
+python3 scripts/frontier_yt_schur_kernel_row_contract_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=132 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=158 FAIL=0
+```
+
+The executable gate validates the future row schema and a positive in-memory
+witness, but the current row file
+`outputs/yt_schur_scalar_kernel_rows_2026-05-03.json` is absent.  Source-only
+`C_ss` data and `kappa_s=1` shortcuts are explicitly rejected.  Do not treat
+the contract gate, Schur sufficiency theorem, or absent-row status as
+retained/proposed-retained top-Yukawa evidence.

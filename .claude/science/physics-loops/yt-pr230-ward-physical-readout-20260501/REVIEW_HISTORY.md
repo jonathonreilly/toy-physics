@@ -4363,3 +4363,20 @@ passes with limiting ESS `242.7849819291294`.  Response stability still fails,
 v2 rows cover only chunks017-018, multiple source radii are absent, and no
 source-Higgs/WZ/canonical-Higgs identity has been supplied.  No retained or
 proposed-retained wording is allowed.
+
+## 2026-05-03 - Block 185 Schur Kernel Row Contract Gate
+
+Review stance: positive route sharpening / claim firewall.
+
+- Added `scripts/frontier_yt_schur_kernel_row_contract_gate.py`.
+- Added `docs/YT_SCHUR_KERNEL_ROW_CONTRACT_GATE_NOTE_2026-05-03.md`.
+- Added `outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json`.
+- Wired the gate into retained-route and campaign-status certificates.
+- Updated loop pack handoff, opportunity queue, no-go ledger, claim status,
+  review history, and state.
+
+Disposition: open gate, not passed.  The Schur `K'(pole)` sufficiency theorem
+now has an executable future row contract, and the gate rejects source-only
+`C_ss` plus `kappa_s=1` shortcuts.  The current Schur row file is absent, and
+canonical-Higgs/source identity remains open.  No retained or proposed-retained
+wording is allowed.

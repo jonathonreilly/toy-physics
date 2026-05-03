@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=157 FAIL=0
+# SUMMARY: PASS=158 FAIL=0
 ```
 
 ## 2026-05-03 Canonical-Higgs Repo Authority Audit Update
@@ -656,3 +656,10 @@ Latest Schur-complement K-prime checkpoint: campaign status now includes
 future same-surface `A/B/C` scalar-kernel rows and pole derivatives are enough
 to compute `D_eff'(pole)`.  It is not closure because those rows are absent
 and the canonical-Higgs identity remains open.
+
+Latest Schur kernel row contract checkpoint: campaign status now includes
+`scripts/frontier_yt_schur_kernel_row_contract_gate.py` and reports
+`PASS=158 FAIL=0`.  The gate makes the future Schur row input contract
+executable, validates a positive in-memory witness, and rejects source-only
+`C_ss` plus `kappa_s=1` shortcuts.  It is not closure because the current
+Schur row file is absent and the canonical-Higgs identity remains open.

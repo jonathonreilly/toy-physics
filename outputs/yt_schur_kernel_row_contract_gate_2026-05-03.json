@@ -1,0 +1,206 @@
+{
+  "acceptance_schema": {
+    "candidate_rows_path": "outputs/yt_schur_scalar_kernel_rows_2026-05-03.json",
+    "claim_firewall": [
+      "used_hunit_matrix_element_readout=false",
+      "used_yt_ward_identity=false",
+      "used_observed_top_or_yukawa_as_selector=false",
+      "used_alpha_lm_or_plaquette_u0=false",
+      "used_reduced_cold_pilots_as_production_evidence=false",
+      "set_c2_equal_one=false",
+      "set_z_match_equal_one=false",
+      "set_kappa_s_equal_one=false",
+      "set_cos_theta_equal_one=false"
+    ],
+    "computed_quantities": [
+      "D_eff(pole)",
+      "D_eff_prime(pole)",
+      "source-pole inverse residue only; no O_sp=O_H claim"
+    ],
+    "partition_certificate": [
+      "same_surface_neutral_scalar_kernel_partition_passed=true",
+      "source_pole_coordinate_certified=true",
+      "orthogonal_neutral_block_certified=true",
+      "source_orthogonal_covariance_included=true"
+    ],
+    "pole_control": [
+      "isolated_scalar_pole_passed=true",
+      "fv_ir_zero_mode_order_certified=true",
+      "finite pole_location_x"
+    ],
+    "required_top_level": {
+      "phase": "production or theorem",
+      "same_surface_cl3_z3": true,
+      "schur_form": "one_orthogonal_mode_v1 or precontracted_matrix_v1",
+      "source_coordinate": "the scalar source coordinate used by the FH/LSZ source response"
+    },
+    "schur_rows_one_orthogonal_mode_v1": [
+      "A_at_pole",
+      "B_at_pole",
+      "C_at_pole",
+      "A_prime_at_pole",
+      "B_prime_at_pole",
+      "C_prime_at_pole"
+    ],
+    "schur_rows_precontracted_matrix_v1": [
+      "A_at_pole",
+      "B_Cinv_B_at_pole",
+      "A_prime_at_pole",
+      "two_Bprime_Cinv_B_at_pole",
+      "B_Cinv_Cprime_Cinv_B_at_pole"
+    ],
+    "status": "support-only row contract; not retained or proposed_retained closure"
+  },
+  "actual_current_surface_status": "open / Schur kernel row contract gate not passed; current rows absent",
+  "bare_retained_allowed": false,
+  "candidate_rows_present": false,
+  "candidate_rows_valid": false,
+  "candidate_validation": {
+    "present": false,
+    "reasons": [
+      "Schur scalar kernel row file absent"
+    ],
+    "valid": false
+  },
+  "current_closure_gate_passed": false,
+  "exact_next_action": "Produce same-surface neutral scalar Schur rows A/B/C and pole derivatives, or precontracted matrix Schur rows, with partition, pole-control, and firewall certificates; then rerun this gate and the retained-closure route certificate.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "kprime_closure_attempt": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "scalar_denominator_closure_attempt": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "schur_complement_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+  },
+  "pass_count": 12,
+  "positive_witness_validation": {
+    "checks": {
+      "does_not_claim_physical_yukawa_closure": true,
+      "finite_nonzero_inverse_residue": true,
+      "finite_pole_location": true,
+      "finite_pole_residual_tolerance": true,
+      "forbidden_set_c2_equal_one_false": true,
+      "forbidden_set_cos_theta_equal_one_false": true,
+      "forbidden_set_kappa_s_equal_one_false": true,
+      "forbidden_set_z_match_equal_one_false": true,
+      "forbidden_used_alpha_lm_or_plaquette_u0_false": true,
+      "forbidden_used_hunit_matrix_element_readout_false": true,
+      "forbidden_used_observed_top_or_yukawa_as_selector_false": true,
+      "forbidden_used_reduced_cold_pilots_as_production_evidence_false": true,
+      "forbidden_used_yt_ward_identity_false": true,
+      "fv_ir_zero_mode_order_certified": true,
+      "isolated_scalar_pole_passed": true,
+      "neutral_scalar_partition_passed": true,
+      "orthogonal_neutral_block_certified": true,
+      "phase_supported": true,
+      "pole_condition_satisfied": true,
+      "same_surface_cl3_z3": true,
+      "source_coordinate_named": true,
+      "source_lsz_only_boundary": true,
+      "source_orthogonal_covariance_included": true,
+      "source_pole_coordinate_certified": true,
+      "valid_schur_numeric_form": true
+    },
+    "computed_schur": {
+      "D_eff_at_pole": 0.0,
+      "D_eff_prime_at_pole": 0.3453975308641975,
+      "schur_form": "one_orthogonal_mode_v1",
+      "valid_numeric_form": true
+    },
+    "present": true,
+    "reasons": [],
+    "valid": true
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current row file is absent and the canonical-Higgs identity gate remains open; the artifact is an input contract, not y_t closure.",
+  "rejection_witnesses": {
+    "kappa_fiat": {
+      "candidate": {
+        "phase": "theorem",
+        "same_surface_cl3_z3": true,
+        "set_kappa_s_equal_one": true,
+        "source_coordinate": "s"
+      },
+      "name": "kappa_s=1 shortcut",
+      "rejection": "setting kappa_s=1 is a forbidden normalization import."
+    },
+    "source_only": {
+      "candidate": {
+        "claims_physical_yukawa_closure": false,
+        "firewall": {
+          "set_c2_equal_one": false,
+          "set_cos_theta_equal_one": false,
+          "set_kappa_s_equal_one": false,
+          "set_z_match_equal_one": false,
+          "used_alpha_lm_or_plaquette_u0": false,
+          "used_hunit_matrix_element_readout": false,
+          "used_observed_top_or_yukawa_as_selector": false,
+          "used_reduced_cold_pilots_as_production_evidence": false,
+          "used_yt_ward_identity": false
+        },
+        "phase": "production",
+        "same_surface_cl3_z3": true,
+        "scalar_source_two_point_residue": 3.2,
+        "source_coordinate": "s",
+        "source_lsz_only_boundary": true
+      },
+      "name": "source-only C_ss pole data without partition rows",
+      "rejection": "C_ss alone does not supply A/B/C partition rows or K'(pole).",
+      "validation": {
+        "checks": {
+          "does_not_claim_physical_yukawa_closure": true,
+          "finite_nonzero_inverse_residue": false,
+          "finite_pole_location": false,
+          "finite_pole_residual_tolerance": true,
+          "forbidden_set_c2_equal_one_false": true,
+          "forbidden_set_cos_theta_equal_one_false": true,
+          "forbidden_set_kappa_s_equal_one_false": true,
+          "forbidden_set_z_match_equal_one_false": true,
+          "forbidden_used_alpha_lm_or_plaquette_u0_false": true,
+          "forbidden_used_hunit_matrix_element_readout_false": true,
+          "forbidden_used_observed_top_or_yukawa_as_selector_false": true,
+          "forbidden_used_reduced_cold_pilots_as_production_evidence_false": true,
+          "forbidden_used_yt_ward_identity_false": true,
+          "fv_ir_zero_mode_order_certified": false,
+          "isolated_scalar_pole_passed": false,
+          "neutral_scalar_partition_passed": false,
+          "orthogonal_neutral_block_certified": false,
+          "phase_supported": true,
+          "pole_condition_satisfied": false,
+          "same_surface_cl3_z3": true,
+          "source_coordinate_named": true,
+          "source_lsz_only_boundary": true,
+          "source_orthogonal_covariance_included": false,
+          "source_pole_coordinate_certified": false,
+          "valid_schur_numeric_form": false
+        },
+        "computed_schur": {
+          "reason": "missing one_orthogonal_mode_v1 or precontracted_matrix_v1 Schur row keys",
+          "valid_numeric_form": false
+        },
+        "present": true,
+        "reasons": [
+          "neutral_scalar_partition_passed",
+          "source_pole_coordinate_certified",
+          "orthogonal_neutral_block_certified",
+          "source_orthogonal_covariance_included",
+          "isolated_scalar_pole_passed",
+          "fv_ir_zero_mode_order_certified",
+          "finite_pole_location",
+          "valid_schur_numeric_form",
+          "pole_condition_satisfied",
+          "finite_nonzero_inverse_residue"
+        ],
+        "valid": false
+      }
+    }
+  },
+  "schur_kernel_row_contract_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not infer A/B/C Schur rows from source-only C_ss data",
+    "does not set kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The Schur K'(pole) sufficiency theorem now has an executable future row contract.  Current PR #230 has no same-surface Schur scalar kernel row file, so the contract gate is not passed.  The gate validates an in-memory positive witness and rejects source-only C_ss or kappa_s=1 shortcuts.  Even a future passed row contract is source-pole LSZ support only until the retained route also supplies the canonical-Higgs/source identity or an allowed physical-response bridge."
+}

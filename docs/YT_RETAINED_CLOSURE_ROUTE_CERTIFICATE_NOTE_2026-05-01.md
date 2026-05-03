@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=131 FAIL=0
+# SUMMARY: PASS=132 FAIL=0
 ```
 
 ## 2026-05-03 Canonical-Higgs Repo Authority Audit Update
@@ -740,3 +740,10 @@ refreshed at `PASS=128 FAIL=0`.  The theorem gives exact support: future
 same-surface `A/B/C` scalar-kernel rows and pole derivatives are sufficient to
 compute `D_eff'(pole)`.  Current rows are absent, so no
 retained/proposed-retained wording is authorized.
+
+Latest Schur kernel row contract checkpoint: the retained-route certificate now
+also includes `scripts/frontier_yt_schur_kernel_row_contract_gate.py` and is
+refreshed at `PASS=132 FAIL=0`.  The gate makes the future row schema
+executable and rejects source-only `C_ss` plus `kappa_s=1` shortcuts.  The
+current row file is absent, so no retained/proposed-retained wording is
+authorized.

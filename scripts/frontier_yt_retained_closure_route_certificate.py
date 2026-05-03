@@ -135,6 +135,7 @@ def main() -> int:
         "schur_complement_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
         "schur_kprime_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
         "legacy_schur_bridge_import_audit": "outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json",
+        "schur_kernel_row_contract_gate": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -795,6 +796,13 @@ def main() -> int:
         and certificates["legacy_schur_bridge_import_audit"].get("proposal_allowed") is False
         and certificates["legacy_schur_bridge_import_audit"].get("legacy_schur_import_closes_pr230") is False
         and certificates["legacy_schur_bridge_import_audit"].get("exact_negative_boundary_passed") is True
+    )
+    schur_kernel_row_contract_gate_not_passed = (
+        "Schur kernel row contract gate not passed"
+        in certificates["schur_kernel_row_contract_gate"].get("actual_current_surface_status", "")
+        and certificates["schur_kernel_row_contract_gate"].get("proposal_allowed") is False
+        and certificates["schur_kernel_row_contract_gate"].get("schur_kernel_row_contract_gate_passed") is False
+        and certificates["schur_kernel_row_contract_gate"].get("current_closure_gate_passed") is False
     )
     higgs_pole_identity_gate_blocks = (
         "canonical-Higgs pole identity gate blocking"
@@ -1582,6 +1590,11 @@ def main() -> int:
         "legacy-schur-bridge-import-audit-blocks-hidden-closure",
         legacy_schur_bridge_import_audit_blocks_hidden_closure,
         certificates["legacy_schur_bridge_import_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "schur-kernel-row-contract-gate-not-passed",
+        schur_kernel_row_contract_gate_not_passed,
+        certificates["schur_kernel_row_contract_gate"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

@@ -1,5 +1,29 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 Schur kernel row contract gate:
+
+- Added `scripts/frontier_yt_schur_kernel_row_contract_gate.py`,
+  `docs/YT_SCHUR_KERNEL_ROW_CONTRACT_GATE_NOTE_2026-05-03.md`, and
+  `outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json`.
+- The gate makes the Schur `K'(pole)` future input contract executable:
+  same-surface scalar-kernel partition rows must supply `A/B/C` and pole
+  derivatives, or equivalent precontracted matrix Schur rows, with pole
+  control and firewall metadata.
+- The runner validates a positive in-memory row witness and rejects source-only
+  `C_ss` plus `kappa_s=1` shortcuts.  The current row file
+  `outputs/yt_schur_scalar_kernel_rows_2026-05-03.json` is absent.
+- Verification after merging the remote Schur/Higgs guards: Schur row contract
+  gate `PASS=12 FAIL=0`; retained-route `PASS=132 FAIL=0`; campaign status
+  `PASS=158 FAIL=0`.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: produce same-surface neutral scalar Schur rows or
+precontracted matrix rows with partition, pole-control, and firewall
+certificates, then rerun the Schur row contract gate and retained-route
+certificate.  If those rows cannot be produced, pivot to certified
+`O_H/C_sH/C_HH` pole rows or same-source W/Z response rows with identity
+certificates.  PR #230 remains draft/open.
+
 Latest checkpoint, 2026-05-03 canonical-Higgs repo authority audit wiring:
 
 - Wired `outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json`
