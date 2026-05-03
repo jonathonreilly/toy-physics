@@ -1,5 +1,32 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 canonical-Higgs operator candidate stress:
+
+- Added `scripts/frontier_yt_canonical_higgs_operator_candidate_stress.py`,
+  `docs/YT_CANONICAL_HIGGS_OPERATOR_CANDIDATE_STRESS_NOTE_2026-05-03.md`,
+  and `outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json`.
+- Hardened `scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py`
+  so `identity_certificate` and `normalization_certificate` references must
+  point to existing local `docs/`, `outputs/`, or `scripts/` artifacts.
+  Arbitrary strings such as absent/unratified labels no longer satisfy the
+  reference checks.
+- Stress result is `PASS=6 FAIL=0`.  The raw unratified source-Higgs smoke
+  operator, a schema-padded unratified version, static EW algebra as `O_H`,
+  `H_unit` by fiat, and observed-target selection are all rejected.
+- Retained-route is now `PASS=116 FAIL=0`; campaign status is now
+  `PASS=142 FAIL=0`.
+- This closes a certificate loophole only.  It does not derive `O_H`, does not
+  identify the source pole with the canonical Higgs radial mode, and does not
+  authorize retained or proposed-retained closure.
+
+Next exact action: supply a genuinely derived same-surface canonical-Higgs
+operator identity and normalization certificate backed by local audit
+artifacts, then rerun the operator certificate gate before treating any
+production `C_sH/C_HH` rows as source-Higgs evidence.  After that, run
+production cross-correlator rows, isolated-pole residue extraction, and
+Gram-purity postprocessing.  No retained or proposed-retained closure is
+authorized.
+
 Latest checkpoint, 2026-05-03 source-Higgs unratified-operator smoke:
 
 - Added `outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json`

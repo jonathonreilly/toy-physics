@@ -1,5 +1,33 @@
 # Claim Status Certificate
 
+Canonical-Higgs operator candidate stress:
+
+```text
+actual_current_surface_status: open / current O_H substitutes rejected by hardened certificate gate
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_canonical_higgs_operator_candidate_stress.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=116 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=142 FAIL=0
+```
+
+The hardened gate requires local artifact-backed identity and normalization
+certificates.  The candidate stress runner rejects the raw unratified
+source-Higgs smoke operator, a schema-padded unratified version, static EW
+algebra as `O_H`, `H_unit` by fiat, and observed-target selection.  This
+authorizes no canonical-Higgs operator identity, no source-to-Higgs LSZ
+normalization, no source-Higgs Gram-purity claim, and no retained or
+`proposed_retained` wording.
+
 Source-Higgs unratified-operator smoke checkpoint:
 
 ```text

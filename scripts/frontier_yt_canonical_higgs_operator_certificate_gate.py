@@ -81,7 +81,7 @@ def path_reference_ok(value: Any) -> bool:
     text = str(value)
     if text.startswith("docs/") or text.startswith("outputs/") or text.startswith("scripts/"):
         return (ROOT / text).exists()
-    return True
+    return False
 
 
 def validate_candidate(candidate: dict[str, Any]) -> dict[str, bool]:

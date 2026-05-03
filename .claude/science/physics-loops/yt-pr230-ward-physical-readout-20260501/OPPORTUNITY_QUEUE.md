@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-03 update: the canonical-Higgs operator certificate gate now rejects
+all current tempting `O_H` substitutes under stricter local-artifact reference
+rules.  The raw and schema-padded unratified source-Higgs smoke operator,
+static EW algebra, `H_unit` by fiat, and observed-target selection all fail the
+stress runner.  This closes a claim-firewall loophole but is not positive
+closure.  The highest-value next step is still a genuinely derived same-surface
+canonical-Higgs operator identity and normalization certificate, backed by
+local artifacts, followed by production `C_sH/C_HH` pole residues and
+Gram-purity.  If that cannot be derived, pivot to real W/Z response with
+sector-overlap identity or to a microscopic theorem excluding orthogonal
+neutral top coupling.
+
 2026-05-03 update: the source-Higgs cross-correlator estimator has now been
 smoke-tested with an explicitly unratified operator certificate.  The path
 emits finite-mode `C_ss/C_sH/C_HH` rows and per-configuration time series, so

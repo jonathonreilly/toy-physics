@@ -221,6 +221,9 @@ def main() -> int:
         "source_higgs_gram_purity_gate": load(
             "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json"
         ),
+        "canonical_higgs_operator_candidate_stress": load(
+            "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json"
+        ),
         "canonical_higgs_operator_realization_gate": load(
             "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json"
         ),
@@ -823,6 +826,15 @@ def main() -> int:
         "canonical-Higgs operator realization gate not passed"
         in str(statuses["canonical_higgs_operator_realization_gate"]),
         statuses["canonical_higgs_operator_realization_gate"],
+    )
+    candidate_stress = certificates["canonical_higgs_operator_candidate_stress"]
+    report(
+        "canonical-higgs-operator-candidate-stress-blocks",
+        "canonical-Higgs operator candidate stress rejects current substitutes"
+        in str(statuses["canonical_higgs_operator_candidate_stress"])
+        and candidate_stress.get("proposal_allowed") is False
+        and all(row.get("candidate_valid") is False for row in candidate_stress.get("candidate_rows", [])),
+        statuses["canonical_higgs_operator_candidate_stress"],
     )
     report(
         "hunit-canonical-higgs-operator-candidate-gate-blocks",

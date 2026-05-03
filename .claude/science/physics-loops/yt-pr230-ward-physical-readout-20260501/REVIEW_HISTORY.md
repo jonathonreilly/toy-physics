@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Canonical-Higgs Operator Candidate Stress
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN OPERATOR IDENTITY / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- canonical-Higgs operator certificate references must be existing local
+  `docs/`, `outputs/`, or `scripts/` artifacts;
+- the raw unratified source-Higgs smoke operator and a schema-padded
+  unratified version are rejected;
+- static EW algebra, `H_unit` by fiat, and observed-target selection are
+  rejected by explicit firewall checks;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py scripts/frontier_yt_canonical_higgs_operator_candidate_stress.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py
+python3 scripts/frontier_yt_canonical_higgs_operator_candidate_stress.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Source-Higgs Unratified-Operator Smoke
 
 Local review-loop disposition:

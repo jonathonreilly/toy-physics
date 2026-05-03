@@ -1,5 +1,28 @@
 # No-Go Ledger
 
+## Current O_H substitutes fail the canonical-Higgs operator certificate gate
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py
+# SUMMARY: PASS=9 FAIL=0
+python3 scripts/frontier_yt_canonical_higgs_operator_candidate_stress.py
+# SUMMARY: PASS=6 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=116 FAIL=0
+```
+
+The certificate gate now requires `identity_certificate` and
+`normalization_certificate` references to be existing local `docs/`, `outputs/`,
+or `scripts/` artifacts.  The raw unratified source-Higgs smoke operator, a
+schema-padded unratified version, static EW algebra used as `O_H`, `H_unit` by
+fiat, and observed-target selection all fail.  This is a useful firewall
+hardening result, not a positive `O_H` derivation.  Do not treat any current
+substitute, padded schema row, or static algebra reference as a
+canonical-Higgs operator identity, scalar LSZ normalization, or
+retained/proposed-retained evidence.
+
 ## Source-Higgs unratified operator smoke is not closure
 
 Runners:

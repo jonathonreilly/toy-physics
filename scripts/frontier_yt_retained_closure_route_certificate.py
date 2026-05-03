@@ -139,6 +139,7 @@ def main() -> int:
         "source_higgs_cross_correlator_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
         "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
         "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+        "canonical_higgs_operator_candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
         "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
@@ -776,6 +777,20 @@ def main() -> int:
             "canonical_higgs_operator_realization_gate_passed"
         )
         is False
+    )
+    canonical_higgs_operator_candidate_stress_blocks = (
+        "canonical-Higgs operator candidate stress rejects current substitutes"
+        in certificates["canonical_higgs_operator_candidate_stress"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["canonical_higgs_operator_candidate_stress"].get("proposal_allowed")
+        is False
+        and all(
+            row.get("candidate_valid") is False
+            for row in certificates["canonical_higgs_operator_candidate_stress"].get(
+                "candidate_rows", []
+            )
+        )
     )
     hunit_canonical_higgs_operator_candidate_gate_blocks = (
         "H_unit not canonical-Higgs operator realization"
@@ -1431,6 +1446,11 @@ def main() -> int:
         "canonical-higgs-operator-realization-gate-blocks",
         canonical_higgs_operator_realization_gate_blocks,
         certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "canonical-higgs-operator-candidate-stress-blocks",
+        canonical_higgs_operator_candidate_stress_blocks,
+        certificates["canonical_higgs_operator_candidate_stress"].get("actual_current_surface_status", ""),
     )
     report(
         "hunit-canonical-higgs-operator-candidate-gate-blocks",
