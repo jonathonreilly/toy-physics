@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:00:13.148211+00:00
+**Generated:** 2026-05-03T01:02:27.390988+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 208 |
+| **retained_bounded** | 209 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 484 |
+| unaudited | 483 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 417 |
+| `audited_clean` | 418 |
 | `audited_conditional` | 656 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 524 |
+| `unaudited` | 523 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 539 |
+| `bounded_theorem` | 540 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 94 |
+| `open_gate` | 93 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -478,6 +478,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_adiabatic_time_evolution_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_apparatus_dynamics_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
+| `teleportation_causal_channel_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
@@ -16756,6 +16757,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** The packet supports the bounded logical decomposition with exact matrix identities up to numerical precision, and all acceptance gates pass. It does not claim a physical native schedule, apparatus Hamiltonian, decoherence model, or durable measurement-record derivation. Because that physical mechanism is explicitly left open, the correct retained object is a clean open gate rather than a theorem about implementable teleportation hardware.
 - **open / conditional deps cited:**
   - `TELEPORTATION_BELL_MEASUREMENT_CIRCUIT_NOTE.md`
+- **auditor confidence:** high
+
+### `teleportation_causal_channel_note`
+
+- **Note:** [`TELEPORTATION_CAUSAL_CHANNEL_NOTE.md`](../../docs/TELEPORTATION_CAUSAL_CHANNEL_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A narrow model harness shows that an explicit classical Bell-measurement record can be carried on a positive-latency directed lattice channel without deriving the record bits or enabling pre-delivery signaling.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Hegel-the-2nd-019deb5a-bdd5-78e0-87c0-ddf419a2b445`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The harness checks that an explicit two-bit Bell record is scheduled on a finite directed lattice/DAG with positive latency, no early or duplicate delivery, and Bob pre-delivery no-signaling.  _(class `C`)_
+- **chain closes:** True — The source note limits the claim to a causal classical-record channel, and the runner directly checks the scheduling, delivery, wrong/delayed controls, post-delivery correction, and pre-delivery Bob no-signaling properties. No cited dependencies or external physical identifications are needed for that bounded model claim.
+- **rationale:** The scoped claim closes because the runner constructs the channel and teleportation-control harness directly, then verifies the stated causal and no-signaling properties within the declared boundary. The note explicitly excludes FTL signaling, matter/mass/charge transfer, Bell-record derivation from the DAG, and CHSH/Poisson derivation, so the clean verdict does not ratify those stronger claims. Residual risk is limited to this being a first-artifact model harness rather than a broader physical derivation.
 - **auditor confidence:** high
 
 ### `teleportation_conclusion_boundary_note`
