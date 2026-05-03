@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:25:06.694404+00:00",
+  "generated_at": "2026-05-03T14:30:02.468123+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -5400,6 +5400,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/equivalence_principle_harness.py"
+    },
+    "eta_188_structural_origin_partial_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_eta_188_structural_origin.py"
     },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "assert_count": 1,
@@ -24111,6 +24123,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_eta_188_structural_origin.py": {
+      "assert_count": 1,
+      "claims": [
+        "eta_188_structural_origin_partial_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_evanescent_barrier_amplitude_suppression.py": {
       "assert_count": 1,
       "claims": [
@@ -37268,11 +37295,11 @@
       "A": 10,
       "B": 160,
       "C": 544,
-      "D": 204,
+      "D": 205,
       "none": 420
     },
-    "runners_classified": 1338,
-    "runners_with_C": 649,
-    "runners_with_D": 329
+    "runners_classified": 1339,
+    "runners_with_C": 650,
+    "runners_with_D": 330
   }
 }

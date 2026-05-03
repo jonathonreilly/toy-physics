@@ -8657,10 +8657,6 @@
       "to": "equivalence_principle_harness_note"
     },
     {
-      "from": "newton_derivation_note",
-      "to": "composite_source_additivity_2d_note"
-    },
-    {
       "from": "nonlabel_grown_drift_basin_note",
       "to": "nonlabel_grown_basin_note"
     },
@@ -10065,10 +10061,6 @@
       "to": "signed_gravity_cl3z3_source_character_derivation_note"
     },
     {
-      "from": "signed_gravity_native_boundary_complex_containment_note",
-      "to": "signed_gravity_naturally_hosted_orientation_line_note"
-    },
-    {
       "from": "signed_gravity_naturally_hosted_orientation_line_note",
       "to": "signed_gravity_native_boundary_complex_containment_note"
     },
@@ -10247,10 +10239,6 @@
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
       "to": "signed_gravity_aps_boundary_index_chi_probe_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
     },
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
@@ -12413,10 +12401,6 @@
       "to": "alpha_s_derived_note"
     },
     {
-      "from": "yt_vertex_power_derivation",
-      "to": "yt_zero_import_authority_note"
-    },
-    {
       "from": "yt_ward_identity_derivation_theorem",
       "to": "native_gauge_closure_note"
     },
@@ -12439,10 +12423,6 @@
     {
       "from": "yt_ward_identity_derivation_theorem",
       "to": "minimal_axioms_2026-04-11"
-    },
-    {
-      "from": "yt_zero_import_authority_note",
-      "to": "yt_ward_identity_derivation_theorem"
     },
     {
       "from": "yt_zero_import_authority_note",
@@ -22617,7 +22597,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:25:04.236990+00:00",
+  "generated_at": "2026-05-03T14:29:56.534319+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -30813,6 +30793,17 @@
       "runner_path": null,
       "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
     },
+    "eta_188_structural_origin_partial_note_2026-05-03": {
+      "claim_id": "eta_188_structural_origin_partial_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "partial closing of cycle 09 Obstruction 3 + falsification of four near-fit candidates",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "c5ed36efc98f9355afe0c875640e10aa18712844e32a0e22ab63fa6a17b5e691",
+      "path": "docs/ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_eta_188_structural_origin.py",
+      "title": "Structural Origin of eta/eta_obs = 0.1888 \u2014 Partial Closing Note"
+    },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "claim_id": "evanescent_barrier_amplitude_suppression_theorem_note",
       "claim_type_author_hint": null,
@@ -38110,10 +38101,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [
-        "equivalence_principle_harness_note",
-        "composite_source_additivity_2d_note"
+        "equivalence_principle_harness_note"
       ],
-      "note_hash": "b88d6a2ba1c23957e5a6a19a0588d1b669859d3ddeda73663f85c1aa69e287b1",
+      "note_hash": "0f556be8867f9e2804f6ab9a3b842c0b4e45b75b85d9fe385d8f43c5e2ea68b3",
       "path": "docs/NEWTON_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)"
@@ -44043,10 +44033,9 @@
       "claim_type_seed_hint": "no_go",
       "deps": [
         "signed_gravity_remaining_closure_gates_note",
-        "signed_gravity_cl3z3_source_character_derivation_note",
-        "signed_gravity_naturally_hosted_orientation_line_note"
+        "signed_gravity_cl3z3_source_character_derivation_note"
       ],
-      "note_hash": "43e08788bc44103bf0655b61ac2a38689dc1ec6ca1d43bad076fad730f3c2e42",
+      "note_hash": "c123da75e8e99d157293a2466a39d2a5ab6d3eb4cb027e8e6cc74a14ad220826",
       "path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
       "runner_path": "scripts/signed_gravity_native_boundary_complex_containment.py",
       "title": "Signed Gravity Native Boundary-Complex Containment Note"
@@ -44186,7 +44175,6 @@
         "signed_gravity_nonlocal_boundary_chi_target_note",
         "signed_gravity_boundary_coframe_chi_probe_note",
         "signed_gravity_aps_boundary_index_chi_probe_note",
-        "signed_gravity_aps_wald_gauss_bridge_audit_note",
         "signed_gravity_aps_locked_source_action_proposal_note",
         "signed_gravity_aps_action_origin_superselection_stability_note",
         "signed_gravity_retained_boundary_source_principle_no_go_note",
@@ -44200,7 +44188,7 @@
         "lensing_k_sweep_note",
         "complex_action_note"
       ],
-      "note_hash": "c252c6251031988a913f56dab46a936f5b0cbb2c229b1a0f6a42323aa7cc83c4",
+      "note_hash": "8cc06bac2cca3033305abb4747465b50e78e8253c2288e9cd882a23ca5739421",
       "path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
       "runner_path": null,
       "title": "Signed Gravitational Response Lane Backlog"
@@ -49317,10 +49305,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [
-        "alpha_s_derived_note",
-        "yt_zero_import_authority_note"
+        "alpha_s_derived_note"
       ],
-      "note_hash": "30400dc6edc1c2283ee378fcf084fad6c0daec6f356b54f5be807545e72e8ef4",
+      "note_hash": "d95d31f178d6fcff39a0ceed12a477aebf2ff8b27e9f37083662b934df32d118",
       "path": "docs/YT_VERTEX_POWER_DERIVATION.md",
       "runner_path": "scripts/frontier_vertex_power.py",
       "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`"
@@ -49349,12 +49336,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "yt_ward_identity_derivation_theorem",
         "alpha_s_derived_note",
         "yt_color_projection_correction_note",
         "yt_explicit_systematic_budget_note"
       ],
-      "note_hash": "f8ab46c69ac80bc129cfdaed26edab37409d4d7cd05d741a017233deea7fa8bb",
+      "note_hash": "f3d396af839c334960850478f248f469a5cba1ae35a637982bd8a664e97fd6a2",
       "path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "title": "y_t Lane: Zero-Import Authority"
@@ -49757,6 +49743,7 @@
     "emergent_product_law_note",
     "equivalence_principle_harness_note",
     "equivalence_principle_note",
+    "eta_188_structural_origin_partial_note_2026-05-03",
     "evolving_network_prototype_note",
     "evolving_network_prototype_v2_note",
     "evolving_network_prototype_v3_note",
@@ -50470,22 +50457,22 @@
       "bounded_theorem": 48,
       "meta": 5,
       "no_go": 3,
-      "none": 1722,
+      "none": 1723,
       "open_gate": 3,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 548,
+      "bounded_theorem": 549,
       "meta": 5,
       "no_go": 109,
       "none": 450,
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5654,
-    "leaf_count": 615,
-    "node_count": 1849,
-    "root_count": 1054,
-    "runners_with_path": 1410
+    "edge_count": 5649,
+    "leaf_count": 617,
+    "node_count": 1850,
+    "root_count": 1055,
+    "runners_with_path": 1411
   }
 }

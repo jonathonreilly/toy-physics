@@ -1,5 +1,5 @@
 {
-  "cycle_count": 46,
+  "cycle_count": 42,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -108,56 +108,6 @@
       "decision": null,
       "edges": [
         {
-          "from": "yt_ward_identity_derivation_theorem",
-          "to": "yt_vertex_power_derivation"
-        },
-        {
-          "from": "yt_vertex_power_derivation",
-          "to": "yt_zero_import_authority_note"
-        },
-        {
-          "from": "yt_zero_import_authority_note",
-          "to": "yt_ward_identity_derivation_theorem"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 193,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "yt_ward_identity_derivation_theorem",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
-          "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 193
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "yt_vertex_power_derivation",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
-          "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 193
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "yt_zero_import_authority_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
-          "title": "y_t Lane: Zero-Import Authority",
-          "transitive_descendants": 193
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0003",
-      "decision": null,
-      "edges": [
-        {
           "from": "publication.ci3_z3.claims_table",
           "to": "publication.ci3_z3.full_claim_ledger"
         },
@@ -191,7 +141,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0004",
+      "cycle_id": "cycle-0003",
       "decision": null,
       "edges": [
         {
@@ -228,7 +178,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0005",
+      "cycle_id": "cycle-0004",
       "decision": null,
       "edges": [
         {
@@ -265,7 +215,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0005",
       "decision": null,
       "edges": [
         {
@@ -315,7 +265,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0006",
       "decision": null,
       "edges": [
         {
@@ -365,7 +315,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -415,7 +365,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -478,7 +428,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -541,7 +491,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -604,7 +554,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -661,6 +611,69 @@
           "effective_status": "meta",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
+          "transitive_descendants": 41
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0012",
+      "decision": null,
+      "edges": [
+        {
+          "from": "publication.ci3_z3.inputs_and_qualifiers_note",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.inputs_and_qualifiers_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 41,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.inputs_and_qualifiers_note",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
+          "title": "Inputs And Qualifiers",
+          "transitive_descendants": 41
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 41
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 41
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
           "transitive_descendants": 41
         }
       ],
@@ -671,69 +684,6 @@
       "decision": null,
       "edges": [
         {
-          "from": "publication.ci3_z3.inputs_and_qualifiers_note",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.inputs_and_qualifiers_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 41,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.inputs_and_qualifiers_note",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
-          "title": "Inputs And Qualifiers",
-          "transitive_descendants": 41
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 41
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 41
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
-          "transitive_descendants": 41
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0014",
-      "decision": null,
-      "edges": [
-        {
           "from": "publication.ci3_z3.claims_table",
           "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
         },
@@ -806,7 +756,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -882,7 +832,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -971,94 +921,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
-      "decision": null,
-      "edges": [
-        {
-          "from": "newton_derivation_note",
-          "to": "composite_source_additivity_2d_note"
-        },
-        {
-          "from": "composite_source_additivity_2d_note",
-          "to": "composite_source_additivity_note"
-        },
-        {
-          "from": "composite_source_additivity_note",
-          "to": "newton_derivation_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 27,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "newton_derivation_note",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/NEWTON_DERIVATION_NOTE.md",
-          "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)",
-          "transitive_descendants": 27
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "composite_source_additivity_2d_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md",
-          "title": "Composite-Source Additivity Cross-Family Note",
-          "transitive_descendants": 27
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "composite_source_additivity_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
-          "title": "Composite-Source Additivity Note",
-          "transitive_descendants": 27
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0018",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_native_boundary_complex_containment_note",
-          "to": "signed_gravity_naturally_hosted_orientation_line_note"
-        },
-        {
-          "from": "signed_gravity_naturally_hosted_orientation_line_note",
-          "to": "signed_gravity_native_boundary_complex_containment_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 25,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_native_boundary_complex_containment_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
-          "title": "Signed Gravity Native Boundary-Complex Containment Note",
-          "transitive_descendants": 25
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_naturally_hosted_orientation_line_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md",
-          "title": "Signed Gravity Naturally Hosted Orientation-Line Note",
-          "transitive_descendants": 25
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0016",
       "decision": null,
       "edges": [
         {
@@ -1108,57 +971,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
-          "to": "signed_gravity_native_boundary_complex_containment_note"
-        },
-        {
-          "from": "signed_gravity_native_boundary_complex_containment_note",
-          "to": "signed_gravity_naturally_hosted_orientation_line_note"
-        },
-        {
-          "from": "signed_gravity_naturally_hosted_orientation_line_note",
-          "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 25,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md",
-          "title": "Signed Gravity Staggered-Dirac APS Boundary Realization Note",
-          "transitive_descendants": 25
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_native_boundary_complex_containment_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
-          "title": "Signed Gravity Native Boundary-Complex Containment Note",
-          "transitive_descendants": 25
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_naturally_hosted_orientation_line_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md",
-          "title": "Signed Gravity Naturally Hosted Orientation-Line Note",
-          "transitive_descendants": 25
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -1247,7 +1060,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0018",
       "decision": null,
       "edges": [
         {
@@ -1284,7 +1097,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -1334,7 +1147,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1384,7 +1197,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -1434,7 +1247,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1484,7 +1297,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -1547,7 +1360,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1623,7 +1436,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1712,44 +1525,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_response_backlog_2026-04-25",
-          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
-        },
-        {
-          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-          "to": "signed_gravity_response_backlog_2026-04-25"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
-          "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
-          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1799,7 +1575,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1849,7 +1625,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1899,7 +1675,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1949,7 +1725,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -1999,7 +1775,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -2049,7 +1825,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -2099,7 +1875,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -2149,7 +1925,57 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0034",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_aps_locked_source_action_proposal_note"
+        },
+        {
+          "from": "signed_gravity_aps_locked_source_action_proposal_note",
+          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
+        },
+        {
+          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
+          "title": "Signed Gravity APS-Locked Source Action Proposal",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
+          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -2212,7 +2038,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -2275,7 +2101,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -2338,7 +2164,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -2401,7 +2227,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -2464,7 +2290,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -2527,7 +2353,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -2590,7 +2416,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -2666,10 +2492,10 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T14:25:07.195856+00:00",
+  "generated_at": "2026-05-03T14:30:03.294255+00:00",
   "length_counts": {
-    "2": 6,
-    "3": 19,
+    "2": 4,
+    "3": 17,
     "4": 13,
     "5": 4,
     "6": 3,
@@ -2680,5 +2506,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T14:25:04.236990+00:00"
+  "source_graph_generated_at": "2026-05-03T14:29:56.534319+00:00"
 }
