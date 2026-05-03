@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:30:06.113453+00:00
+**Generated:** 2026-05-03T01:32:20.766858+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 213 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 474 |
+| unaudited | 473 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 659 |
+| ~~audited_conditional~~ | 660 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 424 |
-| `audited_conditional` | 659 |
+| `audited_conditional` | 660 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 514 |
+| `unaudited` | 513 |
 
 | claim_type | count |
 |---|---:|
@@ -1129,6 +1129,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_end_to_end_poisson_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `teleportation_hard_blocker_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_native_record_apparatus_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_nature_grade_push_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -16955,6 +16956,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The note's retained claim is not native teleportation closure, but the open-gate boundary that Pauli-frame transport invariants are only conditional formal structure until Bell-resource preparation, durable Bell records, record carriers, apparatus/noise, and conservation ledgers are derived from native dynamics.  _(class `C`)_
 - **chain closes:** True — The scoped open gate closes because the note and runner consistently separate formal transport-invariant consequences from the missing native-dynamics bridge; it does not close a positive physical teleportation theorem.
 - **rationale:** The source note explicitly withholds promotion and states that the transport vocabulary is candidate lane theory. The runner checks only the algebraic consequences of the assumed Pauli-frame/record formalism and explicitly reports nature-grade unconditional closure as HOLD. Because the audited object is the open-gate articulation rather than a positive physical derivation, there is no hidden physical identification being ratified as closed physics; the missing Bell resource, measurement, record carrier, apparatus, noise model, and conservation-ledger derivations are preserved as the blocker.
+- **auditor confidence:** high
+
+### `teleportation_nature_grade_push_note`
+
+- **Note:** [`TELEPORTATION_NATURE_GRADE_PUSH_NOTE.md`](../../docs/TELEPORTATION_NATURE_GRADE_PUSH_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** State-only teleportation planning artifact: the runner verifies pass/fail gates for added selection principles, finite sides 4, 6, and 8 at G=-1000, and independent noisy apparatus models, while excluding matter, energy, objects, charge, mass, and faster-than-light transport.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Linnaeus-the-2nd-019deb76-1233-7f52-8082-4d2cb1eeab5e`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note's load-bearing step is that adding causal-positive minimal action, least-dwell carrier selection, a fixed signed sparse finite-size resource branch, and independent pulse/detector noise models is enough to pass the listed teleportation nature-grade gates for ordinary state-only teleportation.  _(class `C`)_
+- **chain closes:** False — The runner checks internal consequences of explicit added principles and chosen finite model settings, but the principles are not derived from the original framework, the sparse resource evidence is finite rather than asymptotic or preparational, and the pulse/detector robustness models are independent-error proxies rather than physical hardware or continuum thermodynamic constructions.
+- **rationale:** Issue: The asserted gate passage depends on added causal-positive minimal-action and least-dwell selection principles, a fixed signed G=-1000 finite side=4,6,8 resource window, and independent-error apparatus models. Why this blocks: These ingredients are introduced as premises or bounded probes rather than derived physical consequences, so the runner hard-codes the contested bridge and verifies consistency after the fact. Repair target: Derive the selection principles from retained axioms or promote them explicitly as defended physical postulates, prove an asymptotic/preparation theorem for the signed sparse branch, and replace independent-error pulse/detector proxies with a fabricated controller/material-medium model or a theorem bounding the omitted correlations. Claim boundary until fixed: It may be cited as an open-gate planning bundle showing conditional numerical/model evidence for state-only teleportation gates under the stated added assumptions, not as retained theorem closure.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
