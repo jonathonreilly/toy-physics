@@ -1,0 +1,76 @@
+slug: pmns-branch-selector-2026-05-03
+campaign: pmns-branch-selector
+cycle: 21
+parent_campaign: follow-on-2026-05-02
+parent_cycles_addressed: [09, 12, 18]
+
+mode: run
+target: best-honest-status
+target_claim_type: open_gate  # stretch-attempt expected; audit lane owns status
+actual_current_surface_status: open
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+
+start_branch_base: origin/main
+science_branch: physics-loop/pmns-branch-selector-2026-05-03
+
+current_goal: |
+  Resolve the "branch selector" obstruction (Cycle 09 Obstruction 2):
+  the framework has TWO partial η/η_obs predictions
+    - Branch A: η/η_obs = 0.18879 — exact one-flavor radiation-branch
+      transport on the reduced one-flavor theorem-native surface
+      (decomposed by cycle 18 as (516/53009) · Y₀² · F_CP · κ_axiom).
+    - Branch B: η/η_obs = 1.000   — PMNS-assisted off-seed source on
+      the fixed native N_e seed surface, exact closure point existence
+      certified by the constructive continuity theorem.
+  Identify which (if any) is framework-native, and document the
+  selector laws (min-info, observable-relative-action, transport-
+  extremal, continuity-closure) and the structural obstructions to
+  uniqueness.
+
+active_route: D  # Symmetry / parity-based selection; CP-sheet blindness
+hard_residual_being_attacked: |
+  Branch B is provably CP-sheet blind: every current selector
+  objective is even under δ → -δ, while γ = x₁y₃ sin(δ) is odd.
+  Therefore every "winner" comes with an equally winning CP partner;
+  no Branch-B selector can choose a unique baryogenesis witness.
+  This is a NEGATIVE structural result that excludes the current
+  Branch-B selector bank (modulo audit-lane treatment).
+
+route_portfolio:
+  - id: A
+    name: information-theoretic
+    score: low
+  - id: B
+    name: action-theoretic
+    score: low
+  - id: C
+    name: transport-extremal
+    score: low
+  - id: D
+    name: symmetry/parity (CP-sheet blindness)
+    score: high
+  - id: E
+    name: direct comparison + counterfactual
+    score: medium
+
+files_to_touch:
+  - .claude/science/physics-loops/pmns-branch-selector-2026-05-03/*
+  - docs/PMNS_BRANCH_SELECTOR_CP_SHEET_BLINDNESS_NOTE_2026-05-03.md
+  - scripts/frontier_pmns_branch_selector.py
+
+open_imports: []
+no_go_routes:
+  - "Same-surface family arguments forbidden"
+  - "PDG η_obs as derivation input forbidden (comparator only)"
+  - "Fitted selectors forbidden"
+review_findings: []
+pr_status: pending
+next_exact_action: |
+  Execute Route D — write the CP-sheet-blindness branch-selector note,
+  build the runner verifying the parity argument, package the loop
+  pack, and open the PR.
+stop_condition: cycle 21 records one open-gate block in one PR
