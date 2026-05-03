@@ -3,9 +3,9 @@
     "critical": 62,
     "high": 213,
     "leaf": 201,
-    "medium": 263
+    "medium": 262
   },
-  "generated_at": "2026-05-03T19:46:31.206908+00:00",
+  "generated_at": "2026-05-03T19:47:25.048907+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7686,27 +7686,6 @@
       "ready": true,
       "runner_path": "scripts/valley_linear_same_harness_compare.py",
       "transitive_descendants": 11
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "action_power_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.822,
-      "note_path": "docs/ACTION_POWER_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/action_power_canonical_harness.py",
-      "transitive_descendants": 9
     },
     {
       "audit_independence_required": "any_non_self",
@@ -19451,6 +19430,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 54,
-  "total_pending": 739
+  "ready_count": 53,
+  "total_pending": 738
 }

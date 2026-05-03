@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:46:32.847716+00:00
+**Generated:** 2026-05-03T19:47:25.853650+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 83 |
 | **retained_no_go** | 105 |
-| **retained_bounded** | 179 |
+| **retained_bounded** | 180 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 710 |
+| unaudited | 709 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 337 |
+| `audited_clean` | 338 |
 | `audited_conditional` | 548 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 756 |
+| `unaudited` | 755 |
 
 | claim_type | count |
 |---|---:|
@@ -109,6 +109,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---|---|---|---|---|---|---|---|
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `action_power_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `action_power_scaling_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `action_uniqueness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -1183,6 +1184,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The completed runner output enumerates exactly the bounded variations named in the note, and every reported detector z-centroid shift is negative/AWAY. The note explicitly excludes topology-changing, continuum-limit, and other action-family claims.
 - **rationale:** The source note makes a bounded finite-sweep claim, not a universal no-go over all possible 3D gravity constructions. The runner output covers the stated field-strength, forward-connectivity, and geometric-jitter sweeps and agrees with the note's zero-toward summaries. The clean verdict is limited to this runner-defined ordered-family barrier-sign closure.
 - **auditor confidence:** high
+
+### `action_power_note`
+
+- **Note:** [`ACTION_POWER_NOTE.md`](../../docs/ACTION_POWER_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Fixed finite-output audit of scripts/action_power_canonical_harness.py for the action-power p=0.5 versus spent-delay 2D/3D NN harness values reported in docs/ACTION_POWER_NOTE.md.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-lambert`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The action-power branch is a bounded axiom-fork whose fixed canonical harness gives the reported 2D comparison, 3D close-slit barrier card, and 3D no-barrier distance/mass companion, while not closing same-harness 3D attraction.  _(class `C`)_
+- **chain closes:** True — The current self-contained runner completed and reproduced the note's canonical harness numbers, including the 3D power Born=2.63e-16, k=0=0, MI=0.6712, d_TV=0.8116, gravity=-0.000076, distance exponent=-1.84, and F proportional to M=1.00. The clean verdict is bounded to this finite canonical harness output and does not audit separate gravity-sign sweep claims beyond the named runner.
+- **rationale:** Within the scoped finite harness, the runner computes the reported values from the stated action fork and fixed lattice setup rather than importing an external comparator or renaming a target observable. The note also states the relevant limits: no inherited spent-delay claims, no continuum or robustness closure, and no same-harness 3D Newtonian attraction closure.
+- **auditor confidence:** medium
 
 ### `action_power_scaling_sweep_note`
 
