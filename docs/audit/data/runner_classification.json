@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T18:21:10.615961+00:00",
+  "generated_at": "2026-05-03T18:21:56.730468+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -5905,16 +5905,28 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_g_bare_canonical_convention_narrow.py"
     },
+    "g_bare_constraint_vs_convention_theorem_note_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 22,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_g_bare_derivation.py"
+    },
     "g_bare_derivation_note": {
       "assert_count": 0,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 22,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "C",
       "runner": "scripts/frontier_g_bare_derivation.py"
     },
     "g_bare_derivation_status_correction_audit_note_2026-05-02": {
@@ -5940,6 +5952,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_g_bare_critical_feature_scan.py"
+    },
+    "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 22,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_g_bare_derivation.py"
     },
     "g_bare_rigidity_theorem_note": {
       "assert_count": 1,
@@ -24532,17 +24556,19 @@
     "scripts/frontier_g_bare_derivation.py": {
       "assert_count": 0,
       "claims": [
-        "g_bare_derivation_note"
+        "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
+        "g_bare_derivation_note",
+        "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 22,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
+      "dominant_class": "C",
+      "exists": true
     },
     "scripts/frontier_g_bare_derivation_status_audit.py": {
       "assert_count": 1,
@@ -37564,12 +37590,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 162,
-      "C": 552,
+      "C": 553,
       "D": 207,
-      "none": 418
+      "none": 417
     },
     "runners_classified": 1349,
-    "runners_with_C": 658,
+    "runners_with_C": 659,
     "runners_with_D": 335
   }
 }
