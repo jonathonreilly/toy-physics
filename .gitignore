@@ -9,6 +9,13 @@ logs/*
 !logs/retained/
 !logs/retained/README.md
 .claude/worktrees/
+
+# Python virtual environments (per-developer, per-worktree).
+# See docs/repo/PYTHON_VENV_SETUP.md for setup instructions.
+.venv/
+venv/
+env/
+
 .claude/science/physics-loops/**/last_codex_message.md
 .claude/science/physics-loops/**/supervisor.lock
 .claude/science/physics-loops/**/supervisor.log
