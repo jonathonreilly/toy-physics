@@ -81,7 +81,7 @@ Only the narrower statement survives:
 - changing `beta` changes both amplitude and sign structure
 
 That is consistent with the adjoint-kernel result in
-[`/Users/jonreilly/Projects/Physics/docs/LENSING_ADJOINT_KERNEL_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/LENSING_ADJOINT_KERNEL_NOTE.md):
+`/Users/jonreilly/Projects/Physics/docs/LENSING_ADJOINT_KERNEL_NOTE.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note):
 the observable is a broad detector-weighted wave response, so it should depend
 on the propagator's angular weighting.
 

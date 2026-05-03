@@ -12,7 +12,8 @@ by the bounded zero-input `y_t` / `alpha_s` package.
 Use it together with:
 
 - [ALPHA_S_DERIVED_NOTE.md](./ALPHA_S_DERIVED_NOTE.md)
-- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](./YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
+- `YT_ZERO_IMPORT_AUTHORITY_NOTE.md` (sibling/companion authority note;
+  cross-reference only — not a one-hop dep of this derivation)
 
 It does not by itself close the renormalized `y_t` lane.
 

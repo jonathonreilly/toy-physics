@@ -16,7 +16,9 @@ lane on `main`.
 
 Use this note together with:
 
-- [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](./YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+- `YT_WARD_IDENTITY_DERIVATION_THEOREM.md` (sibling/companion derivation;
+  cross-reference only — not a one-hop dep of this note. The Ward theorem
+  cites this note's vertex-power line, not vice versa.)
 - [ALPHA_S_DERIVED_NOTE.md](./ALPHA_S_DERIVED_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](./YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - `YT_FLAGSHIP_BOUNDARY_NOTE.md`

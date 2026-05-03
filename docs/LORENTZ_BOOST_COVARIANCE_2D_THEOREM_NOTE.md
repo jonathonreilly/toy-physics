@@ -4,7 +4,9 @@
 **Status:** proposed_retained exact theorem on the continuum-limit free-scalar surface
 **Script:** `scripts/frontier_lorentz_boost_2d.py` (PASS=39, FAIL=0)
 **Companion:** [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
-[LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md)
+`LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md`
+(downstream extension; the 3+1D note cites this 2D theorem as a stepping
+stone — not a one-hop dep of this note)
 
 ## Theorem
 

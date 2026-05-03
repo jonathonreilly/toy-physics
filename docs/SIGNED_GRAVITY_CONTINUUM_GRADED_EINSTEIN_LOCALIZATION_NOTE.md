@@ -226,7 +226,8 @@ What remains outside this note:
 ## Remaining-Gates Follow-Up
 
 Those outside gates are now audited in
-[`SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md`](SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md)
+`SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md` (sibling artifact;
+cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_remaining_closure_gates.py`](../scripts/signed_gravity_remaining_closure_gates.py).
 

@@ -150,7 +150,8 @@ and no-go-boundary packet.
 ## Axiomatic Continuation
 
 The new-principle route is now made explicit in
-[`SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md`](SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md)
+`SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md`
+(downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_aps_locked_axiom_extension_audit.py`](../scripts/signed_gravity_aps_locked_axiom_extension_audit.py).
 

@@ -227,7 +227,8 @@ First result:
 - [`../scripts/frontier_signed_gravity_chi_selector_algebra.py`](../scripts/frontier_signed_gravity_chi_selector_algebra.py)
   scans all non-identity local Pauli-string involutions on the 8D KS taste
   cell
-- [`SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md`](SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md)
+- `SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md` (sibling artifact;
+  cross-reference only — not a one-hop dep of this note)
   records the first local/taste-cell no-go
 - strict selector candidates found: `0`
 - conserved neutral taste labels found: `IXY`, `XYI`, `XZY`
@@ -363,7 +364,9 @@ Artifacts:
 - [`../scripts/signed_gravity_aps_boundary_index_probe.py`](../scripts/signed_gravity_aps_boundary_index_probe.py)
 - [`SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md`](SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md)
 - [`../scripts/signed_gravity_aps_wald_gauss_bridge_audit.py`](../scripts/signed_gravity_aps_wald_gauss_bridge_audit.py)
-- [`SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md`](SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md)
+- `SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md` (downstream consumer
+  audit derived from this backlog; cross-reference only — that audit cites
+  this backlog as its source target, not vice versa)
 - [`../scripts/signed_gravity_aps_locked_source_action_proposal.py`](../scripts/signed_gravity_aps_locked_source_action_proposal.py)
 - [`SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md`](SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md)
 - [`../scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py`](../scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py)

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T13:23:27.022388+00:00",
+  "generated_at": "2026-05-03T14:33:23.247763+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -996,6 +996,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_boundary_law_robustness.py"
+    },
+    "branch_cleanup_recommendation_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/inventory_remote_branches.py"
     },
     "branch_entanglement_robustness_note_2026-04-11": {
       "assert_count": 0,
@@ -5401,6 +5413,18 @@
       "dominant_class": null,
       "runner": "scripts/equivalence_principle_harness.py"
     },
+    "eta_188_structural_origin_partial_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_eta_188_structural_origin.py"
+    },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "assert_count": 1,
       "counts": {
@@ -7500,6 +7524,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_mass_full_3loop.py"
+    },
+    "higgs_vacuum_stability_new_physics_discrimination_note_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_higgs_vacuum_stability_new_physics_discrimination.py"
     },
     "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02": {
       "assert_count": 1,
@@ -11316,6 +11352,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_physical_lattice_necessity.py"
+    },
+    "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 22,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pl_s3_atlas_refinement_compatibility.py"
     },
     "planck_boundary_density_extension_theorem_note_2026-04-24": {
       "assert_count": 0,
@@ -24099,6 +24147,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_eta_188_structural_origin.py": {
+      "assert_count": 1,
+      "claims": [
+        "eta_188_structural_origin_partial_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_evanescent_barrier_amplitude_suppression.py": {
       "assert_count": 1,
       "claims": [
@@ -25559,6 +25622,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_higgs_vacuum_stability_new_physics_discrimination.py": {
+      "assert_count": 0,
+      "claims": [
+        "higgs_vacuum_stability_new_physics_discrimination_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_higgs_y_from_lhcm_yukawa.py": {
@@ -28478,6 +28556,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_pl_s3_atlas_refinement_compatibility.py": {
+      "assert_count": 2,
+      "claims": [
+        "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 22,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_planck_boundary_density_extension.py": {
@@ -33814,6 +33907,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/inventory_remote_branches.py": {
+      "assert_count": 0,
+      "claims": [
+        "branch_cleanup_recommendation_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": false
+    },
     "scripts/inverse_problem_graph_requirements.py": {
       "assert_count": 0,
       "claims": [
@@ -37240,12 +37348,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 544,
-      "D": 203,
-      "none": 420
+      "C": 545,
+      "D": 205,
+      "none": 421
     },
-    "runners_classified": 1337,
-    "runners_with_C": 649,
-    "runners_with_D": 328
+    "runners_classified": 1341,
+    "runners_with_C": 651,
+    "runners_with_D": 331
   }
 }
