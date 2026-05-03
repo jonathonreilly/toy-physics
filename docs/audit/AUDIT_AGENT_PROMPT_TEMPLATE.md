@@ -53,6 +53,22 @@ inputs. You must not assume access to any other note.
 {{RUNNER_STDOUT}}
 ```
 
+If the runner output is absent only because the runner timed out, exceeded
+the audit wall-time budget, or is known to require a long compute run, that
+is not a scientific audit verdict. Do not convert mere noncompletion into
+`audited_conditional` or `audited_failed`. If the load-bearing step cannot be
+judged without the missing run, return exactly:
+
+```
+COMPUTE_REQUIRED: <one sentence naming the missing completed run, sliced runner, cached certificate, or independent derivation needed>
+```
+
+The wrapper must then leave the row pending or blocked for compute and must
+not apply a terminal audit verdict for that reason alone. Completed runner
+mismatches, stale numbers, import errors, or code that hard-codes the
+contested premise remain valid audit evidence; the special rule is only for
+wall-time noncompletion.
+
 ### 4. The audit rubric
 
 Definitions you must use:

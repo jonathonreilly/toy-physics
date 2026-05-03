@@ -127,6 +127,16 @@ disagreement.
    `effective_status` from the audit ledger or an artifact derived from it,
    not source-note status prose.
 
+6. **Runner timeout is not a verdict.** A wall-time timeout, missing stdout,
+   or noncompletion of a long-running runner is not evidence that the
+   scientific claim is wrong, conditional, or failed. If the load-bearing
+   step cannot be judged without that run, the row remains pending with a
+   compute-required blocker or is skipped in the current audit loop until a
+   completed log, faster/sliced runner, cached certificate, or independent
+   derivation is supplied. A terminal non-clean verdict may cite concrete
+   runner evidence such as a completed mismatch or an executable/import error,
+   but not mere long compute.
+
 ## Workflow
 
 ### Mechanical phase (cron-able)
@@ -157,6 +167,14 @@ For each `unaudited` claim, an audit agent is spawned with
 The agent does **not** receive the broader publication framing or the
 publication-facing claim status. That is the "fresh look" requirement. The
 agent returns a fill of the audit row.
+
+If the primary runner is load-bearing but does not complete inside the
+current audit budget, the audit is not applied as `audited_conditional` or
+`audited_failed` for that reason alone. The loop records a local
+`compute_required` skip, or tooling records `audit_in_progress` with a
+compute blocker when supported, and then continues to the next ready row.
+Rows skipped this way need a completed run artifact, reduced deterministic
+runner, or proof-level replacement before re-audit.
 
 For high-stakes claims (`criticality = critical` by transitive-descendant
 count; the audit lane does not use author-declared flagship status), a second independent

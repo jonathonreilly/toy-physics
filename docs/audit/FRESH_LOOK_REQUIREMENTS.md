@@ -86,6 +86,18 @@ The intent is to remove the social pressure of "this is already retained,
 find a way to confirm it" and replace it with "given only the cited
 inputs, does the derivation close?"
 
+### Long-running runner rule
+
+Runner noncompletion is a context limitation, not a claim defect. A timeout,
+missing stdout, or wall-time budget exhaustion must not be used by itself to
+land `audited_conditional`, `audited_failed`, or any other terminal
+non-clean status. If the runner is load-bearing and no completed output,
+cached certificate, sliced runner, or independent derivation is available,
+the audit remains pending with a compute-required blocker and the loop moves
+on. A terminal verdict may still rest on concrete completed evidence: for
+example a reproducible output mismatch, stale number, import/API error, or a
+runner that hard-codes the contested premise.
+
 ## 3. The audit question
 
 The auditor answers exactly five questions per claim:
