@@ -164,9 +164,13 @@ Current absolute-scale package rule:
   - authority:
     [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
 - color normalization support:
-  - `R_conn = 8/9 + O(1/N_c^4)`
+  - exact Fierz channel fraction `F_adj = 8/9`
+  - EW readout coefficient `K_EW(kappa_EW) = 1 / (8/9 + kappa_EW/9)`;
+    `K_EW(0)=9/8` is the connected-trace specialization, not an
+    unconditional retained theorem
   - authority:
-    [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
+    [EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md](../../EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md),
+    [EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md](../../EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md)
 - bare EW/color dimension-ratio support:
   - exact support identity `alpha_3(bare)/alpha_em(bare) = 2d + 3 = 9`
     at `d = 3`

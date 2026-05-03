@@ -5,7 +5,8 @@
 **Status:** proposed_retained - explicit strong derivation claim pending audit
 the exact tree-level gauge-boson mass spectrum and charge normalization
 forced by one `SU(2)_L` Higgs doublet of hypercharge `Y_H = 1/2`. It is a
-structural guardrail for the retained EW normalization and bounded `M_W`
+structural guardrail for the lattice-scale EW normalization identities,
+the matching-rule conditional EW normalization package, and bounded `M_W`
 same-surface notes. It does not modify, promote, or close any Higgs-mass,
 top-Yukawa, `alpha_s`, CKM, PMNS, dark-sector, cosmology, time-travel,
 teleportation, or antigravity lane.
@@ -428,8 +429,9 @@ sin^2(theta_W) = g_Y^2 / (g_2^2 + g_Y^2),
 1/e^2 = 1/g_2^2 + 1/g_Y^2.
 ```
 
-These are the algebraic inputs used by the retained EW normalization package
-and by the bounded `M_W` consistency probe. Any numerical comparison to pole
+These are the algebraic inputs used by the matching-rule conditional EW
+normalization package and by the bounded `M_W` consistency probe. Any
+numerical comparison to pole
 masses, `sin^2(theta_W)(M_Z)`, or `1/alpha_EM(M_Z)` is downstream of this
 theorem and inherits the relevant running, matching, and retained-coupling
 systematics.

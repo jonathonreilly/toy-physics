@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:34:33.671874+00:00
+**Generated:** 2026-05-03T15:38:31.076940+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,16 +20,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 75 |
-| **retained_no_go** | 100 |
+| **retained_no_go** | 101 |
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 15 |
-| unaudited | 776 |
+| open_gate | 14 |
+| unaudited | 774 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 515 |
+| ~~audited_conditional~~ | 517 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,21 +37,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 313 |
-| `audited_conditional` | 515 |
+| `audited_conditional` | 517 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 821 |
+| `unaudited` | 819 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 586 |
+| `bounded_theorem` | 587 |
 | `decoration` | 7 |
 | `meta` | 45 |
-| `no_go` | 160 |
-| `open_gate` | 88 |
-| `positive_theorem` | 864 |
+| `no_go` | 161 |
+| `open_gate` | 87 |
+| `positive_theorem` | 863 |
 
 | criticality | count |
 |---|---:|
@@ -85,7 +85,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 7 | `native_gauge_closure_note` | bounded_theorem | critical | 369 | 25.53 | `audited_clean` | **retained_bounded** |
 | 8 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 83 | 24.89 | `unaudited` | unaudited |
 | 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 364 | 24.51 | `audited_clean` | open_gate |
-| 10 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 128 | 24.01 | `unaudited` | unaudited |
+| 10 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 128 | 24.01 | `audited_conditional` | ~~audited_conditional~~ |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
 | 12 | `minimal_axioms_2026-05-03` | meta | critical | 364 | 23.51 | `unaudited` | meta |
 | 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 306 | 22.76 | `unaudited` | unaudited |
@@ -198,7 +198,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
-| `ew_current_matching_rule_open_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | B | - |
+| `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -607,7 +607,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `equivalence_principle_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `evolving_network_prototype_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `evolving_network_prototype_v2_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `field_equation_derivation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `flagship_paper_contribution_statement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -815,7 +815,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
+| `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `retardation_discriminator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -924,6 +924,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_endpoint_shift_bound_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_bridge_rearrangement_principle_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_bridge_variational_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `yt_ew_delta_r_retention_analysis_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_exact_coarse_grained_bridge_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `yt_exact_hessian_selector_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_explicit_systematic_budget_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -932,16 +934,16 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_i_s_revision_verification_note_2026-04-17` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_taste_staircase_transport_note_2026-04-17` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
-| `yt_p2_v_matching_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p2_v_matching_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | fresh_context | codex-fresh | B | `koide_dweh_cyclic_compression_note_2026-04-18` |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `pmns_selector_unique_amplitude_slot_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
-| `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
+| `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | B | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
@@ -1014,10 +1016,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_bridge_operator_closure_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_uv_class_uniqueness_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_constructive_uv_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
-| `yt_ew_coupling_bridge_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | D | - |
+| `yt_ew_coupling_bridge_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | C | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
-| `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
+| `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | B | - |
 | `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `g_bare_derivation_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -2544,14 +2546,16 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 - **Note:** [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](../../docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the asserted derivation that Z^3 forces N_c=3, realizes SU(3)_c on the 3D symmetric base subspace commuting with fiber SU(2) and Y, and gives R_conn=8/9 and sqrt(9/8) from the SU(3) Fierz identity.
+- **claim_scope:** CL3/SU(3) color-automorphism and Fierz bookkeeping with renamed EW boundary: it may support F_adj=8/9 and K_EW(0)=9/8 as a conditional specialization, but it does not prove the physical connected-trace EW readout rule.
 - **audit_status:** ~~audited_renaming~~
 - **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-audit-2026-05-03`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** N_c = |hw=1 states| = dim(Z^3) = 3; this is not an input, it is the algebraic image of the spatial dimension.  _(class `F`)_
-- **chain closes:** False — The runner verifies the constructed SU(3) embedding and Fierz algebra, but the theorem's physical-color step identifies the hw=1/symmetric-base structure with N_c and SU(3)_c rather than deriving that identification. The script sets N_c=3 and installs Gell-Mann generators on the selected 3D block, then checks consistency.
-- **rationale:** Issue: the load-bearing step equates the three hw=1/Z^3 axis states and the selected symmetric-base SU(3) representation with physical color N_c and SU(3)_c. Why this blocks: the algebra proves a valid 3D SU(3) construction and Fierz factor once that identification is made, but it does not force the physical color interpretation from the restricted inputs. Repair target: derive an independent theorem mapping the taste-cube symmetric-base sector to continuum color carriers/gauge fields and make the runner compute that bridge rather than construct the chosen block. Claim boundary until fixed: the note supports an exact SU(3) representation on the 3D symmetric base, its commutation with fiber SU(2) and Y, and the SU(3) Fierz value R_conn=8/9 under the color identification.
-- **auditor confidence:** high
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Check that the note's EW language is boundary/renaming only after the kappa_EW no-go closure.  _(class `B`)_
+- **chain closes:** False — No coefficient closure is claimed here.
+- **rationale:** The edit narrows wording without changing the underlying CL3 algebraic support status.
+- **open / conditional deps cited:**
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
+- **auditor confidence:** medium
 
 ### `cl3_sm_embedding_theorem`
 
@@ -2626,22 +2630,16 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 - **Note:** [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](../../docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Package prediction-chain summary with EW rows rewritten as kappa_EW-conditional. Values using sqrt(9/8) are route-history/readout values at kappa_EW=0, not retained unconditional predictions.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
-- **load-bearing step:** This document is the single authority for the Cl(3) on Z^3 prediction chain, absorbing the listed YT, Higgs, color-projection, and EW-coupling support stack.  _(class `B`)_
-- **chain closes:** False — The note is an inventory of upstream prediction surfaces and explicitly says it is not an independent strong derivation claim. The listed support stack contains conditional and decoration audit states, and the runner prints a package synthesis card rather than checking the upstream derivations.
-- **rationale:** Issue: the row presents a package-level prediction inventory as the complete chain while importing the YT, Higgs, color-projection, R_conn, and alpha_LM support surfaces. Why this blocks: those listed authorities are not audit-clean as a set, and the primary runner is a synthesis/printout runner with no PASS/FAIL verification of the load-bearing upstream bridges; it cannot ratify the absorbed package as a closed derivation. Repair target: register the listed support-stack rows as dependencies and re-audit this inventory after the R_conn/color-projection/YT/Higgs bridge rows are audit-clean, or narrow the row to a non-authoritative dashboard over conditional inputs. Claim boundary until fixed: useful support inventory of current package numbers, not an audit-clean complete prediction chain.
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Verify the summary table and color-projection narrative no longer assert a derived unconditional EW sqrt(9/8) coefficient.  _(class `B`)_
+- **chain closes:** False — Summary remains conditional on the named EW readout coefficient.
+- **rationale:** The chain summary has been narrowed to fixed-coefficient EW values.
 - **open / conditional deps cited:**
-  - `RCONN_DERIVED_NOTE.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
-  - `HIGGS_MASS_FROM_AXIOM_NOTE.md`
-  - `HIGGS_MASS_DERIVED_NOTE.md`
-  - `ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-- **auditor confidence:** high
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
+- **auditor confidence:** medium
 
 ### `complex_action_note`
 
@@ -5434,29 +5432,29 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 ### `ew_current_matching_rule_open_gate_note_2026-05-03`
 
 - **Note:** [`EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`](../../docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** The electroweak package-level 9/8 correction has an exact group-theory channel ratio input, (N_c^2 - 1)/N_c^2 = 8/9 at N_c = 3, but the physical matching rule selecting the connected color trace as the EW readout remains unclosed and must block downstream retained propagation.
+- **claim_type:** `no_go`
+- **claim_scope:** No-go/underdetermination theorem: the retained Fierz/channel-count input fixes F_adj=(N_c^2-1)/N_c^2=8/9 at N_c=3, but the current retained Fierz/CMT/OZI packet does not fix the physical disconnected-current readout coefficient kappa_EW. The EW matching family is K_EW(kappa_EW)=1/(8/9+kappa_EW/9); the old 9/8 value is only the connected-trace specialization kappa_EW=0.
 - **audit_status:** ~~audited_clean~~
-- **effective_status:** open_gate  (reason: `audited_open_gate`)
-- **auditor:** `codex-audit-loop-cleanroom-ew-current-matching-rule-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The exact Fierz-channel theorem supplies the channel-count arithmetic, but it does not by itself prove that the physical electroweak vacuum polarization reads only the connected color trace after CMT factorization.  _(class `B`)_
-- **chain closes:** True — The source note is not claiming the 9/8 matching rule as retained; it claims the opposite boundary. The one-hop dependency explicitly derives only the exact Fierz/channel-count ratio and separately labels matching rule (M) as not derived. Therefore the open-gate claim closes from the restricted packet.
-- **rationale:** Clean as an open gate. Issue identified by the note: the exact Fierz ratio supplies only the adjoint-channel fraction, while the physical EW readout selection remains a separate structural input. Why this blocks downstream theorem status: downstream uses of the exact 9/8 coefficient require the unmatched premise that the physical EW vacuum polarization projects onto the connected/adjoint channel after CMT factorization. Repair target: a retained theorem deriving the connected-trace EW readout from the lattice current construction, or an exact derivation of the disconnected-current coefficient, or a bounded restatement that keeps the normalization conditional. Claim boundary until fixed: the 8/9 group-theory channel ratio may be cited as exact support, but the package-level EW 9/8 matching rule remains conditioned on this open gate.
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Construct two completions with identical retained Fierz fraction, identical color-blind CMT scaling, and bounded OZI disconnected size, but different physical readout coefficients: kappa_EW=0 gives K_EW=9/8 while kappa_EW=1 gives K_EW=1.  _(class `A`)_
+- **chain closes:** True — The former gate is closed negatively: the exact coefficient is not promoted. The note proves that the retained primitives underdetermine the EW readout coefficient and requires downstream use of named kappa_EW conditionality.
+- **rationale:** Clean as a no-go closure. The runner verifies exact rational channel arithmetic, CMT cancellation, bounded OZI-size alternatives, the two-completion witness, and downstream wording guardrails. The only load-bearing one-hop dependency is the retained-bounded Fierz/channel decomposition note.
 - **auditor confidence:** high
 
 ### `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26`
 
 - **Note:** [`EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`](../../docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Exact one-Higgs-doublet tree-level gauge-mass diagonalization remains structural, but its package role for physical EW numeric rows is explicitly conditional on the EW normalization coefficient kappa_EW.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-04`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The one-Higgs-doublet tree-level mass matrix diagonalizes into a massless photon, M_W^2=g^2 v^2/4, M_Z^2=(g^2+g_Y^2)v^2/4, Q=T3+Y, e=g sin(theta_W)=g_Y cos(theta_W), and rho_tree=1.  _(class `A`)_
-- **chain closes:** False — The symbolic mass-matrix, charge, coupling, and scalar-Hessian algebra all pass, but the registered primary runner exits nonzero because a note-surface status guardrail expects wording not present in the current note. The proof artifact is therefore stale relative to the note and cannot support a clean retained audit until repaired.
-- **rationale:** Issue: the registered verifier reports TOTAL: PASS=45, FAIL=1 and exits nonzero; the failed check is the status-surface guardrail 'status is standalone EW/Higgs theorem', while the note instead describes the result as a structural guardrail. Why this blocks: a candidate retained-grade theorem cannot land clean while its own primary runner's expected verifier status is stale and the note promises 46/0 CLOSED. Repair target: align the runner's surface guardrail with the current note wording or update the note/runner pair, then rerun the exact mass-matrix proof. Claim boundary until fixed: the tree-level algebra appears to pass, but the audit status remains conditional on repairing the stale proof artifact.
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Confirm the edit only narrows downstream package-role language and does not use the theorem to derive kappa_EW.  _(class `A`)_
+- **chain closes:** False — Tree identities do not close the EW current matching rule.
+- **rationale:** The structural Higgs identities are unchanged; the retained EW normalization wording is now conditional.
 - **open / conditional deps cited:**
-  - `runner_exit_nonzero_stale_status_guardrail:scripts/frontier_ew_higgs_gauge_mass_diagonalization.py`
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
 - **auditor confidence:** high
 
 ### `field_equation_derivation_note`
@@ -10825,13 +10823,15 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 
 - **Note:** [`RCONN_DERIVED_NOTE.md`](../../docs/RCONN_DERIVED_NOTE.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded 1/N_c claim that the dynamical connected color-trace ratio R_conn equals (N_c^2 - 1)/N_c^2 + O(1/N_c^4), with N_c=3 giving 8/9 + O(1/81).
+- **claim_scope:** Bounded 1/N_c connected color-trace statement: R_conn=8/9+O(1/N_c^4) remains a color-factor support result, while its EW use is explicitly conditional on kappa_EW=0 and does not derive the physical EW matching coefficient.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-agent-ptolemy-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** If the dynamics populates the color channels according to their dimensionality, then Pi_singlet/Pi_total = 1/N_c^2 and Pi_adjoint/Pi_total = (N_c^2 - 1)/N_c^2.  _(class `F`)_
-- **chain closes:** False — The one-hop authorities close only the exact SU(N_c) adjoint channel-count fraction 8/9 at N_c=3. They do not derive the dynamical identification of the measured connected propagator ratio with that dimension fraction, nor the O(1/N_c^4) correction bound or physical observable propagation.
-- **rationale:** Issue: the note turns an exact Fierz/channel-count fraction into a dynamical statement about R_conn by assuming dimensional channel population and planar dominance fix h/f, then adds an O(1/N_c^4) bound and physical observable consequences. Why this blocks: the retained one-hop parent explicitly closes only the algebraic adjoint q-qbar fraction and excludes the physical matching rule; the --small runner is compatible with 8/9 but uses 2^4 quick-test evidence and checks tolerance around the expected value rather than deriving the bridge or reproducing the note's default 4^4/100-config claim. Repair target: a theorem or runner deriving the connected-trace projection and correction bound from retained lattice dynamics, plus current default-scale runner output. Claim boundary until fixed: the exact adjoint channel-count fraction (N_c^2 - 1)/N_c^2 = 8/9 may be cited via the retained Fierz parent only.
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Confirm the R_conn note no longer presents the EW sqrt(9/8) readout as an unconditional observable prediction.  _(class `B`)_
+- **chain closes:** False — R_conn remains bounded support and does not close EW current matching.
+- **rationale:** The note now distinguishes the exact/bounded color factor from the conditional EW readout coefficient.
+- **open / conditional deps cited:**
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
 - **auditor confidence:** high
 
 ### `replay_environment_note`
@@ -14572,18 +14572,51 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **rationale:** Re-audit confirms the original numerical-match verdict: endpoint-conditioned construction across three families. Scope narrowed from the migration backfill to bounded numerical evidence.
 - **auditor confidence:** high
 
+### `yt_ew_color_projection_theorem`
+
+- **Note:** [`YT_EW_COLOR_PROJECTION_THEOREM.md`](../../docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded/conditional EW normalization lane: the exact Fierz channel fraction is retained, but the physical EW readout is K_EW(kappa_EW)=1/(8/9+kappa_EW/9). The numeric g_1(v), g_2(v), sin^2(theta_W), and alpha_EM rows are fixed-coefficient kappa_EW=0 specializations, not unconditional retained 9/8 predictions.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Verify the note now carries kappa_EW explicitly, cites the no-go gate, and avoids promoting K_EW(0)=9/8 as a derived coefficient.  _(class `A`)_
+- **chain closes:** False — The lane remains conditional until a future theorem fixes kappa_EW or computes the disconnected-current coefficient.
+- **rationale:** The downstream wording is now conditional and runner-guarded by frontier_ew_current_matching_rule_no_go.py; the physical coefficient remains unmatched.
+- **open / conditional deps cited:**
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
+- **auditor confidence:** high
+
 ### `yt_ew_coupling_bridge_note`
 
 - **Note:** [`YT_EW_COUPLING_BRIDGE_NOTE.md`](../../docs/YT_EW_COUPLING_BRIDGE_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Bounded historical sensitivity/narrowing report: the old EW-coupling support scan narrows the y_t import surface and closes the sin^2(theta_W) gap only after scanning an effective taste_weight, with best match at taste_weight ~= 0.390. Excludes any clean derivation of the electroweak coupling bridge; the source note is explicitly superseded and warns against using the old import table for promotion decisions.
+- **claim_scope:** Historical EW-coupling bridge/sensitivity note retained only as a numerical-match/support record; edited wording states that g_1(v), g_2(v) are now matching-rule conditional and not derived here.
 - **audit_status:** ~~audited_numerical_match~~
 - **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-yt-ew-coupling`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** The old EW-coupling support scan narrows the y_t import surface and closes the sin^2(theta_W) gap only after scanning an effective taste_weight, with best match taste_weight=0.390.  _(class `D`)_
-- **chain closes:** False — The runner closes the EW-angle gap by scanning to the observed value; the source note is superseded and the runner script itself warns against promotion.
-- **rationale:** Re-audit confirms the original numerical-match verdict: target-fitted closure on a superseded note. Scope narrowed from the migration backfill to a bounded historical record.
-- **auditor confidence:** high
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Confirm the bridge note remains route history and cannot promote the EW coefficient.  _(class `C`)_
+- **chain closes:** False — Historical numerical match does not derive kappa_EW.
+- **rationale:** The edited note explicitly blocks use as a retained EW coupling derivation.
+- **open / conditional deps cited:**
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
+- **auditor confidence:** medium
+
+### `yt_ew_delta_r_retention_analysis_note_2026-04-18`
+
+- **Note:** [`YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](../../docs/YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Perturbative EW Delta_R band analysis around a fixed EW readout coefficient. The note no longer promotes retained quantitative EW normalization; it conditions the packaged precision on kappa_EW, with K_EW(0)=9/8 treated as the connected-trace specialization.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Check that the perturbative matching uncertainty is scoped around a fixed kappa_EW and does not derive the physical readout coefficient.  _(class `C`)_
+- **chain closes:** False — The perturbative band can survive at fixed coefficient but cannot close the EW matching rule.
+- **rationale:** The edited note explicitly conditions the EW lane and keeps the lattice-to-MSbar estimate as an uncertainty analysis, not a coefficient derivation.
+- **open / conditional deps cited:**
+  - `yt_ew_color_projection_theorem`
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
+- **auditor confidence:** medium
 
 ### `yt_exact_coarse_grained_bridge_operator_note`
 
@@ -14782,21 +14815,16 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 
 - **Note:** [`YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** P2/v-matching support table now treats g_1(v) and g_2(v) as fixed-coefficient kappa_EW=0 EW-lane entries rather than derived unconditional inputs.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The note claims the v-matching coefficient closes in decomposed form as M = sqrt(u_0) * F_yt * sqrt(8/9), with 1-loop M = 1.926 inside the QFP 3% envelope and 2-loop quantitative closure supplied by the primary chain at M = 1.9734.  _(class `B`)_
-- **chain closes:** False — The runner reproduces the Path C algebra and 1-loop SM-RGE integration, but the mixed lattice/SM endpoint factorization, color projection, Ward/CMT inputs, QFP envelope, and 2-loop primary-chain closure are all inherited. The runner does not independently derive the 2-loop M target from retained inputs.
-- **rationale:** Issue: the proposed M closure depends on a selected mixed-scheme factorization M = sqrt(u_0) * F_yt * sqrt(8/9), a QFP 3% support envelope, and a 2-loop primary-chain value that the runner cites rather than derives. Why this blocks: a retained v-matching theorem must prove the lattice-to-SM endpoint map, color-projection factor, and RGE transport as one coherent bridge, and must compute the quantitative 2-loop closure from retained beta functions in the runner or registered clean dependencies. Repair target: clean-audit the taste-staircase, Ward/CMT, color-projection, zero-import beta-coefficient, and QFP parents, and extend this runner to perform the retained 2-loop SM-RGE integration and verify M = 1.9734 from those inputs without reading the target as a premise. Claim boundary until fixed: safe to claim conditional Path C arithmetic: given the supplied endpoint factors and 1-loop RGE, M_1-loop = 1.926 and lies within the asserted 3% QFP envelope; not safe to claim audited retained closure of the P2 v-matching coefficient.
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Check that the import table was narrowed from DERIVED to CONDITIONAL for the EW coupling rows.  _(class `B`)_
+- **chain closes:** False — The P2 note does not close the EW coefficient.
+- **rationale:** The edited table respects the kappa_EW boundary.
 - **open / conditional deps cited:**
-  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
-  - `YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
-  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
-  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
-  - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
-- **auditor confidence:** high
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
+- **auditor confidence:** medium
 
 ### `yt_qfp_insensitivity_support_note`
 
@@ -14846,34 +14874,32 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 
 - **Note:** [`YT_ZERO_IMPORT_CHAIN_NOTE.md`](../../docs/YT_ZERO_IMPORT_CHAIN_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Zero-import chain summary with EW outputs kept conditional on kappa_EW. The chain may display kappa_EW=0 values, but does not claim unconditional retention of the EW 9/8 coefficient.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Every ingredient in the y_t chain is asserted to trace to Cl(3) on Z^3, so m_t, alpha_s(M_Z), sin^2(theta_W), and v are derived with zero SM observable imports at the v-scale.  _(class `C`)_
-- **chain closes:** False — The runner reproduces the advertised numerical chain and comparator checks, but it hard-codes or imports the plaquette surface, CMT/hierarchy inputs, color projection, Ward boundary, QFP/RGE treatment, and threshold infrastructure without those bridge notes being registered as clean one-hop dependencies. The zero-import conclusion therefore remains conditional on ratifying the upstream bridge stack, not just rerunning this synthesis script.
-- **rationale:** Issue: the runner returns PASS=14/FAIL=0 for the current numerical chain, but the load-bearing zero-import claim relies on several unratified bridge inputs: the canonical plaquette surface, coupling map, hierarchy insertion, color projection, Ward boundary, QFP/RGE treatment, and v-to-M_Z threshold infrastructure. Why this blocks: a synthesis script that labels ingredients DERIVED does not by itself prove those bridges from Cl(3)/Z^3 or make the observational matches independent of the selected normalization stack. Repair target: register the bridge notes as one-hop dependencies, ratify them, and split the runner checks between derivation inputs and comparator-only checks. Claim boundary until fixed: the current script is a reproducible y_t synthesis and comparator packet, not an audited zero-import derivation theorem.
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Check that EW outputs are labeled fixed-coefficient/conditional in the zero-import chain.  _(class `B`)_
+- **chain closes:** False — The chain remains conditional on the EW readout coefficient.
+- **rationale:** The edit prevents the zero-import summary from bypassing the no-go closure.
 - **open / conditional deps cited:**
-  - `YT_EFT_BRIDGE_THEOREM.md`
-  - `YT_BOUNDARY_THEOREM.md`
-  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
-  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
-  - `HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`
-- **auditor confidence:** high
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
+- **auditor confidence:** medium
 
 ### `yukawa_color_projection_theorem`
 
 - **Note:** [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](../../docs/YUKAWA_COLOR_PROJECTION_THEOREM.md)
 - **claim_type:** `decoration`
-- **claim_scope:** Algebraic restatement of the upstream exact SU(N_c) Fierz/channel-count decomposition giving adjoint q-qbar dimension fraction (N_c^2 - 1)/N_c^2 and 8/9 at N_c=3; excludes Z_phi physical matching and sqrt(8/9) Yukawa correction.
+- **claim_scope:** Decorative/algebraic comparison note under the exact Fierz/channel decomposition. The Yukawa-side contrast may mention the historical EW sqrt(9/8) only as the conditional kappa_EW=0 specialization and does not derive EW current matching.
 - **audit_status:** ~~audited_decoration~~
 - **effective_status:** `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01`  (reason: `decoration_parent_retained`)
-- **auditor:** `codex-fresh-agent-confucius-2026-05-02`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The scoped claim submitted by this row is only the SU(N_c) Fierz channel-counting result R_conn = (N_c^2 - 1)/N_c^2 = 8/9 for N_c = 3.  _(class `A`)_
-- **chain closes:** True — The narrowed algebraic statement follows from the one-hop EW Fierz-channel decomposition note plus retained-bounded N_c=3 gauge-closure inputs. It adds no independent comparator, compression theorem, or new physical matching content beyond that parent result.
-- **rationale:** Issue: the surviving scoped content is the same exact SU(N_c) Fierz/channel-count identity already carried by EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01. Why this blocks: it has zero independent comparator, compression theorem, or new physical bridge, so it cannot stand as a separate retained theorem under the decoration policy. Repair target: add an independent physical-matching theorem, comparator, or compression surface if this row is meant to be promoted separately. Claim boundary until fixed: cite only the boxed algebraic Fierz fraction under the upstream parent, excluding Z_phi and sqrt(8/9) Yukawa matching.
+- **auditor:** `codex-cleanroom-ew-current-matching-no-go-consumer-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Verify the EW comparison language is conditional and non-load-bearing under the Fierz parent.  _(class `B`)_
+- **chain closes:** False — Decoration under the Fierz parent; no physical EW coefficient closure.
+- **rationale:** The note is not used as an independent EW matching proof and now states the conditional boundary.
+- **open / conditional deps cited:**
+  - `ew_current_matching_rule_open_gate_note_2026-05-03`
 - **decoration parent:** `ew_current_fierz_channel_decomposition_note_2026-05-01`
-- **auditor confidence:** high
+- **auditor confidence:** medium
 
 ### `z2_hw1_mass_matrix_parametrization_note`
 

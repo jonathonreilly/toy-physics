@@ -1,7 +1,11 @@
 # Color-Singlet Projection Theorem for EW Couplings
 
 **Date:** 2026-04-14
-**Status:** proposed_retained EW normalization lane on `main`
+**Status:** audited_conditional / bounded EW normalization lane. The exact
+Fierz channel fraction is retained-bounded support, but the package-level
+EW readout coefficient is conditional on the disconnected-current coefficient
+`kappa_EW` defined in
+`EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`.
 **Primary runner:** `scripts/frontier_color_projection_mc.py`
 **Supporting derivation inputs:** `scripts/frontier_yt_zero_import_chain.py`,
 `scripts/frontier_complete_prediction_chain.py`
@@ -20,52 +24,54 @@
   dynamical-correction sibling of the Fierz route, not a one-hop authority
   for the exact coefficient.
 - [EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md](EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md)
-  — citeable open gate for the load-bearing **matching route** that selects
-  the connected color trace as the physical EW coupling readout. The older
-  `EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md` remains
-  a plain-text bounded-context pointer, not an audit ratification of the
-  package-level `9/8` coefficient.
+  — retained no-go closure for the load-bearing **matching route**. It proves
+  that the current retained Fierz/CMT/OZI packet underdetermines the physical
+  EW readout and must be parameterized by `kappa_EW`; the package-level
+  `9/8` coefficient is the special case `kappa_EW = 0`, not an unconditional
+  retained theorem.
 
-**Note on the matching rule (M).** The package-level `9/8` correction
-splits into two ingredients: (F) the exact group-theory ratio
-`(N_c²−1)/N_c²`, now retained-grade arithmetic via the Fierz-channel
-note; and (M) the matching rule that the physical EW vacuum polarization
-projects onto the adjoint channel after CMT factorization. (M) remains
-a load-bearing structural input from the framework's lattice EW current
-construction; it is named explicitly in the Fierz-channel note §5 and is
-now tracked as its own open gate by the matching-rule note above.
+**Note on the matching rule.** The package-level EW correction splits into
+two ingredients: (F) the exact group-theory ratio `(N_c²−1)/N_c²`, now
+retained-bounded arithmetic via the Fierz-channel note; and (M) the physical
+readout coefficient. The no-go closure shows that the current retained
+primitives only support
+`K_EW(kappa_EW) = 1 / (8/9 + kappa_EW/9)` at `N_c = 3`. The familiar
+`9/8` alpha-level correction is the connected-trace specialization
+`kappa_EW = 0`.
 
 ---
 
 ## The Claim
 
 On the Cl(3)/Z^3 lattice, the physical electroweak gauge couplings at the
-EW scale v are related to the lattice-derived predictions by a universal
-multiplicative color-singlet projection factor:
+EW scale v are related to the lattice-derived predictions by a conditional
+matching factor:
 
-    g_EW(physical) = g_EW(lattice) / sqrt(C_color)
+    g_EW(physical; kappa_EW) = g_EW(lattice) * sqrt(K_EW(kappa_EW))
 
-    C_color = R_conn = (N_c^2 - 1)/N_c^2 + O(1/N_c^4)
+    K_EW(kappa_EW) = 1 / (F_adj + kappa_EW (1 - F_adj))
+    F_adj = (N_c^2 - 1)/N_c^2
 
-and on the current retained package surface we use the canonical leading-order
-value:
+At `N_c = 3`:
 
-    C_color = 8/9  for  N_c = 3
+    K_EW(kappa_EW) = 1 / (8/9 + kappa_EW/9)
 
-Equivalently:
+The canonical package number is the connected-trace specialization:
 
-    alpha_EW(physical) = alpha_EW(lattice) * N_c^2/(N_c^2 - 1) = (9/8) alpha_EW(lattice)
+    kappa_EW = 0  =>  K_EW = 9/8
 
-where alpha_EW(lattice) is the coupling obtained from the bare lattice
-couplings (g_2^2 = 1/4, g_Y^2 = 1/5) after the taste staircase and the
-framework-side running to v.
+where `alpha_EW(lattice)` is the coupling obtained from the bare lattice
+couplings (`g_2^2 = 1/4`, `g_Y^2 = 1/5`) after the taste staircase and the
+framework-side running to `v`. The retained packet does not derive
+`kappa_EW = 0`; that coefficient remains the explicit matching condition.
 
 This correction preserves sin^2(theta_W) exactly (it multiplies both g_1
 and g_2 by the same factor) while fixing the absolute normalization.
 
-The framework-scale retained quantities on this lane are `g_1(v)` and
-`g_2(v)`. The quoted `sin^2(theta_W)(M_Z)` and `1/alpha_EM(M_Z)` rows are the
-same package after the retained running bridge below `v`.
+The framework-scale quantities on this lane are `g_1(v; kappa_EW)` and
+`g_2(v; kappa_EW)`. The quoted `sin^2(theta_W)(M_Z)` and
+`1/alpha_EM(M_Z)` rows are the same package after the running bridge below
+`v`, at a fixed value of the matching coefficient.
 
 This lane is structurally independent of the backward Ward / Yukawa chain and
 stands on its own on the current `main` package surface.
@@ -75,8 +81,8 @@ stands on its own on the current `main` package surface.
 ## Numerical Evidence
 
 Starting from bare couplings g_3^2 = 1, g_2^2 = 1/(d+1) = 1/4,
-g_Y^2 = 1/(d+2) = 1/5, with the taste staircase, derived `R_conn = 8/9`
-support, and the retained package bridge:
+g_Y^2 = 1/(d+2) = 1/5, with the taste staircase, exact `F_adj = 8/9`
+support, and the connected-trace specialization `kappa_EW = 0`:
 
 | Coupling     | Predicted | Observed | Ratio pred/obs |
 |--------------|-----------|----------|----------------|
@@ -92,7 +98,7 @@ The ratio pred/obs is consistent with sqrt(8/9) to:
 Two independent couplings agree with the SAME group-theory factor to
 0.17%. The probability of this being coincidental is small.
 
-After correction:
+Under the connected-trace specialization `kappa_EW = 0`:
 - g_1(corrected) = 0.43779 * sqrt(9/8) = 0.46435
   vs observed 0.46399 (+0.08%)
 - g_2(corrected) = 0.61090 * sqrt(9/8) = 0.64795
@@ -162,10 +168,10 @@ is consistent with 1 - sqrt(8/9) = 5.72% to high precision.
 
 This section presents the full partition-function investigation of
 whether the 9/8 factor can be derived from the CMT alone, or whether
-it requires additional input. The conclusion is that it requires ONE
-additional input -- the connected color trace condition (Section 2.6)
--- which cannot be derived from the CMT but has strong physical
-motivation and is verifiable by lattice measurement.
+it requires additional input. The conclusion is that it requires one
+additional coefficient -- `kappa_EW`, equivalently the disconnected-current
+readout coefficient in the no-go closure note. The connected color trace
+condition in Section 2.6 is the specialization `kappa_EW = 0`.
 
 ### 2.1 Setup: EW vs SU(3) vacuum polarizations
 
@@ -326,7 +332,7 @@ is non-zero. The gluon-dressed propagator G_{ab} acquires off-
 diagonal color components (G^{adj}_{ab} != 0), and these couple
 the adjoint channel into the EW vacuum polarization.
 
-**The physical claim.** The 9/8 correction arises if the
+**The conditional physical claim.** The 9/8 correction arises if the
 non-perturbative SU(3) dynamics on the unified lattice generates
 a COLOR-DEPENDENT normalization correction to the EW vacuum
 polarization that is not captured by the color-blind CMT.
@@ -348,6 +354,15 @@ The ratio:
 This is equivalent to the statement that the connected color trace
 ratio in the q-qbar channel is (N_c^2-1)/N_c^2, which is the
 Fierz-identity value for the adjoint channel fraction.
+
+The no-go closure sharpens this paragraph: the retained Fierz/CMT/OZI
+packet permits the conditional family
+
+    alpha_EW(physical; kappa_EW) / alpha_EW(CMT)
+      = 1 / (8/9 + kappa_EW/9).
+
+The equation above becomes `9/8` only at `kappa_EW = 0`. That value is the
+connected-trace readout premise, not a theorem derived by this note.
 
 ### 2.7 Why R_conn = (N_c^2-1)/N_c^2 -- TWO INDEPENDENT EXACT DERIVATIONS
 
@@ -439,20 +454,22 @@ The key arguments supporting the derivation:
    of the unified lattice, captured by the 1/N_c expansion but
    not by perturbative QCD.
 
-### 2.8 The gap (now closed by the 1/N_c derivation)
+### 2.8 The channel-ratio gap and the remaining readout coefficient
 
-The gap described in the original version of this note -- computing
-R_conn analytically -- has been closed by the 1/N_c expansion
-(RCONN_DERIVED_NOTE.md). The MC observable:
+The channel-ratio gap described in the original version of this note --
+computing `R_conn` analytically -- is addressed by the Fierz/channel-count
+derivation for the exact `8/9` representation fraction, with the 1/N_c route
+kept as bounded dynamical context. The MC observable:
 
     R_conn = 1 - <Tr[U_1 G] Tr[U_2 G]> / (N_c <Tr[U_1 G U_2 G]>)
 
-is now both DERIVED (leading order 1/N_c gives 8/9) and VERIFIED
-(MC gives 0.887 +/- 0.008, agreeing to 0.2%).
+is a useful connected-trace check, but it is not an exact computation of the
+physical EW current readout coefficient `kappa_EW`.
 
-To promote from DERIVED to THEOREM would require proving the exact
-vanishing of genus >= 2 corrections, which is not currently available
-but also not needed for sub-percent predictions.
+To promote the EW normalization lane from conditional to retained would
+require a framework-native derivation of `kappa_EW = 0` or an exact
+disconnected-current coefficient computation. The no-go closure proves that
+the current retained primitives do not supply that coefficient.
 
 ---
 
@@ -475,11 +492,13 @@ Therefore:
 The correction changes the absolute normalization of both EW couplings
 by the same factor, leaving their ratio (and hence sin^2) unchanged.
 
-This is verified numerically:
+For any fixed `kappa_EW`, the universal multiplicative factor preserves
+`sin^2(theta_W)`. In the connected-trace specialization this is verified
+numerically:
     sin^2(theta_W) from taste staircase: 0.23120
     sin^2(theta_W) observed: 0.23122
     Agreement: 0.008% (BEFORE the 9/8 correction)
-    After correction: UNCHANGED (the 9/8 multiplies both couplings equally)
+After correction: UNCHANGED (the same factor multiplies both couplings)
 
 ### 3.2 Generalization to arbitrary N_c
 
@@ -495,8 +514,8 @@ For general N_c, the correction factor is:
 | 5   | 25/24   | 1.0206  | 2.0%           |
 | inf | 1       | 1       | 0%             |
 
-In the large-N_c limit, the correction vanishes as O(1/N_c^2), which is
-the expected scaling for non-planar color corrections.
+In the large-N_c limit, the connected-trace specialization approaches 1 as
+`O(1/N_c^2)`, which is the expected scaling for non-planar color corrections.
 
 ### 3.3 Independence from alpha_s
 
@@ -594,10 +613,14 @@ afterward.
    is color-blind: it gives the same u_0^2 for both EW and SU(3) vacuum
    polarizations. The 9/8, if present, lies BEYOND the CMT.
 
-### 5.2 R_conn is now DERIVED
+### 5.2 F_adj is exact; the EW readout coefficient is conditional
 
-R_conn = (N_c^2-1)/N_c^2 = 8/9 is derived from the 1/N_c expansion
-of SU(N_c) gauge theory (RCONN_DERIVED_NOTE.md). The derivation:
+The adjoint channel fraction
+
+    F_adj = (N_c^2-1)/N_c^2 = 8/9
+
+is exact group theory from the Fierz/channel-count derivation. The older
+1/N_c route remains bounded dynamical context:
 
 1. Uses the 't Hooft topological classification of Feynman diagrams
    by genus (standard: 't Hooft 1974, Witten 1979)
@@ -611,21 +634,21 @@ of SU(N_c) gauge theory (RCONN_DERIVED_NOTE.md). The derivation:
 6. MC verification: R_conn(MC) = 0.887 +/- 0.008 vs 8/9 = 0.889
    (0.2% agreement, consistent with O(1/N_c^4) being small)
 
-This closes the previous gap. R_conn is no longer "a single computable
-lattice observable" blocking THEOREM status -- it is analytically
-derived with controlled corrections.
+This closes only the channel-ratio arithmetic. It does not compute
+`kappa_EW`, the physical disconnected-current readout coefficient.
 
-### 5.3 Status: DERIVED
+### 5.3 Status: audited_conditional / bounded
 
-The correction 9/8 on the EW couplings is derived from
-`R_conn = 8/9 + O(1/N_c^4)`,
-which is itself derived from the 1/N_c expansion (RCONN_DERIVED_NOTE.md).
-The full chain traces to Cl(3) with zero imports.
+The EW normalization lane now has the conditional coefficient
 
-To promote to THEOREM: prove that higher-genus corrections vanish
-identically (exact non-perturbative result, not currently available).
-The DERIVED status has O(1%) controlled corrections, verified by
-0.17% agreement of two independent EW couplings.
+    K_EW(kappa_EW) = 1 / (8/9 + kappa_EW/9).
+
+The familiar alpha-level factor `9/8` is the specialization
+`kappa_EW = 0`. The no-go closure proves that the current retained
+framework primitives do not derive that specialization. To promote to a
+retained positive theorem, add a runner-checked lattice-current selector
+theorem deriving `kappa_EW = 0`, or compute the disconnected-current
+coefficient exactly.
 
 ### 5.4 Routes investigated and found insufficient
 
@@ -669,7 +692,7 @@ unable to close the gap:
 
 ### 6.1 Corrected EW coupling predictions
 
-With the 9/8 correction:
+With the connected-trace specialization `kappa_EW = 0`:
 
 | Coupling     | Before 9/8 | After 9/8 | Observed | Error  |
 |-------------|-----------|-----------|----------|--------|
@@ -693,19 +716,20 @@ is unchanged at the precision of the QFP stability bound.
 
 ### 6.3 Import elimination
 
-If the 9/8 correction is accepted, then g_1(v) and g_2(v) are BOTH
-derived from the framework with zero imports:
+If the `kappa_EW = 0` specialization is accepted as an additional matching
+condition, then g_1(v) and g_2(v) are both obtained from the framework-side
+pipeline plus that condition:
 
     g_2^2(bare) = 1/4         [lattice geometry]
     g_Y^2(bare) = 1/5         [lattice geometry]
     taste thresholds           [Cl(3) BZ orbit structure]
     2-loop SM running          [Cl(3) group theory coefficients]
-    9/8 color projection       [group theory, this note]
+    K_EW(0)=9/8 color projection [conditional matching coefficient]
     u_0^2 CMT improvement      [Coupling Map Theorem]
 
-This would eliminate g_1 and g_2 from the import table, leaving only
-lambda(v) as a BOUNDED (not derived) input to the y_t chain. And
-lambda is negligible for y_t (< 0.03% sensitivity).
+Without a retained derivation of `kappa_EW = 0`, this does not eliminate
+g_1 and g_2 as unconditional retained derived values; it gives the bounded
+EW normalization lane at the named coefficient value.
 
 ---
 
@@ -720,10 +744,12 @@ lambda is negligible for y_t (< 0.03% sensitivity).
 | u_0 = <P>^{1/4}           | 0.8777    | COMPUTED  | mean-field link                  |
 | taste staircase            | --        | DERIVED   | Cl(3) BZ orbit structure         |
 | SM RGE coefficients        | b_i, c_i  | DERIVED   | Cl(3) group theory               |
-| C_color = 8/9             | 0.8889    | DERIVED   | 1/N_c expansion (RCONN_DERIVED_NOTE.md), with bounded `O(1/N_c^4)` correction |
-| g_1_GUT(v) corrected      | 0.4644    | DERIVED   | bare + taste + derived `R_conn` support (0.08% match) |
-| g_2(v) corrected           | 0.6480    | DERIVED   | bare + taste + derived `R_conn` support (0.26% match) |
-| sin^2(theta_W)(M_Z)       | 0.23120   | DERIVED   | framework-side EW package + retained running bridge |
+| F_adj = 8/9               | 0.8889    | RETAINED-BOUNDED | exact Fierz/channel-count derivation |
+| kappa_EW                  | unspecified | CONDITIONAL | disconnected-current readout coefficient |
+| K_EW(0)                   | 9/8       | CONDITIONAL | connected-trace specialization `kappa_EW = 0` |
+| g_1_GUT(v) at kappa_EW=0  | 0.4644    | CONDITIONAL | bare + taste + `K_EW(0)` specialization (0.08% match) |
+| g_2(v) at kappa_EW=0      | 0.6480    | CONDITIONAL | bare + taste + `K_EW(0)` specialization (0.26% match) |
+| sin^2(theta_W)(M_Z)       | 0.23120   | CONDITIONAL | framework-side EW package + retained running bridge at fixed `kappa_EW` |
 | alpha_s(v)                 | 0.1033    | DERIVED   | CMT, n_link = 2                  |
 
 ---

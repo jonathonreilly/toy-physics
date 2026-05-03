@@ -29,7 +29,10 @@ the group acting on the 3D symmetric base subspace of the taste cube, with:
 
 6. From the Fierz identity, the color-trace ratio is:
    `R_conn = (N_c² − 1)/N_c² = 8/9`
-   which gives the sqrt(9/8) electroweak-color correction factor.
+   as an exact channel-count fraction. The EW alpha-level factor is now
+   tracked as `K_EW(kappa_EW)=1/(8/9+kappa_EW/9)`; `sqrt(9/8)` is the
+   connected-trace specialization `kappa_EW=0`, not an unconditional
+   consequence of this algebra alone.
 
 ---
 
@@ -110,12 +113,14 @@ R_conn = (N_c²−1)/N_c²  [leading order in 1/N_c]
 For `N_c = 3`: `R_conn = 8/9`. Subleading topology corrections are
 `O(1/N_c^4) ~ 1.2%` at `N_c=3` (bounded in `RCONN_DERIVED_NOTE.md`).
 
-**EW-color correction factor:**
+**EW-color coefficient boundary:**
 
 The Ward-identity derivation of `y_t = g_bare/√(2N_c)` produces a ratio of EW
-and color traces. The color projection correction is `sqrt(1/R_conn) = sqrt(9/8)`,
-which was previously derived geometrically but now follows from SU(N_c) algebra
-(leading order, with the same O(1/N_c^4) systematic as R_conn).
+and color traces. The SU(N_c) algebra fixes the channel fraction, but the EW
+normalization lane now carries the explicit coefficient
+`K_EW(kappa_EW)=1/(8/9+kappa_EW/9)`. The coupling factor `sqrt(9/8)` is the
+connected-trace specialization `kappa_EW=0`, not a consequence of this
+algebraic support note by itself.
 
 ---
 
@@ -130,8 +135,8 @@ which was previously derived geometrically but now follows from SU(N_c) algebra
 | `[SU(3)_c, Y] = 0` | max err < 10⁻¹⁷ |
 | `N_c = 3`, adjoint dim = 8 | exact |
 | Fierz identity | max err < 10⁻¹⁶ |
-| `R_conn = 8/9` (leading order in `1/N_c`; O(1/N_c⁴) ~ 1.2%) | algebraic |
-| `sqrt(9/8) = 1.060660...` | algebraic |
+| `F_adj = 8/9` | exact Fierz/channel-count fraction |
+| `K_EW(0)=9/8` | conditional connected-trace specialization |
 
 ---
 
@@ -149,8 +154,9 @@ is now grounded in the explicit Gell-Mann embedding verified here.
 
 ### YT_EW_COLOR_PROJECTION_THEOREM.md
 
-The sqrt(9/8) correction derived there via EW/color trace ratio is confirmed here
-via the SU(3) Fierz identity. The two derivations agree and are now cross-verified.
+The exact `8/9` channel fraction used there is confirmed here via the SU(3)
+Fierz identity. The EW physical readout coefficient is separately bounded by
+`EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`.
 
 ### RCONN_DERIVED_NOTE.md
 
@@ -163,7 +169,8 @@ constants alone, with `N_c = 3` forced by the spatial dimension of Z³.
 
 - **R_conn = 8/9 blocker**: algebraic origin — adjoint fraction of SU(N_c) matrix algebra;
   leading-order value exact, O(1/N_c^4) corrections bounded in `RCONN_DERIVED_NOTE.md`
-- **sqrt(9/8) EW-color correction**: confirmed from SU(N_c) Fierz identity
+- **EW-color correction**: reduced to `K_EW(kappa_EW)`; the `sqrt(9/8)`
+  coupling factor is only the `kappa_EW=0` specialization
 - **[SU(3), SU(2)] = 0**: exact from tensor product structure of taste cube
 - **N_c = 3 forced**: from dim(Z³) = 3 spatial axes
 

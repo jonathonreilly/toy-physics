@@ -604,7 +604,7 @@ Runner output logs to
 | Color-projection factor on `y_t`: `sqrt(8/9)`         | DERIVED           |
 | SM 1-loop beta coefficients (b_1, b_2, b_3, beta_yt)  | DERIVED (group theory of derived gauge + matter; `YT_ZERO_IMPORT_CHAIN_NOTE.md`) |
 | SM 2-loop beta coefficients                           | DERIVED (same)    |
-| `g_1(v) = 0.4644`, `g_2(v) = 0.6480` (derived at v)   | DERIVED           |
+| `g_1(v;kappa_EW=0) = 0.4644`, `g_2(v;kappa_EW=0) = 0.6480` (conditional fixed-coefficient EW lane) | CONDITIONAL       |
 | Ward BC at M_Pl: `y_t(M_Pl) = g_s^lat(M_Pl)/sqrt(6)`  | DERIVED           |
 | `F_yt^(1-loop) = 2.1799`                              | DERIVED (this note, from retained inputs) |
 | Structural identity `M = sqrt(u_0) * F_yt * sqrt(8/9)`| DERIVED (this note, algebraic) |

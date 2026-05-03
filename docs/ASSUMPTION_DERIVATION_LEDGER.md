@@ -20,7 +20,7 @@ derived quantitative rows, and still-open companion lanes.
 | CKM neutron EDM | retained corollary + bounded companion | Retained strong-CP closure plus the promoted CKM atlas/axiom package imply `d_n(QCD) = 0` exactly on the retained surface, so the surviving neutron EDM is CKM-only; the bounded `d_n(CKM) ~ 10^-32 - 10^-33 e cm` readout uses the standard short-/long-distance EFT bridge. |
 | hierarchy / `v` theorem | derived | `v = 246.282818290129 GeV` is retained on the hierarchy lane; it is not part of the separate quantitative component stack. |
 | `R_conn = 8/9` color factor | derived | Canonical authority is [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md); it is not a fit knob. |
-| EW normalization package | derived | `sin^2(theta_W)`, `1/alpha_EM`, `g_1(v)`, and `g_2(v)` form a standalone retained EW lane. |
+| EW normalization package | matching-rule conditional | the exact Fierz/channel fraction is retained, but `sin^2(theta_W)`, `1/alpha_EM`, `g_1(v)`, and `g_2(v)` at the physical scale depend on the named readout coefficient `kappa_EW`; the familiar `9/8` correction is the connected-trace specialization `kappa_EW=0`, not an unconditional retained coefficient. |
 | renormalized `y_t` endpoint | derived | `y_t(v) = 0.9176` is a zero-import central value, but it inherits an approximately `3%` QFP/RGE-surrogate systematic. |
 | top pole mass package | derived | `m_t(pole) = 172.57 GeV` (2-loop) and `173.10 GeV` (3-loop) inherit the bounded `y_t` systematic. |
 | Higgs CW/stability package | bounded | the mechanism, `lambda(M_Pl)=0` boundary, and framework-native full 3-loop Higgs implementation now exist; exact `m_H` and vacuum stability remain bounded only because they inherit the bounded `y_t` / QFP route. |

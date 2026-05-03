@@ -1,7 +1,9 @@
 # Zero-Import y_t Derivation: Definitive Authority Note
 
 **Date:** 2026-04-14
-**Status:** DERIVED (zero SM imports)
+**Status:** historical zero-import chain note with EW normalization now
+matching-rule conditional through `kappa_EW`; do not cite the EW `sqrt(9/8)`
+step as an unconditional retained derivation.
 **Script:** `scripts/frontier_yt_zero_import_chain.py`
 
 ---
@@ -37,7 +39,7 @@ Cl(3) on Z^3                                            [AXIOM]
   |
   +--- SAME-SURFACE EVALUATION
   |      <P> = 0.5934      (SU(3) plaquette at beta=6)   [EVALUATED]
-  |      R_conn = 8/9      (connected color trace ratio)  [COMPUTED]
+  |      F_adj = 8/9      (exact Fierz channel fraction)  [RETAINED-BOUNDED]
   |
   +--- INTERMEDIATE QUANTITIES
   |      u_0 = <P>^{1/4} = 0.8776                        [DERIVED]
@@ -45,11 +47,12 @@ Cl(3) on Z^3                                            [AXIOM]
   |      alpha_s(v) = alpha_bare / u_0^2 = 0.1033  (CMT) [DERIVED]
   |      v = M_Pl * (7/8)^{1/4} * alpha_LM^16 = 246.28  [DERIVED]
   |
-  +--- TASTE THRESHOLDS + COLOR PROJECTION
+  +--- TASTE THRESHOLDS + CONDITIONAL COLOR PROJECTION
   |      taste_weight = (7/8)*T_F*(8/9) = 7/18           [DERIVED]
   |      1-loop staircase:  M_Pl -> v  (4 segments)
-  |      color projection:  g_EW(phys) = g_EW(latt) * sqrt(9/8)
-  |      g_1(v) = 0.4644,  g_2(v) = 0.6480               [DERIVED]
+  |      K_EW(kappa_EW) = 1 / (8/9 + kappa_EW/9)
+  |      connected trace:  g_EW(phys) = g_EW(latt) * sqrt(9/8)
+  |      g_1(v) = 0.4644,  g_2(v) = 0.6480               [CONDITIONAL: kappa_EW=0]
   |
   +--- WARD IDENTITY
   |      y_t(M_Pl) = g_lattice / sqrt(6) = 0.4358        [DERIVED]
@@ -78,7 +81,8 @@ Cl(3) on Z^3                                            [AXIOM]
 | N_c = 3                | 3            | AXIOM          | Cl(3) spatial dimension              |
 | M_Pl                   | 1.221e19 GeV | AXIOM          | Framework UV cutoff                  |
 | < P >                  | 0.5934       | EVALUATED      | same-surface plaquette evaluation at beta = 6 |
-| R_conn                 | 8/9          | COMPUTED       | Color trace ratio (MC, 0.24%)        |
+| F_adj                  | 8/9          | RETAINED-BOUNDED | Exact Fierz channel fraction       |
+| K_EW(0)                | 9/8          | CONDITIONAL    | Connected-trace specialization of `kappa_EW` |
 | g_3^2(bare)            | 1            | DERIVED        | Z_3 clock-shift algebra              |
 | g_2^2(bare)            | 1/4          | DERIVED        | Z_2 bipartite, d+1 directions       |
 | g_Y^2(bare)            | 1/5          | DERIVED        | Chirality sector, d+2 directions    |
@@ -87,15 +91,17 @@ Cl(3) on Z^3                                            [AXIOM]
 | alpha_s(v)             | 0.1033       | DERIVED        | CMT: alpha_bare / u_0^2              |
 | v                      | 246.28 GeV   | DERIVED        | Hierarchy theorem                    |
 | taste_weight           | 7/18         | DERIVED        | (7/8) * T_F * (8/9)                 |
-| g_1(v)                 | 0.4644       | DERIVED        | Bare + taste + color projection      |
-| g_2(v)                 | 0.6480       | DERIVED        | Bare + taste + color projection      |
+| g_1(v)                 | 0.4644       | CONDITIONAL    | Bare + taste + `K_EW(0)` specialization |
+| g_2(v)                 | 0.6480       | CONDITIONAL    | Bare + taste + `K_EW(0)` specialization |
 | b_1, b_2, b_3          | -41/10, ...  | DERIVED        | Group theory of derived gauge+matter |
 | y_t(M_Pl)              | 0.4358       | DERIVED        | Ward identity: g_latt / sqrt(6)      |
 | y_t(v)                 | 0.9734       | DERIVED        | Backward Ward + 2-loop RGE           |
 | lambda(v)              | 0.1908       | DERIVED        | Full 1-loop CW on lattice BZ         |
 | m_b, m_c thresholds    | 4.18, 1.27   | INFRASTRUCTURE | v -> M_Z running only                |
 
-**No row says IMPORTED or BOUNDED.**  Every v-scale quantity is derived from the axiom plus the canonical same-surface plaquette evaluation.  INFRASTRUCTURE items affect only the v -> M_Z cross-check transfer.
+The EW rows above are now explicitly conditional on `kappa_EW=0`; they are
+not unconditional zero-import retained quantities. INFRASTRUCTURE items affect
+only the v -> M_Z cross-check transfer.
 
 ---
 
@@ -111,7 +117,12 @@ Cl(3) on Z^3                                            [AXIOM]
 
 **QFP Insensitivity.**  The top Yukawa has an infrared quasi-fixed point: y_t(v) is insensitive to the UV boundary condition.  A 10% change in y_t(M_Pl) produces less than 0.5% change in y_t(v).  This makes the prediction robust against higher-order corrections to the Ward identity.
 
-**Color Projection.**  The EW couplings measured on the lattice include a color-averaging factor C_color = (N_c^2 - 1)/N_c^2 = 8/9 from the connected color trace.  Physical EW couplings are g_EW(phys) = g_EW(lattice) * sqrt(N_c^2/(N_c^2-1)) = g_EW(lattice) * sqrt(9/8).  This factor preserves sin^2(theta_W) (universal across EW couplings) and is verified by lattice MC measurement of R_conn = 8/9 to 0.24%.
+**Color Projection.**  The exact Fierz channel fraction is
+`F_adj = (N_c^2 - 1)/N_c^2 = 8/9`. The EW physical readout is now
+parameterized by `K_EW(kappa_EW)=1/(8/9+kappa_EW/9)`. Physical EW couplings
+take the familiar `g_EW(phys)=g_EW(lattice)*sqrt(9/8)` only at
+`kappa_EW=0`; the no-go closure shows that this connected-trace selector is
+not derived from the current retained primitives.
 
 ---
 

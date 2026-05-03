@@ -55,7 +55,7 @@ corollary note alone.
 
 | Input | Authority | Status |
 | --- | --- | --- |
-| `g_2^2 = 1/(d+1)`, `g_Y^2 = 1/(d+2)`, `d=3` | [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) | retained EW normalization lane |
+| `g_2^2 = 1/(d+1)`, `g_Y^2 = 1/(d+2)`, `d=3` | [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) | retained lattice-scale EW bare-normalization identity; not the v-scale `K_EW(kappa_EW)` matching rule |
 | `A^2 = N_pair/N_color = 2/3` | [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) | retained CKM structural identity |
 | below-`W2` source theorem for `A^2 = N_pair/N_color = 2/3` | [`CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md) | retained companion theorem |
 | `N_pair=2`, `N_color=3` | [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | retained CKM structural-counts identity |

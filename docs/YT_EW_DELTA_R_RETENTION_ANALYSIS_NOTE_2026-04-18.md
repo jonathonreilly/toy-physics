@@ -6,7 +6,7 @@ Rep-A/Rep-B methodology to the electroweak gauge couplings `g_1(v)` and
 `g_2(v)`. Produces a framework-native-analog `Δ_R^{EW}` estimate for each
 coupling and propagates it to `sin²θ_W` and `1/α_EM`. Verdict on the
 outcome, explicit comparison to the currently packaged EW precision, and
-statement on whether the EW lane's "retained quantitative" status should
+statement on whether the EW lane's matching-rule conditional status should
 be revised.
 
 **Primary runner:** `scripts/frontier_yt_ew_delta_r_retention.py`
@@ -24,15 +24,17 @@ Rep-A/Rep-B three-channel methodology
 electroweak gauge couplings. It does **not** modify:
 
 - the EW color-projection theorem
-  (`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`), whose DERIVED status for
-  `C_color = 8/9` and whose packaged `g_1(v) = 0.4644`, `g_2(v) = 0.6480`
-  are inherited verbatim;
+  (`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`), whose exact Fierz/channel
+  fraction `F_adj = 8/9` and packaged `g_1(v;kappa_EW=0) = 0.4644`,
+  `g_2(v;kappa_EW=0) = 0.6480` are inherited as a fixed-coefficient
+  specialization;
 - the R_conn derived note (`docs/RCONN_DERIVED_NOTE.md`), whose
   `R_conn = 8/9 + O(1/N_c^4)` 1/N_c derivation is inherited;
-- the retained zero-import chain
+- the zero-import chain
   (`docs/YT_ZERO_IMPORT_CHAIN_NOTE.md`), whose v-scale EW outputs
-  `g_1(v) = 0.4644`, `g_2(v) = 0.6480`, `sin²θ_W = 0.23061`,
-  `1/α_EM(M_Z) = 127.665` are inherited on the current surface;
+  `g_1(v;kappa_EW=0) = 0.4644`, `g_2(v;kappa_EW=0) = 0.6480`,
+  `sin²θ_W = 0.23061`, `1/α_EM(M_Z) = 127.665` are inherited on the
+  fixed connected-trace specialization;
 - the retained YT P1 master assembly theorem
   (`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`),
   whose `Δ_R^{y_t/g_s} = −3.27 %` central is specific to the
@@ -217,8 +219,9 @@ bands that comfortably cover the packaged-observed deviations:
 
 ### Verdict on EW lane status
 
-**Outcome C is the correct classification.** The EW lane's "retained
-quantitative" status is **preserved** but with an important
+**Outcome C is the correct classification.** At fixed EW readout
+coefficient the perturbative matching-band analysis is preserved, but the
+lane is now explicitly **matching-rule conditional** with an important
 refinement:
 
 - The EW lane's 1-loop matching corrections at **literature-cited
@@ -226,18 +229,19 @@ refinement:
   which is comparable to (for g_2) or somewhat smaller than (for
   g_1) the YT P1 Yukawa/strong ratio correction `|Δ_R^{YT}| = 3.8 %`.
   They are **larger than** the current packaged-observed deviations
-  (`0.1 %–0.3 %`), meaning the retained matching band is wider than
+  (`0.1 %–0.3 %`), meaning the fixed-coefficient matching band is wider than
   the current sub-percent precision claim.
 - The EW lane's 1-loop matching corrections are **structurally
   subdominant to the non-perturbative color-projection piece
-  (8/9 → ~5.7 %)**, which is already fully accounted for in the
-  packaged surface via the EW color projection theorem.
-- The EW lane precision therefore carries a **retained matching
+  (8/9 -> ~5.7 %)**, but the physical readout coefficient is now named
+  explicitly as `kappa_EW`.
+- The EW lane precision therefore carries a **conditional matching
   band of ~0.4 %–2.9 % per quantity** that comfortably covers the
   current packaged-observed deviations (`0.1 %–0.3 %`).
 
-**Recommendation.** The EW lane status is `retained quantitative`
-with **retained matching uncertainty**:
+**Recommendation.** The EW lane status is `matching-rule conditional`
+with a named `kappa_EW` readout coefficient and fixed-coefficient matching
+uncertainty:
 
 ```
     g_1(v)            ±  0.4 %  (Δ_R^{g_1}/2 = 0.36 %)
@@ -247,16 +251,16 @@ with **retained matching uncertainty**:
 ```
 
 versus the sub-percent packaged-observed agreement that currently
-stands. This is a **refinement of the retention**, not a downgrade:
-the packaged values remain the best-available framework-native
-predictions, but the sub-percent agreement should be interpreted as
+stands. This is a **refinement of the coefficient boundary**:
+the packaged values remain the best-available connected-trace
+specialization, but the sub-percent agreement should be interpreted as
 a **happy accident** (or, more likely, the retained literature-cited
 BZ analog values **over-estimate** the genuine EW-sector BZ
 integrals — a question that only framework-native EW-sector
 quadrature can resolve).
 
 The packaged sub-percent agreement is **internally consistent** with
-the retained matching band; sub-percent precision on EW quantities
+the fixed-coefficient matching band; sub-percent precision on EW quantities
 **below** the retained matching band requires (i) framework-native
 EW-sector 4D BZ quadrature of the relevant vertex and self-energy
 integrals (not performed here; open), or (ii) an independent
@@ -871,14 +875,15 @@ me reconsider.
 
 ### 4.3 Sign reconsideration: the lattice ⊃ MSbar direction
 
-In the retained EW color projection theorem, `g_EW(phys) =
-g_EW(latt) · sqrt(9/8)`, which is a **multiplicative increase** on
-the lattice coupling to get the physical (observed) coupling. If
+In the EW color projection lane after the matching-rule no-go closure,
+`g_EW(phys) = g_EW(latt) · sqrt(9/8)` is the **conditional**
+connected-trace specialization `kappa_EW = 0` of
+`K_EW(kappa_EW)=1/(8/9+kappa_EW/9)`. If
 the 1-loop matching **adds** to this increase, then the matched
 `g_EW` is even larger than the color-projected value.
 
 But the packaged `g_1(v) = 0.4644` and `g_2(v) = 0.6480` are
-**already** the color-projected values (after the 9/8 correction).
+**already** the `kappa_EW = 0` color-projected values.
 The question is whether an additional 1-loop MSbar matching shifts
 them **up** or **down** relative to observed.
 
@@ -908,13 +913,14 @@ MSbar-matched quantities, not the raw lattice-surface values. The
 framework chain
 
 ```
-    g_bare → taste staircase → 9/8 color projection → g_i(v)
+    g_bare -> taste staircase -> K_EW(kappa_EW) readout
+           -> fixed specialization K_EW(0)=9/8 -> g_i(v)
 ```
 
-ends with `g_i(v) = g_i^{MSbar}(v)` on the packaged surface (where
-the 9/8 color projection absorbs the dominant non-perturbative
-matching, and the residual 1-loop perturbative matching is **not**
-separately applied).
+ends with `g_i(v) = g_i^{MSbar}(v)` on the packaged `kappa_EW = 0`
+surface (where the connected-trace color projection is the chosen
+non-perturbative matching condition, and the residual 1-loop perturbative
+matching is **not** separately applied).
 
 This is consistent with the reading: the packaged EW precision
 represents the framework prediction **for the observed MSbar
@@ -1042,21 +1048,21 @@ uncertainty on the already-matched value.
 
 ### 5.2 Net assessment
 
-The packaged EW precision claims are **robust** under the YT P1
+The packaged EW precision claims at fixed `kappa_EW=0` are **robust** under the YT P1
 Rep-A/Rep-B methodology application: the 1-loop lattice-to-MSbar
 matching corrections, computed at literature-cited central values
 with 30 % citation uncertainty, produce retained uncertainty bands
-that **comfortably cover** the packaged-observed deviations for all
+that **comfortably cover** the fixed-coefficient packaged-observed deviations for all
 four quantities `g_1, g_2, sin²θ_W, 1/α_EM`.
 
-**The EW lane's "retained quantitative" status survives**, with the
-important refinement that the quantitative precision at the
+**The EW lane's perturbative matching-band analysis survives**, with the
+important refinement that the quantitative precision at fixed `kappa_EW` and the
 literature-cited BZ analog level carries a `~0.4 %–2.9 %` retained
 matching uncertainty per quantity. This is at the same order of
 magnitude as the YT P1 Yukawa/strong ratio correction (`3.8 %`),
 consistent with the shared lattice-to-MSbar matching structure.
-The non-perturbative color-projection correction (`8/9 → ~5.7 %`)
-remains the leading piece of the framework-to-observed matching,
+The non-perturbative color-projection correction (`8/9 -> ~5.7 %`)
+remains the leading piece only after a fixed `kappa_EW` readout is chosen,
 with the perturbative 1-loop matching computed here as a
 subdominant refinement whose current magnitude depends on the
 literature-cited BZ analog values.
@@ -1153,18 +1159,18 @@ This note claims:
 > corrections are comparable in magnitude for g_2 (where n_f^{(2)}
 > = 12 is large) and smaller for g_1 (where the abelian structure
 > removes the C_A channel entirely). Both are **subleading to** the
-> non-perturbative color-projection correction (8/9 → ~5.7 %) that
-> the EW color projection theorem already retains.
+> non-perturbative color-projection correction (`K_EW(0)=9/8` -> ~5.7 %)
+> on the connected-trace specialization of the EW color projection lane.
 >
-> The packaged EW precision claims (g_1(v) = 0.4644, g_2(v) = 0.6480,
+> The packaged EW precision claims at `kappa_EW=0`
+> (g_1(v) = 0.4644, g_2(v) = 0.6480,
 > sin²θ_W(M_Z) = 0.23061, 1/α_EM(M_Z) = 127.665) **survive** the
-> application of the YT P1 methodology: the retained matching
+> application of the YT P1 methodology: the perturbative matching
 > uncertainty bands (±0.4 %, ±1.4 %, ±1.7 %, ±2.9 % respectively)
 > comfortably cover the packaged-observed deviations (+0.09 %,
-> +0.26 %, −0.26 %, −0.22 %) for all four quantities. The EW lane's
-> "retained quantitative" status is preserved, with the refinement
-> that each EW quantity carries a retained ~0.4 %–2.9 % matching
-> uncertainty band at the literature-cited BZ analog level. The
+> +0.26 %, −0.26 %, −0.22 %) for all four quantities. This does not
+> remove the separate `kappa_EW` matching-rule condition; it only scopes
+> the perturbative uncertainty around a fixed coefficient value. The
 > classification is Outcome C (EW-specific structure distinct from
 > Yukawa/strong); see §0 verdict.
 
@@ -1181,7 +1187,7 @@ It does **not** claim:
   1/α_EM(M_Z)` values (under the retained reading (4.4)–(4.5),
   the packaged values ALREADY include the 1-loop matching; Δ_R^{EW}
   is retained as an uncertainty on these values, not a shift);
-- modification of the EW color projection theorem, R_conn derived
+- modification of the EW color projection theorem, Rconn derived
   note, zero-import chain, YT P1 master assembly theorem, or
   full-staggered-PT BZ quadrature note;
 - modification of any publication-surface file.
@@ -1203,9 +1209,10 @@ It does **not** claim:
 - Three-channel color-factor decomposition structure (inherited
   from YT P1 Rep-A/Rep-B).
 - Ward identity `Z_1 = Z_2` for absolute gauge coupling matching.
-- Non-perturbative color-projection factor `C_color = 8/9`
-  (retained from EW color projection theorem).
-- sin²θ_W preservation under C_color (exact group theory).
+- Exact non-perturbative channel fraction `F_adj = 8/9` plus the named
+  EW readout coefficient `kappa_EW`.
+- sin²θ_W preservation under a universal EW coefficient at fixed
+  `kappa_EW` (exact algebra).
 
 ### 8.2 Cited (external, with O(1) uncertainty)
 

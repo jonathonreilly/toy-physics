@@ -314,7 +314,8 @@ sin²(theta_W)|_lattice = A^4 = 4/9   EXACTLY at retained lattice scale.
 This NEW retained identity ties the EW Weinberg angle at lattice scale
 to the Wolfenstein A parameter through two independent retained
 authorities (YT_EW and S1+S2 / W2). It is an INDEPENDENT corroboration
-of the framework's retained EW lane and CKM lane at lattice scale.
+of the framework's retained lattice-scale EW bare-normalization lane and CKM
+lane at lattice scale.
 
 ### S6 auxiliary support reading (NOT load-bearing)
 
@@ -400,7 +401,8 @@ quantities at the lattice scale:
 - `sin²(θ_W)|_lattice = 4/9` from YT_EW retained bare couplings.
 - `A^4 = 4/9` from S1+S2 squared (derived below W2).
 
-The framework's retained EW lane and CKM lane meet at this sharp
+The framework's retained lattice-scale EW bare-normalization lane and CKM
+lane meet at this sharp
 identity at lattice scale.
 
 ### What this does NOT promote

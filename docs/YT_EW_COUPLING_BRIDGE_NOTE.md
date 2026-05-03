@@ -209,8 +209,11 @@ lattice RG / taste-staircase evolution"
    and Ward BC gives the same y_t(v) within the sensitivity budget.
    [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md, 14/14 PASS]
 
-4. **EW Coupling Derivation**: g_1(v) derived (zero imports, +27%).
-   g_2(v) blocked by Landau pole (needs SU(2) non-perturbative matching).
+4. **EW Coupling Boundary**: g_1(v) and g_2(v) are matching-rule
+   conditional at the physical scale because the EW readout coefficient
+   `kappa_EW` is not fixed by the Fierz arithmetic alone. Older zero-import
+   g_1(v) wording is retained only as route history. g_2(v) remains blocked
+   by the SU(2) non-perturbative matching problem in this bridge note.
    lambda(v) bounded via CW (0.034). Both g_2 and lambda are
    subdominant in the y_t beta and do not contaminate the prediction.
    [EW_COUPLING_DERIVATION_NOTE.md]
