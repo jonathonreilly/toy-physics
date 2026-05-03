@@ -1,0 +1,148 @@
+{
+  "actual_current_surface_status": "exact-support / isolated-pole Gram factorization theorem",
+  "assumptions": [
+    "same Hilbert space and same scalar superselection sector",
+    "nondegenerate isolated pole separated from continuum/other poles",
+    "operators have finite nonzero overlap with the pole",
+    "pole residues are extracted at the same pole on the same ensemble/surface"
+  ],
+  "conditional_surface_status": "If a future certificate supplies a nondegenerate isolated scalar pole shared by O_sp and certified O_H, then O_sp-Higgs Gram purity follows.",
+  "exact_next_action": "Use this theorem as the exact support layer for future source-Higgs rows: supply a certified O_H, production same-pole C_ss/C_sH/C_HH residues with nondegenerate pole isolation, then rerun the O_sp-normalized Gram postprocessor and retained-route gate.",
+  "fail_count": 0,
+  "isolated_pole_gram_factorization_theorem_passed": true,
+  "necessary_assumption_counterexample": {
+    "description": "two independent states at the same pole give a positive rank-two residue matrix",
+    "gram_determinant": 1.0,
+    "residue_matrix": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "parent_certificates": {
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "complete_source_spectrum_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_higgs_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The theorem is exact support only; PR #230 still lacks certified O_H, production C_sH/C_HH pole rows, pole isolation, and the retained-route gate.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not supply or define canonical O_H",
+    "does not manufacture C_sH or C_HH pole rows",
+    "does not prove pole isolation, nondegeneracy, FV/IR control, or canonical-Higgs identity",
+    "does not use H_unit, yt_ward_identity, observed top/y_t/W/Z values, alpha_LM, plaquette, or u0"
+  ],
+  "theorem_statement": "For Euclidean two-point functions with a nondegenerate isolated scalar pole and operator overlaps z_i=<0|O_i|phi>, the pole residue matrix factorizes as Res C_ij = z_i z_j.  Therefore every 2x2 Gram determinant at that pole vanishes.  With O_sp = O_s / sqrt(Res C_ss), Delta_spH = Res(C_HH)-Res(C_sp,H)^2 = 0 and |rho_spH|=1.",
+  "witness": {
+    "degenerate_counterexample": {
+      "description": "two independent states at the same pole give a positive rank-two residue matrix",
+      "gram_determinant": 1.0,
+      "residue_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "isolated_non_degenerate_rows": [
+      {
+        "Delta_spH": 0.0,
+        "Dprime_ss_at_pole": 1.0,
+        "Res_C_spH": 0.4,
+        "gram_determinant": 0.0,
+        "residue_matrix": [
+          [
+            1.0,
+            0.4
+          ],
+          [
+            0.4,
+            0.16000000000000003
+          ]
+        ],
+        "rho_spH_abs": 1.0,
+        "z_higgs": 0.4,
+        "z_source": 1.0
+      },
+      {
+        "Delta_spH": 0.0,
+        "Dprime_ss_at_pole": 0.25,
+        "Res_C_spH": -0.8,
+        "gram_determinant": 0.0,
+        "residue_matrix": [
+          [
+            4.0,
+            -1.6
+          ],
+          [
+            -1.6,
+            0.6400000000000001
+          ]
+        ],
+        "rho_spH_abs": 1.0,
+        "z_higgs": -0.8,
+        "z_source": 2.0
+      },
+      {
+        "Delta_spH": -8.881784197001252e-16,
+        "Dprime_ss_at_pole": 8.163265306122451,
+        "Res_C_spH": 1.7000000000000002,
+        "gram_determinant": -5.551115123125783e-17,
+        "residue_matrix": [
+          [
+            0.12249999999999998,
+            0.595
+          ],
+          [
+            0.595,
+            2.8899999999999997
+          ]
+        ],
+        "rho_spH_abs": 1.0000000000000002,
+        "z_higgs": 1.7,
+        "z_source": 0.35
+      }
+    ],
+    "source_rescaling_rows": [
+      {
+        "Delta_spH": 0.0,
+        "Res_C_HH": 0.81,
+        "Res_C_sH": 0.29250000000000004,
+        "Res_C_spH": 0.9,
+        "Res_C_ss": 0.10562500000000001,
+        "source_scale": 0.25
+      },
+      {
+        "Delta_spH": 0.0,
+        "Res_C_HH": 0.81,
+        "Res_C_sH": 1.1700000000000002,
+        "Res_C_spH": 0.9,
+        "Res_C_ss": 1.6900000000000002,
+        "source_scale": 1.0
+      },
+      {
+        "Delta_spH": 0.0,
+        "Res_C_HH": 0.81,
+        "Res_C_sH": 4.680000000000001,
+        "Res_C_spH": 0.9,
+        "Res_C_ss": 27.040000000000003,
+        "source_scale": 4.0
+      }
+    ]
+  }
+}

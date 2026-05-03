@@ -70,6 +70,32 @@ canonical `O_H` with production `C_sH/C_HH` pole rows passing O_sp-Higgs Gram
 purity, or production same-source W/Z mass-response rows with sector-overlap
 and canonical-Higgs identity certificates.  PR #230 remains draft/open.
 
+Latest checkpoint, 2026-05-03 isolated-pole Gram factorization exact support:
+
+- Added `scripts/frontier_yt_isolated_pole_gram_factorization_theorem.py`,
+  `docs/YT_ISOLATED_POLE_GRAM_FACTORIZATION_THEOREM_NOTE_2026-05-03.md`, and
+  `outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json`.
+- The theorem proves the exact spectral factorization support needed by the
+  selected source-Higgs route: for a nondegenerate isolated scalar pole,
+  `Res C_ij = z_i z_j`, so the `2 x 2` pole-residue Gram determinant vanishes.
+  With the existing `O_sp = O_s / sqrt(Res C_ss)` normalization this gives
+  `Delta_spH = Res(C_HH) - Res(C_sp,H)^2 = 0` and `|rho_spH| = 1`.
+- The runner also records the necessary-assumption counterexample: if two
+  independent states are degenerate at the same pole, the residue matrix can
+  be rank two and Gram purity need not follow.
+- Verification: isolated-pole theorem `PASS=12 FAIL=0`; retained-route
+  `PASS=124 FAIL=0`; campaign status `PASS=150 FAIL=0`.
+- This is exact support only.  It does not supply certified `O_H`, production
+  `C_sH/C_HH` pole rows, pole isolation/nondegeneracy/FV/IR control, or the
+  canonical-Higgs identity.  No retained or `proposed_retained` closure is
+  authorized.
+
+Next exact action: use this theorem as the algebraic support layer for the
+source-Higgs route, then supply the missing physics inputs: a same-surface
+canonical `O_H` identity/normalization certificate and production same-pole
+`C_ss/C_sH/C_HH` residues with nondegenerate pole isolation.  The W/Z response
+route remains the fallback physical-observable path.
+
 Latest checkpoint, 2026-05-03 FH/LSZ chunks021-022 v2 multi-tau wave:
 
 - The active PR #230 worker completed chunks021-022 in the sibling worktree

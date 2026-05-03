@@ -108,6 +108,7 @@
     "hs_rpa": "exact negative boundary / HS-RPA contact route open only with new kernel theorem",
     "hunit_canonical_higgs_operator_candidate_gate": "exact negative boundary / H_unit not canonical-Higgs operator realization",
     "interacting_kinetic": "bounded-support / interacting kinetic background sensitivity",
+    "isolated_pole_gram_factorization": "exact-support / isolated-pole Gram factorization theorem",
     "key_blocker": "open / key blocker not closed",
     "kprime_closure": "open / K-prime closure attempt blocked",
     "ladder_input": "exact-support / input audit",
@@ -180,7 +181,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 149,
+  "pass_count": 150,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

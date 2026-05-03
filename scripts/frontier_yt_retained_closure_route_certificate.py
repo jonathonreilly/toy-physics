@@ -123,6 +123,7 @@ def main() -> int:
         "cl3_automorphism_source_identity": "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json",
         "same_source_pole_data_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
         "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+        "isolated_pole_gram_factorization": "outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
@@ -647,6 +648,15 @@ def main() -> int:
         in certificates["source_functional_lsz_identifiability"].get("actual_current_surface_status", "")
         and certificates["source_functional_lsz_identifiability"].get("proposal_allowed") is False
         and certificates["source_functional_lsz_identifiability"].get("theorem_closed") is False
+    )
+    isolated_pole_gram_factorization_support = (
+        "isolated-pole Gram factorization theorem"
+        in certificates["isolated_pole_gram_factorization"].get("actual_current_surface_status", "")
+        and certificates["isolated_pole_gram_factorization"].get("proposal_allowed") is False
+        and certificates["isolated_pole_gram_factorization"].get(
+            "isolated_pole_gram_factorization_theorem_passed"
+        )
+        is True
     )
     complete_source_spectrum_identity_no_go_blocks = (
         "complete source spectrum not canonical-Higgs closure"
@@ -1420,6 +1430,11 @@ def main() -> int:
         "source-functional-lsz-identifiability-blocks-source-only-closure",
         source_functional_lsz_identifiability_blocks,
         certificates["source_functional_lsz_identifiability"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "isolated-pole-gram-factorization-exact-support-not-closure",
+        isolated_pole_gram_factorization_support,
+        certificates["isolated_pole_gram_factorization"].get("actual_current_surface_status", ""),
     )
     report(
         "complete-source-spectrum-identity-no-go-blocks",

@@ -29,6 +29,18 @@ identity certificates.  Generic W/Z slopes without those identity certificates
 are explicitly insufficient.  Continue source-only chunks only as background
 support.
 
+2026-05-03 update: the source-Higgs Gram-purity lane now has exact
+isolated-pole support.  A new theorem proves that at a nondegenerate isolated
+scalar pole the residue matrix factorizes, so once a certified `O_H` and
+same-pole `C_ss/C_sH/C_HH` production residues exist, the future
+`O_sp`-Higgs Gram condition follows without fitting Gram purity.  This improves
+the route quality but does not close the PR: the open blockers are now more
+explicitly `O_H` certification, same-pole cross-correlator rows,
+pole-isolation/nondegeneracy/FV/IR control, and the retained-route gate.  The
+highest-value next action remains deriving or measuring the missing `O_H` /
+`C_sH/C_HH` layer; same-source W/Z response remains the fallback physical
+observable route.
+
 2026-05-03 update: chunks021-022 now extend the v2 FH/LSZ production-support
 set.  Ready L12 coverage is `22/63` chunks and `352/1000` saved
 configurations; v2 multi-tau rows are present for chunks017-022; target ESS

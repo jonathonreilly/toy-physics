@@ -175,6 +175,9 @@ def main() -> int:
         "source_functional_lsz_identifiability": load(
             "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
         ),
+        "isolated_pole_gram_factorization": load(
+            "outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json"
+        ),
         "complete_source_spectrum_identity_no_go": load(
             "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json"
         ),
@@ -750,6 +753,16 @@ def main() -> int:
         "source-functional LSZ identifiability theorem"
         in str(statuses["source_functional_lsz_identifiability"]),
         statuses["source_functional_lsz_identifiability"],
+    )
+    report(
+        "isolated-pole-gram-factorization-exact-support-not-closure",
+        "isolated-pole Gram factorization theorem"
+        in str(statuses["isolated_pole_gram_factorization"])
+        and certificates["isolated_pole_gram_factorization"].get(
+            "isolated_pole_gram_factorization_theorem_passed"
+        )
+        is True,
+        statuses["isolated_pole_gram_factorization"],
     )
     report(
         "complete-source-spectrum-identity-no-go-blocks",
