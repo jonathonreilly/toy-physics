@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:04:50.183668+00:00
+**Generated:** 2026-05-03T16:14:39.372253+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 774 |
+| unaudited | 773 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 27 |
+| ~~audited_numerical_match~~ | 28 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 520 |
 | ~~audited_failed~~ | 8 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 520 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
-| `audited_numerical_match` | 27 |
+| `audited_numerical_match` | 28 |
 | `audited_renaming` | 21 |
-| `unaudited` | 820 |
+| `unaudited` | 819 |
 
 | claim_type | count |
 |---|---:|
@@ -1008,6 +1008,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-agent | D | - |
 | `source_resolved_wavefield_escalation_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
+| `source_resolved_wavefield_v2_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_numerical_proxy | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -12107,6 +12108,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `derivation/justification of detector-line phase-ramp as the promoted physical readout`
   - `current runner-output verification for the note's numeric values`
 - **auditor confidence:** 0.82
+
+### `source_resolved_wavefield_v2_note`
+
+- **Note:** [`SOURCE_RESOLVED_WAVEFIELD_V2_NOTE.md`](../../docs/SOURCE_RESOLVED_WAVEFIELD_V2_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claim that the frozen larger exact-lattice wavefield family establishes a source-strength detector-line phase-ramp law, with exact zero-source reduction, TOWARD sign, and near-linear phase-ramp slope/span scaling on the listed source-strength ladder.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-source-v2-hostile-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note promotes the fitted detector-line phase-ramp slope/span exponents, approximately 1.02 and 1.01 over five configured source strengths, into a retained exact-lattice phase-ramp source-strength law.  _(class `configured_numerical_proxy`)_
+- **chain closes:** False — The runner reproduces the frozen zero-source check, TOWARD sign, table values, and near-unit fitted exponents, but this closes only a configured finite numerical proxy. It does not derive the phase-ramp observable, source law, normalization, or wavefield update as a theorem from independent retained inputs.
+- **rationale:** Issue: The load-bearing theorem step is the promotion of a five-point fitted detector-line phase-ramp proxy on one frozen exact-lattice family into a retained exact-lattice phase-ramp law. Why this blocks: A positive_theorem requires the law to follow from retained inputs, but the available packet only shows configured numerical consistency for selected parameters and readouts; the runner checks the proxy after constructing the wavefield candidate rather than proving the hard bridge. Repair target: Provide an exact derivation that the detector-line phase-ramp slope/span scale with source strength for the stated family, including the observable/readout, normalization, source law, and wavefield update, plus a runner that verifies the derived theorem or fails when the bridge is removed. Claim boundary until fixed: The note may safely claim a frozen-run numerical observation: on the listed parameter family and source-strength ladder, zero-source reduction holds and the computed phase-ramp slope/span fits are close to linear.
+- **open / conditional deps cited:**
+  - `missing retained theorem deriving the detector-line phase-ramp source-strength law from exact-lattice primitives and the finite-speed wavefield construction`
+- **auditor confidence:** 0.84
 
 ### `spectral_closure_2026-04-09`
 
