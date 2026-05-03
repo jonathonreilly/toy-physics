@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:40:52.590034+00:00
+**Generated:** 2026-05-03T01:43:34.075456+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 215 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 470 |
+| unaudited | 469 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 661 |
+| ~~audited_conditional~~ | 662 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,20 +39,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 426 |
-| `audited_conditional` | 661 |
+| `audited_conditional` | 662 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 510 |
+| `unaudited` | 509 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 547 |
+| `bounded_theorem` | 548 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 86 |
+| `open_gate` | 85 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -1133,6 +1133,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_native_record_apparatus_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_nature_grade_push_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_open_item_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
+| `teleportation_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -17011,6 +17012,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The note treats retained-action selection and no-dwell cubic-covariant carrier selection as bridge principles, then combines those hard-coded bridges with finite side 4/6/8/10 sparse-resource evidence, a correlated pulse decoder, and a finite Ising-domain detector proxy to narrow the teleportation blockers.  _(class `D`)_
 - **chain closes:** False — The runner passes its gates, but the load-bearing apparatus and amplitude selections are assumed bridge principles, and the resource, pulse, and detector parts remain finite/proxy evidence rather than retained derivations or material constructions.
 - **rationale:** Issue: The load-bearing retained-action and no-dwell carrier rules are introduced as bridge principles, while the sparse resource, pulse, and detector checks are finite/proxy models. Why this blocks: Passing consistency gates under those assumptions does not derive the audited transducer, amplitude law, asymptotic preparation/cooling, hardware noise spectrum, or irreversible material detector from retained premises. Repair target: Derive the bridge rules from the original axiom or promote them through independently retained theorems, add a rigorous asymptotic preparation/cooling theorem, and replace the pulse/detector proxies with specified hardware/material models or bounded theorems. Claim boundary until fixed: The artifact is citeable as a conditional open-gate/planning attack showing current finite checks and narrowed blockers for state-only teleportation, not as nature-grade closure of teleportation implementation.
+- **auditor confidence:** high
+
+### `teleportation_operator_consistent_end_to_end_note`
+
+- **Note:** [`TELEPORTATION_OPERATOR_CONSISTENT_END_TO_END_NOTE.md`](../../docs/TELEPORTATION_OPERATOR_CONSISTENT_END_TO_END_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite operator-consistent ordinary quantum state teleportation check for selected small Poisson-derived retained taste-qubit resources, using retained-axis logical Z/X for readout, Bell measurement, and correction; excludes matter, mass, charge, energy, object transport, hardware readout, and faster-than-light signaling.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Hume-the-2nd-019deb80-4071-78a3-9d8d-09e17f5c8e0e`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note's finite retained-axis teleportation conclusion depends on imported Poisson resource construction/end-to-end teleportation machinery and the retained-taste operator-model factorization machinery: the runner imports evaluate_case/passes_protocol/probe_states, DEFAULT_CASES/AuditCase resource definitions, and factorization_audit/pair_factorization_audit/operator builders rather than deriving those bridges inside this claim with declared dependencies.  _(class `B`)_
+- **chain closes:** False — The note and runner are internally consistent with the supplied live output, but the scoped check does not close from declared inputs because the runner's decisive resource construction, teleportation-channel evaluation, and operator-factorization guards are imported from undeclared upstream modules/results while this claim declares no dependencies.
+- **rationale:** Issue: The finite end-to-end result is presented with deps=[] even though the primary runner load-bearingly imports the Poisson resource/end-to-end teleportation implementation and the retained taste-readout operator-model implementation. Why this blocks: A hostile audit cannot treat the PASS table as an independent closed theorem from this note and runner alone; the retained-resource and operator-model bridges are upstream premises, not rederived here, and their status is not declared. Repair target: Declare the exact upstream dependency claims for the Poisson resource construction/end-to-end evaluator and retained-axis operator factorization, or inline a self-contained derivation/computation in this runner that removes those imports as scientific premises. Claim boundary until fixed: The note may be cited as a conditional finite numerical/operator-consistency artifact: if the imported Poisson-resource and retained-axis operator-model premises are retained, then the selected 1D and 2D non-null cases pass the stated ideal logical teleportation gates while raw xi_5 controls are rejected in 2D/3D.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
