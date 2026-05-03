@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:00:06.164584+00:00
+**Generated:** 2026-05-03T17:03:45.820536+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 777 |
+| unaudited | 776 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 518 |
+| ~~audited_conditional~~ | 519 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 309 |
-| `audited_conditional` | 518 |
+| `audited_conditional` | 519 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 823 |
+| `unaudited` | 822 |
 
 | claim_type | count |
 |---|---:|
@@ -933,6 +933,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_i_s_revision_verification_note_2026-04-17` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_taste_staircase_transport_note_2026-04-17` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `yt_p2_v_matching_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | fresh_context | codex-fresh | B | `koide_dweh_cyclic_compression_note_2026-04-18` |
@@ -14895,6 +14896,23 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
   - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `scripts/canonical_plaquette_surface.py`
+- **auditor confidence:** high
+
+### `yt_p2_v_matching_theorem_note_2026-04-17`
+
+- **Note:** [`YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited bounded 1-loop numerical consistency of the decomposition M = sqrt(u_0) * F_yt * sqrt(8/9), giving M_1-loop = 1.926029 within 2.400% of the stated target M = 1.9734 under the note's assumed inputs; not an audited derived physical v-matching theorem.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-yt-p2-v-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The 1-loop residual therefore sits exactly on the retained envelope; the 2-loop SM RGE closes the gap by construction (as already carried out on the primary chain, producing y_t(v) = 0.9734 and the corresponding M = 1.9734).  _(class `B`)_
+- **chain closes:** False — The runner computes the 1-loop product and verifies it is within a stated 3% envelope, but it does not derive the physical matching theorem or compute the claimed 2-loop closure. The decisive 2-loop value, QFP envelope, prior M target, and conditional electroweak inputs are cross-note premises, with some described in the source note itself as partial/support/conditional.
+- **rationale:** Issue: The note upgrades a bounded 1-loop consistency check into closure of the v-matching coefficient by importing the target M = 1.9734, the QFP 3%/2.4% tolerance, and the primary-chain 2-loop y_t(v) = 0.9734 rather than deriving them in this claim. Why this blocks: A bounded numerical agreement inside an asserted envelope is not a derived physical matching theorem, and the runner hard-codes the target/2-loop comparator instead of constructing the load-bearing bridge. Repair target: Provide a retained, audited 2-loop F_yt computation from the stated BCs and beta functions, plus retained-grade dependency closure for the taste-staircase M target, QFP envelope/truncation shift, CMT endpoints, color projection, Ward identity, and EW inputs. Claim boundary until fixed: The safe claim is only that the listed 1-loop equations and constants give M_1-loop = 1.926029, 2.400% below the stated target and inside the stated 3% envelope.
+- **open / conditional deps cited:**
+  - `YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_qfp_insensitivity_support_note`
