@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:55:12.502976+00:00
+**Generated:** 2026-05-03T19:58:01.782429+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 181 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 710 |
+| unaudited | 709 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 550 |
+| ~~audited_conditional~~ | 551 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 339 |
-| `audited_conditional` | 550 |
+| `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 756 |
+| `unaudited` | 755 |
 
 | claim_type | count |
 |---|---:|
@@ -468,6 +468,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audit_dm_runner_stale_path_cleanup_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
@@ -1648,6 +1649,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite-dimensional complex Cl(3) irreps split into rho_+ and rho_- 2-dimensional chiralities; the per-site Hilbert dimension 2 conclusion additionally uses the A3 one-Grassmann-pair normalization.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-riemann`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Combining (U2) with A3's staggered-fermion canonical normalisation (one Grassmann pair per site), the per-site Hilbert space has dimension exactly 2.  _(class `B`)_
+- **chain closes:** False — The Cl(3) representation-theory classification closes algebraically and the runner completed with 6/6 PASS. The U4 per-site Hilbert-space conclusion does not close from the cited dependency because docs/MINIMAL_AXIOMS_2026-04-11.md is marked superseded and says the staggered/Grassmann realization/A3 is no longer a current primitive but an open-gate item.
+- **rationale:** Issue: U4 imports A3's one-Grassmann-pair staggered-fermion normalization to identify the abstract 2-dimensional Cl(3) chirality module with the physical per-site Hilbert space. Why this blocks: the sole permitted dependency, docs/MINIMAL_AXIOMS_2026-04-11.md, is explicitly superseded and states that the staggered/Grassmann realization is recategorized out of the current primitive axiom set, so the physical bridge is not retained-grade in the restricted packet. Repair target: cite and audit a retained theorem/open-gate closure deriving the one-Grassmann-pair per-site Hilbert-space bridge from current A_min inputs, or narrow the claim to the algebraic Cl(3) irrep classification only. Claim boundary until fixed: U1-U3 may be treated as an algebraic Cl(3) classification with two 2-dimensional chiral irreps, but U4 remains conditional on the A3/staggered realization bridge.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
 - **auditor confidence:** high
 
 ### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
