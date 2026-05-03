@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:51:15.902382+00:00
+**Generated:** 2026-05-03T02:53:53.347807+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 149 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 218 |
+| **retained_bounded** | 219 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
 | unaudited | 454 |
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 665 |
+| ~~audited_conditional~~ | 664 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 436 |
-| `audited_conditional` | 665 |
+| `audited_clean` | 437 |
+| `audited_conditional` | 664 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 27 |
@@ -143,6 +143,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cpt_exact_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh | C | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
+| `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `cyclic_projector_compression_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -652,7 +653,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | F | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dark_energy_eos_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `decoherence_action_independence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3716,16 +3716,14 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 - **Note:** [`CYCLE_BATTERY_SCALED_NOTE_2026-04-10.md`](../../docs/CYCLE_BATTERY_SCALED_NOTE_2026-04-10.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** This retained sibling freezes the larger-size claim for the same cycle-bearing  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (cycle_battery_note_2026-04-10=bounded), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (cycle_battery_note_2026-04-10=bounded). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `CYCLE_BATTERY_NOTE_2026-04-10.md`
-- **auditor confidence:** high
+- **claim_scope:** The larger-size sibling harness for the retained cycle-bearing graph battery passes the inherited B1-B9 checks for random geometric, growing, and layered cycle graph families through side 12, with force treated as the primary observable and B9 as characterization only.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-mcclintock-3rd-019debc0-eab9-7e42-85c9-8da3000a319d`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The scaled runner reports that all nine family/size cases, spanning random geometric, growing, and layered cycle graphs at side 8, 10, and 12, score 9/9 under the inherited cycle-battery protocol.  _(class `C`)_
+- **chain closes:** True — The one-hop dependency is now retained_bounded and supplies the row semantics and caveats. The provided scaled runner output directly covers the larger side sweep without invoking an external comparator, a hidden physical identification, or a new semantic standard.
+- **rationale:** The scoped bounded claim closes as a retained scaled computation: the base battery semantics are clean, and the scaled runner output reports 9/9 scores for all nine family/size cases. The clean verdict is limited to the stated battery protocol and inherits the base-note caveats: irregular-graph force is a shell-radial proxy, two-sign behavior narrows sign interpretation, and B9 is characterization rather than a gate. This does not establish a full gravity-selection theorem or exact lattice-coordinate force result.
+- **auditor confidence:** medium
 
 ### `cycle_break_frontier_note_2026-04-10`
 
