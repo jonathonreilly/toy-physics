@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T15:40:37.692902+00:00",
+  "generated_at": "2026-05-03T15:41:27.700212+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -1044,6 +1044,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/broken_graph_action_power_robustness.py"
+    },
+    "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_carrier_orbit_invariance.py"
     },
     "causal_cone_speed_map_note": {
       "assert_count": 0,
@@ -2160,6 +2172,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py"
+    },
+    "composite_higgs_mechanism_stretch_attempt_note_2026-05-03": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_composite_higgs_mechanism.py"
     },
     "composite_source_additivity_2d_note": {
       "assert_count": 0,
@@ -19737,6 +19761,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_carrier_orbit_invariance.py": {
+      "assert_count": 1,
+      "claims": [
+        "carrier_orbit_invariance_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -20701,6 +20740,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_composite_higgs_mechanism.py": {
+      "assert_count": 2,
+      "claims": [
+        "composite_higgs_mechanism_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_confinement_string_tension.py": {
@@ -37402,12 +37456,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 549,
-      "D": 206,
+      "C": 550,
+      "D": 207,
       "none": 418
     },
-    "runners_classified": 1343,
-    "runners_with_C": 655,
-    "runners_with_D": 333
+    "runners_classified": 1345,
+    "runners_with_C": 656,
+    "runners_with_D": 334
   }
 }

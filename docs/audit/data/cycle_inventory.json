@@ -35,7 +35,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 286,
+      "max_transitive_descendants": 287,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -44,7 +44,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 286
+          "transitive_descendants": 287
         },
         {
           "audit_status": "unaudited",
@@ -53,7 +53,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 286
+          "transitive_descendants": 287
         },
         {
           "audit_status": "unaudited",
@@ -62,7 +62,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 286
+          "transitive_descendants": 287
         },
         {
           "audit_status": "unaudited",
@@ -71,7 +71,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 286
+          "transitive_descendants": 287
         },
         {
           "audit_status": "unaudited",
@@ -80,7 +80,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 286
+          "transitive_descendants": 287
         },
         {
           "audit_status": "unaudited",
@@ -89,7 +89,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 286
+          "transitive_descendants": 287
         },
         {
           "audit_status": "unaudited",
@@ -98,7 +98,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 286
+          "transitive_descendants": 287
         }
       ],
       "requires_lemma_extraction": false
@@ -2579,7 +2579,7 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T15:40:38.654739+00:00",
+  "generated_at": "2026-05-03T15:41:28.675112+00:00",
   "length_counts": {
     "2": 5,
     "3": 18,
@@ -2593,5 +2593,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T15:40:32.783199+00:00"
+  "source_graph_generated_at": "2026-05-03T15:41:22.063510+00:00"
 }
