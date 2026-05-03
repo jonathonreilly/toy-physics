@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:04:22.171200+00:00
+**Generated:** 2026-05-03T02:07:55.240900+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 463 |
+| unaudited | 462 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 666 |
+| ~~audited_conditional~~ | 667 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 428 |
-| `audited_conditional` | 666 |
+| `audited_conditional` | 667 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 503 |
+| `unaudited` | 502 |
 
 | claim_type | count |
 |---|---:|
@@ -1140,6 +1140,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_record_field_closure_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `teleportation_remaining_blocker_reduction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_remaining_open_item_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
+| `teleportation_retention_theorem_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -17131,6 +17132,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** After tracing cells and spectator taste bits while keeping the last KS taste bit per species, the audited Poisson/CHSH ground states yield deterministic two-qubit logical resources with Bell overlap above 0.90 and high standard teleportation fidelity.  _(class `B`)_
 - **chain closes:** True — Within the stated small-surface numerical scope, the runner sanity-checks the teleportation convention, constructs the traced logical two-qubit resource, and reports Bell overlap, CHSH, negativity, and teleportation fidelity above the note's threshold for both Poisson cases. The note explicitly leaves generalization, preparation/readout, and parameter sensitivity outside this scoped claim.
 - **rationale:** The proper retained object is not an open gate but a bounded numerical theorem over the specified small surfaces and extraction rule. The current runner output matches the note's reported values and separates deterministic traced extraction from postselected diagnostic branches. No one-hop cited authorities are present, and the remaining limitations are future hardening tasks rather than missing premises for the scoped result.
+- **auditor confidence:** high
+
+### `teleportation_retention_theorem_attack_note`
+
+- **Note:** [`TELEPORTATION_RETENTION_THEOREM_ATTACK_NOTE.md`](../../docs/TELEPORTATION_RETENTION_THEOREM_ATTACK_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open-gate planning artifact for ordinary quantum state teleportation: explicit selector-retention decision, finite side-12 sparse-resource table, and dimensionless controller/detector threshold envelopes, with no matter, object, energy, or faster-than-light transport claim.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-tesla-2nd-019deb95-811d-7300-960b-dac021b146bc`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The remaining blockers are now: selector derivation from the bare axiom is closed negatively on audited invariants; signed sparse scaling is supported through side 12 but still needs an all-even-side induction or analytic operator inequality; controller/detector thresholds have local implementation envelopes but still lack fabricated hardware, named material parameters, and measured spectra.  _(class `D`)_
+- **chain closes:** False — The open-gate boundary is stated honestly, but the artifact is not cleanly citeable as a closed bounded gate because the selector-equivalence result, minimal completion sufficiency, and side-12 sparse certificate are asserted or hard-coded rather than derived from retained inputs. The runner also imports the record-apparatus code from an audited_conditional operational dependency.
+- **rationale:** Issue: the note's side-12 certificate and selector-retention metrics are load-bearing, but the runner stores the decisive rows and Boolean closure flags directly; it does not construct the signed sparse operator, recompute the spectrum/Bell floors, or prove minimal completion sufficiency. Why this blocks: a hostile reviewer can reject the bounded open-gate artifact without error because the finite certificate and selector negative result are not independently generated from retained premises, and the controller/detector envelopes rely on a conditional record-apparatus import. Repair target: provide a runner that builds the side-12 signed sparse certificate from the declared operator data, derives the 32-equivalence selector obstruction and the three-clause sufficiency theorem, and either removes or cleanly closes the record-apparatus dependency. Claim boundary until fixed: the note may be cited only as a planning checklist with explicit open obligations and embedded numerical rows, not as a clean audited open gate.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md`
 - **auditor confidence:** high
 
 ### `teleportation_taste_readout_operator_model_note`
