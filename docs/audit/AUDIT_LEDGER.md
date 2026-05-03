@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:04:50.183668+00:00
+**Generated:** 2026-05-03T16:06:17.346262+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 72 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 166 |
+| **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 15 |
+| open_gate | 14 |
 | unaudited | 774 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
@@ -36,7 +36,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 308 |
+| `audited_clean` | 309 |
 | `audited_conditional` | 520 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
@@ -46,11 +46,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 586 |
+| `bounded_theorem` | 588 |
 | `decoration` | 7 |
 | `meta` | 46 |
 | `no_go` | 160 |
-| `open_gate` | 91 |
+| `open_gate` | 90 |
 | `positive_theorem` | 865 |
 
 | criticality | count |
@@ -58,7 +58,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 114 |
 | `high` | 364 |
 | `medium` | 583 |
-| `leaf` | 694 |
+| `leaf` | 695 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 42
@@ -207,7 +207,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_trapping_transport_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
-| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
+| `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -5909,20 +5910,31 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
 - **auditor confidence:** high
 
+### `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03`
+
+- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact bounded implicit-response bridge on finite Wilson evaluation surfaces, with infinite-volume passage conditional on existence of the plaquette limit; no explicit beta_eff(6), P(6), or rho_(p,q)(6) evaluation.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-physics-loop-bridge-implicit-flow-20260503`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Since R_O is a strict bijective local response coordinate on [0,1) and P_Lambda(beta) lies in [0,1), beta_eff,Lambda(beta)=R_O^(-1)(P_Lambda(beta)) exists uniquely and P_Lambda(beta)=R_O(beta_eff,Lambda(beta)).  _(class `A`)_
+- **chain closes:** True — The finite-volume bridge equality follows from compact Haar calculus, strict positivity of the local susceptibility, the finite Wilson plaquette range bound, and the inverse-function theorem. The theorem deliberately does not claim an explicit evaluated plaquette or environment Perron solve.
+- **rationale:** The scoped claim is clean as a bounded structural bridge: it proves existence and uniqueness of the completed response coordinate and the exact finite-volume bridge identity without importing observed plaquette data, fitted beta_eff, or perturbative running. The load-bearing move is an algebraic/analysis closure over the Wilson integral and local response map, not a numerical match. Residual explicit-evaluation work is correctly left out of scope.
+- **auditor confidence:** medium
+
 ### `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02`
 
 - **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Open gate documenting that the observable-level bridge <P>_full = R_O(beta_eff) from the full interacting Wilson plaquette expectation to the completed local one-plaquette response is not derived from A_min and remains a blocker; does not establish that bridge or any positive theorem.
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Historical stretch obstruction packet plus bounded discharge certificate for the observable bridge equality via the implicit-flow theorem; not an independent P(6) evaluation.
 - **audit_status:** ~~audited_clean~~
-- **effective_status:** open_gate  (reason: `audited_open_gate`)
-- **auditor:** `fresh-gauge-scalar-observable-bridge-auditor`  (codex-fresh; independence=fresh_context)
-- **load-bearing step:** The bridge <P>_full = R_O(beta_eff) cannot be derived analytically from A_min alone with the current retained primitives; O1/O2/O3 identify the Schwinger-Dyson, effective-action, and RG obstruction routes.  _(class `B`)_
-- **chain closes:** True — The chain closes for the open-gate scope because the note explicitly documents the missing observable bridge, forbidden imports, and concrete obstruction routes, and the runner verifies that obstruction packet. The chain does not close for any positive theorem asserting <P>_full = R_O(beta_eff).
-- **rationale:** Clean only as an open gate, not as a positive theorem. The source note repeatedly states that the bridge remains open and that exact beta_eff(beta) is not analytically available from A_min; the runner checks obstruction documentation rather than computing the bridge. Residual risk: the phrase non-analytically-derivable should be cited as the documented unresolved bridge from current premises, not as a proved impossibility theorem.
-- **open / conditional deps cited:**
-  - `GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`
-- **auditor confidence:** high
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-physics-loop-bridge-stretch-discharge-20260503`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The added branch-local discharge section cites the implicit-flow theorem and narrows the old obstruction to explicit beta_eff(6), P(6), and rho_(p,q)(6) evaluation rather than the bridge equality.  _(class `A`)_
+- **chain closes:** True — The row no longer claims an open gate: the current source explicitly points to the bounded implicit-flow theorem for the bridge equality and preserves the original O1/O2/O3 obstruction only for closed-form evaluation. It depends on the new bounded theorem and the parent temporal-completion theorem.
+- **rationale:** The old source remains a valid obstruction packet and now explicitly records its bounded positive supersession. The current claim is not that O1/O2/O3 themselves became positive routes; it is that the open bridge row is discharged by the cited implicit-flow theorem while explicit nonperturbative evaluation remains open. This is clean only under that bounded handoff scope.
+- **auditor confidence:** medium
 
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`
 
