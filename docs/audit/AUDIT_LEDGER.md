@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:06:41.914567+00:00
+**Generated:** 2026-05-03T00:09:07.775038+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 501 |
+| unaudited | 500 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 653 |
+| ~~audited_conditional~~ | 654 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 404 |
-| `audited_conditional` | 653 |
+| `audited_conditional` | 654 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 540 |
+| `unaudited` | 539 |
 
 | claim_type | count |
 |---|---:|
@@ -1082,6 +1082,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_wavefield_v2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `spectral_symmetry_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `staggered_backreaction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `staggered_backreaction_shell_spectral_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `staggered_graph_failure_map_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -15969,6 +15970,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `STAGGERED_BACKREACTION_ITERATIVE_NOTE.md`
   - `STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`
   - `STAGGERED_LAYERED_BACKREACTION_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_backreaction_note`
+
+- **Note:** [`STAGGERED_BACKREACTION_NOTE.md`](../../docs/STAGGERED_BACKREACTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical prototype on three listed graph families showing exact zero-source reduction, nonzero solved-field force, TOWARD force sign, machine-precision norm stability, and separation from the external-kernel baseline.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Euler-019deb2a-0e88-7bf1-a15b-1fb789c8d8d9`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** A source-generated Phi on the same graph changes the force response from the zero-source control while preserving TOWARD force sign and norm stability across the three retained graph families.  _(class `C`)_
+- **chain closes:** False — The runner output supports the fixed three-family numerical readout, but the broader required stability under modest lattice-size changes is not demonstrated and the runner has no explicit assertion wrapper.
+- **rationale:** Issue: the note's bounded source-response claims are supported only for the displayed fixed graph instances and runner-computed observables. Why this blocks: there is one n per family, no explicit pass/fail threshold enforcement, and the solved-vs-external force gap remains large rather than closed. Repair target: add asserted acceptance thresholds plus size or graph-family perturbation sweeps. Claim boundary until fixed: this audits as a bounded numerical source-generated Phi prototype, not a self-gravity closure or clean theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_staggered_backreaction_prototype.py`
 - **auditor confidence:** high
 
 ### `staggered_backreaction_results_2026-04-10`
