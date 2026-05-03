@@ -114,6 +114,7 @@ def main() -> int:
         "brst_nielsen_higgs_identity": "outputs/yt_brst_nielsen_higgs_identity_no_go_2026-05-02.json",
         "cl3_automorphism_source_identity": "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json",
         "same_source_pole_data_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
+        "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
@@ -606,6 +607,12 @@ def main() -> int:
         in certificates["same_source_pole_data_sufficiency"].get("actual_current_surface_status", "")
         and certificates["same_source_pole_data_sufficiency"].get("proposal_allowed") is False
         and certificates["same_source_pole_data_sufficiency"].get("gate_passed") is False
+    )
+    source_functional_lsz_identifiability_blocks = (
+        "source-functional LSZ identifiability theorem"
+        in certificates["source_functional_lsz_identifiability"].get("actual_current_surface_status", "")
+        and certificates["source_functional_lsz_identifiability"].get("proposal_allowed") is False
+        and certificates["source_functional_lsz_identifiability"].get("theorem_closed") is False
     )
     complete_source_spectrum_identity_no_go_blocks = (
         "complete source spectrum not canonical-Higgs closure"
@@ -1238,6 +1245,11 @@ def main() -> int:
         "same-source-pole-data-sufficiency-gate-not-passed",
         same_source_pole_data_sufficiency_not_passed,
         certificates["same_source_pole_data_sufficiency"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "source-functional-lsz-identifiability-blocks-source-only-closure",
+        source_functional_lsz_identifiability_blocks,
+        certificates["source_functional_lsz_identifiability"].get("actual_current_surface_status", ""),
     )
     report(
         "complete-source-spectrum-identity-no-go-blocks",

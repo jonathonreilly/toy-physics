@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Source-Functional LSZ Identifiability
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / SOURCE-ONLY CLOSURE BLOCKED
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- same-source LSZ can remove source-coordinate scaling in the invariant
+  `(dE_top/ds) * sqrt(dGamma_ss/dp2)`;
+- source-only pole data still do not identify the measured source pole with
+  the canonical Higgs radial mode used by `v`;
+- orthogonal neutral top coupling is an independent premise, not source
+  functional data;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Neutral Scalar Rank-One Purity Gate
 
 Local review-loop disposition:

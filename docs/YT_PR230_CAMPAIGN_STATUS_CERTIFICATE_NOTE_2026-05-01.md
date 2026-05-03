@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=129 FAIL=0
+# SUMMARY: PASS=134 FAIL=0
 ```
 
 The certificate consumes the PR-local route certificates for:
@@ -435,3 +435,10 @@ and reports `PASS=133 FAIL=0` over 136 certificates.  The queue identifies
 chunks001-010 as target-timeseries reruns required before the current ready
 set can have complete target ESS.  No retained/proposed-retained wording is
 authorized.
+
+Latest source-functional LSZ identifiability checkpoint: campaign status now
+includes `scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py`
+and reports `PASS=134 FAIL=0` over 137 certificates.  Same-source LSZ removes
+the source-coordinate scaling shortcut, but source-only pole data still do not
+identify the canonical Higgs radial mode or exclude orthogonal neutral top
+coupling.  No retained/proposed-retained wording is authorized.

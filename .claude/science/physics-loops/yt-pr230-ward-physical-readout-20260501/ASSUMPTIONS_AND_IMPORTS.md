@@ -483,11 +483,11 @@ A_min =
   + structural counts N_c=3, N_iso=2
 
 Forbidden in A_min =
-  H_unit-to-top matrix-element definition
+  H_unit-to-top matrix-element definition; H_unit matrix-element readout
   yt_ward_identity as y_t authority
   observed top mass / observed y_t as proof selectors
-  alpha_LM / plaquette / u0 as load-bearing normalization
-  reduced cold-gauge pilot values as production evidence
+  alpha_LM / plaquette / u0 as load-bearing normalization; alpha_LM / plaquette / u0 as load-bearing proof input
+  reduced cold pilots as production evidence, including reduced cold-gauge pilot values
   c2 = 1 unless derived from the action in the same route
   Z_match = 1 unless derived as a matching theorem
   kappa_s = 1 unless derived by scalar LSZ/canonical normalization

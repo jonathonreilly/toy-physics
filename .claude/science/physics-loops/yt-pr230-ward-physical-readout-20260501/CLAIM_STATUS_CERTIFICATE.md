@@ -62,6 +62,7 @@ plus source-Higgs Gram purity gate
 plus FH/LSZ chunks009-010 ready-set processing
 plus same-source W/Z response certificate gate
 plus neutral scalar rank-one purity gate
+plus source-functional LSZ identifiability theorem
 **PR:** #230 draft branch
 
 ```yaml
@@ -74,6 +75,24 @@ proposal_allowed_reason: "Open imports remain: scalar projector/source normaliza
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
+
+Source-functional LSZ identifiability theorem:
+
+```text
+actual_current_surface_status: exact negative boundary / source-functional LSZ identifiability theorem
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+Same-source LSZ data can determine the source-pole coupling through
+`(dE_top/ds) * sqrt(dGamma_ss/dp2)` without setting `kappa_s = 1`.  The
+remaining blocker is identifiability: source-only pole data do not determine
+the source-pole overlap with the canonical Higgs radial mode used by `v`, and
+they do not set orthogonal neutral top couplings to zero.  No retained or
+proposed-retained closure is authorized.
 
 Neutral scalar rank-one purity gate:
 

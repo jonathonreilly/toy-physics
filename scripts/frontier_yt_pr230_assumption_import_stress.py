@@ -77,13 +77,18 @@ def main() -> int:
         "source_pole_purity_cross_correlator_gate": load(
             "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json"
         ),
+        "source_functional_lsz_identifiability": load(
+            "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+        ),
     }
 
     required_terms = [
         "H_unit-to-top matrix-element definition",
+        "H_unit matrix-element readout",
         "yt_ward_identity as y_t authority",
         "observed top mass / observed y_t as proof selectors",
         "alpha_LM / plaquette / u0 as load-bearing normalization",
+        "alpha_LM / plaquette / u0 as load-bearing proof input",
         "c2 = 1 unless derived",
         "Z_match = 1 unless derived",
         "kappa_s = 1 unless derived",
@@ -96,6 +101,7 @@ def main() -> int:
         "same-surface PR #230 operator",
         "`O_H`",
         "`H_unit` matrix-element readout",
+        "reduced cold pilots as production evidence",
         "`source_higgs_cross_correlator` guard is claim",
         "`wz_mass_response` guard is claim",
         "Reduced cold-gauge momentum pilots",
@@ -213,6 +219,16 @@ def main() -> int:
         is False,
         certificates["source_pole_purity_cross_correlator_gate"].get("actual_current_surface_status"),
     )
+    report(
+        "source-functional-lsz-rejects-source-only-closure",
+        "source-functional LSZ identifiability theorem"
+        in str(certificates["source_functional_lsz_identifiability"].get("actual_current_surface_status"))
+        and certificates["source_functional_lsz_identifiability"].get("proposal_allowed") is False
+        and certificates["source_functional_lsz_identifiability"].get("theorem_closed") is False
+        and "kappa_s = 1 unless derived by scalar LSZ/canonical normalization"
+        in certificates["source_functional_lsz_identifiability"].get("forbidden_shortcuts_checked", []),
+        certificates["source_functional_lsz_identifiability"].get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -233,6 +249,10 @@ def main() -> int:
             "the same pole-purity and canonical-normalization certificates.  "
             "The source-Higgs absence guard names the missing rows but is not "
             "itself C_sH/C_HH evidence.  "
+            "The source-functional LSZ identifiability theorem keeps the same "
+            "firewall active after granting an isolated source pole: source-only "
+            "LSZ data do not identify the canonical-Higgs overlap or exclude "
+            "orthogonal neutral top coupling.  "
             "Static EW W/Z algebra is not dM_W/ds, "
             "and slope-only W/Z outputs need production mass fits plus sector-"
             "overlap and canonical-Higgs identity certificates.  No current route "
@@ -253,6 +273,7 @@ def main() -> int:
             "does not define y_t through H_unit matrix elements",
             "does not use yt_ward_identity as y_t authority",
             "does not set kappa_s to one without scalar LSZ/canonical normalization",
+            "does not use source-only LSZ data as canonical-Higgs identity",
         ],
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

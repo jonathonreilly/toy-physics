@@ -12,13 +12,14 @@
     "scalar_ir": "exact negative boundary / scalar ladder IR zero-mode obstruction",
     "scalar_renormalization_condition_overlap": "exact negative boundary / scalar renormalization-condition source-overlap no-go",
     "source_contact_term_scheme": "exact negative boundary / scalar source contact-term scheme boundary",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
     "source_higgs_cross_correlator_import": "exact negative boundary / source-Higgs cross-correlator import audit",
     "source_higgs_harness_absence_guard": "bounded-support / source-Higgs harness absence guard",
     "source_pole_purity_cross_correlator_gate": "open / source-pole purity cross-correlator gate not passed"
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 17,
+  "pass_count": 18,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [
@@ -27,7 +28,8 @@
     "does not use observed top mass as calibration",
     "does not define y_t through H_unit matrix elements",
     "does not use yt_ward_identity as y_t authority",
-    "does not set kappa_s to one without scalar LSZ/canonical normalization"
+    "does not set kappa_s to one without scalar LSZ/canonical normalization",
+    "does not use source-only LSZ data as canonical-Higgs identity"
   ],
-  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  Canonical Z_h=1 does not derive the source operator overlap <0|O_s|h>, and source contact-term schemes do not derive the isolated pole residue.  A single finite source-shift radius also does not derive the zero-source Feynman-Hellmann derivative.  A C_sH source-Higgs cross-correlator is not hidden in the current harness or EW/Higgs notes; it remains an open observable/theorem.  Current EW gauge-mass algebra also does not realize a same-surface canonical-Higgs operator O_H or C_HH/C_sH pole residues.  H_unit likewise is not O_H without the same pole-purity and canonical-normalization certificates.  The source-Higgs absence guard names the missing rows but is not itself C_sH/C_HH evidence.  Static EW W/Z algebra is not dM_W/ds, and slope-only W/Z outputs need production mass fits plus sector-overlap and canonical-Higgs identity certificates.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
+  "verdict": "The refreshed PR #230 assumption exercise is explicit: H_unit, yt_ward_identity, observed top/y_t, alpha_LM/plaquette/u0, reduced cold pilots, undetermined c2, undetermined Z_match, and kappa_s = 1 are forbidden as proof shortcuts unless the relevant normalization or matching theorem is derived.  Canonical Z_h=1 does not derive the source operator overlap <0|O_s|h>, and source contact-term schemes do not derive the isolated pole residue.  A single finite source-shift radius also does not derive the zero-source Feynman-Hellmann derivative.  A C_sH source-Higgs cross-correlator is not hidden in the current harness or EW/Higgs notes; it remains an open observable/theorem.  Current EW gauge-mass algebra also does not realize a same-surface canonical-Higgs operator O_H or C_HH/C_sH pole residues.  H_unit likewise is not O_H without the same pole-purity and canonical-normalization certificates.  The source-Higgs absence guard names the missing rows but is not itself C_sH/C_HH evidence.  The source-functional LSZ identifiability theorem keeps the same firewall active after granting an isolated source pole: source-only LSZ data do not identify the canonical-Higgs overlap or exclude orthogonal neutral top coupling.  Static EW W/Z algebra is not dM_W/ds, and slope-only W/Z outputs need production mass fits plus sector-overlap and canonical-Higgs identity certificates.  No current route certificate authorizes retained proposal wording.  Positive closure still requires production evidence plus heavy matching, or an independent scalar pole/LSZ theorem."
 }

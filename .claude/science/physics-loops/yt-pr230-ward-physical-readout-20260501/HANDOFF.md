@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 source-functional LSZ identifiability theorem:
+
+- Added `scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py`,
+  `docs/YT_SOURCE_FUNCTIONAL_LSZ_IDENTIFIABILITY_THEOREM_NOTE_2026-05-03.md`,
+  and `outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json`.
+- Result: same-source LSZ can form the source-coordinate invariant
+  `(dE_top/ds) * sqrt(dGamma_ss/dp2)`, but source-only pole data do not identify
+  the source pole with the canonical Higgs radial mode used by `v` and do not
+  exclude orthogonal neutral top coupling.
+- Assumption/import stress is refreshed to `PASS=18 FAIL=0`; retained-route
+  gate is `PASS=108 FAIL=0`; campaign status is `PASS=134 FAIL=0`.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: implement or derive same-surface `C_sH` / `C_HH` pole
+residue rows, or implement a real production W/Z mass-response observable with
+a sector-overlap certificate.  Source-only LSZ data are insufficient.
+
 Latest checkpoint, 2026-05-02 neutral-scalar rank-one purity gate:
 
 - Added `scripts/frontier_yt_neutral_scalar_rank_one_purity_gate.py`,

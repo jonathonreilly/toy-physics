@@ -26,7 +26,7 @@ route, matching obstruction, and source-overlap renormalization boundary.
 
 ```text
 python3 scripts/frontier_yt_pr230_assumption_import_stress.py
-# SUMMARY: PASS=17 FAIL=0
+# SUMMARY: PASS=18 FAIL=0
 ```
 
 The refreshed `A_min` allows only:
@@ -44,8 +44,9 @@ The stress test explicitly forbids:
 - `H_unit`-to-top matrix-element definition;
 - `yt_ward_identity` as `y_t` authority;
 - observed top mass or observed `y_t` as proof selectors;
-- `alpha_LM`, plaquette, or `u0` as load-bearing normalization;
-- reduced cold-gauge pilot values as production evidence;
+- `alpha_LM`, plaquette, or `u0` as load-bearing normalization or proof input;
+- reduced cold pilots, including cold-gauge pilot values, as production
+  evidence;
 - `c2 = 1` unless derived from the action in the same route;
 - `Z_match = 1` unless derived as a matching theorem.
 - `kappa_s = 1` unless derived by scalar LSZ/canonical normalization.
@@ -74,6 +75,10 @@ The stress test explicitly forbids:
 - slope-only W/Z outputs as proof input unless they come from production W/Z
   mass fits and are paired with sector-overlap plus canonical-Higgs identity
   certificates.
+- source-only LSZ data as canonical-Higgs identity: the source-functional LSZ
+  identifiability theorem still requires `C_sH` / `C_HH`, a canonical `O_H`
+  identity theorem, W/Z response sector overlap, or rank-one neutral-scalar
+  dynamics.
 
 ## Consequence
 
@@ -96,3 +101,4 @@ Positive closure still requires one of:
 - This note does not use `yt_ward_identity` as `y_t` authority.
 - This note does not set `kappa_s = 1` without deriving scalar LSZ/canonical
   normalization.
+- This note does not use source-only LSZ data as a canonical-Higgs identity.

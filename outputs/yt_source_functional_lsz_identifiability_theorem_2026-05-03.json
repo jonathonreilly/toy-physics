@@ -1,0 +1,146 @@
+{
+  "actual_current_surface_status": "exact negative boundary / source-functional LSZ identifiability theorem",
+  "exact_next_action": "Implement or derive same-surface C_sH/C_HH pole-residue rows, or implement a production W/Z mass-response observable with a sector-overlap certificate; source-only LSZ data are insufficient.",
+  "fail_count": 0,
+  "forbidden_shortcuts_checked": [
+    "H_unit matrix-element readout",
+    "yt_ward_identity as authority",
+    "observed top mass / observed y_t as proof selectors",
+    "alpha_LM / plaquette / u0 as load-bearing proof input",
+    "reduced cold pilots as production evidence",
+    "c2 = 1 unless derived",
+    "Z_match = 1 unless derived",
+    "kappa_s = 1 unless derived by scalar LSZ/canonical normalization"
+  ],
+  "general_two_coupling_counterfamily": [
+    {
+      "canonical_higgs_overlap_cos_theta": 0.8,
+      "canonical_higgs_y_t": 1.4374999999999998,
+      "orthogonal_overlap_sin_theta": 0.5999999999999999,
+      "orthogonal_top_coupling_y_chi": -0.4,
+      "same_source_lsz_readout": 0.91
+    },
+    {
+      "canonical_higgs_overlap_cos_theta": 0.8,
+      "canonical_higgs_y_t": 1.1375,
+      "orthogonal_overlap_sin_theta": 0.5999999999999999,
+      "orthogonal_top_coupling_y_chi": 0.0,
+      "same_source_lsz_readout": 0.91
+    },
+    {
+      "canonical_higgs_overlap_cos_theta": 0.8,
+      "canonical_higgs_y_t": 0.8375,
+      "orthogonal_overlap_sin_theta": 0.5999999999999999,
+      "orthogonal_top_coupling_y_chi": 0.4,
+      "same_source_lsz_readout": 0.91
+    }
+  ],
+  "necessary_and_sufficient_extra_data": [
+    "C_sH and C_HH pole residues with Gram purity Res(C_sH)^2 = Res(C_ss) Res(C_HH)",
+    "a same-surface canonical-Higgs operator O_H and source-pole identity theorem",
+    "a W/Z mass-response certificate measuring dM_W/ds or dM_Z/ds plus sector-overlap identity",
+    "a microscopic rank-one neutral-scalar theorem excluding orthogonal source-pole admixture and orthogonal top coupling"
+  ],
+  "orthogonal_overlap_counterfamily": [
+    {
+      "Gram_rho_sH_if_OH_available": 1.0,
+      "Res_CsH_if_OH_available": 1.0,
+      "Res_Css": 1.0,
+      "canonical_higgs_overlap_cos_theta": 1.0,
+      "canonical_y_t_if_orthogonal_top_coupling_zero": 0.91,
+      "dGamma_ss_dp2_at_pole": 1.0,
+      "orthogonal_overlap_sin_theta": 0.0,
+      "same_source_lsz_readout": 0.91
+    },
+    {
+      "Gram_rho_sH_if_OH_available": 0.9,
+      "Res_CsH_if_OH_available": 0.9,
+      "Res_Css": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.9,
+      "canonical_y_t_if_orthogonal_top_coupling_zero": 1.011111111111111,
+      "dGamma_ss_dp2_at_pole": 1.0,
+      "orthogonal_overlap_sin_theta": 0.4358898943540673,
+      "same_source_lsz_readout": 0.91
+    },
+    {
+      "Gram_rho_sH_if_OH_available": 0.75,
+      "Res_CsH_if_OH_available": 0.75,
+      "Res_Css": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.75,
+      "canonical_y_t_if_orthogonal_top_coupling_zero": 1.2133333333333334,
+      "dGamma_ss_dp2_at_pole": 1.0,
+      "orthogonal_overlap_sin_theta": 0.6614378277661477,
+      "same_source_lsz_readout": 0.91
+    },
+    {
+      "Gram_rho_sH_if_OH_available": 0.6,
+      "Res_CsH_if_OH_available": 0.6,
+      "Res_Css": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.6,
+      "canonical_y_t_if_orthogonal_top_coupling_zero": 1.5166666666666668,
+      "dGamma_ss_dp2_at_pole": 1.0,
+      "orthogonal_overlap_sin_theta": 0.8,
+      "same_source_lsz_readout": 0.91
+    }
+  ],
+  "parent_certificates": {
+    "assumption_stress": "outputs/yt_pr230_assumption_import_stress_2026-05-01.json",
+    "same_source_pole_data_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
+    "same_source_wz_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "source_higgs_cross_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "source_reparametrization": "outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The source-functional LSZ theorem identifies the missing overlap; it does not derive it on the current surface.",
+  "same_source_lsz_rescaling_rows": [
+    {
+      "dE_top_ds": 0.038000000000000006,
+      "dGamma_ss_dp2_at_pole": 174.99999999999997,
+      "forbidden_kappa_s_equals_one_readout": 0.038000000000000006,
+      "same_source_lsz_readout": 0.5026927491022722,
+      "source_rescaling_c": 0.2
+    },
+    {
+      "dE_top_ds": 0.095,
+      "dGamma_ss_dp2_at_pole": 28.0,
+      "forbidden_kappa_s_equals_one_readout": 0.095,
+      "same_source_lsz_readout": 0.5026927491022722,
+      "source_rescaling_c": 0.5
+    },
+    {
+      "dE_top_ds": 0.19,
+      "dGamma_ss_dp2_at_pole": 7.0,
+      "forbidden_kappa_s_equals_one_readout": 0.19,
+      "same_source_lsz_readout": 0.5026927491022722,
+      "source_rescaling_c": 1.0
+    },
+    {
+      "dE_top_ds": 0.38,
+      "dGamma_ss_dp2_at_pole": 1.75,
+      "forbidden_kappa_s_equals_one_readout": 0.38,
+      "same_source_lsz_readout": 0.5026927491022722,
+      "source_rescaling_c": 2.0
+    },
+    {
+      "dE_top_ds": 0.95,
+      "dGamma_ss_dp2_at_pole": 0.28,
+      "forbidden_kappa_s_equals_one_readout": 0.95,
+      "same_source_lsz_readout": 0.5026927491022722,
+      "source_rescaling_c": 5.0
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s = 1",
+    "does not identify O_s with canonical H",
+    "does not set cos(theta) = 1",
+    "does not set orthogonal neutral top coupling to zero",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, c2 = 1, Z_match = 1, or reduced pilots as proof input"
+  ],
+  "theorem_closed": false,
+  "verdict": "From the current Cl(3)/Z3 scalar source functional, an isolated source pole plus same-source FH/LSZ data can identify a source-pole coupling through (dE_top/ds)*sqrt(dGamma_ss/dp2). That product is invariant under source-coordinate rescaling, so the blocker is not the forbidden shortcut kappa_s=1.  The blocker is identifiability: source-only pole data do not determine the overlap between the measured source pole and the canonical Higgs radial mode used by v, nor do they set the top coupling of an orthogonal neutral scalar to zero.  Therefore route 1 cannot close from source-functional data alone.  The exact missing data are a same-surface source-Higgs Gram purity measurement/theorem, an equivalent canonical-Higgs source identity, or a real W/Z response certificate that fixes the same sector overlap."
+}

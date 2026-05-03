@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=103 FAIL=0
+# SUMMARY: PASS=108 FAIL=0
 ```
 
 The runner verifies:
@@ -496,6 +496,13 @@ chunks001-010 as the current rerun queue from the autocorrelation/ESS
 certificate and refreshes the retained-route certificate at `PASS=107 FAIL=0`.
 This is scheduling support only and authorizes no retained/proposed-retained
 wording.
+
+The source-functional LSZ identifiability theorem is now included.  It grants
+the route-1 isolated source pole and same-source LSZ readout, then proves the
+source-only subcase still does not identify the source pole with the canonical
+Higgs radial mode or exclude orthogonal neutral top coupling.  The retained
+route certificate is refreshed at `PASS=108 FAIL=0`.  No
+retained/proposed-retained wording is authorized.
 
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive

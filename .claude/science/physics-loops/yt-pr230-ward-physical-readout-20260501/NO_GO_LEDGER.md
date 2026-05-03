@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## Source-functional LSZ data do not identify canonical Higgs overlap
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+Granting an isolated scalar source pole is not enough to close PR #230.
+Same-source LSZ gives a source-coordinate invariant source-pole coupling, but
+source-only `C_ss`, `dGamma_ss/dp2`, and `dE_top/ds` can stay fixed while the
+source-pole overlap with the canonical Higgs radial mode changes.  They also do
+not set orthogonal neutral top couplings to zero.  Closure still needs
+same-surface `C_sH` / `C_HH` Gram purity, a canonical-Higgs source identity
+theorem, a W/Z response sector-overlap certificate, or a rank-one neutral
+scalar theorem.
+
 ## Neutral scalar rank-one purity gate is not passed
 
 Runner:

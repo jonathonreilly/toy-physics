@@ -99,6 +99,17 @@ carrier support does not prove it.  This makes a direct rank-one theorem lower
 probability unless a new substrate argument appears; the better foreground
 routes are still `C_sH`/Gram measurement, W/Z response with identity
 certificates, or continued FH/LSZ production.
+The source-functional LSZ identifiability theorem now closes the route-1
+source-only subcase: granting an isolated source pole and same-source LSZ data
+does not identify the source pole with the canonical Higgs radial mode or
+exclude orthogonal neutral top coupling.  The highest-value foreground
+opportunity is therefore no longer another source-only LSZ algebra check; it is
+one of the non-source-only identity routes: implement/derive same-surface
+`C_sH`/`C_HH` pole residues and Gram purity, implement a real same-source W/Z
+mass-response observable plus sector-overlap certificate, or find a genuinely
+new microscopic rank-one neutral-scalar theorem.  Seed-controlled FH/LSZ
+production remains useful background support but cannot by itself close the
+canonical-Higgs identity gate.
 
 1. **Nonzero-momentum heavy kinetic-mass route.** This bypasses the Ward/H-unit
    readout trap and cancels the static additive mass through `E(p)-E(0)`.

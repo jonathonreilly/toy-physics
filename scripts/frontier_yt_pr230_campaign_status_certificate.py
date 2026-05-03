@@ -164,6 +164,9 @@ def main() -> int:
         "same_source_pole_data_sufficiency": load(
             "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json"
         ),
+        "source_functional_lsz_identifiability": load(
+            "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+        ),
         "complete_source_spectrum_identity_no_go": load(
             "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json"
         ),
@@ -675,6 +678,12 @@ def main() -> int:
         "same-source pole-data sufficiency gate not passed"
         in str(statuses["same_source_pole_data_sufficiency"]),
         statuses["same_source_pole_data_sufficiency"],
+    )
+    report(
+        "source-functional-lsz-identifiability-boundary-loaded",
+        "source-functional LSZ identifiability theorem"
+        in str(statuses["source_functional_lsz_identifiability"]),
+        statuses["source_functional_lsz_identifiability"],
     )
     report(
         "complete-source-spectrum-identity-no-go-blocks",
