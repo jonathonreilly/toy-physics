@@ -52,6 +52,52 @@ dim = 2 (notably the spin-statistics chain) are unaffected; consumers
 that assume "the unique 2-dim Cl(3) irrep" need to be aware of the
 chirality choice.
 
+## Audit-driven repair (2026-05-03 second pass — A3 bridge gate)
+
+The 2026-05-03 fresh-agent-riemann re-audit moved this row from
+`audited_failed` to `audited_conditional` and flagged a remaining
+gap: U4's "one-Grassmann-pair staggered-fermion normalization" used
+to identify the abstract 2-dim Cl(3) chirality module with the
+physical per-site Hilbert space chains through A3, but the current
+canonical axiom set [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+**recategorizes the staggered/Grassmann realization out of the
+primitive axioms** (only A1=Cl(3) and A2=Z³ are retained primitives).
+
+The repair: cite the audited-clean **open-gate** authority for the
+staggered-Dirac realization rather than treat A3 as a primitive
+input.
+
+**Cited authority:**
+[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+— `claim_type = open_gate`, `audit_status = audited_clean` — is the
+retained-grade open-gate authority for the staggered-Dirac/Grassmann
+realization on A1+A2. It explicitly enumerates the closure routes
+that, when one lands as a positive theorem, will provide the
+Grassmann/Fock per-site bridge from primitives.
+
+**Status of U4 under this scoping:**
+- **U2, U3** (the abstract Cl(3) representation classification with
+  chirality split) load-bear on A1 only and remain unconditional.
+- **U4** (per-site Hilbert dim = 2 on the **physical** lattice) is
+  now explicitly **conditional on the staggered-Dirac realization
+  gate**. Until the gate closes (a positive theorem deriving the
+  one-Grassmann-pair Fock structure from A1+A2 alone), U4 is a
+  bounded/conditional statement that "**if** A3 (one Grassmann pair
+  per site) is admitted as the physical-lattice realization, **then**
+  per-site Hilbert dim = 2 follows from U2's chirality-summand
+  dim = 2."
+
+This conditional-on-open-gate status is the honest scope:
+- The chirality-aware U2/U3 algebraic content is solid (A1-only).
+- The physical bridge U4 awaits open-gate closure.
+- Downstream consumers (spin-statistics chain, Pauli exclusion, etc.)
+  inherit this conditional status; they remain `audited_conditional`
+  until the gate closes positively.
+
+The runner still PASS=6/6 on the algebraic content; the open-gate
+dependency does not affect runner-level verification, only the
+publication-facing retention status.
+
 ## Scope
 
 Cycle 1's spin-statistics theorem load-bears on the *finite-
