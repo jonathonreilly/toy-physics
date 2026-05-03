@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:49:10.483765+00:00
+**Generated:** 2026-05-03T15:01:52.815987+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,35 +24,34 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 778 |
+| unaudited | 772 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
-| ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 515 |
-| ~~audited_failed~~ | 7 |
+| ~~audited_renaming~~ | 21 |
+| ~~audited_conditional~~ | 518 |
+| ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 515 |
+| `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
-| `audited_failed` | 51 |
+| `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
-| `audited_renaming` | 19 |
-| `unaudited` | 823 |
+| `audited_renaming` | 21 |
+| `unaudited` | 817 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 585 |
+| `bounded_theorem` | 586 |
 | `decoration` | 7 |
 | `meta` | 45 |
 | `no_go` | 160 |
 | `open_gate` | 89 |
 | `positive_theorem` | 865 |
-| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
@@ -67,7 +66,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 ### Runner classification (static heuristic)
 
 - runners classified: 1343
-- runners with (C) first-principles compute hits: 652
+- runners with (C) first-principles compute hits: 655
 - runners with (D) external comparator hits: 333
 - decoration candidates (no C, no D): 112
 
@@ -743,6 +742,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mirror_vs_central_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `moving_source_retarded_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | configured_proxy_physical_bridge | - |
 | `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -775,6 +775,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_c3_character_holonomy_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unsupported_readout_bridge | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_current_bank_value_selection_nogo_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
@@ -816,6 +817,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
+| `restricted_strong_field_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unratified_physical_bridge_and_definition_as_closure | - |
 | `retardation_discriminator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -945,6 +947,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
+| `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | misidentified_symmetry_and_proxy_runner | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | D | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1028,11 +1031,13 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `monopole_derived_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
+| `oh_static_constraint_lift_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | definition_as_derivation | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_bilinear_tensor_primitive_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
+| `star_supported_bridge_class_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | definition_as_derivation | - |
 | `universal_qg_optional_textbook_comparison_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -1529,6 +1534,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
 - **auditor confidence:** high
+
+### `axiom_first_lattice_noether_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims an axiom-first lattice Noether theorem on A_min, including Z^3 translation momentum conservation, global U(1) fermion-number conservation, and a general lattice Noether current identity.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-hostile-noether-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Step 4 asserts that substituting the Z^3 translation generator into the general current formula yields the staggered momentum density and that M_KS commutes with discrete translation up to staggered phase factors; Step 2 asserts without a full derivation that promoting alpha_x produces the current formula (5).  _(class `misidentified_symmetry_and_proxy_runner`)_
+- **chain closes:** False — The U(1) bilinear phase symmetry is plausibly exhibited, but the full theorem chain does not close for the stated Z^3 translation and general-current claims. The note states pure Z^3 translation conservation, while the runner deliberately checks only two-site shifts to avoid staggered phase modulation and never verifies the claimed momentum current P.
+- **rationale:** Issue: The load-bearing translation step identifies the staggered Kogut-Susskind action as Z^3-translation invariant and derives momentum conservation from that identification, but the runner itself restricts E2 to two-step shifts because one-step shifts encounter staggered phase modulation; it also does not compute the momentum-density divergence in equation (3). The local runner passed E1-E4, but those exhibits are U(1) commutation, two-step translation invariance, an M^{-1} expectation-current divergence, and slice trace equality. Why this blocks: The scoped claim includes Z^3 translation symmetry -> discrete momentum conservation and a general Noether identity, so verifying U(1) commutation plus two-step shift invariance plus M^{-1} current expectations cannot establish the stated theorem. A hostile referee can reject the claimed N1/N3 closure without disputing the runner output. Repair target: State the exact staggered symmetry group, including any required phase/taste transformation, derive its local Noether current from the finite Grassmann action with site-dependent parameters, and add a runner that verifies the actual P-current divergence or the exact symbolic finite-lattice identity for arbitrary on-shell fields. Claim boundary until fixed: The note may safely claim a numerical exhibit of free pure-staggered U(1) phase invariance and two-step translation invariance on small periodic lattices, plus an expectation-value current-divergence check; it may not claim the full A_min lattice Noether theorem or Z^3 momentum conservation as retained.
+- **auditor confidence:** 0.88
 
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
 
@@ -9002,6 +9020,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: The retained shortlist/ranking imports unnamed retained artifacts and an R^2 ~ 0.96 phase-ramp result, then declares the interferometric / waveguide analog the best non-diamond testable without a cited authority set, ranking metric, or runner. Why this blocks: the audit input contains no dependency theorem or computation from which the top-testable conclusion follows, so the candidate retained-grade claim cannot be verified from the allowed source context. Repair target: add explicit audited-retained one-hop citations for each retained connection, define the ranking criteria, and provide a table or runner that recomputes the ordering from those inputs; otherwise demote the note to open brainstorming. Claim boundary until fixed: it is safe to present these as possible non-diamond analog directions and the waveguide phase-ramp as an author-prioritized candidate, but not as an audit-retained best testable grounded in retained science.
 - **auditor confidence:** high
 
+### `moving_source_retarded_portability_note`
+
+- **Note:** [`MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`](../../docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the configured grown row drift=0.2, restore=0.7, seeds=0..5, source_layer=8, strength=5e-5, and imposed layer-wise source law y_src(layer)=y0+v*(layer-source_layer)*h, the runner reports exact zero-source baselines and signed final-layer centroid-y shifts versus the matched v=0 static control.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-retarded-portability-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note treats the imposed layer-dependent source field as a moving-source / retarded-source proxy and infers that nonzero sign-flipping delta_y versus the v=0 static control is a real directional observable on the portable grown row.  _(class `configured_proxy_physical_bridge`)_
+- **chain closes:** False — The numerical chain closes for the runner's configured proxy: current runner output matches the frozen table and shows exact zero-source baselines plus signed centroid-y shifts. It does not close as a bounded theorem about retarded-source portability because the source motion law, readout, and proxy-to-retarded interpretation are configured rather than derived from retained inputs.
+- **rationale:** Issue: The load-bearing retarded-source portability step is not derived; the runner imposes y_src(layer)=y0+v*(layer-source_layer)*h and then verifies a signed centroid-y response for that configured source law. The local runner reproduced the frozen table, including exact zero-source baselines, matched static v=0 control, sign-flipping centroid-y shifts, and small nonzero phase-lag values. Why this blocks: A hostile reviewer can accept the table while rejecting the theorem-level claim that this establishes a retained moving-source/retarded-source bridge, because the physical carrier, source law, and readout are selected as the proxy rather than proved from retained inputs. Repair target: Add a retained theorem deriving the moving/retarded source law and detector centroid-y observable from the framework primitives, or demote the ledger scope to a computational proxy observation with no retarded-source theorem claim. Claim boundary until fixed: The safe statement is that this runner, with these fixed parameters and seeds, reports exact zero baselines and non-static signed centroid-y shifts under an imposed moving-source proxy.
+- **auditor confidence:** 0.82
+
 ### `multipole_tidal_response_note`
 
 - **Note:** [`MULTIPOLE_TIDAL_RESPONSE_NOTE.md`](../../docs/MULTIPOLE_TIDAL_RESPONSE_NOTE.md)
@@ -9411,6 +9442,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `non_Oh_strong_field_closure_missing`
   - `fully_nonlinear_GR_closure_missing`
 - **auditor confidence:** high
+
+### `oh_static_constraint_lift_note`
+
+- **Note:** [`OH_STATIC_CONSTRAINT_LIFT_NOTE.md`](../../docs/OH_STATIC_CONSTRAINT_LIFT_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims that on the exact local O_h source class, the exact shell source and same-charge bridge admit an exact local static conformal constraint lift on the current bridge surface.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-restricted-static-lift-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** After setting psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi, the note defines rho = sigma_R / (2 pi psi^5) and S = 0.5 rho (1/alpha - 1), then concludes that H_0 psi = 2 pi psi^5 rho and H_0 chi = -2 pi alpha psi^5 (rho + 2S) hold identically.  _(class `definition_as_derivation`)_
+- **chain closes:** False — The algebraic residuals close only after rho and S are defined to make the two static constraints true. The note does not derive these matter variables, source law, or 3+1 physical lift independently from retained inputs, and ledger deps=[] leaves the cited shell source and same-charge bridge outside the audited chain.
+- **rationale:** Issue: The load-bearing shell-to-3+1 lift is introduced by defining rho and S from the desired static conformal constraints, while the note's retained dependency list is empty despite relying on the exact shell source and same-charge bridge. The local runner passed all eight checks and reproduced machine-precision residuals, but it uses the same rho/S definitions that make the residual identities true. Why this blocks: A hostile reviewer can accept the residual identities and still reject the advertised positive theorem, because the runner verifies consistency after the bridge variables have been set rather than deriving the physical matter lift from independent retained premises. Repair target: Add retained dependencies for the exact shell source and same-charge bridge, and prove or run a bridge theorem that constructs rho and S as physical 3+1 shell density/stress-trace from those inputs without solving the target constraints by definition. Claim boundary until fixed: The safe claim is an exact algebraic parametrization: given sigma_R, psi, chi, alpha, and the stated definitions of rho and S, the two discrete static conformal residuals vanish on the tested O_h lattice class.
+- **open / conditional deps cited:**
+  - `exact shell source on the sewing band`
+  - `unique same-charge bridge psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi`
+  - `independent physical interpretation theorem for rho and S as 3+1 shell density and stress trace`
+- **auditor confidence:** 0.86
 
 ### `ollivier_einstein_proxy_note_2026-04-11`
 
@@ -9841,6 +9889,25 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md`
   - `UNREGISTERED: retained hw=1 triplet / coordinate-cycle authority`
 - **auditor confidence:** high
+
+### `pmns_c3_nontrivial_current_boundary_note`
+
+- **Note:** [`PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md`](../../docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The PMNS-side remaining sole-axiom source object is exactly one native complex nontrivial C3-character current J_chi, with J_chi(A_fwd)=u+i v and J_chi=0 on the listed retained routes.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-hostile-nature-pmns-c3-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note defines J_chi(A) := (h_0 + omega h_1 + omega^2 h_2)/3 and then asserts that on the reduced graph-first PMNS family A_fwd(u,v,w), J_chi(A_fwd)=chi=u+i v, making this current the exact smallest remaining sole-axiom source object.  _(class `unsupported_readout_bridge`)_
+- **chain closes:** False — The algebraic projection is stated, but the source note does not prove from retained inputs that the h_j are the forced native C3 holonomy readouts for A_fwd, that this projection is the smallest remaining sole-axiom source object, or that the listed retained routes annihilate it.
+- **rationale:** Issue: The load-bearing step identifies the exact remaining PMNS source object with the nontrivial C3-character current J_chi and asserts J_chi(A_fwd)=u+i v plus J_chi=0 on all current sole-axiom retained routes without supplying the retained reduction theorem, holonomy readout construction, or annihilation proof in this no-dependency packet. Why this blocks: A hostile reviewer can accept the displayed definition as a Fourier-style current while still rejecting the theorem-level conclusion that this is the forced smallest remaining sole-axiom source object; that conclusion imports a retained PMNS reduction/readout bridge and route-annihilation facts not established here. Repair target: Add or cite retained theorem dependencies proving the native C3 holonomies h_0,h_1,h_2 for A_fwd, deriving the projection J_chi(A_fwd)=u+i v from those holonomies, proving minimality of one complex current, and proving J_chi=0 on the free, hw=1 source/transfer, and retained scalar routes; ideally add a runner that constructs these values rather than assuming the current. Claim boundary until fixed: The note can safely state a proposed C3-character current definition and the intended boundary target, but not a closed positive theorem that this current is exactly the smallest remaining sole-axiom PMNS source object.
+- **open / conditional deps cited:**
+  - `retained PMNS reduction to the native C3-character family`
+  - `construction of native C3-character holonomies h_0,h_1,h_2 for A_fwd`
+  - `proof that J_chi(A_fwd)=u+i v follows from those holonomies rather than definition/readout choice`
+  - `minimality proof that one complex current is the exact smallest remaining source object`
+  - `annihilation proof J_chi=0 on the free, hw=1 source/transfer, and retained scalar routes`
+- **auditor confidence:** 0.86
 
 ### `pmns_commutant_eigenoperator_selector_note`
 
@@ -10831,6 +10898,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — Within the restricted inputs, the note's operational claims close: the runner script matches the documented bootstrap behavior, the current inspection output supports that the helper is present and importable, and the usage search supports the claim that relevant retained numpy replay lanes call it. The note also explicitly limits its scope to local operational reproducibility and disclaims CI enforcement, scientific promotion, and generalization beyond this host.
 - **rationale:** The support note is internally accurate against the provided runner and inspection output. Its load-bearing operational convention is implemented by the bootstrap helper and reflected in listed script usages. Because the claim boundary is explicitly local, non-scientific, and non-CI-enforced, no hidden premise is needed for the stated support-level claim.
 - **auditor confidence:** high
+
+### `restricted_strong_field_closure_note`
+
+- **Note:** [`RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md`](../../docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact restricted strong-field closure on the exact local O_h star-supported source class, including exact shell source, same-charge bridge, static conformal 3+1 lift, and Schur-complement boundary action.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `restricted-audit-fresh-20260503-alpha`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note asserts the same-charge bridge and local 3+1 lift: psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi, with rho = sigma_R / (2 pi psi^5) and S = 0.5 rho (1/alpha - 1), then concludes these satisfy the static conformal constraints identically and close the strong-field package.  _(class `unratified_physical_bridge_and_definition_as_closure`)_
+- **chain closes:** False — The algebraic identities close only after the bridge fields and matter observables are selected in the note. With no declared dependencies and no runner, the source note does not prove that the same-charge bridge, rho/S readout, shell orbit laws, or Schur boundary action are forced by retained inputs rather than introduced as premises.
+- **rationale:** Issue: The closure package depends on unproved physical identifications: the same-charge bridge psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi, and the definitions of rho and S that make the static conformal equations hold identically. Why this blocks: Those steps are the theorem, not consequences shown from retained inputs in this restricted packet; a hostile reviewer can reject the claimed strong-field closure as a selected bridge/readout plus algebraic consistency check. Repair target: Provide retained theorem-level derivations that construct the unique same-charge bridge, prove the pointwise shell observables as orbit laws, derive rho and S as the physical 3+1 source variables, and derive the Schur-complement boundary action, preferably with a runner that constructs rather than assumes the bridge. Claim boundary until fixed: The note may state a conditional exact algebraic closure for the specified ansatz/source definitions on the local O_h class, but not an audited positive theorem that the restricted strong-field closure is no longer open.
+- **auditor confidence:** 0.87
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
 
@@ -12487,6 +12567,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The runner directly computes the scalar wave field coupled to staggered matter and reproduces the note's hard scores of 4/5, 5/5, 4/5 plus width ratios 1.0047, 1.0019, and 0.9923. The note's bounded conclusion matches the current corrected output.
 - **rationale:** The claim is scoped to a bounded corrected wave-field prototype, not retained universal robustness. Current output confirms W1-W4 on all three families, W6 only on growing, and width response as a diagnostic rather than a gate. Residual risk is limited to the stated lack of universal contraction, full state-family robustness, larger-graph battery, and retarded-field closure.
 - **auditor confidence:** high
+
+### `star_supported_bridge_class_note`
+
+- **Note:** [`STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md`](../../docs/STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For star-supported finite-rank source fields on the current Dirichlet box and R=4 sewing surface, the note claims exact shell support, exact local static conformal bridge constraints, and Schur-boundary stationarity for the full class.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-hostile-bridge-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The load-bearing step is the passage from phi_ext to the claimed bridge matter pair by setting psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi, rho = sigma_R / (2 pi psi^5), and S = 0.5 rho (1/alpha - 1), then treating the resulting static conformal constraints as an exact class theorem.  _(class `definition_as_derivation`)_
+- **chain closes:** False — The note asserts universal closure for any star-supported finite-rank class member, but the retained packet gives no independent derivation of alpha, rho, S, or the physical bridge law; the constraints are made true by definitions, and the runner samples five configured fields rather than proving the universal hard bridge.
+- **rationale:** Issue: The theorem-level bridge step defines alpha, rho, and S so that the displayed local static conformal constraints hold, then advertises that as exact bridge-side closure for the full star-supported finite-rank class. The local runner passed all five sampled checks, but it only samples five configured fields and verifies residual identities after the bridge definitions are installed. Why this blocks: A hostile referee can reject the result as definition-as-derivation: the source/stress variables and same-charge bridge are not independently derived from retained inputs, and the runner only confirms residual identities on five sampled fields after those definitions are installed. Repair target: Provide a retained theorem deriving the bridge variables and source law from independent lattice/physical primitives for arbitrary star-supported finite-rank PSD support operators, plus a runner that proves or symbolically exhausts the class-level step and fails when the bridge definitions are removed. Claim boundary until fixed: The note may safely claim bounded numerical sanity for five random star-supported finite-rank examples and algebraic consistency of the configured bridge definitions on those examples, not an audited positive theorem closing the full source class.
+- **auditor confidence:** 0.86
 
 ### `strc_lo_collinearity_theorem_note_2026-04-19`
 
