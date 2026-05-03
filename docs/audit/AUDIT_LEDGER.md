@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:11:58.019326+00:00
+**Generated:** 2026-05-03T00:14:15.889083+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 143 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 200 |
+| **retained_bounded** | 201 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 499 |
+| unaudited | 498 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 405 |
+| `audited_clean` | 406 |
 | `audited_conditional` | 654 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 538 |
+| `unaudited` | 537 |
 
 | claim_type | count |
 |---|---:|
@@ -455,6 +455,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `staggered_layered_backreaction_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `staggered_self_consistent_two_body_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | C | - |
@@ -16193,6 +16194,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The stress runner has no retained-row failures, but the claim strengthens portability by reusing the baseline graph-depth force/current battery before that battery has a retained derivation as the physical gravity observable on arbitrary non-cubic graphs; additionally, the live gauge magnitudes drift slightly from the frozen table while keeping PASS status. Why this blocks: larger stress families test robustness of a selected probe, but they do not close the missing observable/readout theorem or turn finite-family evidence into audit-clean retained portability. Repair target: first audit-clean the baseline graph force/current observable and thresholds, then make the stress note an asserted holdout battery with exact current output or toleranced assertions. Claim boundary until fixed: safe to claim the current stress runner gives 8/8 retained-row PASS/N/A on the four named stress graph families, with current gauge values about 6.193e-04, 1.861e-03, 1.176e-04, and N/A; not safe to claim clean retained graph-portability closure from this stress run alone.
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_layered_backreaction_note`
+
+- **Note:** [`STAGGERED_LAYERED_BACKREACTION_NOTE.md`](../../docs/STAGGERED_LAYERED_BACKREACTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A bounded numerical bridge: for layered_bipartite_dag_s13_n36 and layered_bipartite_dag_s29_n55 under the stated screened-Poisson point-source runner, the retained observable F=-<dPhi/dd> passes zero-source, source-on, linearity, residual, norm, and robustness checks, while not claiming gauge closure or self-gravity closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Newton-019deb2e-c7d6-74b2-ab93-fe2468cde9ac`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** On the two named layered graph families, solving screened-Poisson Phi on the same graph gives exact zero-source force, TOWARD source-on force, R^2 > 0.99 source-linearity, machine-small residual/norm drift, and robustness 3/3, with gauge closure only N/A/FAIL as caveated.  _(class `C`)_
+- **chain closes:** True — The runner output directly supplies the metrics asserted in the note, and the note's blockers exclude the unresolved gauge/current and fully endogenous density-fed backreaction claims from scope.
+- **rationale:** The audited claim is narrow and matches the runner output: two fixed graph families, a screened-Poisson point-source Phi, and force-based retained metrics. The runner has no assertion wrapper, but it computes and reports the load-bearing quantities, all of which satisfy the thresholds stated in the note. Claim boundary: this does not audit a self-gravity closure, evolving density-fed source sector, larger-family persistence, or gauge/current closure.
 - **auditor confidence:** high
 
 ### `staggered_layered_gauge_engineering_note`
