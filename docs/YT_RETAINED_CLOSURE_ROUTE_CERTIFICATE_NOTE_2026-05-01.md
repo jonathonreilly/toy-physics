@@ -399,6 +399,13 @@ The response-window forensics certificate narrows the next production-support
 step to a predeclared response-window acceptance gate; it is not a replacement
 FH derivative certificate.
 
+The W/Z response measurement-row contract gate now defines the future
+same-source W/Z input rows: production source-shift W/Z correlator mass fits,
+top/WZ covariance, retained `g2` provenance, sector-overlap and
+canonical-Higgs identity certificates, and explicit forbidden-import
+firewalls.  The current W/Z measurement-row file is absent, so the gate is
+schema support only and authorizes no retained wording.
+
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
 Derive from retained dynamics:

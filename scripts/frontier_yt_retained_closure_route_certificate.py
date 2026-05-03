@@ -144,6 +144,7 @@ def main() -> int:
         "same_source_wz_response_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
         "wz_response_harness_absence_guard": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json",
         "wz_response_repo_harness_import_audit": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
+        "wz_response_measurement_row_contract_gate": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "osp_oh_identity_stretch": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
@@ -871,6 +872,17 @@ def main() -> int:
             "exact_negative_boundary_passed"
         )
         is True
+    )
+    wz_response_measurement_row_contract_not_evidence = (
+        "WZ response measurement-row contract gate"
+        in certificates["wz_response_measurement_row_contract_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_response_measurement_row_contract_gate"].get("proposal_allowed") is False
+        and certificates["wz_response_measurement_row_contract_gate"].get(
+            "wz_measurement_row_contract_gate_passed"
+        )
+        is False
     )
     same_source_sector_overlap_identity_blocks = (
         "same-source sector-overlap identity obstruction"
@@ -1656,6 +1668,11 @@ def main() -> int:
         "wz-response-repo-harness-import-audit-blocks-hidden-harness",
         wz_response_repo_harness_import_audit_blocks_hidden_harness,
         certificates["wz_response_repo_harness_import_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-response-measurement-row-contract-not-evidence",
+        wz_response_measurement_row_contract_not_evidence,
+        certificates["wz_response_measurement_row_contract_gate"].get("actual_current_surface_status", ""),
     )
     report(
         "same-source-sector-overlap-identity-blocks",

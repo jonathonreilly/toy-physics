@@ -1,5 +1,23 @@
 # No-Go Ledger
 
+## W/Z response measurement-row contract gate is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_wz_response_measurement_row_contract_gate.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=133 FAIL=0
+```
+
+The W/Z row-contract gate defines future accepted measurement rows, but the
+current production W/Z row file is absent.  Static EW algebra, slope-only
+rows without per-shift correlator mass fits and identity certificates, and
+observed W/Z or observed `g2` selectors are explicitly rejected.  Do not treat
+the row contract, its positive in-memory witness, or the W/Z route manifest as
+retained/proposed-retained evidence.
+
 ## FH/LSZ chunks023-024 v2 multi-tau wave is not closure
 
 Runners:

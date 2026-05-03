@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-03 update: the same-source W/Z physical-response lane now has an
+executable measurement-row contract gate.  Future rows must be production
+source-shift W/Z correlator mass fits with top/WZ covariance, retained `g2`
+provenance, sector-overlap and canonical-Higgs identity certificates, and
+explicit firewalls against observed selectors, `H_unit`, Ward authority,
+`alpha_LM`, plaquette/u0, `c2=1`, `Z_match=1`, and `kappa_s=1`.  The gate
+accepts a positive in-memory witness and rejects static EW algebra,
+slope-only rows, and observed W/Z or observed `g2` selectors.  The current row
+file is absent, so closure remains open.  Highest-value foreground actions are
+now direct: produce contract-satisfying W/Z rows, produce Schur `A/B/C` rows,
+or produce certified `O_H/C_sH/C_HH` pole rows.
+
 2026-05-03 update: the repo-wide W/Z response harness import audit is now
 landed and wired into the retained-route/campaign gates.  It finds no hidden
 same-source W/Z physical-response implementation: the top production harness

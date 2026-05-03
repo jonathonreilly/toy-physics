@@ -236,6 +236,9 @@ def main() -> int:
         "wz_response_repo_harness_import_audit": load(
             "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json"
         ),
+        "wz_response_measurement_row_contract_gate": load(
+            "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json"
+        ),
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
@@ -982,6 +985,16 @@ def main() -> int:
         )
         is True,
         statuses["wz_response_repo_harness_import_audit"],
+    )
+    report(
+        "wz-response-measurement-row-contract-not-evidence",
+        "WZ response measurement-row contract gate"
+        in str(statuses["wz_response_measurement_row_contract_gate"])
+        and certificates["wz_response_measurement_row_contract_gate"].get(
+            "wz_measurement_row_contract_gate_passed"
+        )
+        is False,
+        statuses["wz_response_measurement_row_contract_gate"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

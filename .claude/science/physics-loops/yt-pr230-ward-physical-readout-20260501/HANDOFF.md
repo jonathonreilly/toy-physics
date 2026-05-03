@@ -1,5 +1,31 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 W/Z response measurement-row contract gate:
+
+- Added `scripts/frontier_yt_wz_response_measurement_row_contract_gate.py`,
+  `docs/YT_WZ_RESPONSE_MEASUREMENT_ROW_CONTRACT_GATE_NOTE_2026-05-03.md`,
+  and `outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json`.
+- The gate makes the physical-response bypass input contract executable:
+  future same-source W/Z rows must be production source-shift correlator mass
+  fits with top/WZ covariance, retained `g2` provenance, sector-overlap and
+  canonical-Higgs identity certificates, and explicit forbidden-import
+  firewall flags.
+- The runner validates a positive in-memory row witness and rejects static EW
+  algebra, aggregate slope-only rows without per-source-shift correlator fits
+  and identities, and observed W/Z or observed `g2` selectors.
+- The current row file
+  `outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json` is
+  absent.  W/Z row-contract gate `PASS=10 FAIL=0`; retained-route
+  `PASS=134 FAIL=0`; campaign status `PASS=160 FAIL=0` after integrating the
+  repo-wide W/Z import audit.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: produce production same-source W/Z measurement rows
+satisfying the contract, then rerun the W/Z builder, same-source W/Z gate,
+retained-route certificate, and campaign status certificate.  If W/Z rows
+cannot be produced, pivot back to Schur `A/B/C` rows or certified
+`O_H/C_sH/C_HH` pole rows.
+
 Latest checkpoint, 2026-05-03 W/Z response repo harness import audit:
 
 - Added `scripts/frontier_yt_wz_response_repo_harness_import_audit.py`,

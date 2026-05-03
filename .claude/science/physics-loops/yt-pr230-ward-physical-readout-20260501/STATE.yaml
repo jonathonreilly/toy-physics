@@ -13,11 +13,14 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-186-wz-response-repo-harness-import-audit-after-schur-contract
-blocks_completed: 186
-active_route: "repo-wide W/Z response harness import audit wired after the Schur row contract gate"
-active_hard_residual: "The remote Schur row contract gate is preserved, and the W/Z response repo harness import audit is now an exact negative boundary on top of it. W/Z runner PASS=10 FAIL=0; retained-route PASS=133 FAIL=0; campaign status PASS=159 FAIL=0. No existing repo surface supplies same-source W/Z correlator mass fits, dM_W/ds or dM_Z/ds rows, covariance with dE_top/ds, and sector-overlap/canonical-Higgs identity certificates. Static EW gauge-mass algebra starts after canonical H is supplied, and W/Z manifest/builder/gate artifacts are future-row contracts only. Positive closure still requires real W/Z response rows, Schur A/B/C scalar-kernel rows passing the contract gate, certified O_H/C_sH/C_HH pole rows passing Gram purity, or honest production evidence. No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-187-wz-response-measurement-row-contract-after-import-audit
+blocks_completed: 187
+active_route: "same-source W/Z response measurement-row contract after repo-wide W/Z harness import audit"
+active_hard_residual: "The repo-wide W/Z response harness import audit is preserved and shows no hidden same-source W/Z implementation.  The new W/Z measurement-row contract gate makes the future physical-response input schema executable: production source-shift W/Z correlator mass fits, covariance with dE_top/ds, retained g2 provenance, sector-overlap and canonical-Higgs identity certificates, and forbidden-import firewalls.  The gate rejects static EW algebra, aggregate slope-only rows, and observed W/Z or observed g2 selectors.  The current row file outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json is absent.  W/Z row gate PASS=10 FAIL=0; retained-route PASS=134 FAIL=0; campaign status PASS=160 FAIL=0.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_wz_response_measurement_row_contract_gate.py"
+  - "docs/YT_WZ_RESPONSE_MEASUREMENT_ROW_CONTRACT_GATE_NOTE_2026-05-03.md"
+  - "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json"
   - "scripts/frontier_yt_wz_response_repo_harness_import_audit.py"
   - "docs/YT_WZ_RESPONSE_REPO_HARNESS_IMPORT_AUDIT_NOTE_2026-05-03.md"
   - "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json"
@@ -55,6 +58,7 @@ files_touched:
   - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
   - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"

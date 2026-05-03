@@ -1,5 +1,35 @@
 # Review History
 
+## Review-Loop Backpressure - W/Z Response Measurement-Row Contract Gate
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / ROW CONTRACT ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- future same-source W/Z measurement rows now have an executable contract;
+- static EW algebra, slope-only rows, and observed W/Z or observed `g2`
+  selectors are rejected before builder/gate consumption;
+- the current W/Z measurement-row file is absent, so the current gate is not
+  passed as evidence;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_wz_response_measurement_row_contract_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_wz_response_measurement_row_contract_gate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - W/Z Response Repo Harness Import Audit
 
 Local review-loop disposition:

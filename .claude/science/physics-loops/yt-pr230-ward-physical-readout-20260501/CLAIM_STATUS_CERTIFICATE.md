@@ -1,5 +1,29 @@
 # Claim Status Certificate
 
+W/Z response measurement-row contract gate:
+
+```text
+actual_current_surface_status: bounded-support / WZ response measurement-row contract gate
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_wz_response_measurement_row_contract_gate.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=134 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=160 FAIL=0
+```
+
+The gate defines and tests the future W/Z measurement-row contract but does
+not provide production W/Z rows.  The current surface still lacks
+`outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json`,
+sector-overlap identity, canonical-Higgs identity, and retained-route
+authorization.  It authorizes no response readout switch and no retained or
+`proposed_retained` wording.
+
 W/Z response repo harness import audit:
 
 ```text
