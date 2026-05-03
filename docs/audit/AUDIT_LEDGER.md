@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:35:11.738565+00:00
+**Generated:** 2026-05-03T15:41:00.198029+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 776 |
+| unaudited | 775 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 25 |
+| ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 518 |
 | ~~audited_failed~~ | 7 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
-| `audited_numerical_match` | 25 |
+| `audited_numerical_match` | 26 |
 | `audited_renaming` | 21 |
-| `unaudited` | 821 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
@@ -996,6 +996,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
+| `fourth_family_quadrant_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_numerical_sweep_to_retained_basin | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh | G | - |
@@ -5641,6 +5642,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The live runner recomputes the fixed-lattice F~M exponent, six grown-seed F~M exponents at drift=0.2 and restore=0.7, their mean/spread, and the fixed-grown sigma comparison. The note explicitly excludes geometry-generic transfer, other drift/restore values, and other observables.
 - **rationale:** The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check.
 - **auditor confidence:** high
+
+### `fourth_family_quadrant_note`
+
+- **Note:** [`FOURTH_FAMILY_QUADRANT_NOTE.md`](../../docs/FOURTH_FAMILY_QUADRANT_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims that the quadrant-reflection connectivity rule on the grown slice gives a distinct, narrow retained signed-source basin on the tested drift/seed rows, with zero-source and neutral controls preserved and near-linear charge scaling on passing rows.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fourth-family-fresh-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The load-bearing step is the move from the quick sweep result, especially passing rows: 5/9, to the theorem-language conclusion that the quadrant-reflection family is a genuine new retained basin.  _(class `configured_numerical_sweep_to_retained_basin`)_
+- **chain closes:** False — The runner defines a particular connectivity construction, source placement, propagation/readout, constants, drift grid, seed grid, and pass tolerances, then reports which rows pass. That supports a bounded numerical scout result, but it does not prove the structural bridge from quadrant-reflection connectivity to a retained basin as a positive theorem.
+- **rationale:** Issue: The note promotes a configured numerical scout, summarized as 5/9 passing quick rows, into the retained positive-theorem claim that the quadrant-reflection family is a genuine new retained basin. Why this blocks: A finite drift/seed sweep with fixed source/readout/constants and pass tolerances does not establish the theorem-level bridge that quadrant-reflection connectivity structurally preserves the signed-source response; it only identifies sampled rows that satisfy the runner's configured controls. Repair target: State and prove a bounded theorem specifying the admissible parameter domain, source/readout map, tolerances, and basin criterion, or extend the runner so it verifies that theorem rather than only sampling selected rows. Claim boundary until fixed: The safe claim is that this runner configuration reports a narrow candidate signed-source basin on its sampled rows, with the listed controls, not that the family is retained as a positive theorem.
+- **auditor confidence:** 0.86
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
 
