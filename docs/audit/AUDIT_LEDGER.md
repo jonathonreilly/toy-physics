@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:10:37.766093+00:00
+**Generated:** 2026-05-03T02:14:06.618407+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 461 |
+| unaudited | 460 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 667 |
+| ~~audited_conditional~~ | 668 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 429 |
-| `audited_conditional` | 667 |
+| `audited_conditional` | 668 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 501 |
+| `unaudited` | 500 |
 
 | claim_type | count |
 |---|---:|
@@ -1142,6 +1142,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_remaining_blocker_reduction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_remaining_open_item_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `teleportation_retention_theorem_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
+| `teleportation_unconditional_closure_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -17176,6 +17177,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Within the bounded default survey, the obstruction is not three-register cross-encoding itself; the intended logical protocol passes when the A/R Bell measurement is explicitly adapted to the two Alice-side encodings and Bob's corrections are adapted to Bob's chosen encoding.  _(class `C`)_
 - **chain closes:** True — The source note has no declared dependencies and confines the claim to a finite ideal logical-state survey. The runner independently enumerates the bounded KS encoding supports, constructs the logical Pauli/Bell objects and controls, and reproduces the stated pass/fail boundaries with zero unexpected results.
 - **rationale:** The clean verdict applies only to the open-gate artifact: a bounded finite-survey planning result over ideal encoded taste qubits. The runner does not merely restate the conclusion; it builds the surveyed encodings, logical operators, Bell projectors, teleportation trials, no-signaling metrics, and negative controls, and the current output matches the source note. The note explicitly excludes apparatus dynamics, physical resource preparation, durable records, Hamiltonian transport, noise, matter/object transfer, and faster-than-light signaling, so those missing physical bridges do not block the scoped artifact. Residual risk is limited to the finite sampling boundary: dim 2 side 4, dim 3 side 2, and dim 3 side 4 are capped at 512 triples per geometry rather than exhaustive over all possible triples.
+- **auditor confidence:** high
+
+### `teleportation_unconditional_closure_attack_note`
+
+- **Note:** [`TELEPORTATION_UNCONDITIONAL_CLOSURE_ATTACK_NOTE.md`](../../docs/TELEPORTATION_UNCONDITIONAL_CLOSURE_ATTACK_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open-gate artifact sharpening the teleportation lane blockers: bare one-axiom selector underdetermination, conditional sparse-resource asymptotics, pulse threshold class, thermodynamic detector class, and a state-only non-FTL boundary.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-pascal-2nd-019deb9b-4a03-79f0-8224-3f810cc0a363`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The lane remains planning / conditional theory, not unconditional nature-grade closure.  _(class `B`)_
+- **chain closes:** False — The note honestly preserves the open-gate boundary, but the artifact is not cleanly self-contained: the runner imports the record-code apparatus from an audited_conditional operational dependency, and the sparse-resource and variational-completion premises are explicitly not derived.
+- **rationale:** Issue: the pulse and detector threshold pieces depend on the native record apparatus code path, whose operational note is audited_conditional, while the variational selector and sparse-resource asymptotic floors remain explicit unproved premises. Why this blocks: a clean open_gate verdict would make this bounded theorem-premise artifact citeable as closed on its own scoped terms, but the load-bearing codeword/record input and asymptotic premises do not close from the declared dependency-free note. Repair target: either retain/clean-audit the native record apparatus dependency and add it as an explicit dependency, or restate the pulse/detector parts as conditional on that dependency; separately prove or explicitly parameterize the variational selector and all-even-L gap/Bell floors. Claim boundary until fixed: the note can be cited only as a conditional blocker inventory for ordinary quantum state teleportation, not as a clean open-gate theorem-premise artifact.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md`
 - **auditor confidence:** high
 
 ### `tensor_block_closure_test_note`
