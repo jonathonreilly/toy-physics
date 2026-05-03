@@ -149,6 +149,7 @@ def main() -> int:
         "fh_lsz_finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
         "fh_lsz_target_observable_ess": "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json",
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
+        "fh_lsz_response_window_forensics": "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json",
         "fh_lsz_target_timeseries_replacement_queue": "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json",
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
         "fh_lsz_selected_mass_normal_cache_speedup": "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json",
@@ -888,6 +889,12 @@ def main() -> int:
         in certificates["fh_lsz_autocorrelation_ess_gate"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_autocorrelation_ess_gate"].get("proposal_allowed") is False
     )
+    response_window_forensics_not_closure = (
+        "response-window forensics"
+        in certificates["fh_lsz_response_window_forensics"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_response_window_forensics"].get("proposal_allowed") is False
+        and certificates["fh_lsz_response_window_forensics"].get("readout_switch_authorized") is False
+    )
     target_timeseries_replacement_queue_cert = certificates[
         "fh_lsz_target_timeseries_replacement_queue"
     ]
@@ -1437,6 +1444,11 @@ def main() -> int:
         "fh-lsz-autocorrelation-ess-gate-not-closure",
         autocorrelation_ess_gate_not_closure,
         certificates["fh_lsz_autocorrelation_ess_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-response-window-forensics-not-closure",
+        response_window_forensics_not_closure,
+        certificates["fh_lsz_response_window_forensics"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-target-timeseries-replacement-queue-not-closure",

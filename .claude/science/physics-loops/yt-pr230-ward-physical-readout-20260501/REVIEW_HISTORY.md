@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Response-Window Forensics
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED RESPONSE DIAGNOSTIC / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- fitted `dE/ds` central values remain unstable across chunks001-016;
+- the tau=1 target diagnostic is stable across the same chunks;
+- the result localizes the production-support blocker to response-window or
+  readout selection;
+- no production readout switch is authorized without a predeclared acceptance
+  gate;
+- scalar-pole/FV/IR/model-class and canonical-Higgs identity gates remain
+  open, and no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_response_window_forensics.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Target-Observable ESS Support
 
 Local review-loop disposition:

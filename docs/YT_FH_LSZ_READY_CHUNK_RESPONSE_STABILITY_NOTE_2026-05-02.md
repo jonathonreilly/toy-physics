@@ -43,6 +43,14 @@ The fitted slope uncertainties are also too large for production-grade
 response use at this stage.  This is expected for `16/63` L12 chunks and is a
 reason to keep collecting chunks, not a physics closure.
 
+The 2026-05-03 response-window forensics runner separates this from the target
+time-series stability.  The fitted-slope central values have
+`relative_stdev=0.8943920916391181`, while the tau=1 target diagnostic across
+the same chunks has `relative_stdev=0.006010378980783995` and
+`spread_ratio=1.0229374224682368`.  That is useful debugging support, but it
+does not authorize switching the production response readout without a
+predeclared response-window acceptance gate.
+
 ## Claim Boundary
 
 This diagnostic does not authorize retained or proposed-retained wording.  It
@@ -59,4 +67,7 @@ canonical-Higgs source-pole identity before physical `y_t` closure.
 ```bash
 python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
 # SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
 ```

@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-03 update: response-window forensics now shows the tau=1 target
+diagnostic is stable across chunks001-016, but the fitted `dE/ds` response
+surface remains unstable and no readout switch is authorized.  The next
+production-support move is a predeclared FH response-window acceptance gate
+with multiple tau windows, fit windows, source radii, and covariance.  The
+highest retained-positive routes remain non-source-only identity data:
+same-surface `O_H/C_sH/C_HH`, real W/Z response with sector-overlap identity,
+or a theorem excluding the orthogonal neutral top-coupling loophole.
+
 2026-05-03 update: target-observable ESS now passes for the current ready set
 after chunks013-016 completed (`16/63` L12 chunks, `256/1000` saved
 configurations, limiting ESS `210.7849819291294`).  This retires the target

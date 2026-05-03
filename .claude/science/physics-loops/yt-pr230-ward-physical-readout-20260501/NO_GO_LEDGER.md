@@ -1,5 +1,24 @@
 # No-Go Ledger
 
+## FH/LSZ tau1 response-window stability is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=111 FAIL=0
+```
+
+The tau=1 target diagnostic is stable across chunks001-016, while the fitted
+`dE/ds` response surface remains unstable.  This localizes a
+response-window/readout-selection blocker, but it does not authorize replacing
+the production response readout.  A future readout needs a predeclared
+acceptance gate with multiple tau windows, fit windows, source radii, and
+covariance.  Do not treat tau1 stability as retained/proposed-retained
+evidence.
+
 ## FH/LSZ target-observable ESS pass is not closure
 
 Runners:

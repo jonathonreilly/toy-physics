@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=110 FAIL=0
+# SUMMARY: PASS=111 FAIL=0
 ```
 
 ## 2026-05-03 FH/LSZ Production-Support Update
@@ -40,6 +40,13 @@ stability still fails (`relative_stdev=0.8943920916391181`,
 `spread_ratio=5.476535332624479`, `relative_fit_error=8.121324509664896`),
 and no scalar-pole/FV/IR/model-class or canonical-Higgs identity closure is
 available. No retained or `proposed_retained` closure is authorized.
+
+The response-window forensics certificate now explains the current
+response-stability split: the fitted-slope surface is unstable, while the
+tau=1 target diagnostic is stable (`relative_stdev=0.006010378980783995`,
+`spread_ratio=1.0229374224682368`).  This is diagnostic support only; no
+readout switch is authorized without a predeclared response-window acceptance
+gate.
 
 The runner verifies:
 
@@ -79,6 +86,7 @@ The runner verifies:
 | single finite source-shift radius certifies the zero-source FH derivative | no |
 | finite-source-linearity gate is passed for current FH chunks | no |
 | autocorrelation/ESS gate is passed for target FH/LSZ observables | bounded support only; yes for current target ESS, not closure |
+| response-window forensics authorizes a new response readout | no |
 | chunk011 target time series make the ready set production evidence | no |
 | target time-series harness extension is production evidence | no |
 | target time series identify the canonical Higgs radial mode | no |
@@ -260,6 +268,9 @@ fails (`relative_stdev=0.8943920916391181`,
 The selected-mass normal-cache speedup, completed replacement queue, and
 target ESS certificate are performance/processing support only, not retained
 evidence.
+The response-window forensics certificate narrows the next production-support
+step to a predeclared response-window acceptance gate; it is not a replacement
+FH derivative certificate.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 
@@ -525,6 +536,11 @@ target-observable ESS certificate passes with limiting ESS
 `210.7849819291294`.  This retires the current target-ESS blocker only; the
 route remains open because response stability, scalar-pole/FV/IR/model-class,
 and canonical-Higgs identity gates are not closed.
+
+Latest FH/LSZ response-window forensics checkpoint: retained-route is
+refreshed at `PASS=111 FAIL=0`.  The tau=1 target response is stable across
+chunks001-016, but the fitted response surface remains unstable and no
+production readout switch is authorized.
 This is scheduling support only and authorizes no retained/proposed-retained
 wording.
 

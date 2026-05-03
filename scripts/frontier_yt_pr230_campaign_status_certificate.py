@@ -267,6 +267,9 @@ def main() -> int:
         "fh_lsz_autocorrelation_ess_gate": load(
             "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
         ),
+        "fh_lsz_response_window_forensics": load(
+            "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json"
+        ),
         "fh_lsz_target_timeseries_replacement_queue": load(
             "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json"
         ),
@@ -889,6 +892,11 @@ def main() -> int:
         "autocorrelation ESS gate"
         in str(statuses["fh_lsz_autocorrelation_ess_gate"]),
         statuses["fh_lsz_autocorrelation_ess_gate"],
+    )
+    report(
+        "fh-lsz-response-window-forensics-not-closure",
+        "response-window forensics" in str(statuses["fh_lsz_response_window_forensics"]),
+        statuses["fh_lsz_response_window_forensics"],
     )
     report(
         "fh-lsz-target-timeseries-replacement-queue-not-closure",

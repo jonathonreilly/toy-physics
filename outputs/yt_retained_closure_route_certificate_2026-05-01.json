@@ -48,7 +48,7 @@
   ],
   "exact_next_action": "Do not run more small pilot MC for closure.  Either run the strict production physical-response manifest and follow it with pole/LSZ and matching analysis through the FH/LSZ postprocess gate, or derive the microscopic interacting scalar denominator/residue theorem from the retained action, including the canonical-Higgs pole identity, a source-pole mixing exclusion, a same-source sector-overlap identity, or a same-source gauge-mass response observable.  Continue chunked production only with seed-controlled replacement chunks or scheduler handoff; do not treat historical chunk001/chunk002 as independent evidence.  Before treating any finite-shell pole fit as load-bearing, add a model-class/analytic-continuation gate or a theorem excluding shell-vanishing derivative deformations.  If using the eight-mode/eight-noise foreground option, first add a same-source x8/x16 variance calibration with noise-subsample diagnostics.  Before using finite source-shift slopes as FH derivatives, add multiple source radii or a retained analytic response-bound theorem; the current finite-source-linearity gate is not passed. Before treating chunked FH/LSZ as production evidence, also emit target-observable autocorrelation/ESS or blocking/bootstrap certificates.",
   "fail_count": 0,
-  "pass_count": 110,
+  "pass_count": 111,
   "proposal_allowed": false,
   "proposal_allowed_reason": "No route currently satisfies retained-proposal conditions.",
   "required_certificates": {
@@ -111,6 +111,7 @@
     "fh_lsz_production_postprocess_gate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
     "fh_lsz_ready_chunk_response_stability": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
     "fh_lsz_ready_chunk_set_checkpoint": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
+    "fh_lsz_response_window_forensics": "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json",
     "fh_lsz_selected_mass_normal_cache_speedup": "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json",
     "fh_lsz_soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
     "fh_lsz_stieltjes_model_class": "outputs/yt_fh_lsz_stieltjes_model_class_obstruction_2026-05-02.json",

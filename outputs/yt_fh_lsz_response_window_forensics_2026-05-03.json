@@ -1,0 +1,306 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ response-window forensics",
+  "chunk_rows": [
+    {
+      "absolute_fit_tau1_discrepancy": 0.19382992592426462,
+      "chunk_index": 1,
+      "fit_minus_tau1_mean": 0.19382992592426462,
+      "fit_slope_dE_ds_lat": 1.4356354951944574,
+      "fit_slope_dE_ds_lat_err": 24.709859183295674,
+      "fit_tau1_discrepancy_sigma": 0.007844233900368904,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2418055692701928,
+      "tau1_target_slope_stderr": 0.008266010522962424
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 5.371078249048096,
+      "chunk_index": 2,
+      "fit_minus_tau1_mean": 5.371078249048096,
+      "fit_slope_dE_ds_lat": 6.629960999250584,
+      "fit_slope_dE_ds_lat_err": 13.3339880038919,
+      "fit_tau1_discrepancy_sigma": 0.40281100239255924,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2588827502024884,
+      "tau1_target_slope_stderr": 0.008821056674424666
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.1756320203385704,
+      "chunk_index": 3,
+      "fit_minus_tau1_mean": 0.1756320203385704,
+      "fit_slope_dE_ds_lat": 1.4159189031935757,
+      "fit_slope_dE_ds_lat_err": 24.706361382572076,
+      "fit_tau1_discrepancy_sigma": 0.007108777040146296,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk003_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2402868828550053,
+      "tau1_target_slope_stderr": 0.006347578072333727
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 5.5546658333949,
+      "chunk_index": 4,
+      "fit_minus_tau1_mean": 5.5546658333949,
+      "fit_slope_dE_ds_lat": 6.80363930805008,
+      "fit_slope_dE_ds_lat_err": 13.365226263164969,
+      "fit_tau1_discrepancy_sigma": 0.41560575576273057,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk004_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2489734746551808,
+      "tau1_target_slope_stderr": 0.007486163251715207
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.1875478428226951,
+      "chunk_index": 5,
+      "fit_minus_tau1_mean": 0.1875478428226951,
+      "fit_slope_dE_ds_lat": 1.4282013633170878,
+      "fit_slope_dE_ds_lat_err": 24.574854546099253,
+      "fit_tau1_discrepancy_sigma": 0.007631696384931094,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk005_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2406535204943927,
+      "tau1_target_slope_stderr": 0.009570748021538473
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.01097549693241806,
+      "chunk_index": 6,
+      "fit_minus_tau1_mean": 0.01097549693241806,
+      "fit_slope_dE_ds_lat": 1.2423254657958398,
+      "fit_slope_dE_ds_lat_err": 0.08809901421981421,
+      "fit_tau1_discrepancy_sigma": 0.12419773352927371,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk006_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2313499688634217,
+      "tau1_target_slope_stderr": 0.006929964296251898
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.1738134566876619,
+      "chunk_index": 7,
+      "fit_minus_tau1_mean": 0.1738134566876619,
+      "fit_slope_dE_ds_lat": 1.4279585199127138,
+      "fit_slope_dE_ds_lat_err": 24.342121294550754,
+      "fit_tau1_discrepancy_sigma": 0.007140439690914259,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk007_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.254145063225052,
+      "tau1_target_slope_stderr": 0.007214999878368787
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.18094395058740198,
+      "chunk_index": 8,
+      "fit_minus_tau1_mean": 0.18094395058740198,
+      "fit_slope_dE_ds_lat": 1.4358688402488398,
+      "fit_slope_dE_ds_lat_err": 24.603203841209027,
+      "fit_tau1_discrepancy_sigma": 0.007354487017614495,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk008_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2549248896614378,
+      "tau1_target_slope_stderr": 0.0070104441567316374
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.18811445941737936,
+      "chunk_index": 9,
+      "fit_minus_tau1_mean": 0.18811445941737936,
+      "fit_slope_dE_ds_lat": 1.4329511536106778,
+      "fit_slope_dE_ds_lat_err": 24.852886590011767,
+      "fit_tau1_discrepancy_sigma": 0.007569118646917374,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk009_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2448366941932985,
+      "tau1_target_slope_stderr": 0.008913721661364228
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.17591491518230162,
+      "chunk_index": 10,
+      "fit_minus_tau1_mean": 0.17591491518230162,
+      "fit_slope_dE_ds_lat": 1.4266663595777471,
+      "fit_slope_dE_ds_lat_err": 24.824793199508896,
+      "fit_tau1_discrepancy_sigma": 0.007086258716304592,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2507514443954455,
+      "tau1_target_slope_stderr": 0.007482939635149526
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.18033650848133487,
+      "chunk_index": 11,
+      "fit_minus_tau1_mean": 0.18033650848133487,
+      "fit_slope_dE_ds_lat": 1.4274485932311824,
+      "fit_slope_dE_ds_lat_err": 25.05546876805939,
+      "fit_tau1_discrepancy_sigma": 0.007197490721653701,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk011_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2471120847498476,
+      "tau1_target_slope_stderr": 0.005595193355085176
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.1869602232972809,
+      "chunk_index": 12,
+      "fit_minus_tau1_mean": 0.1869602232972809,
+      "fit_slope_dE_ds_lat": 1.4326654432439319,
+      "fit_slope_dE_ds_lat_err": 24.561029520549397,
+      "fit_tau1_discrepancy_sigma": 0.007612067530015562,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk012_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.245705219946651,
+      "tau1_target_slope_stderr": 0.0071761677733527185
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.0054052956672792085,
+      "chunk_index": 13,
+      "fit_minus_tau1_mean": -0.0054052956672792085,
+      "fit_slope_dE_ds_lat": 1.2459279992373107,
+      "fit_slope_dE_ds_lat_err": 0.08204775246988888,
+      "fit_tau1_discrepancy_sigma": 0.0656370759712255,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk013_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2513332949045899,
+      "tau1_target_slope_stderr": 0.007063691089990049
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 5.448359002517208,
+      "chunk_index": 14,
+      "fit_minus_tau1_mean": 5.448359002517208,
+      "fit_slope_dE_ds_lat": 6.6959198043875165,
+      "fit_slope_dE_ds_lat_err": 13.363594635765157,
+      "fit_tau1_discrepancy_sigma": 0.4077015083282398,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk014_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2475608018703086,
+      "tau1_target_slope_stderr": 0.009277042001735012
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.16361517864754305,
+      "chunk_index": 15,
+      "fit_minus_tau1_mean": 0.16361517864754305,
+      "fit_slope_dE_ds_lat": 1.4232091419530353,
+      "fit_slope_dE_ds_lat_err": 24.309459336947416,
+      "fit_tau1_discrepancy_sigma": 0.006730514476040822,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk015_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2595939633054922,
+      "tau1_target_slope_stderr": 0.00878157648445707
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.15917819591118687,
+      "chunk_index": 16,
+      "fit_minus_tau1_mean": 0.15917819591118687,
+      "fit_slope_dE_ds_lat": 1.4136616747562865,
+      "fit_slope_dE_ds_lat_err": 24.419586782287507,
+      "fit_tau1_discrepancy_sigma": 0.006518463543893937,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk016_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2544834788450996,
+      "tau1_target_slope_stderr": 0.008531161504110792
+    }
+  ],
+  "exact_next_action": "Add a predeclared FH response-window acceptance gate that compares multiple effective-mass tau windows, fit windows, and source radii with covariance, then rerun response stability.  In parallel, keep the scalar-pole/FV/IR/model-class and canonical-Higgs identity gates as separate blockers.",
+  "fail_count": 0,
+  "fit_slope_outliers": {
+    "available": true,
+    "mad": 0.0076722261067477815,
+    "median": 1.4280799416149008,
+    "outliers": [
+      {
+        "chunk_index": 2,
+        "robust_z": 457.32082508483,
+        "value": 6.629960999250584
+      },
+      {
+        "chunk_index": 4,
+        "robust_z": 472.5896685280947,
+        "value": 6.80363930805008
+      },
+      {
+        "chunk_index": 6,
+        "robust_z": -16.330513751382,
+        "value": 1.2423254657958398
+      },
+      {
+        "chunk_index": 13,
+        "robust_z": -16.01379878854547,
+        "value": 1.2459279992373107
+      },
+      {
+        "chunk_index": 14,
+        "robust_z": 463.1195611290834,
+        "value": 6.6959198043875165
+      }
+    ]
+  },
+  "fit_slope_summary": {
+    "available": true,
+    "max": 6.80363930805008,
+    "mean": 2.394872441560054,
+    "median": 1.4280799416149008,
+    "min": 1.2423254657958398,
+    "n": 16,
+    "relative_stdev": 0.8943920916391181,
+    "spread_ratio": 5.476535332624479,
+    "stdev": 2.1419549722157787
+  },
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Tau1 target stability does not select a production FH derivative, does not supply scalar pole derivative/FV/IR/model-class control, and does not identify the source pole with the canonical Higgs.",
+  "readout_switch_authorized": false,
+  "ready_chunk_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "response_window_forensics_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not replace the production response readout with tau1 by fiat",
+    "does not set kappa_s = 1",
+    "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0",
+    "does not treat target ESS or response-window stability as canonical-Higgs identity"
+  ],
+  "tau1_target_outliers": {
+    "available": true,
+    "mad": 0.006047132772331154,
+    "median": 1.2482671382627446,
+    "outliers": []
+  },
+  "tau1_target_slope_summary": {
+    "available": true,
+    "max": 1.2595939633054922,
+    "mean": 1.248274943839869,
+    "median": 1.2482671382627446,
+    "min": 1.2313499688634217,
+    "n": 16,
+    "relative_stdev": 0.006010378980783995,
+    "spread_ratio": 1.0229374224682368,
+    "stdev": 0.00750260548469447
+  },
+  "verdict": "The accepted target time series expose a stable tau=1 effective-energy response diagnostic across chunks001-016, while the current fitted dE/ds response-stability surface remains unstable.  This identifies a response-window/readout-selection blocker, not a replacement physical readout.  Switching from the production fit slope to the tau=1 target diagnostic would require a predeclared response-window acceptance gate with covariance, multiple tau windows, source-radius control, and the existing scalar-LSZ/canonical-Higgs gates."
+}

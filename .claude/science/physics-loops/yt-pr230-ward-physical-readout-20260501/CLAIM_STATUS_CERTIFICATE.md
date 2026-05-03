@@ -1,5 +1,28 @@
 # Claim Status Certificate
 
+FH/LSZ response-window forensics:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ response-window forensics
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=111 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=137 FAIL=0
+```
+
+The tau=1 target diagnostic is stable across chunks001-016, but the fitted
+response surface still fails stability and no production readout switch is
+authorized.  This is diagnostic support only; it does not supply scalar-pole
+derivative/FV/IR/model-class control or canonical-Higgs/source-overlap
+identity.  This authorizes no retained or `proposed_retained` wording.
+
 FH/LSZ target-observable ESS support:
 
 ```text

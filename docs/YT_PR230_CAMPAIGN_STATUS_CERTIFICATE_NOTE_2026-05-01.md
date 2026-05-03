@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=136 FAIL=0
+# SUMMARY: PASS=137 FAIL=0
 ```
 
 ## 2026-05-03 FH/LSZ Production-Support Update
@@ -53,6 +53,12 @@ derivative/model-class/FV/IR gates remain open, and the scalar source pole is
 not identified with the canonical Higgs radial mode.  The target-observable
 ESS gate passes as bounded support only.  No retained or `proposed_retained`
 closure is authorized.
+
+The response-window forensics certificate now records that the tau=1 target
+diagnostic is stable across chunks001-016 (`relative_stdev=0.006010378980783995`,
+`spread_ratio=1.0229374224682368`) while the fitted response surface remains
+unstable.  This is a support diagnostic only; it does not authorize replacing
+the production response readout.
 
 The certificate consumes the PR-local route certificates for:
 
@@ -234,6 +240,7 @@ the visible shortcut routes:
 | finite source-shift derivative no-go | one symmetric finite source radius can keep `E(-delta)`, `E(0)`, `E(+delta)`, and the finite slope fixed while changing `dE/ds|_0` |
 | finite-source-linearity gate | current chunks use one nonzero source radius; the three-radius calibration manifest is planning support only and not foreground evidence |
 | autocorrelation/ESS gate | chunks001-016 have target time series and target-observable ESS passes for the current ready set; bounded support only, not closure |
+| response-window forensics | tau=1 target response is stable, but readout switching is not authorized without a predeclared response-window acceptance gate |
 | chunk target time series | bounded support for future ESS processing; not production evidence or Higgs identity |
 | FH/LSZ target time-series harness extension | future chunks now serialize per-configuration source-response and scalar two-point target time series, but the smoke is reduced-scope infrastructure support only |
 | FH/LSZ target time-series Higgs-identity no-go | even perfect source-coordinate target statistics do not identify the source pole with the canonical Higgs radial mode |
@@ -500,3 +507,9 @@ Latest FH/LSZ target-observable ESS checkpoint: campaign status now includes
 replacement queue is empty, and target-observable ESS passes with limiting ESS
 `210.7849819291294`.  This is bounded support only; response stability,
 scalar-pole/FV/IR/model-class, and canonical-Higgs identity gates remain open.
+
+Latest FH/LSZ response-window forensics checkpoint: campaign status now
+includes `scripts/frontier_yt_fh_lsz_response_window_forensics.py` and reports
+`PASS=137 FAIL=0`.  The tau=1 target diagnostic is stable across chunks001-016,
+but the fitted-slope response surface remains unstable and no retained or
+`proposed_retained` wording is authorized.

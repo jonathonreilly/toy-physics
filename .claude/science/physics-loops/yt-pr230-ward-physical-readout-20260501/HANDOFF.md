@@ -1,5 +1,27 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ response-window forensics:
+
+- Added `scripts/frontier_yt_fh_lsz_response_window_forensics.py` and
+  `outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json`.
+- The fitted `dE/ds` response surface still fails stability across
+  chunks001-016 (`relative_stdev=0.8943920916391181`,
+  `spread_ratio=5.476535332624479`).
+- The tau=1 target diagnostic is stable on the same chunks
+  (`relative_stdev=0.006010378980783995`,
+  `spread_ratio=1.0229374224682368`), which localizes the next
+  production-support blocker to response-window/readout selection.
+- No readout switch is authorized.  Tau1 stability is diagnostic support only
+  until a predeclared response-window acceptance gate compares multiple tau
+  windows, fit windows, source radii, and covariance.
+- Retained-route is `PASS=111 FAIL=0`; campaign status is `PASS=137 FAIL=0`.
+  No retained or proposed-retained closure is authorized.
+
+Next exact action: add a response-window acceptance gate, or prioritize
+same-surface `C_sH/C_HH`, a same-surface `O_H` identity theorem, or real W/Z
+response rows with sector-overlap identity.  Keep scalar-pole/FV/IR/model-class
+and canonical-Higgs identity separate blockers.
+
 Latest checkpoint, 2026-05-03 FH/LSZ target-observable ESS support:
 
 - Added `scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py` and
