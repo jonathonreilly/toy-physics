@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:29:01.846627+00:00
+**Generated:** 2026-05-03T00:31:44.199095+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 98 |
 | **retained_bounded** | 203 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 8 |
-| unaudited | 493 |
+| open_gate | 9 |
+| unaudited | 492 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 409 |
+| `audited_clean` | 410 |
 | `audited_conditional` | 655 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 533 |
+| `unaudited` | 532 |
 
 | claim_type | count |
 |---|---:|
@@ -469,6 +469,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
+| `teleportation_3d1_causal_record_channel_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | A | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
@@ -16602,6 +16603,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `bounded_gauge_only_taste_scalar_split_model`
   - `bounded_scalar_only_thermal_cubic_estimate`
+- **auditor confidence:** high
+
+### `teleportation_3d1_causal_record_channel_note`
+
+- **Note:** [`TELEPORTATION_3D1_CAUSAL_RECORD_CHANNEL_NOTE.md`](../../docs/TELEPORTATION_3D1_CAUSAL_RECORD_CHANNEL_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** 3D+1 discrete planning harness for causal classical Bell-record propagation in ordinary qubit teleportation, explicitly bounded to exclude derivation of the Bell record, Bell resource, measurement dynamics, matter transfer, and faster-than-light signaling.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-agent-Nash-019deb3e-2f92-7dc0-a0ad-ca4eafb5fa0e`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The channel schedules and delivers the record inside the configured 3D+1 light cone, while explicitly not deriving the Bell bits, Bell resource, or measurement dynamics.  _(class `A`)_
+- **chain closes:** True — The note closes as an open-gate boundary: the runner verifies local record propagation, delivery timing, exactly-once delivery controls, standard finite-matrix correction behavior, and pre-delivery Bob input-independence. The omitted Bell-record/resource/dynamics derivations are stated as limitations rather than claimed results.
+- **rationale:** Clean only as an open-gate/planning-boundary claim. The runner checks consistency of an explicit classical Bell-record channel on a discrete 3D+1 lattice and the note clearly says the Bell record, Bell resource, and measurement dynamics are supplied rather than derived. No retained physics theorem beyond that bounded channel claim is established or implied.
 - **auditor confidence:** high
 
 ### `teleportation_acceptance_suite_note`
