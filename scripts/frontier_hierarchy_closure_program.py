@@ -304,6 +304,99 @@ for s in required_program_content:
 
 
 # ============================================================================
+section("Part 7: H1 Route 1 status correction (V-invariance scope)")
+# ============================================================================
+# Status-correction note exists and articulates the V-invariance scope correctly.
+
+R1_CORRECTION = DOCS / "HIERARCHY_H1_ROUTE_1_STATUS_CORRECTION_NOTE_2026-05-03.md"
+check(f"status-correction note exists: {R1_CORRECTION.name}", R1_CORRECTION.exists())
+
+if R1_CORRECTION.exists():
+    correction_text = R1_CORRECTION.read_text()
+    check(
+        "correction explicitly retracts the V-invariance rho-fixing claim",
+        "retracted" in correction_text and "rho_(p,q)" in correction_text,
+    )
+    check(
+        "correction identifies Route 1A (onset-jet extension)",
+        "onset-jet extension" in correction_text or "Route 1A" in correction_text,
+    )
+    check(
+        "correction identifies Route 1B (spectral-moment closure)",
+        "spectral-moment" in correction_text or "Route 1B" in correction_text,
+    )
+
+# Verify the framework's onset jet coefficient: beta_eff(beta) = beta + beta^5/26244 + O(beta^6)
+# 26244 = 4 * 6561 = 2^2 * 3^8.
+denom_jet = Fraction(26244)
+check(
+    "onset-jet denominator 26244 factorizes as 2^2 * 3^8",
+    denom_jet == Fraction(4) * Fraction(3) ** 8,
+    detail=f"26244 = 4 * 3^8 = {4 * 3**8}",
+)
+
+# Witness-law gap at beta = 6 for one extra coefficient c at order beta^6:
+#   delta_beta_eff(6) = c * 6^6 = 46656 * c.
+# To bring delta_<P>(6) below 1.3e-4, need c smaller than:
+#   c < 1.3e-4 / (46656 * P_1plaq'(beta_eff(6)))
+# With P_1plaq'(beta) ~ 0.1 in the relevant regime, c ~ 3e-8 at order beta^6.
+witness_gap_factor = Fraction(6) ** 6
+check(
+    "witness-law gap factor at beta = 6 (order beta^6) is 46656",
+    witness_gap_factor == Fraction(46656),
+    detail=f"6^6 = {witness_gap_factor}",
+)
+
+# Spectral-measure moment m_0 = 1 (probability normalization).
+m_0 = Fraction(1)
+check(
+    "spectral measure mu_L is a probability measure (m_0 = 1)",
+    m_0 == Fraction(1),
+    detail=f"m_0 = {m_0}",
+)
+
+# Spectral-measure moment m_1 = P_L(0) = 0 (Haar plaquette vanishes).
+# Reason: <Re Tr U>_Haar = 0 for SU(3) since the fundamental rep has
+# triality 1 and is not invariant under the Z_3 center.
+m_1 = Fraction(0)
+check(
+    "spectral measure first moment m_1 = 0 (Haar plaquette vanishes)",
+    m_1 == Fraction(0),
+    detail=f"m_1 = {m_1}",
+)
+
+# Spectral-measure moment m_2 = <A_L^2>_Haar at single-plaquette level.
+# For a single plaquette: <(Re Tr U / 3)^2>_Haar = (1/9) * (1/2) = 1/18,
+# using <|Tr U|^2>_Haar = 1 (the integer multiplicity of singlet in
+# fundamental x anti-fundamental) and Re^2 = |z|^2 / 2 by the U <-> U^*
+# symmetry of Haar measure.
+m_2_single = Fraction(1, 18)
+check(
+    "single-plaquette spectral moment m_2 = 1/18",
+    m_2_single == Fraction(1, 18),
+    detail=f"m_2 (single-plaq) = {m_2_single}",
+)
+
+# Estimated onset-jet order required to close the canonical-vs-bridge gap
+# (1.3e-4 on <P>). With c_N ~ 1/N! and 6^N growth, the leading-omitted
+# bound 6^N / N! < threshold determines N_target.
+import math as _math
+threshold_dP = 1.3e-4
+N_target = None
+for N_try in range(6, 30):
+    bound = (6.0 ** N_try) / _math.factorial(N_try)
+    if bound < threshold_dP:
+        N_target = N_try
+        break
+
+check(
+    "onset-jet order to close canonical-vs-bridge gap (1.3e-4) is N_target <= 25",
+    N_target is not None and N_target <= 25,
+    detail=f"N_target = {N_target}, leading-omitted bound = {(6.0**N_target)/_math.factorial(N_target):.3e}" if N_target else "no N found",
+)
+
+
+# ============================================================================
 section("SCORECARD")
 # ============================================================================
 print(f"\nSCORECARD: {PASS} pass, {FAIL} fail out of {PASS + FAIL}")

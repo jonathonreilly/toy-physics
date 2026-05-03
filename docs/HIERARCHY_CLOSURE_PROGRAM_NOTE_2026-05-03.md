@@ -67,23 +67,44 @@ now has **zero** remaining postulates. All three of:
 
 are now framework-internal theorems.
 
-### H1 Route 1 (partial closure): self-consistent saddle on V-invariant subspace
+### H1 Route 1 (partial closure + status correction): reduction-law / spectral-moment closure paths
 
-Note: `HIERARCHY_H1_SELF_CONSISTENT_SADDLE_NOTE_2026-05-03.md`
+Notes: `HIERARCHY_H1_SELF_CONSISTENT_SADDLE_NOTE_2026-05-03.md`
+       `HIERARCHY_H1_ROUTE_1_STATUS_CORRECTION_NOTE_2026-05-03.md` (same-day correction)
 
-**Result:** the naive mean-field saddle on the minimal block has no
-positive real solution (proven), and the V-invariant projection reduces
-the plaquette fixed-point equation to a finite-dimensional analytic
-equation on the spatial-environment Perron operator.
+**Result (retained from parent):** the naive mean-field saddle on the
+minimal block has no positive real solution (proven by sign analysis of
+the saddle equation). The bridge-support stack already factorizes
+`T_src(6) = exp(3 J) D_6^loc C_(Z_6^env) exp(3 J)` with the first two
+factors fully explicit.
 
-**Status:** class (A) bounded theorem. The note **does not** evaluate
-`<P>_V(6)` explicitly — it identifies the V-invariant Perron solve as
-the residual computational target (estimated 2-4 weeks of focused work
-using the existing `frontier_gauge_vacuum_plaquette_*` runner family).
+**Status correction (this program, same-day):** the parent note's claim
+that V-invariance reduces the spatial-environment character measure
+`rho_(p,q)(6)` is retracted. V acts on temporal APBC phases, not on
+SU(3) representation labels, so V-invariance does NOT close the
+plaquette gap. The retraction is explicit in
+`HIERARCHY_H1_ROUTE_1_STATUS_CORRECTION_NOTE_2026-05-03.md`.
 
-**What it changes:** the plaquette closure surface is now finite-dimensional
-and analytic in `beta`. The remaining gap is one explicit Perron-state
-calculation.
+**Corrected closure paths:**
+
+- **Route 1A (onset-jet extension):** extend the implicit reduction-law
+  onset jet `beta_eff(beta) = beta + beta^5/26244 + O(beta^6)` to order
+  `N >= 22` using the framework's existing mixed-cumulant audit machinery.
+  At `N = 22`, the leading-omitted bound `6^N/N! < 1.2e-4` brings the
+  witness-law gap below the canonical-vs-bridge window. Estimated effort:
+  ~8-9 months of focused mixed-cumulant audit work.
+
+- **Route 1B (spectral-moment closure):** use the framework's compact
+  spectral-measure theorem. The connected hierarchy moments are explicit
+  (`m_0 = 1`, `m_1 = 0`, `m_2 = 1/18` per plaquette, etc.) and the
+  truncated Hausdorff moment problem brackets `<P>(6)` via SDP. Effort
+  comparable to Route 3.
+
+**What it changes:** the plaquette closure path is now correctly
+identified. The famous-open-lattice-problem reviewer concern is
+disambiguated: the framework's plaquette is a *finite computational
+target*, not the continuum-limit thermodynamic-bulk problem. Both
+correction paths are bounded effort.
 
 ### H1 Route 2 (closed by this program): `beta = 6` from convention chain
 
@@ -171,19 +192,27 @@ becomes a structural prediction, not a numerical match.
 | Closure | Status | Effort to land |
 |---|---|---|
 | H2 (V-orbit-measure correction) | closed by this note (audit-pending) | 0 (already done) |
-| H1 Route 1 (V-invariant Perron solve) | partially closed | 2-4 weeks |
+| H1 Route 1A (onset-jet extension to N >= 22) | path corrected and specified | ~8-9 months |
+| H1 Route 1B (spectral-moment Hausdorff bracket) | path specified | ~6 months |
 | H1 Route 2 (beta = 6 convention chain) | closed by this note (audit-pending) | 0 (already done) |
-| H1 Route 3 (V-invariant bootstrap) | path specified | 6 months |
-| Audit ratification of H2 + Route 1 + Route 2 | pending | 2-4 weeks |
+| H1 Route 3 (V-invariant Wilson bootstrap) | path specified | ~6 months |
+| Audit ratification of H2 + Route 2 | pending | ~4 weeks |
 
-Best case: H2 + Route 2 ratified in audit (4 weeks), Route 1 lands
-analytically (additional 4 weeks). Total: 2 months from now to a
-fully-derived hierarchy theorem with a single audit-pending plaquette
-input.
+Best case: H2 + Route 2 ratified in audit (4 weeks), Route 1B lands
+via spectral-moment SDP (additional 6 months). Total: ~7 months from
+now to a fully-derived hierarchy theorem with a rigorously bracketed
+plaquette input.
 
-Worst case: Route 1 stalls on the Perron solve, Route 3 needed as a
-backstop. Total: 6-9 months for an SDP-bracketed v to ~10 keV
-precision.
+Worst case: All three plaquette routes (1A, 1B, 3) require their full
+estimated effort and run in parallel. Total: 8-9 months for either
+analytic onset-jet extension or rigorous SDP bracket. The strict
+"analytic vs SDP-bracketed" taxonomy distinction matters less than
+the rigorous-finite-precision substance.
+
+The earlier "2-month best case" estimate was wrong because Route 1 was
+mis-specified (V-invariance does not fix the spatial environment
+`rho_(p,q)`). The corrected Route 1 paths are bounded but not
+2-week-bounded; comparable to Route 3.
 
 ## Why this is the right path for a Nobel-grade result
 
@@ -219,12 +248,23 @@ not years-grade**. The path is now:
 
 1. Close H2 (this note, audit-pending). 4 weeks.
 2. Close Route 2 (this note, audit-pending). 0 additional time.
-3. Run the V-invariant Perron solve (Route 1). 2-4 weeks.
-4. If 3 stalls, run the V-invariant bootstrap (Route 3). 6 months.
+3. Audit ratifies the same-day status correction on Route 1
+   (V-invariance retraction). 2-4 weeks.
+4. Run **either** Route 1A (onset-jet extension to `N >= 22`),
+   Route 1B (spectral-moment SDP), or Route 3 (V-invariant Wilson
+   bootstrap). Any of the three produces a rigorous bracket on
+   `<P>(6)` of width `<= 10^{-4}`. Effort: 6-9 months.
 
 A fully-closed first-principles derivation of the electroweak scale at
-`246.28 GeV +/- 1 keV` is achievable on this timeline. That is
+`246.28 GeV +/- 10 keV` is achievable on this timeline. That is
 Nobel-grade physics if the audit ratifies the closure chain.
+
+The most important reframing is the *correct* statement of the
+remaining plaquette gap: it is *not* the continuum-limit
+thermodynamic-bulk SU(3) plaquette (the famous open lattice problem).
+It is a finite, well-defined `<P>_L(beta = 6)` on a specific Wilson
+canonical-normalization surface, with three independent closure
+routes already structurally identified.
 
 ## Verification
 

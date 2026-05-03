@@ -8,6 +8,18 @@ input by promoting `<P>(beta=6)` from a Monte-Carlo readout to a
 fixed-point of an axiom-determined self-consistency equation on the minimal
 hierarchy block.
 
+> **Status correction (same-day, 2026-05-03):** the V-invariant projection
+> claim in this note is **retracted**. V acts on temporal APBC phases, not
+> on SU(3) representation labels, so V-invariance does NOT fix the spatial
+> environment `rho_(p,q)(6)` in the bridge-support stack factorization. The
+> retained content is Lemma A (the naive MF saddle has no positive real
+> solution; proved) and Lemma B (the bridge-support factorization
+> `T_src(6) = exp(3 J) D_6^loc C_(Z_6^env) exp(3 J)` is correctly stated;
+> this is existing framework content). The corrected closure paths
+> (onset-jet extension and spectral-moment Hausdorff bracket) are stated
+> in the companion note
+> `HIERARCHY_H1_ROUTE_1_STATUS_CORRECTION_NOTE_2026-05-03.md`.
+
 ## Claim scope (proposed)
 
 > On the V-invariant subspace of the L_s = 2, L_t = 4 staggered-fermion APBC
