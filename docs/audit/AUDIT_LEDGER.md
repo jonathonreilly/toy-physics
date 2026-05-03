@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:09:28.699308+00:00
+**Generated:** 2026-05-03T17:14:01.435530+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 774 |
+| unaudited | 773 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 519 |
+| ~~audited_conditional~~ | 520 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 311 |
-| `audited_conditional` | 519 |
+| `audited_conditional` | 520 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 820 |
+| `unaudited` | 819 |
 
 | claim_type | count |
 |---|---:|
@@ -937,6 +937,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p2_taste_staircase_transport_note_2026-04-17` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `yt_qfp_insensitivity_support_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | fresh_context | codex-fresh | B | `koide_dweh_cyclic_compression_note_2026-04-18` |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -14985,6 +14986,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The Ward 4-fermion channel and the physical trilinear are both matrix elements of H_unit; they share the 1/sqrt(6) coefficient by construction.  _(class `F`)_
 - **chain closes:** False — The matching closure equates a Ward 4-fermion matrix element with a physical trilinear coefficient by declaring both share the H_unit normalization 1/sqrt(6); these are different Green-function/readout structures and the chain reduces to symbol identification.
 - **rationale:** Re-audit confirms the original renaming verdict: shared H_unit normalization is asserted, not derived from a tree-level operator-matching theorem. Scope narrowed from the migration backfill to the bounded H_unit arithmetic.
+- **auditor confidence:** high
+
+### `yt_zero_import_chain_note`
+
+- **Note:** [`YT_ZERO_IMPORT_CHAIN_NOTE.md`](../../docs/YT_ZERO_IMPORT_CHAIN_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note's claimed zero-SM-import derivation of v, y_t(v)/m_t, alpha_s(M_Z), sin^2(theta_W)(M_Z), and related EW quantities from Cl(3) inputs as exercised by scripts/frontier_yt_zero_import_chain.py.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Physical EW couplings take the familiar g_EW(phys)=g_EW(lattice)*sqrt(9/8) only at kappa_EW=0; the no-go closure shows that this connected-trace selector is not derived from the current retained primitives.  _(class `F`)_
+- **chain closes:** False — The runner reproduces the advertised numbers, but it applies the kappa_EW=0 color-projection readout and Ward/CMT/hierarchy boundary choices as premises. The source note itself says the connected-trace selector is not derived, so the unconditional zero-import chain does not close.
+- **rationale:** Issue: The claimed zero-import chain depends on the kappa_EW=0 EW readout g_EW(phys)=g_EW(lattice)*sqrt(9/8) and on hard-coded boundary/normalization bridges such as y_t(M_Pl)=g_lattice/sqrt(6), while the note says the connected-trace selector is not derived. Why this blocks: The EW couplings feed the RGE and comparator predictions, so the advertised unconditional derivation rests on an explicit open physical-readout choice rather than retained primitives alone. Repair target: Provide a retained theorem deriving the kappa_EW=0 selector and the Ward/CMT/hierarchy bridges from Cl(3) primitives, with a runner that constructs these bridges rather than setting them before downstream consistency checks. Claim boundary until fixed: The current material supports a conditional numerical scenario using the canonical plaquette, stated bridge theorems, and kappa_EW=0 specialization; it does not establish an unconditional zero-import retained theorem.
 - **auditor confidence:** high
 
 ### `yukawa_color_projection_theorem`
