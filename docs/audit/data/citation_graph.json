@@ -1782,6 +1782,22 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "pmns_selector_bank_nonrealization_note"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25"
     },
     {
@@ -16326,6 +16342,18 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "lattice_complementarity_note"
     },
     {
@@ -22713,7 +22741,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:02:51.250231+00:00",
+  "generated_at": "2026-05-03T14:04:50.980247+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25403,6 +25431,10 @@
         "dm_flagship_closure_review_note_2026-04-17",
         "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
+        "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+        "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
+        "pmns_selector_bank_nonrealization_note",
+        "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
         "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25",
         "ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25",
         "ckm_n9_structural_family_koide_bridge_support_note_2026-04-25",
@@ -25449,7 +25481,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "93ecd91f680aec408f614391149abf460caff0ff4680d150b8e59be909aebc1d",
+      "note_hash": "89ea1fcb63bbefd246e0a63c66d43085f0ff1d0503e2051af63516d5b81a2632",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -40478,13 +40510,16 @@
         "neutrino_two_amplitude_last_mile_reduction_note",
         "pmns_right_polar_section_note",
         "pmns_right_conjugacy_invariant_no_go_note",
+        "dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21",
+        "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
+        "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
         "lattice_complementarity_note",
         "teleportation_protocol_note",
         "teleportation_native_axioms_theory_note",
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "d03405e3e9e8917482a94bc43de89d5ca877ffe86579061e70ec90d2397ed582",
+      "note_hash": "432882c3a902998b397de21f176f09e56df2b8dd8396968c4c8dd491d7bd38fc",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50578,8 +50613,8 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5678,
-    "leaf_count": 621,
+    "edge_count": 5685,
+    "leaf_count": 619,
     "node_count": 1847,
     "root_count": 1047,
     "runners_with_path": 1410
