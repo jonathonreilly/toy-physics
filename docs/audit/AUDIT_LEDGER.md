@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:32:07.769281+00:00
+**Generated:** 2026-05-03T14:33:24.265050+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 776 |
+| unaudited | 777 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -42,7 +42,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 821 |
+| `unaudited` | 822 |
 
 | claim_type | count |
 |---|---:|
@@ -51,13 +51,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 45 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 863 |
+| `positive_theorem` | 864 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 114 |
 | `high` | 357 |
-| `medium` | 565 |
+| `medium` | 566 |
 | `leaf` | 713 |
 
 - **Retained pending chain closure:** 2
@@ -65,9 +65,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1340
-- runners with (C) first-principles compute hits: 650
-- runners with (D) external comparator hits: 330
+- runners classified: 1341
+- runners with (C) first-principles compute hits: 651
+- runners with (D) external comparator hits: 331
 - decoration candidates (no C, no D): 112
 
 ## Top 25 by load-bearing score (topology only)

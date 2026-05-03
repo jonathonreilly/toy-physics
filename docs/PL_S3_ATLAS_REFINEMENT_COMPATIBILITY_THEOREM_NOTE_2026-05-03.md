@@ -10,6 +10,7 @@ overlap and (b) the global stationary section of cycle 14's patched
 solver.
 **Status:** branch-local closing-derivation candidate; audit-lane
 ratification required for any retained-grade interpretation.
+**Script:** `scripts/frontier_pl_s3_atlas_refinement_compatibility.py`
 **Runner:** [`scripts/frontier_pl_s3_atlas_refinement_compatibility.py`](./../scripts/frontier_pl_s3_atlas_refinement_compatibility.py)
 **Authority role:** completes parent's class-A load-bearing step by
 verifying refinement-invariance of the patched atlas + global stationary

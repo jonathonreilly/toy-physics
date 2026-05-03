@@ -9089,6 +9089,14 @@
       "to": "scalar_3plus1_temporal_ratio_note"
     },
     {
+      "from": "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03",
+      "to": "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03"
+    },
+    {
+      "from": "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03",
+      "to": "patched_stationary_system_pl_s3_theorem_note_2026-05-03"
+    },
+    {
       "from": "pmns_c3_character_mode_reduction_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -22597,7 +22605,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:31:56.256104+00:00",
+  "generated_at": "2026-05-03T14:33:17.265686+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -38794,6 +38802,20 @@
       "runner_path": null,
       "title": "Physics QA Tracker"
     },
+    "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03": {
+      "claim_id": "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "closing_derivation (output type a)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03",
+        "patched_stationary_system_pl_s3_theorem_note_2026-05-03"
+      ],
+      "note_hash": "b5287e3eb9e1767236f032e22d930922b7a0d0198c54c7e7d5c0778b9da3ea73",
+      "path": "docs/PL_S3_ATLAS_REFINEMENT_COMPATIBILITY_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_pl_s3_atlas_refinement_compatibility.py",
+      "title": "PL S^3 Atlas Refinement Compatibility \u2014 Theorem Note"
+    },
     "planck_boundary_density_extension_theorem_note_2026-04-24": {
       "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
@@ -50469,7 +50491,7 @@
       "bounded_theorem": 48,
       "meta": 6,
       "no_go": 3,
-      "none": 1723,
+      "none": 1724,
       "open_gate": 3,
       "positive_theorem": 68
     },
@@ -50477,14 +50499,14 @@
       "bounded_theorem": 549,
       "meta": 6,
       "no_go": 109,
-      "none": 450,
+      "none": 451,
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5649,
+    "edge_count": 5651,
     "leaf_count": 618,
-    "node_count": 1851,
+    "node_count": 1852,
     "root_count": 1056,
-    "runners_with_path": 1412
+    "runners_with_path": 1413
   }
 }
