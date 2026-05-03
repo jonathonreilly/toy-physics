@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T03:14:59.413329+00:00
+**Generated:** 2026-05-03T03:19:16.291379+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 221 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 453 |
+| unaudited | 452 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 662 |
+| ~~audited_conditional~~ | 663 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 440 |
-| `audited_conditional` | 662 |
+| `audited_conditional` | 663 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 493 |
+| `unaudited` | 492 |
 
 | claim_type | count |
 |---|---:|
@@ -906,6 +906,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_brannen_callan_harvey_candidate_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_brannen_geometry_dirac_support_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_brannen_phase_reduction_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `koide_circulant_wilson_target_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -9794,6 +9795,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
   - `SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`
+- **auditor confidence:** high
+
+### `koide_circulant_wilson_target_note_2026-04-18`
+
+- **Note:** [`KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`](../../docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The C3-covariant Hermitian charged-lepton target is the 3-real family H = aI + bC + b*C^2 inside the adjacent-chain algebra, and Koide would restrict it to a 2-real cone via the imported bridge equation.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-helmholtz-3rd-019debd6-5b43-7db3-b4d6-d8d45a06717d`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** By the exact Koide bridge note, the spectral Koide condition is a_0^2 = 2 |z|^2, which on the circulant coordinates becomes 3 a^2 = 6 |b|^2 = 6 (x^2 + y^2).  _(class `B`)_
+- **chain closes:** False — The C3 commutant dimension and adjacent-chain containment close as exact algebra. The Koide-to-circulant bridge a_0^2 = 2|z|^2 is imported from an unprovided authority, so the full 2-real Koide-target conclusion does not close from the restricted inputs alone.
+- **rationale:** Issue: the decisive Koide cone reduction relies on the external bridge equation a_0^2 = 2|z|^2 rather than deriving that spectral/readout equivalence inside the supplied source note or retained one-hop authorities. Why this blocks: the runner verifies algebra after accepting that bridge, but it does not establish the physical/spectral identification needed for the full Koide target claim. Repair target: supply and cite the retained bridge theorem, or add a self-contained derivation from the charged-lepton amplitude readout to the Fourier/circulant coordinates. Claim boundary until fixed: the 3-real C3-covariant path-algebra target reduction is supported, but the 2-real Koide cone status remains conditional on the missing bridge.
 - **auditor confidence:** high
 
 ### `koide_cl3_selector_gap_note_2026-04-19`
