@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T21:40:58.309768+00:00",
+  "generated_at": "2026-05-03T21:59:40.027752+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -312,6 +312,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/gravity_signed_sector_harness.py"
+    },
+    "architecture_note_directional_measure": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/architecture_directional_measure_table_runner_2026_05_03.py"
     },
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25": {
       "assert_count": 1,
@@ -678,7 +690,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 2,
+        "C": 3,
         "D": 0
       },
       "decoration_candidate": false,
@@ -714,7 +726,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 21,
+        "C": 22,
         "D": 0
       },
       "decoration_candidate": false,
@@ -871,7 +883,7 @@
         "A": 0,
         "B": 0,
         "C": 16,
-        "D": 1
+        "D": 3
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -5533,18 +5545,6 @@
       "dominant_class": null,
       "runner": "scripts/evolving_network_prototype_v6.py"
     },
-    "ew_coupling_derivation_note": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 5,
-        "D": 12
-      },
-      "decoration_candidate": false,
-      "dominant_class": "D",
-      "runner": "scripts/frontier_yt_ew_coupling_derivation.py"
-    },
     "ew_current_fierz_channel_decomposition_note_2026-05-01": {
       "assert_count": 2,
       "counts": {
@@ -6540,18 +6540,6 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_2026_04_20.py"
-    },
-    "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20": {
-      "assert_count": 1,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 6,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20": {
       "assert_count": 1,
@@ -7574,16 +7562,16 @@
       "runner": "scripts/frontier_higgs_mass_full_3loop.py"
     },
     "higgs_mass_from_axiom_note": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 4,
-        "D": 5
+        "C": 1,
+        "D": 3
       },
       "decoration_candidate": false,
       "dominant_class": "D",
-      "runner": "scripts/frontier_higgs_mass_corrected_yt.py"
+      "runner": "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py"
     },
     "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02": {
       "assert_count": 1,
@@ -17971,6 +17959,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/architecture_directional_measure_table_runner_2026_05_03.py": {
+      "assert_count": 1,
+      "claims": [
+        "architecture_note_directional_measure"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/asymmetry_persistence_born_calibration.py": {
       "assert_count": 0,
       "claims": [
@@ -18204,7 +18207,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 2,
+        "C": 3,
         "D": 0
       },
       "decoration_candidate": false,
@@ -18249,7 +18252,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 21,
+        "C": 22,
         "D": 0
       },
       "decoration_candidate": false,
@@ -19725,7 +19728,7 @@
         "A": 0,
         "B": 0,
         "C": 16,
-        "D": 1
+        "D": 3
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -24888,21 +24891,6 @@
       "dominant_class": "C",
       "exists": true
     },
-    "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py": {
-      "assert_count": 1,
-      "claims": [
-        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 6,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
-    },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_2026_04_20.py": {
       "assert_count": 1,
       "claims": [
@@ -25819,21 +25807,6 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
-      "exists": true
-    },
-    "scripts/frontier_higgs_mass_corrected_yt.py": {
-      "assert_count": 0,
-      "claims": [
-        "higgs_mass_from_axiom_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 4,
-        "D": 5
-      },
-      "decoration_candidate": false,
-      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_higgs_mass_derived.py": {
@@ -32765,7 +32738,6 @@
     "scripts/frontier_yt_ew_coupling_derivation.py": {
       "assert_count": 1,
       "claims": [
-        "ew_coupling_derivation_note",
         "yt_ew_coupling_bridge_note"
       ],
       "counts": {
@@ -34163,6 +34135,21 @@
         "B": 0,
         "C": 0,
         "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py": {
+      "assert_count": 1,
+      "claims": [
+        "higgs_mass_from_axiom_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 3
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -37684,12 +37671,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 162,
-      "C": 556,
+      "C": 555,
       "D": 207,
-      "none": 417
+      "none": 418
     },
     "runners_classified": 1352,
-    "runners_with_C": 662,
+    "runners_with_C": 661,
     "runners_with_D": 337
   }
 }

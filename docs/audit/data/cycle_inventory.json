@@ -1,8 +1,45 @@
 {
-  "cycle_count": 45,
+  "cycle_count": 46,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
+      "decision": null,
+      "edges": [
+        {
+          "from": "angular_kernel_underdetermination_no_go_note",
+          "to": "architecture_note_directional_measure"
+        },
+        {
+          "from": "architecture_note_directional_measure",
+          "to": "angular_kernel_underdetermination_no_go_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 292,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "angular_kernel_underdetermination_no_go_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
+          "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
+          "transitive_descendants": 292
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "architecture_note_directional_measure",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
+          "title": "Architecture Note: Directional Path Measure",
+          "transitive_descendants": 292
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0002",
       "decision": null,
       "edges": [
         {
@@ -35,7 +72,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 287,
+      "max_transitive_descendants": 292,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -44,7 +81,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 287
+          "transitive_descendants": 292
         },
         {
           "audit_status": "unaudited",
@@ -53,7 +90,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 287
+          "transitive_descendants": 292
         },
         {
           "audit_status": "unaudited",
@@ -62,7 +99,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 287
+          "transitive_descendants": 292
         },
         {
           "audit_status": "unaudited",
@@ -71,7 +108,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 287
+          "transitive_descendants": 292
         },
         {
           "audit_status": "unaudited",
@@ -80,7 +117,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 287
+          "transitive_descendants": 292
         },
         {
           "audit_status": "unaudited",
@@ -89,7 +126,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 287
+          "transitive_descendants": 292
         },
         {
           "audit_status": "unaudited",
@@ -98,13 +135,13 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 287
+          "transitive_descendants": 292
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0002",
+      "cycle_id": "cycle-0003",
       "decision": null,
       "edges": [
         {
@@ -141,7 +178,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0003",
+      "cycle_id": "cycle-0004",
       "decision": null,
       "edges": [
         {
@@ -178,7 +215,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0004",
+      "cycle_id": "cycle-0005",
       "decision": null,
       "edges": [
         {
@@ -215,7 +252,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0005",
+      "cycle_id": "cycle-0006",
       "decision": null,
       "edges": [
         {
@@ -252,7 +289,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -302,7 +339,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -352,7 +389,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -402,7 +439,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -452,7 +489,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -515,7 +552,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -578,7 +615,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -641,7 +678,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -698,69 +735,6 @@
           "effective_status": "meta",
           "note_path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
           "title": "Science Map",
-          "transitive_descendants": 43
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0014",
-      "decision": null,
-      "edges": [
-        {
-          "from": "publication.ci3_z3.inputs_and_qualifiers_note",
-          "to": "publication.ci3_z3.claims_table"
-        },
-        {
-          "from": "publication.ci3_z3.claims_table",
-          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
-        },
-        {
-          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "to": "publication.ci3_z3.external_reviewer_guide"
-        },
-        {
-          "from": "publication.ci3_z3.external_reviewer_guide",
-          "to": "publication.ci3_z3.inputs_and_qualifiers_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 43,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.inputs_and_qualifiers_note",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
-          "title": "Inputs And Qualifiers",
-          "transitive_descendants": 43
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.claims_table",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
-          "title": "Manuscript Claims Surface",
-          "transitive_descendants": 43
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
-          "title": "Gravity Publication Package Summary",
-          "transitive_descendants": 43
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "publication.ci3_z3.external_reviewer_guide",
-          "claim_type": "meta",
-          "effective_status": "meta",
-          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
-          "title": "External Reviewer Guide",
           "transitive_descendants": 43
         }
       ],
@@ -771,6 +745,69 @@
       "decision": null,
       "edges": [
         {
+          "from": "publication.ci3_z3.inputs_and_qualifiers_note",
+          "to": "publication.ci3_z3.claims_table"
+        },
+        {
+          "from": "publication.ci3_z3.claims_table",
+          "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
+        },
+        {
+          "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "to": "publication.ci3_z3.external_reviewer_guide"
+        },
+        {
+          "from": "publication.ci3_z3.external_reviewer_guide",
+          "to": "publication.ci3_z3.inputs_and_qualifiers_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 43,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.inputs_and_qualifiers_note",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
+          "title": "Inputs And Qualifiers",
+          "transitive_descendants": 43
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.claims_table",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
+          "title": "Manuscript Claims Surface",
+          "transitive_descendants": 43
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
+          "title": "Gravity Publication Package Summary",
+          "transitive_descendants": 43
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "publication.ci3_z3.external_reviewer_guide",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
+          "title": "External Reviewer Guide",
+          "transitive_descendants": 43
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0016",
+      "decision": null,
+      "edges": [
+        {
           "from": "publication.ci3_z3.claims_table",
           "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
         },
@@ -843,7 +880,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -919,7 +956,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0018",
       "decision": null,
       "edges": [
         {
@@ -1008,7 +1045,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -1058,7 +1095,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -1147,7 +1184,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -1184,7 +1221,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1234,7 +1271,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -1284,7 +1321,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1334,7 +1371,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1384,7 +1421,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1447,7 +1484,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1523,7 +1560,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1612,7 +1649,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1662,7 +1699,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -1712,7 +1749,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -1762,7 +1799,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -1812,7 +1849,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -1862,7 +1899,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -1912,7 +1949,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -1962,7 +1999,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -2012,7 +2049,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -2062,7 +2099,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -2125,7 +2162,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -2188,7 +2225,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -2251,7 +2288,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -2314,7 +2351,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -2377,7 +2414,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -2440,7 +2477,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -2503,7 +2540,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -2579,7 +2616,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -2616,9 +2653,9 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T21:40:59.057648+00:00",
+  "generated_at": "2026-05-03T21:59:40.678418+00:00",
   "length_counts": {
-    "2": 6,
+    "2": 7,
     "3": 18,
     "4": 13,
     "5": 4,
@@ -2630,5 +2667,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T21:40:51.160482+00:00"
+  "source_graph_generated_at": "2026-05-03T21:59:35.575152+00:00"
 }
