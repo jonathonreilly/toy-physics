@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T03:11:33.724772+00:00
+**Generated:** 2026-05-03T03:14:59.413329+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 149 |
-| **retained_no_go** | 99 |
+| **retained_no_go** | 100 |
 | **retained_bounded** | 221 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 454 |
+| unaudited | 453 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,22 +38,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 439 |
+| `audited_clean` | 440 |
 | `audited_conditional` | 662 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 494 |
+| `unaudited` | 493 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 548 |
 | `decoration` | 9 |
 | `meta` | 41 |
-| `no_go` | 158 |
+| `no_go` | 159 |
 | `open_gate` | 85 |
-| `positive_theorem` | 861 |
+| `positive_theorem` | 860 |
 
 | criticality | count |
 |---|---:|
@@ -303,6 +303,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_moment_ratio_uniformity_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_mru_demotion_note_2026-04-20` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | D | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `koide_positive_parent_axis_obstruction_note_2026-04-18` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `koide_q23_oh_covariance_nogo_note_2026-04-22` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
 | `koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_bridge_single_primitive_note_2026-04-22` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
@@ -10248,6 +10249,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `selected_line_local_boundary_source_law_not_registered`
   - `based_endpoint_section_theorem_not_registered`
   - `retained_physical_source_boundary_origin_law_open`
+- **auditor confidence:** high
+
+### `koide_positive_parent_axis_obstruction_note_2026-04-18`
+
+- **Note:** [`KOIDE_POSITIVE_PARENT_AXIS_OBSTRUCTION_NOTE_2026-04-18.md`](../../docs/KOIDE_POSITIVE_PARENT_AXIS_OBSTRUCTION_NOTE_2026-04-18.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go for obtaining a nondegenerate charged-lepton hierarchy from a positive `C_3[111]`-covariant parent under the current axis-basis `U_e = I_3` readout, including the retained Schur/effective-operator reduction class.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `fresh-agent-raman-3rd-019debd3-b25e-74c1-8817-d6993e81b032`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** `M` circulant and axis-diagonal iff `M` is a scalar multiple of `I`, so no nontrivial charged-lepton hierarchy can arise from a positive `C_3`-covariant parent while keeping the current axis-diagonal readout.  _(class `A`)_
+- **chain closes:** True — The obstruction follows by exact linear algebra: a Hermitian circulant has equal diagonal entries and nonzero off-diagonal parameter `b`, while imposing axis-diagonality forces `b = 0` and hence a scalar matrix. The retained one-hop Schur-inheritance authority extends the same circulant obstruction to larger carriers reduced by the standard equivariant Schur/effective-operator map.
+- **rationale:** The audited claim is a scoped no-go, not a positive charged-lepton closure. Its load-bearing step is an exact algebraic intersection result for circulant and axis-diagonal matrices, and the cited retained authority supplies the one-hop full-carrier Schur-inheritance extension. The runner checks the exact matrix identities and adds one observed-mass channel sanity check; no hidden numerical tuning or symbol renaming is needed for the no-go within the stated `U_e = I_3`/Schur-reduction scope.
 - **auditor confidence:** high
 
 ### `koide_q23_oh_covariance_nogo_note_2026-04-22`
