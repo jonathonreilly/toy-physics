@@ -34,6 +34,9 @@ identity:
   canonical Higgs doublet after it is supplied.
 - `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md` selects the
   allowed one-Higgs Yukawa monomials but leaves Yukawa values free.
+- `YT_LEGENDRE_SOURCE_POLE_OPERATOR_CONSTRUCTION_NOTE_2026-05-03.md` derives
+  the LSZ-normalized source-pole operator `O_sp`; it explicitly does not prove
+  `O_sp = O_H`.
 - `H_unit` is explicitly blocked by the audit and by the dedicated candidate
   gate unless pole-purity and canonical-normalization certificates are supplied.
 
@@ -57,6 +60,10 @@ Res(C_sH)^2 = Res(C_ss) Res(C_HH)
 at the isolated scalar pole, with `C_sH` and `C_HH` measured on the same
 ensemble and source surface.
 
+The source side of that test now has a clean object, `O_sp`, from the
+Legendre/LSZ construction.  The remaining derivation is the sector-overlap
+identity between `O_sp` and canonical `O_H`.
+
 ## Claim Boundary
 
 This is not retained or `proposed_retained` top-Yukawa closure.  It does not
@@ -68,5 +75,5 @@ promote Higgs/taste support to `O_H` authority, does not treat `H_unit` as
 
 ```bash
 python3 scripts/frontier_yt_canonical_higgs_repo_authority_audit.py
-# SUMMARY: PASS=12 FAIL=0
+# SUMMARY: PASS=13 FAIL=0
 ```

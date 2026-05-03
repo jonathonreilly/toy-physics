@@ -8,6 +8,7 @@ canonical-Higgs operator certificate schema:
 
 - the raw unratified source-Higgs smoke operator;
 - a schema-padded version of that smoke operator;
+- the Legendre/LSZ source-pole operator, both raw and schema-padded;
 - static electroweak gauge-mass algebra used as an operator;
 - `H_unit` by fiat;
 - an observed-target selector.
@@ -16,7 +17,7 @@ The runner is:
 
 ```bash
 python3 scripts/frontier_yt_canonical_higgs_operator_candidate_stress.py
-# SUMMARY: PASS=6 FAIL=0
+# SUMMARY: PASS=7 FAIL=0
 ```
 
 It writes:
@@ -25,11 +26,15 @@ It writes:
 outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json
 ```
 
-All five current candidates are rejected.  The schema-padded unratified smoke
+All seven current candidates are rejected.  The schema-padded unratified smoke
 operator still fails because the canonical identity and local identity /
 normalization certificate references are absent.  Static electroweak algebra,
 `H_unit` by fiat, and observed-target selection fail their explicit firewall
 checks.
+
+The Legendre/LSZ source-pole operator is accepted only as support: it derives
+`O_sp`, but its `canonical_higgs_operator_identity_passed` flag is false, so it
+cannot be used as `O_H`.
 
 As part of this block,
 `scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py` was hardened

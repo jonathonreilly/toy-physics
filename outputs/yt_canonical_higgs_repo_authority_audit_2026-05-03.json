@@ -411,6 +411,35 @@
         "csh_chh_residue_hint": true,
         "forbidden_hunit_or_observed_authority_absent": false,
         "ledger_not_renaming_or_conditional": true,
+        "normalization_hint": true,
+        "operator_definition_hint": true,
+        "same_source_coordinate_hint": true,
+        "same_surface_cl3z3_hint": true
+      },
+      "classification": "bounded support; normalized source-pole operator, not canonical O_H",
+      "id": "legendre_source_pole_operator_construction",
+      "ledger": {},
+      "missing_or_blocking": [
+        "does not prove O_sp = O_H",
+        "source-Higgs Gram purity or rank-one neutral-scalar identity remains open",
+        "does not authorize PR230 retained or proposed_retained closure"
+      ],
+      "path_presence": {
+        "docs/YT_LEGENDRE_SOURCE_POLE_OPERATOR_CONSTRUCTION_NOTE_2026-05-03.md": true,
+        "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json": true
+      },
+      "paths": [
+        "docs/YT_LEGENDRE_SOURCE_POLE_OPERATOR_CONSTRUCTION_NOTE_2026-05-03.md",
+        "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json"
+      ],
+      "positive_reuse": "same-surface LSZ-normalized source-pole side of a future overlap test",
+      "usable_as_pr230_oh_certificate": false
+    },
+    {
+      "acceptance_checks": {
+        "csh_chh_residue_hint": true,
+        "forbidden_hunit_or_observed_authority_absent": false,
+        "ledger_not_renaming_or_conditional": true,
         "normalization_hint": false,
         "operator_definition_hint": true,
         "same_source_coordinate_hint": false,
@@ -547,17 +576,18 @@
   ],
   "exact_next_action": "Derive a same-surface canonical-Higgs operator identity and normalization certificate from the Cl(3)/Z3 substrate, or run source-Higgs C_sH/C_HH pole-residue production and pass Gram purity.",
   "fail_count": 0,
-  "pass_count": 12,
+  "pass_count": 13,
   "positive_reuse": [
     "Use EW/SM one-Higgs notes only after canonical H is supplied.",
     "Use taste-scalar isotropy as scalar/taste support, not source identity.",
     "Use source-functional LSZ for source-pole invariant readout, not overlap closure.",
+    "Use the Legendre/LSZ source-pole operator as the normalized source side of a future overlap test.",
     "Use the default-off source-Higgs harness once a real O_H certificate exists."
   ],
   "proposal_allowed": false,
   "proposal_allowed_reason": "No existing repo surface satisfies the canonical-Higgs O_H certificate schema.",
   "repo_authority_found": false,
-  "repo_keyword_hit_count": 435,
+  "repo_keyword_hit_count": 437,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not promote Higgs/taste support to O_H authority",
@@ -843,5 +873,5 @@
       "path": "docs/YT_DIRECT_CORRELATOR_MOMENTUM_HARNESS_EXTENSION_NOTE_2026-05-01.md"
     }
   ],
-  "verdict": "A repo-wide check found no existing artifact that can be used as the PR #230 same-surface canonical-Higgs radial operator O_H certificate.  The Higgs/taste stack supplies useful support, but it either assumes canonical H after it is supplied, proves bounded Higgs-sector consequences, or gives taste/projector algebra without the PR230 source-coordinate identity and LSZ normalization.  The old H_unit route is explicitly audited_renaming and the H_unit candidate gate rejects it without pole-purity and normalization certificates.  The current positive target is therefore not hidden in the repo: it must be derived as a same-surface O_H identity or measured through C_sH/C_HH pole residues and Gram purity."
+  "verdict": "A repo-wide check found no existing artifact that can be used as the PR #230 same-surface canonical-Higgs radial operator O_H certificate.  The Higgs/taste stack supplies useful support, but it either assumes canonical H after it is supplied, proves bounded Higgs-sector consequences, or gives taste/projector algebra without the PR230 source-coordinate identity and LSZ normalization.  The old H_unit route is explicitly audited_renaming and the H_unit candidate gate rejects it without pole-purity and normalization certificates.  The Legendre/LSZ source-pole construction gives a real normalized source-pole operator, but it explicitly leaves O_sp = O_H open.  The current positive target is therefore not hidden in the repo: it must be derived as a same-surface O_H identity or measured through C_sH/C_HH pole residues and Gram purity."
 }

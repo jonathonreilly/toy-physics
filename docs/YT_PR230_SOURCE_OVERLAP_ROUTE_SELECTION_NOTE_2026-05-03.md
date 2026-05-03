@@ -12,6 +12,12 @@ needed to convert that source-pole coupling into physical `y_t`.
 
 This note selects the next engineering lane for that blocker.
 
+The source side is now sharpened by
+`YT_LEGENDRE_SOURCE_POLE_OPERATOR_CONSTRUCTION_NOTE_2026-05-03.md`: the
+Legendre/LSZ construction derives a normalized source-pole operator `O_sp`.
+The remaining blocker is the identity or measured overlap between `O_sp` and
+canonical `O_H`.
+
 ## Selection
 
 The selected primary lane is the same-surface source-Higgs Gram-purity route:
@@ -26,8 +32,8 @@ source pole and the canonical Higgs radial operator create the same one-pole
 state, up to normalization/sign.
 
 This is the best first route because it directly attacks the missing
-source-pole/canonical-Higgs overlap and reuses the existing same-source `C_ss`
-and `dE_top/ds` production stream.
+source-pole/canonical-Higgs overlap, uses `O_sp` as the normalized source side,
+and reuses the existing same-source `C_ss` and `dE_top/ds` production stream.
 
 ## Fallback
 
@@ -47,6 +53,7 @@ certificates.
 This route selection is not closure.  The current surface still lacks:
 
 - a same-surface canonical-Higgs radial operator `O_H`;
+- the identity or measured pole overlap `O_sp = O_H`;
 - `C_sH` and `C_HH` pole-residue rows;
 - a passing Gram-purity gate;
 - a same-source W/Z response certificate;
@@ -61,6 +68,6 @@ does not treat `H_unit` as `O_H`, does not set `kappa_s = 1`, does not set
 
 ## Next Action
 
-Implement or audit a canonical `O_H` operator on the PR #230 surface, then add
+Implement or audit the `O_sp/O_H` identity on the PR #230 surface, then add
 same-ensemble `C_sH` and `C_HH` pole-residue rows and run the Gram-purity gate.
 Keep same-source W/Z response as the fallback physical-observable route.

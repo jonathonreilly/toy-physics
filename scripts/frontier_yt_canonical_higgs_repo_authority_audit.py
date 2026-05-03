@@ -170,6 +170,21 @@ CANDIDATES = [
         ],
     },
     {
+        "id": "legendre_source_pole_operator_construction",
+        "paths": [
+            "docs/YT_LEGENDRE_SOURCE_POLE_OPERATOR_CONSTRUCTION_NOTE_2026-05-03.md",
+            "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+        ],
+        "ledger_id": None,
+        "classification": "bounded support; normalized source-pole operator, not canonical O_H",
+        "positive_reuse": "same-surface LSZ-normalized source-pole side of a future overlap test",
+        "missing_or_blocking": [
+            "does not prove O_sp = O_H",
+            "source-Higgs Gram purity or rank-one neutral-scalar identity remains open",
+            "does not authorize PR230 retained or proposed_retained closure",
+        ],
+    },
+    {
         "id": "source_higgs_harness_extension",
         "paths": [
             "docs/YT_SOURCE_HIGGS_CROSS_CORRELATOR_HARNESS_EXTENSION_NOTE_2026-05-03.md",
@@ -411,6 +426,7 @@ def main() -> int:
 
     hunit_candidate = next(row for row in candidates if row["id"] == "hunit_canonical_higgs_operator_candidate_gate")
     source_functional = next(row for row in candidates if row["id"] == "source_functional_lsz_identifiability")
+    source_pole_operator = next(row for row in candidates if row["id"] == "legendre_source_pole_operator_construction")
     harness_extension = next(row for row in candidates if row["id"] == "source_higgs_harness_extension")
     higgs_mass = next(row for row in candidates if row["id"] == "higgs_mass_derived_note")
     taste_isotropy = next(row for row in candidates if row["id"] == "taste_scalar_isotropy_theorem_note")
@@ -423,6 +439,7 @@ def main() -> int:
     report("taste-isotropy-not-oh-authority", taste_status == "audited_conditional", taste_isotropy["classification"])
     report("hunit-candidate-gate-blocks", "negative boundary" in hunit_candidate["classification"], hunit_candidate["classification"])
     report("source-functional-identifies-missing-overlap", "missing overlap" in source_functional["classification"], source_functional["classification"])
+    report("legendre-source-pole-operator-support-only", "not canonical O_H" in source_pole_operator["classification"], source_pole_operator["classification"])
     report("source-higgs-harness-support-only", "instrumentation" in harness_extension["classification"], harness_extension["classification"])
     report("no-candidate-usable-as-oh-certificate", not any_valid, f"usable_candidates={[row['id'] for row in candidates if row['usable_as_pr230_oh_certificate']]}")
     report(
@@ -443,9 +460,12 @@ def main() -> int:
             "the PR230 source-coordinate identity and LSZ normalization.  The "
             "old H_unit route is explicitly audited_renaming and the H_unit "
             "candidate gate rejects it without pole-purity and normalization "
-            "certificates.  The current positive target is therefore not hidden "
-            "in the repo: it must be derived as a same-surface O_H identity or "
-            "measured through C_sH/C_HH pole residues and Gram purity."
+            "certificates.  The Legendre/LSZ source-pole construction gives a "
+            "real normalized source-pole operator, but it explicitly leaves "
+            "O_sp = O_H open.  The current positive target is therefore not "
+            "hidden in the repo: it must be derived as a same-surface O_H "
+            "identity or measured through C_sH/C_HH pole residues and Gram "
+            "purity."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "No existing repo surface satisfies the canonical-Higgs O_H certificate schema.",
@@ -470,6 +490,7 @@ def main() -> int:
             "Use EW/SM one-Higgs notes only after canonical H is supplied.",
             "Use taste-scalar isotropy as scalar/taste support, not source identity.",
             "Use source-functional LSZ for source-pole invariant readout, not overlap closure.",
+            "Use the Legendre/LSZ source-pole operator as the normalized source side of a future overlap test.",
             "Use the default-off source-Higgs harness once a real O_H certificate exists.",
         ],
         "strict_non_claims": [

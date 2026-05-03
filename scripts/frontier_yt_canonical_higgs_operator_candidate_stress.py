@@ -21,6 +21,7 @@ OUTPUT = ROOT / "outputs" / "yt_canonical_higgs_operator_candidate_stress_2026-0
 
 CANONICAL_GATE = ROOT / "outputs" / "yt_canonical_higgs_operator_certificate_gate_2026-05-03.json"
 UNRATIFIED_OPERATOR = ROOT / "outputs" / "yt_source_higgs_unratified_operator_certificate_2026-05-03.json"
+SOURCE_POLE_OPERATOR = ROOT / "outputs" / "yt_legendre_source_pole_operator_construction_2026-05-03.json"
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -102,8 +103,29 @@ def padded_unratified_candidate(base: dict[str, Any]) -> dict[str, Any]:
     return candidate
 
 
-def candidate_rows(unratified: dict[str, Any]) -> list[dict[str, Any]]:
+def candidate_rows(unratified: dict[str, Any], source_pole: dict[str, Any]) -> list[dict[str, Any]]:
     padded = padded_unratified_candidate(unratified)
+    source_pole_candidate = (
+        source_pole.get("operator_candidate", {})
+        if isinstance(source_pole.get("operator_candidate", {}), dict)
+        else {}
+    )
+    padded_source_pole = padded_unratified_candidate(source_pole_candidate)
+    padded_source_pole.update(
+        {
+            "certificate_kind": "canonical_higgs_operator",
+            "operator_id": "schema_padded_legendre_source_pole_operator_rejected",
+            "operator_definition": source_pole_candidate.get(
+                "operator_definition",
+                "LSZ-normalized source-pole operator, not certified as canonical O_H",
+            ),
+            "canonical_higgs_operator_identity_passed": source_pole_candidate.get(
+                "canonical_higgs_operator_identity_passed"
+            ),
+            "identity_certificate": source_pole_candidate.get("identity_certificate"),
+            "normalization_certificate": source_pole_candidate.get("normalization_certificate"),
+        }
+    )
     static_ew = dict(padded)
     static_ew.update(
         {
@@ -160,6 +182,21 @@ def candidate_rows(unratified: dict[str, Any]) -> list[dict[str, Any]]:
             ],
         },
         {
+            "name": "legendre_source_pole_operator_support_only",
+            "candidate": source_pole_candidate,
+            "expected_failed_checks": [
+                "certificate_kind",
+                "canonical_identity_passed",
+            ],
+        },
+        {
+            "name": "schema_padded_legendre_source_pole_operator",
+            "candidate": padded_source_pole,
+            "expected_failed_checks": [
+                "canonical_identity_passed",
+            ],
+        },
+        {
             "name": "static_ew_algebra_substitute",
             "candidate": static_ew,
             "expected_failed_checks": ["not_static_ew_algebra"],
@@ -183,6 +220,7 @@ def main() -> int:
 
     canonical_gate = load_json(CANONICAL_GATE)
     unratified = load_json(UNRATIFIED_OPERATOR)
+    source_pole = load_json(SOURCE_POLE_OPERATOR)
     rows = []
     all_rejected = True
     expected_rejections_hit = True
@@ -190,6 +228,7 @@ def main() -> int:
 
     report("canonical-gate-present", bool(canonical_gate), str(CANONICAL_GATE.relative_to(ROOT)))
     report("unratified-operator-present", bool(unratified), str(UNRATIFIED_OPERATOR.relative_to(ROOT)))
+    report("source-pole-operator-present", bool(source_pole), str(SOURCE_POLE_OPERATOR.relative_to(ROOT)))
     report(
         "canonical-gate-open",
         canonical_gate.get("candidate_valid") is False
@@ -197,7 +236,7 @@ def main() -> int:
         canonical_gate.get("actual_current_surface_status", ""),
     )
 
-    for row in candidate_rows(unratified):
+    for row in candidate_rows(unratified, source_pole):
         checks = validate_candidate(row["candidate"])
         failed = [key for key, ok in checks.items() if not ok]
         valid = not failed
@@ -228,8 +267,10 @@ def main() -> int:
             "tempting substitutes all fail the canonical-Higgs operator "
             "certificate schema.  Padding the smoke operator with surface labels "
             "still fails because the canonical identity and normalization "
-            "certificates are absent.  Static EW algebra, H_unit-by-fiat, and "
-            "observed-target selectors are rejected by explicit firewall checks."
+            "certificates are absent.  The Legendre/LSZ source-pole operator "
+            "also fails as O_H because its canonical-Higgs identity is explicitly "
+            "open.  Static EW algebra, H_unit-by-fiat, and observed-target "
+            "selectors are rejected by explicit firewall checks."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Every current candidate fails the O_H certificate schema; this stress gate is rejection evidence only.",

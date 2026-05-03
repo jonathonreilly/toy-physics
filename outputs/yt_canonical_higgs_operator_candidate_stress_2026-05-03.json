@@ -43,6 +43,32 @@
     {
       "candidate_valid": false,
       "expected_failed_checks": [
+        "certificate_kind",
+        "canonical_identity_passed"
+      ],
+      "expected_rejections_hit": true,
+      "failed_checks": [
+        "certificate_kind",
+        "canonical_identity_passed"
+      ],
+      "name": "legendre_source_pole_operator_support_only",
+      "proposal_allowed": false
+    },
+    {
+      "candidate_valid": false,
+      "expected_failed_checks": [
+        "canonical_identity_passed"
+      ],
+      "expected_rejections_hit": true,
+      "failed_checks": [
+        "canonical_identity_passed"
+      ],
+      "name": "schema_padded_legendre_source_pole_operator",
+      "proposal_allowed": false
+    },
+    {
+      "candidate_valid": false,
+      "expected_failed_checks": [
         "not_static_ew_algebra"
       ],
       "expected_rejections_hit": true,
@@ -79,7 +105,7 @@
   ],
   "exact_next_action": "Supply a genuinely derived same-surface canonical-Higgs operator identity and normalization certificate; then rerun the certificate gate before any production C_sH/C_HH rows are evidence.",
   "fail_count": 0,
-  "pass_count": 6,
+  "pass_count": 7,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Every current candidate fails the O_H certificate schema; this stress gate is rejection evidence only.",
   "strict_non_claims": [
@@ -89,5 +115,5 @@
     "does not use H_unit, static EW algebra, observed targets, yt_ward_identity, alpha_LM, plaquette, or u0",
     "does not set kappa_s = 1 or cos(theta) = 1"
   ],
-  "verdict": "The current unratified source-Higgs smoke operator and nearby tempting substitutes all fail the canonical-Higgs operator certificate schema.  Padding the smoke operator with surface labels still fails because the canonical identity and normalization certificates are absent.  Static EW algebra, H_unit-by-fiat, and observed-target selectors are rejected by explicit firewall checks."
+  "verdict": "The current unratified source-Higgs smoke operator and nearby tempting substitutes all fail the canonical-Higgs operator certificate schema.  Padding the smoke operator with surface labels still fails because the canonical identity and normalization certificates are absent.  The Legendre/LSZ source-pole operator also fails as O_H because its canonical-Higgs identity is explicitly open.  Static EW algebra, H_unit-by-fiat, and observed-target selectors are rejected by explicit firewall checks."
 }

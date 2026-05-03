@@ -1,0 +1,185 @@
+{
+  "actual_current_surface_status": "bounded-support / Legendre source-pole operator constructed; canonical O_H identity open",
+  "canonical_higgs_operator_identity_passed": false,
+  "canonical_higgs_overlap_counterfamily": [
+    {
+      "Res_C_HH_if_OH_supplied": 1.0,
+      "Res_C_source_pole_H_if_OH_supplied": 1.0,
+      "Res_C_source_pole_source_pole": 1.0,
+      "canonical_higgs_overlap_cos_theta": 1.0,
+      "orthogonal_overlap_sin_theta": 0.0,
+      "source_higgs_gram_determinant": 0.0,
+      "would_certify_OH_identity": true
+    },
+    {
+      "Res_C_HH_if_OH_supplied": 1.0,
+      "Res_C_source_pole_H_if_OH_supplied": 0.9,
+      "Res_C_source_pole_source_pole": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.9,
+      "orthogonal_overlap_sin_theta": 0.4358898943540673,
+      "source_higgs_gram_determinant": 0.18999999999999995,
+      "would_certify_OH_identity": false
+    },
+    {
+      "Res_C_HH_if_OH_supplied": 1.0,
+      "Res_C_source_pole_H_if_OH_supplied": 0.75,
+      "Res_C_source_pole_source_pole": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.75,
+      "orthogonal_overlap_sin_theta": 0.6614378277661477,
+      "source_higgs_gram_determinant": 0.4375,
+      "would_certify_OH_identity": false
+    },
+    {
+      "Res_C_HH_if_OH_supplied": 1.0,
+      "Res_C_source_pole_H_if_OH_supplied": 0.6,
+      "Res_C_source_pole_source_pole": 1.0,
+      "canonical_higgs_overlap_cos_theta": 0.6,
+      "orthogonal_overlap_sin_theta": 0.8,
+      "source_higgs_gram_determinant": 0.64,
+      "would_certify_OH_identity": false
+    }
+  ],
+  "contact_term_rows": [
+    {
+      "Res_C_source_pole_operator": 0.9999999999999999,
+      "analytic_contact_a0": 0.0,
+      "analytic_contact_a1": 0.0,
+      "dGamma_ss_dx_at_pole": 0.27027027027027023,
+      "pole_residue_Z_s": 3.7
+    },
+    {
+      "Res_C_source_pole_operator": 0.9999999999999999,
+      "analytic_contact_a0": 2.0,
+      "analytic_contact_a1": 0.0,
+      "dGamma_ss_dx_at_pole": 0.27027027027027023,
+      "pole_residue_Z_s": 3.7
+    },
+    {
+      "Res_C_source_pole_operator": 0.9999999999999999,
+      "analytic_contact_a0": -1.5,
+      "analytic_contact_a1": 0.8,
+      "dGamma_ss_dx_at_pole": 0.27027027027027023,
+      "pole_residue_Z_s": 3.7
+    },
+    {
+      "Res_C_source_pole_operator": 0.9999999999999999,
+      "analytic_contact_a0": 12.0,
+      "analytic_contact_a1": -4.0,
+      "dGamma_ss_dx_at_pole": 0.27027027027027023,
+      "pole_residue_Z_s": 3.7
+    }
+  ],
+  "exact_next_action": "Use O_sp as the normalized source-pole side of the next test, then derive or measure its overlap with canonical O_H through C_sH/C_HH Gram purity, W/Z response, or a rank-one neutral-scalar theorem.",
+  "fail_count": 0,
+  "legendre_lsz_formula": {
+    "connected_two_point_near_pole": "C_ss(x) = Z_s/x + analytic, x = p^2 - p_*^2",
+    "inverse_derivative": "dGamma_ss/dx|_{x=0} = 1/Z_s",
+    "source_pole_operator": "O_sp = sqrt(dGamma_ss/dx|pole) O_s",
+    "unit_residue": "Res(C_sp_sp) = (dGamma_ss/dx|pole) Res(C_ss) = 1"
+  },
+  "necessary_next_certificate": [
+    "same-surface canonical O_H identity plus normalization certificate",
+    "or pole-level C_sH/C_HH residues satisfying Res(C_sH)^2 = Res(C_ss) Res(C_HH)",
+    "or a rank-one neutral-scalar theorem excluding orthogonal admixture",
+    "or a same-source W/Z response certificate fixing the sector overlap"
+  ],
+  "operator_candidate": {
+    "canonical_higgs_operator_identity_passed": false,
+    "certificate_kind": "source_pole_operator",
+    "diagonal_vertex": {
+      "kind": "constant_site_color_diagonal",
+      "strict_limit": "diagonal source vertex only; physical O_H identity remains open"
+    },
+    "firewall": {
+      "used_alpha_lm_or_plaquette": false,
+      "used_hunit_matrix_element_readout": false,
+      "used_observed_targets_as_selectors": false,
+      "used_yt_ward_identity": false
+    },
+    "hunit_used_as_operator": false,
+    "identity_certificate": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "normalization_certificate": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "operator_definition": "O_sp(q) = sqrt(dGamma_ss/dx|_{x=0}) O_s(q), where x = p^2 - p_*^2 and C_ss has an isolated source pole at x = 0",
+    "operator_id": "legendre_lsz_source_pole_operator_v1",
+    "proposal_allowed": false,
+    "same_source_coordinate": true,
+    "same_surface_cl3z3": true,
+    "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+    "source_pole_operator_constructed": true,
+    "source_pole_residue_normalized_to_one": true,
+    "static_ew_algebra_used_as_operator": false
+  },
+  "parent_certificates": {
+    "candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
+    "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "same_source_pole_data_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
+    "scalar_contact_boundary": "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json",
+    "scalar_renormalization_overlap_no_go": "outputs/yt_scalar_renormalization_condition_overlap_no_go_2026-05-01.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_pole_mixing_obstruction": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "source_reparametrization": "outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json",
+    "source_to_higgs_lsz": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json",
+    "source_unit_normalization_no_go": "outputs/yt_cl3_source_unit_normalization_no_go_2026-05-01.json"
+  },
+  "pass_count": 17,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The source-pole operator is constructed, but the canonical-Higgs radial identity is still open.",
+  "source_pole_operator_constructed": true,
+  "source_rescaling_rows": [
+    {
+      "Res_C_ss_scaled": 0.23125,
+      "dGamma_ss_dx_scaled": 4.324324324324324,
+      "matrix_element_O_s": 0.48088460154178364,
+      "matrix_element_O_source_pole": 1.0,
+      "source_pole_residue": 1.0,
+      "source_rescaling_c": 0.25
+    },
+    {
+      "Res_C_ss_scaled": 0.925,
+      "dGamma_ss_dx_scaled": 1.081081081081081,
+      "matrix_element_O_s": 0.9617692030835673,
+      "matrix_element_O_source_pole": 1.0,
+      "source_pole_residue": 1.0,
+      "source_rescaling_c": 0.5
+    },
+    {
+      "Res_C_ss_scaled": 3.7,
+      "dGamma_ss_dx_scaled": 0.27027027027027023,
+      "matrix_element_O_s": 1.9235384061671346,
+      "matrix_element_O_source_pole": 1.0,
+      "source_pole_residue": 1.0,
+      "source_rescaling_c": 1.0
+    },
+    {
+      "Res_C_ss_scaled": 14.8,
+      "dGamma_ss_dx_scaled": 0.06756756756756756,
+      "matrix_element_O_s": 3.847076812334269,
+      "matrix_element_O_source_pole": 1.0,
+      "source_pole_residue": 1.0,
+      "source_rescaling_c": 2.0
+    },
+    {
+      "Res_C_ss_scaled": 59.2,
+      "dGamma_ss_dx_scaled": 0.01689189189189189,
+      "matrix_element_O_s": 7.694153624668538,
+      "matrix_element_O_source_pole": 1.0,
+      "source_pole_residue": 1.0,
+      "source_rescaling_c": 4.0
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H by fiat",
+    "does not identify O_s or O_sp with canonical H",
+    "does not set kappa_s = 1 or cos(theta) = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
+  ],
+  "verdict": "The Cl(3)/Z3 scalar source functional determines an LSZ-normalized source-pole operator O_sp = sqrt(dGamma_ss/dx|pole) O_s at an isolated source pole.  This operator has unit pole residue and is invariant under source-coordinate rescaling; analytic source contact terms do not change the construction.  This is the maximal same-source operator derivable on the current PR #230 surface.  It does not yet prove O_sp = O_H, because a source pole can still be a mixture cos(theta) O_H + sin(theta) O_chi while preserving the source-pole normalization.  Closing O_H requires source-Higgs Gram purity, a rank-one neutral-scalar theorem, or an equivalent W/Z response/sector-overlap certificate.",
+  "why_not_O_H_yet": [
+    "The construction normalizes the source pole, not the canonical Higgs radial field used by v.",
+    "A mixed pole O_sp = cos(theta) O_H + sin(theta) O_chi has the same source-pole normalization for different theta.",
+    "Source-only C_ss data cannot measure C_sH or C_HH pole residues.",
+    "No current theorem excludes an orthogonal neutral scalar top coupling."
+  ]
+}

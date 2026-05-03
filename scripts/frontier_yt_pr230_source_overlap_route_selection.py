@@ -22,6 +22,7 @@ PARENTS = {
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
     "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
     "same_source_pole_sufficiency": "outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json",
     "source_higgs_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
     "source_higgs_gram_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
@@ -75,19 +76,21 @@ def route_rows(certs: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
             "selected_primary": True,
             "why": [
                 "directly targets the missing source-pole/canonical-Higgs overlap",
+                "the source side now has a clean O_sp Legendre/LSZ normalization certificate",
                 "reuses the existing same-source C_ss and dE_top/ds production stream",
                 "has an existing algebraic acceptance gate: Res(C_sH)^2 = Res(C_ss) Res(C_HH)",
                 "does not require introducing an electroweak gauge-sector MC harness before the first useful test",
             ],
             "current_blockers": [
                 "same-surface canonical-Higgs operator O_H is absent",
+                "O_sp is not yet proved equal to O_H",
                 "C_sH and C_HH pole rows are absent",
                 "H_unit is explicitly not accepted as O_H without pole-purity and canonical-normalization certificates",
                 "source-Higgs Gram gate is open, not passed",
             ],
             "first_engineering_step": (
-                "implement a same-surface O_H/C_sH/C_HH measurement path or a "
-                "candidate O_H operator certificate, then feed it into the Gram-purity gate"
+                "derive or measure the O_sp/O_H overlap with a same-surface "
+                "O_H/C_sH/C_HH path, then feed it into the Gram-purity gate"
             ),
             "audit_boundary": "support only until O_H/C_sH/C_HH production rows and retained-route gates pass",
         },
@@ -166,6 +169,10 @@ def main() -> int:
         or "invariant product" in same_source_text
         or "same-source pole-data sufficiency gate records the positive side" in retained_text
     )
+    source_pole_constructed = (
+        certs["legendre_source_pole_operator"].get("source_pole_operator_constructed") is True
+        and certs["legendre_source_pole_operator"].get("canonical_higgs_operator_identity_passed") is False
+    )
     gram_gate_open = has_false(certs["source_higgs_gram_gate"], "source_higgs_gram_purity_gate_passed")
     canonical_operator_open = has_false(
         certs["canonical_higgs_operator_gate"],
@@ -193,6 +200,7 @@ def main() -> int:
     report("retained-route-open", retained_open, status(certs["retained_route"]))
     report("campaign-open", campaign_open, status(certs["campaign_status"]))
     report("source-only-route-blocked", source_only_blocked, "source-functional LSZ cannot close alone")
+    report("legendre-source-pole-operator-available", source_pole_constructed, status(certs["legendre_source_pole_operator"]))
     report("same-source-fh-lsz-still-supports-measurement", same_source_support, "source-pole coupling support")
     report("gram-gate-open", gram_gate_open, status(certs["source_higgs_gram_gate"]))
     report("canonical-operator-open", canonical_operator_open, status(certs["canonical_higgs_operator_gate"]))
@@ -207,8 +215,10 @@ def main() -> int:
         "verdict": (
             "The best next PR #230 overlap lane is the same-surface "
             "source-Higgs Gram-purity route.  It directly targets the missing "
-            "source-pole/canonical-Higgs overlap, reuses the existing same-source "
-            "C_ss and dE_top/ds production stream, and has a sharp acceptance "
+            "source-pole/canonical-Higgs overlap.  The source pole now has a "
+            "Legendre/LSZ normalized operator O_sp, so the remaining object is "
+            "the O_sp/O_H overlap.  The route reuses the existing same-source "
+            "C_ss and dE_top/ds production stream and has a sharp acceptance "
             "condition.  The W/Z response lane remains the fallback physical "
             "observable route, but it requires a new electroweak gauge-response "
             "harness plus sector-overlap certificates.  Source-only FH/LSZ and "
@@ -224,7 +234,8 @@ def main() -> int:
         "implementation_packet": {
             "do_now": [
                 "keep FH/LSZ chunk reruns running in parallel as source-pole support",
-                "start same-surface O_H/C_sH/C_HH implementation or candidate-O_H audit",
+                "use O_sp as the normalized source side",
+                "start same-surface O_H/C_sH/C_HH implementation or O_sp/O_H identity audit",
                 "feed any resulting pole residues through the existing Gram-purity gate",
             ],
             "do_not_do": [
@@ -244,7 +255,7 @@ def main() -> int:
         ],
         "exact_next_action": (
             "Work the same-surface source-Higgs Gram-purity lane first: implement "
-            "or audit a canonical O_H operator on the PR230 surface, then add "
+            "or audit the O_sp/O_H identity on the PR230 surface, then add "
             "C_sH/C_HH pole-residue rows and run the Gram-purity gate.  Keep W/Z "
             "response as the fallback physical-observable route."
         ),

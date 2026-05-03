@@ -15,7 +15,7 @@
   "candidate_missing_or_failed_checks": [],
   "candidate_present": false,
   "candidate_valid": false,
-  "exact_next_action": "Derive or supply a real same-surface canonical-Higgs operator certificate satisfying this schema, then run source-Higgs C_sH/C_HH measurements and pole-residue/Gram-purity gates.",
+  "exact_next_action": "Derive or supply a real same-surface canonical-Higgs operator certificate satisfying this schema, or upgrade the constructed source-pole operator with source-Higgs C_sH/C_HH pole residues and Gram purity.",
   "fail_count": 0,
   "known_surface_audit": {
     "canonical_scalar_import": {
@@ -31,6 +31,11 @@
     "hunit_candidate_gate": {
       "classification": "explicitly rejected unless purity/normalization certificates are supplied",
       "status": "exact negative boundary / H_unit not canonical-Higgs operator realization",
+      "usable_as_operator_certificate": false
+    },
+    "legendre_source_pole_operator": {
+      "classification": "LSZ-normalized source-pole operator constructed; canonical O_H identity open",
+      "status": "bounded-support / Legendre source-pole operator constructed; canonical O_H identity open",
       "usable_as_operator_certificate": false
     },
     "repo_authority_audit": {
@@ -49,7 +54,7 @@
       "usable_as_operator_certificate": false
     }
   },
-  "pass_count": 10,
+  "pass_count": 11,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Operator certificate validation is support only; it does not authorize retained/proposed-retained y_t wording.",
   "strict_non_claims": [
@@ -58,5 +63,5 @@
     "does not treat H_unit or static EW algebra as O_H",
     "does not use observed targets, yt_ward_identity, alpha_LM, plaquette, or u0"
   ],
-  "verdict": "No canonical-Higgs O_H operator certificate is present. Existing EW/Higgs/YT surfaces either assume canonical H after it is supplied, select allowed monomials, reject H_unit as a substitute, or provide measurement instrumentation. They do not supply the same-surface operator identity and normalization certificate required by PR #230."
+  "verdict": "No canonical-Higgs O_H operator certificate is present. Existing EW/Higgs/YT surfaces either assume canonical H after it is supplied, select allowed monomials, reject H_unit as a substitute, or provide measurement instrumentation. The Legendre/LSZ construction supplies a normalized source-pole operator, but it does not certify that pole as canonical O_H. These surfaces do not supply the same-surface canonical-Higgs identity required by PR #230."
 }

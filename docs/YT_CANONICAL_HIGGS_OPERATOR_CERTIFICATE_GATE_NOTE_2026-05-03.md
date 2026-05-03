@@ -16,6 +16,12 @@ the current repository surfaces for a hidden existing authority.  The broader
 repo-wide authority audit is recorded in
 `outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json`.
 
+The Legendre/LSZ source-pole construction in
+`outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json` is now
+recognized as positive support: it gives a normalized source-pole operator
+`O_sp`.  It is not accepted as canonical `O_H` because the source-pole /
+canonical-Higgs overlap remains open.
+
 ## Acceptance Schema
 
 A future certificate must provide:
@@ -44,6 +50,8 @@ surfaces are not hidden certificates:
 - the source-Higgs harness extension is measurement instrumentation only.
 - the repo-wide authority audit finds no hidden accepted `O_H` certificate in
   the Higgs/taste/Ward/source/EW surfaces.
+- the Legendre/LSZ source-pole construction supplies `O_sp`, not the physical
+  canonical `O_H` identity.
 
 ## Claim Boundary
 
@@ -55,12 +63,12 @@ plaquette, or `u0`.
 ## Next Action
 
 Derive or supply a real same-surface canonical-Higgs operator certificate
-satisfying this schema, then run source-Higgs `C_sH/C_HH` measurements and the
-pole-residue / Gram-purity gates.
+satisfying this schema, or upgrade the constructed source-pole operator with
+source-Higgs `C_sH/C_HH` pole residues and Gram purity.
 
 ## Verification
 
 ```bash
 python3 scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py
-# SUMMARY: PASS=10 FAIL=0
+# SUMMARY: PASS=11 FAIL=0
 ```

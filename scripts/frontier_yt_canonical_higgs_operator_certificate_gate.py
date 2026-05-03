@@ -35,6 +35,7 @@ CERTS = {
     "source_higgs_harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
     "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
 }
 
 PASS_COUNT = 0
@@ -147,6 +148,11 @@ def known_surface_audit(texts: dict[str, str], certs: dict[str, dict[str, Any]])
             "usable_as_operator_certificate": False,
             "status": status(certs["repo_authority_audit"]),
         },
+        "legendre_source_pole_operator": {
+            "classification": "LSZ-normalized source-pole operator constructed; canonical O_H identity open",
+            "usable_as_operator_certificate": False,
+            "status": status(certs["legendre_source_pole_operator"]),
+        },
     }
 
 
@@ -187,6 +193,12 @@ def main() -> int:
     report("hunit-still-not-certificate", "H_unit not canonical-Higgs" in status(certs["hunit_candidate_gate"]), status(certs["hunit_candidate_gate"]))
     report("harness-extension-is-instrumentation-only", "harness extension" in status(certs["source_higgs_harness_extension"]), status(certs["source_higgs_harness_extension"]))
     report("repo-authority-audit-finds-no-hidden-certificate", certs["repo_authority_audit"].get("repo_authority_found") is False, status(certs["repo_authority_audit"]))
+    report(
+        "source-pole-operator-is-not-oh",
+        certs["legendre_source_pole_operator"].get("source_pole_operator_constructed") is True
+        and certs["legendre_source_pole_operator"].get("canonical_higgs_operator_identity_passed") is False,
+        status(certs["legendre_source_pole_operator"]),
+    )
     report("gram-purity-still-open", "not passed" in status(certs["source_higgs_gram_purity"]), status(certs["source_higgs_gram_purity"]))
 
     result = {
@@ -199,8 +211,10 @@ def main() -> int:
             "No canonical-Higgs O_H operator certificate is present. Existing "
             "EW/Higgs/YT surfaces either assume canonical H after it is supplied, "
             "select allowed monomials, reject H_unit as a substitute, or provide "
-            "measurement instrumentation. They do not supply the same-surface "
-            "operator identity and normalization certificate required by PR #230."
+            "measurement instrumentation. The Legendre/LSZ construction supplies "
+            "a normalized source-pole operator, but it does not certify that pole "
+            "as canonical O_H. These surfaces do not supply the same-surface "
+            "canonical-Higgs identity required by PR #230."
             if not candidate_valid
             else (
                 "A canonical-Higgs operator certificate candidate satisfies the "
@@ -234,8 +248,9 @@ def main() -> int:
         ],
         "exact_next_action": (
             "Derive or supply a real same-surface canonical-Higgs operator "
-            "certificate satisfying this schema, then run source-Higgs "
-            "C_sH/C_HH measurements and pole-residue/Gram-purity gates."
+            "certificate satisfying this schema, or upgrade the constructed "
+            "source-pole operator with source-Higgs C_sH/C_HH pole residues "
+            "and Gram purity."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
