@@ -13,6 +13,17 @@ be explicit, and support-only results must not be promoted by prose.
 This skill is **review only**. It may make branch/package hygiene changes that
 allow the independent audit system to parse and queue claims, but it must not
 apply audit verdicts, write `audited_clean`, or run the audit worker.
+It must not create or open pull requests. When reviewing an existing PR or
+branch, review-loop either fixes/narrows that existing landing path and lands it
+when requested, or rejects/closes it with a clear reason. Salvage, dependency
+chain repair, audit queue regeneration, and parent re-audit gates are part of
+that same landing path, not follow-up PRs.
+It may correct status vocabulary and terminology so a PR follows repo
+conventions, but it must not introduce new repo-wide axioms, new theory
+language, new retained-surface claims, or new foundational premises without
+explicit user approval. Imports are allowed for bounded theorem surfaces when
+they are scoped, labelled, and dependency-checked; repo-wide axiom additions
+are not review-loop fixes.
 
 The bar is intentionally high: if review-loop is doing its job, the later
 fresh-context audit should be mostly confirmatory. Do not pass branches that
@@ -123,7 +134,10 @@ locally and report that limitation.
   `docs/repo/CONTROLLED_VOCABULARY.md`, and changed claim notes are compatible
   with the audit lane's propose/ratify split. Also verify that load-bearing
   dependencies are real markdown links that seed the citation graph, not just
-  code-formatted file names in prose.
+  code-formatted file names in prose. Block repo-wide axiom additions,
+  nonstandard theory vocabulary, or new foundational claims unless the user
+  explicitly approved that change; vocabulary corrections back to repo
+  conventions are allowed.
 
 ### Optional Reviewer
 
@@ -237,9 +251,11 @@ lowering the review bar.
    claim-status certificates, handoffs, campaign state, expected audit
    verdicts, `target_effective_status_*`, `audit_status = ...`, generated audit
    verdict payloads, and branch-local logs.
-5. Prefer small salvage PRs grouped by coherent topic. Split unrelated lemmas
-   rather than bundling them only because they came from the same failed PR.
-6. Run the normal audit-system compatibility gate on every salvage branch.
+5. Prefer small salvage slices grouped by coherent topic. Split unrelated
+   lemmas rather than bundling them only because they came from the same failed
+   PR, but do not open follow-up PRs for those slices. Land them through the
+   current requested landing path or report that the work cannot be landed yet.
+6. Run the normal audit-system compatibility gate on every salvage slice.
    The resulting rows must remain `unaudited`; the independent audit lane owns
    all verdicts.
 7. If no salvage is possible, leave a concise PR comment or review summary
@@ -283,10 +299,11 @@ Otherwise apply the narrowest honest fix:
 6. Update `docs/repo/ACTIVE_REVIEW_QUEUE.md` for live unresolved findings.
 7. Route detailed resolved packets to
    `docs/work_history/repo/review_feedback/` only when a long packet is needed.
-8. When a PR is non-landable but salvageable, create a new source-only salvage
-   branch or PR rather than editing the rejected branch in place if the rejected
-   branch contains substantial non-source packet material. Preserve only the
-   durable note/runner content and make the claim boundary canonical.
+8. When a PR is non-landable but salvageable, preserve only the durable
+   note/runner content, make the claim boundary canonical, and land that source
+   salvage through the current requested landing path. If the rejected branch
+   contains substantial non-source packet material, use a clean temporary
+   worktree for integration, but do not create or open a follow-up PR.
 
 Skip:
 
@@ -294,6 +311,8 @@ Skip:
 - suspected findings without evidence;
 - ambiguous science gaps that need new derivation;
 - attempts to paper over missing theorem steps with confident prose;
+- repo-wide axiom additions, new theory terminology, or new foundational
+  premises that lack explicit user approval;
 - broad refactors unrelated to the finding.
 
 ## Audit-System Compatibility Gate
