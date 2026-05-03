@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:45:58.696632+00:00
+**Generated:** 2026-05-03T21:47:04.821801+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 108 |
-| **retained_bounded** | 204 |
+| **retained_bounded** | 205 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 672 |
+| unaudited | 671 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 372 |
+| `audited_clean` | 373 |
 | `audited_conditional` | 553 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 719 |
+| `unaudited` | 718 |
 
 | claim_type | count |
 |---|---:|
@@ -390,6 +390,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_wavefield_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_generated_wavefield_transfer_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `source_resolved_geometry_rule_repair_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `source_resolved_green_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `source_resolved_propagating_generated_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_radical_geometry_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_self_consistent_generated_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
@@ -13400,6 +13401,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The adaptive sector-fan repair slightly improves sign count and F~M, but it reduces detector support and does not recover a clean weak-field mass law.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the note's baseline and repair summaries, zero-source checks, and repair deltas exactly. The note states a bounded negative with one partial improvement rather than a closure theorem.
 - **rationale:** The current runner output matches all frozen values: baseline has 7/16 TOWARD, F~M=0.058, N_eff=5.06; repair has 8/16 TOWARD, F~M=0.335, N_eff=2.80; zero-source shifts are 0; delta_TOWARD is +1 and delta_N_eff is -2.26. This closes the bounded read that the sector-fan repair is mixed and does not solve the geometry bottleneck. Residual risk is limited to this one geometry-rule repair on the compact generated family.
+- **auditor confidence:** high
+
+### `source_resolved_green_robustness_note`
+
+- **Note:** [`SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md`](../../docs/SOURCE_RESOLVED_GREEN_ROBUSTNESS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Under the runner-defined exact-lattice weak-field normalization target max |f| = 0.02, the tested local kernel and source-cluster neighborhood around the source-resolved Green pocket passes all finite hard gates.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-source-green-robustness`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The frozen sweep reports that all 9 kernel-neighborhood cases and all 3 cluster-neighborhood cases pass the zero-source, TOWARD-sign, near-linear F~M, and nontrivial |green/inst| gates.  _(class `C`)_
+- **chain closes:** True — The one-hop dependencies are retained_bounded, and the current runner completed with output matching the source tables: 9/9 kernel cases and 3/3 cluster cases passed. The result is bounded to the tested lattice family, local parameter grid, source ladder, detector readout, and weak-field normalization.
+- **rationale:** The runner computes the finite exact-lattice sweep rather than hard-coding the PASS table, and its completed stdout agrees with the frozen note values within displayed precision. The claim is explicitly bounded and does not assert generated-geometry transfer, refinement, or a full self-consistent field theory. Residual risk is interpretive: the robustness is under the stated target max |f| normalization, not a proof for fixed raw Green amplitude or wider parameter space.
 - **auditor confidence:** high
 
 ### `source_resolved_propagating_generated_transfer_note`
