@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:24:43.357267+00:00
+**Generated:** 2026-05-03T02:31:15.675624+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 146 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 216 |
+| **retained_bounded** | 217 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 457 |
+| unaudited | 456 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 431 |
+| `audited_clean` | 432 |
 | `audited_conditional` | 668 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 49 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 497 |
+| `unaudited` | 496 |
 
 | claim_type | count |
 |---|---:|
@@ -506,6 +506,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `three_generation_observable_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `three_generation_structure_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `triple_stack_collapse_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `two_field_retarded_probe_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
@@ -17449,6 +17450,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `GROWN_TRANSFER_BASIN_NOTE.md`
   - `EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md`
+- **auditor confidence:** high
+
+### `triple_stack_collapse_scaling_note`
+
+- **Note:** [`TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md`](../../docs/TRIPLE_STACK_COLLAPSE_SCALING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-run runner result for default settings seeds=8, n_realizations=10, npl=25, y_range=12.0, connect_radius=3.0, y_cut=2.0, p_collapse=0.2 over N=25,40,60,80,100: LN+|y|+collapse purity is 0.7075 at N=25 and 0.8835 at N=100, with fitted alpha=-0.754 for 1-purity; no asymptotic reversal is retained.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-noether-2nd-019deba9-8584-7c02-94a4-9f33dba20e63`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The strongest retained quantitative result from this pilot is: LN+|y|+collapse at N=25: purity=0.7075; LN+|y|+collapse at N=100: purity=0.8835.  _(class `C`)_
+- **chain closes:** True — For the narrowed bounded scope, the live runner reproduces the note's finite-run purity values and negative fitted alpha. The chain does not close for any asymptotic theorem beyond the tested/fitted range or for a uniform collapse-over-LN improvement claim.
+- **rationale:** The retained claim is only the bounded numerical output of the specified runner configuration. No declared ledger dependencies are needed for that scoped finite-run statement, and the operational helper imports are implementation code rather than cited retained claims. The runner has no assert/PASS checks, so the clean verdict rests on direct live reproduction of the reported output, not on a formal assertion harness. The source prose that adding collapse gives a small finite-N improvement over LN+|y| alone should not be treated as retained, since N=40 has LN+|y|+collapse purity 0.7655 versus LN+|y| purity 0.7636.
 - **auditor confidence:** high
 
 ### `two_field_retarded_family_closure_note_2026-04-10`
