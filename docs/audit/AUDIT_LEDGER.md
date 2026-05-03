@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:27:44.737632+00:00
+**Generated:** 2026-05-03T13:30:23.895639+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 734 |
+| unaudited | 733 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 521 |
+| ~~audited_conditional~~ | 522 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 346 |
-| `audited_conditional` | 521 |
+| `audited_conditional` | 522 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 776 |
+| `unaudited` | 775 |
 
 | claim_type | count |
 |---|---:|
@@ -663,6 +663,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
+| `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6237,6 +6238,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The runner exhibits two explicit admissible positive residual source-sector environment operators with m_1^(A) != m_1^(B) and higher moments differing as well.  _(class `A`)_
 - **chain closes:** True — The scoped no-go is witnessed by two admissible positive conjugation-symmetric residual operators in the stated factorized class whose Perron states give different J-moments and Jacobi coefficients. No external comparator, tuned match, or symbol renaming is used.
 - **rationale:** The claim is negative and scoped to underdetermination inside the residual source-sector environment class, not to computing canonical beta=6 Jacobi data. The runner constructs two admissible residual environments, verifies positivity/symmetry/Perron properties, and obtains distinct moments and Jacobi coefficients for the same J. This is a direct counterexample to uniqueness within the scoped class.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_perron_reduction_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite Wilson large-derived-time plaquette transfer-state reduction to the unique Perron vector and equivalent Jacobi data of J, conditional on an exact strictly positive symmetric Wilson transfer kernel.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-gpt-5-fresh-audit-loop-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** For beta > 0, the kernel of T_(L_s,beta) is pointwise strictly positive.  _(class `B`)_
+- **chain closes:** False — The Perron-Jentzsch and spectral-decomposition consequences would close once the exact Wilson transfer operator is known to have a continuous strictly positive symmetric kernel. In the restricted packet, that kernel positivity/compact self-adjoint transfer construction is imported from an unnamed upstream theorem and is not itself derived.
+- **rationale:** Issue: the note's exact theorem rests on the asserted pointwise strict positivity and symmetry of the finite Wilson transfer kernel, while the declared dependency set is empty and the runner checks only a finite truncated proxy built from a chosen matrix exponential. Why this blocks: the functional-analytic Perron reduction is standard after that premise, but the restricted audit packet does not establish that the actual gauge-invariant Wilson transfer operator satisfies the required kernel hypotheses. Repair target: cite and audit the exact transfer-operator/character-recurrence theorem proving the compact self-adjoint positivity-improving kernel, or extend the runner to construct/check the exact finite Wilson transfer object rather than a proxy. Claim boundary until fixed: the note may claim a conditional Perron/Jacobi reduction assuming the exact positive symmetric transfer kernel; it cannot be retained as an unconditional positive theorem from the supplied inputs.
+- **open / conditional deps cited:**
+  - `missing cited retained dependency for the exact transfer-operator / character-recurrence theorem proving strict positivity of T_(L_s,beta)`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_reduction_existence_theorem_note`
