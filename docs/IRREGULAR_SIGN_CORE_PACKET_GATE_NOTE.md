@@ -74,7 +74,8 @@ The right read on current `main` is:
 ## Companion Context
 
 - blocker history:
-  [`IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md)
+  `IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md` (sibling artifact;
+  cross-reference only — not a one-hop dep of this note)
 - weak-coupling retained companion:
   [`WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md`](WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md)
 - broader sign audit:

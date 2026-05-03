@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:26:45.563921+00:00
+**Generated:** 2026-05-03T13:42:00.039314+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -57,12 +57,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | criticality | count |
 |---|---:|
 | `critical` | 111 |
-| `high` | 365 |
-| `medium` | 522 |
-| `leaf` | 746 |
+| `high` | 363 |
+| `medium` | 521 |
+| `leaf` | 749 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 105
+- **Citation cycles detected:** 94
 
 ### Runner classification (static heuristic)
 

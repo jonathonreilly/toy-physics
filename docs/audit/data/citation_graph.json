@@ -254,10 +254,6 @@
     },
     {
       "from": "antigravity_sign_selector_boundary_note",
-      "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
-    },
-    {
-      "from": "antigravity_sign_selector_boundary_note",
       "to": "gravity_signed_source_density_boundary_note"
     },
     {
@@ -6366,10 +6362,6 @@
     },
     {
       "from": "irregular_sign_core_packet_gate_note",
-      "to": "irregular_directional_observable_note_2026-04-11"
-    },
-    {
-      "from": "irregular_sign_core_packet_gate_note",
       "to": "weak_coupling_retention_note_2026-04-11"
     },
     {
@@ -6798,10 +6790,6 @@
     },
     {
       "from": "kubo_continuum_limit_families_note",
-      "to": "kubo_fam2_refinement_note"
-    },
-    {
-      "from": "kubo_continuum_limit_families_note",
       "to": "kubo_continuum_limit_note"
     },
     {
@@ -6931,10 +6919,6 @@
     {
       "from": "lattice_physical_matching_cluster_obstruction_note_2026-05-02",
       "to": "yt_ew_color_projection_theorem"
-    },
-    {
-      "from": "lattice_symmetry_unification_decision_note",
-      "to": "lattice_field_strength_unification_note"
     },
     {
       "from": "lattice_total_momentum_conservation_theorem_note_2026-05-02",
@@ -9765,10 +9749,6 @@
       "to": "signed_gravity_tensor_source_transport_retention_note"
     },
     {
-      "from": "signed_gravity_continuum_graded_einstein_localization_note",
-      "to": "signed_gravity_remaining_closure_gates_note"
-    },
-    {
       "from": "signed_gravity_mechanism_separation_note",
       "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
     },
@@ -9799,10 +9779,6 @@
     {
       "from": "signed_gravity_native_boundary_complex_containment_note",
       "to": "signed_gravity_cl3z3_source_character_derivation_note"
-    },
-    {
-      "from": "signed_gravity_native_boundary_complex_containment_note",
-      "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
     },
     {
       "from": "signed_gravity_native_boundary_complex_containment_note",
@@ -9918,10 +9894,6 @@
     },
     {
       "from": "signed_gravity_remaining_closure_gates_note",
-      "to": "signed_gravity_native_boundary_complex_containment_note"
-    },
-    {
-      "from": "signed_gravity_remaining_closure_gates_note",
       "to": "signed_gravity_staggered_dirac_aps_boundary_realization_note"
     },
     {
@@ -9971,10 +9943,6 @@
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
       "to": "signed_gravity_naturally_hosted_orientation_line_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
     },
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
@@ -10078,10 +10046,6 @@
     },
     {
       "from": "signed_gravity_source_character_uniqueness_theorem_note",
-      "to": "signed_gravity_cl3z3_source_character_derivation_note"
-    },
-    {
-      "from": "signed_gravity_source_character_uniqueness_theorem_note",
       "to": "signed_gravity_nature_grade_closure_blocker_audit_note"
     },
     {
@@ -10109,16 +10073,8 @@
       "to": "signed_gravity_native_boundary_complex_containment_note"
     },
     {
-      "from": "signed_gravity_staggered_dirac_aps_boundary_realization_note",
-      "to": "signed_gravity_naturally_hosted_orientation_line_note"
-    },
-    {
       "from": "signed_gravity_tensor_source_transport_retention_note",
       "to": "tensor_source_map_eta_note"
-    },
-    {
-      "from": "signed_gravity_tensor_source_transport_retention_note",
-      "to": "signed_gravity_continuum_graded_einstein_localization_note"
     },
     {
       "from": "sign_portability_invariant_note",
@@ -18602,15 +18558,7 @@
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
-      "to": "publication.ci3_z3.quantitative_summary_table"
-    },
-    {
-      "from": "publication.ci3_z3.publication_matrix",
       "to": "publication.ci3_z3.claims_table"
-    },
-    {
-      "from": "publication.ci3_z3.publication_matrix",
-      "to": "publication.ci3_z3.full_claim_ledger"
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
@@ -22069,10 +22017,6 @@
       "to": "work_history.ckm.ckm_mass_basis_nni_note"
     },
     {
-      "from": "work_history.ckm.cabibbo_bound_note",
-      "to": "work_history.ckm.jarlskog_phase_bound_note"
-    },
-    {
       "from": "work_history.ckm.jarlskog_phase_bound_note",
       "to": "work_history.ckm.ckm_mass_basis_nni_note"
     },
@@ -22083,14 +22027,6 @@
     {
       "from": "work_history.repo.lane_status_board",
       "to": "repo.active_review_queue"
-    },
-    {
-      "from": "work_history.repo.lane_status_board",
-      "to": "work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11"
-    },
-    {
-      "from": "work_history.repo.lane_status_board",
-      "to": "work_history.repo.review_feedback.claude_frontier_retain_audit_2026-04-11"
     },
     {
       "from": "work_history.repo.lane_status_board",
@@ -22225,14 +22161,6 @@
       "to": "work_history.repo.review_feedback.code_review_last_week_2026-04-11"
     },
     {
-      "from": "work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11",
-      "to": "repo.retest_playbook"
-    },
-    {
-      "from": "work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11",
-      "to": "work_history.repo.lane_status_board"
-    },
-    {
       "from": "work_history.yt.yt_unbounded_program_note",
       "to": "work_history.yt.yt_explicit_systematic_status_review_2026-04-15"
     },
@@ -22241,7 +22169,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:26:38.518020+00:00",
+  "generated_at": "2026-05-03T13:41:57.042721+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23676,10 +23604,9 @@
         "staggered_self_consistent_two_body_note_2026-04-11",
         "cl3_sm_embedding_theorem",
         "cpt_exact_note",
-        "signed_gravity_chi_selector_theorem_or_nogo_note",
         "gravity_signed_source_density_boundary_note"
       ],
-      "note_hash": "08d37fbc0c945bd53757b00daf7ebc6125d23fc2e69c674709711756ff852de9",
+      "note_hash": "b8501d44b2d568145d9818b493588ceb93e71c2afb7659e8c84a4c7ca3193b03",
       "path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
       "runner_path": "scripts/gravity_signed_sector_harness.py",
       "title": "Signed Gravitational Response Selector Boundary Note"
@@ -33414,11 +33341,10 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "irregular_directional_observable_note_2026-04-11",
         "weak_coupling_retention_note_2026-04-11",
         "gravity_sign_audit_2026-04-10"
       ],
-      "note_hash": "61c1a3a3d446e48f46099a4344180db2e0caf6e63cb2e118835056be01c5a577",
+      "note_hash": "83288739a09171dd406ac4b7b893e6b483de48b977926e6f2f05b6142531e3fa",
       "path": "docs/IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md",
       "runner_path": "scripts/frontier_irregular_sign_core_packet_gate.py",
       "title": "Irregular Sign Core-Packet Gate Note"
@@ -34671,10 +34597,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "kubo_fam2_refinement_note",
         "kubo_continuum_limit_note"
       ],
-      "note_hash": "72849a975042162cdc545ae54464972dceea6cd5d649118ba0a37b8d033c5ab6",
+      "note_hash": "b7ba804ad375e509b8c29d1a6a3e1df852fc3022ccef0222b5df7261a738cf53",
       "path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
       "runner_path": "scripts/kubo_continuum_limit_families.py",
       "title": "Kubo Continuum Limit \u2014 Family Portability (Partial, Later Narrowed)"
@@ -35422,10 +35347,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "lattice_field_strength_unification_note"
-      ],
-      "note_hash": "5a600b413ffa38b18812c764372d2296d63dccb17935c724144c4e9d4e1236e4",
+      "deps": [],
+      "note_hash": "7a0d028927f35a87a707f168447292712a17b350b19faa1e8288617fd0832e85",
       "path": "docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md",
       "runner_path": "scripts/lattice_symmetry_unification_decision.py",
       "title": "Lattice Symmetry Unification Decision Note"
@@ -40699,9 +40622,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "publication.ci3_z3.quantitative_summary_table",
         "publication.ci3_z3.claims_table",
-        "publication.ci3_z3.full_claim_ledger",
         "publication.ci3_z3.arxiv_draft",
         "minimal_axioms_2026-04-11",
         "self_consistency_forces_poisson_note",
@@ -40926,7 +40847,7 @@
         "gw_echo_null_result_note",
         "koide_reviewer_stress_test_note_2026-04-21"
       ],
-      "note_hash": "d0672442a3a652cc923f78855bfbfa55b162bff103bb4cad7717800c6fc62fb3",
+      "note_hash": "b53e0b271d989476d206afce1b0e03b82229467b8da10729d820c96649912323",
       "path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
       "runner_path": null,
       "title": "Publication Matrix"
@@ -43498,10 +43419,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "signed_gravity_tensor_source_transport_retention_note",
-        "signed_gravity_remaining_closure_gates_note"
+        "signed_gravity_tensor_source_transport_retention_note"
       ],
-      "note_hash": "e821ce3ff2e01721aac8b12abf048113cebaa0df28267fb09a6e7b0e3af434d7",
+      "note_hash": "da0cd586b5ae98ff3dc0a7606b07746da5f294d18a96d43d83b93dba8867cef9",
       "path": "docs/SIGNED_GRAVITY_CONTINUUM_GRADED_EINSTEIN_LOCALIZATION_NOTE.md",
       "runner_path": "scripts/signed_gravity_continuum_graded_einstein_localization.py",
       "title": "Signed Gravity Continuum Graded Einstein Localization Note"
@@ -43532,10 +43452,9 @@
       "deps": [
         "signed_gravity_remaining_closure_gates_note",
         "signed_gravity_cl3z3_source_character_derivation_note",
-        "signed_gravity_staggered_dirac_aps_boundary_realization_note",
         "signed_gravity_naturally_hosted_orientation_line_note"
       ],
-      "note_hash": "e0939bc6737ba62b91e23449673ce049e9a98a6edf8f585a998d1e47bf65ad1d",
+      "note_hash": "43e08788bc44103bf0655b61ac2a38689dc1ec6ca1d43bad076fad730f3c2e42",
       "path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
       "runner_path": "scripts/signed_gravity_native_boundary_complex_containment.py",
       "title": "Signed Gravity Native Boundary-Complex Containment Note"
@@ -43645,11 +43564,10 @@
       "claim_type_seed_hint": null,
       "deps": [
         "signed_gravity_continuum_graded_einstein_localization_note",
-        "signed_gravity_native_boundary_complex_containment_note",
         "signed_gravity_staggered_dirac_aps_boundary_realization_note",
         "signed_gravity_naturally_hosted_orientation_line_note"
       ],
-      "note_hash": "9d716bfdef2186efbec98b0d40ee93c30d3a6639d09a81194be8e2ac89fb2724",
+      "note_hash": "2abae256dfd08ae554a6628f2d799b827ca5e86623cdf441b8b555de3f513fc5",
       "path": "docs/SIGNED_GRAVITY_REMAINING_CLOSURE_GATES_NOTE.md",
       "runner_path": "scripts/signed_gravity_remaining_closure_gates.py",
       "title": "Signed Gravity Remaining Closure Gates Note"
@@ -43671,7 +43589,6 @@
         "signed_gravity_native_boundary_complex_containment_note",
         "signed_gravity_staggered_dirac_aps_boundary_realization_note",
         "signed_gravity_naturally_hosted_orientation_line_note",
-        "signed_gravity_chi_selector_theorem_or_nogo_note",
         "scalar_trace_tensor_no_go_note",
         "gravity_signed_source_density_boundary_note",
         "planck_source_unit_normalization_support_theorem_note_2026-04-25",
@@ -43692,7 +43609,7 @@
         "lensing_k_sweep_note",
         "complex_action_note"
       ],
-      "note_hash": "182dd3e932a562e6b73886f139784eb352663cd5d16a566f3ab8b0778b14a5bb",
+      "note_hash": "c252c6251031988a913f56dab46a936f5b0cbb2c229b1a0f6a42323aa7cc83c4",
       "path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
       "runner_path": null,
       "title": "Signed Gravitational Response Lane Backlog"
@@ -43744,11 +43661,10 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "signed_gravity_cl3z3_source_character_derivation_note",
         "signed_gravity_nature_grade_closure_blocker_audit_note",
         "signed_gravity_naturally_hosted_orientation_line_note"
       ],
-      "note_hash": "fb45bff8a2f373c2247082418a466d16c86cdc4f3a0d0371d85d206ecf3cfb72",
+      "note_hash": "5f9bfa618645063afd2ac1921c48e3731b36e0f751a9c1c21867f50ee5cf86cd",
       "path": "docs/SIGNED_GRAVITY_SOURCE_CHARACTER_UNIQUENESS_THEOREM_NOTE.md",
       "runner_path": "scripts/signed_gravity_source_character_uniqueness_theorem.py",
       "title": "Signed Gravity Source-Character Uniqueness Theorem Note"
@@ -43775,10 +43691,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "signed_gravity_native_boundary_complex_containment_note",
-        "signed_gravity_naturally_hosted_orientation_line_note"
+        "signed_gravity_native_boundary_complex_containment_note"
       ],
-      "note_hash": "69323d2d258da908a1b7086136976c12d88af680ca757d73f09688128d52ebce",
+      "note_hash": "6f8f8009c3e41ff35ae6f96dad3c5eba32c13e7efc2b0198c6166f256d372c7f",
       "path": "docs/SIGNED_GRAVITY_STAGGERED_DIRAC_APS_BOUNDARY_REALIZATION_NOTE.md",
       "runner_path": "scripts/signed_gravity_staggered_dirac_boundary_eta_realization.py",
       "title": "Signed Gravity Staggered-Dirac APS Boundary Realization Note"
@@ -43789,10 +43704,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "tensor_source_map_eta_note",
-        "signed_gravity_continuum_graded_einstein_localization_note"
+        "tensor_source_map_eta_note"
       ],
-      "note_hash": "c2da81e516cbe2a08ae93c9ac63df53d42cf44f0630ffbbccfa319d14f87aff3",
+      "note_hash": "98e9d8809371d62c85fdb5e1cbd5cc5919716786a43f47647b520d12feea95de",
       "path": "docs/SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_NOTE.md",
       "runner_path": "scripts/signed_gravity_tensor_source_transport_retention.py",
       "title": "Signed Gravity Tensor-Source Transport And Retention Note"
@@ -47317,10 +47231,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "work_history.ckm.ckm_mass_basis_nni_note",
-        "work_history.ckm.jarlskog_phase_bound_note"
+        "work_history.ckm.ckm_mass_basis_nni_note"
       ],
-      "note_hash": "1a0c097f6a647660f24e0fec5fbd5f867e9664a23028bceb355e8eacf5fccd57",
+      "note_hash": "66b180ef72e33494a257197b85ef6c51334a56fdece9b411073b7d19c70fa7a4",
       "path": "docs/work_history/ckm/CABIBBO_BOUND_NOTE.md",
       "runner_path": "scripts/frontier_ckm_mass_basis_nni.py",
       "title": "Historical Cabibbo Bound Note"
@@ -47560,13 +47473,11 @@
       "claim_type_seed_hint": null,
       "deps": [
         "repo.active_review_queue",
-        "work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11",
-        "work_history.repo.review_feedback.claude_frontier_retain_audit_2026-04-11",
         "repo.controlled_vocabulary",
         "work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18",
         "work_history.repo.backlog.nature_backlog_2026-04-10"
       ],
-      "note_hash": "aa8af0918ea9c0eb08a36a90853f4ac788385234a73b20d76816b8cc1027df0d",
+      "note_hash": "f9e06749b1df02d43d300a9511ffc392d55544587bb5b115b234aedd4775b7ac",
       "path": "docs/work_history/repo/LANE_STATUS_BOARD.md",
       "runner_path": null,
       "title": "Historical Lane Status Board"
@@ -47704,11 +47615,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "work_history.repo.review_feedback.code_review_last_week_2026-04-11",
-        "repo.retest_playbook",
-        "work_history.repo.lane_status_board"
+        "work_history.repo.review_feedback.code_review_last_week_2026-04-11"
       ],
-      "note_hash": "1ea2797da2c14b96c08a4d1027bcca6942f4f8321c9ee46b23702c0b1add251d",
+      "note_hash": "90a84af6f95f3759a640fd0ea1e7aa4e2d104c8adb2bb447f2e30143b3a6ad98",
       "path": "docs/work_history/repo/review_feedback/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md",
       "runner_path": null,
       "title": "Rerun-Required Bug Audit \u2014 2026-04-11"
@@ -49459,6 +49368,7 @@
     "lattice_nn_deterministic_rescale_note",
     "lattice_nn_high_precision_note",
     "lattice_nn_rg_gravity_note",
+    "lattice_symmetry_unification_decision_note",
     "lattice_synthesis_guard_note",
     "lensing_adjoint_kernel_reduced_model_note",
     "lensing_deflection_note",
@@ -49964,10 +49874,10 @@
       "open_gate": 112,
       "positive_theorem": 654
     },
-    "edge_count": 5560,
+    "edge_count": 5542,
     "leaf_count": 647,
     "node_count": 1845,
-    "root_count": 1068,
+    "root_count": 1069,
     "runners_with_path": 1409
   }
 }
