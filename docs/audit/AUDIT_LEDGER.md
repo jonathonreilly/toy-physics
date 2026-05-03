@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:57:28.928946+00:00
+**Generated:** 2026-05-03T12:00:31.346330+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 740 |
+| unaudited | 739 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 516 |
+| ~~audited_conditional~~ | 517 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 345 |
-| `audited_conditional` | 516 |
+| `audited_conditional` | 517 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 781 |
+| `unaudited` | 780 |
 
 | claim_type | count |
 |---|---:|
@@ -472,6 +472,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audit_dm_runner_stale_path_cleanup_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_change_proposal_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `axiom_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1448,6 +1449,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Step 1 asserts Cl(3) ⊗_R C has complex dimension 4 and is isomorphic to M_2(C), then uses that asserted simple complex algebra to derive unique irreducible Pauli representation and U2-U4.  _(class `C`)_
 - **chain closes:** False — The chain does not close because the central algebraic identification is wrong: a real 8-dimensional algebra tensored with C remains 8-dimensional over C, and odd complex Clifford algebra splits into two M_2(C) summands rather than M_2(C). U4 also imports the staggered-fermion one-mode Fock-space bridge while claiming A1 only.
 - **rationale:** Issue: Step 1 misidentifies Cl(3) ⊗_R C as M_2(C) by halving the tensor-product dimension and ignoring the odd-complex-Clifford split. Why this blocks: U2 and U3 rely on simplicity and unique irreducibility of M_2(C); with two simple summands, the claimed unique Pauli irrep and universal decomposition into that single irrep are not established. The runner exhibits Pauli relations, no scalar model, random failed 3x3 searches, constructed unitary conjugates, and Pauli direct sums, but it does not verify the Artin-Wedderburn identification or rule out the second central-character irrep. Repair target: replace Step 1 with the correct representation category for real Cl_{3,0} ~= M_2(C) as a real algebra, state any fixed central-character convention explicitly, prove classification under that convention, and separately prove or cite the Grassmann one-mode Fock-space bridge needed for U4. Claim boundary until fixed: Pauli matrices give a 2-dimensional faithful irreducible model and no 1-dimensional faithful complex model; this packet does not prove uniqueness of all faithful irreducible complex Cl(3) representations, the full decomposition theorem, or per-site Hilbert dimension exactly 2 from A1 alone.
+- **auditor confidence:** high
+
+### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite-range Cl(3) site-algebra Hamiltonians on Z^3: L1 Lieb-Robinson envelope, L3 lattice light cone, L4 finite local norm bound, plus L2 exponential connected-correlator clustering for the canonical thermal state/gapped canonical surface.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-ohm-019dedb4-fb2e-7ce0-9d1c-f4c83666905e`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Step 4: deriving L2 exponential clustering for the canonical thermal state from the LR bound via imaginary-time/Hastings-Koma and asserting m_gap>0 from the A_min gauge/SU(3) sector.  _(class `C`)_
+- **chain closes:** False — The LR portion can plausibly close from finite-dimensional local algebras, finite interaction range, bounded local norm, and cubic coordination. The full claim does not close because L2 is not an immediate consequence of those inputs: exponential clustering requires an independently established spectral gap, high-temperature/finite-temperature clustering hypotheses, uniqueness/mixing assumptions, or a cited theorem with all hypotheses verified. The note instead imports m_gap>0 through statements about the A_min gauge sector, SU(3) confinement, and generic gapped behavior, none of which are in the retained inputs or proved by the runner.
+- **rationale:** Issue: L2 exponential clustering is promoted from LR plus an asserted mass gap/confinement bridge. Why this blocks: LR bounds alone control commutators outside a light cone; they do not prove static connected-correlator clustering for arbitrary canonical thermal states, and the packet gives no retained derivation of m_gap>0 for the stated Cl(3) tensor Z^3 Hamiltonian class. The runner is a 1D free-fermion representative with weak clustering pass condition and cannot verify the 3D Cl(3) theorem or the imported gauge-sector gap. Repair target: either restrict the audited theorem to L1/L3/L4 LR consequences, or add a separate retained theorem proving the required spectral gap/thermal clustering hypotheses for the canonical Hamiltonian and then verify the exact Hastings-Koma assumptions and constants. Claim boundary until fixed: clean only as a conditional LR-plus-clustering statement: if the specified Hamiltonian/state satisfies an independently proved positive gap or valid finite-temperature clustering theorem hypotheses, then exponential clustering may be invoked; the unconditional cluster-decomposition corollary is not audited clean.
+- **open / conditional deps cited:**
+  - `independent proof of m_gap>0 or valid thermal clustering hypotheses for the canonical Cl(3) Z^3 Hamiltonian/state`
+  - `verification that Hastings-Koma assumptions apply to the stated finite-range interaction and state`
+  - `replacement of 1D free-fermion proxy runner with a theorem-level check or exact model-specific verification`
 - **auditor confidence:** high
 
 ### `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29`
