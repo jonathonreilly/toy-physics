@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 203,
-    "medium": 278
+    "medium": 277
   },
-  "generated_at": "2026-05-03T18:43:14.130303+00:00",
+  "generated_at": "2026-05-03T18:43:58.749200+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7602,27 +7602,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "growing_graph_frontier_expansion_proxy_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.144,
-      "note_path": "docs/GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/growing_graph_frontier_expansion.py",
-      "transitive_descendants": 24
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gate_b_connectivity_tolerance_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -14888,6 +14867,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "growing_graph_dynamic_propagation_replacement_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "growing_graph_frontier_expansion_proxy_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/GROWING_GRAPH_DYNAMIC_PROPAGATION_REPLACEMENT_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/growing_graph_frontier_expansion.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "minimal_source_driven_field_probe_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -17541,29 +17543,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "growing_graph_dynamic_propagation_replacement_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "growing_graph_frontier_expansion_proxy_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GROWING_GRAPH_DYNAMIC_PROPAGATION_REPLACEMENT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/growing_graph_frontier_expansion.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "growing_graph_expansion_skeptic_audit_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -19770,5 +19749,5 @@
     }
   ],
   "ready_count": 64,
-  "total_pending": 754
+  "total_pending": 753
 }

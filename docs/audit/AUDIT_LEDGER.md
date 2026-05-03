@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:43:14.647524+00:00
+**Generated:** 2026-05-03T18:43:59.305970+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 81 |
+| **retained** | 82 |
 | **retained_no_go** | 104 |
 | **retained_bounded** | 173 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 725 |
+| unaudited | 724 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 328 |
+| `audited_clean` | 329 |
 | `audited_conditional` | 544 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 771 |
+| `unaudited` | 770 |
 
 | claim_type | count |
 |---|---:|
@@ -232,6 +232,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravitational_entanglement_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `growing_graph_dynamic_limit_diagnostic_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | C | - |
+| `growing_graph_frontier_expansion_proxy_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | D | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
@@ -6974,6 +6975,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** It does **not** claim a cosmology derivation or a literal de Sitter solution.  _(class `B`)_
 - **chain closes:** False — No. The runner exits zero, but the audit classifier records no A/B/C/D PASS checks for a load-bearing audit surface.
 - **rationale:** Issue: the registered runner exits with status 0 but has no classified A/B/C/D PASS checks in runner_classification.json. Why this blocks: infrastructure registration alone does not show that the load-bearing step is being computed or checked. Repair target: add explicit runner checks or a proof artifact that exposes the load-bearing computation under the audit classifier. Claim boundary until fixed: safe to cite as a bounded note with executable but unratified support.
+- **auditor confidence:** medium
+
+### `growing_graph_frontier_expansion_proxy_note`
+
+- **Note:** [`GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md`](../../docs/GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For the current growing_graph_frontier_expansion.py runner with the specified seed, 20 growth steps, and max_height 15, the generated snapshot sequence has nondecreasing frontier delay from 3 to 22 while the frozen step-0 control remains at frontier delay 3.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-hilbert`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The growing graph expands its frontier delay relative to the frozen control, with step 0 frontier delay 3.000, step 20 frontier delay 22.000, slope +0.9325 hops/step, and static control frontier delay 3.000.  _(class `A`)_
+- **chain closes:** True — The current runner output matches the note's frozen replay and directly computes the finite graph-distance observable. The closure is limited to this graph proxy and does not establish a metric, cosmology, or asymptotic theorem.
+- **rationale:** The load-bearing step is a finite graph-combinatorial computation over the runner's generated snapshots and frozen control. The runner output supports the stated scoped observable: frontier delay is nondecreasing and ends at 22 while the static control remains the step-0 graph at frontier delay 3. No hidden physical observable bridge or external comparator is used; the audited boundary is only the finite prototype graph-expansion proxy.
 - **auditor confidence:** medium
 
 ### `growing_graph_static_control_audit_note`
