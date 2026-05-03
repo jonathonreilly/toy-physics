@@ -1,7 +1,8 @@
 # LH-Doublet Traceless Abelian Eigenvalue Ratio (Narrow Theorem)
 
 **Date:** 2026-05-02
-**Type:** positive_theorem (proposed; audit-lane to ratify)
+**Type:** bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)
+**Admitted context inputs:** staggered-Dirac realization derivation target (canonical parent: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)).
 **Primary runner:** `scripts/frontier_lh_doublet_traceless_abelian_ratio.py`
 
 ## Claim scope (proposed)
@@ -89,7 +90,7 @@ decomposition.
 ## Audit-lane disposition (proposed)
 
 ```yaml
-target_claim_type: positive_theorem
+target_claim_type: bounded_theorem
 proposed_claim_scope: |
   exact eigenvalue ratio 1:(-3) on Sym²:Anti² of the LH-doublet sector under
   the graph-first selected-axis commutant decomposition; no specific eigenvalues,
@@ -100,7 +101,7 @@ audit_required_before_effective_retained: true
 ```
 
 If the audit lane ratifies a clean theorem verdict, the pipeline can derive a
-retained-family effective status because both cited authorities are
+retained-bounded effective status because both cited authorities are
 retained-grade and the load-bearing step is a class (A) algebraic closure.
 
 ## Cross-references
@@ -112,3 +113,18 @@ retained-grade and the load-bearing step is a class (A) algebraic closure.
   the commutant decomposition.
 - `HYPERCHARGE_IDENTIFICATION_NOTE.md` (currently `audited_renaming`) —
   carries the SM-Y identification step that is **out of scope** here.
+
+
+## Hypothesis set used (axiom-reset 2026-05-03)
+
+Per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), this note depends on the **staggered-Dirac realization derivation target**, which is currently an open gate. The note's load-bearing claim defines or relies on fermion fields, fermion-number operators, fermion correlators, fermion bilinears, the staggered Dirac action, the BZ-corner doubler structure, the `hw=1` triplet, charged-lepton sector content, neutrino sector content, quark / hadron content, the Koide / PMNS / CKM observable surfaces, or the Grassmann CAR boundary structure — all of which depend on the staggered-Dirac realization derivation target listed in `MINIMAL_AXIOMS_2026-05-03.md`.
+
+Canonical parent note: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md) (`claim_type: open_gate`). In-flight supporting work (see `MINIMAL_AXIOMS_2026-05-03.md`):
+
+- `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
+- `THREE_GENERATION_STRUCTURE_NOTE.md`
+- `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+- `scripts/frontier_generation_rooting_undefined.py`
+- `GENERATION_AXIOM_BOUNDARY_NOTE.md` (preserved)
+
+Therefore `claim_type: bounded_theorem` until that gate closes. When that gate closes, the lane becomes eligible for independent audit/governance retagging as `positive_theorem`; the audit pipeline recomputes `effective_status`, but it does not silently invent a new `claim_type`. The substantive science content of this note is unchanged by this retag.
