@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 27,
     "high": 215,
-    "leaf": 137,
+    "leaf": 136,
     "medium": 156
   },
-  "generated_at": "2026-05-03T00:22:03.458161+00:00",
+  "generated_at": "2026-05-03T00:24:15.533829+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -10876,30 +10876,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "left_handed_charge_matching_note",
-        "anomaly_forces_time_theorem"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SU3_ANOMALY_FORCED_3BAR_COMPLETION_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_su3_anomaly_forced_3bar_completion.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "synthesis_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -14319,6 +14295,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 60,
-  "total_pending": 535
+  "ready_count": 59,
+  "total_pending": 534
 }

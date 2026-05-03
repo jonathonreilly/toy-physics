@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:22:03.745903+00:00
+**Generated:** 2026-05-03T00:24:15.812673+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 203 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 496 |
+| unaudited | 495 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 654 |
+| ~~audited_conditional~~ | 655 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 408 |
-| `audited_conditional` | 654 |
+| `audited_conditional` | 655 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 535 |
+| `unaudited` | 534 |
 
 | claim_type | count |
 |---|---:|
@@ -1103,6 +1103,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
+| `su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `symmetry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
@@ -16462,6 +16463,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** N_D(three generations) = 3 * 4 = 12 = 0 mod 2.  _(class `B`)_
 - **chain closes:** False — The parity arithmetic closes if the Q_L/L_L SU(2) doublet content, color multiplicity, and three-generation replication are retained inputs. The direct cited left-handed doublet-content dependency is currently audited_decoration with a decoration_under effective status, not retained-grade, so the one-hop retained chain does not close.
 - **rationale:** Issue: the theorem imports the SU(2) weak-doublet carrier assignment Q_L/L_L and then applies the standard Witten even-doublet rule, but the direct cited dependency for that left-handed doublet content is not retained-grade. Why this blocks: the claimed cancellation is a correct standard-physics parity restatement once the field content is granted, but the audit question is whether the retained one-hop chain supplies that field content; it currently does not. Repair target: provide a retained-grade dependency deriving or ratifying the chiral SU(2) carrier/doublet assignment used in the count, or cite the retained parent directly if that parent is the actual authority. Claim boundary until fixed: the note may state that the imported SM-like retained field surface with 3 colored Q_L doublets plus 1 L_L doublet per generation has even Witten parity, but not that this closes as a retained theorem from the present one-hop dependencies.
+- **open / conditional deps cited:**
+  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
+- **auditor confidence:** high
+
+### `su3_anomaly_forced_3bar_completion_theorem_note_2026-05-02`
+
+- **Note:** [`SU3_ANOMALY_FORCED_3BAR_COMPLETION_THEOREM_NOTE_2026-05-02.md`](../../docs/SU3_ANOMALY_FORCED_3BAR_COMPLETION_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Derivation that, given a retained-grade Q_L : (3,2) input, SU(3)^3 anomaly cancellation, the SU(2)_L-singlet LH-Weyl completion premise, and the admitted SU(3) cubic-anomaly catalogue, the unique minimal two-field SU(3) completion is two 3bar singlets; hypercharge and u/d labelling remain out of scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=weak)
+- **load-bearing step:** Under P1+P2+P3, the SU(3) representation content of the RH (anti-)quark sector is forced to be exactly 2 LH-Weyl fermions in the 3bar representation.  _(class `B`)_
+- **chain closes:** False — The runner verifies the algebraic enumeration once the inputs are admitted, but one direct cited authority for P1 is currently audited as decoration, not retained-grade. The note also treats the SU(2)_L-singlet completion premise and SU(3) anomaly catalogue as admitted inputs rather than independently retained authorities.
+- **rationale:** Issue: the load-bearing P1 input is cited through docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md, whose ledger status is audited_decoration/effective decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02 rather than retained-grade. Why this blocks: a positive theorem cannot inherit retained status through a decoration row, and the runner only enumerates the SU(3) completion after the P1/P2/P3 inputs and anomaly catalogue are supplied. Repair target: cite a retained-grade standalone authority for the Q_L : (3,2) representation, or include an audited derivation of that representation in this row; separately keep P3 and the anomaly-coefficient catalogue explicit as admitted premises or retained authorities. Claim boundary until fixed: the note is a valid conditional algebraic completion check showing two 3bar singlets follow from the admitted inputs, but not an independently retained positive theorem.
 - **open / conditional deps cited:**
   - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
 - **auditor confidence:** high
