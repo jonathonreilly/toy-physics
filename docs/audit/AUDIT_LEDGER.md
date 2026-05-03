@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:12:48.036039+00:00
+**Generated:** 2026-05-03T21:15:30.718074+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 193 |
+| **retained_bounded** | 194 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 693 |
+| unaudited | 692 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 356 |
+| `audited_clean` | 357 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 740 |
+| `unaudited` | 739 |
 
 | claim_type | count |
 |---|---:|
@@ -205,6 +205,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `evolving_network_prototype_v4_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `evolving_network_prototype_v5_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
+| `evolving_network_prototype_v6_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -5871,6 +5872,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The frozen replay reports cross growth at 77.8% toward and F~M = 0.76 versus KNN at 66.7% toward and F~M = 0.66, while cross growth trails KNN on mean_delta by 0.000001.  _(class `C`)_
 - **chain closes:** True — The note has no known dependencies, and the runner directly constructs the ordered, cross-growth, and KNN-control families from explicit constants and recomputes the reported metrics. The audit only closes the finite replay claim, not any broad Gate B dynamics theorem or independent comparison to v4.
 - **rationale:** The current runner completed cleanly and reproduced the note's frozen table and pairwise read: cross growth improves toward fraction and F~M relative to KNN, but not mean_delta. The note's safe interpretation matches that output and explicitly avoids claiming a Gate B win. Residual risk is limited to the bounded prototype framing: it is a finite scripted replay over fixed parameters and seeds, not a general theorem about the dynamics.
+- **auditor confidence:** high
+
+### `evolving_network_prototype_v6_note`
+
+- **Note:** [`EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md`](../../docs/EVOLVING_NETWORK_PROTOTYPE_V6_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The stated h=0.5 structured-growth v6 finite sweep over four drift/restore rows, four seeds, three mass y targets, and three mass strengths reproduces the note's toward counts, mean deltas, and local F~M values, without proving Gate B closure or universality.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-evolving-network-v6`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The frozen replay result table reports the four drift/restore rows with toward counts 33/36, 24/36, 24/36, and 24/36, matching the conservative bounded interpretation.  _(class `C`)_
+- **chain closes:** True — The runner completed and reproduced the note's table exactly: 33/36, 24/36, 24/36, 24/36 with the same rounded mean deltas and F~M values. The note's own boundary language excludes the broader 100% TOWARD and Gate B closure claims.
+- **rationale:** The load-bearing claim is a bounded finite replay result, not a broad physics theorem. Current execution of scripts/evolving_network_prototype_v6.py completed successfully and reproduced the note's table values exactly, including the mixed best row and conservative interpretation. No cited dependencies are required, and the note explicitly avoids claiming Gate B closure, universality across seeds, or the prior 100% TOWARD branch narrative.
 - **auditor confidence:** high
 
 ### `ew_coupling_derivation_note`
