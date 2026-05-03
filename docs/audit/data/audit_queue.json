@@ -3,9 +3,9 @@
     "critical": 62,
     "high": 215,
     "leaf": 201,
-    "medium": 251
+    "medium": 250
   },
-  "generated_at": "2026-05-03T20:49:26.912435+00:00",
+  "generated_at": "2026-05-03T20:51:49.331350+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7799,27 +7799,6 @@
       "ready": true,
       "runner_path": "scripts/poisson_self_gravity_born_audit.py",
       "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lattice_nn_rg_gravity_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.585,
-      "note_path": "docs/LATTICE_NN_RG_GRAVITY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 2
     },
     {
       "audit_independence_required": "any_non_self",
@@ -19260,6 +19239,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 44,
-  "total_pending": 729
+  "ready_count": 43,
+  "total_pending": 728
 }

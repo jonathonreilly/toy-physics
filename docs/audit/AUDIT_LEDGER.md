@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:49:27.321845+00:00
+**Generated:** 2026-05-03T20:51:49.692975+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 186 |
+| **retained_bounded** | 187 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 700 |
+| unaudited | 699 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 349 |
+| `audited_clean` | 350 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 747 |
+| `unaudited` | 746 |
 
 | claim_type | count |
 |---|---:|
@@ -287,6 +287,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_continuum_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | C | - |
 | `lattice_nn_deterministic_rescale_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `lattice_nn_high_precision_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | C | - |
+| `lattice_nn_rg_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -9340,6 +9341,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The NN light-cone branch is frozen as a topological causal-bound statement: influence is confined to the relevant forward causal neighborhood in the graph/DAG sense, with no emergent-relativity or physical spacetime light-cone claim retained.  _(class `F`)_
 - **chain closes:** False — The remaining content is a relabeling of directed-graph forward reachability under the name 'topological causal cone', not an independently derived light-cone theorem. Renaming verdict captures the symbol-relabel character of what survives after the physical interpretation is retracted.
 - **rationale:** Re-audit confirms the original renaming verdict: the residual claim is a graph-reachability label, not a derived physical light-cone law. Scope narrowed to the administrative branch-freeze with explicit emergent-relativity retraction.
+- **auditor confidence:** high
+
+### `lattice_nn_rg_gravity_note`
+
+- **Note:** [`LATTICE_NN_RG_GRAVITY_NOTE.md`](../../docs/LATTICE_NN_RG_GRAVITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-resolution raw nearest-neighbor lattice sweep over h = 2.0, 1.0, 0.5, 0.25, 0.125 showing Born-clean rows through h = 0.25, descriptive gravity-trend reshaping under fixed, 1/h, and 1/sqrt(h) strength schedules, and no closed RG/continuum claim.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-lattice-nn-rg-gravity`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The nearest-neighbor lattice does support a Born-clean refinement window through h = 0.25, and simple h-dependent strength laws slightly reshape the gravity trend, but the data do not yet justify a promoted renormalization claim.  _(class `C`)_
+- **chain closes:** True — The cited completed run log matches the note's finite-row tables and records the shared h = 0.125 FAIL rows as raw-kernel continuation limits rather than schedule-discriminating evidence. The note's conclusion is explicitly bounded to the finite retained window and does not promote the descriptive fits to clean refinement laws.
+- **rationale:** The bounded claim closes because the note only asserts the finite-resolution behavior actually shown by the cited run artifact: Born errors stay machine-small through h = 0.25, all tested schedules fail at h = 0.125, and the fitted exponents are descriptive over sign-flipping finite rows. The script computes the lattice sweep from fixed geometry, schedules, and propagation rules rather than hard-coding the output values. Residual risk is limited to the harness-specific meaning of the gravity observable; the audited scope does not claim a continuum theory, physical gravity derivation, or RG fixed point.
 - **auditor confidence:** high
 
 ### `lattice_symmetry_unification_decision_note`
