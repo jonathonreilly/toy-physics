@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:41:55.140595+00:00
+**Generated:** 2026-05-03T00:45:33.627159+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 204 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 489 |
+| unaudited | 488 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 655 |
+| ~~audited_conditional~~ | 656 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,20 +39,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 413 |
-| `audited_conditional` | 655 |
+| `audited_conditional` | 656 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 529 |
+| `unaudited` | 528 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 535 |
+| `bounded_theorem` | 536 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 98 |
+| `open_gate` | 97 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -1113,6 +1113,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `symmetry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `teleportation_3d_resource_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_acceptance_suite_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -16658,6 +16659,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Raw xi_5 = Z_r * product_{a != r} Z_a, so it is a signed logical Z_r only after fixing spectator taste bits and is not the traced retained-bit operator Z_r tensor I_spectator.  _(class `A`)_
 - **chain closes:** True — The conclusion follows from the explicit Pauli tensor identity and the finite runner checks: retained Z_r/X_r factor as logical operators tensored with spectator identity, raw xi_5 fails traced factorization, and fixed spectator branches reduce raw xi_5 to signed Z_r. The note keeps the claim bounded to side=2/4 operator algebra and does not claim hardware readout or end-to-end teleportation resource closure.
 - **rationale:** The runner's seven acceptance gates are A-class algebraic/factorization checks and directly test the contested observable distinction rather than importing an external comparator or hidden dependency. Within the stated finite side=2/4 scope, the no-go for substituting raw xi_5 into traced retained-axis Z/Bell measurements closes. The note also preserves the valid reduced use: raw xi_5 remains allowed only in explicitly fixed spectator-branch algebra or in a future branch-conditioned workflow.
+- **auditor confidence:** high
+
+### `teleportation_3d_resource_probe_note`
+
+- **Note:** [`TELEPORTATION_3D_RESOURCE_PROBE_NOTE.md`](../../docs/TELEPORTATION_3D_RESOURCE_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded 3D side=2 dense two-species mass=0 retained-axis probe over G=0,100,500,1000: null is non-resource, at least one non-null row is a high-fidelity Psi+ Bell-frame logical resource, Bob no-record input-independence is clean, and no side>2 or physical-object transport claim is made.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Socrates-019deb49-e22e-7f72-91a9-3444a643b768`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The smallest exact 3D spatial surface does contain a strong Poisson-backed logical Bell resource in the retained-axis extraction.  _(class `C`)_
+- **chain closes:** False — The current runner output supports the bounded resource-existence acceptance gates, but the source note's numerical table/details are stale relative to the supplied current runner output. A clean audit cannot ratify the note as written while exact reported values disagree.
+- **rationale:** Issue: the source note's exact numerical results do not fully match the supplied current runner output, including the G=500 row and the G=1000 sampled mean/min/max fidelity summary. Why this blocks: the bounded resource claim is numerical, so a clean audit cannot certify stale table/detail values even though the qualitative acceptance gates still pass. Repair target: refresh docs/TELEPORTATION_3D_RESOURCE_PROBE_NOTE.md from the current runner output and rerun the compile/run commands, preserving the explicit Psi+ Bell-frame boundary. Claim boundary until fixed: the current runner supports only the bounded side=2 existence statement with best row G=1000 Bell*=0.997724, best-frame F_avg=0.998483, fixed-Phi+ F_avg=0.334850, and no side>2 or physical transport claim.
 - **auditor confidence:** high
 
 ### `teleportation_acceptance_suite_note`
