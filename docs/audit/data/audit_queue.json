@@ -3,9 +3,9 @@
     "critical": 62,
     "high": 214,
     "leaf": 201,
-    "medium": 273
+    "medium": 272
   },
-  "generated_at": "2026-05-03T19:03:48.529164+00:00",
+  "generated_at": "2026-05-03T19:15:44.530720+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7667,29 +7667,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
       "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "alt_connectivity_family_complex_failure_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "alt_connectivity_family_sign_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.822,
-      "note_path": "docs/ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/ALT_CONNECTIVITY_FAMILY_COMPLEX_SWEEP.py",
-      "transitive_descendants": 19
     },
     {
       "audit_independence_required": "any_non_self",
@@ -19686,6 +19663,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 61,
-  "total_pending": 750
+  "ready_count": 60,
+  "total_pending": 749
 }
