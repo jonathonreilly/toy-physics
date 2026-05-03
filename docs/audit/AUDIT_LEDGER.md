@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:08:40.489266+00:00
+**Generated:** 2026-05-03T15:10:27.865796+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 769 |
+| unaudited | 768 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 521 |
+| ~~audited_conditional~~ | 522 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 521 |
+| `audited_conditional` | 522 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 814 |
+| `unaudited` | 813 |
 
 | claim_type | count |
 |---|---:|
@@ -841,6 +841,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_tensor_ray_magnitude_bridge_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `scaling_failure_mechanisms` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `second_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unsupported_finite_sweep_and_readout_bridge | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `shapiro_experimental_card` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sigma_hier_uniqueness_theorem_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
@@ -11430,6 +11431,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The only cited battery script is absent from the repository and is described as 'to be frozen', so the numeric control battery cannot be rerun or checked from the provided artifact chain.
 - **rationale:** Issue: The note's retained positive result rests on a missing artifact, scripts/second_grown_family_battery.py, explicitly labeled as not yet frozen, and no frozen output is provided in the artifact chain. Why this blocks: the quoted F~M, Born, gravity, and complex-action control-battery numbers are unreviewable from the allowed source and artifacts, so the candidate retained-grade second-family claim cannot be independently reproduced or checked. Repair target: restore or recreate the exact battery script, add a frozen log and preferably a PASS/FAIL assertion runner, or replace this note with audit-clean sign/complex second-family notes that actually carry the evidence. Claim boundary until fixed: it is safe to say this note records a historical candidate at drift=0.05, restore=0.30; it is not safe to claim a retained second independent grown family from the current artifact chain.
 - **auditor confidence:** high
+
+### `second_grown_family_sign_note`
+
+- **Note:** [`SECOND_GROWN_FAMILY_SIGN_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The signed-source fixed-field package is claimed to survive on the tested no-restore geometry-sector grown-family slice, with 15/15 tested drift/seed rows passing exact zero-source baseline, exact neutral cancellation, opposite sign response, and near-linear weak charge scaling.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-hostile-auditor-2026-05-03-b`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note's load-bearing step is the asserted finite sweep result: 15/15 tested rows passed on drift values 0.0, 0.1, 0.2, 0.3, 0.5 and seeds 0, 1, 2, with exact zero-source baseline, exact +1/-1 cancellation, opposite q/-q response, and mean charge exponent 1.000072.  _(class `unsupported_finite_sweep_and_readout_bridge`)_
+- **chain closes:** False — The note states the sweep outcomes and interprets them as a second independent grown-family basin, but in restricted input there is no runner, proof, table of row outputs, definition of the signed-source readouts, or theorem establishing that the no-restore slice is an independent grown family rather than a selected parameter slice.
+- **rationale:** Issue: The finite-sweep result and the interpretation as a second independent grown-family signed-source survival theorem are asserted but not derived or reproduced from retained inputs in the source packet. Why this blocks: A bounded theorem can close on an explicit finite computation or exact proof, but here the load-bearing pass/fail predicates, readout definitions, row-level outputs, and family-independence criterion are not available for hostile verification. Repair target: Provide a retained runner or exact proof that constructs the no-restore geometry-sector slice, computes each pass predicate from source primitives, emits row-level results for all 15 drift/seed cases, and defines the weak-charge exponent/readout without importing the conclusion. Claim boundary until fixed: The note may be cited as an internal reported sweep summary, not as an audited bounded theorem that the signed-source package survives on an independently verified second grown family.
+- **auditor confidence:** 0.87
 
 ### `self_consistency_forces_poisson_note`
 
