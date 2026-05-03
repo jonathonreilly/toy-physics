@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:08:07.236786+00:00
+**Generated:** 2026-05-03T14:09:25.752259+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 101 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 14 |
-| unaudited | 767 |
+| open_gate | 15 |
+| unaudited | 766 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 315 |
+| `audited_clean` | 316 |
 | `audited_conditional` | 521 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 809 |
+| `unaudited` | 808 |
 
 | claim_type | count |
 |---|---:|
@@ -51,8 +51,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 42 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 862 |
-| `unset` | 1 |
+| `positive_theorem` | 863 |
 
 | criticality | count |
 |---|---:|
@@ -198,6 +197,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `ew_current_matching_rule_open_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | B | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5411,6 +5411,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The q-qbar color space decomposes as N_c tensor N_c-bar = 1 + adjoint, so the adjoint channel-count fraction is (N_c^2 - 1)/N_c^2, giving 8/9 at N_c=3 and reciprocal 9/8.  _(class `A`)_
 - **chain closes:** True — The scoped group-theory result follows from SU(N_c) Fierz completeness and the representation dimension count, with retained upstreams supplying the bounded gauge/color setting and N_c=3. The broader physical EW 9/8 matching correction does not close here because the projection/matching rule is explicitly outside scope.
 - **rationale:** Within the stated boundary, the derivation closes: the Fierz identity supplies the singlet/adjoint decomposition and the Hilbert-space dimension count gives the exact ratio without numerical tuning or an asymptotic correction. The note correctly separates this bounded theorem from the unproved matching rule M and does not claim to derive the full EW coupling correction. The retained upstream dependencies are sufficient for the scoped color/gauge context and no forbidden cycle dependency is load-bearing.
+- **auditor confidence:** high
+
+### `ew_current_matching_rule_open_gate_note_2026-05-03`
+
+- **Note:** [`EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`](../../docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** The electroweak package-level 9/8 correction has an exact group-theory channel ratio input, (N_c^2 - 1)/N_c^2 = 8/9 at N_c = 3, but the physical matching rule selecting the connected color trace as the EW readout remains unclosed and must block downstream retained propagation.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-audit-loop-cleanroom-ew-current-matching-rule-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The exact Fierz-channel theorem supplies the channel-count arithmetic, but it does not by itself prove that the physical electroweak vacuum polarization reads only the connected color trace after CMT factorization.  _(class `B`)_
+- **chain closes:** True — The source note is not claiming the 9/8 matching rule as retained; it claims the opposite boundary. The one-hop dependency explicitly derives only the exact Fierz/channel-count ratio and separately labels matching rule (M) as not derived. Therefore the open-gate claim closes from the restricted packet.
+- **rationale:** Clean as an open gate. Issue identified by the note: the exact Fierz ratio supplies only the adjoint-channel fraction, while the physical EW readout selection remains a separate structural input. Why this blocks downstream theorem status: downstream uses of the exact 9/8 coefficient require the unmatched premise that the physical EW vacuum polarization projects onto the connected/adjoint channel after CMT factorization. Repair target: a retained theorem deriving the connected-trace EW readout from the lattice current construction, or an exact derivation of the disconnected-current coefficient, or a bounded restatement that keeps the normalization conditional. Claim boundary until fixed: the 8/9 group-theory channel ratio may be cited as exact support, but the package-level EW 9/8 matching rule remains conditioned on this open gate.
 - **auditor confidence:** high
 
 ### `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26`
