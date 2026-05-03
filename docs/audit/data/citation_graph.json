@@ -15914,6 +15914,38 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_leptogenesis_transport_status_note_2026-04-16"
     },
     {
@@ -16106,6 +16138,14 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_effective_parent_one_clock_transfer_boundary_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_z3_texture_factor_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_flagship_closure_review_note_2026-04-17"
     },
     {
@@ -16122,6 +16162,22 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_abcc_signature_forcing_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_neutrino_source_surface_active_curvature_23_symmetric_baseline_boundary_theorem_note_2026-04-17"
     },
     {
@@ -16135,6 +16191,22 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -22941,7 +23013,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:45:12.737268+00:00",
+  "generated_at": "2026-05-03T15:47:55.790101+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -40713,6 +40785,14 @@
         "dm_leptogenesis_hrad_theorem_note_2026-04-16",
         "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
         "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15",
+        "dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15",
+        "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
+        "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15",
+        "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+        "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
         "dm_leptogenesis_transport_status_note_2026-04-16",
         "dm_candidate_mass_window_theorem_note_2026-04-19",
         "dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16",
@@ -40761,14 +40841,24 @@
         "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18",
         "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18",
         "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
+        "dm_effective_parent_one_clock_transfer_boundary_theorem_note_2026-04-18",
+        "dm_z3_texture_factor_theorem_note_2026-04-15",
         "dm_flagship_closure_review_note_2026-04-17",
         "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
         "sigma_hier_uniqueness_theorem_note_2026-04-19",
         "abcc_cp_phase_no_go_theorem_note_2026-04-19",
+        "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19",
+        "dm_abcc_signature_forcing_theorem_note_2026-04-19",
+        "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21",
+        "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
         "dm_neutrino_source_surface_active_curvature_23_symmetric_baseline_boundary_theorem_note_2026-04-17",
         "dm_neutrino_source_surface_active_parity_compatible_diagonal_baseline_theorem_note_2026-04-17",
         "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17",
         "dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16",
+        "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20",
+        "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20",
+        "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
+        "dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20",
         "r_base_group_theory_derivation_theorem_note_2026-04-24",
         "cosmology_from_mass_spectrum_note",
         "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
@@ -40887,7 +40977,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "04961e1734bfd92f069424456466c3b11363a4ca06e7021f8170c244fda2ea27",
+      "note_hash": "b6223bb6dfce7e4cc6d162e72bf213e7a7d3445cabb17a1e03b30f0efbfda8be",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50995,8 +51085,8 @@
       "open_gate": 112,
       "positive_theorem": 628
     },
-    "edge_count": 5735,
-    "leaf_count": 603,
+    "edge_count": 5753,
+    "leaf_count": 596,
     "node_count": 1858,
     "root_count": 1058,
     "runners_with_path": 1417
