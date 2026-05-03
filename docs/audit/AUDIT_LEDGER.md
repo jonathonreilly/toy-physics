@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:00:59.490195+00:00
+**Generated:** 2026-05-03T02:04:22.171200+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 99 |
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 12 |
-| unaudited | 464 |
+| open_gate | 13 |
+| unaudited | 463 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 427 |
+| `audited_clean` | 428 |
 | `audited_conditional` | 666 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 504 |
+| `unaudited` | 503 |
 
 | claim_type | count |
 |---|---:|
@@ -492,6 +492,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_no_signaling_audit` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | B | - |
 | `teleportation_noise_fault_controls_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_preparation_readout_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_resource_fidelity_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -17104,6 +17105,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the load-bearing promotion path remains conditional on three explicit open obligations: an underived selector completion, an unproved all-even signed-branch induction beyond side 12, and controller/material envelopes not tied to a physical implementation model. Why this blocks: the runner checks finite metrics and target specifications after setting the relevant certificate/envelope data, but does not compute the missing theorem or hardware bridge. Repair target: prove gap(L)*L^2 >= 0.390 and Bell*(L) >= 0.999702 for every even L >= 4 on the signed G=-1000 branch, derive or independently justify the selector completion, close the native record apparatus dependency, and connect the controller/material thresholds to an actual noise/material model. Claim boundary until fixed: state-only teleportation planning artifact with explicit acceptance surfaces; no matter, mass, charge, energy, object, or faster-than-light transport claim.
 - **open / conditional deps cited:**
   - `TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md`
+- **auditor confidence:** high
+
+### `teleportation_resource_fidelity_note`
+
+- **Note:** [`TELEPORTATION_RESOURCE_FIDELITY_NOTE.md`](../../docs/TELEPORTATION_RESOURCE_FIDELITY_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Bounded open-gate harness for ordinary single-qubit state teleportation using a supplied two-qubit resource density matrix with ideal Bell measurement, two-bit classical record, and Bob-side Pauli correction.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-agent-mencius-2nd-019deb92-73bc-7ee3-a526-26a5109bce08`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** For this fixed Bell-basis measurement and fixed Pauli-correction convention, the exact average fidelity obeys F_avg = (1 + 2 * <Phi+|rho|Phi+>) / 3, so the fixed-protocol threshold is <Phi+|rho|Phi+> > 1/2.  _(class `C`)_
+- **chain closes:** True — The bounded harness closes on its own terms: the runner constructs the fixed teleportation channel from Bell projectors and Pauli corrections, computes average fidelity from the Choi matrix, and verifies the Bell-overlap formula and threshold brackets numerically. It does not close any larger claim about native resource preparation, optimized teleportation protocols, matter transfer, or FTL transport.
+- **rationale:** The note is explicitly scoped to a fixed density-matrix teleportation protocol and keeps the physical boundary narrow. The runner does not merely hard-code the threshold: it computes the corrected channel and Choi average fidelity independently of the Bell-overlap prediction, then checks the formula error, isotropic bracket, no-pre-message Bob input-independence, trace preservation, and resource physicality. Current runner output matches the note and all acceptance gates pass. Residual risk is only scope risk: this clean verdict makes the bounded open-gate harness citeable, not the broader teleportation lane retained.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
