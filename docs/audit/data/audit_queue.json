@@ -5,27 +5,27 @@
     "leaf": 203,
     "medium": 271
   },
-  "generated_at": "2026-05-03T12:23:28.908599+00:00",
+  "generated_at": "2026-05-03T12:25:30.524317+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
+      "audit_status": "audit_in_progress",
+      "blocker": "awaiting_cross_confirmation",
       "claim_id": "planck_finite_response_no_go_note_2026-04-24",
-      "claim_scope": null,
+      "claim_scope": "Bare finite primitive-cell signed-permutation automorphisms B_4 have no nontrivial infinitesimal neighborhood and therefore cannot by themselves supply local metric/coframe response directions for the Planck route.",
       "claim_type": "no_go",
-      "claim_type_provenance": "migration_hint",
+      "claim_type_provenance": "audited_pending_cross_confirmation",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": null,
+      "cross_confirmation_status": "awaiting_second",
       "deps": [
         "planck_parent_source_hidden_character_no_go_note_2026-04-24"
       ],
       "direct_in_degree": 9,
-      "effective_status": "unaudited",
+      "effective_status": "audit_in_progress",
       "load_bearing_score": 12.66,
       "note_path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
-      "queue_reason": "unaudited",
+      "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
       "transitive_descendants": 285
