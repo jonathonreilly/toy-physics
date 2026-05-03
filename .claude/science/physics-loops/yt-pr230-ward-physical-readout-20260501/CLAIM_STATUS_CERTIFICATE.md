@@ -1,5 +1,29 @@
 # Claim Status Certificate
 
+Assumption/import default-off refresh:
+
+```text
+actual_current_surface_status: open / assumption-import stress complete
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=123 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=149 FAIL=0
+```
+
+The refreshed assumption firewall now matches the current source-Higgs
+default-off instrumentation surface.  It authorizes no physics readout:
+guard metadata, unratified canonical-`O_H` inputs, and finite-mode
+`C_sH/C_HH` rows remain non-evidence until a ratified `O_H`, production pole
+extraction, Gram purity, and retained-route gates pass.  No retained or
+`proposed_retained` wording is authorized.
+
 Source-Higgs pole-residue extractor gate:
 
 ```text

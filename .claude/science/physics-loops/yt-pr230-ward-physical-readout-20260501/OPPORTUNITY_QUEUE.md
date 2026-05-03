@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-03 update: the assumption/import stress runner has been refreshed for
+the current source-Higgs harness surface.  The harness can contain default-off
+finite-row `C_sH/C_HH` instrumentation behind a canonical-`O_H` certificate,
+but this is infrastructure only; guard metadata and unratified finite rows are
+not source-Higgs evidence.  Assumption stress now passes `PASS=18 FAIL=0`.
+This does not change the closure ranking.  Highest-value foreground work
+remains a ratified `O_H` plus production pole rows, real same-source W/Z
+response rows with identity certificates, or a microscopic rank-one theorem.
+
 2026-05-03 update: the source-Higgs route now has an explicit pole-residue
 extractor gate between finite-mode `C_ss/C_sH/C_HH` harness rows and the
 builder input.  The current reduced unratified-operator smoke is correctly

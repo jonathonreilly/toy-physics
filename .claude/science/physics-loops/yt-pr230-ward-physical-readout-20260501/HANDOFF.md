@@ -1,5 +1,27 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 assumption/import stress default-off refresh:
+
+- Updated `scripts/frontier_yt_pr230_assumption_import_stress.py`,
+  `docs/YT_PR230_ASSUMPTION_IMPORT_STRESS_NOTE_2026-05-01.md`,
+  `outputs/yt_pr230_assumption_import_stress_2026-05-01.json`, and
+  `ASSUMPTIONS_AND_IMPORTS.md`.
+- The assumption runner had a stale expectation that the source-Higgs harness
+  was absence-only.  The current surface is stricter and more precise:
+  default-off finite-row source-Higgs instrumentation may exist behind a
+  same-surface canonical-`O_H` certificate, but metadata guards and unratified
+  finite rows are not evidence.
+- Runners: assumption stress `PASS=18 FAIL=0`, source-Higgs default-off guard
+  `PASS=13 FAIL=0`, retained-route `PASS=123 FAIL=0`, campaign status
+  `PASS=149 FAIL=0`.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: produce a real rank-repair input, not more source-only
+metadata: either a ratified same-surface canonical `O_H` with production
+`C_sH/C_HH` pole rows passing O_sp-Higgs Gram purity, or production same-source
+W/Z response rows with sector-overlap and canonical-Higgs identity
+certificates.  PR #230 remains draft/open.
+
 Latest checkpoint, 2026-05-03 source-Higgs pole-residue extractor:
 
 - Added `scripts/frontier_yt_source_higgs_pole_residue_extractor.py`,

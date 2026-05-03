@@ -704,12 +704,15 @@ source-Higgs overlap or orthogonal top coupling.  Generic gap language is
 support only and does not certify `cos(theta)=1`, `kappa_s`, or source-pole
 purity.
 
-2026-05-02 source-Higgs harness absence guard:
+2026-05-03 source-Higgs harness default-off guard:
 
 The production certificate's `source_higgs_cross_correlator` guard is claim
-hygiene only.  It marks `O_H`, `C_sH`, and `C_HH` rows absent unless actually
-implemented.  It must not be used as source-Higgs evidence, Gram purity,
-canonical-Higgs normalization, or retained/proposed-retained support.
+hygiene only.  The harness may contain default-off finite-row instrumentation,
+but it is enabled only behind a same-surface canonical-Higgs operator
+certificate and explicit source-Higgs cross/noise settings.  Guard metadata,
+default-off instrumentation, and unratified finite rows must not be used as
+source-Higgs evidence, Gram purity, canonical-Higgs normalization, or
+retained/proposed-retained support.
 
 2026-05-02 W/Z response harness absence guard:
 

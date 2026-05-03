@@ -13,11 +13,15 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-174-source-higgs-pole-residue-extractor
-blocks_completed: 174
-active_route: "source-Higgs pole-residue extraction bridge"
-active_hard_residual: "The finite-mode source-Higgs harness now has an executable pole-residue extractor gate for future C_ss/C_sH/C_HH production artifacts.  The current default input is rejected because it is reduced-scope, uses an unratified operator, has only two momentum modes and two configurations, and lacks model-class pole-saturation plus FV/IR controls.  No pole-residue row file is written.  Extractor PASS=9 FAIL=0, retained-route PASS=123 FAIL=0, campaign status PASS=149 FAIL=0.  Closure still requires a ratified O_H plus production C_sH/C_HH pole rows passing O_sp-Higgs Gram purity, or same-source W/Z rows with identity certificates.  No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-175-assumption-import-stress-default-off-refresh
+blocks_completed: 175
+active_route: "assumption/import firewall maintenance for source-Higgs default-off instrumentation"
+active_hard_residual: "The assumption/import stress runner now matches the current source-Higgs harness surface: default-off finite-row C_sH/C_HH instrumentation behind a canonical-O_H certificate is allowed as instrumentation, but guard metadata and unratified finite rows remain non-evidence.  Assumption stress PASS=18 FAIL=0, retained-route PASS=123 FAIL=0, campaign status PASS=149 FAIL=0.  Closure still requires a ratified O_H plus production C_sH/C_HH pole rows passing O_sp-Higgs Gram purity, or same-source W/Z rows with identity certificates.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_pr230_assumption_import_stress.py"
+  - "docs/YT_PR230_ASSUMPTION_IMPORT_STRESS_NOTE_2026-05-01.md"
+  - "outputs/yt_pr230_assumption_import_stress_2026-05-01.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
   - "scripts/frontier_yt_source_higgs_pole_residue_extractor.py"
   - "docs/YT_SOURCE_HIGGS_POLE_RESIDUE_EXTRACTOR_NOTE_2026-05-03.md"
   - "outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json"

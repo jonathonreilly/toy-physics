@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Assumption Import Default-Off Refresh
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: FIREWALL MAINTENANCE / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- stale source-Higgs absence-only expectation was replaced with the current
+  default-off instrumentation boundary;
+- default-off finite-row `C_sH/C_HH` support remains gated by a
+  same-surface canonical-`O_H` certificate;
+- guard metadata, unratified finite rows, and the assumption runner are not
+  source-Higgs evidence;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+python3 scripts/frontier_yt_source_higgs_harness_absence_guard.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Source-Higgs Pole-Residue Extractor
 
 Local review-loop disposition:

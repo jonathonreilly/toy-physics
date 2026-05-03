@@ -190,18 +190,18 @@ def main() -> int:
         is False,
         certificates["hunit_canonical_higgs_operator_candidate_gate"].get("actual_current_surface_status"),
     )
+    source_higgs_guard = certificates["source_higgs_harness_absence_guard"]
+    source_higgs_guard_fields = source_higgs_guard.get("guard_fields", {})
     report(
-        "source-higgs-absence-guard-not-evidence",
-        "source-Higgs harness absence guard"
-        in str(certificates["source_higgs_harness_absence_guard"].get("actual_current_surface_status"))
-        and certificates["source_higgs_harness_absence_guard"].get("proposal_allowed") is False
-        and certificates["source_higgs_harness_absence_guard"].get("guard_fields", {}).get(
-            "source_higgs_cross_correlator"
-        )
-        is True
-        and certificates["source_higgs_harness_absence_guard"].get("guard_fields", {}).get("enabled_false")
-        is True,
-        certificates["source_higgs_harness_absence_guard"].get("actual_current_surface_status"),
+        "source-higgs-default-off-guard-not-evidence",
+        "source-Higgs harness default-off guard"
+        in str(source_higgs_guard.get("actual_current_surface_status"))
+        and source_higgs_guard.get("proposal_allowed") is False
+        and source_higgs_guard_fields.get("source_higgs_cross_correlator") is True
+        and source_higgs_guard_fields.get("enabled_false") is True
+        and source_higgs_guard_fields.get("canonical_higgs_operator_certificate_gated") is True
+        and source_higgs_guard_fields.get("used_as_physical_yukawa_readout_false") is True,
+        source_higgs_guard.get("actual_current_surface_status"),
     )
     report(
         "source-pole-purity-gate-rejects-guard-only-schema",
@@ -247,8 +247,8 @@ def main() -> int:
             "does not realize a same-surface canonical-Higgs operator O_H or "
             "C_HH/C_sH pole residues.  H_unit likewise is not O_H without "
             "the same pole-purity and canonical-normalization certificates.  "
-            "The source-Higgs absence guard names the missing rows but is not "
-            "itself C_sH/C_HH evidence.  "
+            "The source-Higgs default-off guard and finite-row instrumentation "
+            "are not themselves C_sH/C_HH evidence.  "
             "The source-functional LSZ identifiability theorem keeps the same "
             "firewall active after granting an isolated source pole: source-only "
             "LSZ data do not identify the canonical-Higgs overlap or exclude "

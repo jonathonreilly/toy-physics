@@ -1,5 +1,24 @@
 # No-Go Ledger
 
+## Assumption/import default-off refresh is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=18 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=123 FAIL=0
+```
+
+The refresh fixes a stale audit expectation after source-Higgs finite-row
+instrumentation became default-off rather than purely absent.  Default-off
+`C_sH/C_HH` instrumentation behind a canonical-`O_H` certificate is
+infrastructure only.  Guard metadata, an unratified `O_H`, finite-mode rows,
+or the assumption runner itself must not be treated as source-Higgs Gram
+purity, canonical-Higgs identity, scalar LSZ normalization, retained closure,
+or `proposed_retained` evidence.
+
 ## Source-Higgs pole-residue extractor is not closure
 
 Runners:

@@ -61,8 +61,9 @@ The stress test explicitly forbids:
   open observable/theorem until a canonical-Higgs source operator and
   cross-correlator implementation are supplied.
 - the `source_higgs_cross_correlator` or `wz_mass_response` production metadata
-  guards as evidence.  They name missing rows for claim hygiene only while the
-  blocks remain `enabled: false` / `absent_guarded`.
+  guards as evidence.  The source-Higgs path may have default-off finite-row
+  instrumentation behind a canonical-`O_H` certificate, and W/Z remains
+  absent-guarded; neither metadata surface is evidence.
 - EW gauge-mass diagonalization, scalar Hessian algebra, or any note that
   starts after canonical `H` is supplied as a same-surface PR #230 operator
   realization.  The route needs an explicit `O_H` or radial `H` observable with
