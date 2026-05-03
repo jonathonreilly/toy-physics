@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T03:05:03.479946+00:00
+**Generated:** 2026-05-03T03:07:49.218930+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 149 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 220 |
+| **retained_bounded** | 221 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
 | unaudited | 454 |
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 663 |
+| ~~audited_conditional~~ | 662 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 438 |
-| `audited_conditional` | 663 |
+| `audited_clean` | 439 |
+| `audited_conditional` | 662 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 27 |
@@ -145,6 +145,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh | C | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `cyclic_projector_compression_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -653,7 +654,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | F | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dark_energy_eos_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `decoherence_action_independence_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `decoherence_decision_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3727,17 +3727,14 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 
 - **Note:** [`CYCLE_BREAK_FRONTIER_NOTE_2026-04-10.md`](../../docs/CYCLE_BREAK_FRONTIER_NOTE_2026-04-10.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** - where is the first real failure once we push beyond benign retained graphs?  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (cycle_battery_note_2026-04-10=bounded, cycle_battery_scaled_note_2026-04-10=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (cycle_battery_note_2026-04-10=bounded, cycle_battery_scaled_note_2026-04-10=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `CYCLE_BATTERY_NOTE_2026-04-10.md`
-  - `CYCLE_BATTERY_SCALED_NOTE_2026-04-10.md`
-- **auditor confidence:** high
+- **claim_scope:** Bounded computational frontier claim: within the stated staggered cycle-battery runner protocol and inherited battery caveats, raw size through side 18 does not break the retained rows on the three tested families, while random_geometric side=18 extra=5 is the first reported dense-shortcut gauge/current-collapse boundary among the tested cases.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-leibniz-3rd-019debcd-ae93-78c0-b737-02a5e9d58cb0`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The runner computes the larger retained sweep and dense-shortcut boundary, finding all side 14/16/18 family rows at 9/9 except random_geometric side=18 extra=5, which drops to 8/9 with gauge FAIL and J_span below threshold.  _(class `C`)_
+- **chain closes:** True — The one-hop dependencies are now retained_bounded and the provided runner output directly supplies the larger sweep rows and dense-shortcut failure boundary. The closure is bounded to the stated graph families, sides, shortcut parameters, and inherited shell-radial force proxy interpretation.
+- **rationale:** The scoped bounded claim closes from the supplied note, retained one-hop dependencies, and primary runner output: the larger sweep rows pass, and the named random_geometric side=18 extra=5 boundary is reproduced as 8/9 with native gauge failure and collapsed J_span. This is not promoted beyond the tested protocol: irregular-graph force remains a shell-radial proxy, two-sign behavior limits sign interpretation, and B9 remains characterization only. No external comparator, renaming identity, hidden physical identification, or tuned numerical match is needed for the bounded frontier statement.
+- **auditor confidence:** medium
 
 ### `cycle_break_slice_note_2026-04-10`
 

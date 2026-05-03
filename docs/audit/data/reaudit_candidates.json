@@ -2,54 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 0,
-    "leaf": 2,
+    "leaf": 1,
     "medium": 0
   },
   "candidates": [
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "audited_conditional",
-      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
-      "claim_id": "cycle_break_frontier_note_2026-04-10",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "bounded_theorem",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "current_dep_effective_status": {
-        "cycle_battery_note_2026-04-10": "retained_bounded",
-        "cycle_battery_scaled_note_2026-04-10": "retained_bounded"
-      },
-      "deps": [
-        "cycle_battery_note_2026-04-10",
-        "cycle_battery_scaled_note_2026-04-10"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
-      "generated_order": 1,
-      "improved_dependencies": [
-        {
-          "after_effective_status": "retained_bounded",
-          "before_effective_status": "unaudited",
-          "claim_id": "cycle_battery_note_2026-04-10",
-          "rank_delta": 65
-        },
-        {
-          "after_effective_status": "retained_bounded",
-          "before_effective_status": "audited_conditional",
-          "claim_id": "cycle_battery_scaled_note_2026-04-10",
-          "rank_delta": 85
-        }
-      ],
-      "load_bearing_score": 0.0,
-      "note_hash": "c72fd459e00414b1d1f9da470753e5b4637872994c1b9527ea3e18ed39763672",
-      "note_path": "docs/CYCLE_BREAK_FRONTIER_NOTE_2026-04-10.md",
-      "reraudit_after_claim_ids": [
-        "cycle_battery_note_2026-04-10",
-        "cycle_battery_scaled_note_2026-04-10"
-      ],
-      "runner_path": "scripts/frontier_staggered_cycle_break_frontier.py",
-      "transitive_descendants": 0
-    },
     {
       "audit_independence_required": "any_non_self",
       "audit_status": "audited_conditional",
@@ -67,7 +23,7 @@
       ],
       "direct_in_degree": 0,
       "effective_status": "audited_conditional",
-      "generated_order": 2,
+      "generated_order": 1,
       "improved_dependencies": [
         {
           "after_effective_status": "retained_bounded",
@@ -99,7 +55,7 @@
     "open_gate",
     "positive_theorem"
   ],
-  "generated_at": "2026-05-03T03:05:03.252031+00:00",
+  "generated_at": "2026-05-03T03:07:49.005982+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited theorem/no-go/open-gate claims whose current one-hop dependencies are all retained-grade and whose audit-time dependency snapshot contains at least one dependency that has since become retained-grade.",
   "ratified_dependency_statuses": [
@@ -107,5 +63,5 @@
     "retained_bounded",
     "retained_no_go"
   ],
-  "total_candidates": 2
+  "total_candidates": 1
 }
