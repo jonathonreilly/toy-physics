@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:50:50.684305+00:00
+**Generated:** 2026-05-03T19:51:37.275812+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 180 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 713 |
+| unaudited | 712 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 549 |
+| ~~audited_conditional~~ | 550 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 338 |
-| `audited_conditional` | 549 |
+| `audited_conditional` | 550 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 759 |
+| `unaudited` | 758 |
 
 | claim_type | count |
 |---|---:|
@@ -760,6 +760,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_z3_scalar_potential_support_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
+| `lattice_3d_dense_refinement_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -9018,6 +9019,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
 - **auditor confidence:** medium
+
+### `lattice_3d_dense_refinement_reconciliation_note`
+
+- **Note:** [`LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md`](../../docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Corrected finite h=1.0 versus h=0.5 comparison for the ordered 3D dense spent-delay family with physical indexing and fixed 3.0 connectivity, as reported by the runner/log.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-newton`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The older h = 0.5 refinement-positive story fails under corrected physical mapping.  _(class `C`)_
+- **chain closes:** False — The completed log matches the note's table and verdict, but the deps=[] packet does not retain or inline the spent-delay harness constants, action normalization, or gravity-observable hierarchy imported by the runner. The note therefore closes only conditionally on the current harness.
+- **rationale:** Issue: the load-bearing comparison depends on un-audited harness choices imported as BETA, K, LAM, and N_YBINS plus the selected gravity readout hierarchy, while the claim has deps=[]. Why this blocks: a positive theorem cannot be retained from the restricted inputs when action normalizations and readout definitions are selected outside the note and runner packet. Repair target: make the load-bearing constants/readouts explicit or cite retained dependency notes deriving them, then rerun a deterministic checker with explicit PASS assertions for the h=1.0/h=0.5 comparison. Claim boundary until fixed: the note may report that this runner/log, under the current harness, rejects the older h=0.5 positive-refinement narrative; it cannot yet be a closed retained theorem.
+- **auditor confidence:** high
 
 ### `lattice_3d_dense_spent_delay_note`
 
