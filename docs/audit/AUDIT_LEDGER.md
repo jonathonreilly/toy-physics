@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:56:49.813821+00:00
+**Generated:** 2026-05-03T14:57:46.708883+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 775 |
+| unaudited | 774 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 517 |
+| ~~audited_conditional~~ | 518 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 517 |
+| `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 19 |
-| `unaudited` | 820 |
+| `unaudited` | 819 |
 
 | claim_type | count |
 |---|---:|
@@ -817,6 +817,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_up_amplitude_rpsr_mass_retention_boundary_note_2026-04-28` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
+| `restricted_strong_field_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unratified_physical_bridge_and_definition_as_closure | - |
 | `retardation_discriminator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -10878,6 +10879,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — Within the restricted inputs, the note's operational claims close: the runner script matches the documented bootstrap behavior, the current inspection output supports that the helper is present and importable, and the usage search supports the claim that relevant retained numpy replay lanes call it. The note also explicitly limits its scope to local operational reproducibility and disclaims CI enforcement, scientific promotion, and generalization beyond this host.
 - **rationale:** The support note is internally accurate against the provided runner and inspection output. Its load-bearing operational convention is implemented by the bootstrap helper and reflected in listed script usages. Because the claim boundary is explicitly local, non-scientific, and non-CI-enforced, no hidden premise is needed for the stated support-level claim.
 - **auditor confidence:** high
+
+### `restricted_strong_field_closure_note`
+
+- **Note:** [`RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md`](../../docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact restricted strong-field closure on the exact local O_h star-supported source class, including exact shell source, same-charge bridge, static conformal 3+1 lift, and Schur-complement boundary action.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `restricted-audit-fresh-20260503-alpha`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note asserts the same-charge bridge and local 3+1 lift: psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi, with rho = sigma_R / (2 pi psi^5) and S = 0.5 rho (1/alpha - 1), then concludes these satisfy the static conformal constraints identically and close the strong-field package.  _(class `unratified_physical_bridge_and_definition_as_closure`)_
+- **chain closes:** False — The algebraic identities close only after the bridge fields and matter observables are selected in the note. With no declared dependencies and no runner, the source note does not prove that the same-charge bridge, rho/S readout, shell orbit laws, or Schur boundary action are forced by retained inputs rather than introduced as premises.
+- **rationale:** Issue: The closure package depends on unproved physical identifications: the same-charge bridge psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi, and the definitions of rho and S that make the static conformal equations hold identically. Why this blocks: Those steps are the theorem, not consequences shown from retained inputs in this restricted packet; a hostile reviewer can reject the claimed strong-field closure as a selected bridge/readout plus algebraic consistency check. Repair target: Provide retained theorem-level derivations that construct the unique same-charge bridge, prove the pointwise shell observables as orbit laws, derive rho and S as the physical 3+1 source variables, and derive the Schur-complement boundary action, preferably with a runner that constructs rather than assumes the bridge. Claim boundary until fixed: The note may state a conditional exact algebraic closure for the specified ansatz/source definitions on the local O_h class, but not an audited positive theorem that the restricted strong-field closure is no longer open.
+- **auditor confidence:** 0.87
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
 
