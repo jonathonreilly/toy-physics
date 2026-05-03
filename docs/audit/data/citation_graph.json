@@ -5289,6 +5289,18 @@
       "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
     },
     {
+      "from": "ew_current_traceless_generator_selector_no_go_note_2026-05-03",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
+    },
+    {
+      "from": "ew_current_traceless_generator_selector_no_go_note_2026-05-03",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "ew_current_traceless_generator_selector_no_go_note_2026-05-03",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
       "from": "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -22629,7 +22641,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T16:05:53.965746+00:00",
+  "generated_at": "2026-05-03T16:10:49.274817+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -30980,6 +30992,21 @@
       "path": "docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_ew_current_matching_rule_no_go.py",
       "title": "EW Current Matching Rule No-Go Proposal Note"
+    },
+    "ew_current_traceless_generator_selector_no_go_note_2026-05-03": {
+      "claim_id": "ew_current_traceless_generator_selector_no_go_note_2026-05-03",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "note_hash": "ad4852f94957e2362ef300a20dd11616bf025d8b5db04442d401cb0c87025b82",
+      "path": "docs/EW_CURRENT_TRACELESS_GENERATOR_SELECTOR_NO_GO_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_ew_current_traceless_generator_selector_no_go.py",
+      "title": "EW Current Traceless-Generator Selector No-Go Proposal Note"
     },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
@@ -50520,7 +50547,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 48,
       "meta": 6,
-      "no_go": 4,
+      "no_go": 5,
       "none": 1724,
       "open_gate": 2,
       "positive_theorem": 68
@@ -50528,15 +50555,15 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 550,
       "meta": 6,
-      "no_go": 110,
+      "no_go": 111,
       "none": 452,
       "open_gate": 108,
       "positive_theorem": 626
     },
-    "edge_count": 5657,
-    "leaf_count": 618,
-    "node_count": 1852,
+    "edge_count": 5660,
+    "leaf_count": 619,
+    "node_count": 1853,
     "root_count": 1056,
-    "runners_with_path": 1414
+    "runners_with_path": 1415
   }
 }

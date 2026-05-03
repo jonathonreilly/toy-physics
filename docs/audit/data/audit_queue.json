@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 61,
     "high": 213,
-    "leaf": 216,
+    "leaf": 217,
     "medium": 318
   },
-  "generated_at": "2026-05-03T16:06:01.695677+00:00",
+  "generated_at": "2026-05-03T16:10:55.799004+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1655,14 +1655,14 @@
       "deps": [
         "ew_current_fierz_channel_decomposition_note_2026-05-01"
       ],
-      "direct_in_degree": 10,
+      "direct_in_degree": 11,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.022,
+      "load_bearing_score": 12.533,
       "note_path": "docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md",
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_ew_current_matching_rule_no_go.py",
-      "transitive_descendants": 129
+      "transitive_descendants": 130
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -18187,6 +18187,31 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "ew_current_traceless_generator_selector_no_go_note_2026-05-03",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/EW_CURRENT_TRACELESS_GENERATOR_SELECTOR_NO_GO_NOTE_2026-05-03.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_ew_current_traceless_generator_selector_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "exponent_derivation",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -20896,5 +20921,5 @@
     }
   ],
   "ready_count": 118,
-  "total_pending": 808
+  "total_pending": 809
 }

@@ -1,7 +1,7 @@
 # Goal
 
 Obtain positive closure for the EW current matching rule, or identify the
-precise Nature-grade blocker if the physics loop cannot reach it.
+precise route blocker if the physics loop cannot reach it.
 
 Concrete success criteria:
 

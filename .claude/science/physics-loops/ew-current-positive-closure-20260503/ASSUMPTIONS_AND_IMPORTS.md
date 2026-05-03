@@ -7,8 +7,9 @@
   packet.
 - `EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`: exact color
   singlet/adjoint Fierz decomposition and the `8/9` channel fraction.
-- `AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`: lattice current as
-  a bilinear/point-split current.
+- `AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`: bounded
+  current-form context for a bilinear/point-split current; not promoted here
+  as repo-wide axiom authority.
 - Standard exact finite-dimensional trace algebra.
 
 ## Forbidden Inputs

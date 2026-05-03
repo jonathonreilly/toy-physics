@@ -3,11 +3,11 @@
     "bounded_theorem": 587,
     "decoration": 6,
     "meta": 45,
-    "no_go": 161,
+    "no_go": 162,
     "open_gate": 87,
     "positive_theorem": 864
   },
-  "computed_at": "2026-05-03T16:06:01.376103+00:00",
+  "computed_at": "2026-05-03T16:10:55.511008+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -54,7 +54,7 @@
     "retained_bounded": 166,
     "retained_no_go": 99,
     "retained_pending_chain": 2,
-    "unaudited": 779
+    "unaudited": 780
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

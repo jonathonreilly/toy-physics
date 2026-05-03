@@ -86,11 +86,11 @@ def main() -> int:
     check("gate note exists", GATE.exists(), str(GATE.relative_to(ROOT)))
     check("Fierz note exists", FIERZ.exists(), str(FIERZ.relative_to(ROOT)))
     check("lattice Noether/current note exists", NOETHER.exists(), str(NOETHER.relative_to(ROOT)))
-    check("note declares route-specific no-go", "**Type:** no_go" in note)
+    check("note declares route-specific no-go", "**Claim type:** no_go" in note)
     check("note does not claim positive closure", "not a positive closure" in note)
     check("gate keeps kappa_EW explicit", "kappa_EW" in gate and "K_EW(kappa_EW)" in gate)
     check("Fierz note defines singlet channel S", "S(x, y)" in fierz and "|Tr G" in fierz)
-    check("Noether note supplies bilinear current form", "J^{\u03bc,A}_x" in noether)
+    check("Noether note provides bounded current-form context", "J^{\u03bc,A}_x" in noether)
 
     n_c = 3
 

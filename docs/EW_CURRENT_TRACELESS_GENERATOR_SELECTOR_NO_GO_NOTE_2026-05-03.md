@@ -1,9 +1,9 @@
-# EW Current Traceless-Generator Selector No-Go Note
+# EW Current Traceless-Generator Selector No-Go Proposal Note
 
 **Date:** 2026-05-03
-**Type:** no_go
+**Claim type:** no_go
 **Status:** route-specific exact blocker for a tempting positive closure of the
-EW current matching gate. This note does not replace the existing no-go closure
+EW current matching gate. This note does not replace the existing no-go proposal
 in [`EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`](EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md);
 it records why one proposed positive route is not a positive closure.
 **Primary runner:** `scripts/frontier_ew_current_traceless_generator_selector_no_go.py`
@@ -59,7 +59,7 @@ Tr_color[M^\dagger M]
 ```
 
 Here `S(M)` is the color Fierz singlet and `C(M)` is the color adjoint channel.
-The retained no-go gate names the physical readout coefficient as
+The matching-rule proposal names the physical readout coefficient as
 
 ```text
 Pi_EW^phys(kappa_EW) = C + kappa_EW S.
@@ -135,8 +135,7 @@ This no-go is narrow. It does not say a positive EW current matching theorem is
 impossible in all frameworks. It says the specific trace-based route fails:
 tracelessness of the internal EW generator removes the wrong term.
 
-The remaining Nature-grade positive routes are still exactly the ones named in
-the gate:
+The remaining positive routes are still exactly the ones named in the gate:
 
 1. derive an explicit framework-native lattice EW current construction whose
    two-current contraction mechanically projects onto the color adjoint channel;
@@ -166,4 +165,5 @@ full-trace readout `K_EW(1)=1`.
 - [`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
   supplies the exact color singlet/adjoint Fierz decomposition.
 - [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
-  supplies the framework current as a lattice bilinear.
+  is used here only as bounded current-form context for the point-split
+  bilinear; this branch does not promote it to repo-wide axiom authority.

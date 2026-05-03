@@ -4,7 +4,7 @@
 actual_current_surface_status: no-go
 target_claim_type: no_go
 conditional_surface_status: "K_EW(kappa_EW)=1/(8/9+kappa_EW/9); K_EW(0)=9/8 only under an added connected-trace selector"
-hypothetical_axiom_status: "An EW current primitive with explicit color-adjoint projection would close the rule, but it is not present."
+hypothetical_completion_status: "An EW current primitive with explicit color-adjoint projection would close the rule, but it is not present."
 admitted_observation_status: null
 audit_required_before_effective_status_change: true
 bare_retained_allowed: false

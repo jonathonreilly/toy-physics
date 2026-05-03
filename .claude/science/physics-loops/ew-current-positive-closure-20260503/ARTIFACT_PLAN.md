@@ -14,5 +14,4 @@
 ## Not Done
 
 - No repo-wide audit ledger update for this branch-local route-specific no-go.
-  The base branch already carries the audit-ratified no-go closure for the
-  parent gate.
+  The base branch carries the no-go proposal for the parent gate.
