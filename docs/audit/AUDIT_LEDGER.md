@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:03:05.756659+00:00
+**Generated:** 2026-05-03T18:03:54.108942+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 75 |
+| **retained** | 76 |
 | **retained_no_go** | 100 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 751 |
+| unaudited | 750 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 313 |
+| `audited_clean` | 314 |
 | `audited_conditional` | 535 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 797 |
+| `unaudited` | 796 |
 
 | claim_type | count |
 |---|---:|
@@ -240,6 +240,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | C | - |
 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -7858,6 +7859,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Rearranging the Koide-cone equation as u^2 - 4(v + w)u + (v^2 + w^2 - 4vw) = 0 gives discriminant 12(v^2 + 4vw + w^2), hence roots 2(v+w) +/- sqrt(3(v^2 + 4vw + w^2)).  _(class `A`)_
 - **chain closes:** True — The note has no cited dependencies and the claim is elementary quadratic-formula algebra over positive real v,w. The cone identity, Vieta relations, Koide ratio, and positivity condition follow by direct symbolic manipulation, with no imported physical identification or comparator.
 - **rationale:** The audited content is explicitly bounded to the standalone algebraic cone-completing identity and does not identify the variables with charged-lepton masses, selected-line quantities, or empirical observables. The runner independently checks the load-bearing algebra exactly with SymPy and reports PASS=9, FAIL=0. This is not decoration because it has no upstream parent dependency; it is the isolated primitive algebraic theorem itself. Residual risk is limited to ordinary transcription of the stated formulas, which the runner matches.
+- **auditor confidence:** high
+
+### `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`KOIDE_CONE_THREE_FORM_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/KOIDE_CONE_THREE_FORM_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone polynomial-algebra equivalence over abstract real triples between the orbit quadratic, the explicit cyclic basis-change quadratic, and the Koide ratio form on the nonzero-sum domain.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-context-audit-loop-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The identities 2 r0^2 - r1^2 - r2^2 = 2[4(uv + uw + vw) - (u^2 + v^2 + w^2)] and 3(u^2 + v^2 + w^2) - 2(u + v + w)^2 = -F_orbit establish the shared zero set, with the ratio form obtained only when u + v + w != 0.  _(class `A`)_
+- **chain closes:** True — The note confines itself to exact polynomial algebra on abstract real variables and explicitly excludes physical Koide or charged-lepton identifications. The denominator restriction for the ratio form is stated, so the undefined zero-sum boundary is not silently imported into the ratio claim.
+- **rationale:** The derivation closes by direct expansion and proportionality of explicit polynomials, with no cited dependencies, physical observable bridge, tuned comparator, or hidden normalization. The runner independently verifies the symbolic identities and the stated example/non-example exactly. Residual risk is limited to preserving the stated nonzero-denominator boundary whenever citing the ratio form.
 - **auditor confidence:** high
 
 ### `koide_cyclic_projector_block_democracy_note_2026-04-18`
