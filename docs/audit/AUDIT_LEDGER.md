@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:12:21.251709+00:00
+**Generated:** 2026-05-03T20:15:02.071809+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 183 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 705 |
+| unaudited | 704 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 551 |
-| ~~audited_failed~~ | 12 |
+| ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 343 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 56 |
+| `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 751 |
+| `unaudited` | 750 |
 
 | claim_type | count |
 |---|---:|
@@ -1018,6 +1018,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `dimensional_gravity_table` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-context | C | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -3273,6 +3274,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `dimensional_gravity_table`
+
+- **Note:** [`DIMENSIONAL_GRAVITY_TABLE.md`](../../docs/DIMENSIONAL_GRAVITY_TABLE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-entry inventory of the listed dimensional gravity table rows only: d=2,3,4 with kernel 1/L^(d-1), valley-linear action, stated h restrictions, and the tabulated mass-scaling, Born, decoherence, TOWARD, and distance-tail measurements.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-dimensional-gravity`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The table reports point-tested results for d in {2,3,4}, kernel = 1/L^(d-1), valley-linear action S = L(1-f), with specified h and lattice-family rows.  _(class `C`)_
+- **chain closes:** False — The note narrows the claim to a bounded finite inventory, but the numeric entries are asserted as point-tested results without a runner, certificate, raw log, derivation, or cited one-hop authority that lets the auditor verify those finite measurements from the restricted packet.
+- **rationale:** Issue: the load-bearing table entries are finite computational measurements, but the restricted packet contains only the table prose and no executable runner, completed output, raw data certificate, derivation, or cited authority establishing the values. Why this blocks: a bounded theorem can close on finite evidence, but the evidence must be inspectable; here the note asks the auditor to accept the measurements by assertion. Repair target: provide a deterministic runner, completed logs/certificates for each listed row, or a proof-level derivation of the tabulated finite measurements. Claim boundary until fixed: the note may be treated as an unaudited report of claimed point tests, not as an audited bounded theorem.
 - **auditor confidence:** high
 
 ### `dirac_core_card_note`
