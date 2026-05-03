@@ -1194,6 +1194,34 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "plaquette_bootstrap_framework_integration_note_2026-05-03"
     },
     {
@@ -14910,6 +14938,34 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "plaquette_self_consistency_note"
     },
     {
@@ -22561,7 +22617,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:13:33.020921+00:00",
+  "generated_at": "2026-05-03T14:15:35.516380+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25101,6 +25157,13 @@
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20",
         "plaquette_bootstrap_framework_integration_note_2026-05-03",
         "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
         "axiom_first_reflection_positivity_theorem_note_2026-04-29",
@@ -25301,7 +25364,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "cdf0d144b594b50fc74463ded67a8d38b9a4713b537d2ad4786408080d871345",
+      "note_hash": "d485f8c5e2ab08d11a84369a69b0c5d62c11ba2be2692b68c158b8cdc7c7ead3",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -39986,6 +40049,13 @@
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20",
         "plaquette_self_consistency_note",
         "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
         "ew_current_matching_rule_open_gate_note_2026-05-03",
@@ -40320,7 +40390,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "06298302e924022b0974a6fbce267fb3abedc637121a67d98003dc779dc0b2cd",
+      "note_hash": "7d2d9625c97e4a83579e94127fa51a020b4a9de69c7fe118f626331a6f440daf",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50388,8 +50458,8 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5640,
-    "leaf_count": 618,
+    "edge_count": 5654,
+    "leaf_count": 613,
     "node_count": 1847,
     "root_count": 1052,
     "runners_with_path": 1410
