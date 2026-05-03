@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 59,
-    "high": 215,
+    "high": 214,
     "leaf": 201,
     "medium": 329
   },
-  "generated_at": "2026-05-03T17:06:39.506749+00:00",
+  "generated_at": "2026-05-03T17:09:28.127347+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1700,29 +1700,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_taste_scalar_isotropy.py",
       "transitive_descendants": 54
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "unit_singlet_overlap_narrow_theorem_note_2026-05-02"
-      ],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.555,
-      "note_path": "docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 46
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20832,6 +20809,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 113,
-  "total_pending": 804
+  "ready_count": 112,
+  "total_pending": 803
 }

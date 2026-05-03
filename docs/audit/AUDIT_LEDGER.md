@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:06:39.869604+00:00
+**Generated:** 2026-05-03T17:09:28.699308+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 74 |
 | **retained_no_go** | 100 |
-| **retained_bounded** | 167 |
+| **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 775 |
+| unaudited | 774 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 310 |
+| `audited_clean` | 311 |
 | `audited_conditional` | 519 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 821 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
@@ -198,6 +198,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gate_b_grown_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_grown_propagating_field_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -5719,6 +5720,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `G_BARE_RIGIDITY_THEOREM_NOTE.md`
   - `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19`
+
+- **Note:** [`G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`](../../docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given the explicitly defined unit-normalized scalar-singlet operator H_unit on the Q_L=(2,3) block and canonical basis-pair normalization, the tree-level basis-pair form factor is 1/sqrt(6) for all g_bare; this audit excludes free-theory residue derivation, Standard Model top-Yukawa readout, same-Gamma pinning, and solving g_bare=1.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-g-bare-two-ward-rep-b-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Multiplying the operator normalization from Step 1 by the group-theory overlap from Step 2 and the unit Wick contraction from Step 3 gives F_Htt^(0)(g_bare) = (1 / sqrt(6)) * 1 = 1 / sqrt(6), with no g_bare dependence.  _(class `A`)_
+- **chain closes:** True — The retained narrow dependency supplies the explicit H_unit overlap identity and g_bare-independence for the defined operator; substituting N_iso=2 and N_c=3 gives 1/sqrt(6). The note expressly leaves the same-Gamma/g_bare pinning and terminal Yukawa identification to separate claims, so those are not load-bearing within this bounded scope.
+- **rationale:** The parent row closes only under the narrowed bounded scope: it consumes the retained unit-singlet overlap theorem and performs an exact substitution/application on Q_L=(2,3). The possible normalization-residue derivation and same-Gamma g_bare=1 pinning are not silently imported because the source note explicitly excludes them and assigns them to separate rows. No primary runner is listed for this claim, so the clean verdict rests on the retained dependency plus exact algebra in the note.
 - **auditor confidence:** high
 
 ### `g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19`
