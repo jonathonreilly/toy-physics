@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T03:19:16.291379+00:00
+**Generated:** 2026-05-03T10:48:18.730626+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -1318,7 +1318,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
-| `yt_ward_identity_derivation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | E | - |
+| `yt_ward_identity_derivation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh-agent | E | - |
 
 
 ## Audit findings (full)
@@ -19176,14 +19176,14 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 
 - **Note:** [`YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](../../docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Tree-level canonical-surface identification of the unit-normalized Q_L scalar-singlet H_unit matrix element with the top-Yukawa readout, yielding y_t(M_Pl)/g_s(M_Pl)=1/sqrt(6); no RG, precision, or NLO claim audited.
 - **audit_status:** ~~audited_renaming~~
 - **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-context-20260430-yt-ward-reframe-audit`  (codex-current; independence=fresh_context)
-- **load-bearing step:** On the canonical surface (g_bare = 1), the framework's bare Yukawa coupling y_t_bare is DEFINED as the unit-norm-state matrix element of the H_unit operator between the vacuum and a single top-pair state.  _(class `E`)_
-- **chain closes:** False — The algebraic 1/sqrt(6) overlap and same-channel coefficient checks close, but the target Yukawa readout is introduced by definition as the H_unit-to-top matrix element. The runner confirms coefficient consistency after that identification; it does not derive the physical Yukawa readout map itself.
-- **rationale:** Issue: The load-bearing move defines y_t_bare as the H_unit matrix element and then identifies that matrix element with the top Yukawa readout. Why this blocks: The source note and runner verify the scalar-singlet algebra, Clebsch-Gordan normalization, Fierz coefficients, and tadpole cancellation, but they do not derive the physical observable bridge from independent retained inputs. Repair target: Supply a retained theorem and runner check constructing the map from the composite H_unit matrix element to the SM top Yukawa vertex/readout, including the common tadpole dressing. Claim boundary until fixed: The note supports a tree-level structural identification/algebraic normalization on the canonical surface, not a first-principles derivation of the physical top Yukawa coupling.
-- **auditor confidence:** 0.88
+- **auditor:** `fresh-agent-popper-019ded72-35b5-7031-a1a0-f451abb8141d`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note defines y_t_bare as the unit-norm H_unit matrix element between the vacuum and a single top-pair state, then evaluates that matrix element as 1/sqrt(6).  _(class `E`)_
+- **chain closes:** False — The algebraic Clebsch-Gordan overlap and Fierz checks close for the defined H_unit readout, but the theorem-level identification of that readout as y_t is introduced by definition rather than derived from an independent retained authority. The runner verifies the resulting coefficients after the readout choice; it does not derive the physical Yukawa map without that definition.
+- **rationale:** Issue: the load-bearing step defines y_t_bare to be the H_unit-to-top matrix element and then computes the 1/sqrt(6) overlap. Why this blocks: the presented chain establishes an internally consistent framework readout, but not an independently derived Standard Model top-Yukawa observable. Repair target: provide a retained theorem deriving the top-Yukawa readout and shared tadpole dressing from the bare action without defining y_t as the target matrix element. Claim boundary until fixed: the note may safely claim the unit-normalized H_unit overlap and same-1PI scalar-singlet consistency on the canonical surface.
+- **auditor confidence:** high
 
 ### `yt_zero_import_chain_note`
 
