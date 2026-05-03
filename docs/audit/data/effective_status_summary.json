@@ -7,7 +7,7 @@
     "open_gate": 88,
     "positive_theorem": 863
   },
-  "computed_at": "2026-05-03T13:57:09.696012+00:00",
+  "computed_at": "2026-05-03T13:58:19.072871+00:00",
   "cycle_examples": [
     [
       "restricted_strong_field_closure_note",
@@ -46,12 +46,12 @@
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "meta": 42,
-    "open_gate": 13,
+    "open_gate": 14,
     "retained": 77,
     "retained_bounded": 169,
     "retained_no_go": 101,
     "retained_pending_chain": 2,
-    "unaudited": 763
+    "unaudited": 762
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
