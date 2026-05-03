@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:58:46.878744+00:00
+**Generated:** 2026-05-03T16:00:50.956693+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 777 |
+| unaudited | 776 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 517 |
+| ~~audited_conditional~~ | 518 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 308 |
-| `audited_conditional` | 517 |
+| `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 823 |
+| `unaudited` | 822 |
 
 | claim_type | count |
 |---|---:|
@@ -596,6 +596,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `edge_deletion_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `edge_deletion_boundary_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_card_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unratified_physical_bridge_configured_numerical_proxy | - |
+| `electrostatics_superposition_proxy_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | configured_numerical_proxy_not_theorem | - |
 | `em_gravity_coexistence_2x2_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -5272,6 +5273,22 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — For the bounded fixed-row claim, the registered runner constructs the drift=0.2, restore=0.7 grown geometry, computes the listed source cases, and reproduces the frozen signs, neutral cancellation, and +1/+2 charge exponent. The note explicitly excludes full electromagnetism, Maxwell/radiation, and geometry-generic scope, so the audited-clean result is only for this narrow numerical companion.
 - **rationale:** The load-bearing bounded statement closes because the current registered runner deterministically recomputes the fixed grown-row source cases: single +1 is AWAY, single -1 is TOWARD, same-point +1/-1 cancels to printed zero, the dipole partially cancels, and +2 has charge exponent 1.000 relative to +1. Residual risk is limited to audit ergonomics: the runner prints tables rather than classified PASS lines, and stale source-note boundary text still says the runner is unregistered, but the ledger now supplies the registered runner used for this audit. This clean audit does not promote the row beyond its bounded fixed-geometry claim and does not ratify full electromagnetism or a geometry-generic theorem.
 - **auditor confidence:** medium
+
+### `electrostatics_superposition_proxy_note`
+
+- **Note:** [`ELECTROSTATICS_SUPERPOSITION_PROXY_NOTE.md`](../../docs/ELECTROSTATICS_SUPERPOSITION_PROXY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Narrow numerical proxy that applies the retained weak-field propagator to configured multi-source charge cases and reports cancellation, reinforcement, dipole reduction, and approximate doubled-source scaling in detector centroid shift.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-nature-audit-electrostatics-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The runner forms the multi-source electrostatic field by direct linear summation, field += field_from_charge(...), and then interprets the resulting centroid shifts as evidence that the propagator supports signed electrostatic superposition.  _(class `configured_numerical_proxy_not_theorem`)_
+- **chain closes:** False — The computation reproduces the frozen numbers, but the superposition law is inserted as the runner's field-combination rule rather than derived from retained inputs. With deps=[], the stated positive-theorem chain has no audited bridge from the retained single-source sign law to multi-source electrostatic superposition.
+- **rationale:** Issue: The claimed positive-theorem bridge from the retained electric-like sign law to multi-source electrostatic superposition is implemented by directly summing configured source fields in the runner, not proved from retained inputs. Why this blocks: The successful cancellation and approximate scaling checks are consequences of the imposed linear field construction plus the selected geometries; they do not close the hard theorem that the underlying retained propagator entails electrostatic superposition. Repair target: Provide a retained derivation or audited dependency showing that the lattice source law and propagator force linear multi-source field composition and that the detector centroid shift is the claimed electrostatic observable, then have the runner test that theorem rather than encode it. Claim boundary until fixed: The note may claim a reproducible configured numerical proxy: under the runner's imposed linear source-field sum, the listed cases cancel, reinforce, and scale approximately as printed. It may not stand as an independent positive theorem of electrostatic superposition.
+- **open / conditional deps cited:**
+  - `Retained bridge from single-source electric-like sign law to linear multi-source field composition`
+  - `Retained identification of detector centroid shift as the relevant electrostatic observable`
+- **auditor confidence:** 0.88
 
 ### `em_gravity_coexistence_2x2_note`
 
