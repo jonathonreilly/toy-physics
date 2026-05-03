@@ -257,7 +257,8 @@ boundary selector candidate, not a physical signed active gravitational source.
 ## Follow-Up Bridge Audit
 
 The missing bridge has now been audited in
-[`SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md`](SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md)
+`SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md`
+(downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_aps_wald_gauss_bridge_audit.py`](../scripts/signed_gravity_aps_wald_gauss_bridge_audit.py).
 

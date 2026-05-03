@@ -190,7 +190,8 @@ authority note, not only in the manuscript prose.
 
 For publication organization:
 
-- retained claims belong here and in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- retained claims belong here and in `CLAIMS_TABLE.md` (sibling artifact;
+  cross-reference only — not a one-hop dep of this note)
 - quantitative summary rows belong in
   [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - bounded work belongs in [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)

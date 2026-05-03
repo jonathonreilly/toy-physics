@@ -146,7 +146,8 @@ Use this summary to orient the package documents:
 
 - [EXTERNAL_REVIEWER_GUIDE.md](./EXTERNAL_REVIEWER_GUIDE.md)
 - [README.md](./README.md)
-- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- `CLAIMS_TABLE.md` (sibling artifact; cross-reference only — not a one-hop
+  dep of this note)
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 

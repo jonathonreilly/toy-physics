@@ -3,7 +3,17 @@
 **Date:** 2026-04-12
 **Branch:** `claude/youthful-neumann`
 **Lane:** DM relic mapping (Objection 1 from CODEX_DM_RESPONSE.md)
-**Script:** `scripts/frontier_g_bare_derivation.py`
+**Script:** `scripts/frontier_g_bare_derivation.py` (**MISSING — flagged for re-audit**)
+
+> **Missing primary runner (2026-05-03 audit-repair scan):**
+> `scripts/frontier_g_bare_derivation.py` is referenced as this note's
+> primary runner but does not exist in the current `scripts/` tree. The
+> 2026-05-02 status-correction audit note
+> `G_BARE_DERIVATION_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md`
+> already documents this gap and identifies repair targets (restore the
+> runner; supply a theorem removing the `A → A/g` rescaling freedom). The
+> audit verdict on this note will be redone once a working runner is
+> registered.
 
 ---
 

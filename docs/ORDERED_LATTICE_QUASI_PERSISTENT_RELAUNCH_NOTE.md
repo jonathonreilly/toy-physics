@@ -68,7 +68,8 @@ But this does **not** yet produce:
 ## Relation to the packet re-identification control
 
 This relaunch note should be read together with
-[`ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md):
+`ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md` (sibling artifact;
+cross-reference only — not a one-hop dep of this note):
 
 - the re-identification control says the packet remains recognizable
 - this relaunch control says the compressed packet surrogate can be launched

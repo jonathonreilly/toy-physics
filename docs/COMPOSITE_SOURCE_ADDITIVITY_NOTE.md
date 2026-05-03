@@ -85,7 +85,7 @@ This note sharpens Principle 3 in
   - valley-linear now has a frozen additivity replay, not just a verbal
     composition argument
   - a second retained-family cross-check now exists:
-    [`docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md)
+    `docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 - still open:
   - whether a persistent localized pattern has an effective inertial response
   - whether that inertial response is governed by the same parameter that
