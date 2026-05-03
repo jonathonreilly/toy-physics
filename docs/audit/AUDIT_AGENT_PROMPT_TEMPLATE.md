@@ -69,6 +69,12 @@ mismatches, stale numbers, import errors, or code that hard-codes the
 contested premise remain valid audit evidence; the special rule is only for
 wall-time noncompletion.
 
+If you are asked to review a prior terminal verdict whose main rationale was
+timeout, missing stdout, or compute-budget exhaustion, treat that prior result
+as requiring policy repair or fresh re-audit. Do not inherit the old terminal
+status as scientific evidence unless the current restricted packet also
+contains an independent substantive blocker.
+
 ### 4. The audit rubric
 
 Definitions you must use:

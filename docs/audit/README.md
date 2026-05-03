@@ -137,6 +137,14 @@ disagreement.
    runner evidence such as a completed mismatch or an executable/import error,
    but not mere long compute.
 
+   This rule is retroactive as an audit policy check. A legacy terminal
+   non-clean row whose primary rationale is only wall-time exhaustion,
+   missing stdout, or another compute-budget limit must be treated as a
+   policy-repair/re-audit candidate, not as settled scientific evidence. Do
+   not mechanically reset rows that also contain an independent substantive
+   blocker; repair those by re-auditing the actual blocker under the current
+   restricted-input process.
+
 ## Workflow
 
 ### Mechanical phase (cron-able)

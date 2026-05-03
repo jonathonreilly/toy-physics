@@ -98,6 +98,13 @@ on. A terminal verdict may still rest on concrete completed evidence: for
 example a reproducible output mismatch, stale number, import/API error, or a
 runner that hard-codes the contested premise.
 
+The rule also governs legacy timeout-based verdicts. If a prior non-clean
+audit primarily says "the runner did not finish," the row is not citeable as
+settled scientific non-closure until a current fresh audit identifies a
+substantive blocker or a completed compute artifact confirms the issue. Rows
+with independent blockers should be repaired by re-auditing those blockers,
+not by blanket status rewrites.
+
 ## 3. The audit question
 
 The auditor answers exactly five questions per claim:
