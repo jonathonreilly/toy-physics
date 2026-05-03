@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:12:19.120456+00:00
+**Generated:** 2026-05-03T01:15:10.606495+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 211 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 480 |
+| unaudited | 479 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 657 |
+| ~~audited_conditional~~ | 658 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 420 |
-| `audited_conditional` | 657 |
+| `audited_conditional` | 658 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 520 |
+| `unaudited` | 519 |
 
 | claim_type | count |
 |---|---:|
@@ -1123,6 +1123,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_3d_resource_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_acceptance_suite_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `teleportation_end_to_end_poisson_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
+| `teleportation_hard_blocker_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -16843,6 +16844,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `TELEPORTATION_RESOURCE_FIDELITY_NOTE.md`
   - `TELEPORTATION_PROTOCOL_NOTE.md`
+- **auditor confidence:** high
+
+### `teleportation_hard_blocker_attack_note`
+
+- **Note:** [`TELEPORTATION_HARD_BLOCKER_ATTACK_NOTE.md`](../../docs/TELEPORTATION_HARD_BLOCKER_ATTACK_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** A hard-blocker/open-obligation record for ordinary quantum state teleportation: apparatus and amplitude uniqueness remain obstructed, sparse side-6 scaling is negative for tested couplings, and only ideal pulse and local spin-bath mechanisms are supplied as bounded model positives.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Hypatia-the-2nd-019deb65-fe57-7881-8d60-8a36553816b5`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The important result is mixed: two explicit nonuniqueness obstructions, one side-6 sparse scaling warning, and two bounded ideal mechanisms, while ordinary state teleportation is not promoted to nature-grade closure.  _(class `C`)_
+- **chain closes:** False — The runner supports the individual component gates, but the row does not close as one clean ledger claim because it combines no-go-style obstructions, a finite negative scaling control, and positive ideal mechanisms. The missing step is a split or narrowed theorem that selects one citeable claim surface.
+- **rationale:** Issue: the audited object is a mixed row rather than a single closed theorem, no-go, or bounded finite result. Why this blocks: assigning audited_clean to one claim_type would either overstate the bounded positive mechanisms or blur the obstruction/open-gate content. Repair target: split into separate ledger rows for the apparatus no-go, amplitude no-go, sparse side-6 scaling control, ideal pulse schedule, and spin-bath detector model, each with its own scoped claim_type. Claim boundary until fixed: this may be cited only as a planning/open-gate blocker inventory for ordinary state teleportation, with no matter, energy, object, or FTL transport claim.
 - **auditor confidence:** high
 
 ### `teleportation_logical_readout_audit`
