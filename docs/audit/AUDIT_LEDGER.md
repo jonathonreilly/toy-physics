@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:15:40.130413+00:00
+**Generated:** 2026-05-03T17:22:18.981320+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 771 |
+| unaudited | 770 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 521 |
+| ~~audited_conditional~~ | 522 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,21 +37,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 311 |
-| `audited_conditional` | 521 |
+| `audited_conditional` | 522 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 817 |
+| `unaudited` | 816 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 588 |
+| `bounded_theorem` | 589 |
 | `decoration` | 7 |
 | `meta` | 46 |
 | `no_go` | 163 |
 | `open_gate` | 90 |
-| `positive_theorem` | 864 |
+| `positive_theorem` | 863 |
 
 | criticality | count |
 |---|---:|
@@ -840,6 +840,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unsupported_finite_sweep_and_readout_bridge | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `shapiro_experimental_card` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `shapiro_static_discriminator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `sigma_hier_uniqueness_theorem_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `sigma_mnu_f3_dm_cross_bound_audit_note_2026-04-28` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `single_axiom_hilbert_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -11639,6 +11640,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SHAPIRO_EXPERIMENTAL_CARD.md`
   - `SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md`
 - **auditor confidence:** high
+
+### `shapiro_static_discriminator_note`
+
+- **Note:** [`SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md`](../../docs/SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within scripts/shapiro_static_discriminator.py, the c-indexed static cone-shape proxy is defined with the same spatial support and field law as the runner's causal cone comparator, while the tested fixed-delay static-scheduling proxy does not reproduce that curve.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-audit-loop-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The frozen cone-shape proxy reproduces the full c-dependent causal phase curve to numerical precision on all three families.  _(class `A`)_
+- **chain closes:** False — The exact static-cone mimic follows as a source-code identity because _causal_field and _static_cone_field implement the same cone-support field formula. The retained causal-propagating-field bridge is not supplied as a dependency, and the primary runner did not complete to current table output during audit.
+- **rationale:** Issue: The note treats the runner's causal cone curve as the retained causal propagating-field phase lag, but the allowed source packet contains no cited retained dependency proving that this static cone-support implementation is the causal-propagation lane; the runner also has no PASS assertions and did not complete to result rows during the audit attempt. Why this blocks: The boundary claim can be clean only after the comparator being mimicked is established as the retained causal observable rather than a locally defined cone-shape proxy. Repair target: Add the retained causal phase-lag dependency or an explicit theorem constructing this runner's causal field from the causal-propagating-field lane, and make the runner emit assertive checks for exact cone equality and schedule mismatch that complete reproducibly. Claim boundary until fixed: It is safe to say that, under this runner's own proxy definitions, the static cone field is algebraically identical to the runner's causal cone field, and the sampled fixed-delay schedule is a limited numerical control rather than a universal exclusion of static scheduling.
+- **auditor confidence:** medium
 
 ### `sigma_hier_uniqueness_theorem_note_2026-04-19`
 
