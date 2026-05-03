@@ -5141,6 +5141,38 @@
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "ew_coupling_derivation_note"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "to": "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14"
+    },
+    {
       "from": "hadronic_charges_from_quark_y_note_2026-05-02",
       "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
     },
@@ -20369,7 +20401,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T11:33:19.492864+00:00",
+  "generated_at": "2026-05-03T11:35:34.492579+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28966,6 +28998,26 @@
       "runner_path": null,
       "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route"
     },
+    "g_weak_from_framework_stretch_attempt_note_2026-05-03": {
+      "claim_id": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "stretch_attempt (output type c) WITH closing partial at lattice scale",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03",
+        "yt_ew_color_projection_theorem",
+        "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
+        "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
+        "native_gauge_closure_note",
+        "ew_coupling_derivation_note",
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+        "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14"
+      ],
+      "note_hash": "ab6b6c9aad36f1b85682642a524421f67a22afb07ae28a4456d355cba967d08b",
+      "path": "docs/G_WEAK_FROM_FRAMEWORK_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_g_weak_from_framework.py",
+      "title": "G_weak / y_0\u00b2 from Framework Primitives \u2014 Stretch Attempt with Lattice-Scale Closing Derivation"
+    },
     "gap_physics_note": {
       "claim_id": "gap_physics_note",
       "claim_type_author_hint": null,
@@ -30434,7 +30486,7 @@
         "ewsb_pattern_from_higgs_y_note_2026-05-02",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
       ],
-      "note_hash": "3ff3f2cd8318a55a007b7519b4c90f6d7b33ec5225f2d92740576060c2521b1e",
+      "note_hash": "f8ad5d87aec24d35e5c6cefe3eae88eb5e42f0fb54609b21e373016070347795",
       "path": "docs/HADRONIC_CHARGES_FROM_QUARK_Y_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_hadronic_charges_from_quark_y.py",
       "title": "Hadronic Electric Charges Q_p = +1, Q_n = 0 from Quark Hypercharges"
@@ -47540,21 +47592,21 @@
       "bounded_theorem": 16,
       "meta": 1,
       "no_go": 3,
-      "none": 1747,
+      "none": 1748,
       "positive_theorem": 72
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 516,
       "meta": 1,
       "no_go": 109,
-      "none": 448,
+      "none": 449,
       "open_gate": 109,
       "positive_theorem": 656
     },
-    "edge_count": 5092,
-    "leaf_count": 796,
-    "node_count": 1839,
+    "edge_count": 5100,
+    "leaf_count": 795,
+    "node_count": 1840,
     "root_count": 1225,
-    "runners_with_path": 1405
+    "runners_with_path": 1406
   }
 }

@@ -1,14 +1,14 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 544,
-    "decoration": 9,
+    "bounded_theorem": 550,
+    "decoration": 8,
     "meta": 41,
-    "no_go": 155,
+    "no_go": 160,
     "open_gate": 85,
-    "positive_theorem": 878,
-    "unset": 26
+    "positive_theorem": 887,
+    "unset": 8
   },
-  "computed_at": "2026-05-03T11:33:25.247200+00:00",
+  "computed_at": "2026-05-03T11:35:39.178695+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -39,7 +39,7 @@
   ],
   "cycles_detected": 85,
   "effective_status_counts": {
-    "audited_conditional": 649,
+    "audited_conditional": 646,
     "audited_decoration": 3,
     "audited_failed": 4,
     "audited_numerical_match": 26,
@@ -50,18 +50,15 @@
     "meta": 40,
     "open_gate": 14,
     "retained": 141,
-    "retained_bounded": 216,
+    "retained_bounded": 214,
     "retained_no_go": 95,
-    "retained_pending_chain": 6,
-    "unaudited": 521
+    "retained_pending_chain": 3,
+    "unaudited": 530
   },
-  "retained_pending_chain_count": 6,
+  "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [
-    "cpt_exact_note",
-    "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
-    "cpt_squared_is_identity_theorem_note_2026-05-02",
+    "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
     "pmns_selector_unique_amplitude_slot_note",
-    "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24"
   ]
 }

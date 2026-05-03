@@ -33,7 +33,7 @@ and admitted SM quark constituent content of nucleons:
 
 then Q_p = +1 and Q_n = 0 exactly.
 
-**Proof.** 
+**Proof.**
 ```text
 Q_p  =  Q_u + Q_u + Q_d  =  2/3 + 2/3 − 1/3  =  3/3  =  +1  ✓
 Q_n  =  Q_u + Q_d + Q_d  =  2/3 − 1/3 − 1/3  =  0/3  =  0   ✓

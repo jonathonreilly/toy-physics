@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T11:33:24.456200+00:00",
+  "generated_at": "2026-05-03T11:35:38.615293+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -5904,6 +5904,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_g_bare_two_ward_closure.py"
+    },
+    "g_weak_from_framework_stretch_attempt_note_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_g_weak_from_framework.py"
     },
     "gap_physics_note": {
       "assert_count": 0,
@@ -24337,6 +24349,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_g_weak_from_framework.py": {
+      "assert_count": 0,
+      "claims": [
+        "g_weak_from_framework_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_gauge_scalar_temporal_completion_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -37133,11 +37160,11 @@
       "A": 10,
       "B": 160,
       "C": 541,
-      "D": 202,
+      "D": 203,
       "none": 420
     },
-    "runners_classified": 1333,
-    "runners_with_C": 645,
-    "runners_with_D": 325
+    "runners_classified": 1334,
+    "runners_with_C": 646,
+    "runners_with_D": 326
   }
 }
