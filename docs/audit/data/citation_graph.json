@@ -601,10 +601,6 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
-      "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-      "to": "anomaly_forces_time_theorem"
-    },
-    {
       "from": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
       "to": "native_gauge_closure_note"
     },
@@ -5373,34 +5369,6 @@
       "to": "gate_b_no_restore_joint_package_note"
     },
     {
-      "from": "gate_b_farfield_note",
-      "to": "gate_b_grown_distance_law_note"
-    },
-    {
-      "from": "gate_b_farfield_note",
-      "to": "gate_b_grown_joint_package_note"
-    },
-    {
-      "from": "gate_b_farfield_note",
-      "to": "gate_b_h025_farfield_note"
-    },
-    {
-      "from": "gate_b_farfield_note",
-      "to": "gate_b_h025_distance_law_note"
-    },
-    {
-      "from": "gate_b_farfield_note",
-      "to": "gate_b_h025_joint_package_note"
-    },
-    {
-      "from": "gate_b_grown_distance_law_note",
-      "to": "gate_b_farfield_note"
-    },
-    {
-      "from": "gate_b_grown_distance_law_note",
-      "to": "gate_b_dynamics_note"
-    },
-    {
       "from": "gate_b_grown_joint_package_note",
       "to": "gate_b_farfield_note"
     },
@@ -7111,10 +7079,6 @@
     {
       "from": "lorentz_boost_covariance_2d_theorem_note",
       "to": "emergent_lorentz_invariance_note"
-    },
-    {
-      "from": "lorentz_boost_covariance_2d_theorem_note",
-      "to": "lorentz_boost_covariance_3plus1d_theorem_note"
     },
     {
       "from": "lorentz_boost_covariance_3plus1d_theorem_note",
@@ -10359,10 +10323,6 @@
     {
       "from": "teleportation_z_convention_clarification",
       "to": "teleportation_bell_measurement_circuit_note"
-    },
-    {
-      "from": "third_grown_family_boundary_note",
-      "to": "third_grown_family_sign_note"
     },
     {
       "from": "third_grown_family_complex_boundary_note",
@@ -22157,7 +22117,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:14:27.651898+00:00",
+  "generated_at": "2026-05-03T13:23:41.610701+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24183,10 +24143,9 @@
         "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
         "emergent_lorentz_invariance_note",
         "lorentz_kernel_positive_closure_note",
-        "minimal_axioms_2026-04-11",
-        "anomaly_forces_time_theorem"
+        "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "c4de74d8fe749fe1a4752c5a78f3b3cd5f30e5aad6a8013e4b0165f004394ff7",
+      "note_hash": "e442b25ae0ffdddd85c3dba1f94b8a701921aabee44fcfb26d1038e99ff0b0d9",
       "path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/axiom_first_single_clock_codimension1_evolution_check.py",
       "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3"
@@ -31017,14 +30976,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "gate_b_grown_distance_law_note",
-        "gate_b_grown_joint_package_note",
-        "gate_b_h025_farfield_note",
-        "gate_b_h025_distance_law_note",
-        "gate_b_h025_joint_package_note"
-      ],
-      "note_hash": "67db3535cdd12932c8b9594823a807a8ca9238c5a3a3afc8ae1d86f0a2ab844c",
+      "deps": [],
+      "note_hash": "426a0b541d96b5fbcd571e43a992c2551fa2485fa2f9945c4f4ac5349f7c1baa",
       "path": "docs/GATE_B_FARFIELD_NOTE.md",
       "runner_path": "scripts/gate_b_farfield_harness.py",
       "title": "Gate B Far-Field: Grown Geometry at h=0.5"
@@ -31034,11 +30987,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "gate_b_farfield_note",
-        "gate_b_dynamics_note"
-      ],
-      "note_hash": "3665a4bf50e7e6007387f9afc253225c56d04b0937ad2a5f6416b96286d512e6",
+      "deps": [],
+      "note_hash": "3ee8023e7ebe9ae6bec562800831a5eb4a9501b2a647e45adec36d7fcc9c3a27",
       "path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
       "runner_path": "scripts/gate_b_grown_distance_law.py",
       "title": "Gate B Grown-Geometry Distance-Law Note"
@@ -35773,10 +35723,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "emergent_lorentz_invariance_note",
-        "lorentz_boost_covariance_3plus1d_theorem_note"
+        "emergent_lorentz_invariance_note"
       ],
-      "note_hash": "b40e205ad247bc8a7696d81f92ae5597de0e52124fc460fa05291209dfdbf1eb",
+      "note_hash": "1864a78f4e08c08750d22537dbe081a47ca2f0d7e648733497cedc8bc98c5386",
       "path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_boost_2d.py",
       "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function"
@@ -45352,10 +45301,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "third_grown_family_sign_note"
-      ],
-      "note_hash": "04b04f0930fcd0c0aa6c64036238da09fe42752e52ffe154cd651588af74ce58",
+      "deps": [],
+      "note_hash": "3e3af2e180190c62346bb121b0ae25b8175e7753339d0d939678dc777d64bbbb",
       "path": "docs/THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md",
       "runner_path": "scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py",
       "title": "Third Grown Family Boundary Note"
@@ -49129,6 +49076,8 @@
     "g_bare_rigidity_theorem_note",
     "gap_physics_note",
     "gate_b_connectivity_tolerance_note",
+    "gate_b_farfield_note",
+    "gate_b_grown_distance_law_note",
     "gate_b_grown_propagating_field_note",
     "gate_b_grown_propagating_field_radical_note",
     "gate_b_grown_propagating_field_v2_note",
@@ -49703,6 +49652,7 @@
     "tensor_source_map_eta_note",
     "tensor_support_center_excess_law_note",
     "thales_right_angle_narrow_theorem_note_2026-05-02",
+    "third_grown_family_boundary_note",
     "three_generation_observable_count_corollary_note_2026-05-03",
     "three_generation_structure_note",
     "triple_stack_collapse_scaling_note",
@@ -49847,10 +49797,10 @@
       "open_gate": 111,
       "positive_theorem": 654
     },
-    "edge_count": 5539,
-    "leaf_count": 650,
+    "edge_count": 5529,
+    "leaf_count": 651,
     "node_count": 1844,
-    "root_count": 1074,
+    "root_count": 1077,
     "runners_with_path": 1409
   }
 }

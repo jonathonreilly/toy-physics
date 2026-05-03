@@ -1,10 +1,10 @@
 {
-  "computed_at": "2026-05-03T13:14:33.029284+00:00",
+  "computed_at": "2026-05-03T13:23:44.198022+00:00",
   "criticality_counts": {
     "critical": 111,
     "high": 365,
-    "leaf": 814,
-    "medium": 554
+    "leaf": 822,
+    "medium": 546
   },
   "flagship_signal_used": false,
   "node_count": 1844,
@@ -20,8 +20,8 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 33.085,
-      "transitive_descendants": 383
+      "load_bearing_score": 33.081,
+      "transitive_descendants": 382
     },
     {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
@@ -44,8 +44,8 @@
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 27.34,
-      "transitive_descendants": 323
+      "load_bearing_score": 27.335,
+      "transitive_descendants": 322
     },
     {
       "claim_id": "observable_principle_from_axiom_note",
@@ -62,8 +62,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 25.547,
-      "transitive_descendants": 373
+      "load_bearing_score": 25.543,
+      "transitive_descendants": 372
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
@@ -84,12 +84,6 @@
       "transitive_descendants": 309
     },
     {
-      "claim_id": "anomaly_forces_time_theorem",
-      "criticality": "critical",
-      "load_bearing_score": 22.15,
-      "transitive_descendants": 283
-    },
-    {
       "claim_id": "one_generation_matter_closure_note",
       "criticality": "critical",
       "load_bearing_score": 21.907,
@@ -100,6 +94,12 @@
       "criticality": "critical",
       "load_bearing_score": 21.658,
       "transitive_descendants": 201
+    },
+    {
+      "claim_id": "anomaly_forces_time_theorem",
+      "criticality": "critical",
+      "load_bearing_score": 21.645,
+      "transitive_descendants": 282
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -146,17 +146,17 @@
     {
       "claim_id": "cpt_exact_note",
       "criticality": "critical",
-      "load_bearing_score": 17.18,
-      "transitive_descendants": 289
-    },
-    {
-      "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
-      "criticality": "critical",
-      "load_bearing_score": 17.165,
-      "transitive_descendants": 286
+      "load_bearing_score": 17.175,
+      "transitive_descendants": 288
     },
     {
       "claim_id": "emergent_lorentz_invariance_note",
+      "criticality": "critical",
+      "load_bearing_score": 17.16,
+      "transitive_descendants": 285
+    },
+    {
+      "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
       "criticality": "critical",
       "load_bearing_score": 17.16,
       "transitive_descendants": 285
