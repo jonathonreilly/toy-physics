@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T12:29:43.015826+00:00
+**Generated:** 2026-05-03T12:32:07.133270+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 171 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 731 |
+| unaudited | 730 |
+| audit_in_progress | 1 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -37,20 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
+| `audit_in_progress` | 1 |
 | `audited_clean` | 349 |
 | `audited_conditional` | 519 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 772 |
+| `unaudited` | 771 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 555 |
+| `bounded_theorem` | 554 |
 | `decoration` | 8 |
 | `meta` | 42 |
-| `no_go` | 160 |
+| `no_go` | 161 |
 | `open_gate` | 88 |
 | `positive_theorem` | 889 |
 
@@ -108,6 +110,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
