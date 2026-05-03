@@ -1874,6 +1874,18 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "koide_axiom_native_support_batch_note_2026-04-22"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "koide_cone_completing_root_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "lanes.active_working_lanes_2026-04-26"
     },
     {
@@ -15654,6 +15666,14 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_cone_completing_root_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16"
     },
     {
@@ -22653,7 +22673,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:58:10.846229+00:00",
+  "generated_at": "2026-05-03T14:00:17.523842+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25366,6 +25386,9 @@
         "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24",
         "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
         "koide_q_so2_phase_erasure_support_note_2026-04-25",
+        "koide_axiom_native_support_batch_note_2026-04-22",
+        "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
         "lanes.active_working_lanes_2026-04-26",
         "teleportation_protocol_note",
         "teleportation_native_axioms_theory_note",
@@ -25386,7 +25409,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "d7f47b166f9867d2ba71c21435c448f3fc6899aade40cf05b61b42eef34de6e8",
+      "note_hash": "93ecd91f680aec408f614391149abf460caff0ff4680d150b8e59be909aebc1d",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -40250,6 +40273,8 @@
         "koide_cl3_selector_gap_note_2026-04-19",
         "koide_positive_parent_axis_obstruction_note_2026-04-18",
         "koide_full_lattice_schur_inheritance_note_2026-04-18",
+        "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
+        "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
         "dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16",
         "dm_leptogenesis_hrad_theorem_note_2026-04-16",
         "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
@@ -40409,7 +40434,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "ac015987dead3dc49512e74c52dc14c69e76beee1699472683635e066a5b1080",
+      "note_hash": "301f82b595d13496c04f6e47fb19766354d10cc29a7a22a9df665ff3123ed5b2",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50503,8 +50528,8 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5663,
-    "leaf_count": 633,
+    "edge_count": 5668,
+    "leaf_count": 631,
     "node_count": 1847,
     "root_count": 1047,
     "runners_with_path": 1410
