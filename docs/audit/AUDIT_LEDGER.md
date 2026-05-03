@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:25:46.306637+00:00
+**Generated:** 2026-05-03T14:27:03.050101+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 777 |
+| unaudited | 776 |
 | meta | 43 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
-| ~~audited_renaming~~ | 18 |
+| ~~audited_renaming~~ | 19 |
 | ~~audited_conditional~~ | 514 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
-| `audited_renaming` | 18 |
-| `unaudited` | 820 |
+| `audited_renaming` | 19 |
+| `unaudited` | 819 |
 
 | claim_type | count |
 |---|---:|
@@ -1019,6 +1019,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
+| `g_bare_derivation_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -5611,6 +5612,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a support note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `g_bare_derivation_note`
+
+- **Note:** [`G_BARE_DERIVATION_NOTE.md`](../../docs/G_BARE_DERIVATION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The claim that g_bare = 1 is uniquely forced by Cl(3) generator normalization, a = l_Planck as the single scale, and absence of a continuum limit.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-g-bare-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The Cl(3) normalization identifies g = 1 so that the lattice field strength is the Cl(3) curvature without a rescaling factor.  _(class `F`)_
+- **chain closes:** False — The source note does not derive the removal of gauge-field rescaling freedom; it identifies the unit coefficient convention with the physical bare coupling. The note itself leaves open whether Cl(3) normalization is a constraint or a convention.
+- **rationale:** Issue: the load-bearing step identifies the canonical Cl(3) connection normalization with the physical bare gauge coupling g_bare = 1 rather than deriving that identification. Why this blocks: fixed generator normalization and a single lattice scale do not by themselves prove that no independent coupling/rescaling parameter remains; the note explicitly acknowledges this as an open foundational question. Repair target: a theorem showing that the concrete Cl(3)-derived gauge connection and trace/holonomy normalization eliminate all independent coupling rescalings, with a runner that tests this obstruction rather than setting g = 1. Claim boundary until fixed: the note may state a unit-coupling normalization convention and its downstream consequences, not an audited positive theorem deriving g_bare = 1.
+- **auditor confidence:** high
 
 ### `g_bare_rigidity_theorem_note`
 
