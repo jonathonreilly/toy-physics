@@ -3,6 +3,38 @@
 **Date:** 2026-04-25
 **Status:** bounded no-go on the directional-path-measure kernel +
 retained routing clarification/support note for the boost-covariance program
+**Type:** no_go proposal (with bundled positive routing-clarification
+corollary). Audit status is assigned only by the independent audit
+lane; this note does not set or predict an audit verdict. Effective
+status is `unaudited` until Codex GPT-5.5 audits it independently.
+**Claim type:** no_go
+**Claim scope:** Bounded no-go on the angular kernel `w(theta)` of
+the directional path-measure walk
+(`ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`): the four currently
+retained primitives (Cl(3) trace, action extremization on `Z^3`,
+forward-only causal-cone kinematics, leading-order continuum-limit
+SO(3) isotropy) are ALL satisfied by a multi-parameter family of
+distinct kernels with measurably different transverse-step moments,
+so `w(theta)` is NOT uniquely determined by retained primitives
+alone. The empirical `beta = 0.8` Gaussian-in-theta selection has
+no first-principles derivation on the retained surface. Bundled
+positive corollary: the boost-covariance theorems
+(`LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md`,
+`LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md`) live entirely
+on the staggered/Laplacian Hamiltonian carrier, which has no
+angular-kernel parameter, so the no-go is decoupled from the
+boost-covariance lane. Bounded scope: (a) the no-go is conditional
+on the four retained primitives being all the constraints --
+adding a higher-order isotropy axiom, an action-Lagrangian
+principle, or direct observable matching could close the
+underdetermination, and the no-go does NOT prove no such axiom can
+be written; (b) the seven kernels exhibited in the runner are an
+existence demonstration, not an exhaustive parameterization;
+(c) the decoupling corollary is exact for the staggered/Laplacian
+construction used by the boost-covariance theorems and does not
+extend to other lanes that may use the directional measure.
+Runner `scripts/frontier_angular_kernel_underdetermination_nogo.py`
+PASS=64, FAIL=0.
 **Runner:** `scripts/frontier_angular_kernel_underdetermination_nogo.py`
 (PASS=64, FAIL=0)
 **Companions:**
@@ -209,3 +241,51 @@ The 64 checks span 10 parts:
 | 10   | Combined no-go statement                                       | 6    |
 
 Total: 64/64 PASS.
+
+## Honest claim-status block
+
+```yaml
+proposed_claim_type: no_go
+proposed_claim_scope: |
+  Bounded no-go on the angular kernel w(theta) of the directional
+  path-measure walk (ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md): the
+  four currently retained primitives -- (1) Cl(3) trace structure,
+  (2) action extremization on Z^3, (3) causal-cone kinematics
+  (forward-only edges, theta in [0, pi/2]), (4) leading-order
+  continuum-limit SO(3) isotropy -- are simultaneously satisfied
+  by a multi-parameter family of kernels (uniform, cos, cos^2,
+  three Gaussian-in-theta widths including the empirical
+  beta = 0.8, and linear_falloff) that produce measurably different
+  transverse-step moments <r_perp^2> and <r_perp^4>. The empirical
+  beta = 0.8 has no first-principles selection rule on the
+  retained primitive surface. Bundled positive corollary
+  (decoupling theorem): the boost-covariance Phase 2 / Phase 4
+  program lives entirely on the staggered/Laplacian Hamiltonian
+  carrier (nearest-neighbour hopping with staggered phases
+  eta_mu(x) = (-1)^{sum_{nu < mu} x_nu} and bosonic Laplacian
+  dispersion), which has zero angular-kernel freedom; therefore
+  the no-go does not block the boost-covariance theorems.
+
+  Bounded scope: (a) the no-go is conditional on the four retained
+  primitives being all the constraints; closing the no-go
+  positively would require adopting one additional axiom
+  (higher-order isotropy, action-Lagrangian principle, or direct
+  observable matching), and this note does NOT prove that no such
+  axiom can be written; (b) the seven exhibited kernels are an
+  existence demonstration of underdetermination, not an exhaustive
+  parameterization of the kernel space; (c) the decoupling
+  corollary applies exactly to the staggered/Laplacian construction
+  used by the boost-covariance theorems and does not extend to
+  other lanes that may use the directional measure (e.g. the
+  gravity-card lane, where beta = 0.8 remains an empirical model
+  parameter on the retained surface).
+
+  This note does NOT touch any existing audit row, and does NOT
+  propose flipping any other note's claim_type or effective_status.
+  It enters as a STANDALONE unaudited source claim awaiting
+  independent audit.
+
+status_authority: independent audit lane only
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+```

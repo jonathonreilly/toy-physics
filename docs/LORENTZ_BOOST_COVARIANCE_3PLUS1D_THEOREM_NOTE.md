@@ -4,6 +4,30 @@
 **Status:** proposed_retained exact theorem on the continuum-limit free-scalar
 Hamiltonian-lattice surface, with explicit dim-6 cubic-harmonic LV bound
 at finite `a`
+**Type:** bounded_theorem proposal. Audit status is assigned only by the
+independent audit lane; this note does not set or predict an audit
+verdict. Effective status is `unaudited` until Codex GPT-5.5 audits it
+independently.
+**Claim type:** bounded_theorem
+**Claim scope:** SO(3,1) boost covariance of the free-scalar Wightman
+2-point function on the 3+1D Hamiltonian lattice (`Z^3` spatial,
+continuous time, bosonic Laplacian dispersion), in the strict
+continuum limit `a -> 0` and for spacelike separations
+`s^2 = Δt^2 - |Δx⃗|^2 < 0`. Closed-form limit is
+`W_cont(s^2; m) = m K_1(m sqrt(-s^2))/(4π² sqrt(-s^2))`. Bounded
+scope: (a) free scalar only, no interactions; (b) finite-`a`
+2-point function carries explicit dim-6 cubic-harmonic K_4 LV
+correction (factor-of-3 anisotropy between [100] and [111]/sqrt(3)
+directions) -- only the strict continuum limit is fully covariant;
+(c) phenomenological conversion to physical units inherits the
+Planck-pin caveat from
+`PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`; (d) timelike s^2 > 0
+form follows by analytic continuation but is not numerically
+checked here; (e) the proof is path-sum 2-point on the staggered/
+Laplacian carrier; the directional-measure angular kernel is not
+involved (decoupling per
+`ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`). Runner
+`scripts/frontier_lorentz_boost_3plus1d.py` PASS=55, FAIL=0.
 **Script:** `scripts/frontier_lorentz_boost_3plus1d.py` (PASS=55, FAIL=0)
 **Companions:**
 [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),
@@ -402,4 +426,55 @@ Total: 55/55 PASS.
 git checkout -b lorentz-boost-covariance 59f7e4f0  # main head
 python3 scripts/frontier_lorentz_boost_3plus1d.py
 # Exit code: 0  PASS=55  FAIL=0
+```
+
+## Honest claim-status block
+
+```yaml
+proposed_claim_type: bounded_theorem
+proposed_claim_scope: |
+  SO(3,1) boost covariance of the free-scalar Wightman 2-point
+  function on the 3+1D Hamiltonian lattice (Z^3 spatial, continuous
+  time, bosonic Laplacian dispersion E_lat^2(p) = m^2 + sum_i
+  (4/a^2) sin^2(p_i a / 2)), in the strict continuum limit a -> 0
+  and for spacelike separations s^2 < 0. The continuum limit is the
+  standard SO(3,1)-covariant Wightman function with closed form
+  W_cont(s^2; m) = m K_1(m sqrt(-s^2))/(4π² sqrt(-s^2)). The
+  covariance follows from (a) O_h-symmetry and parity-evenness of
+  the lattice dispersion, (b) O(a^2) convergence of the lattice
+  dispersion to the relativistic continuum dispersion
+  E^2 = m^2 + |p⃗|^2, (c) SO(3,1) invariance of the on-shell
+  Liouville measure d^3p/(2 E_p), and (d) standard Källén-Lehmann
+  reduction in the continuum.
+
+  Bounded scope: (a) free scalar only, interactions not addressed;
+  (b) the lattice 2-point function at any finite a > 0 is NOT
+  strictly SO(3,1)-covariant -- it carries an explicit dim-6
+  cubic-harmonic K_4 LV correction (factor-of-3 anisotropy between
+  [100] and [111]/sqrt(3) directions, inherited from the
+  dispersion-isotropy theorem); only the strict continuum limit is
+  fully covariant; (c) any phenomenological conversion to physical
+  units inherits the Planck-pin caveat from
+  PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md (a^(-1) = M_Pl is a
+  current package pin, not a theorem on the retained surface);
+  (d) timelike s^2 > 0 sheet follows by analytic continuation but
+  is not separately numerically checked here; (e) the proof lives
+  entirely on the staggered/Laplacian Hamiltonian carrier and does
+  NOT involve the directional-measure angular kernel (decoupling
+  per ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md); (f) the
+  Lorentzian convergence W_lat -> W_cont is checked via Wick
+  rotation through the Euclidean Schwinger function (well-conditioned
+  numerically), with direct Lorentzian Δt = 0 spacelike-slice cross
+  check; full Lorentzian-time numerical convergence at finite Δt
+  is hampered by Minkowski oscillation and is not directly
+  re-verified here.
+
+  This note does NOT touch any existing audit row, and does NOT
+  propose flipping any other note's claim_type or effective_status.
+  It enters as a STANDALONE unaudited source claim awaiting
+  independent audit.
+
+status_authority: independent audit lane only
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
 ```

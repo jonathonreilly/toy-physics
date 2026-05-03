@@ -2,6 +2,25 @@
 
 **Date:** 2026-04-25
 **Status:** proposed_retained exact theorem on the continuum-limit free-scalar surface
+**Type:** bounded_theorem proposal. Audit status is assigned only by the
+independent audit lane; this note does not set or predict an audit
+verdict. Effective status is `unaudited` until Codex GPT-5.5 audits it
+independently.
+**Claim type:** bounded_theorem
+**Claim scope:** SO(1,1) boost covariance of the free-scalar Wightman
+2-point function on the 1+1D Hamiltonian lattice, in the strict
+continuum limit `a -> 0` and for spacelike separations
+`s^2 = Δt^2 - Δx^2 < 0`. Closed-form limit is
+`W_cont(s^2; m) = (1/(2π)) K_0(m sqrt(-s^2))`. Bounded scope:
+(a) free scalar only, no interactions; (b) finite-`a` 2-point
+function carries explicit `O(a^2 p^4)` LV corrections that break
+SO(1,1) at any `a > 0` -- only the strict continuum limit is
+covariant; (c) spacelike Macdonald form numerically verified;
+timelike form follows by analytic continuation but is not
+separately checked numerically; (d) the proof is path-sum 2-point
+on the spectral / canonical surface, not on a directed-DAG path
+enumeration. Runner `scripts/frontier_lorentz_boost_2d.py`
+PASS=39, FAIL=0 at machine precision.
 **Script:** `scripts/frontier_lorentz_boost_2d.py` (PASS=39, FAIL=0)
 **Companion:** [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
 [LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md)
@@ -296,4 +315,39 @@ Total: 39/39 PASS.
 git checkout -b lorentz-boost-covariance 59f7e4f0  # main head
 python3 scripts/frontier_lorentz_boost_2d.py
 # Exit code: 0  PASS=39  FAIL=0
+```
+
+## Honest claim-status block
+
+```yaml
+proposed_claim_type: bounded_theorem
+proposed_claim_scope: |
+  SO(1,1) boost covariance of the free-scalar Wightman 2-point
+  function on the 1+1D Hamiltonian lattice, in the strict continuum
+  limit a -> 0 and for spacelike separations s^2 < 0. The continuum
+  limit is the standard SO(1,1)-covariant Wightman function with
+  closed form W_cont(s^2; m) = (1/(2π)) K_0(m sqrt(-s^2)).
+  The covariance follows from (a) parity-evenness of the lattice
+  dispersion, (b) O(a^2) convergence of the lattice dispersion to
+  the relativistic continuum dispersion E^2 = m^2 + p^2, and
+  (c) SO(1,1) invariance of the on-shell Liouville measure dp/E.
+
+  Bounded scope: (a) free scalar only, interactions not addressed;
+  (b) the lattice 2-point function at any finite a > 0 is NOT
+  boost-covariant -- it carries explicit O(a^2 p^4) LV corrections
+  that break SO(1,1); only the strict continuum limit is covariant;
+  (c) spacelike Macdonald form numerically verified to relative
+  error 4.7e-9; the timelike s^2 > 0 sheet follows by analytic
+  continuation but is not separately numerically checked here;
+  (d) the proof works on the spectral / canonical 2-point object,
+  not on a directed-DAG path enumeration on Z^2.
+
+  This note does NOT touch any existing audit row, and does NOT
+  propose flipping any other note's claim_type or effective_status.
+  It enters as a STANDALONE unaudited source claim awaiting
+  independent audit.
+
+status_authority: independent audit lane only
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
 ```
