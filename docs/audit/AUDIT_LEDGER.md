@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:36:35.786595+00:00
+**Generated:** 2026-05-03T14:37:25.014584+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 778 |
+| unaudited | 777 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 514 |
+| ~~audited_conditional~~ | 515 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 313 |
-| `audited_conditional` | 514 |
+| `audited_conditional` | 515 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 823 |
+| `unaudited` | 822 |
 
 | claim_type | count |
 |---|---:|
@@ -487,6 +487,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `ckm_schur_complement_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complete_prediction_chain_2026_04_15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | E | - |
@@ -2592,6 +2593,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** False — No. The active map is tied to the stale Axiom* carrier-axiom narrative and should not remain in docs after the failed wrapper frame is retired.
 - **rationale:** Issue: the consequence map depends on the stale carrier-axiom wrapper frame and presents an active downstream cascade from that frame. Why this blocks: after the forced/minimal Axiom* narrative failed audit, leaving this map in active docs would keep a failed closure story available as support. Repair target: if Axiom* is later adopted or reintroduced, rebuild a new consequence map from the audited extension decision and current dependencies. Claim boundary until fixed: the 2026-04-28 map is archive-only recovery material, not an active claim note.
 - **auditor confidence:** high
+
+### `claude_complex_action_grown_companion_note`
+
+- **Note:** [`CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md`](../../docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Narrow grown-row replay claim for drift=0.2 and restore=0.7: gamma=0 reduction, Born proxy, weak-field F~M sanity, and a TOWARD-to-AWAY gamma crossover on the specified grown geometry; no geometry-generic, continuum, or self-gravity claim was audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The exact-lattice complex-action carryover does survive a retained grown-row replay, including exact gamma=0 reduction, machine-clean Born proxy, weak-field F~M=1.000, and the TOWARD-to-AWAY crossover on the retained grown row.  _(class `C`)_
+- **chain closes:** False — The source note relies on unprovided retained-status premises for the grown row and the exact-lattice complex-action carryover, and the current runner did not complete the full frozen gamma sweep in this audit pass. Partial observed output supports only the gamma=0/Born-proxy boundary, not the full claimed replay.
+- **rationale:** Issue: the note's retained grown-row survival claim requires retained grown-row and exact-lattice carryover premises that are not supplied as dependencies, and the current runner did not reproduce the full frozen sweep in the bounded audit run. Why this blocks: without those authorities and complete current runner output, the statement is a conditional numerical replay rather than a closed theorem from the provided packet. Repair target: provide one-hop retained authorities for the grown row and exact-lattice carryover, and make the runner reproducibly emit the full gamma/F~M/crossover table in an audit-bounded run. Claim boundary until fixed: the seed-0 gamma=0 reduction and Born-proxy lines are consistent with the note, but the broader grown-row survival/crossover claim remains conditional.
+- **auditor confidence:** medium
 
 ### `clifford_bimodule_ray_saturation_future_target_note_2026-04-19`
 
