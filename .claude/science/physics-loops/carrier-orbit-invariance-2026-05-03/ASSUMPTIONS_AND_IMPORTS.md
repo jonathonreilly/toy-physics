@@ -62,7 +62,7 @@ meta-statement about the audited registry, not a statement provable on
 the current axiomatic surface. Future cycles can target this single
 named premise.
 
-## Imports retired by cycle 22
+## Imports refined by cycle 22
 
 - The vague phrasing "no exact E/T-distinguishing operator on the
   carrier" is replaced with the precise phrasing "no antisymmetric

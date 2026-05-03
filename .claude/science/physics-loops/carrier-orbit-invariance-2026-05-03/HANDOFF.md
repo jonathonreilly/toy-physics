@@ -27,17 +27,17 @@ isotypic components V = V^+ ⊕ V^-, each of dimension 2. The operator
 space End(V) decomposes correspondingly as End(V) = End(V)^+ ⊕ End(V)^-,
 each of dimension 8.
 
-**Structural-exhaustion claim sharpened:** any retained-primitive
-operator on the carrier must lie in End(V)^+ (the swap-invariant
-isotypic component). The current retained primitive registry on the
-carrier consists of:
+**Structural-exhaustion claim sharpened:** the enumerated current
+carrier primitives lie in End(V)^+ (the swap-invariant isotypic
+component). The current retained/bounded primitive candidates on the
+carrier consist of:
 - Theta_R^(0) (bounded, gamma_E - gamma_T component bounded)
 - Xi_R^(0) (bounded)
 - Active Hermitian basis (a, b, c, d, T_delta, T_rho) on the H-side,
   not directly on the carrier columns
 
-Direct enumeration confirms that NO retained primitive on the audited
-surface has nonzero antisymmetric component in End(V)^-.
+Direct enumeration finds no retained-exact primitive on the enumerated
+current surface with nonzero antisymmetric component in End(V)^-.
 
 **Residual gap (named precisely):** the closure premise — "no future
 retained primitive can break this classification" — is a
@@ -45,14 +45,16 @@ meta-mathematical statement about the framework registry, not a
 statement provable on the current axiomatic surface. This is the
 **registry closure** obstruction that cycle 22 names precisely.
 
-## What this closes
+## What this narrows
 
 1. Z_2-isotypic decomposition of carrier representation: rigorous
    classification.
 2. Operator space decomposition: End(V) = End(V)^+ ⊕ End(V)^-.
-3. Registry enumeration on current audited surface: PASSES (no
-   antisymmetric retained primitives).
-4. Counterfactual antisymmetric candidates falsified.
+3. Registry enumeration on current audited surface: PASSES as a
+   current-registry check (no retained-exact antisymmetric primitive
+   found).
+4. Counterfactual antisymmetric candidates excluded from the current
+   retained-exact registry or identified as bounded-only.
 5. Cycle 17 named residual sharpened from vague structural exhaustion
    to a single named meta-premise (registry closure).
 6. Routes C, D rejected as overkill (cohomological/sheaf machinery
@@ -65,18 +67,17 @@ statement provable on the current axiomatic surface. This is the
   audit, NOT as a single-cycle physics derivation.
 - Absolute retention of swap-reduction theorem to audited_clean.
 - Absolute retention of v_even theorem (downstream).
-- Cycles 16 sub-B/sub-C and cycle 17 routes A/B/C: retain
-  "single-lemma-away" status; the lemma is now precisely identified.
+- Cycles 16 sub-B/sub-C and cycle 17 routes A/B/C remain blocked by the
+  named registry-closure premise.
 
 ## Audit-graph effect
 
 If audit-lane ratifies cycle 22:
 
 1. Swap-reduction theorem residual sharpened.
-2. Cycle 17 named residual retired.
+2. Cycle 17 named residual narrowed to the registry-closure premise.
 3. New named residual: registry closure (meta).
-4. Cycle 16 / cycle 17 chain retains its single-lemma-away status with
-   the lemma now precisely identified as registry closure.
+4. Cycle 16 / cycle 17 chain remains blocked by registry closure.
 
 ## Forbidden imports — all clean
 
@@ -114,7 +115,7 @@ opportunity queue priorities.
 
 ## Honest classification
 
-**Output type (c):** stretch attempt with partial closing-derivation.
+**Output type (c):** stretch attempt with partial structural insight.
 Most likely outcome per prompt expectation. The structural exhaustion
 claim is sharpened (not closed), and the named residual is a
 meta-mathematical registry-closure premise — tractable for future

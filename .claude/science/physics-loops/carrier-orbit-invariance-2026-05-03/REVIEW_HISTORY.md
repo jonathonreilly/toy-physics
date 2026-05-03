@@ -6,7 +6,7 @@
 
 | # | Question | Answer | Pass? |
 |---|---|---|---|
-| V1 | Closes specific verdict-identified obstruction? | YES — cycle 17's "structural-exhaustion premise" residual | PASS |
+| V1 | Narrows specific verdict-identified obstruction? | YES — cycle 17's "structural-exhaustion premise" residual | PASS |
 | V2 | New derivation not in audit lane? | YES — Z_2-equivariant operator classification on K_R(q) | PASS |
 | V3 | Audit lane couldn't synthesize in one hop? | YES — needs classification machinery the audit lane lacks | PASS |
 | V4 | Marginal content non-trivial? | YES — explicit isotypic decomposition + registry enumeration + meta-premise naming | PASS |
@@ -24,7 +24,7 @@
 - [x] Standard rep theory (Maschke, Schur) declared admitted-context
 - [x] V1-V5 PROMOTION VALUE GATE verified in CLAIM_STATUS_CERTIFICATE
 - [x] Runner PASS=52 FAIL=0 (target >=15)
-- [x] Note documents partial closing-derivation honestly
+- [x] Note documents partial structural insight honestly
 - [x] Residual gap (registry closure) named precisely
 - [x] Routes C/D rejected as overkill (route portfolio)
 - [x] Route E used as runner cross-check
@@ -55,7 +55,7 @@ The PR will be tagged for audit review. Audit-lane considerations:
 
 If audit-lane ratifies cycle 22:
 - Swap-reduction theorem residual sharpened.
-- Cycle 17 named residual retired.
+- Cycle 17 named residual narrowed to registry closure.
 - New named residual: registry closure (meta).
-- Cycle 16 sub-B/sub-C and cycle 17 routes A/B/C retain their
-  "single-lemma-away" status with the lemma now precisely identified.
+- Cycle 16 sub-B/sub-C and cycle 17 routes A/B/C remain blocked by
+  registry closure.

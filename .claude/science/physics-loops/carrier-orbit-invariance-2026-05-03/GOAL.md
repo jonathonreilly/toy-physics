@@ -2,7 +2,7 @@
 
 ## Targeted residual
 
-Cycle 17 (PR #445) closed v_even three independent ways but identified a
+Cycle 17 (PR #445) advanced v_even support along three routes but identified a
 precise residual blocking absolute retention of the upstream
 swap-reduction theorem:
 
@@ -21,15 +21,16 @@ with column swap P_ET = [[0,1],[1,0]] sending (u_E, u_T) ↔ (u_T, u_E).
 
 ## Cycle 22 target
 
-Establish (or precisely sharpen) the structural-exhaustion premise via
+Precisely sharpen the structural-exhaustion premise via
 **representation-theoretic / group-theoretic** classification of
 operators on the carrier representation of the Z_2 swap action.
 
 ## Honest expected outcome
 
-(c) — stretch attempt with partial closing-derivation. Most likely
+(c) — stretch attempt with partial structural insight. Most likely
 outcome: identify a specific representation-theoretic obstruction that
-future work can target. A clean closing would be a Nature-grade result.
+future work can target. Any full retained-grade closing would require
+independent audit-lane ratification.
 
 ## Acceptance criteria
 

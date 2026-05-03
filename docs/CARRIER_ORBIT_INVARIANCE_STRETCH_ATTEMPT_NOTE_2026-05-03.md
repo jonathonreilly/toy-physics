@@ -15,12 +15,14 @@ retained-grade interpretation.
 **Status:** stretch attempt with partial structural insight; the
 residual gap (registry closure) is named precisely.
 
+**Script:** `scripts/frontier_carrier_orbit_invariance.py`
+
 **Runner:** [`scripts/frontier_carrier_orbit_invariance.py`](../scripts/frontier_carrier_orbit_invariance.py)
 
 **Authority role:** sharpens the residual named by cycle 17 (PR #445)
-on the upstream swap-reduction theorem; converts an open-ended
-structural exhaustion question into a finite registry-enumeration check
-plus one named meta-premise.
+on the upstream swap-reduction theorem; reframes an open-ended
+structural exhaustion question as a finite current-registry check plus
+one named meta-premise.
 
 **Cycle:** 22 of `retained-promotion-2026-05-02` campaign.
 
@@ -61,8 +63,8 @@ weak source carrier reduces to the swap quotient — provided that **no
 exact E/T-distinguishing operator** acts on the carrier `K_R(q)`. This
 "structural-exhaustion premise" is the load-bearing input.
 
-Cycle 17 (PR #445) closed v_even three independent ways but identified
-the precise residual:
+Cycle 17 (PR #445) advanced v_even support along three routes but
+identified the precise residual:
 
 > "the swap-reduction theorem's structural-exhaustion premise — 'no
 > exact E/T-distinguishing operator on the K_R(q) carrier' — is
@@ -150,11 +152,12 @@ equivalently `L ≠ L ∘ tau`.
 By the isotypic decomposition, this is equivalent to: `L` has nonzero
 component in `Hom(V, W)^-`.
 
-## Theorem (Carrier Operator Classification — partial)
+## Proposition (Carrier Operator Classification — partial)
 
-**Statement.** Let `L: V -> W` be a linear operator built from the
-current retained framework primitives. Then `L` has zero component in
-`Hom(V, W)^-`.
+**Statement.** For the current registry entries enumerated in this
+note, a candidate operator `L: V -> W` has no observed retained-exact
+component in `Hom(V, W)^-`. This is a current-surface check, not a
+proof that future retained primitives cannot add such a component.
 
 **Proof structure (partial).**
 
@@ -193,16 +196,15 @@ decomposition, their action on the carrier columns is given by
 multiplication by independent scalars `(c_E, c_T)`. The component in
 `(V*)^-` corresponds to `c_E ≠ c_T`.
 
-(6) **Registry enumeration.** Direct enumeration of currently retained
-primitive operators acting on `(u_E, u_T)` confirms each acts
-column-symmetrically (`c_E = c_T = c`) on the carrier columns: the
-inner-product structure of `<E_x, q>` and `<T1x, q>` against any
-retained primitive `O_h`-equivariant operator yields equal weight on
-both columns (by `O_h` block-diagonality).
+(6) **Registry enumeration.** Direct enumeration of the currently cited
+retained/bounded primitive candidates acting on `(u_E, u_T)` finds no
+retained-exact antisymmetric carrier operator. On the enumerated
+current surface, the carrier-column action is column-symmetric
+(`c_E = c_T = c`); the possible failure mode is an unenumerated future
+retained primitive.
 
-(7) Therefore: every retained-primitive operator `L` on the current
-audited surface has `L ∘ tau = L`, i.e., zero component in
-`Hom(V, W)^-`.
+(7) Therefore, within the enumerated current surface, no retained-exact
+operator `L` with nonzero component in `Hom(V, W)^-` is identified.
 
 **Residual gap (named precisely).** Step (6) — registry enumeration —
 is currently a finite check that PASSES on the audited surface. The
@@ -237,7 +239,7 @@ verifies that the active Hermitian basis (a, b, c, d, T_delta, T_rho)
 contains zero such `Z_new`: every basis element induces a column-
 symmetric trace on `K_R`.
 
-## What this closes
+## What this narrows
 
 1. **Z_2-equivariant operator classification** on the carrier
    representation: the operator space decomposes into `(V*)^+ ⊕ (V*)^-`,
@@ -245,10 +247,11 @@ symmetric trace on `K_R`.
    question reduces to: "does the retained primitive registry contain
    any `(V*)^-` element?"
 
-2. **Registry enumeration on current audited surface**: passes — no
-   retained primitive on the carrier has nonzero antisymmetric
-   component. Counterfactual antisymmetric candidates are explicitly
-   absent from the registry or already bounded.
+2. **Registry enumeration on current audited surface**: passes as a
+   current-surface check — no retained-exact primitive on the carrier is
+   found with nonzero antisymmetric component. Counterfactual
+   antisymmetric candidates are explicitly absent from the registry or
+   already bounded.
 
 3. **Sharpens cycle 17 named residual**: from a vague open-ended
    structural exhaustion claim to a single named meta-mathematical
@@ -279,13 +282,11 @@ If independent audit ratifies cycle 22:
 1. Swap-reduction theorem residual sharpened from "no exact
    E/T-distinguishing operator" to "registry closure of antisymmetric
    primitives on `K_R(q)`."
-2. Cycle 17 named residual is RETIRED as cycle 22 names the precise
-   meta-premise.
+2. Cycle 17 named residual is narrowed to the precise meta-premise.
 3. New named residual: **registry closure** — a meta-mathematical
    audit task, not a single-cycle physics derivation.
 4. Cycle 16 sub-B/sub-C and cycle 17 retention routes A/B/C remain
-   single-lemma-away from retained, with the lemma now precisely
-   identified.
+   blocked by the named registry-closure premise.
 
 ## Honesty disclosures
 

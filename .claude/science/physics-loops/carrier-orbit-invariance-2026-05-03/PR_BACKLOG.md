@@ -34,10 +34,10 @@ dim 2.
 
 **Result:** the structural-exhaustion claim is sharpened from the
 open-ended "no exact E/T-distinguishing operator" to the precise
-registry-enumeration claim "no antisymmetric retained primitive on the
-audited surface." Direct enumeration confirms NO retained primitive has
-nonzero antisymmetric component on the current audited surface. The
-residual gap is the meta-mathematical "registry closure" premise.
+registry-enumeration question "is there an antisymmetric retained-exact
+primitive on the current surface?" Direct enumeration finds no such
+primitive in the enumerated current registry. The residual gap is the
+meta-mathematical "registry closure" premise.
 
 ## Files
 
@@ -54,7 +54,7 @@ python3 scripts/frontier_carrier_orbit_invariance.py
 
 ## Honesty disclosures
 
-- Stretch attempt with partial closing-derivation (output type c).
+- Stretch attempt with partial structural insight (output type c).
 - Routes C/D (cohomological, sheaf-theoretic) rejected as overkill
   during route portfolio.
 - Route E (low-degree polynomial enumeration) used as runner cross-check.
@@ -69,10 +69,10 @@ python3 scripts/frontier_carrier_orbit_invariance.py
 
 1. Swap-reduction theorem residual sharpened from vague structural
    exhaustion to precise registry-closure meta-premise.
-2. Cycle 17 named residual retired.
+2. Cycle 17 named residual narrowed to registry closure.
 3. New named residual: registry closure (meta-mathematical).
-4. Cycle 16 sub-B/sub-C and cycle 17 routes A/B/C retain
-   "single-lemma-away" status with the lemma now precisely identified.
+4. Cycle 16 sub-B/sub-C and cycle 17 routes A/B/C remain blocked by
+   the named registry-closure premise.
 
 ## V1-V5 PROMOTION VALUE GATE
 

@@ -15,14 +15,14 @@ If cycle 22 ratifies, the next obstructions in priority order:
    derivation.
 
 2. **Cycle 12 O1 sub-A (γ = 1/2 derivation)**: cycle 16 partial
-   (c_odd · a_sel structure); single-lemma-away if c_odd theorem
+   (c_odd · a_sel structure); blocked until the c_odd theorem
    completes.
 
 3. **c_odd theorem completion**: cycle 16 sub-A; needs independent
    audit ratification of cycle 16.
 
 4. **Cycle 09 O1b/O1c (K_H, thermal/scattering)**: composite-Higgs
-   mechanism; Nature-grade.
+   mechanism; retained-grade only after independent audit.
 
 ## Campaign continuation
 

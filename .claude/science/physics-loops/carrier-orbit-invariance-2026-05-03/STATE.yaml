@@ -4,10 +4,10 @@ cycle: 22
 date: 2026-05-03
 branch: physics-loop/carrier-orbit-invariance-2026-05-03
 goal: |
-  Close (or precisely sharpen) the cycle 17 named residual — the
+  Precisely sharpen the cycle 17 named residual — the
   swap-reduction theorem's structural-exhaustion premise that NO exact
   E/T-distinguishing operator exists on the K_R(q) carrier — via
-  representation-theoretic / group-theoretic exhaustion.
+  representation-theoretic / group-theoretic current-registry analysis.
 target_status: bounded-support
 runtime_used: 2h
 cycles_completed: 1
@@ -33,7 +33,7 @@ stop_condition: |
   and continue).
 status_fields:
   actual_current_surface_status: open
-  target_claim_type: bounded_theorem
+  target_claim_type: open_gate
   conditional_surface_status: bounded-support
   hypothetical_axiom_status: null
   admitted_observation_status: null
