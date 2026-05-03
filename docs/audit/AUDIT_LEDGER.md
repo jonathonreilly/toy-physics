@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:37:25.014584+00:00
+**Generated:** 2026-05-03T14:46:45.183193+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 777 |
+| unaudited | 776 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 24 |
+| ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 19 |
 | ~~audited_conditional~~ | 515 |
 | ~~audited_failed~~ | 7 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 515 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
-| `audited_numerical_match` | 24 |
+| `audited_numerical_match` | 25 |
 | `audited_renaming` | 19 |
-| `unaudited` | 822 |
+| `unaudited` | 821 |
 
 | claim_type | count |
 |---|---:|
@@ -1004,6 +1004,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-agent | D | - |
+| `source_resolved_wavefield_escalation_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -12032,6 +12033,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
   - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_wavefield_escalation_note`
+
+- **Note:** [`SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md`](../../docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For the specified h=0.25, W=4, L=8 exact-lattice source cluster and hard-coded wavefield update parameters, the runner reproduces zero-source reduction, toward-sign wavefield centroid shifts, near-linear F~M scaling, and coherent detector-line phase-ramp diagnostics.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-gpt5-fresh-audit-2026-05-03-source-resolved-wavefield`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The selected exact-lattice source cluster and finite-speed wavefield update produce zero-source reduction, toward-sign centroid shifts, near-linear source-strength scaling, and a coherent detector-line phase-ramp diagnostic that is far above the same-site-memory control.  _(class `G`)_
+- **chain closes:** False — The runner reproduces the frozen numerical table, including zero-source reduction and the reported ramp metrics, but the note does not derive the wavefield update rule, parameter choices, or detector-line phase-ramp readout from retained CL3 inputs.
+- **rationale:** Issue: the claimed escalation rests on a selected exact-lattice family, selected source law, selected local wavefield update parameters, and selected detector-line phase-ramp observable rather than a derivation forcing those choices. The runner completed locally and reproduced the frozen table: zero-source same-site and wavefield shifts are zero; the four source strengths give the reported positive instantaneous, same-site, and wavefield shifts; ramp R^2 stays near 0.96; and the script itself states this is a wavefield escalation, not yet a full self-consistent field theory. Why this blocks: the runner verifies that this configured numerical probe has the reported behavior, but it does not compute the disputed physical bridge from retained premises or show that the wave-like readout is uniquely implied. Repair target: derive the finite-speed update rule, parameter selection, source normalization, and detector readout from retained CL3 inputs, with a runner that fails if those bridge choices are removed. Claim boundary until fixed: it is safe to report the reproducible bounded numerical probe and its diagnostics for this configuration, not a retained positive theorem for a CL3 wavefield lane.
 - **auditor confidence:** high
 
 ### `source_resolved_wavefield_green_pocket_note`
