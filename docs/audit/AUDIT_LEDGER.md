@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:20:32.613163+00:00
+**Generated:** 2026-05-03T21:21:11.571832+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 197 |
+| **retained_bounded** | 198 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 688 |
+| unaudited | 687 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 361 |
+| `audited_clean` | 362 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 735 |
+| `unaudited` | 734 |
 
 | claim_type | count |
 |---|---:|
@@ -227,6 +227,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_no_restore_joint_package_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `gate_b_v6_nearfield_comparator_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | A | - |
 | `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
@@ -6473,6 +6474,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — Within the stated Wilson-source grammar, the six uniform plaquette orientations induce a_x=a_y=a_z=a_t=3w, and the APBC minimal cube sets the spatial sin^2 gaps to 1, giving K_O(omega)=3w(3+sin^2 omega). The normalization cancels in A_inf/A_2, and the exact endpoint ratio is 2/sqrt(3).
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
 - **auditor confidence:** high
+
+### `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03`
+
+- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-volume Wilson plaquette expectations at beta >= 0 admit a unique implicit local-response coordinate beta_eff,Lambda with P_Lambda(beta) = R_O(beta_eff,Lambda(beta)); infinite-volume passage is only for limits with P_full in [0,1).
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-gauge-scalar-implicit-flow`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** Since R_O is bijective onto [0,1) and P_Lambda(beta) lies in [0,1), beta_eff,Lambda(beta) = R_O^(-1)(P_Lambda(beta)) exists uniquely and gives P_Lambda(beta) = R_O(beta_eff,Lambda(beta)).  _(class `A`)_
+- **chain closes:** True — The bounded statement closes as an inverse-function theorem for the explicitly defined local response map and the Wilson finite-integral expectation range. It does not evaluate beta_eff(6), P(6), or the parent observable bridge.
+- **rationale:** The audited claim is only the implicit coordinate theorem, not the parent physical bridge. The note defines R_O, proves strict monotonicity through Var_gamma(X) > 0, bounds the finite Wilson expectation into the response range, and obtains the identity by the inverse-function theorem. The completed runner produced SUMMARY: THEOREM PASS=8 SUPPORT=3 FAIL=0 and did not consume plaquette comparator data. Residual risk is confined to the explicitly excluded tasks: independent evaluation of beta_eff(6), P(6), environment Perron data, and closure of the parent bridge.
+- **auditor confidence:** medium
 
 ### `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03`
 
