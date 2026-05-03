@@ -718,13 +718,96 @@ def build_staggered_dirac(gauge: GaugeField, mass: float) -> sparse.csr_matrix:
     return sparse.csr_matrix((vals, (rows, cols)), shape=(n, n), dtype=complex)
 
 
+@dataclass(frozen=True)
+class NormalEquationSystem:
+    mass: float
+    D: sparse.csr_matrix
+    dh: sparse.csr_matrix
+    normal: sparse.csr_matrix
+
+
+def build_normal_equation_system(gauge: GaugeField, mass: float) -> NormalEquationSystem:
+    D = build_staggered_dirac(gauge, mass)
+    dh = D.getH()
+    normal = dh @ D
+    return NormalEquationSystem(float(mass), D, dh, normal)
+
+
+def normal_cache_key(mass: float) -> str:
+    return f"{float(mass):.15g}"
+
+
+def get_normal_equation_system(
+    cache: dict[str, NormalEquationSystem],
+    gauge: GaugeField,
+    mass: float,
+) -> NormalEquationSystem:
+    key = normal_cache_key(mass)
+    if key not in cache:
+        cache[key] = build_normal_equation_system(gauge, mass)
+    return cache[key]
+
+
+def selected_scalar_fh_lsz_mass(masses: list[float]) -> float:
+    return float(masses[len(masses) // 2])
+
+
+def selected_mass_policy_metadata(masses: list[float], args: argparse.Namespace) -> dict[str, Any]:
+    selected_mass = selected_scalar_fh_lsz_mass(masses)
+    return {
+        "policy": "selected_mass_only_for_scalar_fh_lsz",
+        "selected_mass_parameter": selected_mass,
+        "selected_mass_index": len(masses) // 2,
+        "top_correlator_mass_scan_preserved": True,
+        "scalar_source_response_selected_mass_only": bool(getattr(args, "scalar_source_shifts_parsed", [])),
+        "scalar_two_point_lsz_selected_mass_only": bool(getattr(args, "scalar_two_point_modes_parsed", []))
+        and int(getattr(args, "scalar_two_point_noises", 0)) > 0,
+        "non_selected_masses_scalar_fh_lsz_skipped": [
+            float(mass) for mass in masses if abs(float(mass) - selected_mass) > 1.0e-15
+        ],
+        "normal_equation_cache": {
+            "scope": "per saved gauge configuration and smeared measurement gauge",
+            "key": "mass/source-shift value",
+            "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+        },
+        "physical_higgs_normalization": "not_derived",
+        "used_as_physical_yukawa_readout": False,
+        "strict_limit": (
+            "Selected-mass source-coordinate FH/LSZ target time series are "
+            "performance/instrumentation support only; they are not physical "
+            "y_t evidence until canonical-Higgs/source-overlap or W/Z response "
+            "identity gates close."
+        ),
+    }
+
+
+def solve_vector_normal_eq_cached(
+    system: NormalEquationSystem,
+    rhs: np.ndarray,
+    rtol: float,
+    maxiter: int,
+) -> tuple[np.ndarray, int, float]:
+    b = system.dh @ rhs
+    sol, info = cg(system.normal, b, rtol=rtol, atol=0.0, maxiter=maxiter)
+    residual = float(np.linalg.norm(system.normal @ sol - b) / max(np.linalg.norm(b), 1.0e-30))
+    return sol, int(info), residual
+
+
 def solve_vector_normal_eq(D: sparse.csr_matrix, rhs: np.ndarray, rtol: float, maxiter: int) -> tuple[np.ndarray, int, float]:
     dh = D.getH()
     normal = dh @ D
-    b = dh @ rhs
-    sol, info = cg(normal, b, rtol=rtol, atol=0.0, maxiter=maxiter)
-    residual = float(np.linalg.norm(normal @ sol - b) / max(np.linalg.norm(b), 1.0e-30))
-    return sol, int(info), residual
+    return solve_vector_normal_eq_cached(NormalEquationSystem(float("nan"), D, dh, normal), rhs, rtol, maxiter)
+
+
+def solve_propagator_normal_eq_cached(
+    system: NormalEquationSystem,
+    source_index: int,
+    rtol: float,
+    maxiter: int,
+) -> tuple[np.ndarray, int, float]:
+    rhs = np.zeros(system.D.shape[0], dtype=complex)
+    rhs[source_index] = 1.0
+    return solve_vector_normal_eq_cached(system, rhs, rtol, maxiter)
 
 
 def solve_propagator_normal_eq(D: sparse.csr_matrix, source_index: int, rtol: float, maxiter: int) -> tuple[np.ndarray, int, float]:
@@ -781,8 +864,9 @@ def stochastic_scalar_two_point(
     modes: list[tuple[int, int, int]],
     noise_vectors: int,
     rng: np.random.Generator,
+    normal_system: NormalEquationSystem | None = None,
 ) -> dict[str, Any]:
-    D = build_staggered_dirac(gauge, mass)
+    system = normal_system if normal_system is not None else build_normal_equation_system(gauge, mass)
     geom = gauge.geom
     n = geom.volume * NC
     accum: dict[str, list[complex]] = {momentum_key(mode): [] for mode in modes}
@@ -796,8 +880,8 @@ def stochastic_scalar_two_point(
         for mode in modes:
             key = momentum_key(mode)
             phase = phases[key]
-            y, info_y, residual_y = solve_vector_normal_eq(D, np.conj(phase) * eta, rtol, maxiter)
-            x, info_x, residual_x = solve_vector_normal_eq(D, phase * y, rtol, maxiter)
+            y, info_y, residual_y = solve_vector_normal_eq_cached(system, np.conj(phase) * eta, rtol, maxiter)
+            x, info_x, residual_x = solve_vector_normal_eq_cached(system, phase * y, rtol, maxiter)
             accum[key].append(complex(np.vdot(eta, x) / n))
             infos.extend([info_y, info_x])
             residuals.extend([residual_y, residual_x])
@@ -863,8 +947,9 @@ def measure_correlator(
     rtol: float,
     maxiter: int,
     momentum_modes: list[tuple[int, int, int]] | None = None,
+    normal_system: NormalEquationSystem | None = None,
 ) -> dict[str, Any]:
-    D = build_staggered_dirac(gauge, mass)
+    system = normal_system if normal_system is not None else build_normal_equation_system(gauge, mass)
     geom = gauge.geom
     corr = np.zeros(geom.time_l, dtype=float)
     momentum_corrs = {
@@ -876,7 +961,7 @@ def measure_correlator(
     source_site = geom.site_index((0, 0, 0, 0))
     for source_color in range(NC):
         source_index = source_site * NC + source_color
-        sol, info, residual = solve_propagator_normal_eq(D, source_index, rtol, maxiter)
+        sol, info, residual = solve_propagator_normal_eq_cached(system, source_index, rtol, maxiter)
         infos.append(info)
         residuals.append(residual)
         for site in range(geom.volume):
@@ -1333,6 +1418,8 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         m: {momentum_key(mode): [] for mode in args.scalar_two_point_modes_parsed} for m in masses
     }
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
+    selected_mass = selected_scalar_fh_lsz_mass(masses)
+    fh_lsz_policy = selected_mass_policy_metadata(masses, args)
     plaquettes = []
     for cfg in range(args.measurements):
         for _ in range(args.separation):
@@ -1341,31 +1428,42 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
                 gauge.overrelax_sweep()
         plaquettes.append(gauge.plaquette())
         meas_gauge = ape_smear_spatial(gauge, args.ape_alpha, args.ape_steps) if args.ape_steps else gauge
+        normal_cache: dict[str, NormalEquationSystem] = {}
         for mass in masses:
+            normal_system = get_normal_equation_system(normal_cache, meas_gauge, mass)
             measured = measure_correlator(
                 meas_gauge,
                 mass,
                 args.cg_rtol,
                 args.cg_maxiter,
                 args.momentum_modes_parsed,
+                normal_system=normal_system,
             )
             measurements[mass].append(measured["correlator"])
             for key, corr in measured.get("momentum_correlators", {}).items():
                 momentum_measurements[mass].setdefault(key, []).append(corr)
             cg_residuals[mass].append(float(measured["max_cg_residual"]))
-            for source_shift in args.scalar_source_shifts_parsed:
-                if abs(source_shift) < 1.0e-15:
-                    source_response_measurements[mass][source_shift].append(measured["correlator"])
-                    continue
-                shifted = measure_correlator(
-                    meas_gauge,
-                    mass + source_shift,
-                    args.cg_rtol,
-                    args.cg_maxiter,
-                    [],
-                )
-                source_response_measurements[mass][source_shift].append(shifted["correlator"])
-            if args.scalar_two_point_modes_parsed and args.scalar_two_point_noises > 0:
+            if abs(float(mass) - selected_mass) <= 1.0e-15:
+                for source_shift in args.scalar_source_shifts_parsed:
+                    if abs(source_shift) < 1.0e-15:
+                        source_response_measurements[mass][source_shift].append(measured["correlator"])
+                        continue
+                    shifted_mass = mass + source_shift
+                    shifted_system = get_normal_equation_system(normal_cache, meas_gauge, shifted_mass)
+                    shifted = measure_correlator(
+                        meas_gauge,
+                        shifted_mass,
+                        args.cg_rtol,
+                        args.cg_maxiter,
+                        [],
+                        normal_system=shifted_system,
+                    )
+                    source_response_measurements[mass][source_shift].append(shifted["correlator"])
+            if (
+                abs(float(mass) - selected_mass) <= 1.0e-15
+                and args.scalar_two_point_modes_parsed
+                and args.scalar_two_point_noises > 0
+            ):
                 scalar_two_point = stochastic_scalar_two_point(
                     meas_gauge,
                     mass,
@@ -1374,6 +1472,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
                     args.scalar_two_point_modes_parsed,
                     args.scalar_two_point_noises,
                     rng,
+                    normal_system=normal_system,
                 )
                 for key, row in scalar_two_point["mode_rows"].items():
                     scalar_two_point_measurements[mass].setdefault(key, []).append(row)
@@ -1381,7 +1480,6 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
 
     mass_scan = []
     selected_fit: dict[str, Any] | None = None
-    selected_mass = masses[len(masses) // 2]
     correlator_rows = []
     selected_momentum_analysis: dict[str, Any] = {"energy_fits": {}, "kinetic_mass_fits": {}}
     selected_source_response_analysis: dict[str, Any] = {
@@ -1452,6 +1550,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "plaquette_mean": float(np.mean(plaquettes)) if plaquettes else None,
         "mass_parameter_scan": mass_scan,
         "selected_mass_parameter": selected_mass,
+        "fh_lsz_measurement_policy": fh_lsz_policy,
         "correlators": correlator_rows,
         "momentum_analysis": selected_momentum_analysis,
         "scalar_source_response_analysis": selected_source_response_analysis,
@@ -1486,6 +1585,8 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         m: {momentum_key(mode): [] for mode in args.scalar_two_point_modes_parsed} for m in masses
     }
     cg_residuals: dict[float, list[float]] = {m: [] for m in masses}
+    selected_mass = selected_scalar_fh_lsz_mass(masses)
+    fh_lsz_policy = selected_mass_policy_metadata(masses, args)
     plaquettes = []
     for cfg in range(args.measurements):
         for _ in range(args.separation):
@@ -1495,31 +1596,42 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         plaquettes.append(float(nb_plaquette(u)))
         gauge_view = gauge_field_from_array(geom, u)
         meas_gauge = ape_smear_spatial(gauge_view, args.ape_alpha, args.ape_steps) if args.ape_steps else gauge_view
+        normal_cache: dict[str, NormalEquationSystem] = {}
         for mass in masses:
+            normal_system = get_normal_equation_system(normal_cache, meas_gauge, mass)
             measured = measure_correlator(
                 meas_gauge,
                 mass,
                 args.cg_rtol,
                 args.cg_maxiter,
                 args.momentum_modes_parsed,
+                normal_system=normal_system,
             )
             measurements[mass].append(measured["correlator"])
             for key, corr in measured.get("momentum_correlators", {}).items():
                 momentum_measurements[mass].setdefault(key, []).append(corr)
             cg_residuals[mass].append(float(measured["max_cg_residual"]))
-            for source_shift in args.scalar_source_shifts_parsed:
-                if abs(source_shift) < 1.0e-15:
-                    source_response_measurements[mass][source_shift].append(measured["correlator"])
-                    continue
-                shifted = measure_correlator(
-                    meas_gauge,
-                    mass + source_shift,
-                    args.cg_rtol,
-                    args.cg_maxiter,
-                    [],
-                )
-                source_response_measurements[mass][source_shift].append(shifted["correlator"])
-            if args.scalar_two_point_modes_parsed and args.scalar_two_point_noises > 0:
+            if abs(float(mass) - selected_mass) <= 1.0e-15:
+                for source_shift in args.scalar_source_shifts_parsed:
+                    if abs(source_shift) < 1.0e-15:
+                        source_response_measurements[mass][source_shift].append(measured["correlator"])
+                        continue
+                    shifted_mass = mass + source_shift
+                    shifted_system = get_normal_equation_system(normal_cache, meas_gauge, shifted_mass)
+                    shifted = measure_correlator(
+                        meas_gauge,
+                        shifted_mass,
+                        args.cg_rtol,
+                        args.cg_maxiter,
+                        [],
+                        normal_system=shifted_system,
+                    )
+                    source_response_measurements[mass][source_shift].append(shifted["correlator"])
+            if (
+                abs(float(mass) - selected_mass) <= 1.0e-15
+                and args.scalar_two_point_modes_parsed
+                and args.scalar_two_point_noises > 0
+            ):
                 scalar_two_point = stochastic_scalar_two_point(
                     meas_gauge,
                     mass,
@@ -1528,6 +1640,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
                     args.scalar_two_point_modes_parsed,
                     args.scalar_two_point_noises,
                     scalar_rng,
+                    normal_system=normal_system,
                 )
                 for key, row in scalar_two_point["mode_rows"].items():
                     scalar_two_point_measurements[mass].setdefault(key, []).append(row)
@@ -1535,7 +1648,6 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
 
     mass_scan = []
     selected_fit: dict[str, Any] | None = None
-    selected_mass = masses[len(masses) // 2]
     correlator_rows = []
     selected_momentum_analysis: dict[str, Any] = {"energy_fits": {}, "kinetic_mass_fits": {}}
     selected_source_response_analysis: dict[str, Any] = {
@@ -1614,6 +1726,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "plaquette_mean": float(np.mean(plaquettes)) if plaquettes else None,
         "mass_parameter_scan": mass_scan,
         "selected_mass_parameter": selected_mass,
+        "fh_lsz_measurement_policy": fh_lsz_policy,
         "correlators": correlator_rows,
         "momentum_analysis": selected_momentum_analysis,
         "scalar_source_response_analysis": selected_source_response_analysis,
@@ -1717,6 +1830,8 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
     result = combine_results(ensembles)
     ratio_y = result["y_t_v"]
     phase = "production" if args.production_targets else "pilot" if args.pilot_targets else "reduced_scope"
+    masses = [float(x) for x in args.masses.split(",") if x.strip()]
+    fh_lsz_policy = selected_mass_policy_metadata(masses, args) if masses else {}
     evidence_scope = {
         "production": "user-requested production targets",
         "pilot": "bounded pilot run; infrastructure and scaling evidence only",
@@ -1761,6 +1876,9 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
             "scalar_source_response": {
                 "enabled": bool(getattr(args, "scalar_source_shifts_parsed", [])),
                 "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+                "selected_mass_only": bool(fh_lsz_policy.get("scalar_source_response_selected_mass_only", False)),
+                "selected_mass_parameter": fh_lsz_policy.get("selected_mass_parameter"),
+                "non_selected_masses_skipped": fh_lsz_policy.get("non_selected_masses_scalar_fh_lsz_skipped", []),
                 "physical_higgs_normalization": "not_derived",
                 "used_as_physical_yukawa_readout": False,
             },
@@ -1769,9 +1887,13 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 and int(getattr(args, "scalar_two_point_noises", 0)) > 0,
                 "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
                 "noise_vectors_per_configuration": int(getattr(args, "scalar_two_point_noises", 0)),
+                "selected_mass_only": bool(fh_lsz_policy.get("scalar_two_point_lsz_selected_mass_only", False)),
+                "selected_mass_parameter": fh_lsz_policy.get("selected_mass_parameter"),
+                "non_selected_masses_skipped": fh_lsz_policy.get("non_selected_masses_scalar_fh_lsz_skipped", []),
                 "physical_higgs_normalization": "not_derived",
                 "used_as_physical_yukawa_readout": False,
             },
+            "fh_lsz_measurement_policy": fh_lsz_policy,
             "source_higgs_cross_correlator": {
                 "enabled": False,
                 "implementation_status": "absent_guarded",
@@ -1827,6 +1949,9 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 "scalar_source_shifts": getattr(args, "scalar_source_shifts_parsed", []),
                 "scalar_two_point_modes": getattr(args, "scalar_two_point_modes_parsed", []),
                 "scalar_two_point_noises": int(getattr(args, "scalar_two_point_noises", 0)),
+                "fh_lsz_selected_mass_only": True,
+                "fh_lsz_selected_mass_parameter": fh_lsz_policy.get("selected_mass_parameter"),
+                "normal_equation_cache_enabled": True,
                 "production_output_dir": str(args.production_output_dir),
             },
         },

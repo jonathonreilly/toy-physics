@@ -19,14 +19,14 @@ discovery check.
 
 ```text
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=108 FAIL=0
+# SUMMARY: PASS=109 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=134 FAIL=0
+# SUMMARY: PASS=135 FAIL=0
 ```
 
-The aggregate discovery row currently sees five generic target-timeseries
-chunk certificates: chunk001, chunk002, chunk003, chunk011, and chunk012.
+The aggregate discovery row currently sees twelve generic target-timeseries
+chunk certificates: chunk001 through chunk012.
 
 ## Claim Boundary
 
@@ -39,6 +39,7 @@ canonical-Higgs identity.
 
 ## Next Action
 
-Continue target-timeseries chunks.  After each completed chunk, rerun the
-combiner, ready-set, response-stability, autocorrelation/ESS, generic chunk
-checkpoint, retained-route certificate, and campaign-status certificate.
+Continue target-timeseries chunks beyond the ready set only as production
+support.  After each completed chunk, rerun the combiner, ready-set,
+response-stability, autocorrelation/ESS, generic chunk checkpoint,
+retained-route certificate, and campaign-status certificate.

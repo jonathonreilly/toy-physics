@@ -18,8 +18,25 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=108 FAIL=0
+# SUMMARY: PASS=109 FAIL=0
 ```
+
+## 2026-05-03 FH/LSZ Production-Support Update
+
+The selected-mass FH/LSZ and normal-cache optimization is now landed as
+performance infrastructure support.  The speedup certificate estimates the
+replacement workload moves from 411 to 143 RHS solves per configuration
+(`2.874x`) and from 411 to 5 normal-equation builds (`82.2x`).  This is not
+physics evidence.
+
+The target-timeseries replacement queue for the current ready L12 set is now
+empty: chunks001 through 012 have target time series, with generic chunk
+checkpoints passing for all twelve discovered chunks.  The ready set remains
+only `12/63` L12 chunks and `192/1000` saved configurations, response
+stability still fails (`relative_stdev=0.9004518435028103`,
+`spread_ratio=5.476535332624479`, `relative_fit_error=9.042293381614297`),
+and target ESS still lacks a target-observable blocking/bootstrap certificate.
+No retained or `proposed_retained` closure is authorized.
 
 The runner verifies:
 
@@ -231,11 +248,14 @@ heavy orthogonal mass gap alone does not set `cos(theta)=1` or zero the
 orthogonal top coupling.  A scaling/decoupling theorem or source-Higgs
 Gram-purity data is still required.
 The chunked FH/LSZ route has also advanced only as bounded support:
-chunks009-010 are seed-controlled and combiner-ready, raising the current
-L12 ready set to `10/63` chunks and `160/1000` saved configurations.  Response
-stability still fails (`relative_stdev=0.9078514133280878`,
-`spread_ratio=5.476535332624479`), and target-observable ESS remains blocked
-because these pre-extension chunk outputs lack same-source target time series.
+chunks001-012 are seed-controlled, combiner-ready, and target-timeseries
+complete, raising the current L12 ready set to `12/63` chunks and `192/1000`
+saved configurations.  Response stability still fails
+(`relative_stdev=0.9004518435028103`, `spread_ratio=5.476535332624479`,
+`relative_fit_error=9.042293381614297`), and target-observable ESS remains
+open because no target-observable blocking/bootstrap certificate exists.  The
+selected-mass normal-cache speedup and completed replacement queue are
+performance/infrastructure support only, not retained evidence.
 
 ### Route 2: Analytic Scalar Residue And Common Dressing
 

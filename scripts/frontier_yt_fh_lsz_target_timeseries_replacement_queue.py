@@ -52,7 +52,6 @@ def chunk_command(index: int) -> str:
         "--scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' "
         "--scalar-two-point-noises 16 "
         f"--production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk{index:03d} "
-        "--resume "
         f"--seed {seed} "
         f"--output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk{index:03d}_2026-05-01.json"
     )
@@ -93,8 +92,8 @@ def main() -> int:
         f"ready_indices={ready_indices}",
     )
     report(
-        "target-timeseries-incomplete-for-ready-set",
-        summary.get("complete_for_all_ready_chunks") is False and bool(incomplete_indices),
+        "target-timeseries-coverage-state-recorded",
+        bool(summary),
         f"summary={summary}",
     )
     report(
@@ -104,14 +103,34 @@ def main() -> int:
     )
     report(
         "new-chunks-alone-do-not-repair-current-target-ess",
-        bool(replacement_queue) and min(replacement_queue) < max(complete_indices or [0]),
-        f"complete={complete_indices}, incomplete={incomplete_indices}",
+        (
+            min(replacement_queue) < max(complete_indices or [0])
+            if replacement_queue
+            else summary.get("complete_for_all_ready_chunks") is True
+        ),
+        (
+            f"complete={complete_indices}, incomplete={incomplete_indices}"
+            if replacement_queue
+            else "replacement queue is empty for the current ready set; target ESS still needs its own gate"
+        ),
     )
     report(
         "replacement-keeps-production-target-schema",
-        bool(commands)
-        and all("--production-targets" in cmd and "--scalar-two-point-noises 16" in cmd for cmd in commands.values()),
-        f"commands={list(commands)[:3]}...",
+        (
+            all("--production-targets" in cmd and "--scalar-two-point-noises 16" in cmd for cmd in commands.values())
+            if commands
+            else replacement_queue == []
+        ),
+        f"commands={list(commands)[:3]}..." if commands else "no replacement commands needed",
+    )
+    report(
+        "replacement-reruns-disable-resume",
+        all("--resume" not in cmd for cmd in commands.values()),
+        (
+            "target-series replacements must rebuild artifacts because prior chunk outputs predate target-timeseries serialization"
+            if commands
+            else "replacement queue is empty"
+        ),
     )
     report(
         "does-not-authorize-retained-proposal",
@@ -121,15 +140,27 @@ def main() -> int:
 
     complete_label = ", ".join(f"chunk{index:03d}" for index in complete_indices) or "none"
     replacement_label = ", ".join(f"chunk{index:03d}" for index in replacement_queue) or "none"
-    result = {
-        "actual_current_surface_status": "bounded-support / FH-LSZ target-timeseries replacement queue",
-        "verdict": (
+    if replacement_queue:
+        verdict = (
             "The ready L12 set has reached the minimum size for target ESS checks, "
             f"with target-series complete for {complete_label} and still missing for "
             f"{replacement_label}. Therefore later new chunks can increase the "
             "target-series subset, but cannot make complete_for_all_ready_chunks true "
             "while the replacement queue remains nonempty."
-        ),
+        )
+    else:
+        verdict = (
+            "The ready L12 set has reached the minimum size for target ESS checks, "
+            f"with target-series complete for {complete_label} and no current "
+            "replacement queue. This completes the target-timeseries replacement "
+            "repair for the ready set, but does not certify target ESS, response "
+            "stability, scalar-pole derivative authority, FV/IR control, or a "
+            "canonical-Higgs/source-overlap identity."
+        )
+
+    result = {
+        "actual_current_surface_status": "bounded-support / FH-LSZ target-timeseries replacement queue",
+        "verdict": verdict,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The queue only identifies replacement work. It supplies no new target "
@@ -144,6 +175,15 @@ def main() -> int:
         "replacement_queue": replacement_queue,
         "next_replacement_chunk": next_replacement,
         "replacement_commands": commands,
+        "replacement_rerun_policy": {
+            "resume_allowed": False,
+            "reason": (
+                "Existing replacement-queue artifacts can predate source-response and scalar-LSZ "
+                "target-timeseries serialization, so queued replacements are full reruns with fixed "
+                "seed control rather than resume appends."
+            ),
+            "production_output_paths_are_chunk_isolated": True,
+        },
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",
             "does not treat plaquette ESS as target ESS",

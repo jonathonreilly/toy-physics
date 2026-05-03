@@ -14,13 +14,20 @@
     1,
     2,
     3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
     11,
     12
   ],
-  "exact_next_action": "Rerun chunk004 with target-timeseries serialization if completing the current ready-set target ESS gate is prioritized; otherwise continue new target-series chunks toward the full L12 set. Do not claim complete target ESS while the replacement queue is nonempty.",
+  "exact_next_action": "Rerun the autocorrelation/ESS gate; no replacement queue is currently open.",
   "fail_count": 0,
-  "next_replacement_chunk": 4,
-  "pass_count": 8,
+  "next_replacement_chunk": null,
+  "pass_count": 9,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The queue only identifies replacement work. It supplies no new target ESS, response stability, scalar-pole derivative, FV/IR, or canonical-Higgs identity certificate.",
   "ready_indices": [
@@ -37,24 +44,13 @@
     11,
     12
   ],
-  "replacement_commands": {
-    "chunk004": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk004 --resume --seed 2026051004 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk004_2026-05-01.json",
-    "chunk005": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk005 --resume --seed 2026051005 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk005_2026-05-01.json",
-    "chunk006": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk006 --resume --seed 2026051006 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk006_2026-05-01.json",
-    "chunk007": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk007 --resume --seed 2026051007 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk007_2026-05-01.json",
-    "chunk008": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk008 --resume --seed 2026051008 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk008_2026-05-01.json",
-    "chunk009": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk009 --resume --seed 2026051009 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk009_2026-05-01.json",
-    "chunk010": "python3 scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' --scalar-two-point-noises 16 --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk010 --resume --seed 2026051010 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json"
+  "replacement_commands": {},
+  "replacement_queue": [],
+  "replacement_rerun_policy": {
+    "production_output_paths_are_chunk_isolated": true,
+    "reason": "Existing replacement-queue artifacts can predate source-response and scalar-LSZ target-timeseries serialization, so queued replacements are full reruns with fixed seed control rather than resume appends.",
+    "resume_allowed": false
   },
-  "replacement_queue": [
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10
-  ],
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not treat plaquette ESS as target ESS",
@@ -62,25 +58,24 @@
     "does not set kappa_s = 1 or identify the source pole as canonical Higgs"
   ],
   "target_timeseries_summary": {
-    "complete_count": 5,
-    "complete_for_all_ready_chunks": false,
+    "complete_count": 12,
+    "complete_for_all_ready_chunks": true,
     "complete_indices": [
       1,
       2,
       3,
-      11,
-      12
-    ],
-    "incomplete_indices": [
       4,
       5,
       6,
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12
     ],
+    "incomplete_indices": [],
     "ready_count": 12
   },
-  "verdict": "The ready L12 set has reached the minimum size for target ESS checks, with target-series complete for chunk001, chunk002, chunk003, chunk011, chunk012 and still missing for chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010. Therefore later new chunks can increase the target-series subset, but cannot make complete_for_all_ready_chunks true while the replacement queue remains nonempty."
+  "verdict": "The ready L12 set has reached the minimum size for target ESS checks, with target-series complete for chunk001, chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010, chunk011, chunk012 and no current replacement queue. This completes the target-timeseries replacement repair for the ready set, but does not certify target ESS, response stability, scalar-pole derivative authority, FV/IR control, or a canonical-Higgs/source-overlap identity."
 }

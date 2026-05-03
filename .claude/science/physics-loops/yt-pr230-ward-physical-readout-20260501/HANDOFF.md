@@ -1,5 +1,32 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ selected-mass normal-cache speedup and replacement queue completion:
+
+- Optimized `scripts/yt_direct_lattice_correlator_production.py` so the
+  three-mass top scan remains intact while scalar FH/LSZ source shifts and
+  scalar two-point noise solves run only at the selected middle mass
+  (`0.75`), with explicit selected-mass-only and non-readout metadata.
+- Added per-gauge-config/mass/source normal-equation caching, reusing
+  `D^dagger D` across point-source and stochastic RHS solves while preserving
+  CG residual reporting.
+- Speedup certificate: `PASS=12 FAIL=0`; estimated replacement model moves
+  from 411 to 143 RHS solves per configuration (`2.874x`) and from 411 to 5
+  normal builds (`82.2x`). This is performance support only.
+- Chunk004 finished as an already-running pre-optimization replacement.
+  Chunks005-010 were rerun with the optimized harness, no `--resume`, fixed
+  seeds, distinct chunk output paths, and concurrency 3.
+- Generic target-timeseries checkpoints now pass for chunks001-012.  The
+  target-timeseries replacement queue is empty; autocorrelation/ESS remains
+  open because a target-observable blocking/bootstrap certificate is absent.
+- Retained-route is `PASS=109 FAIL=0`; campaign status is
+  `PASS=135 FAIL=0` over 148 certificates. No retained or proposed-retained
+  closure is authorized.
+
+Next exact action: emit a target-observable blocking/bootstrap ESS certificate
+for same-source `dE/ds` and `C_ss(q)/Gamma_ss(q)` if continuing production
+support, or attack same-surface `C_sH` / `C_HH`, a same-surface `O_H` identity
+theorem, or real W/Z response rows with sector-overlap identity.
+
 Latest checkpoint, 2026-05-03 FH/LSZ chunk003 target-timeseries rerun:
 
 - Reran `L12_T24_chunk003` without `--resume`, replacing the old artifact that

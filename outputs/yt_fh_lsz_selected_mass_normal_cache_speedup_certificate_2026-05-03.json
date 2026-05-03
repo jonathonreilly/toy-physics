@@ -1,0 +1,55 @@
+{
+  "actual_current_surface_status": "bounded-support / FH-LSZ selected-mass normal-cache speedup",
+  "fail_count": 0,
+  "model": {
+    "configuration": {
+      "colors": 3,
+      "mass_points": 3,
+      "scalar_source_shifts": 3,
+      "scalar_two_point_modes": 4,
+      "scalar_two_point_noises": 16,
+      "selected_mass_points": 1
+    },
+    "old_model": {
+      "base_scan_solves": 9,
+      "normal_equation_builds_per_configuration": 411,
+      "scalar_two_point_solves": 384,
+      "source_shift_solves": 18,
+      "total_rhs_solves_per_configuration": 411
+    },
+    "optimized_model": {
+      "base_scan_solves": 9,
+      "normal_equation_builds_per_configuration": 5,
+      "scalar_two_point_solves": 128,
+      "source_shift_solves": 6,
+      "total_rhs_solves_per_configuration": 143
+    },
+    "speedup_estimate": {
+      "normal_build_reduction_factor": 82.2,
+      "normal_builds_removed_per_configuration": 406,
+      "rhs_solve_reduction_factor": 2.874125874125874,
+      "rhs_solves_removed_per_configuration": 268
+    }
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Speedup and metadata hardening do not derive kappa_s or canonical-Higgs/source-overlap.",
+  "source_markers": {
+    "cached-solver": true,
+    "claim-firewall": true,
+    "metadata-normal-cache": true,
+    "metadata-selected-mass-only": true,
+    "normal-equation-system": true,
+    "per-config-normal-cache": true,
+    "selected-mass-gate": true,
+    "selected-mass-policy": true
+  },
+  "strict_non_claims": [
+    "does not derive kappa_s",
+    "does not set kappa_s = 1",
+    "does not use H_unit or yt_ward_identity",
+    "does not use alpha_LM, plaquette/u0, observed m_t, or observed y_t as proof authority",
+    "does not claim retained or proposed_retained y_t closure"
+  ],
+  "verdict": "The harness now preserves the three-mass top-correlator scan while restricting expensive scalar source-response and scalar two-point LSZ solves to the selected middle mass.  It also caches D, D^dagger, and D^dagger D per saved gauge configuration and mass/source-shift value.  This is infrastructure support only and does not make source-only FH/LSZ a physical y_t readout."
+}

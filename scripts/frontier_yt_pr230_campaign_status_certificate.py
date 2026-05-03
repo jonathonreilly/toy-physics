@@ -270,6 +270,9 @@ def main() -> int:
         "fh_lsz_target_timeseries_harness": load(
             "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json"
         ),
+        "fh_lsz_selected_mass_normal_cache_speedup": load(
+            "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json"
+        ),
         "fh_lsz_target_timeseries_higgs_identity_no_go": load(
             "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json"
         ),
@@ -889,6 +892,12 @@ def main() -> int:
         "target time-series harness extension"
         in str(statuses["fh_lsz_target_timeseries_harness"]),
         statuses["fh_lsz_target_timeseries_harness"],
+    )
+    report(
+        "fh-lsz-selected-mass-normal-cache-speedup-not-evidence",
+        "selected-mass normal-cache speedup"
+        in str(statuses["fh_lsz_selected_mass_normal_cache_speedup"]),
+        statuses["fh_lsz_selected_mass_normal_cache_speedup"],
     )
     report(
         "fh-lsz-target-timeseries-higgs-identity-no-go-blocks",

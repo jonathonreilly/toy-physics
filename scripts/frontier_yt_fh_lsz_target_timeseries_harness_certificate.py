@@ -126,6 +126,9 @@ def main() -> int:
     ensemble = first_ensemble(data)
     scalar_source_meta = metadata.get("scalar_source_response", {})
     scalar_lsz_meta = metadata.get("scalar_two_point_lsz", {})
+    run_control = metadata.get("run_control", {})
+    policy = metadata.get("fh_lsz_measurement_policy", {})
+    rng_seed_control = ensemble.get("rng_seed_control", {})
     source_summary = source_timeseries_summary(ensemble)
     lsz_summary = scalar_two_point_timeseries_summary(ensemble)
 
@@ -140,6 +143,14 @@ def main() -> int:
         scalar_source_meta.get("physical_higgs_normalization") == "not_derived"
         and scalar_lsz_meta.get("physical_higgs_normalization") == "not_derived"
     )
+    seed_control_ok = rng_seed_control.get("seed_control_version") == "numba_gauge_seed_v1"
+    selected_mass_policy_ok = (
+        policy.get("policy") == "selected_mass_only_for_scalar_fh_lsz"
+        and scalar_source_meta.get("selected_mass_only") is True
+        and scalar_lsz_meta.get("selected_mass_only") is True
+        and run_control.get("fh_lsz_selected_mass_only") is True
+        and run_control.get("normal_equation_cache_enabled") is True
+    )
 
     report("smoke-output-loaded", bool(data), str(SMOKE.relative_to(ROOT)))
     report("phase-is-reduced-scope", phase == "reduced_scope", f"phase={phase}")
@@ -147,6 +158,8 @@ def main() -> int:
     report("scalar-two-point-lsz-enabled", lsz_enabled, str(scalar_lsz_meta))
     report("source-target-timeseries-present", source_summary["present"], str(source_summary))
     report("scalar-lsz-target-timeseries-present", lsz_summary["present"], str(lsz_summary))
+    report("numba-seed-control-present", seed_control_ok, str(rng_seed_control))
+    report("selected-mass-normal-cache-metadata-present", selected_mass_policy_ok, str(policy))
     report("no-physical-yukawa-readout", no_physical_readout, "metadata uses instrumentation only")
     report("physical-higgs-normalization-not-derived", no_higgs_normalization, "kappa_s remains open")
     report("reduced-smoke-is-not-production-evidence", phase == "reduced_scope", "smoke run is infrastructure only")
@@ -169,6 +182,8 @@ def main() -> int:
         "smoke_certificate": str(SMOKE.relative_to(ROOT)),
         "source_timeseries_summary": source_summary,
         "scalar_two_point_timeseries_summary": lsz_summary,
+        "rng_seed_control": rng_seed_control,
+        "fh_lsz_measurement_policy": policy,
         "required_next_gate": (
             "Rerun production chunks with the extended harness, then apply "
             "target-observable autocorrelation/ESS, finite-source-linearity, "

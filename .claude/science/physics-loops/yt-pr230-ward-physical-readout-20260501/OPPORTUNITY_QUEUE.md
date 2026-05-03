@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-03 update: selected-mass scalar FH/LSZ plus normal-equation caching is
+now landed, and the target-timeseries replacement queue is empty for ready
+chunks001-012.  The next production-support step is not another replacement
+rerun; it is a target-observable blocking/bootstrap ESS certificate for
+same-source `dE/ds` and `C_ss(q)/Gamma_ss(q)`.  The stronger closure routes
+remain same-surface `O_H/C_sH/C_HH` rows, real W/Z response rows with
+sector-overlap identity, or a theorem forbidding the orthogonal neutral
+top-coupling loophole.
+
 2026-05-03 update: chunk003 is now target-timeseries complete, so the current
 target ESS replacement queue is chunks004-010.  The next production-support
 step is chunk004 if completing the current ready-set target ESS gate is still

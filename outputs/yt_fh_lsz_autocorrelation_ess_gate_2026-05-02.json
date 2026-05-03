@@ -92,10 +92,10 @@
         "window_lag": 2
       },
       "target_timeseries": {
-        "scalar_lsz_target_timeseries": false,
-        "source_response_target_timeseries": false
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
       },
-      "target_timeseries_complete": false
+      "target_timeseries_complete": true
     },
     {
       "chunk_index": 5,
@@ -118,10 +118,10 @@
         "window_lag": 5
       },
       "target_timeseries": {
-        "scalar_lsz_target_timeseries": false,
-        "source_response_target_timeseries": false
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
       },
-      "target_timeseries_complete": false
+      "target_timeseries_complete": true
     },
     {
       "chunk_index": 6,
@@ -142,10 +142,10 @@
         "window_lag": 3
       },
       "target_timeseries": {
-        "scalar_lsz_target_timeseries": false,
-        "source_response_target_timeseries": false
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
       },
-      "target_timeseries_complete": false
+      "target_timeseries_complete": true
     },
     {
       "chunk_index": 7,
@@ -165,10 +165,10 @@
         "window_lag": 2
       },
       "target_timeseries": {
-        "scalar_lsz_target_timeseries": false,
-        "source_response_target_timeseries": false
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
       },
-      "target_timeseries_complete": false
+      "target_timeseries_complete": true
     },
     {
       "chunk_index": 8,
@@ -188,10 +188,10 @@
         "window_lag": 2
       },
       "target_timeseries": {
-        "scalar_lsz_target_timeseries": false,
-        "source_response_target_timeseries": false
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
       },
-      "target_timeseries_complete": false
+      "target_timeseries_complete": true
     },
     {
       "chunk_index": 9,
@@ -211,10 +211,10 @@
         "window_lag": 2
       },
       "target_timeseries": {
-        "scalar_lsz_target_timeseries": false,
-        "source_response_target_timeseries": false
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
       },
-      "target_timeseries_complete": false
+      "target_timeseries_complete": true
     },
     {
       "chunk_index": 10,
@@ -237,10 +237,10 @@
         "window_lag": 5
       },
       "target_timeseries": {
-        "scalar_lsz_target_timeseries": false,
-        "source_response_target_timeseries": false
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
       },
-      "target_timeseries_complete": false
+      "target_timeseries_complete": true
     },
     {
       "chunk_index": 11,
@@ -328,25 +328,24 @@
     "does not set kappa_s = 1"
   ],
   "target_timeseries_summary": {
-    "complete_count": 5,
-    "complete_for_all_ready_chunks": false,
+    "complete_count": 12,
+    "complete_for_all_ready_chunks": true,
     "complete_indices": [
       1,
       2,
       3,
-      11,
-      12
-    ],
-    "incomplete_indices": [
       4,
       5,
       6,
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12
     ],
+    "incomplete_indices": [],
     "ready_count": 12
   },
-  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Target-series coverage is partial: complete=chunk001, chunk002, chunk003, chunk011, chunk012; incomplete=chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010.  The load-bearing FH/LSZ target effective sample size therefore cannot be certified for the ready set.  Current chunks remain bounded support only until target-observable blocking/bootstrap data or an equivalent autocorrelation certificate is available for the production set."
+  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Target-series coverage state: complete=chunk001, chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010, chunk011, chunk012; incomplete=none.  The load-bearing FH/LSZ target effective sample size still cannot be certified for the ready set until target-observable blocking/bootstrap data or an equivalent autocorrelation certificate is available for the production set."
 }

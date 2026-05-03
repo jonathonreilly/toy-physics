@@ -7,9 +7,9 @@
 ## Purpose
 
 The autocorrelation/ESS gate now has a ready set large enough for target
-statistics. The current target-series complete ready chunks are chunks001,
-002, 003, 011, and 012. Chunks004-010 are ready production chunks, but they
-predate target-timeseries serialization.
+statistics. The current target-series complete ready chunks are chunks001
+through 012. The earlier replacement queue, chunks004-010, has been consumed
+with fixed seeds and chunk-isolated artifact paths.
 
 This runner derives the replacement queue from the current autocorrelation
 certificate. It prevents the campaign from mistaking more new chunks for a
@@ -19,12 +19,20 @@ complete repair of the existing ready-set target ESS gap.
 
 ```text
 python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
-# SUMMARY: PASS=8 FAIL=0
+# SUMMARY: PASS=9 FAIL=0
 ```
 
-The current replacement queue is chunks004-010. Chunk013 and later can add new
-target-timeseries support, but `complete_for_all_ready_chunks` remains false
-while chunks004-010 stay in the ready set without target-series replacement.
+The current replacement queue is empty for the ready set:
+
+```text
+complete_target_timeseries_indices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+replacement_queue = []
+```
+
+Chunk013 and later can add new target-timeseries support, but they are no
+longer a repair for a missing ready-set target-series queue. Target ESS still
+needs its own predeclared blocking/bootstrap or integrated-autocorrelation
+certificate.
 
 ## Claim Boundary
 
@@ -35,7 +43,6 @@ control, or canonical-Higgs identity. It authorizes no retained or
 
 ## Next Action
 
-Rerun chunk004 with target-timeseries serialization if completing the current
-ready-set target ESS gate is prioritized; otherwise continue new target-series
-chunks toward the full L12 set. Do not claim complete target ESS while the
-replacement queue is nonempty.
+Rerun the autocorrelation/ESS gate with a target-observable blocking/bootstrap
+certificate before treating the ready set as production evidence. Continue new
+target-series chunks toward the full L12 set only as production support.

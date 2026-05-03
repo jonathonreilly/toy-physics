@@ -207,8 +207,8 @@ def main() -> int:
         f"min_plaquette_ess={min_plaquette_ess}",
     )
     report(
-        "target-timeseries-partial-not-complete",
-        not target_series_complete,
+        "target-timeseries-coverage-state-recorded",
+        True,
         (
             f"complete={target_series_complete}, "
             f"complete_indices={target_complete_indices}, "
@@ -218,7 +218,11 @@ def main() -> int:
     report(
         "target-ess-not-available",
         not target_ess_available,
-        "not every ready chunk has target observable time series",
+        (
+            "target time series are still incomplete for the ready set"
+            if not target_series_complete
+            else "target time series are complete for the ready set, but no predeclared target blocking/bootstrap ESS certificate is available"
+        ),
     )
     report(
         "autocorrelation-ess-gate-not-passed",
@@ -240,11 +244,11 @@ def main() -> int:
         "verdict": (
             "The current ready chunks include plaquette histories, so a "
             "diagnostic plaquette autocorrelation can be estimated.  Target-series "
-            f"coverage is partial: complete={complete_label}; incomplete={incomplete_label}.  "
-            "The load-bearing FH/LSZ target effective sample size therefore cannot be "
-            "certified for the ready set.  Current chunks remain bounded support only "
-            "until target-observable blocking/bootstrap data or an equivalent "
-            "autocorrelation certificate is available for the production set."
+            f"coverage state: complete={complete_label}; incomplete={incomplete_label}.  "
+            "The load-bearing FH/LSZ target effective sample size still cannot be "
+            "certified for the ready set until target-observable blocking/bootstrap "
+            "data or an equivalent autocorrelation certificate is available for the "
+            "production set."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Target-observable autocorrelation and effective sample size are not certified.",

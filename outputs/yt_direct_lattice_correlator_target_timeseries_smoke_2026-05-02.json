@@ -13,23 +13,23 @@
       },
       "correlators": [
         {
-          "mean": 0.5717780497777207,
-          "stderr": 0.02607290770731375,
+          "mean": 0.5831282131469029,
+          "stderr": 0.02048146973852577,
           "tau": 0
         },
         {
-          "mean": 0.1078077096428046,
-          "stderr": 0.006608477837571411,
+          "mean": 0.10727921339852418,
+          "stderr": 0.008316118298640374,
           "tau": 1
         },
         {
-          "mean": 0.03755807991748664,
-          "stderr": 0.0037625760289969673,
+          "mean": 0.03726365487879334,
+          "stderr": 0.006052994694468836,
           "tau": 2
         },
         {
-          "mean": 0.0958996288744693,
-          "stderr": 0.010226668105238174,
+          "mean": 0.09613543833452791,
+          "stderr": 0.020075503820483426,
           "tau": 3
         }
       ],
@@ -41,158 +41,184 @@
       ],
       "effective_mass": [
         {
-          "m_eff": 1.6684017172746348,
+          "m_eff": 1.6929721750881757,
           "tau": 0
         },
         {
-          "m_eff": 1.0544606413142454,
+          "m_eff": 1.057416455136921,
           "tau": 1
         },
         {
-          "m_eff": -0.9374135793341251,
+          "m_eff": -0.9477395616055722,
           "tau": 2
         }
       ],
+      "fh_lsz_measurement_policy": {
+        "non_selected_masses_scalar_fh_lsz_skipped": [
+          0.45,
+          1.05
+        ],
+        "normal_equation_cache": {
+          "key": "mass/source-shift value",
+          "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+          "scope": "per saved gauge configuration and smeared measurement gauge"
+        },
+        "physical_higgs_normalization": "not_derived",
+        "policy": "selected_mass_only_for_scalar_fh_lsz",
+        "scalar_source_response_selected_mass_only": true,
+        "scalar_two_point_lsz_selected_mass_only": true,
+        "selected_mass_index": 1,
+        "selected_mass_parameter": 0.75,
+        "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+        "top_correlator_mass_scan_preserved": true,
+        "used_as_physical_yukawa_readout": false
+      },
       "mass_fit": {
-        "chi2_dof": 7.577525516146565e-27,
-        "m_lat": 1.0544606413142503,
-        "m_lat_err": 0.11744619874331222,
+        "chi2_dof": 1.0008810882804634e-28,
+        "m_lat": 1.05741645513692,
+        "m_lat_err": 0.17998576314974327,
         "tau_max": 2,
         "tau_min": 1
       },
       "mass_parameter_scan": [
         {
-          "chi2_dof": 1.6327815098507845e-27,
+          "chi2_dof": 3.6958913874452894e-28,
           "m_bare_lat": 0.45,
-          "m_fit_lat": 0.7028448354018852,
-          "m_fit_lat_err": 0.1380251164436576,
-          "max_cg_residual": 9.996254122997906e-09
+          "m_fit_lat": 0.5882748410579293,
+          "m_fit_lat_err": 0.2564526733224609,
+          "max_cg_residual": 8.890381666432195e-09
         },
         {
-          "chi2_dof": 7.577525516146565e-27,
+          "chi2_dof": 1.0008810882804634e-28,
           "m_bare_lat": 0.75,
-          "m_fit_lat": 1.0544606413142503,
-          "m_fit_lat_err": 0.11744619874331222,
-          "max_cg_residual": 6.251710755970987e-09
+          "m_fit_lat": 1.05741645513692,
+          "m_fit_lat_err": 0.17998576314974327,
+          "max_cg_residual": 9.612539138260731e-09
         },
         {
-          "chi2_dof": 6.652443827073622e-27,
+          "chi2_dof": 3.2721062850248196e-27,
           "m_bare_lat": 1.05,
-          "m_fit_lat": 1.3898323390893346,
-          "m_fit_lat_err": 0.1098185656058657,
-          "max_cg_residual": 9.311020334803538e-09
+          "m_fit_lat": 1.437096115153203,
+          "m_fit_lat_err": 0.1311836484199578,
+          "max_cg_residual": 9.445572473507662e-09
         }
       ],
       "measurement_separation_sweeps": 1,
-      "measurement_sweeps": 3,
+      "measurement_sweeps": 2,
       "momentum_analysis": {
         "energy_fits": {},
         "kinetic_mass_fits": {}
       },
       "plaquette_history": [
-        0.7021248161346295,
-        0.5764807087547007
+        0.6820519684943833
       ],
-      "plaquette_mean": 0.4555671746969892,
+      "plaquette_mean": 0.48184844244061553,
       "plaquette_measurements": [
-        0.5624524504136437,
-        0.4459576187513829,
-        0.35829145492594106
+        0.5568160151682815,
+        0.4068808697129496
       ],
       "r0_over_a": 5.37,
-      "runtime_seconds": 0.21623682975769043,
+      "rng_seed_control": {
+        "base_seed": 2026051304,
+        "gauge_rng_seed": 2028088014,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2028088014,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2028088014
+      },
+      "runtime_seconds": 0.026338815689086914,
       "scalar_source_response_analysis": {
         "base_bare_mass_lat": 0.75,
         "energy_fits": [
           {
-            "chi2_dof": 4.358028227708729e-27,
+            "chi2_dof": 2.045581546369252e-27,
             "correlator": [
               {
-                "mean": 0.5784989863469173,
-                "stderr": 0.026649255375196548,
+                "mean": 0.5904100666991252,
+                "stderr": 0.020708448583604322,
                 "tau": 0
               },
               {
-                "mean": 0.11070427709021775,
-                "stderr": 0.00684242549905589,
+                "mean": 0.11006469146202678,
+                "stderr": 0.008566379645644051,
                 "tau": 1
               },
               {
-                "mean": 0.039019255051729894,
-                "stderr": 0.00391279527115909,
+                "mean": 0.038769917222210695,
+                "stderr": 0.0063776811199694645,
                 "tau": 2
               },
               {
-                "mean": 0.09830451021210206,
-                "stderr": 0.010623345005094351,
+                "mean": 0.09861691888896944,
+                "stderr": 0.020718364517690296,
                 "tau": 3
               }
             ],
             "effective_bare_mass_lat": 0.74,
-            "energy_lat": 1.0428072321707056,
-            "energy_lat_err": 0.11779659886046878,
+            "energy_lat": 1.0434236805456294,
+            "energy_lat_err": 0.18198372036363275,
             "source_shift_lat": -0.01,
             "tau_max": 2,
             "tau_min": 1
           },
           {
-            "chi2_dof": 7.577525516146565e-27,
+            "chi2_dof": 1.0008810882804634e-28,
             "correlator": [
               {
-                "mean": 0.5717780497777207,
-                "stderr": 0.02607290770731375,
+                "mean": 0.5831282131469029,
+                "stderr": 0.02048146973852577,
                 "tau": 0
               },
               {
-                "mean": 0.1078077096428046,
-                "stderr": 0.006608477837571411,
+                "mean": 0.10727921339852418,
+                "stderr": 0.008316118298640374,
                 "tau": 1
               },
               {
-                "mean": 0.03755807991748664,
-                "stderr": 0.0037625760289969673,
+                "mean": 0.03726365487879334,
+                "stderr": 0.006052994694468836,
                 "tau": 2
               },
               {
-                "mean": 0.0958996288744693,
-                "stderr": 0.010226668105238174,
+                "mean": 0.09613543833452791,
+                "stderr": 0.020075503820483426,
                 "tau": 3
               }
             ],
             "effective_bare_mass_lat": 0.75,
-            "energy_lat": 1.0544606413142503,
-            "energy_lat_err": 0.11744619874331222,
+            "energy_lat": 1.05741645513692,
+            "energy_lat_err": 0.17998576314974327,
             "source_shift_lat": 0.0,
             "tau_max": 2,
             "tau_min": 1
           },
           {
-            "chi2_dof": 1.9205394750314297e-27,
+            "chi2_dof": 1.629917107069941e-28,
             "correlator": [
               {
-                "mean": 0.5651728224276669,
-                "stderr": 0.0255133523552289,
+                "mean": 0.5759900081533162,
+                "stderr": 0.020256120027073943,
                 "tau": 0
               },
               {
-                "mean": 0.1050054045908423,
-                "stderr": 0.006384420818379853,
+                "mean": 0.1045797654056409,
+                "stderr": 0.008074513205020742,
                 "tau": 1
               },
               {
-                "mean": 0.03615888000928976,
-                "stderr": 0.0036189842613722272,
+                "mean": 0.03582478614450221,
+                "stderr": 0.005746400372846166,
                 "tau": 2
               },
               {
-                "mean": 0.09356641721690834,
-                "stderr": 0.009847068482181389,
+                "mean": 0.09373244251164528,
+                "stderr": 0.019454385584944292,
                 "tau": 3
               }
             ],
             "effective_bare_mass_lat": 0.76,
-            "energy_lat": 1.0660892592767333,
-            "energy_lat_err": 0.11710627648034179,
+            "energy_lat": 1.0713100813048868,
+            "energy_lat_err": 0.17801783012043737,
             "source_shift_lat": 0.01,
             "tau_max": 2,
             "tau_min": 1
@@ -203,25 +229,17 @@
           {
             "configuration_index": 0,
             "effective_energy_tau1_by_source_shift": {
-              "-0.01": 1.0120630284693,
-              "0": 1.022738835109425,
-              "0.01": 1.033411031892043
+              "-0.01": 0.9660813490263641,
+              "0": 0.9815584943759749,
+              "0.01": 0.9969163521173217
             }
           },
           {
             "configuration_index": 1,
             "effective_energy_tau1_by_source_shift": {
-              "-0.01": 0.9501630364545472,
-              "0": 0.9632913912525319,
-              "0.01": 0.9763556341729658
-            }
-          },
-          {
-            "configuration_index": 2,
-            "effective_energy_tau1_by_source_shift": {
-              "-0.01": 1.1865940751505393,
-              "0": 1.1978539433818864,
-              "0.01": 1.2091046483278844
+              "-0.01": 1.1421233983833772,
+              "0": 1.1539872948340495,
+              "0.01": 1.1657906006777468
             }
           }
         ],
@@ -229,25 +247,19 @@
           {
             "configuration_index": 0,
             "finite": true,
-            "slope_effective_energy_tau1": 1.0674001711371561,
+            "slope_effective_energy_tau1": 1.5417501545478773,
             "source_radius": 0.01
           },
           {
             "configuration_index": 1,
             "finite": true,
-            "slope_effective_energy_tau1": 1.3096298859209266,
-            "source_radius": 0.01
-          },
-          {
-            "configuration_index": 2,
-            "finite": true,
-            "slope_effective_energy_tau1": 1.1255286588672586,
+            "slope_effective_energy_tau1": 1.1833601147184791,
             "source_radius": 0.01
           }
         ],
         "physical_higgs_normalization": "not_derived",
-        "slope_dE_ds_lat": 1.1640989266557003,
-        "slope_dE_ds_lat_err": 8.305058846803092,
+        "slope_dE_ds_lat": 1.3942836270471421,
+        "slope_dE_ds_lat_err": 12.727719360979307,
         "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
         "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization",
         "target_timeseries_rule": "diagnostic per-configuration tau=1 effective-energy slopes for autocorrelation/ESS gates; not a physical dE/dh readout"
@@ -256,8 +268,8 @@
         "estimator": "Z2 stochastic trace estimator; production evidence requires saved ensembles and controlled statistics",
         "finite_difference_residue_proxy": {
           "available": true,
-          "dGamma_dp_hat_sq": -0.4258733658674929,
-          "finite_residue_proxy": 2.34811584885809,
+          "dGamma_dp_hat_sq": -0.6556269202371803,
+          "finite_residue_proxy": 1.5252576871587868,
           "reference_modes": [
             [
               0,
@@ -274,36 +286,29 @@
         "measurement_object": "C_ss(q)=Tr[S V_q S V_-q], Gamma_ss(q)=1/C_ss(q)",
         "mode_rows": {
           "0,0,0": {
-            "C_ss_imag": 0.03683869008203574,
-            "C_ss_imag_config_stderr": 0.02263075720724183,
-            "C_ss_real": 0.16431052365163012,
-            "C_ss_real_config_stderr": 0.019062032129710485,
+            "C_ss_imag": 0.04781365814698916,
+            "C_ss_imag_config_stderr": 0.018209893709369797,
+            "C_ss_real": 0.1355368083669704,
+            "C_ss_real_config_stderr": 0.017923170606457692,
             "C_ss_timeseries": [
               {
-                "C_ss_imag": 0.02883417120033123,
-                "C_ss_real": 0.20182554677540618,
-                "Gamma_ss_imag": -0.6937134228712807,
-                "Gamma_ss_real": 4.855665519348323,
+                "C_ss_imag": 0.06602355185635896,
+                "C_ss_real": 0.1534599789734281,
+                "Gamma_ss_imag": -2.3656661114626596,
+                "Gamma_ss_real": 5.4985692456084685,
                 "configuration_index": 0
               },
               {
-                "C_ss_imag": 0.07942072756040022,
-                "C_ss_real": 0.13967504588030746,
-                "Gamma_ss_imag": -3.0763231149985417,
-                "Gamma_ss_real": 5.410244723624469,
+                "C_ss_imag": 0.029603764437619362,
+                "C_ss_real": 0.11761363776051273,
+                "Gamma_ss_imag": -2.0125813252853413,
+                "Gamma_ss_real": 7.99584159151342,
                 "configuration_index": 1
-              },
-              {
-                "C_ss_imag": 0.00226117148537577,
-                "C_ss_real": 0.15143097829917673,
-                "Gamma_ss_imag": -0.09858417857368452,
-                "Gamma_ss_real": 6.60219656173175,
-                "configuration_index": 2
               }
             ],
-            "Gamma_ss_imag": -1.2991938515802315,
-            "Gamma_ss_real": 5.794756045960075,
-            "configuration_count": 3,
+            "Gamma_ss_imag": -2.3147170949696165,
+            "Gamma_ss_real": 6.561501033034909,
+            "configuration_count": 2,
             "momentum_mode": [
               0,
               0,
@@ -311,45 +316,38 @@
             ],
             "noise_subsample_stability": {
               "C_ss_real_half_delta_over_stderr_max": 2.0000000000000004,
-              "C_ss_real_noise_stderr_max": 0.05350052979954884,
-              "C_ss_real_noise_stderr_mean": 0.04004527747315806,
+              "C_ss_real_noise_stderr_max": 0.06809566157334332,
+              "C_ss_real_noise_stderr_mean": 0.044826422008436916,
               "available": true,
-              "configuration_count": 3,
+              "configuration_count": 2,
               "noise_vectors_per_configuration": 2
             },
             "p_hat_sq": 0.0
           },
           "1,0,0": {
-            "C_ss_imag": 0.005599987938875929,
-            "C_ss_imag_config_stderr": 0.019640632051482504,
-            "C_ss_real": 0.24429495519639408,
-            "C_ss_real_config_stderr": 0.019311188153713018,
+            "C_ss_imag": 0.0639736861806537,
+            "C_ss_imag_config_stderr": 0.011576435101706875,
+            "C_ss_real": 0.23657225471761364,
+            "C_ss_real_config_stderr": 0.006567185011728926,
             "C_ss_timeseries": [
               {
-                "C_ss_imag": 0.016939448592804465,
-                "C_ss_real": 0.2623432564837175,
-                "Gamma_ss_imag": -0.24510520699580973,
-                "Gamma_ss_real": 3.7959735130758885,
+                "C_ss_imag": 0.05239725107894683,
+                "C_ss_real": 0.24313943972934257,
+                "Gamma_ss_imag": -0.846998668728134,
+                "Gamma_ss_real": 3.9303356097015474,
                 "configuration_index": 0
               },
               {
-                "C_ss_imag": 0.03250057778540198,
-                "C_ss_real": 0.26484207573281215,
-                "Gamma_ss_imag": -0.456484095219419,
-                "Gamma_ss_real": 3.719816801879367,
+                "C_ss_imag": 0.07555012128236058,
+                "C_ss_real": 0.23000506970588472,
+                "Gamma_ss_imag": -1.289027882087191,
+                "Gamma_ss_real": 3.924321269640583,
                 "configuration_index": 1
-              },
-              {
-                "C_ss_imag": -0.03264006256157866,
-                "C_ss_real": 0.20569953337265257,
-                "Gamma_ss_imag": 0.7524622985062549,
-                "Gamma_ss_real": 4.7420602638625615,
-                "configuration_index": 2
               }
             ],
-            "Gamma_ss_imag": -0.09378425804290674,
-            "Gamma_ss_real": 4.091262582490104,
-            "configuration_count": 3,
+            "Gamma_ss_imag": -1.0651795362682541,
+            "Gamma_ss_real": 3.9389933520861877,
+            "configuration_count": 2,
             "momentum_mode": [
               1,
               0,
@@ -357,10 +355,10 @@
             ],
             "noise_subsample_stability": {
               "C_ss_real_half_delta_over_stderr_max": 2.0000000000000004,
-              "C_ss_real_noise_stderr_max": 0.058762774926224545,
-              "C_ss_real_noise_stderr_mean": 0.03347040779199404,
+              "C_ss_real_noise_stderr_max": 0.05135745398023158,
+              "C_ss_real_noise_stderr_mean": 0.04473997347199667,
               "available": true,
-              "configuration_count": 3,
+              "configuration_count": 2,
               "noise_vectors_per_configuration": 2
             },
             "p_hat_sq": 4.0
@@ -378,32 +376,55 @@
       },
       "selected_mass_parameter": 0.75,
       "spatial_L": 2,
-      "thermalization_sweeps": 2,
+      "thermalization_sweeps": 1,
       "time_L": 4,
       "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
-      "update_engine": "python"
+      "update_engine": "numba"
     }
   ],
   "metadata": {
     "action": "Cl3Z3_SU3_Wilson_staggered",
     "authority": "staggered_top_correlator_mass_extraction",
-    "created_utc": "2026-05-02T19:05:38Z",
+    "created_utc": "2026-05-03T14:59:27Z",
     "evidence_scope": "reduced run is infrastructure evidence only",
+    "fh_lsz_measurement_policy": {
+      "non_selected_masses_scalar_fh_lsz_skipped": [
+        0.45,
+        1.05
+      ],
+      "normal_equation_cache": {
+        "key": "mass/source-shift value",
+        "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+        "scope": "per saved gauge configuration and smeared measurement gauge"
+      },
+      "physical_higgs_normalization": "not_derived",
+      "policy": "selected_mass_only_for_scalar_fh_lsz",
+      "scalar_source_response_selected_mass_only": true,
+      "scalar_two_point_lsz_selected_mass_only": true,
+      "selected_mass_index": 1,
+      "selected_mass_parameter": 0.75,
+      "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+      "top_correlator_mass_scan_preserved": true,
+      "used_as_physical_yukawa_readout": false
+    },
     "g_bare": 1.0,
     "phase": "reduced_scope",
     "run_control": {
-      "engine": "python",
+      "engine": "numba",
+      "fh_lsz_selected_mass_only": true,
+      "fh_lsz_selected_mass_parameter": 0.75,
       "masses": [
         0.45,
         0.75,
         1.05
       ],
       "measurement_separation_sweeps": 1,
-      "measurement_sweeps": 3,
+      "measurement_sweeps": 2,
       "momentum_modes": [],
+      "normal_equation_cache_enabled": true,
       "overrelaxation_sweeps": 1,
       "pilot_targets": false,
-      "production_output_dir": "outputs/yt_direct_lattice_correlator_target_timeseries_smoke",
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_target_timeseries_smoke_optimized_2026-05-03",
       "production_targets": false,
       "scalar_source_shifts": [
         -0.01,
@@ -423,15 +444,21 @@
         ]
       ],
       "scalar_two_point_noises": 2,
-      "seed": 2026052101,
-      "seed_control_version": "python_generator_v1",
-      "thermalization_sweeps": 2,
+      "seed": 2026051304,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "thermalization_sweeps": 1,
       "volumes": "2x4"
     },
     "running_bridge": "reduced_scope run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
     "scalar_source_response": {
       "enabled": true,
+      "non_selected_masses_skipped": [
+        0.45,
+        1.05
+      ],
       "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": true,
+      "selected_mass_parameter": 0.75,
       "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
       "used_as_physical_yukawa_readout": false
     },
@@ -439,13 +466,44 @@
       "enabled": true,
       "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
       "noise_vectors_per_configuration": 2,
+      "non_selected_masses_skipped": [
+        0.45,
+        1.05
+      ],
       "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": true,
+      "selected_mass_parameter": 0.75,
       "used_as_physical_yukawa_readout": false
     },
     "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for reduced_scope run",
+    "source_higgs_cross_correlator": {
+      "canonical_higgs_operator_realization": "absent",
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "O_H or radial canonical-Higgs observable on the same Cl3/Z3 source surface",
+        "C_sH(q)=<O_s(q) O_H(-q)> pole rows",
+        "C_HH(q)=<O_H(q) O_H(-q)> pole rows",
+        "same-ensemble C_ss/C_sH/C_HH covariance"
+      ],
+      "strict_limit": "Current harness output is C_ss/source-response only.  It must not be treated as source-Higgs Gram purity or canonical-Higgs normalization evidence.",
+      "used_as_physical_yukawa_readout": false
+    },
     "uses_composite_matrix_element_route": false,
     "uses_coupling_definition_route": false,
-    "uses_prior_ward_chain": false
+    "uses_prior_ward_chain": false,
+    "wz_mass_response": {
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "same-source W/Z correlator mass fits",
+        "fitted dM_W/ds or dM_Z/ds under the same scalar source",
+        "covariance with dE_top/ds",
+        "sector-overlap and canonical-Higgs identity certificates"
+      ],
+      "strict_limit": "This QCD top-correlator harness does not measure W/Z mass response.  Static EW algebra or absent W/Z slopes must not be used as dM_W/ds evidence.",
+      "used_as_physical_yukawa_readout": false
+    }
   },
   "ratio_check": {
     "g_s_lattice": null,
@@ -453,36 +511,36 @@
     "ratio": null,
     "uncertainty": null,
     "used_as_definition": false,
-    "y_t_lattice": 0.01283551840110803
+    "y_t_lattice": 0.012871498314653063
   },
   "result": {
-    "m_t_pole_GeV": 2.2347097583947644,
-    "m_t_running_at_v_GeV": 2.2347097583947644,
+    "m_t_pole_GeV": 2.240973990301311,
+    "m_t_running_at_v_GeV": 2.240973990301311,
     "mass_uncertainties_GeV": {
-      "finite_spacing": 0.4469419516789529,
+      "finite_spacing": 0.44819479806026224,
       "finite_volume": 0.0,
-      "heavy_mass_tuning": 0.33520646375921465,
-      "matching": 0.22347097583947645,
-      "running_bridge": 0.22347097583947645,
-      "scale_setting": 0.11173548791973822,
-      "statistical": 0.24890276235529302,
+      "heavy_mass_tuning": 0.33614609854519667,
+      "matching": 0.22409739903013112,
+      "running_bridge": 0.22409739903013112,
+      "scale_setting": 0.11204869951506556,
+      "statistical": 0.3814423464697073,
       "v_input": 0.0001
     },
-    "reduced_scope_delta_to_pdg_GeV": -170.32529024160525,
-    "reduced_scope_delta_to_y_t_target": -0.904164481598892,
-    "total_m_t_pole_uncertainty_GeV": 0.6974499623418172,
-    "total_y_t_uncertainty": 0.004005948330364382,
+    "reduced_scope_delta_to_pdg_GeV": -170.3190260096987,
+    "reduced_scope_delta_to_y_t_target": -0.904128501685347,
+    "total_m_t_pole_uncertainty_GeV": 0.7565482468573367,
+    "total_y_t_uncertainty": 0.004345391569256288,
     "uncertainties": {
-      "finite_spacing": 0.002567103680221606,
+      "finite_spacing": 0.002574299662930613,
       "finite_volume": 0.0,
-      "heavy_mass_tuning": 0.0019253277601662044,
-      "matching": 0.001283551840110803,
-      "running_bridge": 0.001283551840110803,
-      "scale_setting": 0.0006417759200554015,
-      "statistical": 0.0014296245739728037,
+      "heavy_mass_tuning": 0.0019307247471979595,
+      "matching": 0.0012871498314653066,
+      "running_bridge": 0.0012871498314653066,
+      "scale_setting": 0.0006435749157326533,
+      "statistical": 0.002190893129938562,
       "v_input": 5.743707142679697e-07
     },
-    "y_t_v": 0.01283551840110803
+    "y_t_v": 0.012871498314653063
   },
   "v_input": {
     "source": "existing electroweak VEV chain",

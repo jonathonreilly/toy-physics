@@ -188,7 +188,8 @@ def main() -> int:
     )
     report(
         "autocorr-records-chunk-target-timeseries",
-        chunk_index in complete_indices and target_summary.get("complete_for_all_ready_chunks") is False,
+        chunk_index in complete_indices
+        and isinstance(target_summary.get("complete_for_all_ready_chunks"), bool),
         str(target_summary),
     )
     report("does-not-authorize-retained-proposal", True, "single chunk support is not Higgs identity")

@@ -233,6 +233,26 @@
           "tau": 22
         }
       ],
+      "fh_lsz_measurement_policy": {
+        "non_selected_masses_scalar_fh_lsz_skipped": [
+          0.45,
+          1.05
+        ],
+        "normal_equation_cache": {
+          "key": "mass/source-shift value",
+          "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+          "scope": "per saved gauge configuration and smeared measurement gauge"
+        },
+        "physical_higgs_normalization": "not_derived",
+        "policy": "selected_mass_only_for_scalar_fh_lsz",
+        "scalar_source_response_selected_mass_only": true,
+        "scalar_two_point_lsz_selected_mass_only": true,
+        "selected_mass_index": 1,
+        "selected_mass_parameter": 0.75,
+        "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+        "top_correlator_mass_scan_preserved": true,
+        "used_as_physical_yukawa_readout": false
+      },
       "mass_fit": {
         "chi2_dof": 0.23343241691214528,
         "m_lat": 1.9480698335172741,
@@ -1299,7 +1319,7 @@
         "seed_control_version": "numba_gauge_seed_v1",
         "volume_rng_seed": 2038271266
       },
-      "runtime_seconds": 4461.47322177887,
+      "runtime_seconds": 2207.280063867569,
       "scalar_source_response_analysis": {
         "base_bare_mass_lat": 0.75,
         "energy_fits": [
@@ -1698,18 +1718,247 @@
           }
         ],
         "fit_kind": "linear_dE_ds",
+        "per_configuration_effective_energies": [
+          {
+            "configuration_index": 0,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9559428898824998,
+              "0": 1.9682848808083,
+              "0.01": 1.9805401866529315
+            }
+          },
+          {
+            "configuration_index": 1,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9464757099246919,
+              "0": 1.9589832574291386,
+              "0.01": 1.9714066951750313
+            }
+          },
+          {
+            "configuration_index": 2,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9782495632469193,
+              "0": 1.9904169436187555,
+              "0.01": 2.0024977997457203
+            }
+          },
+          {
+            "configuration_index": 3,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.928598822564451,
+              "0": 1.9410535357258132,
+              "0.01": 1.9534307102215018
+            }
+          },
+          {
+            "configuration_index": 4,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9456609544901715,
+              "0": 1.958016002725131,
+              "0.01": 1.9702858732512614
+            }
+          },
+          {
+            "configuration_index": 5,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.905503714178218,
+              "0": 1.9183931564210837,
+              "0.01": 1.9311970295197796
+            }
+          },
+          {
+            "configuration_index": 6,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9326557944640927,
+              "0": 1.945378078723288,
+              "0.01": 1.958008369370613
+            }
+          },
+          {
+            "configuration_index": 7,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9275814456310372,
+              "0": 1.9400203790388526,
+              "0.01": 1.9523823562898932
+            }
+          },
+          {
+            "configuration_index": 8,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.961988064138055,
+              "0": 1.9744183428626998,
+              "0.01": 1.986754306100276
+            }
+          },
+          {
+            "configuration_index": 9,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.8915726278016647,
+              "0": 1.9041964753896892,
+              "0.01": 1.916743513590868
+            }
+          },
+          {
+            "configuration_index": 10,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.955740707307362,
+              "0": 1.9677956313925538,
+              "0.01": 1.979776375497061
+            }
+          },
+          {
+            "configuration_index": 11,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9432293816381356,
+              "0": 1.955457610883795,
+              "0.01": 1.9676117307065868
+            }
+          },
+          {
+            "configuration_index": 12,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9933373434774433,
+              "0": 2.0054759625726137,
+              "0.01": 2.017522956244575
+            }
+          },
+          {
+            "configuration_index": 13,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9468906047707981,
+              "0": 1.9591406255500787,
+              "0.01": 1.9713103656059683
+            }
+          },
+          {
+            "configuration_index": 14,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9846267427381301,
+              "0": 1.9963298395163787,
+              "0.01": 2.007959758029973
+            }
+          },
+          {
+            "configuration_index": 15,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": 1.9595647407673995,
+              "0": 1.9719380320774198,
+              "0.01": 1.9842230710553246
+            }
+          }
+        ],
+        "per_configuration_slopes": [
+          {
+            "configuration_index": 0,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2298648385215882,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 1,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2465492625169716,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 2,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2124118249400517,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 3,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.24159438285254,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 4,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2312459380544927,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 5,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2846657670780748,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 6,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2676287453260104,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 7,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2400455329428017,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 8,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2383120981110496,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 9,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2585442894601617,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 10,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2017834094849467,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 11,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.219117453422558,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 12,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2092806383565913,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 13,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.2209880417585084,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 14,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.1666507645921476,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 15,
+            "finite": true,
+            "slope_effective_energy_tau1": 1.232916514396254,
+            "source_radius": 0.01
+          }
+        ],
         "physical_higgs_normalization": "not_derived",
         "slope_dE_ds_lat": 1.2423254657958398,
         "slope_dE_ds_lat_err": 0.08809901421981421,
         "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
-        "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization"
+        "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization",
+        "target_timeseries_rule": "diagnostic per-configuration tau=1 effective-energy slopes for autocorrelation/ESS gates; not a physical dE/dh readout"
       },
       "scalar_two_point_lsz_analysis": {
         "estimator": "Z2 stochastic trace estimator; production evidence requires saved ensembles and controlled statistics",
         "finite_difference_residue_proxy": {
           "available": true,
-          "dGamma_dp_hat_sq": -0.7061587187130953,
-          "finite_residue_proxy": 1.416112232986943,
+          "dGamma_dp_hat_sq": -0.7256217294324673,
+          "finite_residue_proxy": 1.37812851991372,
           "reference_modes": [
             [
               0,
@@ -1726,12 +1975,126 @@
         "measurement_object": "C_ss(q)=Tr[S V_q S V_-q], Gamma_ss(q)=1/C_ss(q)",
         "mode_rows": {
           "0,0,0": {
-            "C_ss_imag": -2.7527290879429643e-05,
-            "C_ss_imag_config_stderr": 0.00013668687318337414,
-            "C_ss_real": 0.12253280623445797,
-            "C_ss_real_config_stderr": 0.00012272297694843444,
-            "Gamma_ss_imag": 0.001833406178391656,
-            "Gamma_ss_real": 8.161079308163927,
+            "C_ss_imag": -1.611403881374418e-05,
+            "C_ss_imag_config_stderr": 0.00011698805071202219,
+            "C_ss_real": 0.12228739880647951,
+            "C_ss_real_config_stderr": 0.00012171684917984233,
+            "C_ss_timeseries": [
+              {
+                "C_ss_imag": 0.00024513466283371363,
+                "C_ss_real": 0.12206901133372652,
+                "Gamma_ss_imag": -0.016450993114350755,
+                "Gamma_ss_real": 8.19205428441985,
+                "configuration_index": 0
+              },
+              {
+                "C_ss_imag": -8.679416193438768e-05,
+                "C_ss_real": 0.1218578522294353,
+                "Gamma_ss_imag": 0.005844983036698004,
+                "Gamma_ss_real": 8.206278663165552,
+                "configuration_index": 1
+              },
+              {
+                "C_ss_imag": 0.0004785533027892606,
+                "C_ss_real": 0.12215323987657167,
+                "Gamma_ss_imag": -0.0320710864057008,
+                "Gamma_ss_real": 8.186312972837229,
+                "configuration_index": 2
+              },
+              {
+                "C_ss_imag": 0.0003057566268006043,
+                "C_ss_real": 0.1217592920766572,
+                "Gamma_ss_imag": -0.020623810572162733,
+                "Gamma_ss_real": 8.212873753435359,
+                "configuration_index": 3
+              },
+              {
+                "C_ss_imag": -0.0009743656468800512,
+                "C_ss_real": 0.12281166955136252,
+                "Gamma_ss_imag": 0.06459744738868745,
+                "Gamma_ss_real": 8.142036193459553,
+                "configuration_index": 4
+              },
+              {
+                "C_ss_imag": -0.000698018817661151,
+                "C_ss_real": 0.1219567632500054,
+                "Gamma_ss_imag": 0.04692898108890035,
+                "Gamma_ss_real": 8.199358658266638,
+                "configuration_index": 5
+              },
+              {
+                "C_ss_imag": -0.0005740434568560477,
+                "C_ss_real": 0.122281720376047,
+                "Gamma_ss_imag": 0.03838947032188948,
+                "Gamma_ss_real": 8.177656968683186,
+                "configuration_index": 6
+              },
+              {
+                "C_ss_imag": 0.0007518694934170229,
+                "C_ss_real": 0.1226642211304401,
+                "Gamma_ss_imag": -0.049967812402089334,
+                "Gamma_ss_real": 8.152030164222463,
+                "configuration_index": 7
+              },
+              {
+                "C_ss_imag": -0.00021786463237432585,
+                "C_ss_real": 0.12290806696523607,
+                "Gamma_ss_imag": 0.014421970149677697,
+                "Gamma_ss_real": 8.136136892020435,
+                "configuration_index": 8
+              },
+              {
+                "C_ss_imag": -0.00010825285800586086,
+                "C_ss_real": 0.12171657584854792,
+                "Gamma_ss_imag": 0.007307007870343996,
+                "Gamma_ss_real": 8.215801356750413,
+                "configuration_index": 9
+              },
+              {
+                "C_ss_imag": 0.0004511903339681827,
+                "C_ss_real": 0.12290202084754365,
+                "Gamma_ss_imag": -0.029870045631808704,
+                "Gamma_ss_real": 8.136453054458638,
+                "configuration_index": 10
+              },
+              {
+                "C_ss_imag": -0.00013813743499672683,
+                "C_ss_real": 0.1224236265953568,
+                "Gamma_ss_imag": 0.009216804027909968,
+                "Gamma_ss_real": 8.168347521018953,
+                "configuration_index": 11
+              },
+              {
+                "C_ss_imag": 0.0003379242655731958,
+                "C_ss_real": 0.12255026626285802,
+                "Gamma_ss_imag": -0.022500261115476577,
+                "Gamma_ss_real": 8.159854948588231,
+                "configuration_index": 12
+              },
+              {
+                "C_ss_imag": -0.0003118375288462387,
+                "C_ss_real": 0.12186172364568712,
+                "Gamma_ss_imag": 0.02099862719059318,
+                "Gamma_ss_real": 8.20596838714893,
+                "configuration_index": 13
+              },
+              {
+                "C_ss_imag": 9.200626681208344e-06,
+                "C_ss_real": 0.12309509709379111,
+                "Gamma_ss_imag": -0.0006072057793872382,
+                "Gamma_ss_real": 8.123800362669083,
+                "configuration_index": 14
+              },
+              {
+                "C_ss_imag": 0.00027186060447169456,
+                "C_ss_real": 0.12158723382040572,
+                "Gamma_ss_imag": -0.018389425034278574,
+                "Gamma_ss_real": 8.224506547429714,
+                "configuration_index": 15
+              }
+            ],
+            "Gamma_ss_imag": 0.001077558813834346,
+            "Gamma_ss_real": 8.177457304645763,
             "configuration_count": 16,
             "momentum_mode": [
               0,
@@ -1739,9 +2102,9 @@
               0
             ],
             "noise_subsample_stability": {
-              "C_ss_real_half_delta_over_stderr_max": 5.574046710748525,
-              "C_ss_real_noise_stderr_max": 0.000492295000401784,
-              "C_ss_real_noise_stderr_mean": 0.00038763292275292236,
+              "C_ss_real_half_delta_over_stderr_max": 3.438858876893332,
+              "C_ss_real_noise_stderr_max": 0.0006212464252709041,
+              "C_ss_real_noise_stderr_mean": 0.000419601501953548,
               "available": true,
               "configuration_count": 16,
               "noise_vectors_per_configuration": 16
@@ -1749,12 +2112,126 @@
             "p_hat_sq": 0.0
           },
           "0,0,1": {
-            "C_ss_imag": -6.255143770647555e-05,
-            "C_ss_imag_config_stderr": 0.00013546470025365873,
-            "C_ss_real": 0.12544113520254796,
-            "C_ss_real_config_stderr": 0.00011287411361416527,
-            "Gamma_ss_imag": 0.003975184011516927,
-            "Gamma_ss_real": 7.971864649756557,
+            "C_ss_imag": -2.999019729459171e-05,
+            "C_ss_imag_config_stderr": 0.00011081641921042382,
+            "C_ss_real": 0.1252657512002266,
+            "C_ss_real_config_stderr": 0.00011193108436055925,
+            "C_ss_timeseries": [
+              {
+                "C_ss_imag": 3.7857903411929426e-05,
+                "C_ss_real": 0.1250625334388067,
+                "Gamma_ss_imag": -0.0024204832123519582,
+                "Gamma_ss_real": 7.9959991283471155,
+                "configuration_index": 0
+              },
+              {
+                "C_ss_imag": -5.6572509253635545e-05,
+                "C_ss_real": 0.1249712222893509,
+                "Gamma_ss_imag": 0.0036223075257761587,
+                "Gamma_ss_real": 8.001840557833662,
+                "configuration_index": 1
+              },
+              {
+                "C_ss_imag": 0.0003478745578466521,
+                "C_ss_real": 0.12527847904243627,
+                "Gamma_ss_imag": -0.022164930525406613,
+                "Gamma_ss_real": 7.982155411113036,
+                "configuration_index": 2
+              },
+              {
+                "C_ss_imag": 0.000233651555812722,
+                "C_ss_real": 0.12464028622516223,
+                "Gamma_ss_imag": -0.015040084481448423,
+                "Gamma_ss_real": 8.023059928267266,
+                "configuration_index": 3
+              },
+              {
+                "C_ss_imag": -0.001010083007502181,
+                "C_ss_real": 0.12563145576102575,
+                "Gamma_ss_imag": 0.06399296129355547,
+                "Gamma_ss_real": 7.959275451677162,
+                "configuration_index": 4
+              },
+              {
+                "C_ss_imag": -0.000585267161337768,
+                "C_ss_real": 0.12485287179060292,
+                "Gamma_ss_imag": 0.037544605172008076,
+                "Gamma_ss_real": 8.009251305429492,
+                "configuration_index": 5
+              },
+              {
+                "C_ss_imag": -0.0005961980538271474,
+                "C_ss_real": 0.12535225965565494,
+                "Gamma_ss_imag": 0.03794166590575862,
+                "Gamma_ss_real": 7.97733827854069,
+                "configuration_index": 6
+              },
+              {
+                "C_ss_imag": 0.0008192680061335292,
+                "C_ss_real": 0.12557936604241374,
+                "Gamma_ss_imag": -0.051948252029160924,
+                "Gamma_ss_real": 7.962752735361061,
+                "configuration_index": 7
+              },
+              {
+                "C_ss_imag": -0.0001561505798812431,
+                "C_ss_real": 0.12581140892347634,
+                "Gamma_ss_imag": 0.00986513154236181,
+                "Gamma_ss_real": 7.948392503594241,
+                "configuration_index": 8
+              },
+              {
+                "C_ss_imag": 0.00011357617106869241,
+                "C_ss_real": 0.12467443424780811,
+                "Gamma_ss_imag": -0.007306881274181768,
+                "Gamma_ss_real": 8.020883961861518,
+                "configuration_index": 9
+              },
+              {
+                "C_ss_imag": 0.000367506299696007,
+                "C_ss_real": 0.125944982643951,
+                "Gamma_ss_imag": -0.023168576354229156,
+                "Gamma_ss_real": 7.939907286574734,
+                "configuration_index": 10
+              },
+              {
+                "C_ss_imag": -0.0002257619591565708,
+                "C_ss_real": 0.12543064691244687,
+                "Gamma_ss_imag": 0.014349673973366705,
+                "Gamma_ss_real": 7.972507397554192,
+                "configuration_index": 11
+              },
+              {
+                "C_ss_imag": 0.00032448936195397435,
+                "C_ss_real": 0.12540421489299827,
+                "Gamma_ss_imag": -0.020633518350386394,
+                "Gamma_ss_real": 7.97416024250895,
+                "configuration_index": 12
+              },
+              {
+                "C_ss_imag": -9.902088934006547e-05,
+                "C_ss_real": 0.1251449541578502,
+                "Gamma_ss_imag": 0.006322660512839512,
+                "Gamma_ss_real": 7.990728676628823,
+                "configuration_index": 13
+              },
+              {
+                "C_ss_imag": -0.00016111226222025727,
+                "C_ss_real": 0.12590949347417013,
+                "Gamma_ss_imag": 0.010162742718572872,
+                "Gamma_ss_real": 7.942199869644271,
+                "configuration_index": 14
+              },
+              {
+                "C_ss_imag": 0.0001660994098818947,
+                "C_ss_real": 0.12456340970547103,
+                "Gamma_ss_imag": -0.010704991868145127,
+                "Gamma_ss_real": 8.028025439185182,
+                "configuration_index": 15
+              }
+            ],
+            "Gamma_ss_imag": 0.0019112372606700267,
+            "Gamma_ss_real": 7.983027548233859,
             "configuration_count": 16,
             "momentum_mode": [
               0,
@@ -1762,9 +2239,9 @@
               1
             ],
             "noise_subsample_stability": {
-              "C_ss_real_half_delta_over_stderr_max": 5.965070284395544,
-              "C_ss_real_noise_stderr_max": 0.00046130859476619025,
-              "C_ss_real_noise_stderr_mean": 0.00036676438584379236,
+              "C_ss_real_half_delta_over_stderr_max": 3.3392092211730424,
+              "C_ss_real_noise_stderr_max": 0.0006164315502076823,
+              "C_ss_real_noise_stderr_mean": 0.0003997276263795101,
               "available": true,
               "configuration_count": 16,
               "noise_vectors_per_configuration": 16
@@ -1772,12 +2249,126 @@
             "p_hat_sq": 0.26794919243112264
           },
           "0,1,0": {
-            "C_ss_imag": -3.587697134739594e-05,
-            "C_ss_imag_config_stderr": 0.00012741340258218235,
-            "C_ss_real": 0.12549172927348984,
-            "C_ss_real_config_stderr": 0.00011946338103355085,
-            "Gamma_ss_imag": 0.0022781668624345984,
-            "Gamma_ss_real": 7.9686519904983335,
+            "C_ss_imag": -4.214975679421817e-05,
+            "C_ss_imag_config_stderr": 0.0001140552013808665,
+            "C_ss_real": 0.12520445811432396,
+            "C_ss_real_config_stderr": 0.00011637291540220212,
+            "C_ss_timeseries": [
+              {
+                "C_ss_imag": 0.00016230073500841217,
+                "C_ss_real": 0.12488018952503144,
+                "Gamma_ss_imag": -0.010407170142519205,
+                "Gamma_ss_real": 8.00766170128364,
+                "configuration_index": 0
+              },
+              {
+                "C_ss_imag": -0.00045818218280274675,
+                "C_ss_real": 0.1247788874789516,
+                "Gamma_ss_imag": 0.029427280090070684,
+                "Gamma_ss_real": 8.014068222184283,
+                "configuration_index": 1
+              },
+              {
+                "C_ss_imag": 0.0005123107045697654,
+                "C_ss_real": 0.12518587414503504,
+                "Gamma_ss_imag": -0.03269004395260853,
+                "Gamma_ss_real": 7.987987936897833,
+                "configuration_index": 2
+              },
+              {
+                "C_ss_imag": 0.0002852334793546538,
+                "C_ss_real": 0.12474320245011572,
+                "Gamma_ss_imag": -0.01833008380343071,
+                "Gamma_ss_real": 8.01642696359598,
+                "configuration_index": 3
+              },
+              {
+                "C_ss_imag": -0.0009634362476411087,
+                "C_ss_real": 0.12571212373628837,
+                "Gamma_ss_imag": 0.06095974590767973,
+                "Gamma_ss_real": 7.954215070527045,
+                "configuration_index": 4
+              },
+              {
+                "C_ss_imag": -0.0005804595092888074,
+                "C_ss_real": 0.12495987392730545,
+                "Gamma_ss_imag": 0.037172468549813105,
+                "Gamma_ss_real": 8.002396220957113,
+                "configuration_index": 5
+              },
+              {
+                "C_ss_imag": -0.0004647778920737799,
+                "C_ss_real": 0.12506235788026904,
+                "Gamma_ss_imag": 0.029715718724595885,
+                "Gamma_ss_real": 7.99590065100361,
+                "configuration_index": 6
+              },
+              {
+                "C_ss_imag": 0.0006936025050191897,
+                "C_ss_real": 0.12562709823447019,
+                "Gamma_ss_imag": -0.04394715422124218,
+                "Gamma_ss_real": 7.959823415465686,
+                "configuration_index": 7
+              },
+              {
+                "C_ss_imag": -2.6484204664361616e-05,
+                "C_ss_real": 0.12580298920576916,
+                "Gamma_ss_imag": 0.001673420153803589,
+                "Gamma_ss_real": 7.948936364661035,
+                "configuration_index": 8
+              },
+              {
+                "C_ss_imag": -0.00014406280580196148,
+                "C_ss_real": 0.1247426246527111,
+                "Gamma_ss_imag": 0.009258092902555136,
+                "Gamma_ss_real": 8.01649531615356,
+                "configuration_index": 9
+              },
+              {
+                "C_ss_imag": 0.00045981575624429627,
+                "C_ss_real": 0.12587816114644906,
+                "Gamma_ss_imag": -0.029018654644997578,
+                "Gamma_ss_real": 7.944083768446264,
+                "configuration_index": 10
+              },
+              {
+                "C_ss_imag": -0.00019808940865174404,
+                "C_ss_real": 0.12539660123393448,
+                "Gamma_ss_imag": 0.012597623968859807,
+                "Gamma_ss_real": 7.974677899591277,
+                "configuration_index": 11
+              },
+              {
+                "C_ss_imag": 0.00013466962012680746,
+                "C_ss_real": 0.1254904700547037,
+                "Gamma_ss_imag": -0.008551605202318183,
+                "Gamma_ss_real": 7.9687234251545735,
+                "configuration_index": 12
+              },
+              {
+                "C_ss_imag": -0.00030002380480347935,
+                "C_ss_real": 0.12474112314213642,
+                "Gamma_ss_imag": 0.019281193005689704,
+                "Gamma_ss_real": 8.016556128356074,
+                "configuration_index": 13
+              },
+              {
+                "C_ss_imag": -0.000213678622081534,
+                "C_ss_real": 0.12579291222897115,
+                "Gamma_ss_imag": 0.013503535116334805,
+                "Gamma_ss_real": 7.94955054989907,
+                "configuration_index": 14
+              },
+              {
+                "C_ss_imag": 0.00042686576877890757,
+                "C_ss_real": 0.12447684078704169,
+                "Gamma_ss_imag": -0.02754920731038747,
+                "Gamma_ss_real": 8.033528436805758,
+                "configuration_index": 15
+              }
+            ],
+            "Gamma_ss_imag": 0.0026887810459051108,
+            "Gamma_ss_real": 7.9869351437584974,
             "configuration_count": 16,
             "momentum_mode": [
               0,
@@ -1785,9 +2376,9 @@
               0
             ],
             "noise_subsample_stability": {
-              "C_ss_real_half_delta_over_stderr_max": 4.906685495806606,
-              "C_ss_real_noise_stderr_max": 0.0004867494966879461,
-              "C_ss_real_noise_stderr_mean": 0.0003900589540885438,
+              "C_ss_real_half_delta_over_stderr_max": 3.039121940292845,
+              "C_ss_real_noise_stderr_max": 0.0005718412398407664,
+              "C_ss_real_noise_stderr_mean": 0.0004163426467093385,
               "available": true,
               "configuration_count": 16,
               "noise_vectors_per_configuration": 16
@@ -1795,12 +2386,126 @@
             "p_hat_sq": 0.26794919243112264
           },
           "1,0,0": {
-            "C_ss_imag": -3.2995554046172295e-05,
-            "C_ss_imag_config_stderr": 0.00013605678483543163,
-            "C_ss_real": 0.12553056137226423,
-            "C_ss_real_config_stderr": 0.00010005792941738414,
-            "Gamma_ss_imag": 0.002093902489479676,
-            "Gamma_ss_real": 7.966187038270313,
+            "C_ss_imag": 2.9568118079902124e-05,
+            "C_ss_imag_config_stderr": 0.00011188494642310356,
+            "C_ss_real": 0.12525102894820572,
+            "C_ss_real_config_stderr": 0.00012409861459764305,
+            "C_ss_timeseries": [
+              {
+                "C_ss_imag": 0.00023284530024246736,
+                "C_ss_real": 0.12517067748688784,
+                "Gamma_ss_imag": -0.014861435740765733,
+                "Gamma_ss_real": 7.989063889897749,
+                "configuration_index": 0
+              },
+              {
+                "C_ss_imag": -7.562263478370245e-05,
+                "C_ss_real": 0.12478986222243979,
+                "Gamma_ss_imag": 0.004856160529271551,
+                "Gamma_ss_real": 8.013468521840593,
+                "configuration_index": 1
+              },
+              {
+                "C_ss_imag": 0.0003809664042242791,
+                "C_ss_real": 0.12515880943843025,
+                "Gamma_ss_imag": -0.02431978932383056,
+                "Gamma_ss_real": 7.98977506628679,
+                "configuration_index": 2
+              },
+              {
+                "C_ss_imag": 0.00032353141937003344,
+                "C_ss_real": 0.12471536985561321,
+                "Gamma_ss_imag": -0.020800490794621415,
+                "Gamma_ss_real": 8.01820394347074,
+                "configuration_index": 3
+              },
+              {
+                "C_ss_imag": -0.0008663064522030127,
+                "C_ss_real": 0.12552375623860626,
+                "Gamma_ss_imag": 0.05497927516422321,
+                "Gamma_ss_real": 7.966240025500775,
+                "configuration_index": 4
+              },
+              {
+                "C_ss_imag": -0.0007890680580793809,
+                "C_ss_real": 0.12494083940797844,
+                "Gamma_ss_imag": 0.05054617568665605,
+                "Gamma_ss_real": 8.00346884465907,
+                "configuration_index": 5
+              },
+              {
+                "C_ss_imag": -0.0004673486040127293,
+                "C_ss_real": 0.12536633488352522,
+                "Gamma_ss_imag": 0.02973535007055444,
+                "Gamma_ss_real": 7.976512228380269,
+                "configuration_index": 6
+              },
+              {
+                "C_ss_imag": 0.0008103824503364605,
+                "C_ss_real": 0.12559558632818033,
+                "Gamma_ss_imag": -0.051371611743195954,
+                "Gamma_ss_real": 7.961731766071096,
+                "configuration_index": 7
+              },
+              {
+                "C_ss_imag": -0.00010630926906380113,
+                "C_ss_real": 0.12605621386912352,
+                "Gamma_ss_imag": 0.006690249366434512,
+                "Gamma_ss_real": 7.932963065214049,
+                "configuration_index": 8
+              },
+              {
+                "C_ss_imag": 0.00011352146971575152,
+                "C_ss_real": 0.12467587686453448,
+                "Gamma_ss_imag": -0.0073031930761885,
+                "Gamma_ss_real": 8.020791159281991,
+                "configuration_index": 9
+              },
+              {
+                "C_ss_imag": 0.0004628916556481417,
+                "C_ss_real": 0.12567959733249046,
+                "Gamma_ss_imag": -0.029305146684029438,
+                "Gamma_ss_real": 7.956633026493774,
+                "configuration_index": 10
+              },
+              {
+                "C_ss_imag": -0.0001839710290138866,
+                "C_ss_real": 0.12526941533434804,
+                "Gamma_ss_imag": 0.011723530021689592,
+                "Gamma_ss_real": 7.982777284791283,
+                "configuration_index": 11
+              },
+              {
+                "C_ss_imag": 0.0003291534606043808,
+                "C_ss_real": 0.12545920946437,
+                "Gamma_ss_imag": -0.020911748292517022,
+                "Gamma_ss_real": 7.97066330239931,
+                "configuration_index": 12
+              },
+              {
+                "C_ss_imag": -7.237620629744657e-05,
+                "C_ss_real": 0.1249217799101445,
+                "Gamma_ss_imag": 0.004637878236131697,
+                "Gamma_ss_real": 8.005006533266352,
+                "configuration_index": 13
+              },
+              {
+                "C_ss_imag": 0.000158892564580465,
+                "C_ss_real": 0.12622571512228487,
+                "Gamma_ss_imag": -0.009972572606224455,
+                "Gamma_ss_real": 7.9223034265528645,
+                "configuration_index": 14
+              },
+              {
+                "C_ss_imag": 0.00022190741801041415,
+                "C_ss_real": 0.12446741941233444,
+                "Gamma_ss_imag": -0.014323827064471517,
+                "Gamma_ss_real": 8.03420546644211,
+                "configuration_index": 15
+              }
+            ],
+            "Gamma_ss_imag": -0.0018847816940799314,
+            "Gamma_ss_real": 7.983965901661982,
             "configuration_count": 16,
             "momentum_mode": [
               1,
@@ -1808,9 +2513,9 @@
               0
             ],
             "noise_subsample_stability": {
-              "C_ss_real_half_delta_over_stderr_max": 5.925751560520718,
-              "C_ss_real_noise_stderr_max": 0.00048421713495470334,
-              "C_ss_real_noise_stderr_mean": 0.0003739097464614304,
+              "C_ss_real_half_delta_over_stderr_max": 4.308567020004112,
+              "C_ss_real_noise_stderr_max": 0.0005612681616366267,
+              "C_ss_real_noise_stderr_mean": 0.000410687388828893,
               "available": true,
               "configuration_count": 16,
               "noise_vectors_per_configuration": 16
@@ -1819,7 +2524,7 @@
           }
         },
         "noise_subsample_stability": {
-          "C_ss_real_half_delta_over_stderr_max": 5.965070284395544,
+          "C_ss_real_half_delta_over_stderr_max": 4.308567020004112,
           "available": true,
           "mode_count": 4,
           "strict_limit": "Noise subsample stability is an estimator diagnostic only; it is not production evidence or scalar LSZ normalization without same-source production statistics and pole/FV/IR control."
@@ -1839,12 +2544,34 @@
   "metadata": {
     "action": "Cl3Z3_SU3_Wilson_staggered",
     "authority": "staggered_top_correlator_mass_extraction",
-    "created_utc": "2026-05-02T17:35:24Z",
+    "created_utc": "2026-05-03T15:40:26Z",
     "evidence_scope": "user-requested production targets",
+    "fh_lsz_measurement_policy": {
+      "non_selected_masses_scalar_fh_lsz_skipped": [
+        0.45,
+        1.05
+      ],
+      "normal_equation_cache": {
+        "key": "mass/source-shift value",
+        "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+        "scope": "per saved gauge configuration and smeared measurement gauge"
+      },
+      "physical_higgs_normalization": "not_derived",
+      "policy": "selected_mass_only_for_scalar_fh_lsz",
+      "scalar_source_response_selected_mass_only": true,
+      "scalar_two_point_lsz_selected_mass_only": true,
+      "selected_mass_index": 1,
+      "selected_mass_parameter": 0.75,
+      "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+      "top_correlator_mass_scan_preserved": true,
+      "used_as_physical_yukawa_readout": false
+    },
     "g_bare": 1.0,
     "phase": "production",
     "run_control": {
       "engine": "numba",
+      "fh_lsz_selected_mass_only": true,
+      "fh_lsz_selected_mass_parameter": 0.75,
       "masses": [
         0.45,
         0.75,
@@ -1853,6 +2580,7 @@
       "measurement_separation_sweeps": 20,
       "measurement_sweeps": 16,
       "momentum_modes": [],
+      "normal_equation_cache_enabled": true,
       "overrelaxation_sweeps": 4,
       "pilot_targets": false,
       "production_output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk006",
@@ -1893,7 +2621,13 @@
     "running_bridge": "production certificate must supply authoritative 4/5-loop bridge",
     "scalar_source_response": {
       "enabled": true,
+      "non_selected_masses_skipped": [
+        0.45,
+        1.05
+      ],
       "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": true,
+      "selected_mass_parameter": 0.75,
       "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
       "used_as_physical_yukawa_readout": false
     },
@@ -1901,13 +2635,44 @@
       "enabled": true,
       "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
       "noise_vectors_per_configuration": 16,
+      "non_selected_masses_skipped": [
+        0.45,
+        1.05
+      ],
       "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": true,
+      "selected_mass_parameter": 0.75,
       "used_as_physical_yukawa_readout": false
     },
     "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for production run",
+    "source_higgs_cross_correlator": {
+      "canonical_higgs_operator_realization": "absent",
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "O_H or radial canonical-Higgs observable on the same Cl3/Z3 source surface",
+        "C_sH(q)=<O_s(q) O_H(-q)> pole rows",
+        "C_HH(q)=<O_H(q) O_H(-q)> pole rows",
+        "same-ensemble C_ss/C_sH/C_HH covariance"
+      ],
+      "strict_limit": "Current harness output is C_ss/source-response only.  It must not be treated as source-Higgs Gram purity or canonical-Higgs normalization evidence.",
+      "used_as_physical_yukawa_readout": false
+    },
     "uses_composite_matrix_element_route": false,
     "uses_coupling_definition_route": false,
-    "uses_prior_ward_chain": false
+    "uses_prior_ward_chain": false,
+    "wz_mass_response": {
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "same-source W/Z correlator mass fits",
+        "fitted dM_W/ds or dM_Z/ds under the same scalar source",
+        "covariance with dE_top/ds",
+        "sector-overlap and canonical-Higgs identity certificates"
+      ],
+      "strict_limit": "This QCD top-correlator harness does not measure W/Z mass response.  Static EW algebra or absent W/Z slopes must not be used as dM_W/ds evidence.",
+      "used_as_physical_yukawa_readout": false
+    }
   },
   "ratio_check": {
     "g_s_lattice": null,

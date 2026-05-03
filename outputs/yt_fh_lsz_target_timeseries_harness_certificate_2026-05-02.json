@@ -1,32 +1,60 @@
 {
   "actual_current_surface_status": "bounded-support / FH-LSZ target time-series harness extension",
   "fail_count": 0,
-  "pass_count": 10,
+  "fh_lsz_measurement_policy": {
+    "non_selected_masses_scalar_fh_lsz_skipped": [
+      0.45,
+      1.05
+    ],
+    "normal_equation_cache": {
+      "key": "mass/source-shift value",
+      "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+      "scope": "per saved gauge configuration and smeared measurement gauge"
+    },
+    "physical_higgs_normalization": "not_derived",
+    "policy": "selected_mass_only_for_scalar_fh_lsz",
+    "scalar_source_response_selected_mass_only": true,
+    "scalar_two_point_lsz_selected_mass_only": true,
+    "selected_mass_index": 1,
+    "selected_mass_parameter": 0.75,
+    "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+    "top_correlator_mass_scan_preserved": true,
+    "used_as_physical_yukawa_readout": false
+  },
+  "pass_count": 12,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Instrumentation support is not a retained or proposed-retained closure certificate.",
   "required_next_gate": "Rerun production chunks with the extended harness, then apply target-observable autocorrelation/ESS, finite-source-linearity, scalar-pole/FV/IR/model-class, and canonical-Higgs identity gates.",
+  "rng_seed_control": {
+    "base_seed": 2026051304,
+    "gauge_rng_seed": 2028088014,
+    "numba_gauge_seeded_before_thermalization": true,
+    "scalar_rng_seed": 2028088014,
+    "seed_control_version": "numba_gauge_seed_v1",
+    "volume_rng_seed": 2028088014
+  },
   "scalar_two_point_timeseries_summary": {
     "mode_count": 2,
     "mode_summaries": {
       "0,0,0": {
-        "finite_real_gamma_rows": 3,
-        "rows": 3
+        "finite_real_gamma_rows": 2,
+        "rows": 2
       },
       "1,0,0": {
-        "finite_real_gamma_rows": 3,
-        "rows": 3
+        "finite_real_gamma_rows": 2,
+        "rows": 2
       }
     },
     "present": true,
     "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived",
-    "total_timeseries_rows": 6
+    "total_timeseries_rows": 4
   },
   "smoke_certificate": "outputs/yt_direct_lattice_correlator_target_timeseries_smoke_2026-05-02.json",
   "source_timeseries_summary": {
-    "effective_energy_rows": 3,
-    "finite_slope_rows": 3,
+    "effective_energy_rows": 2,
+    "finite_slope_rows": 2,
     "present": true,
-    "slope_rows": 3,
+    "slope_rows": 2,
     "source_radii": [
       0.01
     ],

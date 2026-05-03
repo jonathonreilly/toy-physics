@@ -26,8 +26,31 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=134 FAIL=0
+# SUMMARY: PASS=135 FAIL=0
 ```
+
+## 2026-05-03 FH/LSZ Production-Support Update
+
+The campaign now includes the selected-mass FH/LSZ and normal-cache speedup
+certificate, plus completed target-timeseries replacement checkpoints for
+chunks001 through 012.  The speedup certificate is infrastructure support
+only: it estimates 411 to 143 RHS solves per configuration (`2.874x`) and 411
+to 5 normal-equation builds (`82.2x`) for the replacement workload.
+
+The current replacement queue is empty for the ready L12 set:
+
+```text
+complete_target_timeseries_indices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+replacement_queue = []
+```
+
+The retained boundary is unchanged.  The ready set is still partial
+(`12/63`, `192/1000` saved configurations), response stability fails
+(`relative_stdev=0.9004518435028103`, `spread_ratio=5.476535332624479`,
+`relative_fit_error=9.042293381614297`), target ESS still needs a
+target-observable blocking/bootstrap certificate, and the scalar source pole
+is not identified with the canonical Higgs radial mode.  No retained or
+`proposed_retained` closure is authorized.
 
 The certificate consumes the PR-local route certificates for:
 
@@ -208,8 +231,8 @@ the visible shortcut routes:
 | effective-mass plateau residue no-go | identical finite-window effective masses can coexist with different ground/source-pole residues |
 | finite source-shift derivative no-go | one symmetric finite source radius can keep `E(-delta)`, `E(0)`, `E(+delta)`, and the finite slope fixed while changing `dE/ds|_0` |
 | finite-source-linearity gate | current chunks use one nonzero source radius; the three-radius calibration manifest is planning support only and not foreground evidence |
-| autocorrelation/ESS gate | chunk011 has target time series, but chunks001-010 do not, so target ESS is not certified for the ready set |
-| chunk011 target time series | bounded support for future ESS processing; not production evidence or Higgs identity |
+| autocorrelation/ESS gate | chunks001-012 now have target time series, but target ESS is still not certified because no target-observable blocking/bootstrap certificate exists |
+| chunk target time series | bounded support for future ESS processing; not production evidence or Higgs identity |
 | FH/LSZ target time-series harness extension | future chunks now serialize per-configuration source-response and scalar two-point target time series, but the smoke is reduced-scope infrastructure support only |
 | FH/LSZ target time-series Higgs-identity no-go | even perfect source-coordinate target statistics do not identify the source pole with the canonical Higgs radial mode |
 | no-orthogonal-top-coupling selection-rule no-go | current listed substrate/gauge charges do not allow `h tbar t` while forbidding an orthogonal neutral `chi tbar t` coupling with the same labels |
@@ -224,7 +247,8 @@ the visible shortcut routes:
 | neutral scalar commutant rank no-go | current neutral labels still admit a rank-two response family; symmetry/D17 data do not force rank one |
 | neutral scalar dynamical rank-one closure attempt | current dynamics do not remove a finite orthogonal neutral pole; source pole mass/residue can stay fixed while canonical-Higgs overlap varies |
 | orthogonal neutral decoupling no-go | finite or heavy orthogonal mass gap alone does not force source-pole purity or zero orthogonal top coupling |
-| FH/LSZ chunks009-010 processing | seed-controlled chunks001-010 are now ready (`10/63` L12 chunks, `160/1000` saved configurations), but response stability fails and target-observable ESS is not certified because these pre-extension chunks lack same-source target time series |
+| FH/LSZ chunks001-012 target-timeseries processing | seed-controlled chunks001-012 are now ready and target-timeseries complete (`12/63` L12 chunks, `192/1000` saved configurations), but response stability fails and target-observable ESS still lacks a target blocking/bootstrap certificate |
+| FH/LSZ selected-mass normal-cache speedup | selected-mass scalar FH/LSZ and normal-equation caching reduce estimated replacement RHS solves by `2.874x`; performance infrastructure only, not physics evidence |
 | reflection-positivity LSZ shortcut no-go | OS positivity gives a positive spectral measure, but reflection-positive families can preserve finite same-source shell rows while changing pole residue |
 | effective-potential Hessian source-overlap no-go | canonical VEV, W/Z masses, and scalar Hessian eigenvalues do not fix the PR #230 source operator direction |
 | scalar carrier/projector closure attempt | color-singlet support and unit taste-singlet algebra are available, but physical carrier authority, unit-projector crossing, kernel enhancement, fitted-kernel legitimacy, and `K'(pole)` remain blocked |
