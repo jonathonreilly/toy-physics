@@ -78,16 +78,19 @@ This gate applies before any reviewer can mark a branch PASS.
    `AXIOM_GOVERNANCE` and block landing. Do not repair an unapproved axiom
    change by inventing a softer label unless the user approved the new
    framing.
-3. Review-loop fixes must not introduce new theory names, status labels, claim
-   classes, lane labels, authority surfaces, review categories, or informal
-   synonyms when existing repo language covers the case. Use
-   `docs/repo/CONTROLLED_VOCABULARY.md`, `docs/audit/README.md`, and the
-   canonical audit `claim_type` set:
+3. Review-loop fixes may correct noncanonical wording to the repo's existing
+   vocabulary while landing a PR. They must not introduce new theory names,
+   status labels, claim classes, lane labels, authority surfaces, review
+   categories, or informal synonyms when existing repo language covers the
+   case. Use `docs/repo/CONTROLLED_VOCABULARY.md`,
+   `docs/audit/README.md`, and the canonical audit `claim_type` set:
    `positive_theorem`, `bounded_theorem`, `no_go`, `open_gate`,
    `decoration`, `meta`.
 4. If new vocabulary is genuinely needed, do not land it as an incidental
    review-loop fix. Require explicit user approval or record a
-   `REPO_GOVERNANCE` item in `docs/repo/ACTIVE_REVIEW_QUEUE.md`.
+   `REPO_GOVERNANCE` item in `docs/repo/ACTIVE_REVIEW_QUEUE.md`. If the issue
+   is only stale or noncanonical wording, fix it directly by mapping it to the
+   existing controlled vocabulary.
 5. PRs that introduce phrases like "new theory", "new axiom",
    "additional primitive", "framework postulate", "retained by construction",
    or new claim/status labels require explicit approval and repo-vocabulary
@@ -207,8 +210,9 @@ Rules:
 - Do not apply audit verdicts. Review only whether the branch is ready for the
   independent audit worker.
 - Do not approve unapproved axiom-set changes or invented repo vocabulary.
-  Use existing controlled vocabulary and audit claim types unless the user
-  explicitly approved the new term/change.
+  Correct stale or noncanonical language to existing controlled vocabulary and
+  audit claim types; require explicit user approval only for genuinely new
+  terms or axiom-set changes.
 ````
 
 ## Consolidate Findings

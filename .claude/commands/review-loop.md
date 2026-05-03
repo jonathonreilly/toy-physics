@@ -27,7 +27,9 @@ Run the repo-native physics review loop from:
    user explicitly approved that axiom-set change in the current task or a
    landed governance document already authorizes it. Do not introduce new
    theory names, claim classes, status labels, lane labels, or authority
-   wording when existing repo vocabulary covers the case.
+   wording when existing repo vocabulary covers the case. It is allowed, and
+   expected, to correct noncanonical wording to existing repo vocabulary as
+   part of landing a PR.
 7. Treat review as the canonical science gate: the independent audit should be
    mostly confirmatory. Block PASS when a changed claim has missing graph
    dependencies, author-prewritten audit verdicts, stale retained-status
@@ -53,8 +55,10 @@ Run the repo-native physics review loop from:
 - No new theory name, status label, claim class, lane label, authority surface,
   or review category may be invented when existing repo conventions apply.
   Use `docs/repo/CONTROLLED_VOCABULARY.md`, `docs/audit/README.md`, and the
-  current `claim_type` set; if new vocabulary is genuinely needed, require
-  explicit user approval or queue it as governance work instead of landing it.
+  current `claim_type` set. Review-loop may rewrite noncanonical wording into
+  those existing terms while landing a PR. If genuinely new vocabulary is
+  needed, require explicit user approval or queue it as governance work instead
+  of landing it.
 - Support-only results must not be promoted to retained claims.
 - Source-note `Status:` lines may not contain bare `retained` or `promoted`;
   use `proposed_retained`, `proposed_promoted`, `support`, `bounded`, or
