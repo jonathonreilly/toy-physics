@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:27:15.708454+00:00
+**Generated:** 2026-05-03T18:29:31.151202+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 80 |
+| **retained** | 81 |
 | **retained_no_go** | 103 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 734 |
+| unaudited | 733 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 321 |
+| `audited_clean` | 322 |
 | `audited_conditional` | 542 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 780 |
+| `unaudited` | 779 |
 
 | claim_type | count |
 |---|---:|
@@ -428,6 +428,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_microscopic_schur_class_admissibility_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `yt_schur_stability_gap_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `abcc_cp_phase_no_go_theorem_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `accessible_prediction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -15660,4 +15661,17 @@ Claim boundary until fixed: The exact 8/9 adjoint-channel dimension fraction may
 - **load-bearing step:** Every Z2-invariant Hermitian operator on the axis-selected hw=1 carrier has the five-real-parameter normal form M(a,b,c,d)=[[a,d,d],[d*,b,c],[d*,c,b]].  _(class `A`)_
 - **chain closes:** True — Scoped to the stated carrier and Z2 action, the result is finite-dimensional invariant Hermitian linear algebra. No physical mass hierarchy or parameter selection is needed for the theorem to close.
 - **rationale:** Issue checked: whether the residual Z2 normal form is an exact theorem rather than a mass-hierarchy claim. The load-bearing statement is a finite-dimensional Hermitian invariant-space parametrization for an explicitly given Z2 action, and the runner checks the dimension count, sign eigenvector, block reduction, closed-form spectrum, generic distinctness, and S3-locus degeneracy. The carrier/residual-subgroup identification is part of the scoped theorem, not an independently derived physical hierarchy.
+- **auditor confidence:** high
+
+### `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`Z3_CONJUGATE_SUPPORT_TRICHOTOMY_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/Z3_CONJUGATE_SUPPORT_TRICHOTOMY_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone finite Z_3 character-arithmetic theorem: for any permutation q_L of Z_3 with pointwise conjugate q_R=-q_L mod 3, the supports of q_L_i + q_H + q_R_j ≡ 0 mod 3 are permutation patterns that partition the 3x3 grid over q_H and realize the diagonal/forward/backward cyclic patterns.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-current-fresh-context-2026-05-03-z3-conjugate-support`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Since q_R is a permutation of Z_3, there is exactly one column j solving q_R_j ≡ -(q_L_i + q_H) mod 3 for each row i, and the same bijectivity gives exactly one entry per column.  _(class `A`)_
+- **chain closes:** True — The proof closes as elementary finite-group arithmetic: bijectivity of q_L and q_R gives one solution per row and column, and varying q_H gives a unique support label for every grid cell. With q_R_i=-q_L_i pointwise, q_H=0 is the diagonal and the two remaining disjoint perfect matchings are the two 3-cycles.
+- **rationale:** The claim is narrowly scoped to abstract Z_3 arithmetic and explicitly excludes physical charge assignments, Higgs assumptions, numerical comparators, and parent-note physics. There are no ledger dependencies, so no retained-chain or open-gate premise is imported. The runner exhaustively checks the framework instance, the permutation-pattern property, disjoint cover, failure of the non-distinct hypothesis, and all six q_L permutations, with PASS=13 and FAIL=0.
 - **auditor confidence:** high
