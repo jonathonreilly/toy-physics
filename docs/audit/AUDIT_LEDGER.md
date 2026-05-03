@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:42:56.754140+00:00
+**Generated:** 2026-05-03T17:52:37.496618+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 759 |
+| unaudited | 758 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 529 |
+| ~~audited_conditional~~ | 530 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 529 |
+| `audited_conditional` | 530 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 805 |
+| `unaudited` | 804 |
 
 | claim_type | count |
 |---|---:|
@@ -777,6 +777,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_inertial_response_readiness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
@@ -9813,6 +9814,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The transfer runner reproduces the six-case finite sweep, but the retained-readout conclusion depends on a scan-selected blend, chosen gates, fixed per-case field calibration, and an unratified detector/readout-to-inertial-response interpretation.
 - **rationale:** Issue: the note elevates the scan-selected blend=0.25 readout and top3 compact object to a retained local transfer architecture after a finite nearby-family sweep. Why this blocks: the live runners reproduce the table, but they do not derive the readout blend, source kernel, field-max calibration, top3 object selection, or overlap/alpha/drift gates from retained primitives, and they do not establish a persistent inertial-mass or matter-closure observable. Repair target: provide a theorem or registered computation deriving the readout architecture and admissibility gates independently of the pass/fail scan, plus a persistence/inertial-response bridge that makes the detector shift a retained physical observable rather than a local diagnostic. Claim boundary until fixed: it is safe to claim that, in the frozen exact-lattice setup with h=0.25, Green-like source kernel, field max 0.02, three updates, and blend=0.25, top3 passes all six tested nearby cases while top2 passes only 1/6; this is a bounded local compact-object response transfer regime, not retained matter or inertial-mass closure.
 - **auditor confidence:** high
+
+### `persistent_object_compact_inertial_probe_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_COMPACT_INERTIAL_PROBE_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded compact-object response claim that top3 carries a weak-field-stable response across the four listed nearby exact-lattice cases if readout choice may vary between broad and adaptive; no readout-invariant or persistent inertial-mass closure is claimed.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-restricted-audit-2026-05-03`  (codex-current; independence=weak)
+- **load-bearing step:** For top3, broad readout passes 3/4 cases and adaptive readout passes 3/4 cases with complementary misses, so every tested nearby case has at least one retained readout architecture that passes the frozen weak-field response gates.  _(class `C`)_
+- **chain closes:** False — The note states a bounded computational result, but the primary runner did not produce stdout within a 120 second audit timeout and the note's full conclusion depends on per-case readout switching rather than a retained selection rule. Without current executable output or a derived readout-choice law, the response-lane claim remains conditional.
+- **rationale:** Issue: the load-bearing table could not be reproduced by the registered runner during audit, and the strongest claim uses whichever of two retained readouts passes each case without deriving a family-invariant readout selection rule. Why this blocks: a hostile reviewer cannot verify the current numerics from the allowed packet and can reject the bridge from complementary readout successes to a single compact-object response law. Repair target: make the runner emit timely PASS/FAIL checks for the four-case table, or register the log as a checkable artifact, and add a retained rule selecting the readout per case if the claim is meant to exceed a conditional best-readout envelope. Claim boundary until fixed: the note may be treated as a conditional computational report that the compact source family appears to carry weak-field response under at least one of two tested readouts per case, not as clean readout-invariant inertial response.
+- **auditor confidence:** medium
 
 ### `persistent_object_compact_update_note`
 
