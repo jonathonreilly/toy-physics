@@ -10913,6 +10913,18 @@
       "to": "cl3_color_automorphism_theorem"
     },
     {
+      "from": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+    },
+    {
+      "from": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
+      "from": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
+      "to": "su3_cube_perron_solve_combined_theorem_note_2026-05-03"
+    },
+    {
       "from": "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
       "to": "su3_fusion_engine_pr1_theorem_note_2026-05-03"
     },
@@ -23233,7 +23245,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T22:32:19.185462+00:00",
+  "generated_at": "2026-05-03T22:39:19.433440+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -46217,6 +46229,21 @@
       "runner_path": "scripts/su3_casimir_fundamental_check.py",
       "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3"
     },
+    "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03": {
+      "claim_id": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+        "su3_cube_perron_solve_combined_theorem_note_2026-05-03"
+      ],
+      "note_hash": "29fb15873772e8d2715df6801c950b9b11e435d3bc724b520b35b4fc81bccba7",
+      "path": "docs/SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_cube_index_graph_shortcut_open_gate.py",
+      "title": "SU(3) L_s=2 Cube Index-Graph Shortcut Open Gate"
+    },
     "su3_cube_perron_solve_combined_theorem_note_2026-05-03": {
       "claim_id": "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
       "claim_type_author_hint": "bounded_theorem",
@@ -51481,7 +51508,7 @@
       "meta": 8,
       "no_go": 6,
       "none": 1727,
-      "open_gate": 6,
+      "open_gate": 7,
       "positive_theorem": 71
     },
     "claim_type_seed_hint_counts": {
@@ -51489,13 +51516,13 @@
       "meta": 8,
       "no_go": 112,
       "none": 454,
-      "open_gate": 113,
+      "open_gate": 114,
       "positive_theorem": 629
     },
-    "edge_count": 5808,
+    "edge_count": 5811,
     "leaf_count": 599,
-    "node_count": 1869,
+    "node_count": 1870,
     "root_count": 1056,
-    "runners_with_path": 1429
+    "runners_with_path": 1430
   }
 }
