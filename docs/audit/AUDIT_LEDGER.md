@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:26:12.254500+00:00
+**Generated:** 2026-05-03T13:27:44.737632+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 736 |
+| unaudited | 734 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 519 |
+| ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 346 |
-| `audited_conditional` | 519 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 778 |
+| `unaudited` | 776 |
 
 | claim_type | count |
 |---|---:|
@@ -661,6 +661,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6184,6 +6186,32 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The explicit witness pair satisfies the scoped hypotheses and has exact delta beta_eff(6)=0.0046656 with positive delta P, so the stated inputs cannot force a unique framework-point value.
 - **rationale:** Clean as a scoped no-go obstruction, not as analytic closure of canonical P(6). The runner confirms 5 theorem checks and 2 support checks with no failures; the load-bearing step is algebraic counterexample construction rather than support-class propagation. The safe conclusion is that the current onset jet plus analyticity/monotonicity does not force beta_eff(6) or analytic P(6).
 - **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Obstruction that an exact finite-order polynomial/Taylor truncation of the diagonal connected Wilson plaquette hierarchy cannot close the remaining plaquette problem; analytic nonpolynomial closure remains open.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-f161`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** If the full diagonal connected hierarchy truncated at finite order, then K_L(t) would be a polynomial and therefore P_L(t)=K_L'(t)/N_plaq would also be a polynomial; with P_L(0)=0 and lim_(t->infinity) P_L(t)=1 this contradicts constancy of any polynomial with finite limit.  _(class `A`)_
+- **chain closes:** False — The algebraic polynomial-obstruction step is valid conditional on the endpoint facts, but the restricted packet does not derive the finite-Wilson premises P_L(0)=0 and P_L(t)->1 with the required normalization. The runner marks the finite-Wilson theorem step as true rather than proving or independently computing that compact-Laplace concentration premise.
+- **rationale:** Issue: the note's contradiction depends on endpoint/asymptotic Wilson-surface facts, especially P_L(t)->1 by compact Laplace concentration on the maximum-action gauge orbit, but those facts are asserted rather than derived in the source packet. Why this blocks: without that finite-Wilson concentration theorem and normalization bridge, the polynomial argument proves only a conditional obstruction. Repair target: add a self-contained finite-lattice proof, or a retained dependency, deriving P_L(0)=0 and lim_(t->infinity) P_L(t)=1 for the exact Wilson source surface, with a runner that checks something stronger than condition=True for the contested step. Claim boundary until fixed: the note may safely state the algebraic conditional: if the diagonal generator has those endpoint properties, exact finite Taylor truncation is impossible.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** After trivial-channel normalization, the Wilson mixed-kernel compression on the marked-plaquette character sector equals the four marked-link factor a_(p,q)(beta)^4, excluding residual source-sector environment data and P(6) closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-agent-20260503-gvplftn`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** After the temporal-gauge mixed-kernel factorization and accepted Wilson 3+1 marked-plaquette source surface are granted, trivial-channel normalization makes the mixed-kernel compression on the marked plaquette character sector D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q).  _(class `A`)_
+- **chain closes:** False — The internal representation-theoretic algebra closes only after the mixed-kernel factorization and marked-surface geometry are assumed. The restricted packet does not prove those premises, so the theorem remains conditional.
+- **rationale:** Issue: the note's algebraic factorization depends on asserted inputs that are not proved inside the restricted packet, especially exact temporal-gauge mixed-kernel factorization over spatial links and the accepted Wilson 3+1 source surface with exactly four marked mixed links. Why this blocks: the bounded conclusion follows only after those operator/surface premises are granted, and the runner constructs diag(a_link^4) and c00/c00 rather than deriving the mixed-kernel compression from the underlying link operator. Repair target: supply retained one-hop theorem inputs or an expanded proof/runner that constructs the mixed kernel on the marked plaquette sector and verifies non-marked-link scalar collapse without hard-coding the contested compression. Claim boundary until fixed: conditional on the accepted source-surface and link-factorization premises, the local algebra supports the normalized a_(p,q)^4 factor and does not address residual environment data or P(6).
+- **auditor confidence:** medium
 
 ### `gauge_vacuum_plaquette_mixed_cumulant_audit_note`
 
