@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T13:26:45.177543+00:00
+**Generated:** 2026-05-03T13:48:06.924717+00:00
 **Total pending:** 767
-**Ready (all deps already at retained-grade or metadata tiers):** 107
+**Ready (all deps already at retained-grade or metadata tiers):** 109
 
 By criticality:
-- `critical`: 59
-- `high`: 224
-- `medium`: 275
-- `leaf`: 209
+- `critical`: 58
+- `high`: 222
+- `medium`: 277
+- `leaf`: 210
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -21,7 +21,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 3 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 267 | 10.57 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
 | 4 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | claim_type_backfill_reaudit | critical | 267 | 10.57 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
 | 5 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | unaudited | critical | 71 | 13.67 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
-| 6 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 64 | 14.02 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 6 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 61 | 13.95 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 7 | `cl3_color_automorphism_theorem` | positive_theorem | unaudited | critical | 52 | 13.73 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/verify_cl3_sm_embedding.py` |
 | 8 | `cpt_exact_note` | positive_theorem | unaudited | critical | 291 | 17.19 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 9 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 291 | 11.19 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |

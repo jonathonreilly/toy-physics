@@ -7,7 +7,7 @@
     "open_gate": 88,
     "positive_theorem": 890
   },
-  "computed_at": "2026-05-03T13:26:44.999600+00:00",
+  "computed_at": "2026-05-03T13:48:06.841995+00:00",
   "cycle_examples": [
     [
       "restricted_strong_field_closure_note",
@@ -36,9 +36,9 @@
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
     ]
   ],
-  "cycles_detected": 105,
+  "cycles_detected": 91,
   "effective_status_counts": {
-    "audited_conditional": 521,
+    "audited_conditional": 520,
     "audited_decoration": 3,
     "audited_failed": 8,
     "audited_numerical_match": 25,
@@ -52,7 +52,7 @@
     "retained_bounded": 169,
     "retained_no_go": 102,
     "retained_pending_chain": 2,
-    "unaudited": 733
+    "unaudited": 734
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

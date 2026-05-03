@@ -1,5 +1,5 @@
 {
-  "cycle_count": 106,
+  "cycle_count": 92,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -254,7 +254,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -263,7 +263,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -272,7 +272,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -291,7 +291,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -300,7 +300,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -309,7 +309,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -332,7 +332,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -341,7 +341,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -350,7 +350,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -359,7 +359,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -382,7 +382,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -391,7 +391,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -400,7 +400,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -409,7 +409,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B Grown-Geometry Joint Package Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -432,7 +432,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -441,7 +441,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -450,7 +450,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -459,7 +459,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_FARFIELD_NOTE.md",
           "title": "Gate B h=0.25 Far-Field Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -482,7 +482,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -491,7 +491,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -500,7 +500,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -509,7 +509,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B h=0.25 Joint Package Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -536,7 +536,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -545,7 +545,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -554,7 +554,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -563,7 +563,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -572,7 +572,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B Grown-Geometry Joint Package Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -599,7 +599,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -608,7 +608,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -617,7 +617,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -626,7 +626,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -635,7 +635,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_DISTANCE_LAW_NOTE.md",
           "title": "Gate B h=0.25 Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -662,7 +662,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -671,7 +671,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -680,7 +680,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -689,7 +689,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -698,7 +698,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_FARFIELD_NOTE.md",
           "title": "Gate B h=0.25 Far-Field Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -725,7 +725,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -734,7 +734,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -743,7 +743,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -752,7 +752,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -761,7 +761,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B h=0.25 Joint Package Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -788,7 +788,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -797,7 +797,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -806,7 +806,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -815,7 +815,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -824,7 +824,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
           "title": "Gate B Non-Label Connectivity V2 Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -851,7 +851,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -860,7 +860,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -869,7 +869,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -878,7 +878,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -887,7 +887,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -914,7 +914,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -923,7 +923,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -932,7 +932,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -941,7 +941,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -950,7 +950,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
           "title": "Gate B No-Restore Far-Field Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -977,7 +977,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -986,7 +986,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -995,7 +995,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1004,7 +1004,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1013,7 +1013,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -1044,7 +1044,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1053,7 +1053,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1062,7 +1062,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1071,7 +1071,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1080,7 +1080,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1089,7 +1089,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
           "title": "Gate B No-Restore Far-Field Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -1120,7 +1120,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1129,7 +1129,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1138,7 +1138,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1147,7 +1147,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1156,7 +1156,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1165,7 +1165,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
           "title": "Gate B Non-Label Connectivity V2 Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -1196,7 +1196,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 82,
+      "max_transitive_descendants": 80,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1205,7 +1205,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1214,7 +1214,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1223,7 +1223,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1232,7 +1232,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         },
         {
           "audit_status": "unaudited",
@@ -1241,7 +1241,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 82
+          "transitive_descendants": 80
         }
       ],
       "requires_lemma_extraction": false
@@ -1288,43 +1288,6 @@
       "decision": null,
       "edges": [
         {
-          "from": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
-          "to": "n_eff_from_three_generations_theorem_note_2026-04-24"
-        },
-        {
-          "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
-          "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 49,
-      "nodes": [
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-          "title": "Matter-Radiation Equality Structural Identity Theorem",
-          "transitive_descendants": 49
-        },
-        {
-          "audit_status": "audited_conditional",
-          "claim_id": "n_eff_from_three_generations_theorem_note_2026-04-24",
-          "claim_type": "positive_theorem",
-          "effective_status": "audited_conditional",
-          "note_path": "docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md",
-          "title": "N_eff From Retained Three Generations",
-          "transitive_descendants": 49
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0024",
-      "decision": null,
-      "edges": [
-        {
           "from": "evanescent_barrier_amplitude_suppression_theorem_note",
           "to": "gw_echo_null_result_note"
         },
@@ -1358,7 +1321,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1395,44 +1358,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
-      "decision": null,
-      "edges": [
-        {
-          "from": "quark_up_amplitude_tensor_endpoint_bridge_note_2026-04-19",
-          "to": "quark_up_amplitude_tensor_endpoint_resolution_note_2026-04-19"
-        },
-        {
-          "from": "quark_up_amplitude_tensor_endpoint_resolution_note_2026-04-19",
-          "to": "quark_up_amplitude_tensor_endpoint_bridge_note_2026-04-19"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 46,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "quark_up_amplitude_tensor_endpoint_bridge_note_2026-04-19",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_BRIDGE_NOTE_2026-04-19.md",
-          "title": "Quark Up-Amplitude Tensor-Endpoint Bridge",
-          "transitive_descendants": 46
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "quark_up_amplitude_tensor_endpoint_resolution_note_2026-04-19",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_RESOLUTION_NOTE_2026-04-19.md",
-          "title": "Quark Up-Amplitude Tensor-Endpoint Resolution",
-          "transitive_descendants": 46
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1469,7 +1395,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1506,44 +1432,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
-      "decision": null,
-      "edges": [
-        {
-          "from": "lensing_adjoint_kernel_note",
-          "to": "lensing_beta_sweep_note"
-        },
-        {
-          "from": "lensing_beta_sweep_note",
-          "to": "lensing_adjoint_kernel_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 44,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "lensing_adjoint_kernel_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/LENSING_ADJOINT_KERNEL_NOTE.md",
-          "title": "Lensing Adjoint Kernel Probe \u2014 Why The Slope Is Not A Ray-Deflection Law",
-          "transitive_descendants": 44
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "lensing_beta_sweep_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/LENSING_BETA_SWEEP_NOTE.md",
-          "title": null,
-          "transitive_descendants": 44
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1580,7 +1469,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1617,7 +1506,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1654,7 +1543,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -1691,7 +1580,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -1728,7 +1617,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -1765,7 +1654,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -1802,7 +1691,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -1852,7 +1741,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -1902,7 +1791,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -1952,7 +1841,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -2002,7 +1891,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -2052,7 +1941,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -2115,7 +2004,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -2178,7 +2067,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -2241,7 +2130,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -2304,7 +2193,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -2367,7 +2256,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -2443,7 +2332,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -2519,7 +2408,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -2595,7 +2484,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -2684,7 +2573,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -2786,81 +2675,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0052",
-      "decision": null,
-      "edges": [
-        {
-          "from": "composite_source_additivity_note",
-          "to": "composite_source_additivity_2d_note"
-        },
-        {
-          "from": "composite_source_additivity_2d_note",
-          "to": "composite_source_additivity_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 29,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "composite_source_additivity_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
-          "title": "Composite-Source Additivity Note",
-          "transitive_descendants": 29
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "composite_source_additivity_2d_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md",
-          "title": "Composite-Source Additivity Cross-Family Note",
-          "transitive_descendants": 29
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0053",
-      "decision": null,
-      "edges": [
-        {
-          "from": "newton_derivation_note",
-          "to": "composite_source_additivity_note"
-        },
-        {
-          "from": "composite_source_additivity_note",
-          "to": "newton_derivation_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 29,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "newton_derivation_note",
-          "claim_type": "open_gate",
-          "effective_status": "unaudited",
-          "note_path": "docs/NEWTON_DERIVATION_NOTE.md",
-          "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)",
-          "transitive_descendants": 29
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "composite_source_additivity_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
-          "title": "Composite-Source Additivity Note",
-          "transitive_descendants": 29
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -2897,7 +2712,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -2934,7 +2749,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -2971,7 +2786,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -3008,7 +2823,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -3045,7 +2860,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0054",
       "decision": null,
       "edges": [
         {
@@ -3082,7 +2897,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0055",
       "decision": null,
       "edges": [
         {
@@ -3119,7 +2934,57 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0056",
+      "decision": null,
+      "edges": [
+        {
+          "from": "newton_derivation_note",
+          "to": "composite_source_additivity_2d_note"
+        },
+        {
+          "from": "composite_source_additivity_2d_note",
+          "to": "composite_source_additivity_note"
+        },
+        {
+          "from": "composite_source_additivity_note",
+          "to": "newton_derivation_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 27,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "newton_derivation_note",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/NEWTON_DERIVATION_NOTE.md",
+          "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "composite_source_additivity_2d_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md",
+          "title": "Composite-Source Additivity Cross-Family Note",
+          "transitive_descendants": 27
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "composite_source_additivity_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
+          "title": "Composite-Source Additivity Note",
+          "transitive_descendants": 27
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0057",
       "decision": null,
       "edges": [
         {
@@ -3169,7 +3034,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -3232,7 +3097,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0059",
       "decision": null,
       "edges": [
         {
@@ -3308,44 +3173,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
-      "decision": null,
-      "edges": [
-        {
-          "from": "growing_graph_frontier_architecture_transfer_note",
-          "to": "growing_graph_dynamic_limit_diagnostic_note"
-        },
-        {
-          "from": "growing_graph_dynamic_limit_diagnostic_note",
-          "to": "growing_graph_frontier_architecture_transfer_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 24,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "growing_graph_frontier_architecture_transfer_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md",
-          "title": "Growing Graph Frontier Architecture Transfer Note",
-          "transitive_descendants": 24
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "growing_graph_dynamic_limit_diagnostic_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md",
-          "title": "Growing Graph Dynamic Limit Diagnostic Note",
-          "transitive_descendants": 24
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0060",
       "decision": null,
       "edges": [
         {
@@ -3382,7 +3210,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0061",
       "decision": null,
       "edges": [
         {
@@ -3419,7 +3247,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0062",
       "decision": null,
       "edges": [
         {
@@ -3456,7 +3284,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0063",
       "decision": null,
       "edges": [
         {
@@ -3493,7 +3321,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0064",
       "decision": null,
       "edges": [
         {
@@ -3530,7 +3358,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0065",
       "decision": null,
       "edges": [
         {
@@ -3580,7 +3408,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0066",
       "decision": null,
       "edges": [
         {
@@ -3630,7 +3458,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0072",
+      "cycle_id": "cycle-0067",
       "decision": null,
       "edges": [
         {
@@ -3680,7 +3508,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0073",
+      "cycle_id": "cycle-0068",
       "decision": null,
       "edges": [
         {
@@ -3743,7 +3571,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0074",
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -3774,6 +3602,230 @@
           "effective_status": "unaudited",
           "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
           "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0070",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0071",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
+        },
+        {
+          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
+          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0072",
+      "decision": null,
+      "edges": [
+        {
+          "from": "antigravity_sign_selector_boundary_note",
+          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
+        },
+        {
+          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "to": "signed_gravity_response_backlog_2026-04-25"
+        },
+        {
+          "from": "signed_gravity_response_backlog_2026-04-25",
+          "to": "antigravity_sign_selector_boundary_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "antigravity_sign_selector_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
+          "title": "Signed Gravitational Response Selector Boundary Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
+          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
+          "title": "Signed Gravitational Response Lane Backlog",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0073",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_aps_locked_axiom_extension_note",
+          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
+        },
+        {
+          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
+        },
+        {
+          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "to": "signed_gravity_aps_locked_axiom_extension_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
+          "title": "Signed Gravity APS-Locked Axiom Extension Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
+          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
+          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
+          "transitive_descendants": 17
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0074",
+      "decision": null,
+      "edges": [
+        {
+          "from": "signed_gravity_aps_locked_source_action_proposal_note",
+          "to": "signed_gravity_aps_locked_axiom_extension_note"
+        },
+        {
+          "from": "signed_gravity_aps_locked_axiom_extension_note",
+          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
+        },
+        {
+          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "to": "signed_gravity_aps_locked_source_action_proposal_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 17,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
+          "title": "Signed Gravity APS-Locked Source Action Proposal",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
+          "title": "Signed Gravity APS-Locked Axiom Extension Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
+          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
           "transitive_descendants": 17
         }
       ],
@@ -3781,365 +3833,6 @@
     },
     {
       "cycle_id": "cycle-0075",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
-        },
-        {
-          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
-          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
-          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0076",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_aps_boundary_index_chi_probe_note",
-          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
-        },
-        {
-          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-          "to": "signed_gravity_aps_boundary_index_chi_probe_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_boundary_index_chi_probe_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
-          "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
-          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0077",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_aps_locked_axiom_extension_note",
-          "to": "signed_gravity_source_line_origin_tensor_lift_note"
-        },
-        {
-          "from": "signed_gravity_source_line_origin_tensor_lift_note",
-          "to": "signed_gravity_aps_locked_axiom_extension_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
-          "title": "Signed Gravity APS-Locked Axiom Extension Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_source_line_origin_tensor_lift_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md",
-          "title": "Signed Gravity Source-Line Origin / Partial Tensor-Lift Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0078",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_aps_locked_source_action_proposal_note",
-          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
-        },
-        {
-          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "to": "signed_gravity_aps_locked_source_action_proposal_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
-          "title": "Signed Gravity APS-Locked Source Action Proposal",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
-          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0079",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-          "to": "signed_gravity_aps_locked_source_action_proposal_note"
-        },
-        {
-          "from": "signed_gravity_aps_locked_source_action_proposal_note",
-          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
-          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
-          "title": "Signed Gravity APS-Locked Source Action Proposal",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0080",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "to": "signed_gravity_response_backlog_2026-04-25"
-        },
-        {
-          "from": "signed_gravity_response_backlog_2026-04-25",
-          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
-          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
-          "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0081",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "to": "signed_gravity_aps_locked_axiom_extension_note"
-        },
-        {
-          "from": "signed_gravity_aps_locked_axiom_extension_note",
-          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
-          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
-          "title": "Signed Gravity APS-Locked Axiom Extension Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0082",
-      "decision": null,
-      "edges": [
-        {
-          "from": "antigravity_sign_selector_boundary_note",
-          "to": "signed_gravity_chi_selector_theorem_or_nogo_note"
-        },
-        {
-          "from": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "to": "signed_gravity_response_backlog_2026-04-25"
-        },
-        {
-          "from": "signed_gravity_response_backlog_2026-04-25",
-          "to": "antigravity_sign_selector_boundary_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "antigravity_sign_selector_boundary_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/ANTIGRAVITY_SIGN_SELECTOR_BOUNDARY_NOTE.md",
-          "title": "Signed Gravitational Response Selector Boundary Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_chi_selector_theorem_or_nogo_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md",
-          "title": "Signed Gravity `chi_g` Selector Theorem / No-Go Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_response_backlog_2026-04-25",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
-          "title": "Signed Gravitational Response Lane Backlog",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0083",
-      "decision": null,
-      "edges": [
-        {
-          "from": "signed_gravity_aps_locked_source_action_proposal_note",
-          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
-        },
-        {
-          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
-        },
-        {
-          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "to": "signed_gravity_aps_locked_source_action_proposal_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
-          "title": "Signed Gravity APS-Locked Source Action Proposal",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
-          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
-          "claim_type": "no_go",
-          "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
-          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -4189,7 +3882,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -4239,7 +3932,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -4289,7 +3982,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -4339,7 +4032,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -4389,94 +4082,133 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
-          "from": "signed_gravity_response_backlog_2026-04-25",
-          "to": "signed_gravity_aps_boundary_index_chi_probe_note"
+          "from": "signed_gravity_aps_locked_axiom_extension_note",
+          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
         },
         {
-          "from": "signed_gravity_aps_boundary_index_chi_probe_note",
-          "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
+          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
         },
         {
-          "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-          "to": "signed_gravity_response_backlog_2026-04-25"
+          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "to": "signed_gravity_source_line_origin_tensor_lift_note"
+        },
+        {
+          "from": "signed_gravity_source_line_origin_tensor_lift_note",
+          "to": "signed_gravity_aps_locked_axiom_extension_note"
         }
       ],
-      "length": 3,
+      "length": 4,
       "max_transitive_descendants": 17,
       "nodes": [
         {
           "audit_status": "unaudited",
-          "claim_id": "signed_gravity_response_backlog_2026-04-25",
+          "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
-          "title": "Signed Gravitational Response Lane Backlog",
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
+          "title": "Signed Gravity APS-Locked Axiom Extension Note",
           "transitive_descendants": 17
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_boundary_index_chi_probe_note",
-          "claim_type": "positive_theorem",
+          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "claim_type": "no_go",
           "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
-          "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note",
+          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
+          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
           "transitive_descendants": 17
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "signed_gravity_aps_wald_gauss_bridge_audit_note",
+          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
-          "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note",
+          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
+          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_source_line_origin_tensor_lift_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md",
+          "title": "Signed Gravity Source-Line Origin / Partial Tensor-Lift Note",
           "transitive_descendants": 17
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+          "from": "signed_gravity_aps_locked_source_action_proposal_note",
+          "to": "signed_gravity_aps_locked_axiom_extension_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+          "from": "signed_gravity_aps_locked_axiom_extension_note",
+          "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
+        },
+        {
+          "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "to": "signed_gravity_aps_action_origin_superselection_stability_note"
+        },
+        {
+          "from": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "to": "signed_gravity_aps_locked_source_action_proposal_note"
         }
       ],
-      "length": 2,
-      "max_transitive_descendants": 14,
+      "length": 4,
+      "max_transitive_descendants": 17,
       "nodes": [
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "claim_id": "signed_gravity_aps_locked_source_action_proposal_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 14
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
+          "title": "Signed Gravity APS-Locked Source Action Proposal",
+          "transitive_descendants": 17
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "claim_id": "signed_gravity_aps_locked_axiom_extension_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 14
+          "note_path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
+          "title": "Signed Gravity APS-Locked Axiom Extension Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_retained_boundary_source_principle_no_go_note",
+          "claim_type": "no_go",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
+          "title": "Signed Gravity Retained Boundary Source-Principle No-Go",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "signed_gravity_aps_action_origin_superselection_stability_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
+          "title": "Signed Gravity APS Action Origin / Superselection / Stability Note",
+          "transitive_descendants": 17
         }
       ],
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -4513,7 +4245,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -4550,7 +4282,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -4587,7 +4319,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -4637,7 +4369,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -4674,44 +4406,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0096",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_seed_band_diagnosis_note",
-          "to": "wave_direct_dm_portability_batch_note"
-        },
-        {
-          "from": "wave_direct_dm_portability_batch_note",
-          "to": "wave_direct_dm_seed_band_diagnosis_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 9,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_seed_band_diagnosis_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md",
-          "title": "Wave Direct-dM Seed-Band Diagnosis",
-          "transitive_descendants": 9
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_portability_batch_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
-          "title": "Wave Direct-dM Portability Batch",
-          "transitive_descendants": 9
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -4748,7 +4443,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0088",
       "decision": null,
       "edges": [
         {
@@ -4785,7 +4480,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0089",
       "decision": null,
       "edges": [
         {
@@ -4822,7 +4517,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0100",
+      "cycle_id": "cycle-0090",
       "decision": null,
       "edges": [
         {
@@ -4872,168 +4567,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0101",
-      "decision": null,
-      "edges": [
-        {
-          "from": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "to": "directional_b_geometry_normalized_holdout_transfer_note"
-        },
-        {
-          "from": "directional_b_geometry_normalized_holdout_transfer_note",
-          "to": "directional_b_geometry_normalized_holdout_transfer_mass5_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 3,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Holdout Transfer Mass5 Note",
-          "transitive_descendants": 3
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_holdout_transfer_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Holdout Transfer Note",
-          "transitive_descendants": 3
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0102",
-      "decision": null,
-      "edges": [
-        {
-          "from": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "to": "directional_b_geometry_normalized_overlap_map_note"
-        },
-        {
-          "from": "directional_b_geometry_normalized_overlap_map_note",
-          "to": "directional_b_geometry_normalized_holdout_transfer_mass5_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 3,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Holdout Transfer Mass5 Note",
-          "transitive_descendants": 3
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_overlap_map_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Overlap Map Note",
-          "transitive_descendants": 3
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0103",
-      "decision": null,
-      "edges": [
-        {
-          "from": "directional_b_geometry_normalized_overlap_map_note",
-          "to": "directional_b_geometry_normalized_overlap_subcritical_n12_note"
-        },
-        {
-          "from": "directional_b_geometry_normalized_overlap_subcritical_n12_note",
-          "to": "directional_b_geometry_normalized_overlap_map_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 3,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_overlap_map_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Overlap Map Note",
-          "transitive_descendants": 3
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_overlap_subcritical_n12_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note",
-          "transitive_descendants": 3
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0104",
-      "decision": null,
-      "edges": [
-        {
-          "from": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "to": "directional_b_geometry_normalized_overlap_map_note"
-        },
-        {
-          "from": "directional_b_geometry_normalized_overlap_map_note",
-          "to": "directional_b_geometry_normalized_overlap_subcritical_n12_note"
-        },
-        {
-          "from": "directional_b_geometry_normalized_overlap_subcritical_n12_note",
-          "to": "directional_b_geometry_normalized_holdout_transfer_mass5_note"
-        }
-      ],
-      "length": 3,
-      "max_transitive_descendants": 3,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Holdout Transfer Mass5 Note",
-          "transitive_descendants": 3
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_overlap_map_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Overlap Map Note",
-          "transitive_descendants": 3
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "directional_b_geometry_normalized_overlap_subcritical_n12_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md",
-          "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note",
-          "transitive_descendants": 3
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0105",
+      "cycle_id": "cycle-0091",
       "decision": null,
       "edges": [
         {
@@ -5070,7 +4604,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0106",
+      "cycle_id": "cycle-0092",
       "decision": null,
       "edges": [
         {
@@ -5107,11 +4641,11 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T13:26:45.094417+00:00",
+  "generated_at": "2026-05-03T13:48:06.885092+00:00",
   "length_counts": {
-    "2": 56,
+    "2": 40,
     "3": 25,
-    "4": 15,
+    "4": 17,
     "5": 7,
     "6": 1,
     "7": 1,
@@ -5122,5 +4656,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T13:26:38.518020+00:00"
+  "source_graph_generated_at": "2026-05-03T13:48:03.961672+00:00"
 }
