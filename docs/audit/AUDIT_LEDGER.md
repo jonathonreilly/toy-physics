@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:32:20.766858+00:00
+**Generated:** 2026-05-03T01:34:58.906453+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 213 |
+| **retained_bounded** | 214 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 473 |
+| unaudited | 472 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 424 |
+| `audited_clean` | 425 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 513 |
+| `unaudited` | 512 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 545 |
+| `bounded_theorem` | 546 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 88 |
+| `open_gate` | 87 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -489,6 +489,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_microscopic_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_native_transport_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_no_signaling_audit` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | B | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -16969,6 +16970,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The note's load-bearing step is that adding causal-positive minimal action, least-dwell carrier selection, a fixed signed sparse finite-size resource branch, and independent pulse/detector noise models is enough to pass the listed teleportation nature-grade gates for ordinary state-only teleportation.  _(class `C`)_
 - **chain closes:** False — The runner checks internal consequences of explicit added principles and chosen finite model settings, but the principles are not derived from the original framework, the sparse resource evidence is finite rather than asymptotic or preparational, and the pulse/detector robustness models are independent-error proxies rather than physical hardware or continuum thermodynamic constructions.
 - **rationale:** Issue: The asserted gate passage depends on added causal-positive minimal-action and least-dwell selection principles, a fixed signed G=-1000 finite side=4,6,8 resource window, and independent-error apparatus models. Why this blocks: These ingredients are introduced as premises or bounded probes rather than derived physical consequences, so the runner hard-codes the contested bridge and verifies consistency after the fact. Repair target: Derive the selection principles from retained axioms or promote them explicitly as defended physical postulates, prove an asymptotic/preparation theorem for the signed sparse branch, and replace independent-error pulse/detector proxies with a fabricated controller/material-medium model or a theorem bounding the omitted correlations. Claim boundary until fixed: It may be cited as an open-gate planning bundle showing conditional numerical/model evidence for state-only teleportation gates under the stated added assumptions, not as retained theorem closure.
+- **auditor confidence:** high
+
+### `teleportation_no_signaling_audit`
+
+- **Note:** [`TELEPORTATION_NO_SIGNALING_AUDIT.md`](../../docs/TELEPORTATION_NO_SIGNALING_AUDIT.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** No-signaling for the ideal encoded taste-qubit teleportation protocol only: before receipt of Alice's two classical Bell bits, Bob's local reduced state is independent of Alice's unknown input state.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-James-the-2nd-019deb78-27fb-70c0-97f4-c96ffdddd24f`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** For the ideal three-register encoded taste-qubit protocol |psi>_A tensor |Phi+>_RB with Alice Bell measurement on A,R, Bob's reduced state is I/2 before measurement and remains sum_zx p_zx rho_B|zx = I/2 after Alice's measurement when the Bell outcome record is inaccessible.  _(class `B`)_
+- **chain closes:** True — The scoped claim closes as finite-dimensional teleportation algebra over the explicitly constructed encoded qubit, Bell projectors, partial trace, outcome averaging, and positive-latency classical record. The runner numerically exercises the finite protocol to machine precision and the note explicitly excludes matter transport, FTL signaling, measurement-foundation, durable-record, and Bell-resource-origin claims.
+- **rationale:** The load-bearing no-signaling statement is not a physical-carrier identification or CHSH-to-teleportation bridge; it is the standard reduced-density-matrix statement inside the explicitly bounded encoded two-level protocol. The runner constructs the logical taste Pauli operators, Bell projectors, random input states, pre-measurement Bob partial trace, post-measurement outcome-averaged Bob state, pairwise input-independence check, and delayed two-bit record channel, all passing at machine precision. Residual risk is limited to the stated ideal-protocol boundary: this audit does not certify matter teleportation, mass/charge/energy transfer, FTL communication, a measurement theory, durable classical records, or derivation of the Bell resource from another lane.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
