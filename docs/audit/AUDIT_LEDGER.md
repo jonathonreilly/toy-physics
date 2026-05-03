@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:02:48.109945+00:00
+**Generated:** 2026-05-03T16:04:50.183668+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 775 |
+| unaudited | 774 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 519 |
+| ~~audited_conditional~~ | 520 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 308 |
-| `audited_conditional` | 519 |
+| `audited_conditional` | 520 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 821 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
@@ -792,6 +792,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_nonuniversal_support_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_sector_odd_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_selector_sign_to_branch_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `pmns_selector_three_identity_support_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unretained_selector_law_support_statement | - |
 | `pmns_sigma_zero_nogo_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `pmns_transfer_operator_dominant_mode_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -10252,6 +10253,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
   - `CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md`
 - **auditor confidence:** high
+
+### `pmns_selector_three_identity_support_note_2026-04-21`
+
+- **Note:** [`PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md`](../../docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note supports, but does not prove, that the three-equation selector system Tr(H)=Q_Koide, delta*q_+=Q_Koide, det(H)=E2 has the reported interior PMNS-fit solution on the retained affine Hermitian chart.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-hostile-nature-pmns-identity-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The load-bearing step is treating the proposed selector equations delta*q_+ = Q_Koide and det(H) = E2 as sufficient laws that select the recovered PMNS point.  _(class `unretained_selector_law_support_statement`)_
+- **chain closes:** False — The retained inputs cover chart identities such as SELECTOR^2=Q_Koide, 2*SELECTOR/sqrt(3)=E2, and Tr(H)=m, but the selector equations delta*q_+=Q_Koide and det(H)=E2 are explicitly proposed inputs, not retained derivations. The bounded numerical solution and PMNS band agreement therefore support a candidate law but do not close a theorem chain.
+- **rationale:** Issue: The theorem-grade claim depends on the proposed selector laws delta*q_+ = Q_Koide and det(H) = E2, plus bounded numerical evidence for a solution cluster, while the note itself states these are not retained derivations. Why this blocks: A positive theorem cannot be retained from chart identities and numerical fit alone when the equations that select the PMNS point are introduced as candidate laws rather than derived consequences of retained inputs. Repair target: Provide retained derivations of delta*q_+ = Q_Koide and det(H) = E2, plus a theorem-grade basin/uniqueness argument and a runner or proof that constructs those selector laws from retained primitives rather than assuming them. Claim boundary until fixed: The note may be cited as support for a compact candidate selector system with a reported PMNS-compatible numerical solution, not as a closed positive theorem.
+- **auditor confidence:** 0.93
 
 ### `pmns_selector_unique_amplitude_slot_note`
 
