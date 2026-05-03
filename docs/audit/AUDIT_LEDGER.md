@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:08:35.470978+00:00
+**Generated:** 2026-05-03T18:09:24.426534+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 746 |
+| unaudited | 745 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 535 |
-| ~~audited_failed~~ | 11 |
+| ~~audited_failed~~ | 12 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 317 |
 | `audited_conditional` | 535 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 55 |
+| `audited_failed` | 56 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 792 |
+| `unaudited` | 791 |
 
 | claim_type | count |
 |---|---:|
@@ -976,6 +976,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `bh_entropy_derived_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `complete_prediction_chain_2026_04_15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -2417,6 +2418,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** For the 3x3 cyclic permutation matrix, P23 conjugation swaps S and S^2, so I and S+S^2 are even, i(S-S^2) is odd, and K_01=c_even+i c_odd gives Im[(K_01)^2]=2 c_even c_odd.  _(class `A`)_
 - **chain closes:** True — The note's conclusions follow by direct finite-dimensional matrix algebra and use no cited external authority. The physical parent application is explicitly outside this row's audited scope.
 - **rationale:** The scoped object is a narrow exact theorem, not a broad physical theorem: it proves a residual-Z2 parity split and one scalar identity inside a fixed 3-parameter 3x3 Hermitian-circulant family. No hidden numerical, phenomenological, or external authority premise is needed. The runner output independently checks the matrix identities, Hermiticity, parity action, and scalar formula exactly.
+- **auditor confidence:** high
+
+### `circulant_response_master_identity_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone Hermitian-circulant linear-algebra identity for G(g_0,g_1), the cyclic-basis Frobenius responses, the master identity, and the stated Koide-cone reduction including kappa = g_0^2/|g_1|^2 = 2.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-context-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** From (T2), 2 r_0^2 = r_1^2 + r_2^2 iff 18(g_0^2 - 2 |g_1|^2) = 0 iff g_0^2 = 2 |g_1|^2, i.e. to kappa := g_0^2 / |g_1|^2 = 2.  _(class `A`)_
+- **chain closes:** False — The trace-response formulas and master identity close exactly, and the runner verifies 16 A-class algebra checks. The full scoped claim does not close as stated because the kappa reformulation divides by |g_1|^2 without restricting to g_1 != 0; at g_1 = 0 the cone reduces to g_0 = 0 but kappa is undefined.
+- **rationale:** Issue: The T3 sentence upgrades the exact equation g_0^2 = 2 |g_1|^2 to the one-scalar equation kappa := g_0^2 / |g_1|^2 = 2 while the theorem also claims all real g_0 and complex g_1, including g_1 = 0. Why this blocks: the kappa expression is undefined at |g_1| = 0, so the advertised exact equivalence is not globally true on the stated domain even though T1, T2, and the non-divided cone equation are correct. Repair target: add an explicit domain condition g_1 != 0 for the kappa formulation, or state T3 only as the globally valid equation g_0^2 = 2 |g_1|^2 with kappa = 2 as a nonzero-g_1 corollary; update the note and runner to test the singular boundary. Claim boundary until fixed: the standalone trace identities, master identity, and cone equivalence to g_0^2 = 2 |g_1|^2 may be safely claimed, but not the unrestricted equivalence to kappa = 2.
 - **auditor confidence:** high
 
 ### `ckm_atlas_axiom_closure_note`

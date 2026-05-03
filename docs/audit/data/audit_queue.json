@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 201,
-    "medium": 301
+    "medium": 300
   },
-  "generated_at": "2026-05-03T18:08:35.063073+00:00",
+  "generated_at": "2026-05-03T18:09:23.829752+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7596,27 +7596,6 @@
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_retained_cross_lane_consistency.py",
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.992,
-      "note_path": "docs/CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_circulant_response_master_identity_narrow.py",
       "transitive_descendants": 44
     },
     {
@@ -20214,6 +20193,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 84,
-  "total_pending": 775
+  "ready_count": 83,
+  "total_pending": 774
 }
