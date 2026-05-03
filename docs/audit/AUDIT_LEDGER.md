@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:00:04.430140+00:00
+**Generated:** 2026-05-03T20:06:45.644531+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 84 |
-| **retained_no_go** | 105 |
+| **retained_no_go** | 106 |
 | **retained_bounded** | 181 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 707 |
+| unaudited | 706 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 340 |
+| `audited_clean` | 341 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 753 |
+| `unaudited` | 752 |
 
 | claim_type | count |
 |---|---:|
@@ -219,6 +219,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_trapping_transport_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -6333,6 +6334,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** the accepted Wilson local bosonic scalar gauge-source class has one exact temporal kernel shape on the minimal 3+1 block, differing only by overall normalization: K_O(omega) = 3w (3 + sin^2 omega)  _(class `A`)_
 - **chain closes:** True — Within the stated Wilson-source grammar, the six uniform plaquette orientations induce a_x=a_y=a_z=a_t=3w, and the APBC minimal cube sets the spatial sin^2 gaps to 1, giving K_O(omega)=3w(3+sin^2 omega). The normalization cancels in A_inf/A_2, and the exact endpoint ratio is 2/sqrt(3).
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
+- **auditor confidence:** high
+
+### `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03`
+
+- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go that the cited current Wilson packet does not entail the exact observable bridge <P>_full = R_O(beta_eff) at beta=6 without adding an exact nonperturbative completion object.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `fresh-agent-van-der-waerden`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** A derivation from the current Wilson packet would have to assign the same output to two completion witnesses that agree on every retained premise, but BRIDGE gives unequal readouts R_O(beta_eff^-(6)) and R_O(beta_eff^+(6)).  _(class `A`)_
+- **chain closes:** True — The cited onset and underdetermination notes leave beta_eff(6), Perron/Jacobi data, and the exact beta-6 spectral measure unselected. The two analytic witnesses share the cited packet but give distinct local-response bridge readouts by injectivity, so the narrow non-entailment claim follows.
+- **rationale:** The note proves a narrow formal no-go, not a positive plaquette bridge: current retained primitives plus the finite onset/regularity data do not select the missing beta-6 completion object. The proof uses a valid two-witness non-entailment argument and explicitly keeps fitted beta_eff, external plaquette values, and perturbative imports outside the derivation. Residual risk is only scope creep: this clean verdict applies to the current-packet non-entailment claim, not to any stronger claim that Wilson theory cannot determine the physical plaquette.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`
