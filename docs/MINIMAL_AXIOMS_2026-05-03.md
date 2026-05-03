@@ -41,60 +41,74 @@ dependencies. Everything below the framework's surface is either:
   retained_bounded tier), or
 - an open derivation target with explicit closure path (open_gate).
 
-## Items recategorized from "axiom" to "open derivation target"
+## Items recategorized from "axiom" to open derivation target
 
-### Open Gate G1: Grassmann staggered-Dirac dynamics
+These two items were previously listed as axioms A3 and A4. They are
+now recategorized as **open derivation targets**, with `claim_type:
+open_gate` for the canonical parent note (where one exists) and the
+in-flight supporting work named explicitly.
 
-> "A1+A2 plus admissible mathematical infrastructure forces (or sufficiently
-> constrains) the Grassmann staggered-Dirac realization, including the BZ
-> corner doubler structure that maps to three SM matter generations."
+The naming convention follows the existing repo pattern: refer to each
+gate by its canonical parent note name. No new abstract gate labels are
+introduced.
 
-**Status:** open derivation target (formerly axiom A3).
+### Staggered-Dirac realization derivation target (formerly axiom A3)
 
-**In-flight supporting work:**
+> "A1+A2 plus admissible mathematical infrastructure forces (or
+> sufficiently constrains) the Grassmann staggered-Dirac realization,
+> including the BZ corner doubler structure that maps to three SM
+> matter generations."
+
+**Canonical parent note:** *not yet packaged*. Currently no single
+canonical parent note for this derivation target — the pieces are
+spread across multiple existing notes. Packaging a single canonical
+parent note is itself part of the follow-up work this restructure
+exposes.
+
+**In-flight supporting work** (the existing derivation pieces):
 - `PHYSICAL_LATTICE_NECESSITY_NOTE.md` — closes the substrate-level
-  physical-lattice reading on the accepted one-axiom Hilbert/locality
-  /information surface (already retained as a downstream derivation
+  physical-lattice reading on the accepted one-axiom Hilbert/locality/
+  information surface (already retained as a downstream derivation
   rather than a separate axiom).
-- `THREE_GENERATION_STRUCTURE_NOTE.md` — local algebraic/spectral content
-  of the three-generation matter structure (retained, td=248).
+- `THREE_GENERATION_STRUCTURE_NOTE.md` — local algebraic/spectral
+  content of the three-generation matter structure (retained, td=248).
 - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` — exact observable-sector
   theorem on hw=1 triplet (retained, td=123).
 - `frontier_generation_rooting_undefined.py` — proves no proper taste
-  projection preserves Hamiltonian Cl(3) on Z^3 (no-rooting);
-  retained.
+  projection preserves Hamiltonian Cl(3) on Z^3 (no-rooting; retained).
 - `GENERATION_AXIOM_BOUNDARY_NOTE.md` — older reduced-stack witness
   preserved for boundary documentation.
 
-**Closure status:** partial. The pieces of an "A3 follows from A1+A2" argument
-exist across multiple notes (no-rooting, three-generation observable,
-physical-lattice necessity). They have not been packaged as a single clean
-G1 closure theorem. **Open derivation target.**
+**Closure status:** partial. Pieces of an "A3 follows from A1+A2"
+argument exist across the notes above. They have not been packaged as a
+single canonical parent note. **Open derivation target.**
 
-**Lanes that depend on G1 (currently undischarged):** any lane whose
-derivation defines fermion fields, fermion-number operators, fermion
-correlators, fermion bilinears, or staggered Dirac action (this is
-essentially every lane that touches matter content). These lanes are
-typed `bounded_theorem` with G1 listed in `admitted_context_inputs`
-until G1 closes — at which point they upgrade to `positive_theorem`
-automatically via the audit pipeline's `claim_type` recompute.
+**Lanes that depend on this gate:** any lane whose derivation defines
+fermion fields, fermion-number operators, fermion correlators, fermion
+bilinears, or staggered Dirac action (essentially every lane that
+touches matter content). These lanes are typed `bounded_theorem` with
+"staggered-Dirac realization derivation target (parent note: pending
+packaging — see in-flight supporting work above)" listed in
+`admitted_context_inputs` until the gate closes.
 
-### Open Gate G2: g_bare = 1 normalization
+### g_bare = 1 derivation target (formerly axiom A4)
 
-> "A1+A2 (+ G1 closure) forces `g_bare = 1` by canonical Cl(3) connection
-> normalization; the Wilson plaquette coefficient `β = 2 N_c = 6` follows."
+> "A1+A2 (+ closure of the staggered-Dirac realization target) forces
+> `g_bare = 1` by canonical Cl(3) connection normalization; the Wilson
+> plaquette coefficient `β = 2 N_c = 6` follows."
 
-**Status:** open derivation target (formerly axiom A4).
+**Canonical parent note:** [`G_BARE_DERIVATION_NOTE.md`](G_BARE_DERIVATION_NOTE.md)
+— `claim_type: positive_theorem`, `audit_status: audited_conditional`.
+Codex-named repair targets: missing primary runner, A → A/g rescaling
+freedom, constraint-vs-convention ambiguity. The April 15 rewrite
+mislabeled this as "by fiat with consilience" — in fact the framework
+was actively deriving this via the chain below.
 
-**In-flight supporting work** (the derivation chain already exists; the
-April 15 rewrite mislabeled this as "by fiat with consilience"):
-- `G_BARE_DERIVATION_NOTE.md` — parent derivation (audited_conditional;
-  Codex-named repair targets: missing primary runner, A → A/g rescaling
-  freedom, constraint-vs-convention ambiguity).
-- `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md` — Cl(3) →
-  End(V) → su(3) → Wilson chain. Claims 1, 2 PROVED (canonicity up to
-  finite outer automorphism). Claim 3 PARTIAL: forces `β = 2 N_c = 6`
-  given Wilson action functional form.
+**In-flight supporting work** (the existing g_bare derivation chain):
+- `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md` — Cl(3)
+  → End(V) → su(3) → Wilson chain. Claims 1, 2 PROVED (canonicity up
+  to finite outer automorphism). Claim 3 PARTIAL: forces `β = 2 N_c =
+  6` given Wilson action functional form.
 - `G_BARE_RIGIDITY_THEOREM_NOTE.md` — operator-algebra rigidity route
   (audited_conditional).
 - `G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md` — 1PI two-Ward closure
@@ -109,14 +123,17 @@ April 15 rewrite mislabeled this as "by fiat with consilience"):
   bounded narrow theorem on the canonical-convention reading
   (retained_bounded).
 
-**Closure status:** partial. Multiple closure routes exist; each has named
-remaining residuals. **Open derivation target.**
+**Closure status:** partial. Multiple closure routes exist; each has
+named remaining residuals captured in the parent note's audit
+verdict. **Open derivation target.**
 
-**Lanes that depend on G2 (currently undischarged):** any lane that produces
-quantitative gauge predictions (`α_s`, `v`, `sin²θ_W`, `m_t`, `m_H`, `g_1`,
-`g_2`, etc.) by fixing `g_bare = 1` without independently deriving it.
-These lanes are typed `bounded_theorem` with G2 listed in
-`admitted_context_inputs` until G2 closes.
+**Lanes that depend on this gate:** any lane that produces quantitative
+gauge predictions (`α_s`, `v`, `sin²θ_W`, `m_t`, `m_H`, `g_1`, `g_2`,
+etc.) by fixing `g_bare = 1` without independently deriving it. These
+lanes are typed `bounded_theorem` with "g_bare = 1 derivation target
+(parent: G_BARE_DERIVATION_NOTE.md)" listed in
+`admitted_context_inputs` until that note's audit verdict closes
+clean.
 
 ## What this means for the existing science stack
 
@@ -139,11 +156,11 @@ admissions in `admitted_context_inputs`:
 - no-per-site γ_5 chirality (R6 Block 01)
 - structural Z^3 lattice geometry results
 
-### Lanes that ride on undischarged G1
+### Lanes that depend on the staggered-Dirac realization gate
 
 Type changes to `bounded_theorem` → `effective_status: retained_bounded`,
-with `admitted_context_inputs` listing **G1** (Grassmann staggered Dirac
-realization, currently undischarged):
+with `admitted_context_inputs` listing the staggered-Dirac realization
+derivation target (currently undischarged):
 
 - `coleman_mermin_wagner` (needs Hamiltonian)
 - `cpt_exact` (needs staggered structure)
@@ -152,18 +169,18 @@ realization, currently undischarged):
 - three-generation, baryon/meson singlet, fermion-parity Z_2,
   Q̂ integer spectrum, hopping bilinear, etc.
 
-When G1 closes (via the in-flight derivation chain above), these upgrade
-back to `positive_theorem`.
+When this gate closes, these lanes upgrade back to `positive_theorem`.
 
-### Lanes that ride on undischarged G1 and G2
+### Lanes that depend on both gates
 
-Type `bounded_theorem` with `admitted_context_inputs` listing **G1 + G2**
-(g_bare = 1 normalization, currently undischarged):
+Type `bounded_theorem` with `admitted_context_inputs` listing both the
+staggered-Dirac realization derivation target AND the g_bare = 1
+derivation target (canonical parent: `G_BARE_DERIVATION_NOTE.md`):
 
 - All `α_s`, `v`, `sin²θ_W`, `m_t`, `m_H`, `g_1`, `g_2` quantitative
   results (`y_t` lane, EW lane, Higgs lane, etc.).
 
-When both G1 and G2 close, these upgrade back to `positive_theorem`.
+When both gates close, these upgrade back to `positive_theorem`.
 
 ## Reception story
 
@@ -173,11 +190,12 @@ When both G1 and G2 close, these upgrade back to `positive_theorem`.
 
 **New framing (this note, restoring April 11 intent):**
 > "Framework has 2 axioms (Cl(3), Z³). The fermion realization and gauge
-> normalization are explicit open derivation targets (G1, G2) with
-> partial closure already in flight via 6+ notes. Every quantitative
-> prediction is typed `bounded_theorem` with the open targets named as
-> admitted context inputs. Closing G1, G2 promotes those lanes to
-> `positive_theorem`."
+> normalization are explicit open derivation targets (the staggered-Dirac
+> realization target and the g_bare = 1 derivation target with parent
+> `G_BARE_DERIVATION_NOTE.md`) with partial closure already in flight
+> via 6+ notes. Every quantitative prediction is typed `bounded_theorem`
+> with the open targets named as admitted context inputs. Closing those
+> targets promotes those lanes to `positive_theorem`."
 > Reviewer reaction: framework is honest about what's open; structural
 > results don't depend on regulator choices.
 
@@ -196,8 +214,9 @@ two framework axioms are fixed:
   the bridge as bounded or bridge-conditioned
 
 Those tools do not promote a bounded lane to retained on their own; that
-requires either Open Gate G1/G2 closure (which upgrades the lane's
-`claim_type`) or scope-tightening on the bounded statement itself.
+requires either closure of the named derivation targets above (which
+upgrades the lane's `claim_type` automatically via the audit pipeline)
+or scope-tightening on the bounded statement itself.
 
 ## What This File Is Not
 
@@ -210,6 +229,7 @@ requires either Open Gate G1/G2 closure (which upgrades the lane's
 ## Citation-graph note
 
 This note has no upstream dependencies. Plain-text references to in-flight
-G1 and G2 supporting work above are pointers for readers, not load-bearing
-deps. The supporting notes themselves are downstream consequences (G1, G2
+supporting work above are pointers for readers, not load-bearing
+deps. The supporting notes themselves are downstream consequences (the
+two derivation targets are open-gate
 closure attempts), not upstream axioms.
