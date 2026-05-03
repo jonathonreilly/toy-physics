@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:21:12.517759+00:00
+**Generated:** 2026-05-03T18:23:58.591825+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 78 |
+| **retained** | 79 |
 | **retained_no_go** | 103 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 736 |
+| unaudited | 735 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 319 |
+| `audited_clean` | 320 |
 | `audited_conditional` | 540 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 782 |
+| `unaudited` | 781 |
 
 | claim_type | count |
 |---|---:|
@@ -302,6 +302,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_right_conjugacy_invariant_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `qnm_control_hardening_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | B | - |
 | `quark_c3_circulant_source_law_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | B | - |
@@ -11036,6 +11037,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_bimodule_norm_existence_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Given the stated one-real channel I = R*Im(p), rho = 1/sqrt(42), and the retained bridge family a_u(kappa) = Im(p)*(1 - rho*kappa) for kappa in [sqrt(6/7), 1], the constructed scalar maps D_kappa and U_kappa are complementary positive real-linear endomorphisms of I that reproduce the bridge amplitudes.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-audit-loop-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For any retained kappa in [sqrt(6/7), 1], define D_kappa := rho * kappa * Id_I and U_kappa := (1 - rho * kappa) * Id_I.  _(class `A`)_
+- **chain closes:** True — The note's scoped claim closes as explicit algebra on a one-real-dimensional vector space: scalar multiplication defines real-linear endomorphisms, the coefficients sum to one, and applying U_kappa to Im(p) gives the stated bridge formula. The theorem only establishes existence of such split maps, not a canonical endpoint selection.
+- **rationale:** The load-bearing construction is not a physical-observable identification or a tuned comparator match; it is a direct algebraic lift of the stated bridge-family coefficient to complementary scalar endomorphisms on I. The runner independently checks the interval membership, linearity on the one-real channel, complementarity, contractivity, bridge recovery, and the three named endpoint evaluations, with PASS=10 FAIL=0. The clean verdict is scoped narrowly to existence of split maps from the stated inputs and does not ratify canonicality or uniqueness of kappa.
 - **auditor confidence:** high
 
 ### `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28`
