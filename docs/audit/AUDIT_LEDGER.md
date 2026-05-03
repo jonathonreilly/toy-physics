@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:26:00.471017+00:00
+**Generated:** 2026-05-03T21:28:46.686134+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 85 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 198 |
+| **retained_bounded** | 199 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 684 |
+| unaudited | 683 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 363 |
+| `audited_clean` | 364 |
 | `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 731 |
+| `unaudited` | 730 |
 
 | claim_type | count |
 |---|---:|
@@ -248,6 +248,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravitational_entanglement_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `growing_graph_dynamic_limit_diagnostic_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | C | - |
+| `growing_graph_dynamic_propagation_replacement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | B | - |
 | `growing_graph_frontier_expansion_proxy_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `h0125_scalable_scout_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | B | - |
@@ -7243,6 +7244,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** no monotone dynamic-propagation order parameter emerged from the static comparison  _(class `C`)_
 - **chain closes:** True — The current runner reproduces the note's frontier-delay growth and the weakening dynamic visibility drops across the tested layer counts. With no dependencies and no broader physical claim, the bounded no-go closes for this diagnostic protocol.
 - **rationale:** The note is explicitly bounded to the frozen static-control comparison and does not claim cosmology, de Sitter physics, unitarity, or a field-theory derivation. The runner output matches the reported values: frontier delay grows from 3.000 to 22.000 with slope +0.9325, while mean dynamic visibility drop weakens from 0.0492 to 0.0366 to 0.0224 with positive-seed counts 4/10, 4/10, and 2/10. The clean verdict is only for this bounded no-go, not for any universal transport/decoherence theorem.
+- **auditor confidence:** high
+
+### `growing_graph_dynamic_propagation_replacement_note`
+
+- **Note:** [`GROWING_GRAPH_DYNAMIC_PROPAGATION_REPLACEMENT_NOTE.md`](../../docs/GROWING_GRAPH_DYNAMIC_PROPAGATION_REPLACEMENT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded replacement claim that the dynamic propagator lane is not promoted here and the retained growth content is limited to the frontier-delay proxy on the existing growing-graph family.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-growing-graph-replacement`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The retained replacement observable is the frontier-delay proxy frozen in the runner and proxy note, with step 0 frontier delay 3.000, step 20 frontier delay 22.000, slope +0.9325 hops/step, and static control frontier delay 3.000.  _(class `B`)_
+- **chain closes:** True — The source note only imports the one-hop retained proxy result and narrows the claim boundary around it. The current runner output matches the frozen replay values and the note explicitly excludes cosmology, de Sitter, wavepacket, and amplitude-carry-forward claims.
+- **rationale:** The claim is clean within its bounded replacement scope: it does not assert a new dynamic propagation theorem, but defers to the retained frontier-delay proxy and preserves the proxy-only limitations. The runner completes and reproduces the frozen values in the note. Residual risk is confined to the upstream proxy family and to any future attempt to re-promote dynamic amplitude propagation, which this note does not claim.
 - **auditor confidence:** high
 
 ### `growing_graph_expansion_card_note`

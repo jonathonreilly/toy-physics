@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 62,
     "high": 215,
-    "leaf": 189,
+    "leaf": 188,
     "medium": 247
   },
-  "generated_at": "2026-05-03T21:26:00.096110+00:00",
+  "generated_at": "2026-05-03T21:28:46.285789+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14076,29 +14076,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "growing_graph_dynamic_propagation_replacement_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "growing_graph_frontier_expansion_proxy_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GROWING_GRAPH_DYNAMIC_PROPAGATION_REPLACEMENT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/growing_graph_frontier_expansion.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_weak_field_mass_scaling_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -18920,6 +18897,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 31,
-  "total_pending": 713
+  "ready_count": 30,
+  "total_pending": 712
 }
