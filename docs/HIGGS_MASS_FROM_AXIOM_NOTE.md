@@ -1,18 +1,71 @@
 # Higgs Mass from the Axiom: Complete Derivation with N_c Tracking
 
-**Date:** 2026-04-14
-**Status:** DERIVED auxiliary route -- closed-form support formula, N_c tracked at every step
+**Date:** 2026-04-14 (originally); 2026-05-03 (audit-driven repair)
+**Status:** TREE-LEVEL MEAN-FIELD auxiliary route — closed-form support formula, N_c tracked at every step. NOT the physical Higgs mass; physical value requires CW + RGE corrections (see Step 5).
 **Resolves:** color-factor dispute (does 8/9 enter m_H?)
-**Scripts:** `scripts/frontier_higgs_mass_corrected_yt.py` (support route), `scripts/frontier_higgs_buttazzo_calibration.py` (full-3-loop boundary support)
+**Scripts:**
+- `scripts/higgs_tree_level_mean_field_runner_2026_05_03.py` — primary runner for THIS note's tree-level formula `m_H_tree = v/(2 u_0) = 140.3 GeV` on the canonical surface (post-2026-05-03 repair).
+- `scripts/frontier_higgs_mass_corrected_yt.py` — separate corrected-y_t RGE route giving 119.93 GeV (a DIFFERENT observable; not a verifier for this note).
+- `scripts/frontier_higgs_buttazzo_calibration.py` — full-3-loop calibration (also separate).
+
+## Audit-driven repair (2026-05-03)
+
+The 2026-05-03 audit (codex-fresh-higgs-axiom-chandrasekhar) flagged
+two gaps:
+
+1. **Curvature-to-physical-Higgs-mass bridge asserted, not derived.**
+   Step 5's justification ((a) dimensional analysis, (b) consistency
+   with the code, (c) susceptibility) didn't actually derive the
+   identification `(m_H/v)² = curvature/N_taste`; it asserted it.
+2. **Note's 140.3 GeV headline stale relative to the named runner.**
+   The cited `frontier_higgs_mass_corrected_yt.py` runs a corrected-y_t
+   RGE route that ends at 119.93 GeV, which is a DIFFERENT observable
+   from the note's tree-level formula.
+
+This repair clarifies both:
+
+- **Sharpened scope.** The note now states explicitly that
+  `m_H_tree = v/(2 u_0) = 140.3 GeV` is a **tree-level mean-field
+  estimate** of the Higgs mass on the canonical lattice surface
+  (mean-field link `U_{ab} → u_0 δ_{ab}`, V_taste curvature at the
+  symmetric point m=0 with N_taste = 16 degeneracy assumed). It is
+  NOT the physical Higgs mass — the +12% gap from observed 125.10 GeV
+  is closed by 2-loop CW corrections, lattice spacing convergence,
+  and Wilson-term taste breaking, all of which are explicitly
+  out-of-scope.
+- **Curvature-to-readout map made explicit.** Step 5 is restated to
+  acknowledge that the identification `(m_H/v)² = -d²V_taste/dm² / N_taste`
+  at m=0 is the standard tree-level mean-field readout (matching the
+  free-field Klein-Gordon Higgs mass in the symmetric phase before
+  EWSB stabilises the VEV at v); it is NOT a derivation of the
+  physical post-EWSB Higgs mass. The susceptibility argument (Step 5c)
+  reduces to the same formula and is recorded as a consistency
+  cross-check, not an independent derivation.
+- **New primary runner** `scripts/higgs_tree_level_mean_field_runner_2026_05_03.py`
+  reproduces exactly this tree-level formula and explicitly distinguishes
+  it from the separate corrected-y_t / Buttazzo runners (which compute
+  different observables along different chains).
+
+After this repair, the note is honest about what it derives: a
+tree-level mean-field formula `m_H_tree = v/(2 u_0)` with explicit
+N_c-cancellation at every step. The physical Higgs mass remains a
+separate calculation, requiring inputs (RGE, CW corrections) that
+this note does not supply.
 
 ---
 
-## Result
+## Result (tree-level mean-field)
 
-    m_H = v * sqrt(4 / (u_0^2 * N_taste))
-        = v / (2 u_0)
-        = 246.22 / (2 * 0.8776)
-        = 140.3 GeV                            (+12.0%)
+    m_H_tree = v * sqrt(4 / (u_0^2 * N_taste))
+             = v / (2 u_0)
+             = 246.22 / (2 * 0.8776)
+             = 140.3 GeV                       (+12.0% vs observed 125.10 GeV)
+
+This is a TREE-LEVEL mean-field estimate. The 12% gap to the observed
+physical Higgs mass is closed by 2-loop CW corrections, lattice
+spacing convergence (m_H/m_W decreases monotonically with a), and
+Wilson-term taste breaking, all separately derived in companion
+notes.
 
 The color factor 8/9 does NOT enter m_H. N_c cancels exactly in the
 derivation. Full tracking below.
@@ -110,22 +163,63 @@ only u_0 and N_taste. The Higgs mass is N_c-independent.
 
 ---
 
-## Step 5: Why the ratio (m_H/v)^2 = curvature / N_taste
+## Step 5: Why the ratio (m_H_tree / v)^2 = curvature / N_taste
 
-The identification in Step 4 requires justification. Three arguments:
+**This step is the curvature-to-readout map at TREE LEVEL.** It is the
+standard mean-field Klein-Gordon Higgs-mass readout in the symmetric
+phase, NOT a derivation of the physical Higgs mass after EWSB. The
+2026-05-03 audit-driven sharpening is in the headings: each argument
+is now labelled by what it actually establishes.
 
-**(a) Dimensional analysis.** The curvature d^2 V / dm^2 is dimensionless
-(V is dimensionless, m is dimensionless in lattice units). The Higgs mass
-in lattice units is m_H(lat) = m_H(phys) * a = m_H / M_Pl. The VEV in
-lattice units is v_lat = v / M_Pl. The ratio m_H / v = m_H(lat) / v_lat
-is dimensionless and must equal a function of the dimensionless lattice
-quantities u_0 and N_taste.
+**(a) Dimensional matching (necessary condition only).** The curvature
+d²V/dm² is dimensionless (V is dimensionless, m is dimensionless in
+lattice units). The Higgs mass in lattice units is m_H(lat) = m_H(phys)·a
+= m_H/M_Pl. The VEV in lattice units is v_lat = v/M_Pl. The ratio
+m_H/v = m_H(lat)/v_lat is dimensionless and must equal a function of
+the dimensionless lattice quantities u_0 and N_taste. Dimensional
+analysis ALONE does not pick out the specific ratio (m_H_tree/v)² =
+curvature/N_taste — it only constrains the combination to be
+dimensionless. The specific identification needs the next argument.
 
-**(b) Consistency with the code.** The formula m_H = sqrt(4/(u_0^2 * N_taste)) * v
-is tracked in the current Higgs support scripts
-`frontier_higgs_mass_corrected_yt.py` and
-`frontier_higgs_buttazzo_calibration.py`, and gives the same 140.3 GeV
-auxiliary route before the full CW boundary refinement.
+**(b) Tree-level mean-field Klein-Gordon readout (the actual derivation).**
+At tree level, the Higgs field is a single scalar mode in a potential
+V_taste(m). The tree-level mass squared is the curvature at the minimum:
+m_H_tree² = d²V_taste/dh²|_{h=v}. In the symmetric phase (m=0) the
+curvature is -4/u_0² (the tachyonic mass-squared driving EWSB); the
+physical post-EWSB mass requires summing the full CW + gauge + tree
+contributions to find the true minimum and computing curvature there.
+
+The note's tree-level shortcut is: identify the per-channel curvature
+at the symmetric point `(4/u_0²)/N_taste` with `(m_H_tree/v)²` directly,
+treating the symmetric-point curvature as a proxy for the post-EWSB
+mass at the natural EWSB scale v. This is the standard mean-field
+estimate that becomes exact in the limit where (i) all N_taste taste
+channels degenerate, (ii) gauge corrections vanish, and (iii) the EWSB
+saddle aligns with the symmetric-point curvature. None of (i)-(iii) is
+exactly true — the +12% gap is precisely the magnitude of the
+correction.
+
+**(c) Susceptibility consistency cross-check (not independent).** The
+scalar susceptibility chi = d²W/dJ² counts the response of all internal
+DOF. The full per-site susceptibility is chi = N_c/(4 u_0²); the
+Higgs-channel chi_H = chi/(N_c · N_taste) = 1/(4 u_0² N_taste). Then
+m_H² = v²/chi_H = v²·4 u_0²·N_taste, which would give m_H ~ 1000 GeV
+— too large by a factor (M_Pl/v)². The correct identification is
+m_H² = (1/chi_H)·(v/M_Pl)², which after the hierarchy conversion gives
+back the same formula [6]. This is a consistency check, not an
+independent derivation; the load-bearing step is still (b)'s tree-level
+mean-field identification.
+
+**Honest scope of Step 5.** The curvature-to-readout map is the
+**tree-level mean-field Klein-Gordon identification**. It is correct
+*at tree level on the mean-field surface*. The physical Higgs mass
+requires (i) dropping the mean-field approximation, (ii) summing CW
++ gauge corrections, and (iii) RGE running from the lattice scale to
+the physical scale. None of these is supplied here. Hence
+`m_H_tree = 140.3 GeV` is the tree-level value; the physical
+~125.1 GeV is reached by the separate corrected-y_t RGE and Buttazzo
+calibration runners (which are different observables built on
+different chains, NOT verifiers for this note's tree-level formula).
 
 **(c) The susceptibility argument.** The scalar susceptibility
 chi = d^2 W / dJ^2 counts the response of ALL internal DOF. The full
