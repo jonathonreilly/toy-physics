@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:30:01.971913+00:00
+**Generated:** 2026-05-03T21:33:50.532749+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 200 |
+| **retained_bounded** | 201 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 681 |
+| unaudited | 680 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 366 |
+| `audited_clean` | 367 |
 | `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 728 |
+| `unaudited` | 727 |
 
 | claim_type | count |
 |---|---:|
@@ -307,6 +307,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `minimal_source_driven_field_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `mirror_2d_gravity_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | A | - |
 | `mirror_2d_validation_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -9975,6 +9976,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`
 - **auditor confidence:** high
+
+### `minimal_source_driven_field_probe_note`
+
+- **Note:** [`MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`](../../docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-run claim that the stated 3D lattice source-driven telegraph field rule preserves TOWARD sign and exact zero-source reduction at target max |f_dyn| = 0.08, but fails linear F~M scaling there, with calibration-sensitive recovery supplied by the retained one-hop companion.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-minimal-source-driven`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** the source-driven field does not recover the linear weak-field mass scaling class; the frozen dynamic F~M exponent is 0.64 while the zero-source reduction is +0.000000e+00  _(class `C`)_
+- **chain closes:** True — The source note's frozen table matches the named completed runner log, including zero-source shift, 4/4 TOWARD rows, and dynamic exponent 0.64. The companion dependency is supplied as retained_bounded and supports the limited calibration-hierarchy read rather than a blanket field-dynamics success claim.
+- **rationale:** The live runner produced no stdout within the short audit window, so noncompletion was not used as evidence. The named completed log exists and matches the source note's frozen numerical readout exactly. Within the explicitly bounded setup, the conclusion is conservative: sign and zero-source reduction survive, while linear mass scaling fails at the stronger calibration. Residual risk is only computational reproducibility of the long runner, not closure of the recorded bounded claim.
+- **auditor confidence:** medium
 
 ### `mirror_2d_gravity_law_note`
 
