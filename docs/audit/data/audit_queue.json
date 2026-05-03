@@ -1,33 +1,12 @@
 {
   "by_criticality": {
-    "critical": 81,
+    "critical": 80,
     "high": 222,
     "leaf": 203,
     "medium": 271
   },
-  "generated_at": "2026-05-03T11:49:50.926003+00:00",
+  "generated_at": "2026-05-03T11:51:03.764384+00:00",
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 12,
-      "effective_status": "unaudited",
-      "load_bearing_score": 14.185,
-      "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_boundary_density_extension.py",
-      "transitive_descendants": 290
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -20107,6 +20086,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 122,
-  "total_pending": 777
+  "ready_count": 121,
+  "total_pending": 776
 }
