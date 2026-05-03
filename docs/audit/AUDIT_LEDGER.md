@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:35:56.140185+00:00
+**Generated:** 2026-05-03T18:37:33.822636+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 81 |
 | **retained_no_go** | 103 |
-| **retained_bounded** | 172 |
+| **retained_bounded** | 173 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 728 |
+| unaudited | 727 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 326 |
+| `audited_clean` | 327 |
 | `audited_conditional` | 543 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 774 |
+| `unaudited` | 773 |
 
 | claim_type | count |
 |---|---:|
@@ -109,6 +109,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---|---|---|---|---|---|---|---|
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_scaling_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
+| `action_uniqueness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -1179,6 +1180,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing replay or comparison depends on an unregistered script/log/artifact that is not available as a primary runner in the restricted audit packet. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
+- **auditor confidence:** high
+
+### `action_uniqueness_note`
+
+- **Note:** [`ACTION_UNIQUENESS_NOTE.md`](../../docs/ACTION_UNIQUENESS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded fixed-family replay on the ordered 3D dense lattice with h=0.5, W=8, L=12, kernel 1/L^2 with h^2 measure, field s/r, and the tested action laws S=L, S=L(1+f), S=L(1-f^0.5), S=L(1-f), S=L(1-f^2), S=L exp(-f), S=L/(1+f), and S=-Lf, showing that phase valleys give TOWARD response and that the measured F∝M exponent follows the weak-field power for the tested valley-power cases, with weak-field-linear valleys giving F∝M=1.00.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-current`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On this fixed family, the mass-scaling exponent tracks the weak-field power of f in the action.  _(class `C`)_
+- **chain closes:** True — The source note's bounded claim is directly supported by the current runner output for the W=8 fixed family, and its one-hop dependency is retained_bounded for the matching S=L(1-f^p) power sweep on the W=10 fixed family. The note explicitly does not promote a universal architecture theorem or unique action derivation.
+- **rationale:** The load-bearing result is a bounded computational theorem: the runner constructs the lattice, field, action values, propagation, detector readout, Born check, TOWARD counts, and F∝M fits rather than importing the target exponents. The current output reproduces the note's load-bearing mass-scaling classes: sqrt gives 0.50, linear/exp/reciprocal give 1.00, quadratic gives 2.00, while no-coupling and hill/negative-linear actions do not give the desired TOWARD response. The one-hop dependency is already audited_clean with effective_status retained_bounded, so dependency closure is retained-grade for this bounded scope. Residual risk is confined to broader universality or exact tail laws, which the note explicitly leaves unpromoted.
 - **auditor confidence:** high
 
 ### `adaptive_coevolving_geometry_no_go`
