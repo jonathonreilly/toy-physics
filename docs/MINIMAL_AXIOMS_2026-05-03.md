@@ -71,12 +71,13 @@ exist across multiple notes (no-rooting, three-generation observable,
 physical-lattice necessity). They have not been packaged as a single clean
 G1 closure theorem. **Open derivation target.**
 
-**Lanes that ride on G1 (currently undischarged):** any lane whose
+**Lanes that depend on G1 (currently undischarged):** any lane whose
 derivation defines fermion fields, fermion-number operators, fermion
 correlators, fermion bilinears, or staggered Dirac action (this is
-essentially every lane that touches matter content). These lanes should be
-typed `bounded_theorem` with G1 listed as an admitted context input until
-G1 closes — at which point they upgrade to `positive_theorem`.
+essentially every lane that touches matter content). These lanes are
+typed `bounded_theorem` with G1 listed in `admitted_context_inputs`
+until G1 closes — at which point they upgrade to `positive_theorem`
+automatically via the audit pipeline's `claim_type` recompute.
 
 ### Open Gate G2: g_bare = 1 normalization
 
@@ -111,20 +112,23 @@ April 15 rewrite mislabeled this as "by fiat with consilience"):
 **Closure status:** partial. Multiple closure routes exist; each has named
 remaining residuals. **Open derivation target.**
 
-**Lanes that ride on G2 (currently undischarged):** any lane that produces
+**Lanes that depend on G2 (currently undischarged):** any lane that produces
 quantitative gauge predictions (`α_s`, `v`, `sin²θ_W`, `m_t`, `m_H`, `g_1`,
 `g_2`, etc.) by fixing `g_bare = 1` without independently deriving it.
-These lanes should be typed `bounded_theorem` with G2 listed as an
-admitted context input until G2 closes.
+These lanes are typed `bounded_theorem` with G2 listed in
+`admitted_context_inputs` until G2 closes.
 
 ## What this means for the existing science stack
 
-Lanes split into three tiers under the restored axiom set:
+Recategorization uses **existing framework vocabulary only** — the
+`claim_type` enum (positive_theorem / bounded_theorem / no_go / open_gate
+/ decoration / meta) plus `admitted_context_inputs` already does the
+work. No new tier labels are introduced.
 
-### Tier S (closed on A1+A2 alone, no open-gate riders)
+### Lanes that close on A1+A2 alone
 
-These lanes use only Cl(3) algebra and Z^3 lattice geometry. They are
-`positive_theorem` at `retained` tier under A1+A2 alone:
+Type stays `positive_theorem` → `effective_status: retained`. Zero open-gate
+admissions in `admitted_context_inputs`:
 
 - `cl3_per_site_uniqueness` (only A1)
 - `cl3_color_automorphism` (A1+A2)
@@ -135,10 +139,11 @@ These lanes use only Cl(3) algebra and Z^3 lattice geometry. They are
 - no-per-site γ_5 chirality (R6 Block 01)
 - structural Z^3 lattice geometry results
 
-### Tier B-G1 (bounded; rides on Open Gate G1)
+### Lanes that ride on undischarged G1
 
-These lanes need the staggered/Grassmann realization but don't use
-quantitative gauge normalization:
+Type changes to `bounded_theorem` → `effective_status: retained_bounded`,
+with `admitted_context_inputs` listing **G1** (Grassmann staggered Dirac
+realization, currently undischarged):
 
 - `coleman_mermin_wagner` (needs Hamiltonian)
 - `cpt_exact` (needs staggered structure)
@@ -147,18 +152,18 @@ quantitative gauge normalization:
 - three-generation, baryon/meson singlet, fermion-parity Z_2,
   Q̂ integer spectrum, hopping bilinear, etc.
 
-These should be typed `bounded_theorem` with admission "Open Gate G1
-(staggered Dirac realization) currently undischarged."
+When G1 closes (via the in-flight derivation chain above), these upgrade
+back to `positive_theorem`.
 
-### Tier B-G2 (bounded; rides on both G1 and G2)
+### Lanes that ride on undischarged G1 and G2
 
-These lanes produce quantitative gauge predictions:
+Type `bounded_theorem` with `admitted_context_inputs` listing **G1 + G2**
+(g_bare = 1 normalization, currently undischarged):
 
 - All `α_s`, `v`, `sin²θ_W`, `m_t`, `m_H`, `g_1`, `g_2` quantitative
   results (`y_t` lane, EW lane, Higgs lane, etc.).
 
-These should be typed `bounded_theorem` with admissions "Open Gate G1
-+ Open Gate G2 currently undischarged."
+When both G1 and G2 close, these upgrade back to `positive_theorem`.
 
 ## Reception story
 
