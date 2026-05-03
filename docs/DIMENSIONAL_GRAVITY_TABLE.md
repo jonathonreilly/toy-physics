@@ -3,12 +3,58 @@
 **Status:** bounded finite-entry inventory. This note tabulates point-tested
 results on the listed family/parameter rows. It does NOT claim universality
 across all dimensions, all h values, or all parameter variations. The bolded
-"1.00" entries are point-tested results, not universality theorems. (NARROWED
-2026-05-02 in response to audit verdict requesting a finite-scope reframing.)
+"1.00" entries are point-tested results, not universality theorems.
 
-**Date:** 2026-04-04 (NARROWED 2026-05-02)
+**Date:** 2026-04-04 (NARROWED 2026-05-02; structural certificate added 2026-05-03)
 **Action:** Valley-linear S = L(1-f)
 **Kernel:** 1/L^(d-1) with h^(d-1) measure
+**Structural certificate runner:** [`scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py`](../scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py) (PASS=5/5)
+
+## Audit-driven repair (2026-05-03)
+
+The 2026-05-03 audit (fresh-agent-dimensional-gravity) flagged that
+the table's load-bearing finite measurements (F∝M ≈ 1.00, distance
+tail b^(-0.93) at d=3, Born ≤ 1e-15, etc.) had no runner / completed
+log / certificate / derivation in the restricted packet — the auditor
+was asked to accept the measurements by assertion.
+
+This repair adds a **structural certificate runner**
+[`scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py`](../scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py)
+that verifies what is **executable in tractable time**:
+
+- **C1**: dimensional structure self-consistency (kernel = 1/L^(d-1),
+  field = s/r^(d-2), measure = h^(d-1)) for `d ∈ {2, 3, 4}`.
+- **C2**: Born-rule additivity at floating-point round-off precision
+  on a deterministic 2D path-sum fixture.
+- **C3**: F ∝ M linearity on a small surrogate (the heavy-lattice
+  measurements are reproduced by the underlying distance-law runners,
+  not this certificate).
+- **C4**: cross-references to the underlying measurement scripts for
+  each table row, so re-audit can chase each row to its measurement
+  origin.
+
+The certificate runner is **not** a re-derivation of the heavy 4D
+distance-tail measurements (those need W ≥ 10 lattices, ~3M nodes,
+infeasible at audit-runner timescales). It is a structural
+certificate that the table's dimensional prescription is internally
+consistent and that the small-scale Born/F∝M observations reproduce.
+
+**Underlying measurement provenance** (from the certificate runner's
+C4 output):
+
+| Row | Underlying script |
+|---|---|
+| d=3 distance tail b^(-0.93) | `scripts/frontier_3plus1d_distance_law.py` |
+| d=4 distance tail (early, W=7) | W=7 lattice cards in archive_unlanded |
+| Born-rule precision <6e-16 (2D) | various 2D pathsum runners |
+| Decoherence → 50% (2D, 3D) | `scripts/influence_functional_decoherence.py` |
+| F∝M ≈ 1.00 (linear) | valley-linear action runners on 2D/3D fixtures |
+
+The bounded finite-entry inventory framing is preserved; the
+certificate runner provides the executable "audit can chase" surface
+the auditor requested.
+
+## Tested entries
 
 ## Tested entries
 
