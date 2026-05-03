@@ -14318,6 +14318,42 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "translation_abelian_composition_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "translation_covariance_local_op_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "momentum_charge_commute_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "pauli_group_order_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "multisite_pauli_group_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "circulant_response_master_identity_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "radial_scaling_protected_angle_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "anomaly_forces_time_theorem"
     },
     {
@@ -14443,6 +14479,10 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gellmann_completeness_theorem_note_2026-05-02"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -22673,7 +22713,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:00:17.523842+00:00",
+  "generated_at": "2026-05-03T14:02:51.250231+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39936,6 +39976,15 @@
         "cpt_exact_note",
         "bell_inequality_derived_note",
         "bound_state_selection_note",
+        "translation_abelian_composition_theorem_note_2026-05-02",
+        "translation_covariance_local_op_theorem_note_2026-05-02",
+        "momentum_charge_commute_theorem_note_2026-05-02",
+        "pauli_group_order_theorem_note_2026-05-02",
+        "multisite_pauli_group_theorem_note_2026-05-02",
+        "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02",
+        "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
+        "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
+        "radial_scaling_protected_angle_narrow_theorem_note_2026-05-02",
         "anomaly_forces_time_theorem",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
         "frontier_extension_lane_opening_note_2026-04-25",
@@ -39968,6 +40017,7 @@
         "native_gauge_closure_note",
         "graph_first_selector_derivation_note",
         "graph_first_su3_integration_note",
+        "gellmann_completeness_theorem_note_2026-05-02",
         "confinement_string_tension_note",
         "left_handed_charge_matching_note",
         "lh_anomaly_trace_catalog_theorem_note_2026-04-25",
@@ -40434,7 +40484,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "301f82b595d13496c04f6e47fb19766354d10cc29a7a22a9df665ff3123ed5b2",
+      "note_hash": "d03405e3e9e8917482a94bc43de89d5ca877ffe86579061e70ec90d2397ed582",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50528,8 +50578,8 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5668,
-    "leaf_count": 631,
+    "edge_count": 5678,
+    "leaf_count": 621,
     "node_count": 1847,
     "root_count": 1047,
     "runners_with_path": 1410
