@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:17:58.160090+00:00
+**Generated:** 2026-05-03T01:20:08.766238+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 211 |
+| **retained_bounded** | 212 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 11 |
-| unaudited | 478 |
+| unaudited | 477 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 421 |
+| `audited_clean` | 422 |
 | `audited_conditional` | 658 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 518 |
+| `unaudited` | 517 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 543 |
+| `bounded_theorem` | 544 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 90 |
+| `open_gate` | 89 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -485,6 +485,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
 | `teleportation_initial_state_preparation_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
+| `teleportation_measurement_record_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
@@ -16886,6 +16887,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** This row is best treated as a clean open_gate rather than a theorem claim. The note does establish the mathematical reduced-density diagnostic for taste-only observables, but its citeable load-bearing content is the blocker: trace extraction alone is not an operational logical readout primitive. The runner output directly supports that distinction and does not rely on one-hop cited authorities.
 - **open / conditional deps cited:**
   - `TELEPORTATION_LOGICAL_READOUT_AUDIT.md`
+- **auditor confidence:** high
+
+### `teleportation_measurement_record_note`
+
+- **Note:** [`TELEPORTATION_MEASUREMENT_RECORD_NOTE.md`](../../docs/TELEPORTATION_MEASUREMENT_RECORD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** In the explicit ideal orthogonal Bell-record register model V|Psi> = sum_zx (P_zx^AR tensor I_B)|Psi> tensor |zx>_M, the runner verifies input-independent record/Bob pre-record marginals and branch-conditioned teleportation correction to numerical precision.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Darwin-the-2nd-019deb6a-e8b8-73a2-92e7-98980f753b40`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** After premeasurement into the inaccessible record register, Bob's reduced density matrix is obtained by tracing out A,R,M, remains I/2 to numerical precision, and when a record label is delivered applying U_zx reconstructs the original input state.  _(class `C`)_
+- **chain closes:** True — The scoped claim is confined to the ideal record-register model with orthogonal labels and standard Bell projectors/corrections. The runner directly constructs that model and verifies the stated marginal-independence and delivered-record correction properties without importing dependencies.
+- **rationale:** The note explicitly bounds the result to an ideal premeasurement/isometry plus branch-conditioning model and does not claim a physical apparatus, decoherence, durable endogenous records, Born-weight derivation, matter transport, or faster-than-light signaling. Within that boundary, the runner checks the Bell-record construction, input-independent inaccessible marginals, and conditioned correction behavior to numerical precision. Residual risk is only that a later claim might overuse this as a physical measurement derivation, which this audited scope does not support.
 - **auditor confidence:** high
 
 ### `teleportation_native_axioms_theory_note`
