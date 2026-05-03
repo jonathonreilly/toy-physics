@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:54:09.538041+00:00
+**Generated:** 2026-05-03T11:57:28.928946+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 741 |
+| unaudited | 740 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 515 |
+| ~~audited_conditional~~ | 516 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 345 |
-| `audited_conditional` | 515 |
+| `audited_conditional` | 516 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 782 |
+| `unaudited` | 781 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 554 |
+| `bounded_theorem` | 555 |
 | `decoration` | 8 |
 | `meta` | 42 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 890 |
+| `positive_theorem` | 889 |
 
 | criticality | count |
 |---|---:|
@@ -805,6 +805,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
+| `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | E | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_c3_character_holonomy_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -10000,6 +10001,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The oriented face-incidence data are exactly the Hodge image of the normal one-form data, giving a perfect P_1 <--> P_3 duality rather than a selector.  _(class `A`)_
 - **chain closes:** True — Within the granted finite exterior algebra of the primitive four-cell, the Hodge map sends one-form normals to oriented three-form faces and the incidence pairing is nondegenerate. No one-hop dependency is needed, and the conclusion is bounded to the boundary-incidence-only surface.
 - **rationale:** The no-go claim closes as an algebraic negative result: oriented boundary incidence supplies a perfect normal/face duality and preserves the checked substrate structures, so it does not distinguish P_1 from P_3. The runner independently verifies the relevant finite-dimensional identities, equivariance checks, locality relation, variational-dual packet relation, and absence of a manual selector. This is not decoration because it is a negative route-blocking theorem, not an algebraic corollary inflation of a parent claim.
+- **auditor confidence:** high
+
+### `planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25`
+
+- **Note:** [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded algebraic theorem on the time-locked Boolean coframe event cell: under the stated locality, additivity, slot-symmetry, and unit-response normalization assumptions, the normalized first-order carrier is P_A and Tr(I_16/16 P_A)=1/4. It does not derive the gravitational boundary/action identification, Planck scale, SI constants, or minimal-stack closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-pauli-019dedb2-2e8d-76f3-90f0-c082bb8c70f9`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The selection of P_A rests on the stipulated first-order locality B=P_1BP_1 plus axis additivity, coframe-slot symmetry, and especially unit primitive response normalization b_a=1; without the unit normalization the theorem only gives B=lambda P_A, and without the physical bridge it does not identify this carrier with gravitational boundary/action density.  _(class `E`)_
+- **chain closes:** False — The internal algebraic chain to P_A and the 1/4 trace closes only after accepting the carrier axioms and unit normalization. The Planck physical chain remains open because the note explicitly leaves the bridge premise derive_gravitational_boundary_action_density_as_first_order_coframe_carrier unresolved.
+- **rationale:** Issue: The note proves a normalized first-order carrier theorem, not an unconditional derivation of the primitive gravitational boundary/action carrier. Why this blocks: P_A is forced only after assuming first-order locality and unit primitive response normalization; the coefficient 1/4 is then a trace of the selected normalized packet, not a first-principles physical derivation. This avoids a numerical mismatch, but it is still definition/axiom-conditioned rather than Nature-grade closure. Repair target: derive or independently justify first-order locality and unit coframe-slot response from retained primitive axioms, then separately prove the physical bridge identifying gravitational boundary/action density with this carrier. Claim boundary until fixed: may be retained only as a bounded algebraic support theorem: stipulated normalized first-order coframe carrier equals P_A and has source-free trace 1/4; it must not be cited as Planck minimal-stack closure or as deriving gravitational boundary/action density.
+- **open / conditional deps cited:**
+  - `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`
 - **auditor confidence:** high
 
 ### `planck_source_unit_normalization_support_theorem_note_2026-04-25`
