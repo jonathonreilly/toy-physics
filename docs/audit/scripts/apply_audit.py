@@ -747,10 +747,62 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     return True, "applied"
 
 
+PROPAGATION_STEPS = (
+    # Steps that depend only on the ledger's audit verdicts. We skip the
+    # graph rebuild (notes weren't edited) but recompute everything an
+    # audit-verdict change could shift downstream.
+    ("compute_effective_status.py",        "post-apply effective_status pass"),
+    ("invalidate_stale_audits.py",         "invalidate audits whose deps shifted"),
+    ("compute_effective_status.py",        "post-invalidation effective_status pass"),
+    ("compute_audit_queue.py",             "refresh audit queue"),
+    ("compute_reaudit_candidates.py",      "refresh re-audit candidates"),
+    ("render_audit_ledger.py",             "render AUDIT_LEDGER.md"),
+    ("render_publication_effective_status.py", "render publication effective-status views"),
+)
+
+
+def run_propagation() -> int:
+    """Run the propagation slice of the pipeline. Each step is a separate
+    subprocess so a failure in one doesn't corrupt the others' state.
+    """
+    import subprocess
+
+    scripts_dir = Path(__file__).resolve().parent
+    print()
+    print("Propagating audit verdicts through downstream pipeline steps...")
+    failed = 0
+    for script, desc in PROPAGATION_STEPS:
+        script_path = scripts_dir / script
+        if not script_path.exists():
+            print(f"  [skip] {script} not found")
+            continue
+        print(f"  -> {script:42s} ({desc})")
+        result = subprocess.run(
+            [sys.executable, str(script_path)],
+            cwd=REPO_ROOT, capture_output=True, text=True,
+        )
+        if result.returncode != 0:
+            failed += 1
+            print(f"     FAIL exit={result.returncode}", file=sys.stderr)
+            if result.stderr:
+                print(f"     stderr: {result.stderr.strip()[:400]}", file=sys.stderr)
+    if failed:
+        print(f"Propagation: {len(PROPAGATION_STEPS) - failed}/{len(PROPAGATION_STEPS)} steps OK ({failed} failed)")
+        return 1
+    print(f"Propagation: {len(PROPAGATION_STEPS)} steps OK")
+    return 0
+
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--file", help="Path to a single audit JSON file.")
     p.add_argument("--batch", help="Directory of audit JSON files (one per claim).")
+    p.add_argument(
+        "--no-propagate",
+        action="store_true",
+        help="Skip the post-write propagation pipeline. Use when applying many "
+             "audits in sequence (call run_pipeline.sh manually after the batch).",
+    )
     args = p.parse_args()
 
     if not LEDGER_PATH.exists():
@@ -788,6 +840,13 @@ def main() -> int:
 
     LEDGER_PATH.write_text(json.dumps(ledger, indent=2, sort_keys=True) + "\n")
     print(f"Applied {applied}/{len(audits)} audit(s) to {LEDGER_PATH.relative_to(REPO_ROOT)}")
+
+    propagation_rc = 0
+    if applied > 0 and not args.no_propagate:
+        propagation_rc = run_propagation()
+
+    if propagation_rc != 0:
+        return 4
     return 0 if applied == len(audits) else 3
 
 

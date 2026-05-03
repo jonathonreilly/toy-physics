@@ -15,18 +15,47 @@ only. Fast. Catches:
 - Hard-rule violation (author-declared `retained`, missing auditor on
   `audited_clean`, etc.).
 
-Install:
+Install (one-time, per local clone — git hooks are not version-controlled):
 
 ```bash
-ln -sf ../../docs/audit/scripts/pre_commit_audit_check.sh .git/hooks/pre-commit
-chmod +x docs/audit/scripts/pre_commit_audit_check.sh
+bash scripts/setup_audit_hooks.sh
 ```
 
-## CI / cron (full pipeline)
+The setup script resolves the correct hooks directory (handles main worktree
+and secondary worktrees via `git rev-parse --git-path hooks`) and installs
+a symlink to `docs/audit/scripts/pre_commit_audit_check.sh`. Uninstall with
+`bash scripts/setup_audit_hooks.sh --uninstall`.
 
-Run `bash docs/audit/scripts/run_pipeline.sh` on a regular cadence
-(suggested: every push to `main`, plus a daily cron). The full pipeline
-adds:
+## CI (full pipeline)
+
+The workflow file is provided as a TEMPLATE at
+[`docs/audit/templates/audit_workflow.yml`](templates/audit_workflow.yml).
+It must be installed manually by a user with `workflow` token scope (see
+[`docs/audit/templates/README.md`](templates/README.md)). The bot/OAuth
+account used for automated commits does not have permission to create
+files under `.github/workflows/`.
+
+After install (one-time), `.github/workflows/audit.yml` runs
+`bash docs/audit/scripts/run_pipeline.sh` on:
+
+- every pull request that touches `docs/**/*.md`, `docs/audit/scripts/**`,
+  `scripts/**/*.py`, `scripts/**/*.sh`, or the workflow file itself,
+- a nightly cron at `06:00 UTC` on `main`,
+- manual `workflow_dispatch`.
+
+The trigger set is deliberately narrow because this repo has very high
+commit volume (hundreds of pushes per day). The nightly cron + the PR
+pre-merge gate together still guarantee that `main` never drifts more
+than 24 hours from the audit ledger, and never merges drift through a PR.
+
+On `schedule` and `workflow_dispatch` runs the workflow auto-commits the
+regenerated audit-data and publication-facing effective-status views back
+to `main` (as `audit-bot`, with `[skip ci]` to prevent feedback loops).
+PR runs fail if the pipeline produces a diff (no auto-commit; PRs from forks
+would not have write permission anyway, and PR authors should commit the
+regenerated files themselves before requesting review).
+
+The full pipeline adds:
 
 - `classify_runner_passes.py` — heuristic A/B/C/D classifier.
 - `compute_load_bearing.py` — transitive descendants, criticality tier

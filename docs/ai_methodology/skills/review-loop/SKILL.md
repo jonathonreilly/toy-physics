@@ -353,6 +353,32 @@ git diff --check
 The known graph-cycle warning is acceptable. Any strict-lint error blocks a
 review-loop PASS.
 
+7. **Pipeline-clean PASS gate (hard).** After running the pipeline, the
+   following must hold for review-loop to issue PASS:
+
+```bash
+# Must produce no output. Any change here means the branch did not
+# include the regenerated audit-data files; commit them before PASS.
+git status --porcelain docs/audit/AUDIT_LEDGER.md \
+                       docs/audit/AUDIT_QUEUE.md \
+                       docs/audit/data \
+                       docs/publication/ci3_z3/PUBLICATION_AUDIT_DIVERGENCE.md \
+                       docs/publication/ci3_z3/CLAIMS_TABLE_EFFECTIVE_STATUS.md \
+                       docs/publication/ci3_z3/DERIVATION_ATLAS_EFFECTIVE_STATUS.md \
+                       docs/publication/ci3_z3/PUBLICATION_MATRIX_EFFECTIVE_STATUS.md \
+                       docs/publication/ci3_z3/FULL_CLAIM_LEDGER_EFFECTIVE_STATUS.md \
+                       docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX_EFFECTIVE_STATUS.md \
+                       docs/publication/ci3_z3/RESULTS_INDEX_EFFECTIVE_STATUS.md \
+                       docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE_EFFECTIVE_STATUS.md \
+                       docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP_EFFECTIVE_STATUS.md
+```
+
+If this command prints any lines, BLOCK PASS and instruct the operator to
+commit the regenerated files. When the audit workflow template is installed
+as `.github/workflows/audit.yml`, PR runs enforce the same gate and the nightly
+cron refreshes main; review-loop must not let a branch reach merge with
+pipeline-derived files out of date with the source notes.
+
 The review loop must not run `docs/audit/scripts/apply_audit.py` and must not
 write `audit_status`, `audited_clean`, or other audit verdicts. If the branch
 introduces retained-grade `claim_type` rows, report those claim IDs in the
