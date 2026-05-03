@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T13:49:57.650941+00:00
+**Generated:** 2026-05-03T13:51:37.866428+00:00
 **Total pending:** 794
 **Ready (all deps already at retained-grade or metadata tiers):** 101
 
 By criticality:
 - `critical`: 64
 - `high`: 229
-- `medium`: 280
-- `leaf`: 221
+- `medium`: 281
+- `leaf`: 220
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -16,7 +16,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | unaudited | critical | 364 | 23.51 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 1 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | unaudited | critical | 364 | 24.51 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 2 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | critical | 280 | 14.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_derivation.py` |
 | 3 | `gate_b_farfield_note` | bounded_theorem | unaudited | critical | 81 | 13.86 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gate_b_farfield_harness.py` |
 | 4 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 313 | 9.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 64,
     "high": 229,
-    "leaf": 221,
-    "medium": 280
+    "leaf": 220,
+    "medium": 281
   },
-  "generated_at": "2026-05-03T13:49:57.650941+00:00",
+  "generated_at": "2026-05-03T13:51:37.866428+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -19,9 +19,9 @@
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [],
-      "direct_in_degree": 30,
+      "direct_in_degree": 32,
       "effective_status": "unaudited",
-      "load_bearing_score": 23.512,
+      "load_bearing_score": 24.512,
       "note_path": "docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md",
       "queue_reason": "unaudited",
       "ready": true,
@@ -1970,6 +1970,27 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "axiom_first_lattice_noether_theorem_note_2026-04-29",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 8,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.672,
+      "note_path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/axiom_first_lattice_noether_check.py",
+      "transitive_descendants": 50
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "oh_static_constraint_lift_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -2049,27 +2070,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_rigidity_theorem.py",
       "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "axiom_first_lattice_noether_theorem_note_2026-04-29",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 8,
-      "effective_status": "unaudited",
-      "load_bearing_score": 7.17,
-      "note_path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/axiom_first_lattice_noether_check.py",
-      "transitive_descendants": 8
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -7119,6 +7119,8 @@
         "three_generation_structure_note",
         "three_generation_observable_theorem_note",
         "three_generation_chirality_boundary_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
         "ckm_koide_cross_sector_z3_closure_theorem_note_2026-04-25",
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
         "site_phase_cube_shift_intertwiner_note",
@@ -11609,6 +11611,29 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_active_parity_compatible_diagonal_baseline_theorem.py",
+      "transitive_descendants": 42
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.426,
+      "note_path": "docs/HOPPING_BILINEAR_HERMITICITY_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/hopping_bilinear_hermiticity_check.py",
       "transitive_descendants": 42
     },
     {
@@ -18142,29 +18167,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_higgs_vacuum_stability_new_physics_discrimination.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "axiom_first_lattice_noether_theorem_note_2026-04-29"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/HOPPING_BILINEAR_HERMITICITY_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/hopping_bilinear_hermiticity_check.py",
       "transitive_descendants": 0
     },
     {

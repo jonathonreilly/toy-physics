@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:49:58.137984+00:00
+**Generated:** 2026-05-03T13:51:39.310907+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -57,8 +57,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `critical` | 115 |
 | `high` | 363 |
-| `medium` | 521 |
-| `leaf` | 746 |
+| `medium` | 522 |
+| `leaf` | 745 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
@@ -85,9 +85,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 193 | 26.60 | `unaudited` | unaudited |
 | 8 | `native_gauge_closure_note` | bounded_theorem | critical | 375 | 25.55 | `audited_clean` | **retained_bounded** |
 | 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 224 | 24.81 | `unaudited` | unaudited |
-| 10 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
-| 11 | `minimal_axioms_2026-05-03` | meta | critical | 364 | 23.51 | `unaudited` | meta |
-| 12 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 364 | 23.51 | `unaudited` | unaudited |
+| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 364 | 24.51 | `unaudited` | unaudited |
+| 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `minimal_axioms_2026-05-03` | meta | critical | 364 | 23.51 | `unaudited` | meta |
 | 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 312 | 22.79 | `unaudited` | unaudited |
 | 14 | `one_generation_matter_closure_note` | positive_theorem | critical | 241 | 21.92 | `unaudited` | unaudited |
 | 15 | `three_generation_structure_note` | bounded_theorem | critical | 203 | 21.67 | `unaudited` | unaudited |

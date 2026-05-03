@@ -1026,6 +1026,14 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "hopping_bilinear_hermiticity_theorem_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "ckm_koide_cross_sector_z3_closure_theorem_note_2026-04-25"
     },
     {
@@ -14446,6 +14454,14 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hopping_bilinear_hermiticity_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "site_phase_cube_shift_intertwiner_note"
     },
     {
@@ -22569,7 +22585,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:49:51.487943+00:00",
+  "generated_at": "2026-05-03T13:51:27.553168+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25070,6 +25086,8 @@
         "three_generation_structure_note",
         "three_generation_observable_theorem_note",
         "three_generation_chirality_boundary_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
         "ckm_koide_cross_sector_z3_closure_theorem_note_2026-04-25",
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
         "site_phase_cube_shift_intertwiner_note",
@@ -25293,7 +25311,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "e05710c3a93371cf38f957cb0335bcce0830b2a5ae73d253832918d8b9cba182",
+      "note_hash": "031cf5099fe14ab680af8b4d111202148041c8b604cd2812b5feeb3494a9ab16",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -39864,6 +39882,8 @@
         "su3_cubic_anomaly_cancellation_theorem_note_2026-04-24",
         "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03",
         "three_generation_structure_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "hopping_bilinear_hermiticity_theorem_note_2026-05-02",
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
@@ -40304,7 +40324,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "b51f959edc499a612483a203ad794880d90c96f31c85245e5a479bf019d2ee64",
+      "note_hash": "f720e9f8025ea7deceb0467decc09f4c93b42bc203772b2c97f8c6ce5e15568f",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50398,8 +50418,8 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5642,
-    "leaf_count": 642,
+    "edge_count": 5646,
+    "leaf_count": 641,
     "node_count": 1847,
     "root_count": 1047,
     "runners_with_path": 1410
