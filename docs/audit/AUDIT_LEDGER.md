@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:56:17.506279+00:00
+**Generated:** 2026-05-03T15:58:46.878744+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 778 |
+| unaudited | 777 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 516 |
+| ~~audited_conditional~~ | 517 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 308 |
-| `audited_conditional` | 516 |
+| `audited_conditional` | 517 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 824 |
+| `unaudited` | 823 |
 
 | claim_type | count |
 |---|---:|
@@ -595,6 +595,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `down_type_mass_ratio_ckm_dual_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
 | `edge_deletion_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `edge_deletion_boundary_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `electrostatics_card_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unratified_physical_bridge_configured_numerical_proxy | - |
 | `em_gravity_coexistence_2x2_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -5245,6 +5246,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The live named harness recomputes the fixed finite packet propagation and prints PASS for all six source/test charge cases with centroid shifts of the stated signs. The conclusion closes only for the explicitly sign-flipped scalar phase-law setup and does not derive full electromagnetism.
 - **rationale:** The source note's retained statement is bounded to a representability test under an explicitly sign-flipped scalar phase coupling on one fixed ordered-lattice family. The live runner output matches the frozen qualitative replay: like-charge cases have negative centroid shifts, unlike-charge cases have positive centroid shifts, and neutral cases are zero to printed precision. The note's referenced frozen log is absent from this worktree, which should be repaired as an archival artifact, but the live finite computation is enough to close the narrow sign-law claim audited here.
 - **auditor confidence:** high
+
+### `electrostatics_card_note`
+
+- **Note:** [`ELECTROSTATICS_CARD_NOTE.md`](../../docs/ELECTROSTATICS_CARD_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** On the fixed retained 3D ordered-lattice family, a configured scalar 1/r sign-coupled source field with test-charge phase coupling produces opposite-sign centroid shifts for like/unlike charges, exact same-node opposite-charge cancellation, dipole sign reversal, near-linear charge scaling, and attenuation by a symmetric screening shell.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-electrostatics-fresh-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The theorem depends on promoting the configured scalar source field field += src.charge * SOURCE_STRENGTH / r and the propagation rule act = L * (1 + q_test * lf) into an electrostatic-like charge law, then reading detector centroid shifts as attraction/repulsion.  _(class `unratified_physical_bridge_configured_numerical_proxy`)_
+- **chain closes:** False — The runner output matches the note's frozen numerical claims, but the source law, charge coupling, field power, strength, screening geometry, and centroid readout are configured premises rather than derived retained consequences of the ordered-lattice machinery.
+- **rationale:** Issue: The load-bearing electrostatic-like law is introduced in the runner by hand through the scalar 1/r source field and the q_test * lf action deformation, while the note treats the resulting sign behavior as retained support from the ordered-lattice machinery. Why this blocks: A hostile review can accept every printed numerical check and still reject the positive theorem, because the bridge from retained lattice inputs to charge carriers, source law, coupling sign, and attraction/repulsion readout is not derived. Repair target: Provide a retained theorem deriving the scalar source field, test-charge coupling, allowed normalization/power, and detector centroid readout from ordered-lattice primitives, and update the runner so those objects are constructed from that theorem rather than configured. Claim boundary until fixed: The safe claim is a conditional numerical demonstration: given this imposed scalar sign-coupled field model on the retained lattice family, the listed sign, null, dipole, scaling, and screening probes behave as reported.
+- **auditor confidence:** 0.88
 
 ### `electrostatics_grown_sign_law_note`
 
