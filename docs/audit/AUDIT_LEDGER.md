@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:07:55.240900+00:00
+**Generated:** 2026-05-03T02:10:37.766093+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 99 |
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 13 |
-| unaudited | 462 |
+| open_gate | 14 |
+| unaudited | 461 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 428 |
+| `audited_clean` | 429 |
 | `audited_conditional` | 667 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 502 |
+| `unaudited` | 501 |
 
 | claim_type | count |
 |---|---:|
@@ -495,6 +495,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_resource_fidelity_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
+| `teleportation_three_register_cross_encoding_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -17162,6 +17163,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** The scoped claim is not a teleportation promotion theorem but a clean operational gate on ignoring cells and spectator tastes. The runner directly supports the key distinctions: axis logical Z/X and axis-built projectors pass, while native sublattice Z and native-Z Bell/stabilizer constructions fail in 2D/3D. The result is citeable as a blocker requiring either factorized logical operators, environment-blind apparatus, bounded branch variation, or explicit heralding.
 - **open / conditional deps cited:**
   - `TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md`
+- **auditor confidence:** high
+
+### `teleportation_three_register_cross_encoding_note`
+
+- **Note:** [`TELEPORTATION_THREE_REGISTER_CROSS_ENCODING_NOTE.md`](../../docs/TELEPORTATION_THREE_REGISTER_CROSS_ENCODING_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Bounded finite numerical audit showing that, for the default surveyed KS taste-qubit geometries and sampled A/R/B encoding triples, ideal three-register teleportation passes with axis-adapted Bell measurement, identity logical resource map, and axis-adapted Bob corrections, while the stated controls fail only on their expected boundaries.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-agent-dirac-2nd-019deb98-aaea-7c31-a443-52a08fd2f148`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Within the bounded default survey, the obstruction is not three-register cross-encoding itself; the intended logical protocol passes when the A/R Bell measurement is explicitly adapted to the two Alice-side encodings and Bob's corrections are adapted to Bob's chosen encoding.  _(class `C`)_
+- **chain closes:** True — The source note has no declared dependencies and confines the claim to a finite ideal logical-state survey. The runner independently enumerates the bounded KS encoding supports, constructs the logical Pauli/Bell objects and controls, and reproduces the stated pass/fail boundaries with zero unexpected results.
+- **rationale:** The clean verdict applies only to the open-gate artifact: a bounded finite-survey planning result over ideal encoded taste qubits. The runner does not merely restate the conclusion; it builds the surveyed encodings, logical operators, Bell projectors, teleportation trials, no-signaling metrics, and negative controls, and the current output matches the source note. The note explicitly excludes apparatus dynamics, physical resource preparation, durable records, Hamiltonian transport, noise, matter/object transfer, and faster-than-light signaling, so those missing physical bridges do not block the scoped artifact. Residual risk is limited to the finite sampling boundary: dim 2 side 4, dim 3 side 2, and dim 3 side 4 are capped at 512 triples per geometry rather than exhaustive over all possible triples.
 - **auditor confidence:** high
 
 ### `tensor_block_closure_test_note`
