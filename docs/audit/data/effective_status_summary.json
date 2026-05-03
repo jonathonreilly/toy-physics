@@ -7,7 +7,7 @@
     "open_gate": 100,
     "positive_theorem": 863
   },
-  "computed_at": "2026-05-02T23:59:06.046788+00:00",
+  "computed_at": "2026-05-03T00:01:58.198758+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -36,7 +36,7 @@
     "audited_conditional": 652,
     "audited_decoration": 3,
     "audited_failed": 4,
-    "audited_numerical_match": 26,
+    "audited_numerical_match": 27,
     "audited_renaming": 21,
     "decoration_under_cpt_exact_note": 1,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
@@ -48,7 +48,7 @@
     "retained_bounded": 199,
     "retained_no_go": 98,
     "retained_pending_chain": 2,
-    "unaudited": 504
+    "unaudited": 503
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

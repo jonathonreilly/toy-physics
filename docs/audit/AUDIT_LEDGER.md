@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-02T23:59:06.453260+00:00
+**Generated:** 2026-05-03T00:01:58.705248+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 199 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 504 |
+| unaudited | 503 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 26 |
+| ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 652 |
 | ~~audited_failed~~ | 4 |
@@ -42,9 +42,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 652 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
-| `audited_numerical_match` | 26 |
+| `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 543 |
+| `unaudited` | 542 |
 
 | claim_type | count |
 |---|---:|
@@ -1234,6 +1234,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `source_resolved_exact_green_h025_pocket_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-agent | D | - |
+| `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-agent | D | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -15475,6 +15476,21 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The source-resolved Green field remains a bounded weak-field pocket on the larger exact lattice, preserving zero-source reduction, TOWARD sign, near-linear F~M, and mean |green/inst| = 1.111.  _(class `C`)_
 - **chain closes:** True — The runner recomputes the note's larger-family replay exactly for the declared lattice, source cluster, kernel, source ladder, and calibration gain. The note keeps the result bounded as exact-lattice size-transfer evidence and does not claim a full self-consistent field theory.
 - **rationale:** The current runner output matches the frozen table: zero-source shift is 0, the Green-kernel deflections and ratios match, max |f| scales from 2.5e-03 to 2.0e-02, and both fitted exponents are 1.01. This closes the bounded size-transfer claim for the declared source-resolved linear Green architecture. Residual risk is still generated-geometry transfer, robustness, and self-consistency, which the note identifies as outside this claim.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_self_consistent_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-run statement for the specified h=0.25, W=3, L=6 lattice, source cluster, kernel, source strengths, calibration gain, and single self-consistency update.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Schrodinger-019deb23-90f0-7c51-bc4b-a8a49a5ce370`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** A compact exact h=0.25 lattice with a boundary-clipped 4-node source cluster preserves zero-source reduction, TOWARD sign in 4/4 rows, linear F~M scaling, and nontrivial self-consistent Green deflections after one reweighting update.  _(class `D`)_
+- **chain closes:** True — The runner output directly reproduces the note's numeric table, zero-source shift, TOWARD row count, fitted exponents, and mean ratio for the frozen finite setup, but it is a calibrated numerical pocket rather than a general theorem.
+- **rationale:** Issue: the load-bearing positive is established by a calibrated finite numerical run, with the gain chosen so max |f| reaches the target cap at s=0.008. Why this blocks: the runner output supports the bounded table and sign/scaling readout, but has no explicit PASS/FAIL assertion wrapper and the comparator amplitude is calibration-dependent. Repair target: add explicit assertions for zero-source exactness, TOWARD sign, exponent tolerances, and declare the calibrated gain as an input rather than evidence of independent physical amplitude. Claim boundary until fixed: acceptable only as a narrow refinement-positive numerical pocket for the frozen setup, not as a full self-consistent field theory.
+- **open / conditional deps cited:**
+  - `scripts/source_resolved_exact_green_self_consistent.py`
 - **auditor confidence:** high
 
 ### `source_resolved_generated_architecture_bridge_note`
