@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:01:51.335012+00:00
+**Generated:** 2026-05-03T21:04:32.751406+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 189 |
+| **retained_bounded** | 190 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 697 |
+| unaudited | 696 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 352 |
+| `audited_clean` | 353 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 744 |
+| `unaudited` | 743 |
 
 | claim_type | count |
 |---|---:|
@@ -393,6 +393,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | A | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `symmetry_generated_paired_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -13829,6 +13830,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The safe read is that structureless causal DAGs can show TOWARD rows, and when they do the source-strength response stays close to linear on this pocket.  _(class `C`)_
 - **chain closes:** True — The runner directly constructs the stated random DAG pocket, propagates with the stated valley-linear field and kernel, and reports the TOWARD counts, local power-law fits, and no-field controls. No external dependency or graph-universality claim is needed for the narrowed harness-level statement.
 - **rationale:** The bounded claim closes as a direct numerical harness result: n=200 gives 28/32 TOWARD rows and n=500 gives 21/32 TOWARD rows, with F~M median 1.00 and zero no-field controls in both reported sizes. The source note's n=500 table value is stale relative to current runner output, but this does not change the load-bearing majority-TOWARD and near-linear positive-row conclusion. Exact-count citation should use the current runner values until the note table is refreshed.
+- **auditor confidence:** high
+
+### `su3_fusion_engine_pr1_theorem_note_2026-05-03`
+
+- **Note:** [`SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md`](../../docs/SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded verification that scripts/frontier_su3_fusion_engine.py at NMAX=4 and n_grid=80 returns a rounded SU(3) finite-box fusion table with residual 3.553e-15, 3049 nonzero entries, and PASS on V1-V9 plus numerical-noise diagnostics.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-su3-fusion-engine-pr1`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** At NMAX = 4 and n_grid = 80, the runner computes a finite fusion table on 0 <= p,q <= 4 using numerical Cartan-torus character orthogonality; the returned table has non-negative integer entries after rounding, maximum integer residual < 3.6e-15, and passes V1-V9 plus the numerical-noise check.  _(class `A`)_
+- **chain closes:** True — The source note scopes the claim to the finite default runner surface and explicitly excludes Wilson-plaquette, lattice-gauge, and bridge-parent claims. The runner completed cleanly and reproduced the note's stated PASS=10 FAIL=0 summary with the same residual and table size.
+- **rationale:** The bounded theorem is supported by the completed runner output: NMAX=4, n_grid=80, table shape (25,25,25), 3049 nonzero entries, max integer residual 3.553e-15, and SUMMARY: BOUNDED PASS=10 FAIL=0. The validation suite checks standard SU(3) landmark decompositions, commutativity, singlet selection, dimension overflow, crossing, Pieri, and rounding noise without importing the deferred gauge-scalar bridge. Residual risk is limited to the declared finite numerical surface: this audit does not certify arbitrary-representation fusion, Wigner intertwiners, Haar-integral PRs, cube Perron computation, or any Wilson-plaquette bridge claim.
 - **auditor confidence:** high
 
 ### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
