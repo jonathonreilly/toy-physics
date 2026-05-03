@@ -1,6 +1,7 @@
 # Neutrino Retained Status Note (2026-04-16)
 
 **Status:** live science packet on `main`; outside the flagship paper core
+**Primary runner:** [`scripts/frontier_pmns_lower_level_end_to_end_closure.py`](../scripts/frontier_pmns_lower_level_end_to_end_closure.py) (PASS=26/0)
 
 ## Scope
 

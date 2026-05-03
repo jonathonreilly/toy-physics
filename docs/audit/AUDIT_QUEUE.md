@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T23:07:14.256059+00:00
+**Generated:** 2026-05-03T23:15:28.157042+00:00
 **Total pending:** 696
 **Ready (all deps already at retained-grade or metadata tiers):** 16
 
@@ -18,7 +18,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 313 | 9.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
 | 2 | `left_handed_charge_matching_note` | positive_theorem | unaudited | critical | 312 | 23.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
-| 3 | `cpt_exact_note` | positive_theorem | unaudited | critical | 293 | 17.20 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 3 | `cpt_exact_note` | positive_theorem | unaudited | critical | 293 | 17.20 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
 | 4 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 293 | 11.20 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
 | 5 | `lorentz_boost_covariance_2d_theorem_note` | positive_theorem | unaudited | critical | 288 | 14.18 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_2d.py` |
 | 6 | `area_law_quarter_broader_no_go_note_2026-04-25` | no_go | unaudited | critical | 288 | 13.68 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_quarter_broader_no_go.py` |

@@ -23245,7 +23245,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T23:07:06.492671+00:00",
+  "generated_at": "2026-05-03T23:15:22.109465+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -27849,9 +27849,9 @@
       "deps": [
         "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
       ],
-      "note_hash": "3afa404d43a363c2dde5dd7c210c3aaa95d92fa696759bab6ceac344f83b7826",
+      "note_hash": "679ee3d6c794d007f0a438b14a4f56441ad81ae2d0a95ee79b093e21538e00b6",
       "path": "docs/CPT_EXACT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cpt_exact.py",
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
     },
     "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
@@ -38903,9 +38903,9 @@
         "neutrino_sole_axiom_full_closure_boundary_note",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
       ],
-      "note_hash": "a0088ca657f3503bacc105a1fc8151044445839dfea780204503b4598eccaefa",
+      "note_hash": "0e028296488357d8328ae881add0e9dda81fa1bba417bc0f9447f393bff4148a",
       "path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_lower_level_end_to_end_closure.py",
       "title": "Neutrino Retained Status Note (2026-04-16)"
     },
     "neutrino_sole_axiom_full_closure_boundary_note": {
@@ -39115,9 +39115,9 @@
       "deps": [
         "r_base_group_theory_derivation_theorem_note_2026-04-24"
       ],
-      "note_hash": "37a6a9ee9ce4bfdd042c3173c547b75247a181ed9a772bbe57d5738d91f33a79",
+      "note_hash": "8c0c80f00a86f41f7a849d54ec086695a016a3813171c92a73256dd247790257",
       "path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_omega_lambda_derivation.py",
       "title": "Omega_Lambda Derivation: The Cosmological Pie Chart"
     },
     "omega_lambda_matter_bridge_theorem_note_2026-04-22": {
@@ -40528,9 +40528,9 @@
       "deps": [
         "bminusl_anomaly_freedom_theorem_note_2026-04-24"
       ],
-      "note_hash": "416fe64000b4b60c505e7dede9f0df5c4f7b099feab0f218bad536500cd9f271",
+      "note_hash": "71bc3c30674b66e3f1b933ea022674b4fcc29c25357539739fdca55d37c20070",
       "path": "docs/PROTON_LIFETIME_DERIVED_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_proton_lifetime_derived.py",
       "title": "Proton Lifetime Derived from Cl(3) on Z^3"
     },
     "publication.ci3_z3.arxiv_draft": {
@@ -43441,9 +43441,9 @@
         "ckm_from_mass_hierarchy_note",
         "ckm_five_sixths_bridge_support_note"
       ],
-      "note_hash": "f1b7e70c2bc9a8c184d71cd8dd84d88210050b055936945e3b7f2f68ec4a45e1",
+      "note_hash": "d323ac699bdf3684cb67b74864ed535244f527aa7baea807befcc82b6ac20a40",
       "path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_quark_mass_ratio_review.py",
       "title": "Quark Mass-Ratio Support Packet (2026-04-18)"
     },
     "quark_mass_ratios_taste_staircase_support_note_2026-04-25": {
@@ -46184,9 +46184,9 @@
         "graph_first_su3_integration_note",
         "three_generation_structure_note"
       ],
-      "note_hash": "12fd7ef6374d06440447bcab675a44b6736448e402a8e00dee78cf29bf24b429",
+      "note_hash": "30603ba8b2f45b513147e63c5d1adfd2f7c5db300e615954cabbff7b371660a1",
       "path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su2_witten_z2_anomaly.py",
       "title": "SU(2) Witten Z_2 Global Anomaly Cancellation Theorem"
     },
     "su3_adjoint_casimir_theorem_note_2026-05-02": {
@@ -46270,9 +46270,9 @@
         "graph_first_su3_integration_note",
         "left_handed_charge_matching_note"
       ],
-      "note_hash": "89085dde243dd69e8cd4adb9ce663291652c1283152e79d3a4e9450c34286478",
+      "note_hash": "77f4d469cbbd1b90e51b84612c4fbd3c0890cb807874f24346c891a284690c88",
       "path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su3_cubic_anomaly_cancellation.py",
       "title": "SU(3)^3 Cubic Gauge Anomaly Cancellation Theorem"
     },
     "su3_dabc_symmetric_theorem_note_2026-05-02": {
@@ -51523,6 +51523,6 @@
     "leaf_count": 599,
     "node_count": 1870,
     "root_count": 1056,
-    "runners_with_path": 1430
+    "runners_with_path": 1437
   }
 }

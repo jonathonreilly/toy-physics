@@ -5,7 +5,7 @@
     "leaf": 177,
     "medium": 242
   },
-  "generated_at": "2026-05-03T23:07:14.256059+00:00",
+  "generated_at": "2026-05-03T23:15:28.157042+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -78,7 +78,7 @@
       "note_path": "docs/CPT_EXACT_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cpt_exact.py",
       "transitive_descendants": 293
     },
     {
@@ -1447,7 +1447,7 @@
       "note_path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su2_witten_z2_anomaly.py",
       "transitive_descendants": 74
     },
     {
@@ -2893,7 +2893,7 @@
       "note_path": "docs/OMEGA_LAMBDA_DERIVATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_omega_lambda_derivation.py",
       "transitive_descendants": 128
     },
     {
@@ -3991,7 +3991,7 @@
       "note_path": "docs/SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_su3_cubic_anomaly_cancellation.py",
       "transitive_descendants": 74
     },
     {
@@ -5650,7 +5650,7 @@
       "note_path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_lower_level_end_to_end_closure.py",
       "transitive_descendants": 47
     },
     {
@@ -5999,7 +5999,7 @@
       "note_path": "docs/QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_quark_mass_ratio_review.py",
       "transitive_descendants": 46
     },
     {
@@ -6606,7 +6606,7 @@
       "note_path": "docs/PROTON_LIFETIME_DERIVED_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_proton_lifetime_derived.py",
       "transitive_descendants": 45
     },
     {

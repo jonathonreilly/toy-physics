@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T23:07:14.788301+00:00
+**Generated:** 2026-05-03T23:15:28.648828+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -65,9 +65,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1353
-- runners with (C) first-principles compute hits: 663
-- runners with (D) external comparator hits: 337
+- runners classified: 1360
+- runners with (C) first-principles compute hits: 666
+- runners with (D) external comparator hits: 340
 - decoration candidates (no C, no D): 114
 
 ## Top 25 by load-bearing score (topology only)
