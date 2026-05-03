@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:48:36.163407+00:00
+**Generated:** 2026-05-03T19:02:46.522991+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 723 |
+| unaudited | 722 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 544 |
+| ~~audited_conditional~~ | 545 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 331 |
-| `audited_conditional` | 544 |
+| `audited_conditional` | 545 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 769 |
+| `unaudited` | 768 |
 
 | claim_type | count |
 |---|---:|
@@ -676,6 +676,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravity_sign_audit_2026-04-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `growing_graph_expansion_card_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `grown_wavefield_companion_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `h0125_wider_replay_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `h0125_wider_w4_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `h2t_h0125_narrow_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -7060,6 +7061,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The retained width-4 comparator stays pinned at alpha = 0.499, while the shorter-scale scout only reaches alpha = 0.501, 0.501, 0.502.  _(class `B`)_
 - **chain closes:** True — The cited scout log matches the note's Born, k, gravity, and alpha values, and the cited comparator log reports alpha = 0.499 for phys_l=6, phys_w=4. The closure is bounded to those observed full-window rows and does not exclude untested geometries.
 - **rationale:** The note's load-bearing comparison is a direct read from the two cited logs, and the numeric values match. Under the stated bounded scope, the conclusion does not require an additional physical bridge, tuned comparator, or algebraic decoration. Residual risk is limited to lack of a provided runner rerun; this audit ratifies only the recorded observed rows.
+- **auditor confidence:** medium
+
+### `h0125_wider_replay_note`
+
+- **Note:** [`H0125_WIDER_REPLAY_NOTE.md`](../../docs/H0125_WIDER_REPLAY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded h=0.125 wider-family replay claim that the observed full-window width-4 row and shorter-scale scout remain in the alpha~0.5 class rather than rescuing F~M alpha~1.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-hopper`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The weak-field exponent does not move toward 1.0; it stays pinned to the fixed-family ~0.5 class.  _(class `C`)_
+- **chain closes:** False — The one-hop scout dependency is already clean in current operational metadata, but the load-bearing width-4 replay row did not reproduce within bounded current audit runs, including a narrowed full-window invocation.
+- **rationale:** Issue: the bounded conclusion relies on a current numerical replay row, but the replay runner did not produce the load-bearing Born, k=0, gravity, and alpha diagnostics within bounded audit runs. Why this blocks: a retained bounded theorem cannot rest on stale summarized output when the current executable support is unavailable in the audit lane. Repair target: provide a current completed runner output or a faster deterministic runner path that reproduces the exact phys_l=6, phys_w=4, h=0.125, full-window z=3.0 row and its alpha~0.5 fit. Claim boundary until fixed: the note may be cited only as a conditional diagnostic summary of observed rows, not as an audited retained bounded no-go.
 - **auditor confidence:** medium
 
 ### `h0125_wider_w4_probe_note`
