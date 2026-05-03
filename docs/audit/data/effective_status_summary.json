@@ -1,15 +1,23 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 550,
+    "bounded_theorem": 426,
     "decoration": 8,
     "meta": 41,
-    "no_go": 160,
-    "open_gate": 85,
-    "positive_theorem": 887,
-    "unset": 8
+    "no_go": 158,
+    "open_gate": 83,
+    "positive_theorem": 815,
+    "unset": 208
   },
-  "computed_at": "2026-05-03T11:35:39.178695+00:00",
+  "computed_at": "2026-05-03T11:37:21.380146+00:00",
   "cycle_examples": [
+    [
+      "restricted_strong_field_closure_note",
+      "evanescent_barrier_amplitude_suppression_theorem_note"
+    ],
+    [
+      "evanescent_barrier_amplitude_suppression_theorem_note",
+      "gw_echo_null_result_note"
+    ],
     [
       "lorentz_boost_covariance_2d_theorem_note",
       "lorentz_boost_covariance_3plus1d_theorem_note"
@@ -27,37 +35,29 @@
     [
       "anomaly_forces_time_theorem",
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
-    ],
-    [
-      "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
-      "n_eff_from_three_generations_theorem_note_2026-04-24"
-    ],
-    [
-      "publication.ci3_z3.quantitative_summary_table",
-      "publication.ci3_z3.publication_matrix"
     ]
   ],
-  "cycles_detected": 85,
+  "cycles_detected": 104,
   "effective_status_counts": {
-    "audited_conditional": 646,
+    "audited_conditional": 515,
     "audited_decoration": 3,
     "audited_failed": 4,
-    "audited_numerical_match": 26,
-    "audited_renaming": 20,
+    "audited_numerical_match": 25,
+    "audited_renaming": 18,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
     "meta": 40,
     "open_gate": 14,
-    "retained": 141,
-    "retained_bounded": 214,
+    "retained": 111,
+    "retained_bounded": 170,
     "retained_no_go": 95,
     "retained_pending_chain": 3,
-    "unaudited": 530
+    "unaudited": 738
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [
-    "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
+    "causal_distance_tail_note",
     "pmns_selector_unique_amplitude_slot_note",
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24"
   ]

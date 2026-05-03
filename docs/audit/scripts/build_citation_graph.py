@@ -19,6 +19,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -211,8 +212,22 @@ def extract_runner(body: str, rel_path: str | None = None) -> str | None:
 def resolve_link_target(link_target: str, source_path: Path) -> Path | None:
     """Resolve a markdown link target relative to source_path. Returns
     the resolved path under DOCS_DIR if it lands inside DOCS_DIR, else None.
+
+    Absolute paths from legacy repo locations (e.g. links written against
+    /Users/jonreilly/Projects/Physics/docs/...) are rewritten to the
+    current REPO_ROOT/docs/ tree by detecting the '/docs/' segment so
+    citations survive repo moves and machine renames. URL-encoded
+    characters in the link (%20 etc.) are decoded before resolution.
     """
-    candidate = (source_path.parent / link_target).resolve()
+    decoded = urllib.parse.unquote(link_target)
+    if decoded.startswith("/"):
+        marker = "/docs/"
+        idx = decoded.find(marker)
+        if idx < 0:
+            return None
+        candidate = (DOCS_DIR / decoded[idx + len(marker):]).resolve()
+    else:
+        candidate = (source_path.parent / decoded).resolve()
     try:
         candidate.relative_to(DOCS_DIR)
     except ValueError:
