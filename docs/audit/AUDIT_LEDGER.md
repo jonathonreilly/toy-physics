@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:29:39.312453+00:00
+**Generated:** 2026-05-03T20:31:34.878264+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 183 |
+| **retained_bounded** | 184 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 16 |
-| unaudited | 703 |
+| unaudited | 702 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 345 |
+| `audited_clean` | 346 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 750 |
+| `unaudited` | 749 |
 
 | claim_type | count |
 |---|---:|
@@ -357,6 +357,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sixth_family_sheared_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
 | `source_driven_field_recovery_h025_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_driven_field_recovery_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_generated_discriminator_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `source_resolved_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -12853,6 +12854,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The minimal source-driven field architecture has a real weak-field recovery pocket, with TOWARD surviving and the dynamic mass exponent staying near linear only while stronger calibrations drift away from linear scaling.  _(class `C`)_
 - **chain closes:** True — The two cited runners recompute the broad calibration sweep and the conservative pocket replay values stated in the note. The note does not promote this to a self-consistent strong-field theorem and explicitly keeps the calibration-sensitive boundary.
 - **rationale:** The frozen broad sweep matches the current sweep runner for all seven target maxima, including the F~M drift from 0.997 at target 0.001 to 0.642 at target 0.080. The conservative pocket replay also matches: zero-source shift is exactly zero, dynamic F~M is 0.96, all four rows are TOWARD, and the mean dynamic/instantaneous ratio is 1.304. Residual risk is the declared calibration sensitivity, but the source note states that as the claim boundary rather than hiding it.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_pocket_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-compute bounded pocket: on h=0.5, W=3, L=20 with the specified clipped source cluster, kernel, source ladder, and gain, the source-resolved Green field has zero-source reduction, positive weak-field shifts for all four source strengths, and essentially linear mass scaling.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-source-green-pocket`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** For the fixed small exact lattice, clipped cross5 source cluster, Green-like kernel, source ladder, and calibration gain, the frozen readout shows zero-source reduction, TOWARD sign for all four source strengths, and green-kernel F~M exponent 1.00.  _(class `C`)_
+- **chain closes:** True — The runner completed and reproduced the note's frozen values exactly, including zero-source dynamic shift +0.000000e+00, green-kernel exponent 1.00, TOWARD rows 4/4, and mean |green/inst| ratio 1.235. The closure is only for the explicitly fixed finite construction, not for size transfer or a self-consistent dynamical field equation.
+- **rationale:** The note states a narrow bounded feasibility pocket, and the current runner completes in-budget with output matching the frozen table and safe-read quantities. No prior dependencies are required for the audited finite statement, and the note explicitly disclaims full-size transfer and self-consistent dynamics. Residual risk is scope-related: the calibrated finite construction does not by itself prove a general exact-lattice gravity theory.
 - **auditor confidence:** high
 
 ### `source_resolved_exact_green_self_consistent_note`
