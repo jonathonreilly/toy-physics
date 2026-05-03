@@ -28,8 +28,10 @@ DOCS_DIR = REPO_ROOT / "docs"
 AUDIT_DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 OUTPUT_PATH = AUDIT_DATA_DIR / "citation_graph.json"
 
-# Skip the audit lane itself and any auto-generated subtrees.
+# Skip the audit lane itself and generated publication views.
 SKIP_PREFIXES = ("audit/",)
+GENERATED_PUBLICATION_FILES = {"PUBLICATION_AUDIT_DIVERGENCE.md"}
+GENERATED_PUBLICATION_SUFFIXES = ("_EFFECTIVE_STATUS.md",)
 
 # Legacy Status-line normalization is used only as a temporary migration hint
 # for seeding claim_type on rows that predate Type: metadata. It is not emitted
@@ -249,7 +251,14 @@ def extract_citations(body: str, source_path: Path) -> list[Path]:
 
 def is_skipped(rel_path: Path) -> bool:
     rel_str = rel_path.as_posix()
-    return any(rel_str.startswith(prefix) for prefix in SKIP_PREFIXES)
+    if any(rel_str.startswith(prefix) for prefix in SKIP_PREFIXES):
+        return True
+    if rel_path.parts[:2] == ("publication", "ci3_z3"):
+        if rel_path.name in GENERATED_PUBLICATION_FILES:
+            return True
+        if rel_path.name.endswith(GENERATED_PUBLICATION_SUFFIXES):
+            return True
+    return False
 
 
 def discover_notes() -> list[Path]:
