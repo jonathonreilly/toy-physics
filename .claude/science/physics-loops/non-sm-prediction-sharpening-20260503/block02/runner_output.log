@@ -1,0 +1,64 @@
+==============================================================================
+Lorentz Violation Discrimination Signatures + Falsification Map
+Source: docs/LORENTZ_VIOLATION_DISCRIMINATION_SIGNATURES_NOTE_2026-05-03.md
+==============================================================================
+
+--- Section 1: Predicted |δE²|/E² at various energies ---
+  Framework prediction: |δE²|/E² ≈ (1/12)(E/E_Planck)²
+  E_Planck = 1.22 × 10¹⁹ GeV
+
+           Energy         |δE²|/E²  Context                       
+  ---------------  ---------------  ------------------------------
+        1.000e+00        5.599e-40  1 GeV (LHC)                   
+        1.000e+03        5.599e-34  1 TeV (LHC ATLAS/CMS)         
+        1.000e+06        5.599e-28  1 PeV (IceCube neutrinos)     
+        1.000e+09        5.599e-22  1 EeV (Pierre Auger UHECR)    
+        1.000e+10        5.599e-20  10 EeV (highest UHECR)        
+        1.000e+19        5.599e-02  1 ZeV (Planck-energy scale)   
+
+--- Section 2: Current bounds vs framework prediction ---
+  Experiment                                       Bound     Framework        Margin
+  ----------------------------------------  ------------  ------------  ------------
+  Photon birefringence (GRB)                    1.00e-32      5.60e-40      1.79e+07
+  Fermi-LAT photon dispersion                   2.50e-22      5.60e-40      4.46e+17
+  Hughes-Drever (electron)                      1.00e-27      5.60e-40      1.79e+12
+  Atomic clock (proton)                         1.00e-27      5.60e-40      1.79e+12
+  Neutron spin (CPT-odd)                        1.00e-31      5.60e-40      1.79e+08
+
+  Conclusion: framework prediction is below current bounds by ≥7 orders of magnitude.
+  Direct detection requires precision improvements far beyond near-future experiments.
+
+--- Section 3: Five discrimination scenarios ---
+  #   Observation                               Framework                       Alternative interpretation    
+  --  ----------------------------------------  ------------------------------  ------------------------------
+  A   Linear E/E_Pl LV detected                 FALSIFIED (L1)                  Loop quantum gravity, dim-5 SME
+  B   CPT-odd LV detected                       FALSIFIED (L2)                  SME CPT-odd coefficients      
+  C   Quadratic LV with K_4 cubic harmonic      STRONGLY SUPPORTED (smoking gun)  this framework specifically   
+  D   Quadratic LV without K_4 (isotropic)      DISFAVORED                      continuum QG, isotropic Planck-scale model
+  E   No LV detected (current state)            CONSISTENT                      many models including SM      
+
+--- Section 4: Best near-future discrimination experiments ---
+  CTA (Cherenkov Telescope Array)                 2026-2030  TeV photon dispersion
+  Pierre Auger upgrade (AugerPrime)                now-2030  UHECR composition + angular
+  CMB-S4 (proposed)                                   2030+  CMB statistical isotropy
+  AION-100 / MAGIS atomic interferometry              2030+  improved CPT-odd bounds
+  n2EDM at PSI (related, see block 03)                2027+  CPT via neutron EDM
+
+--- Section 5: Honest discrimination assessment ---
+  Framework's predicted signal magnitude is ~10⁻³⁹ GeV⁻² (at 1 GeV scale).
+  Current bounds are ~10⁻²² GeV⁻². Even CTA at ~10× improvement still 16+ orders away.
+
+  Direct detection: BEYOND REACH for foreseeable future.
+  Falsification via forbidden signatures: ACHIEVABLE
+    - L1 (linear LV): testable now via Fermi-LAT/MAGIC/HESS GRB observations
+    - L2 (CPT-odd): testable via Hughes-Drever, neutron EDM, atomic clocks
+    - L3 (non-K_4 quadratic): testable via UHECR angular distribution (Auger upgrade)
+
+  Best 'new physics' value of LV lane is in FALSIFICATION testing, not detection.
+
+==============================================================================
+Block 02 Lorentz violation discrimination signatures complete.
+
+Key insight: framework's LV prediction is robustly consistent with current data
+AND specifically falsifiable by 3 distinct signature types (L1/L2/L3 violations).
+==============================================================================
