@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:42:57.433404+00:00
+**Generated:** 2026-05-03T13:44:40.553924+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 764 |
+| unaudited | 763 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
-| ~~audited_renaming~~ | 17 |
+| ~~audited_renaming~~ | 18 |
 | ~~audited_conditional~~ | 523 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 25 |
-| `audited_renaming` | 17 |
-| `unaudited` | 806 |
+| `audited_renaming` | 18 |
+| `unaudited` | 805 |
 
 | claim_type | count |
 |---|---:|
@@ -1029,6 +1029,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_ew_coupling_bridge_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | D | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
+| `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -2535,6 +2536,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `cl3_color_automorphism_theorem`
+
+- **Note:** [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](../../docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the asserted derivation that Z^3 forces N_c=3, realizes SU(3)_c on the 3D symmetric base subspace commuting with fiber SU(2) and Y, and gives R_conn=8/9 and sqrt(9/8) from the SU(3) Fierz identity.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-audit-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** N_c = |hw=1 states| = dim(Z^3) = 3; this is not an input, it is the algebraic image of the spatial dimension.  _(class `F`)_
+- **chain closes:** False — The runner verifies the constructed SU(3) embedding and Fierz algebra, but the theorem's physical-color step identifies the hw=1/symmetric-base structure with N_c and SU(3)_c rather than deriving that identification. The script sets N_c=3 and installs Gell-Mann generators on the selected 3D block, then checks consistency.
+- **rationale:** Issue: the load-bearing step equates the three hw=1/Z^3 axis states and the selected symmetric-base SU(3) representation with physical color N_c and SU(3)_c. Why this blocks: the algebra proves a valid 3D SU(3) construction and Fierz factor once that identification is made, but it does not force the physical color interpretation from the restricted inputs. Repair target: derive an independent theorem mapping the taste-cube symmetric-base sector to continuum color carriers/gauge fields and make the runner compute that bridge rather than construct the chosen block. Claim boundary until fixed: the note supports an exact SU(3) representation on the 3D symmetric base, its commutation with fiber SU(2) and Y, and the SU(3) Fierz value R_conn=8/9 under the color identification.
 - **auditor confidence:** high
 
 ### `cl3_sm_embedding_theorem`
