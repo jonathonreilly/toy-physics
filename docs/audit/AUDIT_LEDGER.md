@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T12:43:16.713998+00:00
+**Generated:** 2026-05-03T12:47:22.920272+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 171 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 728 |
+| unaudited | 727 |
+| audit_in_progress | 1 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -37,13 +38,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
+| `audit_in_progress` | 1 |
 | `audited_clean` | 352 |
 | `audited_conditional` | 519 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 769 |
+| `unaudited` | 768 |
 
 | claim_type | count |
 |---|---:|
@@ -108,6 +110,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `action_normalization_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
