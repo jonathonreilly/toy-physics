@@ -19,18 +19,21 @@ command.  It emits:
 After rerunning the combiner gate, the current chunk set is:
 
 ```text
-present_chunks = 4
-ready_chunks = 4
+present_chunks = 12
+ready_chunks = 12
 expected_chunks = 63
 ```
 
-Chunks001-004 are seed-controlled and ready.  The combined L12 output is still
-unavailable because only `4/63` required L12 chunks are ready.
+Chunks001-012 are seed-controlled and ready.  The combined L12 output is still
+unavailable because only `12/63` required L12 chunks are ready.  The later
+chunk001 replacement also carries target time series, so the target-series
+complete set is now chunks001, 011, and 012; chunks002-010 still need
+replacement or an equivalent target-observable blocking/bootstrap certificate.
 
 ## Claim Boundary
 
 This is bounded production support only.  It is not retained or
-proposed-retained closure because four ready chunks are not a combined L12
+proposed-retained closure because twelve ready chunks are not a combined L12
 ensemble, and PR #230 still needs the remaining L12 chunks, L16/L24 scaling,
 richer pole-fit kinematics/model-class control, FV/IR/zero-mode control, and
 retained proposal certification.

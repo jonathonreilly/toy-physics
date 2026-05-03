@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-03 update: chunk001 is now target-timeseries complete, so the current
+target ESS replacement queue is chunks002-010.  The production path has two
+honest next choices: rerun chunk002 next if completing the current ready-set
+target ESS gate is prioritized, or continue new target-series chunks toward the
+full `63/63` L12 combination.  Neither choice touches the canonical-Higgs
+identity gap; the stronger closure route remains actual same-surface
+`O_H/C_sH/C_HH` rows, real W/Z response rows with sector-overlap identity, or a
+theorem forbidding the orthogonal neutral top-coupling loophole.
+
 2026-05-01 rerun priority override: the active user campaign ranks
 source-to-canonical-Higgs / scalar LSZ first, Feynman-Hellmann physical
 response second, scalar Bethe-Salpeter / pole residue third, and heavy kinetic
@@ -571,9 +580,9 @@ continued target-series chunks, actual `O_H/C_sH/C_HH` rows, actual W/Z
 response rows with identity certificates, or a theorem forbidding the
 orthogonal neutral top-coupling loophole.
 
-Target-timeseries replacement queue update: the current ready set has enough
-chunks to make target ESS relevant, but chunks001-010 lack target time series.
-The next production choice after chunk013 is therefore explicit: keep filling
-new chunks toward 63/63, or rerun chunk001 (then 002, etc.) with
-target-timeseries serialization if completing the current ready-set target ESS
-gate is prioritized.
+Target-timeseries replacement queue update: the ready set has enough chunks to
+make target ESS relevant.  After the chunk001 target-series rerun, chunks002-010
+remain the replacement queue.  The next production choice is therefore
+explicit: keep filling new chunks toward 63/63, or rerun chunk002 (then 003,
+etc.) with target-timeseries serialization if completing the current ready-set
+target ESS gate is prioritized.

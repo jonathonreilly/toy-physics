@@ -442,3 +442,11 @@ and reports `PASS=134 FAIL=0` over 137 certificates.  Same-source LSZ removes
 the source-coordinate scaling shortcut, but source-only pole data still do not
 identify the canonical Higgs radial mode or exclude orthogonal neutral top
 coupling.  No retained/proposed-retained wording is authorized.
+
+Latest chunk001 target-timeseries replacement checkpoint: campaign status now
+discovers chunk001, chunk011, and chunk012 generic target-timeseries
+certificates and reports `PASS=134 FAIL=0` over 138 certificates.  The ready
+L12 set remains `12/63` chunks with `192/1000` saved configurations; chunks002
+through 010 still lack target time series, target ESS is not certified,
+response stability still fails, and no retained/proposed-retained wording is
+authorized.

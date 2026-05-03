@@ -4,8 +4,8 @@ PR #230 FH/LSZ autocorrelation and effective-sample-size gate.
 
 Completed chunks cannot become production evidence until autocorrelation and
 effective sample size are certified for the load-bearing observables.  This
-runner checks the current ready chunk surface and records the missing target
-time-series requirement.
+runner checks the current ready chunk surface and records the target time-series
+coverage requirement.
 """
 
 from __future__ import annotations
@@ -233,18 +233,18 @@ def main() -> int:
     )
     report("does-not-authorize-retained-proposal", True, "scalar LSZ and canonical-Higgs identity still open")
 
+    complete_label = ", ".join(f"chunk{index:03d}" for index in target_complete_indices) or "none"
+    incomplete_label = ", ".join(f"chunk{index:03d}" for index in target_incomplete_indices) or "none"
     result = {
         "actual_current_surface_status": "open / FH-LSZ autocorrelation ESS gate not passed",
         "verdict": (
             "The current ready chunks include plaquette histories, so a "
-            "diagnostic plaquette autocorrelation can be estimated.  Chunk011 "
-            "now exposes per-configuration target time series for same-source "
-            "dE/ds and C_ss(q)/Gamma_ss(q), but the older ready chunks do not.  "
-            "The load-bearing FH/LSZ target effective sample size therefore "
-            "cannot be certified for the ready set.  Current chunks remain "
-            "bounded support only until target-observable blocking/bootstrap "
-            "data or an equivalent autocorrelation certificate is available "
-            "for the production set."
+            "diagnostic plaquette autocorrelation can be estimated.  Target-series "
+            f"coverage is partial: complete={complete_label}; incomplete={incomplete_label}.  "
+            "The load-bearing FH/LSZ target effective sample size therefore cannot be "
+            "certified for the ready set.  Current chunks remain bounded support only "
+            "until target-observable blocking/bootstrap data or an equivalent "
+            "autocorrelation certificate is available for the production set."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "Target-observable autocorrelation and effective sample size are not certified.",

@@ -19,14 +19,14 @@ discovery check.
 
 ```text
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=106 FAIL=0
+# SUMMARY: PASS=108 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=132 FAIL=0
+# SUMMARY: PASS=134 FAIL=0
 ```
 
-The aggregate discovery row currently sees two generic target-timeseries chunk
-certificates: chunk011 and chunk012.
+The aggregate discovery row currently sees three generic target-timeseries
+chunk certificates: chunk001, chunk011, and chunk012.
 
 ## Claim Boundary
 

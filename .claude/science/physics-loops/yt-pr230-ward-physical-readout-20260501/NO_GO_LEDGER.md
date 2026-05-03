@@ -1,5 +1,26 @@
 # No-Go Ledger
 
+## FH/LSZ chunk001 target-timeseries rerun is not closure
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 1
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Chunk001 now carries per-configuration same-source target series, but the
+ready set remains only `12/63` L12 chunks.  Target-series coverage is still
+partial: chunks001, 011, and 012 are complete; chunks002-010 are incomplete.
+The target ESS gate is open, response stability still fails, and the source
+pole is not identified with the canonical Higgs radial mode.  Do not treat
+chunk001, three target-series chunks, or the reduced replacement queue as
+retained/proposed-retained evidence.
+
 ## Source-functional LSZ data do not identify canonical Higgs overlap
 
 Runner:
@@ -2068,7 +2089,9 @@ python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
 # SUMMARY: PASS=8 FAIL=0
 ```
 
-The queue identifies chunks001-010 as rerun targets because they lack target
-series.  It does not certify target ESS, response stability, pole derivative,
-or canonical-Higgs identity.  Do not treat the replacement queue, rerun command
-templates, or future scheduling intent as retained/proposed-retained evidence.
+The queue originally identified chunks001-010 as rerun targets because they
+lacked target series; after the chunk001 target-series rerun, the live queue is
+chunks002-010.  It does not certify target ESS, response stability, pole
+derivative, or canonical-Higgs identity.  Do not treat the replacement queue,
+rerun command templates, or future scheduling intent as retained/proposed-
+retained evidence.

@@ -28,13 +28,14 @@ for:
 - scalar-source and scalar-LSZ metadata that explicitly do not use the
   measurements as physical Yukawa readouts.
 
-The current status after processing chunk011 is:
+The current status after processing chunk012 and the chunk001 target-series
+replacement is:
 
 ```text
 expected chunks: 63
-present chunks: 11
-ready chunks: 11
-ready chunk indices: [1,2,3,4,5,6,7,8,9,10,11]
+present chunks: 12
+ready chunks: 12
+ready chunk indices: [1,2,3,4,5,6,7,8,9,10,11,12]
 ```
 
 The production harness now records `metadata.run_control`, so future chunk
@@ -42,9 +43,9 @@ certificates expose the seed and command settings needed by the combiner.
 The combiner also verifies the manifest reconstructs `63` unique artifact
 directories.
 
-Chunks001-011 are ready under the `numba_gauge_seed_v1` seed-control policy
+Chunks001-012 are ready under the `numba_gauge_seed_v1` seed-control policy
 and pass the duplicate-signature gate.  The set is still incomplete:
-`52/63` L12 chunks remain missing, no combined L12 output exists, and L12-only
+`51/63` L12 chunks remain missing, no combined L12 output exists, and L12-only
 would still be non-retained without L16/L24, pole-derivative/model-class,
 FV/IR/zero-mode, and canonical-Higgs identity gates.
 

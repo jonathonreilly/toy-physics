@@ -73,6 +73,7 @@
     "fh_gauge_response_mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
     "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
     "fh_lsz_chunk001_checkpoint": "outputs/yt_fh_lsz_chunk001_checkpoint_certificate_2026-05-02.json",
+    "fh_lsz_chunk001_target_timeseries_generic": "outputs/yt_fh_lsz_chunk001_target_timeseries_generic_checkpoint_2026-05-02.json",
     "fh_lsz_chunk002_checkpoint": "outputs/yt_fh_lsz_chunk002_checkpoint_certificate_2026-05-02.json",
     "fh_lsz_chunk011_target_timeseries": "outputs/yt_fh_lsz_chunk011_target_timeseries_checkpoint_2026-05-02.json",
     "fh_lsz_chunk011_target_timeseries_generic": "outputs/yt_fh_lsz_chunk011_target_timeseries_generic_checkpoint_2026-05-02.json",

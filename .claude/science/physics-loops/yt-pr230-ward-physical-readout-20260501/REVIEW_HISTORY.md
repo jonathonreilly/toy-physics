@@ -1,5 +1,38 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Chunk001 Target-Timeseries Rerun
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED PRODUCTION SUPPORT / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- chunk001 is now production-phase, seed-controlled, and target-timeseries
+  complete;
+- complete target-series chunks are now 001, 011, and 012;
+- chunks002-010 remain in the target-timeseries replacement queue;
+- target ESS and response stability remain open, and canonical-Higgs identity
+  is absent;
+- no retained or proposed-retained wording is authorized.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 1
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Source-Functional LSZ Identifiability
 
 Local review-loop disposition:

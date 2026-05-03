@@ -504,6 +504,12 @@ Higgs radial mode or exclude orthogonal neutral top coupling.  The retained
 route certificate is refreshed at `PASS=108 FAIL=0`.  No
 retained/proposed-retained wording is authorized.
 
+Chunk001 is now reprocessed as a target-timeseries replacement.  The generic
+checkpoint discovery row sees chunks001, 011, and 012; target-series coverage
+is still incomplete for chunks002-010, response stability still fails, and the
+retained-route certificate remains `PASS=108 FAIL=0`.  This is bounded
+production support only and authorizes no retained/proposed-retained wording.
+
 The reflection-positivity LSZ shortcut no-go closes another analytic shortcut.
 OS positivity gives a positive spectral representation, but the positive
 pole-plus-continuum family can be realized by reflection-positive Euclidean

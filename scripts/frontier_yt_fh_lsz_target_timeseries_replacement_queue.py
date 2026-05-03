@@ -3,10 +3,10 @@
 PR #230 FH/LSZ target-timeseries replacement queue certificate.
 
 The autocorrelation/ESS gate currently has enough ready chunks to evaluate a
-target-observable ESS gate, but chunks001-010 predate target-timeseries
-serialization. This runner derives the exact replacement queue from the
-current autocorrelation certificate instead of treating more new chunks as a
-complete ESS repair.
+target-observable ESS gate, but some ready chunks can predate target-timeseries
+serialization. This runner derives the exact replacement queue from the current
+autocorrelation certificate instead of treating more new chunks as a complete
+ESS repair.
 """
 
 from __future__ import annotations
@@ -119,14 +119,16 @@ def main() -> int:
         "replacement queue is scheduling support; no new production output is certified",
     )
 
+    complete_label = ", ".join(f"chunk{index:03d}" for index in complete_indices) or "none"
+    replacement_label = ", ".join(f"chunk{index:03d}" for index in replacement_queue) or "none"
     result = {
         "actual_current_surface_status": "bounded-support / FH-LSZ target-timeseries replacement queue",
         "verdict": (
             "The ready L12 set has reached the minimum size for target ESS checks, "
-            "but chunks001-010 lack per-configuration source-response and scalar-LSZ "
-            "target time series. Therefore chunk013 and later can increase the "
+            f"with target-series complete for {complete_label} and still missing for "
+            f"{replacement_label}. Therefore later new chunks can increase the "
             "target-series subset, but cannot make complete_for_all_ready_chunks true "
-            "while chunks001-010 remain in the ready set without replacement."
+            "while the replacement queue remains nonempty."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -149,8 +151,10 @@ def main() -> int:
             "does not set kappa_s = 1 or identify the source pole as canonical Higgs",
         ],
         "exact_next_action": (
-            f"After chunk013 is processed, either continue chunk014 or rerun chunk{next_replacement:03d} "
-            "with target-timeseries serialization before claiming complete target ESS for the current ready set."
+            f"Rerun chunk{next_replacement:03d} with target-timeseries serialization if "
+            "completing the current ready-set target ESS gate is prioritized; otherwise "
+            "continue new target-series chunks toward the full L12 set. Do not claim "
+            "complete target ESS while the replacement queue is nonempty."
             if next_replacement is not None
             else "Rerun the autocorrelation/ESS gate; no replacement queue is currently open."
         ),

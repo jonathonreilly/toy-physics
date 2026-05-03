@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ chunk001 target-timeseries rerun:
+
+- Processed the completed `L12_T24_chunk001` replacement through the combiner,
+  chunk001 checkpoint, reusable target-timeseries checkpoint, autocorrelation
+  ESS gate, replacement queue, retained-route, and campaign-status gates.
+- Added `docs/YT_FH_LSZ_CHUNK001_TARGET_TIMESERIES_RERUN_CHECKPOINT_NOTE_2026-05-03.md`
+  and `outputs/yt_fh_lsz_chunk001_target_timeseries_generic_checkpoint_2026-05-02.json`.
+- Result: chunk001 is production-phase, seed-controlled, and target-timeseries
+  complete.  The target-series complete set is now chunks001, 011, and 012;
+  replacement queue is chunks002-010.
+- Retained-route remains `PASS=108 FAIL=0`; campaign status remains
+  `PASS=134 FAIL=0` over 138 certificates.  No retained or proposed-retained
+  closure is authorized.
+
+Next exact action: rerun chunk002 with target-timeseries serialization if
+completing the current ready-set target ESS gate is prioritized, or continue
+new target-series chunks toward 63/63.  In parallel, the strongest closure
+route remains same-surface `C_sH` / `C_HH`, a same-surface `O_H` identity
+theorem, or real W/Z response rows with sector-overlap identity.
+
 Latest checkpoint, 2026-05-03 source-functional LSZ identifiability theorem:
 
 - Added `scripts/frontier_yt_source_functional_lsz_identifiability_theorem.py`,
@@ -1682,11 +1702,11 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=133 FAIL=0
 ```
 
-Result: chunks001-010 are the current replacement queue because they are ready
-production chunks but lack target time series.  Chunk013 and later can add
-target-series support, but cannot make `complete_for_all_ready_chunks` true
-while chunks001-010 remain in the ready set without replacement.
+Result at block 156: chunks001-010 were the replacement queue because they
+were ready production chunks but lacked target time series.  Block 158
+supersedes that queue after processing chunk001; the current replacement queue
+is chunks002-010.
 
-Next exact action remains: finish/process chunk013.  After that, choose
-whether to continue chunk014 or rerun chunk001 with target-timeseries
-serialization.
+Next exact action after block 158: rerun chunk002 with target-timeseries
+serialization if completing the current ready-set target ESS gate is
+prioritized, or continue new target-series chunks toward the full L12 set.
