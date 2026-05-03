@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:52:37.496618+00:00
+**Generated:** 2026-05-03T17:53:19.836183+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 758 |
+| unaudited | 757 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 530 |
+| ~~audited_conditional~~ | 531 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 530 |
+| `audited_conditional` | 531 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 804 |
+| `unaudited` | 803 |
 
 | claim_type | count |
 |---|---:|
@@ -778,6 +778,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_compact_inertial_probe_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
+| `persistent_object_multistage_floor_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
@@ -9853,6 +9854,23 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The registered runner reproduces the zero-source reduction and frozen scout table: source N_eff stays about 4.788, detector N_eff stays about 497, all deltas are positive, and each update step has F~M=1.00 with 4/4 TOWARD. The note correctly keeps the claim at bounded quasi-persistent source-object scope.
 - **rationale:** The bounded Green-scout claim is current with the primary runner and the output supports repeated source-object survival plus weak-field linear response. The object remains broad, with source N_eff near 4.788 out of 5 and detector response still broad, so the note does not claim a persistent inertial object or mass theorem. Residual risk is limited to the stated minimal exact-lattice loop rather than a hidden closure claim.
 - **auditor confidence:** high
+
+### `persistent_object_multistage_floor_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_MULTISTAGE_FLOOR_SWEEP_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded multistage floor sweep claim that top4 is the first self-maintaining compact-object floor on the stable widened exact-lattice branch, based on top3/top4/top5/top6 parameterized runs of the multistage probe.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-restricted-audit-2026-05-03`  (codex-current; independence=weak)
+- **load-bearing step:** Multistage-admissible totals are top3: 0/5, top4: 5/5, top5: 5/5, top6: 5/5, so the first honest self-maintaining floor on this exact-lattice branch is top4.  _(class `C`)_
+- **chain closes:** False — The note's top4 floor conclusion depends on multiple parameterized runs and archived logs, while the registered primary runner is the top3 multistage probe and did not produce stdout within a 120 second audit timeout. The current audit packet therefore cannot verify the top4/top5/top6 result or the first-floor comparison from executable evidence.
+- **rationale:** Issue: the load-bearing first-floor conclusion requires comparing top3, top4, top5, and top6 multistage runs, but the registered runner defaults to the top3 probe and timed out with no stdout during audit; the note relies on separate archived logs for the broader widths. Why this blocks: a bounded computational theorem cannot be clean when the current registered evidence does not reproduce the table and the primary executable does not directly check the promoted top4 floor. Repair target: provide a bounded-runtime runner that executes or verifies all four widths, emits PASS/FAIL checks for the 0/5 versus 5/5 floor table, and ties the stable widened rows to retained inputs. Claim boundary until fixed: the note remains a conditional computational report that archived multistage sweeps indicate top4 is sufficient on the tested stable branch, not a clean retained floor theorem.
+- **open / conditional deps cited:**
+  - `logs/2026-04-16-persistent-object-top4-multistage-probe.txt`
+  - `logs/2026-04-16-persistent-object-top5-multistage-probe.txt`
+  - `logs/2026-04-16-persistent-object-top6-multistage-probe.txt`
+- **auditor confidence:** medium
 
 ### `persistent_object_readout_localization_note`
 
