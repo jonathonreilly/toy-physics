@@ -56,8 +56,10 @@ This is still a companion result:
 
 Read this with:
 
-- [`docs/GATE_B_FARFIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_FARFIELD_NOTE.md)
-- [`docs/GATE_B_DYNAMICS_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GATE_B_DYNAMICS_NOTE.md)
+- `docs/GATE_B_FARFIELD_NOTE.md` (sibling artifact in same Gate B lane;
+  cross-reference only — not a one-hop dep of this note)
+- `docs/GATE_B_DYNAMICS_NOTE.md` (sibling artifact in same Gate B lane;
+  cross-reference only — not a one-hop dep of this note)
 
 Together they now support the stronger bounded read:
 
