@@ -22497,6 +22497,22 @@
       "to": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03"
     },
     {
+      "from": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "to": "work_history.repo.canonical_weave_audit_2026-05-03"
+    },
+    {
+      "from": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "to": "assumption_derivation_ledger"
+    },
+    {
+      "from": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "to": "repo.controlled_vocabulary"
+    },
+    {
+      "from": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "to": "publication.ci3_z3.derivation_atlas"
+    },
+    {
       "from": "work_history.repo.lane_status_board",
       "to": "repo.active_review_queue"
     },
@@ -22641,7 +22657,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:01:46.665102+00:00",
+  "generated_at": "2026-05-03T15:04:21.063763+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -48161,6 +48177,22 @@
       "runner_path": null,
       "title": "Canonical Authority-Surface Weave Audit \u2014 2026-05-03"
     },
+    "work_history.repo.dm_lane_weave_triage_2026-05-03": {
+      "claim_id": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "work_history.repo.canonical_weave_audit_2026-05-03",
+        "assumption_derivation_ledger",
+        "repo.controlled_vocabulary",
+        "publication.ci3_z3.derivation_atlas"
+      ],
+      "note_hash": "0e6efdaf4a609f04cfa260531761c0cd5e55cafbac771e3913e6df9c1e420d05",
+      "path": "docs/work_history/repo/DM_LANE_WEAVE_TRIAGE_2026-05-03.md",
+      "runner_path": null,
+      "title": "DM Lane Weave Triage \u2014 2026-05-03"
+    },
     "work_history.repo.evaluation_tools.readme": {
       "claim_id": "work_history.repo.evaluation_tools.readme",
       "claim_type_author_hint": null,
@@ -50560,7 +50592,7 @@
       "bounded_theorem": 48,
       "meta": 6,
       "no_go": 3,
-      "none": 1726,
+      "none": 1727,
       "open_gate": 3,
       "positive_theorem": 68
     },
@@ -50568,13 +50600,13 @@
       "bounded_theorem": 549,
       "meta": 6,
       "no_go": 109,
-      "none": 452,
+      "none": 453,
       "open_gate": 110,
       "positive_theorem": 628
     },
-    "edge_count": 5660,
+    "edge_count": 5664,
     "leaf_count": 618,
-    "node_count": 1854,
+    "node_count": 1855,
     "root_count": 1057,
     "runners_with_path": 1415
   }
