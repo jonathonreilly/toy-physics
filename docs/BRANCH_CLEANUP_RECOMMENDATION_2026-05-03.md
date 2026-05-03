@@ -92,7 +92,7 @@ for completeness; cleanup tool already excludes these.
 
 ## Recommended execution
 
-To execute the safe cleanup (archive + delete the 28 fully_merged +
+To execute the safe cleanup (archive + delete the 29 fully_merged +
 likely_squash_merged remote branches):
 
 ```bash

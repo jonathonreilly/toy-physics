@@ -1,13 +1,13 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 585,
+    "bounded_theorem": 586,
     "decoration": 7,
-    "meta": 44,
+    "meta": 45,
     "no_go": 160,
     "open_gate": 88,
     "positive_theorem": 863
   },
-  "computed_at": "2026-05-03T14:27:39.242419+00:00",
+  "computed_at": "2026-05-03T14:32:05.857405+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -17,11 +17,6 @@
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
       "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
-    ],
-    [
-      "yt_ward_identity_derivation_theorem",
-      "yt_vertex_power_derivation",
-      "yt_zero_import_authority_note"
     ],
     [
       "publication.ci3_z3.claims_table",
@@ -37,9 +32,15 @@
     [
       "publication.ci3_z3.claims_table",
       "publication.ci3_z3.full_claim_ledger"
+    ],
+    [
+      "publication.ci3_z3.inputs_and_qualifiers_note",
+      "publication.ci3_z3.claims_table",
+      "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
+      "publication.ci3_z3.external_reviewer_guide"
     ]
   ],
-  "cycles_detected": 45,
+  "cycles_detected": 41,
   "effective_status_counts": {
     "audited_conditional": 514,
     "audited_decoration": 3,
@@ -48,13 +49,13 @@
     "audited_renaming": 19,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
-    "meta": 44,
+    "meta": 45,
     "open_gate": 15,
     "retained": 75,
     "retained_bounded": 167,
     "retained_no_go": 100,
     "retained_pending_chain": 2,
-    "unaudited": 775
+    "unaudited": 776
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
