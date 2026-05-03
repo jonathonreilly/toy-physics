@@ -3193,10 +3193,6 @@
       "to": "newton_derivation_note"
     },
     {
-      "from": "composite_source_additivity_note",
-      "to": "composite_source_additivity_2d_note"
-    },
-    {
       "from": "connectivity_family_v2_elliptical_duplicate_note",
       "to": "sign_portability_invariant_note"
     },
@@ -3609,10 +3605,6 @@
       "to": "architecture_note_directional_measure"
     },
     {
-      "from": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-      "to": "directional_b_geometry_normalized_overlap_map_note"
-    },
-    {
       "from": "directional_b_geometry_normalized_holdout_transfer_note",
       "to": "architecture_note_directional_measure"
     },
@@ -3621,20 +3613,12 @@
       "to": "directional_b_density_stencil_note"
     },
     {
-      "from": "directional_b_geometry_normalized_holdout_transfer_note",
-      "to": "directional_b_geometry_normalized_holdout_transfer_mass5_note"
-    },
-    {
       "from": "directional_b_geometry_normalized_overlap_map_note",
       "to": "directional_b_geometry_normalized_holdout_transfer_mass5_note"
     },
     {
       "from": "directional_b_geometry_normalized_overlap_map_note",
       "to": "directional_b_geometry_normalized_holdout_transfer_note"
-    },
-    {
-      "from": "directional_b_geometry_normalized_overlap_map_note",
-      "to": "directional_b_geometry_normalized_overlap_subcritical_n12_note"
     },
     {
       "from": "directional_b_geometry_normalized_overlap_map_note",
@@ -6017,10 +6001,6 @@
       "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
     },
     {
-      "from": "growing_graph_dynamic_limit_diagnostic_note",
-      "to": "growing_graph_frontier_architecture_transfer_note"
-    },
-    {
       "from": "growing_graph_dynamic_propagation_replacement_note",
       "to": "growing_graph_frontier_expansion_proxy_note"
     },
@@ -7191,10 +7171,6 @@
     {
       "from": "lensing_adjoint_kernel_shape_note",
       "to": "lensing_combined_invariant_note"
-    },
-    {
-      "from": "lensing_beta_sweep_note",
-      "to": "lensing_adjoint_kernel_note"
     },
     {
       "from": "lensing_combined_invariant_note",
@@ -8654,10 +8630,6 @@
     },
     {
       "from": "newton_derivation_note",
-      "to": "composite_source_additivity_note"
-    },
-    {
-      "from": "newton_derivation_note",
       "to": "composite_source_additivity_2d_note"
     },
     {
@@ -8687,10 +8659,6 @@
     {
       "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
       "to": "neutrino_mass_derived_note"
-    },
-    {
-      "from": "n_eff_from_three_generations_theorem_note_2026-04-24",
-      "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
     },
     {
       "from": "observable_principle_audit_note_2026-05-02",
@@ -9654,10 +9622,6 @@
     },
     {
       "from": "quark_up_amplitude_tensor_endpoint_bridge_note_2026-04-19",
-      "to": "quark_up_amplitude_tensor_endpoint_resolution_note_2026-04-19"
-    },
-    {
-      "from": "quark_up_amplitude_tensor_endpoint_bridge_note_2026-04-19",
       "to": "quark_projector_parameter_audit_note_2026-04-19"
     },
     {
@@ -9914,10 +9878,6 @@
     },
     {
       "from": "signed_gravity_aps_action_origin_superselection_stability_note",
-      "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
-    },
-    {
-      "from": "signed_gravity_aps_action_origin_superselection_stability_note",
       "to": "signed_gravity_aps_locked_axiom_extension_note"
     },
     {
@@ -9949,16 +9909,8 @@
       "to": "signed_gravity_source_action_escape_hatch_note"
     },
     {
-      "from": "signed_gravity_aps_boundary_index_chi_probe_note",
-      "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
-    },
-    {
       "from": "signed_gravity_aps_locked_axiom_extension_note",
       "to": "signed_gravity_retained_boundary_source_principle_no_go_note"
-    },
-    {
-      "from": "signed_gravity_aps_locked_axiom_extension_note",
-      "to": "signed_gravity_source_line_origin_tensor_lift_note"
     },
     {
       "from": "signed_gravity_aps_locked_axiom_extension_note",
@@ -9971,10 +9923,6 @@
     {
       "from": "signed_gravity_aps_locked_source_action_proposal_note",
       "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
-    },
-    {
-      "from": "signed_gravity_aps_locked_source_action_proposal_note",
-      "to": "signed_gravity_aps_action_origin_superselection_stability_note"
     },
     {
       "from": "signed_gravity_aps_locked_source_action_proposal_note",
@@ -9991,10 +9939,6 @@
     {
       "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
       "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
-    },
-    {
-      "from": "signed_gravity_aps_wald_gauss_bridge_audit_note",
-      "to": "signed_gravity_aps_locked_source_action_proposal_note"
     },
     {
       "from": "signed_gravity_boundary_coframe_chi_probe_note",
@@ -10335,10 +10279,6 @@
     {
       "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
       "to": "signed_gravity_aps_locked_source_action_proposal_note"
-    },
-    {
-      "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
-      "to": "signed_gravity_aps_locked_axiom_extension_note"
     },
     {
       "from": "signed_gravity_retained_boundary_source_principle_no_go_note",
@@ -11202,10 +11142,6 @@
     },
     {
       "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-      "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-    },
-    {
-      "from": "wave_direct_dm_h025_fam2_seed1_control_note",
       "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
     },
     {
@@ -11370,10 +11306,6 @@
     },
     {
       "from": "wave_direct_dm_next_widening_recommendation",
-      "to": "wave_direct_dm_seed_band_diagnosis_note"
-    },
-    {
-      "from": "wave_direct_dm_portability_batch_note",
       "to": "wave_direct_dm_seed_band_diagnosis_note"
     },
     {
@@ -22629,7 +22561,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:12:14.350454+00:00",
+  "generated_at": "2026-05-03T14:13:33.020921+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26929,10 +26861,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "newton_derivation_note",
-        "composite_source_additivity_2d_note"
+        "newton_derivation_note"
       ],
-      "note_hash": "258bc5c839f3129afe1d05f903c3c8ebf89bd1a4062270608a724bd741e21e27",
+      "note_hash": "2343e364dcd95c582eae9656f0483a3e8aff128494ac61f8fd64b7d487875f17",
       "path": "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
       "runner_path": "scripts/composite_source_additivity_harness.py",
       "title": "Composite-Source Additivity Note"
@@ -27631,10 +27562,9 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "directional_b_geometry_normalized_holdout_transfer_note",
-        "architecture_note_directional_measure",
-        "directional_b_geometry_normalized_overlap_map_note"
+        "architecture_note_directional_measure"
       ],
-      "note_hash": "89d6894ed9b59497ee2fa0b0660dc8057af9e58e08db50adf0d25c2fad335d7e",
+      "note_hash": "116eb79b433ce85fbe170692c1d95a6f1d10aa73f8fb170fa17684e1a651b8ea",
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md",
       "runner_path": "scripts/directional_b_geometry_normalized_holdout_transfer.py",
       "title": "Directional-B Geometry-Normalized Holdout Transfer Mass5 Note"
@@ -27646,10 +27576,9 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "architecture_note_directional_measure",
-        "directional_b_density_stencil_note",
-        "directional_b_geometry_normalized_holdout_transfer_mass5_note"
+        "directional_b_density_stencil_note"
       ],
-      "note_hash": "3427034af3a052eb11a16b8f7fd431b59e171e1d4d3a514ca5ddae382bf99813",
+      "note_hash": "f3b31dfa64bae961183cc933b2201bdedb2a6aac39cf619d265f85b99839f19a",
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md",
       "runner_path": "scripts/directional_b_geometry_normalized_holdout_transfer.py",
       "title": "Directional-B Geometry-Normalized Holdout Transfer Note"
@@ -27662,10 +27591,9 @@
       "deps": [
         "directional_b_geometry_normalized_holdout_transfer_mass5_note",
         "directional_b_geometry_normalized_holdout_transfer_note",
-        "directional_b_geometry_normalized_overlap_subcritical_n12_note",
         "architecture_note_directional_measure"
       ],
-      "note_hash": "7f83f7053bd895b0c3304641ebe0f0d635b2bfa80643c6847e745b071950a3d9",
+      "note_hash": "0e6997ef505152f763545fee83d7fe56c640905ad9b9fe8065aab3b791b4ad07",
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md",
       "runner_path": "scripts/directional_b_geometry_normalized_overlap_map.py",
       "title": "Directional-B Geometry-Normalized Overlap Map Note"
@@ -32752,10 +32680,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
-      "deps": [
-        "growing_graph_frontier_architecture_transfer_note"
-      ],
-      "note_hash": "110072b858c1e439f882b48c32632be1a1999a11dc0e07c227452fedf775744f",
+      "deps": [],
+      "note_hash": "b799e550ea5599b299c769dc6f26464d81185f49b046bfa02cffd9643f94210a",
       "path": "docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md",
       "runner_path": "scripts/growing_graph_dynamic_limit_diag.py",
       "title": "Growing Graph Dynamic Limit Diagnostic Note"
@@ -36009,10 +35935,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "lensing_adjoint_kernel_note"
-      ],
-      "note_hash": "9b8892a41363caccd80cb1661c47d1989fb40068bda490e8136d10798344dfc5",
+      "deps": [],
+      "note_hash": "2b5aab3eae50f00f2511f5aadc29fce1d715577dc448653f8147716d64c9aa38",
       "path": "docs/LENSING_BETA_SWEEP_NOTE.md",
       "runner_path": "scripts/lensing_beta_sweep.py",
       "title": null
@@ -37117,10 +37041,9 @@
         "three_generation_structure_note",
         "one_generation_matter_closure_note",
         "bminusl_anomaly_freedom_theorem_note_2026-04-24",
-        "neutrino_mass_derived_note",
-        "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
+        "neutrino_mass_derived_note"
       ],
-      "note_hash": "232d68350b32474becad5e8fd5dee59781e8f410916522fe4a0ebda9e2a56144",
+      "note_hash": "3a666b3d3f9c1de0fe8eabceafda185333745a035141c60ecbcf04fd66bd4d5d",
       "path": "docs/N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_n_eff_from_three_generations.py",
       "title": "N_eff From Retained Three Generations"
@@ -38114,10 +38037,9 @@
       "claim_type_seed_hint": "open_gate",
       "deps": [
         "equivalence_principle_harness_note",
-        "composite_source_additivity_note",
         "composite_source_additivity_2d_note"
       ],
-      "note_hash": "83a571dcc1c0e21bd7f918d94f859f95f349bcc210fb8f182cd7917be7f3582b",
+      "note_hash": "b88d6a2ba1c23957e5a6a19a0588d1b669859d3ddeda73663f85c1aa69e287b1",
       "path": "docs/NEWTON_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)"
@@ -42784,12 +42706,11 @@
       "deps": [
         "tensor_support_center_excess_law_note",
         "s3_time_bilinear_tensor_primitive_note",
-        "quark_up_amplitude_tensor_endpoint_resolution_note_2026-04-19",
         "quark_projector_parameter_audit_note_2026-04-19",
         "quark_up_amplitude_affine_support_scan_note_2026-04-19",
         "quark_up_amplitude_native_affine_no_go_note_2026-04-19"
       ],
-      "note_hash": "54a367d42a9ba9363d039651edfe5a19193967a64e57cfb888cf8ab30d1e34e3",
+      "note_hash": "918e41327bfcbf7168a6f283fcddbf491d885bc87629ce1dc0ddde21945747cd",
       "path": "docs/QUARK_UP_AMPLITUDE_TENSOR_ENDPOINT_BRIDGE_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_quark_up_amplitude_tensor_endpoint_bridge.py",
       "title": "Quark Up-Amplitude Tensor-Endpoint Bridge"
@@ -43870,13 +43791,12 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "signed_gravity_aps_locked_source_action_proposal_note",
-        "signed_gravity_retained_boundary_source_principle_no_go_note",
         "signed_gravity_aps_locked_axiom_extension_note",
         "signed_gravity_source_line_origin_tensor_lift_note",
         "signed_gravity_source_character_uniqueness_theorem_note",
         "signed_gravity_cl3z3_source_character_derivation_note"
       ],
-      "note_hash": "5fbcce84e0cd2b049ecc690ad7561fab98686ce255970aa0ef5d2e4006bb0573",
+      "note_hash": "bd1e0dd217b22d50ce6d661b677901c2d7096d05599fe4f5e70460905b69e853",
       "path": "docs/SIGNED_GRAVITY_APS_ACTION_ORIGIN_SUPERSELECTION_STABILITY_NOTE.md",
       "runner_path": "scripts/signed_gravity_aps_action_origin_superselection_stability_audit.py",
       "title": "Signed Gravity APS Action Origin / Superselection / Stability Note"
@@ -43890,10 +43810,9 @@
         "signed_gravity_nonlocal_boundary_chi_target_note",
         "signed_gravity_chi_selector_theorem_or_nogo_note",
         "gravity_signed_source_density_boundary_note",
-        "signed_gravity_source_action_escape_hatch_note",
-        "signed_gravity_aps_wald_gauss_bridge_audit_note"
+        "signed_gravity_source_action_escape_hatch_note"
       ],
-      "note_hash": "b4de1ee054eb5cbe0c7522634b975dc1e8590fbb2718adc33506e545c5960cbb",
+      "note_hash": "2c55ad529c79a2fc587e0bb7c3ebf909828023156c56079386c8b8177b9bca52",
       "path": "docs/SIGNED_GRAVITY_APS_BOUNDARY_INDEX_CHI_PROBE_NOTE.md",
       "runner_path": "scripts/signed_gravity_aps_boundary_index_probe.py",
       "title": "Signed Gravity APS Boundary-Index `chi_g` Probe Note"
@@ -43905,11 +43824,10 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "signed_gravity_retained_boundary_source_principle_no_go_note",
-        "signed_gravity_source_line_origin_tensor_lift_note",
         "signed_gravity_source_character_uniqueness_theorem_note",
         "signed_gravity_cl3z3_source_character_derivation_note"
       ],
-      "note_hash": "c7ba0fa3ac7c45957bdfe575f214460521168feaeebda152b032fdde53c76638",
+      "note_hash": "f1f0bc98d7ba0b30353b05959c97a903990c9f5d63743b63c6a8df399fc82ea6",
       "path": "docs/SIGNED_GRAVITY_APS_LOCKED_AXIOM_EXTENSION_NOTE.md",
       "runner_path": "scripts/signed_gravity_aps_locked_axiom_extension_audit.py",
       "title": "Signed Gravity APS-Locked Axiom Extension Note"
@@ -43921,10 +43839,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "signed_gravity_aps_wald_gauss_bridge_audit_note",
-        "signed_gravity_aps_action_origin_superselection_stability_note",
         "signed_gravity_aps_locked_axiom_extension_note"
       ],
-      "note_hash": "86c514c2e686ac4b7fcc96e83c048cad1a2b813e9228649738ba58eaf90cfb9d",
+      "note_hash": "ab82b56863cc1ee67da18403017d32e620f9d318c6c8a6b6c92de572950afbd5",
       "path": "docs/SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md",
       "runner_path": "scripts/signed_gravity_aps_locked_source_action_proposal.py",
       "title": "Signed Gravity APS-Locked Source Action Proposal"
@@ -43937,10 +43854,9 @@
       "deps": [
         "signed_gravity_response_backlog_2026-04-25",
         "signed_gravity_aps_boundary_index_chi_probe_note",
-        "planck_source_unit_normalization_support_theorem_note_2026-04-25",
-        "signed_gravity_aps_locked_source_action_proposal_note"
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25"
       ],
-      "note_hash": "2fe10aba89fd5697630c23a4efaa2cf22646bf37e4b6ebbff0ae50766aa2ae8e",
+      "note_hash": "cb19cb3441136c4a3948cdd12cb5d4d9b82478988ad1047294230501039184cd",
       "path": "docs/SIGNED_GRAVITY_APS_WALD_GAUSS_BRIDGE_AUDIT_NOTE.md",
       "runner_path": "scripts/signed_gravity_aps_wald_gauss_bridge_audit.py",
       "title": "Signed Gravity APS / Wald / Gauss Bridge Audit Note"
@@ -44227,10 +44143,9 @@
       "deps": [
         "signed_gravity_aps_action_origin_superselection_stability_note",
         "signed_gravity_aps_locked_source_action_proposal_note",
-        "signed_gravity_aps_locked_axiom_extension_note",
         "signed_gravity_source_line_origin_tensor_lift_note"
       ],
-      "note_hash": "545cf459f9d3b4a9bb7d0021e1c5ed6711ab9a5be4016092136c13d3db5602e1",
+      "note_hash": "2a695ba1f9f8cdbc726d9338208861115be64d4cccd022978c6f9ff4f85992c8",
       "path": "docs/SIGNED_GRAVITY_RETAINED_BOUNDARY_SOURCE_PRINCIPLE_NO_GO_NOTE.md",
       "runner_path": "scripts/signed_gravity_retained_boundary_source_principle_nogo.py",
       "title": "Signed Gravity Retained Boundary Source-Principle No-Go"
@@ -47204,10 +47119,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "wave_direct_dm_h025_fam2_seed0_control_note",
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
-      "note_hash": "331d38d423fb11e0760d4373c6f7e2695be41722fb2eb443092aa202516b7215",
+      "note_hash": "3e4e1bde85873994cc80d38608a29b921f5f366794dac7111fad5cd2364960cb",
       "path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note"
@@ -47424,7 +47338,6 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "wave_direct_dm_seed_band_diagnosis_note",
         "wave_direct_dm_h025_high_band_boundary_note",
         "wave_direct_dm_h025_low_band_retention_note",
         "wave_direct_dm_h025_two_point_synthesis_note",
@@ -47434,7 +47347,7 @@
         "wave_direct_dm_h025_fam2_seed1_control_note",
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
-      "note_hash": "cd8a6493f82a82735f07200c84b0f5eec547dc307238f028b9351d85678efb02",
+      "note_hash": "9c6acf9afda43d404454aafd2094b696113594f63d7717df9645dbc4e803da6b",
       "path": "docs/WAVE_DIRECT_DM_PORTABILITY_BATCH_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_portability_batch.py",
       "title": "Wave Direct-dM Portability Batch"
@@ -49838,6 +49751,7 @@
     "gravity_law_cleanup_note",
     "gravity_observable_hierarchy_note",
     "gravity_sign_audit_2026-04-10",
+    "growing_graph_dynamic_limit_diagnostic_note",
     "growing_graph_expansion_card_note",
     "growing_graph_frontier_expansion_proxy_note",
     "growing_graph_static_control_audit_note",
@@ -49980,6 +49894,7 @@
     "lattice_symmetry_unification_decision_note",
     "lattice_synthesis_guard_note",
     "lensing_adjoint_kernel_reduced_model_note",
+    "lensing_beta_sweep_note",
     "lensing_deflection_note",
     "lensing_finite_path_explanation_note",
     "lensing_k_sweep_note",
@@ -50473,10 +50388,10 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5657,
-    "leaf_count": 617,
+    "edge_count": 5640,
+    "leaf_count": 618,
     "node_count": 1847,
-    "root_count": 1050,
+    "root_count": 1052,
     "runners_with_path": 1410
   }
 }

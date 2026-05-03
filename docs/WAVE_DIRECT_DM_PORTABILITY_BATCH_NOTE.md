@@ -94,7 +94,7 @@ probe” state.
 ## Best next move
 
 The first follow-on is now recorded in
-[`WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md`](./WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md):
+`WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note):
 the two-band split is best read as a seed-dependent late-branch
 amplification split, not as sign loss and not as early-branch failure.
 
@@ -163,7 +163,7 @@ So the next honest hardening step is now:
 
 - [`scripts/wave_direct_dm_portability_batch.py`](../scripts/wave_direct_dm_portability_batch.py)
 - [`logs/2026-04-08-wave-direct-dm-portability-batch.txt`](../logs/2026-04-08-wave-direct-dm-portability-batch.txt)
-- [`docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md`](./WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md)
+- `docs/WAVE_DIRECT_DM_SEED_BAND_DIAGNOSIS_NOTE.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 - [`docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md`](./WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md`](./WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md)
 - [`docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md`](./WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md)
