@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:31:55.942118+00:00
+**Generated:** 2026-05-03T16:37:14.726686+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 783 |
+| unaudited | 782 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
-| ~~audited_renaming~~ | 21 |
+| ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 517 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -40,8 +40,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 6 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
-| `audited_renaming` | 21 |
-| `unaudited` | 829 |
+| `audited_renaming` | 22 |
+| `unaudited` | 828 |
 
 | claim_type | count |
 |---|---:|
@@ -1014,6 +1014,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_constructive_uv_bridge_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
+| `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
 | `cl3_sm_embedding_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh | F | - |
 | `cl3_taste_generation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 | `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -2560,6 +2561,22 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `cl3_color_automorphism_theorem`
+
+- **Note:** [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](../../docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The claim that Z3 forces N_c=3, realizes SU(3)_c on the 3D symmetric base subspace of the taste cube, and yields R_conn=8/9 from the SU(3) Fierz channel fraction.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-color-auto-judicial-2026-05-03`  (codex-current; independence=judicial_review)
+- **load-bearing step:** N_c = |hw=1 states| = dim(Z3) = 3, followed by the identification that the 3D symmetric base subspace carries physical SU(3)_c color.  _(class `F`)_
+- **chain closes:** False — The first audit is ratified. The operative load-bearing move is the asserted identity between a selected 3D taste/base carrier and physical SM color N_c/SU(3)_c. The verifier sets N_c=3 and constructs standard Gell-Mann generators on the chosen 3D symmetric block, then checks SU(3) algebra, commutation, and the Fierz 8/9 fraction. Those checks are internally valid after the carrier has been selected, but they do not derive the physical-carrier identification. The statement that the 3-axis count equals rank(SU(3)_c) is mathematically wrong because SU(3) has rank 2 and must be repaired, but it is not the step used by the runner to derive R_conn; the controlling audit failure mode is class-F renaming/identification rather than failed algebraic computation.
+- **rationale:** The first audit is ratified. The operative load-bearing move is the asserted identity between a selected 3D taste/base carrier and physical SM color N_c/SU(3)_c. The verifier sets N_c=3 and constructs standard Gell-Mann generators on the chosen 3D symmetric block, then checks SU(3) algebra, commutation, and the Fierz 8/9 fraction. Those checks are internally valid after the carrier has been selected, but they do not derive the physical-carrier identification. The statement that the 3-axis count equals rank(SU(3)_c) is mathematically wrong because SU(3) has rank 2 and must be repaired, but it is not the step used by the runner to derive R_conn; the controlling audit failure mode is class-F renaming/identification rather than failed algebraic computation.
+- **open / conditional deps cited:**
+  - `EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md`
+  - `RCONN_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `cl3_sm_embedding_theorem`
