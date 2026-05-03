@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Source-Higgs Unratified-Operator Smoke
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED INSTRUMENTATION SUPPORT / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- source-Higgs cross-correlator estimator emits finite-mode `C_ss/C_sH/C_HH`
+  rows and per-configuration time series on a reduced smoke run;
+- the operator certificate is explicitly unratified and has no canonical-Higgs
+  identity or normalization authority;
+- `pole_residue_rows` remain empty, so the source-Higgs certificate builder and
+  Gram-purity postprocessor remain open;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_higgs_unratified_operator_smoke_checkpoint.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/yt_direct_lattice_correlator_production.py --volumes 4x8 --masses 0.75 --therm 2 --measurements 2 --separation 1 --engine numba --source-higgs-cross-modes '0,0,0;1,0,0' --source-higgs-cross-noises 2 --source-higgs-operator-certificate outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json --seed 2026051301 --production-output-dir outputs/yt_source_higgs_unratified_operator_smoke_2026-05-03 --output outputs/yt_source_higgs_unratified_operator_smoke_run_2026-05-03.json
+python3 scripts/frontier_yt_source_higgs_unratified_operator_smoke_checkpoint.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Multi-Tau Target-Timeseries Harness
 
 Local review-loop disposition:

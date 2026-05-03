@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the source-Higgs cross-correlator estimator has now been
+smoke-tested with an explicitly unratified operator certificate.  The path
+emits finite-mode `C_ss/C_sH/C_HH` rows and per-configuration time series, so
+the next positive source-Higgs move is no longer parser plumbing; it is an
+audit-acceptable same-surface canonical-Higgs operator certificate plus
+production pole-residue extraction.  If that `O_H` certificate cannot be
+derived, pivot to real W/Z response with sector-overlap identity or to a
+microscopic theorem excluding orthogonal neutral top coupling.  The smoke is
+not retained/proposed-retained evidence.
+
 2026-05-03 update: the harness-side multi-tau serialization blocker is now
 removed for future chunks.  `fh_lsz_target_timeseries_v2_multitau` preserves
 legacy tau=1 rows and adds per-configuration multi-tau source-response rows,

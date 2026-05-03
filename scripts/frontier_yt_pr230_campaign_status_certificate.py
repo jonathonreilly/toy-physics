@@ -230,6 +230,9 @@ def main() -> int:
         "source_higgs_harness_absence_guard": load(
             "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json"
         ),
+        "source_higgs_unratified_operator_smoke": load(
+            "outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json"
+        ),
         "neutral_scalar_rank_one_purity_gate": load(
             "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json"
         ),
@@ -850,6 +853,22 @@ def main() -> int:
         and source_higgs_guard_fields.get("source_higgs_cross_correlator") is True
         and source_higgs_operator_guarded,
         statuses["source_higgs_harness_absence_guard"],
+    )
+    source_higgs_smoke_cert = certificates["source_higgs_unratified_operator_smoke"]
+    report(
+        "source-higgs-unratified-operator-smoke-not-evidence",
+        "source-Higgs unratified-operator smoke checkpoint"
+        in str(statuses["source_higgs_unratified_operator_smoke"])
+        and source_higgs_smoke_cert.get("proposal_allowed") is False
+        and source_higgs_smoke_cert.get("source_higgs_metadata", {}).get(
+            "canonical_higgs_operator_realization"
+        )
+        == "certificate_supplied_unratified"
+        and source_higgs_smoke_cert.get("source_higgs_metadata", {}).get(
+            "used_as_physical_yukawa_readout"
+        )
+        is False,
+        statuses["source_higgs_unratified_operator_smoke"],
     )
     report(
         "neutral-scalar-rank-one-purity-gate-not-passed",

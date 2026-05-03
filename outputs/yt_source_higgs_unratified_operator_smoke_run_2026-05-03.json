@@ -1,0 +1,511 @@
+{
+  "ensembles": [
+    {
+      "a_fm": 0.0931098696461825,
+      "ape_smearing": {
+        "alpha": 0.5,
+        "steps": 1
+      },
+      "boundary_conditions": {
+        "fermion_time": "antiperiodic",
+        "gauge_spatial": "periodic",
+        "gauge_time": "periodic"
+      },
+      "correlators": [
+        {
+          "mean": 0.42099181219129167,
+          "stderr": 0.00453050118881565,
+          "tau": 0
+        },
+        {
+          "mean": 0.05370729264065001,
+          "stderr": 0.0013241695849877458,
+          "tau": 1
+        },
+        {
+          "mean": 0.007636352707820322,
+          "stderr": 0.00029454579047255135,
+          "tau": 2
+        },
+        {
+          "mean": 0.001074169681527997,
+          "stderr": 6.948542994541292e-05,
+          "tau": 3
+        },
+        {
+          "mean": 0.0002678271460729662,
+          "stderr": 4.580645754684277e-06,
+          "tau": 4
+        },
+        {
+          "mean": 0.001082072783411924,
+          "stderr": 6.074652002067992e-05,
+          "tau": 5
+        },
+        {
+          "mean": 0.007708912442836811,
+          "stderr": 0.00014147403106725548,
+          "tau": 6
+        },
+        {
+          "mean": 0.05829517106428257,
+          "stderr": 0.0004180264651757956,
+          "tau": 7
+        }
+      ],
+      "dims": [
+        4,
+        4,
+        4,
+        8
+      ],
+      "effective_mass": [
+        {
+          "m_eff": 2.0590645893580786,
+          "tau": 0
+        },
+        {
+          "m_eff": 1.950628700733285,
+          "tau": 1
+        },
+        {
+          "m_eff": 1.9613721210680921,
+          "tau": 2
+        },
+        {
+          "m_eff": 1.3889614577553817,
+          "tau": 3
+        },
+        {
+          "m_eff": -1.3962919295389296,
+          "tau": 4
+        },
+        {
+          "m_eff": -1.9634986739871962,
+          "tau": 5
+        },
+        {
+          "m_eff": -2.023142141212063,
+          "tau": 6
+        }
+      ],
+      "fh_lsz_measurement_policy": {
+        "non_selected_masses_scalar_fh_lsz_skipped": [],
+        "normal_equation_cache": {
+          "key": "mass/source-shift value",
+          "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+          "scope": "per saved gauge configuration and smeared measurement gauge"
+        },
+        "physical_higgs_normalization": "not_derived",
+        "policy": "selected_mass_only_for_scalar_fh_lsz",
+        "scalar_source_response_selected_mass_only": false,
+        "scalar_two_point_lsz_selected_mass_only": false,
+        "selected_mass_index": 0,
+        "selected_mass_parameter": 0.75,
+        "source_higgs_cross_correlator_selected_mass_only": true,
+        "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+        "top_correlator_mass_scan_preserved": true,
+        "used_as_physical_yukawa_readout": false
+      },
+      "mass_fit": {
+        "chi2_dof": 17.69361509254158,
+        "m_lat": 1.6566937754480549,
+        "m_lat_err": 0.02063448652471185,
+        "tau_max": 4,
+        "tau_min": 2
+      },
+      "mass_parameter_scan": [
+        {
+          "chi2_dof": 17.69361509254158,
+          "m_bare_lat": 0.75,
+          "m_fit_lat": 1.6566937754480549,
+          "m_fit_lat_err": 0.02063448652471185,
+          "max_cg_residual": 8.610010684771245e-09
+        }
+      ],
+      "measurement_separation_sweeps": 1,
+      "measurement_sweeps": 2,
+      "momentum_analysis": {
+        "energy_fits": {},
+        "kinetic_mass_fits": {}
+      },
+      "plaquette_history": [
+        0.6654854723026505,
+        0.5435882951036025
+      ],
+      "plaquette_mean": 0.3660762481744556,
+      "plaquette_measurements": [
+        0.4405684968777979,
+        0.2915839994711133
+      ],
+      "r0_over_a": 5.37,
+      "rng_seed_control": {
+        "base_seed": 2026051301,
+        "gauge_rng_seed": 2030124721,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2030124721,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2030124721
+      },
+      "runtime_seconds": 0.2697129249572754,
+      "scalar_source_response_analysis": {
+        "energy_fits": [],
+        "slope_dE_ds_lat": NaN,
+        "source_coordinate": "disabled"
+      },
+      "scalar_two_point_lsz_analysis": {
+        "mode_rows": {},
+        "physical_higgs_normalization": "not_derived",
+        "source_coordinate": "disabled"
+      },
+      "selected_mass_parameter": 0.75,
+      "source_higgs_cross_correlator_analysis": {
+        "canonical_higgs_operator_identity_passed": false,
+        "firewall": {
+          "used_alpha_lm_or_plaquette": false,
+          "used_hunit_matrix_element_readout": false,
+          "used_observed_targets_as_selectors": false,
+          "used_yt_ward_identity": false
+        },
+        "measurement_object": "same-ensemble C_ss/C_sH/C_HH(q) rows for a supplied canonical-Higgs operator certificate",
+        "mode_rows": {
+          "0,0,0": {
+            "C_HH_imag": -0.0043981485268689505,
+            "C_HH_imag_config_stderr": 0.003540141935729093,
+            "C_HH_real": 0.0015917270867335503,
+            "C_HH_real_config_stderr": 0.028250312789007453,
+            "C_HH_timeseries": [
+              {
+                "C_HH_imag": -0.0008580065911398575,
+                "C_HH_real": -0.026658585702273908,
+                "configuration_index": 0
+              },
+              {
+                "C_HH_imag": -0.007938290462598044,
+                "C_HH_real": 0.029842039875741008,
+                "configuration_index": 1
+              }
+            ],
+            "C_sH_imag": -0.0043981485268689505,
+            "C_sH_imag_config_stderr": 0.003540141935729093,
+            "C_sH_real": 0.0015917270867335503,
+            "C_sH_real_config_stderr": 0.028250312789007453,
+            "C_sH_timeseries": [
+              {
+                "C_sH_imag": -0.0008580065911398575,
+                "C_sH_real": -0.026658585702273908,
+                "configuration_index": 0
+              },
+              {
+                "C_sH_imag": -0.007938290462598044,
+                "C_sH_real": 0.029842039875741008,
+                "configuration_index": 1
+              }
+            ],
+            "C_ss_imag": -0.0043981485268689505,
+            "C_ss_imag_config_stderr": 0.003540141935729093,
+            "C_ss_real": 0.0015917270867335503,
+            "C_ss_real_config_stderr": 0.028250312789007453,
+            "C_ss_timeseries": [
+              {
+                "C_ss_imag": -0.0008580065911398575,
+                "C_ss_real": -0.026658585702273908,
+                "configuration_index": 0
+              },
+              {
+                "C_ss_imag": -0.007938290462598044,
+                "C_ss_real": 0.029842039875741008,
+                "configuration_index": 1
+              }
+            ],
+            "configuration_count": 2,
+            "finite_row_gram": {
+              "available": true,
+              "gram_determinant_real": 0.0,
+              "rho_sH_real": 1.0,
+              "strict_limit": "Finite-mode rows are not pole residues.  Gram purity can only be evaluated after isolated-pole residue extraction and FV/IR/model-class gates."
+            },
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "p_hat_sq": 0.0
+          },
+          "1,0,0": {
+            "C_HH_imag": -0.00612622619518853,
+            "C_HH_imag_config_stderr": 0.005000910379409514,
+            "C_HH_real": 0.04415138275202145,
+            "C_HH_real_config_stderr": 0.023976286105433744,
+            "C_HH_timeseries": [
+              {
+                "C_HH_imag": -0.0011253158157790155,
+                "C_HH_real": 0.020175096646587697,
+                "configuration_index": 0
+              },
+              {
+                "C_HH_imag": -0.011127136574598044,
+                "C_HH_real": 0.06812766885745519,
+                "configuration_index": 1
+              }
+            ],
+            "C_sH_imag": -0.00612622619518853,
+            "C_sH_imag_config_stderr": 0.005000910379409514,
+            "C_sH_real": 0.04415138275202145,
+            "C_sH_real_config_stderr": 0.023976286105433744,
+            "C_sH_timeseries": [
+              {
+                "C_sH_imag": -0.0011253158157790155,
+                "C_sH_real": 0.020175096646587697,
+                "configuration_index": 0
+              },
+              {
+                "C_sH_imag": -0.011127136574598044,
+                "C_sH_real": 0.06812766885745519,
+                "configuration_index": 1
+              }
+            ],
+            "C_ss_imag": -0.00612622619518853,
+            "C_ss_imag_config_stderr": 0.005000910379409514,
+            "C_ss_real": 0.04415138275202145,
+            "C_ss_real_config_stderr": 0.023976286105433744,
+            "C_ss_timeseries": [
+              {
+                "C_ss_imag": -0.0011253158157790155,
+                "C_ss_real": 0.020175096646587697,
+                "configuration_index": 0
+              },
+              {
+                "C_ss_imag": -0.011127136574598044,
+                "C_ss_real": 0.06812766885745519,
+                "configuration_index": 1
+              }
+            ],
+            "configuration_count": 2,
+            "finite_row_gram": {
+              "available": true,
+              "gram_determinant_real": 0.0,
+              "rho_sH_real": 1.0,
+              "strict_limit": "Finite-mode rows are not pole residues.  Gram purity can only be evaluated after isolated-pole residue extraction and FV/IR/model-class gates."
+            },
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ],
+            "p_hat_sq": 1.9999999999999996
+          }
+        },
+        "operator": {
+          "canonical_higgs_operator_identity_passed": false,
+          "certificate_path": "outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json",
+          "hunit_used_as_operator": null,
+          "identity_certificate": "absent / smoke-only unratified operator certificate",
+          "normalization_certificate": "absent / smoke-only unratified operator certificate",
+          "operator_definition": "constant diagonal vertex used only to smoke-test C_ss/C_sH/C_HH estimator plumbing",
+          "operator_id": "unratified_constant_diagonal_smoke_operator_v1",
+          "static_ew_algebra_used_as_operator": false
+        },
+        "pole_residue_rows": [],
+        "same_ensemble": true,
+        "same_source_coordinate": true,
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "strict_limit": "This analysis emits finite-momentum cross-correlator rows.  It does not supply pole residues, Gram-purity closure, or retained y_t authorization without the source-Higgs certificate builder and postprocessor gates.",
+        "used_as_physical_yukawa_readout": false
+      },
+      "spatial_L": 4,
+      "thermalization_sweeps": 2,
+      "time_L": 8,
+      "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
+      "update_engine": "numba"
+    }
+  ],
+  "metadata": {
+    "action": "Cl3Z3_SU3_Wilson_staggered",
+    "authority": "staggered_top_correlator_mass_extraction",
+    "created_utc": "2026-05-03T19:48:00Z",
+    "evidence_scope": "reduced run is infrastructure evidence only",
+    "fh_lsz_measurement_policy": {
+      "non_selected_masses_scalar_fh_lsz_skipped": [],
+      "normal_equation_cache": {
+        "key": "mass/source-shift value",
+        "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+        "scope": "per saved gauge configuration and smeared measurement gauge"
+      },
+      "physical_higgs_normalization": "not_derived",
+      "policy": "selected_mass_only_for_scalar_fh_lsz",
+      "scalar_source_response_selected_mass_only": false,
+      "scalar_two_point_lsz_selected_mass_only": false,
+      "selected_mass_index": 0,
+      "selected_mass_parameter": 0.75,
+      "source_higgs_cross_correlator_selected_mass_only": true,
+      "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+      "top_correlator_mass_scan_preserved": true,
+      "used_as_physical_yukawa_readout": false
+    },
+    "g_bare": 1.0,
+    "phase": "reduced_scope",
+    "run_control": {
+      "engine": "numba",
+      "fh_lsz_selected_mass_only": true,
+      "fh_lsz_selected_mass_parameter": 0.75,
+      "masses": [
+        0.75
+      ],
+      "measurement_separation_sweeps": 1,
+      "measurement_sweeps": 2,
+      "momentum_modes": [],
+      "normal_equation_cache_enabled": true,
+      "overrelaxation_sweeps": 1,
+      "pilot_targets": false,
+      "production_output_dir": "outputs/yt_source_higgs_unratified_operator_smoke_2026-05-03",
+      "production_targets": false,
+      "scalar_source_shifts": [],
+      "scalar_two_point_modes": [],
+      "scalar_two_point_noises": 0,
+      "seed": 2026051301,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "source_higgs_cross_modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "source_higgs_cross_noises": 2,
+      "source_higgs_operator_certificate": "outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json",
+      "thermalization_sweeps": 2,
+      "volumes": "4x8"
+    },
+    "running_bridge": "reduced_scope run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
+    "scalar_source_response": {
+      "enabled": false,
+      "multi_tau_response_serialization": false,
+      "multi_tau_response_serialization_status": "disabled_no_scalar_source_shifts",
+      "non_selected_masses_skipped": [],
+      "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": false,
+      "selected_mass_parameter": 0.75,
+      "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+      "target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau",
+      "used_as_physical_yukawa_readout": false
+    },
+    "scalar_two_point_lsz": {
+      "enabled": false,
+      "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
+      "noise_vectors_per_configuration": 0,
+      "non_selected_masses_skipped": [],
+      "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": false,
+      "selected_mass_parameter": 0.75,
+      "used_as_physical_yukawa_readout": false
+    },
+    "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for reduced_scope run",
+    "source_higgs_cross_correlator": {
+      "canonical_higgs_operator_realization": "certificate_supplied_unratified",
+      "enabled": true,
+      "firewall": {
+        "used_alpha_lm_or_plaquette": false,
+        "used_hunit_matrix_element_readout": false,
+        "used_observed_targets_as_selectors": false,
+        "used_yt_ward_identity": false
+      },
+      "implementation_status": "finite_mode_measurement_enabled_pending_pole_residue_gate",
+      "modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "noise_vectors_per_configuration": 2,
+      "operator": {
+        "canonical_higgs_operator_identity_passed": false,
+        "certificate_path": "outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json",
+        "hunit_used_as_operator": null,
+        "identity_certificate": "absent / smoke-only unratified operator certificate",
+        "normalization_certificate": "absent / smoke-only unratified operator certificate",
+        "operator_definition": "constant diagonal vertex used only to smoke-test C_ss/C_sH/C_HH estimator plumbing",
+        "operator_id": "unratified_constant_diagonal_smoke_operator_v1",
+        "static_ew_algebra_used_as_operator": false
+      },
+      "required_measurement_objects": [
+        "O_H or radial canonical-Higgs observable on the same Cl3/Z3 source surface",
+        "C_sH(q)=<O_s(q) O_H(-q)> pole rows",
+        "C_HH(q)=<O_H(q) O_H(-q)> pole rows",
+        "same-ensemble C_ss/C_sH/C_HH covariance"
+      ],
+      "selected_mass_only": true,
+      "selected_mass_parameter": 0.75,
+      "strict_limit": "Finite-mode source-Higgs rows are not pole residues and must not be treated as source-Higgs Gram purity or canonical-Higgs normalization evidence until the source-Higgs certificate builder, Gram-purity postprocessor, and retained-route gates pass.",
+      "used_as_physical_yukawa_readout": false
+    },
+    "uses_composite_matrix_element_route": false,
+    "uses_coupling_definition_route": false,
+    "uses_prior_ward_chain": false,
+    "wz_mass_response": {
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "same-source W/Z correlator mass fits",
+        "fitted dM_W/ds or dM_Z/ds under the same scalar source",
+        "covariance with dE_top/ds",
+        "sector-overlap and canonical-Higgs identity certificates"
+      ],
+      "strict_limit": "This QCD top-correlator harness does not measure W/Z mass response.  Static EW algebra or absent W/Z slopes must not be used as dM_W/ds evidence.",
+      "used_as_physical_yukawa_readout": false
+    }
+  },
+  "ratio_check": {
+    "g_s_lattice": null,
+    "g_s_source": "not_measured_reduced_scope",
+    "ratio": null,
+    "uncertainty": null,
+    "used_as_definition": false,
+    "y_t_lattice": 0.020166256194504455
+  },
+  "result": {
+    "m_t_pole_GeV": 3.5110174828823166,
+    "m_t_running_at_v_GeV": 3.5110174828823166,
+    "mass_uncertainties_GeV": {
+      "finite_spacing": 0.7022034965764634,
+      "finite_volume": 0.0,
+      "heavy_mass_tuning": 0.5266526224323475,
+      "matching": 0.3511017482882317,
+      "running_bridge": 0.3511017482882317,
+      "scale_setting": 0.17555087414411585,
+      "statistical": 0.04373049745959794,
+      "v_input": 0.0001
+    },
+    "reduced_scope_delta_to_pdg_GeV": -169.04898251711768,
+    "reduced_scope_delta_to_y_t_target": -0.8968337438054956,
+    "total_m_t_pole_uncertainty_GeV": 1.0245623877744159,
+    "total_y_t_uncertainty": 0.005884786304780878,
+    "uncertainties": {
+      "finite_spacing": 0.004033251238900891,
+      "finite_volume": 0.0,
+      "heavy_mass_tuning": 0.0030249384291756677,
+      "matching": 0.0020166256194504456,
+      "running_bridge": 0.0020166256194504456,
+      "scale_setting": 0.0010083128097252228,
+      "statistical": 0.00025117517061162907,
+      "v_input": 5.743707142679697e-07
+    },
+    "y_t_v": 0.020166256194504455
+  },
+  "v_input": {
+    "source": "existing electroweak VEV chain",
+    "treatment": "substrate_input_only",
+    "v_GeV": 246.21965
+  }
+}

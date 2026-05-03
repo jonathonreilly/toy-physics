@@ -1,5 +1,25 @@
 # No-Go Ledger
 
+## Source-Higgs unratified operator smoke is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_source_higgs_unratified_operator_smoke_checkpoint.py
+# SUMMARY: PASS=18 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=115 FAIL=0
+```
+
+The reduced smoke proves the source-Higgs estimator can emit finite-mode
+`C_ss/C_sH/C_HH` rows and per-configuration time series under a supplied
+operator certificate.  The supplied certificate is deliberately unratified:
+`canonical_higgs_operator_identity_passed=false`, the canonical-Higgs
+realization is `certificate_supplied_unratified`, and `pole_residue_rows=[]`.
+Finite-row Gram diagnostics are not isolated-pole residues and do not pass the
+source-Higgs Gram-purity gate.  Do not treat this smoke as `O_H`, source-Higgs
+purity, canonical-Higgs normalization, or retained/proposed-retained evidence.
+
 ## FH/LSZ multi-tau target rows are not closure
 
 Runners:

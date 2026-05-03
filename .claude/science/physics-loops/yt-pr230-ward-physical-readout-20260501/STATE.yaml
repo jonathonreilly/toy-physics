@@ -13,11 +13,16 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-165-fh-lsz-multitau-target-timeseries-harness
-blocks_completed: 165
-active_route: "Feynman-Hellmann physical-response route"
-active_hard_residual: "Selected-mass scalar FH/LSZ plus normal-equation caching is landed, chunks001-016 are target-timeseries complete, and target-observable ESS now passes for the current ready set with limiting ESS 210.7849819291294 >= 200.  The production harness now emits versioned v2 multi-tau per-configuration source-response target rows while preserving the legacy tau1 fields and C_ss/Gamma_ss target rows; the reduced smoke/certificate is PASS=14 FAIL=0 and is infrastructure support only.  Response-window forensics show tau1 target stability and the response-window acceptance gate shows chunk-level central slopes stable across tau windows 0-9, but the acceptance gate still is not passed for current production chunks because those chunks predate v2 multi-tau rows and multiple source radii remain absent; no readout switch is authorized.  The ready set is still only 16/63 L12 chunks and 256/1000 saved configurations; scalar-pole derivative/model-class/FV/IR gates remain open, and canonical-Higgs identity remains absent.  Exact next action is rerun future production chunks with the v2 schema plus multi-radius source-response calibration, or derive same-surface C_sH/C_HH, an O_H identity theorem, a real W/Z response row with sector-overlap identity, or a microscopic theorem excluding the orthogonal neutral top-coupling loophole.  No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-167-source-higgs-unratified-operator-smoke
+blocks_completed: 167
+active_route: "same-surface source-Higgs Gram-purity route"
+active_hard_residual: "The source-Higgs cross-correlator harness path now has an explicit reduced smoke using an unratified constant diagonal operator certificate.  The smoke emits finite-mode C_ss/C_sH/C_HH rows and per-configuration time series for modes (0,0,0) and (1,0,0), with numba_gauge_seed_v1 seed control, selected-mass-only metadata, forbidden-import firewall fields false, and used_as_physical_yukawa_readout=false.  The checkpoint is PASS=18 FAIL=0; retained-route is PASS=115 FAIL=0; campaign status is PASS=141 FAIL=0.  This is instrumentation reachability only: canonical_higgs_operator_identity_passed=false, pole_residue_rows=[], finite-row Gram diagnostics are not pole residues, and the builder/postprocessor/canonical-Higgs operator gates remain open.  Exact next action is to replace the unratified smoke operator with an audit-acceptable same-surface canonical-Higgs operator certificate, run production source-Higgs cross-correlator rows, extract isolated-pole residues, then rerun the builder, Gram-purity postprocessor, and retained-route gate.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json"
+  - "outputs/yt_source_higgs_unratified_operator_smoke_run_2026-05-03.json"
+  - "scripts/frontier_yt_source_higgs_unratified_operator_smoke_checkpoint.py"
+  - "outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json"
+  - "docs/YT_SOURCE_HIGGS_UNRATIFIED_OPERATOR_SMOKE_CHECKPOINT_NOTE_2026-05-03.md"
   - "scripts/frontier_yt_fh_lsz_multitau_target_timeseries_harness_certificate.py"
   - "outputs/yt_fh_lsz_multitau_target_timeseries_harness_certificate_2026-05-03.json"
   - "outputs/yt_direct_lattice_correlator_multitau_target_timeseries_smoke_2026-05-03.json"

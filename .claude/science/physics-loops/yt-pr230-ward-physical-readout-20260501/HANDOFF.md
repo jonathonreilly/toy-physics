@@ -1,5 +1,30 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 source-Higgs unratified-operator smoke:
+
+- Added `outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json`
+  as an explicitly unratified constant diagonal operator certificate.
+- Ran a tiny reduced `4x8` source-Higgs cross-correlator smoke:
+  `outputs/yt_source_higgs_unratified_operator_smoke_run_2026-05-03.json`.
+  It emits same-ensemble finite-mode `C_ss`, `C_sH`, and `C_HH` rows with
+  per-configuration time series for modes `(0,0,0)` and `(1,0,0)`.
+- Added
+  `scripts/frontier_yt_source_higgs_unratified_operator_smoke_checkpoint.py`
+  and
+  `outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json`;
+  checkpoint result is `PASS=18 FAIL=0`.
+- Retained-route is now `PASS=115 FAIL=0`; campaign status is now
+  `PASS=141 FAIL=0`.
+- The smoke is not evidence: `canonical_higgs_operator_identity_passed=false`,
+  `canonical_higgs_operator_realization=certificate_supplied_unratified`,
+  `used_as_physical_yukawa_readout=false`, and `pole_residue_rows=[]`.
+
+Next exact action: replace the unratified smoke operator with an
+audit-acceptable same-surface canonical-Higgs operator certificate, run
+production source-Higgs cross-correlator rows, extract isolated-pole residues,
+then rerun the source-Higgs certificate builder, Gram-purity postprocessor, and
+retained-route gate.  No retained or proposed-retained closure is authorized.
+
 Latest checkpoint, 2026-05-03 FH/LSZ multi-tau target-timeseries harness:
 
 - Extended `scripts/yt_direct_lattice_correlator_production.py` so scalar

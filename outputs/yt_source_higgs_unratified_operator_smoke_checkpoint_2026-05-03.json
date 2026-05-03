@@ -1,0 +1,92 @@
+{
+  "actual_current_surface_status": "bounded-support / source-Higgs unratified-operator smoke checkpoint",
+  "exact_next_action": "Replace the unratified smoke operator with an audit-acceptable same-surface canonical-Higgs operator certificate, run production source-Higgs cross-correlator rows, extract isolated-pole residues, then rerun the certificate builder, Gram-purity postprocessor, and retained-route gate.",
+  "fail_count": 0,
+  "mode_summary": {
+    "finite_mode_count": 2,
+    "finite_row_gram_available_count": 2,
+    "mode_count": 2,
+    "modes": [
+      {
+        "configuration_count": 2,
+        "finite_row_gram_available": true,
+        "mode": "0,0,0",
+        "mode_complete": true
+      },
+      {
+        "configuration_count": 2,
+        "finite_row_gram_available": true,
+        "mode": "1,0,0",
+        "mode_complete": true
+      }
+    ],
+    "strict_limit_blocks_finite_gram_as_evidence": true,
+    "timeseries_labels_complete": true
+  },
+  "operator_certificate": "outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json",
+  "parent_certificates": {
+    "builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_operator_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
+    "postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Smoke rows use an unratified operator and are finite-mode instrumentation rows, not pole-residue evidence.",
+  "smoke_artifact": "outputs/yt_source_higgs_unratified_operator_smoke_run_2026-05-03.json",
+  "source_higgs_metadata": {
+    "canonical_higgs_operator_realization": "certificate_supplied_unratified",
+    "enabled": true,
+    "firewall": {
+      "used_alpha_lm_or_plaquette": false,
+      "used_hunit_matrix_element_readout": false,
+      "used_observed_targets_as_selectors": false,
+      "used_yt_ward_identity": false
+    },
+    "implementation_status": "finite_mode_measurement_enabled_pending_pole_residue_gate",
+    "modes": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "noise_vectors_per_configuration": 2,
+    "operator": {
+      "canonical_higgs_operator_identity_passed": false,
+      "certificate_path": "outputs/yt_source_higgs_unratified_operator_certificate_2026-05-03.json",
+      "hunit_used_as_operator": null,
+      "identity_certificate": "absent / smoke-only unratified operator certificate",
+      "normalization_certificate": "absent / smoke-only unratified operator certificate",
+      "operator_definition": "constant diagonal vertex used only to smoke-test C_ss/C_sH/C_HH estimator plumbing",
+      "operator_id": "unratified_constant_diagonal_smoke_operator_v1",
+      "static_ew_algebra_used_as_operator": false
+    },
+    "required_measurement_objects": [
+      "O_H or radial canonical-Higgs observable on the same Cl3/Z3 source surface",
+      "C_sH(q)=<O_s(q) O_H(-q)> pole rows",
+      "C_HH(q)=<O_H(q) O_H(-q)> pole rows",
+      "same-ensemble C_ss/C_sH/C_HH covariance"
+    ],
+    "selected_mass_only": true,
+    "selected_mass_parameter": 0.75,
+    "strict_limit": "Finite-mode source-Higgs rows are not pole residues and must not be treated as source-Higgs Gram purity or canonical-Higgs normalization evidence until the source-Higgs certificate builder, Gram-purity postprocessor, and retained-route gates pass.",
+    "used_as_physical_yukawa_readout": false
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H",
+    "does not treat finite-mode C_sH/C_HH rows as pole residues",
+    "does not set kappa_s = 1 or cos(theta) = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not use reduced smoke data as production evidence"
+  ],
+  "verdict": "A tiny reduced-scope run exercised the default-off source-Higgs cross-correlator estimator and emitted same-ensemble finite-mode C_ss/C_sH/C_HH rows.  The supplied operator certificate is explicitly unratified, the canonical-Higgs identity is false, pole_residue_rows are empty, and all downstream evidence gates remain open.  This proves instrumentation reach only; it supplies no source-Higgs Gram purity, canonical-Higgs normalization, or retained y_t closure."
+}

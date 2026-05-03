@@ -1,0 +1,28 @@
+{
+  "canonical_higgs_operator_identity_passed": false,
+  "diagonal_vertex": {
+    "constant": 1.0,
+    "kind": "constant_site_color_diagonal"
+  },
+  "firewall": {
+    "used_alpha_lm_or_plaquette": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_yt_ward_identity": false
+  },
+  "identity_certificate": "absent / smoke-only unratified operator certificate",
+  "normalization_certificate": "absent / smoke-only unratified operator certificate",
+  "operator_definition": "constant diagonal vertex used only to smoke-test C_ss/C_sH/C_HH estimator plumbing",
+  "operator_id": "unratified_constant_diagonal_smoke_operator_v1",
+  "phase": "smoke",
+  "proposal_allowed": false,
+  "static_ew_algebra_used_as_operator": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H",
+    "does not identify the source pole with the canonical Higgs",
+    "does not set kappa_s = 1 or cos(theta) = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "This certificate is intentionally unratified. It exists only to exercise the default-off source-Higgs estimator path and must be rejected by physics-evidence gates."
+}

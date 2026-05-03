@@ -142,6 +142,7 @@ def main() -> int:
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
         "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
+        "source_higgs_unratified_operator_smoke": "outputs/yt_source_higgs_unratified_operator_smoke_checkpoint_2026-05-03.json",
         "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
         "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
         "neutral_scalar_dynamical_rank_one_closure": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
@@ -810,6 +811,22 @@ def main() -> int:
         and source_higgs_guard_fields.get("source_higgs_cross_correlator") is True
         and source_higgs_operator_guarded
     )
+    source_higgs_unratified_operator_smoke_not_evidence = (
+        "source-Higgs unratified-operator smoke checkpoint"
+        in certificates["source_higgs_unratified_operator_smoke"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["source_higgs_unratified_operator_smoke"].get("proposal_allowed")
+        is False
+        and certificates["source_higgs_unratified_operator_smoke"].get(
+            "source_higgs_metadata", {}
+        ).get("canonical_higgs_operator_realization")
+        == "certificate_supplied_unratified"
+        and certificates["source_higgs_unratified_operator_smoke"].get(
+            "source_higgs_metadata", {}
+        ).get("used_as_physical_yukawa_readout")
+        is False
+    )
     neutral_scalar_rank_one_purity_gate_blocks = (
         "neutral scalar rank-one purity gate not passed"
         in certificates["neutral_scalar_rank_one_purity_gate"].get("actual_current_surface_status", "")
@@ -1424,6 +1441,11 @@ def main() -> int:
         "source-higgs-harness-absence-guard-not-evidence",
         source_higgs_harness_absence_guard_not_evidence,
         certificates["source_higgs_harness_absence_guard"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "source-higgs-unratified-operator-smoke-not-evidence",
+        source_higgs_unratified_operator_smoke_not_evidence,
+        certificates["source_higgs_unratified_operator_smoke"].get("actual_current_surface_status", ""),
     )
     report(
         "neutral-scalar-rank-one-purity-gate-blocks",
