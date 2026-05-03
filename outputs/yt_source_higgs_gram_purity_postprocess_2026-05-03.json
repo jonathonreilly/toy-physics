@@ -1,0 +1,22 @@
+{
+  "actual_current_surface_status": "open / source-Higgs Gram-purity postprocess awaiting production certificate",
+  "candidate_checks": {},
+  "candidate_missing_or_failed_checks": [],
+  "candidate_present": false,
+  "exact_next_action": "Supply a production same-surface O_H/C_sH/C_HH certificate, then rerun this postprocessor and the retained-route gate.",
+  "fail_count": 0,
+  "gram_purity": null,
+  "input_certificate": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json",
+  "pass_count": 2,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This postprocessor is an acceptance gate; retained/proposed-retained wording still requires the retained-route certificate.",
+  "source_higgs_gram_purity_gate_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define O_H by fiat",
+    "does not treat H_unit as O_H",
+    "does not set kappa_s = 1 or cos(theta) = 1",
+    "does not use yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "No source-Higgs production certificate is present, so the selected Gram-purity lane remains open."
+}

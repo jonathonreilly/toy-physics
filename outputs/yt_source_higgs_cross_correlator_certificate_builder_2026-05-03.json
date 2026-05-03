@@ -1,0 +1,21 @@
+{
+  "actual_current_surface_status": "open / source-Higgs cross-correlator rows absent",
+  "candidate_checks": {},
+  "candidate_missing_or_failed_checks": [],
+  "candidate_output": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json",
+  "candidate_written": false,
+  "exact_next_action": "Produce same-ensemble measurement rows for a certified O_H operator with Res_C_ss, Res_C_sH, and Res_C_HH; rerun this builder, then run the Gram-purity postprocessor.",
+  "fail_count": 0,
+  "input_present": false,
+  "input_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+  "pass_count": 2,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Builder output is support only; retained-route gate remains authoritative.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not manufacture O_H, C_sH, or C_HH data",
+    "does not treat H_unit, static EW algebra, or observed targets as O_H",
+    "does not set kappa_s = 1 or cos(theta) = 1"
+  ],
+  "verdict": "No source-Higgs O_H/C_sH/C_HH measurement rows are present, so no production candidate certificate was written."
+}
