@@ -41,6 +41,17 @@ Current science/open-lane follow-ups:
   dependency closure, before the parent theorem or status surfaces cite them
   as closing repair targets.
   Disposition: `science-needed`.
+- `2026-05-03-pr463-axiom-first-weave-gate`
+  Scope: PR #463, `CANONICAL_HARNESS_INDEX.md`,
+  `docs/publication/ci3_z3/DERIVATION_ATLAS.md`, and the `AXIOM_FIRST_*`
+  package.
+  Finding: do not weave grouped axiom-first foundational blocks onto retained
+  core or publication authority surfaces while member rows are mixed
+  `audited_failed`, `audited_conditional`, and `unaudited`; that would
+  authority-promote non-clean claims.
+  Disposition: `science-needed`.
+  Detail:
+  [`PR463_AXIOM_FIRST_WEAVE_REVIEW_2026-05-03.md`](../work_history/repo/review_feedback/PR463_AXIOM_FIRST_WEAVE_REVIEW_2026-05-03.md)
 - Planck Target 2 / area-law carrier: the simple-fiber Widom class is now
   closed negatively; any positive `1/4` entropy carrier needs a physical
   multi-pocket/multi-interval law or a gapped horizon-sector primitive-boundary
