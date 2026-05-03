@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T16:10:54.584795+00:00",
+  "generated_at": "2026-05-03T16:31:53.524696+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -1044,6 +1044,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/broken_graph_action_power_robustness.py"
+    },
+    "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_carrier_orbit_invariance.py"
     },
     "causal_cone_speed_map_note": {
       "assert_count": 0,
@@ -2160,6 +2172,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py"
+    },
+    "composite_higgs_mechanism_stretch_attempt_note_2026-05-03": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_composite_higgs_mechanism.py"
     },
     "composite_source_additivity_2d_note": {
       "assert_count": 0,
@@ -6349,6 +6373,30 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_scalar_temporal_completion_theorem.py"
     },
+    "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 17,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_scalar_temporal_observable_bridge_implicit_flow.py"
+    },
+    "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_scalar_temporal_observable_bridge_no_go.py"
+    },
     "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -6410,27 +6458,27 @@
       "runner": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py"
     },
     "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19": {
-      "assert_count": 0,
+      "assert_count": 2,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 9,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19": {
-      "assert_count": 0,
+      "assert_count": 2,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20": {
@@ -6566,15 +6614,15 @@
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 4,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_framework_point_underdetermination_note": {
@@ -11569,6 +11617,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py"
     },
+    "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_pmns_branch_selector.py"
+    },
     "pmns_c3_character_holonomy_closure_note": {
       "assert_count": 1,
       "counts": {
@@ -15612,6 +15672,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_ward_identity_derivation.py"
+    },
+    "v_even_theorem_retention_stretch_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 16,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_v_even_theorem_retention.py"
     },
     "vacuum_critical_stability_note": {
       "assert_count": 0,
@@ -19737,6 +19809,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_carrier_orbit_invariance.py": {
+      "assert_count": 1,
+      "claims": [
+        "carrier_orbit_invariance_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -20701,6 +20788,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_composite_higgs_mechanism.py": {
+      "assert_count": 2,
+      "claims": [
+        "composite_higgs_mechanism_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_confinement_string_tension.py": {
@@ -24532,6 +24634,36 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_scalar_temporal_observable_bridge_implicit_flow.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 17,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_gauge_scalar_temporal_observable_bridge_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py": {
       "assert_count": 1,
       "claims": [
@@ -24608,34 +24740,34 @@
       "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py": {
-      "assert_count": 0,
+      "assert_count": 2,
       "claims": [
         "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 9,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
+      "dominant_class": "C",
+      "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py": {
-      "assert_count": 0,
+      "assert_count": 2,
       "claims": [
         "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
+      "dominant_class": "C",
+      "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_2026_04_20.py": {
       "assert_count": 1,
@@ -24803,19 +24935,19 @@
       "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py": {
-      "assert_count": 0,
+      "assert_count": 1,
       "claims": [
         "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19"
       ],
       "counts": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 4,
         "D": 0
       },
       "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": false
+      "dominant_class": "C",
+      "exists": true
     },
     "scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py": {
       "assert_count": 1,
@@ -28852,6 +28984,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_pmns_branch_selector.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_pmns_c3_character_holonomy_closure.py": {
       "assert_count": 1,
       "claims": [
@@ -32043,6 +32190,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_v_even_theorem_retention.py": {
+      "assert_count": 1,
+      "claims": [
+        "v_even_theorem_retention_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 16,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/frontier_vector_gauge_field_kk_tower.py": {
@@ -37402,12 +37564,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 162,
-      "C": 545,
-      "D": 205,
-      "none": 421
+      "C": 552,
+      "D": 207,
+      "none": 418
     },
-    "runners_classified": 1343,
-    "runners_with_C": 651,
-    "runners_with_D": 331
+    "runners_classified": 1349,
+    "runners_with_C": 658,
+    "runners_with_D": 335
   }
 }
