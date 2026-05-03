@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:38:18.362035+00:00
+**Generated:** 2026-05-03T01:40:52.590034+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 215 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 471 |
+| unaudited | 470 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 660 |
+| ~~audited_conditional~~ | 661 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 426 |
-| `audited_conditional` | 660 |
+| `audited_conditional` | 661 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 511 |
+| `unaudited` | 510 |
 
 | claim_type | count |
 |---|---:|
@@ -1132,6 +1132,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_hard_blocker_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_native_record_apparatus_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_nature_grade_push_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_open_item_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -16997,6 +16998,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The note's load-bearing step is the bounded harness claim that, for the supplied qubit Bell resource rho_RB(v) and independent input-independent classical fault layers, the computed deadline/eventual teleportation fidelities, threshold crossings, trace preservation, and pre-record Bob input-independence behave as reported, without identifying the model with a physical apparatus or matter transport.  _(class `C`)_
 - **chain closes:** True — The source note keeps the claim inside the explicit supplied-resource, independent-fault qubit model, and the runner recomputes the channel, Choi average fidelities, threshold crossings, no-record Bob marginal diagnostics, and trace checks from that model. No one-hop dependencies are required, and the live runner output matches the note's reported numerics.
 - **rationale:** The bounded claim closes for the explicit model. The runner does not derive an apparatus noise law, Bell-resource preparation dynamics, spacetime propagation theorem, or matter/energy transport claim, but the note does not ask for those. Residual risk is only scope discipline: this clean audit applies to the independent-fault qubit-state harness and should not be promoted to a physical-noise derivation or apparatus-level teleportation claim.
+- **auditor confidence:** high
+
+### `teleportation_open_item_attack_note`
+
+- **Note:** [`TELEPORTATION_OPEN_ITEM_ATTACK_NOTE.md`](../../docs/TELEPORTATION_OPEN_ITEM_ATTACK_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Conditional planning artifact for ordinary quantum state teleportation only: it tests bridge-principle selectors and finite proxy models while explicitly excluding matter, mass, charge, energy, object, and faster-than-light transport claims.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-Turing-the-2nd-019deb7d-d97a-7541-8786-95e1b4a807f9`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note treats retained-action selection and no-dwell cubic-covariant carrier selection as bridge principles, then combines those hard-coded bridges with finite side 4/6/8/10 sparse-resource evidence, a correlated pulse decoder, and a finite Ising-domain detector proxy to narrow the teleportation blockers.  _(class `D`)_
+- **chain closes:** False — The runner passes its gates, but the load-bearing apparatus and amplitude selections are assumed bridge principles, and the resource, pulse, and detector parts remain finite/proxy evidence rather than retained derivations or material constructions.
+- **rationale:** Issue: The load-bearing retained-action and no-dwell carrier rules are introduced as bridge principles, while the sparse resource, pulse, and detector checks are finite/proxy models. Why this blocks: Passing consistency gates under those assumptions does not derive the audited transducer, amplitude law, asymptotic preparation/cooling, hardware noise spectrum, or irreversible material detector from retained premises. Repair target: Derive the bridge rules from the original axiom or promote them through independently retained theorems, add a rigorous asymptotic preparation/cooling theorem, and replace the pulse/detector proxies with specified hardware/material models or bounded theorems. Claim boundary until fixed: The artifact is citeable as a conditional open-gate/planning attack showing current finite checks and narrowed blockers for state-only teleportation, not as nature-grade closure of teleportation implementation.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
