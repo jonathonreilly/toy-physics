@@ -9,7 +9,7 @@ overclaim`, with explicit selection rationale.
 For each route, score 0-3 on:
 
 - **U** = claim-state upgrade potential (could it close a cycle 08 obstruction?)
-- **N** = novelty (new content beyond cycles 06/07/08/15/16/18?)
+- **N** = novelty (branch-local candidate content beyond cycles 06/07/08/15/16/18?)
 - **A** = artifactability within single cycle (can a runner verify it?)
 - **H** = hard-residual pressure (tackles a cycle 08 obstruction directly?)
 - **R** = risk of overclaim (NEGATIVE: -3 = high risk, 0 = clean)
@@ -23,7 +23,7 @@ Total = U + N + A + H + R + B. Maximum theoretical = 15.
 `V(m) = V₀ + (c1+c2/2)m + (3/2)m² + (1/6)m³` operates on a 1D scalar
 coordinate `m = Tr(K_Z3^sel)` derived from the Clifford involution
 `T_m² = I_3`. Could this Z3-symmetric scalar potential modify the
-top-condensate prediction by providing a new selector that suppresses
+top-condensate prediction by providing a candidate selector that suppresses
 the up-quark Yukawa magnitude? Hypothesis: Z3 operates on the
 *generation index* of the up-type quark sector; the dominant
 condensate is then `Z3-symmetric`, which forbids the unbalanced
@@ -35,7 +35,7 @@ mean-field condensation behavior than single-channel BHL.
 
 **Score:**
 - U = 1 (modifies cycle 08 O2 framing but doesn't close it)
-- N = 2 (Z3+condensate is new structural combination)
+- N = 2 (Z3+condensate is a branch-local structural combination)
 - A = 1 (artifact would mostly be qualitative — Z3 acting on
   generation index is a structural assertion, not a calculation)
 - H = 1 (only addresses cycle 08 O2; not O1 or O3)
@@ -90,21 +90,21 @@ selected slice — equivalent to a Z3 cyclic group acting on a triplet.
 
 **Score:**
 - U = 2 (sharpens all three cycle 08 obstructions with concrete
-  mechanism; full closure would require strong-coupling magnitude
+  candidate; full closure would require strong-coupling magnitude
   derivation, which is honestly NOT in scope)
-- N = 3 (multi-channel Z3-phased condensate is genuinely new — not
+- N = 3 (multi-channel Z3-phased condensate is branch-local candidate content — not
   in cycles 06, 07, 08, 11, 15, 16, 17, 18)
 - A = 2 (runner can verify quantum-number arithmetic for Z3 triplet,
   Z3 phase covariance, mass-ratio constraints, multi-channel
   effective Yukawa formula at exact rational precision)
 - H = 3 (directly attacks all 3 of cycle 08's named obstructions
-  with one mechanism — meets the corollary-churn guard since this
-  introduces a NEW load-bearing premise: Z3 acts on the
+  with one candidate — meets the corollary-churn guard since this
+  introduces a branch-local hypothesis: Z3 acts on the
   generation-index doubled up the bilinear triplet)
 - R = -1 (risk: identifying Z3 from the lepton mass-tower context
   with Z3 acting on quark-bilinear generation index is a STRUCTURAL
-  hypothesis, not a derivation; explicitly named as the new
-  load-bearing premise to be attacked by future cycles)
+  hypothesis, not a derivation; explicitly named as the branch-local
+  premise to be attacked by future cycles)
 - B = 3 (addresses all three cycle 08 obstructions)
 
 **Total: 12**
@@ -112,14 +112,14 @@ selected slice — equivalent to a Z3 cyclic group acting on a triplet.
 **Verdict**: strongest route. Selected for execution.
 
 **Key obstructions still named after Route B:**
-- New Obstruction (NO1): need to derive that Z3 indeed acts on
+- Residual obstruction (NO1): need to derive that Z3 indeed acts on
   generation index of quark bilinears (not just on charged-lepton
-  mass-tower). This is the **load-bearing premise** of Route B.
-- New Obstruction (NO2): need to derive that the three condensate
+  mass-tower). This is the **branch-local premise** of Route B.
+- Residual obstruction (NO2): need to derive that the three condensate
   magnitudes are equal (Z3 phase relation gives directions, not
   magnitudes; equal magnitudes is an additional Z3-symmetry
   assertion).
-- New Obstruction (NO3): need to derive the strong-coupling
+- Residual obstruction (NO3): need to derive the strong-coupling
   *magnitude* of the condensate (cycle 08 O1 inherits to here).
 
 ## Route C — Dimensional argument from g_2² = 1/4
@@ -192,14 +192,14 @@ Route B's score of **12** dominates the portfolio. It is the only route
 that:
 
 1. Tackles all three cycle 08 obstructions with one mechanism;
-2. Introduces a genuinely new load-bearing premise (Z3 on quark
-   bilinears) that is testable via runner;
+2. Introduces a branch-local hypothesis (Z3 on quark bilinears) that is
+   checked as a candidate by the runner;
 3. Avoids corollary-churn vs cycles 15, 18;
-4. Honestly names new obstructions (NO1, NO2, NO3) for what remains.
+4. Honestly names residual obstructions (NO1, NO2, NO3) for what remains.
 
-Stretch attempt output type (c) — sharpens cycle 08 with mechanism +
-new obstructions. Closing derivation (a) NOT achieved on the strong-
-coupling magnitude; that's the Nature-grade hard residual.
+Stretch attempt output type (c) — sharpens cycle 08 with candidate +
+residual obstructions. Closing derivation (a) NOT achieved on the strong-
+coupling magnitude; that remains the hard residual.
 
 ## Stuck fan-out check (workflow §7)
 

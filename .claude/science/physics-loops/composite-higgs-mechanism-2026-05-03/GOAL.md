@@ -3,7 +3,7 @@
 ## Lane
 
 EWSB Higgs identification — what plays the Higgs in the framework? This is
-the central Nature-grade EWSB question, opened by cycle 07's conditional
+an open EWSB question, opened by cycle 07's conditional
 `Q = T_3 + Y/2` derivation and sharpened by cycle 08's three named
 obstructions:
 
@@ -18,8 +18,9 @@ obstructions:
 
 `best-honest-status` (per SKILL.md). Expected output type **(c) STRETCH
 ATTEMPT**: produce one major cycle's worth of structural analysis on the
-composite-Higgs mechanism, sharpening cycle 08's obstructions with new
-mechanism content, with explicit named obstructions for what remains.
+composite-Higgs candidate, sharpening cycle 08's obstructions with
+branch-local candidate content and explicit named residual obstructions for
+what remains.
 
 A closing derivation (output type a) is NOT honestly expected and would
 indicate either (i) a missed import, (ii) a numerical coincidence, or
@@ -46,8 +47,10 @@ execution is the genuine /physics-loop contribution.
 
 ### Retained inputs (load-bearing; cited at one hop)
 
-- Cycle 06 derived SM rep — `SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02.md`.
-- Cycle 07 conditional Q-formula — `CONDITIONAL_EWSB_Q_FORMULA_ON_DERIVED_REP_THEOREM_NOTE_2026-05-02.md`.
+- Derived SM matter and conditional EWSB harness — `UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md`.
+- Doubled-Y normalization and `Q = T_3 + Y/2` convention — `LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md`.
+- One-Higgs Yukawa gauge-selection boundary — `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md`.
+- Higgs `Y_H=+1` from LHCM plus admitted Yukawa structure — `HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`.
 - Cycle 15 lattice-scale `g_2² = 1/(d+1) = 1/4` — `YT_EW_COLOR_PROJECTION_THEOREM_NOTE.md`.
 - Koide Z3 scalar potential — `KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`.
 - EW Fierz channel decomposition — `EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`.
@@ -57,7 +60,7 @@ execution is the genuine /physics-loop contribution.
 | # | Question |
 |---|---|
 | V1 | What specific cycle 08 obstruction(s) does this PR sharpen? |
-| V2 | What NEW derivation/mechanism does this PR contain beyond cycles 07/08/15/16? |
+| V2 | What branch-local candidate derivation does this PR contain beyond cycles 07/08/15/16? |
 | V3 | Could the audit lane synthesize this from existing retained primitives + textbook QFT? |
 | V4 | Is the marginal content non-trivial (not relabeling cycle 08's quantum-number match)? |
 | V5 | Is this distinct from cycles 11 (synthesis), 17 (Carrier Orbit), 18 (Z3 origin)? |

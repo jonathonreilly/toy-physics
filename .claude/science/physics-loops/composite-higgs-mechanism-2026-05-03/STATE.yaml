@@ -14,16 +14,17 @@ current_goal: |
 active_route: |
   ROUTE B (Multi-channel condensation with Z3 cluster phase relations).
   Selected after dramatic-step scoring of 5 routes (see ROUTE_PORTFOLIO.md).
-  Highest combined score on (a) probability of useful new structural
-  result, (b) novel content beyond cycles 06/07/08/15/16, and (c) ability
-  to address ALL THREE of cycle 08's obstructions with one mechanism.
+  Highest combined score on (a) probability of useful branch-local structural
+  result, (b) branch-local candidate content beyond cycles 06/07/08/15/16,
+  and (c) ability to address ALL THREE of cycle 08's obstructions with one
+  candidate.
 
 hard_residual_being_attacked: |
-  EWSB mechanism in framework: derive (or sharpen named obstructions for)
-  the dynamical mechanism that produces ⟨q̄_L u_R⟩ ≠ 0 with effective
-  Yukawa giving observed m_top consistent (without using m_top as input)
-  AND selects which bilinear plays the Higgs role. This is cycle 08's
-  Obstructions 1, 2, and 3 jointly.
+  EWSB candidate mechanism in framework: sharpen named obstructions for the
+  dynamical candidate that would produce ⟨q̄_L u_R⟩ ≠ 0 with an effective
+  Yukawa relation, without using observed m_top as input, AND selects which
+  bilinear plays the Higgs role. This is cycle 08's Obstructions 1, 2, and
+  3 jointly.
 
 cycle_count: 1 (single-cycle compressed)
 
@@ -34,11 +35,13 @@ files_touched_planned:
 
 open_imports:
   retained_inputs_used:
-    - cycle 06 derived rep (Q_L, L_L, u_R, d_R, e_R, ν_R hypercharges)
-    - cycle 07 conditional Q = T_3 + Y/2 formula
+    - unified matter-content EWSB harness
+    - LHCM Y normalization and Q = T_3 + Y/2 convention
+    - one-Higgs Yukawa gauge-selection boundary
+    - Higgs Y_H=+1 from LHCM and admitted Yukawa structure
     - Koide Z3 scalar potential (V(m) = V₀ + (c1+c2/2)m + (3/2)m² + (1/6)m³)
     - EW current Fierz channel decomposition (N_c²-1)/N_c² adjoint fraction
-    - cycle 08 quantum-number match for q̄_L u_R singlet
+    - current-note bilinear hypercharge recomputation
   admitted_context_external:
     - SU(N) representation theory (textbook)
     - SM Yukawa structural form (Halzen-Martin)
@@ -58,7 +61,7 @@ no_go_routes:
     a SU(2)_L-singlet Majorana mass; it BREAKS lepton number, not
     SU(2)_L × U(1)_Y. Different structural target.
   - Route E (Non-Higgs EWSB with no fundamental scalar): too broad for
-    single cycle; would replicate technicolor without new framework input.
+    single cycle; would replicate technicolor without branch-local framework input.
 
 review_findings: |
   Self-review pending — V1-V5 gate to be answered in CLAIM_STATUS_CERTIFICATE.md
@@ -72,7 +75,7 @@ next_exact_action: |
   3. Write GOAL.md, ASSUMPTIONS_AND_IMPORTS.md, ARTIFACT_PLAN.md
   4. Write CLAIM_STATUS_CERTIFICATE.md with V1-V5 answered
   5. Build COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md
-     with Route B's mechanism analysis + named obstructions
+     with Route B's candidate analysis + named residual obstructions
   6. Build runner with PASS=N/0 N≥20
   7. Commit, push, open PR
   8. Write HANDOFF.md

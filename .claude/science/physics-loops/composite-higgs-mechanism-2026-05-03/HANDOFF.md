@@ -7,10 +7,10 @@ Single-cycle compressed campaign: cycle 20 successor to retained-promotion-2026-
 ## Outcome classification
 
 **Output type (c) STRETCH ATTEMPT** with positive structural content +
-3 new named obstructions. Honest expected outcome per the cycle 20
-prompt — this is not a closing derivation; it is a Nature-grade
-stretch attempt that sharpens cycle 08's three obstructions with a
-concrete multi-channel Z3-phased composite scalar mechanism.
+3 named residual obstructions. Honest expected outcome per the cycle 20
+prompt — this is not a closing derivation; it is an open-gate stretch
+attempt that sharpens cycle 08's three obstructions with a concrete
+multi-channel Z3-phased composite-scalar candidate.
 
 ## Best route + outcome
 
@@ -22,18 +22,18 @@ Route B's outcome:
 
 - **Sharpens cycle 08 O1 (mechanism)**: direction of EW-breaking
   condensate forced by Z3 covariance; magnitude inherits to NO3.
-- **Partially closes cycle 08 O2 (BHL m_top ~ 600 GeV)**: multi-channel
+- **Partially addresses cycle 08 O2 (BHL m_top ~ 600 GeV)**: multi-channel
   structure suppresses single-channel BHL prediction by structural
   factor 1/N_z3 = 1/3, giving m_top^multi = 200 GeV (versus
   observed 173 GeV). Residual gap → NO3.
-- **Resolves cycle 08 O3 (multi-bilinear selector)**: structurally —
+- **Narrows cycle 08 O3 (multi-bilinear selector)**: structurally —
   the three bilinears are NOT arbitrary but are precisely the three
-  Z3-charged components of a single Z3-covariant composite. Z3
-  representation theory IS the selector.
+  Z3-charged components of a single Z3-covariant candidate under H1/H2.
+  Z3 representation theory supplies the candidate selector.
 
-## Three NEW named obstructions
+## Three named residual obstructions
 
-- **NO1**: Z3 acts on quark-bilinear generation index (load-bearing
+- **NO1**: Z3 acts on quark-bilinear generation index (branch-local
   premise of Route B; extends Koide Z3 from charged-lepton selected
   slice to quark sector).
 - **NO2**: Three condensates have equal magnitude (Z3-symmetric
@@ -41,7 +41,7 @@ Route B's outcome:
 - **NO3**: Strong-coupling magnitude of multi-channel condensate
   (inherits cycle 08 O1; multi-week strong-coupling derivation needed).
 
-## Key new structural results
+## Key branch-local structural results
 
 1. **Z3-covariant composite scalar identification**: the three
    matching bilinears `Φ_1' (Φ̃-equivalent)`, `Φ_2'`, `Φ_3'` form a
@@ -104,10 +104,10 @@ Total: 80/80 PASS, 0 FAIL.
 All five answered IN WRITING in `CLAIM_STATUS_CERTIFICATE.md`:
 
 - V1: Sharpens cycle 08 O1/O2/O3 specifically.
-- V2: NEW Z3-covariant multi-channel mechanism + 3 new obstructions.
-- V3: Audit lane could not synthesize (requires NEW load-bearing
-  premise H1 / NO1).
-- V4: Marginal content non-trivial (mechanism proposal + counterfactuals
+- V2: Branch-local Z3-covariant multi-channel candidate + 3 named obstructions.
+- V3: Audit lane could not synthesize (requires branch-local hypothesis
+  H1 / NO1).
+- V4: Marginal content non-trivial (candidate proposal + counterfactuals
   + falsifier).
 - V5: Distinct from cycles 11 (synthesis), 18 (Z3 in cosmology), 17
   (Carrier Orbit), 07 (conditional Q-formula), 08 (quantum-number match).
@@ -157,8 +157,8 @@ ensure isolation).
 
 Cycle 20 single-cycle compressed campaign is complete. The deepest
 EWSB question (composite-Higgs mechanism) remains open at the
-strong-coupling magnitude level (NO3), but Route B's mechanism +
-3 new named obstructions are the genuine /physics-loop contribution
+strong-coupling magnitude level (NO3), but Route B's candidate +
+3 named residual obstructions are the genuine /physics-loop contribution
 beyond the parent campaign's 19 cycles.
 
 Future cycles can:

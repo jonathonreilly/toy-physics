@@ -1,18 +1,19 @@
-# Composite-Higgs Mechanism — Multi-Channel Z3-Phased Composite Scalar (Stretch Attempt with 3 New Named Obstructions)
+# Composite-Higgs Candidate — Multi-Channel Z3-Phased Composite Scalar (Stretch Attempt with 3 Named Residual Obstructions)
 
 **Date:** 2026-05-03
-**Type:** stretch_attempt (output type c)
+**Claim type:** open_gate
+**Output type:** stretch_attempt (output type c)
 **Cycle:** 20 of physics-loop campaign (single-cycle compressed successor
 to retained-promotion-2026-05-02)
 **Claim scope:** documents a worked stretch attempt at the composite-Higgs
-mechanism question opened by cycle 08
-(`COMPOSITE_HIGGS_QUANTUM_NUMBER_MATCH_STRETCH_ATTEMPT_NOTE_2026-05-02.md`,
-PR #409). The attempt's positive content is a multi-channel Z3-covariant
-composite scalar that JOINTLY addresses cycle 08's three named obstructions
+candidate question opened by earlier EWSB obstruction work. The attempt's
+candidate content is a branch-local
+multi-channel Z3-covariant composite-scalar candidate that JOINTLY
+narrows cycle 08's three named obstructions
 O1 (mechanism for ⟨q̄_L u_R⟩ ≠ 0), O2 (BHL m_top ~ 600 GeV literature
 prediction), and O3 (multi-bilinear selector ambiguity).
 
-The worked attempt's POSITIVE structural content:
+The worked attempt's candidate structural content:
 
 1. The three matching bilinears `q̄_L u_R`, `q̄_L d_R`, `l̄_L e_R`
    identified by cycle 08 form a Z3 cyclic triplet under the framework's
@@ -22,11 +23,11 @@ The worked attempt's POSITIVE structural content:
    Φ_i are the three bilinear condensates) is proposed.
 3. Multi-channel structure suppresses the single-channel BHL m_top
    prediction by a factor 1/N_z3 = 1/3 in the effective Yukawa magnitude.
-4. The three-bilinear ambiguity (cycle 08 O3) is resolved structurally:
+4. The three-bilinear ambiguity (cycle 08 O3) is narrowed structurally:
    the three bilinears are NOT arbitrary — they are precisely the Z3
-   triplet components of the composite scalar.
+   triplet components of the candidate composite scalar under H1.
 
-The worked attempt's THREE NEW NAMED OBSTRUCTIONS:
+The worked attempt's named residual obstructions:
 
 - **NO1**: framework needs derivation that Z3 extends from charged-lepton
   selected slice to act on quark-bilinear generation index.
@@ -36,14 +37,17 @@ The worked attempt's THREE NEW NAMED OBSTRUCTIONS:
 - **NO3**: framework needs derivation of the strong-coupling magnitude
   itself (inherits cycle 08 O1).
 
-**Status:** stretch attempt with new mechanism + 3 new named obstructions.
+**Status:** stretch attempt with candidate mechanism + 3 named residual obstructions.
 Audit-lane ratification required for any retained-grade interpretation.
 This is NOT a closing derivation. Independent audit required.
+
+**Script:** `scripts/frontier_composite_higgs_mechanism.py`
 
 **Runner:** [`scripts/frontier_composite_higgs_mechanism.py`](../scripts/frontier_composite_higgs_mechanism.py)
 
 **Authority role:** Sharpens cycle 08's three named obstructions with a
-concrete multi-channel mechanism + 3 new obstructions for future cycles.
+concrete multi-channel candidate + 3 named residual obstructions for future
+cycles.
 
 ## A_min (minimal allowed premise set)
 
@@ -52,8 +56,8 @@ The premises of this stretch attempt:
 - **(D1, retained)** Native gauge structure SU(3)_c × SU(2)_L × U(1)_Y
   via [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md).
 
-- **(D2, exact-support cycle 06)** Framework's derived SM matter
-  representation:
+- **(D2, bounded support)** Framework's current matter-content/EWSB
+  harness supplies the SM matter representation used here:
 
   ```text
   Q_L : (2, 3)_{+1/3}_Y
@@ -64,10 +68,11 @@ The premises of this stretch attempt:
   ν_R : (1, 1)_0_Y
   ```
 
-  Source: [`SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02.md`](SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02.md).
+  Source: [`UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md`](UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md),
+  cross-checked against [`LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md`](LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md).
 
-- **(D3, exact-support cycle 08)** Three bilinears with matching SU(2)
-  × U(1)_Y quantum numbers:
+- **(D3, current-note recomputation)** Three bilinears with matching
+  SU(2) × U(1)_Y quantum numbers:
 
   ```text
   Φ_1 ≡ (q̄_L u_R)|_color-singlet  ~  (2̄, 1)_{+1}     [Φ̃-equivalent]
@@ -75,7 +80,12 @@ The premises of this stretch attempt:
   Φ_3 ≡  l̄_L e_R                  ~  (2̄, 1)_{-1}     [Φ-equivalent]
   ```
 
-  Source: [`COMPOSITE_HIGGS_QUANTUM_NUMBER_MATCH_STRETCH_ATTEMPT_NOTE_2026-05-02.md`](COMPOSITE_HIGGS_QUANTUM_NUMBER_MATCH_STRETCH_ATTEMPT_NOTE_2026-05-02.md).
+  This note recomputes the bilinear hypercharges directly from D2 and
+  the landed one-Higgs/Yukawa guardrails
+  [`SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md`](SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md)
+  and [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md). The
+  unlanded cycle 08 note is historical context only, not a load-bearing
+  dependency.
 
 - **(D4, exact-support)** Koide Z3 scalar potential
   `V(m) = V₀ + (c1+c2/2)m + (3/2)m² + (1/6)m³` from Clifford involution
@@ -86,12 +96,14 @@ The premises of this stretch attempt:
   adjoint fraction `(N_c² - 1)/N_c² = 8/9` at N_c = 3. Source:
   [`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md).
 
-- **(H1, HYPOTHESIS — load-bearing for Route B; NOT retained)** Z3 acts
-  on quark-bilinear generation index, extending the Koide Z3 domain
-  from charged-lepton selected slice to bilinear triplets.
+- **(H1, branch-local HYPOTHESIS; NOT retained)** Z3 acts on
+  quark-bilinear generation index, extending the Koide Z3 domain from
+  charged-lepton selected slice to bilinear triplets. This is
+  load-bearing for the candidate only.
 
-- **(H2, HYPOTHESIS — load-bearing for Route B; NOT retained)** The
-  three bilinear condensates `Φ_1, Φ_2, Φ_3` have equal magnitude.
+- **(H2, branch-local HYPOTHESIS; NOT retained)** The three bilinear
+  condensates `Φ_1, Φ_2, Φ_3` have equal magnitude. This is
+  load-bearing for the candidate only.
 
 - **(C1, admitted-context external)** NJL mean-field factorization
   for fermion bilinears (Nambu-Jona-Lasinio 1961).
@@ -157,8 +169,8 @@ retained on charged-lepton selected slice) extends to act on the
 Z3 : (Φ_1', Φ_2', Φ_3')  ↦  (Φ_2', Φ_3', Φ_1')         [cyclic]
 ```
 
-This is a **load-bearing premise** of Route B. Not derived here. Named
-as obstruction NO1.
+This is a **branch-local hypothesis** for Route B. It is not derived
+here and is named as obstruction NO1.
 
 ### Step 2: Z3-covariant composite scalar
 
@@ -203,7 +215,7 @@ scalars, not gauge transformations. So:
 ```
 
 All three Z3 combinations carry the SAME SU(2) × U(1)_Y rep —
-consistent with playing the Higgs role.
+consistent with the candidate Higgs role.
 
 The Goldstone count for SU(2) × U(1)_Y → U(1)_em SSB is 4 - 1 = 3
 broken generators. With multi-channel condensate, each of Φ_eff^(0),
@@ -266,7 +278,7 @@ the gap between "multi-channel structural suppression alone" and "exact
 m_top". This residual is to be addressed by NO3 (strong-coupling magnitude)
 in future cycles.
 
-### Step 5: Resolution of cycle 08 Obstruction O3 (multi-bilinear selector)
+### Step 5: Narrowing cycle 08 Obstruction O3 (multi-bilinear selector)
 
 Cycle 08 named the multi-bilinear selector ambiguity as O3:
 
@@ -276,17 +288,18 @@ Cycle 08 named the multi-bilinear selector ambiguity as O3:
 > coefficients; in a composite picture, a unique condensate would
 > need to be selected.
 
-**Route B resolves O3 structurally.** The "selector" is the Z3
+**Route B narrows O3 structurally.** The "selector" is the Z3
 representation theory itself: the three bilinears are NOT three
 independent candidates with one to be selected — they are precisely
-the three Z3-charged components of a single Z3-covariant composite.
+the three Z3-charged components of a single Z3-covariant candidate.
 The Z3-singlet linear combination Φ_eff^(0) is the unique
 Z3-symmetric condensate direction.
 
 Under H1 (Z3 generation action) and H2 (equal-magnitude), the unique
 Higgs-role component is `Φ_eff^(0) = Φ_1' + Φ_2' + Φ_3'`, and the
-*selector* IS the Z3 invariance condition. No additional selector is
-needed.
+*selector* is the Z3 invariance condition inside this H1/H2 candidate.
+No additional selector is introduced by the candidate, but O3 is not
+retained-closed without H1/H2.
 
 This is a structural sharpening of cycle 08 O3, not a closing of
 cycle 08 O1.
@@ -316,13 +329,14 @@ If only ONE of the three bilinears condensed (e.g., ⟨Φ_1'⟩ ≠ 0,
 (0, ⟨Φ_1'⟩, 0) which is NOT proportional to the original. So
 single-channel condensation BREAKS Z3 explicitly.
 
-If the framework's Z3 is fundamental (per H1 hypothesis), then
+If the framework's Z3 applies here (per H1 hypothesis), then
 single-channel condensation is FORBIDDEN, and the BHL single-channel
 prediction does not apply.
 
-This is a falsifier: if the framework's Z3 is fundamental on
-generation indices, then the EWSB condensate MUST be multi-channel,
-and m_top single-channel ~ 600 GeV is structurally inapplicable.
+This is a falsifier for the candidate: if the framework's Z3 applies
+on generation indices, then the EWSB condensate must be multi-channel,
+and the single-channel BHL `m_top ~ 600 GeV` comparator is structurally
+inapplicable.
 
 ### Step 8: Mass-ratio constraints from Z3 symmetry
 
@@ -359,31 +373,31 @@ themselves break Z3. Future cycles must address this. Named as part of
 
 ### Conclusion of stretch attempt
 
-**Positive structural result**:
+**Candidate structural result**:
 
 1. The three matching bilinears form a Z3 cyclic triplet under H1.
 2. The Z3-covariant composite scalar Φ_eff has consistent SU(2) × U(1)_Y
    quantum numbers across all three Z3 charges.
 3. Multi-channel condensation suppresses single-channel BHL m_top ~ 600
    GeV by structural factor 1/N_z3 = 1/3.
-4. Cycle 08 O3 (multi-bilinear selector) is RESOLVED structurally:
-   selector = Z3 representation theory.
+4. Cycle 08 O3 (multi-bilinear selector) is narrowed structurally:
+   selector = Z3 representation theory inside the H1/H2 candidate.
 5. Cycle 08 O2 (BHL m_top too high) is PARTIALLY ADDRESSED:
    600/3 ≈ 200 GeV, gap of ~1.16x to observed 173 GeV remains for NO3.
-6. Cycle 08 O1 (mechanism for nonzero condensate) is partially addressed
-   by direction-fixing; magnitude inherits to NO3.
+6. Cycle 08 O1 (mechanism for nonzero condensate) is narrowed by the
+   candidate direction under H1/H2; magnitude inherits to NO3.
 7. Counterfactuals on Z3 phase orderings, single-channel condensation,
    and mass-ratio constraints all give STRUCTURAL constraints, not
    numerical inputs.
 
-**Three NEW named obstructions (the stretch attempt's residual gaps):**
+**Three named residual obstructions (the stretch attempt's residual gaps):**
 
-#### NO1: Z3 generation action (load-bearing for Route B)
+#### NO1: Z3 generation action (branch-local for Route B)
 
 The framework's retained Koide Z3 structure (`KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE`)
 is established on the charged-lepton selected slice. Extending Z3 to act
-on quark-bilinear generation index is a NEW HYPOTHESIS. To close this
-obstruction, future cycles must:
+on quark-bilinear generation index is a branch-local hypothesis. To
+resolve this obstruction, future cycles must:
 
 - Identify the Z3 generator on the *quark sector* of the framework's
   derived rep (cycle 06).
@@ -393,7 +407,7 @@ obstruction, future cycles must:
   consequence of the Clifford involution structure.
 
 If H1 fails (Z3 does NOT extend to quark sector), Route B fails
-structurally and the multi-channel mechanism does not apply.
+structurally and the multi-channel candidate does not apply.
 
 **Specific repair target**: derive (or refute) H1 from framework primitives.
 
@@ -439,7 +453,7 @@ primitives. Candidates for future cycles:
 
 ## Honest stop conditions
 
-This is a stretch attempt with three new obstructions. The mechanism
+This is a stretch attempt with three named obstructions. The candidate
 analysis is structurally clean (quantum numbers preserved, Z3
 covariance consistent, counterfactuals provide structural constraints),
 but H1, H2, and NO3 are unattacked premises. Promotion to retained-
@@ -451,12 +465,13 @@ multi-week work outside this single cycle's scope.
 - **(P1)** Z3 cyclic action on three bilinear triplet (under H1) gives
   three Z3-charged composite scalars Φ_eff^(0), Φ_eff^(1), Φ_eff^(2).
 - **(P2)** All three Z3-charged components have SU(2) × U(1)_Y quantum
-  numbers (2̄, 1)_{-1}, identical and consistent for the Higgs role.
+  numbers (2̄, 1)_{-1}, identical and consistent for the candidate
+  Higgs role.
 - **(P3)** Multi-channel structure suppresses single-channel BHL
   m_top prediction by structural factor 1/N_z3 = 1/3.
-- **(P4)** Cycle 08 O3 (multi-bilinear selector) resolved: Z3
-  representation IS the selector.
-- **(P5)** Three NEW named obstructions (NO1, NO2, NO3) for what
+- **(P4)** Cycle 08 O3 (multi-bilinear selector) is narrowed inside
+  the H1/H2 candidate: Z3 representation supplies the selector.
+- **(P5)** Three named residual obstructions (NO1, NO2, NO3) for what
   remains.
 - **(P6)** Counterfactuals: alternative phase orderings, single-channel,
   mass-ratio constraints all give structural constraints.
@@ -474,16 +489,18 @@ multi-week work outside this single cycle's scope.
   GeV mentioned only for falsifier comparison in Step 8, NOT used as
   fitting input.
 - Does NOT ratify cycle 08 obstructions as fully closed — only
-  sharpens them with Route B mechanism + names new obstructions for
+  sharpens them with Route B candidate + names residual obstructions for
   what remains.
 
 ## Cited dependencies
 
 - (D1) [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md) — retained.
-- (D2) [`SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02.md`](SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02.md)
-  — cycle 06.
-- (D3) [`COMPOSITE_HIGGS_QUANTUM_NUMBER_MATCH_STRETCH_ATTEMPT_NOTE_2026-05-02.md`](COMPOSITE_HIGGS_QUANTUM_NUMBER_MATCH_STRETCH_ATTEMPT_NOTE_2026-05-02.md)
-  — cycle 08.
+- (D2) [`UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md`](UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md)
+  and [`LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md`](LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md)
+  — current matter-content and hypercharge support.
+- (D3) Current-note recomputation from D2 plus
+  [`SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md`](SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md)
+  and [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md).
 - (D4) [`KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`](KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
   — Koide Z3 retained.
 - (D5) [`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
@@ -561,14 +578,13 @@ verifies (PASS=N/0, exact rational arithmetic + Z3 phase covariance):
 
 ## Cross-references
 
-- [`COMPOSITE_HIGGS_QUANTUM_NUMBER_MATCH_STRETCH_ATTEMPT_NOTE_2026-05-02.md`](COMPOSITE_HIGGS_QUANTUM_NUMBER_MATCH_STRETCH_ATTEMPT_NOTE_2026-05-02.md)
-  — cycle 08: provides the three-bilinear quantum-number match this
-  PR sharpens with Z3 multi-channel mechanism.
-- [`CONDITIONAL_EWSB_Q_FORMULA_ON_DERIVED_REP_THEOREM_NOTE_2026-05-02.md`](CONDITIONAL_EWSB_Q_FORMULA_ON_DERIVED_REP_THEOREM_NOTE_2026-05-02.md)
-  — cycle 07: provides the conditional Q = T_3 + Y/2 formula for
-  EWSB pattern.
-- [`SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02.md`](SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02.md)
-  — cycle 06: provides the derived rep for matter content.
+- [`UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md`](UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md)
+  — current matter-content/EWSB synthesis used for the SM representation
+  and EWSB bookkeeping.
+- [`SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md`](SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md)
+  and [`HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md`](HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md)
+  — landed Yukawa/hypercharge guardrails used to check the bilinear
+  arithmetic.
 - [`KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`](KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
   — Koide Z3 retained on charged-lepton selected slice; Route B's
   H1 extends Z3 to quark-bilinear generation index.

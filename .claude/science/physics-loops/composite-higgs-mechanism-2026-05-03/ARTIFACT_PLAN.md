@@ -18,16 +18,16 @@
    - Header (date, status, runner, authority role)
    - A_min (minimal allowed premise set)
    - Forbidden imports
-   - Worked attempt (Route B mechanism analysis)
+   - Worked attempt (Route B candidate analysis)
      - Step 1: Z3 cyclic group acting on generation triplet of bilinears
      - Step 2: Z3-covariant composite scalar Φ_eff = ⟨q̄_L u_R⟩ + ω⟨q̄_L d_R⟩ + ω²⟨l̄_L e_R⟩
      - Step 3: SU(2) × U(1)_Y quantum numbers of Z3 components
      - Step 4: Multi-channel suppression of effective top Yukawa
      - Step 5: Counterfactual on Z3 phase relations (1, ω², ω vs 1, ω, ω²)
      - Step 6: Mass-ratio constraints from Z3 symmetry
-   - Three NEW named obstructions (NO1: Z3 generation action; NO2:
+   - Three named residual obstructions (NO1: Z3 generation action; NO2:
      equal-magnitude condensate; NO3: strong-coupling magnitude)
-   - What this closes (sharpens cycle 08 O1/O2/O3 with mechanism)
+   - What this narrows (sharpens cycle 08 O1/O2/O3 with candidate)
    - What this does NOT close (the strong-coupling magnitude itself)
    - Honest status
 

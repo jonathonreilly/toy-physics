@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the composite-Higgs mechanism (Route B: multi-channel Z3-phased
+"""Verify the composite-Higgs candidate (Route B: multi-channel Z3-phased
 composite scalar) stretch-attempt analysis at exact rational precision.
 
 Cycle 20 of physics-loop campaign successor to retained-promotion-2026-05-02.
@@ -13,7 +13,7 @@ This runner verifies the structural content of the stretch attempt:
 - Multi-channel suppression formula
 - Counterfactuals (alternative Z3 phase orderings, single-channel)
 - Mass-ratio falsifier (equal-magnitude vs observed hierarchy)
-- Three NEW named obstructions (NO1, NO2, NO3) explicit in note
+- Three named residual obstructions (NO1, NO2, NO3) explicit in note
 - Forbidden imports check (no PDG values consumed in derivation steps)
 - Cycle 15 g_2² = 1/4 used at one hop
 
@@ -32,8 +32,10 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 NOTE_PATH = ROOT / "docs" / "COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md"
-CYCLE08_PATH = ROOT / "docs" / "COMPOSITE_HIGGS_QUANTUM_NUMBER_MATCH_STRETCH_ATTEMPT_NOTE_2026-05-02.md"
-CYCLE06_PATH = ROOT / "docs" / "SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02.md"
+MATTER_HARNESS_PATH = ROOT / "docs" / "UNIFIED_MATTER_CONTENT_EWSB_HARNESS_THEOREM_NOTE_2026-05-03.md"
+HYPERCHARGE_PATH = ROOT / "docs" / "LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md"
+YUKAWA_GUARDRAIL_PATH = ROOT / "docs" / "SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md"
+HIGGS_Y_PATH = ROOT / "docs" / "HIGGS_Y_FROM_LHCM_AND_YUKAWA_STRUCTURE_NOTE_2026-05-02.md"
 KOIDE_Z3_PATH = ROOT / "docs" / "KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md"
 EW_FIERZ_PATH = ROOT / "docs" / "EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md"
 
@@ -65,13 +67,17 @@ note_text = NOTE_PATH.read_text() if NOTE_PATH.exists() else ""
 check("docs/COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md exists",
       NOTE_PATH.exists(), detail=f"path={NOTE_PATH}")
 
-cycle08_exists = CYCLE08_PATH.exists()
-check("Cycle 08 cited authority exists (or noted)", True,
-      detail=("on-disk" if cycle08_exists else "absent on this branch (referenced in main retained graph; cycle 08 was PR #409, may not yet be on main)"))
+check("Current matter-content/EWSB harness exists",
+      MATTER_HARNESS_PATH.exists(), detail=f"path={MATTER_HARNESS_PATH.name}")
 
-cycle06_exists = CYCLE06_PATH.exists()
-check("Cycle 06 cited authority exists (or noted)", True,
-      detail=("on-disk" if cycle06_exists else "absent on this branch (cycle 06 was PR #405)"))
+check("Current hypercharge normalization support exists",
+      HYPERCHARGE_PATH.exists(), detail=f"path={HYPERCHARGE_PATH.name}")
+
+check("One-Higgs Yukawa gauge-selection guardrail exists",
+      YUKAWA_GUARDRAIL_PATH.exists(), detail=f"path={YUKAWA_GUARDRAIL_PATH.name}")
+
+check("Higgs-Y from LHCM/Yukawa support exists",
+      HIGGS_Y_PATH.exists(), detail=f"path={HIGGS_Y_PATH.name}")
 
 check("Koide Z3 scalar potential authority exists",
       KOIDE_Z3_PATH.exists(), detail=f"path={KOIDE_Z3_PATH.name}")
@@ -474,7 +480,7 @@ check("g_2²|_lattice = 1/(d+1) = 1/4 (cycle 15 retained)",
       g_2_sq_lattice == Fraction(1, 4),
       detail=f"1/(3+1) = {g_2_sq_lattice}")
 
-# Used at one hop in cycle 20 note (referenced but not load-bearing for Route B mechanism)
+# Used at one hop in cycle 20 note (referenced but not load-bearing for Route B candidate)
 check("g_2² = 1/4 cited at one hop in cycle 20 cross-references", True,
       detail="cycle 15 retained; one-hop reference only (not load-bearing for Route B)")
 
@@ -504,10 +510,10 @@ check("Adjoint + singlet = 1 (exhaustive decomposition)",
 
 
 # =============================================================================
-# Part 14: Three NEW named obstructions present in note
+# Part 14: Three named residual obstructions present in note
 # =============================================================================
 
-section("Part 14: New named obstructions NO1, NO2, NO3 present in note")
+section("Part 14: Named residual obstructions NO1, NO2, NO3 present in note")
 
 required_obstructions = [
     "NO1",
@@ -525,7 +531,7 @@ for s in required_obstructions:
 # Part 15: Note structure and required content
 # =============================================================================
 
-section("Part 15: Note structure (cycle 08 sharpening + Route B mechanism)")
+section("Part 15: Note structure (cycle 08 sharpening + Route B candidate)")
 
 required_sections = [
     "Multi-Channel Z3-Phased Composite Scalar",
@@ -609,13 +615,13 @@ check("Recompute Y(l̄_L e_R) = -1",
 # =============================================================================
 
 print(f"\n{'='*88}\n  TOTAL: PASS={PASS_COUNT}, FAIL={FAIL_COUNT}\n{'='*88}")
-print(f"\n  Output type: (c) STRETCH ATTEMPT with multi-channel Z3 mechanism")
-print(f"  + 3 new named obstructions (NO1, NO2, NO3)")
+print(f"\n  Output type: (c) STRETCH ATTEMPT with multi-channel Z3 candidate")
+print(f"  + 3 named residual obstructions (NO1, NO2, NO3)")
 print(f"  Cycle 20 of physics-loop campaign successor")
 print(f"  Note: {NOTE_PATH.relative_to(ROOT)}")
-print(f"\n  All cycle-08 obstructions O1, O2, O3 SHARPENED with Route B mechanism.")
-print(f"  Cycle-08 O3 (multi-bilinear selector) RESOLVED structurally (Z3 representation IS the selector).")
+print(f"\n  All cycle-08 obstructions O1, O2, O3 SHARPENED with Route B candidate.")
+print(f"  Cycle-08 O3 (multi-bilinear selector) NARROWED structurally under H1/H2.")
 print(f"  Cycle-08 O2 (BHL m_top ~ 600 GeV) PARTIALLY ADDRESSED (multi-channel suppression 1/3).")
-print(f"  Cycle-08 O1 (mechanism for ⟨q̄_L u_R⟩ ≠ 0) DIRECTION FORCED, magnitude → NO3.")
+print(f"  Cycle-08 O1 (mechanism for ⟨q̄_L u_R⟩ ≠ 0) CANDIDATE DIRECTION IDENTIFIED, magnitude → NO3.")
 
 sys.exit(1 if FAIL_COUNT > 0 else 0)
