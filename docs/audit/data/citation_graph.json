@@ -23097,7 +23097,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T19:45:32.345608+00:00",
+  "generated_at": "2026-05-03T20:16:43.470966+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25104,7 +25104,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d5e0c27fcb2697459a61091181ec8cb122e0e4a24f4e05190fc46b8c102839bb",
+      "note_hash": "34c152f1a4ac56c025252edfb08d68034034f17aab3efde9ff684336edbb2068",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -25310,7 +25310,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "7353c18d547e13a31f8f335e32fd342c301c9151ce0d129d35970de2cb9d72f8",
+      "note_hash": "0ccc2afc46074e8b80c928c534775431b1ac23e233d287b2af3cd8586a251bbf",
       "path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_bh_entropy_derived.py",
       "title": "Bekenstein-Hawking Entropy Derived from Lattice Entanglement"
@@ -31470,11 +31470,11 @@
       "claim_id": "ew_coupling_derivation_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "e38af095b484e0b6e74ba92c0605a84879480fee0d78ac41c36c9bad3e2dab3f",
+      "note_hash": "5bdcb2ffbe997ae9d22b5310423af9eac1f32e77c85fdc6dabd25d63e5089dbd",
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
-      "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
+      "runner_path": null,
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
     },
     "ew_current_fierz_channel_decomposition_note_2026-05-01": {
@@ -32656,9 +32656,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "6ac38e34c3add77a1ae5f779a98091b7a742a751e84bed251ace8cee1d1e5645",
+      "note_hash": "323332366fb231636a420988759124364253288fa2aeff3b08ff4f97b3efe12f",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md",
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20.py",
+      "runner_path": null,
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Exact-Solve Doublet Theorem"
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20": {
@@ -33862,9 +33862,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "6be076d91a8f79af6895637075b4249a1bb6b1d840fcca4b0679bcdef176e6ed",
+      "note_hash": "47aada7fd8ba42e9a009e6d2dcce75f3ad44b4dd29b162b149e7df1c11bf3657",
       "path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
-      "runner_path": "scripts/frontier_higgs_mass_corrected_yt.py",
+      "runner_path": "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py",
       "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking"
     },
     "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02": {
@@ -51243,17 +51243,17 @@
       "positive_theorem": 71
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 551,
+      "bounded_theorem": 552,
       "meta": 7,
       "no_go": 112,
       "none": 452,
       "open_gate": 112,
-      "positive_theorem": 629
+      "positive_theorem": 628
     },
     "edge_count": 5774,
     "leaf_count": 598,
     "node_count": 1863,
     "root_count": 1057,
-    "runners_with_path": 1424
+    "runners_with_path": 1422
   }
 }

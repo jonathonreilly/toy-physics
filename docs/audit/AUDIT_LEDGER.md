@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:45:38.380647+00:00
+**Generated:** 2026-05-03T20:16:50.450141+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 728 |
+| unaudited | 733 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 545 |
-| ~~audited_failed~~ | 7 |
+| ~~audited_failed~~ | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 331 |
 | `audited_conditional` | 545 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 51 |
+| `audited_failed` | 46 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 774 |
+| `unaudited` | 779 |
 
 | claim_type | count |
 |---|---:|
@@ -65,8 +65,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1350
-- runners with (C) first-principles compute hits: 659
+- runners classified: 1349
+- runners with (C) first-principles compute hits: 658
 - runners with (D) external comparator hits: 335
 - decoration candidates (no C, no D): 114
 
@@ -992,9 +992,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | D | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `bh_entropy_derived_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1002,18 +1000,15 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
-| `ew_coupling_derivation_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_boundary_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | stale_runner_configured_numerical_sweep | - |
 | `fifth_family_radial_fm_transfer_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `fifth_family_radial_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
-| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `grown_transfer_basin_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `higgs_mass_from_axiom_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | F | - |
 | `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
 | `if_program_closing_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -1627,26 +1622,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
 - **auditor confidence:** high
 
-### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Full R1-R4 theorem for the canonical CL3-on-Z3 finite-volume action: reflection positivity, positive semidefinite physical Hilbert form, positive Hermitian transfer matrix bounded by 1, and non-negative lattice energy spectrum.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `fresh-agent-linnaeus-019deda6-1d1a-7fa1-ae4f-27f85d5d15a5`  (codex-fresh-agent; independence=fresh_context)
-- **load-bearing step:** Step 3 combined gauge-plus-fermion RP factorisation and transfer-matrix reconstruction for the full canonical SU(3) staggered-Dirac plus Wilson-plaquette action at g_bare=1, including determinant positivity and the assertion ||T||<=1.  _(class `D`)_
-- **chain closes:** False — The source note does not give an axiom-first derivation of the OS/STW/Menotti factorisations for this exact canonical action; it imports standard lattice RP theorems without proving that all hypotheses match A_min. The combined gauge-plus-fermion step adds an unsupported determinant-positivity bridge, and the transfer-matrix norm claim is contradicted by the runner's own unsubtracted examples. The runner checks only small proxy systems: free 1+1D staggered fermions, truncated U(1) gauge transfer matrix, and small free Gram matrices, not the full SU(3) interacting canonical action.
-- **rationale:** Issue: The theorem as stated depends on imported OS/STW/Menotti reflection-positivity machinery, an unproved match between those theorem hypotheses and the exact A_min canonical staggered-plus-Wilson SU(3) action, and an unsupported combined-sector determinant-positivity claim. Why this blocks: a Nature-grade audit cannot treat external theorem names, gamma_5-Hermiticity, or real determinant statements as an internal derivation of <Theta(F)F> >= 0 for the full measure; gamma_5-Hermiticity gives reality, not by itself non-negativity, and the runner does not test the full interacting SU(3) case. Issue: R3 asserts ||T||<=1 on the canonical surface, while the runner reports max(T)=8.069 for the unsubtracted free fermion example and max(T_G)=1.256 for the truncated U(1) gauge example. Why this blocks: the claimed bounded-by-1 transfer matrix is not exhibited; it requires a ground-state/vacuum-energy subtraction or normalization that is not stated as part of the theorem. Repair target: provide a self-contained mapping from A1-A4 to the exact hypotheses of the lattice RP theorems, including boundary conditions, Wilson term conventions, staggered phases, Grassmann reflection, gauge-link reflection, positivity of the full fermion integration/factorisation, and the normalization needed for ||T||<=1. Replace proxy numerics with either symbolic checks for the stated action or explicitly downgrade the runner to illustrative examples. Claim boundary until fixed: at most a decoration/conditional literature-backed RP sketch for known lattice gauge/staggered systems plus proxy numerical exhibits; not an audited axiom-first theorem for canonical CL3-on-Z3 R1-R4.
-- **open / conditional deps cited:**
-  - `external_OS_Seiler_Wilson_gauge_RP_hypothesis_match`
-  - `external_Sharatchandra_Thun_Weisz_staggered_RP_hypothesis_match`
-  - `external_Menotti_Pelissetto_fermion_RP_hypothesis_match`
-  - `full_SU3_interacting_combined_factorisation`
-  - `fermion_determinant_nonnegativity_for_canonical_surface`
-  - `transfer_matrix_ground_state_subtraction_or_norm_bound`
-- **auditor confidence:** high
-
 ### `axiom_reduction_note`
 
 - **Note:** [`AXIOM_REDUCTION_NOTE.md`](../../docs/AXIOM_REDUCTION_NOTE.md)
@@ -1717,19 +1692,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Beyond Lattice Gauge Theory: Two Concrete Results: Demonstrated numerically  _(class `C`)_
 - **chain closes:** False — No. The numerical comparisons demonstrate a distinction, but the physical interpretation still imports the framework source/readout bridge rather than deriving it here, so the conclusion cannot be ratified from the source note alone.
 - **rationale:** Issue: the numerical comparisons demonstrate a distinction, but the physical interpretation still imports the framework source/readout bridge rather than deriving it here. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
-- **auditor confidence:** high
-
-### `bh_entropy_derived_note`
-
-- **Note:** [`BH_ENTROPY_DERIVED_NOTE.md`](../../docs/BH_ENTROPY_DERIVED_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded claim that the free-fermion lattice half-space calculation supports only a finite-L BH-like entropy comparison near S=A/(4 l_P^2), while the retained/asymptotic coefficient is not 1/4.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-cl3-auditor-2026-05-03`  (codex-fresh-agent; independence=fresh_context)
-- **load-bearing step:** Finite-L free-fermion RT ratio near 1/4 is used as the BH-comparison surface, while asymptotic behavior is assigned to the Widom coefficient rather than a derived BH coefficient.  _(class `G`)_
-- **chain closes:** False — The chain does not close because the BH-facing step is a finite-L numerical match to an external comparator and chosen scale, while the runner simultaneously reports failed component checks and an aggregate 6/6 pass. The asymptotic no-go statement may be directionally consistent with the note, but it is not closed by the supplied runner output.
-- **rationale:** Issue: the chain is a finite-size numerical comparator to the BH coefficient, not a first-principles derivation, and the current runner is internally inconsistent: it prints failed subchecks for 2D area-law thresholding and 3D RT-within-15%, yet still reports CHECKS PASSED: 6/6. The runner's own finite-size extrapolation also gives 2D RT(inf)=0.2168 and 3D RT(inf)=0.0575, not the note's stated asymptotic 1/6 closure. Why this blocks: under the hostile rubric, selected finite-L agreement with 1/4 at a chosen normalization is class G numerical matching, and stale/inconsistent runner pass accounting prevents the bounded theorem from closing on its own terms. Repair target: split the claim into explicit numerical observations with exact thresholds, make runner pass/fail accounting match the subchecks, and separately cite or prove the Widom asymptotic coefficient used for the no-go boundary. Claim boundary until fixed: usable only as a bounded numerical companion showing approximate finite-L 2D ratios near 1/4 and non-derivation of BH entropy, not as an audited theorem deriving or validating the BH coefficient.
 - **auditor confidence:** high
 
 ### `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02`
@@ -5640,19 +5602,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
-### `ew_coupling_derivation_note`
-
-- **Note:** [`EW_COUPLING_DERIVATION_NOTE.md`](../../docs/EW_COUPLING_DERIVATION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audit of the note's claim that g_1(v) is obtained by one-loop Planck-to-v running while g_2(v) and lambda(v) remain only bounded inputs for the y_t sensitivity analysis.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-ew-coupling-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Since U(1) running is perturbative from M_Pl to v: alpha_1_GUT(v) = 1/(11.03 + 25.08) = 0.02769, so g_1_GUT(v) = 0.5899 and g_1_SM(v) = 0.4569.  _(class `A`)_
-- **chain closes:** False — The source note's g_1 estimate is an algebraic one-loop calculation over asserted framework inputs, but the EW package claim does not close because g_2(v) and lambda(v) are explicitly left to future non-perturbative/Higgs derivations and the primary runner no longer reproduces the note's stated calculation.
-- **rationale:** Issue: the note presents an EW-coupling derivation package, but only a one-loop g_1 estimate is computed, while g_2(v) and lambda(v) are explicitly not derived; the current primary runner instead scans a taste_weight parameter to fit sin^2(theta_W) and reports different g_1(v), g_2(v) outputs than the note. Why this blocks: the claim cannot be retained as a closed EW-coupling derivation when its required SU(2) and Higgs-sector bridges are open and its runner is stale/mismatched relative to the source note. Repair target: provide a source note and runner that compute the same scoped quantities, derive the SU(2) non-perturbative matching and lambda(v) from retained inputs, and avoid selecting a fitted taste_weight from the target observable. Claim boundary until fixed: the note may be cited only as a support scan showing that the original EW imports are not yet closed and that g_2/lambda remain bounded or open inputs.
-- **auditor confidence:** high
-
 ### `ew_current_fierz_channel_decomposition_note_2026-05-01`
 
 - **Note:** [`EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`](../../docs/EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md)
@@ -6213,19 +6162,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `scripts/frontier_dm_leptogenesis_k00_sparse_face_target_preimage_theorem.py`
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19.py`
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_2026_04_20.py`
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded positive-angle chart claim that the selected minimally-positive Wilson-branch live target equation has exactly two distinct nondegenerate retained-line roots.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-audit-loop-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** On the selected least-positive-bulk Wilson branch, the retained `3d+1` complement-line problem is solved on the bounded positive-angle chart by an audited exact target equation whose isolated solution set contains exactly two nondegenerate retained-line roots.  _(class `C`)_
-- **chain closes:** False — The runner finds two nondegenerate numerical roots with small residuals, but the presented chain does not certify that the bounded chart has no additional roots. The exact equation, target, and selected branch are also imported by code rather than supplied as retained cited inputs in the note.
-- **rationale:** Issue: The theorem-level step is the assertion that the bounded chart solution set contains exactly two roots, but the runner uses a finite seeded least-squares search and then counts the roots it found. Why this blocks: small residuals and nonsingular local Jacobians certify two local solutions, not global exhaustiveness of the bounded positive-angle chart or the retained status of the imported target/branch definitions. Repair target: provide a retained derivation of the selected target equation and branch plus an interval, subdivision, symbolic elimination, degree/counting, or otherwise rigorous global root-exclusion certificate for the bounded chart. Claim boundary until fixed: the runner supports that its finite seed search finds two distinct nondegenerate target-hitting numerical roots with residuals below 1e-10.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20`
@@ -7285,19 +7221,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`
   - `HIGGS_MECHANISM_NOTE.md`
   - `HIGGS_FROM_LATTICE_NOTE.md`
-- **auditor confidence:** high
-
-### `higgs_mass_from_axiom_note`
-
-- **Note:** [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](../../docs/HIGGS_MASS_FROM_AXIOM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** The note claims the taste-sector curvature identifies the physical Higgs mass ratio as m_H/v = 1/(2 u_0), giving m_H = 140.3 GeV with no color 8/9 factor.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-higgs-axiom-chandrasekhar-20260502`  (codex-current; independence=fresh_context)
-- **load-bearing step:** This curvature is the dimensionless ratio (m_H / v)^2 in lattice units, since the VEV v is the natural scale of the scalar field.  _(class `F`)_
-- **chain closes:** False — The note asserts rather than derives the map from taste-channel curvature to the physical Higgs mass ratio, and the specified current runner reports a corrected-y_t RGE route ending at 119.93 GeV rather than the note's 140.3 GeV headline.
-- **rationale:** Issue: the curvature-to-physical-Higgs-mass bridge is an asserted observable identification, and the 140.3 GeV headline is stale relative to the current named runner. Why this blocks: the claimed physical Higgs mass does not follow from the audited inputs, and the executable artifact checks a different corrected-y_t RGE route rather than validating equation [6]. Repair target: derive the physical readout/normalization theorem and update or replace the runner so it computes the load-bearing bridge and current headline consistently. Claim boundary until fixed: the note may state the internal taste-sector algebra and N_c cancellation within the displayed mean-field formula only.
 - **auditor confidence:** high
 
 ### `higgs_mass_hierarchy_correction_note`
