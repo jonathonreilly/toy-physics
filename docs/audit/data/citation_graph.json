@@ -1194,6 +1194,34 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "plaquette_bootstrap_framework_integration_note_2026-05-03"
     },
     {
@@ -14890,6 +14918,34 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "plaquette_self_consistency_note"
     },
     {
@@ -22541,7 +22597,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:19:57.609436+00:00",
+  "generated_at": "2026-05-03T14:28:44.656413+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25081,6 +25137,13 @@
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20",
         "plaquette_bootstrap_framework_integration_note_2026-05-03",
         "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
         "axiom_first_reflection_positivity_theorem_note_2026-04-29",
@@ -25281,7 +25344,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "cdf0d144b594b50fc74463ded67a8d38b9a4713b537d2ad4786408080d871345",
+      "note_hash": "d485f8c5e2ab08d11a84369a69b0c5d62c11ba2be2692b68c158b8cdc7c7ead3",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -30730,6 +30793,17 @@
       "runner_path": null,
       "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
     },
+    "eta_188_structural_origin_partial_note_2026-05-03": {
+      "claim_id": "eta_188_structural_origin_partial_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "partial closing of cycle 09 Obstruction 3 + falsification of four near-fit candidates",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "c5ed36efc98f9355afe0c875640e10aa18712844e32a0e22ab63fa6a17b5e691",
+      "path": "docs/ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_eta_188_structural_origin.py",
+      "title": "Structural Origin of eta/eta_obs = 0.1888 \u2014 Partial Closing Note"
+    },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "claim_id": "evanescent_barrier_amplitude_suppression_theorem_note",
       "claim_type_author_hint": null,
@@ -31242,7 +31316,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "ced63ce0a8947d442d33e60926296749c3d4b4a2f97172823a464854d61c2681",
+      "note_hash": "7b3c664511f26bb5c89fa1206af24681ea2c20cfc7c605296d48a9bbbd01b224",
       "path": "docs/G_BARE_DERIVATION_NOTE.md",
       "runner_path": "scripts/frontier_g_bare_derivation.py",
       "title": "Derivation of g_bare = 1 from Cl(3) Framework Axioms"
@@ -31881,7 +31955,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "e17619a84d07469c195c457cebfb02a3d3053a561528dea76a852a313114022b",
+      "note_hash": "dbc1ecdd1e9f2eacada3e0bb7b569a67f86a71df434878aade6aa8c697e262b8",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
@@ -31892,7 +31966,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "5a725424f88fdb080759417871c4845c8aaff57f9c4e725851e1f32ac03eecb8",
+      "note_hash": "d6d96b96ebd1c2e736203cd1dc2dfd3f77643e767d6f9f7c073c080e3e7df00a",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_FIRST_HANKEL_TO_DM_BOUNDARY_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector First-Hankel to DM Boundary"
@@ -32006,7 +32080,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "5f072bf36eb08f4f5a3d4fdae0cc250c0ad1313c511797fbb0b4a1804183eca0",
+      "note_hash": "8857d13bd1f15b4b81b6972eeb207d8aa3b90b682016aa78e7d35584956144ec",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Minimal Positive Completion"
@@ -36795,6 +36869,17 @@
       "runner_path": null,
       "title": "Mirror vs Lattice Program Note"
     },
+    "missing_runner_inventory_2026-05-03": {
+      "claim_id": "missing_runner_inventory_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "b801ebc2cbd6dd15eac116436368b1de9932f332359f8c939bee816813447061",
+      "path": "docs/MISSING_RUNNER_INVENTORY_2026-05-03.md",
+      "runner_path": null,
+      "title": "Missing Runner Inventory \u2014 2026-05-03 Audit-Repair Scan"
+    },
     "momentum_charge_commute_theorem_note_2026-05-02": {
       "claim_id": "momentum_charge_commute_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -39965,6 +40050,13 @@
         "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20",
         "plaquette_self_consistency_note",
         "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
         "ew_current_matching_rule_open_gate_note_2026-05-03",
@@ -40299,7 +40391,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "06298302e924022b0974a6fbce267fb3abedc637121a67d98003dc779dc0b2cd",
+      "note_hash": "7d2d9625c97e4a83579e94127fa51a020b4a9de69c7fe118f626331a6f440daf",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -49640,6 +49732,7 @@
     "emergent_product_law_note",
     "equivalence_principle_harness_note",
     "equivalence_principle_note",
+    "eta_188_structural_origin_partial_note_2026-05-03",
     "evolving_network_prototype_note",
     "evolving_network_prototype_v2_note",
     "evolving_network_prototype_v3_note",
@@ -49902,6 +49995,7 @@
     "mirror_mutual_information_canonical_families_note",
     "mirror_program_synthesis",
     "mirror_vs_central_head_to_head_note",
+    "missing_runner_inventory_2026-05-03",
     "monopole_derived_note",
     "moonshot_failure_audit_note",
     "moonshot_frontier_brainstorm_note",
@@ -50349,24 +50443,24 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 48,
-      "meta": 3,
+      "meta": 4,
       "no_go": 3,
-      "none": 1722,
+      "none": 1723,
       "open_gate": 3,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 548,
-      "meta": 3,
+      "bounded_theorem": 549,
+      "meta": 4,
       "no_go": 109,
       "none": 450,
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5635,
-    "leaf_count": 619,
-    "node_count": 1847,
-    "root_count": 1052,
-    "runners_with_path": 1410
+    "edge_count": 5649,
+    "leaf_count": 616,
+    "node_count": 1849,
+    "root_count": 1054,
+    "runners_with_path": 1411
   }
 }
