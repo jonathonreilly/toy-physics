@@ -4622,10 +4622,6 @@
     },
     {
       "from": "dm_wilson_direct_descendant_canonical_path_derivation_no_go_note_2026-04-19",
-      "to": "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19"
-    },
-    {
-      "from": "dm_wilson_direct_descendant_canonical_path_derivation_no_go_note_2026-04-19",
       "to": "dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17"
     },
     {
@@ -5135,10 +5131,6 @@
     {
       "from": "evanescent_barrier_amplitude_suppression_theorem_note",
       "to": "restricted_strong_field_closure_note"
-    },
-    {
-      "from": "evanescent_barrier_amplitude_suppression_theorem_note",
-      "to": "gw_echo_null_result_note"
     },
     {
       "from": "evanescent_barrier_amplitude_suppression_theorem_note",
@@ -8414,10 +8406,6 @@
     },
     {
       "from": "neutrino_retained_status_note_2026-04-16",
-      "to": "neutrino_retained_lanes_review_packet_2026-04-16"
-    },
-    {
-      "from": "neutrino_retained_status_note_2026-04-16",
       "to": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16"
     },
     {
@@ -8643,18 +8631,6 @@
     {
       "from": "ordered_lattice_packet_reidentification_note",
       "to": "ordered_lattice_quasi_persistent_relaunch_2d_note"
-    },
-    {
-      "from": "ordered_lattice_quasi_persistent_relaunch_2d_note",
-      "to": "ordered_lattice_packet_reidentification_note"
-    },
-    {
-      "from": "ordered_lattice_quasi_persistent_relaunch_2d_note",
-      "to": "ordered_lattice_quasi_persistent_relaunch_note"
-    },
-    {
-      "from": "ordered_lattice_quasi_persistent_relaunch_note",
-      "to": "ordered_lattice_packet_reidentification_note"
     },
     {
       "from": "ordered_lattice_quasi_persistent_relaunch_note",
@@ -9665,10 +9641,6 @@
       "to": "legacy_exploratory_drivers_note"
     },
     {
-      "from": "restricted_strong_field_closure_note",
-      "to": "evanescent_barrier_amplitude_suppression_theorem_note"
-    },
-    {
       "from": "retarded_field_causality_probe_note",
       "to": "physics_first_attack_plan"
     },
@@ -10067,10 +10039,6 @@
     {
       "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
       "to": "signed_gravity_naturally_hosted_orientation_line_note"
-    },
-    {
-      "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
-      "to": "signed_gravity_oriented_tensor_source_lift_note"
     },
     {
       "from": "signed_gravity_nature_grade_closure_blocker_audit_note",
@@ -12489,10 +12457,6 @@
       "to": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25"
     },
     {
-      "from": "ai_methodology.canonical_framing_paragraph_2026-04-25",
-      "to": "ai_methodology_note_2026-04-25"
-    },
-    {
       "from": "ai_methodology.llm_skill_pack_2026-04-25",
       "to": "ai_methodology.methodology_synthesis_2026-04-25"
     },
@@ -12531,10 +12495,6 @@
     {
       "from": "ai_methodology.methodology_paper_source_packet_2026-04-25",
       "to": "ai_methodology.readme"
-    },
-    {
-      "from": "ai_methodology.methodology_paper_source_packet_2026-04-25",
-      "to": "ai_methodology_note_2026-04-25"
     },
     {
       "from": "ai_methodology.methodology_paper_source_packet_2026-04-25",
@@ -12579,10 +12539,6 @@
     {
       "from": "ai_methodology.methodology_paper_source_packet_2026-04-25",
       "to": "publication.ci3_z3.what_this_paper_does_not_claim"
-    },
-    {
-      "from": "ai_methodology.readme",
-      "to": "ai_methodology_note_2026-04-25"
     },
     {
       "from": "ai_methodology.readme",
@@ -13103,10 +13059,6 @@
     {
       "from": "lanes.active_working_lanes_2026-04-26",
       "to": "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29"
-    },
-    {
-      "from": "lanes.active_working_lanes_2026-04-26",
-      "to": "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26"
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
@@ -14199,10 +14151,6 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "publication.ci3_z3.usable_derived_values_index"
-    },
-    {
-      "from": "publication.ci3_z3.derivation_atlas",
-      "to": "publication.ci3_z3.derivation_validation_map"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -17257,10 +17205,6 @@
       "to": "teleportation_acceptance_suite_note"
     },
     {
-      "from": "publication.ci3_z3.derivation_validation_map",
-      "to": "publication.ci3_z3.claims_table"
-    },
-    {
       "from": "publication.ci3_z3.external_reviewer_guide",
       "to": "minimal_axioms_2026-04-11"
     },
@@ -17539,10 +17483,6 @@
     {
       "from": "publication.ci3_z3.figure_captions",
       "to": "publication.ci3_z3.figure_plan"
-    },
-    {
-      "from": "publication.ci3_z3.figure_plan",
-      "to": "publication.ci3_z3.figure_captions"
     },
     {
       "from": "publication.ci3_z3.figure_plan",
@@ -18563,10 +18503,6 @@
     {
       "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
       "to": "publication.ci3_z3.readme"
-    },
-    {
-      "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-      "to": "publication.ci3_z3.claims_table"
     },
     {
       "from": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
@@ -20186,10 +20122,6 @@
     },
     {
       "from": "publication.ci3_z3.reproduce",
-      "to": "publication.ci3_z3.science_map"
-    },
-    {
-      "from": "publication.ci3_z3.reproduce",
       "to": "publication.ci3_z3.release_environment"
     },
     {
@@ -20211,10 +20143,6 @@
     {
       "from": "publication.ci3_z3.results_index",
       "to": "publication.ci3_z3.full_claim_ledger"
-    },
-    {
-      "from": "publication.ci3_z3.results_index",
-      "to": "publication.ci3_z3.science_map"
     },
     {
       "from": "publication.ci3_z3.results_index",
@@ -22505,7 +22433,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:44:33.959334+00:00",
+  "generated_at": "2026-05-03T13:48:16.132029+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -22697,10 +22625,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
-        "ai_methodology_note_2026-04-25"
+        "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25"
       ],
-      "note_hash": "07649bfc3dbfcd9a2e8f092059a6f65fb7f7062597c6241a2d7a9219d5257882",
+      "note_hash": "02586f7743d29a5c9e5e9fcfde27777af073ce6989446c2dda99f64fe83cc125",
       "path": "docs/ai_methodology/CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md",
       "runner_path": null,
       "title": "Canonical Methodology Framing Paragraph"
@@ -22766,7 +22693,6 @@
       "claim_type_seed_hint": null,
       "deps": [
         "ai_methodology.readme",
-        "ai_methodology_note_2026-04-25",
         "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
         "ai_methodology.raw.readme",
         "ai_methodology.methodology_synthesis_2026-04-25",
@@ -22779,7 +22705,7 @@
         "publication.ci3_z3.derivation_validation_map",
         "publication.ci3_z3.what_this_paper_does_not_claim"
       ],
-      "note_hash": "9495ee763b8330d06aa0c0cefac25f1a9d595c33b1b5262fd6b4082aedfdc85c",
+      "note_hash": "f80440b71ed6ea4c18a1c900289c5c2a0a26ffcbe3b90e565b0cadeb999dfd89",
       "path": "docs/ai_methodology/METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md",
       "runner_path": null,
       "title": "AI Theoretical Physics Methodology Paper Source Packet"
@@ -23566,7 +23492,6 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "ai_methodology_note_2026-04-25",
         "writing_voice_guide_2026-04-25",
         "ai_methodology.canonical_framing_paragraph_2026-04-25",
         "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -23590,7 +23515,7 @@
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "a2ce609fbb3db3f9f2b88abfc77e5b678a95333b1bf788375d4d1aece9c17096",
+      "note_hash": "468fdd91ffbe25f8bdb2fe2e9710a9040e25bd40e9f1130c3587646e54ae8f1a",
       "path": "docs/ai_methodology/README.md",
       "runner_path": null,
       "title": "AI Methodology Lane"
@@ -29996,7 +29921,6 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19",
         "dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17",
         "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18",
         "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18",
@@ -30005,7 +29929,7 @@
         "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17",
         "dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16"
       ],
-      "note_hash": "73cc77d75239211adae262e19b382a5df2f2be47f489e0cbe74bf6ca59124ba1",
+      "note_hash": "acbcced5de1684f12f6293f6a3725d5258df249602aba028917a9844d13c3b3c",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_DERIVATION_NO_GO_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_canonical_path_selector_theorem_2026_04_19.py",
       "title": "DM Wilson Direct-Descendant Canonical Path Derivation No-Go Note"
@@ -30684,12 +30608,11 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "restricted_strong_field_closure_note",
-        "gw_echo_null_result_note",
         "oh_static_constraint_lift_note",
         "oh_schur_boundary_action_note",
         "star_supported_bridge_class_note"
       ],
-      "note_hash": "ad15db6f57f7a15c9e7685c66325702a8d756399fe64141d2ca891e5a80edd98",
+      "note_hash": "199288cebde4a82021b06043ed715af17d2f2248663879e88d3f52f2f04fda91",
       "path": "docs/EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_evanescent_barrier_amplitude_suppression.py",
       "title": "Discrete Evanescent-Barrier Amplitude Suppression on `Cl(3)/Z^3`"
@@ -35110,7 +35033,6 @@
         "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
         "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
         "hubble_lane5_c1_carrier_metrology_axiom_audit_note_2026-04-29",
-        "lanes.open_science.06_charged_lepton_mass_retention_open_lane_2026-04-26",
         "frontier_extension_lane_opening_note_2026-04-25",
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
         "signed_gravity_response_lane_status_note_2026-04-26",
@@ -35119,7 +35041,7 @@
         "ai_methodology.raw.readme",
         "lanes.open_science.readme"
       ],
-      "note_hash": "168ac6f8107dfcc57246c1e7fd7ac790353741280fa3a42361c1db12c938c65e",
+      "note_hash": "88a0925c950f2d3aaa1631b9a7c615ffdbbc9e2e66e8a09d92883f851b40fb0c",
       "path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
       "runner_path": null,
       "title": "Active Working Lanes"
@@ -37902,7 +37824,6 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "neutrino_retained_lanes_review_packet_2026-04-16",
         "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
         "neutrino_majorana_retained_lane_packet_2026-04-16",
         "pmns_lower_level_end_to_end_closure_note",
@@ -37942,7 +37863,7 @@
         "neutrino_sole_axiom_full_closure_boundary_note",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
       ],
-      "note_hash": "961fbe131a68f21df29a31d747e16512ee80aa438fc752c7905a0ba150c07c77",
+      "note_hash": "a0088ca657f3503bacc105a1fc8151044445839dfea780204503b4598eccaefa",
       "path": "docs/NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md",
       "runner_path": null,
       "title": "Neutrino Retained Status Note (2026-04-16)"
@@ -38217,11 +38138,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "ordered_lattice_packet_reidentification_note",
-        "ordered_lattice_quasi_persistent_relaunch_note"
-      ],
-      "note_hash": "19bf1b962f1be57d6452f3cc56ceeeea8831ddd492b4e7188e261159770c5277",
+      "deps": [],
+      "note_hash": "fd46bd4c89855208c98674f91aa5673188b1714423829b171585adaced690733",
       "path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md",
       "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch_2d.py",
       "title": "Ordered-Lattice Quasi-Persistent Relaunch 2D Note"
@@ -38232,10 +38150,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "ordered_lattice_packet_reidentification_note",
         "ordered_lattice_quasi_persistent_relaunch_2d_note"
       ],
-      "note_hash": "958ce52bfad3b0e9adb7950f88fc6bfc5469eaed7e0fb2ade4b7a5159c883d8c",
+      "note_hash": "8cca657ff79b572a68180f1926b85b530b56f18e89da75e9b705b859fc51b803",
       "path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
       "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch.py",
       "title": "Ordered-Lattice Quasi-Persistent Relaunch Note"
@@ -39739,7 +39656,6 @@
       "deps": [
         "publication.ci3_z3.claims_table",
         "publication.ci3_z3.usable_derived_values_index",
-        "publication.ci3_z3.derivation_validation_map",
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.arxiv_draft",
         "minimal_axioms_2026-04-11",
@@ -40228,7 +40144,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "e3073b3e936b811c5654199c6627d025e1b8139385ba2e87c916fd8abcf4798e",
+      "note_hash": "bab936cb40e8cc65827561fe7c24c8743ce675f557e4baae5548c20f132be103",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -40514,10 +40430,9 @@
         "teleportation_protocol_note",
         "teleportation_native_axioms_theory_note",
         "teleportation_conclusion_boundary_note",
-        "teleportation_acceptance_suite_note",
-        "publication.ci3_z3.claims_table"
+        "teleportation_acceptance_suite_note"
       ],
-      "note_hash": "b29823347df76f3f34b0efcfeee433007608776240540d426391ec3523c81bea",
+      "note_hash": "2b82fe17f9b78ff3ddc08a18bdbd78af8bb9bfe3410b156d3c77c601132b22e8",
       "path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
       "runner_path": null,
       "title": "Derivation / Validation Map"
@@ -40622,7 +40537,6 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [
-        "publication.ci3_z3.figure_captions",
         "graph_first_su3_integration_note",
         "anomaly_forces_time_theorem",
         "three_generation_structure_note",
@@ -40643,7 +40557,7 @@
         "work_history.ckm.ckm_mass_basis_nni_note",
         "work_history.ckm.jarlskog_phase_bound_note"
       ],
-      "note_hash": "29e9de85d9898843bf454da6c15c0af6b646572f406796ebf60da1bd2c6a8514",
+      "note_hash": "9c965bc2ac192cf2d88e5199c10dce2b2296af02a9e6b370f846464feaf7bfc3",
       "path": "docs/publication/ci3_z3/FIGURE_PLAN.md",
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
       "title": "Figure Plan"
@@ -40902,11 +40816,10 @@
         "universal_qg_canonical_smooth_gravitational_weak_measure_note",
         "publication.ci3_z3.external_reviewer_guide",
         "publication.ci3_z3.readme",
-        "publication.ci3_z3.claims_table",
         "publication.ci3_z3.derivation_validation_map",
         "publication.ci3_z3.publication_matrix"
       ],
-      "note_hash": "ca0e6272baa21bf3778f7c479bbb878a0aa2840eea6715467788e6df23e98fc2",
+      "note_hash": "13251cfe5e95e5bcd4e6f9b465f475f4f1c7bed6a0c6429f56cf37db5516ab18",
       "path": "docs/publication/ci3_z3/GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md",
       "runner_path": null,
       "title": "Gravity Publication Package Summary"
@@ -41402,12 +41315,11 @@
       "claim_type_seed_hint": null,
       "deps": [
         "publication.ci3_z3.derivation_validation_map",
-        "publication.ci3_z3.science_map",
         "publication.ci3_z3.release_environment",
         "publication.ci3_z3.results_index",
         "publication.ci3_z3.reproducibility_freeze_2026-04-14"
       ],
-      "note_hash": "f2431cff287e3ab1a15b76fa8dc069c5e22f758656bb916943a19aeccdf934fc",
+      "note_hash": "bfcacbba8b0bb332385bc64752021db34395f4c59170f117594ce4fa6af69dc5",
       "path": "docs/publication/ci3_z3/REPRODUCE.md",
       "runner_path": null,
       "title": "Reproduce Guide"
@@ -41432,7 +41344,6 @@
         "publication.ci3_z3.derivation_validation_map",
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.full_claim_ledger",
-        "publication.ci3_z3.science_map",
         "publication.ci3_z3.reproduce",
         "publication.ci3_z3.arxiv_draft",
         "minimal_axioms_2026-04-11",
@@ -41770,7 +41681,7 @@
         "ckm_atlas_axiom_closure_note",
         "ckm_thales_pinned_alpha_s_independent_ratios_theorem_note_2026-04-25"
       ],
-      "note_hash": "8a994c331a435b483edf0b0b64377063f15c1423ed1d1043028cc16802a31ca4",
+      "note_hash": "28b13045629bea8f0b0601327120cf7dfd39f6b4e4783a77df5e2453ff360159",
       "path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
       "runner_path": null,
       "title": "Results Index"
@@ -42881,10 +42792,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [
-        "evanescent_barrier_amplitude_suppression_theorem_note"
-      ],
-      "note_hash": "22358c7d3ce1c8b9522f2a168ccb62b0553f8ad09f0ed193c42bd5b046da6f18",
+      "deps": [],
+      "note_hash": "39edfe0f9b867e3519ad876638932aeab882213992e6eb1494834d360683d668",
       "path": "docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md",
       "runner_path": null,
       "title": "Restricted Strong-Field Closure on the Exact `O_h` Shell Class"
@@ -43919,11 +43828,10 @@
         "signed_gravity_native_boundary_complex_containment_note",
         "signed_gravity_staggered_dirac_aps_boundary_realization_note",
         "signed_gravity_naturally_hosted_orientation_line_note",
-        "signed_gravity_oriented_tensor_source_lift_note",
         "signed_gravity_tensor_source_transport_retention_note",
         "signed_gravity_continuum_graded_einstein_localization_note"
       ],
-      "note_hash": "fffc288c9b8ce93c2fc7b2187cf6f0061b505c4859bcaed52506bb09930a04b2",
+      "note_hash": "268d391cb0d2f209529efac7c0b0d06086d7afd50e485bc7c3a62e7ed3ba9333",
       "path": "docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md",
       "runner_path": "scripts/signed_gravity_nature_grade_closure_blockers.py",
       "title": "Signed Gravity Nature-Grade Closure Blocker Audit Note"
@@ -49891,6 +49799,7 @@
     "ollivier_einstein_proxy_note_2026-04-11",
     "omega_lambda_matter_bridge_theorem_note_2026-04-22",
     "one_parameter_reduced_shell_law_note",
+    "ordered_lattice_quasi_persistent_relaunch_2d_note",
     "packet_memory_note",
     "paper_outline_2026-04-12",
     "persistent_inertial_object_probe_note",
@@ -49993,6 +49902,7 @@
     "replay_environment_note",
     "repo.python_venv_setup",
     "repo_submission_consolidation_plan_2026-04-12",
+    "restricted_strong_field_closure_note",
     "retained_cross_lane_consistency_support_note_2026-04-22",
     "retardation_discriminator_note",
     "retarded_field_compact_refinement_note",
@@ -50306,10 +50216,10 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5626,
-    "leaf_count": 646,
+    "edge_count": 5608,
+    "leaf_count": 647,
     "node_count": 1846,
-    "root_count": 1047,
+    "root_count": 1049,
     "runners_with_path": 1410
   }
 }
