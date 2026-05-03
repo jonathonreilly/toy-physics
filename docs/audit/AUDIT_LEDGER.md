@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:57:39.480752+00:00
+**Generated:** 2026-05-03T01:00:13.148211+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 207 |
+| **retained_bounded** | 208 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 485 |
+| unaudited | 484 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 416 |
+| `audited_clean` | 417 |
 | `audited_conditional` | 656 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 525 |
+| `unaudited` | 524 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 538 |
+| `bounded_theorem` | 539 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 95 |
+| `open_gate` | 94 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -476,6 +476,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_adiabatic_convergence_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_adiabatic_prep_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_adiabatic_time_evolution_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_apparatus_dynamics_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
@@ -16727,6 +16728,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The finite-time closed-system simulation shows that a smooth endpoint schedule can reach the target logical Bell-resource quality with small full-state diabatic loss on the default 2D 4x4 surface.  _(class `C`)_
 - **chain closes:** True — Within the stated small closed-system model, the source-note numbers match the live runner output and the runner computes the finite-time evolution, logical trace, teleportation fidelity, null control, and no-message checks. The closure is only for the bounded diagnostic, not for scalable or physical hardware preparation.
 - **rationale:** The scoped claim is a bounded numerical diagnostic, not the hinted open gate or a physical preparation theorem. The live runner output supports the finite-time candidate, the null non-resource control, and Bob pre-message input-independence under the stated ideal protocol boundary. No hidden matter-transfer, FTL, scaling, or hardware-readout claim is needed for the audited statement.
+- **auditor confidence:** high
+
+### `teleportation_apparatus_dynamics_closure_note`
+
+- **Note:** [`TELEPORTATION_APPARATUS_DYNAMICS_CLOSURE_NOTE.md`](../../docs/TELEPORTATION_APPARATUS_DYNAMICS_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the explicit engineered lattice model, a retarded nearest-neighbor carrier, finite-strength Bell-stabilizer transducer, finite spin bath, and branch-independent apparatus ledger jointly pass the stated ordinary state-teleportation gates without claiming matter, energy, object, FTL, unique relativistic-field, continuum-detector, or microscopic Cl(3)/Z^3 Hamiltonian closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Dalton-the-2nd-019deb58-8d1e-7193-840e-8bf7cd63de9a`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** This is still planning-level, but it is a nontrivial native apparatus candidate rather than a supplied classical bit channel or a projective measurement placeholder.  _(class `C`)_
+- **chain closes:** True — The runner computes the scoped candidate-model properties directly: the local field first-arrival surface matches the lattice eikonal, the finite transducer and bath suppress record overlaps, Bob remains input-independent before delivery and is restored after delivery, and the candidate ledger is branch independent. The note explicitly withholds the broader physical identifications that would otherwise be hidden premises.
+- **rationale:** The clean result is only for the bounded engineered apparatus candidate, not for a retained microscopic or relativistic apparatus theory. The load-bearing claim closes because the note and live runner keep the carrier/readout/protocol boundary at ordinary quantum state teleportation and expose the remaining Nature-grade blockers instead of smuggling them in. Residual risk is that later promotion beyond this candidate would require separate audits for the unique field equation, continuum detector, microscopic Cl(3)/Z^3 Hamiltonian, and all native apparatus implementations.
 - **auditor confidence:** high
 
 ### `teleportation_bell_measurement_circuit_note`
