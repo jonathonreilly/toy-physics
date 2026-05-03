@@ -18,8 +18,21 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=132 FAIL=0
+# SUMMARY: PASS=133 FAIL=0
 ```
+
+## 2026-05-03 W/Z Response Repo Harness Import Audit Update
+
+The retained-route certificate now consumes
+`outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json`.
+This checks whether the fallback same-source W/Z physical-response route
+already has a usable implementation elsewhere in the repo.
+
+The audit blocks that import.  The production harness only records a W/Z
+absent guard; EW gauge-mass algebra starts after canonical `H` is supplied;
+EW/native-gauge scripts are algebra/running support; and the W/Z
+builder/gate have no measurement rows or candidate certificate.  No retained
+or `proposed_retained` closure is authorized.
 
 ## 2026-05-03 Canonical-Higgs Repo Authority Audit Update
 

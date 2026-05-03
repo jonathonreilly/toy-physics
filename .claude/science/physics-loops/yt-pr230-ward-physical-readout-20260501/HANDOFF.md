@@ -1,5 +1,26 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 W/Z response repo harness import audit:
+
+- Added `scripts/frontier_yt_wz_response_repo_harness_import_audit.py`,
+  `docs/YT_WZ_RESPONSE_REPO_HARNESS_IMPORT_AUDIT_NOTE_2026-05-03.md`, and
+  `outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json`.
+- Result: exact negative boundary.  No hidden same-source W/Z response
+  implementation exists in the repo.  The current top harness has W/Z rows
+  absent-guarded; EW gauge-mass algebra starts after canonical `H` is supplied;
+  and W/Z builder/gate artifacts are future-row contracts, not evidence.
+- Verification: W/Z repo import audit `PASS=10 FAIL=0`; retained-route
+  `PASS=133 FAIL=0`; campaign status `PASS=159 FAIL=0`.
+- Claim boundary: no retained or `proposed_retained` wording is authorized.
+  The W/Z route remains a future physical-observable route requiring
+  same-source W/Z mass fits, covariance with top response, and identity
+  certificates.
+
+Next exact action: implement actual W/Z response rows in a dedicated EW
+gauge/Higgs harness, produce same-surface Schur rows that pass the new
+contract gate, or pursue certified `O_H/C_sH/C_HH` pole residues while the
+production chunk runner advances.
+
 Latest checkpoint, 2026-05-03 Schur kernel row contract gate:
 
 - Added `scripts/frontier_yt_schur_kernel_row_contract_gate.py`,

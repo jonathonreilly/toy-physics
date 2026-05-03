@@ -1,5 +1,39 @@
 # Review History
 
+## Review-Loop Backpressure - W/Z Response Repo Harness Import Audit
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / NO HIDDEN W/Z RESPONSE HARNESS
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- repo-wide W/Z response import audit is now consumed by the retained and
+  campaign certificates;
+- no existing harness emits same-source W/Z correlator mass fits,
+  `dM_W/ds`/`dM_Z/ds`, covariance with `dE_top/ds`, and identity
+  certificates;
+- static EW W/Z mass algebra remains support after canonical `H` is supplied,
+  not a PR #230 scalar-source response;
+- W/Z manifest, builder, gate, and absence-guard artifacts are future-row
+  contracts/firewalls only;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_wz_response_repo_harness_import_audit.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_wz_response_repo_harness_import_audit.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Canonical-Higgs Repo Authority Audit Wiring
 
 Local review-loop disposition:

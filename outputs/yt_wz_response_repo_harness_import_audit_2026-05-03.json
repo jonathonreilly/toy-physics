@@ -1,0 +1,255 @@
+{
+  "actual_current_surface_status": "exact negative boundary / repo-wide WZ response harness import audit",
+  "candidate_surfaces": [
+    {
+      "classification": "QCD top-correlator harness with W/Z absent guard",
+      "id": "yt_direct_lattice_correlator_production",
+      "missing_or_blocking": [
+        "no W/Z gauge-boson correlator mass fits",
+        "no gauge_mass_response_analysis output field",
+        "W/Z metadata is absent_guarded and not evidence"
+      ],
+      "path_presence": {
+        "scripts/yt_direct_lattice_correlator_production.py": true
+      },
+      "paths": [
+        "scripts/yt_direct_lattice_correlator_production.py"
+      ],
+      "positive_reuse": "same-source top dE_top/ds rows and metadata guard",
+      "signals": {
+        "guard_only": true,
+        "has_all_required_row_tokens": false,
+        "has_real_cli_token": false,
+        "has_real_row_token": false,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    },
+    {
+      "classification": "object-level EW algebra after canonical H is supplied",
+      "id": "ew_higgs_gauge_mass_diagonalization",
+      "missing_or_blocking": [
+        "does not measure dM_W/ds under PR230 scalar source",
+        "does not emit W/Z correlator mass fits",
+        "does not prove source-sector overlap"
+      ],
+      "path_presence": {
+        "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md": true,
+        "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py": true
+      },
+      "paths": [
+        "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+        "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py"
+      ],
+      "positive_reuse": "tree-level W/Z mass dictionary once H is known",
+      "signals": {
+        "guard_only": false,
+        "has_all_required_row_tokens": false,
+        "has_real_cli_token": false,
+        "has_real_row_token": false,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    },
+    {
+      "classification": "acceptance manifest only",
+      "id": "fh_gauge_mass_response_manifest",
+      "missing_or_blocking": [
+        "manifest_is_evidence=false",
+        "no measurement rows or candidate certificate"
+      ],
+      "path_presence": {
+        "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json": true,
+        "scripts/frontier_yt_fh_gauge_mass_response_manifest.py": true
+      },
+      "paths": [
+        "scripts/frontier_yt_fh_gauge_mass_response_manifest.py",
+        "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json"
+      ],
+      "positive_reuse": "minimum W/Z response schema and rejection rules",
+      "signals": {
+        "guard_only": false,
+        "has_all_required_row_tokens": false,
+        "has_real_cli_token": true,
+        "has_real_row_token": true,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    },
+    {
+      "classification": "current-surface observable gap",
+      "id": "fh_gauge_mass_response_observable_gap",
+      "missing_or_blocking": [
+        "gauge_mass_response_observable_ready=false",
+        "W/Z response certificate absent"
+      ],
+      "path_presence": {
+        "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json": true,
+        "scripts/frontier_yt_fh_gauge_mass_response_observable_gap.py": true
+      },
+      "paths": [
+        "scripts/frontier_yt_fh_gauge_mass_response_observable_gap.py",
+        "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json"
+      ],
+      "positive_reuse": "sector-overlap countermodels and acceptance schema",
+      "signals": {
+        "guard_only": false,
+        "has_all_required_row_tokens": false,
+        "has_real_cli_token": true,
+        "has_real_row_token": true,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    },
+    {
+      "classification": "future-row certificate builder",
+      "id": "fh_gauge_mass_response_certificate_builder",
+      "missing_or_blocking": [
+        "input_present=false",
+        "candidate_written=false"
+      ],
+      "path_presence": {
+        "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json": true,
+        "scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py": true
+      },
+      "paths": [
+        "scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py",
+        "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json"
+      ],
+      "positive_reuse": "validates future measurement row schema",
+      "signals": {
+        "guard_only": false,
+        "has_all_required_row_tokens": true,
+        "has_real_cli_token": false,
+        "has_real_row_token": true,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    },
+    {
+      "classification": "future W/Z response acceptance gate",
+      "id": "same_source_wz_response_certificate_gate",
+      "missing_or_blocking": [
+        "gate not passed",
+        "future W/Z response certificate absent"
+      ],
+      "path_presence": {
+        "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json": true,
+        "scripts/frontier_yt_same_source_wz_response_certificate_gate.py": true
+      },
+      "paths": [
+        "scripts/frontier_yt_same_source_wz_response_certificate_gate.py",
+        "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json"
+      ],
+      "positive_reuse": "rejects static EW algebra and slope-only W/Z rows",
+      "signals": {
+        "guard_only": false,
+        "has_all_required_row_tokens": true,
+        "has_real_cli_token": false,
+        "has_real_row_token": true,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    },
+    {
+      "classification": "explicit absence guard",
+      "id": "wz_response_harness_absence_guard",
+      "missing_or_blocking": [
+        "guard marks missing evidence; it is not W/Z response evidence"
+      ],
+      "path_presence": {
+        "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json": true,
+        "scripts/frontier_yt_wz_response_harness_absence_guard.py": true
+      },
+      "paths": [
+        "scripts/frontier_yt_wz_response_harness_absence_guard.py",
+        "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
+      ],
+      "positive_reuse": "claim firewall in production certificates",
+      "signals": {
+        "guard_only": true,
+        "has_all_required_row_tokens": false,
+        "has_real_cli_token": false,
+        "has_real_row_token": false,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    },
+    {
+      "classification": "EW running/coupling support scan",
+      "id": "ew_coupling_support_scan",
+      "missing_or_blocking": [
+        "does not measure W/Z mass response",
+        "contains observed comparators and taste-threshold support inputs"
+      ],
+      "path_presence": {
+        "scripts/frontier_yt_ew_coupling_derivation.py": true
+      },
+      "paths": [
+        "scripts/frontier_yt_ew_coupling_derivation.py"
+      ],
+      "positive_reuse": "possible g2 context after separate audit",
+      "signals": {
+        "guard_only": false,
+        "has_all_required_row_tokens": false,
+        "has_real_cli_token": false,
+        "has_real_row_token": false,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    },
+    {
+      "classification": "native SU(2) Clifford-bivector scope theorem",
+      "id": "native_gauge_scope",
+      "missing_or_blocking": [
+        "does not implement electroweak gauge-boson correlators",
+        "does not couple the PR230 scalar source to W/Z masses"
+      ],
+      "path_presence": {
+        "scripts/frontier_native_gauge_scope.py": true
+      },
+      "paths": [
+        "scripts/frontier_native_gauge_scope.py"
+      ],
+      "positive_reuse": "weak-gauge algebra context",
+      "signals": {
+        "guard_only": false,
+        "has_all_required_row_tokens": false,
+        "has_real_cli_token": false,
+        "has_real_row_token": false,
+        "output_claims_evidence": false
+      },
+      "usable_as_wz_response_harness": false
+    }
+  ],
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Implement actual same-source W/Z response measurement rows in a dedicated EW gauge/Higgs harness, or return to source-Higgs C_sH/C_HH pole rows / production FH-LSZ evidence.",
+  "fail_count": 0,
+  "pass_count": 10,
+  "positive_reuse": [
+    "Use the production harness for same-source top dE_top/ds rows.",
+    "Use EW gauge-mass algebra only after canonical H/source overlap is certified.",
+    "Use the W/Z builder and gate once real measurement rows exist.",
+    "Use native SU(2) and EW coupling scripts only as separate gauge-context support."
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No same-source W/Z response measurement rows or candidate certificate exist.",
+  "repo_wz_response_harness_found": false,
+  "required_output_presence": {
+    "candidate_certificate": false,
+    "measurement_rows": false
+  },
+  "required_outputs": {
+    "candidate_certificate": "outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json",
+    "measurement_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json"
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat static EW algebra as dM_W/ds",
+    "does not use observed W/Z masses, observed top mass, or observed y_t as selectors",
+    "does not set k_top = k_gauge, kappa_s = 1, c2 = 1, or Z_match = 1",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette, or u0 as W/Z response authority"
+  ],
+  "verdict": "No existing repo artifact supplies the same-source W/Z mass-response measurement required by PR #230.  The production harness has only a W/Z absent guard; EW gauge-mass algebra starts after canonical H is supplied; EW coupling/native-gauge scripts provide algebra or running context; and the W/Z builder/gate have no measurement rows. Therefore the W/Z route remains a future physical-observable route, not a hidden current closure.",
+  "wz_response_repo_import_closes_pr230": false
+}

@@ -233,6 +233,9 @@ def main() -> int:
         "wz_response_harness_absence_guard": load(
             "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
         ),
+        "wz_response_repo_harness_import_audit": load(
+            "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json"
+        ),
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
@@ -961,6 +964,24 @@ def main() -> int:
         "WZ response harness absence guard"
         in str(statuses["wz_response_harness_absence_guard"]),
         statuses["wz_response_harness_absence_guard"],
+    )
+    report(
+        "wz-response-repo-harness-import-audit-blocks-hidden-harness",
+        "repo-wide WZ response harness import audit"
+        in str(statuses["wz_response_repo_harness_import_audit"])
+        and certificates["wz_response_repo_harness_import_audit"].get(
+            "wz_response_repo_import_closes_pr230"
+        )
+        is False
+        and certificates["wz_response_repo_harness_import_audit"].get(
+            "repo_wz_response_harness_found"
+        )
+        is False
+        and certificates["wz_response_repo_harness_import_audit"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True,
+        statuses["wz_response_repo_harness_import_audit"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the repo-wide W/Z response harness import audit is now
+landed and wired into the retained-route/campaign gates.  It finds no hidden
+same-source W/Z physical-response implementation: the top production harness
+has W/Z rows absent-guarded, EW gauge-mass algebra starts after canonical `H`
+is supplied, and the W/Z manifest/builder/gate surfaces are future-row
+contracts without measurement rows.  Do not spend more loop time trying to
+import existing W/Z algebra as `dM_W/ds`.  The positive W/Z route requires
+real same-source W/Z mass fits, top/WZ covariance, `g2` authority, and
+sector-overlap/canonical-Higgs identity certificates.
+
 2026-05-03 update: the scalar denominator route now has an executable Schur
 kernel row contract gate layered after the remote row-absence, legacy bridge
 import, and canonical-Higgs authority guards.  Future same-surface rows must

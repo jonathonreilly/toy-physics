@@ -26,8 +26,24 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=158 FAIL=0
+# SUMMARY: PASS=159 FAIL=0
 ```
+
+## 2026-05-03 W/Z Response Repo Harness Import Audit Update
+
+The campaign status certificate now consumes the repo-wide W/Z response
+harness import audit.  This closes the "maybe the fallback W/Z physical
+response is already implemented elsewhere" branch of the queue.
+
+The audit passes with `PASS=10 FAIL=0` and finds no existing same-source W/Z
+mass-response implementation.  The current top harness has W/Z rows explicitly
+absent-guarded, the EW gauge-mass theorem is static algebra after canonical
+`H` is supplied, and the W/Z manifest/builder/gate surfaces are future-row
+contracts with no measurement rows or candidate certificate.
+
+The retained boundary is unchanged.  PR #230 still needs real same-source W/Z
+mass-response rows with covariance and identity certificates, certified
+`O_H/C_sH/C_HH` pole rows, Schur `A/B/C` rows, or honest production evidence.
 
 ## 2026-05-03 Canonical-Higgs Repo Authority Audit Update
 
