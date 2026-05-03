@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:31:15.675624+00:00
+**Generated:** 2026-05-03T02:34:28.343396+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 146 |
+| **retained** | 147 |
 | **retained_no_go** | 99 |
 | **retained_bounded** | 217 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 456 |
+| unaudited | 455 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 432 |
+| `audited_clean` | 433 |
 | `audited_conditional` | 668 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 49 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 496 |
+| `unaudited` | 495 |
 
 | claim_type | count |
 |---|---:|
@@ -511,6 +511,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `two_field_retarded_probe_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
 | `unification_basin_failure_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `unit_singlet_overlap_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `universal_gr_block_ident_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `universal_gr_block_normalization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `universal_gr_canonical_projector_connection_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
@@ -17545,6 +17546,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the active support note depends on printed signed-source rows from an archived failed wrapper and has no registered runner or log for a signed-source-only recomputation. Why this blocks: a hostile audit can verify that the printed archive table contains the quoted zero, neutral, antisymmetry, and doubled-source values, but cannot ratify them as current support evidence from this row alone. Repair target: attach or register the exact signed-source-only runner/log that recomputes the three seed rows, and declare the archived wrapper or extracted table as an explicit dependency. Claim boundary until fixed: safe as a salvage pointer to archived printed control observations; not safe as independently audited numerical support.
 - **open / conditional deps cited:**
   - `archive_unlanded/unified-basin-signed-source-salvage-2026-04-30/UNIFIED_BASIN_FREEZE_NOTE.md`
+- **auditor confidence:** high
+
+### `unit_singlet_overlap_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/UNIT_SINGLET_OVERLAP_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For positive integers N_iso and N_c, with H_unit explicitly defined as (1/sqrt(N_iso*N_c))*I on the pair-Hilbert basis, the diagonal tree-level matrix element with any single basis pair-state is 1/sqrt(N_iso*N_c), and the expression contains no gauge-coupling parameter.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-pascal-3rd-019debae-7044-7e91-9e7e-07bbb7e60f0c`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** By definition of H_unit and the canonical normalization of the basis-pair states, <basis pair|H_unit|basis pair> = (1/sqrt(N_iso*N_c))*1.  _(class `A`)_
+- **chain closes:** True — The conclusion follows directly from the explicit operator definition and the canonical orthonormal basis-pair normalization. No upstream Ward identity, physical identification of N_iso,N_c, or parent g_bare selection is used.
+- **rationale:** The scoped claim is a narrow combinatorial/operator-definition identity, not a derivation of the H_unit normalization from physics. A hostile reviewer can object to using this as a physical normalization theorem, but that is explicitly outside the claim boundary. Within the stated premises, the diagonal matrix element and gauge-coupling independence close exactly because H_unit is (1/sqrt(N_iso*N_c))*I and contains no g_bare.
 - **auditor confidence:** high
 
 ### `universal_gr_a1_invariant_section_note`
