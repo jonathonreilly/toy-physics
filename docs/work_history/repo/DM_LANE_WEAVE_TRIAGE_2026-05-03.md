@@ -94,9 +94,8 @@ phrases already used by the woven `G. DM and cosmology tools` rows in
 
 For each sub-family the recommendation is one of:
 
-- `weave to DERIVATION_ATLAS.md` — clean structural support theorem on the
-  retained / open-gate DM surface; the note's declared status matches the
-  existing atlas wording for that section.
+- `weave to DERIVATION_ATLAS.md` — clean structural support theorem that
+  matches the existing DM/open-gate atlas wording for that section.
 - `weave to LANE_STATUS_BOARD.md only` — the note belongs to a historical
   lane-board row rather than the publication atlas. (Not applicable here:
   there is no DM lane row on `LANE_STATUS_BOARD.md`, and adding one would
@@ -116,7 +115,7 @@ For each sub-family the recommendation is one of:
 | `DM_SELECTOR_*` (relative-action recovered, threshold stabilization, shifted-doublet imag-sign, packet closure) | `leave unwoven; route-history-only` | All five carry `selector-side support theorem on the open DM gate` or plain `support`. They are within-bank refinements of the same selector chamber the existing atlas row `DM source-bank Z_3 doublet-block selection obstruction theorem` already closes off as a current-bank obstruction. Weaving them would duplicate that obstruction at finer granularity without changing the gate. |
 | `DM_ABCC_*` (cubic closure, five-basin chamber DPLE, PMNS non-singularity, signature forcing) | `governance decision required` | The ABCC chamber is the live closing chamber for the bounded `G1 DM-neutrino PMNS-as-f(H) bounded package` row already woven into the atlas (which references `ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`). Two of the four ABCC notes here (`PMNS non-singularity`, `signature forcing`) are the IVT / threshold lemma backbones that the woven `G1 ...` row implicitly leans on. Recommend the user decide whether the existing single `G1` row is sufficient as an authority pointer for the ABCC chamber, or whether the four ABCC notes should be woven as named one-hop deps under the `G1` row. |
 | `DM_SIGMA_HIER_*` (H-intrinsic no-go, upper-octant selector) | `weave to DERIVATION_ATLAS.md` (1 of 2); `leave unwoven; route-history-only` (1 of 2) | The `H-intrinsic no-go theorem` is a named-family no-go in the same style as already-woven `PMNS stationary CP incompatibility theorem` and is a clean weave candidate. The `upper-octant selector` note is declared `conditional/support theorem on the open DM PMNS gate` and points back to the authoritative `I12` closeout theorem; it is appropriately route-history-only. |
-| `DM_DPLE_*`, `DM_EFFECTIVE_PARENT_*`, `DM_ETA_NSITES_V_*`, `DM_SPLIT2_*`, `DM_Z3_TEXTURE_FACTOR_*` (singletons) | `weave to DERIVATION_ATLAS.md` for `DM_Z3_TEXTURE_FACTOR` and `DM_EFFECTIVE_PARENT_ONE_CLOCK_TRANSFER_BOUNDARY`; `leave unwoven; route-history-only` for the other three | The two recommended weave candidates are exact theorems on the proposed_retained surface that match existing atlas slot/character/transport-boundary rows. The three left unwoven (DPLE matrix-analysis, ETA n_sites lift, split2 interval-certified dominance) are bounded support / matrix-analysis tools that did not feed the live ABCC / G1 closure path. |
+| `DM_DPLE_*`, `DM_EFFECTIVE_PARENT_*`, `DM_ETA_NSITES_V_*`, `DM_SPLIT2_*`, `DM_Z3_TEXTURE_FACTOR_*` (singletons) | `weave to DERIVATION_ATLAS.md` for `DM_Z3_TEXTURE_FACTOR` and `DM_EFFECTIVE_PARENT_ONE_CLOCK_TRANSFER_BOUNDARY`; `leave unwoven; route-history-only` for the other three | The two recommended weave candidates are exact theorems whose declared surfaces match existing atlas slot/character/transport-boundary rows. The three left unwoven (DPLE matrix-analysis, ETA n_sites lift, split2 interval-certified dominance) are bounded support / matrix-analysis tools that did not feed the live ABCC / G1 closure path. |
 
 ## Headline triage outcome
 
@@ -127,7 +126,7 @@ For each sub-family the recommendation is one of:
 | `leave unwoven; route-history-only` | ~29 (within-bank selector / leptogenesis-decomposition / redundant neutrino support / ordered-chain support / DPLE / ETA / split2) |
 
 Most unwoven DM_* notes (~29 of 63, or ~46%) are appropriately classified
-as historical / diagnostic route history. A smaller proven-clean fraction
+as historical / diagnostic route history. A smaller clean-candidate fraction
 (~14 of 63, or ~22%) is a candidate for a follow-on atlas weave PR. The
 largest single sub-family (`DM_WILSON_*`, 16 notes) and the live-flagship
 `DM_ABCC_*` chamber (4 notes) require a governance decision before any
@@ -136,7 +135,7 @@ exact reductions visible.
 
 ## Recommended next-cycle actions
 
-1. **Follow-on atlas weave PR** — Wave the ~14 clean structural notes
+1. **Follow-on atlas weave PR** — Weave the ~14 clean structural notes
    (exact neutrino-side theorems + the two PMNS no-go theorems + the
    ordered-chain current-activation theorem + the sigma-hier H-intrinsic
    no-go + the two singleton candidates) onto
