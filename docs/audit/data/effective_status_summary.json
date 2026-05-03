@@ -7,7 +7,7 @@
     "open_gate": 92,
     "positive_theorem": 857
   },
-  "computed_at": "2026-05-03T21:11:22.289768+00:00",
+  "computed_at": "2026-05-03T21:12:11.198627+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -50,10 +50,10 @@
     "meta": 47,
     "open_gate": 17,
     "retained": 84,
-    "retained_bounded": 191,
+    "retained_bounded": 192,
     "retained_no_go": 106,
     "retained_pending_chain": 3,
-    "unaudited": 695
+    "unaudited": 694
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [

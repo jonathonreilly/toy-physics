@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:11:22.945700+00:00
+**Generated:** 2026-05-03T21:12:12.039594+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 191 |
+| **retained_bounded** | 192 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 695 |
+| unaudited | 694 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 354 |
+| `audited_clean` | 355 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 742 |
+| `unaudited` | 741 |
 
 | claim_type | count |
 |---|---:|
@@ -202,6 +202,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
+| `evolving_network_prototype_v4_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `evolving_network_prototype_v5_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -5830,6 +5831,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** This v3 pass improves the *control design* relative to v2: the imposed  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 4 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `evolving_network_prototype_v4_note`
+
+- **Note:** [`EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md`](../../docs/EVOLVING_NETWORK_PROTOTYPE_V4_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite v4 prototype result for scripts/evolving_network_prototype_v4.py at current constants/seeds: fixed-offset crystal connectivity ties KNN on toward count and slightly improves mean_delta and alpha, without proving a general Gate B dynamics theorem.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-evolving-network-v4`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The frozen replay lands as a mixed bounded result: ordered 0.0/9 mean_delta -0.000058 alpha 0.00, crystal 2.0/9 mean_delta -0.000037 alpha 0.83, and KNN control 2.0/9 mean_delta -0.000050 alpha 0.66; crystal improves mean_delta/alpha but does not clearly beat KNN on toward count.  _(class `C`)_
+- **chain closes:** True — The runner explicitly constructs the ordered, crystal fixed-offset, and KNN-on-same-positions families, computes the stated metrics, and current stdout reproduces the note's frozen table. There are no known upstream dependencies; closure is only for this finite prototype comparison.
+- **rationale:** The note's load-bearing numerical table matches the current runner output, and the prose substantially bounds the result as a prototype rather than a solved dynamics theorem. The main signal is correctly described as mixed: crystal does not beat KNN on toward count, but it slightly improves mean_delta and alpha. Residual risk is only scope risk: broader claims such as a general connectivity bottleneck are not audited here beyond this finite replay.
 - **auditor confidence:** high
 
 ### `evolving_network_prototype_v5_note`
