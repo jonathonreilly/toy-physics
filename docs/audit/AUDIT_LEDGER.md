@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:16:57.936729+00:00
+**Generated:** 2026-05-03T21:19:55.638814+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 196 |
+| **retained_bounded** | 197 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 690 |
+| unaudited | 689 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 359 |
+| `audited_clean` | 360 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 737 |
+| `unaudited` | 736 |
 
 | claim_type | count |
 |---|---:|
@@ -293,6 +293,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_continuum_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | C | - |
 | `lattice_nn_deterministic_rescale_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `lattice_nn_high_precision_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | C | - |
+| `lattice_nn_rg_alpha_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `lattice_nn_rg_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -9428,6 +9429,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The NN light-cone branch is frozen as a topological causal-bound statement: influence is confined to the relevant forward causal neighborhood in the graph/DAG sense, with no emergent-relativity or physical spacetime light-cone claim retained.  _(class `F`)_
 - **chain closes:** False — The remaining content is a relabeling of directed-graph forward reachability under the name 'topological causal cone', not an independently derived light-cone theorem. Renaming verdict captures the symbol-relabel character of what survives after the physical interpretation is retracted.
 - **rationale:** Re-audit confirms the original renaming verdict: the residual claim is a graph-reachability label, not a derived physical light-cone law. Scope narrowed to the administrative branch-freeze with explicit emergent-relativity retraction.
+- **auditor confidence:** high
+
+### `lattice_nn_rg_alpha_sweep_note`
+
+- **Note:** [`LATTICE_NN_RG_ALPHA_SWEEP_NOTE.md`](../../docs/LATTICE_NN_RG_ALPHA_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite alpha sweep on the Born-safe deterministic NN refinement path showing alpha=1.5 is the best tested h=0.5 to h=0.25 gravity-stability point, with ratio 0.858, without promoting a continuum RG theorem.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-lattice-nn-alpha-sweep`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** Within the scanned grid, the strongest checked alpha is 1.5; at that alpha, gravity is nearly h-independent between h = 0.5 and h = 0.25, with ratio 0.858.  _(class `C`)_
+- **chain closes:** True — The one-hop dependency is retained_bounded for the deterministic Born-safe NN refinement path, and the current runner completes with the note's gravity values, ratios, Born values, and scan-edge conclusion. The note explicitly limits the result to the scanned grid and disclaims h-independence, fixed-point establishment, and renormalized continuum closure.
+- **rationale:** The runner computes the finite alpha grid rather than setting the ratio by definition, and its completed output matches the source note: alpha 1.5 gives gravity +0.209207 at h=0.5, +0.179561 at h=0.25, and ratio 0.858. The dependency supplies the retained bounded deterministic refinement/Born-safe path, while this note only claims a bounded scan-edge probe. Residual risk is that this is not an optimized exponent or continuum theorem, but the note already states that boundary.
 - **auditor confidence:** high
 
 ### `lattice_nn_rg_gravity_note`
