@@ -3,7 +3,7 @@
 **Date:** 2026-05-03
 **Status:** current public framework memo for the `Cl(3)` / `Z^3` package
 **Type:** meta
-**Supersedes:** [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md) (the
+**Supersedes:** `MINIMAL_AXIOMS_2026-04-11.md` (the
 2026-04-11 file as it existed up to commit `0267ef09f`; the 2026-04-15
 rewrite that introduced A3, A4, A5 as additional axioms is being backed
 out by this note).
@@ -87,10 +87,10 @@ single canonical parent note. **Open derivation target.**
 **Lanes that depend on this gate:** any lane whose derivation defines
 fermion fields, fermion-number operators, fermion correlators, fermion
 bilinears, or staggered Dirac action (essentially every lane that
-touches matter content). These lanes are typed `bounded_theorem` with
-"staggered-Dirac realization derivation target (parent note: pending
-packaging — see in-flight supporting work above)" listed in
-`admitted_context_inputs` until the gate closes.
+touches matter content). These lanes should be reviewed as
+`bounded_theorem` surfaces with "staggered-Dirac realization derivation
+target (parent note: pending packaging — see in-flight supporting work
+above)" listed in `admitted_context_inputs` until the gate closes.
 
 ### g_bare = 1 derivation target (formerly axiom A4)
 
@@ -98,7 +98,7 @@ packaging — see in-flight supporting work above)" listed in
 > `g_bare = 1` by canonical Cl(3) connection normalization; the Wilson
 > plaquette coefficient `β = 2 N_c = 6` follows."
 
-**Canonical parent note:** [`G_BARE_DERIVATION_NOTE.md`](G_BARE_DERIVATION_NOTE.md)
+**Canonical parent note:** `G_BARE_DERIVATION_NOTE.md`
 — `claim_type: positive_theorem`, `audit_status: audited_conditional`.
 Codex-named repair targets: missing primary runner, A → A/g rescaling
 freedom, constraint-vs-convention ambiguity. The April 15 rewrite
@@ -131,10 +131,9 @@ verdict. **Open derivation target.**
 **Lanes that depend on this gate:** any lane that produces quantitative
 gauge predictions (`α_s`, `v`, `sin²θ_W`, `m_t`, `m_H`, `g_1`, `g_2`,
 etc.) by fixing `g_bare = 1` without independently deriving it. These
-lanes are typed `bounded_theorem` with "g_bare = 1 derivation target
-(parent: G_BARE_DERIVATION_NOTE.md)" listed in
-`admitted_context_inputs` until that note's audit verdict closes
-clean.
+lanes should be reviewed as `bounded_theorem` surfaces with "g_bare = 1
+derivation target (parent: G_BARE_DERIVATION_NOTE.md)" listed in
+`admitted_context_inputs` until that note's audit verdict closes clean.
 
 ## What this means for the existing science stack
 
@@ -145,7 +144,9 @@ work. No new tier labels are introduced.
 
 ### Lanes that close on A1+A2 alone
 
-Type stays `positive_theorem` → `effective_status: retained`. Zero open-gate
+Target review typing: `positive_theorem`. Once the independent audit lane has
+an `audited_clean` verdict and retained-grade dependencies, the pipeline
+derives `effective_status: retained`. These rows have zero open-gate
 admissions in `admitted_context_inputs`:
 
 - `cl3_per_site_uniqueness` (only A1)
@@ -159,9 +160,11 @@ admissions in `admitted_context_inputs`:
 
 ### Lanes that depend on the staggered-Dirac realization gate
 
-Type changes to `bounded_theorem` → `effective_status: retained_bounded`,
-with `admitted_context_inputs` listing the staggered-Dirac realization
-derivation target (currently undischarged):
+Target review typing until the gate closes: `bounded_theorem`, with
+`admitted_context_inputs` listing the staggered-Dirac realization derivation
+target (currently undischarged). Once such a row has an `audited_clean`
+bounded-theorem verdict and retained-grade dependencies, the pipeline derives
+`effective_status: retained_bounded`:
 
 - `coleman_mermin_wagner` (needs Hamiltonian)
 - `cpt_exact` (needs staggered structure)
@@ -170,18 +173,22 @@ derivation target (currently undischarged):
 - three-generation, baryon/meson singlet, fermion-parity Z_2,
   Q̂ integer spectrum, hopping bilinear, etc.
 
-When this gate closes, these lanes upgrade back to `positive_theorem`.
+When this gate closes, these lanes become eligible for independent audit or
+repo-governance retagging as `positive_theorem`; the review loop must not
+rewrite auditor-owned `claim_type` fields by implication.
 
 ### Lanes that depend on both gates
 
-Type `bounded_theorem` with `admitted_context_inputs` listing both the
-staggered-Dirac realization derivation target AND the g_bare = 1
-derivation target (canonical parent: `G_BARE_DERIVATION_NOTE.md`):
+Target review typing until both gates close: `bounded_theorem`, with
+`admitted_context_inputs` listing both the staggered-Dirac realization
+derivation target and the g_bare = 1 derivation target (canonical parent:
+`G_BARE_DERIVATION_NOTE.md`):
 
 - All `α_s`, `v`, `sin²θ_W`, `m_t`, `m_H`, `g_1`, `g_2` quantitative
   results (`y_t` lane, EW lane, Higgs lane, etc.).
 
-When both gates close, these upgrade back to `positive_theorem`.
+When both gates close, these lanes become eligible for independent audit or
+repo-governance retagging as `positive_theorem`.
 
 ## Comparison with prior framing
 
@@ -193,10 +200,11 @@ When both gates close, these upgrade back to `positive_theorem`.
 > normalization are open gates (the staggered-Dirac realization gate and
 > the g_bare = 1 derivation gate with parent
 > `G_BARE_DERIVATION_NOTE.md`) with partial closure already in progress
-> via 6+ notes. Every quantitative prediction is typed `bounded_theorem`
-> with the open gates named in `admitted_context_inputs`. Closing those
-> gates promotes those lanes to `positive_theorem` automatically via
-> the audit pipeline's recompute."
+> via 6+ notes. Every quantitative prediction that depends on those gates is
+> reviewed as `bounded_theorem` with the open gates named in
+> `admitted_context_inputs`. Closing those gates makes the affected lanes
+> eligible for independent audit or repo-governance retagging as
+> `positive_theorem`."
 
 The framework's parameter reduction under this framing:
 **19 SM numerical parameters → 2 framework axioms + 2 named open
@@ -212,10 +220,11 @@ two framework axioms are fixed:
 - perturbative low-energy EFT running where the package explicitly labels
   the bridge as bounded or bridge-conditioned
 
-Those tools do not promote a bounded lane to retained on their own; that
-requires either closure of the named derivation targets above (which
-upgrades the lane's `claim_type` automatically via the audit pipeline)
-or scope-tightening on the bounded statement itself.
+Those tools do not promote a bounded lane to retained on their own. A bounded
+lane remains bounded unless the statement is scope-tightened or the named
+derivation targets close and an independent audit/governance pass retags the
+row. The audit pipeline recomputes `effective_status`; it does not silently
+invent a new `claim_type`.
 
 ## What This File Is Not
 

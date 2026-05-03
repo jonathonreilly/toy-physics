@@ -1,7 +1,7 @@
 # Minimal Framework Inputs (SUPERSEDED)
 
 **Date:** 2026-04-15 (last citation-graph repair: 2026-05-02)
-**Status:** **SUPERSEDED** by [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) — see that note for the current axiom set.
+**Status:** **SUPERSEDED** by `MINIMAL_AXIOMS_2026-05-03.md` — see that note for the current axiom set.
 **Type:** meta
 
 > **Notice (2026-05-03):** the A1–A4 numbered axiom list below was inserted on
@@ -14,7 +14,7 @@
 > framework axioms; the staggered/Grassmann realization and `g_bare = 1`
 > normalization are recategorized as named open gates
 > with explicit closure paths in flight. See
-> [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) for the
+> `MINIMAL_AXIOMS_2026-05-03.md` for the
 > restored axiom set and per-lane bookkeeping rules.
 
 This file is preserved for the historical record only. Do not cite as the
