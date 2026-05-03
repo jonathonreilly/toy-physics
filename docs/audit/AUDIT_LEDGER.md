@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:34:58.906453+00:00
+**Generated:** 2026-05-03T01:38:18.362035+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 214 |
+| **retained_bounded** | 215 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 472 |
+| unaudited | 471 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 425 |
+| `audited_clean` | 426 |
 | `audited_conditional` | 660 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 512 |
+| `unaudited` | 511 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 546 |
+| `bounded_theorem` | 547 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 87 |
+| `open_gate` | 86 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -490,6 +490,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_native_transport_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_no_signaling_audit` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | B | - |
+| `teleportation_noise_fault_controls_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_resource_from_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | B | - |
 | `teleportation_taste_readout_operator_model_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -16983,6 +16984,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** For the ideal three-register encoded taste-qubit protocol |psi>_A tensor |Phi+>_RB with Alice Bell measurement on A,R, Bob's reduced state is I/2 before measurement and remains sum_zx p_zx rho_B|zx = I/2 after Alice's measurement when the Bell outcome record is inaccessible.  _(class `B`)_
 - **chain closes:** True — The scoped claim closes as finite-dimensional teleportation algebra over the explicitly constructed encoded qubit, Bell projectors, partial trace, outcome averaging, and positive-latency classical record. The runner numerically exercises the finite protocol to machine precision and the note explicitly excludes matter transport, FTL signaling, measurement-foundation, durable-record, and Bell-resource-origin claims.
 - **rationale:** The load-bearing no-signaling statement is not a physical-carrier identification or CHSH-to-teleportation bridge; it is the standard reduced-density-matrix statement inside the explicitly bounded encoded two-level protocol. The runner constructs the logical taste Pauli operators, Bell projectors, random input states, pre-measurement Bob partial trace, post-measurement outcome-averaged Bob state, pairwise input-independence check, and delayed two-bit record channel, all passing at machine precision. Residual risk is limited to the stated ideal-protocol boundary: this audit does not certify matter teleportation, mass/charge/energy transfer, FTL communication, a measurement theory, durable classical records, or derivation of the Bell resource from another lane.
+- **auditor confidence:** high
+
+### `teleportation_noise_fault_controls_note`
+
+- **Note:** [`TELEPORTATION_NOISE_FAULT_CONTROLS_NOTE.md`](../../docs/TELEPORTATION_NOISE_FAULT_CONTROLS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical/algebraic control harness for ordinary qubit state teleportation under the explicit independent fault model: resource depolarization, Bell-readout bit flips, classical record flips/drop/delay, Bob correction-control bit errors, identity fallback for unavailable records, and deadline versus eventual delivery accounting.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Copernicus-the-2nd-019deb7b-2718-76e3-b899-9a3912193a9c`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note's load-bearing step is the bounded harness claim that, for the supplied qubit Bell resource rho_RB(v) and independent input-independent classical fault layers, the computed deadline/eventual teleportation fidelities, threshold crossings, trace preservation, and pre-record Bob input-independence behave as reported, without identifying the model with a physical apparatus or matter transport.  _(class `C`)_
+- **chain closes:** True — The source note keeps the claim inside the explicit supplied-resource, independent-fault qubit model, and the runner recomputes the channel, Choi average fidelities, threshold crossings, no-record Bob marginal diagnostics, and trace checks from that model. No one-hop dependencies are required, and the live runner output matches the note's reported numerics.
+- **rationale:** The bounded claim closes for the explicit model. The runner does not derive an apparatus noise law, Bell-resource preparation dynamics, spacetime propagation theorem, or matter/energy transport claim, but the note does not ask for those. Residual risk is only scope discipline: this clean audit applies to the independent-fault qubit-state harness and should not be promoted to a physical-noise derivation or apparatus-level teleportation claim.
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
