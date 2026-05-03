@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-03T11:50:04.842618+00:00",
+  "computed_at": "2026-05-03T11:51:03.349436+00:00",
   "criticality_counts": {
     "critical": 111,
     "high": 365,
-    "leaf": 812,
+    "leaf": 813,
     "medium": 554
   },
   "flagship_signal_used": false,
-  "node_count": 1842,
+  "node_count": 1843,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -128,8 +128,8 @@
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 18.044,
-      "transitive_descendants": 263
+      "load_bearing_score": 18.55,
+      "transitive_descendants": 264
     },
     {
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
