@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:21:59.681618+00:00
+**Generated:** 2026-05-03T18:27:15.708454+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,30 +19,30 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 78 |
+| **retained** | 80 |
 | **retained_no_go** | 103 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 738 |
+| unaudited | 734 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 23 |
-| ~~audited_conditional~~ | 540 |
+| ~~audited_conditional~~ | 542 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 319 |
-| `audited_conditional` | 540 |
+| `audited_clean` | 321 |
+| `audited_conditional` | 542 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 784 |
+| `unaudited` | 780 |
 
 | claim_type | count |
 |---|---:|
@@ -302,6 +302,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_right_conjugacy_invariant_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `qnm_control_hardening_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | B | - |
 | `quark_c3_circulant_source_law_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | B | - |
@@ -310,6 +311,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
+| `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `replay_environment_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | B | - |
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | configured_numerical_proxy | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -833,6 +835,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quantum_horizon_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_endpoint_denominator_admissibility_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `quark_issr1_bicac_forcing_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `quark_jts_affine_physical_carrier_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `quark_jts_physical_point_closure_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_jts_residue_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -11038,6 +11042,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
+### `quark_bimodule_norm_existence_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Given the stated one-real channel I = R*Im(p), rho = 1/sqrt(42), and the retained bridge family a_u(kappa) = Im(p)*(1 - rho*kappa) for kappa in [sqrt(6/7), 1], the constructed scalar maps D_kappa and U_kappa are complementary positive real-linear endomorphisms of I that reproduce the bridge amplitudes.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-fresh-audit-loop-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** For any retained kappa in [sqrt(6/7), 1], define D_kappa := rho * kappa * Id_I and U_kappa := (1 - rho * kappa) * Id_I.  _(class `A`)_
+- **chain closes:** True — The note's scoped claim closes as explicit algebra on a one-real-dimensional vector space: scalar multiplication defines real-linear endomorphisms, the coefficients sum to one, and applying U_kappa to Im(p) gives the stated bridge formula. The theorem only establishes existence of such split maps, not a canonical endpoint selection.
+- **rationale:** The load-bearing construction is not a physical-observable identification or a tuned comparator match; it is a direct algebraic lift of the stated bridge-family coefficient to complementary scalar endomorphisms on I. The runner independently checks the interval membership, linearity on the one-real channel, complementarity, contractivity, bridge recovery, and the three named endpoint evaluations, with PASS=10 FAIL=0. The clean verdict is scoped narrowly to existence of split maps from the stated inputs and does not ratify canonicality or uniqueness of kappa.
+- **auditor confidence:** high
+
 ### `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28`
 
 - **Note:** [`QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_C3_A1_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md)
@@ -11159,6 +11176,40 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`
   - `QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_jts_affine_physical_carrier_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note proves that, assuming the asserted physical carrier H_(1+5)=span{e_1,e_5} and projector ray p=cos_d e_1+sin_d e_5, Pert(p)=H_(1+5) and affine-section 1-jets at p identify with tangent vectors in that plane.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Because H_(1+5) is the exact retained physical reduced carrier, this affine plane is a canonical affine subspace of the bimodule: A_p subset B.  _(class `B`)_
+- **chain closes:** False — The internal linear algebra closes after H_(1+5), p, and the physical-route carrier are assumed. The audit packet/ledger row supplies no retained-grade dependency chain for the physical-carrier provenance, and the runner hard-codes the carrier and projector constants rather than deriving them.
+- **rationale:** Issue: the note imports the exact physical carrier H_(1+5), projector ray p, bimodule B, and retained atoms as already retained physical inputs, while the ledger row has no dependency paths and the runner only checks downstream algebra with those objects hard-coded. Why this blocks: the claimed physical-carrier JTS derivation cannot be granted from the provided row without a retained theorem establishing that this carrier and route section functor are the physical ones. Repair target: add/restore explicit retained-grade dependency paths for the carrier, projector, and bimodule provenance, and use a runner that constructs or verifies those inputs rather than merely checking affine tangent algebra after insertion. Claim boundary until fixed: the note supports a conditional linear-algebra lemma that Pert(p) is the tangent/1-jet plane of A_p once the physical carrier and p are assumed.
+- **open / conditional deps cited:**
+  - `CL3_SM_EMBEDDING_THEOREM.md`
+  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_jts_physical_point_closure_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_JTS_PHYSICAL_POINT_CLOSURE_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_JTS_PHYSICAL_POINT_CLOSURE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Physical-point JTS closure: assuming the shell-normalized carrier fixes a_u_phys = sin_d*(1-rho) and ISSR1 supplies Pi(v)=Im<v_5,v>, psi_phys satisfies Pi(psi_phys)=Pi(p), with kappa=1 the unique bridge factor satisfying that JTS condition.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Let the physical amplitude a_u_phys be the unique value forced by the exact shell-normalized bilinear carrier K_R(q) (Shell-Normalization Theorem): a_u_phys = sin_d * (1 - rho).  _(class `B`)_
+- **chain closes:** False — The algebra after setting a_u_phys = sin_d*(1-rho) closes exactly and the runner verifies that equality. The load-bearing physical selection of that unique amplitude, plus the ISSR1/JTS projection authority, is imported rather than closed inside the restricted packet or represented as retained-grade dependencies in the exact row metadata.
+- **rationale:** Issue: the theorem's decisive step imports the Shell-Normalization Theorem's unique physical amplitude and ISSR1's projection/JTS setup, while the exact ledger row has deps=[] and the restricted audit packet does not establish those inputs as retained-grade. Why this blocks: the runner only checks downstream algebra after the contested physical amplitude and bridge family are encoded; it does not derive the carrier selection from retained primitives. Repair target: add/verify explicit retained-grade dependency paths for the shell-normalization theorem and ISSR1 projection theorem, or include a runner that constructs the physical amplitude from those retained carrier data. Claim boundary until fixed: conditional on those upstream retained theorems, psi_phys satisfies Pi(psi_phys)=Pi(p) and kappa=1 is the unique checked bridge factor.
+- **open / conditional deps cited:**
+  - `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_jts_residue_note_2026-04-19`
@@ -11365,6 +11416,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
   - `QUARK_UP_AMPLITUDE_PROVENANCE_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/RADIAL_SCALING_PROTECTED_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone plane-geometry theorem that positive radial scaling (rho, eta) -> (mu rho, mu eta) preserves eta/rho, the origin angle and doubled angle, and scales radius by mu, with a concrete counter-check that the angle at (1,0) is not generally protected.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-current-fresh-context-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** eta_bar / rho_bar = (mu eta) / (mu rho) = eta / rho, since mu > 0 cancels.  _(class `A`)_
+- **chain closes:** True — The protected-angle and doubled-angle conclusions follow directly from exact slope preservation, and the radius scaling follows by factoring mu^2 under the square root. The note has no cited dependencies and does not import CKM-specific assignments or physical comparators.
+- **rationale:** The audited claim is pure algebra/Euclidean geometry over abstract positive real symbols. The runner independently checks the exact symbolic slope, arctan, doubled-angle, and radius identities and a concrete non-protection example for the (1,0) angle, with PASS=9 and FAIL=0. No hidden physical bridge, numerical tuning, external comparator, or upstream dependency is load-bearing.
 - **auditor confidence:** high
 
 ### `rconn_derived_note`
