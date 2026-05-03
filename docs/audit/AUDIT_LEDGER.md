@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:15:29.229936+00:00
+**Generated:** 2026-05-03T18:18:41.474196+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 78 |
-| **retained_no_go** | 102 |
+| **retained_no_go** | 103 |
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 740 |
+| unaudited | 739 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,22 +36,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 318 |
+| `audited_clean` | 319 |
 | `audited_conditional` | 538 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 786 |
+| `unaudited` | 785 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 593 |
 | `decoration` | 8 |
 | `meta` | 46 |
-| `no_go` | 163 |
+| `no_go` | 164 |
 | `open_gate` | 90 |
-| `positive_theorem` | 858 |
+| `positive_theorem` | 857 |
 
 | criticality | count |
 |---|---:|
@@ -242,6 +242,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `i3_zero_exact_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
+| `koide_berry_bundle_obstruction_theorem_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
@@ -7864,6 +7865,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** On the admitted ambient APS route, the retained C3[111] rotation fixes p=3 and transverse weights (1,2), the ABSS prerequisites hold, and the fixed-point formula gives eta=2/9 with no internal route choice.  _(class `C`)_
 - **chain closes:** True — The source note is support-tier and explicitly excludes the remaining physical-observable bridge. The runner recomputes the C3 rotation, eigenvalues, fixed locus, tangent weights, ABSS prerequisites, core cube-root identity, alternative-weight checks, and composite eta=2/9 result with 29/29 passes.
 - **rationale:** The executable support claim closes on its own boundary: the ambient APS eta=2/9 route is structurally fixed by the retained C3[111] kinematics and ABSS fixed-point computation, and the runner reproduces every listed block. This audit does not promote the missing physical bridge delta_physical = eta_APS; the note states that as the remaining open issue.
+- **auditor confidence:** high
+
+### `koide_berry_bundle_obstruction_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the obstruction claim that the actual positive projectivized Koide cone has interval quotient under C3, so equivariant line bundles and U(1) connections there are trivial and cannot force a nonzero Chern/Berry phase; the sign-relaxed S1 variant has only arbitrary flat holonomy.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-fresh-audit-loop-2026-05-03-koide-berry-bundle-obstruction`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The C3 action on K_norm^+ is free, so equivariant complex line bundles on K_norm^+ are equivalent to complex line bundles on the quotient K_norm^+ / C3; by Theorem 1 that quotient is an interval, hence contractible, so complex line bundles over it are trivial.  _(class `A`)_
+- **chain closes:** True — The source note reduces the physical base to three C3-permuted open arcs and an interval quotient, then applies standard free-action descent and contractibility of intervals to rule out nontrivial line bundles, Chern class, and loop holonomy. The runner independently checks the normalized Koide circle geometry, C3 action, positive-arc structure, quotient Betti numbers, fixed-point freeness, and flat-holonomy non-uniqueness with PASS=30 FAIL=0.
+- **rationale:** The load-bearing step is a standard topology/algebra closure over the explicitly presented Koide-locus geometry: free finite-group quotient to an interval, contractible-base line-bundle triviality, and absence of gauge-invariant loop holonomy on a simply connected one-dimensional interval. The sign-relaxed S1 extension also closes because H2(S1; Z)=0 rules out nonzero first Chern class while flat U(1) holonomy remains a continuous parameter. No tuned comparator, symbol renaming, or open dependency is needed for the audited no-go scope; residual risk is limited to the source note's cited Koide-locus setup, but the row metadata lists no open dependencies.
 - **auditor confidence:** high
 
 ### `koide_berry_phase_theorem_note_2026-04-19`
