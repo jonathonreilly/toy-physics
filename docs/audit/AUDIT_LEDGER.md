@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:30:29.209242+00:00
+**Generated:** 2026-05-03T17:31:12.228813+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 764 |
+| unaudited | 763 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 525 |
+| ~~audited_conditional~~ | 526 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,21 +37,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 525 |
+| `audited_conditional` | 526 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 810 |
+| `unaudited` | 809 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 590 |
+| `bounded_theorem` | 591 |
 | `decoration` | 7 |
 | `meta` | 46 |
 | `no_go` | 163 |
 | `open_gate` | 90 |
-| `positive_theorem` | 862 |
+| `positive_theorem` | 861 |
 
 | criticality | count |
 |---|---:|
@@ -523,6 +523,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_candidate_mass_window_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `dm_chamber_signature_structure_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3400,6 +3401,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** **Runner result:** `PASS = 39, FAIL = 0`  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 16 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21`
+
+- **Note:** [`DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the listed exact PMNS target-surface chamber root set, the finite sign check shows I_src(H)>0 selects Basin 1 and agrees with positive det(H); no global source-space sign law is asserted.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-context-audit-loop-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** So the exact target-surface chamber roots are exactly {Basin 1, Basin 2, Basin X}.  _(class `B`)_
+- **chain closes:** False — The finite sign arithmetic closes only after the exact target-surface basin chart and chamber-root completeness are granted. The runner itself redirects the completeness input to an archive_unlanded note described as finite multistart enumeration rather than a covering proof, so the exact root-set premise is not retained-grade from the allowed packet.
+- **rationale:** Issue: The theorem's exact chamber-root set {Basin 1, Basin 2, Basin X} is imported from an unprovided/unratified target-surface basin completeness claim, and the runner points that input to archive_unlanded because it was finite multistart enumeration rather than a covering proof. Why this blocks: Without retained-grade exact completeness of the target-surface roots, the later I_src and det sign table proves only a conditional finite-table result, not exact A-BCC closure on the full target surface. Repair target: Restore or replace the basin-enumeration dependency with a retained covering/completeness theorem and a runner that proves no additional target-surface chamber roots exist. Claim boundary until fixed: It is safe to say that for the five listed basin candidates, after imposing the chamber inequality, I_src(H)>0 selects Basin 1 and the global source-space sign implication remains false.
+- **open / conditional deps cited:**
+  - `archive_unlanded/dm-abcc-finite-search-salvage-2026-04-30/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
