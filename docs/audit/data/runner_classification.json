@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T21:47:02.636374+00:00",
+  "generated_at": "2026-05-03T22:51:05.532561+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -6492,18 +6492,6 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py"
-    },
-    "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19": {
-      "assert_count": 2,
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 9,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py"
     },
     "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19": {
       "assert_count": 2,
@@ -24828,21 +24816,6 @@
       "dominant_class": "C",
       "exists": true
     },
-    "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py": {
-      "assert_count": 2,
-      "claims": [
-        "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 1,
-        "C": 9,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "exists": true
-    },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py": {
       "assert_count": 2,
       "claims": [
@@ -37684,12 +37657,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 162,
-      "C": 556,
+      "C": 555,
       "D": 207,
       "none": 417
     },
-    "runners_classified": 1352,
-    "runners_with_C": 662,
+    "runners_classified": 1351,
+    "runners_with_C": 661,
     "runners_with_D": 337
   }
 }

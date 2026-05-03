@@ -23233,7 +23233,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T21:46:55.410474+00:00",
+  "generated_at": "2026-05-03T22:50:58.693528+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28200,7 +28200,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ea379ed024a452799ac86acc36790a5e40a8bc741a9e5cdff0936cfb48c2614a",
+      "note_hash": "b9779307124b3ec92c8d5ac9937d39a254f5acfe3eb77e16467efc01c5f68a34",
       "path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
       "runner_path": null,
       "title": "Dimensional Gravity Table"
@@ -31801,7 +31801,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4a0723a08ae5321256ae817a5386a927b284bdf5a8e2122708b58e07a7c3522f",
+      "note_hash": "e289a3dd6ac67a8de9bac0b2ad47d055e45280fa7cb887b671bbaef629e51c4e",
       "path": "docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
       "runner_path": "scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py",
       "title": "Fifth Family Complex Boundary Note"
@@ -32778,9 +32778,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "e17619a84d07469c195c457cebfb02a3d3053a561528dea76a852a313114022b",
+      "note_hash": "a9a2131bb127333da4b3f655cec12086805dd29b574aac77fdc009237c2ed345",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py",
+      "runner_path": null,
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
     },
     "gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19": {
@@ -34182,7 +34182,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "df8c7a795aa5f6178a77266ecec85b4acb9221d79510e1ae40756a6b7d3e0f5b",
+      "note_hash": "c2acb63a8cf48ae6ce1e509519b973e2fbb71cfb5e7303d72dae61c499941765",
       "path": "docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md",
       "runner_path": "scripts/higher_symmetry_gravity_probe.py",
       "title": "Higher-Symmetry Gravity Probe Note"
@@ -44611,7 +44611,7 @@
       "deps": [
         "staggered_fermion_card_2026-04-10"
       ],
-      "note_hash": "c9875cdd5b069abe48f66682c09630cc9072cf2a46fdd07a2c5e742e7658f7bb",
+      "note_hash": "1422e4cf8e07a86917f6c3e6cc873f1556393f023eda2323eb7baba870c0c688",
       "path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md",
       "runner_path": "scripts/frontier_axioms_16card.py",
       "title": "Session Synthesis: Graph Laplacian Axioms (2026-04-10)"
@@ -46103,7 +46103,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "605f761f2ad0a9addf780450c5d0cbcb2e40fe0a1b2853087d93c72119b2d68a",
+      "note_hash": "3e41c9841a4691692b1f73f9886a099ee80e56c0a5b6b4cffbfd2213e87ee41d",
       "path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
       "runner_path": null,
       "title": "Structured Mirror Born-Safe Scan Note"
@@ -51496,6 +51496,6 @@
     "leaf_count": 599,
     "node_count": 1869,
     "root_count": 1056,
-    "runners_with_path": 1429
+    "runners_with_path": 1428
   }
 }
