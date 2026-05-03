@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:40:35.756451+00:00
+**Generated:** 2026-05-03T20:44:31.780847+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 185 |
+| **retained_bounded** | 186 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 16 |
-| unaudited | 702 |
+| unaudited | 701 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 347 |
+| `audited_clean` | 348 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 749 |
+| `unaudited` | 748 |
 
 | claim_type | count |
 |---|---:|
@@ -322,6 +322,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_corner_transport_active_block_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `pmns_right_conjugacy_invariant_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `pmns_sole_axiom_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `qnm_control_hardening_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | B | - |
@@ -11344,6 +11345,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** Issue: The note presents the transverse profile as derived from a local equation, but the local 2D Poisson equation, source normalization, boundary conditions, iteration budget, and the longitudinal 1/(dx+0.1) factor are still chosen inputs. Why this blocks: the live runner verifies a finite Poisson-branch computation after those premises are supplied, but it does not derive the field law or source carrier from retained framework structure, so the retained derivation claim is conditional. Repair target: derive or cite a retained theorem for the Poisson equation and source/boundary normalization, remove the explicit longitudinal factor or prove its retained origin, and add convergence/residual checks for the solver. Claim boundary until fixed: it is safe to claim that the tested runner replaces the transverse imposed profile with a chosen 2D Poisson stencil while preserving TOWARD response, near-linear F versus M, Born behavior, and the s=0 null; it is not safe to claim the gravitational field is retained as an axiom-derived consequence.
 - **open / conditional deps cited:**
   - `GATE_B_POISSON_SELF_GRAVITY_NOTE.md`
+- **auditor confidence:** high
+
+### `poisson_self_gravity_loop_v3_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-lattice control result for the h=0.25, W=3, L=6 Poisson-like backreaction loop: exact epsilon=0 reduction, small nonzero matched-null centroid/phase shifts, failed nonzero convergence, and non-clean end-to-end Born behavior.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-poisson-loop-v3`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The strongest retained statement is: exact null identity is solid; a small positive centroid / phase-ramp shift appears under backreaction; but the shift is not large enough, and the nonlinear loop is not converged enough, to promote this to a new exact-lattice self-gravity mechanism.  _(class `C`)_
+- **chain closes:** True — The full current runner completed and reproduced the note's zero-epsilon identity, full sweep summaries, nonzero non-convergence, and Born audit numbers. With no known dependencies, the bounded control claim closes as a finite-run computational theorem, while not promoting any positive self-gravity mechanism.
+- **rationale:** The runner computes the load-bearing finite-lattice loop rather than hard-coding the claimed centroid, phase, convergence, or Born outputs. The current full output matches the note's reported reduction check, sweep table, and Born audit, including the caveat that all nonzero-coupling rows fail strict convergence and the end-to-end Born check is not machine-clean. The audited scope is therefore only the bounded control/no-promotion statement, not a retained positive self-gravity mechanism.
 - **auditor confidence:** high
 
 ### `portable_card_extension_note`

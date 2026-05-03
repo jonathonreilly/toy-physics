@@ -3,9 +3,9 @@
     "critical": 62,
     "high": 215,
     "leaf": 201,
-    "medium": 253
+    "medium": 252
   },
-  "generated_at": "2026-05-03T20:40:35.468182+00:00",
+  "generated_at": "2026-05-03T20:44:31.376578+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7804,27 +7804,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "poisson_self_gravity_loop_v3_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.0,
-      "note_path": "docs/POISSON_SELF_GRAVITY_LOOP_V3_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_nn_high_precision_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -14573,6 +14552,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "self_gravity_failure_diagnosis",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "poisson_self_gravity_loop_v3_note",
+        "self_gravity_backreaction_closure_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "source_resolved_generated_bridge_failure_audit",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -18499,30 +18502,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "self_gravity_failure_diagnosis",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "poisson_self_gravity_loop_v3_note",
-        "self_gravity_backreaction_closure_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/poisson_self_gravity_loop_v3.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "session_synthesis_2026-04-10_graph_axioms",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -19303,5 +19282,5 @@
     }
   ],
   "ready_count": 45,
-  "total_pending": 731
+  "total_pending": 730
 }
