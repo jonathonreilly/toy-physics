@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:57:06.737001+00:00
+**Generated:** 2026-05-03T02:00:59.490195+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 465 |
+| unaudited | 464 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 665 |
+| ~~audited_conditional~~ | 666 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 427 |
-| `audited_conditional` | 665 |
+| `audited_conditional` | 666 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 505 |
+| `unaudited` | 504 |
 
 | claim_type | count |
 |---|---:|
@@ -1138,6 +1138,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_poisson_resource_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `teleportation_record_field_closure_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `teleportation_remaining_blocker_reduction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_remaining_open_item_attack_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -17088,6 +17089,21 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **open / conditional deps cited:**
   - `TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md`
   - `TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md`
+- **auditor confidence:** high
+
+### `teleportation_remaining_open_item_attack_note`
+
+- **Note:** [`TELEPORTATION_REMAINING_OPEN_ITEM_ATTACK_NOTE.md`](../../docs/TELEPORTATION_REMAINING_OPEN_ITEM_ATTACK_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** State-only teleportation remaining-open-item planning artifact: selector completion minimality, side-12 signed-branch induction target, and controller/material requirement envelopes are explicit obligations, not unconditional closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-ohm-2nd-019deb8e-fd17-7120-8190-6d2fa351afc7`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The lane remains planning / conditional theory, not unconditional nature-grade closure.  _(class `D`)_
+- **chain closes:** False — The note and runner identify finite-side targets and requirement envelopes, but they do not prove the all-even-side signed-branch induction, derive the selector completion from the original axiom, or map the envelopes to fabricated controller/material noise models. The runner also operationally imports the native record apparatus, whose current effective status is audited_conditional.
+- **rationale:** Issue: the load-bearing promotion path remains conditional on three explicit open obligations: an underived selector completion, an unproved all-even signed-branch induction beyond side 12, and controller/material envelopes not tied to a physical implementation model. Why this blocks: the runner checks finite metrics and target specifications after setting the relevant certificate/envelope data, but does not compute the missing theorem or hardware bridge. Repair target: prove gap(L)*L^2 >= 0.390 and Bell*(L) >= 0.999702 for every even L >= 4 on the signed G=-1000 branch, derive or independently justify the selector completion, close the native record apparatus dependency, and connect the controller/material thresholds to an actual noise/material model. Claim boundary until fixed: state-only teleportation planning artifact with explicit acceptance surfaces; no matter, mass, charge, energy, object, or faster-than-light transport claim.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md`
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
