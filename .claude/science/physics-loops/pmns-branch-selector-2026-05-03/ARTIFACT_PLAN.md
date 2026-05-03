@@ -43,5 +43,5 @@ Expected: PASS=N/0 with N ≥ 15.
 
 - Commit science block on `physics-loop/pmns-branch-selector-2026-05-03`.
 - Push branch.
-- Open PR with title `[physics-loop][cycle21] PMNS branch selector — CP-sheet blindness selects Branch A by exclusion`.
+- Open PR with title `[physics-loop][cycle21] PMNS branch selector — CP-sheet blindness excludes the current Branch-B bank`.
 - PR body links to all loop-pack files, the new note, and runner output.

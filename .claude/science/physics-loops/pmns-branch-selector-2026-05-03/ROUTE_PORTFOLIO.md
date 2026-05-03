@@ -19,7 +19,7 @@ The min-info selector chooses the off-seed source minimizing
 
 **Score (a) closing**: 0. The minimum-information functional is an
 **imported** information-geometric quantity. It is not derivable
-from retained Cl(3) staggered Dirac structure or from retained
+from the current Cl(3) staggered Dirac structure or from current
 CPT structure on the current bank.
 
 **Score (b) obstruction**: 1. The functional has no first-principles
@@ -35,7 +35,7 @@ The observable-relative-action selector chooses the source minimizing
 `S_rel(H_e || H_seed) = Tr(H_seed^{-1} H_e) - log det(H_seed^{-1} H_e) - 3`.
 
 **Score (a) closing**: 0. While the `log det` factor connects to the
-retained scalar observable principle (cycle 03), the `Tr` and `-3`
+current scalar observable principle (cycle 03), the `Tr` and `-3`
 terms are not framework-native. The objective is an imported
 action-functional, not a Cl(3)-derived stationary principle.
 
@@ -64,7 +64,7 @@ selector for `η_obs` itself.
 
 ## Route D — symmetry/parity (CP-sheet blindness) — rank 1
 
-The retained CP-sheet blindness theorem (P4) proves that EVERY
+The cited CP-sheet blindness theorem proves that EVERY
 current Branch-B selector objective is even under δ → -δ, while
 the baryogenesis source channel `γ = x_1 y_3 sin(δ)` is odd. So
 every Branch-B "winner" comes paired with its CP-conjugate "winner"
@@ -83,11 +83,11 @@ choose a CP-symmetric pair.
 Branch-B closure of η can be unique.
 
 **Verdict**: this is the cleanest, most structural result that can
-be made on the current bank. It selects Branch A by EXCLUSION:
-Branch A is not a Branch-B selector, hence does not have the parity
-problem; Branch A's prediction (cycle 18's 0.1888 decomposition) is
-already a unique numerical output that does not require choosing
-among CP-conjugate pairs.
+be made on the current bank. It excludes the current Branch-B selector
+bank as a unique-selection law: Branch A is not a Branch-B selector,
+hence does not have the parity problem; Branch A's prediction (cycle
+18's 0.1888 decomposition) is already a unique numerical output that
+does not require choosing among CP-conjugate pairs.
 
 ## Route E — direct comparison + counterfactual — rank 2
 
@@ -109,10 +109,10 @@ Route E's comparison data as a counterfactual section.
 Route D is selected as the primary cycle output because:
 
 1. It is a structural exclusion theorem on the current bank (using
-   already-retained CP-sheet blindness premise).
-2. It immediately resolves the branch-selector ambiguity by
-   exclusion: no Branch-B selector can choose a unique baryogenesis
-   witness, hence Branch B cannot uniquely close η.
+   the cited CP-sheet blindness premise).
+2. It sharpens the branch-selector ambiguity by exclusion: no
+   current Branch-B selector can choose a unique baryogenesis
+   witness, hence Branch B cannot uniquely close η under this bank.
 3. By contrast, Branch A produces 0.1888 deterministically (cycle
    18's structural decomposition).
 4. The PR delivers (a) named obstruction, (b) structural insight,

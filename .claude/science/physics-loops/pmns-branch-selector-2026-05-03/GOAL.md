@@ -17,7 +17,7 @@ The framework's `dW_e^H` source-side bundle admits two distinct
 - **Branch A** (one-flavor reduced surface): exact theorem-native
   radiation transport on the reduced one-flavor surface, computing
   `η/η_obs = 0.18879` directly from `(516/53009) · Y₀² · F_CP ·
-  κ_axiom`. Cycle 18 closed this structurally.
+  κ_axiom`. Cycle 18 reported this structural decomposition.
 
 - **Branch B** (PMNS-assisted off-seed source): on the fixed native
   N_e seed surface `(x̄, ȳ) = (0.5633, 0.3067)`, the constructive
@@ -38,7 +38,7 @@ question of WHICH branch is framework-native.
 ## Best ranked route
 
 Route D (symmetry / parity / CP-sheet blindness). This is the
-strongest negative-structural result already retained on the surface
+strongest negative-structural result already carried on the current surface
 (`DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16`),
 which proves all four Branch-B selectors are even under `δ → -δ`
 while the source channel `γ = x_1 y_3 sin(δ)` is odd.

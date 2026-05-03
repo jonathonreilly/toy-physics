@@ -4,10 +4,11 @@
     "decoration": 7,
     "meta": 45,
     "no_go": 160,
-    "open_gate": 88,
-    "positive_theorem": 865
+    "open_gate": 89,
+    "positive_theorem": 864,
+    "unset": 1
   },
-  "computed_at": "2026-05-03T14:37:24.144155+00:00",
+  "computed_at": "2026-05-03T14:46:06.238809+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -51,11 +52,11 @@
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "meta": 45,
     "open_gate": 15,
-    "retained": 75,
+    "retained": 74,
     "retained_bounded": 167,
     "retained_no_go": 100,
     "retained_pending_chain": 2,
-    "unaudited": 777
+    "unaudited": 779
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

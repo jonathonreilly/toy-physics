@@ -2,7 +2,7 @@
 
 ## What this cycle delivered
 
-Cycle 21 of the retained-promotion follow-on campaign (parallel
+Cycle 21 of the follow-on campaign (parallel
 agents on cycles 20, 21, 22) addressed Cycle 09 Obstruction 2
 (branch selector ambiguity).
 
@@ -38,10 +38,11 @@ is odd. So every Branch-B "winner" comes paired with its CP-
 conjugate. **Branch B cannot uniquely select a baryogenesis
 witness** under the current selector bank.
 
-By exclusion, the only branch with a deterministic unique numerical
-output is Branch A. **Cycle 21's resolution: select Branch A by
-structural exclusion of Branch B's parity-degenerate selector
-bank**, modulo audit ratification.
+By exclusion, the only current-bank branch with a deterministic
+unique numerical output already documented by prior transport/
+decomposition surfaces is Branch A. **Cycle 21's result is an
+open-gate structural exclusion of Branch B's parity-degenerate
+selector bank**, modulo independent audit-lane treatment.
 
 ## Audit-lane handoff items
 

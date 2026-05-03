@@ -287,11 +287,12 @@ def part4_counterfactual_cp_odd() -> None:
         f"O_odd(0.7)={val_pos:.4f}, O_odd(-0.7)={val_neg:.4f}",
     )
 
-    # However, no such CP-odd selector is currently retained on the framework.
+    # However, no such CP-odd selector is currently audit-ratified on the
+    # framework surface.
     # The right-sensitive 2-real Z_3 doublet-block selector law (cycle 09
     # transport-status open object) is the candidate target.
     check(
-        "no CP-odd selector currently retained on framework — open obstruction",
+        "no CP-odd selector currently audit-ratified on framework surface — open obstruction",
         True,
         "named in cycle 09 transport-status as right-sensitive Z_3 doublet-block law",
     )
@@ -379,11 +380,11 @@ def part7_v_gate() -> None:
         ),
         "V2": (
             "Synthesis of (a) cycle 18's Branch-A decomposition, "
-            "(b) retained CP-sheet blindness theorem, (c) four candidate "
+            "(b) cited CP-sheet blindness theorem, (c) four candidate "
             "selectors → uniqueness exclusion theorem; not in any single note"
         ),
         "V3": (
-            "Audit lane lacks the synthesis: parity argument is in P4 but "
+            "Audit lane lacks the synthesis: parity argument is in A3 but "
             "not connected to branch-selector ambiguity; requires recognizing "
             "applicability across all four selectors uniformly"
         ),

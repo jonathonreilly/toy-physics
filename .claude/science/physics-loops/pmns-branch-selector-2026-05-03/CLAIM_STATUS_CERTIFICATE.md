@@ -22,11 +22,12 @@ claim_type_reason: |
   selector bank (min-info, observable-relative-action, transport-
   extremal, continuity-closure) is CP-sheet blind, hence cannot
   uniquely select a baryogenesis witness. By exclusion, Branch A
-  (one-flavor reduced surface) is selected as the framework-native
-  branch — but only modulo the audit ratification of the CP-sheet
-  blindness theorem (P4) and the cycle-18 structural decomposition
-  (P2). This is a sharpening of cycle 09 Obstruction 2, NOT a closing
-  derivation.
+  (one-flavor reduced surface) is the only current-bank branch with
+  a deterministic numerical output already documented by prior
+  transport/decomposition surfaces — but only modulo independent
+  audit-lane treatment of the cited CP-sheet blindness theorem and
+  the cycle-18 structural decomposition. This is a sharpening of
+  cycle 09 Obstruction 2, NOT a closing derivation.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -36,8 +37,8 @@ bare_retained_allowed: false
 | # | Question | Pass/Fail |
 |---|----------|-----------|
 | V1 | Closes/sharpens cycle 09 Obstruction 2 by EXCLUDING all four Branch-B selectors via CP-sheet blindness | PASS |
-| V2 | New synthesis of cycle 18 (Branch A decomposition) + retained CP-sheet blindness + four candidate selectors → uniqueness exclusion theorem | PASS |
-| V3 | Audit lane does not have this synthesis; the parity argument is in P4 but not connected to the branch-selector ambiguity | PASS |
+| V2 | New synthesis of cycle 18 (Branch A decomposition) + cited CP-sheet blindness + four candidate selectors -> uniqueness exclusion boundary | PASS |
+| V3 | Audit lane does not have this synthesis; the parity argument is in A3 but not connected to the branch-selector ambiguity | PASS |
 | V4 | Five-route portfolio + symbolic parity verification across four selectors + Route-E counterfactual is substantive | PASS |
 | V5 | Different from cycle 09 (near-fit catalogue), cycle 12 (cp1/cp2 = -√3 partial), cycle 18 (structural decomposition); cycle 21 does branch-selector LAW analysis | PASS |
 
@@ -45,13 +46,13 @@ All five gate questions pass.
 
 ## Dependencies
 
-- (P1) cycle 06 Majorana null-space — retained
-- (P2) cycle 18 structural decomposition — bounded_theorem (audit
+- (A1) cycle 18 structural decomposition — bounded_theorem (audit
   ratification pending)
-- (P3) H-source-surface chart constants — support-grade
-- (P4) CP-sheet blindness theorem — audited_conditional retained
-- (P5) Four candidate selectors — support-grade
-- (P6) cycle 09 transport-status — audited_conditional retained
+- (A2) H-source-surface chart constants — support-grade
+- (A3) CP-sheet blindness theorem — exact obstruction theorem on open gate;
+  effective status pipeline-derived
+- (A4) Four candidate selectors — support-grade
+- (A5) cycle 09 transport-status — historical/exact transport provenance
 
 ## Open imports
 

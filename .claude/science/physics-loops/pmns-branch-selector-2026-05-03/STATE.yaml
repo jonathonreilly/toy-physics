@@ -1,12 +1,12 @@
 slug: pmns-branch-selector-2026-05-03
 campaign: pmns-branch-selector
 cycle: 21
-parent_campaign: retained-promotion-2026-05-02
+parent_campaign: follow-on-2026-05-02
 parent_cycles_addressed: [09, 12, 18]
 
 mode: run
 target: best-honest-status
-target_claim_type: open  # stretch-attempt expected; may close to bounded_theorem
+target_claim_type: open_gate  # stretch-attempt expected; audit lane owns status
 actual_current_surface_status: open
 conditional_surface_status: null
 hypothetical_axiom_status: null
@@ -37,8 +37,8 @@ hard_residual_being_attacked: |
   objective is even under δ → -δ, while γ = x₁y₃ sin(δ) is odd.
   Therefore every "winner" comes with an equally winning CP partner;
   no Branch-B selector can choose a unique baryogenesis witness.
-  This is a NEGATIVE structural result that selects Branch A by
-  exclusion of Branch B (modulo audit ratification).
+  This is a NEGATIVE structural result that excludes the current
+  Branch-B selector bank (modulo audit-lane treatment).
 
 route_portfolio:
   - id: A
@@ -73,4 +73,4 @@ next_exact_action: |
   Execute Route D — write the CP-sheet-blindness branch-selector note,
   build the runner verifying the parity argument, package the loop
   pack, and open the PR.
-stop_condition: cycle 21 closes (one block, one PR)
+stop_condition: cycle 21 records one open-gate block in one PR

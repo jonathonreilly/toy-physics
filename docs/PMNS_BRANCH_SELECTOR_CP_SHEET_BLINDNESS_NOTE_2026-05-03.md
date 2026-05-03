@@ -1,11 +1,12 @@
-# PMNS Branch Selector — CP-Sheet Blindness Selects Branch A by Exclusion
+# PMNS Branch Selector — CP-Sheet Blindness Excludes the Current Branch-B Bank
 
 **Date:** 2026-05-03
-**Type:** stretch_attempt (output type c) — negative structural exclusion theorem
-**Cycle:** 21 of retained-promotion follow-on campaign 2026-05-03
+**Type:** stretch_attempt (output type c) — negative structural open-gate note
+**Cycle:** 21 of follow-on campaign 2026-05-03
 **Branch:** physics-loop/pmns-branch-selector-2026-05-03
 **Claim type:** open_gate (sharpens cycle 09 Obstruction 2)
 **Status:** open with negative structural conclusion (not retained-grade)
+**Script:** scripts/frontier_pmns_branch_selector.py
 
 This document is a branch-local physics-loop artifact. Its `Status:`
 line is not an audit-ratified retained status. Independent audit-lane
@@ -25,32 +26,35 @@ This cycle synthesizes:
 
 1. **cycle 18's structural decomposition** of Branch A:
    `η/η_obs|_A = (516/53009) · Y₀² · F_CP · κ_axiom = 0.18879...`,
-   from `ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03`.
+   from
+   [`ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md`](ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md).
 2. **the four candidate Branch-B selectors**:
    - **min-info**: `D_KL(x||x_seed) + D_KL(y||y_seed) + (1 - cos δ)`
    - **observable-relative-action**: `Tr(H_seed^{-1} H_e) -
      log det(H_seed^{-1} H_e) - 3`
    - **transport-extremal**: `max_i η_i / η_obs`
    - **continuity-closure**: `λ_*` along seed→witness interpolation
-3. **the retained CP-sheet blindness theorem**:
-   `DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16`,
+3. **the cited CP-sheet blindness theorem**:
+   [`DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md),
    which proves every Branch-B selector objective above is even
    under `δ → -δ`, while the baryogenesis source channel
    `γ = x_1 y_3 sin(δ)` is odd.
 
-**Resolution by exclusion**: every Branch-B selector under the
+**Open-gate boundary by exclusion**: every Branch-B selector under the
 current bank produces a CP-DEGENERATE pair `(δ, -δ)` with equal
 selector value but opposite γ. So no Branch-B selector chooses a
 unique baryogenesis witness; Branch B cannot uniquely close η/η_obs
 under the current selector bank.
 
-By exclusion, **Branch A is the only branch with a deterministic
-unique numerical output** under the current bank — modulo audit
-ratification of cycle 18's decomposition (the structural form is
-explicit; numerical value reproduces to 12 decimal digits).
+Within the current bank, **Branch A is the only branch with a
+deterministic unique numerical output already documented by the
+prior-cycle transport/decomposition surface**. This remains an
+open-gate synthesis: cycle 18's decomposition and this note's
+dependency chain still require independent audit-lane treatment
+before any retained-grade reuse.
 
 This does NOT close cycle 09 Obstruction 2 by constructing a
-positive selector. It SHARPENS Obstruction 2 to a structural
+positive selector. It sharpens Obstruction 2 to a structural
 exclusion: the entire current Branch-B selector bank fails the
 parity test, so the only remaining route to unique η-closure is
 Branch A. The numerical mismatch `0.1888 ≠ 1.0` between the two
@@ -59,29 +63,28 @@ the already-named Y₀² and α_LM imports.
 
 ## A_min (minimal allowed premise set)
 
-- (P1, retained) `SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02`
-  (cycle 06): with-ν_R Majorana null-space has unique
-  `ν_R^T C P_R ν_R` operator.
-- (P2, bounded_theorem, audit-pending)
-  `ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03` (cycle 18):
+- (A1, bounded_theorem, audit-pending)
+  [`ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md`](ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md)
+  (cycle 18):
   `η/η_obs|_A = (516/53009) · Y₀² · F_CP · κ_axiom`. Pure-rational
   ABC closure with π⁴·ζ_3 cancellation.
-- (P3, support-grade)
-  `DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16`:
+- (A2, support-grade)
+  [`DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md`](DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md):
   `γ = 1/2, E₁ = √(8/3), E₂ = √8/3` chart constants on N_e seed
   surface.
-- (P4, audited_conditional retained)
-  `DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16`:
+- (A3, exact obstruction theorem on open gate; effective status is
+  pipeline-derived)
+  [`DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md):
   every current Branch-B selector objective is even under
   `δ → -δ`.
-- (P5, support-grade) Four candidate Branch-B selectors:
-  - `DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16`
-  - `DM_LEPTOGENESIS_PMNS_OBSERVABLE_RELATIVE_ACTION_LAW_NOTE_2026-04-16`
-  - `DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16`
-  - `DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17`
-- (P6, audited_conditional retained)
-  `DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16` (cycle 09
-  parent): documents Branch A and Branch B.
+- (A4, support-grade) Four candidate Branch-B selectors:
+  - [`DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16.md)
+  - [`DM_LEPTOGENESIS_PMNS_OBSERVABLE_RELATIVE_ACTION_LAW_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_OBSERVABLE_RELATIVE_ACTION_LAW_NOTE_2026-04-16.md)
+  - [`DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md)
+  - [`DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17.md`](DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17.md)
+- (A5, historical/exact transport provenance)
+  [`DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)
+  (cycle 09 parent): documents Branch A and Branch B.
 
 ## Forbidden imports (declared)
 
@@ -152,7 +155,7 @@ yielding `η_{i_*} / η_obs = 1.0` on the favored column `i_*`:
 
 ## The CP-sheet blindness exclusion
 
-The retained CP-sheet blindness theorem (P4) proves:
+The cited CP-sheet blindness theorem (A3) proves:
 
 1. The min-info objective `D_KL(x||x_seed) + D_KL(y||y_seed) +
    (1 - cos δ)` is even under `δ → -δ` (because `cos(-δ) = cos δ`
@@ -194,7 +197,7 @@ A unique selection requires breaking the `δ → -δ` symmetry. The
 current Branch-B selector bank does not contain such a CP-odd
 functional.
 
-## Resolution by exclusion
+## Open-gate boundary by exclusion
 
 The cycle 21 resolution:
 
@@ -202,11 +205,12 @@ The cycle 21 resolution:
 > Branch A produces a deterministic unique numerical η output.
 > Branch B's predictions are necessarily CP-paired (parity-
 > degenerate), hence cannot uniquely close η without an additional
-> CP-odd structural input that is not currently retained.
+> CP-odd structural input that is not currently audit-ratified.
 
-Therefore, **modulo audit ratification of cycle 18's structural
-decomposition (P2) and the CP-sheet blindness theorem (P4)**, the
-framework's deterministic prediction is Branch A's
+Therefore, **modulo independent audit treatment of cycle 18's
+structural decomposition (A1), the cited CP-sheet blindness theorem
+(A3), and this open-gate synthesis**, the framework's current-bank
+deterministic branch is Branch A's
 `(516/53009) · Y₀² · F_CP · κ_axiom`.
 
 The 0.1888 ≠ 1.0 numerical mismatch between Branch A and Branch B
@@ -229,8 +233,8 @@ a deterministic transport-chain output without selector freedom.
 
 ## Counterfactual — what would a Branch-B closure require?
 
-For Branch B to provide a unique η-closure, the framework must
-provide a NEW retained CP-odd selector functional. Examples of
+For Branch B to provide a unique η-closure, the framework would need
+an audit-ratified CP-odd selector functional. Examples of
 what would NOT work (already considered and ruled out):
 
 - **CP-odd polynomial in `(ξ, η, δ)`**: the `δ → -δ` symmetry
@@ -243,7 +247,7 @@ what would NOT work (already considered and ruled out):
   framework's discreteness-from-Cl(3) principle.
 
 A genuinely framework-native CP-odd selector would need to derive
-a sign convention from retained Cl(3)/Z³ structure. The closest
+a sign convention from current Cl(3)/Z³ structure. The closest
 candidate in the framework's existing language is the **right-
 sensitive 2-real Z_3 doublet-block selector law** named in cycle
 09's transport-status note as the open theorem object. Closing
@@ -317,33 +321,32 @@ verifies:
 
 ## Cited dependencies
 
-- (P1) `SM_REP_DERIVED_MAJORANA_NULL_SPACE_THEOREM_NOTE_2026-05-02`
-  (retained, cycle 06).
-- (P2) `ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03`
+- (A1) [`ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md`](ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md)
   (bounded_theorem, audit-pending, cycle 18).
-- (P3) `DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16`
+- (A2) [`DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md`](DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md)
   (support-grade).
-- (P4) `DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16`
-  (audited_conditional retained).
-- (P5a) `DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16`
+- (A3) [`DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md)
+  (exact obstruction theorem on open gate; effective status pipeline-derived).
+- (A4a) [`DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_MINIMUM_INFORMATION_SOURCE_LAW_NOTE_2026-04-16.md)
   (support-grade).
-- (P5b) `DM_LEPTOGENESIS_PMNS_OBSERVABLE_RELATIVE_ACTION_LAW_NOTE_2026-04-16`
+- (A4b) [`DM_LEPTOGENESIS_PMNS_OBSERVABLE_RELATIVE_ACTION_LAW_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_OBSERVABLE_RELATIVE_ACTION_LAW_NOTE_2026-04-16.md)
   (support-grade).
-- (P5c) `DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16`
+- (A4c) [`DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md)
   (support-grade).
-- (P5d) `DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17`
+- (A4d) [`DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17.md`](DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17.md)
   (support-grade).
-- (P6) `DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16` (audited_conditional
-  retained, cycle 09 parent).
+- (A5) [`DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md`](DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)
+  (historical/exact transport provenance, cycle 09 parent).
 
 ## Cross-references
 
-- `ETA_COSMOLOGY_DERIVATION_STRETCH_ATTEMPT_NOTE_2026-05-02` (cycle 09 parent;
-  this cycle sharpens its Obstruction 2).
-- `EPSILON1_FROM_CP_CHAIN_STRETCH_ATTEMPT_NOTE_2026-05-03` (cycle 12; this
-  cycle inherits cp1/cp2 = -√3).
-- `ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03` (cycle 18; this cycle
-  uses the structural decomposition of Branch A).
+- `ETA_COSMOLOGY_DERIVATION_STRETCH_ATTEMPT_NOTE_2026-05-02.md`
+  (cycle 09 parent named in prior-cycle materials; not present as a
+  current-main source dependency).
+- [`EPSILON1_FROM_CP_CHAIN_STRETCH_ATTEMPT_NOTE_2026-05-03.md`](EPSILON1_FROM_CP_CHAIN_STRETCH_ATTEMPT_NOTE_2026-05-03.md)
+  (cycle 12; this cycle inherits cp1/cp2 = -√3).
+- [`ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md`](ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md)
+  (cycle 18; this cycle uses the structural decomposition of Branch A).
 
 ## Honest claim type
 
