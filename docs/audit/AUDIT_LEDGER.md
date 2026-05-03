@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:49:51.234500+00:00
+**Generated:** 2026-05-03T19:50:50.684305+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 180 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 714 |
+| unaudited | 713 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 548 |
+| ~~audited_conditional~~ | 549 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 338 |
-| `audited_conditional` | 548 |
+| `audited_conditional` | 549 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 760 |
+| `unaudited` | 759 |
 
 | claim_type | count |
 |---|---:|
@@ -471,6 +471,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `axiom_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `beyond_lattice_qcd_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `bmv_bounded_negative_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1727,6 +1728,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
+
+### `b_independence_mechanism_note`
+
+- **Note:** [`B_INDEPENDENCE_MECHANISM_NOTE.md`](../../docs/B_INDEPENDENCE_MECHANISM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded mechanism diagnostic that the cited finite path-sampling and field-localization outputs support local path preservation, graph-wide field response, and no clean 1/b recovery on the tested retained modular DAG family.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-minkowski`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The graph preserves local paths; the field spreads enough to act as a smooth phase valley on that path ensemble; the integrated phase perturbation is then dominated by a graph-averaged field, which is why the force behaves topologically rather than like a simple geometric 1/b law.  _(class `C`)_
+- **chain closes:** False — The cited completed diagnostics support the narrower observed pattern, but the mechanism conclusion relies on the retained status and correctness of the underlying modular-family generator and distance-law closure, which are not supplied as dependencies in the restricted packet.
+- **rationale:** Issue: the note turns finite diagnostic outputs into a mechanism claim about the retained linear path-sum architecture, but the restricted packet does not include the theorem or retained dependency establishing the modular DAG family, field construction, and distance-law closure as valid inputs. Why this blocks: the mechanism inference cannot be audited as a closed bounded theorem from the note and cited diagnostics alone, even though the completed log is consistent with the narrower observation. Repair target: add explicit retained dependencies or a self-contained derivation/runner certificate for the graph family, field law, and distance-law closure used by the diagnostics. Claim boundary until fixed: the note may safely state that the cited diagnostics, on the tested implementation and seeds, show channel preservation and no clean 1/b recovery for tested localized fields.
+- **open / conditional deps cited:**
+  - `scripts/four_d_distance_scaling.py`
+- **auditor confidence:** medium
 
 ### `background_independence_note`
 
