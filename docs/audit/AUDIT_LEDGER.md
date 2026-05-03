@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:28:34.003366+00:00
+**Generated:** 2026-05-03T17:30:29.209242+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 765 |
+| unaudited | 764 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 28 |
+| ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 525 |
 | ~~audited_failed~~ | 9 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 525 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
-| `audited_numerical_match` | 28 |
+| `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 811 |
+| `unaudited` | 810 |
 
 | claim_type | count |
 |---|---:|
@@ -1009,6 +1009,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_finite_lattice_numerical_replay | - |
 | `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `fourth_family_quadrant_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_numerical_sweep_to_retained_basin | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh | G | - |
@@ -6055,6 +6056,25 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_dm_leptogenesis_k00_sparse_face_target_preimage_theorem.py`
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19.py`
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_2026_04_20.py`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_REDUCED_PACKET_COMPLEX_GIVENS_SELECTOR_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_REDUCED_PACKET_COMPLEX_GIVENS_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Existence and least-Frobenius-distance selection of an ordered complex-Givens dressing G12.G13.G23 that matches the reduced packet (E1,E2,S12,S13) on the selected 3d retained slice; not full 9-channel sparse-face equality.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Inside the fixed selected slice, the runner solves the reduced projected-source packet equation within the ordered complex-Givens grammar G12.G13.G23 and chooses the exact solution with least Frobenius distortion to the identity basis.  _(class `G`)_
+- **chain closes:** False — The runner reports PASS=5 FAIL=0 with residuals near 1e-11, but the load-bearing construction is a least_squares fit of six Givens parameters to an imported target packet on an imported selected slice. The note/runner packet does not provide a retained exact certificate, exhaustive solution proof, or explicit audited dependency chain for the selected slice and target maps.
+- **rationale:** Issue: the claimed exact selector is produced by numerical least_squares against the target packet, then downstream packet and live-target equalities are checked after the target/slice maps have already been imported. Why this blocks: a hostile reviewer can reject the theorem as a tuned numerical match rather than an exact retained derivation, and the empty dependency list does not close the selected-slice/source-law/target-preimage inputs. Repair target: provide a certified exact or interval proof of existence and strict minimality over the stated Givens grammar, plus audited dependency paths for the selected retained slice, target preimage, source law, and live-target map. Claim boundary until fixed: the runner has found approximate fitted complex-Givens parameters with small residual and a finite-seed distortion gap for the reduced packet, not an independently closed exact theorem.
+- **open / conditional deps cited:**
+  - `scripts/frontier_dm_leptogenesis_dweh_even_split_transfer_layer.py`
+  - `scripts/frontier_dm_leptogenesis_k00_sparse_face_target_preimage_theorem.py`
+  - `scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py`
+  - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19.py`
+  - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_2026_04_20.py`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19`
