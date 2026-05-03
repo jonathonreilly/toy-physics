@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:06:45.644531+00:00
+**Generated:** 2026-05-03T20:07:32.231099+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 181 |
+| **retained_bounded** | 182 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 706 |
+| unaudited | 705 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 341 |
+| `audited_clean` | 342 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 752 |
+| `unaudited` | 751 |
 
 | claim_type | count |
 |---|---:|
@@ -380,6 +380,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_test_mass_companion_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_two_field_wave_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
+| `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `substrate_to_p_a_forcing_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
@@ -13636,6 +13637,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The note gives a scan summary and cites the scripts, but provides no completed exhaustive scan transcript, cached certificate, or registered runner output certifying the minimum Born readout over every scanned row.
 - **rationale:** Issue: the load-bearing null result is asserted from a finite scan without a completed output/certificate showing every listed configuration and seed was evaluated and that the minimum corrected Born readout stayed above threshold. Why this blocks: the bounded theorem is a computational exhaustion claim, so the source note plus scripts define the search but do not by themselves certify the exhaustive result. Repair target: add a registered runner or cached transcript that emits a PASS/certificate for the exact scanned grid, seed policy, Born threshold, and minimum row. Claim boundary until fixed: the note may be cited as a negative-control scan report, not as an audited retained bounded theorem.
 - **auditor confidence:** high
+
+### `structured_mirror_reconciliation_note`
+
+- **Note:** [`STRUCTURED_MIRROR_RECONCILIATION_NOTE.md`](../../docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The retained canonical linear structured-growth validator output is O(1e-1), so the structured-growth lane is not Born-clean under that canonical harness.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-wigner`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The canonical validator reports Born |I3|/P values of 2.51e-01, 1.71e-01, and 1.71e-01, so the canonical structured-growth validator is not Born-clean.  _(class `C`)_
+- **chain closes:** True — The saved canonical validation log gives completed numerical outputs far above machine precision for all listed N. That closes the bounded negative claim without requiring a long run.
+- **rationale:** The bounded claim is conservative and directly supported by the cited saved validator output: the canonical structured-growth Born ratios are O(1e-1), not machine-clean. This audit does not certify any stronger structured-growth Born-clean result or the exact 2D mirror lane; it only certifies the canonical-harness negative result.
+- **auditor confidence:** medium
 
 ### `structureless_dag_gravity_harness_note`
 
