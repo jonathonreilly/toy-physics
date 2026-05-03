@@ -1,35 +1,34 @@
 #!/usr/bin/env python3
 """
-v_even theorem retention from framework primitives — stretch attempt with partial closing-derivation.
+v_even theorem support from framework primitives — stretch attempt with partial closing-derivation.
 
 Question:
-  Can v_even = (sqrt(8/3), sqrt(8)/3) be retained from framework primitives,
-  retiring the audited_conditional status of:
+  Can v_even = (sqrt(8/3), sqrt(8)/3) be supported from framework primitives,
+  narrowing the audited_conditional status of:
     - DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM (td=1, lbs=C)
     - DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM (td=47, lbs=A)
 
 Convergent-funnel leverage:
-  Single retention here closes BOTH cycle 16 sub-B (E1 = sqrt(8/3))
-  and cycle 16 sub-C (E2 = sqrt(8)/3).
+  A ratified support route would narrow BOTH cycle 16 sub-B
+  (E1 = sqrt(8/3)) and cycle 16 sub-C (E2 = sqrt(8)/3).
 
 Approach:
   1. Verify the spectral identity (existing, restated for runner hygiene):
        spec(F1) = +/- sqrt(3/8) and spec(F2) = +/- 3/sqrt(8)
        isospectral up to null multiplicity to scaled Z_row = diag(1,-1).
   2. Verify the H-side source-surface witness existence — this is the
-     retained downstream theorem (td=45, audited_clean) and forces
+     cited downstream theorem and supports
      v_even = (sqrt(8/3), sqrt(8)/3) via the positive Hermitian witness.
   3. Verify the cp1/cp2 = -sqrt(3) ratio (cycle 12 prior input) is
      consistent with v_even = (sqrt(8/3), sqrt(8)/3) and falsifies
      specific counterfactual v_even values.
   4. Formulate and partially prove the Carrier Orbit Invariance Lemma:
      any exact linear readout from K_R(q) must be E/T-swap-invariant
-     because no retained operator distinguishes E from T on the current
-     carrier.
+     if no exact operator distinguishes E from T on the current carrier.
   5. Counterfactual perturbation tests on alternative v_even values.
 
 Outcome:
-  Three independent paths force v_even = (sqrt(8/3), sqrt(8)/3).
+  Three independent paths support v_even = (sqrt(8/3), sqrt(8)/3).
   The Carrier Orbit Invariance Lemma is formulated and the residual
   structural-exhaustion gap is named.
 """
@@ -183,11 +182,11 @@ def part1_spectral_isospectrality_independent_of_audited_conditional_runner() ->
 
 
 def part2_h_side_source_surface_witness_route() -> None:
-    """Route B: positive Hermitian witness from retained source-surface theorem."""
+    """Route B: positive Hermitian witness from cited source-surface theorem."""
     print("\n" + "=" * 88)
     print("PART 2: H-SIDE SOURCE-SURFACE WITNESS ROUTE")
     print("=" * 88)
-    print("  (uses retained DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM, td=45)")
+    print("  (uses cited DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM)")
 
     pkg = exact_package()
 
@@ -207,7 +206,7 @@ def part2_h_side_source_surface_witness_route() -> None:
         f"E2 = {pkg.E2:.12f}",
     )
 
-    # The retained surface equations are:
+    # The cited surface equations are:
     #   r31 sin(phi) = 1/2 = gamma
     #   d2 - d3 + r12 - r31 cos(phi) = 2 sqrt(8/3) = 2 E1
     #   2 d1 - d2 - d3 + r12 - 2 r23 + r31 cos(phi) = 2 sqrt(8)/3 = 2 E2
@@ -247,7 +246,7 @@ def part2_h_side_source_surface_witness_route() -> None:
     gamma_check = r31 * math.sin(phi)
 
     check(
-        "Witness satisfies retained gamma constraint (gamma = 1/2)",
+        "Witness satisfies gamma constraint (gamma = 1/2)",
         abs(gamma_check - 0.5) < 1e-12,
         f"r31 sin(phi) = {gamma_check:.12f}",
     )
@@ -265,7 +264,7 @@ def part2_h_side_source_surface_witness_route() -> None:
     v1 = b1 / 2.0
     v2 = b2 / 2.0
     check(
-        "v_even = (B1/2, B2/2) = (sqrt(8/3), sqrt(8)/3) read off from retained witness",
+        "v_even = (B1/2, B2/2) = (sqrt(8/3), sqrt(8)/3) read off from witness",
         abs(v1 - math.sqrt(8.0 / 3.0)) < 1e-12 and abs(v2 - math.sqrt(8.0) / 3.0) < 1e-12,
         f"v_even = ({v1:.12f}, {v2:.12f})",
     )
@@ -463,28 +462,28 @@ def part6_named_obstruction_residual_summary() -> None:
     print("PART 6: RESIDUAL STRUCTURAL-EXHAUSTION GAP — NAMED OBSTRUCTIONS")
     print("=" * 88)
 
-    # The retention path:
-    #  - v_even values forced 3 ways: spectral, witness, cp-ratio.
+    # The support path:
+    #  - v_even values supported 3 ways: spectral, witness, cp-ratio.
     #  - Carrier Orbit Invariance Lemma proved given:
     #     (1) carrier closed under swap (verified)
-    #     (2) retained weak-vector theorem column-ordering independent (verified)
+    #     (2) cited weak-vector theorem column-ordering independent (verified)
     #     (3) Theta_R^(0), Xi_R^(0) bounded not exact (verified)
     #     (4) Schur reduction: M = M P_ET => equal columns (verified)
     #
     # Residual gap: (3) shows specific E/T-distinguishing objects are bounded,
-    # but not that NO exact E/T-distinguishing operator exists. The retained
+    # but not that NO exact E/T-distinguishing operator exists. Retained-grade
     # exhaustion claim requires a classification or a no-go theorem.
     #
-    # However: the retained DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM (td=45)
+    # However: the cited DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM
     # already proves the values pull back to a nonempty H-side surface with
-    # explicit positive-Hermitian witness. So v_even is retained-bounded
-    # (consistent with retained witness existence), and the swap-reduction
-    # logical premise is the load-bearing residual.
+    # explicit positive-Hermitian witness. So v_even has bounded-support
+    # evidence, and the swap-reduction logical premise is the load-bearing
+    # residual.
 
     check(
-        "v_even = (sqrt(8/3), sqrt(8)/3) is forced by retained H-side source-surface witness existence",
+        "v_even = (sqrt(8/3), sqrt(8)/3) is supported by H-side source-surface witness existence",
         True,
-        "retained downstream theorem provides positive-Hermitian witness",
+        "cited downstream theorem provides positive-Hermitian witness",
     )
     check(
         "Spectral isospectrality (independent of v_even runner) confirms v_even values",
@@ -499,22 +498,22 @@ def part6_named_obstruction_residual_summary() -> None:
     check(
         "Carrier Orbit Invariance Lemma: swap-quotient requirement formulated",
         True,
-        "Premises 1-6 of Part 4 establish the lemma to retained-bounded grade",
+        "Premises 1-6 of Part 4 establish bounded support for the lemma",
     )
     check(
         "Residual gap NAMED: structural exhaustion (no exact E/T-distinguishing operator)",
         True,
-        "retained classification of admissible exact operators on K_R(q) carrier required",
+        "classification of admissible exact operators on K_R(q) carrier required",
     )
     check(
-        "Convergent funnel: cycle 16 sub-B (E1) becomes single-lemma-away from retained",
+        "Convergent funnel: cycle 16 sub-B (E1) has a single named support gap",
         True,
-        "given v_even retention via H-side witness, sub-B closes",
+        "given audit-ratified v_even support via H-side witness, sub-B narrows",
     )
     check(
-        "Convergent funnel: cycle 16 sub-C (E2) becomes single-lemma-away from retained",
+        "Convergent funnel: cycle 16 sub-C (E2) has a single named support gap",
         True,
-        "given v_even retention via H-side witness, sub-C closes",
+        "given audit-ratified v_even support via H-side witness, sub-C narrows",
     )
 
 
@@ -563,12 +562,12 @@ def part7_forbidden_imports_check() -> None:
 
 def main() -> int:
     print("=" * 88)
-    print("V_EVEN THEOREM RETENTION FROM FRAMEWORK PRIMITIVES")
+    print("V_EVEN THEOREM SUPPORT FROM FRAMEWORK PRIMITIVES")
     print("=" * 88)
     print()
     print("Cycle 17 of retained-promotion-2026-05-02 campaign.")
-    print("Convergent-funnel target: retire v_even theorem audited_conditional status,")
-    print("which closes BOTH cycle 16 sub-B (E1) and sub-C (E2) simultaneously.")
+    print("Convergent-funnel target: narrow v_even theorem audited_conditional status,")
+    print("which would narrow BOTH cycle 16 sub-B (E1) and sub-C (E2) if ratified.")
 
     part1_spectral_isospectrality_independent_of_audited_conditional_runner()
     part2_h_side_source_surface_witness_route()

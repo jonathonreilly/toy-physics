@@ -2,24 +2,27 @@
 
 **Date:** 2026-05-03
 **Type:** stretch_attempt (output type c) with PARTIAL closing-derivation
-**Claim scope:** documents a worked stretch attempt at retiring the v_even
+**Claim scope:** documents a worked stretch attempt at narrowing the v_even
 theorem (DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15)
 and the upstream weak-even-swap-reduction theorem
-(DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15) from
-audited_conditional to retained. v_even = (sqrt(8/3), sqrt(8)/3) is forced
-three independent ways from retained framework primitives + admitted-context
-math. Carrier Orbit Invariance Lemma is formulated and partially proved.
-Outcome: v_even values are retained-bounded via the retained downstream
-H-side source-surface witness theorem (audited_clean, td=45); the
-swap-reduction theorem's structural-exhaustion premise is the residual gap.
+(DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15). Any retirement
+from audited-conditional status requires independent audit. The branch argues
+that v_even = (sqrt(8/3), sqrt(8)/3) has three independent bounded-support
+routes from retained framework primitives plus admitted-context math. Carrier
+Orbit Invariance Lemma is formulated and partially proved. Outcome: bounded
+support candidate for the v_even values via the cited downstream H-side
+source-surface witness theorem; the swap-reduction theorem's
+structural-exhaustion premise is the residual gap.
 
 **Status:** stretch attempt with partial closing-derivation; audit-lane
 ratification required for any retained-grade interpretation.
 
+**Script:** `scripts/frontier_v_even_theorem_retention.py`
 **Runner:** [`scripts/frontier_v_even_theorem_retention.py`](./../scripts/frontier_v_even_theorem_retention.py)
 
-**Authority role:** convergent-funnel target — single retention here closes
-BOTH cycle 16 sub-B (E_1 = sqrt(8/3)) and cycle 16 sub-C (E_2 = sqrt(8)/3).
+**Authority role:** convergent-funnel target — if independently ratified, this
+would narrow both cycle 16 sub-B (E_1 = sqrt(8/3)) and cycle 16 sub-C
+(E_2 = sqrt(8)/3).
 
 **Cycle:** 17 of retained-promotion-2026-05-02 campaign.
 
@@ -148,8 +151,8 @@ linear algebra. Independent of the audited_conditional v_even runner.
 
 ### Route B: H-side source-surface witness route
 
-The retained `DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16`
-(audited_clean, td=45) proves the source surface
+The cited retained-grade `DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16`
+proves the source surface
 
 ```text
 r31 sin(phi) = 1/2 = gamma
@@ -173,14 +176,15 @@ and verifies:
 - B_1 = 2 sqrt(8/3) and B_2 = 2 sqrt(8)/3 are satisfied.
 - v_1 = B_1 / 2 = sqrt(8/3) and v_2 = B_2 / 2 = sqrt(8)/3.
 
-This route is load-bearing through the retained downstream theorem:
-the retained source-surface theorem requires γ, B_1, B_2 to take exactly
+This route is load-bearing through the cited downstream theorem:
+the source-surface theorem requires γ, B_1, B_2 to take exactly
 these values for the witness to be positive Hermitian.
 
-**This is the strongest retention path.** The retained source-surface
-theorem provides explicit positive-Hermitian evidence that v_even =
-(sqrt(8/3), sqrt(8)/3) is the unique vector consistent with H-side
-existence on the exact source surface.
+This is the strongest support path in the branch. The source-surface theorem
+provides explicit positive-Hermitian evidence that v_even =
+(sqrt(8/3), sqrt(8)/3) is the vector consistent with H-side existence on the
+exact source surface, but retained-grade reuse of that conclusion remains
+audit-lane work.
 
 ### Route C: cp1/cp2 = -sqrt(3) cross-check
 
@@ -242,8 +246,7 @@ claim — that NO such operator can exist — requires either:
   operator can be exact (not retained currently).
 
 This residual gap is the load-bearing structural premise that blocks
-absolute retention of the swap-reduction theorem from audited_conditional
-to audited_clean.
+retained-grade reuse of the swap-reduction theorem.
 
 ### Counterfactual perturbation tests
 
@@ -261,13 +264,13 @@ ratio, H-side witness consistency):
 
 All counterfactual values are falsified by all three routes.
 
-## What this closes
+## What this supports
 
-1. **v_even values forced three independent ways** (Routes A, B, C).
-   The retained downstream H-side source-surface theorem (td=45,
-   audited_clean) provides positive-Hermitian witness existence
-   evidence for v_even = (sqrt(8/3), sqrt(8)/3). This is genuine
-   retained-bounded support for the values.
+1. **v_even values supported three independent ways** (Routes A, B, C).
+   The cited downstream H-side source-surface theorem provides
+   positive-Hermitian witness existence evidence for v_even =
+   (sqrt(8/3), sqrt(8)/3). This is bounded support until independent audit
+   ratifies any retained-grade reuse.
 
 2. **v_even runner verdict ("missing artifact") repaired**: the
    cycle 17 runner provides three-way redundant verification with no
@@ -279,18 +282,18 @@ All counterfactual values are falsified by all three routes.
    identifying the exact load-bearing structural premise.
 
 4. **Cycle 16 sub-B and sub-C reduced to a single shared lemma**:
-   given v_even retention via the H-side witness route, both E_1
+   if the v_even support route is independently ratified, both E_1
    and E_2 chart constants become single-lemma-away from retained.
    The convergent-funnel observation is now operationalized.
 
 ## What this does not close
 
-- **Absolute retention of the swap-reduction theorem to audited_clean**:
+- **Retained-grade reuse of the swap-reduction theorem**:
   blocked on the structural-exhaustion premise (no exact E/T-distinguishing
   operator). The premise is partially established (specific operators
   bounded) but not exhaustively proved.
 
-- **Absolute retention of the v_even theorem to audited_clean**:
+- **Retained-grade reuse of the v_even theorem**:
   blocked on the same upstream swap-reduction premise (the runner is
   hardened, but the theorem's load-bearing reduction depends on the
   swap-quotient requirement).
@@ -305,28 +308,28 @@ All counterfactual values are falsified by all three routes.
 
 If independent audit ratifies this stretch attempt:
 
-1. v_even runner verdict shifts from "missing artifact" to
-   audited_clean (multi-way verification + retained H-side witness).
+1. v_even runner verdict can be reconsidered using the multi-way verification
+   and cited H-side witness.
 
 2. swap-reduction theorem verdict sharpened: residual gap is now a
    specific structural-exhaustion claim (Carrier Orbit Invariance
    Lemma residual). Future cycles can target this single named
    premise.
 
-3. Cycle 16 sub-B (E_1) and sub-C (E_2): given v_even retention,
-   both become retained-bounded via the same H-side witness chain.
+3. Cycle 16 sub-B (E_1) and sub-C (E_2): if the v_even support route is
+   ratified, both can reuse the same H-side witness chain.
 
-4. Convergent funnel discharged: cycle 16's two upstream theorems
-   (c_odd, v_even/swap-reduction) — v_even is now retained-bounded;
+4. Convergent funnel sharpened: cycle 16's two upstream theorems
+   (c_odd, v_even/swap-reduction) now have a concrete v_even support route;
    c_odd remains audited_conditional (cycle 16 sub-A partial).
 
 ## Honesty disclosures
 
 - This is a **stretch attempt with partial closing-derivation**, not
   an absolute closing derivation.
-- v_even values = (sqrt(8/3), sqrt(8)/3) are retained-bounded via the
-  retained downstream H-side source-surface witness theorem
-  (audited_clean, td=45). Three independent routes confirm.
+- v_even values = (sqrt(8/3), sqrt(8)/3) are proposed as bounded support via
+  the cited downstream H-side source-surface witness theorem. Three
+  independent routes support the proposal.
 - The Carrier Orbit Invariance Lemma is formulated; the residual
   structural-exhaustion gap is named precisely.
 - Audit-lane ratification required for any retained-grade
