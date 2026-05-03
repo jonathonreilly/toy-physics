@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:28:46.686134+00:00
+**Generated:** 2026-05-03T21:29:35.348241+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 85 |
+| **retained** | 86 |
 | **retained_no_go** | 106 |
 | **retained_bounded** | 199 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 683 |
+| unaudited | 682 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 364 |
+| `audited_clean` | 365 |
 | `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 730 |
+| `unaudited` | 729 |
 
 | claim_type | count |
 |---|---:|
@@ -300,6 +300,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_rg_alpha_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `lattice_nn_rg_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `lattice_weak_field_mass_scaling_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-context | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
@@ -9566,6 +9567,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The restricted packet has no registered primary runner or retained upstream proof artifact for the leaf claim.
 - **rationale:** Issue: no primary runner or retained one-hop proof artifact is registered for this leaf row. Why this blocks: the audit packet does not expose an independently checkable load-bearing computation. Repair target: register a runner/proof note for the load-bearing step or cite an audited retained dependency. Claim boundary until fixed: safe to cite as a bounded note without audit-ratified executable closure.
 - **auditor confidence:** medium
+
+### `lattice_weak_field_mass_scaling_note`
+
+- **Note:** [`LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md`](../../docs/LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite deterministic strength sweep on the max_dy=5 wide_center ordered-lattice weak-field pocket showing positive retained rows and a sub-linear fitted gravity response over strengths 1e-5 through 5e-4.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-weak-field-mass-scaling`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The sweep gives gravity = 2.6960 * strength^0.353 with R^2 = 0.971, so the weak-field ordered-lattice pocket has a positive but sub-linear mass-proxy response rather than an F proportional to M law.  _(class `C`)_
+- **chain closes:** True — The one-hop dependency supplies the retained_bounded weak-field ordered-lattice pocket and the runner recomputes the stated strength sweep without timeout. The output matches the note's monotone positive gravity rows and alpha=0.353 sub-linear fit.
+- **rationale:** The load-bearing step is a completed first-principles finite harness computation over the retained bounded pocket, not a definition or symbol rename. The runner recomputes all six strength rows, the retained-row criteria, and the power-law fit; its current output agrees with the note. The clean verdict is limited to the stated finite sweep and fitted sub-linear response, not to a universal continuum mass law.
+- **auditor confidence:** high
 
 ### `lensing_adjoint_kernel_reduced_model_note`
 
