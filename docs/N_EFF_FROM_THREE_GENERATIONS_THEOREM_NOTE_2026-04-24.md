@@ -180,5 +180,5 @@ The runner uses the Python standard library only.
   - independent anomaly witness for the neutral `nu_R` slot when B-L is gauged.
 - [`NEUTRINO_MASS_DERIVED_NOTE.md`](NEUTRINO_MASS_DERIVED_NOTE.md)
   - retained Majorana scale and atmospheric neutrino package.
-- [`MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+- `MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
   - equality-redshift identity using the resulting standard radiation density.

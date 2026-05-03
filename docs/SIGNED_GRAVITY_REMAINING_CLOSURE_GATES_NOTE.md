@@ -88,7 +88,8 @@ target:
 > families, with zero modes quarantined or lifted by retained structure.
 
 The decisive native-containment follow-up is now recorded in
-[`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md`](SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md)
+`SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md` (sibling
+artifact; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_native_boundary_complex_containment.py`](../scripts/signed_gravity_native_boundary_complex_containment.py).
 

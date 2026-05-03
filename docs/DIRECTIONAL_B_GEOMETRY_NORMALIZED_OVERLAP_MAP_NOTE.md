@@ -104,7 +104,7 @@ Read this with:
 
 - [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md)
 - [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md)
-- [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md)
+- `docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md` (sibling artifact in same lane; cross-reference only — not a one-hop dep of this note)
 - [`docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`](/Users/jonreilly/Projects/Physics/docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
 - [`scripts/directional_b_overlap_occupancy_bridge_card.py`](/Users/jonreilly/Projects/Physics/scripts/directional_b_overlap_occupancy_bridge_card.py)
 

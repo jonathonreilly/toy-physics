@@ -31,5 +31,6 @@ default manuscript/talk insertion point.
 - This file is the short paper-facing disclosure.
 - [`AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md`](./AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md)
   is the longer package-level disclosure.
-- [`../AI_METHODOLOGY_NOTE_2026-04-25.md`](../AI_METHODOLOGY_NOTE_2026-04-25.md)
-  explains the broader branch/review/repo-hygiene method.
+- `../AI_METHODOLOGY_NOTE_2026-04-25.md` (sibling artifact;
+  cross-reference only — not a one-hop dep of this note) explains the
+  broader branch/review/repo-hygiene method.

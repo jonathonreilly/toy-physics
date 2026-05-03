@@ -4,8 +4,9 @@ Run these from the repo root on the checked-out public package state.
 
 This file is the quickest route to validating the active package. For claim
 boundaries, pair it with [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
-For domain routing, pair it with [SCIENCE_MAP.md](./SCIENCE_MAP.md). For the
-exact validated runtime, use [RELEASE_ENVIRONMENT.md](./RELEASE_ENVIRONMENT.md).
+For domain routing, pair it with `SCIENCE_MAP.md` (sibling artifact;
+cross-reference only — not a one-hop dep of this note). For the exact
+validated runtime, use [RELEASE_ENVIRONMENT.md](./RELEASE_ENVIRONMENT.md).
 
 ## Pinned Environment
 
