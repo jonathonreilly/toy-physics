@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:04:32.751406+00:00
+**Generated:** 2026-05-03T21:11:22.945700+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 190 |
+| **retained_bounded** | 191 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 696 |
+| unaudited | 695 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 353 |
+| `audited_clean` | 354 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 743 |
+| `unaudited` | 742 |
 
 | claim_type | count |
 |---|---:|
@@ -202,6 +202,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
+| `evolving_network_prototype_v5_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -5829,6 +5830,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** This v3 pass improves the *control design* relative to v2: the imposed  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 4 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `evolving_network_prototype_v5_note`
+
+- **Note:** [`EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md`](../../docs/EVOLVING_NETWORK_PROTOTYPE_V5_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the fixed v5 runner parameters and seeds, cross growth beats the recomputed KNN control on toward fraction and F~M, trails it on mean_delta, and therefore remains a mixed bounded prototype rather than a Gate B win.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-evolving-network-v5`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The frozen replay reports cross growth at 77.8% toward and F~M = 0.76 versus KNN at 66.7% toward and F~M = 0.66, while cross growth trails KNN on mean_delta by 0.000001.  _(class `C`)_
+- **chain closes:** True — The note has no known dependencies, and the runner directly constructs the ordered, cross-growth, and KNN-control families from explicit constants and recomputes the reported metrics. The audit only closes the finite replay claim, not any broad Gate B dynamics theorem or independent comparison to v4.
+- **rationale:** The current runner completed cleanly and reproduced the note's frozen table and pairwise read: cross growth improves toward fraction and F~M relative to KNN, but not mean_delta. The note's safe interpretation matches that output and explicitly avoids claiming a Gate B win. Residual risk is limited to the bounded prototype framing: it is a finite scripted replay over fixed parameters and seeds, not a general theorem about the dynamics.
 - **auditor confidence:** high
 
 ### `ew_coupling_derivation_note`
