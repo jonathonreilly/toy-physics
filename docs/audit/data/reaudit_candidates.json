@@ -2,45 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 0,
-    "leaf": 4,
+    "leaf": 3,
     "medium": 0
   },
   "candidates": [
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "audited_conditional",
-      "candidate_reason": "all_deps_ratified_after_audit_time_dependency_strengthening",
-      "claim_id": "global_coherence_predictor_note",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "bounded_theorem",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "current_dep_effective_status": {
-        "global_coherence_off_scaffold_note": "retained_bounded"
-      },
-      "deps": [
-        "global_coherence_off_scaffold_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
-      "generated_order": 1,
-      "improved_dependencies": [
-        {
-          "after_effective_status": "retained_bounded",
-          "before_effective_status": "unaudited",
-          "claim_id": "global_coherence_off_scaffold_note",
-          "rank_delta": 65
-        }
-      ],
-      "load_bearing_score": 1.5,
-      "note_hash": "2f240a64449669d4761bdbe4619d820372a17e16ed9c03724599c2dd37c6061e",
-      "note_path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
-      "reraudit_after_claim_ids": [
-        "global_coherence_off_scaffold_note"
-      ],
-      "runner_path": "scripts/global_coherence_predictor.py",
-      "transitive_descendants": 1
-    },
     {
       "audit_independence_required": "any_non_self",
       "audit_status": "audited_conditional",
@@ -58,7 +23,7 @@
       ],
       "direct_in_degree": 0,
       "effective_status": "audited_conditional",
-      "generated_order": 2,
+      "generated_order": 1,
       "improved_dependencies": [
         {
           "after_effective_status": "retained",
@@ -95,7 +60,7 @@
       ],
       "direct_in_degree": 0,
       "effective_status": "audited_conditional",
-      "generated_order": 3,
+      "generated_order": 2,
       "improved_dependencies": [
         {
           "after_effective_status": "retained_bounded",
@@ -137,7 +102,7 @@
       ],
       "direct_in_degree": 0,
       "effective_status": "audited_conditional",
-      "generated_order": 4,
+      "generated_order": 3,
       "improved_dependencies": [
         {
           "after_effective_status": "retained_bounded",
@@ -169,7 +134,7 @@
     "open_gate",
     "positive_theorem"
   ],
-  "generated_at": "2026-05-03T02:53:53.134242+00:00",
+  "generated_at": "2026-05-03T03:02:27.486342+00:00",
   "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
   "policy_summary": "Non-clean audited theorem/no-go/open-gate claims whose current one-hop dependencies are all retained-grade and whose audit-time dependency snapshot contains at least one dependency that has since become retained-grade.",
   "ratified_dependency_statuses": [
@@ -177,5 +142,5 @@
     "retained_bounded",
     "retained_no_go"
   ],
-  "total_candidates": 4
+  "total_candidates": 3
 }

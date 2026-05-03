@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:53:53.347807+00:00
+**Generated:** 2026-05-03T03:02:27.717831+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -829,7 +829,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_held_out2_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `global_coherence_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | F | - |
 | `gr_class_expansion_finite_rank_target_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `graph_phase_diagram_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -8125,16 +8125,13 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 - **Note:** [`GLOBAL_COHERENCE_PREDICTOR_NOTE.md`](../../docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **claim_scope:** Historical bounded scaffold-specific claim that one global free-beam coherence threshold improved the original scaffolded cross-generator comparator from 6/9 to 7/9, while the retained off-scaffold dependency limits the result to non-general finite evidence.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The off-scaffold held-out lane reversed this lane's advantage, so the original 7/9 revival was scaffold-specific and this note is historical finite evidence only.  _(class `B`)_
-- **chain closes:** False — The primary runner reproduces the old scaffolded 7/9 free_coh revival, and the one-hop off-scaffold note supplies the later 5/9 reversal. However that dependency is itself bounded and the primary runner emits no classified PASS lines, so the current scoped conclusion remains conditional rather than audit-clean.
-- **rationale:** Issue: the note's current claim depends on a bounded off-scaffold reversal note, while its own runner only reproduces the earlier scaffolded 7/9 predictor revival and emits no classified PASS lines. Why this blocks: a hostile reviewer can verify the historical scaffolded run but cannot promote the reversal/scaffold-specific conclusion beyond the bounded dependency and unclassified runner output. Repair target: add classified C/B PASS lines for the scaffolded 7/9 result and the off-scaffold 5/9 supersession, or split the historical scaffolded result from the later reversal note. Claim boundary until fixed: this row is historical finite evidence for a scaffolded predictor improvement that was later boxed in by the bounded off-scaffold test.
-- **open / conditional deps cited:**
-  - `GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`
-  - `scripts/global_coherence_predictor.py`
+- **auditor:** `fresh-agent-bacon-3rd-019debc8-b7e9-72d3-9a8d-e85ec479aaf8`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The note's load-bearing step is the scaffolded held-out comparison that free_coh >= 7.96e-04 scored 7/9 versus 6/9 for the old two-property rule, later bounded by the retained off-scaffold 5/9 null-advantage dependency.  _(class `D`)_
+- **chain closes:** False — The one-hop dependency is now closed and retained, but the primary scaffolded 7/9 versus 6/9 computation is load-bearing and has no current replay output. The runner was terminated after about six minutes with no stdout, so the computation is unreplayed in this audit session.
+- **rationale:** Issue: the dependency block is repaired, but the primary runner produced no live replay output for the scaffolded comparator numbers. Why this blocks: audited_clean requires the bounded computation or held-out comparison to close from the provided evidence without unreplayable load-bearing support, and the 7/9 versus 6/9 scaffolded result is exactly the load-bearing step. Repair target: provide a successful registered runner replay or archived deterministic output for the scaffolded swept/cross-generator comparison. Claim boundary until fixed: historical scaffold-specific finite evidence only, with no promotion to a live classifier closure theorem or simple-classifier exhaustion result.
 - **auditor confidence:** high
 
 ### `gluon_tree_level_masslessness_theorem_note_2026-05-02`
