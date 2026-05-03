@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T12:39:20.535765+00:00
+**Generated:** 2026-05-03T12:41:25.760874+00:00
 **Total pending:** 763
 **Ready (all deps already at retained-grade or metadata tiers):** 110
 
@@ -16,7 +16,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `i3_zero_exact_theorem_note` | positive_theorem | unaudited | critical | 284 | 12.65 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_born_rule_derived.py` |
+| 1 | `i3_zero_exact_theorem_note` | positive_theorem | audit_in_progress | critical | 284 | 12.65 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_born_rule_derived.py` |
 | 2 | `action_normalization_note` | bounded_theorem | unaudited | critical | 284 | 10.15 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_action_normalization.py` |
 | 3 | `light_cone_framing_note` | positive_theorem | unaudited | critical | 284 | 9.65 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_staggered_dispersion.py` |
 | 4 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | unaudited | critical | 284 | 8.65 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_first_order_coframe_unconditionality_no_go.py` |
