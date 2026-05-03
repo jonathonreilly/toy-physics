@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:06:49.382124+00:00
+**Generated:** 2026-05-03T15:08:40.489266+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 770 |
+| unaudited | 769 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 520 |
+| ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 520 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 815 |
+| `unaudited` | 814 |
 
 | claim_type | count |
 |---|---:|
@@ -517,6 +517,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dispersion_high_p_tiebreaker_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dispersion_relation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `distance_law_definitive_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unsupported_numerical_sweep_and_readout_bridge | - |
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3234,6 +3235,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — The source note contains incompatible retained surfaces, and the current artifact set does not reproduce the W=40 alpha ~ -1.5 table from the status headline.
 - **rationale:** Issue: the note's candidate retained-grade status claims a far-field alpha around -1.5 and continued steepening, but the note's own later conclusion claims an approximately 1/b law from the grown-geometry runner, and the current named artifacts do not reproduce the W=40 far-field table that carries the -1.5 headline. Why this blocks: the retained claim surface is internally contradictory and stale relative to the current artifact set; a reader cannot tell whether the proposed retained result is a steep non-Newtonian wide-lattice law or the grown-geometry alpha = -0.962 near-1/b result. Repair target: split or rewrite the note so the status, artifact chain, and runner output name one exact claim; either restore a runner that reproduces the W=40 b>=15/local-exponent table or demote that old table and retain only the current grown-geometry alpha = -0.962 result under its own bounded note. Claim boundary until fixed: it is safe to claim that scripts/distance_law_grown_geometry.py currently reproduces the grown-geometry table with all sampled b rows TOWARD and alpha(all b) = -0.962; the alpha ~ -1.5 far-field steepening headline is not audit-retained.
 - **auditor confidence:** high
+
+### `distance_law_portability_note`
+
+- **Note:** [`DISTANCE_LAW_PORTABILITY_NOTE.md`](../../docs/DISTANCE_LAW_PORTABILITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the listed retained structured families, sampled impact parameters b = [5, 6, 7, 8, 10], field strength 0.004, k = 5.0, and beta = 0.8, the note claims the near-Newtonian distance law does not port uniformly because no tested newer family preserves both directional bias and exponent at the same time.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-hostile-nature-fresh-20260503-distance-portability`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The Results table is the load-bearing step: the listed alpha values and TOWARD counts are used to conclude that alt-connectivity, third-family, fourth-family, and fifth-family radial fail to preserve both the retained direction and exponent simultaneously.  _(class `unsupported_numerical_sweep_and_readout_bridge`)_
+- **chain closes:** False — The bounded negative conclusion would close if the sweep values and the gravity-style source-centroid observable were retained inputs or reproducible from a runner. In this restricted packet there is no runner, dependency, proof, or retained bridge establishing that the readout is valid for all listed structured families.
+- **rationale:** Issue: The note imports the grown-geometry gravity-style source-centroid observable and then relies on an unverified numerical sweep table to establish non-portability across newer retained structured families. Why this blocks: With deps=[] and runner=none, the audit packet does not prove that the source-centroid readout is a retained portable observable for these architectures, nor that the listed alpha and direction results are reproducible retained facts. The conclusion may be true, but it is conditional on an unratified readout bridge and unexecuted sweep outputs. Repair target: Provide a retained theorem or explicit dependency justifying the source-centroid observable for each listed family, plus a runner that constructs the families, computes the sampled responses, fits alpha, and reports direction counts from retained inputs. Claim boundary until fixed: The note can be treated as a diagnostic sweep report stating that the recorded table, if accepted, suggests non-uniform portability; it should not be retained as a closed bounded theorem about distance-law portability.
+- **open / conditional deps cited:**
+  - `retained proof that the gravity-style source-centroid observable is valid for each tested structured family`
+  - `reproducible runner for the alpha fits and TOWARD/AWAY counts`
+  - `retained provenance for the selected representative rows and parameter settings`
+- **auditor confidence:** 0.86
 
 ### `distracted_napier_reconciliation_note`
 
