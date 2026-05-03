@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:46:07.370360+00:00
+**Generated:** 2026-05-03T11:47:10.924513+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 741 |
+| unaudited | 742 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
-| ~~audited_renaming~~ | 18 |
+| ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 513 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,8 +42,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 8 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 25 |
-| `audited_renaming` | 18 |
-| `unaudited` | 782 |
+| `audited_renaming` | 17 |
+| `unaudited` | 783 |
 
 | claim_type | count |
 |---|---:|
@@ -51,18 +51,18 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 8 |
 | `meta` | 42 |
 | `no_go` | 160 |
-| `open_gate` | 87 |
-| `positive_theorem` | 892 |
+| `open_gate` | 88 |
+| `positive_theorem` | 891 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 110 |
+| `critical` | 111 |
 | `high` | 364 |
-| `medium` | 521 |
+| `medium` | 520 |
 | `leaf` | 746 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 104
+- **Citation cycles detected:** 105
 
 ### Runner classification (static heuristic)
 
@@ -77,25 +77,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 369 | 33.03 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 383 | 33.09 | `audited_clean` | **retained_bounded** |
 | 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 127 | 29.50 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.01 | `unaudited` | unaudited |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 248 | 28.96 | `unaudited` | unaudited |
-| 5 | `minimal_axioms_2026-04-11` | meta | critical | 311 | 26.79 | `unaudited` | meta |
+| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 256 | 29.01 | `unaudited` | unaudited |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 323 | 27.34 | `unaudited` | meta |
 | 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 207 | 26.70 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `yt_ward_identity_derivation_theorem` | positive_theorem | critical | 190 | 26.08 | `audited_renaming` | ~~audited_renaming~~ |
-| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 359 | 24.99 | `audited_clean` | **retained_bounded** |
-| 9 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
-| 10 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 118 | 23.39 | `unaudited` | unaudited |
-| 11 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 283 | 22.15 | `unaudited` | unaudited |
-| 12 | `left_handed_charge_matching_note` | decoration | critical | 282 | 22.14 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
+| 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 190 | 26.08 | `unaudited` | unaudited |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 373 | 25.55 | `audited_clean` | **retained_bounded** |
+| 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 221 | 24.79 | `unaudited` | unaudited |
+| 10 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
+| 11 | `left_handed_charge_matching_note` | decoration | critical | 309 | 22.78 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
+| 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 283 | 22.15 | `unaudited` | unaudited |
 | 13 | `one_generation_matter_closure_note` | positive_theorem | critical | 239 | 21.91 | `unaudited` | unaudited |
 | 14 | `three_generation_structure_note` | positive_theorem | critical | 201 | 21.66 | `audited_clean` | **retained** |
 | 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 132 | 21.55 | `audited_clean` | **retained** |
 | 16 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 124 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
 | 17 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 19.70 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 139 | 19.13 | `audited_clean` | **retained** |
-| 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 257 | 18.01 | `unaudited` | unaudited |
+| 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 263 | 18.04 | `unaudited` | unaudited |
 | 20 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 69 | 17.63 | `unaudited` | unaudited |
 | 21 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 84 | 17.41 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `cpt_exact_note` | positive_theorem | critical | 289 | 17.18 | `unaudited` | unaudited |
@@ -1066,7 +1066,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
-| `yt_ward_identity_derivation_theorem` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-fresh-agent | E | - |
 
 
 ## Audit findings (full)
@@ -15265,19 +15264,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The Ward 4-fermion channel and the physical trilinear are both matrix elements of H_unit; they share the 1/sqrt(6) coefficient by construction.  _(class `F`)_
 - **chain closes:** False — The matching closure equates a Ward 4-fermion matrix element with a physical trilinear coefficient by declaring both share the H_unit normalization 1/sqrt(6); these are different Green-function/readout structures and the chain reduces to symbol identification.
 - **rationale:** Re-audit confirms the original renaming verdict: shared H_unit normalization is asserted, not derived from a tree-level operator-matching theorem. Scope narrowed from the migration backfill to the bounded H_unit arithmetic.
-- **auditor confidence:** high
-
-### `yt_ward_identity_derivation_theorem`
-
-- **Note:** [`YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](../../docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Tree-level canonical-surface identification of the unit-normalized Q_L scalar-singlet H_unit matrix element with the top-Yukawa readout, yielding y_t(M_Pl)/g_s(M_Pl)=1/sqrt(6); no RG, precision, or NLO claim audited.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `fresh-agent-popper-019ded72-35b5-7031-a1a0-f451abb8141d`  (codex-fresh-agent; independence=fresh_context)
-- **load-bearing step:** The note defines y_t_bare as the unit-norm H_unit matrix element between the vacuum and a single top-pair state, then evaluates that matrix element as 1/sqrt(6).  _(class `E`)_
-- **chain closes:** False — The algebraic Clebsch-Gordan overlap and Fierz checks close for the defined H_unit readout, but the theorem-level identification of that readout as y_t is introduced by definition rather than derived from an independent retained authority. The runner verifies the resulting coefficients after the readout choice; it does not derive the physical Yukawa map without that definition.
-- **rationale:** Issue: the load-bearing step defines y_t_bare to be the H_unit-to-top matrix element and then computes the 1/sqrt(6) overlap. Why this blocks: the presented chain establishes an internally consistent framework readout, but not an independently derived Standard Model top-Yukawa observable. Repair target: provide a retained theorem deriving the top-Yukawa readout and shared tadpole dressing from the bare action without defining y_t as the target matrix element. Claim boundary until fixed: the note may safely claim the unit-normalized H_unit overlap and same-1PI scalar-singlet consistency on the canonical surface.
 - **auditor confidence:** high
 
 ### `yt_zero_import_chain_note`

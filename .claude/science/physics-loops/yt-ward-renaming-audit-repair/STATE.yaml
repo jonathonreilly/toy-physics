@@ -1,0 +1,36 @@
+loop: yt-ward-renaming-audit-repair
+date: 2026-05-03
+branch: physics-loop/yt-ward-renaming-audit-repair-block01-20260503
+base: origin/main
+mode: run
+target: best-honest-status
+cycle: 1
+active_route: expose_hidden_dependencies_and_demote_to_open_gate
+files_touched:
+  - docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md
+  - scripts/frontier_yt_ward_identity_derivation.py
+  - docs/audit/AUDIT_LEDGER.md
+  - docs/audit/AUDIT_QUEUE.md
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/audit_queue.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/cycle_inventory.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/load_bearing_summary.json
+  - docs/audit/data/reaudit_candidates.json
+  - docs/audit/data/runner_classification.json
+claim_status:
+  claim_id: yt_ward_identity_derivation_theorem
+  actual_current_surface_status: open
+  claim_type_author_hint_after_repair: open_gate
+  audit_status_after_pipeline: unaudited
+  effective_status_after_pipeline: unaudited
+  bare_retained_allowed: false
+verification_completed:
+  - python3 scripts/frontier_yt_ward_identity_derivation.py
+  - bash docs/audit/scripts/run_pipeline.sh
+  - python3 docs/audit/scripts/audit_lint.py --strict
+  - python3 -m py_compile scripts/frontier_yt_ward_identity_derivation.py
+  - git diff --check
+next_exact_action: commit, push, and open PR
+stop_condition: coherent block packaged
