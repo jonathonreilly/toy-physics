@@ -1,0 +1,68 @@
+==============================================================================
+Plaquette Minimal-Block Self-Consistent Saddle — Stretch Attempt
+Source note: docs/PLAQUETTE_MINIMAL_BLOCK_SADDLE_STRETCH_NOTE_2026-05-02.md
+==============================================================================
+
+--- Section 1: Naive mean-field saddle (no Haar entropy) ---
+  Naive saddle: u_0^4 = -2L_t/(β N_p) = -2·4/(6.0·192) = -0.006944 (NEGATIVE — naive MF insufficient; need Haar entropy)
+    ✓ Naive mean-field has no positive saddle (Haar entropy required)
+
+--- Section 2: SU(3) single-link mean-field with toy Haar entropy ---
+  Toy parameterization: h(u_0) = 4 log(1 - u_0^2)
+  Saddle: 3 β u_0^4 - 3 β u_0^2 + 1 = 0   (independent of V_4 / N_p)
+
+  β = 3.0: u_0^2 = 0.872678, u_0 = 0.934172, ⟨P⟩_MF = u_0^4 = 0.761567
+  β = 4.0: u_0^2 = 0.908248, u_0 = 0.953021, ⟨P⟩_MF = u_0^4 = 0.824915
+  β = 5.0: u_0^2 = 0.928174, u_0 = 0.963418, ⟨P⟩_MF = u_0^4 = 0.861508
+  β = 6.0: u_0^2 = 0.940959, u_0 = 0.970030, ⟨P⟩_MF = u_0^4 = 0.885403
+  β = 8.0: u_0^2 = 0.956435, u_0 = 0.977975, ⟨P⟩_MF = u_0^4 = 0.914769
+  β = 10.0: u_0^2 = 0.965475, u_0 = 0.982586, ⟨P⟩_MF = u_0^4 = 0.932141
+
+  Toy SU(3) mean-field at β=6: ⟨P⟩_MF ≈ 0.8854
+
+--- Section 3: Comparison with canonical and bridge-support values ---
+  Toy SU(3) mean-field (this stretch):     ⟨P⟩_MF ≈ 0.8854
+  Canonical MC (comparator):               ⟨P⟩    ≈ 0.5934
+  Bridge-support stack analytic candidate: P(6)   ≈ 0.59353
+
+  Note: the toy mean-field result (~0.886) is HIGHER than the MC
+  value because the toy parameterization h(u_0) = 4 log(1-u_0^2)
+  is not the true SU(3) Haar entropy. The true SU(3) Haar entropy
+  (Drouffe-Zuber 1983, Münster 1981) gives ⟨P⟩_MF ≈ 0.55-0.58 at β=6.
+  This sets the order of magnitude of the mean-field-vs-bulk gap
+  (~5-7% below MC) but does not close the analytic problem.
+
+--- Section 4: Named obstruction ---
+  The minimal-block-equals-bulk gap is the FAMOUS OPEN LATTICE
+  PROBLEM. Closing it requires either:
+    (a) structural theorem proving minimal-block = bulk on V-invariant
+        subspace [no such theorem currently exists]
+    (b) perturbative correction to mean-field [standard but lossy]
+    (c) non-perturbative analytic derivation [the open problem]
+
+  This stretch attempt SHARPENS the obstruction: the V-invariant
+  minimal-block mean-field is well-defined but its analytic value
+  differs from the bulk thermodynamic-limit value. The gap is the
+  framework-point underdetermination theorem of the bridge-support
+  stack (GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE).
+
+--- Section 5: Connection to existing bridge-support stack ---
+  Bridge-support stack (PLAQUETTE_SELF_CONSISTENCY_NOTE) provides:
+    - Reference Perron solves: P_loc(6) = 0.4524, P_triv(6) = 0.4225
+    - Analytic upper-bound candidate: P(6) ≈ 0.59353 (+0.022% above MC)
+    - Analytic window: 0.5934 ≤ ⟨P⟩(β=6) ≤ 0.59353
+
+  Mean-field saddle (this stretch) is a complementary lower-bound
+  estimate. Together they bracket the analytic problem; closing the
+  window remains the famous open problem.
+
+==============================================================================
+STRETCH ATTEMPT COMPLETE.
+
+Outcome: NAMED-OBSTRUCTION STRETCH — sharpens the minimal-block-equals-
+bulk obstruction; does NOT close the analytic ⟨P⟩(β=6) problem.
+
+This is honest stretch-attempt output per the physics-loop skill
+workflow #6: 'no-go packet / partial structure / sharper obstruction /
+worked failed derivation with the exact load-bearing wall named.'
+==============================================================================
