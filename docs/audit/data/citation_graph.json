@@ -22617,7 +22617,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:19:40.893300+00:00",
+  "generated_at": "2026-05-03T14:23:32.668972+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -30812,6 +30812,17 @@
       "path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "runner_path": null,
       "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
+    },
+    "eta_188_structural_origin_partial_note_2026-05-03": {
+      "claim_id": "eta_188_structural_origin_partial_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "partial closing of cycle 09 Obstruction 3 + falsification of four near-fit candidates",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "9d29e1473043e46a17cab521ad98cfc3de488dd4bce9b6f33fcd23c0ba3e6213",
+      "path": "docs/ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md",
+      "runner_path": null,
+      "title": "Structural Origin of eta/eta_obs = 0.1888 \u2014 Partial Closing Note"
     },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "claim_id": "evanescent_barrier_amplitude_suppression_theorem_note",
@@ -49746,6 +49757,7 @@
     "emergent_product_law_note",
     "equivalence_principle_harness_note",
     "equivalence_principle_note",
+    "eta_188_structural_origin_partial_note_2026-05-03",
     "evolving_network_prototype_note",
     "evolving_network_prototype_v2_note",
     "evolving_network_prototype_v3_note",
@@ -50458,12 +50470,12 @@
       "bounded_theorem": 48,
       "meta": 4,
       "no_go": 3,
-      "none": 1722,
+      "none": 1723,
       "open_gate": 3,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 548,
+      "bounded_theorem": 549,
       "meta": 4,
       "no_go": 109,
       "none": 450,
@@ -50471,9 +50483,9 @@
       "positive_theorem": 628
     },
     "edge_count": 5654,
-    "leaf_count": 614,
-    "node_count": 1848,
-    "root_count": 1053,
+    "leaf_count": 615,
+    "node_count": 1849,
+    "root_count": 1054,
     "runners_with_path": 1410
   }
 }

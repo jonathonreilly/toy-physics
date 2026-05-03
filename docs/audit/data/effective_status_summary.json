@@ -1,13 +1,13 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 585,
+    "bounded_theorem": 586,
     "decoration": 7,
     "meta": 43,
     "no_go": 160,
     "open_gate": 88,
     "positive_theorem": 863
   },
-  "computed_at": "2026-05-03T14:19:49.195733+00:00",
+  "computed_at": "2026-05-03T14:23:39.736830+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -54,7 +54,7 @@
     "retained_bounded": 166,
     "retained_no_go": 100,
     "retained_pending_chain": 2,
-    "unaudited": 777
+    "unaudited": 778
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
