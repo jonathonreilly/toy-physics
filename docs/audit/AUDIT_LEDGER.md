@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:22:18.981320+00:00
+**Generated:** 2026-05-03T17:22:58.598611+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 770 |
+| unaudited | 769 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 27 |
+| ~~audited_numerical_match~~ | 28 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 522 |
 | ~~audited_failed~~ | 9 |
@@ -40,18 +40,18 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 522 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
-| `audited_numerical_match` | 27 |
+| `audited_numerical_match` | 28 |
 | `audited_renaming` | 22 |
-| `unaudited` | 816 |
+| `unaudited` | 815 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 589 |
+| `bounded_theorem` | 590 |
 | `decoration` | 7 |
 | `meta` | 46 |
 | `no_go` | 163 |
 | `open_gate` | 90 |
-| `positive_theorem` | 863 |
+| `positive_theorem` | 862 |
 
 | criticality | count |
 |---|---:|
@@ -1003,6 +1003,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `claude_complex_action_carryover_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_finite_lattice_numerical_replay | - |
+| `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `fourth_family_quadrant_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | configured_numerical_sweep_to_retained_basin | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -4932,6 +4933,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md`
   - `DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md`
   - `DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`
+- **auditor confidence:** high
+
+### `dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20`
+
+- **Note:** [`DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`](../../docs/DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the fixed native N_e seed-surface claim that numerical PMNS-target preimages exist, have full-rank local Jacobian, and are missed by the listed current nonlocal selector-family points.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The verifier exhibits multiple distinct exact source points p in S_Ne with F_Ne(p) = (0.307, 0.0218, 0.545) to numerical precision, and rank dF_Ne = 3 there, so the preimage is a local 2-real source manifold.  _(class `G`)_
+- **chain closes:** False — The runner gives strong numerical evidence: PASS=12 FAIL=0, six polished source representatives reproduce the hard-coded PMNS target to floating precision, and finite-difference Jacobians have rank 3. It does not prove exact existence of a source point or an exact regular manifold; the target is imposed and the source coordinates are found by numerical least-squares polishing.
+- **rationale:** Issue: the exact source-manifold theorem is carried by numerical least-squares roots against the hard-coded physical PMNS triple plus finite-difference rank checks, not by an exact root certificate or analytic regular-value proof. Why this blocks: a Nature-grade exact theorem cannot be promoted from double-precision residuals and selected optimizer starts, even though the numerical evidence is internally consistent. Repair target: provide an exact certificate for at least one point on S_Ne satisfying F_Ne(p) = (0.307, 0.0218, 0.545), an exact or interval-certified rank-3 Jacobian proof on that point, and a verifier that checks those certificates rather than only polishing to the target. Claim boundary until fixed: the note may be cited as numerical evidence that the fixed native N_e seed surface appears to contain PMNS-target preimages and that the listed selector-family representatives miss the target by the reported chi^2 values.
 - **auditor confidence:** high
 
 ### `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21`
