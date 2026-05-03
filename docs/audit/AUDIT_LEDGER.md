@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:47:25.853650+00:00
+**Generated:** 2026-05-03T19:49:51.234500+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 180 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 709 |
+| unaudited | 714 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 548 |
-| ~~audited_failed~~ | 15 |
+| ~~audited_failed~~ | 10 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 338 |
 | `audited_conditional` | 548 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 59 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 755 |
+| `unaudited` | 760 |
 
 | claim_type | count |
 |---|---:|
@@ -56,8 +56,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | criticality | count |
 |---|---:|
 | `critical` | 115 |
-| `high` | 365 |
-| `medium` | 583 |
+| `high` | 367 |
+| `medium` | 581 |
 | `leaf` | 697 |
 
 - **Retained pending chain closure:** 3
@@ -76,27 +76,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 384 | 33.09 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 387 | 33.10 | `audited_clean` | **retained_bounded** |
 | 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 130 | 29.53 | `unaudited` | unaudited |
-| 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 131 | 29.04 | `unaudited` | unaudited |
-| 4 | `alpha_s_derived_note` | bounded_theorem | critical | 262 | 29.04 | `unaudited` | unaudited |
-| 5 | `minimal_axioms_2026-04-11` | meta | critical | 323 | 27.34 | `unaudited` | meta |
-| 6 | `native_gauge_closure_note` | bounded_theorem | critical | 374 | 27.05 | `audited_clean` | **retained_bounded** |
+| 3 | `alpha_s_derived_note` | bounded_theorem | critical | 264 | 29.05 | `unaudited` | unaudited |
+| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 131 | 29.04 | `unaudited` | unaudited |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 343 | 28.93 | `unaudited` | meta |
+| 6 | `native_gauge_closure_note` | bounded_theorem | critical | 377 | 27.06 | `audited_clean` | **retained_bounded** |
 | 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 212 | 26.73 | `audited_conditional` | ~~audited_conditional~~ |
-| 8 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 85 | 24.93 | `unaudited` | unaudited |
-| 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 368 | 24.53 | `audited_clean` | open_gate |
-| 10 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 130 | 24.03 | `audited_clean` | **retained_bounded** |
+| 8 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 88 | 24.98 | `unaudited` | unaudited |
+| 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 133 | 24.57 | `audited_clean` | **retained_bounded** |
+| 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 370 | 24.54 | `audited_clean` | open_gate |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 114 | 23.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `minimal_axioms_2026-05-03` | meta | critical | 368 | 23.53 | `unaudited` | meta |
-| 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 310 | 23.28 | `unaudited` | unaudited |
+| 12 | `minimal_axioms_2026-05-03` | meta | critical | 370 | 23.54 | `unaudited` | meta |
+| 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 312 | 23.29 | `unaudited` | unaudited |
 | 14 | `one_generation_matter_closure_note` | positive_theorem | critical | 244 | 21.94 | `unaudited` | unaudited |
 | 15 | `three_generation_structure_note` | bounded_theorem | critical | 206 | 21.69 | `unaudited` | unaudited |
 | 16 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 287 | 21.67 | `unaudited` | unaudited |
-| 17 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 134 | 21.58 | `unaudited` | unaudited |
+| 17 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 136 | 21.60 | `unaudited` | unaudited |
 | 18 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 126 | 20.99 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 105 | 19.73 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 141 | 19.15 | `audited_clean` | **retained** |
-| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 271 | 18.59 | `unaudited` | unaudited |
+| 20 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 143 | 19.17 | `audited_clean` | **retained** |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 273 | 18.60 | `unaudited` | unaudited |
 | 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 72 | 17.69 | `unaudited` | unaudited |
 | 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 86 | 17.44 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `cpt_exact_note` | positive_theorem | critical | 293 | 17.20 | `unaudited` | unaudited |
@@ -1003,16 +1003,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
-| `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
-| `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | misidentified_symmetry_and_proxy_runner | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | D | - |
-| `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `bh_entropy_derived_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
-| `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
-| `complete_prediction_chain_2026_04_15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | B | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1651,19 +1646,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
-### `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Finite-dimensional complex representations of the real Cl(3) site algebra, including uniqueness of faithful irreducible representation, decomposition, odd-dimensional exclusion, and per-site Hilbert dimension exactly 2 on A_min.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `fresh-agent-herschel-019ded9f-0cbc-7d71-b27e-1ce7957cbd6e`  (codex-fresh-agent; independence=fresh_context)
-- **load-bearing step:** Step 1 asserts Cl(3) ⊗_R C has complex dimension 4 and is isomorphic to M_2(C), then uses that asserted simple complex algebra to derive unique irreducible Pauli representation and U2-U4.  _(class `C`)_
-- **chain closes:** False — The chain does not close because the central algebraic identification is wrong: a real 8-dimensional algebra tensored with C remains 8-dimensional over C, and odd complex Clifford algebra splits into two M_2(C) summands rather than M_2(C). U4 also imports the staggered-fermion one-mode Fock-space bridge while claiming A1 only.
-- **rationale:** Issue: Step 1 misidentifies Cl(3) ⊗_R C as M_2(C) by halving the tensor-product dimension and ignoring the odd-complex-Clifford split. Why this blocks: U2 and U3 rely on simplicity and unique irreducibility of M_2(C); with two simple summands, the claimed unique Pauli irrep and universal decomposition into that single irrep are not established. The runner exhibits Pauli relations, no scalar model, random failed 3x3 searches, constructed unitary conjugates, and Pauli direct sums, but it does not verify the Artin-Wedderburn identification or rule out the second central-character irrep. Repair target: replace Step 1 with the correct representation category for real Cl_{3,0} ~= M_2(C) as a real algebra, state any fixed central-character convention explicitly, prove classification under that convention, and separately prove or cite the Grassmann one-mode Fock-space bridge needed for U4. Claim boundary until fixed: Pauli matrices give a 2-dimensional faithful irreducible model and no 1-dimensional faithful complex model; this packet does not prove uniqueness of all faithful irreducible complex Cl(3) representations, the full decomposition theorem, or per-site Hilbert dimension exactly 2 from A1 alone.
-- **auditor confidence:** high
-
 ### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
 
 - **Note:** [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
@@ -1711,19 +1693,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
 - **auditor confidence:** high
 
-### `axiom_first_lattice_noether_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** The note claims an axiom-first lattice Noether theorem on A_min, including Z^3 translation momentum conservation, global U(1) fermion-number conservation, and a general lattice Noether current identity.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-hostile-noether-auditor-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Step 4 asserts that substituting the Z^3 translation generator into the general current formula yields the staggered momentum density and that M_KS commutes with discrete translation up to staggered phase factors; Step 2 asserts without a full derivation that promoting alpha_x produces the current formula (5).  _(class `misidentified_symmetry_and_proxy_runner`)_
-- **chain closes:** False — The U(1) bilinear phase symmetry is plausibly exhibited, but the full theorem chain does not close for the stated Z^3 translation and general-current claims. The note states pure Z^3 translation conservation, while the runner deliberately checks only two-site shifts to avoid staggered phase modulation and never verifies the claimed momentum current P.
-- **rationale:** Issue: The load-bearing translation step identifies the staggered Kogut-Susskind action as Z^3-translation invariant and derives momentum conservation from that identification, but the runner itself restricts E2 to two-step shifts because one-step shifts encounter staggered phase modulation; it also does not compute the momentum-density divergence in equation (3). The local runner passed E1-E4, but those exhibits are U(1) commutation, two-step translation invariance, an M^{-1} expectation-current divergence, and slice trace equality. Why this blocks: The scoped claim includes Z^3 translation symmetry -> discrete momentum conservation and a general Noether identity, so verifying U(1) commutation plus two-step shift invariance plus M^{-1} current expectations cannot establish the stated theorem. A hostile referee can reject the claimed N1/N3 closure without disputing the runner output. Repair target: State the exact staggered symmetry group, including any required phase/taste transformation, derive its local Noether current from the finite Grassmann action with site-dependent parameters, and add a runner that verifies the actual P-current divergence or the exact symbolic finite-lattice identity for arbitrary on-shell fields. Claim boundary until fixed: The note may safely claim a numerical exhibit of free pure-staggered U(1) phase invariance and two-step translation invariance on small periodic lattices, plus an expectation-value current-divergence check; it may not claim the full A_min lattice Noether theorem or Z^3 momentum conservation as retained.
-- **auditor confidence:** 0.88
-
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
 
 - **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
@@ -1742,21 +1711,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `full_SU3_interacting_combined_factorisation`
   - `fermion_determinant_nonnegativity_for_canonical_surface`
   - `transfer_matrix_ground_state_subtraction_or_norm_bound`
-- **auditor confidence:** high
-
-### `axiom_first_spin_statistics_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Attempted axiom-first lattice spin-statistics theorem claiming Grassmann anticommutation is forced by A_min rather than assumed, with determinant and correlator antisymmetry corollaries for the canonical staggered matter sector.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The Grassmann implementation is the unique canonical-quantisation choice on A_min that gives a finite-dim per-site Hilbert space matching the Cl(3) spinor module, hence anticommutation is forced.  _(class `B`)_
-- **chain closes:** False — The anticommutator/determinant/sign-flip exhibits close only after Grassmann generators are already assumed by A3. The claimed force step depends on a per-site Cl(3) uniqueness/dimension premise that is not retained and has been audited failed, and the runner does not prove uniqueness of Grassmann quantisation from A1-A4.
-- **rationale:** Issue: the note treats A3's finite Grassmann partition as evidence that anticommutation is forced, then relies on a finite per-site Cl(3) module argument to exclude bosonic CCR; that per-site representation premise is not retained and the stronger uniqueness claim has failed audit. Why this blocks: the row would let downstream notes cite spin-statistics as derived from A_min, when the runner only checks standard CAR/Berezin consequences and a finite-dimensional trace obstruction to exact bosonic CCR. Repair target: either demote this to a bounded Grassmann-calculus lemma conditional on A3, or provide a correct independent theorem deriving the matter algebra from retained Cl(3)/locality/reflection-positivity inputs. Claim boundary until fixed: given Grassmann generators, the anticommutators, determinant identity, and exchange sign checks are valid; the forced spin-statistics theorem is not retained.
-- **open / conditional deps cited:**
-  - `AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`
 - **auditor confidence:** high
 
 ### `axiom_reduction_note`
@@ -2523,19 +2477,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The scoped object is a narrow exact theorem, not a broad physical theorem: it proves a residual-Z2 parity split and one scalar identity inside a fixed 3-parameter 3x3 Hermitian-circulant family. No hidden numerical, phenomenological, or external authority premise is needed. The runner output independently checks the matrix identities, Hermiticity, parity action, and scalar formula exactly.
 - **auditor confidence:** high
 
-### `circulant_response_master_identity_narrow_theorem_note_2026-05-02`
-
-- **Note:** [`CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Standalone Hermitian-circulant linear-algebra identity for G(g_0,g_1), the cyclic-basis Frobenius responses, the master identity, and the stated Koide-cone reduction including kappa = g_0^2/|g_1|^2 = 2.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-current-fresh-context-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** From (T2), 2 r_0^2 = r_1^2 + r_2^2 iff 18(g_0^2 - 2 |g_1|^2) = 0 iff g_0^2 = 2 |g_1|^2, i.e. to kappa := g_0^2 / |g_1|^2 = 2.  _(class `A`)_
-- **chain closes:** False — The trace-response formulas and master identity close exactly, and the runner verifies 16 A-class algebra checks. The full scoped claim does not close as stated because the kappa reformulation divides by |g_1|^2 without restricting to g_1 != 0; at g_1 = 0 the cone reduces to g_0 = 0 but kappa is undefined.
-- **rationale:** Issue: The T3 sentence upgrades the exact equation g_0^2 = 2 |g_1|^2 to the one-scalar equation kappa := g_0^2 / |g_1|^2 = 2 while the theorem also claims all real g_0 and complex g_1, including g_1 = 0. Why this blocks: the kappa expression is undefined at |g_1| = 0, so the advertised exact equivalence is not globally true on the stated domain even though T1, T2, and the non-divided cone equation are correct. Repair target: add an explicit domain condition g_1 != 0 for the kappa formulation, or state T3 only as the globally valid equation g_0^2 = 2 |g_1|^2 with kappa = 2 as a nonzero-g_1 corollary; update the note and runner to test the singular boundary. Claim boundary until fixed: the standalone trace identities, master identity, and cone equivalence to g_0^2 = 2 |g_1|^2 may be safely claimed, but not the unrestricted equivalence to kappa = 2.
-- **auditor confidence:** high
-
 ### `ckm_atlas_axiom_closure_note`
 
 - **Note:** [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](../../docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
@@ -2854,19 +2795,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** Issue: the source note explicitly frames this as open, future, planning, or a stretch attempt rather than a closed theorem. Why this blocks: the audit packet does not independently close the load-bearing step, so the row cannot carry an audit-clean theorem/result beyond its stated bounded or open scope. Repair target: register a current runner/log or cite an audited dependency that proves the missing bridge, then re-audit the narrowed claim. Claim boundary until fixed: safe to cite as a bounded diagnostic, roadmap, archive, or finite-slice report only as worded in the source note.
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
-- **auditor confidence:** high
-
-### `complete_prediction_chain_2026_04_15`
-
-- **Note:** [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](../../docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** The complete Cl(3) on Z^3 prediction package is claimed to yield seven observables and vacuum stability from one axiom plus the single computed plaquette input.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-context-auditor-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Seven independent observables (v, alpha_s, sin^2(theta_W), 1/alpha_EM, y_t, m_t, m_H) plus one qualitative prediction (vacuum stability) from one axiom and one computed number.  _(class `B`)_
-- **chain closes:** False — The source note is a synthesis wrapper that explicitly depends on upstream proposed/audited rows while the ledger metadata exposes no deps for this claim. The current runner also disagrees with the note on the full 3-loop Higgs value: the note repeatedly says 129.7 GeV, while the runner prints 125.10 GeV.
-- **rationale:** Issue: The complete-package claim does not close from the provided note plus runner, and the note is stale relative to the runner for the headline m_H(full 3-loop) number. Why this blocks: A complete prediction-chain theorem cannot be retained when its support stack is not registered as auditable dependencies and one promoted observable has conflicting current values, 129.7 GeV in the note versus 125.10 GeV in the runner. Repair target: Register and audit the one-hop theorem dependencies, make the runner compute rather than hard-code the load-bearing bridges, and reconcile the Higgs full-3-loop route so source note and runner agree. Claim boundary until fixed: This may be treated only as an unaudited package inventory listing promoted component outputs, not as an independently closed zero-import prediction chain.
 - **auditor confidence:** high
 
 ### `complex_action_note`

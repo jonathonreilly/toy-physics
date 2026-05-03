@@ -23,8 +23,9 @@ Verifies the standalone Hermitian-circulant response identity:
     (ii)  Master identity:
               2 r_0^2  -  (r_1^2 + r_2^2)  =  18 (g_0^2 - 2 |g_1|^2).
     (iii) The Koide cone condition `2 r_0^2 = r_1^2 + r_2^2` is exactly
-          equivalent to the one-scalar equation `g_0^2 = 2 |g_1|^2`,
-          i.e., kappa := g_0^2 / |g_1|^2 = 2.
+          equivalent to the global one-scalar equation
+          `g_0^2 = 2 |g_1|^2`. On the open subdomain `g_1 != 0`,
+          this can be written as kappa := g_0^2 / |g_1|^2 = 2.
 
 This is class-A pure linear algebra on Hermitian circulant 3x3 matrices.
 No Koide / charged-lepton / observable-principle / second-order-return
@@ -164,14 +165,14 @@ check("On cone g_0 = sqrt(2) |g_1|: 2 r_0^2 - (r_1^2 + r_2^2) = 0 exact",
 
 
 # ----------------------------------------------------------------------------
-section("Part 6: kappa = g_0^2 / |g_1|^2 = 2 at cone")
+section("Part 6: kappa = g_0^2 / |g_1|^2 = 2 on the nonzero cone")
 # ----------------------------------------------------------------------------
 # kappa is well-defined when g_1 != 0; on cone, kappa = 2.
 g_1_re_concrete, g_1_im_concrete = Rational(1, 3), Rational(1, 5)
 g_1_sq_concrete = g_1_re_concrete**2 + g_1_im_concrete**2
 g_0_concrete_on_cone = sympy.sqrt(2 * g_1_sq_concrete)
 kappa_on_cone = simplify(g_0_concrete_on_cone**2 / g_1_sq_concrete)
-check("at concrete (g_1_re, g_1_im) = (1/3, 1/5) on cone: kappa = 2",
+check("at concrete nonzero (g_1_re, g_1_im) = (1/3, 1/5) on cone: kappa = 2",
       simplify(kappa_on_cone - Rational(2)) == 0,
       detail=f"kappa = {kappa_on_cone}")
 
@@ -210,7 +211,10 @@ print("""
     (T2) Master identity:
             2 r_0^2 - (r_1^2 + r_2^2)  =  18 (g_0^2 - 2 |g_1|^2).
     (T3) Koide cone condition 2 r_0^2 = r_1^2 + r_2^2 is exactly
-         equivalent to g_0^2 = 2 |g_1|^2, i.e. kappa := g_0^2 / |g_1|^2 = 2.
+         equivalent to the global equation g_0^2 = 2 |g_1|^2.
+         On the open subdomain g_1 != 0 this can also be written as
+         kappa := g_0^2 / |g_1|^2 = 2. At g_1 = 0 the cone forces
+         g_0 = 0 and the kappa quotient is undefined.
 
   Audit-lane class:
     (A) — pure linear algebra on Hermitian-circulant 3x3 matrices and

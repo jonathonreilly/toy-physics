@@ -429,6 +429,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
       "from": "axiom_first_first_law_bh_mechanics_theorem_note_2026-05-01",
       "to": "universal_qg_canonical_textbook_geometric_action_equivalence_note"
     },
@@ -519,6 +523,10 @@
     {
       "from": "axiom_first_kms_condition_theorem_note_2026-05-01",
       "to": "axiom_first_cpt_theorem_stretch_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_lattice_noether_theorem_note_2026-04-29",
+      "to": "minimal_axioms_2026-04-11"
     },
     {
       "from": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
@@ -655,6 +663,30 @@
     {
       "from": "axiom_first_spectrum_condition_theorem_note_2026-04-29",
       "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
+      "from": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "to": "g_bare_rigidity_theorem_note"
+    },
+    {
+      "from": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "to": "g_bare_two_ward_closure_note_2026-04-18"
+    },
+    {
+      "from": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "to": "assumption_derivation_ledger"
     },
     {
       "from": "axiom_first_stefan_boltzmann_theorem_note_2026-05-01",
@@ -3175,6 +3207,30 @@
     {
       "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
       "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "rconn_derived_note"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "yt_color_projection_correction_note"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "yt_qfp_insensitivity_support_note"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "higgs_mass_from_axiom_note"
     },
     {
       "from": "complex_selectivity_compare_note",
@@ -23093,7 +23149,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T19:47:17.217179+00:00",
+  "generated_at": "2026-05-03T19:49:42.579506+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24935,8 +24991,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "c0ede1499e224cdc7db5ba20c005122d1023fd6a04c5903f394d9decb0e71c27",
+      "deps": [
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "c0db814be170195c5345f058c26611fedc1a6b79d0512ebe982b5e48518acc05",
       "path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
       "title": "Axiom-First Per-Site Uniqueness of the Cl(3) Spinor Module"
@@ -25050,8 +25108,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "48830647401175ba36d084ecb66f06c1e67b5e4f20128ce376cb38807ddf1ad2",
+      "deps": [
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "fe9fcea6e1ccffe12ec2fe24063157798a13624520269736d276b2c6746247f7",
       "path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "title": "Axiom-First Lattice Noether's Theorem on Cl(3) \u2297 Z^3"
@@ -25166,8 +25226,15 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "cf781bfad36f6f4c9820886f5e4982b2d8776aab5dda3c93064bf09ce6674de4",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "minimal_axioms_2026-04-11",
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "g_bare_rigidity_theorem_note",
+        "g_bare_two_ward_closure_note_2026-04-18",
+        "assumption_derivation_ledger"
+      ],
+      "note_hash": "1664d1ef60c39298ac9358211b093a08f16de3ca4fc7fd2391667d4eab682f8e",
       "path": "docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_spin_statistics_check.py",
       "title": "Axiom-First Spin-Statistics Theorem on Cl(3) \u2297 Z^3"
@@ -26464,7 +26531,7 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "3c63b5af18b1e4cdf0293ca8203ba1c80370737d53052976e22a5da693422a94",
+      "note_hash": "e69fff175ab6931b909165df9f3ce4ecd6799461f8467b43d676206b47114aca",
       "path": "docs/CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_circulant_response_master_identity_narrow.py",
       "title": "Hermitian-Circulant Response Master Identity Narrow Theorem"
@@ -27353,8 +27420,15 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "21c95806ea15fa032fdd73475c2d86a1f930e05d635df2cb7e72e11faf96db97",
+      "deps": [
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem",
+        "yt_color_projection_correction_note",
+        "yt_qfp_insensitivity_support_note",
+        "higgs_mass_from_axiom_note"
+      ],
+      "note_hash": "e9016baa85e4959aee445dbe7a75147419879b56cd613659e33ecfc3a5d089bc",
       "path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
       "runner_path": "scripts/frontier_complete_prediction_chain.py",
       "title": "Complete Prediction Chain: Cl(3) on Z^3"
@@ -50283,13 +50357,10 @@
     "audit_dm_runner_stale_path_cleanup_note_2026-05-01",
     "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
     "axiom_change_proposal_2026-04-10",
-    "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
     "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
     "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
-    "axiom_first_lattice_noether_theorem_note_2026-04-29",
     "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-    "axiom_first_spin_statistics_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "b_independence_mechanism_note",
     "background_independence_note",
@@ -50352,7 +50423,6 @@
     "claude_complex_action_carryover_note",
     "claude_complex_action_grown_companion_note",
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
-    "complete_prediction_chain_2026_04_15",
     "complex_action_note",
     "confinement_string_tension_note",
     "continuum_bridge_note",
@@ -51257,10 +51327,10 @@
       "open_gate": 112,
       "positive_theorem": 629
     },
-    "edge_count": 5773,
+    "edge_count": 5787,
     "leaf_count": 598,
     "node_count": 1864,
-    "root_count": 1059,
+    "root_count": 1055,
     "runners_with_path": 1423
   }
 }

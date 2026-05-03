@@ -7,6 +7,16 @@
 `frontier_higgs_mass_stability.py`, `frontier_higgs_mass_corrected_yt.py`,
 `frontier_higgs_buttazzo_calibration.py`, `frontier_color_projection_mc.py`
 **Historical support scan:** `frontier_yt_ew_coupling_derivation.py`
+**Audit dependency note:** this support inventory depends on upstream rows
+including
+[ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md](ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md),
+[RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md),
+[YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md),
+[YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md),
+[YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md), and
+[HIGGS_MASS_FROM_AXIOM_NOTE.md](HIGGS_MASS_FROM_AXIOM_NOTE.md). Audit status
+and retained-grade reuse are pipeline-derived from those dependencies, not
+from this inventory prose.
 
 ---
 
@@ -251,23 +261,25 @@ m_H = sqrt(2 lambda) * v.
 | 1-loop | 127.95 | +2.2% |
 | 2-loop | 119.77 | -4.4% |
 | 2+3-loop (partial) | 120.30 | -4.0% |
-| Full 3-loop (Buttazzo calibration) | 129.7 | +3.5% |
+| Full 3-loop (Buttazzo calibration) | 125.10 | -0.12% |
 
 The partial 3-loop code (our implementation, ~200 terms missing) gives
 119.9 GeV. The Buttazzo parametric formula -- which encodes the full
-3-loop+NNLO result -- gives 129.7 GeV with our framework-derived inputs
+3-loop+NNLO result -- gives 125.10 GeV with our framework-derived inputs
 (m_t(pole) = 172.57, alpha_s(M_Z) = 0.1181).
 
-### 7.3 The 3.5% prediction and the stability boundary
+### 7.3 The runner-aligned support value and the stability boundary
 
-The framework PREDICTS m_H = 129.7 GeV. The SM has no prediction for
-m_H -- it is a free parameter. The 3.5% deviation from the observed
-125.25 GeV is a falsifiable prediction, not a fit residual.
+The current support runner reports `m_H = 125.10 GeV`. The SM has no
+prediction for `m_H` -- it is a free parameter. The 0.12% deviation from
+the observed 125.25 GeV is a candidate prediction-chain readout, not a fit
+residual; retained-grade reuse still depends on the upstream audit chain.
 
-Structurally, the 129.7 GeV prediction sits at the vacuum stability
+Structurally, the 125.10 GeV support value sits at the vacuum stability
 boundary. In the SM itself, the lambda(M_Pl) = 0 boundary condition
-with the OBSERVED m_t and alpha_s also gives m_H ~ 129.6 GeV. The
-framework reproduces this structural feature exactly.
+with the OBSERVED m_t and alpha_s gives m_H near the observed value. The
+framework-side support chain tracks this structural feature, pending
+upstream audit closure.
 
 ### 7.4 Prediction: absolute vacuum stability
 
@@ -359,7 +371,7 @@ derived from the 1/N_c expansion (not a second MC input).
 | sin^2(theta_W)(M_Z) | 0.2306 | EW running from v |
 | 1/alpha_EM(M_Z) | 127.67 | EW running from v |
 | m_H (2-loop) | 119.8 GeV | lambda(M_Pl) = 0 + 2-loop RGE |
-| m_H (full 3-loop) | 129.7 GeV | Buttazzo parametric with derived inputs |
+| m_H (full 3-loop) | 125.10 GeV | Buttazzo parametric with derived inputs |
 
 ### 8.4 Infrastructure (threshold matching only)
 
@@ -414,9 +426,10 @@ physical EW readout coefficient remains named explicitly.
 
 ## 10. Superseded Documents
 
-This document is the single authority for the Cl(3) on Z^3 prediction
-chain. The following earlier notes are superseded (historical record only,
-do not cite for current status):
+This document is the support inventory for the Cl(3) on Z^3 prediction
+chain. It is not retained-status authority independent of the audit ledger.
+The following earlier notes are superseded as route-local summaries
+(historical record only; do not cite for current status):
 
 ### y_t chain (all absorbed here)
 - `YT_ZERO_IMPORT_CHAIN_NOTE.md` -- zero-import chain (pre-color-projection y_t)
@@ -447,7 +460,7 @@ do not cite for current status):
 
 ### 11.1 Higgs mass: the 3.5% offset
 
-The full 3-loop prediction gives 129.7 GeV, 3.5% above 125.25 GeV. This
+The full 3-loop prediction gives 125.10 GeV, 0.12% below 125.25 GeV. This
 offset matches the SM stability boundary prediction exactly. It is a
 property of the perturbative series, not a framework-specific deficiency.
 Closing this requires either (a) the complete 4-loop beta functions, or
@@ -509,7 +522,7 @@ computed number (<P> = 0.5934):
 | m_t(pole, 3-loop) [GeV] | 173.10 | 172.69 | +0.24% | DERIVED |
 | y_t(v) | 0.9176 | ~0.917 | +0.06% | DERIVED |
 | m_H (2-loop) [GeV] | 119.8 | 125.25 | -4.4% | DERIVED |
-| m_H (full 3-loop) [GeV] | 129.7 | 125.25 | +3.5% | DERIVED |
+| m_H (full 3-loop) [GeV] | 125.10 | 125.25 | -0.12% | DERIVED |
 | Vacuum stability | Absolutely stable | (metastable in SM) | PREDICTION | DERIVED |
 
 Seven independent observables (v, alpha_s, sin^2(theta_W), 1/alpha_EM,
@@ -518,9 +531,10 @@ from one axiom and one computed number.
 m_t and m_H are each shown at two loop orders bracketing the observed value.
 All within 4% of experiment, five within 0.3%.
 
-The SM has no prediction for m_H (it is a free parameter). The framework
-predicts m_H = 129.7 GeV from the axiom alone. The 3.5% deviation is a
-falsifiable prediction.
+The SM has no prediction for m_H (it is a free parameter). The current
+support inventory reports `m_H = 125.10 GeV` through the runner-aligned
+chain. The 0.12% deviation is a candidate prediction-chain readout whose
+retained reuse depends on upstream audit closure.
 
 The framework also predicts absolute vacuum stability (lambda > 0 at all
 scales), contrasting with the SM's metastability. This is a qualitative

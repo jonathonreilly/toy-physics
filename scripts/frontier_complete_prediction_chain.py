@@ -3,8 +3,9 @@
 Canonical synthesis runner for COMPLETE_PREDICTION_CHAIN_2026_04_15.md.
 
 This script is intentionally package-level rather than route-level. It
-collects the final promoted quantitative rows that survived the review pass and
-prints the single reviewer-facing prediction card on `main`.
+collects the current support-inventory quantitative rows and prints the
+reviewer-facing prediction card on `main`. Audit status and retained-grade
+reuse are pipeline-derived, not granted by this runner.
 
 Subcomponent provenance:
   - plaquette/u0/alpha_LM/alpha_s(v)/v: hierarchy + zero-import chain
@@ -39,19 +40,19 @@ ALPHA_S_V = CANONICAL_ALPHA_S_V
 V = M_PL * ((7.0 / 8.0) ** 0.25) * (ALPHA_LM ** 16)
 TASTE_WEIGHT = (7.0 / 8.0) * 0.5 * R_CONN
 
-# Final promoted EW package values from the reviewed complete chain.
+# Current EW support-inventory values from the complete chain.
 SIN2_MZ = 0.23061
 INV_ALPHA_EM_MZ = 127.665
 G1_V = 0.464376
 G2_V = 0.648031
 
-# Final promoted Yukawa / top package values.
+# Current Yukawa / top support-inventory values.
 YT_WARD_V = 0.973220
 YT_PHYSICAL_V = 0.9176
 MT_POLE_2L = 172.57
 MT_POLE_3L = 173.10
 
-# Final promoted Higgs / vacuum package values.
+# Current Higgs / vacuum support-inventory values.
 MH_2L = 119.77
 MH_3L = 125.10
 VACUUM_READOUT = "Qualitatively favorable"
@@ -76,7 +77,7 @@ def main() -> None:
     print(f"  R_conn          = {R_CONN:.6f}")
     print(f"  taste_weight    = {TASTE_WEIGHT:.6f} (= 7/18)")
     print()
-    print("Promoted quantitative package")
+    print("Support inventory quantitative package")
     rows = [
         ("v [GeV]", V, 246.22),
         ("alpha_s(M_Z)", 0.118066, 0.1179),
@@ -107,7 +108,7 @@ def main() -> None:
     print("  YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md")
     print("  HIGGS_MASS_FROM_AXIOM_NOTE.md")
     print()
-    print("Status: promoted package on main")
+    print("Status: support inventory; audit status is pipeline-derived")
 
 
 if __name__ == "__main__":

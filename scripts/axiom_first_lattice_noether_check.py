@@ -16,9 +16,11 @@ the same Noether structure for U(1) ⊂ SU(3)):
   E1.  Symmetry condition (6): for the U(1) phase generator T = i·I,
        [T, M] = T M - M T = 0 to machine precision.
 
-  E2.  Symmetry condition (6): for the Z^3 (or Z^d) translation
-       generator T^μ = (forward - backward)/2 (staggered hop),
-       [T^μ, M] = 0 up to staggered phase factors.
+  E2.  Symmetry condition (6) for the (2Z)^d sublattice translation:
+       two-site shift operator S^{(2μ̂)} satisfies S M S^T = M
+       (one-site shifts are NOT symmetries because the staggered
+       phase factor η_μ has period 2; that is the staggered-shift
+       caveat documented in the theorem note's Step 5).
 
   E3.  Fermion-number current J^μ_x defined by (4); on-shell lattice
        divergence ∂^L · J = 0 verified at a chosen classical
@@ -81,11 +83,11 @@ def exhibit_E1(L=2, dim=3, mass=0.3, tol=1e-12):
 
 
 # ---------------------------------------------------------------------------
-# E2: Z^d translation symmetry — invariance under shift x → x + a
+# E2: (2Z)^d sublattice translation symmetry — invariance under x → x + 2a
 # ---------------------------------------------------------------------------
 
 def exhibit_E2(L=4, dim=3, mass=0.3, tol=1e-12):
-    print("\n--- Exhibit E2: Z^d translation symmetry of M ---")
+    print("\n--- Exhibit E2: (2Z)^d sublattice translation symmetry of M ---")
     M, sites, idx = build_M_pure_staggered(L, mass=mass, dim=dim)
     N = len(sites)
 
@@ -198,8 +200,8 @@ def main():
     print("=" * 72)
     print(" axiom_first_lattice_noether_check.py")
     print(" Loop: axiom-first-foundations, Cycle 5 / Route R5")
-    print(" Exhibits the lattice Noether theorem (U(1) phase + Z^d translation)")
-    print(" on the canonical pure-staggered Cl(3) ⊗ Z^d action.")
+    print(" Exhibits the lattice Noether theorem (U(1) phase + (2Z)^d sublattice")
+    print(" translation) on the canonical pure-staggered Cl(3) ⊗ Z^d action.")
     print("=" * 72)
 
     e1 = exhibit_E1(L=2, dim=3)
@@ -211,7 +213,7 @@ def main():
     print(" SUMMARY")
     print("=" * 72)
     results = {"E1 (U(1) sym condition)": e1,
-               "E2 (Z^d translation sym)": e2,
+               "E2 ((2Z)^d sublattice translation sym)": e2,
                "E3 (current divergence-free on shell)": e3,
                "E4 (global charge conservation)": e4}
     n_pass = sum(1 for v in results.values() if v)
@@ -221,7 +223,8 @@ def main():
     print(f"\n   PASSED: {n_pass}/{n_total}")
     print()
     if n_pass == n_total:
-        print(" verdict: lattice Noether theorem (N1)-(N3) exhibited on Cl(3) on Z^d.")
+        print(" verdict: lattice Noether theorem (N1)-(N3) exhibited on Cl(3) ⊗ Z^d")
+        print("          with the (2Z)^d sublattice scope from the 2026-05-03 repair.")
         return 0
     else:
         print(" verdict: at least one structural exhibit failed.")

@@ -1,12 +1,35 @@
 {
   "by_criticality": {
-    "critical": 62,
-    "high": 213,
+    "critical": 63,
+    "high": 216,
     "leaf": 201,
-    "medium": 262
+    "medium": 263
   },
-  "generated_at": "2026-05-03T19:47:25.048907+00:00",
+  "generated_at": "2026-05-03T19:49:50.560826+00:00",
   "queue": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "minimal_axioms_2026-04-11"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.719,
+      "note_path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
+      "transitive_descendants": 297
+    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -26,12 +49,12 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.285,
+      "load_bearing_score": 9.295,
       "note_path": "docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py",
-      "transitive_descendants": 311
+      "transitive_descendants": 313
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -51,12 +74,12 @@
       ],
       "direct_in_degree": 30,
       "effective_status": "unaudited",
-      "load_bearing_score": 23.281,
+      "load_bearing_score": 23.29,
       "note_path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
-      "transitive_descendants": 310
+      "transitive_descendants": 312
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -551,6 +574,29 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.17,
+      "note_path": "docs/G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_g_bare_derivation.py",
+      "transitive_descendants": 287
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -581,29 +627,6 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cl3_color_automorphism_theorem"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.16,
-      "note_path": "docs/G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_g_bare_derivation.py",
-      "transitive_descendants": 285
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -616,12 +639,12 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 8.655,
+      "load_bearing_score": 8.665,
       "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
-      "transitive_descendants": 284
+      "transitive_descendants": 286
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -640,12 +663,12 @@
       ],
       "direct_in_degree": 13,
       "effective_status": "unaudited",
-      "load_bearing_score": 14.65,
+      "load_bearing_score": 14.66,
       "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
-      "transitive_descendants": 283
+      "transitive_descendants": 285
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -663,12 +686,12 @@
       ],
       "direct_in_degree": 6,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.103,
+      "load_bearing_score": 11.114,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py",
-      "transitive_descendants": 274
+      "transitive_descendants": 276
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -692,12 +715,12 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.598,
+      "load_bearing_score": 9.609,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py",
-      "transitive_descendants": 273
+      "transitive_descendants": 275
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -718,12 +741,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.593,
+      "load_bearing_score": 10.603,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_bridge_support.py",
-      "transitive_descendants": 272
+      "transitive_descendants": 274
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -744,12 +767,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.593,
+      "load_bearing_score": 10.603,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
-      "transitive_descendants": 272
+      "transitive_descendants": 274
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -769,12 +792,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.593,
+      "load_bearing_score": 10.603,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
-      "transitive_descendants": 272
+      "transitive_descendants": 274
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -794,12 +817,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.593,
+      "load_bearing_score": 10.603,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
-      "transitive_descendants": 272
+      "transitive_descendants": 274
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -819,12 +842,12 @@
       ],
       "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.593,
+      "load_bearing_score": 10.603,
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
-      "transitive_descendants": 272
+      "transitive_descendants": 274
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -863,12 +886,12 @@
       ],
       "direct_in_degree": 21,
       "effective_status": "unaudited",
-      "load_bearing_score": 18.587,
+      "load_bearing_score": 18.598,
       "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_plaquette_self_consistency.py",
-      "transitive_descendants": 271
+      "transitive_descendants": 273
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -886,12 +909,12 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 8.544,
+      "load_bearing_score": 8.555,
       "note_path": "docs/QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_qcd_low_energy_running_bridge.py",
-      "transitive_descendants": 263
+      "transitive_descendants": 265
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -910,12 +933,12 @@
       ],
       "direct_in_degree": 42,
       "effective_status": "unaudited",
-      "load_bearing_score": 29.039,
+      "load_bearing_score": 29.05,
       "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_yt_zero_import_chain.py",
-      "transitive_descendants": 262
+      "transitive_descendants": 264
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1065,12 +1088,12 @@
       ],
       "direct_in_degree": 29,
       "effective_status": "unaudited",
-      "load_bearing_score": 21.577,
+      "load_bearing_score": 21.598,
       "note_path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
-      "transitive_descendants": 134
+      "transitive_descendants": 136
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1355,6 +1378,34 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_ward_identity_derivation_theorem",
+      "claim_scope": null,
+      "claim_type": "open_gate",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": "confirmed",
+      "deps": [
+        "native_gauge_closure_note",
+        "left_handed_charge_matching_note",
+        "yukawa_color_projection_theorem",
+        "yt_ew_color_projection_theorem",
+        "yt_vertex_power_derivation",
+        "minimal_axioms_2026-04-11"
+      ],
+      "direct_in_degree": 37,
+      "effective_status": "unaudited",
+      "load_bearing_score": 24.976,
+      "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
+      "transitive_descendants": 88
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audited_conditional",
       "blocker": null,
       "claim_id": "ckm_atlas_axiom_closure_note",
@@ -1395,34 +1446,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_ckm_atlas_axiom_closure.py",
       "transitive_descendants": 86
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_ward_identity_derivation_theorem",
-      "claim_scope": null,
-      "claim_type": "open_gate",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "confirmed",
-      "deps": [
-        "native_gauge_closure_note",
-        "left_handed_charge_matching_note",
-        "yukawa_color_projection_theorem",
-        "yt_ew_color_projection_theorem",
-        "yt_vertex_power_derivation",
-        "minimal_axioms_2026-04-11"
-      ],
-      "direct_in_degree": 37,
-      "effective_status": "unaudited",
-      "load_bearing_score": 24.926,
-      "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
-      "transitive_descendants": 85
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1699,14 +1722,14 @@
       "criticality_rank": 2,
       "cross_confirmation_status": null,
       "deps": [],
-      "direct_in_degree": 12,
+      "direct_in_degree": 13,
       "effective_status": "audited_decoration",
-      "load_bearing_score": 12.19,
+      "load_bearing_score": 12.748,
       "note_path": "docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 72
+      "transitive_descendants": 75
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -1720,14 +1743,14 @@
       "criticality_rank": 2,
       "cross_confirmation_status": null,
       "deps": [],
-      "direct_in_degree": 6,
+      "direct_in_degree": 7,
       "effective_status": "audited_conditional",
-      "load_bearing_score": 9.0,
+      "load_bearing_score": 9.522,
       "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_yt_qfp_insensitivity.py",
-      "transitive_descendants": 63
+      "transitive_descendants": 64
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -1773,6 +1796,29 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "axiom_first_lattice_noether_theorem_note_2026-04-29",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "minimal_axioms_2026-04-11"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.255,
+      "note_path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/axiom_first_lattice_noether_check.py",
+      "transitive_descendants": 53
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "audited_conditional",
       "blocker": null,
       "claim_id": "g_bare_rigidity_theorem_note",
@@ -1783,14 +1829,14 @@
       "criticality_rank": 2,
       "cross_confirmation_status": "third_confirmed_second",
       "deps": [],
-      "direct_in_degree": 5,
+      "direct_in_degree": 6,
       "effective_status": "audited_conditional",
-      "load_bearing_score": 8.055,
+      "load_bearing_score": 8.644,
       "note_path": "docs/G_BARE_RIGIDITY_THEOREM_NOTE.md",
       "queue_reason": "claim_type_backfill_reaudit",
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_rigidity_theorem.py",
-      "transitive_descendants": 46
+      "transitive_descendants": 49
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -2842,12 +2888,12 @@
       ],
       "direct_in_degree": 11,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.598,
+      "load_bearing_score": 12.619,
       "note_path": "docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_s3_action_taste_cube_decomposition.py",
-      "transitive_descendants": 136
+      "transitive_descendants": 138
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -5463,6 +5509,58 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "g_bare_structural_normalization_theorem_note_2026-04-18",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "g_bare_rigidity_theorem_note",
+        "g_bare_derivation_note",
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note",
+        "three_generation_observable_theorem_note",
+        "plaquette_self_consistency_note"
+      ],
+      "direct_in_degree": 6,
+      "effective_status": "unaudited",
+      "load_bearing_score": 8.615,
+      "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_g_bare_structural_normalization.py",
+      "transitive_descendants": 48
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "audited_conditional",
+      "blocker": null,
+      "claim_id": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "backfilled_pending_reaudit",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
+        "yt_ward_identity_derivation_theorem"
+      ],
+      "direct_in_degree": 5,
+      "effective_status": "audited_conditional",
+      "load_bearing_score": 8.115,
+      "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
+      "queue_reason": "claim_type_backfill_reaudit",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 48
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "quark_up_amplitude_tensor_endpoint_bridge_note_2026-04-19",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -5730,6 +5828,56 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_quark_route2_exact_time_coupling.py",
+      "transitive_descendants": 47
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "assumption_derivation_ledger",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "rconn_derived_note"
+      ],
+      "direct_in_degree": 5,
+      "effective_status": "unaudited",
+      "load_bearing_score": 8.085,
+      "note_path": "docs/ASSUMPTION_DERIVATION_LEDGER.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 47
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "audited_conditional",
+      "blocker": null,
+      "claim_id": "g_bare_two_ward_closure_note_2026-04-18",
+      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "backfilled_pending_reaudit",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
+        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
+        "yt_ward_identity_derivation_theorem",
+        "g_bare_rigidity_theorem_note",
+        "g_bare_structural_normalization_theorem_note_2026-04-18"
+      ],
+      "direct_in_degree": 5,
+      "effective_status": "audited_conditional",
+      "load_bearing_score": 8.085,
+      "note_path": "docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md",
+      "queue_reason": "claim_type_backfill_reaudit",
+      "ready": false,
+      "runner_path": "scripts/frontier_g_bare_two_ward_closure.py",
       "transitive_descendants": 47
     },
     {
@@ -6457,58 +6605,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_teleportation_protocol.py",
-      "transitive_descendants": 45
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "g_bare_structural_normalization_theorem_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "g_bare_rigidity_theorem_note",
-        "g_bare_derivation_note",
-        "native_gauge_closure_note",
-        "graph_first_su3_integration_note",
-        "three_generation_observable_theorem_note",
-        "plaquette_self_consistency_note"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.024,
-      "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_g_bare_structural_normalization.py",
-      "transitive_descendants": 45
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "audited_conditional",
-      "blocker": null,
-      "claim_id": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-        "yt_ward_identity_derivation_theorem"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "audited_conditional",
-      "load_bearing_score": 8.024,
-      "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
-      "queue_reason": "claim_type_backfill_reaudit",
-      "ready": false,
-      "runner_path": null,
       "transitive_descendants": 45
     },
     {
@@ -7649,6 +7745,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 5.992,
+      "note_path": "docs/CIRCULANT_RESPONSE_MASTER_IDENTITY_NARROW_THEOREM_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_circulant_response_master_identity_narrow.py",
+      "transitive_descendants": 44
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "fourth_family_complex_boundary_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -8233,12 +8350,12 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 7.943,
+      "load_bearing_score": 7.992,
       "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_vertex_power.py",
-      "transitive_descendants": 86
+      "transitive_descendants": 89
     },
     {
       "audit_independence_required": "any_non_self",
@@ -9885,6 +10002,34 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "complete_prediction_chain_2026_04_15",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem",
+        "yt_color_projection_correction_note",
+        "yt_qfp_insensitivity_support_note",
+        "higgs_mass_from_axiom_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.085,
+      "note_path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_complete_prediction_chain.py",
+      "transitive_descendants": 47
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "koide_positive_paths_first_principles_note_2026-04-18",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -10605,56 +10750,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_dm_neutrino_yukawa_candidate.py",
       "transitive_descendants": 45
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "assumption_derivation_ledger",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "rconn_derived_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 7.492,
-      "note_path": "docs/ASSUMPTION_DERIVATION_LEDGER.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 44
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "audited_conditional",
-      "blocker": null,
-      "claim_id": "g_bare_two_ward_closure_note_2026-04-18",
-      "claim_scope": "Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "backfilled_pending_reaudit",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
-        "yt_ward_identity_derivation_theorem",
-        "g_bare_rigidity_theorem_note",
-        "g_bare_structural_normalization_theorem_note_2026-04-18"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
-      "load_bearing_score": 7.492,
-      "note_path": "docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md",
-      "queue_reason": "claim_type_backfill_reaudit",
-      "ready": false,
-      "runner_path": "scripts/frontier_g_bare_two_ward_closure.py",
-      "transitive_descendants": 44
     },
     {
       "audit_independence_required": "any_non_self",
@@ -13984,6 +14079,34 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_atomic_lane2_qed_running_dependency_firewall.py",
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "axiom_first_spin_statistics_theorem_note_2026-04-29",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "minimal_axioms_2026-04-11",
+        "g_bare_structural_normalization_theorem_note_2026-04-18",
+        "g_bare_rigidity_theorem_note",
+        "g_bare_two_ward_closure_note_2026-04-18",
+        "assumption_derivation_ledger"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.585,
+      "note_path": "docs/AXIOM_FIRST_SPIN_STATISTICS_THEOREM_NOTE_2026-04-29.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/axiom_first_spin_statistics_check.py",
       "transitive_descendants": 2
     },
     {
@@ -19430,6 +19553,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 53,
-  "total_pending": 738
+  "ready_count": 56,
+  "total_pending": 743
 }
