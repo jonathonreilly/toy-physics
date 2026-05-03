@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:33:30.435270+00:00
+**Generated:** 2026-05-03T19:37:29.662787+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 105 |
-| **retained_bounded** | 176 |
+| **retained_bounded** | 177 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 716 |
+| unaudited | 715 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 333 |
+| `audited_clean` | 334 |
 | `audited_conditional` | 548 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 762 |
+| `unaudited` | 761 |
 
 | claim_type | count |
 |---|---:|
@@ -276,6 +276,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lattice_3d_dense_window_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lattice_3d_tapered_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `lattice_field_strength_unification_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lattice_kernel_transfer_norm_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -9135,6 +9136,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The ordered lattice supports a continuous tradeoff between decoherence/which-slit structure and distance-law quality, with a bounded sweet spot where both are simultaneously present.  _(class `C`)_
 - **chain closes:** False — The runner reproduces the finite canonical sweep, but the promoted complementarity claim depends on selected proxy observables, the chosen sweet-spot guard, and a Born check on a same-family companion aperture rather than the same two-slit card.
 - **rationale:** Issue: the note promotes a bounded complementarity sweet spot from a finite N=40, half_width=20 slit-gap sweep with chosen centroid, mass-placement, distance-fit, and threshold guards, while Born cleanliness is checked only on a same-family companion aperture. Why this blocks: those choices demonstrate an internally reproducible scenario, but they do not by themselves establish a retained lattice complementarity theorem or same-card coexistence of Born, which-slit/decoherence, distance-law quality, and attractive gravity. Repair target: provide a theorem or registered runner proving the observable/readout and guard selection from retained primitives, and compute Born plus the distance-law/decoherence observables on the same aperture card or explicitly prove the companion-aperture transfer. Claim boundary until fixed: the current runner safely supports the reported canonical finite sweep, the monotone MI/d_TV rise, the R^2 degradation, the gap=2 thresholded sweet-spot row, clean companion Born residuals, zero k=0 response, and away-signed same-card gravity.
+- **auditor confidence:** high
+
+### `lattice_field_strength_unification_note`
+
+- **Note:** [`LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`](../../docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite runner-backed sweep showing four retained weak-field rows in the specified ordered-lattice Z2 family: max_dy=5, narrow_center/wide_center, strengths 0.0005 to 0.001, under the note's criteria.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-emmy`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Across the full 3 x 3 x 8 = 72 rows, retained weak-field rows: 4/72.  _(class `C`)_
+- **chain closes:** True — The primary runner completed within the audit budget and reproduced the canonical row, retained-row count, positive/all-b-positive counts, Born-clean count, and standard-strength contrast. This audit is scoped only to the finite sweep and criteria, not to a blanket lattice unification theorem or an independently derived field-strength selection law.
+- **rationale:** Within the bounded claim scope, the note's numerical claims match the current completed runner output and the runner computes the weak-field sweep rather than setting the retained rows by fiat. The one-hop dependency supports the fixed-standard-strength contrast used for the reopening framing. Residual risk is only interpretive: causal language about the mechanism must remain bounded to this tested sweep.
 - **auditor confidence:** high
 
 ### `lattice_kernel_transfer_norm_note`

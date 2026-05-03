@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 62,
-    "high": 214,
+    "high": 213,
     "leaf": 201,
     "medium": 268
   },
-  "generated_at": "2026-05-03T19:33:29.632769+00:00",
+  "generated_at": "2026-05-03T19:37:28.774555+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1791,29 +1791,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_rigidity_theorem.py",
       "transitive_descendants": 46
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lattice_field_strength_unification_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_symmetry_unification_decision_note"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.2,
-      "note_path": "docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/lattice_field_strength_unification.py",
-      "transitive_descendants": 12
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -14767,6 +14744,52 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lattice_weak_field_mass_scaling_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "lattice_field_strength_unification_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/lattice_weak_field_mass_scaling.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "lattice_weak_field_purity_scaling_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "lattice_field_strength_unification_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/LATTICE_WEAK_FIELD_PURITY_SCALING_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/lattice_weak_field_purity_scaling.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "minimal_source_driven_field_probe_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -17922,52 +17945,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lattice_weak_field_mass_scaling_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_field_strength_unification_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_weak_field_mass_scaling.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lattice_weak_field_purity_scaling_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_field_strength_unification_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/LATTICE_WEAK_FIELD_PURITY_SCALING_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_weak_field_purity_scaling.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lensing_adjoint_kernel_shape_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -19579,6 +19556,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 57,
-  "total_pending": 745
+  "ready_count": 58,
+  "total_pending": 744
 }
