@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:31:44.199095+00:00
+**Generated:** 2026-05-03T00:35:09.080539+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 98 |
 | **retained_bounded** | 203 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 9 |
-| unaudited | 492 |
+| open_gate | 10 |
+| unaudited | 491 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 410 |
+| `audited_clean` | 411 |
 | `audited_conditional` | 655 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 532 |
+| `unaudited` | 531 |
 
 | claim_type | count |
 |---|---:|
@@ -470,6 +470,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `symmetry_spectrum_mirror_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `teleportation_3d1_causal_record_channel_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | A | - |
+| `teleportation_3d_initial_ramp_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
@@ -16616,6 +16617,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The channel schedules and delivers the record inside the configured 3D+1 light cone, while explicitly not deriving the Bell bits, Bell resource, or measurement dynamics.  _(class `A`)_
 - **chain closes:** True — The note closes as an open-gate boundary: the runner verifies local record propagation, delivery timing, exactly-once delivery controls, standard finite-matrix correction behavior, and pre-delivery Bob input-independence. The omitted Bell-record/resource/dynamics derivations are stated as limitations rather than claimed results.
 - **rationale:** Clean only as an open-gate/planning-boundary claim. The runner checks consistency of an explicit classical Bell-record channel on a discrete 3D+1 lattice and the note clearly says the Bell record, Bell resource, and measurement dynamics are supplied rather than derived. No retained physics theorem beyond that bounded channel claim is established or implied.
+- **auditor confidence:** high
+
+### `teleportation_3d_initial_ramp_probe_note`
+
+- **Note:** [`TELEPORTATION_3D_INITIAL_RAMP_PROBE_NOTE.md`](../../docs/TELEPORTATION_3D_INITIAL_RAMP_PROBE_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Exact side=2/N=8 3D Poisson ramp diagnostic under the listed runner: null control, high best-Bell resource candidate, and a native-basis G=0 preparation blocker; no scalability, robustness, readout, or non-teleportation transport claim.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-agent-Pasteur-019deb40-9d82-7c00-929f-e09aed5e18ea`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Combined preparation verdict: unresolved gap; the side-2 ramp is a useful 3D resource candidate, but the required G=0 initial state is maximally delocalized in the native basis and no scalable preparation, control, noise, or readout proof is supplied.  _(class `C`)_
+- **chain closes:** True — The chain closes for the open-gate scope only: the runner output supports the note's candidate resource numbers while also showing G=0 PR/dim=1.000000 against the localization threshold. It does not close a retained scalable preparation or transport theorem, and the note does not claim one.
+- **rationale:** The audited claim is a planning boundary, not a resource theorem. The source note and runner output agree on the load-bearing facts: the null control is clean, the side-2 Poisson endpoint and finite-time ramp meet the stated Bell/overlap thresholds, and the G=0 initial state remains maximally delocalized in the native basis. Because the note explicitly limits the conclusion to a side-2 resource candidate with unresolved preparation/scaling/readout gaps, it cleanly establishes a citeable open gate.
 - **auditor confidence:** high
 
 ### `teleportation_acceptance_suite_note`
