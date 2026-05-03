@@ -124,6 +124,13 @@ EMPTY_AUDIT = {
     "claim_type_provenance": None,
     "claim_type_last_reviewed": None,
     "notes_for_re_audit_if_any": None,
+    # audit_state_snapshot is preserved BY apply_audit.py at audit time so
+    # invalidate_stale_audits.py can detect downstream changes. When an audit
+    # is reset (note hash drift, archived audit), the snapshot from the prior
+    # audit is just historical noise and should be cleared so the lint does
+    # not generate false "criticality bumped since audit" warnings against a
+    # snapshot that no longer corresponds to an active audit.
+    "audit_state_snapshot": None,
 }
 
 # Audit fields that are preserved across re-seeds when the note hash is
