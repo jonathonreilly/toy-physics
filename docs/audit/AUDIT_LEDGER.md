@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:45:12.576036+00:00
+**Generated:** 2026-05-03T21:45:58.696632+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 108 |
-| **retained_bounded** | 203 |
+| **retained_bounded** | 204 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 673 |
+| unaudited | 672 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 371 |
+| `audited_clean` | 372 |
 | `audited_conditional` | 553 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 720 |
+| `unaudited` | 719 |
 
 | claim_type | count |
 |---|---:|
@@ -407,6 +407,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_self_consistent_two_body_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | C | - |
 | `staggered_test_mass_companion_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_two_field_wave_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `structured_chokepoint_bridge_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -14062,6 +14063,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The algebraic and numerical runner checks close theta_eff = 0 inside the explicitly theta-free retained action surface, but the note does not derive that theta-free action surface and mass orientation as forced physical strong-sector inputs.
 - **rationale:** Issue: theta_eff = 0 relies on selecting a theta-free Wilson-plus-staggered scalar-mass action surface with real positive mass orientation. Why this blocks: the runner verifies determinant positivity, axial exit from the selected scalar-mass class, real effective action, and positive-weight theta-sum behavior after that surface is imposed; it does not derive that the physical strong sector must have no bare theta slot or that the selected mass orientation is forced by retained primitives. Repair target: add a retained theorem and runner deriving the action-surface/no-theta-slot selection and mass-orientation boundary from framework primitives rather than taking them as the retained surface definition. Claim boundary until fixed: bounded conditional theta_eff = 0 closure on the explicitly theta-free retained surface only, not a tier-ratifiable strong-CP solution beyond that selected surface.
 - **auditor confidence:** high
+
+### `structured_chokepoint_bridge_extension_note`
+
+- **Note:** [`STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md`](../../docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite runner replay of the structured chokepoint bridge on the fixed canonical readout for N = 60, 80, 100 with the stated parameters and 16 seeds.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-structured-chokepoint-extension`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The larger-N replay widened the retained pocket on the same structured family.  _(class `C`)_
+- **chain closes:** True — The named runner completed on the default rows and reproduced the note's table: Born-clean printed as zero, k=0 remained zero, and gravity stayed positive for N = 60, 80, 100. This closes only the bounded larger-N replay, not any asymptotic, readout-independent, or architecture-level bridge claim.
+- **rationale:** Within the bounded scope, the claim is a finite computational replay over the retained structured bridge setup, and the current runner output matches the source table for all three default larger-N rows. The runner does not hard-code the displayed numerical rows in the audited file; it calls the retained narrow-probe machinery with widened layer counts. The clean result is limited to the stated canonical readout, parameters, layer counts, and seed count, with no asymptotic or readout-independent extension inferred.
+- **auditor confidence:** medium
 
 ### `structured_chokepoint_bridge_note`
 

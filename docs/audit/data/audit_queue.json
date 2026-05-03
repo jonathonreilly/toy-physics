@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 62,
     "high": 215,
-    "leaf": 178,
+    "leaf": 177,
     "medium": 247
   },
-  "generated_at": "2026-05-03T21:45:12.003459+00:00",
+  "generated_at": "2026-05-03T21:45:58.070815+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -14100,29 +14100,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "structured_chokepoint_bridge_extension_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "structured_chokepoint_bridge_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/structured_chokepoint_bridge_extension.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -18666,6 +18643,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 20,
-  "total_pending": 702
+  "ready_count": 19,
+  "total_pending": 701
 }
