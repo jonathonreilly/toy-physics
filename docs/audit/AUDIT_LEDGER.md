@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:23:39.941844+00:00
+**Generated:** 2026-05-03T17:24:18.066179+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 74 |
 | **retained_no_go** | 100 |
-| **retained_bounded** | 168 |
+| **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 768 |
+| unaudited | 767 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 28 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 311 |
+| `audited_clean` | 312 |
 | `audited_conditional` | 523 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 28 |
 | `audited_renaming` | 22 |
-| `unaudited` | 814 |
+| `unaudited` | 813 |
 
 | claim_type | count |
 |---|---:|
@@ -264,6 +264,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_dense_window_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lattice_3d_tapered_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `lensing_beta_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -8605,6 +8606,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The one-term-per-layer reduction fails badly while the exact edge replay matches the first-order observable at the stated H=0.35 setup.  _(class `C`)_
 - **chain closes:** True — The source makes only a bounded negative claim about the first reduced surrogate. The live H=0.35 runner reproduces the archived exact-edge/full-harness spot-check and the layer_signed/layer_abs failures against the exact edge series, with no cited dependencies needed.
 - **rationale:** The retained content is a bounded negative inside the stated harness, not a derivation of the reference lensing slope or a continuum physics claim. The live runner with --h 0.35 reproduces true_kubo=+5.972756 and exact_edge=+5.972756 at b=3 with |Delta|=4.228e-13, then shows the signed and absolute one-term-per-layer reductions miss the b=3..6 exact-edge series by about 98-100%. Because the note explicitly keeps the exact edge factorization as the reference object and rejects only the first reduced surrogate, the claim closes on its own terms.
+- **auditor confidence:** high
+
+### `lensing_beta_sweep_note`
+
+- **Note:** [`LENSING_BETA_SWEEP_NOTE.md`](../../docs/LENSING_BETA_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded Fam1 numerical mechanism check: for b={3,4,5,6}, coarse H=0.5 beta={0.8,5,7,10} and refinement H=0.35 at beta=5, the beta=5 coarse near-1/b behavior is not stable under nearby beta values or refinement.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-current-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The beta=5 near-1/b result was not a real narrow-beam limit: nearby large-beta values already leave it, and the H=0.35 refinement check flips sign and lands at slope -0.7930.  _(class `C`)_
+- **chain closes:** True — The registered runner recomputes the exact table values quoted in the note: beta=5 at H=0.5 gives slope -1.0114 with ++++ signs, beta=7 and 10 give negative sign patterns and slopes -1.3922 and -1.2690, and H=0.35 beta=5 gives slope -0.7930 with ---- signs. The conclusion closes only as the explicitly bounded Fam1 finite-parameter numerical negative, not as a global no-go theorem for all narrow-beam limits.
+- **rationale:** The current primary runner output exactly reproduces the note's load-bearing numerical claims and does not hard-code the conclusion: it computes kubo_true values across the stated beta, H, and b grid and reports the slopes, signs, and 1/b spread used by the argument. The audited claim is therefore clean only within the stated bounded scope: the coarse beta=5 spike is unstable against the specified nearby beta values and H-refinement. Residual risk is external validity: this does not prove a framework-level no-go for every beta, geometry family, b range, or continuum refinement path.
 - **auditor confidence:** high
 
 ### `lensing_deflection_note`
