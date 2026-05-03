@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:30:23.895639+00:00
+**Generated:** 2026-05-03T13:33:48.946694+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 733 |
+| unaudited | 732 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 522 |
+| ~~audited_conditional~~ | 523 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 346 |
-| `audited_conditional` | 522 |
+| `audited_conditional` | 523 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 775 |
+| `unaudited` | 774 |
 
 | claim_type | count |
 |---|---:|
@@ -903,6 +903,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_layered_gauge_phase_diagram_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strc_lo_collinearity_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | E | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | E | - |
+| `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `teleportation_3d_resource_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
@@ -13092,6 +13093,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The safe read is that structureless causal DAGs can show TOWARD rows, and when they do the source-strength response stays close to linear on this pocket.  _(class `C`)_
 - **chain closes:** True — The runner directly constructs the stated random DAG pocket, propagates with the stated valley-linear field and kernel, and reports the TOWARD counts, local power-law fits, and no-field controls. No external dependency or graph-universality claim is needed for the narrowed harness-level statement.
 - **rationale:** The bounded claim closes as a direct numerical harness result: n=200 gives 28/32 TOWARD rows and n=500 gives 21/32 TOWARD rows, with F~M median 1.00 and zero no-field controls in both reported sizes. The source note's n=500 table value is stale relative to current runner output, but this does not change the load-bearing majority-TOWARD and near-linear positive-row conclusion. Exact-count citation should use the current runner values until the note table is refreshed.
+- **auditor confidence:** high
+
+### `su2_witten_z2_anomaly_theorem_note_2026-04-24`
+
+- **Note:** [`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](../../docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Given native SU(2), a left-handed (2,3) plus (2,1) doublet sector with N_c=3, and three replicated generations as retained upstream inputs, the Witten SU(2) doublet count is even: N_D = 12.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-audit-loop-2026-05-03-su2-witten-z2`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** N_D(three generations) = 3 * 4 = 12 = 0 mod 2, so the retained SU(2) matter content is Witten-Z2 anomaly-free.  _(class `A`)_
+- **chain closes:** False — The parity arithmetic closes if the upstream matter, color, SU(2), and three-generation inputs are already retained-grade as actual chiral Weyl doublet content. In the restricted packet, the left-handed matter-content and physical three-generation replication bridge are not closed strongly enough for an unconditional positive theorem.
+- **rationale:** Issue: the load-bearing Witten count is correct algebra over imported premises, but the source claim depends on retained native SU(2), N_c=3 color, left-handed Q_L/L_L doublet content, and physical three-generation replication; the one-hop packet does not independently close the chiral matter-content and physical replication bridge needed to count actual Weyl doublets. Why this blocks: the audit can verify the parity arithmetic, but it cannot promote the theorem from conditional arithmetic to retained anomaly cancellation when the required retained chiral-matter surface is supplied only by scope-limited upstream notes. Repair target: provide or cite retained-grade audit closure for the chiral SU(2) Weyl-doublet content and the bridge from local hw=1 triplet structure to three physical replicated chiral generations used in the Witten count. Claim boundary until fixed: the note may safely state that the Witten Z2 obstruction cancels on the assumed retained SM-like surface with N_D = 3*(3+1) = 12.
+- **open / conditional deps cited:**
+  - `LEFT_HANDED_CHARGE_MATCHING_NOTE.md`
+  - `THREE_GENERATION_STRUCTURE_NOTE.md`
 - **auditor confidence:** high
 
 ### `substrate_to_p_a_forcing_theorem_note_2026-04-30`

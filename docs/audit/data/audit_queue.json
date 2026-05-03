@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 59,
+    "critical": 58,
     "high": 223,
     "leaf": 208,
     "medium": 277
   },
-  "generated_at": "2026-05-03T13:30:23.257936+00:00",
+  "generated_at": "2026-05-03T13:33:48.241786+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -69,32 +69,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py",
       "transitive_descendants": 268
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "su2_witten_z2_anomaly_theorem_note_2026-04-24",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "native_gauge_closure_note",
-        "left_handed_charge_matching_note",
-        "graph_first_su3_integration_note",
-        "three_generation_structure_note"
-      ],
-      "direct_in_degree": 15,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.67,
-      "note_path": "docs/SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 71
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -19929,6 +19903,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 106,
-  "total_pending": 767
+  "ready_count": 105,
+  "total_pending": 766
 }
