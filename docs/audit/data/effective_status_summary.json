@@ -1,14 +1,14 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 586,
+    "bounded_theorem": 585,
     "decoration": 7,
     "meta": 45,
     "no_go": 160,
     "open_gate": 89,
-    "positive_theorem": 864,
+    "positive_theorem": 865,
     "unset": 1
   },
-  "computed_at": "2026-05-03T14:47:39.794164+00:00",
+  "computed_at": "2026-05-03T14:49:08.671994+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",

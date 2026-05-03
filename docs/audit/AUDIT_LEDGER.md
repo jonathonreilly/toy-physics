@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:47:41.623964+00:00
+**Generated:** 2026-05-03T14:49:10.483765+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -46,12 +46,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 586 |
+| `bounded_theorem` | 585 |
 | `decoration` | 7 |
 | `meta` | 45 |
 | `no_go` | 160 |
 | `open_gate` | 89 |
-| `positive_theorem` | 864 |
+| `positive_theorem` | 865 |
 | `unset` | 1 |
 
 | criticality | count |
@@ -452,7 +452,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `broad_gravity_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_field_canonical_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `causal_impact_parameter_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `causal_field_portability_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | configured_proxy_threshold_without_retained_bridge | - |
 | `central_band_born_dense_sweep_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_born_largen_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_collapse_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1816,21 +1816,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `causal_field_primary_runner_not_registered`
 - **auditor confidence:** high
 
-### `causal_impact_parameter_note`
+### `causal_field_portability_note`
 
-- **Note:** [`CAUSAL_IMPACT_PARAMETER_NOTE.md`](../../docs/CAUSAL_IMPACT_PARAMETER_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **Note:** [`CAUSAL_FIELD_PORTABILITY_NOTE.md`](../../docs/CAUSAL_FIELD_PORTABILITY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims a diagnosed family boundary: exact-null controls survive across three configured grown families, but causal-field forward-only and finite-cone ratios split rather than yielding a cross-family portability law.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** The finite-cone variant is the boundary.  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (causal_field_portability_note=support, causal_field_reconciliation_note=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (causal_field_portability_note=support, causal_field_reconciliation_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared candidate retained-grade tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `CAUSAL_FIELD_PORTABILITY_NOTE.md`
-  - `CAUSAL_FIELD_RECONCILIATION_NOTE.md`
-- **auditor confidence:** high
+- **auditor:** `codex-causal-portability-fresh-auditor-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The boundary conclusion rests on treating the measured forward-only ratio spread of 0.423 and dynamic(c=0.5)/instantaneous ratio spread of 0.352 as sufficient to establish non-portability/family-boundary structure for the causal-field observable.  _(class `configured_proxy_threshold_without_retained_bridge`)_
+- **chain closes:** False — The runner reproduces the stated numerical spreads for the configured families, seeds, source anchor, field definitions, and readout. It does not supply a retained theorem that these ratios, thresholds, family choices, and detector-centroid readout constitute the hard portability bridge.
+- **rationale:** Issue: The note converts configured ratio spreads into a positive theorem-level family-boundary claim without a retained derivation of the portability criterion, threshold, family parametrization, or readout map. The local runner reproduced the stated exact-null controls, forward-only ratio spread 0.423, and dynamic(c=0.5)/instantaneous ratio spread 0.352, and it explicitly frames the result as a bounded portability probe rather than a field-theory derivation. Why this blocks: A hostile reviewer can accept the script output and still reject the theorem claim, because the runner only measures a chosen proxy under chosen cases; it does not prove the hard bridge from retained CL3 inputs to a portability law or boundary theorem. Repair target: Provide a retained theorem defining the causal-field observable, admissible family class, portability metric, boundary threshold, and detector readout, plus a runner that tests that theorem rather than only replaying selected configurations. Claim boundary until fixed: The safe claim is a bounded computational diagnostic: this script, with its current parameters and seeds, finds exact-null stability and ratio splitting across the three configured families.
+- **auditor confidence:** 0.86
 
 ### `causal_propagating_field_note`
 

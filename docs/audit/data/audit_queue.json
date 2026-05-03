@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 60,
-    "high": 219,
-    "leaf": 201,
+    "high": 218,
+    "leaf": 202,
     "medium": 327
   },
-  "generated_at": "2026-05-03T14:47:40.026539+00:00",
+  "generated_at": "2026-05-03T14:49:08.893220+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1708,27 +1708,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "causal_field_portability_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 7,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.281,
-      "note_path": "docs/CAUSAL_FIELD_PORTABILITY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/causal_field_portability_probe.py",
-      "transitive_descendants": 54
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "moving_source_retarded_portability_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -1878,8 +1857,8 @@
       "blocker": null,
       "claim_id": "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
       "claim_scope": null,
-      "claim_type": null,
-      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
@@ -17609,6 +17588,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "causal_impact_parameter_note",
+      "claim_scope": null,
+      "claim_type": null,
+      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "causal_field_portability_note",
+        "causal_field_reconciliation_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CAUSAL_IMPACT_PARAMETER_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/causal_impact_parameter_probe.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "causal_moving_unification_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -20868,6 +20871,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 120,
+  "ready_count": 119,
   "total_pending": 807
 }
