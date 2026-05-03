@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:52:17.865886+00:00
+**Generated:** 2026-05-03T19:53:17.905065+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 181 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 711 |
+| unaudited | 710 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 550 |
-| ~~audited_failed~~ | 10 |
+| ~~audited_failed~~ | 11 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 339 |
 | `audited_conditional` | 550 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 54 |
+| `audited_failed` | 55 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 757 |
+| `unaudited` | 756 |
 
 | claim_type | count |
 |---|---:|
@@ -1053,6 +1053,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_nonlocal_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_results_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
 | `testable_predictions_map_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `three_family_card_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -13561,6 +13562,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** For N=25,40,60, the structured chokepoint slice remains Born-clean, k=0 pinned, positive-gravity, and below the decoherence ceiling on the registered canonical readout.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the three-row diagnostic table with the stated Born, k=0, gravity, and pur_cl values. The closure is finite and readout-specific, with no asymptotic or architecture-level bridge theorem.
 - **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
+- **auditor confidence:** high
+
+### `structured_mirror_bornsafe_scan_note`
+
+- **Note:** [`STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](../../docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The listed finite structured-mirror linear-propagator scan found no Born-safe pocket in the scanned parameter grid and seeds.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-pascal`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** No scanned structured-mirror configuration reached the corrected Born threshold of machine precision.  _(class `C`)_
+- **chain closes:** False — The note gives a scan summary and cites the scripts, but provides no completed exhaustive scan transcript, cached certificate, or registered runner output certifying the minimum Born readout over every scanned row.
+- **rationale:** Issue: the load-bearing null result is asserted from a finite scan without a completed output/certificate showing every listed configuration and seed was evaluated and that the minimum corrected Born readout stayed above threshold. Why this blocks: the bounded theorem is a computational exhaustion claim, so the source note plus scripts define the search but do not by themselves certify the exhaustive result. Repair target: add a registered runner or cached transcript that emits a PASS/certificate for the exact scanned grid, seed policy, Born threshold, and minimum row. Claim boundary until fixed: the note may be cited as a negative-control scan report, not as an audited retained bounded theorem.
 - **auditor confidence:** high
 
 ### `structureless_dag_gravity_harness_note`
