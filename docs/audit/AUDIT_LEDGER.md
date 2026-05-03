@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:29:22.744905+00:00
+**Generated:** 2026-05-03T16:30:32.501193+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,24 +24,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 783 |
+| unaudited | 782 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 516 |
+| ~~audited_conditional~~ | 517 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 306 |
-| `audited_conditional` | 516 |
+| `audited_conditional` | 517 |
 | `audited_decoration` | 6 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 829 |
+| `unaudited` | 828 |
 
 | claim_type | count |
 |---|---:|
@@ -762,6 +762,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
 | `persistent_inertial_response_readiness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
@@ -9598,6 +9599,28 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The widened exact-lattice top3 branch fails the three-segment multistage persistence bar on all five stable widened rows, specifically because later-stage mean update overlap falls below 0.90 while compressed carry and kappa drift remain clean.  _(class `C`)_
 - **chain closes:** True — The current top_keep=3 runner execution reproduced the note's 0/5 admissible summary and the row-level overlap/carry/drift pattern: baseline, source1.5, source2.75, width5, and length8 all fail by sub-threshold stage overlap with carry_mean=1.000 and max_kappa_drift=0.000%.
 - **rationale:** Clean within the declared bounded-negative scope. The note does not claim persistent inertial-mass closure; it claims the top3 branch is compression-stabilized but not self-maintaining under the retained multistage persistence gate. The current registered runner computes the five stable widened-regime rows and reproduces the frozen 0/5 result, with the failure localized to stage-2/stage-3 overlap below 0.90 while TOWARD, F~M, carry, and kappa drift remain stable. Residual risk is the note's stated limitation: this is a diagnosis of the top3 exact-lattice branch, not a proof about other object architectures or broader floors.
+- **auditor confidence:** high
+
+### `persistent_object_top4_multistage_transfer_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded exact-lattice claim that a retained top4 multistage compact-object floor is admissible on 11 of 13 listed widened local-pocket cases, with the residual inward-source boundary between source_z=1.00 and 1.25.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-restricted-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The exact-lattice branch has a real self-maintaining multistage top4 floor that transfers across most of the widened local pocket, with only a residual inward-source boundary between 1.00 and 1.25.  _(class `C`)_
+- **chain closes:** False — The source note states the 11/13 pass table, but the cited batch logs are not present in this checkout and current full-run attempts did not produce completed case rows. The script is a computational exact-lattice check in form, but the pass/fail table and imported gate/readout primitives remain unverified from the available bounded packet.
+- **rationale:** Issue: The bounded transfer conclusion rests on a frozen 11/13 admissibility table whose cited batch logs are absent from the checkout, while current full-run attempts produced no completed case rows before the audit moved on. Why this blocks: A bounded computational transfer claim can be clean only when current runner output or provided logs reproduce the stated pass/fail boundary under the same gates; otherwise the table is an asserted result rather than an audited closure. Repair target: Provide fast reproducible current output for all 13 rows, or split/cache the runner so baseline, source0p75, source1p00, source1p25, source1p50, source2p75, width5, and length8 can be independently checked, with the imported readout/gate primitives included as retained or auditable dependencies. Claim boundary until fixed: The note may be cited as an attempted bounded exact-lattice transfer sweep with a stated 11/13 result, but not as a retained bounded theorem that top4 transfer closes across the widened pocket.
+- **open / conditional deps cited:**
+  - `logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-a.txt`
+  - `logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-b.txt`
+  - `logs/2026-04-16-persistent-object-top4-multistage-transfer-batch-c.txt`
+  - `scripts/minimal_source_driven_field_probe.py`
+  - `scripts/persistent_object_blended_readout_boundary_probe.py`
+  - `scripts/persistent_object_blended_readout_transfer_sweep.py`
+  - `scripts/persistent_object_compact_inertial_probe.py`
+  - `scripts/persistent_object_compact_shared.py`
 - **auditor confidence:** high
 
 ### `persistent_record_matched_compare_note`

@@ -3,9 +3,9 @@
     "critical": 61,
     "high": 219,
     "leaf": 200,
-    "medium": 332
+    "medium": 331
   },
-  "generated_at": "2026-05-03T16:29:21.972254+00:00",
+  "generated_at": "2026-05-03T16:30:32.079934+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7737,27 +7737,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "transitive_descendants": 54
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 7.085,
-      "note_path": "docs/PERSISTENT_OBJECT_TOP4_MULTISTAGE_TRANSFER_SWEEP_NOTE_2026-04-16.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
-      "transitive_descendants": 47
     },
     {
       "audit_independence_required": "any_non_self",
@@ -21008,6 +20987,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 119,
-  "total_pending": 812
+  "ready_count": 118,
+  "total_pending": 811
 }
