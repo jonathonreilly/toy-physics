@@ -10925,6 +10925,26 @@
       "to": "cl3_color_automorphism_theorem"
     },
     {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "su3_fusion_engine_pr1_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+    },
+    {
+      "from": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
       "from": "symmetry_head_to_head_note",
       "to": "mirror_chokepoint_note"
     },
@@ -23193,7 +23213,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T20:26:21.346521+00:00",
+  "generated_at": "2026-05-03T20:29:28.580619+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -46204,6 +46224,34 @@
       "runner_path": "scripts/su3_dabc_symmetric_check.py",
       "title": "SU(3) Symmetric Structure Constants d^{abc} from Anticommutator"
     },
+    "su3_fusion_engine_pr1_theorem_note_2026-05-03": {
+      "claim_id": "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "7ce2bef16f4afa98abbb9cdefa8e3f23f0addbab32f3b8d536b77d187b35946b",
+      "path": "docs/SU3_FUSION_ENGINE_PR1_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_fusion_engine.py",
+      "title": "SU(3) Fusion Engine via Cartan-Torus Character Orthogonality (PR 1)"
+    },
+    "su3_tensor_network_engine_roadmap_note_2026-05-03": {
+      "claim_id": "su3_tensor_network_engine_roadmap_note_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+        "su3_fusion_engine_pr1_theorem_note_2026-05-03",
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+      ],
+      "note_hash": "7cef199cbda68d4c79e49fc3cf5d7e0a8ec3ba249371133742453bcddb22c794",
+      "path": "docs/SU3_TENSOR_NETWORK_ENGINE_ROADMAP_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_su3_fusion_engine.py",
+      "title": "SU(3) Tensor-Network Engine Roadmap (5-PR Plan)"
+    },
     "substrate_to_p_a_forcing_theorem_note_2026-04-30": {
       "claim_id": "substrate_to_p_a_forcing_theorem_note_2026-04-30",
       "claim_type_author_hint": null,
@@ -51207,6 +51255,7 @@
     "structured_mirror_reconciliation_note",
     "structureless_dag_gravity_harness_note",
     "structureless_dag_gravity_note",
+    "su3_fusion_engine_pr1_theorem_note_2026-05-03",
     "substrate_to_p_a_forcing_theorem_note_2026-04-30",
     "symmetry_generated_paired_chokepoint_note",
     "symmetry_spectrum_mirror_compare_note",
@@ -51391,25 +51440,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 49,
-      "meta": 7,
+      "bounded_theorem": 50,
+      "meta": 8,
       "no_go": 6,
       "none": 1727,
       "open_gate": 6,
       "positive_theorem": 71
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 551,
-      "meta": 7,
+      "bounded_theorem": 552,
+      "meta": 8,
       "no_go": 112,
       "none": 454,
       "open_gate": 113,
       "positive_theorem": 629
     },
-    "edge_count": 5798,
+    "edge_count": 5803,
     "leaf_count": 599,
-    "node_count": 1866,
-    "root_count": 1055,
-    "runners_with_path": 1426
+    "node_count": 1868,
+    "root_count": 1056,
+    "runners_with_path": 1428
   }
 }
