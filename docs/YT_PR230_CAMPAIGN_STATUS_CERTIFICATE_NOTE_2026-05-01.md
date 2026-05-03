@@ -26,8 +26,26 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=149 FAIL=0
+# SUMMARY: PASS=155 FAIL=0
 ```
+
+## 2026-05-03 Schur K-Prime Row Absence Guard Update
+
+The campaign status certificate now consumes the Schur K-prime row absence
+guard.  This is the claim-firewall companion to the Schur-complement
+sufficiency theorem: future same-surface `A/B/C` kernel rows would be useful,
+but current finite source-only `C_ss(q)` rows are not those rows.
+
+The guard passes with `PASS=14 FAIL=0`.  It scans current PR #230 certificates
+for complete Schur kernel rows, finds none, and gives a finite-row
+counterfamily with identical source-only shell values and pole location but
+different `D_eff'(pole)`.  The production harness now emits default-off
+`metadata.schur_kprime_kernel_rows` guard metadata for future certificates.
+
+The retained boundary is unchanged.  Explicit Schur `A/B/C` rows,
+certified `O_H/C_sH/C_HH` pole rows, or same-source W/Z response rows with
+identity certificates remain required.  No retained or `proposed_retained`
+closure is authorized.
 
 ## 2026-05-03 Source-Higgs Pole-Residue Extractor Update
 

@@ -203,6 +203,9 @@ def main() -> int:
         "schur_complement_kprime_sufficiency": load(
             "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json"
         ),
+        "schur_kprime_row_absence_guard": load(
+            "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json"
+        ),
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
@@ -867,6 +870,20 @@ def main() -> int:
         )
         is False,
         statuses["schur_complement_kprime_sufficiency"],
+    )
+    report(
+        "schur-kprime-row-absence-guard-blocks-source-only-import",
+        "Schur K-prime row absence guard"
+        in str(statuses["schur_kprime_row_absence_guard"])
+        and certificates["schur_kprime_row_absence_guard"].get(
+            "schur_kprime_row_absence_guard_passed"
+        )
+        is True
+        and certificates["schur_kprime_row_absence_guard"].get(
+            "current_schur_kernel_rows_present"
+        )
+        is False,
+        statuses["schur_kprime_row_absence_guard"],
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

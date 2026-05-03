@@ -1,5 +1,28 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 Schur K-prime row absence guard:
+
+- Added `scripts/frontier_yt_schur_kprime_row_absence_guard.py`,
+  `docs/YT_SCHUR_KPRIME_ROW_ABSENCE_GUARD_NOTE_2026-05-03.md`, and
+  `outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json`.
+- Updated `scripts/yt_direct_lattice_correlator_production.py` so future
+  certificates explicitly emit `metadata.schur_kprime_kernel_rows` as
+  `absent_guarded` unless a real same-surface Schur kernel partition is
+  supplied.
+- Result: bounded support / claim firewall.  Current finite source-only
+  `C_ss(q)` rows and FH slopes are not Schur `A/B/C` rows.  The counterfamily
+  keeps finite source-only rows and pole location fixed while changing Schur
+  rows and `D_eff'(pole)`.
+- Verification: Schur row absence guard `PASS=14 FAIL=0`; retained-route
+  `PASS=129 FAIL=0`; campaign status `PASS=155 FAIL=0`.
+- The chunks023-024 checkpoint from the remote branch is preserved below as
+  bounded production support.
+
+Next exact action: produce explicit same-surface Schur `A/B/C` kernel rows,
+or use a non-source rank-repair route: certified `O_H/C_sH/C_HH` pole rows or
+same-source W/Z response rows with identity certificates.  Keep polling any
+duplicate local chunk jobs until they exit or can be safely ignored.
+
 Latest checkpoint, 2026-05-03 FH/LSZ chunks023-024 v2 multi-tau wave:
 
 - Completed chunks023-024 with the selected-mass-only / normal-cache

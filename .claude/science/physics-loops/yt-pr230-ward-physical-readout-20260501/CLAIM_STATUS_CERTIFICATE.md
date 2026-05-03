@@ -1,5 +1,29 @@
 # Claim Status Certificate
 
+Schur K-prime row absence guard:
+
+```text
+actual_current_surface_status: bounded-support / Schur K-prime row absence guard; finite source-only rows rejected
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_schur_kprime_row_absence_guard.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=129 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=155 FAIL=0
+```
+
+The guard closes a claim-firewall gap after the Schur sufficiency theorem:
+finite source-only `C_ss(q)` rows and same-source FH slopes are not
+same-surface Schur `A/B/C` kernel rows.  A counterfamily keeps finite
+source-only rows and pole location fixed while changing Schur rows and
+`D_eff'(pole)`.  The production harness now marks Schur kernel rows as
+`absent_guarded`.  No retained or `proposed_retained` wording is authorized.
+
 FH/LSZ chunks023-024 v2 multi-tau target wave:
 
 ```text

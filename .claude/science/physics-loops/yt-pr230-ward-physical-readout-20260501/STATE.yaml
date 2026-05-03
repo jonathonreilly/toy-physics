@@ -13,11 +13,24 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-181-fh-lsz-chunks023-024-v2-multitau-wave
-blocks_completed: 181
-active_route: "FH/LSZ selected-mass-only v2 multi-tau production support after Schur K-prime route refresh"
-active_hard_residual: "Chunks023-024 completed with fixed seeds, no --resume, chunk-isolated output directories, selected-mass-only scalar FH/LSZ rows at m_bare=0.75, and normal-equation caching.  Chunk-local generic target-timeseries checkpoints are PASS=14 FAIL=0 for each chunk; v2 multi-tau checkpoints are PASS=19 FAIL=0 for each chunk.  The ready L12 set is now 24/63 chunks and 384/1000 saved configurations; target-observable ESS passes with limiting ESS 323.8130499055201.  Response stability remains open (relative_stdev=0.8942414475625226, spread_ratio=5.920283844112204), response-window acceptance remains open, and canonical-Higgs/source-overlap identity is still absent.  The remote Schur-complement K-prime sufficiency block is preserved as exact support for the scalar denominator route, but current Schur rows remain absent.  No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-182-schur-kprime-row-absence-guard
+blocks_completed: 182
+active_route: "scalar denominator route via Schur-complement K-prime row contract and source-only row firewall"
+active_hard_residual: "Schur K-prime row absence guard is bounded support, not closure. Runner PASS=14 FAIL=0; retained-route PASS=129 FAIL=0; campaign status PASS=155 FAIL=0. Current finite source-only C_ss(q) rows and FH slopes are not same-surface Schur A/B/C kernel rows; a counterfamily keeps finite source-only rows and pole location fixed while changing Schur rows and D_eff'(pole). Future certificates now mark schur_kprime_kernel_rows absent_guarded. K'(pole), scalar LSZ, explicit Schur rows, and canonical-Higgs identity remain open. The remote chunks023-024 block is preserved as bounded production support: ready L12 is 24/63 chunks, target ESS passes, but response stability and identity gates remain open. No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_schur_kprime_row_absence_guard.py"
+  - "docs/YT_SCHUR_KPRIME_ROW_ABSENCE_GUARD_NOTE_2026-05-03.md"
+  - "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json"
+  - "scripts/yt_direct_lattice_correlator_production.py"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_schur_complement_kprime_sufficiency.py"
   - "docs/YT_SCHUR_COMPLEMENT_KPRIME_SUFFICIENCY_NOTE_2026-05-03.md"
   - "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json"

@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - Schur K-Prime Row Absence Guard
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / SOURCE-ONLY ROWS REJECTED / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- finite source-only `C_ss(q)` rows and same-source FH slopes are not
+  same-surface Schur `A/B/C` kernel rows;
+- current production-support outputs contain no complete Schur row
+  certificate;
+- a finite-row counterfamily keeps source-only shell data and pole location
+  fixed while changing Schur rows and `D_eff'(pole)`;
+- the production harness now emits default-off Schur row guard metadata;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_schur_kprime_row_absence_guard.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/yt_direct_lattice_correlator_production.py
+python3 scripts/frontier_yt_schur_kprime_row_absence_guard.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Chunks023-024 V2 Multi-Tau Wave
 
 Local review-loop disposition:

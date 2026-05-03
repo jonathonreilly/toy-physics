@@ -2321,6 +2321,26 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 "physical_higgs_normalization": "not_derived",
                 "used_as_physical_yukawa_readout": False,
             },
+            "schur_kprime_kernel_rows": {
+                "enabled": False,
+                "implementation_status": "absent_guarded",
+                "required_measurement_objects": [
+                    "neutral scalar kernel partition K=[[A,B^T],[B,C]] on the same Cl3/Z3 surface",
+                    "A(pole) and A_prime(pole) for the source-pole coordinate",
+                    "B(pole) and B_prime(pole) for source-orthogonal neutral mixing",
+                    "C(pole), C_prime(pole), and C_inverse(pole) for the orthogonal neutral block",
+                    "pole isolation, finite-volume, finite-spacing, model-class, and identity certificates",
+                ],
+                "finite_source_only_c_ss_is_not_schur_rows": True,
+                "used_as_physical_yukawa_readout": False,
+                "strict_limit": (
+                    "Same-source C_ss(q) rows and finite source-response slopes "
+                    "must not be treated as Schur A/B/C kernel rows or as a "
+                    "K-prime closure certificate.  The Schur sufficiency theorem "
+                    "requires explicit same-surface kernel partition rows and "
+                    "pole derivatives."
+                ),
+            },
             "fh_lsz_measurement_policy": fh_lsz_policy,
             "source_higgs_cross_correlator": {
                 "enabled": source_higgs_enabled,

@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the Schur K-prime row absence guard is now landed.  It
+blocks the tempting source-only import: finite `C_ss(q)` rows and same-source
+FH slopes are not same-surface Schur `A/B/C` kernel rows, and a counterfamily
+keeps finite source-only rows plus pole location fixed while changing
+`D_eff'(pole)`.  Future certificates now carry an explicit
+`schur_kprime_kernel_rows` absent-guard.  This does not change the positive
+closure ranking: produce real Schur `A/B/C` rows, certified
+`O_H/C_sH/C_HH` pole rows, or same-source W/Z response rows with identity
+certificates.
+
 2026-05-03 update: chunks023-024 now extend the v2 FH/LSZ production-support
 set.  Ready L12 coverage is `24/63` chunks and `384/1000` saved
 configurations; v2 multi-tau rows are present for chunks017-024; target ESS

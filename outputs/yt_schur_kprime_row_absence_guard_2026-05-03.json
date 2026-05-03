@@ -1,0 +1,145 @@
+{
+  "actual_current_surface_status": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+  "bare_retained_allowed": false,
+  "counterfamily": {
+    "d_eff_prime_difference": 0.06104700000000007,
+    "different_d_eff_prime": true,
+    "different_schur_rows": true,
+    "epsilon": 0.17,
+    "family_1_schur_rows_at_pole": {
+      "A_at_pole": 0.0,
+      "B_at_pole": 0.0,
+      "C_at_pole": 1.4,
+      "D_eff_prime_at_pole": 1.0
+    },
+    "family_2_schur_rows_at_pole": {
+      "A_at_pole": 0.06864285714285714,
+      "B_at_pole": 0.31,
+      "C_at_pole": 1.4,
+      "D_eff_prime_at_pole": 1.061047
+    },
+    "finite_points": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "same_finite_source_rows": true,
+    "same_pole_location": true,
+    "source_rows": [
+      {
+        "C_ss_family_1": 2.2222222222222223,
+        "C_ss_family_2": 2.2222222222222223,
+        "D_eff_family_1": 0.45,
+        "D_eff_family_2": 0.45,
+        "absolute_c_ss_difference": 0.0,
+        "x": 0.25
+      },
+      {
+        "C_ss_family_1": 1.4285714285714286,
+        "C_ss_family_2": 1.4285714285714286,
+        "D_eff_family_1": 0.7,
+        "D_eff_family_2": 0.7,
+        "absolute_c_ss_difference": 0.0,
+        "x": 0.5
+      },
+      {
+        "C_ss_family_1": 1.0526315789473684,
+        "C_ss_family_2": 1.0526315789473684,
+        "D_eff_family_1": 0.95,
+        "D_eff_family_2": 0.95,
+        "absolute_c_ss_difference": 0.0,
+        "x": 0.75
+      },
+      {
+        "C_ss_family_1": 0.8333333333333334,
+        "C_ss_family_2": 0.8333333333333334,
+        "D_eff_family_1": 1.2,
+        "D_eff_family_2": 1.2,
+        "absolute_c_ss_difference": 0.0,
+        "x": 1.0
+      }
+    ],
+    "x_pole": -0.2
+  },
+  "current_schur_kernel_rows_present": false,
+  "exact_next_action": "Produce explicit same-surface Schur A/B/C kernel rows and pole derivatives, or use a non-source rank-repair route: certified O_H/C_sH/C_HH pole rows or same-source W/Z response rows with identity certificates.",
+  "fail_count": 0,
+  "finite_source_only_counterfamily_passed": true,
+  "parent_certificates": {
+    "finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "schur_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_harness_absence_guard": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
+    "wz_response_harness_absence_guard": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The guard proves that current finite source-only C_ss rows are not Schur A/B/C kernel rows and confirms that no complete current Schur row certificate exists.",
+  "scan": {
+    "complete_schur_row_hits": [],
+    "current_schur_kernel_rows_present": false,
+    "metadata_absent_guards": [],
+    "scanned_file_count": 49,
+    "scanned_files": [
+      "outputs/yt_direct_lattice_correlator_certificate_2026-04-30.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk001_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk002_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk003_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk004_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk005_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk006_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk007_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk008_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk009_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk010_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk011_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk012_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk013_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk014_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk015_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk016_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk017_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk018_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk019_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk020_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk021_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk022_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk023_2026-05-01.json",
+      "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk024_2026-05-01.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk001/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk002/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk003/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk004/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk005/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk006/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk007/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk008/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk009/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk010/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk011/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk012/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk013/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk014/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk015/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk016/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk017/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk018/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk019/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk020/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk021/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk022/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk023/L12xT24/ensemble_measurement.json",
+      "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk024/L12xT24/ensemble_measurement.json"
+    ],
+    "schur_row_hits": []
+  },
+  "schur_kprime_row_absence_guard_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not infer Schur A/B/C rows from C_ss(q), dE_top/ds, or finite source slopes",
+    "does not set kappa_s=1, D_eff'(pole)=1, or O_sp=O_H",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

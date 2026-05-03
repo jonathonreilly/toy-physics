@@ -18,8 +18,26 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=123 FAIL=0
+# SUMMARY: PASS=129 FAIL=0
 ```
+
+## 2026-05-03 Schur K-Prime Row Absence Guard Update
+
+The retained-route certificate now consumes
+`outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json`.
+This adds the negative side of the Schur-complement support theorem:
+finite source-only `C_ss(q)` rows and same-source FH slopes are not Schur
+`A/B/C` kernel rows.
+
+The guard scans current production-support certificates and finds no complete
+Schur row certificate.  It also records a counterfamily with identical finite
+source-only rows and the same pole location but different Schur rows and a
+different `D_eff'(pole)`.  The production harness now marks
+`metadata.schur_kprime_kernel_rows` as `absent_guarded`.
+
+This is bounded support and a claim firewall only.  It does not close
+`K'(pole)`, scalar LSZ normalization, or the canonical-Higgs/source-pole
+identity, and no retained or `proposed_retained` closure is authorized.
 
 ## 2026-05-03 Source-Higgs Pole-Residue Extractor Update
 

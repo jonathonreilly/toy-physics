@@ -133,6 +133,7 @@ def main() -> int:
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "schur_complement_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+        "schur_kprime_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -777,6 +778,14 @@ def main() -> int:
         and certificates["schur_complement_kprime_sufficiency"].get("proposal_allowed") is False
         and certificates["schur_complement_kprime_sufficiency"].get("schur_sufficiency_theorem_passed") is True
         and certificates["schur_complement_kprime_sufficiency"].get("current_closure_gate_passed") is False
+    )
+    schur_kprime_row_absence_guard_blocks_source_only_import = (
+        "Schur K-prime row absence guard"
+        in certificates["schur_kprime_row_absence_guard"].get("actual_current_surface_status", "")
+        and certificates["schur_kprime_row_absence_guard"].get("proposal_allowed") is False
+        and certificates["schur_kprime_row_absence_guard"].get("schur_kprime_row_absence_guard_passed") is True
+        and certificates["schur_kprime_row_absence_guard"].get("current_schur_kernel_rows_present") is False
+        and certificates["schur_kprime_row_absence_guard"].get("finite_source_only_counterfamily_passed") is True
     )
     higgs_pole_identity_gate_blocks = (
         "canonical-Higgs pole identity gate blocking"
@@ -1540,6 +1549,11 @@ def main() -> int:
         "schur-complement-kprime-sufficiency-not-closure",
         schur_complement_kprime_sufficiency_not_closure,
         certificates["schur_complement_kprime_sufficiency"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "schur-kprime-row-absence-guard-blocks-source-only-import",
+        schur_kprime_row_absence_guard_blocks_source_only_import,
+        certificates["schur_kprime_row_absence_guard"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",
