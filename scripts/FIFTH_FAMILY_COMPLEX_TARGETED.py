@@ -20,7 +20,7 @@ if SCRIPT_DIR not in sys.path:
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
-from CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP import (
+from CONNECTIVITY_FAMILY_V2_ELLIPTICAL_SWEEP import (
     Family,
     SOURCE_STRENGTH,
     SOURCE_Z,
