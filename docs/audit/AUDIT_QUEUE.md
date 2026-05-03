@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T12:00:30.970322+00:00
+**Generated:** 2026-05-03T12:05:31.740874+00:00
 **Total pending:** 773
 **Ready (all deps already at retained-grade or metadata tiers):** 118
 
@@ -16,7 +16,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `physical_lattice_necessity_note` | no_go | unaudited | critical | 288 | 15.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_physical_lattice_necessity.py` |
+| 1 | `physical_lattice_necessity_note` | no_go | audit_in_progress | critical | 288 | 15.18 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_physical_lattice_necessity.py` |
 | 2 | `architecture_note_directional_measure` | bounded_theorem | unaudited | critical | 288 | 10.18 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 3 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | unaudited | critical | 286 | 13.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_parent_source_hidden_character_nogo.py` |
 | 4 | `bh_entropy_derived_note` | bounded_theorem | unaudited | critical | 286 | 12.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bh_entropy_derived.py` |
