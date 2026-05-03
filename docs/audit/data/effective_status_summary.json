@@ -1,13 +1,13 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 534,
+    "bounded_theorem": 535,
     "decoration": 9,
     "meta": 40,
     "no_go": 157,
-    "open_gate": 100,
+    "open_gate": 99,
     "positive_theorem": 862
   },
-  "computed_at": "2026-05-03T00:35:08.658357+00:00",
+  "computed_at": "2026-05-03T00:38:44.566799+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -45,10 +45,10 @@
     "meta": 40,
     "open_gate": 10,
     "retained": 144,
-    "retained_bounded": 203,
+    "retained_bounded": 204,
     "retained_no_go": 98,
     "retained_pending_chain": 2,
-    "unaudited": 491
+    "unaudited": 490
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

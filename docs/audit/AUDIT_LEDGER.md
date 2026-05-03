@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:35:09.080539+00:00
+**Generated:** 2026-05-03T00:38:45.000297+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 203 |
+| **retained_bounded** | 204 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 491 |
+| unaudited | 490 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 411 |
+| `audited_clean` | 412 |
 | `audited_conditional` | 655 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 531 |
+| `unaudited` | 530 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 534 |
+| `bounded_theorem` | 535 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 157 |
-| `open_gate` | 100 |
+| `open_gate` | 99 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -471,6 +471,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `teleportation_3d1_causal_record_channel_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | A | - |
 | `teleportation_3d_initial_ramp_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_3d_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
@@ -16631,6 +16632,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** True — The chain closes for the open-gate scope only: the runner output supports the note's candidate resource numbers while also showing G=0 PR/dim=1.000000 against the localization threshold. It does not close a retained scalable preparation or transport theorem, and the note does not claim one.
 - **rationale:** The audited claim is a planning boundary, not a resource theorem. The source note and runner output agree on the load-bearing facts: the null control is clean, the side-2 Poisson endpoint and finite-time ramp meet the stated Bell/overlap thresholds, and the G=0 initial state remains maximally delocalized in the native basis. Because the note explicitly limits the conclusion to a side-2 resource candidate with unresolved preparation/scaling/readout gaps, it cleanly establishes a citeable open gate.
 - **auditor confidence:** high
+
+### `teleportation_3d_operator_consistent_end_to_end_note`
+
+- **Note:** [`TELEPORTATION_3D_OPERATOR_CONSISTENT_END_TO_END_NOTE.md`](../../docs/TELEPORTATION_3D_OPERATOR_CONSISTENT_END_TO_END_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite 3D side=2, mass=0, G=1000 Poisson resource under the retained-last-taste-axis convention and ideal retained-logical Bell/feed-forward operations; the framed Psi+->Phi+ row reaches Bell*=0.997724 and F_avg=0.998483 while raw xi_5 controls reject and no-signaling/causal-record guards pass.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Carson-019deb43-dd0e-7a20-85e3-2f9141cbbd29`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The default 3D positive Poisson case lands in the Psi+ Bell frame, and a known Bob-side retained logical X frame followed by standard retained-axis Z^z X^x feed-forward maps the resource to Phi+ and passes.  _(class `C`)_
+- **chain closes:** True — The scoped conclusion follows from the supplied runner output: retained-axis Z/X factorization passes, raw xi_5 controls fail as intended, null and fixed-Phi+ controls do not pass, and the non-null framed row passes all acceptance gates. Closure is bounded to the stated finite side=2 resource and ideal logical operations.
+- **rationale:** Within the note's explicit boundary, the runner computes the finite-resource bridge rather than merely asserting a Bell-frame label: it reports the raw best Bell state, applies the known Bob-side retained-axis frame, and checks exact/sample/branch fidelities, no-record independence, outcome coverage, and causal-record behavior. The note does not promote raw xi_5 as a retained readout and does not claim hardware teleportation, matter transport, larger 3D surfaces, or faster-than-light signaling.
+- **auditor confidence:** medium
 
 ### `teleportation_acceptance_suite_note`
 
