@@ -1,57 +1,58 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 548,
+    "bounded_theorem": 424,
     "decoration": 9,
     "meta": 41,
-    "no_go": 159,
-    "open_gate": 85,
-    "positive_theorem": 860
+    "no_go": 156,
+    "open_gate": 82,
+    "positive_theorem": 780,
+    "unset": 210
   },
-  "computed_at": "2026-05-03T10:48:18.078504+00:00",
+  "computed_at": "2026-05-03T11:31:07.044747+00:00",
   "cycle_examples": [
     [
-      "lorentz_boost_covariance_2d_theorem_note",
-      "lorentz_boost_covariance_3plus1d_theorem_note"
+      "restricted_strong_field_closure_note",
+      "evanescent_barrier_amplitude_suppression_theorem_note"
+    ],
+    [
+      "evanescent_barrier_amplitude_suppression_theorem_note",
+      "gw_echo_null_result_note"
     ],
     [
       "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
       "n_eff_from_three_generations_theorem_note_2026-04-24"
     ],
     [
-      "publication.ci3_z3.quantitative_summary_table",
-      "publication.ci3_z3.publication_matrix"
+      "lorentz_boost_covariance_2d_theorem_note",
+      "lorentz_boost_covariance_3plus1d_theorem_note"
     ],
     [
-      "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas"
-    ],
-    [
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas"
+      "irregular_sign_core_packet_gate_note",
+      "irregular_directional_observable_note_2026-04-11"
     ]
   ],
-  "cycles_detected": 83,
+  "cycles_detected": 102,
   "effective_status_counts": {
-    "audited_conditional": 663,
+    "audited_conditional": 530,
     "audited_decoration": 3,
     "audited_failed": 6,
-    "audited_numerical_match": 27,
-    "audited_renaming": 21,
+    "audited_numerical_match": 26,
+    "audited_renaming": 19,
     "decoration_under_cpt_exact_note": 1,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02": 1,
     "meta": 40,
     "open_gate": 14,
-    "retained": 149,
-    "retained_bounded": 221,
+    "retained": 119,
+    "retained_bounded": 176,
     "retained_no_go": 100,
-    "retained_pending_chain": 2,
-    "unaudited": 452
+    "retained_pending_chain": 3,
+    "unaudited": 662
   },
-  "retained_pending_chain_count": 2,
+  "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [
+    "causal_distance_tail_note",
     "pmns_selector_unique_amplitude_slot_note",
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24"
   ]
