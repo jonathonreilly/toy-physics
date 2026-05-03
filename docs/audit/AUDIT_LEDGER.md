@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:38:22.333583+00:00
+**Generated:** 2026-05-03T18:43:14.647524+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 81 |
-| **retained_no_go** | 103 |
+| **retained_no_go** | 104 |
 | **retained_bounded** | 173 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 726 |
+| unaudited | 725 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 327 |
+| `audited_clean` | 328 |
 | `audited_conditional` | 544 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 772 |
+| `unaudited` | 771 |
 
 | claim_type | count |
 |---|---:|
@@ -231,6 +231,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_true_kg_vs_cn_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gravitational_entanglement_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
+| `growing_graph_dynamic_limit_diagnostic_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | C | - |
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | D | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
@@ -6948,6 +6949,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `external authority cited in note: Zache et al. 2020 / Dempsey et al. 2025`
   - `open blocker stated in note: graph-native directional observable on irregular graphs`
 - **auditor confidence:** 0.94
+
+### `growing_graph_dynamic_limit_diagnostic_note`
+
+- **Note:** [`GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md`](../../docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go for the named frozen static-control growing-graph diagnostic: dynamic-propagation visibility is weak, seed-dependent, and not promoted as the expansion observable.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `fresh-agent-gould`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** no monotone dynamic-propagation order parameter emerged from the static comparison  _(class `C`)_
+- **chain closes:** True — The current runner reproduces the note's frontier-delay growth and the weakening dynamic visibility drops across the tested layer counts. With no dependencies and no broader physical claim, the bounded no-go closes for this diagnostic protocol.
+- **rationale:** The note is explicitly bounded to the frozen static-control comparison and does not claim cosmology, de Sitter physics, unitarity, or a field-theory derivation. The runner output matches the reported values: frontier delay grows from 3.000 to 22.000 with slope +0.9325, while mean dynamic visibility drop weakens from 0.0492 to 0.0366 to 0.0224 with positive-seed counts 4/10, 4/10, and 2/10. The clean verdict is only for this bounded no-go, not for any universal transport/decoherence theorem.
+- **auditor confidence:** high
 
 ### `growing_graph_expansion_card_note`
 
