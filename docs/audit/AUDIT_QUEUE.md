@@ -1,6 +1,6 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T12:16:31.166149+00:00
+**Generated:** 2026-05-03T12:18:52.299676+00:00
 **Total pending:** 769
 **Ready (all deps already at retained-grade or metadata tiers):** 115
 
@@ -16,7 +16,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `holographic_probe_note_2026-04-11` | bounded_theorem | unaudited | critical | 286 | 9.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_holographic_probe.py` |
+| 1 | `holographic_probe_note_2026-04-11` | bounded_theorem | audit_in_progress | critical | 286 | 9.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_holographic_probe.py` |
 | 2 | `gravity_clean_derivation_note` | bounded_theorem | unaudited | critical | 285 | 13.16 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 3 | `planck_finite_response_no_go_note_2026-04-24` | no_go | unaudited | critical | 285 | 12.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_finite_response_nogo.py` |
 | 4 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | bounded_theorem | unaudited | critical | 284 | 12.65 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py` |
