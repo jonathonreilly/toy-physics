@@ -1,5 +1,39 @@
 # Review History
 
+## Review-Loop Backpressure - O_sp-Higgs Gram-Purity Acceptance
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: OPEN SOURCE-HIGGS POLE ROWS / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- source-side normalization now uses the derived `O_sp` source-pole operator;
+- the postprocessor computes both raw `C_ss/C_sH/C_HH` Gram rows and
+  `O_sp`-Higgs rows;
+- a synthetic temporary candidate exercised the positive branch and passed the
+  numerical `O_sp`-Higgs Gram formula, while the real repo artifact remains
+  open because no production candidate exists;
+- current global gates remain open and explicitly bar retained/proposed-retained
+  wording.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py scripts/frontier_yt_source_higgs_cross_correlator_harness_extension.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py
+python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
+python3 scripts/frontier_yt_source_higgs_cross_correlator_harness_extension.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Chunks019-020 V2 Multi-Tau Wave
 
 Local review-loop disposition:

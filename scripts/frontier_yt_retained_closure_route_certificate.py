@@ -140,6 +140,9 @@ def main() -> int:
         "source_higgs_cross_correlator_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
         "source_higgs_cross_correlator_import": "outputs/yt_source_higgs_cross_correlator_import_audit_2026-05-02.json",
         "source_higgs_gram_purity_gate": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+        "source_higgs_cross_correlator_harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
+        "source_higgs_cross_correlator_certificate_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+        "source_higgs_gram_purity_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
         "canonical_higgs_operator_candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
         "hunit_canonical_higgs_operator_candidate_gate": "outputs/yt_hunit_canonical_higgs_operator_candidate_gate_2026-05-02.json",
@@ -775,6 +778,24 @@ def main() -> int:
         and certificates["source_higgs_gram_purity_gate"].get("proposal_allowed") is False
         and certificates["source_higgs_gram_purity_gate"].get("source_higgs_gram_purity_gate_passed")
         is False
+    )
+    source_higgs_harness_extension_not_evidence = (
+        "source-Higgs cross-correlator harness extension"
+        in certificates["source_higgs_cross_correlator_harness_extension"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_cross_correlator_harness_extension"].get("proposal_allowed") is False
+    )
+    source_higgs_builder_rows_absent = (
+        "source-Higgs cross-correlator rows absent"
+        in certificates["source_higgs_cross_correlator_certificate_builder"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_cross_correlator_certificate_builder"].get("proposal_allowed") is False
+        and certificates["source_higgs_cross_correlator_certificate_builder"].get("input_present") is False
+        and certificates["source_higgs_cross_correlator_certificate_builder"].get("source_pole_operator_available") is True
+    )
+    source_higgs_osp_postprocessor_waits = (
+        "O_sp-Higgs Gram-purity postprocess awaiting production certificate"
+        in certificates["source_higgs_gram_purity_postprocessor"].get("actual_current_surface_status", "")
+        and certificates["source_higgs_gram_purity_postprocessor"].get("proposal_allowed") is False
+        and certificates["source_higgs_gram_purity_postprocessor"].get("osp_higgs_gram_purity_gate_passed") is False
     )
     canonical_higgs_operator_realization_gate_blocks = (
         "canonical-Higgs operator realization gate not passed"
@@ -1455,6 +1476,21 @@ def main() -> int:
         certificates["source_higgs_gram_purity_gate"].get("actual_current_surface_status", ""),
     )
     report(
+        "source-higgs-cross-correlator-harness-extension-not-evidence",
+        source_higgs_harness_extension_not_evidence,
+        certificates["source_higgs_cross_correlator_harness_extension"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "source-higgs-cross-correlator-builder-rows-absent",
+        source_higgs_builder_rows_absent,
+        certificates["source_higgs_cross_correlator_certificate_builder"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "osp-higgs-gram-purity-postprocessor-waits",
+        source_higgs_osp_postprocessor_waits,
+        certificates["source_higgs_gram_purity_postprocessor"].get("actual_current_surface_status", ""),
+    )
+    report(
         "canonical-higgs-operator-realization-gate-blocks",
         canonical_higgs_operator_realization_gate_blocks,
         certificates["canonical_higgs_operator_realization_gate"].get("actual_current_surface_status", ""),
@@ -1867,7 +1903,12 @@ def main() -> int:
             "future observable/theorem, not current closure.  The Gram purity "
             "gate gives that future route an acceptance condition, "
             "C_sH^2 = C_ss C_HH at the isolated pole, but current C_sH/C_HH "
-            "residues are absent.  The canonical-Higgs operator realization "
+            "residues are absent.  The source-Higgs builder and postprocessor "
+            "now attach the Legendre/LSZ source-pole operator O_sp as the "
+            "unit-residue source side, so the sharp future test is "
+            "Delta_spH = Res(C_HH) - Res(C_sp,H)^2 = 0 and |rho_spH| = 1; "
+            "no production O_H/C_sH/C_HH pole certificate is present.  "
+            "The canonical-Higgs operator realization "
             "gate adds the adjacent object-level blocker: existing EW "
             "gauge-mass artifacts assume canonical H after it is supplied, "
             "while the PR #230 harness has no same-surface O_H, C_sH, or C_HH "
@@ -1934,7 +1975,9 @@ def main() -> int:
             "linearity gate is not passed."
             " Before treating chunked FH/LSZ as production evidence, also "
             "emit target-observable autocorrelation/ESS or blocking/bootstrap "
-            "certificates."
+            "certificates.  For the source-Higgs lane, use the O_sp-normalized "
+            "builder/postprocessor and supply a certified O_H with production "
+            "C_sH/C_HH pole residues before running retained-route gating."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

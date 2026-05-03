@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the selected source-Higgs Gram-purity lane is now
+O_sp-normalized.  The builder attaches the Legendre/LSZ source-pole operator
+as the unit-residue source side, and the postprocessor's future acceptance
+condition is `Delta_spH = Res(C_HH) - Res(C_sp,H)^2 = 0` with
+`|rho_spH| = 1`.  This is positive route sharpening, not closure: the current
+surface still lacks a certified same-surface canonical `O_H` operator and
+production `C_sH/C_HH` pole rows.  The next highest-value action remains
+supplying that `O_H` certificate plus production pole rows, with same-source
+W/Z response as the fallback physical-observable route.
+
 2026-05-03 update: chunks019-020 now extend the v2 FH/LSZ production-support
 set.  Ready L12 coverage is `20/63` chunks and `320/1000` saved
 configurations; v2 multi-tau rows are present for chunks017-020; target ESS

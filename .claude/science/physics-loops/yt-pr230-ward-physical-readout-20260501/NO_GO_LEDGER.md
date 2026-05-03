@@ -1,5 +1,27 @@
 # No-Go Ledger
 
+## O_sp-normalized source-Higgs Gram-purity postprocessor is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py
+# SUMMARY: PASS=3 FAIL=0
+python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
+# SUMMARY: PASS=2 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=120 FAIL=0
+```
+
+The postprocessor now uses the derived unit-residue source-pole operator
+`O_sp` and will test `Delta_spH = Res(C_HH) - Res(C_sp,H)^2 = 0` with
+`|rho_spH| = 1` for future production rows.  This is an acceptance surface,
+not evidence: the current PR surface still lacks a certified same-surface
+canonical `O_H` operator and production `C_sH/C_HH` pole residues.  Do not
+treat the O_sp-normalized formula, absent rows, or unratified smoke rows as
+canonical-Higgs identity, scalar LSZ normalization, retained closure, or
+`proposed_retained` evidence.
+
 ## FH/LSZ chunks019-020 v2 multi-tau wave is not closure
 
 Runners:

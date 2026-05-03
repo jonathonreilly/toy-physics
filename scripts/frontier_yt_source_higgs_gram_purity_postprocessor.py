@@ -5,8 +5,10 @@ Postprocess a future PR #230 source-Higgs Gram-purity production certificate.
 This is the executable acceptance surface for the selected source-overlap
 route.  If a future production run supplies pole residues Res(C_ss),
 Res(C_sH), and Res(C_HH) for a certified same-surface canonical Higgs operator,
-this runner computes the Gram determinant and normalized overlap.  With no
-candidate certificate present, it records the route as open.
+this runner uses the already-derived Legendre/LSZ source-pole operator
+O_sp = sqrt(D'_ss) O_s to compute the O_sp-Higgs Gram determinant and
+normalized overlap.  With no candidate certificate present, it records the
+route as open.
 """
 
 from __future__ import annotations
@@ -65,6 +67,12 @@ def compute_gate(candidate: dict[str, Any], tolerance: float, sigma: float) -> d
     product = c_ss * c_hh
     delta = product - c_sh * c_sh
     rho = c_sh / math.sqrt(product) if product > 0.0 else float("nan")
+    dgamma_ss = 1.0 / c_ss if c_ss > 0.0 else float("nan")
+    c_sp_h = c_sh * math.sqrt(dgamma_ss) if dgamma_ss > 0.0 else float("nan")
+    c_sp_sp = 1.0 if c_ss > 0.0 else float("nan")
+    delta_sp_h = c_sp_sp * c_hh - c_sp_h * c_sp_h
+    rho_sp_h = c_sp_h / math.sqrt(c_sp_sp * c_hh) if c_sp_sp > 0.0 and c_hh > 0.0 else float("nan")
+    rho_sp_h_abs_error = abs(abs(rho_sp_h) - 1.0) if math.isfinite(rho_sp_h) else float("inf")
     rho_abs_error = abs(abs(rho) - 1.0) if math.isfinite(rho) else float("inf")
 
     err_ss = uncertainty(candidate, "Res_C_ss_err")
@@ -92,21 +100,31 @@ def compute_gate(candidate: dict[str, Any], tolerance: float, sigma: float) -> d
 
     delta_bound = max(tolerance, sigma * delta_err) if delta_err is not None else tolerance
     rho_bound = max(tolerance, sigma * rho_err) if rho_err is not None else tolerance
-    positive_residues = c_ss > 0.0 and c_hh > 0.0
-    purity_gate_passed = positive_residues and abs(delta) <= delta_bound and rho_abs_error <= rho_bound
+    positive_residues = c_ss > 0.0 and c_hh > 0.0 and c_sp_sp > 0.0
+    raw_purity_gate_passed = positive_residues and abs(delta) <= delta_bound and rho_abs_error <= rho_bound
+    osp_higgs_purity_gate_passed = positive_residues and abs(delta_sp_h) <= delta_bound / max(c_ss, tolerance) and rho_sp_h_abs_error <= rho_bound
+    purity_gate_passed = raw_purity_gate_passed and osp_higgs_purity_gate_passed
 
     return {
         "Res_C_ss": c_ss,
         "Res_C_sH": c_sh,
         "Res_C_HH": c_hh,
+        "Dprime_ss_at_pole": dgamma_ss,
+        "Res_C_sp_sp": c_sp_sp,
+        "Res_C_spH": c_sp_h,
         "gram_determinant": delta,
         "normalized_overlap_rho_sH": rho,
         "rho_abs_error_from_one": rho_abs_error,
+        "osp_higgs_gram_determinant": delta_sp_h,
+        "normalized_overlap_rho_spH": rho_sp_h,
+        "rho_spH_abs_error_from_one": rho_sp_h_abs_error,
         "delta_error": delta_err,
         "rho_error": rho_err,
         "delta_acceptance_bound": delta_bound,
         "rho_acceptance_bound": rho_bound,
         "positive_residues": positive_residues,
+        "raw_source_higgs_purity_gate_passed": raw_purity_gate_passed,
+        "osp_higgs_purity_gate_passed": osp_higgs_purity_gate_passed,
         "purity_gate_passed": purity_gate_passed,
     }
 
@@ -115,10 +133,16 @@ def validate_candidate(candidate: dict[str, Any]) -> dict[str, bool]:
     matrix = candidate.get("residue_matrix", {})
     firewall = candidate.get("firewall", {})
     operator = candidate.get("canonical_higgs_operator", {})
+    source_pole = candidate.get("source_pole_operator", {})
     return {
         "production_phase": candidate.get("phase") == "production",
         "same_ensemble": candidate.get("same_ensemble") is True,
         "same_source_coordinate": candidate.get("same_source_coordinate") is True,
+        "legendre_lsz_source_side_selected": candidate.get("selected_source_side_normalization")
+        == "legendre_lsz_source_pole_operator_v1",
+        "source_pole_operator_constructed": source_pole.get("source_pole_operator_constructed") is True,
+        "source_pole_residue_unit": source_pole.get("source_pole_residue_normalized_to_one") is True,
+        "source_pole_not_claimed_as_higgs_by_fiat": source_pole.get("canonical_higgs_operator_identity_passed") is False,
         "canonical_higgs_operator_identity": candidate.get("canonical_higgs_operator_identity_passed") is True,
         "has_identity_certificate": isinstance(operator.get("identity_certificate"), str)
         and bool(operator.get("identity_certificate")),
@@ -174,9 +198,9 @@ def main() -> int:
 
     result = {
         "actual_current_surface_status": (
-            "open / source-Higgs Gram-purity postprocess awaiting production certificate"
+            "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate"
             if not gate_passed
-            else "support / source-Higgs Gram-purity candidate numerically passed"
+            else "support / O_sp-Higgs Gram-purity candidate numerically passed"
         ),
         "verdict": (
             "No source-Higgs production certificate is present, so the selected "
@@ -198,22 +222,27 @@ def main() -> int:
         "candidate_missing_or_failed_checks": missing_checks,
         "gram_purity": gate,
         "source_higgs_gram_purity_gate_passed": gate_passed,
+        "osp_higgs_gram_purity_gate_passed": gate_passed,
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",
             "does not define O_H by fiat",
             "does not treat H_unit as O_H",
             "does not set kappa_s = 1 or cos(theta) = 1",
+            "does not identify O_sp with O_H without an O_sp-Higgs Gram-purity pass",
             "does not use yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "Supply a production same-surface O_H/C_sH/C_HH certificate, then rerun this postprocessor and the retained-route gate."
+            "Supply a production same-surface O_H/C_sH/C_HH certificate, "
+            "attach the Legendre/LSZ O_sp source-side normalization, then "
+            "rerun this postprocessor and the retained-route gate."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"\nWrote certificate: {args.output.relative_to(ROOT)}")
+    output_display = str(args.output.relative_to(ROOT)) if args.output.is_relative_to(ROOT) else str(args.output)
+    print(f"\nWrote certificate: {output_display}")
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
 

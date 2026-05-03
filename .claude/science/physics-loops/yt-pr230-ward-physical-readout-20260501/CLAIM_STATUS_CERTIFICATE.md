@@ -1,5 +1,35 @@
 # Claim Status Certificate
 
+O_sp-normalized source-Higgs Gram-purity acceptance:
+
+```text
+actual_current_surface_status: open / O_sp-Higgs Gram-purity postprocess awaiting production certificate
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py
+# SUMMARY: PASS=3 FAIL=0
+
+python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
+# SUMMARY: PASS=2 FAIL=0
+
+python3 scripts/frontier_yt_source_higgs_cross_correlator_harness_extension.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=120 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=146 FAIL=0
+```
+
+The source-side normalization is now the derived Legendre/LSZ source-pole
+operator `O_sp`, not a source-unit convention.  This removes source-coordinate
+rescaling from the future Gram test, but it does not identify `O_sp` with
+canonical `O_H`.  Current rows are absent, so no source-Higgs Gram purity,
+canonical-Higgs identity, retained closure, or `proposed_retained` wording is
+authorized.
+
 FH/LSZ chunks019-020 v2 multi-tau target wave:
 
 ```text

@@ -1,5 +1,26 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 O_sp-normalized source-Higgs Gram-purity acceptance:
+
+- Updated the source-Higgs cross-correlator certificate builder so future
+  `O_H/C_sH/C_HH` pole rows are paired with the Legendre/LSZ source-pole
+  operator from
+  `outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json`.
+- Updated the Gram-purity postprocessor to compute the normalized source-side
+  rows:
+  `Res(C_sp,H) = Res(C_sH) / sqrt(Res(C_ss))`,
+  `Delta_spH = Res(C_HH) - Res(C_sp,H)^2`, and
+  `rho_spH = Res(C_sp,H) / sqrt(Res(C_HH))`.
+- Current status is still open: no certified same-surface canonical `O_H`
+  operator and no production `C_sH/C_HH` pole-residue certificate are present.
+- Runners: builder `PASS=3 FAIL=0`, postprocessor `PASS=2 FAIL=0`, harness
+  extension `PASS=17 FAIL=0`, retained-route `PASS=120 FAIL=0`, campaign
+  status `PASS=146 FAIL=0`.
+- The positive next action is concrete: supply an audit-acceptable canonical
+  `O_H` certificate and production pole rows, then rerun the builder,
+  `O_sp`-Higgs postprocessor, and retained-route gate.
+- No retained or proposed-retained closure is authorized.
+
 Latest checkpoint, 2026-05-03 FH/LSZ chunks019-020 v2 multi-tau wave:
 
 - Ran chunks019-020 with the selected-mass-only / normal-cache production

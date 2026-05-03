@@ -13,11 +13,21 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-169-fh-lsz-chunks019-020-v2-wave
-blocks_completed: 169
-active_route: "FH/LSZ production support while same-surface identity remains open"
-active_hard_residual: "Chunks019-020 completed with fixed seeds 2026051019 and 2026051020, no resume, two-worker concurrency, selected-mass-only scalar FH/LSZ, normal-equation caching, and v2 multi-tau target rows.  Chunk-local generic checkpoints are PASS=14 FAIL=0 each; v2 multi-tau checkpoints are PASS=19 FAIL=0 each.  The ready L12 set is now 20/63 chunks and 320/1000 saved configurations; target ESS passes with limiting ESS 268.13169763211454.  Response stability still fails with relative_stdev=0.8885692945249242 and spread_ratio=5.476535332624479.  Response-window acceptance remains open because v2 rows exist only for chunks017-020, chunks001-016 lack v2 rows, multiple source radii are absent, and canonical-Higgs/source-overlap identity is still absent.  Retained-route is PASS=116 FAIL=0 and campaign status is PASS=142 FAIL=0.  No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-170-osp-higgs-gram-purity-acceptance
+blocks_completed: 170
+active_route: "O_sp-normalized source-Higgs Gram-purity acceptance path"
+active_hard_residual: "The source-Higgs cross-correlator builder and Gram-purity postprocessor now attach the Legendre/LSZ source-pole operator O_sp as the unit-residue source side.  A future production O_H/C_sH/C_HH pole certificate must pass Delta_spH = Res(C_HH) - Res(C_sp,H)^2 = 0 and |rho_spH| = 1 before O_sp can be identified with canonical O_H.  Current status remains open because no certified canonical-Higgs operator or production C_sH/C_HH pole rows exist.  Builder PASS=3 FAIL=0, postprocessor PASS=2 FAIL=0, harness extension PASS=17 FAIL=0, retained-route PASS=120 FAIL=0, campaign status PASS=146 FAIL=0.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_source_higgs_cross_correlator_certificate_builder.py"
+  - "scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py"
+  - "docs/YT_SOURCE_HIGGS_GRAM_PURITY_POSTPROCESSOR_NOTE_2026-05-03.md"
+  - "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json"
+  - "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json"
+  - "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk019_2026-05-01.json"
   - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk020_2026-05-01.json"
   - "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk019/L12xT24/ensemble_measurement.json"
