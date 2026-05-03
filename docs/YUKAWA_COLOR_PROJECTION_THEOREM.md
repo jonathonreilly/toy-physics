@@ -75,11 +75,12 @@ color-singlet wave function renormalization of the composite scalar
 
     R_conn = (N_c^2 - 1)/N_c^2 = 8/9   for  N_c = 3
 
-The EW gauge couplings receive the OPPOSITE factor sqrt(9/8) from the
-same R_conn. The two corrections are independent, applied to different
-vertices, and derived from different color channels of the same Fierz
-decomposition. Those physical-coupling statements require a separate
-matching theorem and are outside this row's independent-audit submission.
+The historical EW gauge-coupling comparison used the opposite
+connected-trace specialization `sqrt(K_EW(0)) = sqrt(9/8)` from the same
+Fierz fraction. The current EW package keeps this as a conditional
+`kappa_EW=0` readout rather than an unconditional derived coefficient.
+Those physical-coupling statements require a separate matching theorem and
+are outside this row's independent-audit submission.
 
 ---
 
@@ -430,19 +431,20 @@ The Yukawa vertex has ONE scalar leg. The wave function renormalization
 enters as sqrt(Z_phi) per external leg (from LSZ reduction). So the
 correction is sqrt(8/9), not 8/9.
 
-By contrast, the EW vacuum polarization involves a bilinear in
-propagators (a loop with TWO fermion propagators), and the color
-projection acts on the FULL loop. The EW coupling is extracted from
-Pi_EW, which gives alpha_EW ~ 1/Pi_EW, so the correction on the
-coupling is the inverse: 9/8 on alpha_EW, or sqrt(9/8) on g_EW.
+By contrast, the conditional EW vacuum-polarization readout involves a
+bilinear in propagators (a loop with TWO fermion propagators), and the
+color projection acts on the FULL loop. If the connected-trace selector
+`kappa_EW=0` is chosen, the EW coupling is extracted from Pi_EW with the
+inverse correction: 9/8 on alpha_EW, or sqrt(9/8) on g_EW.
 
 The two corrections are structurally different:
 - sqrt(8/9) on y_t: scalar external leg normalization (ONE sqrt)
-- sqrt(9/8) on g_EW: vacuum polarization inverse (propagator correction)
+- sqrt(9/8) on g_EW: conditional `kappa_EW=0` vacuum polarization inverse
+  (propagator correction)
 
 ---
 
-## Part 4: Excluded Context: Why sqrt(8/9) and Not sqrt(9/8) -- From Color Structure
+## Part 4: Excluded Context: Why sqrt(8/9) and Not the EW sqrt(9/8) Specialization -- From Color Structure
 
 This section addresses the adversarial question: "How do you know
 the Yukawa gets sqrt(8/9) and not sqrt(9/8)?"
@@ -483,25 +485,24 @@ physical detector tunes to only 8 of them (the connected part), the
 detected power is 8/9 of the total. The coupling (amplitude) is
 sqrt(8/9) of the total amplitude.
 
-### 4.3 Why EW goes the OTHER way
+### 4.3 Why the conditional EW readout goes the OTHER way
 
-The EW coupling is extracted differently. The EW vacuum polarization
-Pi_EW receives contributions from the CONNECTED color channels of
-the quark loop. In the continuum EFT, the EW photon/Z/W does not
-carry color, so its vacuum polarization involves only the connected
-(color-exchanging) part of the quark loop.
+The EW coupling is extracted differently once a physical readout rule is
+chosen. Under the connected-trace specialization `kappa_EW=0`, the EW
+vacuum polarization Pi_EW receives contributions from the CONNECTED color
+channels of the quark loop.
 
 The CMT normalizes the EW coupling using the TOTAL color trace
-(N_c channels). The physical coupling uses the connected trace
+(N_c channels). The `kappa_EW=0` readout uses the connected trace
 (N_c(N_c^2-1)/N_c^2 = 8N_c/9 effective channels). Since the
-coupling is alpha ~ 1/(1 + Pi) and Pi_connected < Pi_total, the
-physical coupling is LARGER: alpha_phys = alpha_CMT * 9/8.
+coupling is alpha ~ 1/(1 + Pi) and Pi_connected < Pi_total, this
+fixed-coefficient specialization gives alpha_phys = alpha_CMT * 9/8.
 
 So:
 - Scalar Z_phi: physical propagator is 8/9 of total -> coupling
   sqrt(8/9) DOWN
-- EW Pi: connected Pi is 8/9 of total -> alpha = 1/(1+Pi) goes
-  as 9/8 -> coupling sqrt(9/8) UP
+- EW Pi at `kappa_EW=0`: connected Pi is 8/9 of total -> alpha = 1/(1+Pi)
+  goes as 9/8 -> coupling sqrt(9/8) UP
 
 The SAME R_conn = 8/9 produces OPPOSITE corrections because it
 enters through DIFFERENT quantities (Z_phi vs 1/Pi_EW).
@@ -558,9 +559,9 @@ For the scalar self-energy: Sigma_phi = C_loop (directly).
 The physical coupling is y_t ~ sqrt(Z_phi) ~ sqrt(C_loop^conn/C_loop^total)
 = sqrt(8/9).
 
-For the EW vacuum polarization: Pi_EW = C_loop.
+For the EW vacuum polarization under `kappa_EW=0`: Pi_EW = C_loop.
 The physical coupling is alpha_EW ~ 1/(1 + Pi_EW). The CMT
-normalizes using Pi^total; the physical uses Pi^connected.
+normalizes using Pi^total; this fixed readout uses Pi^connected.
 So alpha_phys/alpha_CMT = Pi_total/Pi_connected = 9/8.
 
 ### 4.5 Summary: the sign is fixed by the color structure
@@ -638,7 +639,7 @@ correction applied twice. They enter through DIFFERENT quantities:
 
 | Correction    | Quantity modified    | Channel   | Factor      |
 |---------------|---------------------|-----------|-------------|
-| EW coupling   | Pi_EW (vac. pol.)   | Adjoint   | sqrt(9/8)   |
+| EW coupling   | Pi_EW (vac. pol.)   | Adjoint   | sqrt(9/8) only at `kappa_EW=0` |
 | Yukawa y_t    | Z_phi (scalar w.f.) | Singlet   | sqrt(8/9)   |
 
 The EW vacuum polarization Pi_EW enters the GAUGE BOSON propagator.
@@ -663,9 +664,10 @@ The prediction chain for m_t involves:
                 |
     m_t(pole) = m_t(MSbar) * [QCD conversion]  [Marquard et al.]
 
-The EW correction sqrt(9/8) enters SEPARATELY, in the RGE step:
-it corrects g_1(v) and g_2(v), which are INPUTS to the SM RGE beta
-functions. But the y_t beta function is dominated by the QCD term
+The EW correction `sqrt(K_EW(kappa_EW))` enters SEPARATELY, in the RGE
+step; the historical `sqrt(9/8)` value is the `kappa_EW=0`
+specialization. It corrects g_1(v) and g_2(v), which are INPUTS to the SM
+RGE beta functions. But the y_t beta function is dominated by the QCD term
 (-8 g_3^2 y_t), with the EW terms contributing < 7.4% of the total
 (QFP insensitivity theorem). So the EW correction affects y_t(v) only
 at the sub-percent level through the RGE, and this effect is already

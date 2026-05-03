@@ -1,8 +1,8 @@
-# `M_W` Same-Surface Consistency Probe on the Retained EW Lane
+# `M_W` Same-Surface Consistency Probe on the Conditional EW Lane
 
 **Date:** 2026-04-18 (revised after review)
 **Status:** package-captured **bounded same-surface consistency probe** on the
-retained EW lane. Comparison against PDG / CDF / ATLAS / CMS / LHCb pole
+matching-rule conditional EW lane. Comparison against PDG / CDF / ATLAS / CMS / LHCb pole
 measurements only; **not** a retained or manuscript-facing quantitative
 claim.
 **Primary runner:** `scripts/frontier_w_mass_prediction.py`
@@ -14,10 +14,11 @@ claim.
 ## Authority Role
 
 This note records the W-boson pole-mass lane as a **same-surface consistency
-probe** on the retained EW normalization surface. Its readouts use only
-retained same-surface values plus the SM 1-loop SU(2) beta coefficient
+probe** on the matching-rule conditional EW normalization surface. Its
+current numerical readouts fix the connected-trace specialization
+`kappa_EW = 0`. They use same-surface values plus the SM 1-loop SU(2) beta coefficient
 `b_2 = 19/6` (the same pure group-theory coefficient already used by the
-retained sin^2(theta_W) / alpha_EM running bridge and by
+EW sin^2(theta_W) / alpha_EM running bridge and by
 [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)).
 
 The lane is **not** a retained claim. It is package-captured only in the
@@ -28,10 +29,11 @@ be read as an SM-parity prediction. It is an internal consistency probe only.
 
 ## Safe Statement
 
-On the current retained EW normalization surface on `main`, solving the
-fixed-point equation `M_W = g_2(M_W) * v / 2` with `g_2` run by the SM
-1-loop SU(2) beta function from the retained `g_2(v)` (no pole value
-imported into the solve):
+On the current matching-rule conditional EW normalization surface at
+`kappa_EW = 0`, solving the fixed-point equation
+`M_W = g_2(M_W; kappa_EW=0) * v / 2` with `g_2` run by the SM 1-loop SU(2)
+beta function from the fixed-coefficient `g_2(v; kappa_EW=0)` (no pole
+value imported into the solve):
 
 - tree readout:
   `M_W^tree = g_2(v) * v / 2 = 79.7956 GeV`
@@ -47,22 +49,22 @@ with the framework-side M_Z cross-check
 - RGE vs CDF-II 2022 (80.4335 GeV):          `+0.154%`
 
 The ~`0.2 GeV` RGE residual is **not** of ordinary SM 2-loop / `Delta r_rem`
-size. It tracks the precision already carried by the retained `g_2(v)`
-lane itself. On the retained
+size. It tracks the precision already carried by the conditional `g_2(v)`
+lane itself. On the fixed `kappa_EW=0`
 [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md)
 surface the framework value `g_2(v)_framework = 0.64795` is `+0.26%`
 above `g_2(v)_observed = 0.64629`. At the W scale that `0.26%` input gap
 propagates directly into M_W at the same fractional size. The lane
-therefore inherits — it does not escape — the existing retained EW
-normalization precision.
+therefore inherits — it does not escape — the existing conditional EW
+normalization precision and the named `kappa_EW` matching coefficient.
 
 ## Canonical Chain
 
 ```
 Cl(3) on Z^3
   |-> v = 246.282818290129 GeV                 [OBSERVABLE_PRINCIPLE]
-  |-> g_2(v) = 0.6480                           [YT_EW_COLOR_PROJECTION]
-  |-> g_1_GUT(v) = 0.4644                       [YT_EW_COLOR_PROJECTION]
+  |-> g_2(v; kappa_EW=0) = 0.6480               [YT_EW_COLOR_PROJECTION]
+  |-> g_1_GUT(v; kappa_EW=0) = 0.4644           [YT_EW_COLOR_PROJECTION]
   |-> g_Y(v) = g_1_GUT(v) * sqrt(3/5) = 0.3597  [SM convention]
   |
   |-> tree readout:
@@ -96,15 +98,15 @@ Cl(3) on Z^3
 
 This lane is a framework-side bounded same-surface consistency probe. Its tree
 readout uses only retained same-surface values; the RGE fixed-point solve adds
-only the SM 1-loop SU(2) coefficient `b_2 = 19/6`, reused from the retained
-EW normalization and `alpha_s` lanes.
+only the SM 1-loop SU(2) coefficient `b_2 = 19/6`, reused from the
+conditional EW normalization and retained `alpha_s` lanes.
 
 Publication placement on `main`: bounded companion section / appendix only.
 
 It remains distinct from:
 
-- the retained EW normalization lane (`g_1(v)`, `g_2(v)`,
-  `sin^2 theta_W(M_Z)`, `1/alpha_EM(M_Z)`)
+- the matching-rule conditional EW normalization lane (`g_1(v)`, `g_2(v)`,
+  `sin^2 theta_W(M_Z)`, `1/alpha_EM(M_Z)` at fixed `kappa_EW`)
 - the retained strong-coupling lane (`alpha_s(M_Z)`)
 - the YT / top / Higgs bounded lanes
 

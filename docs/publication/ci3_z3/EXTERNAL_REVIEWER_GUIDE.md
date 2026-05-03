@@ -136,21 +136,22 @@ Review this as a modular component stack:
 Current status from that stack:
 
 - retained `alpha_s(M_Z) = 0.1181`
-- retained EW normalization package:
+- matching-rule conditional EW normalization package:
   `sin^2(theta_W)(M_Z) = 0.2306`,
   `1/alpha_EM(M_Z) = 127.67`,
-  `g_1(v) = 0.4644`,
-  `g_2(v) = 0.6480`
+  `g_1(v; kappa_EW=0) = 0.4644`,
+  `g_2(v; kappa_EW=0) = 0.6480`
   where `alpha_s(v)` comes from the same-surface plaquette chain,
-  `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
-  rows use the retained running bridge
+  `g_1(v), g_2(v)` use exact Fierz `F_adj=8/9` support plus the named
+  connected-trace specialization `K_EW(0)=9/8`, and the `M_Z` rows use the
+  running bridge
 - support-tier lattice-scale Ward identification (audited_renaming):
   `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
-- bounded same-surface W-boson EW diagnostic on that retained EW lane:
+- bounded same-surface W-boson EW diagnostic on that conditional EW lane:
   `M_W^tree = 79.7956 GeV`,
   `M_W^RGE = 80.5573 GeV`,
   `M_Z^tree = 91.2663 GeV`;
-  the `~0.19 GeV` `M_W` residual tracks the retained `g_2(v)` precision and
+  the `~0.19 GeV` `M_W` residual tracks the conditional `g_2(v)` precision and
   is not a retained or few-MeV SM-indirect `M_W` claim
 - YT/top transport package conditioned on that Ward identification:
   canonical full-staggered-PT `Δ_R = -3.77% ± 0.45%`,
@@ -256,7 +257,7 @@ Current status from that stack:
   selector/source no-go boundaries; not a physical antigravity,
   negative-mass, shielding, propulsion, reactionless-force, or
   switchable-gravity claim.
-- W-boson same-surface EW consistency probe. Entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
+- W-boson same-surface EW consistency probe. Entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the matching-rule conditional EW lane at `kappa_EW=0` the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing fixed-coefficient `g_2(v)` precision and is therefore treated as a same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
 - dark-matter exact-target package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed for the exact PMNS-target formulation treated in the manuscript, with broader target-free global uniqueness left out of scope.
 - DM Wilson direct-descendant Schur-Feshbach boundary support theorem. Entry
   point: [DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md](../../DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md).

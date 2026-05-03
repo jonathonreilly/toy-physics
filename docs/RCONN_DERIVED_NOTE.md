@@ -387,10 +387,13 @@ O(1/N_c^4 ~ 1.2%) correction being small.
 
 ### 5.4 Cross-check: observable predictions
 
-The derived R_conn = 8/9 enters two independent observable predictions:
+The Fierz/channel result `R_conn = 8/9` enters one direct observable
+prediction and one matching-rule conditional EW package:
 
 1. **EW couplings:** g_1(v), g_2(v) match observed values to 0.17%
-   average deviation when corrected by sqrt(9/8) = 1/sqrt(R_conn).
+   average deviation only on the connected-trace specialization
+   `kappa_EW=0`, where `sqrt(K_EW(0)) = sqrt(9/8)`. The exact Fierz
+   fraction alone does not derive that physical readout coefficient.
 
 2. **Top mass:** m_t(pole) = 172.57 GeV vs observed 172.69 GeV
    (-0.07%) when y_t is corrected by sqrt(8/9) = sqrt(R_conn).

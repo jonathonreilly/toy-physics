@@ -97,7 +97,7 @@ R_conn enters with opposite sign in two independent channels:
 
 | Coupling | Color channel | Correction | Direction | Physics |
 |----------|---------------|------------|-----------|---------|
-| g_EW (g_1, g_2) | Adjoint | * sqrt(9/8) = 1.0607 | UP | EW vacuum polarization probes connected color trace |
+| g_EW (g_1, g_2) | Adjoint | * sqrt(K_EW(kappa_EW)); `sqrt(9/8)` only at `kappa_EW=0` | UP at connected-trace specialization | EW vacuum polarization readout depends on named `kappa_EW` coefficient |
 | y_t | Singlet | * sqrt(8/9) = 0.9428 | DOWN | Scalar Z_phi probes singlet wave function |
 
 The direction is determined by color structure, not by fitting. Both corrections
@@ -109,7 +109,7 @@ in the ratio).
 
 | Observable | How R_conn enters | Effect |
 |------------|-------------------|--------|
-| g_1(v), g_2(v) | sqrt(9/8) on EW couplings | Absolute normalization to sub-0.3% |
+| g_1(v), g_2(v) | `sqrt(K_EW(kappa_EW))` on EW couplings; `sqrt(9/8)` only at `kappa_EW=0` | Conditional absolute normalization |
 | sin^2(theta_W) | Ratio invariant (cancels) | Preserved exactly |
 | y_t(physical) | sqrt(8/9) on Ward y_t | The correction that delivers sub-percent m_t |
 | taste_weight | 7/18 = (7/8) * T_F * (8/9) | Enters taste threshold running |
@@ -131,7 +131,9 @@ the taste threshold staircase:
 - Each segment has effective beta coefficients shifted by n_extra * taste_weight
 - taste_weight = (7/8) * T_F * R_conn = 7/18
 
-After staircase running, the color projection correction sqrt(9/8) is applied.
+After staircase running, the EW color projection is written as
+`K_EW(kappa_EW)=1/(8/9+kappa_EW/9)`. The historical `sqrt(9/8)` coupling
+factor is the connected-trace specialization `kappa_EW=0`.
 
 ### 5.2 Prediction table
 
@@ -139,10 +141,10 @@ After staircase running, the color projection correction sqrt(9/8) is applied.
 |-----------|-----------|-----------|----------|-----------|
 | v | Hierarchy theorem: M_Pl * (7/8)^{1/4} * alpha_LM^16 | 246.28 GeV | 246.22 GeV | +0.03% |
 | alpha_s(M_Z) | same-surface plaquette chain + one-decade running bridge from `v` | 0.1181 | 0.1179 | +0.14% |
-| sin^2(theta_W)(M_Z) | bare geometry + taste staircase + derived `R_conn` support + running bridge | 0.2306 | 0.2312 | -0.26% |
-| 1/alpha_EM(M_Z) | derived `g_1, g_2` package after color projection + running bridge | 127.67 | 127.95 | -0.22% |
-| g_1(v) | staircase + `sqrt(9/8)` from derived `R_conn` | 0.4644 | 0.4640 | +0.08% |
-| g_2(v) | staircase + `sqrt(9/8)` from derived `R_conn` | 0.6480 | 0.6463 | +0.26% |
+| sin^2(theta_W)(M_Z) | bare geometry + taste staircase + exact Fierz fraction + conditional `kappa_EW` matching + running bridge | 0.2306 at `kappa_EW=0` | 0.2312 | -0.26% |
+| 1/alpha_EM(M_Z) | conditional `g_1, g_2` package after color projection + running bridge | 127.67 at `kappa_EW=0` | 127.95 | -0.22% |
+| g_1(v) | staircase + connected-trace `sqrt(K_EW(0)) = sqrt(9/8)` specialization | 0.4644 at `kappa_EW=0` | 0.4640 | +0.08% |
+| g_2(v) | staircase + connected-trace `sqrt(K_EW(0)) = sqrt(9/8)` specialization | 0.6480 at `kappa_EW=0` | 0.6463 | +0.26% |
 
 All four primary predictions (v, alpha_s, sin^2, 1/alpha_EM) pass their
 thresholds. The EW couplings agree with the color projection factor to
@@ -402,10 +404,11 @@ This makes the prediction robust against higher-order corrections to
 the Ward identity. (14/14 PASS, `frontier_yt_qfp_insensitivity.py`.)
 
 **Color-Singlet Projection Theorem.** R_conn = (N_c^2-1)/N_c^2 = 8/9
-from the 1/N_c expansion. Applied as sqrt(9/8) to EW couplings (adjoint
-channel) and sqrt(8/9) to y_t (singlet channel). Directions determined
-by color structure. Verified by MC to 0.2% and by three independent
-observables (g_1, g_2, m_t) to sub-percent precision.
+from the 1/N_c expansion. The EW use is now written as
+`sqrt(K_EW(kappa_EW))`, with `sqrt(9/8)` only at the connected-trace
+specialization `kappa_EW=0`; the Yukawa use remains `sqrt(8/9)` on y_t
+(singlet channel). Directions are determined by color structure, while the
+physical EW readout coefficient remains named explicitly.
 
 ---
 

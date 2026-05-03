@@ -1262,6 +1262,10 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26"
     },
     {
@@ -1299,10 +1303,6 @@
     {
       "from": "canonical_harness_index",
       "to": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
-    },
-    {
-      "from": "canonical_harness_index",
-      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
     },
     {
       "from": "canonical_harness_index",
@@ -17230,11 +17230,11 @@
     },
     {
       "from": "publication.ci3_z3.derivation_validation_map",
-      "to": "yt_ew_delta_r_retention_analysis_note_2026-04-18"
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
     },
     {
       "from": "publication.ci3_z3.derivation_validation_map",
-      "to": "rconn_derived_note"
+      "to": "yt_ew_delta_r_retention_analysis_note_2026-04-18"
     },
     {
       "from": "publication.ci3_z3.derivation_validation_map",
@@ -18650,6 +18650,10 @@
     },
     {
       "from": "publication.ci3_z3.full_claim_ledger",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.full_claim_ledger",
       "to": "yt_ew_delta_r_retention_analysis_note_2026-04-18"
     },
     {
@@ -19194,7 +19198,11 @@
     },
     {
       "from": "publication.ci3_z3.inputs_and_qualifiers_note",
-      "to": "rconn_derived_note"
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "publication.ci3_z3.inputs_and_qualifiers_note",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
     },
     {
       "from": "publication.ci3_z3.inputs_and_qualifiers_note",
@@ -19762,11 +19770,11 @@
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
-      "to": "yt_ew_delta_r_retention_analysis_note_2026-04-18"
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
-      "to": "rconn_derived_note"
+      "to": "yt_ew_delta_r_retention_analysis_note_2026-04-18"
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
@@ -20323,6 +20331,10 @@
     {
       "from": "publication.ci3_z3.quantitative_summary_table",
       "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "publication.ci3_z3.quantitative_summary_table",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
     },
     {
       "from": "publication.ci3_z3.quantitative_summary_table",
@@ -21095,6 +21107,10 @@
     {
       "from": "publication.ci3_z3.results_index",
       "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "publication.ci3_z3.results_index",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
     },
     {
       "from": "publication.ci3_z3.results_index",
@@ -22402,6 +22418,14 @@
     },
     {
       "from": "publication.ci3_z3.usable_derived_values_index",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "publication.ci3_z3.usable_derived_values_index",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.usable_derived_values_index",
       "to": "rconn_derived_note"
     },
     {
@@ -23037,7 +23061,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T16:27:11.204528+00:00",
+  "generated_at": "2026-05-03T16:29:13.980947+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24628,7 +24652,7 @@
       "deps": [
         "rconn_derived_note"
       ],
-      "note_hash": "ce4be3ebb10323cbde7e0c926d7d1406d80e982b1f03a1b7668951ad2fe0728d",
+      "note_hash": "184bcf9134f431bc1a69e15807ee8fbf40e9b6da8dbc845ac90e6cbe35dcf585",
       "path": "docs/ASSUMPTION_DERIVATION_LEDGER.md",
       "runner_path": null,
       "title": "Assumption / Derivation Ledger"
@@ -25605,6 +25629,7 @@
         "rconn_derived_note",
         "yt_ew_color_projection_theorem",
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
         "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
@@ -25615,7 +25640,6 @@
         "left_handed_charge_matching_note",
         "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
         "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
-        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "yt_ew_m_residual_stretch_attempt_note_2026-05-02",
         "g_weak_from_framework_stretch_attempt_note_2026-05-03",
         "yt_ward_identity_derivation_theorem",
@@ -25795,7 +25819,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "d485f8c5e2ab08d11a84369a69b0c5d62c11ba2be2692b68c158b8cdc7c7ead3",
+      "note_hash": "d3ab83097f583b05622af6a022c4aeb74a51b87ee02ba0724ed62b0164cc7413",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -26427,7 +26451,7 @@
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
         "cl3_taste_generation_theorem"
       ],
-      "note_hash": "05f9b7dc43fe0d15714b577f323670e27fa5720240b8f402a65c7b56d8e88ffe",
+      "note_hash": "6f76f82f23a04f439f0c8dae892ebd5a4ac564f9ee71abad19799114d3460c3c",
       "path": "docs/CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_a_squared_below_w2_y_quantum_closure.py",
       "title": "A\u00b2 Closure Below W2 via Retained Quark-Doublet Identification Source Theorem"
@@ -26810,7 +26834,7 @@
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
         "minimal_axioms_2026-04-11"
       ],
-      "note_hash": "c893ac16e6289fe0714ec5491721571b811512040167395b60693483bab01f01",
+      "note_hash": "11fca6e66106c1aad15fbe1cd4a4e13300bf52923dcd1b382f4f82a1e5ce91a7",
       "path": "docs/CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_ew_lattice_a4_bridge.py",
       "title": "CKM-EW Lattice A4 Bridge Retained Identity"
@@ -27164,7 +27188,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "3d3c339b0c3fb2cc7bd7587f6ce9949bd76b10cc028ade19dd18197c5e3d44bc",
+      "note_hash": "609a2c0a7bd5401788580fd68f7807aaca60ecea8e01d5b7350b3661ec8cd226",
       "path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation"
@@ -27298,7 +27322,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d9b79c9fbf7928333646521c8d4f060c71e2e65328ccf30ba318000128af762c",
+      "note_hash": "21c95806ea15fa032fdd73475c2d86a1f930e05d635df2cb7e72e11faf96db97",
       "path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
       "runner_path": "scripts/frontier_complete_prediction_chain.py",
       "title": "Complete Prediction Chain: Cl(3) on Z^3"
@@ -31444,16 +31468,16 @@
     },
     "ew_current_matching_rule_open_gate_note_2026-05-03": {
       "claim_id": "ew_current_matching_rule_open_gate_note_2026-05-03",
-      "claim_type_author_hint": "open_gate",
-      "claim_type_author_hint_raw": "open_gate",
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
       "deps": [
         "ew_current_fierz_channel_decomposition_note_2026-05-01"
       ],
-      "note_hash": "b087b169f0b2506ee30cf2000ec1ef1a14864b7f3f3c3d2052b51dd50ffaa37d",
+      "note_hash": "177b44c2cfc8d3c90c98e09cd5a17192a158b88e7ee369c0e24ad384b809ce77",
       "path": "docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md",
-      "runner_path": null,
-      "title": "EW Current Matching Rule Open Gate Note"
+      "runner_path": "scripts/frontier_ew_current_matching_rule_no_go.py",
+      "title": "EW Current Matching Rule No-Go Proposal Note"
     },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
@@ -31461,7 +31485,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "33955254f4a4c5a16723582482dba72e79b3a977bbd918bc83083d76ef12e47a",
+      "note_hash": "a427bbd85df1bb1f783bb2878d9b4e112ed78aa0786b29e5e3edc7749e6e089d",
       "path": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py",
       "title": "Electroweak Higgs Gauge-Mass Diagonalization Theorem"
@@ -31484,7 +31508,7 @@
         "ckm_n9_structural_family_koide_bridge_support_note_2026-04-25",
         "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
       ],
-      "note_hash": "de960807fd7b646714c0c5e654d4af32afc8dd9ba967a3ae09186ee039a1e8ff",
+      "note_hash": "5d9e76abaeda450ceeceda6d73aeaee03f7fcef285ad6f9688a7e26c92f8b4c6",
       "path": "docs/EW_LATTICE_COS_SQ_THETA_W_COMPLEMENT_BRIDGE_THEOREM_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_ew_lattice_cos_sq_theta_w_complement_bridge.py",
       "title": "EW-CKM Lattice cos\u00b2(\u03b8_W) Complement Bridge: Four-Way Retained Identity, Support-Tier F5 Companion, and M_W/M_Z Closed Form"
@@ -41030,7 +41054,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "b6223bb6dfce7e4cc6d162e72bf213e7a7d3445cabb17a1e03b30f0efbfda8be",
+      "note_hash": "246b90de97dea011bf2cda50e5f250fe0c190e44d138080144391667e7e88e1a",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -41173,8 +41197,8 @@
         "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "yt_ew_color_projection_theorem",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
-        "rconn_derived_note",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
         "cl3_sm_embedding_theorem",
@@ -41318,7 +41342,7 @@
         "teleportation_conclusion_boundary_note",
         "teleportation_acceptance_suite_note"
       ],
-      "note_hash": "2b82fe17f9b78ff3ddc08a18bdbd78af8bb9bfe3410b156d3c77c601132b22e8",
+      "note_hash": "fc943592dc3cff0fc851156ca89b306e440a6802ed5c04c89343b976f3f67e3f",
       "path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
       "runner_path": null,
       "title": "Derivation / Validation Map"
@@ -41399,7 +41423,7 @@
         "publication.ci3_z3.full_claim_ledger",
         "publication.ci3_z3.results_index"
       ],
-      "note_hash": "48fbe5ebe9ec7289b36385ad722753a1aad92eecaf9702c4534371de0209a2b8",
+      "note_hash": "d777e22b0dfdd8c28e726e96c3f8b183f859ca831f9f7a86006ccf5baeeadd18",
       "path": "docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md",
       "runner_path": null,
       "title": "External Reviewer Guide"
@@ -41576,6 +41600,7 @@
         "alpha_s_derived_note",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "yt_ew_color_projection_theorem",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
@@ -41677,7 +41702,7 @@
         "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
         "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25"
       ],
-      "note_hash": "a9cc96b2435da849cb7a436b0258c6039d7ced2775177f6143d4158764f0a485",
+      "note_hash": "1567e29b1016722aefa155f48500ad018ec0f2fd9aa132851c730c6319e0cc1b",
       "path": "docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md",
       "runner_path": null,
       "title": "Full Claim Ledger"
@@ -41736,13 +41761,14 @@
         "plaquette_self_consistency_note",
         "alpha_s_derived_note",
         "observable_principle_from_axiom_note",
-        "rconn_derived_note",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "continuum_identification_note",
         "publication.ci3_z3.claims_table",
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "42647f7249a3d38acb6516cd8296ff15af95800436b7f22e26d2e5ce757cf4c8",
+      "note_hash": "5a68d152e5c468b861c7e945b00c74cb3de6e2dec677bc8648dcd8272f033b5e",
       "path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
       "runner_path": null,
       "title": "Inputs And Qualifiers"
@@ -41914,8 +41940,8 @@
         "alpha_s_derived_note",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "yt_ew_color_projection_theorem",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
-        "rconn_derived_note",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "w_mass_derived_note",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
@@ -42049,7 +42075,7 @@
         "gw_echo_null_result_note",
         "koide_reviewer_stress_test_note_2026-04-21"
       ],
-      "note_hash": "b53e0b271d989476d206afce1b0e03b82229467b8da10729d820c96649912323",
+      "note_hash": "9d05fdd1442b6f0169d6e022f6edc5370feb5066bf33a29c7515702281cf5da4",
       "path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
       "runner_path": null,
       "title": "Publication Matrix"
@@ -42067,6 +42093,7 @@
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "confinement_string_tension_note",
         "yt_ew_color_projection_theorem",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
@@ -42132,7 +42159,7 @@
         "teleportation_conclusion_boundary_note",
         "teleportation_acceptance_suite_note"
       ],
-      "note_hash": "4ca5f5e3aa0a678ce514757cbd22898dad5dacc22f0bfdcc4fc44499bc529545",
+      "note_hash": "7222b6121024f9db49fd0d86658ac06f5be770bff50f967ae8fff95f95623037",
       "path": "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md",
       "runner_path": null,
       "title": "Quantitative Summary Table"
@@ -42318,6 +42345,7 @@
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "rconn_derived_note",
         "yt_ew_color_projection_theorem",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "yt_ew_delta_r_retention_analysis_note_2026-04-18",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
@@ -42565,7 +42593,7 @@
         "ckm_atlas_axiom_closure_note",
         "ckm_thales_pinned_alpha_s_independent_ratios_theorem_note_2026-04-25"
       ],
-      "note_hash": "28b13045629bea8f0b0601327120cf7dfd39f6b4e4783a77df5e2453ff360159",
+      "note_hash": "bfcb6b35872a8ab9d94c2e518daeb943c9c7d048e9e1f252e6e7cdbc6e75cbad",
       "path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
       "runner_path": null,
       "title": "Results Index"
@@ -42668,6 +42696,8 @@
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
         "rconn_derived_note",
         "yukawa_color_projection_theorem",
         "r_base_group_theory_derivation_theorem_note_2026-04-24",
@@ -42734,7 +42764,7 @@
         "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
         "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
       ],
-      "note_hash": "ea517d495a201eae41c00b1a3dd9a4f7d298e0d302456b5073d05a7004a5938a",
+      "note_hash": "53e5b7d087df1579c87a2eb758b63f68dcd78dc9e478f9911d4badd7f210d60c",
       "path": "docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md",
       "runner_path": null,
       "title": "Usable Derived Values Index"
@@ -43505,7 +43535,7 @@
         "yukawa_color_projection_theorem",
         "ew_current_fierz_channel_decomposition_note_2026-05-01"
       ],
-      "note_hash": "f770bc32f0da575292747e15877dfa3c99a256e85904692a77b97a0c746dce4c",
+      "note_hash": "f3174d8d9b6a5f56c7744e38e11c5b8f0c3bd958f3c403fef637df23bfe417dd",
       "path": "docs/RCONN_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "R_conn Derivation from the 1/N_c Expansion"
@@ -47724,10 +47754,10 @@
         "observable_principle_from_axiom_note",
         "alpha_s_derived_note"
       ],
-      "note_hash": "cca34e6998ccbfa3e47a2784a3a17b05da3d57f058aa651172be7a1a7705fb68",
+      "note_hash": "07a0b1d735168228b6f064b5603b641b59884a501306ffcec82b0cb4219a4adb",
       "path": "docs/W_MASS_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_w_mass_prediction.py",
-      "title": "`M_W` Same-Surface Consistency Probe on the Retained EW Lane"
+      "title": "`M_W` Same-Surface Consistency Probe on the Conditional EW Lane"
     },
     "w_z_mass_ratio_from_ewsb_note_2026-05-02": {
       "claim_id": "w_z_mass_ratio_from_ewsb_note_2026-05-02",
@@ -49242,12 +49272,12 @@
       "claim_id": "yt_ew_color_projection_theorem",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "ew_current_fierz_channel_decomposition_note_2026-05-01",
         "ew_current_matching_rule_open_gate_note_2026-05-03"
       ],
-      "note_hash": "4e5ae96ccaf17c49268767ca6999fd18f8e33ce7830687bab5a9136b27fc5c86",
+      "note_hash": "67b8ab12b7b6118e73a2ef121b4005f8dec792c865a70c4a63b6183c02d5a505",
       "path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Color-Singlet Projection Theorem for EW Couplings"
@@ -49258,7 +49288,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "a3f417899b37d74eec8858ac51321dbdedeaf87f88c7a8053c78afdc0cccb7e2",
+      "note_hash": "9904a7b61b08b39b6f3142d66903fe26a512d2ac576ed9c53f4e27b412119ed0",
       "path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
       "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
       "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis"
@@ -49277,7 +49307,7 @@
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
         "plaquette_self_consistency_note"
       ],
-      "note_hash": "26c2916ef161c797e18b030f855f8351e459176771d0fdcfd51e6dc25ed9833e",
+      "note_hash": "4f12df73338d51c7939800fb1dc40ea647779ddfd8b931ce03d6c51c649da14b",
       "path": "docs/YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_yt_ew_delta_r_retention.py",
       "title": "YT EW \u0394_R Retention Analysis Note (Lattice-to-MSbar Matching for g_1(v), g_2(v))"
@@ -49767,7 +49797,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "4cc36860f822b2ff46b0a2a5f25b3aaa43edf1bdc2c918e5420a8ff025eca993",
+      "note_hash": "bb0382314c782a66b2e425a45c333f16a6009567eb9ba9887254518d2a30d6f6",
       "path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_p2_v_matching.py",
       "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M"
@@ -50015,9 +50045,9 @@
       "claim_id": "yt_zero_import_chain_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "c0bb2cb49c91786a63a1d39e1353e7f6d1e114281ce30b6ae2bc2899bc174c98",
+      "note_hash": "8b864d7f4ef944d0ab21742c3994093d4ade4c11d9a02b8cd4e14a2df6fc9cbf",
       "path": "docs/YT_ZERO_IMPORT_CHAIN_NOTE.md",
       "runner_path": "scripts/frontier_yt_zero_import_chain.py",
       "title": "Zero-Import y_t Derivation: Definitive Authority Note"
@@ -50032,7 +50062,7 @@
         "native_gauge_closure_note",
         "graph_first_su3_integration_note"
       ],
-      "note_hash": "a77d1a2b4cc2caa5073ee1348d3aba0344326e2df0bac06161342cf8e351db77",
+      "note_hash": "3ab25bfad27854537a8b4fa9ed5bb1e9d5b0410e8e007d5db123824289a88da7",
       "path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
       "runner_path": "scripts/frontier_ew_current_fierz_channel_decomposition.py",
       "title": "Yukawa Color-Singlet Projection Theorem"
@@ -51126,23 +51156,23 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 49,
       "meta": 7,
-      "no_go": 4,
+      "no_go": 5,
       "none": 1726,
-      "open_gate": 6,
+      "open_gate": 5,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 550,
+      "bounded_theorem": 551,
       "meta": 7,
-      "no_go": 110,
-      "none": 452,
-      "open_gate": 113,
-      "positive_theorem": 628
+      "no_go": 111,
+      "none": 453,
+      "open_gate": 112,
+      "positive_theorem": 626
     },
-    "edge_count": 5759,
+    "edge_count": 5765,
     "leaf_count": 597,
     "node_count": 1860,
     "root_count": 1059,
-    "runners_with_path": 1419
+    "runners_with_path": 1420
   }
 }

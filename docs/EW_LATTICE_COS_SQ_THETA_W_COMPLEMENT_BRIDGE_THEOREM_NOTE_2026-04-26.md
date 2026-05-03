@@ -93,8 +93,8 @@ latter — exactly like the retained sister bridge for the `4/9` side.
 On retained-tier authorities of current `main`:
 
 ```text
-(P1)  YT_EW retains bare lattice couplings (Status: "DERIVED -- standalone
-      retained EW normalization lane on main"):
+(P1)  YT_EW retains bare lattice couplings as a lattice-scale identity
+      (not the v-scale `K_EW(kappa_EW)` matching rule):
         g_2² = 1/(d+1) = 1/4,   g_Y² = 1/(d+2) = 1/5,    d = dim(Z³) = 3.
 
 (P2)  EW Higgs gauge-mass diagonalization (retained tree theorem):

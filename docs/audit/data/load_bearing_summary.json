@@ -1,8 +1,8 @@
 {
-  "computed_at": "2026-05-03T16:27:17.990264+00:00",
+  "computed_at": "2026-05-03T16:29:21.188155+00:00",
   "criticality_counts": {
-    "critical": 114,
-    "high": 366,
+    "critical": 113,
+    "high": 367,
     "leaf": 762,
     "medium": 618
   },
