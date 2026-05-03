@@ -1,5 +1,5 @@
 {
-  "cycle_count": 86,
+  "cycle_count": 87,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -108,6 +108,43 @@
       "decision": null,
       "edges": [
         {
+          "from": "g_bare_derivation_note",
+          "to": "g_bare_derivation_status_correction_audit_note_2026-05-02"
+        },
+        {
+          "from": "g_bare_derivation_status_correction_audit_note_2026-05-02",
+          "to": "g_bare_derivation_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 280,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "g_bare_derivation_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
+          "title": "Derivation of g_bare = 1 from Cl(3) Framework Axioms",
+          "transitive_descendants": 280
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "g_bare_derivation_status_correction_audit_note_2026-05-02",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/G_BARE_DERIVATION_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md",
+          "title": "g_bare Derivation Note \u2014 Status Correction Audit",
+          "transitive_descendants": 280
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0003",
+      "decision": null,
+      "edges": [
+        {
           "from": "yt_ward_identity_derivation_theorem",
           "to": "yt_vertex_power_derivation"
         },
@@ -154,7 +191,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0003",
+      "cycle_id": "cycle-0004",
       "decision": null,
       "edges": [
         {
@@ -191,7 +228,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0004",
+      "cycle_id": "cycle-0005",
       "decision": null,
       "edges": [
         {
@@ -228,7 +265,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0005",
+      "cycle_id": "cycle-0006",
       "decision": null,
       "edges": [
         {
@@ -265,7 +302,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -302,7 +339,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -339,7 +376,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -376,7 +413,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -413,7 +450,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -450,7 +487,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -487,7 +524,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -524,7 +561,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -561,7 +598,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -598,7 +635,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0016",
       "decision": null,
       "edges": [
         {
@@ -635,7 +672,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -672,7 +709,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0018",
       "decision": null,
       "edges": [
         {
@@ -722,7 +759,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -772,7 +809,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -822,7 +859,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -872,7 +909,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -922,7 +959,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -985,7 +1022,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1048,7 +1085,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1111,7 +1148,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1174,7 +1211,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1237,7 +1274,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1313,7 +1350,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1389,7 +1426,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -1465,7 +1502,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -1554,7 +1591,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -1656,7 +1693,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -1693,7 +1730,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -1730,7 +1767,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -1767,7 +1804,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -1804,7 +1841,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -1841,7 +1878,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -1878,7 +1915,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -1915,7 +1952,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -1952,7 +1989,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -1989,7 +2026,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -2039,7 +2076,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -2102,7 +2139,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -2178,7 +2215,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -2215,7 +2252,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -2252,7 +2289,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -2289,7 +2326,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -2326,7 +2363,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -2363,7 +2400,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -2400,7 +2437,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -2450,7 +2487,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -2500,7 +2537,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -2550,7 +2587,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0054",
       "decision": null,
       "edges": [
         {
@@ -2613,7 +2650,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0055",
       "decision": null,
       "edges": [
         {
@@ -2650,7 +2687,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0056",
       "decision": null,
       "edges": [
         {
@@ -2687,7 +2724,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0057",
       "decision": null,
       "edges": [
         {
@@ -2724,7 +2761,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -2761,7 +2798,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0059",
       "decision": null,
       "edges": [
         {
@@ -2798,7 +2835,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0060",
       "decision": null,
       "edges": [
         {
@@ -2835,7 +2872,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0061",
       "decision": null,
       "edges": [
         {
@@ -2872,7 +2909,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0062",
       "decision": null,
       "edges": [
         {
@@ -2909,7 +2946,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0063",
       "decision": null,
       "edges": [
         {
@@ -2959,7 +2996,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0064",
       "decision": null,
       "edges": [
         {
@@ -3009,7 +3046,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0065",
       "decision": null,
       "edges": [
         {
@@ -3059,7 +3096,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0066",
       "decision": null,
       "edges": [
         {
@@ -3109,7 +3146,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0067",
       "decision": null,
       "edges": [
         {
@@ -3159,7 +3196,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0068",
       "decision": null,
       "edges": [
         {
@@ -3209,7 +3246,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -3259,7 +3296,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -3309,7 +3346,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -3346,7 +3383,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -3383,7 +3420,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0072",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -3420,7 +3457,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0073",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -3457,7 +3494,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0074",
+      "cycle_id": "cycle-0075",
       "decision": null,
       "edges": [
         {
@@ -3507,7 +3544,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0075",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -3544,7 +3581,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0076",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -3581,7 +3618,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0077",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -3618,7 +3655,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0078",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -3655,7 +3692,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0079",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -3692,7 +3729,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0080",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -3742,7 +3779,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -3779,7 +3816,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -3816,7 +3853,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -3853,7 +3890,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -3903,7 +3940,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -3940,7 +3977,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -3977,9 +4014,9 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T14:00:25.341815+00:00",
+  "generated_at": "2026-05-03T14:08:56.774550+00:00",
   "length_counts": {
-    "2": 51,
+    "2": 52,
     "3": 21,
     "4": 7,
     "5": 4,
@@ -3991,5 +4028,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T14:00:17.523842+00:00"
+  "source_graph_generated_at": "2026-05-03T14:08:53.613625+00:00"
 }
