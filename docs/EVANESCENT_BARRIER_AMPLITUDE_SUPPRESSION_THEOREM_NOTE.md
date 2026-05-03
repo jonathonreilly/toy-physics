@@ -170,9 +170,10 @@ Two honest consequences:
    numerically on moderate lattices, not `exp(-(R_S/a) ln(R_S/a))`.
 2. The `exp[-(R_S/l_P) ln(R_S/l_P)]` formula that the bounded GW-echo
    null companion carries
-   ([GW_ECHO_NULL_RESULT_NOTE.md](./GW_ECHO_NULL_RESULT_NOTE.md))
-   remains a BOUNDED statement that depends on (C-rate) above.  This
-   note does NOT promote that formula to the retained surface.
+   (`GW_ECHO_NULL_RESULT_NOTE.md`; sibling artifact, cross-reference
+   only — not a one-hop dep of this note) remains a BOUNDED statement
+   that depends on (C-rate) above.  This note does NOT promote that
+   formula to the retained surface.
 
 Promoting (C-rate) is an explicit follow-up theorem target.  Until it
 lands, retained theorems A and B are the full retained surface of this
@@ -226,7 +227,8 @@ Run summary on commit land: `PASS = 11`, `FAIL = 0`.
 ## Relation to the bounded echo companion
 
 The bounded companion
-[GW_ECHO_NULL_RESULT_NOTE.md](./GW_ECHO_NULL_RESULT_NOTE.md) carries
+`GW_ECHO_NULL_RESULT_NOTE.md` (sibling artifact; cross-reference only —
+not a one-hop dep of this note) carries
 the Planck-unit formula `|T| ~ exp[-(R_S/l_P) ln(R_S/R_min)]` and the
 associated `log10 |T| ~ -10^41` numerical echo-amplitude statement for
 LIGO-class targets.  That formula remains BOUNDED.  The retained
