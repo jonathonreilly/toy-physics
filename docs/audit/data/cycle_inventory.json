@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 283,
+      "max_transitive_descendants": 285,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -33,7 +33,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         }
       ],
       "requires_lemma_extraction": false
@@ -52,7 +52,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 283,
+      "max_transitive_descendants": 285,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -61,7 +61,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
           "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -70,7 +70,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         }
       ],
       "requires_lemma_extraction": false
@@ -113,7 +113,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 283,
+      "max_transitive_descendants": 285,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -122,7 +122,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -131,7 +131,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -140,7 +140,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -149,7 +149,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -158,7 +158,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
           "title": "1+1D SO(1,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -167,7 +167,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -176,7 +176,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         },
         {
           "audit_status": "unaudited",
@@ -185,7 +185,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 283
+          "transitive_descendants": 285
         }
       ],
       "requires_lemma_extraction": false
@@ -208,7 +208,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 190,
+      "max_transitive_descendants": 193,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -217,7 +217,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 190
+          "transitive_descendants": 193
         },
         {
           "audit_status": "unaudited",
@@ -226,7 +226,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 190
+          "transitive_descendants": 193
         },
         {
           "audit_status": "unaudited",
@@ -235,7 +235,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
           "title": "y_t Lane: Zero-Import Authority",
-          "transitive_descendants": 190
+          "transitive_descendants": 193
         }
       ],
       "requires_lemma_extraction": false
@@ -254,7 +254,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -263,7 +263,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -272,7 +272,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -291,7 +291,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -300,7 +300,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -309,7 +309,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -332,7 +332,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -341,7 +341,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -350,7 +350,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -359,7 +359,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -382,7 +382,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -391,7 +391,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -400,7 +400,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -409,7 +409,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B Grown-Geometry Joint Package Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -432,7 +432,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -441,7 +441,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -450,7 +450,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -459,7 +459,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_FARFIELD_NOTE.md",
           "title": "Gate B h=0.25 Far-Field Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -482,7 +482,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -491,7 +491,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -500,7 +500,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -509,7 +509,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B h=0.25 Joint Package Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -536,7 +536,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -545,7 +545,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -554,7 +554,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -563,7 +563,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -572,7 +572,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B Grown-Geometry Joint Package Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -599,7 +599,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -608,7 +608,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -617,7 +617,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -626,7 +626,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -635,7 +635,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_DISTANCE_LAW_NOTE.md",
           "title": "Gate B h=0.25 Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -662,7 +662,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -671,7 +671,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -680,7 +680,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -689,7 +689,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -698,7 +698,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_FARFIELD_NOTE.md",
           "title": "Gate B h=0.25 Far-Field Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -725,7 +725,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -734,7 +734,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -743,7 +743,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -752,7 +752,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -761,7 +761,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B h=0.25 Joint Package Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -788,7 +788,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -797,7 +797,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -806,7 +806,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -815,7 +815,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -824,7 +824,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
           "title": "Gate B Non-Label Connectivity V2 Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -851,7 +851,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -860,7 +860,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -869,7 +869,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -878,7 +878,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -887,7 +887,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -914,7 +914,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -923,7 +923,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -932,7 +932,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -941,7 +941,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -950,7 +950,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
           "title": "Gate B No-Restore Far-Field Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -977,7 +977,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -986,7 +986,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -995,7 +995,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1004,7 +1004,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1013,7 +1013,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -1044,7 +1044,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1053,7 +1053,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1062,7 +1062,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1071,7 +1071,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1080,7 +1080,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1089,7 +1089,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
           "title": "Gate B No-Restore Far-Field Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -1120,7 +1120,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1129,7 +1129,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1138,7 +1138,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1147,7 +1147,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1156,7 +1156,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1165,7 +1165,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
           "title": "Gate B Non-Label Connectivity V2 Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -1196,7 +1196,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 81,
+      "max_transitive_descendants": 82,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1205,7 +1205,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1214,7 +1214,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1223,7 +1223,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1232,7 +1232,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         },
         {
           "audit_status": "unaudited",
@@ -1241,7 +1241,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
-          "transitive_descendants": 81
+          "transitive_descendants": 82
         }
       ],
       "requires_lemma_extraction": false
@@ -5107,7 +5107,7 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T12:07:37.720594+00:00",
+  "generated_at": "2026-05-03T13:27:44.287641+00:00",
   "length_counts": {
     "2": 56,
     "3": 25,
@@ -5122,5 +5122,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T12:07:32.799308+00:00"
+  "source_graph_generated_at": "2026-05-03T13:27:37.852607+00:00"
 }

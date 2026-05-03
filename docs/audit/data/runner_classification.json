@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T12:07:36.832926+00:00",
+  "generated_at": "2026-05-03T13:27:43.569575+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -7501,6 +7501,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_mass_full_3loop.py"
     },
+    "higgs_vacuum_stability_new_physics_discrimination_note_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_higgs_vacuum_stability_new_physics_discrimination.py"
+    },
     "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -9948,6 +9960,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/minimal_absorbing_horizon_probe.py"
+    },
+    "minimal_axioms_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_generation_rooting_undefined.py"
     },
     "minimal_bidirectional_trapping_probe_note": {
       "assert_count": 0,
@@ -24959,6 +24983,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_generation_rooting_undefined.py": {
+      "assert_count": 1,
+      "claims": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_geometry_superposition.py": {
       "assert_count": 0,
       "claims": [
@@ -25532,6 +25571,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_higgs_vacuum_stability_new_physics_discrimination.py": {
+      "assert_count": 0,
+      "claims": [
+        "higgs_vacuum_stability_new_physics_discrimination_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_higgs_y_from_lhcm_yukawa.py": {
@@ -37213,12 +37267,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 543,
-      "D": 203,
+      "C": 544,
+      "D": 204,
       "none": 420
     },
-    "runners_classified": 1336,
-    "runners_with_C": 648,
-    "runners_with_D": 328
+    "runners_classified": 1338,
+    "runners_with_C": 649,
+    "runners_with_D": 329
   }
 }
