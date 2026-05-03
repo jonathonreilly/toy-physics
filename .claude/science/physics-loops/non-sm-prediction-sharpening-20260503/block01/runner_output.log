@@ -1,0 +1,79 @@
+==============================================================================
+Higgs + Vacuum Stability — New-Physics Discrimination Tests
+Source: docs/HIGGS_VACUUM_STABILITY_NEW_PHYSICS_DISCRIMINATION_NOTE_2026-05-03.md
+==============================================================================
+
+--- Section 1: y_t(v) discrimination ---
+  Framework y_t(v) = 0.918 ± 0.0275
+  SM extraction y_t(v) = 0.94 ± 0.01
+  Difference: 0.0220
+  Combined uncertainty: 0.0293
+  Current framework-vs-observation tension: 0.75σ
+  Current distance above stability boundary y_t≈0.93: 1.00σ on the observational error alone
+
+  Discrimination thresholds:
+    Stability claim falsified if the measured y_t lower 5σ bound exceeds the stability boundary y_t≈0.93.
+    If the central value remains 0.94, this needs σ_y_t < 0.0020.
+    Direct y_t=0.918 discrimination also requires narrowing the current 3% framework-side transport systematic.
+
+--- Section 2: m_H discrimination ---
+  PDG m_H = 125.25 ± 0.17 GeV
+    Naive m_H = v/(2u_0) (HIGGS_MASS_FROM_AXIOM): 140.3 GeV (+12.0%, ✗ outside 5%)
+    Color-corrected 2-loop CW: 119.8 GeV (+4.4%, ✓ within 5%)
+    Full 3-loop CW (current canonical): 125.1 GeV (+0.1%, ✓ within 5%)
+    Stability-boundary CW: 129.7 GeV (+3.6%, ✓ within 5%)
+
+  Honest assessment: the framework has multiple m_H predictions across
+  derivation routes. The 3-loop CW value (125.1 GeV) is closest to PDG and
+  is the framework's canonical current value, but the version conflict reflects
+  bounded systematic in the underlying y_t/RGE bridge chain.
+
+--- Section 3: Vacuum stability discrimination ---
+  SM stability boundary (Buttazzo et al 2013, NNLO): y_t ≲ 0.93
+  Framework y_t(v) = 0.918: STABLE
+  SM extraction y_t = 0.94: METASTABLE
+
+  Bounded framework package predicts an absolutely stable EW vacuum.
+  SM with current y_t extraction predicts METASTABLE (lifetime >> Hubble; observationally OK).
+  Discrimination: a precision y_t measurement whose lower 5σ bound exceeds
+  y_t≈0.93 would falsify the framework's stability claim.
+
+--- Section 4: Discrimination experiment timeline ---
+  HL-LHC (2030+): δm_t ~ 100 MeV; λ_3 to 50%
+    → discriminates: y_t to <1%; stability via λ(v)
+  FCC-ee (proposed 2040s): δm_t ~ 25 MeV (threshold); m_H to 4 MeV
+    → discriminates: y_t to ~0.1%; m_H to 0.003%
+  FCC-hh (proposed 2050s): λ_3 to 5%
+    → discriminates: direct stability via λ shape
+  Linear collider (ILC/CLIC): δm_t ~ 30 MeV; m_H to 14 MeV
+    → discriminates: y_t / stability
+
+--- Section 5: Discrimination summary ---
+  Framework's distinguishing claims (relative to SM):
+
+  D1. Vacuum is absolutely stable (vs SM metastable)
+  D2. y_t(v) = 0.918 (vs SM extraction 0.940; current 0.75σ including framework systematic)
+  D3. m_H ∈ [119.8, 129.7] GeV (vs SM free param; PDG 125.25)
+  D4. λ(M_Pl) = 0 on the conditional CW-boundary surface (vs SM extracted ~ 0)
+
+  Currently: 0.75σ tension between framework y_t(v) and SM extraction
+  after including the stated 3% framework systematic.
+  Near-term precision can falsify the stability claim if the lower 5σ
+  observational bound rises above the y_t≈0.93 stability boundary.
+  Direct y_t discrimination also needs a narrower audited framework-side systematic.
+
+  This lane provides a bounded, current-testable discrimination surface against the SM.
+
+==============================================================================
+Block 01 discrimination tests complete.
+
+Honest assessment:
+  - Framework has 4 distinguishing predictions in this lane
+  - Currently 0.75σ tension on y_t once framework systematic is included
+  - Future precision can falsify the stability boundary claim if observational
+    errors shrink enough while the central value stays above y_t≈0.93
+  - Vacuum stability is the binary claim with cleanest discrimination
+
+This makes the Higgs/y_t/stability lane a bounded beyond-SM discrimination
+surface, contingent on future precision and a narrower framework transport bound.
+==============================================================================

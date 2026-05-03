@@ -11,7 +11,8 @@ Use it to answer:
 
 ## Start Here
 
-1. [`../AI_METHODOLOGY_NOTE_2026-04-25.md`](../AI_METHODOLOGY_NOTE_2026-04-25.md)
+1. `../AI_METHODOLOGY_NOTE_2026-04-25.md` (sibling artifact;
+   cross-reference only — not a one-hop dep of this note)
    Curated overview of the methodology lane and its operating rules.
 
 2. [`../WRITING_VOICE_GUIDE_2026-04-25.md`](../WRITING_VOICE_GUIDE_2026-04-25.md)
