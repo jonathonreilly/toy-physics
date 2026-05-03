@@ -5865,6 +5865,34 @@
       "to": "three_generation_structure_note"
     },
     {
+      "from": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+      "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+      "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+      "to": "gauge_scalar_temporal_completion_theorem_note"
+    },
+    {
       "from": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
       "to": "gauge_scalar_temporal_completion_theorem_note"
     },
@@ -23165,7 +23193,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T20:08:08.776469+00:00",
+  "generated_at": "2026-05-03T20:08:59.251677+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32577,6 +32605,25 @@
       "path": "docs/GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md",
       "runner_path": null,
       "title": "Gauge/Matter Closure Gates"
+    },
+    "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03": {
+      "claim_id": "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note",
+        "gauge_scalar_temporal_completion_theorem_note"
+      ],
+      "note_hash": "bd05a176189419cafb1d7e0738455ca3bffa952068622b5b607d6678c6016d23",
+      "path": "docs/GAUGE_SCALAR_BRIDGE_3PLUS1_NATIVE_TUBE_STAGING_GATE_2026-05-03.md",
+      "runner_path": "scripts/frontier_gauge_scalar_bridge_3plus1_native_tube_staging.py",
+      "title": "Gauge-Scalar Bridge 3+1 Native Tube Staging Gate"
     },
     "gauge_scalar_temporal_completion_theorem_note": {
       "claim_id": "gauge_scalar_temporal_completion_theorem_note",
@@ -51348,7 +51395,7 @@
       "meta": 7,
       "no_go": 6,
       "none": 1727,
-      "open_gate": 5,
+      "open_gate": 6,
       "positive_theorem": 71
     },
     "claim_type_seed_hint_counts": {
@@ -51356,13 +51403,13 @@
       "meta": 7,
       "no_go": 112,
       "none": 454,
-      "open_gate": 112,
+      "open_gate": 113,
       "positive_theorem": 629
     },
-    "edge_count": 5791,
-    "leaf_count": 598,
-    "node_count": 1865,
+    "edge_count": 5798,
+    "leaf_count": 599,
+    "node_count": 1866,
     "root_count": 1055,
-    "runners_with_path": 1425
+    "runners_with_path": 1426
   }
 }
