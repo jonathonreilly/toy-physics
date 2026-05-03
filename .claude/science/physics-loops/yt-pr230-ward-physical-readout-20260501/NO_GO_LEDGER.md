@@ -1,5 +1,26 @@
 # No-Go Ledger
 
+## FH/LSZ chunk002 target-timeseries rerun is not closure
+
+Runner:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 2
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+# SUMMARY: PASS=8 FAIL=0
+```
+
+Chunk002 now carries per-configuration same-source target series, but the
+ready set remains only `12/63` L12 chunks.  Target-series coverage is still
+partial: chunks001, 002, 011, and 012 are complete; chunks003-010 are
+incomplete.  The target ESS gate is open, response stability still fails, and
+the source pole is not identified with the canonical Higgs radial mode.  Do
+not treat chunk002, four target-series chunks, or the reduced replacement
+queue as retained/proposed-retained evidence.
+
 ## FH/LSZ chunk001 target-timeseries rerun is not closure
 
 Runner:

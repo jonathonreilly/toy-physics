@@ -44,10 +44,10 @@
         "window_lag": 3
       },
       "target_timeseries": {
-        "scalar_lsz_target_timeseries": false,
-        "source_response_target_timeseries": false
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
       },
-      "target_timeseries_complete": false
+      "target_timeseries_complete": true
     },
     {
       "chunk_index": 3,
@@ -328,15 +328,15 @@
     "does not set kappa_s = 1"
   ],
   "target_timeseries_summary": {
-    "complete_count": 3,
+    "complete_count": 4,
     "complete_for_all_ready_chunks": false,
     "complete_indices": [
       1,
+      2,
       11,
       12
     ],
     "incomplete_indices": [
-      2,
       3,
       4,
       5,
@@ -348,5 +348,5 @@
     ],
     "ready_count": 12
   },
-  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Target-series coverage is partial: complete=chunk001, chunk011, chunk012; incomplete=chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010.  The load-bearing FH/LSZ target effective sample size therefore cannot be certified for the ready set.  Current chunks remain bounded support only until target-observable blocking/bootstrap data or an equivalent autocorrelation certificate is available for the production set."
+  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Target-series coverage is partial: complete=chunk001, chunk002, chunk011, chunk012; incomplete=chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010.  The load-bearing FH/LSZ target effective sample size therefore cannot be certified for the ready set.  Current chunks remain bounded support only until target-observable blocking/bootstrap data or an equivalent autocorrelation certificate is available for the production set."
 }

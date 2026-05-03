@@ -28,6 +28,7 @@
     "fh_lsz_chunk001_checkpoint": "bounded-support / FH-LSZ chunk001 seed-controlled production checkpoint",
     "fh_lsz_chunk001_target_timeseries_generic": "bounded-support / FH-LSZ chunk001 generic target-timeseries checkpoint",
     "fh_lsz_chunk002_checkpoint": "bounded-support / FH-LSZ chunk002 seed-controlled production checkpoint",
+    "fh_lsz_chunk002_target_timeseries_generic": "bounded-support / FH-LSZ chunk002 generic target-timeseries checkpoint",
     "fh_lsz_chunk011_target_timeseries": "bounded-support / FH-LSZ chunk011 target-timeseries production checkpoint",
     "fh_lsz_chunk011_target_timeseries_generic": "bounded-support / FH-LSZ chunk011 generic target-timeseries checkpoint",
     "fh_lsz_chunk012_target_timeseries_generic": "bounded-support / FH-LSZ chunk012 generic target-timeseries checkpoint",
