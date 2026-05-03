@@ -1,13 +1,14 @@
-# DM Wilson Direct-Descendant Batch Authority Note
+# DM Wilson Direct-Descendant Bounded Support Batch Note
 
 **Date:** 2026-05-03
+**Claim type:** meta
 **Status:** bounded support batch on the open DM flagship lane. This note is a
-single batch-authority pointer for the DM Wilson direct-descendant
+single bounded-support-batch pointer for the DM Wilson direct-descendant
 route-history sub-stack; it introduces no new derivation, does not promote the
 DM flagship lane out of `open flagship lane` status in
 [`ASSUMPTION_DERIVATION_LEDGER.md`](ASSUMPTION_DERIVATION_LEDGER.md), and does
 not modify any of the 14 cataloged source notes.
-**Authority role:** canonical batch-authority entrypoint for the DM Wilson
+**Authority role:** publication/control-plane entrypoint for the DM Wilson
 direct-descendant theorem-note family.
 **Scope qualifier:** historical / diagnostic; route history of the
 `L_e = Schur_{E_e}(D_-)` direct-descendant gate already pinned to the atlas
@@ -21,13 +22,13 @@ This note implements recommendation `2` of
 `DM_WILSON_DIRECT_DESCENDANT_*_THEOREM_NOTE_*.md` rows individually onto
 [`docs/publication/ci3_z3/DERIVATION_ATLAS.md`](publication/ci3_z3/DERIVATION_ATLAS.md)
 section `G. DM and cosmology tools` (which would inflate the DM section with
-closely related route-history rows), record a single batch authority pointer
+closely related route-history rows), record a single bounded support batch pointer
 that catalogs the family as a coherent route-history sub-stack and weave that
 single pointer.
 
 The triage explicitly identified this sub-family as ambiguous between
 "weave each note as its own atlas row" and "leave unwoven; route history only".
-This note is the recommended middle path: a single canonical surface row points
+This note is the recommended middle path: a single control-plane row points
 here; this note enumerates the underlying theorem-note bank for reviewer and
 audit-graph reuse without atlas-row inflation.
 
@@ -108,7 +109,7 @@ flagship lane closure is re-attempted.
   [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md);
 - upstream Wilson parent audit:
   [`DM_WILSON_PARENT_CORRECTNESS_AUDIT_NOTE_2026-04-18.md`](DM_WILSON_PARENT_CORRECTNESS_AUDIT_NOTE_2026-04-18.md);
-- governance triage that recommended this batch authority note:
+- governance triage that recommended this bounded support batch note:
   [`DM_LANE_WEAVE_TRIAGE_2026-05-03.md`](work_history/repo/DM_LANE_WEAVE_TRIAGE_2026-05-03.md)
   (merged via PR `#472`);
 - companion canonical-weave audit:
@@ -127,7 +128,7 @@ flagship lane closure is re-attempted.
 - treat individual cataloged notes as route history and reviewer-pressure
   scaffolding, not as standalone authority for new closure claims;
 - when citing the family from a publication-control-plane surface, cite this
-  batch authority note plus the existing atlas row, not the 14 underlying
+  bounded support batch note plus the existing atlas row, not the 14 underlying
   notes individually;
 - do not modify the 14 cataloged source notes from this batch; their content
   is frozen route history of the April 18-25 Wilson-parent audit cycle.
