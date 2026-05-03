@@ -225,7 +225,8 @@ unless an extra rule fixes the line as physical boundary data.
 ## Naturally Hosted Orientation-Line Follow-Up
 
 The hosted-versus-selected distinction is now audited in
-[`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`](SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md)
+`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`
+(downstream follow-up; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_naturally_hosted_orientation_line.py`](../scripts/signed_gravity_naturally_hosted_orientation_line.py).
 
