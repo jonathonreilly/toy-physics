@@ -1,8 +1,41 @@
 # Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)
 
-**Date:** 2026-04-14
-**Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`; proposed_retained as a support scan
-**Script:** `scripts/frontier_yt_ew_coupling_derivation.py`
+**Date:** 2026-04-14 (originally); 2026-05-03 (audit-driven repair)
+**Status:** SUPERSEDED by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`; proposed_retained as a bounded-status support scan
+**Primary runner (post-2026-05-03 repair):** `scripts/ew_coupling_bounded_status_runner_2026_05_03.py`
+**Companion runner (does NOT match this note's claims):** `scripts/frontier_yt_ew_coupling_derivation.py` — that runner scans a `taste_weight` parameter against `sin^2(theta_W)` and reports different g_1, g_2 outputs; it is a separate derivation attempt, not a verifier of this note.
+
+## Audit-driven repair (2026-05-03)
+
+The 2026-05-03 audit (codex-fresh-ew-coupling) flagged that the
+previously named primary runner (`frontier_yt_ew_coupling_derivation.py`)
+does NOT reproduce this note's stated calculations. That runner fits
+a `taste_weight = 0.390` parameter to match `sin²θ_W = 0.23122`,
+reports g_1 ≈ 0.438 and g_2 ≈ 0.611 — values different from this
+note's g_1 = 0.590 (1-loop derivation) and `g_2` BOUNDED.
+
+Repair: a new primary runner
+[`scripts/ew_coupling_bounded_status_runner_2026_05_03.py`](../scripts/ew_coupling_bounded_status_runner_2026_05_03.py)
+reproduces exactly what this note claims:
+
+  D1  g_1(v) DERIVED via 1-loop U(1) RGE from M_Pl with α_LM = 0.0907
+      → g_1_GUT(v) = 0.590, ~27% above observed (expected at 1-loop SU(5))
+  D2  g_2(v) BOUNDED — SU(2) Landau pole barrier identified; no fit
+      to observable; non-perturbative SU(2) matching remains open
+  D3  λ(v) BOUNDED — Coleman-Weinberg lower bound (3 y_t⁴ / 8π²)
+      and vacuum-stability upper window; no derivation yet
+  D4  y_t sensitivity table reproducing note Part 5 (EW couplings
+      subdominant to QCD beta in y_t chain)
+
+The new runner does NOT introduce or fit any new parameter. It does
+not touch `taste_weight`. The note and primary runner now compute
+the same scoped quantities (PASS=4/4).
+
+The status table is unchanged in content but is now backed by an
+executable runner that matches it. g_2(v) and λ(v) remain BOUNDED
+(not derived) — this is the honest scope of the note. The taste-weight
+runner remains in the repo as a separate, distinct derivation attempt
+that requires its own audit and is not a verifier for this note.
 
 ---
 
