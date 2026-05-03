@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T18:40:01.122855+00:00",
+  "generated_at": "2026-05-03T19:49:11.283612+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -6360,6 +6360,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/gate_b_weak_connectivity_harness.py"
+    },
+    "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 30,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_scalar_bridge_3plus1_native_lower_bound.py"
     },
     "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03": {
       "assert_count": 1,
@@ -24631,6 +24643,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_gauge_scalar_bridge_3plus1_native_lower_bound.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 30,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_scalar_bridge_kz_external_lift.py": {
       "assert_count": 1,
       "claims": [
@@ -37591,12 +37618,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 162,
-      "C": 553,
+      "C": 554,
       "D": 207,
       "none": 418
     },
-    "runners_classified": 1350,
-    "runners_with_C": 659,
-    "runners_with_D": 336
+    "runners_classified": 1351,
+    "runners_with_C": 660,
+    "runners_with_D": 337
   }
 }

@@ -5809,6 +5809,42 @@
       "to": "three_generation_structure_note"
     },
     {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_scalar_temporal_completion_theorem_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_constant_lift_obstruction_note"
+    },
+    {
+      "from": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02"
+    },
+    {
       "from": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
       "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     },
@@ -23097,7 +23133,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T18:39:58.801223+00:00",
+  "generated_at": "2026-05-03T19:49:08.891104+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -32462,6 +32498,27 @@
       "path": "docs/GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md",
       "runner_path": null,
       "title": "Gauge/Matter Closure Gates"
+    },
+    "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03": {
+      "claim_id": "gauge_scalar_bridge_3plus1_native_lower_bound_staging_note_2026-05-03",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
+        "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+        "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
+        "gauge_vacuum_plaquette_constant_lift_obstruction_note",
+        "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02"
+      ],
+      "note_hash": "09a1caf2e9ff7943004a4477c4a772741576170c7bc5d6a4198b4ad12c1e3df0",
+      "path": "docs/GAUGE_SCALAR_BRIDGE_3PLUS1_NATIVE_LOWER_BOUND_STAGING_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_gauge_scalar_bridge_3plus1_native_lower_bound.py",
+      "title": "Gauge-Scalar Bridge 3+1 Native Lower-Bound Staging Note"
     },
     "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03": {
       "claim_id": "gauge_scalar_bridge_kz_external_lift_theorem_note_2026-05-03",
@@ -51223,7 +51280,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 50,
+      "bounded_theorem": 51,
       "meta": 7,
       "no_go": 6,
       "none": 1726,
@@ -51231,17 +51288,17 @@
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 552,
+      "bounded_theorem": 553,
       "meta": 7,
       "no_go": 112,
       "none": 453,
       "open_gate": 112,
       "positive_theorem": 626
     },
-    "edge_count": 5774,
+    "edge_count": 5783,
     "leaf_count": 599,
-    "node_count": 1862,
+    "node_count": 1863,
     "root_count": 1059,
-    "runners_with_path": 1422
+    "runners_with_path": 1423
   }
 }

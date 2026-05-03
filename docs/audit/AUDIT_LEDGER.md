@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:40:01.766731+00:00
+**Generated:** 2026-05-03T19:49:11.962737+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 741 |
+| unaudited | 742 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -42,11 +42,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 787 |
+| `unaudited` | 788 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 594 |
+| `bounded_theorem` | 595 |
 | `decoration` | 8 |
 | `meta` | 46 |
 | `no_go` | 163 |
@@ -58,16 +58,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 113 |
 | `high` | 366 |
 | `medium` | 584 |
-| `leaf` | 696 |
+| `leaf` | 697 |
 
 - **Retained pending chain closure:** 3
 - **Citation cycles detected:** 42
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1350
-- runners with (C) first-principles compute hits: 659
-- runners with (D) external comparator hits: 336
+- runners classified: 1351
+- runners with (C) first-principles compute hits: 660
+- runners with (D) external comparator hits: 337
 - decoration candidates (no C, no D): 114
 
 ## Top 25 by load-bearing score (topology only)
@@ -84,10 +84,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 6 | `native_gauge_closure_note` | bounded_theorem | critical | 374 | 27.05 | `audited_clean` | **retained_bounded** |
 | 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 212 | 26.73 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 85 | 24.93 | `unaudited` | unaudited |
-| 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 369 | 24.53 | `audited_clean` | open_gate |
+| 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 370 | 24.54 | `audited_clean` | open_gate |
 | 10 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 130 | 24.03 | `audited_clean` | **retained_bounded** |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 114 | 23.84 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `minimal_axioms_2026-05-03` | meta | critical | 369 | 23.53 | `unaudited` | meta |
+| 12 | `minimal_axioms_2026-05-03` | meta | critical | 370 | 23.54 | `unaudited` | meta |
 | 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 310 | 23.28 | `unaudited` | unaudited |
 | 14 | `one_generation_matter_closure_note` | positive_theorem | critical | 244 | 21.94 | `unaudited` | unaudited |
 | 15 | `three_generation_structure_note` | bounded_theorem | critical | 206 | 21.69 | `unaudited` | unaudited |
@@ -96,7 +96,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 126 | 20.99 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 105 | 19.73 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 141 | 19.15 | `audited_clean` | **retained** |
-| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 272 | 18.59 | `unaudited` | unaudited |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 273 | 18.60 | `unaudited` | unaudited |
 | 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 72 | 17.69 | `unaudited` | unaudited |
 | 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 86 | 17.44 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `cpt_exact_note` | positive_theorem | critical | 293 | 17.20 | `unaudited` | unaudited |
