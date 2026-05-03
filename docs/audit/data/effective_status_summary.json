@@ -7,16 +7,8 @@
     "open_gate": 88,
     "positive_theorem": 863
   },
-  "computed_at": "2026-05-03T14:10:49.572231+00:00",
+  "computed_at": "2026-05-03T14:12:20.804411+00:00",
   "cycle_examples": [
-    [
-      "restricted_strong_field_closure_note",
-      "evanescent_barrier_amplitude_suppression_theorem_note"
-    ],
-    [
-      "evanescent_barrier_amplitude_suppression_theorem_note",
-      "gw_echo_null_result_note"
-    ],
     [
       "anomaly_forces_time_theorem",
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
@@ -34,9 +26,18 @@
     [
       "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
       "n_eff_from_three_generations_theorem_note_2026-04-24"
+    ],
+    [
+      "quark_up_amplitude_tensor_endpoint_bridge_note_2026-04-19",
+      "quark_up_amplitude_tensor_endpoint_resolution_note_2026-04-19"
+    ],
+    [
+      "publication.ci3_z3.claims_table",
+      "publication.ci3_z3.derivation_validation_map",
+      "publication.ci3_z3.derivation_atlas"
     ]
   ],
-  "cycles_detected": 74,
+  "cycles_detected": 59,
   "effective_status_counts": {
     "audited_conditional": 521,
     "audited_decoration": 3,
