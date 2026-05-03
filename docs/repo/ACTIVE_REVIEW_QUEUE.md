@@ -52,6 +52,19 @@ Current science/open-lane follow-ups:
   Disposition: `science-needed`.
   Detail:
   [`PR463_AXIOM_FIRST_WEAVE_REVIEW_2026-05-03.md`](../work_history/repo/review_feedback/PR463_AXIOM_FIRST_WEAVE_REVIEW_2026-05-03.md)
+- `2026-05-03-pr484-kz-external-lift-gate`
+  Scope: PR #484,
+  `GAUGE_SCALAR_BRIDGE_KZ_EXTERNAL_LIFT_THEOREM_NOTE_2026-05-03.md`,
+  `scripts/frontier_gauge_scalar_bridge_kz_external_lift.py`, and the
+  gauge-scalar temporal bridge parent chain.
+  Finding: do not land the K-Z / SU(3) external-lift package as a bounded
+  theorem or parent status promotion while the runner fails without optional
+  CVXPY and the load-bearing `W_lift = 0.05` is not extracted from an
+  explicit SU(3), beta=6 primary-source bracket; this is an open
+  external-lift candidate, not retained authority.
+  Disposition: `science-needed`.
+  Detail:
+  [`PR484_KZ_EXTERNAL_LIFT_REVIEW_2026-05-03.md`](../work_history/repo/review_feedback/PR484_KZ_EXTERNAL_LIFT_REVIEW_2026-05-03.md)
 - Planck Target 2 / area-law carrier: the simple-fiber Widom class is now
   closed negatively; any positive `1/4` entropy carrier needs a physical
   multi-pocket/multi-interval law or a gapped horizon-sector primitive-boundary

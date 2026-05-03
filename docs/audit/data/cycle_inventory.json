@@ -1,5 +1,5 @@
 {
-  "cycle_count": 44,
+  "cycle_count": 45,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -2577,11 +2577,48 @@
         }
       ],
       "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0045",
+      "decision": null,
+      "edges": [
+        {
+          "from": "repo.active_review_queue",
+          "to": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03"
+        },
+        {
+          "from": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03",
+          "to": "repo.active_review_queue"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 0,
+      "nodes": [
+        {
+          "audit_status": null,
+          "claim_id": "repo.active_review_queue",
+          "claim_type": null,
+          "effective_status": null,
+          "note_path": "docs/repo/ACTIVE_REVIEW_QUEUE.md",
+          "title": "Active Review Queue",
+          "transitive_descendants": null
+        },
+        {
+          "audit_status": null,
+          "claim_id": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03",
+          "claim_type": null,
+          "effective_status": null,
+          "note_path": "docs/work_history/repo/review_feedback/PR484_KZ_EXTERNAL_LIFT_REVIEW_2026-05-03.md",
+          "title": "PR #484 K-Z External Lift Review - 2026-05-03",
+          "transitive_descendants": null
+        }
+      ],
+      "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T19:53:16.284001+00:00",
+  "generated_at": "2026-05-03T19:55:11.900565+00:00",
   "length_counts": {
-    "2": 5,
+    "2": 6,
     "3": 18,
     "4": 13,
     "5": 4,
@@ -2593,5 +2630,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T19:53:08.345519+00:00"
+  "source_graph_generated_at": "2026-05-03T19:55:04.137077+00:00"
 }

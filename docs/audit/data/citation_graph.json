@@ -22822,6 +22822,10 @@
     },
     {
       "from": "repo.active_review_queue",
+      "to": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03"
+    },
+    {
+      "from": "repo.active_review_queue",
       "to": "work_history.repo.backlog.readme"
     },
     {
@@ -23137,6 +23141,18 @@
       "to": "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11"
     },
     {
+      "from": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03",
+      "to": "repo.active_review_queue"
+    },
+    {
+      "from": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03",
+      "to": "gauge_scalar_temporal_completion_theorem_note"
+    },
+    {
+      "from": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
       "from": "work_history.repo.review_feedback.rerun_required_bug_audit_2026-04-11",
       "to": "work_history.repo.review_feedback.code_review_last_week_2026-04-11"
     },
@@ -23149,7 +23165,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T19:53:08.345519+00:00",
+  "generated_at": "2026-05-03T19:55:04.137077+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43720,11 +43736,12 @@
       "deps": [
         "work_history.repo.review_feedback.readme",
         "work_history.repo.review_feedback.pr463_axiom_first_weave_review_2026-05-03",
+        "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03",
         "work_history.repo.backlog.readme"
       ],
-      "note_hash": "ee1fd18df0dba82e8624523a915fd028d2d2d058235244abe47bebde114a9979",
+      "note_hash": "c0299f7c303589f5a11ae1678b43d9d178fa8e9ee7347ced23bcaf704ae33b86",
       "path": "docs/repo/ACTIVE_REVIEW_QUEUE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_gauge_scalar_bridge_kz_external_lift.py",
       "title": "Active Review Queue"
     },
     "repo.controlled_vocabulary": {
@@ -49056,6 +49073,21 @@
       "runner_path": null,
       "title": "PR #463 Axiom-First Weave Review - 2026-05-03"
     },
+    "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03": {
+      "claim_id": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "repo.active_review_queue",
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+      ],
+      "note_hash": "8dbb5604013f2664fe6f23247e364079c560c46237f53a410a653985aff90fbb",
+      "path": "docs/work_history/repo/review_feedback/PR484_KZ_EXTERNAL_LIFT_REVIEW_2026-05-03.md",
+      "runner_path": "scripts/frontier_gauge_scalar_bridge_kz_external_lift.py",
+      "title": "PR #484 K-Z External Lift Review - 2026-05-03"
+    },
     "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11": {
       "claim_id": "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11",
       "claim_type_author_hint": null,
@@ -51315,7 +51347,7 @@
       "bounded_theorem": 49,
       "meta": 7,
       "no_go": 6,
-      "none": 1726,
+      "none": 1727,
       "open_gate": 5,
       "positive_theorem": 71
     },
@@ -51323,14 +51355,14 @@
       "bounded_theorem": 551,
       "meta": 7,
       "no_go": 112,
-      "none": 453,
+      "none": 454,
       "open_gate": 112,
       "positive_theorem": 629
     },
-    "edge_count": 5787,
+    "edge_count": 5791,
     "leaf_count": 598,
-    "node_count": 1864,
+    "node_count": 1865,
     "root_count": 1055,
-    "runners_with_path": 1423
+    "runners_with_path": 1425
   }
 }
