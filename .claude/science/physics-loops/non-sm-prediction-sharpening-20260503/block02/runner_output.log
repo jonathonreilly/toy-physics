@@ -23,7 +23,7 @@ Source: docs/LORENTZ_VIOLATION_DISCRIMINATION_SIGNATURES_NOTE_2026-05-03.md
   Fermi-LAT photon dispersion                   2.50e-22      5.60e-40      4.46e+17
   Hughes-Drever (electron)                      1.00e-27      5.60e-40      1.79e+12
   Atomic clock (proton)                         1.00e-27      5.60e-40      1.79e+12
-  Neutron spin (CPT-odd)                        1.00e-31      5.60e-40      1.79e+08
+  Neutron spin (CPT-odd)                        1.00e-31      0.00e+00           inf
 
   Conclusion: framework prediction is below current bounds by ≥7 orders of magnitude.
   Direct detection requires precision improvements far beyond near-future experiments.
@@ -31,9 +31,9 @@ Source: docs/LORENTZ_VIOLATION_DISCRIMINATION_SIGNATURES_NOTE_2026-05-03.md
 --- Section 3: Five discrimination scenarios ---
   #   Observation                               Framework                       Alternative interpretation    
   --  ----------------------------------------  ------------------------------  ------------------------------
-  A   Linear E/E_Pl LV detected                 FALSIFIED (L1)                  Loop quantum gravity, dim-5 SME
-  B   CPT-odd LV detected                       FALSIFIED (L2)                  SME CPT-odd coefficients      
-  C   Quadratic LV with K_4 cubic harmonic      STRONGLY SUPPORTED (smoking gun)  this framework specifically   
+  A   Linear E/E_Pl LV detected                 INCOMPATIBLE (L1)               Loop quantum gravity, dim-5 SME
+  B   CPT-odd LV detected                       INCOMPATIBLE (L2)               SME CPT-odd coefficients
+  C   Quadratic LV with K_4 cubic harmonic      SPECIFIC SUPPORT SIGNAL         this framework specifically
   D   Quadratic LV without K_4 (isotropic)      DISFAVORED                      continuum QG, isotropic Planck-scale model
   E   No LV detected (current state)            CONSISTENT                      many models including SM      
 
@@ -49,12 +49,12 @@ Source: docs/LORENTZ_VIOLATION_DISCRIMINATION_SIGNATURES_NOTE_2026-05-03.md
   Current bounds are ~10⁻²² GeV⁻². Even CTA at ~10× improvement still 16+ orders away.
 
   Direct detection: BEYOND REACH for foreseeable future.
-  Falsification via forbidden signatures: ACHIEVABLE
+  Falsification via forbidden signatures: ACHIEVABLE if systematics are controlled
     - L1 (linear LV): testable now via Fermi-LAT/MAGIC/HESS GRB observations
     - L2 (CPT-odd): testable via Hughes-Drever, neutron EDM, atomic clocks
     - L3 (non-K_4 quadratic): testable via UHECR angular distribution (Auger upgrade)
 
-  Best 'new physics' value of LV lane is in FALSIFICATION testing, not detection.
+  Best beyond-SM value of the LV lane is in forbidden-signature testing, not detection.
 
 ==============================================================================
 Block 02 Lorentz violation discrimination signatures complete.

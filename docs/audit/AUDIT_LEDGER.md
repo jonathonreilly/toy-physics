@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:27:44.737632+00:00
+**Generated:** 2026-05-03T13:31:51.440968+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,7 +24,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 734 |
+| unaudited | 735 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -43,11 +43,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 776 |
+| `unaudited` | 777 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 555 |
+| `bounded_theorem` | 556 |
 | `decoration` | 8 |
 | `meta` | 43 |
 | `no_go` | 161 |
@@ -59,16 +59,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 112 |
 | `high` | 364 |
 | `medium` | 524 |
-| `leaf` | 745 |
+| `leaf` | 746 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 105
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1338
+- runners classified: 1339
 - runners with (C) first-principles compute hits: 649
-- runners with (D) external comparator hits: 329
+- runners with (D) external comparator hits: 330
 - decoration candidates (no C, no D): 112
 
 ## Top 25 by load-bearing score (topology only)
@@ -98,7 +98,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 267 | 18.57 | `unaudited` | unaudited |
 | 20 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 69 | 17.63 | `unaudited` | unaudited |
 | 21 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 84 | 17.41 | `audited_conditional` | ~~audited_conditional~~ |
-| 22 | `cpt_exact_note` | positive_theorem | critical | 291 | 17.19 | `unaudited` | unaudited |
+| 22 | `cpt_exact_note` | positive_theorem | critical | 292 | 17.20 | `unaudited` | unaudited |
 | 23 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | critical | 288 | 17.18 | `audited_clean` | **retained_no_go** |
 | 24 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 287 | 17.17 | `audited_conditional` | ~~audited_conditional~~ |
 | 25 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 134 | 17.08 | `audited_clean` | **retained** |

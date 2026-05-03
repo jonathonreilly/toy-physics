@@ -57,13 +57,13 @@ def main() -> int:
         ("Fermi-LAT photon dispersion", 2.5e-22, "GeV⁻²", "TOF bounds from gamma-ray bursts"),
         ("Hughes-Drever (electron)", 1e-27, "(dimensionless)", "atomic spectroscopy"),
         ("Atomic clock (proton)", 1e-27, "(dimensionless)", "modern optical clock comparisons"),
-        ("Neutron spin (CPT-odd)", 1e-31, "GeV", "framework predicts EXACTLY 0"),
+        ("Neutron spin (CPT-odd)", 1e-31, "GeV", "bounded CPT/SME surface predicts zero"),
     ]
     print(f"  {'Experiment':40s}  {'Bound':>12s}  {'Framework':>12s}  {'Margin':>12s}")
     print(f"  {'-'*40:40s}  {'-'*12:>12s}  {'-'*12:>12s}  {'-'*12:>12s}")
     for exp, bound, units, note in bounds_table:
         # Most are at GeV² scale; quadratic LV gives ~10^-40 at 1 GeV
-        if "CPT-odd" in note:
+        if "CPT-odd" in exp or "CPT-odd" in note:
             framework_pred = 0.0
             margin = float("inf")
         else:
@@ -78,9 +78,9 @@ def main() -> int:
     # ----- Section 3: Discrimination scenarios -----
     print("\n--- Section 3: Five discrimination scenarios ---")
     scenarios = [
-        ("A", "Linear E/E_Pl LV detected", "FALSIFIED (L1)", "Loop quantum gravity, dim-5 SME"),
-        ("B", "CPT-odd LV detected", "FALSIFIED (L2)", "SME CPT-odd coefficients"),
-        ("C", "Quadratic LV with K_4 cubic harmonic", "STRONGLY SUPPORTED (smoking gun)", "this framework specifically"),
+        ("A", "Linear E/E_Pl LV detected", "INCOMPATIBLE (L1)", "Loop quantum gravity, dim-5 SME"),
+        ("B", "CPT-odd LV detected", "INCOMPATIBLE (L2)", "SME CPT-odd coefficients"),
+        ("C", "Quadratic LV with K_4 cubic harmonic", "SPECIFIC SUPPORT SIGNAL", "this framework specifically"),
         ("D", "Quadratic LV without K_4 (isotropic)", "DISFAVORED", "continuum QG, isotropic Planck-scale model"),
         ("E", "No LV detected (current state)", "CONSISTENT", "many models including SM"),
     ]
@@ -107,12 +107,12 @@ def main() -> int:
     print("  Current bounds are ~10⁻²² GeV⁻². Even CTA at ~10× improvement still 16+ orders away.")
     print()
     print("  Direct detection: BEYOND REACH for foreseeable future.")
-    print("  Falsification via forbidden signatures: ACHIEVABLE")
+    print("  Falsification via forbidden signatures: ACHIEVABLE if systematics are controlled")
     print("    - L1 (linear LV): testable now via Fermi-LAT/MAGIC/HESS GRB observations")
     print("    - L2 (CPT-odd): testable via Hughes-Drever, neutron EDM, atomic clocks")
     print("    - L3 (non-K_4 quadratic): testable via UHECR angular distribution (Auger upgrade)")
     print()
-    print("  Best 'new physics' value of LV lane is in FALSIFICATION testing, not detection.")
+    print("  Best beyond-SM value of the LV lane is in forbidden-signature testing, not detection.")
 
     print("\n" + "=" * 78)
     print("Block 02 Lorentz violation discrimination signatures complete.")

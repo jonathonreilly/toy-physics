@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T13:27:44.359145+00:00
-**Total pending:** 768
+**Generated:** 2026-05-03T13:31:50.817855+00:00
+**Total pending:** 769
 **Ready (all deps already at retained-grade or metadata tiers):** 107
 
 By criticality:
 - `critical`: 60
 - `high`: 223
 - `medium`: 277
-- `leaf`: 208
+- `leaf`: 209
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -23,7 +23,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 5 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | unaudited | critical | 71 | 13.67 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 6 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 64 | 14.02 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 7 | `cl3_color_automorphism_theorem` | positive_theorem | unaudited | critical | 52 | 13.73 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/verify_cl3_sm_embedding.py` |
-| 8 | `cpt_exact_note` | positive_theorem | unaudited | critical | 291 | 17.19 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 8 | `cpt_exact_note` | positive_theorem | unaudited | critical | 292 | 17.20 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 9 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 291 | 11.19 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
 | 10 | `area_law_quarter_broader_no_go_note_2026-04-25` | no_go | unaudited | critical | 286 | 13.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_area_law_quarter_broader_no_go.py` |
 | 11 | `planck_scale_conditional_completion_note_2026-04-24` | positive_theorem | unaudited | critical | 286 | 12.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_planck_conditional_completion_audit.py` |

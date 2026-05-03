@@ -1,14 +1,31 @@
 # Lorentz Violation — Discrimination Signatures + Falsification Map
 
 **Date:** 2026-05-03
-**Type:** discrimination-test sharpening note
+**Type:** bounded_theorem
+**Role:** discrimination-test sharpening note
 **Claim scope:** sharpen the framework's Lorentz-violation prediction
 (already in [`LORENTZ_VIOLATION_DERIVED_NOTE.md`](LORENTZ_VIOLATION_DERIVED_NOTE.md))
 into specific experimental discrimination scenarios + explicit
 falsification map. NOT a re-derivation; the LV prediction is already
-documented with experimental-status table.
+documented with experimental-status table. The underlying LV row is
+audit-conditional, so this note is a bounded discrimination map, not a
+retained-grade upgrade.
 **Status authority:** independent audit lane only.
 **Primary runner:** `scripts/frontier_lorentz_violation_discrimination_signatures.py`
+
+## Cited authorities (one hop)
+
+- [`LORENTZ_VIOLATION_DERIVED_NOTE.md`](LORENTZ_VIOLATION_DERIVED_NOTE.md)
+  — underlying bounded/audit-conditional LV prediction surface.
+- [`PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md`](PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md)
+  — no-go surface for one linear/dimension-5 LV route.
+- [`PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`](PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md)
+  — bounded bridge note for physical-Hamiltonian CPT / SME interpretation.
+
+External experiment bounds, SME terminology, LQG/DSR/spacetime-foam
+comparators, and experiment timelines are comparator/literature inputs. They
+are used only to map falsification scenarios and do not become framework
+derivations.
 
 ## 0. Why this note
 
@@ -19,8 +36,8 @@ current bounds (SAFE by ≥7 orders of magnitude on all current
 experiments).
 
 This note **sharpens the discrimination map**: under what experimental
-scenarios is the framework FALSIFIED, SUPPORTED, DISFAVORED, or
-UNCONSTRAINED? Maps to specific near-future experiments.
+scenarios is this bounded LV surface incompatible, supported, disfavored, or
+unconstrained? Maps to specific near-future experiments.
 
 ## 1. The four sharp framework predictions
 
@@ -33,18 +50,18 @@ UNCONSTRAINED? Maps to specific near-future experiments.
 
 ## 2. Discrimination scenarios
 
-### Scenario A: linear E/E_Pl LV detected at any level
-**Framework status:** **FALSIFIED** (L1 violated)
+### Scenario A: robust linear E/E_Pl LV detected
+**Framework status:** incompatible with this bounded LV surface (L1 violated)
 **Likely interpretation:** Loop quantum gravity, dimension-5 SME operator
 **Best experiments:** GRB time-of-flight (Fermi-LAT, MAGIC, HESS); CTA upcoming
 
 ### Scenario B: CPT-odd LV detected (e.g., neutron-spin asymmetry, kaon mass difference)
-**Framework status:** **FALSIFIED** (L2 violated)
+**Framework status:** incompatible with this bounded LV surface (L2 violated)
 **Likely interpretation:** SME with CPT-odd coefficients (a_μ, b_μ, e_μ, f_μ, g_λμν)
 **Best experiments:** Hughes-Drever experiments, atomic clock comparisons, neutron EDM as CPT probe
 
 ### Scenario C: Quadratic LV with K_4 angular signature detected
-**Framework status:** **STRONGLY SUPPORTED** (smoking gun)
+**Framework status:** specific support signal for this LV surface
 **Best experiments:** vacuum birefringence in GRBs (high-energy polarization), UHECR angular distribution (Pierre Auger / TA), CTA large-statistics gamma observations
 **Required precision:** signal at ~10⁻³² GeV⁻² for direct detection; the angular signature can be tested at much higher signal levels (would distinguish from isotropic quadratic LV)
 
@@ -53,7 +70,7 @@ UNCONSTRAINED? Maps to specific near-future experiments.
 **Likely interpretation:** continuum quantum gravity, isotropic Planck-scale model
 **Best experiments:** CTA + statistical isotropy tests on UHECR angular distribution
 
-### Scenario E: No LV detected at any level (current state)
+### Scenario E: No LV detected (current state)
 **Framework status:** **CONSISTENT** (predicted signal is ~10⁻³⁹ GeV⁻², far below current ~10⁻²² GeV⁻² bounds)
 **Note:** consistent with most Planck-scale LV models too; not currently discriminating
 
@@ -61,9 +78,9 @@ UNCONSTRAINED? Maps to specific near-future experiments.
 
 | Test | Current bound | Framework prediction | Falsification trigger |
 |---|---|---|---|
-| Photon dispersion (GRB time delay) | linear: ~10⁻¹⁵ s/GeV; quadratic: ~10⁻²² GeV⁻² | linear: 0; quadratic: 5.6 × 10⁻⁴⁰ GeV⁻² | linear LV at any precision-level above 0 |
+| Photon dispersion (GRB time delay) | linear: ~10⁻¹⁵ s/GeV; quadratic: ~10⁻²² GeV⁻² | linear: 0; quadratic: 5.6 × 10⁻⁴⁰ GeV⁻² | statistically significant linear LV after systematics |
 | Vacuum birefringence (polarization rotation) | ~10⁻³² GeV⁻² | 5.6 × 10⁻⁴⁰ GeV⁻² | quadratic LV without K_4 signature at >10⁻³² level |
-| CPT-odd coefficients (Hughes-Drever, neutron spin) | ~10⁻²⁷ to 10⁻³¹ GeV | exactly 0 | any CPT-odd LV detected at any precision |
+| CPT-odd coefficients (Hughes-Drever, neutron spin) | ~10⁻²⁷ to 10⁻³¹ GeV | zero on the bounded CPT/SME surface | statistically significant CPT-odd LV after systematics |
 | UHECR angular distribution (Pierre Auger) | order 10% deviations from isotropy | K_4 signature with factor-3 anisotropy (axis vs body diagonal) | non-K_4 angular signature at >5σ |
 | CMB statistical isotropy | Planck constraints on directional asymmetry | K_4 signature in statistical anisotropy of low-l multipoles | well-motivated non-K_4 anisotropy |
 
@@ -83,14 +100,15 @@ The framework's quantitative LV signal (~10⁻³⁹ GeV⁻²) is **completely be
 
 **Therefore:** the framework cannot be DIRECTLY DETECTED in this lane in the foreseeable future via signal magnitude.
 
-**However:** the framework CAN be FALSIFIED if any of the following are observed at any level:
+**However:** this bounded LV surface can be falsified if any of the following
+are robustly observed with controlled systematics:
 - (L1 violation) linear E/E_Pl LV
 - (L2 violation) CPT-odd LV
 - (L3 violation) Quadratic LV with non-K_4 angular signature
 
 These are **easier to detect** than the framework's predicted signal because they would manifest at higher levels in models that allow them.
 
-## 6. New-physics discrimination value
+## 6. Beyond-SM discrimination value
 
 **Distinguishing power vs SM:** very high (SM has exact Lorentz; framework breaks to O_h)
 
@@ -99,19 +117,20 @@ These are **easier to detect** than the framework's predicted signal because the
 - Specific suppression order (quadratic, not linear)
 - Specific CPT structure (all CPT-odd vanish)
 
-**Caveat:** very small predicted signal magnitude limits direct testability. Best discrimination is via FALSIFICATION (looking for what the framework FORBIDS rather than confirming what it predicts).
+**Caveat:** very small predicted signal magnitude limits direct testability.
+Best discrimination is via forbidden-signature tests, not near-term direct
+detection of the predicted signal.
 
 ## 7. Honest status
 
 ```yaml
-actual_current_surface_status: discrimination-test sharpening note
-target_claim_type: positive_theorem (framework's LV prediction already retained-bounded);
-  open_gate (direct experimental discrimination)
+actual_current_surface_status: bounded discrimination-test sharpening note
+target_claim_type: bounded_theorem
 proposal_allowed: false
 proposal_allowed_reason: |
-  Sharpening note. The underlying LV prediction is already documented in
-  LORENTZ_VIOLATION_DERIVED_NOTE.md (bounded tier). This note adds
-  discrimination scenarios + falsification map.
+  Sharpening note. The underlying LV prediction is documented in
+  LORENTZ_VIOLATION_DERIVED_NOTE.md and is currently audit-conditional.
+  This note adds discrimination scenarios + falsification map.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -126,7 +145,7 @@ bare_retained_allowed: false
 ## 9. What this note does NOT close
 
 - Direct detection of the framework's predicted ~10⁻³⁹ GeV⁻² signal (beyond reach)
-- The retained-tier upgrade of LV prediction (still bounded; not retained)
+- Retained-grade ratification of the LV prediction (still bounded/audit-conditional)
 
 ## 10. Cross-references
 

@@ -7241,6 +7241,18 @@
       "to": "angular_kernel_underdetermination_no_go_note"
     },
     {
+      "from": "lorentz_violation_discrimination_signatures_note_2026-05-03",
+      "to": "lorentz_violation_derived_note"
+    },
+    {
+      "from": "lorentz_violation_discrimination_signatures_note_2026-05-03",
+      "to": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
+    },
+    {
+      "from": "lorentz_violation_discrimination_signatures_note_2026-05-03",
+      "to": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+    },
+    {
       "from": "mass_mixing_subspace_disjointness_theorem_note",
       "to": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
     },
@@ -22269,7 +22281,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:27:37.852607+00:00",
+  "generated_at": "2026-05-03T13:31:43.318953+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -35974,6 +35986,21 @@
       "path": "docs/LORENTZ_VIOLATION_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_violation.py",
       "title": "Lorentz Violation Derived from Cubic Lattice Structure"
+    },
+    "lorentz_violation_discrimination_signatures_note_2026-05-03": {
+      "claim_id": "lorentz_violation_discrimination_signatures_note_2026-05-03",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "lorentz_violation_derived_note",
+        "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+        "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+      ],
+      "note_hash": "9defec3f7bf162e8b5b31ce570bacc05e9f1a63d471d1eea3bb0ae199a68de18",
+      "path": "docs/LORENTZ_VIOLATION_DISCRIMINATION_SIGNATURES_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_lorentz_violation_discrimination_signatures.py",
+      "title": "Lorentz Violation \u2014 Discrimination Signatures + Falsification Map"
     },
     "main_open_cubic_validation_2026-04-11": {
       "claim_id": "main_open_cubic_validation_2026-04-11",
@@ -49996,7 +50023,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 18,
+      "bounded_theorem": 19,
       "meta": 3,
       "no_go": 3,
       "none": 1747,
@@ -50004,17 +50031,17 @@
       "positive_theorem": 72
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 518,
+      "bounded_theorem": 519,
       "meta": 3,
       "no_go": 109,
       "none": 450,
       "open_gate": 112,
       "positive_theorem": 654
     },
-    "edge_count": 5567,
+    "edge_count": 5570,
     "leaf_count": 647,
-    "node_count": 1846,
+    "node_count": 1847,
     "root_count": 1068,
-    "runners_with_path": 1410
+    "runners_with_path": 1411
   }
 }

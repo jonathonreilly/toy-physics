@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T13:27:43.569575+00:00",
+  "generated_at": "2026-05-03T13:31:49.542509+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -9768,6 +9768,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_lorentz_violation.py"
+    },
+    "lorentz_violation_discrimination_signatures_note_2026-05-03": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_lorentz_violation_discrimination_signatures.py"
     },
     "main_open_cubic_validation_2026-04-11": {
       "assert_count": 0,
@@ -27457,6 +27469,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_lorentz_violation_discrimination_signatures.py": {
+      "assert_count": 0,
+      "claims": [
+        "lorentz_violation_discrimination_signatures_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_mass_mixing_disjointness_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -37268,11 +37295,11 @@
       "A": 10,
       "B": 160,
       "C": 544,
-      "D": 204,
+      "D": 205,
       "none": 420
     },
-    "runners_classified": 1338,
+    "runners_classified": 1339,
     "runners_with_C": 649,
-    "runners_with_D": 329
+    "runners_with_D": 330
   }
 }
