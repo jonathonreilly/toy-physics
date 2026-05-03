@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:00:47.721832+00:00
+**Generated:** 2026-05-03T15:01:52.815987+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,11 +24,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 773 |
+| unaudited | 772 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
-| ~~audited_renaming~~ | 20 |
+| ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 518 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
-| `audited_renaming` | 20 |
-| `unaudited` | 818 |
+| `audited_renaming` | 21 |
+| `unaudited` | 817 |
 
 | claim_type | count |
 |---|---:|
@@ -1037,6 +1037,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_bilinear_tensor_primitive_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
+| `star_supported_bridge_class_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | definition_as_derivation | - |
 | `universal_qg_optional_textbook_comparison_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
 | `yt_color_projection_correction_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
@@ -12566,6 +12567,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** True — The runner directly computes the scalar wave field coupled to staggered matter and reproduces the note's hard scores of 4/5, 5/5, 4/5 plus width ratios 1.0047, 1.0019, and 0.9923. The note's bounded conclusion matches the current corrected output.
 - **rationale:** The claim is scoped to a bounded corrected wave-field prototype, not retained universal robustness. Current output confirms W1-W4 on all three families, W6 only on growing, and width response as a diagnostic rather than a gate. Residual risk is limited to the stated lack of universal contraction, full state-family robustness, larger-graph battery, and retarded-field closure.
 - **auditor confidence:** high
+
+### `star_supported_bridge_class_note`
+
+- **Note:** [`STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md`](../../docs/STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For star-supported finite-rank source fields on the current Dirichlet box and R=4 sewing surface, the note claims exact shell support, exact local static conformal bridge constraints, and Schur-boundary stationarity for the full class.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-hostile-bridge-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The load-bearing step is the passage from phi_ext to the claimed bridge matter pair by setting psi = 1 + phi_ext, chi = 1 - phi_ext = alpha psi, rho = sigma_R / (2 pi psi^5), and S = 0.5 rho (1/alpha - 1), then treating the resulting static conformal constraints as an exact class theorem.  _(class `definition_as_derivation`)_
+- **chain closes:** False — The note asserts universal closure for any star-supported finite-rank class member, but the retained packet gives no independent derivation of alpha, rho, S, or the physical bridge law; the constraints are made true by definitions, and the runner samples five configured fields rather than proving the universal hard bridge.
+- **rationale:** Issue: The theorem-level bridge step defines alpha, rho, and S so that the displayed local static conformal constraints hold, then advertises that as exact bridge-side closure for the full star-supported finite-rank class. The local runner passed all five sampled checks, but it only samples five configured fields and verifies residual identities after the bridge definitions are installed. Why this blocks: A hostile referee can reject the result as definition-as-derivation: the source/stress variables and same-charge bridge are not independently derived from retained inputs, and the runner only confirms residual identities on five sampled fields after those definitions are installed. Repair target: Provide a retained theorem deriving the bridge variables and source law from independent lattice/physical primitives for arbitrary star-supported finite-rank PSD support operators, plus a runner that proves or symbolically exhausts the class-level step and fails when the bridge definitions are removed. Claim boundary until fixed: The note may safely claim bounded numerical sanity for five random star-supported finite-rank examples and algebraic consistency of the configured bridge definitions on those examples, not an audited positive theorem closing the full source class.
+- **auditor confidence:** 0.86
 
 ### `strc_lo_collinearity_theorem_note_2026-04-19`
 
