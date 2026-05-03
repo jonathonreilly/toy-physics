@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:04:27.678831+00:00
+**Generated:** 2026-05-03T15:06:49.382124+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 771 |
+| unaudited | 770 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 519 |
+| ~~audited_conditional~~ | 520 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 519 |
+| `audited_conditional` | 520 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 21 |
-| `unaudited` | 816 |
+| `unaudited` | 815 |
 
 | claim_type | count |
 |---|---:|
@@ -767,6 +767,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `oh_schur_boundary_action_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
+| `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | configured_numerical_proxy_to_surrogate_theorem_bridge | - |
 | `persistent_inertial_response_readiness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_record_sidebit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -9530,6 +9531,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `scripts/frontier_sewing_shell_source.py`
   - `scripts/frontier_radial_shell_matching_law.py`
 - **auditor confidence:** medium
+
+### `ordered_lattice_quasi_persistent_relaunch_2d_note`
+
+- **Note:** [`ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`](../../docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the fixed 2D ordered-lattice harness at h=0.5, W=12, L=20, a compact Gaussian packet is propagated, top-k reidentified, relaunched, and reported to retain recognizable surrogate structure under the listed weak-field probes.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `cl3-hostile-nature-fresh-2026-05-03-a`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The note treats high carry overlap, near-unit width ratio, and nonzero relaunch shift in the configured 2D replay as sufficient to conclude that the packet surrogate is family-generic enough to relaunch on the retained 2D ordered-lattice family.  _(class `configured_numerical_proxy_to_surrogate_theorem_bridge`)_
+- **chain closes:** False — The replayed numbers match the note, but the bounded theorem does not close because no retained theorem derives the acceptance criterion linking the chosen Gaussian packet, top-k reidentification, capture/carry/width metrics, and weak-field centroid shifts to a family-generic relaunch property.
+- **rationale:** Issue: The load-bearing step promotes a configured proxy result, especially carry overlap 0.911 and width ratio near 1 under a selected Gaussian/top-k harness, into the claim that the surrogate is family-generic enough to relaunch. The local runner reproduced the frozen valley-linear and spent-delay rows exactly, but it also frames the result as a control rather than a persistent-mass theorem. Why this blocks: The runner reproduces the diagnostic metrics, but it does not derive the criterion that makes those metrics a bounded theorem rather than a scenario-specific sanity check; capture is only 0.344 and no theorem establishes that this still counts as robust reidentification. Repair target: Add a retained theorem or bounded lemma specifying the packet class, reidentification rule, acceptance thresholds, and stability/invariance guarantee, or revise the claim to a purely numerical replay statement. Claim boundary until fixed: It is safe to say that this exact 2D harness, with the frozen parameters and top-k surrogate construction, reproduces the listed capture, carry, shift, relaunch-shift, and width-ratio diagnostics; it is not yet retained as a bounded theorem of family-generic relaunch.
+- **auditor confidence:** 0.87
 
 ### `packet_memory_note`
 
