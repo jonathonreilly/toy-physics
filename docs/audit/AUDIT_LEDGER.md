@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:23:28.325637+00:00
+**Generated:** 2026-05-03T13:26:45.563921+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 734 |
+| unaudited | 733 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 520 |
+| ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 346 |
-| `audited_conditional` | 520 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 776 |
+| `unaudited` | 775 |
 
 | claim_type | count |
 |---|---:|
@@ -661,6 +661,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -6184,6 +6185,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The two analytic strictly increasing witnesses share beta_eff(beta)=beta+beta^5/26244+O(beta^6) but differ at beta=6, hence give different P_1plaq values.  _(class `A`)_
 - **chain closes:** True — The explicit witness pair satisfies the scoped hypotheses and has exact delta beta_eff(6)=0.0046656 with positive delta P, so the stated inputs cannot force a unique framework-point value.
 - **rationale:** Clean as a scoped no-go obstruction, not as analytic closure of canonical P(6). The runner confirms 5 theorem checks and 2 support checks with no failures; the load-bearing step is algebraic counterexample construction rather than support-class propagation. The safe conclusion is that the current onset jet plus analyticity/monotonicity does not force beta_eff(6) or analytic P(6).
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Obstruction that an exact finite-order polynomial/Taylor truncation of the diagonal connected Wilson plaquette hierarchy cannot close the remaining plaquette problem; analytic nonpolynomial closure remains open.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-f161`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** If the full diagonal connected hierarchy truncated at finite order, then K_L(t) would be a polynomial and therefore P_L(t)=K_L'(t)/N_plaq would also be a polynomial; with P_L(0)=0 and lim_(t->infinity) P_L(t)=1 this contradicts constancy of any polynomial with finite limit.  _(class `A`)_
+- **chain closes:** False — The algebraic polynomial-obstruction step is valid conditional on the endpoint facts, but the restricted packet does not derive the finite-Wilson premises P_L(0)=0 and P_L(t)->1 with the required normalization. The runner marks the finite-Wilson theorem step as true rather than proving or independently computing that compact-Laplace concentration premise.
+- **rationale:** Issue: the note's contradiction depends on endpoint/asymptotic Wilson-surface facts, especially P_L(t)->1 by compact Laplace concentration on the maximum-action gauge orbit, but those facts are asserted rather than derived in the source packet. Why this blocks: without that finite-Wilson concentration theorem and normalization bridge, the polynomial argument proves only a conditional obstruction. Repair target: add a self-contained finite-lattice proof, or a retained dependency, deriving P_L(0)=0 and lim_(t->infinity) P_L(t)=1 for the exact Wilson source surface, with a runner that checks something stronger than condition=True for the contested step. Claim boundary until fixed: the note may safely state the algebraic conditional: if the diagonal generator has those endpoint properties, exact finite Taylor truncation is impossible.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_local_environment_factorization_theorem_note`
