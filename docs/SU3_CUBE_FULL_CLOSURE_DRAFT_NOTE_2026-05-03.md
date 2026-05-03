@@ -235,20 +235,55 @@ structural input choice (no rho=delta or rho=1 assumption). This
 is a real upgrade from the existing reference Perron solves which
 required structural input.
 
-## 5. Next steps for closure
+## 5. Next steps for closure (HONEST CORRECTION)
 
 The framework's roadmap to `<P>(beta=6) ≈ 0.5934` from primitives
-requires:
+requires LARGER spatial cubes (L_s ≥ 3). However, an earlier draft of
+this note claimed the index-graph counting algorithm "generalizes
+trivially to larger L_s" — **that claim is INCORRECT and is retracted
+here**.
 
-1. **Larger spatial cubes** (L_s = 3, 4, ...) to capture more
-   correlations. The same index-graph contraction algorithm
-   generalizes; only the geometry changes.
-2. **Convergence study** in L_s to extrapolate to L_s → infinity.
-3. **Comparison to MC** at intermediate L_s to validate the
-   index-graph approach.
+**Why the L_s=2 algorithm does NOT extend to L_s ≥ 3:**
 
-Estimated effort: ~500-1000 LOC per L_s extension; several sessions
-of focused work for L_s = 3 alone.
+At L_s = 2 PBC, each directed link is in exactly **2** plaquettes (a
+special PBC degeneracy where opposite-side plaquettes coincide). This
+is what allows the simple 2-link Haar formula `(1/d_λ) δ × δ` to
+reduce the partition function to a finite-graph counting problem.
+
+At L_s ≥ 3 PBC, each directed link is in exactly **4** plaquettes
+(standard 3D lattice gauge theory geometry: 2 plaquettes per
+orthogonal plane, on either side of the link). The 4-link Haar
+integral
+
+```text
+integral dU [D^lambda(U)]_(...) [D^lambda(U)]_(...)
+            [D^lambda(U)]_(...) [D^lambda(U)]_(...)
+    = projector onto V_lambda^(⊗4) G-invariant subspace
+    = sum over invariant tensors (rank N^0_(lambda^⊗4))
+```
+
+requires the **explicit invariant tensors**, not just the count.
+This needs the SU(3) Wigner-Racah machinery (3j and 6j symbols,
+intertwiner contractions). For (1,1) adjoint at L=3:
+N^0_((1,1)^⊗4) = 9 invariants, each with a specific 8^4-dim tensor
+structure.
+
+**Realistic L_s ≥ 3 effort:**
+
+- ~500-1000 LOC for SU(3) Wigner-Racah engine implementation
+- ~300 LOC for L=3 cube tensor-network contraction
+- 3-5 focused sessions of intertwiner work
+- Total: multi-week project, NOT a single-session extension
+
+**What the L_s=2 result is good for:**
+
+- Establishes the framework's first DERIVED cube partition function
+  (no structural input choice)
+- Confirms the L_s=2 minimal block is too small for canonical 0.5934
+  (substantive finding)
+- Provides a validation reference for any L≥3 implementation
+- Gives the K-Z external lift (#484) the load-bearing position for
+  the framework's tightest <P> bracket until L≥3 work completes
 
 ## 6. Validation
 
