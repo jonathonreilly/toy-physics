@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:31:12.228813+00:00
+**Generated:** 2026-05-03T17:34:40.158341+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 763 |
+| unaudited | 762 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 526 |
+| ~~audited_conditional~~ | 527 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 526 |
+| `audited_conditional` | 527 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 809 |
+| `unaudited` | 808 |
 
 | claim_type | count |
 |---|---:|
@@ -553,6 +553,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_cascade_geometry_note_2026-04-14` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | implicit_bridge_to_configured_identity | - |
 | `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -4199,6 +4200,24 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `open theorem: physical Dirac Yukawa operator chain`
   - `open theorem: neutrino-sector base normalization`
 - **auditor confidence:** 0.91
+
+### `dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claim that equality of the displayed selector and DM odd triplet bosonic source-response laws fixes the odd transfer normalization to |c_odd|=1 and, by branch convention, c_odd=+1.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-audit-loop-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** "Therefore the canonical odd normalization is |c_odd| = 1 and on the source-oriented branch convention we record c_odd = +1."  _(class `B`)_
+- **chain closes:** False — The algebraic equality of the two displayed spectra and scalar-baseline determinant responses closes, but the inference to the physical transfer coefficient c_odd requires atlas/source-coordinate and branch-orientation inputs that are not present as ledger dependencies. The runner also aborts before checking those bridge inputs.
+- **rationale:** Issue: The note moves from identical determinant response of two matrices under a common scalar source parameter j to the physical statement |c_odd|=1 and c_odd=+1 without a retained dependency deriving that the selector amplitude a_sel and triplet odd source gamma share the same source coordinate, units, and branch orientation. Why this blocks: Equal spectra/source-response curves establish an algebraic normalization comparison only after the physical source map and sign convention are supplied; those are hidden atlas inputs here, and the primary runner crashes on stale absolute dependency paths before verifying them. Repair target: Add explicit retained-grade dependencies, or a theorem and runner that construct the selector slot, triplet source slot, unique bosonic generator, and branch sign from allowed retained inputs without absolute-path imports. Claim boundary until fixed: The note may claim the displayed S_cls and T_gamma have the same nonzero odd spectrum and scalar-baseline determinant response; it may not claim c_odd is canonically fixed from the single axiom/current atlas.
+- **open / conditional deps cited:**
+  - `/Users/jonBridger/Toy Physics-neutrino-majorana/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`
+  - `/Users/jonBridger/Toy Physics-neutrino-majorana/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md`
+  - `DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md`
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+- **auditor confidence:** high
 
 ### `dm_neutrino_dirac_bridge_theorem_note_2026-04-15`
 
