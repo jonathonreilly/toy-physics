@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:09:07.775038+00:00
+**Generated:** 2026-05-03T00:11:58.019326+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 142 |
+| **retained** | 143 |
 | **retained_no_go** | 98 |
 | **retained_bounded** | 200 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 500 |
+| unaudited | 499 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 404 |
+| `audited_clean` | 405 |
 | `audited_conditional` | 654 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 539 |
+| `unaudited` | 538 |
 
 | claim_type | count |
 |---|---:|
@@ -451,6 +451,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_support_localization_split_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `spectral_closure_2026-04-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -16035,6 +16036,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `cycle_force_gap_now_9.624e-01_not_8.767e-01`
   - `layered_force_gap_now_8.822e-01_not_8.759e-01`
   - `runner_has_no_assertions_for_exact_diagnostics`
+- **auditor confidence:** high
+
+### `staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02`
+
+- **Note:** [`STAGGERED_CHIRAL_SYMMETRY_SPECTRUM_THEOREM_NOTE_2026-05-02.md`](../../docs/STAGGERED_CHIRAL_SYMMETRY_SPECTRUM_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For the finite even-periodic staggered Cl(3) free Hamiltonian H_phys = iD with retained chiral anticommutation {C,H_phys}=0, the spectrum is symmetric as a multiset, trace vanishes, sublattices balance, and zero modes are C-invariant.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-Faraday-019deb2c-b562-7650-ae6a-e3eabf505239`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Given the retained identity C H_phys C = -H_phys with C unitary involutive, applying C to any H_phys eigenstate maps eigenvalue E to -E and preserves eigenspace multiplicity.  _(class `A`)_
+- **chain closes:** True — The cited retained authority supplies the exact anticommutation relation and finite even-periodic lattice setting; finite-dimensional spectral theory then gives the stated pairing, multiplicity equality, trace cancellation, and zero-mode invariance.
+- **rationale:** The theorem is an exact finite-dimensional algebraic consequence of the retained chiral anticommutation identity and does not require hidden physical assumptions. The proof correctly handles nonzero eigenspaces, zero modes, trace cancellation, and even-L sublattice balance. The runner independently verifies the construction, anticommutation, spectral symmetry, multiplicities, eigenstate pairing, trace, and sublattice counts on L=4 as a sanity check, while the proof itself is general over the stated finite lattice.
 - **auditor confidence:** high
 
 ### `staggered_dag_note_2026-04-10`
