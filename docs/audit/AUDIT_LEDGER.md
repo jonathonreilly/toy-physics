@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:03:54.108942+00:00
+**Generated:** 2026-05-03T18:04:34.822309+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -22,9 +22,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 76 |
 | **retained_no_go** | 100 |
 | **retained_bounded** | 169 |
-| _retained_pending_chain_ | 2 |
+| _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 750 |
+| unaudited | 749 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -38,20 +38,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audited_clean` | 314 |
 | `audited_conditional` | 535 |
-| `audited_decoration` | 7 |
+| `audited_decoration` | 8 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 796 |
+| `unaudited` | 795 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 592 |
-| `decoration` | 7 |
+| `decoration` | 8 |
 | `meta` | 46 |
 | `no_go` | 163 |
 | `open_gate` | 90 |
-| `positive_theorem` | 860 |
+| `positive_theorem` | 859 |
 
 | criticality | count |
 |---|---:|
@@ -60,7 +60,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 583 |
 | `leaf` | 697 |
 
-- **Retained pending chain closure:** 2
+- **Retained pending chain closure:** 3
 - **Citation cycles detected:** 42
 
 ### Runner classification (static heuristic)
@@ -961,6 +961,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_eq_3delta_identity_note_2026-04-21` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `pmns_selector_unique_amplitude_slot_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
+| `three_generation_observable_count_corollary_note_2026-05-03` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-current | A | `three_generation_observable_theorem_note` |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
@@ -13817,6 +13818,20 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Three independent grown families produce quantitatively identical physics on all 9 measurable properties to within 5%.  _(class `B`)_
 - **chain closes:** False — The source table itself leaves Family 3 Distance alpha as '(not yet)', and no runner is provided to recompute the 9-property comparison, so the headline 9/9 three-family match does not close.
 - **rationale:** Issue: The note claims three families match on all 9 measurable properties, but the table explicitly has Family 3 Distance alpha marked '(not yet)' and the note provides no runner or log artifact to verify the cross-family card. Why this blocks: the load-bearing 9/9 statement is false on the face of the supplied table, and the broader inference that observables are geometry-independent cannot follow from a partial, hand-entered comparison. Repair target: add a runner that recomputes every listed property for all three families, including Family 3 Distance alpha, with explicit <5% assertions and at least one holdout check. Claim boundary until fixed: safe to cite this as a partial comparison of three selected drift/restore rows with eight populated properties and distance-alpha data only for Families 1 and 2; not safe to claim 9/9 three-family equality or geometry-independence.
+- **auditor confidence:** high
+
+### `three_generation_observable_count_corollary_note_2026-05-03`
+
+- **Note:** [`THREE_GENERATION_OBSERVABLE_COUNT_COROLLARY_NOTE_2026-05-03.md`](../../docs/THREE_GENERATION_OBSERVABLE_COUNT_COROLLARY_NOTE_2026-05-03.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Finite-dimensional corollary that the retained hw=1 count of three is unchanged under any nonzero quotient preserving the retained generation algebra on H_hw=1.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** _retained_pending_chain_  (reason: `decoration_waiting_on:three_generation_observable_theorem_note`)
+- **auditor:** `codex-current-fresh-context-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Under Q an isomorphism, dim(H_red) = dim(H_hw=1) = 3. Combined with the orbit-count step, the observable count card(hw=1) = 3 is exactly preserved.  _(class `A`)_
+- **chain closes:** True — The finite-dimensional algebra closes from the imported count-three orbit input plus the imported no-proper-quotient/irreducibility input. It does not close as an independent theorem because it only packages those upstream inputs into a quotient-stability corollary.
+- **rationale:** Issue: The note's own authority boundary says it does not re-derive either input and inherits no additional logical strength beyond the two upstream rows; the load-bearing step is ordinary finite-dimensional algebra applied to the retained count and retained irreducibility/no-quotient theorem. Why this blocks: A separate positive_theorem verdict would overstate an algebraic corollary as an independent retained result with new physical content, comparator surface, or falsifiability. Repair target: To promote it, add a genuinely new retained theorem, independent observable/readout, or nontrivial compression result not already present in the upstream count and no-proper-quotient inputs. Claim boundary until fixed: It may be cited as a boxed corollary: algebra-preserving nonzero quotients of H_hw=1 are isomorphic, so the already-retained hw=1 count remains three.
+- **decoration parent:** `three_generation_observable_theorem_note`
 - **auditor confidence:** high
 
 ### `triage_no_promotion_note`
