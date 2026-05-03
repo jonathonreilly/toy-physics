@@ -197,7 +197,8 @@ No physical signed-gravity claim follows from this note.
 ## Hosted-Versus-Selected Follow-Up
 
 The determinant-line host question is now audited in
-[`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`](SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md)
+`SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md` (sibling
+artifact; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_naturally_hosted_orientation_line.py`](../scripts/signed_gravity_naturally_hosted_orientation_line.py).
 

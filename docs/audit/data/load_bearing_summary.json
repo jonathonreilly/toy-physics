@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-03T13:48:18.710999+00:00",
+  "computed_at": "2026-05-03T14:12:20.383344+00:00",
   "criticality_counts": {
     "critical": 115,
-    "high": 363,
-    "leaf": 817,
-    "medium": 551
+    "high": 361,
+    "leaf": 780,
+    "medium": 591
   },
   "flagship_signal_used": false,
-  "node_count": 1846,
+  "node_count": 1847,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -50,8 +50,8 @@
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 26.714,
-      "transitive_descendants": 209
+      "load_bearing_score": 26.721,
+      "transitive_descendants": 210
     },
     {
       "claim_id": "yt_ward_identity_derivation_theorem",
@@ -72,6 +72,12 @@
       "transitive_descendants": 224
     },
     {
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 24.512,
+      "transitive_descendants": 364
+    },
+    {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "criticality": "critical",
       "load_bearing_score": 23.82,
@@ -80,14 +86,8 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 23.508,
-      "transitive_descendants": 363
-    },
-    {
-      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
-      "criticality": "critical",
-      "load_bearing_score": 23.508,
-      "transitive_descendants": 363
+      "load_bearing_score": 23.512,
+      "transitive_descendants": 364
     },
     {
       "claim_id": "left_handed_charge_matching_note",
@@ -140,8 +140,8 @@
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 18.566,
-      "transitive_descendants": 267
+      "load_bearing_score": 18.571,
+      "transitive_descendants": 268
     },
     {
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
