@@ -14,16 +14,17 @@
   is a representation-theoretic dimension fraction; no `O(1/N_c⁴)` correction
   applies. At `N_c = 3` the ratio is exactly `8/9`. This is the primary
   group-theory derivation route for the `(N_c²−1)/N_c²` coefficient.
-- [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) — complementary derivation
+- `RCONN_DERIVED_NOTE.md` — complementary derivation
   of the same ratio via the `1/N_c` topological expansion (leading-order
   with `O(1/N_c⁴)` dynamical-correction estimate). Used here as the
-  dynamical-correction sibling of the Fierz route, not as the only chain
-  for the coefficient.
-- [EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md](EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md)
-  — bounded large-`N_c` support for the **matching route** that selects
-  the connected color trace as the physical EW coupling readout. This
-  is corroborating support for Section 2.6, not an audit ratification
-  of the package-level `9/8` coefficient.
+  dynamical-correction sibling of the Fierz route, not a one-hop authority
+  for the exact coefficient.
+- [EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md](EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md)
+  — citeable open gate for the load-bearing **matching route** that selects
+  the connected color trace as the physical EW coupling readout. The older
+  `EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md` remains
+  a plain-text bounded-context pointer, not an audit ratification of the
+  package-level `9/8` coefficient.
 
 **Note on the matching rule (M).** The package-level `9/8` correction
 splits into two ingredients: (F) the exact group-theory ratio
@@ -32,7 +33,7 @@ note; and (M) the matching rule that the physical EW vacuum polarization
 projects onto the adjoint channel after CMT factorization. (M) remains
 a load-bearing structural input from the framework's lattice EW current
 construction; it is named explicitly in the Fierz-channel note §5 and is
-not derived by any of the four cited authorities above.
+now tracked as its own open gate by the matching-rule note above.
 
 ---
 

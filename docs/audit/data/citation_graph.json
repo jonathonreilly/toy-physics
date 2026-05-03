@@ -137,10 +137,6 @@
       "to": "qcd_low_energy_running_bridge_note_2026-05-01"
     },
     {
-      "from": "alpha_s_derived_note",
-      "to": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30"
-    },
-    {
       "from": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
       "to": "graph_first_su3_integration_note"
     },
@@ -2599,10 +2595,6 @@
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "alpha_s_derived_note"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
     {
       "from": "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
@@ -5129,6 +5121,10 @@
       "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
     },
     {
+      "from": "ew_current_matching_rule_open_gate_note_2026-05-03",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
       "from": "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -5978,7 +5974,7 @@
     },
     {
       "from": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-      "to": "yt_ward_identity_derivation_theorem"
+      "to": "unit_singlet_overlap_narrow_theorem_note_2026-05-02"
     },
     {
       "from": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
@@ -11117,10 +11113,6 @@
       "to": "alpha_s_derived_note"
     },
     {
-      "from": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
-    },
-    {
       "from": "w_mass_derived_note",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -11406,11 +11398,7 @@
     },
     {
       "from": "yt_ew_color_projection_theorem",
-      "to": "rconn_derived_note"
-    },
-    {
-      "from": "yt_ew_color_projection_theorem",
-      "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
     },
     {
       "from": "yt_ew_delta_r_retention_analysis_note_2026-04-18",
@@ -22137,7 +22125,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T11:40:28.919833+00:00",
+  "generated_at": "2026-05-03T11:41:57.560567+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23401,10 +23389,9 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "plaquette_self_consistency_note",
-        "qcd_low_energy_running_bridge_note_2026-05-01",
-        "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30"
+        "qcd_low_energy_running_bridge_note_2026-05-01"
       ],
-      "note_hash": "8a8e89f6ce26b57caadbe9522818aa0e4e11a83ff32baed3b23b1855b681514d",
+      "note_hash": "b628b842a0f36ffe1a5971b8a5f915906d881e247a424a68ef8262b6e7046dbf",
       "path": "docs/ALPHA_S_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_yt_zero_import_chain.py",
       "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)"
@@ -25776,10 +25763,9 @@
       "deps": [
         "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
-        "alpha_s_derived_note",
-        "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
+        "alpha_s_derived_note"
       ],
-      "note_hash": "3f8e983724111958f356d4d6e7ad1587f7e60de170c318b87148306e8a2897d4",
+      "note_hash": "d53f4e350f9ed37a94fb12d82f64010980813d1ba0657648d35f299b6730a288",
       "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
@@ -30415,6 +30401,19 @@
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "EW Current Matching via OZI / Disconnected-Trace Suppression Theorem"
     },
+    "ew_current_matching_rule_open_gate_note_2026-05-03": {
+      "claim_id": "ew_current_matching_rule_open_gate_note_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "ew_current_fierz_channel_decomposition_note_2026-05-01"
+      ],
+      "note_hash": "b087b169f0b2506ee30cf2000ec1ef1a14864b7f3f3c3d2052b51dd50ffaa37d",
+      "path": "docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md",
+      "runner_path": null,
+      "title": "EW Current Matching Rule Open Gate Note"
+    },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
       "claim_type_author_hint": null,
@@ -30873,13 +30872,13 @@
     },
     "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19": {
       "claim_id": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "yt_ward_identity_derivation_theorem"
+        "unit_singlet_overlap_narrow_theorem_note_2026-05-02"
       ],
-      "note_hash": "b64360312dbb0b14473727c28670ab435d43acb547ee87b4320cefffe91b75b5",
+      "note_hash": "5aa4df69c2cb3d97e528488c5ea02a0c0e675b4f54086d5b900bbdfc314a7c90",
       "path": "docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Rep-B Bare-Scale Independence Theorem for the Two-Ward `g_bare` Route"
@@ -37615,13 +37614,13 @@
     },
     "observable_principle_audit_note_2026-05-02": {
       "claim_id": "observable_principle_audit_note_2026-05-02",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [
         "observable_principle_from_axiom_note"
       ],
-      "note_hash": "84a36a07538aef51a3ad6539f13a1ae6173ba5ff29c8e6a02d41907a83718139",
+      "note_hash": "a2d7c548abc404cd053ac61e1abae783fcacacb56dd376e95b83a8497708eb16",
       "path": "docs/OBSERVABLE_PRINCIPLE_AUDIT_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_observable_principle_audit.py",
       "title": "Observable-Principle From-Axiom Note \u2014 Status Correction Audit"
@@ -47076,10 +47075,9 @@
       "deps": [
         "native_gauge_closure_note",
         "graph_first_su3_integration_note",
-        "alpha_s_derived_note",
-        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+        "alpha_s_derived_note"
       ],
-      "note_hash": "df31d2b0e572567eef04f9c2d32b70dda323b7746508e27ba4aebb0dd14566b9",
+      "note_hash": "9399cd3dd739a6aa0ebff3cc48a048b3a9a03cb23f8133699c34b0b4e93d080d",
       "path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_wolfenstein_lambda_a_structural_identities.py",
       "title": "Wolfenstein Lambda and A Structural Identities Theorem"
@@ -47881,10 +47879,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "ew_current_fierz_channel_decomposition_note_2026-05-01",
-        "rconn_derived_note",
-        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+        "ew_current_matching_rule_open_gate_note_2026-05-03"
       ],
-      "note_hash": "d7a6106370413a56ce43d2dbd69e494b0a6c01785e68c3bfe5be3c3733411b4a",
+      "note_hash": "4e5ae96ccaf17c49268767ca6999fd18f8e33ce7830687bab5a9136b27fc5c86",
       "path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Color-Singlet Projection Theorem for EW Couplings"
@@ -49771,23 +49768,24 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 16,
-      "meta": 1,
+      "bounded_theorem": 17,
+      "meta": 2,
       "no_go": 3,
-      "none": 1749,
+      "none": 1747,
+      "open_gate": 1,
       "positive_theorem": 72
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 516,
-      "meta": 1,
+      "bounded_theorem": 517,
+      "meta": 2,
       "no_go": 109,
-      "none": 450,
-      "open_gate": 109,
-      "positive_theorem": 656
+      "none": 449,
+      "open_gate": 110,
+      "positive_theorem": 655
     },
-    "edge_count": 5534,
-    "leaf_count": 649,
-    "node_count": 1841,
+    "edge_count": 5531,
+    "leaf_count": 648,
+    "node_count": 1842,
     "root_count": 1074,
     "runners_with_path": 1407
   }

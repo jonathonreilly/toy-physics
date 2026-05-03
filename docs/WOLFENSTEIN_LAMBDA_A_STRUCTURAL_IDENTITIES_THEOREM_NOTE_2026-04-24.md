@@ -217,8 +217,9 @@ The runner uses the Python standard library plus the canonical
   - companion third-row atlas-leading magnitude identities.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   - canonical `alpha_s(v)` input.
-- [`ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`](ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md)
-  - adjacent coupling-chain identity.
+- `ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`
+  - adjacent coupling-chain identity; plain-text pointer only, not a
+    load-bearing authority for the Wolfenstein identities.
 - [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
   - retained `n_color = 3` color structure.
 - [`NATIVE_GAUGE_CLOSURE_NOTE.md`](NATIVE_GAUGE_CLOSURE_NOTE.md)
