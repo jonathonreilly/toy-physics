@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 59,
-    "high": 218,
+    "high": 217,
     "leaf": 201,
     "medium": 331
   },
-  "generated_at": "2026-05-03T16:45:56.883050+00:00",
+  "generated_at": "2026-05-03T16:49:50.514251+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1619,31 +1619,6 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yukawa_color_projection_theorem",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "ew_current_fierz_channel_decomposition_note_2026-05-01",
-        "native_gauge_closure_note",
-        "graph_first_su3_integration_note"
-      ],
-      "direct_in_degree": 10,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.629,
-      "note_path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_ew_current_fierz_channel_decomposition.py",
-      "transitive_descendants": 98
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "audited_decoration",
       "blocker": null,
       "claim_id": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
@@ -1704,6 +1679,30 @@
       "ready": true,
       "runner_path": "scripts/frontier_universal_theta_induced_edm_vanishing.py",
       "transitive_descendants": 60
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "rconn_derived_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "yukawa_color_projection_theorem",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01"
+      ],
+      "direct_in_degree": 12,
+      "effective_status": "unaudited",
+      "load_bearing_score": 11.807,
+      "note_path": "docs/RCONN_DERIVED_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "transitive_descendants": 55
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -4900,30 +4899,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_2026_04_18.py",
       "transitive_descendants": 56
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "rconn_derived_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "yukawa_color_projection_theorem",
-        "ew_current_fierz_channel_decomposition_note_2026-05-01"
-      ],
-      "direct_in_degree": 12,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.807,
-      "note_path": "docs/RCONN_DERIVED_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
-      "transitive_descendants": 55
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20945,5 +20920,5 @@
     }
   ],
   "ready_count": 116,
-  "total_pending": 809
+  "total_pending": 808
 }

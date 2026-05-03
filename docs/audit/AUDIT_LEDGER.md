@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:45:57.301039+00:00
+**Generated:** 2026-05-03T16:49:51.057255+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,33 +24,34 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 780 |
+| unaudited | 779 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 517 |
 | ~~audited_failed~~ | 8 |
+| `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 308 |
 | `audited_conditional` | 517 |
-| `audited_decoration` | 6 |
+| `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 826 |
+| `unaudited` | 825 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 588 |
-| `decoration` | 6 |
+| `decoration` | 7 |
 | `meta` | 46 |
 | `no_go` | 163 |
 | `open_gate` | 90 |
-| `positive_theorem` | 865 |
+| `positive_theorem` | 864 |
 
 | criticality | count |
 |---|---:|
@@ -937,6 +938,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_unique_amplitude_slot_note` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5 | A | `pmns_selector_class_space_uniqueness_note` |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | decoration | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
+| `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
@@ -14907,6 +14909,23 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The Ward 4-fermion channel and the physical trilinear are both matrix elements of H_unit; they share the 1/sqrt(6) coefficient by construction.  _(class `F`)_
 - **chain closes:** False — The matching closure equates a Ward 4-fermion matrix element with a physical trilinear coefficient by declaring both share the H_unit normalization 1/sqrt(6); these are different Green-function/readout structures and the chain reduces to symbol identification.
 - **rationale:** Re-audit confirms the original renaming verdict: shared H_unit normalization is asserted, not derived from a tree-level operator-matching theorem. Scope narrowed from the migration backfill to the bounded H_unit arithmetic.
+- **auditor confidence:** high
+
+### `yukawa_color_projection_theorem`
+
+- **Note:** [`YUKAWA_COLOR_PROJECTION_THEOREM.md`](../../docs/YUKAWA_COLOR_PROJECTION_THEOREM.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Duplicate/decorative restatement of the retained-bounded EW Fierz channel theorem: exact SU(N_c) q-qbar channel dimension fraction dim(adj)/dim(N_c x N_c-bar) = (N_c^2 - 1)/N_c^2, evaluated at N_c = 3 as 8/9. Physical Higgs-Z, Z_phi, and y_t correction claims are out of scope.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-yukawa-color-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** F_adjoint = (N_c^2 - 1) / N_c^2 = 8/9, justified by the adjoint representation having dimension N_c^2 - 1 and the singlet having dimension 1 out of the N_c^2-dimensional bilinear space.  _(class `A`)_
+- **chain closes:** True — The exact dimension-fraction identity closes through the audited_clean retained_bounded EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01 plus retained_bounded SU(N_c)/N_c=3 inputs. It does not close as an independent Yukawa theorem; after physical matching is excluded, the row adds no independent load-bearing content beyond the parent Fierz theorem.
+- **rationale:** Issue: The narrowed row imports and restates the exact Fierz/dimension-count result already carried by EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01; the supplied runner verifies that parent note, not a new Yukawa-specific theorem.
+Why this blocks: With physical Higgs-Z, Z_phi, and y_t matching explicitly out of scope, there is no new physical observable, comparator, compression, or independent derivation left for this row to retain as a separate positive_theorem or bounded_theorem.
+Repair target: Box or merge this row under the EW Fierz parent, or supply a genuinely independent theorem and runner deriving a Yukawa-specific color-projection map without using the excluded physical-matching bridge.
+Claim boundary until fixed: The exact 8/9 adjoint-channel dimension fraction may be cited via the EW Fierz parent; no physical y_t, Higgs wave-function, or continuum-matching correction is audited here.
+- **decoration parent:** `ew_current_fierz_channel_decomposition_note_2026-05-01`
 - **auditor confidence:** high
 
 ### `z2_hw1_mass_matrix_parametrization_note`
