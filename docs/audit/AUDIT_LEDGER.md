@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:30:38.232307+00:00
+**Generated:** 2026-05-03T19:31:27.925758+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 175 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 718 |
+| unaudited | 717 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 547 |
+| ~~audited_conditional~~ | 548 |
 | ~~audited_failed~~ | 14 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 332 |
-| `audited_conditional` | 547 |
+| `audited_conditional` | 548 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 764 |
+| `unaudited` | 763 |
 
 | claim_type | count |
 |---|---:|
@@ -756,6 +756,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_3d_l2_numpy_h0125_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
+| `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `lattice_complementarity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_synthesis_guard_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lensing_deflection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -9095,6 +9096,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `lattice_3d_l2_tail_stats_note`
+
+- **Note:** [`LATTICE_3D_L2_TAIL_STATS_NOTE.md`](../../docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded claim that the h = 0.25 width-8 3D 1/L^2 fork improves the post-peak tail fit while preserving the stated same-family barrier sanity checks, without proving an asymptotic -2 law.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-cantor`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** This is a real improvement over the earlier h = 0.25, width-6 readout that had fewer post-peak points and a weaker tail fit.  _(class `B`)_
+- **chain closes:** False — The note states the width-8 statistics and the width-6 comparison, but the restricted packet contains no runner output and no cited width-6 comparator authority. The improvement claim therefore depends on premises not closed by the provided inputs.
+- **rationale:** Issue: the improvement claim rests on the stated width-8 fit and an uncited earlier width-6 retained summary, with no runner output or supplied comparator authority in the audit packet. Why this blocks: from the permitted source note alone, the fit, barrier sanity checks, and retained-grade status of the prior baseline cannot be verified. Repair target: provide the runner output/log as audit evidence and cite the exact width-6 comparator note/status, or include the reproducible fit calculation in the note. Claim boundary until fixed: the note may be treated only as a bounded report of claimed fork-probe statistics, not an audited improvement theorem.
+- **auditor confidence:** high
 
 ### `lattice_3d_tapered_refinement_note`
 

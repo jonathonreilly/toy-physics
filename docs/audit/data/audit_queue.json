@@ -3,9 +3,9 @@
     "critical": 62,
     "high": 214,
     "leaf": 201,
-    "medium": 270
+    "medium": 269
   },
-  "generated_at": "2026-05-03T19:30:37.743241+00:00",
+  "generated_at": "2026-05-03T19:31:26.627003+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7688,27 +7688,6 @@
       "ready": true,
       "runner_path": "scripts/FOURTH_FAMILY_COMPLEX.py",
       "transitive_descendants": 19
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lattice_3d_l2_tail_stats_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.7,
-      "note_path": "docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 12
     },
     {
       "audit_independence_required": "any_non_self",
@@ -19621,6 +19600,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 59,
-  "total_pending": 747
+  "ready_count": 58,
+  "total_pending": 746
 }
