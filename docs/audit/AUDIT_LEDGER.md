@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T20:44:31.780847+00:00
+**Generated:** 2026-05-03T20:49:27.321845+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 106 |
 | **retained_bounded** | 186 |
 | _retained_pending_chain_ | 3 |
-| open_gate | 16 |
-| unaudited | 701 |
+| open_gate | 17 |
+| unaudited | 700 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 348 |
+| `audited_clean` | 349 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 748 |
+| `unaudited` | 747 |
 
 | claim_type | count |
 |---|---:|
@@ -50,8 +50,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 8 |
 | `meta` | 47 |
 | `no_go` | 164 |
-| `open_gate` | 91 |
-| `positive_theorem` | 858 |
+| `open_gate` | 92 |
+| `positive_theorem` | 857 |
 
 | criticality | count |
 |---|---:|
@@ -286,6 +286,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_kernel_transfer_norm_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lattice_nn_continuum_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | C | - |
 | `lattice_nn_deterministic_rescale_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
+| `lattice_nn_high_precision_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | C | - |
 | `lattice_symmetry_unification_decision_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `lensing_beta_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
@@ -9314,6 +9315,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** True — The cited script implements a raw 3-edge NN lattice and a fixed step_scale = spacing/sqrt(3) schedule that does not inspect amplitudes or slit configuration. The cited completed log reproduces the note's rows through h = 0.0625, including Born values 7.86e-16 at h = 0.125 and 3.00e-16 at h = 0.0625.
 - **rationale:** The bounded computational claim closes from the note plus its one-hop cited script/log: the schedule is deterministic and geometry-only, and the completed finite output matches the canonical table. No continuum-limit theorem or physical interpretation of the vanishing gravity scale is being granted. Residual risk is limited to reproducibility/versioning of the cited absolute-path artifacts rather than a missing load-bearing derivation in the restricted packet.
 - **auditor confidence:** medium
+
+### `lattice_nn_high_precision_note`
+
+- **Note:** [`LATTICE_NN_HIGH_PRECISION_NOTE.md`](../../docs/LATTICE_NN_HIGH_PRECISION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** The raw nearest-neighbor high-precision h = 0.125 continuation remains open; no canonical Born-clean h = 0.125 extension is promoted.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `fresh-agent-lattice-nn-high-precision-classifier`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The h = 0.125 continuation did not complete in a practical runtime window and did not produce a retained numerical result.  _(class `C`)_
+- **chain closes:** True — The source note and cited scripts consistently bound the safe claim to Born-clean refinement through h = 0.25 and treat h = 0.125 as unresolved. The audit does not require completing the long run because the scoped claim is the open boundary, not a positive extension.
+- **rationale:** The seeded positive_theorem label is not the note's actual scoped claim. The note explicitly says the h = 0.125 attempt did not complete, produced no retained numerical result, and should not be promoted as a canonical Born-clean extension. Under the timeout/noncompletion policy, this is a clean open gate rather than a failed or conditional theorem.
+- **auditor confidence:** high
 
 ### `lattice_nn_light_cone_note`
 
