@@ -1,5 +1,35 @@
 # Review History
 
+## Review-Loop Backpressure - Schur-Complement K-Prime Sufficiency
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT SUPPORT / CURRENT ROWS ABSENT / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- Schur/Feshbach algebra gives an exact denominator derivative formula once
+  same-surface `A/B/C` scalar-kernel rows and pole derivatives are supplied;
+- the formula was checked against a finite-difference witness;
+- current PR #230 lacks those Schur kernel rows, so `K'(pole)` remains open;
+- the theorem does not identify `O_sp` with `O_H`;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_schur_complement_kprime_sufficiency.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_schur_complement_kprime_sufficiency.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Direct Positivity-Improving Stretch Attempt
 
 Local review-loop disposition:

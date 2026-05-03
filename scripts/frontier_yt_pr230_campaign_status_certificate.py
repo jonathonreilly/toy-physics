@@ -200,6 +200,9 @@ def main() -> int:
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
         "kprime_closure": load("outputs/yt_kprime_closure_attempt_2026-05-02.json"),
+        "schur_complement_kprime_sufficiency": load(
+            "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json"
+        ),
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
@@ -850,6 +853,20 @@ def main() -> int:
         "kprime-closure-attempt-blocked",
         "K-prime closure attempt blocked" in str(statuses["kprime_closure"]),
         statuses["kprime_closure"],
+    )
+    report(
+        "schur-complement-kprime-sufficiency-not-closure",
+        "Schur-complement K-prime sufficiency theorem"
+        in str(statuses["schur_complement_kprime_sufficiency"])
+        and certificates["schur_complement_kprime_sufficiency"].get(
+            "schur_sufficiency_theorem_passed"
+        )
+        is True
+        and certificates["schur_complement_kprime_sufficiency"].get(
+            "current_closure_gate_passed"
+        )
+        is False,
+        statuses["schur_complement_kprime_sufficiency"],
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

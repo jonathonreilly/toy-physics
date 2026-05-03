@@ -1,0 +1,51 @@
+{
+  "actual_current_surface_status": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "If same-surface production or theorem rows provide A, B, C and their pole derivatives in a certified neutral scalar kernel partition, then D_eff'(pole) and the same-source scalar LSZ normalization are computable by the Schur-complement formula.",
+  "current_closure_gate_passed": false,
+  "current_schur_kernel_rows_present": false,
+  "exact_next_action": "Either produce the Schur kernel rows by a same-surface neutral scalar kernel theorem/measurement, or pivot to direct rank-repair observables: certified O_H/C_sH/C_HH pole rows or same-source W/Z response rows with identity certificates.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "determinant_gate": "outputs/yt_scalar_pole_determinant_gate_2026-05-01.json",
+    "eigen_derivative_gate": "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json",
+    "feshbach_response_boundary": "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json",
+    "kprime_closure_attempt": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "scalar_denominator_closure": "outputs/yt_scalar_denominator_theorem_closure_attempt_2026-05-02.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The sufficiency formula is exact support, but the required same-surface A/B/C kernel rows and derivatives are absent, and K'(pole) / scalar denominator closure remains open.",
+  "required_future_rows": [
+    "A(pole), A'(pole) for the source-pole coordinate",
+    "B(pole), B'(pole) for source-orthogonal neutral mixing",
+    "C(pole), C'(pole), or matrix C^{-1} and C' for the orthogonal neutral block",
+    "pole isolation, FV/IR/model-class, and canonical-Higgs/source identity gates"
+  ],
+  "schur_sufficiency_theorem_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not infer the A/B/C rows from source-only C_ss data",
+    "does not set kappa_s=1 or O_sp=O_H",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "witness": {
+    "A_at_pole": 0.04266666666666663,
+    "A_prime": 0.31,
+    "B_at_pole": 0.24,
+    "B_prime": -0.08,
+    "C_at_pole": 1.35,
+    "C_prime": 0.22,
+    "D_eff_at_pole": -3.469446951953614e-17,
+    "D_eff_prime_finite_difference": 0.3453975308671114,
+    "D_eff_prime_formula": 0.3453975308641975,
+    "absolute_error": 2.913891350431186e-12,
+    "formula_terms": {
+      "-2_B_Bprime_over_C": 0.02844444444444444,
+      "A_prime": 0.31,
+      "B2_Cprime_over_C2": 0.006953086419753085
+    },
+    "x_pole": -0.37
+  }
+}

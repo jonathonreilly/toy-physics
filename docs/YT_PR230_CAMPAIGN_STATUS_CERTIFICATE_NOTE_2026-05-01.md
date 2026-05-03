@@ -598,3 +598,10 @@ positivity-improvement shortcut on the current surface: OS positivity,
 positive semidefinite transfer, and gauge heat-kernel positivity still do not
 prove neutral-sector irreducibility or source-Higgs purity.  No
 retained/proposed-retained wording is authorized.
+
+Latest Schur-complement K-prime checkpoint: campaign status now includes
+`scripts/frontier_yt_schur_complement_kprime_sufficiency.py` and reports
+`PASS=154 FAIL=0`.  This is exact support for the scalar denominator route:
+future same-surface `A/B/C` scalar-kernel rows and pole derivatives are enough
+to compute `D_eff'(pole)`.  It is not closure because those rows are absent
+and the canonical-Higgs identity remains open.

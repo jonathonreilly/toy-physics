@@ -680,3 +680,10 @@ and is refreshed at `PASS=127 FAIL=0`.  The current surface does not derive
 neutral-sector irreducibility / primitive-cone positivity improvement from
 reflection positivity, positive semidefinite transfer, or gauge heat-kernel
 positivity.  No retained/proposed-retained wording is authorized.
+
+Latest Schur-complement K-prime checkpoint: the retained-route certificate now
+includes `scripts/frontier_yt_schur_complement_kprime_sufficiency.py` and is
+refreshed at `PASS=128 FAIL=0`.  The theorem gives exact support: future
+same-surface `A/B/C` scalar-kernel rows and pole derivatives are sufficient to
+compute `D_eff'(pole)`.  Current rows are absent, so no
+retained/proposed-retained wording is authorized.

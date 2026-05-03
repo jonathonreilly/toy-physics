@@ -1,5 +1,30 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 Schur-complement K-prime sufficiency:
+
+- Added `scripts/frontier_yt_schur_complement_kprime_sufficiency.py`,
+  `docs/YT_SCHUR_COMPLEMENT_KPRIME_SUFFICIENCY_NOTE_2026-05-03.md`, and
+  `outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json`.
+- This sharpens the scalar denominator / `K'(pole)` route.  For a neutral
+  scalar kernel partitioned into source-pole coordinate `A`, orthogonal block
+  `C`, and mixing `B`, the same-source denominator derivative is fixed by the
+  Schur complement:
+  `D_eff' = A' - 2 B B'/C + B^2 C'/C^2` in the one-orthogonal-mode case.
+- The runner verifies the formula against a finite-difference witness and
+  converts the vague `K'(pole)` blocker into a concrete future row contract:
+  same-surface `A/B/C` kernel rows and pole derivatives are required.
+- Current surface remains open because those Schur kernel rows are absent and
+  the K-prime / scalar-denominator closure attempts remain blocked.
+- Verification: Schur sufficiency `PASS=12 FAIL=0`; retained-route
+  `PASS=128 FAIL=0`; campaign status `PASS=154 FAIL=0`.
+- Background production support: chunks023-024 are still running and remain
+  non-evidence until completed and postprocessed.
+
+Next exact action: either produce the Schur kernel rows through a
+same-surface scalar-kernel theorem/measurement, or pivot to direct rank-repair
+observables: certified `O_H/C_sH/C_HH` pole rows or same-source W/Z response
+rows with identity certificates.  Keep polling chunks023-024.
+
 Latest checkpoint, 2026-05-03 direct positivity-improving stretch attempt:
 
 - Added

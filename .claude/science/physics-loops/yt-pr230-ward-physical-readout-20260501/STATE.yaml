@@ -13,11 +13,23 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-179-direct-positivity-improving-stretch-attempt
-blocks_completed: 179
-active_route: "neutral-scalar rank-one route; direct positivity-improving theorem attempted and blocked"
-active_hard_residual: "Direct neutral-scalar positivity improvement is not derived on the current surface. Runner PASS=14 FAIL=0; retained-route PASS=127 FAIL=0; campaign status PASS=153 FAIL=0. Reflection positivity, positive semidefinite transfer support, and gauge heat-kernel positivity do not prove irreducibility / primitive-cone positivity improvement in the neutral scalar response sector. The queue now pivots to direct rank-repair evidence (certified O_H/C_sH/C_HH rows or same-source W/Z response rows with identity certificates) or the scalar denominator / K'(pole) theorem. Background chunks023-024 are running as production support only. No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-180-schur-kprime-sufficiency
+blocks_completed: 180
+active_route: "scalar denominator route via Schur-complement K-prime row contract"
+active_hard_residual: "Schur-complement K-prime sufficiency is exact support, not closure. Runner PASS=12 FAIL=0; retained-route PASS=128 FAIL=0; campaign status PASS=154 FAIL=0. If future same-surface scalar-kernel rows supply A/B/C and pole derivatives, D_eff'(pole) is computable; current rows are absent and K'(pole), scalar LSZ, and canonical-Higgs identity remain open. Background chunks023-024 are running as production support only. No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_schur_complement_kprime_sufficiency.py"
+  - "docs/YT_SCHUR_COMPLEMENT_KPRIME_SUFFICIENCY_NOTE_2026-05-03.md"
+  - "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_neutral_scalar_positivity_improving_direct_closure_attempt.py"
   - "docs/YT_NEUTRAL_SCALAR_POSITIVITY_IMPROVING_DIRECT_CLOSURE_ATTEMPT_NOTE_2026-05-03.md"
   - "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json"
@@ -827,6 +839,7 @@ no_go_routes_inherited:
   - "beta_lambda(M_Pl)=0 Planck selector: current-surface no-go"
   - "Ward decomposition without physical readout map: audited_renaming"
 claim_state_movement:
+  - "added Schur-complement K-prime sufficiency: future A/B/C scalar-kernel rows and pole derivatives are enough to compute D_eff'(pole), but current rows are absent"
   - "attempted direct neutral-scalar positivity improvement from current Cl(3)/Z3 support and blocked it: reflection positivity, positive semidefinite transfer, and gauge heat-kernel positivity do not prove neutral-sector irreducibility / primitive-cone positivity improvement"
   - "audited the gauge-vacuum Perron theorem as a possible neutral-scalar rank-one import and blocked it: the gauge theorem is scoped to plaquette-source J, and a same-gauge counterfamily changes the neutral residue rank from one to two"
   - "proved no existing hidden retained y_t proof in current repo ledger"
@@ -990,13 +1003,14 @@ claim_state_movement:
   - "added positivity-improving neutral-scalar rank-one conditional support: Perron-Frobenius uniqueness would close the rank-one pole premise if positivity-improving transfer dynamics were proved in the neutral scalar sector, but that premise is absent on the current surface; runner PASS=15 FAIL=0, retained-route PASS=125 FAIL=0, campaign PASS=151 FAIL=0; chunks023-024 launched as background production support only"
   - "audited and blocked the gauge-Perron import route: finite Wilson gauge-vacuum Perron uniqueness for plaquette source J does not certify neutral-scalar positivity improvement or source-Higgs purity; runner PASS=14 FAIL=0, retained-route PASS=126 FAIL=0, campaign PASS=152 FAIL=0"
   - "attempted direct neutral-scalar positivity improvement: current support-level reflection positivity and transfer positivity do not prove neutral-sector irreducibility / primitive-cone positivity improvement; runner PASS=14 FAIL=0, retained-route PASS=127 FAIL=0, campaign PASS=153 FAIL=0"
-actual_current_surface_status: "exact negative boundary plus open closure / neutral-scalar positivity-improving direct theorem not derived"
-conditional_surface_status: "If a future same-surface proof of neutral-sector irreducibility / positivity improvement is supplied, then Perron-Frobenius uniqueness plus isolated-pole factorization gives rank-one O_sp-Higgs residues; separately, if certified canonical O_H and same-pole production C_ss/C_sH/C_HH residues are supplied, the isolated-pole Gram condition can be evaluated. Current production evidence remains conditional on response-window/readout acceptance, finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity."
+  - "added Schur-complement K-prime sufficiency: exact support for computing D_eff'(pole) from future same-surface A/B/C scalar-kernel rows; runner PASS=12 FAIL=0, retained-route PASS=128 FAIL=0, campaign PASS=154 FAIL=0"
+actual_current_surface_status: "exact-support plus open closure / Schur-complement K-prime sufficiency theorem; current rows absent"
+conditional_surface_status: "If same-surface A/B/C scalar-kernel rows and pole derivatives are supplied, the Schur-complement formula computes D_eff'(pole). If certified canonical O_H and same-pole production C_ss/C_sH/C_HH residues are supplied, the isolated-pole Gram condition can be evaluated. Current production evidence remains conditional on response-window/readout acceptance, finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity."
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Commit/push/PR-update this checkpoint, keep polling chunks023-024 until completion, and pursue the next closure input: direct rank-repair evidence through certified O_H plus production C_sH/C_HH pole rows, same-source W/Z response rows with sector-overlap identity certificates, or the scalar denominator / K'(pole) theorem. Do not treat the direct positivity attempt, gauge-vacuum Perron theorem, positivity-improving conditional theorem by itself, isolated-pole Gram theorem, reduced smokes, multi-tau smoke rows, plaquette ESS, target-observable ESS, tau-window central stability, chunks017-024 v2 rows, source-coordinate target statistics, target-timeseries replacement commands, complete source-only C_ss(p), rank-one source-only response matrices, D17 carrier support, symmetry-only commutant rank arguments, finite orthogonal neutral-pole assumptions, finite/heavy orthogonal mass gaps, source-only pole purity, the source-Higgs absence guard, the W/Z response absence guard, guard-only source_higgs_cross_correlator metadata, generic chunk target-series support, automatic generic checkpoint discovery, 22/63 L12 chunks, missing C_sH/C_HH authority, missing O_H realization, missing W/Z response rows, C_sH manifest support, H_unit-as-O_H substitution, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Commit/push/PR-update this checkpoint, keep polling chunks023-024 until completion, and pursue the next closure input: produce the Schur A/B/C scalar-kernel rows by theorem/measurement, or direct rank-repair evidence through certified O_H plus production C_sH/C_HH pole rows or same-source W/Z response rows with sector-overlap identity certificates. Do not treat the Schur sufficiency theorem by itself, direct positivity attempt, gauge-vacuum Perron theorem, positivity-improving conditional theorem, isolated-pole Gram theorem, reduced smokes, multi-tau smoke rows, plaquette ESS, target-observable ESS, tau-window central stability, chunks017-024 v2 rows, source-coordinate target statistics, target-timeseries replacement commands, complete source-only C_ss(p), rank-one source-only response matrices, D17 carrier support, symmetry-only commutant rank arguments, finite orthogonal neutral-pole assumptions, finite/heavy orthogonal mass gaps, source-only pole purity, the source-Higgs absence guard, the W/Z response absence guard, guard-only source_higgs_cross_correlator metadata, generic chunk target-series support, automatic generic checkpoint discovery, 22/63 L12 chunks, missing C_sH/C_HH authority, missing O_H realization, missing W/Z response rows, C_sH manifest support, H_unit-as-O_H substitution, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

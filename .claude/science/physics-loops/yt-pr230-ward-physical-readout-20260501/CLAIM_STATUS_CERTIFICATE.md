@@ -1,5 +1,29 @@
 # Claim Status Certificate
 
+Schur-complement K-prime sufficiency:
+
+```text
+actual_current_surface_status: exact-support / Schur-complement K-prime sufficiency theorem; current rows absent
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_schur_complement_kprime_sufficiency.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=128 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=154 FAIL=0
+```
+
+The support theorem makes the scalar-denominator acceptance row explicit:
+same-surface `A/B/C` scalar-kernel rows and pole derivatives are sufficient to
+compute the Schur-complement denominator derivative.  The current surface does
+not provide those rows and does not close `K'(pole)`, scalar LSZ, or
+canonical-Higgs identity.  No retained or `proposed_retained` wording is
+authorized.
+
 Direct neutral-scalar positivity-improving closure attempt:
 
 ```text

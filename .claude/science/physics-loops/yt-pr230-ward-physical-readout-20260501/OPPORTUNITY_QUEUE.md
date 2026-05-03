@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-03 update: the scalar denominator route now has an exact
+Schur-complement `K'(pole)` sufficiency theorem.  This is positive support:
+if future same-surface scalar-kernel rows provide `A/B/C` and their pole
+derivatives in a certified source/orthogonal neutral partition, then the
+same-source denominator derivative is computable.  It is not closure because
+those rows are absent.  The highest-value actions remain: derive/measure those
+Schur kernel rows, produce certified `O_H/C_sH/C_HH` pole rows, or produce
+same-source W/Z response rows with identity certificates.
+
 2026-05-03 update: the direct neutral-scalar positivity-improvement stretch
 attempt is now blocked on the current surface.  Reflection positivity,
 positive semidefinite transfer support, and gauge heat-kernel positivity do

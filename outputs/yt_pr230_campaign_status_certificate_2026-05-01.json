@@ -157,6 +157,7 @@
     "scalar_taste_projector_normalization_attempt": "exact negative boundary / scalar taste-projector normalization theorem attempt blocked",
     "scalar_two_point_harness": "bounded-support / scalar two-point production-harness extension",
     "scalar_zero_mode_limit_order": "exact negative boundary / scalar zero-mode limit-order theorem",
+    "schur_complement_kprime_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
     "short_distance_ope_lsz_no_go": "exact negative boundary / short-distance OPE not scalar LSZ closure",
     "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
     "source_higgs_cross_correlator_certificate_builder": "open / source-Higgs cross-correlator rows absent",
@@ -184,7 +185,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 153,
+  "pass_count": 154,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
