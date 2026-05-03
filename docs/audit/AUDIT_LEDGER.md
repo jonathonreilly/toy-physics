@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:24:46.334101+00:00
+**Generated:** 2026-05-03T18:25:37.197542+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 734 |
+| unaudited | 733 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 23 |
-| ~~audited_conditional~~ | 541 |
+| ~~audited_conditional~~ | 542 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 320 |
-| `audited_conditional` | 541 |
+| `audited_conditional` | 542 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 780 |
+| `unaudited` | 779 |
 
 | claim_type | count |
 |---|---:|
@@ -835,6 +835,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_endpoint_denominator_admissibility_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `quark_issr1_bicac_forcing_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_jts_affine_physical_carrier_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `quark_jts_physical_point_closure_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `quark_jts_residue_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quark_projector_parameter_audit_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-current | B | `quark_projector_ray_phase_completion_note_2026-04-18` |
 | `quark_route2_exact_readout_map_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -11192,6 +11193,22 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_jts_physical_point_closure_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_JTS_PHYSICAL_POINT_CLOSURE_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_JTS_PHYSICAL_POINT_CLOSURE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Physical-point JTS closure: assuming the shell-normalized carrier fixes a_u_phys = sin_d*(1-rho) and ISSR1 supplies Pi(v)=Im<v_5,v>, psi_phys satisfies Pi(psi_phys)=Pi(p), with kappa=1 the unique bridge factor satisfying that JTS condition.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-current-fresh-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Let the physical amplitude a_u_phys be the unique value forced by the exact shell-normalized bilinear carrier K_R(q) (Shell-Normalization Theorem): a_u_phys = sin_d * (1 - rho).  _(class `B`)_
+- **chain closes:** False — The algebra after setting a_u_phys = sin_d*(1-rho) closes exactly and the runner verifies that equality. The load-bearing physical selection of that unique amplitude, plus the ISSR1/JTS projection authority, is imported rather than closed inside the restricted packet or represented as retained-grade dependencies in the exact row metadata.
+- **rationale:** Issue: the theorem's decisive step imports the Shell-Normalization Theorem's unique physical amplitude and ISSR1's projection/JTS setup, while the exact ledger row has deps=[] and the restricted audit packet does not establish those inputs as retained-grade. Why this blocks: the runner only checks downstream algebra after the contested physical amplitude and bridge family are encoded; it does not derive the carrier selection from retained primitives. Repair target: add/verify explicit retained-grade dependency paths for the shell-normalization theorem and ISSR1 projection theorem, or include a runner that constructs the physical amplitude from those retained carrier data. Claim boundary until fixed: conditional on those upstream retained theorems, psi_phys satisfies Pi(psi_phys)=Pi(p) and kappa=1 is the unique checked bridge factor.
+- **open / conditional deps cited:**
+  - `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `quark_jts_residue_note_2026-04-19`
