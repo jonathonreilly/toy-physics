@@ -15,18 +15,41 @@ only. Fast. Catches:
 - Hard-rule violation (author-declared `retained`, missing auditor on
   `audited_clean`, etc.).
 
-Install:
+Install (one-time, per local clone — git hooks are not version-controlled):
 
 ```bash
-ln -sf ../../docs/audit/scripts/pre_commit_audit_check.sh .git/hooks/pre-commit
-chmod +x docs/audit/scripts/pre_commit_audit_check.sh
+bash scripts/setup_audit_hooks.sh
 ```
 
-## CI / cron (full pipeline)
+The setup script resolves the correct hooks directory (handles main worktree
+and secondary worktrees via `git rev-parse --git-path hooks`) and installs
+a symlink to `docs/audit/scripts/pre_commit_audit_check.sh`. Uninstall with
+`bash scripts/setup_audit_hooks.sh --uninstall`.
 
-Run `bash docs/audit/scripts/run_pipeline.sh` on a regular cadence
-(suggested: every push to `main`, plus a daily cron). The full pipeline
-adds:
+## CI (full pipeline)
+
+The workflow file is provided as a TEMPLATE at
+[`docs/audit/templates/audit_workflow.yml`](templates/audit_workflow.yml).
+It must be installed manually by a user with `workflow` token scope (see
+[`docs/audit/templates/README.md`](templates/README.md)). The bot/OAuth
+account used for automated commits does not have permission to create
+files under `.github/workflows/`.
+
+After install (one-time), `.github/workflows/audit.yml` runs
+`bash docs/audit/scripts/run_pipeline.sh` plus
+`python3 docs/audit/scripts/render_publication_effective_status.py` on:
+
+- every push to `main` and `audit-lane`,
+- every pull request,
+- a daily cron at `06:00 UTC`,
+- manual `workflow_dispatch`.
+
+On `main` pushes and scheduled runs the workflow auto-commits the regenerated
+audit-data and publication-facing effective-status views back to the branch
+(committed as `audit-bot`), so the publication surface can never silently
+drift from the audit ledger. PR runs surface a diff warning (no auto-commit).
+
+The full pipeline adds:
 
 - `classify_runner_passes.py` — heuristic A/B/C/D classifier.
 - `compute_load_bearing.py` — transitive descendants, criticality tier

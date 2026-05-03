@@ -1,0 +1,131 @@
+name: audit-lane
+
+# Run the mechanical audit pipeline on every push to main, every PR, and a
+# daily cron. Auto-commits regenerated audit-data on main / cron runs so the
+# ledger and queue never silently drift from upstream content changes.
+#
+# This workflow does NOT perform audits. Audit verdicts are minted only by
+# Codex GPT-5.5 (or another independent auditor) via apply_audit.py.
+
+on:
+  push:
+    branches:
+      - main
+      - audit-lane
+  pull_request:
+  schedule:
+    - cron: "0 6 * * *"   # daily 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write          # required for auto-commit on main / schedule
+
+concurrency:
+  group: audit-lane-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit_pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # full history so the citation graph builder can resolve all paths
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Run audit pipeline
+        run: bash docs/audit/scripts/run_pipeline.sh
+
+      - name: Render publication effective-status views
+        run: python3 docs/audit/scripts/render_publication_effective_status.py
+
+      - name: Show pipeline diff (PR runs only)
+        if: github.event_name == 'pull_request'
+        run: |
+          git status --short docs/audit docs/publication/ci3_z3
+          if [[ -n "$(git status --porcelain docs/audit docs/publication/ci3_z3)" ]]; then
+            echo
+            echo "::warning::Audit-data files changed during pipeline run on this PR."
+            echo "::warning::This usually means notes were edited without re-running"
+            echo "::warning::bash docs/audit/scripts/run_pipeline.sh and committing the result."
+            echo "::warning::Run the pipeline locally and commit the regenerated files."
+            git diff --stat docs/audit docs/publication/ci3_z3 || true
+          fi
+
+      - name: Commit refreshed ledger / queue (main + cron only)
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'push' && github.ref == 'refs/heads/main') }}
+        run: |
+          set -e
+          if [[ -z "$(git status --porcelain docs/audit docs/publication/ci3_z3)" ]]; then
+            echo "No audit-data changes; nothing to commit."
+            exit 0
+          fi
+          git config user.name  "audit-bot"
+          git config user.email "audit-bot@users.noreply.github.com"
+          git add \
+            docs/audit/AUDIT_LEDGER.md \
+            docs/audit/AUDIT_QUEUE.md \
+            docs/audit/data/ \
+            docs/publication/ci3_z3/CLAIMS_TABLE_EFFECTIVE_STATUS.md \
+            docs/publication/ci3_z3/DERIVATION_ATLAS_EFFECTIVE_STATUS.md \
+            docs/publication/ci3_z3/PUBLICATION_MATRIX_EFFECTIVE_STATUS.md \
+            docs/publication/ci3_z3/FULL_CLAIM_LEDGER_EFFECTIVE_STATUS.md \
+            docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX_EFFECTIVE_STATUS.md \
+            docs/publication/ci3_z3/RESULTS_INDEX_EFFECTIVE_STATUS.md \
+            docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE_EFFECTIVE_STATUS.md \
+            docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP_EFFECTIVE_STATUS.md \
+            docs/publication/ci3_z3/PUBLICATION_AUDIT_DIVERGENCE.md \
+            2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No audit-data changes after staging; nothing to commit."
+            exit 0
+          fi
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            msg="audit: scheduled pipeline refresh (automated)"
+          else
+            msg="audit: refresh ledger + queue + effective-status views (automated)"
+          fi
+          git commit -m "$msg"
+          git push
+
+      - name: Upload audit queue artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-queue-${{ github.run_id }}
+          path: |
+            docs/audit/data/audit_queue.json
+            docs/audit/data/effective_status_summary.json
+            docs/audit/data/cycle_inventory.json
+            docs/publication/ci3_z3/PUBLICATION_AUDIT_DIVERGENCE.md
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Print summary
+        if: always()
+        run: |
+          if [ -f docs/audit/data/effective_status_summary.json ]; then
+            python3 -c "
+          import json
+          s = json.load(open('docs/audit/data/effective_status_summary.json'))
+          print('=== effective_status counts ===')
+          for k, v in sorted(s.get('effective_status_counts', {}).items(), key=lambda x: -x[1]):
+              print(f'  {k:50s} {v}')
+          print()
+          print(f'cycles detected: {s.get(\"cycles_detected\", \"?\")}')
+          "
+          fi
