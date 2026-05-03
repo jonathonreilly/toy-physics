@@ -22157,7 +22157,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:14:27.651898+00:00",
+  "generated_at": "2026-05-03T13:16:54.674036+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -44226,6 +44226,17 @@
       "runner_path": "scripts/frontier_staggered_dag.py",
       "title": "Staggered Fermion on Layered DAG-Derived Family \u2014 Bounded Note"
     },
+    "staggered_dirac_realization_gate_note_2026-05-03": {
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [],
+      "note_hash": "fd28dcf0477000499a0272db8051b909012194f2388658a853dc5246c3afd708",
+      "path": "docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md",
+      "runner_path": null,
+      "title": "Staggered-Dirac Realization Gate Note"
+    },
     "staggered_fermion_card_2026-04-10": {
       "claim_id": "staggered_fermion_card_2026-04-10",
       "claim_type_author_hint": null,
@@ -49624,6 +49635,7 @@
     "staggered_backreaction_note",
     "staggered_backreaction_shell_spectral_note",
     "staggered_dag_note_2026-04-10",
+    "staggered_dirac_realization_gate_note_2026-05-03",
     "staggered_fermion_card_2026-04-10",
     "staggered_fermion_card_2026-04-11",
     "staggered_geometry_superposition_note_2026-04-11",
@@ -49836,7 +49848,7 @@
       "meta": 3,
       "no_go": 3,
       "none": 1747,
-      "open_gate": 2,
+      "open_gate": 3,
       "positive_theorem": 72
     },
     "claim_type_seed_hint_counts": {
@@ -49844,13 +49856,13 @@
       "meta": 3,
       "no_go": 109,
       "none": 450,
-      "open_gate": 111,
+      "open_gate": 112,
       "positive_theorem": 654
     },
     "edge_count": 5539,
-    "leaf_count": 650,
-    "node_count": 1844,
-    "root_count": 1074,
+    "leaf_count": 651,
+    "node_count": 1845,
+    "root_count": 1075,
     "runners_with_path": 1409
   }
 }
