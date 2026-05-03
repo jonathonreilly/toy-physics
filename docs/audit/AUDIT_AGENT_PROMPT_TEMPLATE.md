@@ -169,7 +169,10 @@ caught downstream.
   `load_bearing_step_class` before landing `audited_clean`. A same-family
   second audit is eligible only when recorded as `independence:
   fresh_context` from a distinct restricted-input session. Mismatches
-  promote to a third-auditor review.
+  promote to a judicial third-auditor review. The judicial auditor receives
+  the restricted source packet and the two prior audit arguments, then
+  records whether the first audit, second audit, or neither should be
+  ratified.
 - The auditor's session metadata (model version, session ID, timestamp)
   is recorded in the audit row's `auditor` field; `auditor_family =
   "codex-gpt-5.5"` is set automatically when this template is used.

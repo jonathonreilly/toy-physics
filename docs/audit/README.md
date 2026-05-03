@@ -161,6 +161,11 @@ agent returns a fill of the audit row.
 For high-stakes claims (`criticality = critical` by transitive-descendant
 count; the audit lane does not use author-declared flagship status), a second independent
 agent runs the same audit; the two must agree before `audited_clean` lands.
+If the two audits disagree, the next step is a judicial third-auditor
+review: a fresh auditor reads the restricted source packet and both audit
+arguments, then explicitly ratifies the first audit, the second audit, or
+neither. The ledger records that decision in `cross_confirmation.status`
+and the row's current verdict must match the ratified side.
 
 ### Pruning phase (per decoration cluster)
 
