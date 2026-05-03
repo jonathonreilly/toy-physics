@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:14:06.618407+00:00
+**Generated:** 2026-05-03T02:17:02.967716+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 144 |
+| **retained** | 145 |
 | **retained_no_go** | 99 |
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 460 |
+| unaudited | 459 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 429 |
+| `audited_clean` | 430 |
 | `audited_conditional` | 668 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 500 |
+| `unaudited` | 499 |
 
 | claim_type | count |
 |---|---:|
@@ -499,6 +499,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `tensor_matching_completion_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `tensor_source_map_eta_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `thales_right_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | A | - |
 | `third_grown_family_boundary_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `third_grown_family_complex_boundary_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `third_grown_family_complex_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -17298,6 +17299,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `GROWING_GRAPH_EXPANSION_CARD_NOTE.md`
   - `SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md`
   - `WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`
+- **auditor confidence:** high
+
+### `thales_right_angle_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/THALES_RIGHT_ANGLE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For real 0 < rho < 1 and eta > 0 satisfying eta^2 = rho(1-rho), the triangle with vertices (0,0), (1,0), and (rho,eta) has a right angle at (rho,eta), equivalently arctan(eta/rho)+arctan(eta/(1-rho))=pi/2.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-locke-2nd-019deb9e-652e-78d2-8c59-5d0b0543df44`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** By hypothesis eta^2 = rho(1-rho), hence v_1 . v_2 = -rho(1-rho)+eta^2 = 0.  _(class `A`)_
+- **chain closes:** True — The source note's explicit premise eta^2 = rho(1-rho) makes the Euclidean dot product of the two incident edge vectors exactly zero. The assumptions 0 < rho < 1 and eta > 0 keep the vectors nonzero and the arctan angles positive, so the right-angle and arctan-sum conclusions follow without any ledger dependency.
+- **rationale:** The audited claim is only the narrow pure Euclidean implication, not the CKM-specific choice rho=1/6, eta=sqrt(5)/6 and not a physical CKM right-angle prediction. The load-bearing step is a direct algebraic identity over the stated premises, with no hidden PDG, fitted, literature, unit, or upstream-value import. The parent and CKM value rows are cross-references only; they are not needed for this scoped theorem. Residual risk is only scope creep: this clean verdict must not be cited as auditing any CKM-specific parameter derivation.
 - **auditor confidence:** high
 
 ### `third_grown_family_boundary_note`
