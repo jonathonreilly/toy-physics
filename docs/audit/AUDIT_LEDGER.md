@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:46:06.276221+00:00
+**Generated:** 2026-05-03T14:55:10.788627+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,30 +19,30 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 75 |
+| **retained** | 74 |
 | **retained_no_go** | 100 |
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 776 |
+| unaudited | 777 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 24 |
+| ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 515 |
+| ~~audited_conditional~~ | 516 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 313 |
-| `audited_conditional` | 515 |
+| `audited_clean` | 312 |
+| `audited_conditional` | 516 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
-| `audited_numerical_match` | 24 |
+| `audited_numerical_match` | 25 |
 | `audited_renaming` | 19 |
-| `unaudited` | 821 |
+| `unaudited` | 822 |
 
 | claim_type | count |
 |---|---:|
@@ -50,24 +50,24 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 7 |
 | `meta` | 45 |
 | `no_go` | 160 |
-| `open_gate` | 88 |
-| `positive_theorem` | 864 |
+| `open_gate` | 89 |
+| `positive_theorem` | 865 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 114 |
-| `high` | 357 |
-| `medium` | 566 |
-| `leaf` | 713 |
+| `high` | 358 |
+| `medium` | 565 |
+| `leaf` | 715 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 41
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1341
-- runners with (C) first-principles compute hits: 652
-- runners with (D) external comparator hits: 331
+- runners classified: 1343
+- runners with (C) first-principles compute hits: 654
+- runners with (D) external comparator hits: 333
 - decoration candidates (no C, no D): 112
 
 ## Top 25 by load-bearing score (topology only)
@@ -76,19 +76,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 379 | 32.07 | `audited_clean` | **retained_bounded** |
-| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 127 | 29.50 | `unaudited` | unaudited |
-| 3 | `alpha_s_derived_note` | bounded_theorem | critical | 259 | 29.02 | `unaudited` | unaudited |
-| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.01 | `unaudited` | unaudited |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 380 | 32.07 | `audited_clean` | **retained_bounded** |
+| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.51 | `unaudited` | unaudited |
+| 3 | `alpha_s_derived_note` | bounded_theorem | critical | 260 | 29.03 | `unaudited` | unaudited |
+| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 129 | 29.02 | `unaudited` | unaudited |
 | 5 | `minimal_axioms_2026-04-11` | meta | critical | 320 | 27.33 | `unaudited` | meta |
 | 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 210 | 26.72 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 369 | 25.53 | `audited_clean` | **retained_bounded** |
+| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 370 | 25.54 | `audited_clean` | **retained_bounded** |
 | 8 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 83 | 24.89 | `unaudited` | unaudited |
-| 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 364 | 24.51 | `audited_clean` | open_gate |
+| 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 365 | 24.52 | `audited_clean` | open_gate |
 | 10 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 128 | 24.01 | `unaudited` | unaudited |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `minimal_axioms_2026-05-03` | meta | critical | 364 | 23.51 | `unaudited` | meta |
-| 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 306 | 22.76 | `unaudited` | unaudited |
+| 12 | `minimal_axioms_2026-05-03` | meta | critical | 365 | 23.52 | `unaudited` | meta |
+| 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 307 | 22.77 | `unaudited` | unaudited |
 | 14 | `one_generation_matter_closure_note` | positive_theorem | critical | 241 | 21.92 | `unaudited` | unaudited |
 | 15 | `three_generation_structure_note` | bounded_theorem | critical | 203 | 21.67 | `unaudited` | unaudited |
 | 16 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 284 | 21.66 | `unaudited` | unaudited |
@@ -96,7 +96,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 124 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 19.70 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 139 | 19.13 | `audited_clean` | **retained** |
-| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 268 | 18.57 | `unaudited` | unaudited |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 269 | 18.58 | `unaudited` | unaudited |
 | 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 69 | 17.63 | `unaudited` | unaudited |
 | 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 84 | 17.41 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `cpt_exact_note` | positive_theorem | critical | 290 | 17.18 | `unaudited` | unaudited |
@@ -168,7 +168,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
-| `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
@@ -452,7 +451,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `broad_gravity_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `causal_field_canonical_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `causal_impact_parameter_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `causal_field_portability_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | configured_proxy_threshold_without_retained_bridge | - |
 | `central_band_born_dense_sweep_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_born_largen_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `central_band_collapse_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -743,6 +742,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_program_synthesis` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `mirror_vs_central_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `moving_source_retarded_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | configured_proxy_physical_bridge | - |
 | `neutrino_axiom3_reading_stuck_fanout_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_global_lift_partial_theorem_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `neutrino_dirac_two_higgs_canonical_reduction_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -1004,6 +1004,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `quark_projector_ray_phase_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
 | `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh-agent | D | - |
+| `source_resolved_wavefield_escalation_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5 | G | - |
 | `tensor_support_center_excess_law_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `wave_direct_dm_h025_seed0_crossfamily_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `yt_bridge_action_invariant_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
@@ -1815,21 +1816,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `causal_field_primary_runner_not_registered`
 - **auditor confidence:** high
 
-### `causal_impact_parameter_note`
+### `causal_field_portability_note`
 
-- **Note:** [`CAUSAL_IMPACT_PARAMETER_NOTE.md`](../../docs/CAUSAL_IMPACT_PARAMETER_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
+- **Note:** [`CAUSAL_FIELD_PORTABILITY_NOTE.md`](../../docs/CAUSAL_FIELD_PORTABILITY_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims a diagnosed family boundary: exact-null controls survive across three configured grown families, but causal-field forward-only and finite-cone ratios split rather than yielding a cross-family portability law.
 - **audit_status:** ~~audited_conditional~~
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** The finite-cone variant is the boundary.  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (causal_field_portability_note=support, causal_field_reconciliation_note=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (causal_field_portability_note=support, causal_field_reconciliation_note=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared candidate retained-grade tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `CAUSAL_FIELD_PORTABILITY_NOTE.md`
-  - `CAUSAL_FIELD_RECONCILIATION_NOTE.md`
-- **auditor confidence:** high
+- **auditor:** `codex-causal-portability-fresh-auditor-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The boundary conclusion rests on treating the measured forward-only ratio spread of 0.423 and dynamic(c=0.5)/instantaneous ratio spread of 0.352 as sufficient to establish non-portability/family-boundary structure for the causal-field observable.  _(class `configured_proxy_threshold_without_retained_bridge`)_
+- **chain closes:** False — The runner reproduces the stated numerical spreads for the configured families, seeds, source anchor, field definitions, and readout. It does not supply a retained theorem that these ratios, thresholds, family choices, and detector-centroid readout constitute the hard portability bridge.
+- **rationale:** Issue: The note converts configured ratio spreads into a positive theorem-level family-boundary claim without a retained derivation of the portability criterion, threshold, family parametrization, or readout map. The local runner reproduced the stated exact-null controls, forward-only ratio spread 0.423, and dynamic(c=0.5)/instantaneous ratio spread 0.352, and it explicitly frames the result as a bounded portability probe rather than a field-theory derivation. Why this blocks: A hostile reviewer can accept the script output and still reject the theorem claim, because the runner only measures a chosen proxy under chosen cases; it does not prove the hard bridge from retained CL3 inputs to a portability law or boundary theorem. Repair target: Provide a retained theorem defining the causal-field observable, admissible family class, portability metric, boundary threshold, and detector readout, plus a runner that tests that theorem rather than only replaying selected configurations. Claim boundary until fixed: The safe claim is a bounded computational diagnostic: this script, with its current parameters and seeds, finds exact-null stability and ratio splitting across the three configured families.
+- **auditor confidence:** 0.86
 
 ### `causal_propagating_field_note`
 
@@ -4148,19 +4146,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Once the exact source-oriented triplet package is fixed, the H-side source surface is an explicit two-sheet codimension-three preimage bundle over free data (d1,d2,d3,r31).  _(class `A`)_
 - **chain closes:** True — The runner verifies the explicit bundle formulas on both sheets, checks the exact CP pair, and exhibits positive local regions around witnesses on both sheets.
 - **rationale:** The support claim closes: given the fixed exact source package, the runner verifies the two-sheet preimage-bundle parameterization and nonempty positive regions. This clean audit does not derive the post-canonical mixed-bridge law that selects a point on the bundle. Residual risk: any future claim that a framework law selects a particular bundle point must be audited separately.
-- **auditor confidence:** high
-
-### `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16`
-
-- **Note:** [`DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The exact source-oriented triplet values pull back to a nonempty exact H-side source surface, so the remaining mainline object is the H-side law whose image lands on that surface.  _(class `A`)_
-- **chain closes:** True — The runner verifies the source-surface equations, an explicit positive Hermitian witness, invariant CP pair, and common diagonal tangent at the stated support boundary.
-- **rationale:** The support claim closes: the exact source package pulls back to a nonempty H-side source surface, and the runner verifies the equations and witness. This clean audit does not derive the post-canonical H-side law that selects a surface point. Residual risk: selected-point or mixed-bridge claims remain separate open science.
 - **auditor confidence:** high
 
 ### `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15`
@@ -9017,6 +9002,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: The retained shortlist/ranking imports unnamed retained artifacts and an R^2 ~ 0.96 phase-ramp result, then declares the interferometric / waveguide analog the best non-diamond testable without a cited authority set, ranking metric, or runner. Why this blocks: the audit input contains no dependency theorem or computation from which the top-testable conclusion follows, so the candidate retained-grade claim cannot be verified from the allowed source context. Repair target: add explicit audited-retained one-hop citations for each retained connection, define the ranking criteria, and provide a table or runner that recomputes the ordering from those inputs; otherwise demote the note to open brainstorming. Claim boundary until fixed: it is safe to present these as possible non-diamond analog directions and the waveguide phase-ramp as an author-prioritized candidate, but not as an audit-retained best testable grounded in retained science.
 - **auditor confidence:** high
 
+### `moving_source_retarded_portability_note`
+
+- **Note:** [`MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`](../../docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the configured grown row drift=0.2, restore=0.7, seeds=0..5, source_layer=8, strength=5e-5, and imposed layer-wise source law y_src(layer)=y0+v*(layer-source_layer)*h, the runner reports exact zero-source baselines and signed final-layer centroid-y shifts versus the matched v=0 static control.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-retarded-portability-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The note treats the imposed layer-dependent source field as a moving-source / retarded-source proxy and infers that nonzero sign-flipping delta_y versus the v=0 static control is a real directional observable on the portable grown row.  _(class `configured_proxy_physical_bridge`)_
+- **chain closes:** False — The numerical chain closes for the runner's configured proxy: current runner output matches the frozen table and shows exact zero-source baselines plus signed centroid-y shifts. It does not close as a bounded theorem about retarded-source portability because the source motion law, readout, and proxy-to-retarded interpretation are configured rather than derived from retained inputs.
+- **rationale:** Issue: The load-bearing retarded-source portability step is not derived; the runner imposes y_src(layer)=y0+v*(layer-source_layer)*h and then verifies a signed centroid-y response for that configured source law. The local runner reproduced the frozen table, including exact zero-source baselines, matched static v=0 control, sign-flipping centroid-y shifts, and small nonzero phase-lag values. Why this blocks: A hostile reviewer can accept the table while rejecting the theorem-level claim that this establishes a retained moving-source/retarded-source bridge, because the physical carrier, source law, and readout are selected as the proxy rather than proved from retained inputs. Repair target: Add a retained theorem deriving the moving/retarded source law and detector centroid-y observable from the framework primitives, or demote the ledger scope to a computational proxy observation with no retarded-source theorem claim. Claim boundary until fixed: The safe statement is that this runner, with these fixed parameters and seeds, reports exact zero baselines and non-static signed centroid-y shifts under an imposed moving-source proxy.
+- **auditor confidence:** 0.82
+
 ### `multipole_tidal_response_note`
 
 - **Note:** [`MULTIPOLE_TIDAL_RESPONSE_NOTE.md`](../../docs/MULTIPOLE_TIDAL_RESPONSE_NOTE.md)
@@ -12032,6 +12030,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
   - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_wavefield_escalation_note`
+
+- **Note:** [`SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md`](../../docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For the specified h=0.25, W=4, L=8 exact-lattice source cluster and hard-coded wavefield update parameters, the runner reproduces zero-source reduction, toward-sign wavefield centroid shifts, near-linear F~M scaling, and coherent detector-line phase-ramp diagnostics.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-gpt5-fresh-audit-2026-05-03-source-resolved-wavefield`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The selected exact-lattice source cluster and finite-speed wavefield update produce zero-source reduction, toward-sign centroid shifts, near-linear source-strength scaling, and a coherent detector-line phase-ramp diagnostic that is far above the same-site-memory control.  _(class `G`)_
+- **chain closes:** False — The runner reproduces the frozen numerical table, including zero-source reduction and the reported ramp metrics, but the note does not derive the wavefield update rule, parameter choices, or detector-line phase-ramp readout from retained CL3 inputs.
+- **rationale:** Issue: the claimed escalation rests on a selected exact-lattice family, selected source law, selected local wavefield update parameters, and selected detector-line phase-ramp observable rather than a derivation forcing those choices. The runner completed locally and reproduced the frozen table: zero-source same-site and wavefield shifts are zero; the four source strengths give the reported positive instantaneous, same-site, and wavefield shifts; ramp R^2 stays near 0.96; and the script itself states this is a wavefield escalation, not yet a full self-consistent field theory. Why this blocks: the runner verifies that this configured numerical probe has the reported behavior, but it does not compute the disputed physical bridge from retained premises or show that the wave-like readout is uniquely implied. Repair target: derive the finite-speed update rule, parameter selection, source normalization, and detector readout from retained CL3 inputs, with a runner that fails if those bridge choices are removed. Claim boundary until fixed: it is safe to report the reproducible bounded numerical probe and its diagnostics for this configuration, not a retained positive theorem for a CL3 wavefield lane.
 - **auditor confidence:** high
 
 ### `source_resolved_wavefield_green_pocket_note`
