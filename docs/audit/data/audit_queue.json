@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 59,
     "high": 214,
-    "leaf": 201,
+    "leaf": 203,
     "medium": 287
   },
-  "generated_at": "2026-05-03T18:26:30.690964+00:00",
+  "generated_at": "2026-05-03T18:27:14.803910+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -15858,6 +15858,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cl3_color_automorphism_theorem"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/G_BARE_RESCALING_FREEDOM_REMOVAL_THEOREM_NOTE_2026-05-03.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_g_bare_derivation.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gate_b_complex_action_falsifier_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -17433,6 +17456,29 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_frozen_stars_rigorous.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_g_bare_derivation.py",
       "transitive_descendants": 0
     },
     {
@@ -19921,5 +19967,5 @@
     }
   ],
   "ready_count": 70,
-  "total_pending": 761
+  "total_pending": 763
 }
