@@ -1,14 +1,14 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 586,
+    "bounded_theorem": 584,
     "decoration": 7,
-    "meta": 45,
-    "no_go": 160,
-    "open_gate": 89,
-    "positive_theorem": 858,
+    "meta": 46,
+    "no_go": 157,
+    "open_gate": 91,
+    "positive_theorem": 863,
     "unset": 7
   },
-  "computed_at": "2026-05-03T15:10:54.214783+00:00",
+  "computed_at": "2026-05-03T15:46:40.498208+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -31,32 +31,30 @@
       "publication.ci3_z3.publication_matrix"
     ],
     [
-      "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.full_claim_ledger"
+      "publication.ci3_z3.derivation_atlas",
+      "dm_wilson_direct_descendant_batch_authority_note_2026-05-03"
     ],
     [
-      "publication.ci3_z3.inputs_and_qualifiers_note",
       "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
-      "publication.ci3_z3.external_reviewer_guide"
+      "publication.ci3_z3.full_claim_ledger"
     ]
   ],
-  "cycles_detected": 41,
+  "cycles_detected": 42,
   "effective_status_counts": {
-    "audited_conditional": 516,
+    "audited_conditional": 515,
     "audited_decoration": 3,
-    "audited_failed": 7,
-    "audited_numerical_match": 25,
+    "audited_failed": 8,
+    "audited_numerical_match": 26,
     "audited_renaming": 21,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
-    "meta": 45,
+    "meta": 46,
     "open_gate": 15,
-    "retained": 73,
-    "retained_bounded": 167,
-    "retained_no_go": 100,
+    "retained": 72,
+    "retained_bounded": 165,
+    "retained_no_go": 99,
     "retained_pending_chain": 2,
-    "unaudited": 776
+    "unaudited": 781
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
