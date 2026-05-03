@@ -27,6 +27,22 @@ with a staggered sign rotation) is acknowledged as a separate, larger
 symmetry whose Noether current is not in scope here. The U(1) phase
 result (N2) is unaffected by the repair.
 
+### Downstream-consumer compatibility note
+
+Consumers that use the **unitary translation operator `T_a` on
+`H_phys` as a permutation of site labels** (the structural relabeling
+`T_a |x; α⟩ = |x + a; α⟩`) are **unaffected** — that unitarity holds
+for any `a ∈ Z^3` purely as a permutation, independent of whether
+`M_KS` is invariant. The `(2Z)^3` narrowing only affects consumers
+that load-bear on the **conserved-current / Noether-charge** result
+(i.e. consumers that need the action `S` to be invariant under `T_a`,
+not just the Hilbert-space relabeling).
+`TRANSLATION_COVARIANCE_LOCAL_OP_THEOREM_NOTE_2026-05-02` falls in
+the first category — its statements `T_a · O(x_0) · T_a† = O(x_0 + a)`
+for `a ∈ Z^3` use the unitarity of the relabeling, not the
+conservation theorem, so it remains compatible with the narrowed
+(N1) scope.
+
 ## Scope
 
 This note derives, on the current `A_min`

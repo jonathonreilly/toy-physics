@@ -23097,7 +23097,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T20:16:43.470966+00:00",
+  "generated_at": "2026-05-03T20:38:52.219680+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25058,7 +25058,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "2f2fb4bc9d37fc3239e0ca08fe8f117b0b049c1360c26f3f040bb4e2086c1765",
+      "note_hash": "174333c07e6e18779d2498a9959980b6fd092c4bf3715e505a003c44f47a41cf",
       "path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "title": "Axiom-First Lattice Noether's Theorem on Cl(3) \u2297 Z^3"
@@ -30423,7 +30423,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "1975315a4c2c0d4f4c2edad2034aba5a634da891d9b7a92f255343562a977611",
+      "note_hash": "800b003af5c1a4887b6b10f1cc28f23d1125a7852a00782b0bc4eab3c5b110aa",
       "path": "docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md",
       "runner_path": "scripts/frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py",
       "title": "DM PMNS `Z_3` Doublet-Block Center Positive-Sheet No-Go Theorem"
@@ -31661,7 +31661,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "4d86a26adf0f79e7a8fcaec8e4876bf4f7f8f3ecae0a112c6010ebdb86cc7150",
+      "note_hash": "8b7d4a42c10c22317714f15289dbecb8383290b3d9421a1677bd1daf1751e48c",
       "path": "docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md",
       "runner_path": "scripts/FIFTH_FAMILY_RADIAL_FAILURE_AUDIT.py",
       "title": "Fifth Family Radial Boundary Note"
