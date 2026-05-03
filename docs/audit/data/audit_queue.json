@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 62,
-    "high": 227,
+    "high": 226,
     "leaf": 192,
     "medium": 317
   },
-  "generated_at": "2026-05-03T14:09:47.065348+00:00",
+  "generated_at": "2026-05-03T14:10:49.807334+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1648,29 +1648,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_matter_radiation_equality_structural_identity.py",
       "transitive_descendants": 49
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ew_current_matching_rule_open_gate_note_2026-05-03",
-      "claim_scope": null,
-      "claim_type": "open_gate",
-      "claim_type_provenance": "author_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "ew_current_fierz_channel_decomposition_note_2026-05-01"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.32,
-      "note_path": "docs/EW_CURRENT_MATCHING_RULE_OPEN_GATE_NOTE_2026-05-03.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 225
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20698,6 +20675,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 107,
-  "total_pending": 798
+  "ready_count": 106,
+  "total_pending": 797
 }
