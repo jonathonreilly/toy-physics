@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:34:31.629331+00:00",
+  "generated_at": "2026-05-03T14:37:23.068685+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -15588,6 +15588,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_ward_identity_derivation.py"
+    },
+    "v_even_theorem_retention_stretch_attempt_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 16,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_v_even_theorem_retention.py"
     },
     "vacuum_critical_stability_note": {
       "assert_count": 0,
@@ -31991,6 +32003,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_v_even_theorem_retention.py": {
+      "assert_count": 1,
+      "claims": [
+        "v_even_theorem_retention_stretch_attempt_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 16,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_vector_gauge_field_kk_tower.py": {
       "assert_count": 1,
       "claims": [
@@ -37348,12 +37375,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 545,
+      "C": 546,
       "D": 205,
       "none": 421
     },
-    "runners_classified": 1341,
-    "runners_with_C": 651,
-    "runners_with_D": 331
+    "runners_classified": 1342,
+    "runners_with_C": 652,
+    "runners_with_D": 332
   }
 }
