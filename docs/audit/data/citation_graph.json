@@ -1158,6 +1158,26 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "plaquette_bootstrap_framework_integration_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "industrial_sdp_bootstrap_infrastructure_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "alpha_s_derived_note"
     },
     {
@@ -14894,6 +14914,26 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "plaquette_bootstrap_framework_integration_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "industrial_sdp_bootstrap_infrastructure_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "alpha_s_derived_note"
     },
     {
@@ -22345,6 +22385,22 @@
       "to": "work_history.ckm.cabibbo_bound_note"
     },
     {
+      "from": "work_history.repo.canonical_weave_audit_2026-05-03",
+      "to": "plaquette_bootstrap_framework_integration_note_2026-05-03"
+    },
+    {
+      "from": "work_history.repo.canonical_weave_audit_2026-05-03",
+      "to": "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03"
+    },
+    {
+      "from": "work_history.repo.canonical_weave_audit_2026-05-03",
+      "to": "industrial_sdp_bootstrap_infrastructure_note_2026-05-03"
+    },
+    {
+      "from": "work_history.repo.canonical_weave_audit_2026-05-03",
+      "to": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03"
+    },
+    {
       "from": "work_history.repo.lane_status_board",
       "to": "repo.active_review_queue"
     },
@@ -22505,7 +22561,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T13:44:33.959334+00:00",
+  "generated_at": "2026-05-03T13:47:13.628746+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25039,6 +25095,11 @@
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "scalar_3plus1_temporal_ratio_note",
+        "plaquette_bootstrap_framework_integration_note_2026-05-03",
+        "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "industrial_sdp_bootstrap_infrastructure_note_2026-05-03",
+        "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03",
         "alpha_s_derived_note",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "rconn_derived_note",
@@ -25223,7 +25284,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "fe3f4b89bbcc6e735aedddfb27e0283006242040b8d5c6040d35b8f86025ae97",
+      "note_hash": "2bbcfb030d234b72cf247a1dc81cc4886da317fcbbbb839061e23362635e452b",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -39912,6 +39973,11 @@
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "plaquette_self_consistency_note",
+        "plaquette_bootstrap_framework_integration_note_2026-05-03",
+        "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "industrial_sdp_bootstrap_infrastructure_note_2026-05-03",
+        "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03",
         "alpha_s_derived_note",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "rconn_derived_note",
@@ -40228,7 +40294,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "e3073b3e936b811c5654199c6627d025e1b8139385ba2e87c916fd8abcf4798e",
+      "note_hash": "a9df098ffe62b0d507c05485b5b99c21d542f98b54d73b42536cfc2e81e2df17",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -47899,6 +47965,22 @@
       "runner_path": null,
       "title": "Work Backlog"
     },
+    "work_history.repo.canonical_weave_audit_2026-05-03": {
+      "claim_id": "work_history.repo.canonical_weave_audit_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "plaquette_bootstrap_framework_integration_note_2026-05-03",
+        "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
+        "industrial_sdp_bootstrap_infrastructure_note_2026-05-03",
+        "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03"
+      ],
+      "note_hash": "11c934d4d5ce831e49a829b4f1ddc00e474d21f0b430b2086751499e4dddf82b",
+      "path": "docs/work_history/repo/CANONICAL_WEAVE_AUDIT_2026-05-03.md",
+      "runner_path": null,
+      "title": "Canonical Authority-Surface Weave Audit \u2014 2026-05-03"
+    },
     "work_history.repo.evaluation_tools.readme": {
       "claim_id": "work_history.repo.evaluation_tools.readme",
       "claim_type_author_hint": null,
@@ -50294,7 +50376,7 @@
       "bounded_theorem": 48,
       "meta": 3,
       "no_go": 3,
-      "none": 1721,
+      "none": 1722,
       "open_gate": 3,
       "positive_theorem": 68
     },
@@ -50302,13 +50384,13 @@
       "bounded_theorem": 548,
       "meta": 3,
       "no_go": 109,
-      "none": 449,
+      "none": 450,
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5626,
-    "leaf_count": 646,
-    "node_count": 1846,
+    "edge_count": 5640,
+    "leaf_count": 643,
+    "node_count": 1847,
     "root_count": 1047,
     "runners_with_path": 1410
   }
