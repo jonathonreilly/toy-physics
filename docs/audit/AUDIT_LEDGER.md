@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:49:24.012908+00:00
+**Generated:** 2026-05-03T00:52:28.027205+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 205 |
+| **retained_bounded** | 206 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 487 |
+| unaudited | 486 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 414 |
+| `audited_clean` | 415 |
 | `audited_conditional` | 656 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 527 |
+| `unaudited` | 526 |
 
 | claim_type | count |
 |---|---:|
@@ -474,6 +474,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_3d_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_3d_readout_convention_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `teleportation_adiabatic_convergence_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `teleportation_adiabatic_prep_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
@@ -16700,6 +16701,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** True — Within the stated candidate and ideal protocol-level readout assumptions, the supplied runner output matches the note's convergence, robustness, null-control, and input-independence claims. The chain closes only for this bounded diagnostic, not for physical preparation, scaling, hardware implementation, object transport, or faster-than-light signaling.
 - **rationale:** The note's actual claim is narrow and bounded: it reports finite-time numerical diagnostics for one small closed-system candidate, and the runner output directly supports the reported metrics and PASS rows. The source explicitly excludes preparation proof, scaling theorem, hardware readout theorem, matter/energy/object transfer, and faster-than-light signaling, so no broader physical bridge is being claimed.
 - **auditor confidence:** medium
+
+### `teleportation_adiabatic_prep_probe_note`
+
+- **Note:** [`TELEPORTATION_ADIABATIC_PREP_PROBE_NOTE.md`](../../docs/TELEPORTATION_ADIABATIC_PREP_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical diagnostic for the four default small cases of a native linear ramp from G=0 to the Poisson target, reporting sampled gaps, endpoint Bell-resource quality, CHSH/negativity, and adiabatic diagnostics while excluding finite-time preparation and physical transport claims.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Carver-019deb50-ee47-7273-9fc7-8e0937b2e5f3`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The coupling-ramp path is not a diagnostic no-go on the small default cases, with clean null controls, high-quality Poisson Bell-resource endpoints, and the 2D 4x4 case below both adiabatic diagnostic thresholds on the sampled grid.  _(class `C`)_
+- **chain closes:** True — The supplied runner output matches the note's bounded claims: both null controls are clean, both Poisson paths pass high endpoint resource, sampled gap, and exact diagnostic thresholds, and only the 2D path also passes the conservative norm bound. The note explicitly does not claim a schedule, runtime/error theorem, control-noise robustness, readout implementation, matter transport, or faster-than-light transport.
+- **rationale:** The audited claim is only the bounded planning diagnostic, not a preparation theorem. Within that boundary, the load-bearing numerical comparisons are produced by the runner output and the note does not import an unproved physical-implementation bridge as part of the conclusion.
+- **auditor confidence:** high
 
 ### `teleportation_bell_measurement_circuit_note`
 
