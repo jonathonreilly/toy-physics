@@ -1274,6 +1274,22 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "yt_ew_m_residual_stretch_attempt_note_2026-05-02"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "g_weak_from_framework_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
@@ -15062,6 +15078,22 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_ew_m_residual_stretch_attempt_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "g_weak_from_framework_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "plaquette_bootstrap_framework_integration_note_2026-05-03"
     },
     {
@@ -22741,7 +22773,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:06:18.873217+00:00",
+  "generated_at": "2026-05-03T14:07:58.193205+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25304,6 +25336,10 @@
         "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
         "left_handed_charge_matching_note",
         "ckm_wolfenstein_eta_inverse_square_gap_theorem_note_2026-04-26",
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
+        "yt_ew_m_residual_stretch_attempt_note_2026-05-02",
+        "g_weak_from_framework_stretch_attempt_note_2026-05-03",
         "yt_ward_identity_derivation_theorem",
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
@@ -25481,7 +25517,7 @@
         "neutrino_axiom3_reading_stuck_fanout_note_2026-04-28",
         "neutrino_lane4_workstream_closeout_note_2026-04-28"
       ],
-      "note_hash": "89ea1fcb63bbefd246e0a63c66d43085f0ff1d0503e2051af63516d5b81a2632",
+      "note_hash": "cdf0d144b594b50fc74463ded67a8d38b9a4713b537d2ad4786408080d871345",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -40190,6 +40226,10 @@
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
         "gauge_vacuum_plaquette_constant_lift_obstruction_note",
         "plaquette_self_consistency_note",
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
+        "yt_ew_m_residual_stretch_attempt_note_2026-05-02",
+        "g_weak_from_framework_stretch_attempt_note_2026-05-03",
         "plaquette_bootstrap_framework_integration_note_2026-05-03",
         "plaquette_bootstrap_framework_specific_positivity_note_2026-05-03",
         "axiom_first_reflection_positivity_theorem_note_2026-04-29",
@@ -40519,7 +40559,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "432882c3a902998b397de21f176f09e56df2b8dd8396968c4c8dd491d7bd38fc",
+      "note_hash": "18296f9a48835e6a7ff380d360700e965d41401d4e5511b9cca11ac04c4e718f",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50613,8 +50653,8 @@
       "open_gate": 109,
       "positive_theorem": 628
     },
-    "edge_count": 5685,
-    "leaf_count": 619,
+    "edge_count": 5693,
+    "leaf_count": 616,
     "node_count": 1847,
     "root_count": 1047,
     "runners_with_path": 1410

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:06:26.483649+00:00
+**Generated:** 2026-05-03T14:08:07.236786+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,10 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 766 |
+| unaudited | 767 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 25 |
+| ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 18 |
 | ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 7 |
@@ -40,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 521 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
-| `audited_numerical_match` | 25 |
+| `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 808 |
+| `unaudited` | 809 |
 
 | claim_type | count |
 |---|---:|
@@ -51,14 +51,15 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 42 |
 | `no_go` | 160 |
 | `open_gate` | 88 |
-| `positive_theorem` | 863 |
+| `positive_theorem` | 862 |
+| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 115 |
 | `high` | 363 |
-| `medium` | 552 |
-| `leaf` | 715 |
+| `medium` | 557 |
+| `leaf` | 710 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 85
@@ -1003,7 +1004,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | A | - |
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-current | G | - |
-| `ew_coupling_derivation_note` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | claude-opus | G | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-fresh | G | - |
@@ -5398,19 +5398,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** This v3 pass improves the *control design* relative to v2: the imposed  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 4 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
-- **auditor confidence:** high
-
-### `ew_coupling_derivation_note`
-
-- **Note:** [`EW_COUPLING_DERIVATION_NOTE.md`](../../docs/EW_COUPLING_DERIVATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Bounded support scan: bare geometric couplings plus a tuned taste-threshold parameter taste_weight ~= 0.390 numerically match observed sin^2(theta_W) at the runner's chosen scale; the 1/alpha_EM gap remains ~12.22% and SU(2) g_2(v) and Higgs lambda(v) remain bounded/open. Excludes any retained derivation of g_1(v), g_2(v), or lambda(v) from Cl(3) on Z^3.
-- **audit_status:** ~~audited_numerical_match~~
-- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-ew-coupling`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** The registered runner closes the weak-angle gap only by scanning an effective taste_weight and choosing about 0.390 to match observed sin^2(theta_W), while the source note is superseded and leaves g_2(v) and lambda(v) bounded rather than derived.  _(class `G`)_
-- **chain closes:** False — The runner reproduces near-match to sin^2(theta_W) only after scanning taste_weight and selecting the best fit; the source note is explicitly superseded and leaves SU(2) and Higgs couplings open. Promotion to retained requires deriving the taste-gauge coupling/taste_weight from registered representation theory and predicting sin^2(theta_W) without target fitting.
-- **rationale:** Re-audit confirms the original numerical-match verdict: the EW-angle closure is obtained by scanning to the observed value, the source note is superseded, and the chain does not derive g_1, g_2, or lambda. Scope narrowed from the migration backfill to a bounded support scan.
 - **auditor confidence:** high
 
 ### `ew_current_fierz_channel_decomposition_note_2026-05-01`
