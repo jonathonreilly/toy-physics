@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:45:32.664065+00:00
+**Generated:** 2026-05-03T11:47:10.924513+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 170 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 743 |
+| unaudited | 742 |
 | meta | 41 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 513 |
-| ~~audited_failed~~ | 5 |
+| ~~audited_failed~~ | 6 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
@@ -40,10 +40,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 345 |
 | `audited_conditional` | 513 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 49 |
+| `audited_failed` | 50 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 784 |
+| `unaudited` | 783 |
 
 | claim_type | count |
 |---|---:|
@@ -976,6 +976,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
+| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | D | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1474,6 +1475,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the fermion-sector identities close on the bounded runner surface, but the full-action CPT theorem imports a deferred SU(3) Wilson-plaquette operator lift and prior physical-Hilbert/partition-function consequences. Why this blocks: the ledger cannot retain the broader canonical action invariance or CPT-even Observable Principle discharge from a runner that explicitly excludes the gauge-sector algebraic lift. Repair target: construct the CPT action on SU(3) Wilson links/plaquettes and tie it to S_G, Z, H_phys, and CP-odd observables. Claim boundary until fixed: pure-staggered finite-block fermion-sector CPT identities are runner-backed, while full canonical action CPT remains conditional.
 - **open / conditional deps cited:**
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
+- **auditor confidence:** high
+
+### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Full R1-R4 theorem for the canonical CL3-on-Z3 finite-volume action: reflection positivity, positive semidefinite physical Hilbert form, positive Hermitian transfer matrix bounded by 1, and non-negative lattice energy spectrum.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-linnaeus-019deda6-1d1a-7fa1-ae4f-27f85d5d15a5`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Step 3 combined gauge-plus-fermion RP factorisation and transfer-matrix reconstruction for the full canonical SU(3) staggered-Dirac plus Wilson-plaquette action at g_bare=1, including determinant positivity and the assertion ||T||<=1.  _(class `D`)_
+- **chain closes:** False — The source note does not give an axiom-first derivation of the OS/STW/Menotti factorisations for this exact canonical action; it imports standard lattice RP theorems without proving that all hypotheses match A_min. The combined gauge-plus-fermion step adds an unsupported determinant-positivity bridge, and the transfer-matrix norm claim is contradicted by the runner's own unsubtracted examples. The runner checks only small proxy systems: free 1+1D staggered fermions, truncated U(1) gauge transfer matrix, and small free Gram matrices, not the full SU(3) interacting canonical action.
+- **rationale:** Issue: The theorem as stated depends on imported OS/STW/Menotti reflection-positivity machinery, an unproved match between those theorem hypotheses and the exact A_min canonical staggered-plus-Wilson SU(3) action, and an unsupported combined-sector determinant-positivity claim. Why this blocks: a Nature-grade audit cannot treat external theorem names, gamma_5-Hermiticity, or real determinant statements as an internal derivation of <Theta(F)F> >= 0 for the full measure; gamma_5-Hermiticity gives reality, not by itself non-negativity, and the runner does not test the full interacting SU(3) case. Issue: R3 asserts ||T||<=1 on the canonical surface, while the runner reports max(T)=8.069 for the unsubtracted free fermion example and max(T_G)=1.256 for the truncated U(1) gauge example. Why this blocks: the claimed bounded-by-1 transfer matrix is not exhibited; it requires a ground-state/vacuum-energy subtraction or normalization that is not stated as part of the theorem. Repair target: provide a self-contained mapping from A1-A4 to the exact hypotheses of the lattice RP theorems, including boundary conditions, Wilson term conventions, staggered phases, Grassmann reflection, gauge-link reflection, positivity of the full fermion integration/factorisation, and the normalization needed for ||T||<=1. Replace proxy numerics with either symbolic checks for the stated action or explicitly downgrade the runner to illustrative examples. Claim boundary until fixed: at most a decoration/conditional literature-backed RP sketch for known lattice gauge/staggered systems plus proxy numerical exhibits; not an audited axiom-first theorem for canonical CL3-on-Z3 R1-R4.
+- **open / conditional deps cited:**
+  - `external_OS_Seiler_Wilson_gauge_RP_hypothesis_match`
+  - `external_Sharatchandra_Thun_Weisz_staggered_RP_hypothesis_match`
+  - `external_Menotti_Pelissetto_fermion_RP_hypothesis_match`
+  - `full_SU3_interacting_combined_factorisation`
+  - `fermion_determinant_nonnegativity_for_canonical_surface`
+  - `transfer_matrix_ground_state_subtraction_or_norm_bound`
 - **auditor confidence:** high
 
 ### `axiom_first_spin_statistics_theorem_note_2026-04-29`
