@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:46:43.273002+00:00",
+  "generated_at": "2026-05-03T14:47:37.849697+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -11544,6 +11544,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py"
+    },
+    "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_pmns_branch_selector.py"
     },
     "pmns_c3_character_holonomy_closure_note": {
       "assert_count": 1,
@@ -28810,6 +28822,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_pmns_branch_selector.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_pmns_c3_character_holonomy_closure.py": {
       "assert_count": 1,
       "claims": [
@@ -37376,11 +37403,11 @@
       "A": 10,
       "B": 160,
       "C": 546,
-      "D": 205,
+      "D": 206,
       "none": 421
     },
-    "runners_classified": 1342,
+    "runners_classified": 1343,
     "runners_with_C": 652,
-    "runners_with_D": 332
+    "runners_with_D": 333
   }
 }

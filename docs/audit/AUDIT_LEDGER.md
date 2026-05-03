@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:46:45.183193+00:00
+**Generated:** 2026-05-03T14:47:41.623964+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 75 |
+| **retained** | 74 |
 | **retained_no_go** | 100 |
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 776 |
+| unaudited | 778 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 313 |
+| `audited_clean` | 312 |
 | `audited_conditional` | 515 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 19 |
-| `unaudited` | 821 |
+| `unaudited` | 823 |
 
 | claim_type | count |
 |---|---:|
@@ -50,24 +50,25 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 7 |
 | `meta` | 45 |
 | `no_go` | 160 |
-| `open_gate` | 88 |
-| `positive_theorem` | 865 |
+| `open_gate` | 89 |
+| `positive_theorem` | 864 |
+| `unset` | 1 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 114 |
-| `high` | 357 |
-| `medium` | 566 |
-| `leaf` | 714 |
+| `high` | 358 |
+| `medium` | 565 |
+| `leaf` | 715 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 41
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1342
+- runners classified: 1343
 - runners with (C) first-principles compute hits: 652
-- runners with (D) external comparator hits: 332
+- runners with (D) external comparator hits: 333
 - decoration candidates (no C, no D): 112
 
 ## Top 25 by load-bearing score (topology only)
@@ -76,19 +77,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 379 | 32.07 | `audited_clean` | **retained_bounded** |
-| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 127 | 29.50 | `unaudited` | unaudited |
-| 3 | `alpha_s_derived_note` | bounded_theorem | critical | 259 | 29.02 | `unaudited` | unaudited |
-| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.01 | `unaudited` | unaudited |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 380 | 32.07 | `audited_clean` | **retained_bounded** |
+| 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 128 | 29.51 | `unaudited` | unaudited |
+| 3 | `alpha_s_derived_note` | bounded_theorem | critical | 260 | 29.03 | `unaudited` | unaudited |
+| 4 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 129 | 29.02 | `unaudited` | unaudited |
 | 5 | `minimal_axioms_2026-04-11` | meta | critical | 320 | 27.33 | `unaudited` | meta |
 | 6 | `observable_principle_from_axiom_note` | positive_theorem | critical | 210 | 26.72 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 369 | 25.53 | `audited_clean` | **retained_bounded** |
+| 7 | `native_gauge_closure_note` | bounded_theorem | critical | 370 | 25.54 | `audited_clean` | **retained_bounded** |
 | 8 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 83 | 24.89 | `unaudited` | unaudited |
-| 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 364 | 24.51 | `audited_clean` | open_gate |
+| 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 365 | 24.52 | `audited_clean` | open_gate |
 | 10 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 128 | 24.01 | `unaudited` | unaudited |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 112 | 23.82 | `audited_conditional` | ~~audited_conditional~~ |
-| 12 | `minimal_axioms_2026-05-03` | meta | critical | 364 | 23.51 | `unaudited` | meta |
-| 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 306 | 22.76 | `unaudited` | unaudited |
+| 12 | `minimal_axioms_2026-05-03` | meta | critical | 365 | 23.52 | `unaudited` | meta |
+| 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 307 | 22.77 | `unaudited` | unaudited |
 | 14 | `one_generation_matter_closure_note` | positive_theorem | critical | 241 | 21.92 | `unaudited` | unaudited |
 | 15 | `three_generation_structure_note` | bounded_theorem | critical | 203 | 21.67 | `unaudited` | unaudited |
 | 16 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 284 | 21.66 | `unaudited` | unaudited |
@@ -96,7 +97,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 18 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 124 | 20.97 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 103 | 19.70 | `audited_conditional` | ~~audited_conditional~~ |
 | 20 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 139 | 19.13 | `audited_clean` | **retained** |
-| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 268 | 18.57 | `unaudited` | unaudited |
+| 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 269 | 18.58 | `unaudited` | unaudited |
 | 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 69 | 17.63 | `unaudited` | unaudited |
 | 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 84 | 17.41 | `audited_conditional` | ~~audited_conditional~~ |
 | 24 | `cpt_exact_note` | positive_theorem | critical | 290 | 17.18 | `unaudited` | unaudited |
@@ -168,7 +169,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dm_neutrino_dirac_bridge_theorem_note_2026-04-15` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
-| `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `dm_neutrino_source_surface_atomic_witness_volume_selector_nonrealization_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | B | - |
 | `dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
@@ -4149,19 +4149,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Once the exact source-oriented triplet package is fixed, the H-side source surface is an explicit two-sheet codimension-three preimage bundle over free data (d1,d2,d3,r31).  _(class `A`)_
 - **chain closes:** True — The runner verifies the explicit bundle formulas on both sheets, checks the exact CP pair, and exhibits positive local regions around witnesses on both sheets.
 - **rationale:** The support claim closes: given the fixed exact source package, the runner verifies the two-sheet preimage-bundle parameterization and nonempty positive regions. This clean audit does not derive the post-canonical mixed-bridge law that selects a point on the bundle. Residual risk: any future claim that a framework law selects a particular bundle point must be audited separately.
-- **auditor confidence:** high
-
-### `dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16`
-
-- **Note:** [`DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md`](../../docs/DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The exact source-oriented triplet values pull back to a nonempty exact H-side source surface, so the remaining mainline object is the H-side law whose image lands on that surface.  _(class `A`)_
-- **chain closes:** True — The runner verifies the source-surface equations, an explicit positive Hermitian witness, invariant CP pair, and common diagonal tangent at the stated support boundary.
-- **rationale:** The support claim closes: the exact source package pulls back to a nonempty H-side source surface, and the runner verifies the equations and witness. This clean audit does not derive the post-canonical H-side law that selects a surface point. Residual risk: selected-point or mixed-bridge claims remain separate open science.
 - **auditor confidence:** high
 
 ### `dm_neutrino_hermitian_bridge_carrier_note_2026-04-15`
