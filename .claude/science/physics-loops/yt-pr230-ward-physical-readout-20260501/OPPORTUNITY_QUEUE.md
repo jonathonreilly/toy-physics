@@ -1,5 +1,20 @@
 # Opportunity Queue
 
+2026-05-03 update: chunks023-024 now extend the v2 FH/LSZ production-support
+set.  Ready L12 coverage is `24/63` chunks and `384/1000` saved
+configurations; v2 multi-tau rows are present for chunks017-024; target ESS
+passes with limiting ESS `323.8130499055201`; target autocorrelation ESS
+passes over the current ready set; replacement queue is empty for the current
+ready set.  This still does not change the closure ranking.  Chunk023 joins
+the high-slope group, so response stability remains open
+(`relative_stdev=0.8942414475625226`, `spread_ratio=5.920283844112204`), and
+response-window acceptance, canonical-Higgs/source-overlap, W/Z-response,
+scalar-pole/FV/IR/model-class, finite-source-linearity, and multi-radius gates
+remain open.  New chunks are useful background support, but the highest-value
+foreground move remains a genuine same-surface `O_H/C_sH/C_HH` identity,
+same-source W/Z response with sector-overlap identity, or a microscopic
+rank-one neutral-scalar theorem.
+
 2026-05-03 update: the scalar denominator route now has an exact
 Schur-complement `K'(pole)` sufficiency theorem.  This is positive support:
 if future same-surface scalar-kernel rows provide `A/B/C` and their pole

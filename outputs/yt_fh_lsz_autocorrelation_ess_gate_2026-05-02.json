@@ -539,6 +539,55 @@
         "source_response_target_timeseries": true
       },
       "target_timeseries_complete": true
+    },
+    {
+      "chunk_index": 23,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk023_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 964.1080681580837,
+        "n": 1000,
+        "rho_first_lags": [
+          0.018614060512161995,
+          -0.001455837028804513
+        ],
+        "tau_int_initial_positive": 0.518614060512162,
+        "window_lag": 2
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
+      },
+      "target_timeseries_complete": true
+    },
+    {
+      "chunk_index": 24,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk024_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 955.5145420169649,
+        "n": 1000,
+        "rho_first_lags": [
+          0.02141396511629306,
+          0.0010897992017299494,
+          0.0005657629661640392,
+          0.0002087463719795707,
+          -0.0014231173526566504
+        ],
+        "tau_int_initial_positive": 0.5232782736561665,
+        "window_lag": 5
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
+      },
+      "target_timeseries_complete": true
     }
   ],
   "exact_next_action": "Target-observable ESS is accepted for the current ready set; response stability, scalar-pole derivative/model-class/FV/IR, and canonical-Higgs identity remain open.",
@@ -577,7 +626,9 @@
     19,
     20,
     21,
-    22
+    22,
+    23,
+    24
   ],
   "ready_count_reaches_threshold": true,
   "strict_non_claims": [
@@ -590,12 +641,12 @@
   "target_observable_ess_certificate": "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json",
   "target_observable_ess_summary": {
     "additional_chunks_estimate_at_current_rate": 0,
-    "limiting_target_ess": 296.09790071733823,
+    "limiting_target_ess": 323.8130499055201,
     "minimum_target_ess_per_volume": 200.0,
     "target_observable_ess_gate_passed": true
   },
   "target_timeseries_summary": {
-    "complete_count": 22,
+    "complete_count": 24,
     "complete_for_all_ready_chunks": true,
     "complete_indices": [
       1,
@@ -619,10 +670,12 @@
       19,
       20,
       21,
-      22
+      22,
+      23,
+      24
     ],
     "incomplete_indices": [],
-    "ready_count": 22
+    "ready_count": 24
   },
-  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Target-series coverage state: complete=chunk001, chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010, chunk011, chunk012, chunk013, chunk014, chunk015, chunk016, chunk017, chunk018, chunk019, chunk020, chunk021, chunk022; incomplete=none.  The load-bearing FH/LSZ target effective sample size is accepted only when the target-observable ESS certificate reaches the configured threshold; plaquette ESS is diagnostic only."
+  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Target-series coverage state: complete=chunk001, chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010, chunk011, chunk012, chunk013, chunk014, chunk015, chunk016, chunk017, chunk018, chunk019, chunk020, chunk021, chunk022, chunk023, chunk024; incomplete=none.  The load-bearing FH/LSZ target effective sample size is accepted only when the target-observable ESS certificate reaches the configured threshold; plaquette ESS is diagnostic only."
 }

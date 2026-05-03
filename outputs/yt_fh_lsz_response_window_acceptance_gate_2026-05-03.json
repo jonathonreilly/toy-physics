@@ -958,6 +958,128 @@
         "8": 1.2508579677699583,
         "9": 1.233783950646128
       }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 23,
+      "multi_tau_target_summary": {
+        "chunk_index": 23,
+        "expected_rows": 16,
+        "finite_multi_tau_slope_values": 368,
+        "multi_tau_target_rows_present": true,
+        "row_count": 16,
+        "schema_version": "fh_lsz_target_timeseries_v2_multitau",
+        "tau_keys": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ]
+      },
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk023_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2517783642479685,
+        "1": 1.252137117910368,
+        "2": 1.2495800286283831,
+        "3": 1.245558615191833,
+        "4": 1.2409214040027594,
+        "5": 1.2488059495351034,
+        "6": 1.235716447914359,
+        "7": 1.2414767457436748,
+        "8": 1.2477074555961698,
+        "9": 1.2412785478560062
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 24,
+      "multi_tau_target_summary": {
+        "chunk_index": 24,
+        "expected_rows": 16,
+        "finite_multi_tau_slope_values": 368,
+        "multi_tau_target_rows_present": true,
+        "row_count": 16,
+        "schema_version": "fh_lsz_target_timeseries_v2_multitau",
+        "tau_keys": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ]
+      },
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk024_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2429147096487125,
+        "1": 1.2450211080343832,
+        "2": 1.2442484310566604,
+        "3": 1.251397314493985,
+        "4": 1.2370516746829097,
+        "5": 1.2462262318259643,
+        "6": 1.2467428302562533,
+        "7": 1.2433182865092096,
+        "8": 1.2418350473559436,
+        "9": 1.251949536116015
+      }
     }
   ],
   "exact_next_action": "Complete v2 multi-tau production rows for the full ready set and run a multi-radius source-response calibration, or continue the non-source-only canonical-Higgs identity routes.",
@@ -986,7 +1108,9 @@
     19,
     20,
     21,
-    22
+    22,
+    23,
+    24
   ],
   "multi_tau_target_rows": [
     {
@@ -1330,6 +1454,72 @@
         "21",
         "22"
       ]
+    },
+    {
+      "chunk_index": 23,
+      "expected_rows": 16,
+      "finite_multi_tau_slope_values": 368,
+      "multi_tau_target_rows_present": true,
+      "row_count": 16,
+      "schema_version": "fh_lsz_target_timeseries_v2_multitau",
+      "tau_keys": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+      ]
+    },
+    {
+      "chunk_index": 24,
+      "expected_rows": 16,
+      "finite_multi_tau_slope_values": 368,
+      "multi_tau_target_rows_present": true,
+      "row_count": 16,
+      "schema_version": "fh_lsz_target_timeseries_v2_multitau",
+      "tau_keys": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+      ]
     }
   ],
   "multi_tau_target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau",
@@ -1361,7 +1551,9 @@
     19,
     20,
     21,
-    22
+    22,
+    23,
+    24
   ],
   "response_stability_passed": false,
   "response_window_acceptance_gate_passed": false,
@@ -1385,117 +1577,117 @@
     "does not set kappa_s = 1 or identify the source pole with canonical Higgs",
     "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0"
   ],
-  "tau_window_mean_spread_ratio": 1.0040897297761093,
+  "tau_window_mean_spread_ratio": 1.0040317875521179,
   "tau_window_summaries": {
     "0": {
       "available": true,
       "max": 1.2595947656486084,
-      "mean": 1.2447609518009006,
+      "mean": 1.2449764172298539,
       "min": 1.2252495316390388,
-      "n": 22,
-      "relative_stdev": 0.007627632152899553,
+      "n": 24,
+      "relative_stdev": 0.007385722718652582,
       "spread_ratio": 1.0280312157831437,
       "stable_by_rule": true,
-      "stdev": 0.0094945786586304
+      "stdev": 0.009195050608921227
     },
     "1": {
       "available": true,
       "max": 1.2600494005788554,
-      "mean": 1.2465784285656933,
+      "mean": 1.24674515226625,
       "min": 1.2317402681361944,
-      "n": 22,
-      "relative_stdev": 0.006409565667008998,
+      "n": 24,
+      "relative_stdev": 0.0061978688314157995,
       "spread_ratio": 1.0229830372319457,
       "stable_by_rule": true,
-      "stdev": 0.007990026296968697
+      "stdev": 0.007727162919949736
     },
     "2": {
       "available": true,
       "max": 1.2604738655169978,
-      "mean": 1.2442534531167488,
+      "mean": 1.2444751845105633,
       "min": 1.2291256640039716,
-      "n": 22,
-      "relative_stdev": 0.0058773407258272785,
+      "n": 24,
+      "relative_stdev": 0.005682564455489441,
       "spread_ratio": 1.0255044723506195,
       "stable_by_rule": true,
-      "stdev": 0.00731290149325429
+      "stdev": 0.00707181044923839
     },
     "3": {
       "available": true,
       "max": 1.2593131242699118,
-      "mean": 1.2460793472788627,
+      "mean": 1.2462792320758664,
       "min": 1.234680465468263,
-      "n": 22,
-      "relative_stdev": 0.005241528364040443,
+      "n": 24,
+      "relative_stdev": 0.005084187374742192,
       "spread_ratio": 1.0199506345897411,
       "stable_by_rule": true,
-      "stdev": 0.006531360242607161
+      "stdev": 0.006336317137123514
     },
     "4": {
       "available": true,
       "max": 1.2600521352965743,
-      "mean": 1.2460270278612608,
-      "min": 1.2380275979855249,
-      "n": 22,
-      "relative_stdev": 0.004852772668188592,
-      "spread_ratio": 1.0177900212781097,
+      "mean": 1.2454403204847253,
+      "min": 1.2370516746829097,
+      "n": 24,
+      "relative_stdev": 0.004927375083752852,
+      "spread_ratio": 1.0185929667162532,
       "stable_by_rule": true,
-      "stdev": 0.006046685904629392
+      "stdev": 0.006136751603457603
     },
     "5": {
       "available": true,
       "max": 1.2562148890248537,
-      "mean": 1.2448681857574468,
+      "mean": 1.2450888445010373,
       "min": 1.2350789940591245,
-      "n": 22,
-      "relative_stdev": 0.003929019472262211,
+      "n": 24,
+      "relative_stdev": 0.003813615947511995,
       "spread_ratio": 1.0171129903976954,
       "stable_by_rule": true,
-      "stdev": 0.004891111342240739
+      "stdev": 0.004748290673458438
     },
     "6": {
       "available": true,
       "max": 1.2539956769985205,
-      "mean": 1.2450062279346636,
+      "mean": 1.244691512197217,
       "min": 1.2354992086168526,
-      "n": 22,
-      "relative_stdev": 0.003971260215003812,
+      "n": 24,
+      "relative_stdev": 0.004104467054433292,
       "spread_ratio": 1.0149708459970401,
       "stable_by_rule": true,
-      "stdev": 0.004944243700428898
+      "stdev": 0.005108795304746231
     },
     "7": {
       "available": true,
       "max": 1.2557105626260667,
-      "mean": 1.243491009644945,
+      "mean": 1.2433998851850698,
       "min": 1.2284472866817997,
-      "n": 22,
-      "relative_stdev": 0.005874817334012028,
+      "n": 24,
+      "relative_stdev": 0.005623722929724064,
       "spread_ratio": 1.022193281095446,
       "stable_by_rule": true,
-      "stdev": 0.007305282538150241
+      "stdev": 0.006992536445131545
     },
     "8": {
       "available": true,
       "max": 1.2541002493852482,
-      "mean": 1.2447600713578664,
+      "mean": 1.2447610030343823,
       "min": 1.232317086618695,
-      "n": 22,
-      "relative_stdev": 0.005291239164786722,
+      "n": 24,
+      "relative_stdev": 0.005103575308929335,
       "spread_ratio": 1.0176765890882218,
       "stable_by_rule": true,
-      "stdev": 0.006586323240331458
+      "stdev": 0.006352731520604387
     },
     "9": {
       "available": true,
       "max": 1.2552598569153806,
-      "mean": 1.2485765518534142,
+      "mean": 1.2484130093644639,
       "min": 1.233783950646128,
-      "n": 22,
-      "relative_stdev": 0.003979251487002515,
+      "n": 24,
+      "relative_stdev": 0.004030708428056752,
       "spread_ratio": 1.0174065372288283,
       "stable_by_rule": true,
-      "stdev": 0.004968400100599172
+      "stdev": 0.005031988838541038
     }
   },
   "verdict": "The current chunks give stable chunk-level symmetric source-shift effective-mass slopes across tau windows 0-9, so the forensics diagnostic is reproducible beyond tau=1.  The acceptance gate still does not pass: per-configuration multi-tau target rows are not yet complete for the full ready set, the finite-source-linearity gate is not passed, and the production fitted-slope response-stability gate remains open."

@@ -1,5 +1,40 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ chunks023-024 v2 multi-tau wave:
+
+- Completed chunks023-024 with the selected-mass-only / normal-cache
+  production harness, fixed seeds `2026051023` and `2026051024`, no
+  `--resume`, chunk-isolated output paths, and two concurrent workers.
+- Outputs:
+  `outputs/yt_pr230_fh_lsz_production_L12_T24_chunk023_2026-05-01.json`
+  and
+  `outputs/yt_pr230_fh_lsz_production_L12_T24_chunk024_2026-05-01.json`.
+- Chunk023 runtime was `2274.8532021045685` seconds with source slope
+  `6.800776826038631`; chunk024 runtime was `2278.1163148880005` seconds
+  with source slope `1.4363176487241531`.
+- Chunk-local generic target-timeseries checkpoints are `PASS=14 FAIL=0`
+  for each chunk; v2 multi-tau checkpoints are `PASS=19 FAIL=0` for each
+  chunk.
+- The ready L12 set is now `24/63` chunks with `384/1000` saved
+  configurations.  Target-observable ESS passes with limiting ESS
+  `323.8130499055201`, and the autocorrelation ESS gate passes for target
+  observables over the current ready set.
+- Response stability remains open (`relative_stdev=0.8942414475625226`,
+  `spread_ratio=5.920283844112204`).  Response-window acceptance remains
+  open: v2 rows are present only for chunks017-024, chunks001-016 still lack
+  v2 rows, multiple source radii are absent, finite-source-linearity is
+  absent, production response stability is still open, and canonical-Higgs /
+  source-overlap identity is still absent.
+- The Schur-complement K-prime sufficiency block from the remote branch is
+  preserved as exact support, but current Schur rows are absent.
+- Retained-route is `PASS=128 FAIL=0`; campaign status is `PASS=154 FAIL=0`.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: continue v2 production chunks only as support, while the
+foreground positive closure route remains a real same-surface canonical-Higgs /
+source-overlap certificate, a W/Z response identity, scalar Schur kernel rows,
+or a scalar-pole theorem.  PR #230 remains draft/open.
+
 Latest checkpoint, 2026-05-03 Schur-complement K-prime sufficiency:
 
 - Added `scripts/frontier_yt_schur_complement_kprime_sufficiency.py`,
