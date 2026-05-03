@@ -14258,6 +14258,38 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "no_per_site_bosonic_ccr_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "no_per_site_chirality_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "u1_fermion_number_conservation_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "unit_singlet_overlap_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02"
     },
     {
@@ -15062,6 +15094,22 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_p2_v_matching_theorem_note_2026-04-17"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "yt_color_projection_correction_note"
     },
     {
@@ -15414,6 +15462,30 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_bimodule_norm_existence_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_bimodule_norm_naturality_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_jts_affine_physical_carrier_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_jts_physical_point_closure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_bicac_endpoint_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "ckm_from_mass_hierarchy_note"
     },
     {
@@ -15675,6 +15747,30 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_berry_bundle_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_berry_phase_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -16175,6 +16271,14 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "neutrino_majorana_residual_sharing_split_theorem_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "neutrino_majorana_adjacent_singlet_placement_theorem_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "neutrino_majorana_background_normalization_theorem_note"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -22657,7 +22761,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:10:18.213723+00:00",
+  "generated_at": "2026-05-03T15:10:44.772243+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -39980,6 +40084,14 @@
         "momentum_charge_commute_theorem_note_2026-05-02",
         "pauli_group_order_theorem_note_2026-05-02",
         "multisite_pauli_group_theorem_note_2026-05-02",
+        "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
+        "no_per_site_chirality_theorem_note_2026-05-02",
+        "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+        "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02",
+        "u1_fermion_number_conservation_theorem_note_2026-05-02",
+        "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
+        "unit_singlet_overlap_narrow_theorem_note_2026-05-02",
+        "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02",
         "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02",
         "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
         "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
@@ -40181,6 +40293,10 @@
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
         "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
+        "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
+        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
+        "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
+        "yt_p2_v_matching_theorem_note_2026-04-17",
         "yt_color_projection_correction_note",
         "yukawa_color_projection_theorem",
         "yt_boundary_theorem",
@@ -40269,6 +40385,12 @@
         "quark_cp_carrier_completion_note_2026-04-18",
         "quark_endpoint_readout_constraints_note_2026-04-19",
         "s3_time_theta_to_slice_coupling_note",
+        "quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19",
+        "quark_bimodule_norm_existence_theorem_note_2026-04-19",
+        "quark_bimodule_norm_naturality_theorem_note_2026-04-19",
+        "quark_jts_affine_physical_carrier_theorem_note_2026-04-19",
+        "quark_jts_physical_point_closure_theorem_note_2026-04-19",
+        "quark_bicac_endpoint_obstruction_theorem_note_2026-04-19",
         "ckm_from_mass_hierarchy_note",
         "ckm_schur_complement_theorem",
         "work_history.ckm.cabibbo_bound_note",
@@ -40335,6 +40457,12 @@
         "koide_full_lattice_schur_inheritance_note_2026-04-18",
         "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
         "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
+        "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
+        "koide_berry_phase_theorem_note_2026-04-19",
+        "koide_q_delta_linking_relation_theorem_note_2026-04-20",
+        "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
         "dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16",
         "dm_leptogenesis_hrad_theorem_note_2026-04-16",
         "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
@@ -40460,6 +40588,8 @@
         "neutrino_majorana_algebraic_bridge_obstruction_note",
         "neutrino_majorana_endpoint_exchange_midpoint_theorem_note",
         "neutrino_majorana_residual_sharing_split_theorem_note",
+        "neutrino_majorana_adjacent_singlet_placement_theorem_note",
+        "neutrino_majorana_background_normalization_theorem_note",
         "neutrino_majorana_lower_level_pairing_nogo_note",
         "neutrino_sole_axiom_full_closure_boundary_note",
         "neutrino_retained_status_note_2026-04-16",
@@ -40497,7 +40627,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "7d2d9625c97e4a83579e94127fa51a020b4a9de69c7fe118f626331a6f440daf",
+      "note_hash": "f4ed62ff365a1ac53621497eb6a15c468c8243dda14f1367eb19a9f34a8e80b0",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -50604,8 +50734,8 @@
       "open_gate": 110,
       "positive_theorem": 628
     },
-    "edge_count": 5664,
-    "leaf_count": 618,
+    "edge_count": 5690,
+    "leaf_count": 602,
     "node_count": 1855,
     "root_count": 1057,
     "runners_with_path": 1415
