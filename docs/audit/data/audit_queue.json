@@ -5,7 +5,7 @@
     "leaf": 95,
     "medium": 156
   },
-  "generated_at": "2026-05-03T02:39:59.085363+00:00",
+  "generated_at": "2026-05-03T02:44:17.608143+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6468,6 +6468,29 @@
     },
     {
       "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "koide_positive_parent_axis_obstruction_note_2026-04-18",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "koide_full_lattice_schur_inheritance_note_2026-04-18"
+      ],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.858,
+      "note_path": "docs/KOIDE_POSITIVE_PARENT_AXIS_OBSTRUCTION_NOTE_2026-04-18.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_koide_positive_parent_axis_obstruction.py",
+      "transitive_descendants": 40
+    },
+    {
+      "audit_independence_required": "any_non_self",
       "audit_status": "audited_decoration",
       "blocker": null,
       "claim_id": "koide_q_eq_3delta_identity_note_2026-04-21",
@@ -7333,29 +7356,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 43
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_positive_parent_axis_obstruction_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_full_lattice_schur_inheritance_note_2026-04-18"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.858,
-      "note_path": "docs/KOIDE_POSITIVE_PARENT_AXIS_OBSTRUCTION_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_koide_positive_parent_axis_obstruction.py",
-      "transitive_descendants": 40
     },
     {
       "audit_independence_required": "any_non_self",
@@ -13425,6 +13425,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 18,
+  "ready_count": 19,
   "total_pending": 493
 }
