@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:14:15.889083+00:00
+**Generated:** 2026-05-03T00:16:56.956745+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 143 |
 | **retained_no_go** | 98 |
-| **retained_bounded** | 201 |
+| **retained_bounded** | 202 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 8 |
-| unaudited | 498 |
+| unaudited | 497 |
 | meta | 39 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 406 |
+| `audited_clean` | 407 |
 | `audited_conditional` | 654 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 537 |
+| `unaudited` | 536 |
 
 | claim_type | count |
 |---|---:|
@@ -456,6 +456,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `staggered_layered_backreaction_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
+| `staggered_layered_loop_threshold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `staggered_newton_blocking_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `staggered_newton_reproduction_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `staggered_self_consistent_two_body_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | C | - |
@@ -16238,6 +16239,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
   - `STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_layered_loop_threshold_note`
+
+- **Note:** [`STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md`](../../docs/STAGGERED_LAYERED_LOOP_THRESHOLD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded computational threshold result for the specified seed=13, layers=8, width=5 layered construction and six one-plaquette adjacent-layer windows, with stated gauge thresholds and structural guardrails.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Mill-019deb31-42b9-7981-98c6-cf2c2bbb9b79`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** Within the seed=13 layered family, adding exactly one local K2,2 plaquette to the two-rail corridor makes all six tested loop windows retain 8/8 force rows and pass strict native gauge/current closure while controls do not.  _(class `C`)_
+- **chain closes:** True — The runner output directly reports the retained rows, force signs, gauge spans/residuals, cycle status, and structural guardrails needed for the bounded claim. The claim closes only as a bounded harness result, not as a universal minimality theorem over all nearby layered graph geometries.
+- **rationale:** The load-bearing bounded comparison is checked explicitly by the runner output: the DAG and no-loop controls have gauge=N/A, the sparse-cycle control has gauge=FAIL, and all six single-plaquette cases have retained=8/8 with J_span above 1e-4 and residual below 1e-8. The source note's qualitative decision is supported under the stated harness constraints. Claim boundary: the result is only for the seeded layered construction and tested plaquette windows; the note should not be read as proving global minimality across all possible nearby graph edits. Minor stale numeric discrepancies exist between the note table and runner output for some J values, but they do not change any pass/fail or threshold conclusion.
 - **auditor confidence:** high
 
 ### `staggered_newton_blocking_sensitivity_note_2026-04-11`
