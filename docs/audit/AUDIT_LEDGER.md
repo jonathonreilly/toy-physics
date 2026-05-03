@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T01:51:22.987110+00:00
+**Generated:** 2026-05-03T01:57:06.737001+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 216 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 12 |
-| unaudited | 466 |
+| unaudited | 465 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 664 |
+| ~~audited_conditional~~ | 665 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 427 |
-| `audited_conditional` | 664 |
+| `audited_conditional` | 665 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 506 |
+| `unaudited` | 505 |
 
 | claim_type | count |
 |---|---:|
@@ -1137,6 +1137,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `teleportation_poisson_resource_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | B | - |
 | `teleportation_record_field_closure_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | D | - |
+| `teleportation_remaining_blocker_reduction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -17071,6 +17072,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: The note's closure claim depends load-bearingly on the imported native apparatus/transducer model and on finite proxy gates for routing, durability, thermal stability, and ledger commutation. Why this blocks: A conditional upstream apparatus plus discrete/proxy checks do not close a retained theorem or standalone physical bridge; the runner verifies internal consistency of the candidate stack rather than deriving the Bell transducer, readout, hardware carrier, bath model, or conservation theorem. Repair target: Declare the native apparatus row as a dependency and close it cleanly, then replace the eikonal carrier, pointer bath, and ledger split with retained derivations or narrow the claim to an explicit finite-model planning gate. Claim boundary until fixed: It may be cited as a planning-level open gate showing that the proposed finite record-sector stack passes the listed local routing, bounded error, no-early-decode, correction-fidelity, and algebraic ledger checks under ideal imported premises.
 - **open / conditional deps cited:**
   - `teleportation_native_record_apparatus_note`
+- **auditor confidence:** high
+
+### `teleportation_remaining_blocker_reduction_note`
+
+- **Note:** [`TELEPORTATION_REMAINING_BLOCKER_REDUCTION_NOTE.md`](../../docs/TELEPORTATION_REMAINING_BLOCKER_REDUCTION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open-gate blocker-reduction artifact for ordinary quantum state teleportation, auditing five bounded finite or conditional reductions while excluding matter, energy, object, charge, mass, and faster-than-light transport claims.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-halley-2nd-019deb8b-1fe1-7342-85e1-17d427e4a557`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** It provides five bounded reductions: conditional Bell-record transducer uniqueness, a unique 3D+1 support/eikonal front, sparse side-4 Poisson resource evidence, retained-axis readout/correction, and an independent-fragment detector theorem.  _(class `C`)_
+- **chain closes:** False — The runner gates pass inside the stated finite or conditional classes, but the aggregate imports non-retained operational inputs and assumes unratified apparatus, support, resource, readout, and detector premises. The note therefore closes only as conditional blocker reduction, not as an independent retained theorem.
+- **rationale:** Issue: the blocker-reduction claim relies on explicitly conditional classes and on operational imports whose effective statuses include audited_conditional and open_gate, while the source note declares no dependencies. Why this blocks: the five PASS gates show consistency inside selected apparatus/support/resource/readout/detector assumptions, but they do not derive those physical bridges from retained-grade inputs. Repair target: promote the native record apparatus/readout model and the assumed carrier, preparation, and detector classes to retained-grade theorems, or declare these operational dependencies and keep the artifact purely conditional. Claim boundary until fixed: it may be cited only as a state-teleportation planning/open-gate reduction with the listed assumptions and limitations, not as nature-grade teleportation closure.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md`
+  - `TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md`
 - **auditor confidence:** high
 
 ### `teleportation_resource_from_poisson_note`
