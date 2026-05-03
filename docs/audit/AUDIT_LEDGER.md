@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:23:42.173961+00:00
+**Generated:** 2026-05-03T14:25:46.306637+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 75 |
 | **retained_no_go** | 100 |
-| **retained_bounded** | 166 |
+| **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 778 |
+| unaudited | 777 |
 | meta | 43 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 312 |
+| `audited_clean` | 313 |
 | `audited_conditional` | 514 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 18 |
-| `unaudited` | 821 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
@@ -65,9 +65,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1338
-- runners with (C) first-principles compute hits: 649
-- runners with (D) external comparator hits: 329
+- runners classified: 1339
+- runners with (C) first-principles compute hits: 650
+- runners with (D) external comparator hits: 330
 - decoration candidates (no C, no D): 112
 
 ## Top 25 by load-bearing score (topology only)
@@ -108,6 +108,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
+| `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
@@ -1196,6 +1197,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The load-bearing step is exact algebra from the definitions alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2, but the row presents this bookkeeping corollary as a separate candidate retained-grade theorem and registers no parent dependency or primary runner. Why this blocks: A definition-level geometric-mean identity adds no independent observable, comparator, falsifiability, or new physical bridge beyond the upstream plaquette/coupling surface, so it should not inflate the retained claim surface as a standalone theorem. Repair target: Box this identity under the retained plaquette/coupling-chain parent, or re-promote only if it is shown to be genuine compression used load-bearing by downstream claims with an explicit parent dependency. Claim boundary until fixed: It is safe to state the exact identity as a bookkeeping corollary of the accepted coupling definitions and to use it to avoid double-counting alpha_LM and alpha_s(v) as independent knobs.
 - **open / conditional deps cited:**
   - `accepted_plaquette_coupling_chain_parent_not_registered`
+- **auditor confidence:** high
+
+### `alt_connectivity_family_sign_note`
+
+- **Note:** [`ALT_CONNECTIVITY_FAMILY_SIGN_NOTE.md`](../../docs/ALT_CONNECTIVITY_FAMILY_SIGN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the script-defined parity-rotated sector-transition connectivity on the no-restore grown slice with drifts [0.0, 0.1, 0.2, 0.3, 0.5] and seeds [0, 1, 2], 10 of 15 rows satisfy the zero-source, neutral-cancellation, sign-orientation, and near-linear charge-scaling guards, with at least one passing seed at every tested drift; no geometry-generic or family-wide claim is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-independent-cl3-audit-loop-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Rows passed 10/15, with drift coverage among passes 0.0, 0.1, 0.2, 0.3, 0.5, while not claiming all seeds or family-wide closure.  _(class `C`)_
+- **chain closes:** True — The chain closes for the narrow bounded theorem because the note's numerical claims and stated limitations match the current runner output, and there are no cited dependencies. The runner computes the tested response rather than importing the reported pass table.
+- **rationale:** The current runner reproduces the source note exactly: 10/15 rows pass, passing rows cover all five tested drift values, zero and neutral controls are exact in the displayed output, and the mean exponent among passing rows is 1.000035. The runner constructs a parity-rotated sector-transition adjacency from the grown positions and layers rather than reusing the input adjacency, so the scoped alternative-connectivity computation is explicit. The clean verdict applies only to the bounded computational sweep and not to all seeds, untested drifts, geometry-generic behavior, or a physical observable beyond the script-defined centroid response.
 - **auditor confidence:** high
 
 ### `alternative_coupled_field_probe_note`

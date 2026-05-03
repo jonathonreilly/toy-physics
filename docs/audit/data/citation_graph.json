@@ -22617,7 +22617,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:23:32.668972+00:00",
+  "generated_at": "2026-05-03T14:25:36.902871+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -30819,9 +30819,9 @@
       "claim_type_author_hint_raw": "partial closing of cycle 09 Obstruction 3 + falsification of four near-fit candidates",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "9d29e1473043e46a17cab521ad98cfc3de488dd4bce9b6f33fcd23c0ba3e6213",
+      "note_hash": "c5ed36efc98f9355afe0c875640e10aa18712844e32a0e22ab63fa6a17b5e691",
       "path": "docs/ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_eta_188_structural_origin.py",
       "title": "Structural Origin of eta/eta_obs = 0.1888 \u2014 Partial Closing Note"
     },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
@@ -50486,6 +50486,6 @@
     "leaf_count": 615,
     "node_count": 1849,
     "root_count": 1054,
-    "runners_with_path": 1410
+    "runners_with_path": 1411
   }
 }

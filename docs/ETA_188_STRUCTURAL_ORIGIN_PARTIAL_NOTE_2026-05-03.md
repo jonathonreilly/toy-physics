@@ -4,6 +4,7 @@ Date: 2026-05-03
 Type: partial closing of cycle 09 Obstruction 3 + falsification of four near-fit candidates
 Claim type: bounded_theorem (structural decomposition with one isolated phenomenological factor)
 Status: bounded-support (partial closing)
+Script: scripts/frontier_eta_188_structural_origin.py
 Cycle: 18 of retained-promotion 2026-05-02 → 2026-05-03 campaign
 Branch: physics-loop/eta-188-structural-origin-2026-05-03
 
