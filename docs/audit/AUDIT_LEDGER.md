@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:44:21.253983+00:00
+**Generated:** 2026-05-03T21:45:12.576036+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 203 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 674 |
+| unaudited | 673 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 552 |
+| ~~audited_conditional~~ | 553 |
 | ~~audited_failed~~ | 15 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 371 |
-| `audited_conditional` | 552 |
+| `audited_conditional` | 553 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 721 |
+| `unaudited` | 720 |
 
 | claim_type | count |
 |---|---:|
@@ -1001,6 +1001,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `universal_qg_uv_finite_partition_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `up_sector_partition_revisit_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `v_even_theorem_retention_stretch_attempt_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-context | B | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
@@ -15552,6 +15553,22 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`
   - `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md`
+- **auditor confidence:** high
+
+### `v_even_theorem_retention_stretch_attempt_note_2026-05-03`
+
+- **Note:** [`V_EVEN_THEOREM_RETENTION_STRETCH_ATTEMPT_NOTE_2026-05-03.md`](../../docs/V_EVEN_THEOREM_RETENTION_STRETCH_ATTEMPT_NOTE_2026-05-03.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Worked support attempt for v_even = (sqrt(8/3), sqrt(8)/3) via spectral, H-side witness, and cp-ratio routes, with retained-grade reuse still conditional on carrier structural exhaustion.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-v-even-retention`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The structural-exhaustion claim that no exact E/T-distinguishing operator can exist requires either a retained classification of all admissible exact operators on the current carrier or a retained no-go theorem.  _(class `B`)_
+- **chain closes:** False — The runner completes with SUMMARY: PASS=46 FAIL=0, but it verifies algebraic consistency, cited/package values, and selected bounded staging examples. It does not prove the exhaustive no-go/classification needed to force every exact readout through the swap quotient.
+- **rationale:** Issue: the note itself leaves the carrier structural-exhaustion premise unproved. Why this blocks: the positive theorem claim for retained-grade v_even reuse requires a theorem that no exact E/T-distinguishing operator exists, not just checks that Theta_R^(0) and Xi_R^(0) are bounded. Repair target: provide a retained classification of all admissible exact operators on K_R(q), or a retained no-go theorem plus a runner that computes/checks that exhaustive obstruction. Claim boundary until fixed: the note supplies bounded support and consistency evidence for the stated v_even values, but not a closed retained-grade theorem.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`
 - **auditor confidence:** high
 
 ### `valley_linear_mirror_transfer_note`
