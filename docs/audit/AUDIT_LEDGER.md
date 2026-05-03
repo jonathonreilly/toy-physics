@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:10:10.742463+00:00
+**Generated:** 2026-05-03T18:13:18.305359+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 744 |
+| unaudited | 743 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 536 |
+| ~~audited_conditional~~ | 537 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 317 |
-| `audited_conditional` | 536 |
+| `audited_conditional` | 537 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 790 |
+| `unaudited` | 789 |
 
 | claim_type | count |
 |---|---:|
@@ -530,6 +530,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_candidate_mass_window_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
 | `dm_chamber_signature_structure_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3489,6 +3490,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Chamber survivors are {Basin 1, Basin 2, Basin X}; F_4(Basin 1)=TRUE, F_4(Basin 2)=FALSE, and F_4(Basin X)=FALSE, therefore {Basin 1, Basin 2, Basin X} ∩ {Basin 1} = {Basin 1}.  _(class `A`)_
 - **chain closes:** False — The finite arithmetic/filtering check closes over the hard-coded chart and selector definitions, and the runner reports PASS=24 FAIL=0. The source note does not derive or cite retained authority for the five-basin source chart, H_base/J_B construction, or physical F_4 selector structure, so the support theorem does not close as an independent retained theorem from the allowed inputs.
 - **rationale:** Issue: the proof and runner establish only a finite computation after accepting the corrected five-basin chart, chamber inequality, H_base/J_B construction, and DPLE F_4 selector as inputs. Why this blocks: those inputs are the physical/source-chart bridge needed for the claimed native route, but they are not derived or backed by retained dependencies in the allowed packet. Repair target: provide retained upstream theorem(s) deriving the five-basin chart and selector structure, or add explicit retained dependencies whose audit chain closes. Claim boundary until fixed: it is safe to cite the conditional finite-chart result that the supplied chamber ∩ F_4 computation selects Basin 1 uniquely.
+- **auditor confidence:** high
+
+### `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19`
+
+- **Note:** [`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`](../../docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional IVT reduction: if det(H_base + t J_phys) is nowhere zero on [0,1] and det(H_base)>0, then det(H_base + J_phys)>0; the runner checks this picture on the specified Basin 1, Basin 2, and Basin X paths.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Under PMNS Non-Singularity (f(t) != 0 for all t in [0,1]), the contrapositive of the IVT lemma gives f(1)=det(H_base + J_phys)>0, which is exactly A-BCC.  _(class `A`)_
+- **chain closes:** False — The IVT implication closes as ordinary mathematics after PNS is assumed, but the physical A-BCC claim does not close from the allowed inputs because PNS is an explicit residual axiom, not a derived theorem. The runner verifies consistency and specified basin crossings, not a derivation of PNS.
+- **rationale:** Issue: The decisive premise is PMNS Non-Singularity, an explicit path non-singularity axiom; the note states it is observationally grounded but not derived from Cl(3)/Z^3 algebra. Why this blocks: IVT proves sign preservation only conditional on that premise, and nonzero measured endpoint masses do not by themselves rule out an intermediate det=0 crossing along the coupling path. Repair target: supply a retained theorem or runner computation deriving PNS for the physical coupling path, and separately justify that the Basin 1/2/X enumeration exhausts the relevant chi^2=0 source basins if uniqueness is claimed. Claim boundary until fixed: the note may be cited as a conditional bounded reduction A-BCC <- PNS + IVT + det(H_base)>0, plus runner-verified behavior for the listed basins, but not as an unconditional closure of A-BCC.
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
