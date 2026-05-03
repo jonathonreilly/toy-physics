@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T10:55:33.499514+00:00
+**Generated:** 2026-05-03T11:20:45.684870+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,18 +19,18 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 149 |
+| **retained** | 148 |
 | **retained_no_go** | 100 |
-| **retained_bounded** | 221 |
+| **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 452 |
+| unaudited | 481 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
 | ~~audited_conditional~~ | 663 |
-| ~~audited_failed~~ | 6 |
+| ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,39 +38,39 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 440 |
+| `audited_clean` | 438 |
 | `audited_conditional` | 663 |
 | `audited_decoration` | 9 |
-| `audited_failed` | 50 |
+| `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 492 |
+| `unaudited` | 521 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 549 |
+| `bounded_theorem` | 552 |
 | `decoration` | 9 |
 | `meta` | 41 |
-| `no_go` | 159 |
+| `no_go` | 161 |
 | `open_gate` | 85 |
-| `positive_theorem` | 859 |
+| `positive_theorem` | 879 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 45 |
-| `high` | 387 |
-| `medium` | 437 |
-| `leaf` | 833 |
+| `critical` | 46 |
+| `high` | 389 |
+| `medium` | 434 |
+| `leaf` | 858 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 83
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1297
-- runners with (C) first-principles compute hits: 622
-- runners with (D) external comparator hits: 313
-- decoration candidates (no C, no D): 108
+- runners classified: 1322
+- runners with (C) first-principles compute hits: 636
+- runners with (D) external comparator hits: 317
+- decoration candidates (no C, no D): 112
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -78,7 +78,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 355 | 31.98 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 360 | 32.00 | `audited_clean` | **retained_bounded** |
 | 2 | `alpha_s_derived_note` | bounded_theorem | critical | 238 | 28.90 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 118 | 28.89 | `unaudited` | unaudited |
 | 4 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 117 | 28.88 | `audited_conditional` | ~~audited_conditional~~ |
@@ -87,19 +87,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 199 | 26.14 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 104 | 23.71 | `audited_conditional` | ~~audited_conditional~~ |
 | 9 | `yt_ew_color_projection_theorem` | positive_theorem | critical | 110 | 22.79 | `unaudited` | unaudited |
-| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 257 | 22.51 | `audited_clean` | **retained_bounded** |
-| 11 | `left_handed_charge_matching_note` | decoration | critical | 266 | 21.56 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
-| 12 | `one_generation_matter_closure_note` | bounded_theorem | critical | 260 | 21.53 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `three_generation_structure_note` | positive_theorem | critical | 248 | 20.96 | `audited_clean` | **retained** |
+| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 262 | 22.54 | `audited_clean` | **retained_bounded** |
+| 11 | `left_handed_charge_matching_note` | decoration | critical | 270 | 21.58 | `audited_decoration` | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
+| 12 | `one_generation_matter_closure_note` | bounded_theorem | critical | 264 | 21.55 | `audited_conditional` | ~~audited_conditional~~ |
+| 13 | `three_generation_structure_note` | positive_theorem | critical | 252 | 21.48 | `audited_clean` | **retained** |
 | 14 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 116 | 20.87 | `audited_conditional` | ~~audited_conditional~~ |
 | 15 | `three_generation_observable_theorem_note` | positive_theorem | critical | 123 | 20.45 | `audited_clean` | **retained** |
-| 16 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 301 | 20.24 | `audited_clean` | **retained_bounded** |
+| 16 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 305 | 20.26 | `audited_clean` | **retained_bounded** |
 | 17 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 96 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
 | 18 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | critical | 130 | 19.03 | `audited_clean` | **retained** |
-| 19 | `cpt_exact_note` | positive_theorem | critical | 64 | 18.02 | `audited_clean` | **retained** |
-| 20 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
-| 21 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 125 | 16.98 | `audited_clean` | **retained** |
-| 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 132 | 16.55 | `unaudited` | unaudited |
+| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 136 | 18.60 | `unaudited` | unaudited |
+| 20 | `cpt_exact_note` | positive_theorem | critical | 65 | 18.54 | `audited_clean` | **retained** |
+| 21 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 77 | 17.29 | `audited_conditional` | ~~audited_conditional~~ |
+| 22 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | high | 125 | 16.98 | `audited_clean` | **retained** |
 | 23 | `s3_taste_cube_decomposition_note` | positive_theorem | high | 125 | 16.48 | `audited_clean` | **retained** |
 | 24 | `r_base_group_theory_derivation_theorem_note_2026-04-24` | bounded_theorem | critical | 124 | 16.47 | `unaudited` | unaudited |
 | 25 | `plaquette_self_consistency_note` | bounded_theorem | critical | 244 | 16.44 | `unaudited` | unaudited |
@@ -136,8 +136,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | A | - |
 | `ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
-| `cl3_color_automorphism_theorem` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
-| `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh | C | - |
 | `claude_complex_action_carryover_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -1222,8 +1220,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
-| `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1950,19 +1946,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
 
-### `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Attempted per-site uniqueness theorem asserting every faithful irreducible finite-dimensional complex Cl(3) representation is exactly the Pauli 2-dimensional representation and that all finite-dimensional representations decompose into Pauli copies.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Working over the complexification of Cl(3), the relations generate dimension 4 over C and the Pauli map gives an isomorphism Cl(3) tensor_R C ~= M_2(C).  _(class `A`)_
-- **chain closes:** False — The load-bearing algebra statement is wrong: real Cl(3) has real dimension 8, so its complexification has complex dimension 8, and the odd complex Clifford algebra has two 2-dimensional irreducible sectors rather than the single simple M_2(C) algebra asserted here. The runner only checks Pauli-generated examples and does not test the missing second sector or the false dimension/isomorphism step.
-- **rationale:** Issue: Step 1 misidentifies the complexified Clifford algebra as M_2(C) by claiming the complex dimension is 4; this is the theorem's load-bearing uniqueness step. Why this blocks: U2's uniqueness up to unitary equivalence to Pauli, and U3's decomposition into only Pauli copies, do not follow from the stated algebra and omit the odd-Clifford sector/orientation distinction. Repair target: restate the theorem with the correct real-versus-complex Clifford algebra, central volume-element sector/orientation choice, and prove the exact representation category needed for the per-site dimension claim; update the runner to test non-Pauli orientation/conjugate sectors rather than only unitary conjugates of Pauli. Claim boundary until fixed: Pauli matrices satisfy the defining relations and Pauli direct sums provide even-dimensional examples, but the advertised uniqueness theorem is not retained.
-- **auditor confidence:** high
-
 ### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
 
 - **Note:** [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
@@ -2008,19 +1991,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the fermion-sector identities close on the bounded runner surface, but the full-action CPT theorem imports a deferred SU(3) Wilson-plaquette operator lift and prior physical-Hilbert/partition-function consequences. Why this blocks: the ledger cannot retain the broader canonical action invariance or CPT-even Observable Principle discharge from a runner that explicitly excludes the gauge-sector algebraic lift. Repair target: construct the CPT action on SU(3) Wilson links/plaquettes and tie it to S_G, Z, H_phys, and CP-odd observables. Claim boundary until fixed: pure-staggered finite-block fermion-sector CPT identities are runner-backed, while full canonical action CPT remains conditional.
 - **open / conditional deps cited:**
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
-- **auditor confidence:** high
-
-### `axiom_first_lattice_noether_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Attempted general lattice Noether theorem asserting ordinary Z^3 translation momentum conservation, fermion-number current conservation, and a general on-shell current formula for one-parameter Lie or discrete symmetries of the canonical staggered action.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** For Z^3 translation, the generator is T^mu_xy = delta_{y,x+mu} - delta_{y,x-mu}; substituting into the general current formula gives the staggered momentum density, and M_KS commutes with discrete translation up to the staggered phase factor.  _(class `A`)_
-- **chain closes:** False — The claimed Z^3 translation/momentum current does not follow from the stated infinitesimal Noether formula: ordinary one-site translation is not the same symmetry checked by the runner, which only tests two-site shifts to avoid staggered phase modulation. The runner also verifies expectation-level identities from M^{-1}, not the advertised classical on-shell current for arbitrary fields or the general discrete-symmetry theorem.
-- **rationale:** Issue: the note applies a continuous infinitesimal Noether current formula to ordinary Z^3 translations and then claims a conserved staggered momentum density, but the staggered action is only checked under two-site shifts and the required one-site/phase-compensated translation current is not derived. Why this blocks: downstream lanes would cite momentum and general current conservation as if they were established on A_min, while the runner only confirms narrower U(1) and two-step/expectation-level identities. Repair target: split out the internal U(1) current, define the correct staggered translation or shift symmetry, derive its lattice Ward identity/current explicitly, and update the runner to test the same on-shell observable claimed in the note. Claim boundary until fixed: U(1) phase commutation and a finite expectation-level divergence check pass, but the advertised general lattice Noether theorem is not retained.
 - **auditor confidence:** high
 
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
@@ -3182,32 +3152,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-- **auditor confidence:** high
-
-### `cl3_color_automorphism_theorem`
-
-- **Note:** [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](../../docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-05`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The Cl(3)/Z^3 taste-cube construction has a 3D symmetric base subspace carrying SU(3), commuting with fiber SU(2) and hypercharge, with N_c=3 and R_conn=(N_c^2-1)/N_c^2=8/9 from the SU(3) Fierz identity.  _(class `C`)_
-- **chain closes:** True — The runner constructs the Cl(3) taste-space matrices, the symmetric-base SU(3) embedding, the commuting SU(2)/Y structure, and the Fierz/R_conn algebra directly. The source note limits the result to an algebraic support packet and explicitly leaves continuum color matching and running to separate lanes.
-- **rationale:** The support-tier algebraic color-structure claim closes on its own scoped surface: the runner verifies the Cl(3) generators, even-subalgebra su(2), hypercharge projectors, S3/Z3 taste decomposition, symmetric-base SU(3) embedding, commutators with weak/Y, N_c=3, Fierz identity, R_conn=8/9, and sqrt(9/8) factor. This clean audit is limited to the finite taste-cube support theorem; it does not ratify continuum QCD color matching, alpha_s running, or the critical native-gauge/EW-color projection lanes. Residual risk is downstream citation as a full physical gauge-closure theorem rather than as algebraic support.
-- **auditor confidence:** high
-
-### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
-
-- **Note:** [`CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** For the retained Cl(3) color structure with N_c=3 and SU(3)_c, the quark-antiquark product 3 tensor 3bar decomposes as one canonical singlet plus an eight-dimensional adjoint complement, with the normalized trace-channel projector.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `fresh-cl3-quark-antiquark-singlet-auditor`  (codex-fresh; independence=fresh_context)
-- **load-bearing step:** Apply the standard SU(N) tensor product rule with N=3: N tensor Nbar = 1 plus adj(N), so 3 tensor 3bar = 1 plus 8.  _(class `C`)_
-- **chain closes:** True — The retained one-hop dependency supplies N_c=3 and SU(3)_c color structure. Together with admitted standard SU(N) representation theory and the trace singlet projector, the scoped algebraic decomposition closes without a hidden physical bridge.
-- **rationale:** The claim is a narrow exact representation-theory result on an already retained SU(3)_c color structure. The runner verifies the dimension split, singlet normalization, invariance under all eight generators, projector idempotence and trace, and rank-eight complement. No confinement, meson-existence, or continuum-physics statement is needed for the scoped theorem.
 - **auditor confidence:** high
 
 ### `cl3_sm_embedding_theorem`

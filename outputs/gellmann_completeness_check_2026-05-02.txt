@@ -1,0 +1,63 @@
+========================================================================
+GELL-MANN COMPLETENESS: {T^a} is R-basis for su(3)
+========================================================================
+
+------------------------------------------------------------------------
+TEST 1: T^a Hermitian (a = 1, ..., 8)
+------------------------------------------------------------------------
+  max ||T^a - (T^a)†|| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 2: Tr[T^a] = 0 (so i T^a ∈ su(3))
+------------------------------------------------------------------------
+  max |Tr[T^a]| = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 3: Tr[T^a T^b] = (1/2) δ^{ab} (orthogonality ⇒ linear independence)
+------------------------------------------------------------------------
+  max |Tr[T^a T^a] - 1/2| = 1.110e-16
+  max |Tr[T^a T^b]|, a≠b = 0.000e+00
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 4: dim_R span{T^a} = 8
+------------------------------------------------------------------------
+  R-rank of {T^a}_a=1..8 (as real-flattened) = 8
+  Expected: dim_R su(3) = 8
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 5: Any 3x3 traceless Hermitian M = Σ_a c_a T^a
+        with c_a = 2 Tr[M T^a] (using Tr[T^a T^b] = δ^{ab}/2)
+------------------------------------------------------------------------
+  test matrix M Hermitian: ||M - M†|| = 0.000e+00
+  test matrix M traceless: |Tr[M]| = 5.551e-17
+  Computed c_a coefficients (8 of them)
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 6: Round-trip reconstruction M → c_a → Σ c_a T^a recovers M
+------------------------------------------------------------------------
+  ||M - Σ c_a T^a|| = 1.360e-16
+  STATUS: PASS
+
+------------------------------------------------------------------------
+TEST 7: [T^a, T^b] = i f^{abc} T^c lies in C-span{T^c}, with f^{abc}
+        the standard SU(3) structure constants (real, anti-symmetric).
+        Equivalently: any traceless anti-Hermitian 3x3 matrix decomposes as
+        i · Σ_c (real coefficient) · T^c.
+------------------------------------------------------------------------
+  max ||[T^a, T^b] - i·Σ_c f^{abc} T^c|| = 1.241e-16
+  STATUS: PASS
+
+========================================================================
+  Test 1 (T^a Hermitian):                          PASS
+  Test 2 (T^a traceless ⇒ i T^a ∈ su(3)):           PASS
+  Test 3 (Tr orthogonality (1/2) δ^{ab}):           PASS
+  Test 4 (R-span dim = 8 = dim_R su(3)):           PASS
+  Test 5 (decomposition of arbitrary M):           PASS
+  Test 6 (round-trip M → c_a → M):                 PASS
+  Test 7 (closure [T^a, T^b] ∈ span):               PASS
+  OVERALL: PASS
