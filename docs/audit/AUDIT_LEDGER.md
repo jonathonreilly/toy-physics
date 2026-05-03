@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:32:02.941544+00:00
+**Generated:** 2026-05-03T18:34:52.106804+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 103 |
 | **retained_bounded** | 172 |
 | _retained_pending_chain_ | 3 |
-| open_gate | 13 |
-| unaudited | 730 |
+| open_gate | 14 |
+| unaudited | 729 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 325 |
+| `audited_clean` | 326 |
 | `audited_conditional` | 542 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 776 |
+| `unaudited` | 775 |
 
 | claim_type | count |
 |---|---:|
@@ -282,6 +282,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `newton_derivation_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | A | - |
 | `ollivier_einstein_proxy_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `packet_memory_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
 | `persistent_inertial_object_probe_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -9851,6 +9852,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md`
   - `NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md`
   - `NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md`
+- **auditor confidence:** high
+
+### `newton_derivation_note`
+
+- **Note:** [`NEWTON_DERIVATION_NOTE.md`](../../docs/NEWTON_DERIVATION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited the Newtonian mass-scaling note as an open gate: on the retained ordered-lattice family, the algebra selects p=1 only conditional on a phase valley, linear propagation, momentum conservation, and an as-yet-unclosed persistent-pattern inertial mass parameter extensive under the same composition law as the source parameter s.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-current-fresh-context`  (codex-current; independence=fresh_context)
+- **load-bearing step:** If the inertial quantity of a persistent pattern is an extensive quantity attached to the same composition law as the field-source parameter s, then m proportional to s.  _(class `A`)_
+- **chain closes:** True — The conditional algebra from m proportional to s and momentum conservation to p=1 closes, and the note explicitly marks the persistent-pattern inertial-mass bridge as open rather than claiming retained closure.
+- **rationale:** The row should be clean only as an open gate, not as a retained Newtonian derivation. The one-hop dependency, docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md, is retained_bounded and supports only amplitude-scaling invariance plus packet-shape dependence on a fixed test-particle family; it does not close the persistent-pattern inertial-mass bridge. The source note preserves that boundary and states the missing theorem explicitly, so the audited object is a valid open gate blocking retained propagation.
 - **auditor confidence:** high
 
 ### `newton_law_derived_note`
