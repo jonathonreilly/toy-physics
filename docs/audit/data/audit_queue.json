@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 60,
-    "high": 217,
+    "high": 216,
     "leaf": 202,
     "medium": 327
   },
-  "generated_at": "2026-05-03T14:52:14.285722+00:00",
+  "generated_at": "2026-05-03T14:53:37.205164+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1724,27 +1724,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_taste_scalar_isotropy.py",
       "transitive_descendants": 52
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "axiom_first_lattice_noether_theorem_note_2026-04-29",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 8,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.672,
-      "note_path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/axiom_first_lattice_noether_check.py",
-      "transitive_descendants": 50
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20850,6 +20829,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 118,
-  "total_pending": 806
+  "ready_count": 117,
+  "total_pending": 805
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T14:52:14.944994+00:00
+**Generated:** 2026-05-03T14:53:38.798756+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 777 |
+| unaudited | 776 |
 | meta | 45 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 19 |
 | ~~audited_conditional~~ | 516 |
-| ~~audited_failed~~ | 7 |
+| ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 312 |
 | `audited_conditional` | 516 |
 | `audited_decoration` | 7 |
-| `audited_failed` | 51 |
+| `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 19 |
-| `unaudited` | 822 |
+| `unaudited` | 821 |
 
 | claim_type | count |
 |---|---:|
@@ -945,6 +945,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `architecture_note_directional_measure` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | C | - |
+| `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-current | misidentified_symmetry_and_proxy_runner | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | D | - |
 | `axiom_first_spin_statistics_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
@@ -1529,6 +1530,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
 - **auditor confidence:** high
+
+### `axiom_first_lattice_noether_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The note claims an axiom-first lattice Noether theorem on A_min, including Z^3 translation momentum conservation, global U(1) fermion-number conservation, and a general lattice Noether current identity.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-hostile-noether-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Step 4 asserts that substituting the Z^3 translation generator into the general current formula yields the staggered momentum density and that M_KS commutes with discrete translation up to staggered phase factors; Step 2 asserts without a full derivation that promoting alpha_x produces the current formula (5).  _(class `misidentified_symmetry_and_proxy_runner`)_
+- **chain closes:** False — The U(1) bilinear phase symmetry is plausibly exhibited, but the full theorem chain does not close for the stated Z^3 translation and general-current claims. The note states pure Z^3 translation conservation, while the runner deliberately checks only two-site shifts to avoid staggered phase modulation and never verifies the claimed momentum current P.
+- **rationale:** Issue: The load-bearing translation step identifies the staggered Kogut-Susskind action as Z^3-translation invariant and derives momentum conservation from that identification, but the runner itself restricts E2 to two-step shifts because one-step shifts encounter staggered phase modulation; it also does not compute the momentum-density divergence in equation (3). The local runner passed E1-E4, but those exhibits are U(1) commutation, two-step translation invariance, an M^{-1} expectation-current divergence, and slice trace equality. Why this blocks: The scoped claim includes Z^3 translation symmetry -> discrete momentum conservation and a general Noether identity, so verifying U(1) commutation plus two-step shift invariance plus M^{-1} current expectations cannot establish the stated theorem. A hostile referee can reject the claimed N1/N3 closure without disputing the runner output. Repair target: State the exact staggered symmetry group, including any required phase/taste transformation, derive its local Noether current from the finite Grassmann action with site-dependent parameters, and add a runner that verifies the actual P-current divergence or the exact symbolic finite-lattice identity for arbitrary on-shell fields. Claim boundary until fixed: The note may safely claim a numerical exhibit of free pure-staggered U(1) phase invariance and two-step translation invariance on small periodic lattices, plus an expectation-value current-divergence check; it may not claim the full A_min lattice Noether theorem or Z^3 momentum conservation as retained.
+- **auditor confidence:** 0.88
 
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
 
