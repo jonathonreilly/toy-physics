@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:19:32.781898+00:00
+**Generated:** 2026-05-03T18:20:22.186052+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 738 |
+| unaudited | 737 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 539 |
+| ~~audited_conditional~~ | 540 |
 | ~~audited_failed~~ | 13 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 319 |
-| `audited_conditional` | 539 |
+| `audited_conditional` | 540 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 784 |
+| `unaudited` | 783 |
 
 | claim_type | count |
 |---|---:|
@@ -715,6 +715,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_explicit_calculations_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | A | - |
 | `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -8218,6 +8219,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`
   - `KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact Herm_circ(3) Fourier identity a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2) and the consequent equivalence of spectrum-side Koide and operator-side kappa under the stated cyclic-compression/P1 dictionary.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The following identity holds identically on Herm_circ(3): a_0^2 - 2 |z|^2 = 3 (a^2 - 2 |b|^2).  _(class `A`)_
+- **chain closes:** False — The algebraic identity itself closes exactly on Herm_circ(3), and the runner verifies it. The broader retained-physics conclusion imports the cyclic-compression bridge, P1 square-root eigenvalue identification, MRU Frobenius readout, and spectrum-side Koide closure without supplied retained dependency rows.
+- **rationale:** Issue: the note proves the Herm_circ(3) Fourier identity after assuming the cyclic-compression/P1 dictionary, but the physical bridge from charged-lepton sqrt masses to operator eigenvalues and the spectrum-side Koide closure are imported rather than closed in the provided dependency chain. Why this blocks: the runner computes the hard algebra correctly, but it does not derive the physical carrier/readout identifications or the upstream spectrum closure needed for retained operator-side kappa = 2. Repair target: add retained dependency rows or an in-note theorem and runner that construct the cyclic-compression bridge, P1 sqrt-mass eigenvalue map, MRU Frobenius readout, and spectrum-side Q = 2/3 closure without assuming the target bridge. Claim boundary until fixed: the exact Herm_circ(3) identity and lockstep numerical translation are valid conditional algebra, not a standalone retained physical closure.
 - **auditor confidence:** high
 
 ### `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19`
