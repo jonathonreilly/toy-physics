@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:40:10.663916+00:00
+**Generated:** 2026-05-03T21:40:59.832906+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 203 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 676 |
+| unaudited | 675 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 552 |
-| ~~audited_failed~~ | 14 |
+| ~~audited_failed~~ | 15 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 371 |
 | `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 58 |
+| `audited_failed` | 59 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 723 |
+| `unaudited` | 722 |
 
 | claim_type | count |
 |---|---:|
@@ -1077,6 +1077,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `portable_package_extension_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
 | `second_grown_family_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `session_synthesis_2026-04-10_graph_axioms` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-context | C | - |
 | `shapiro_complex_interaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | A | - |
 | `shapiro_diamond_bridge_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
 | `shapiro_diamond_frequency_bridge_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | F | - |
@@ -12762,6 +12763,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `HIGHER_DIMENSION_STATUS_2026-04-01.md`
   - `IF_PROGRAM_CLOSING_NOTE.md`
   - `DECOHERENCE_FAILURE_ANALYSIS.md`
+- **auditor confidence:** high
+
+### `session_synthesis_2026-04-10_graph_axioms`
+
+- **Note:** [`SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md`](../../docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Whether the graph-Laplacian axiom synthesis is supported as a current positive theorem by frontier_axioms_16card.py across cubic, random geometric, and growing graph cards.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-session-graph-axioms`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The note says the session ended with a new axiom set that passes the full 16-row audited core card on three graph topologies, but its current status boundary says the declared runner is a legacy proxy harness and not a current-main evidence surface.  _(class `C`)_
+- **chain closes:** False — The chain does not close as a current theorem because both the source note and runner explicitly demote the declared harness to legacy proxy/control status. The one-hop staggered card is retained_bounded, but it is contrasted as a successor/current lane rather than deriving this graph-axiom synthesis.
+- **rationale:** Issue: The source note's positive graph-axiom/card language is not supported by a current evidence surface, because the declared runner and note both state that frontier_axioms_16card.py is a historical legacy proxy/control harness. Why this blocks: a legacy proxy 16-card cannot ratify a current positive theorem, especially where the note says live status belongs to separate force-based staggered, corrected graph-KG, and portability cards with different semantics. Repair target: audit the current successor cards and runners as separate scoped claims, or supply a current retained-grade graph-axiom runner/certificate for this exact theorem. Claim boundary until fixed: the file may be cited only as historical synthesis/support context, not as a current retained positive theorem.
 - **auditor confidence:** high
 
 ### `seventh_family_diagonal_boundary_note`
