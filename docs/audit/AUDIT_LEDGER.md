@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:48:04.621802+00:00
+**Generated:** 2026-05-03T15:50:33.994804+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 780 |
+| unaudited | 779 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 26 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 515 |
+| ~~audited_conditional~~ | 516 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,22 +37,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 308 |
-| `audited_conditional` | 515 |
+| `audited_conditional` | 516 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 26 |
 | `audited_renaming` | 21 |
-| `unaudited` | 826 |
+| `unaudited` | 825 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 584 |
+| `bounded_theorem` | 586 |
 | `decoration` | 7 |
 | `meta` | 46 |
-| `no_go` | 157 |
+| `no_go` | 160 |
 | `open_gate` | 91 |
-| `positive_theorem` | 863 |
-| `unset` | 7 |
+| `positive_theorem` | 865 |
 
 | criticality | count |
 |---|---:|
@@ -843,6 +842,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_support_recovery_basin_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_propagating_green_pocket_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_green_pocket_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `source_resolved_wavefield_mechanism_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | configured_numerical_proxy_for_physical_mechanism | - |
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | C | - |
 | `staggered_backreaction_shell_spectral_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -12016,6 +12016,24 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
 - **auditor confidence:** high
+
+### `source_resolved_wavefield_mechanism_note`
+
+- **Note:** [`SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md`](../../docs/SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** On the configured h=0.25 exact-lattice wavefield runner, the detector-line phase-ramp slope is reported to vary monotonically with source-detector depth while zero-source reduction and near-linear weak-field scaling are checked.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-source-depth-hostile-reviewer-2026-05-03`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** The note promotes the numerical source-layer scan into a mechanism-level refinement: the detector-line phase-ramp steepens as the source moves closer to the detector plane, interpreted as a causal-field-style depth mechanism rather than a pure source-strength rescaling.  _(class `configured_numerical_proxy_for_physical_mechanism`)_
+- **chain closes:** False — The retained inputs supplied here do not derive the finite-speed wavefield carrier, the detector-line phase-ramp observable, or the causal-field interpretation from first principles. The note also imports the retained TOWARD/wavefield lane as a parent fact despite deps=[].
+- **rationale:** Issue: The load-bearing move is the promotion of a configured numerical source-depth trend into a mechanism-level positive theorem, while the finite-speed wavefield carrier, detector-line phase-ramp readout, and upstream retained TOWARD/wavefield branch are not derived or declared as dependencies in this claim packet. Why this blocks: A hostile referee can accept that the runner samples a configured proxy and still reject the theorem-level mechanism claim, because the runner does not construct the causal-field bridge from retained inputs and deps=[] does not close the parent-lane import. Repair target: Add explicit retained dependencies for the upstream exact-family wavefield/TOWARD lane and provide a theorem or runner that derives the wavefield carrier and phase-ramp depth coupling from retained primitives rather than selecting the proxy and measuring its response. Claim boundary until fixed: The safe claim is a numerical diagnostic: under this configured runner and parameter family, the phase-ramp proxy is reported to vary with source layer; it is not yet an independently closed positive theorem for a causal wavefield mechanism.
+- **open / conditional deps cited:**
+  - `retained exact-family TOWARD branch used as parent wavefield lane`
+  - `derivation of finite-speed wavefield candidate from retained CL3 primitives`
+  - `derivation/justification of detector-line phase-ramp as the promoted physical readout`
+  - `current runner-output verification for the note's numeric values`
+- **auditor confidence:** 0.82
 
 ### `spectral_closure_2026-04-09`
 
