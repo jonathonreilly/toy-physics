@@ -1,0 +1,85 @@
+slug: composite-higgs-mechanism-2026-05-03
+parent_campaign: retained-promotion-2026-05-02 (cycle 20)
+mode: campaign-block (single-cycle compressed)
+status: in-progress
+target_status: best-honest-status (expected: stretch-attempt with named obstructions)
+
+current_goal: |
+  Run /physics-loop methodology on the composite-Higgs mechanism question.
+  Produce a 5-route portfolio + execute the best-ranked route as one major
+  cycle. Document outcome with V1-V5 promotion value gate. Honest expected
+  outcome: STRETCH ATTEMPT (output type c) sharpening cycle 08's three
+  named obstructions with multi-route portfolio + selected-route execution.
+
+active_route: |
+  ROUTE B (Multi-channel condensation with Z3 cluster phase relations).
+  Selected after dramatic-step scoring of 5 routes (see ROUTE_PORTFOLIO.md).
+  Highest combined score on (a) probability of useful branch-local structural
+  result, (b) branch-local candidate content beyond cycles 06/07/08/15/16,
+  and (c) ability to address ALL THREE of cycle 08's obstructions with one
+  candidate.
+
+hard_residual_being_attacked: |
+  EWSB candidate mechanism in framework: sharpen named obstructions for the
+  dynamical candidate that would produce ⟨q̄_L u_R⟩ ≠ 0 with an effective
+  Yukawa relation, without using observed m_top as input, AND selects which
+  bilinear plays the Higgs role. This is cycle 08's Obstructions 1, 2, and
+  3 jointly.
+
+cycle_count: 1 (single-cycle compressed)
+
+files_touched_planned:
+  - .claude/science/physics-loops/composite-higgs-mechanism-2026-05-03/* (loop pack)
+  - docs/COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md
+  - scripts/frontier_composite_higgs_mechanism.py
+
+open_imports:
+  retained_inputs_used:
+    - unified matter-content EWSB harness
+    - LHCM Y normalization and Q = T_3 + Y/2 convention
+    - one-Higgs Yukawa gauge-selection boundary
+    - Higgs Y_H=+1 from LHCM and admitted Yukawa structure
+    - Koide Z3 scalar potential (V(m) = V₀ + (c1+c2/2)m + (3/2)m² + (1/6)m³)
+    - EW current Fierz channel decomposition (N_c²-1)/N_c² adjoint fraction
+    - current-note bilinear hypercharge recomputation
+  admitted_context_external:
+    - SU(N) representation theory (textbook)
+    - SM Yukawa structural form (Halzen-Martin)
+  forbidden_imports_check:
+    - No PDG values for m_top, m_H, v_EW, m_W, m_Z
+    - No literature numerical comparators (BHL m_top ~ 600 GeV cited only as obstruction context)
+    - No fitted selectors
+
+no_go_routes:
+  - Route A (Z3 cluster only): does NOT directly produce a doublet condensate
+    on its own; Z3 acts on the lepton mass-tower selector slice, not the
+    quark-bilinear EW doublet structure. Demoted to support component of B.
+  - Route C (dimensional argument from g_2² = 1/4): the running surface
+    M_Pl → v is the bounded SU(2) staircase residual from cycle 15;
+    re-attacking this is corollary churn.
+  - Route D (Majorana null-space → EWSB): cycle 06 Majorana operator is
+    a SU(2)_L-singlet Majorana mass; it BREAKS lepton number, not
+    SU(2)_L × U(1)_Y. Different structural target.
+  - Route E (Non-Higgs EWSB with no fundamental scalar): too broad for
+    single cycle; would replicate technicolor without branch-local framework input.
+
+review_findings: |
+  Self-review pending — V1-V5 gate to be answered in CLAIM_STATUS_CERTIFICATE.md
+  before any commit/PR.
+
+pr_status: not_yet_opened
+
+next_exact_action: |
+  1. Write ROUTE_PORTFOLIO.md scoring 5 routes
+  2. Write OPPORTUNITY_QUEUE.md
+  3. Write GOAL.md, ASSUMPTIONS_AND_IMPORTS.md, ARTIFACT_PLAN.md
+  4. Write CLAIM_STATUS_CERTIFICATE.md with V1-V5 answered
+  5. Build COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md
+     with Route B's candidate analysis + named residual obstructions
+  6. Build runner with PASS=N/0 N≥20
+  7. Commit, push, open PR
+  8. Write HANDOFF.md
+
+stop_condition: |
+  Single-cycle compressed campaign — STOP after one major cycle delivers
+  loop pack + note + runner + PR. Do not attempt cycle 21+.

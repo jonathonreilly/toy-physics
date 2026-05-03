@@ -3213,6 +3213,42 @@
       "to": "fifth_family_complex_boundary_note"
     },
     {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "unified_matter_content_ewsb_harness_theorem_note_2026-05-03"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "lhcm_y_normalization_from_anomaly_and_convention_note_2026-05-02"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "higgs_mechanism_note"
+    },
+    {
+      "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "to": "neutrino_majorana_native_gaussian_no_go_note"
+    },
+    {
       "from": "composite_source_additivity_2d_note",
       "to": "composite_source_additivity_note"
     },
@@ -4695,6 +4731,94 @@
     {
       "from": "dm_su3_gauge_loop_obstruction_note_2026-04-25",
       "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "assumption_derivation_ledger"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "work_history.repo.dm_lane_weave_triage_2026-05-03"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "publication.ci3_z3.derivation_atlas"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_local_schur_source_family_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_microscopic_value_frontier_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_leptogenesis_pmns_projector_interface_note_2026-04-16"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "dm_wilson_parent_correctness_audit_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "work_history.repo.canonical_weave_audit_2026-05-03"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "to": "repo.controlled_vocabulary"
     },
     {
       "from": "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19",
@@ -8681,10 +8805,6 @@
       "to": "equivalence_principle_harness_note"
     },
     {
-      "from": "newton_derivation_note",
-      "to": "composite_source_additivity_2d_note"
-    },
-    {
       "from": "nonlabel_grown_drift_basin_note",
       "to": "nonlabel_grown_basin_note"
     },
@@ -9115,6 +9235,50 @@
     {
       "from": "plaquette_self_consistency_note",
       "to": "scalar_3plus1_temporal_ratio_note"
+    },
+    {
+      "from": "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03",
+      "to": "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03"
+    },
+    {
+      "from": "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03",
+      "to": "patched_stationary_system_pl_s3_theorem_note_2026-05-03"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "eta_188_structural_origin_partial_note_2026-05-03"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "dm_leptogenesis_transport_status_note_2026-04-16"
+    },
+    {
+      "from": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "to": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03"
     },
     {
       "from": "pmns_c3_character_mode_reduction_note",
@@ -10089,10 +10253,6 @@
       "to": "signed_gravity_cl3z3_source_character_derivation_note"
     },
     {
-      "from": "signed_gravity_native_boundary_complex_containment_note",
-      "to": "signed_gravity_naturally_hosted_orientation_line_note"
-    },
-    {
       "from": "signed_gravity_naturally_hosted_orientation_line_note",
       "to": "signed_gravity_native_boundary_complex_containment_note"
     },
@@ -10271,10 +10431,6 @@
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
       "to": "signed_gravity_aps_boundary_index_chi_probe_note"
-    },
-    {
-      "from": "signed_gravity_response_backlog_2026-04-25",
-      "to": "signed_gravity_aps_wald_gauss_bridge_audit_note"
     },
     {
       "from": "signed_gravity_response_backlog_2026-04-25",
@@ -12437,10 +12593,6 @@
       "to": "alpha_s_derived_note"
     },
     {
-      "from": "yt_vertex_power_derivation",
-      "to": "yt_zero_import_authority_note"
-    },
-    {
       "from": "yt_ward_identity_derivation_theorem",
       "to": "native_gauge_closure_note"
     },
@@ -12463,10 +12615,6 @@
     {
       "from": "yt_ward_identity_derivation_theorem",
       "to": "minimal_axioms_2026-04-11"
-    },
-    {
-      "from": "yt_zero_import_authority_note",
-      "to": "yt_ward_identity_derivation_theorem"
     },
     {
       "from": "yt_zero_import_authority_note",
@@ -14258,6 +14406,38 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "no_per_site_bosonic_ccr_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "no_per_site_chirality_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "u1_fermion_number_conservation_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "unit_singlet_overlap_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02"
     },
     {
@@ -15062,6 +15242,22 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "yt_p2_v_matching_theorem_note_2026-04-17"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "yt_color_projection_correction_note"
     },
     {
@@ -15414,6 +15610,30 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_bimodule_norm_existence_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_bimodule_norm_naturality_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_jts_affine_physical_carrier_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_jts_physical_point_closure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "quark_bicac_endpoint_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "ckm_from_mass_hierarchy_note"
     },
     {
@@ -15678,6 +15898,30 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_berry_bundle_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_berry_phase_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16"
     },
     {
@@ -15691,6 +15935,38 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -15830,6 +16106,70 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_local_schur_source_family_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_microscopic_value_frontier_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_effective_parent_one_clock_transfer_boundary_theorem_note_2026-04-18"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_z3_texture_factor_theorem_note_2026-04-15"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_flagship_closure_review_note_2026-04-17"
     },
     {
@@ -15846,6 +16186,22 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_abcc_signature_forcing_theorem_note_2026-04-19"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_neutrino_source_surface_active_curvature_23_symmetric_baseline_boundary_theorem_note_2026-04-17"
     },
     {
@@ -15859,6 +16215,22 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -16175,6 +16547,14 @@
     {
       "from": "publication.ci3_z3.derivation_atlas",
       "to": "neutrino_majorana_residual_sharing_split_theorem_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "neutrino_majorana_adjacent_singlet_placement_theorem_note"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "neutrino_majorana_background_normalization_theorem_note"
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
@@ -22497,6 +22877,22 @@
       "to": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03"
     },
     {
+      "from": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "to": "work_history.repo.canonical_weave_audit_2026-05-03"
+    },
+    {
+      "from": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "to": "assumption_derivation_ledger"
+    },
+    {
+      "from": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "to": "repo.controlled_vocabulary"
+    },
+    {
+      "from": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "to": "publication.ci3_z3.derivation_atlas"
+    },
+    {
       "from": "work_history.repo.lane_status_board",
       "to": "repo.active_review_queue"
     },
@@ -22641,7 +23037,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:53:08.172461+00:00",
+  "generated_at": "2026-05-03T15:56:08.895003+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25005,6 +25401,17 @@
       "runner_path": "scripts/frontier_boundary_law_robustness.py",
       "title": "Boundary-Law Robustness Addendum"
     },
+    "branch_cleanup_recommendation_2026-05-03": {
+      "claim_id": "branch_cleanup_recommendation_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "5b3094d41a89c91e2896877319981104eb0330e63d091af30933994bd16e34f2",
+      "path": "docs/BRANCH_CLEANUP_RECOMMENDATION_2026-05-03.md",
+      "runner_path": "scripts/inventory_remote_branches.py",
+      "title": "Branch / Worktree Cleanup Recommendation \u2014 2026-05-03"
+    },
     "branch_entanglement_robustness_note_2026-04-11": {
       "claim_id": "branch_entanglement_robustness_note_2026-04-11",
       "claim_type_author_hint": null,
@@ -25392,6 +25799,17 @@
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
+    },
+    "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
+      "claim_id": "carrier_orbit_invariance_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [],
+      "note_hash": "cfd3c06e41ba9dc3691b90d5fec94eb785c6a1377e14ca3a5dffb9ec56d9fe34",
+      "path": "docs/CARRIER_ORBIT_INVARIANCE_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_carrier_orbit_invariance.py",
+      "title": "Carrier Orbit Invariance \u2014 Stretch Attempt with Partial Structural Insight"
     },
     "causal_cone_speed_map_note": {
       "claim_id": "causal_cone_speed_map_note",
@@ -26928,6 +27346,27 @@
       "path": "docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md",
       "runner_path": "scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py",
       "title": "Complex Selectivity Predictor Note"
+    },
+    "composite_higgs_mechanism_stretch_attempt_note_2026-05-03": {
+      "claim_id": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "native_gauge_closure_note",
+        "unified_matter_content_ewsb_harness_theorem_note_2026-05-03",
+        "lhcm_y_normalization_from_anomaly_and_convention_note_2026-05-02",
+        "sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26",
+        "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02",
+        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "higgs_mechanism_note",
+        "neutrino_majorana_native_gaussian_no_go_note"
+      ],
+      "note_hash": "e1222949f58c2e59bf11bc193c0c1524e320b2e41c5c2a5e93a51bc97be64203",
+      "path": "docs/COMPOSITE_HIGGS_MECHANISM_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_composite_higgs_mechanism.py",
+      "title": "Composite-Higgs Candidate \u2014 Multi-Channel Z3-Phased Composite Scalar (Stretch Attempt with 3 Named Residual Obstructions)"
     },
     "composite_source_additivity_2d_note": {
       "claim_id": "composite_source_additivity_2d_note",
@@ -30107,6 +30546,40 @@
       "runner_path": "scripts/frontier_dm_su3_gauge_loop_derivation_attempt.py",
       "title": "SU(3) Gauge-Loop Derivation of the 8/3 Enhancement -- Obstruction Note"
     },
+    "dm_wilson_direct_descendant_batch_authority_note_2026-05-03": {
+      "claim_id": "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "assumption_derivation_ledger",
+        "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
+        "work_history.repo.dm_lane_weave_triage_2026-05-03",
+        "publication.ci3_z3.derivation_atlas",
+        "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_local_schur_source_family_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_microscopic_value_frontier_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
+        "dm_leptogenesis_pmns_projector_interface_note_2026-04-16",
+        "left_handed_charge_matching_note",
+        "dm_wilson_parent_correctness_audit_note_2026-04-18",
+        "work_history.repo.canonical_weave_audit_2026-05-03",
+        "repo.controlled_vocabulary"
+      ],
+      "note_hash": "1a7f894c5bfb18e724772c955eb63ff33556be5663d5e150d08b902a21d9f27b",
+      "path": "docs/DM_WILSON_DIRECT_DESCENDANT_BATCH_AUTHORITY_NOTE_2026-05-03.md",
+      "runner_path": null,
+      "title": "DM Wilson Direct-Descendant Bounded Support Batch Note"
+    },
     "dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19": {
       "claim_id": "dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19",
       "claim_type_author_hint": null,
@@ -30836,6 +31309,17 @@
       "path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "runner_path": null,
       "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
+    },
+    "eta_188_structural_origin_partial_note_2026-05-03": {
+      "claim_id": "eta_188_structural_origin_partial_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "partial closing of cycle 09 Obstruction 3 + falsification of four near-fit candidates",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "c5ed36efc98f9355afe0c875640e10aa18712844e32a0e22ab63fa6a17b5e691",
+      "path": "docs/ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_eta_188_structural_origin.py",
+      "title": "Structural Origin of eta/eta_obs = 0.1888 \u2014 Partial Closing Note"
     },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "claim_id": "evanescent_barrier_amplitude_suppression_theorem_note",
@@ -32006,7 +32490,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "dbc1ecdd1e9f2eacada3e0bb7b569a67f86a71df434878aade6aa8c697e262b8",
+      "note_hash": "e17619a84d07469c195c457cebfb02a3d3053a561528dea76a852a313114022b",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
@@ -32017,7 +32501,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "d6d96b96ebd1c2e736203cd1dc2dfd3f77643e767d6f9f7c073c080e3e7df00a",
+      "note_hash": "5a725424f88fdb080759417871c4845c8aaff57f9c4e725851e1f32ac03eecb8",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_FIRST_HANKEL_TO_DM_BOUNDARY_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector First-Hankel to DM Boundary"
@@ -32131,7 +32615,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "8857d13bd1f15b4b81b6972eeb207d8aa3b90b682016aa78e7d35584956144ec",
+      "note_hash": "5f072bf36eb08f4f5a3d4fdae0cc250c0ad1313c511797fbb0b4a1804183eca0",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Minimal Positive Completion"
@@ -36926,7 +37410,7 @@
       "claim_type_author_hint_raw": "meta",
       "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "b801ebc2cbd6dd15eac116436368b1de9932f332359f8c939bee816813447061",
+      "note_hash": "868dc20d2ee4a73266eae15daf9d732066f5dd94df4cba80445f55b404933b41",
       "path": "docs/MISSING_RUNNER_INVENTORY_2026-05-03.md",
       "runner_path": null,
       "title": "Missing Runner Inventory \u2014 2026-05-03 Audit-Repair Scan"
@@ -38152,10 +38636,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [
-        "equivalence_principle_harness_note",
-        "composite_source_additivity_2d_note"
+        "equivalence_principle_harness_note"
       ],
-      "note_hash": "b88d6a2ba1c23957e5a6a19a0588d1b669859d3ddeda73663f85c1aa69e287b1",
+      "note_hash": "0f556be8867f9e2804f6ab9a3b842c0b4e45b75b85d9fe385d8f43c5e2ea68b3",
       "path": "docs/NEWTON_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)"
@@ -38835,6 +39318,20 @@
       "runner_path": null,
       "title": "Physics QA Tracker"
     },
+    "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03": {
+      "claim_id": "pl_s3_atlas_refinement_compatibility_theorem_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "closing_derivation (output type a)",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "full_pl_s3_atlas_cocycle_closure_theorem_note_2026-05-03",
+        "patched_stationary_system_pl_s3_theorem_note_2026-05-03"
+      ],
+      "note_hash": "b5287e3eb9e1767236f032e22d930922b7a0d0198c54c7e7d5c0778b9da3ea73",
+      "path": "docs/PL_S3_ATLAS_REFINEMENT_COMPATIBILITY_THEOREM_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_pl_s3_atlas_refinement_compatibility.py",
+      "title": "PL S^3 Atlas Refinement Compatibility \u2014 Theorem Note"
+    },
     "planck_boundary_density_extension_theorem_note_2026-04-24": {
       "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
@@ -39096,6 +39593,27 @@
       "path": "docs/PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py",
       "title": "PMNS Branch-Conditioned Quadratic-Sheet Closure"
+    },
+    "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03": {
+      "claim_id": "pmns_branch_selector_cp_sheet_blindness_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "stretch_attempt (output type c) \u2014 negative structural open-gate note",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "eta_188_structural_origin_partial_note_2026-05-03",
+        "dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16",
+        "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
+        "dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16",
+        "dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16",
+        "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16",
+        "dm_leptogenesis_pmns_constructive_continuity_closure_theorem_note_2026-04-17",
+        "dm_leptogenesis_transport_status_note_2026-04-16",
+        "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03"
+      ],
+      "note_hash": "c657c45153d8fe501f694eb8193de9be6ee814b33ba1cedb1d61c176bfdf2bbf",
+      "path": "docs/PMNS_BRANCH_SELECTOR_CP_SHEET_BLINDNESS_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_pmns_branch_selector.py",
+      "title": "PMNS Branch Selector \u2014 CP-Sheet Blindness Excludes the Current Branch-B Bank"
     },
     "pmns_c3_character_holonomy_closure_note": {
       "claim_id": "pmns_c3_character_holonomy_closure_note",
@@ -39926,6 +40444,14 @@
         "momentum_charge_commute_theorem_note_2026-05-02",
         "pauli_group_order_theorem_note_2026-05-02",
         "multisite_pauli_group_theorem_note_2026-05-02",
+        "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
+        "no_per_site_chirality_theorem_note_2026-05-02",
+        "cpt_particle_antiparticle_mass_equality_theorem_note_2026-05-02",
+        "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02",
+        "u1_fermion_number_conservation_theorem_note_2026-05-02",
+        "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
+        "unit_singlet_overlap_narrow_theorem_note_2026-05-02",
+        "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02",
         "affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02",
         "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
         "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
@@ -40127,6 +40653,10 @@
         "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
         "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
         "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
+        "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
+        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
+        "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
+        "yt_p2_v_matching_theorem_note_2026-04-17",
         "yt_color_projection_correction_note",
         "yukawa_color_projection_theorem",
         "yt_boundary_theorem",
@@ -40215,6 +40745,12 @@
         "quark_cp_carrier_completion_note_2026-04-18",
         "quark_endpoint_readout_constraints_note_2026-04-19",
         "s3_time_theta_to_slice_coupling_note",
+        "quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19",
+        "quark_bimodule_norm_existence_theorem_note_2026-04-19",
+        "quark_bimodule_norm_naturality_theorem_note_2026-04-19",
+        "quark_jts_affine_physical_carrier_theorem_note_2026-04-19",
+        "quark_jts_physical_point_closure_theorem_note_2026-04-19",
+        "quark_bicac_endpoint_obstruction_theorem_note_2026-04-19",
         "ckm_from_mass_hierarchy_note",
         "ckm_schur_complement_theorem",
         "work_history.ckm.cabibbo_bound_note",
@@ -40281,10 +40817,24 @@
         "koide_full_lattice_schur_inheritance_note_2026-04-18",
         "koide_cone_completing_root_narrow_theorem_note_2026-05-02",
         "koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
+        "koide_berry_bundle_obstruction_theorem_note_2026-04-19",
+        "koide_berry_phase_theorem_note_2026-04-19",
+        "koide_q_delta_linking_relation_theorem_note_2026-04-20",
+        "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29",
         "dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16",
         "dm_leptogenesis_hrad_theorem_note_2026-04-16",
         "dm_neutrino_source_amplitude_theorem_note_2026-04-15",
         "dm_neutrino_positive_polar_h_cp_theorem_note_2026-04-15",
+        "dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15",
+        "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
+        "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
+        "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15",
+        "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+        "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
         "dm_leptogenesis_transport_status_note_2026-04-16",
         "dm_candidate_mass_window_theorem_note_2026-04-19",
         "dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16",
@@ -40319,14 +40869,38 @@
         "dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16",
         "dm_leptogenesis_pmns_microscopic_selector_reduction_theorem_note_2026-04-17",
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
+        "dm_wilson_direct_descendant_batch_authority_note_2026-05-03",
+        "dm_wilson_direct_descendant_canonical_path_selector_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_constructive_transport_plateau_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_local_schur_source_family_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_microscopic_value_frontier_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18",
+        "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
+        "dm_effective_parent_one_clock_transfer_boundary_theorem_note_2026-04-18",
+        "dm_z3_texture_factor_theorem_note_2026-04-15",
         "dm_flagship_closure_review_note_2026-04-17",
         "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
         "sigma_hier_uniqueness_theorem_note_2026-04-19",
         "abcc_cp_phase_no_go_theorem_note_2026-04-19",
+        "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19",
+        "dm_abcc_signature_forcing_theorem_note_2026-04-19",
+        "dm_abcc_exact_target_surface_source_cubic_closure_theorem_note_2026-04-21",
+        "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
         "dm_neutrino_source_surface_active_curvature_23_symmetric_baseline_boundary_theorem_note_2026-04-17",
         "dm_neutrino_source_surface_active_parity_compatible_diagonal_baseline_theorem_note_2026-04-17",
         "dm_neutrino_source_surface_parity_compatible_observable_selector_theorem_note_2026-04-17",
         "dm_leptogenesis_pmns_stationary_cp_incompatibility_theorem_note_2026-04-16",
+        "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20",
+        "dm_pmns_z3_doublet_block_center_positive_sheet_no_go_theorem_note_2026-04-20",
+        "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
+        "dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20",
         "r_base_group_theory_derivation_theorem_note_2026-04-24",
         "cosmology_from_mass_spectrum_note",
         "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
@@ -40406,6 +40980,8 @@
         "neutrino_majorana_algebraic_bridge_obstruction_note",
         "neutrino_majorana_endpoint_exchange_midpoint_theorem_note",
         "neutrino_majorana_residual_sharing_split_theorem_note",
+        "neutrino_majorana_adjacent_singlet_placement_theorem_note",
+        "neutrino_majorana_background_normalization_theorem_note",
         "neutrino_majorana_lower_level_pairing_nogo_note",
         "neutrino_sole_axiom_full_closure_boundary_note",
         "neutrino_retained_status_note_2026-04-16",
@@ -40443,7 +41019,7 @@
         "teleportation_conclusion_boundary_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "7d2d9625c97e4a83579e94127fa51a020b4a9de69c7fe118f626331a6f440daf",
+      "note_hash": "b6223bb6dfce7e4cc6d162e72bf213e7a7d3445cabb17a1e03b30f0efbfda8be",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -44085,10 +44661,9 @@
       "claim_type_seed_hint": "no_go",
       "deps": [
         "signed_gravity_remaining_closure_gates_note",
-        "signed_gravity_cl3z3_source_character_derivation_note",
-        "signed_gravity_naturally_hosted_orientation_line_note"
+        "signed_gravity_cl3z3_source_character_derivation_note"
       ],
-      "note_hash": "43e08788bc44103bf0655b61ac2a38689dc1ec6ca1d43bad076fad730f3c2e42",
+      "note_hash": "c123da75e8e99d157293a2466a39d2a5ab6d3eb4cb027e8e6cc74a14ad220826",
       "path": "docs/SIGNED_GRAVITY_NATIVE_BOUNDARY_COMPLEX_CONTAINMENT_NOTE.md",
       "runner_path": "scripts/signed_gravity_native_boundary_complex_containment.py",
       "title": "Signed Gravity Native Boundary-Complex Containment Note"
@@ -44228,7 +44803,6 @@
         "signed_gravity_nonlocal_boundary_chi_target_note",
         "signed_gravity_boundary_coframe_chi_probe_note",
         "signed_gravity_aps_boundary_index_chi_probe_note",
-        "signed_gravity_aps_wald_gauss_bridge_audit_note",
         "signed_gravity_aps_locked_source_action_proposal_note",
         "signed_gravity_aps_action_origin_superselection_stability_note",
         "signed_gravity_retained_boundary_source_principle_no_go_note",
@@ -44242,7 +44816,7 @@
         "lensing_k_sweep_note",
         "complex_action_note"
       ],
-      "note_hash": "c252c6251031988a913f56dab46a936f5b0cbb2c229b1a0f6a42323aa7cc83c4",
+      "note_hash": "8cc06bac2cca3033305abb4747465b50e78e8253c2288e9cd882a23ca5739421",
       "path": "docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md",
       "runner_path": null,
       "title": "Signed Gravitational Response Lane Backlog"
@@ -45094,6 +45668,17 @@
       "path": "docs/STAGGERED_TWO_FIELD_WAVE_NOTE.md",
       "runner_path": "scripts/frontier_two_field_wave.py",
       "title": "Staggered Two-Field Wave Coupling \u2014 Rerun-Corrected Note"
+    },
+    "stale_narrative_review_2026-05-03": {
+      "claim_id": "stale_narrative_review_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "9196d9932367223a6266a9efb2a2dc93dd0a6d89aeea5095a48226937a61e32e",
+      "path": "docs/STALE_NARRATIVE_REVIEW_2026-05-03.md",
+      "runner_path": null,
+      "title": "Stale-Narrative Archival Review \u2014 2026-05-03"
     },
     "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24": {
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
@@ -46963,6 +47548,17 @@
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "title": "UV Gauge-to-Yukawa Bridge: Subordinate Support Note"
     },
+    "v_even_theorem_retention_stretch_attempt_note_2026-05-03": {
+      "claim_id": "v_even_theorem_retention_stretch_attempt_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "stretch_attempt (output type c) with PARTIAL closing-derivation",
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "85eca19dd6e8e7e03dfdd6787de13e7be612f5034d5bb28f0cb181fdf9c2776c",
+      "path": "docs/V_EVEN_THEOREM_RETENTION_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_v_even_theorem_retention.py",
+      "title": "v_even Theorem Retention \u2014 Stretch Attempt with Partial Closing-Derivation"
+    },
     "vacuum_critical_stability_note": {
       "claim_id": "vacuum_critical_stability_note",
       "claim_type_author_hint": null,
@@ -48102,6 +48698,22 @@
       "path": "docs/work_history/repo/CANONICAL_WEAVE_AUDIT_2026-05-03.md",
       "runner_path": null,
       "title": "Canonical Authority-Surface Weave Audit \u2014 2026-05-03"
+    },
+    "work_history.repo.dm_lane_weave_triage_2026-05-03": {
+      "claim_id": "work_history.repo.dm_lane_weave_triage_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "work_history.repo.canonical_weave_audit_2026-05-03",
+        "assumption_derivation_ledger",
+        "repo.controlled_vocabulary",
+        "publication.ci3_z3.derivation_atlas"
+      ],
+      "note_hash": "0e6efdaf4a609f04cfa260531761c0cd5e55cafbac771e3913e6df9c1e420d05",
+      "path": "docs/work_history/repo/DM_LANE_WEAVE_TRIAGE_2026-05-03.md",
+      "runner_path": null,
+      "title": "DM Lane Weave Triage \u2014 2026-05-03"
     },
     "work_history.repo.evaluation_tools.readme": {
       "claim_id": "work_history.repo.evaluation_tools.readme",
@@ -49348,10 +49960,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [
-        "alpha_s_derived_note",
-        "yt_zero_import_authority_note"
+        "alpha_s_derived_note"
       ],
-      "note_hash": "30400dc6edc1c2283ee378fcf084fad6c0daec6f356b54f5be807545e72e8ef4",
+      "note_hash": "d95d31f178d6fcff39a0ceed12a477aebf2ff8b27e9f37083662b934df32d118",
       "path": "docs/YT_VERTEX_POWER_DERIVATION.md",
       "runner_path": "scripts/frontier_vertex_power.py",
       "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`"
@@ -49380,12 +49991,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "yt_ward_identity_derivation_theorem",
         "alpha_s_derived_note",
         "yt_color_projection_correction_note",
         "yt_explicit_systematic_budget_note"
       ],
-      "note_hash": "f8ab46c69ac80bc129cfdaed26edab37409d4d7cd05d741a017233deea7fa8bb",
+      "note_hash": "f3d396af839c334960850478f248f469a5cba1ae35a637982bd8a664e97fd6a2",
       "path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "title": "y_t Lane: Zero-Import Authority"
@@ -49564,8 +50174,10 @@
     "born_lane_comparison_note",
     "born_rule_analysis_2026-04-11",
     "bound_state_selection_note",
+    "branch_cleanup_recommendation_2026-05-03",
     "breakthrough_direction_memo_2026-04-10",
     "broad_gravity_derivation_note",
+    "carrier_orbit_invariance_stretch_attempt_note_2026-05-03",
     "causal_escape_window_note",
     "causal_field_canonical_chain_note",
     "causal_field_portability_note",
@@ -49788,6 +50400,7 @@
     "emergent_product_law_note",
     "equivalence_principle_harness_note",
     "equivalence_principle_note",
+    "eta_188_structural_origin_partial_note_2026-05-03",
     "evolving_network_prototype_note",
     "evolving_network_prototype_v2_note",
     "evolving_network_prototype_v3_note",
@@ -50307,6 +50920,7 @@
     "staggered_self_consistent_two_body_note_2026-04-11",
     "staggered_test_mass_companion_note_2026-04-11",
     "staggered_two_field_wave_note",
+    "stale_narrative_review_2026-05-03",
     "star_supported_bridge_class_note",
     "strc_lo_collinearity_theorem_note_2026-04-19",
     "strong_cp_theta_zero_note",
@@ -50409,6 +51023,7 @@
     "universal_qg_uv_finite_partition_note",
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24",
     "up_sector_partition_revisit_note_2026-04-19",
+    "v_even_theorem_retention_stretch_attempt_note_2026-05-03",
     "valley_linear_action_note",
     "valley_linear_asymptotic_bridge_note",
     "valley_linear_mirror_transfer_note",
@@ -50498,24 +51113,24 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 48,
-      "meta": 4,
+      "meta": 7,
       "no_go": 4,
-      "none": 1721,
-      "open_gate": 4,
+      "none": 1726,
+      "open_gate": 6,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 548,
-      "meta": 4,
+      "bounded_theorem": 549,
+      "meta": 7,
       "no_go": 110,
-      "none": 449,
-      "open_gate": 110,
+      "none": 452,
+      "open_gate": 113,
       "positive_theorem": 628
     },
-    "edge_count": 5660,
-    "leaf_count": 614,
-    "node_count": 1849,
-    "root_count": 1053,
-    "runners_with_path": 1411
+    "edge_count": 5759,
+    "leaf_count": 596,
+    "node_count": 1859,
+    "root_count": 1058,
+    "runners_with_path": 1418
   }
 }
