@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:34:40.158341+00:00
+**Generated:** 2026-05-03T17:35:23.856051+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 762 |
+| unaudited | 761 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 527 |
+| ~~audited_conditional~~ | 528 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 527 |
+| `audited_conditional` | 528 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 808 |
+| `unaudited` | 807 |
 
 | claim_type | count |
 |---|---:|
@@ -578,6 +578,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_triplet_normalization_target_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
 | `dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -4826,6 +4827,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** **Script:** `scripts/frontier_dm_neutrino_two_higgs_minimality_theorem.py`  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 2 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the claim that the even transfer coefficient vector is canonically fixed as v_even=(sqrt(8/3),sqrt(8)/3) from Frobenius-dual target generators, the exact two-row weak source factor, and bosonic source-response normalization.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-context-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** So the scalar source amplitude tau_+ is related to the channel amplitudes by sqrt(3/8) E1 = tau_+ and (3/sqrt(8)) E2 = tau_+.  _(class `F`)_
+- **chain closes:** False — The runner verifies the Frobenius duals, spectra, and determinant-response equality after the target/source generators and scale factors are chosen, but the note does not derive the physical normalization map from equal bosonic response to the amplitude identities a_i E_i=tau_+. With no retained dependency supplied for the weak swap-reduction carrier, null-multiplicity handling, or the unique bosonic source-response law, the coefficient conclusion remains conditional on that bridge.
+- **rationale:** Issue: the load-bearing step identifies the channel amplitudes E1,E2 with the source amplitude tau_+ through the asserted bosonic normalization law rather than deriving that amplitude map from retained inputs. Why this blocks: isospectrality and equal determinant response establish an algebraic consistency check for the chosen generators, but they do not by themselves force the physical source-to-target amplitude normalization or the orientation convention. Repair target: provide a retained theorem and runner that constructs the bosonic source-response normalization map from the exact weak source carrier to the Frobenius-dual target observables, including the null-multiplicity and branch conventions, without setting v_even=1/a_i afterward. Claim boundary until fixed: the note may safely state that the specified F1 and F2 have the displayed spectra and determinant-response equality with scaled Z_row, not that the transfer coefficients are canonically closed.
 - **auditor confidence:** high
 
 ### `dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15`
