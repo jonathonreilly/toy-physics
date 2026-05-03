@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:20:57.735184+00:00
+**Generated:** 2026-05-03T16:27:19.826254+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -23,33 +23,33 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 99 |
 | **retained_bounded** | 166 |
 | _retained_pending_chain_ | 2 |
-| open_gate | 15 |
-| unaudited | 773 |
+| open_gate | 14 |
+| unaudited | 774 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 28 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 520 |
+| ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 308 |
-| `audited_conditional` | 520 |
+| `audited_clean` | 307 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 28 |
 | `audited_renaming` | 22 |
-| `unaudited` | 819 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 587 |
 | `decoration` | 7 |
 | `meta` | 46 |
-| `no_go` | 160 |
+| `no_go` | 161 |
 | `open_gate` | 91 |
 | `positive_theorem` | 865 |
 
@@ -58,15 +58,15 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 114 |
 | `high` | 364 |
 | `medium` | 583 |
-| `leaf` | 695 |
+| `leaf` | 696 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 42
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1346
-- runners with (C) first-principles compute hits: 657
+- runners classified: 1347
+- runners with (C) first-principles compute hits: 658
 - runners with (D) external comparator hits: 335
 - decoration candidates (no C, no D): 112
 
@@ -207,7 +207,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_trapping_transport_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
-| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -526,6 +525,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_leptogenesis_exact_kernel_closure_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_leptogenesis_hrad_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -3577,6 +3577,21 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **rationale:** Issue: the theorem depends on the exact relativistic spectrum count g_* = 28 + (7/8)*90, but the note provides no cited theorem or derivation for the 28 and 90 counts. Why this blocks: the runner verifies downstream arithmetic and standard equilibrium integrals only after those constants are already set, so it does not independently close the authority path. Repair target: cite or add a theorem-grade spectrum-count note/runner that derives the bosonic and fermionic counts from the framework inputs, then keep this note as the conversion corollary. Claim boundary until fixed: conditional on the spectrum count, the d_N, s/n_gamma, and product arithmetic are internally consistent and runner-checked.
 - **auditor confidence:** high
 
+### `dm_leptogenesis_exact_kernel_closure_note_2026-04-15`
+
+- **Note:** [`DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`](../../docs/DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the conditional coherent-heavy-basis leptogenesis arithmetic: given gamma=1/2, E1=sqrt(8/3), E2=sqrt(8)/3, K00=2, and the retained benchmark constants, the runner gives epsilon_1/epsilon_DI=0.9276209209 and eta/eta_obs=0.5578749661, with no percent-level eta closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-restricted-audit-2026-05-03-dm-leptogenesis`  (codex-current; independence=fresh_context)
+- **load-bearing step:** After the refreshed branch closes c_odd=+1, v_even=(sqrt(8/3), sqrt(8)/3), a_sel=1/2, tau_E=tau_T=1/2, K00=2, what does the standard coherent leptogenesis kernel predict on the retained benchmark?  _(class `B`)_
+- **chain closes:** False — The downstream arithmetic from the imported constants is internally consistent and the runner reproduces the corrected epsilon and eta ratios. The bounded exact-package claim does not close from the restricted packet because gamma, E1, E2, K00, and the retained washout benchmark are imported as closed inputs rather than derived or supported by provided retained-grade authorities.
+- **rationale:** Issue: The note and runner import gamma=1/2, E1=sqrt(8/3), E2=sqrt(8)/3, K00=2, and benchmark washout inputs as already closed; the runner hard-codes these values and checks downstream consistency. Why this blocks: The claim includes exact source-and-CP-channel package closure, but the provided inputs do not derive those source values or the diagonal normalization from Cl(3) or retained one-hop authorities, so a clean verdict would ratify unsupported upstream premises. Repair target: Provide retained-grade one-hop derivations for the source package, K00 diagonal normalization, and retained washout benchmark, and update the runner to consume or compute those values rather than setting them directly. Claim boundary until fixed: It is safe only as conditional arithmetic: if the imported exact package and benchmark are granted, epsilon_1/epsilon_DI=0.9276209209 and eta/eta_obs=0.5578749661, so percent-level eta closure is not retained.
+- **open / conditional deps cited:**
+  - `missing retained-grade derivations for gamma=1/2, E1=sqrt(8/3), E2=sqrt(8)/3, K00=2, and the retained washout benchmark used by the runner`
+- **auditor confidence:** high
+
 ### `dm_leptogenesis_expansion_axiom_boundary_note_2026-04-16`
 
 - **Note:** [`DM_LEPTOGENESIS_EXPANSION_AXIOM_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_EXPANSION_AXIOM_BOUNDARY_NOTE_2026-04-16.md)
@@ -5922,21 +5937,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** the accepted Wilson local bosonic scalar gauge-source class has one exact temporal kernel shape on the minimal 3+1 block, differing only by overall normalization: K_O(omega) = 3w (3 + sin^2 omega)  _(class `A`)_
 - **chain closes:** True — Within the stated Wilson-source grammar, the six uniform plaquette orientations induce a_x=a_y=a_z=a_t=3w, and the APBC minimal cube sets the spatial sin^2 gaps to 1, giving K_O(omega)=3w(3+sin^2 omega). The normalization cancels in A_inf/A_2, and the exact endpoint ratio is 2/sqrt(3).
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
-- **auditor confidence:** high
-
-### `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02`
-
-- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Open gate documenting that the observable-level bridge <P>_full = R_O(beta_eff) from the full interacting Wilson plaquette expectation to the completed local one-plaquette response is not derived from A_min and remains a blocker; does not establish that bridge or any positive theorem.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** open_gate  (reason: `audited_open_gate`)
-- **auditor:** `fresh-gauge-scalar-observable-bridge-auditor`  (codex-fresh; independence=fresh_context)
-- **load-bearing step:** The bridge <P>_full = R_O(beta_eff) cannot be derived analytically from A_min alone with the current retained primitives; O1/O2/O3 identify the Schwinger-Dyson, effective-action, and RG obstruction routes.  _(class `B`)_
-- **chain closes:** True — The chain closes for the open-gate scope because the note explicitly documents the missing observable bridge, forbidden imports, and concrete obstruction routes, and the runner verifies that obstruction packet. The chain does not close for any positive theorem asserting <P>_full = R_O(beta_eff).
-- **rationale:** Clean only as an open gate, not as a positive theorem. The source note repeatedly states that the bridge remains open and that exact beta_eff(beta) is not analytically available from A_min; the runner checks obstruction documentation rather than computing the bridge. Residual risk: the phrase non-analytically-derivable should be cited as the documented unresolved bridge from current premises, not as a proved impossibility theorem.
-- **open / conditional deps cited:**
-  - `GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`

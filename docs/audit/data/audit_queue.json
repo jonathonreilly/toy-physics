@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 60,
     "high": 215,
-    "leaf": 197,
-    "medium": 330
+    "leaf": 199,
+    "medium": 329
   },
-  "generated_at": "2026-05-03T16:20:57.288729+00:00",
+  "generated_at": "2026-05-03T16:27:18.948402+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7602,27 +7602,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "transitive_descendants": 54
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.115,
-      "note_path": "docs/DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_leptogenesis_exact_kernel_closure.py",
-      "transitive_descendants": 48
     },
     {
       "audit_independence_required": "any_non_self",
@@ -15784,6 +15763,33 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_scalar_temporal_completion_theorem_note",
+        "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
+        "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
+        "gauge_vacuum_plaquette_framework_point_underdetermination_note",
+        "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.822,
+      "note_path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_no_go.py",
+      "transitive_descendants": 4
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "eta_188_structural_origin_partial_note_2026-05-03",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -16209,6 +16215,30 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
+      "transitive_descendants": 3
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
+      "claim_scope": null,
+      "claim_type": "open_gate",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "gauge_scalar_temporal_completion_theorem_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.5,
+      "note_path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
       "transitive_descendants": 3
     },
     {
@@ -20781,5 +20811,5 @@
     }
   ],
   "ready_count": 111,
-  "total_pending": 802
+  "total_pending": 803
 }
