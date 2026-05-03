@@ -1,5 +1,19 @@
 # Opportunity Queue
 
+2026-05-03 update: chunks021-022 have been imported from the active worker's
+sibling worktree and locally postprocessed.  Ready L12 coverage is now `22/63`
+chunks and `352/1000` saved configurations; v2 multi-tau rows are present for
+chunks017-022; target-observable ESS passes with limiting ESS
+`296.09790071733823`; target autocorrelation ESS passes over the current ready
+set.  This still does not change the closure ranking.  Chunk022 is a
+response-slope outlier, so response stability remains failed
+(`relative_stdev=0.9050778118183592`, `spread_ratio=5.920283844112204`), and
+the canonical-Higgs/source-overlap, W/Z-response, scalar-pole/FV/IR/model-class,
+finite-source-linearity, and multi-radius gates remain open.  New chunks are
+useful background support, but the highest-value foreground move remains a
+genuine same-surface `O_H/C_sH/C_HH` identity, same-source W/Z response with
+sector-overlap identity, or a microscopic rank-one neutral-scalar theorem.
+
 2026-05-03 update: the fallback same-source W/Z physical-response route now
 has a candidate certificate builder.  This reduces implementation ambiguity
 for future production rows: the required surface is same-source W/Z mass fits,

@@ -1,5 +1,35 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ chunks021-022 v2 multi-tau wave:
+
+- The active PR #230 worker completed chunks021-022 in the sibling worktree
+  `/Users/jonBridger/CI3Z2-pr230-status-20260503`; raw chunk outputs were
+  imported into this checkout and all post-run gates were rerun locally.
+- Outputs:
+  `outputs/yt_pr230_fh_lsz_production_L12_T24_chunk021_2026-05-01.json`
+  and
+  `outputs/yt_pr230_fh_lsz_production_L12_T24_chunk022_2026-05-01.json`.
+- Chunk-local generic target-timeseries checkpoints are `PASS=14 FAIL=0` for
+  each chunk; v2 multi-tau checkpoints are `PASS=19 FAIL=0` for each chunk.
+- The ready L12 set is now `22/63` chunks with `352/1000` saved
+  configurations.  Target-observable ESS passes with limiting ESS
+  `296.09790071733823`, and the autocorrelation ESS gate passes for target
+  observables over the current ready set.
+- Response stability still fails and worsened after the chunk022 outlier:
+  `relative_stdev=0.9050778118183592`, `spread_ratio=5.920283844112204`.
+  Response-window acceptance remains open: v2 rows are present only for
+  chunks017-022, chunks001-016 still lack v2 rows, multiple source radii are
+  absent, finite-source-linearity is absent, and production response stability
+  is still open.
+- Retained-route is `PASS=121 FAIL=0`; campaign status is `PASS=147 FAIL=0`.
+  No retained or proposed-retained closure is authorized.
+
+Next exact action: continue v2 production chunks or rerun older chunks with v2
+multi-tau rows only as production support, while the foreground closure route
+remains a real same-surface canonical-Higgs/source-overlap certificate, a W/Z
+response identity, or a scalar-pole identity theorem.  PR #230 remains
+draft/open.
+
 Latest checkpoint, 2026-05-03 same-source W/Z response certificate builder:
 
 - Added `scripts/frontier_yt_fh_gauge_mass_response_certificate_builder.py`
