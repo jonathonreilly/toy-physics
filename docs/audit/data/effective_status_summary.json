@@ -2,12 +2,12 @@
   "claim_type_counts": {
     "bounded_theorem": 585,
     "decoration": 7,
-    "meta": 42,
+    "meta": 43,
     "no_go": 160,
     "open_gate": 88,
     "positive_theorem": 863
   },
-  "computed_at": "2026-05-03T14:18:26.488564+00:00",
+  "computed_at": "2026-05-03T14:19:49.195733+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -41,20 +41,20 @@
   ],
   "cycles_detected": 45,
   "effective_status_counts": {
-    "audited_conditional": 518,
+    "audited_conditional": 514,
     "audited_decoration": 3,
     "audited_failed": 7,
     "audited_numerical_match": 24,
     "audited_renaming": 18,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
-    "meta": 42,
+    "meta": 43,
     "open_gate": 15,
     "retained": 75,
     "retained_bounded": 166,
     "retained_no_go": 100,
     "retained_pending_chain": 2,
-    "unaudited": 773
+    "unaudited": 777
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [

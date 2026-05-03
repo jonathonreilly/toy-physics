@@ -4,7 +4,15 @@
 **Status:** support - structural or confirmatory support note
 three-sample seam; the local Wilson triple still fails the retained positive
 cone, but there is one unique smallest adjoint-only positive completion  
-**Script:** `scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py`
+**Script:** `scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py` (**MISSING — flagged for re-audit**)
+
+> **Missing primary runner (2026-05-03 audit-repair scan):**
+> The script above is referenced as this note's primary runner but does not
+> exist in the current `scripts/` tree. Sibling notes in the same lane were
+> archived to `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/`;
+> this note is left active pending a runner-rewrite decision. The audit
+> verdict on this note will be redone once a working runner is registered
+> or the note is moved to archive.
 
 ## Question
 

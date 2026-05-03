@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T14:18:26.809525+00:00
-**Total pending:** 803
-**Ready (all deps already at retained-grade or metadata tiers):** 116
+**Generated:** 2026-05-03T14:19:49.621704+00:00
+**Total pending:** 806
+**Ready (all deps already at retained-grade or metadata tiers):** 119
 
 By criticality:
 - `critical`: 61
 - `high`: 222
 - `medium`: 327
-- `leaf`: 193
+- `leaf`: 196
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -16,7 +16,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | critical | 280 | 14.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_derivation.py` |
+| 1 | `g_bare_derivation_note` | positive_theorem | unaudited | critical | 280 | 14.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_g_bare_derivation.py` |
 | 2 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 313 | 9.29 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
 | 3 | `left_handed_charge_matching_note` | positive_theorem | unaudited | critical | 312 | 22.79 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
 | 4 | `cpt_exact_note` | positive_theorem | unaudited | critical | 290 | 17.18 |  | fresh_context_or_stronger_with_cross_confirmation | - |

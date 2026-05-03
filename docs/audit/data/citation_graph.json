@@ -22617,7 +22617,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T14:18:20.594555+00:00",
+  "generated_at": "2026-05-03T14:19:40.893300+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -31325,7 +31325,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "ced63ce0a8947d442d33e60926296749c3d4b4a2f97172823a464854d61c2681",
+      "note_hash": "7b3c664511f26bb5c89fa1206af24681ea2c20cfc7c605296d48a9bbbd01b224",
       "path": "docs/G_BARE_DERIVATION_NOTE.md",
       "runner_path": "scripts/frontier_g_bare_derivation.py",
       "title": "Derivation of g_bare = 1 from Cl(3) Framework Axioms"
@@ -31964,7 +31964,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "e17619a84d07469c195c457cebfb02a3d3053a561528dea76a852a313114022b",
+      "note_hash": "dbc1ecdd1e9f2eacada3e0bb7b569a67f86a71df434878aade6aa8c697e262b8",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
@@ -31975,7 +31975,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "5a725424f88fdb080759417871c4845c8aaff57f9c4e725851e1f32ac03eecb8",
+      "note_hash": "d6d96b96ebd1c2e736203cd1dc2dfd3f77643e767d6f9f7c073c080e3e7df00a",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_FIRST_HANKEL_TO_DM_BOUNDARY_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector First-Hankel to DM Boundary"
@@ -32089,7 +32089,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "5f072bf36eb08f4f5a3d4fdae0cc250c0ad1313c511797fbb0b4a1804183eca0",
+      "note_hash": "8857d13bd1f15b4b81b6972eeb207d8aa3b90b682016aa78e7d35584956144ec",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Minimal Positive Completion"
@@ -36877,6 +36877,17 @@
       "path": "docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md",
       "runner_path": null,
       "title": "Mirror vs Lattice Program Note"
+    },
+    "missing_runner_inventory_2026-05-03": {
+      "claim_id": "missing_runner_inventory_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "b801ebc2cbd6dd15eac116436368b1de9932f332359f8c939bee816813447061",
+      "path": "docs/MISSING_RUNNER_INVENTORY_2026-05-03.md",
+      "runner_path": null,
+      "title": "Missing Runner Inventory \u2014 2026-05-03 Audit-Repair Scan"
     },
     "momentum_charge_commute_theorem_note_2026-05-02": {
       "claim_id": "momentum_charge_commute_theorem_note_2026-05-02",
@@ -49997,6 +50008,7 @@
     "mirror_mutual_information_canonical_families_note",
     "mirror_program_synthesis",
     "mirror_vs_central_head_to_head_note",
+    "missing_runner_inventory_2026-05-03",
     "monopole_derived_note",
     "moonshot_failure_audit_note",
     "moonshot_frontier_brainstorm_note",
@@ -50444,7 +50456,7 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 48,
-      "meta": 3,
+      "meta": 4,
       "no_go": 3,
       "none": 1722,
       "open_gate": 3,
@@ -50452,16 +50464,16 @@
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 548,
-      "meta": 3,
+      "meta": 4,
       "no_go": 109,
       "none": 450,
       "open_gate": 109,
       "positive_theorem": 628
     },
     "edge_count": 5654,
-    "leaf_count": 613,
-    "node_count": 1847,
-    "root_count": 1052,
+    "leaf_count": 614,
+    "node_count": 1848,
+    "root_count": 1053,
     "runners_with_path": 1410
   }
 }
