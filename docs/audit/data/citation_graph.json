@@ -6337,6 +6337,14 @@
       "to": "plaquette_self_consistency_note"
     },
     {
+      "from": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03",
+      "to": "gauge_vacuum_plaquette_framework_point_underdetermination_note"
+    },
+    {
       "from": "inverse_problem_graph_requirements_note",
       "to": "newton_derivation_note"
     },
@@ -22233,7 +22241,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T11:59:30.238828+00:00",
+  "generated_at": "2026-05-03T13:19:09.934484+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -33335,6 +33343,20 @@
       "runner_path": "scripts/frontier_industrial_sdp_bootstrap_block01.py",
       "title": "Industrial SDP Bootstrap \u2014 Infrastructure + SU(2)/SU(3) Single-Plaquette Validation"
     },
+    "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03": {
+      "claim_id": "industrial_sdp_bootstrap_lattice_bracket_note_2026-05-03",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "numerical CVXPY bracket attempt + named-obstruction stretch",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "plaquette_self_consistency_note",
+        "gauge_vacuum_plaquette_framework_point_underdetermination_note"
+      ],
+      "note_hash": "c6e67f12f150045c5645e55e0dd95493aaa02d85908c92647436e5850e7679cc",
+      "path": "docs/INDUSTRIAL_SDP_BOOTSTRAP_LATTICE_BRACKET_NOTE_2026-05-03.md",
+      "runner_path": "scripts/frontier_industrial_sdp_bootstrap_block02.py",
+      "title": "Industrial SDP Bootstrap \u2014 Lattice \u27e8P\u27e9(\u03b2=6) Bracket Attempt"
+    },
     "interest_map": {
       "claim_id": "interest_map",
       "claim_type_author_hint": null,
@@ -36218,10 +36240,21 @@
       "claim_type_author_hint_raw": "meta",
       "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "5700d7727f62c12deb09f576d288e942f92d8e7878b1414f53f5afd5781e3ff6",
+      "note_hash": "06805b8b8e2d6291762dc925504540e86ab95d494211800ca5e85ada2cc1ca1c",
       "path": "docs/MINIMAL_AXIOMS_2026-04-11.md",
       "runner_path": null,
-      "title": "Minimal Framework Inputs"
+      "title": "Minimal Framework Inputs (SUPERSEDED)"
+    },
+    "minimal_axioms_2026-05-03": {
+      "claim_id": "minimal_axioms_2026-05-03",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "dd2c308e52b06fcd5c4edf740a7a19712639311d06af86e2792a5fb0817d922c",
+      "path": "docs/MINIMAL_AXIOMS_2026-05-03.md",
+      "runner_path": "scripts/frontier_generation_rooting_undefined.py",
+      "title": "Minimal Framework Axioms (Restored)"
     },
     "minimal_bidirectional_trapping_probe_note": {
       "claim_id": "minimal_bidirectional_trapping_probe_note",
@@ -44305,6 +44338,17 @@
       "runner_path": "scripts/frontier_staggered_dag.py",
       "title": "Staggered Fermion on Layered DAG-Derived Family \u2014 Bounded Note"
     },
+    "staggered_dirac_realization_gate_note_2026-05-03": {
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [],
+      "note_hash": "fd28dcf0477000499a0272db8051b909012194f2388658a853dc5246c3afd708",
+      "path": "docs/STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md",
+      "runner_path": null,
+      "title": "Staggered-Dirac Realization Gate Note"
+    },
     "staggered_fermion_card_2026-04-10": {
       "claim_id": "staggered_fermion_card_2026-04-10",
       "claim_type_author_hint": null,
@@ -49440,6 +49484,7 @@
     "mesoscopic_surrogate_localization_sweep_note",
     "mesoscopic_surrogate_threshold_2d_note",
     "minimal_axioms_2026-04-11",
+    "minimal_axioms_2026-05-03",
     "mirror_2d_gravity_law_note",
     "mirror_2d_validation_note",
     "mirror_chokepoint_boundary_fit_note",
@@ -49695,6 +49740,7 @@
     "staggered_backreaction_note",
     "staggered_backreaction_shell_spectral_note",
     "staggered_dag_note_2026-04-10",
+    "staggered_dirac_realization_gate_note_2026-05-03",
     "staggered_fermion_card_2026-04-10",
     "staggered_fermion_card_2026-04-11",
     "staggered_geometry_superposition_note_2026-04-11",
@@ -49904,24 +49950,24 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 17,
-      "meta": 2,
+      "meta": 3,
       "no_go": 3,
-      "none": 1746,
-      "open_gate": 2,
+      "none": 1747,
+      "open_gate": 3,
       "positive_theorem": 72
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 517,
-      "meta": 2,
+      "meta": 3,
       "no_go": 109,
-      "none": 449,
-      "open_gate": 111,
+      "none": 450,
+      "open_gate": 112,
       "positive_theorem": 654
     },
-    "edge_count": 5558,
-    "leaf_count": 644,
-    "node_count": 1842,
-    "root_count": 1066,
-    "runners_with_path": 1407
+    "edge_count": 5560,
+    "leaf_count": 647,
+    "node_count": 1845,
+    "root_count": 1068,
+    "runners_with_path": 1409
   }
 }

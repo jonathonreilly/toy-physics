@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-03T11:59:32.774744+00:00",
+  "computed_at": "2026-05-03T13:19:14.734539+00:00",
   "criticality_counts": {
     "critical": 111,
     "high": 366,
-    "leaf": 809,
+    "leaf": 812,
     "medium": 556
   },
   "flagship_signal_used": false,
-  "node_count": 1842,
+  "node_count": 1845,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -104,8 +104,8 @@
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 22.055,
-      "transitive_descendants": 265
+      "load_bearing_score": 22.561,
+      "transitive_descendants": 266
     },
     {
       "claim_id": "three_generation_observable_theorem_note",

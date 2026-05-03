@@ -1,8 +1,26 @@
-# Minimal Framework Inputs
+# Minimal Framework Inputs (SUPERSEDED)
 
 **Date:** 2026-04-15 (last citation-graph repair: 2026-05-02)
-**Status:** current public framework memo for the `Cl(3)` / `Z^3` package
+**Status:** **SUPERSEDED** by `MINIMAL_AXIOMS_2026-05-03.md` — see that note for the current axiom set.
 **Type:** meta
+
+> **Notice (2026-05-03):** the A1–A4 numbered axiom list below was inserted on
+> 2026-04-15 (commit `24d698d94`, bundled inside a YT/EW Higgs documentation
+> commit) without being surfaced as a separate axiom-set decision. The
+> original 2026-04-11 framing intentionally treated the staggered Dirac
+> realization and `g_bare = 1` normalization as **bundled modeling
+> ingredients, not independent primitive axioms**. The 2026-05-03 restoration
+> backs this out: only the algebraic core (`Cl(3)` and `Z^3`) is treated as
+> framework axioms; the staggered/Grassmann realization and `g_bare = 1`
+> normalization are recategorized as named open gates
+> with explicit closure paths in flight. See
+> `MINIMAL_AXIOMS_2026-05-03.md` for the
+> restored axiom set and per-lane bookkeeping rules.
+
+This file is preserved for the historical record only. Do not cite as the
+current framework axiom set.
+
+---
 
 This file records the smallest input stack the current package actually uses.
 It is not a claim that every downstream lane is already closed, and it is not
