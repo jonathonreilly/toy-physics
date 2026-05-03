@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:35:47.341346+00:00
+**Generated:** 2026-05-03T21:36:11.864603+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,11 +20,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 86 |
-| **retained_no_go** | 106 |
+| **retained_no_go** | 107 |
 | **retained_bounded** | 202 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 679 |
+| unaudited | 678 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,22 +36,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 368 |
+| `audited_clean` | 369 |
 | `audited_conditional` | 552 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 726 |
+| `unaudited` | 725 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 597 |
 | `decoration` | 8 |
 | `meta` | 47 |
-| `no_go` | 164 |
+| `no_go` | 165 |
 | `open_gate` | 92 |
-| `positive_theorem` | 856 |
+| `positive_theorem` | 855 |
 
 | criticality | count |
 |---|---:|
@@ -364,6 +364,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `self_gravity_backreaction_closure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh | C | - |
 | `self_gravity_born_hardening_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `self_gravity_entropy_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `self_gravity_failure_diagnosis` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-context | B | - |
 | `self_gravity_scaling_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
 | `seventh_family_diagonal_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | claude-opus | C | - |
@@ -12716,6 +12717,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** This simple entropy observable does not currently support an area-law claim; it is capped at ln(2) and controlled primarily by the mass split p_A rather than boundary complexity.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the exact table values and the cautious negative readout: boundary correlations are inconsistent across families and the observable is a binary single-particle occupancy entropy capped by ln(2).
 - **rationale:** The claim is a negative/inconclusive boundary, not a positive area-law theorem. The current runner reproduces the note's entropy shifts and mixed boundary correlations, and the note explicitly limits the conclusion to topology-sensitive occupancy entropy with no robust boundary-controlled scaling. Residual risk is only that the broader self-gravity lane remains a model context; the audited claim here is the narrower no-area-law diagnostic for this simple observable.
+- **auditor confidence:** high
+
+### `self_gravity_failure_diagnosis`
+
+- **Note:** [`SELF_GRAVITY_FAILURE_DIAGNOSIS.md`](../../docs/SELF_GRAVITY_FAILURE_DIAGNOSIS.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go for the exact-lattice Poisson-like self-gravity/backreaction lane as a stable retained mechanism on this architecture.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `fresh-agent-self-gravity-diagnosis`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The failure is a three-part limit: the backreaction signal is small, the nonlinear loop is not stable enough, and end-to-end Born stops being machine-clean.  _(class `B`)_
+- **chain closes:** True — The source note's diagnosis is directly supported by the two retained-grade one-hop notes: exact epsilon=0/null controls survive, nonzero-coupling rows fail strict convergence, and full-loop Born is not machine-clean. The quick runner completed and reproduced the exact null identity plus nonzero-coupling nonconvergence, while explicitly skipping only the full end-to-end Born sweep.
+- **rationale:** The scoped claim is not a positive self-gravity theorem; it is a bounded no-go diagnosis. The cited retained_bounded and retained_no_go dependencies supply the load-bearing facts, and the current quick run agrees with the core failure pattern rather than contradicting it. Residual risk is limited to the full-sweep end-to-end Born value, which was not rerun in quick mode but is supplied by the retained one-hop closure note.
 - **auditor confidence:** high
 
 ### `self_gravity_scaling_note_2026-04-10`
