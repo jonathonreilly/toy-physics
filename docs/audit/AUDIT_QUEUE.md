@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-05-03T11:20:45.139317+00:00
-**Total pending:** 518
-**Ready (all deps already at retained-grade or metadata tiers):** 27
+**Generated:** 2026-05-03T11:30:36.740219+00:00
+**Total pending:** 517
+**Ready (all deps already at retained-grade or metadata tiers):** 26
 
 By criticality:
 - `critical`: 26
-- `high`: 218
+- `high`: 217
 - `medium`: 153
 - `leaf`: 121
 
@@ -42,29 +42,29 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 24 | `higgs_mass_derived_note` | positive_theorem | claim_type_backfill_reaudit | critical | 43 | 12.96 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_higgs_mass_full_3loop.py` |
 | 25 | `n_eff_from_three_generations_theorem_note_2026-04-24` | positive_theorem | claim_type_backfill_reaudit | critical | 42 | 13.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_n_eff_from_three_generations.py` |
 | 26 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | claim_type_backfill_reaudit | critical | 42 | 12.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_matter_radiation_equality_structural_identity.py` |
-| 27 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py` |
-| 28 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py` |
-| 29 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
-| 30 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
-| 31 | `yt_explicit_systematic_budget_note` | positive_theorem | claim_type_backfill_reaudit | high | 174 | 8.95 | Y | fresh_context_or_stronger | `scripts/frontier_yt_explicit_systematic_budget.py` |
-| 32 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 119 | 13.41 | Y | fresh_context_or_stronger | - |
-| 33 | `pmns_selector_unique_amplitude_slot_note` | decoration | claim_type_backfill_reaudit | high | 112 | 9.32 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_unique_amplitude_slot.py` |
-| 34 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | high | 112 | 8.82 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_derivation.py` |
-| 35 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/frontier_universal_theta_induced_edm_vanishing.py` |
-| 36 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | high | 53 | 8.76 | Y | fresh_context_or_stronger | `scripts/frontier_yt_qfp_insensitivity.py` |
-| 37 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | claim_type_backfill_reaudit | high | 44 | 11.49 | Y | fresh_context_or_stronger | `scripts/frontier_taste_scalar_isotropy.py` |
-| 38 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 37 | 7.75 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_rigidity_theorem.py` |
-| 39 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | unaudited | high | 8 | 7.17 | Y | fresh_context_or_stronger | `scripts/axiom_first_lattice_noether_check.py` |
-| 40 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | unaudited | high | 7 | 6.50 | Y | fresh_context_or_stronger | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
-| 41 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | unaudited | high | 247 | 10.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
-| 42 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | high | 246 | 8.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
-| 43 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | unaudited | high | 245 | 10.44 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py` |
-| 44 | `qcd_low_energy_running_bridge_note_2026-05-01` | bounded_theorem | unaudited | high | 239 | 8.41 |  | fresh_context_or_stronger | `scripts/frontier_qcd_low_energy_running_bridge.py` |
-| 45 | `neutrino_majorana_native_gaussian_no_go_note` | positive_theorem | unaudited | high | 184 | 10.03 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
-| 46 | `neutrino_majorana_finite_normal_grammar_no_go_note` | positive_theorem | unaudited | high | 183 | 10.52 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
-| 47 | `neutrino_majorana_pfaffian_extension_note` | positive_theorem | unaudited | high | 182 | 10.02 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
-| 48 | `neutrino_majorana_pfaffian_axiom_boundary_note` | no_go | unaudited | high | 181 | 8.01 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py` |
-| 49 | `neutrino_majorana_pfaffian_no_forcing_theorem_note` | positive_theorem | unaudited | high | 180 | 10.50 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py` |
-| 50 | `neutrino_majorana_current_atlas_nonrealization_note` | positive_theorem | unaudited | high | 180 | 9.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py` |
+| 27 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py` |
+| 28 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
+| 29 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 245 | 10.44 | Y | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
+| 30 | `yt_explicit_systematic_budget_note` | positive_theorem | claim_type_backfill_reaudit | high | 174 | 8.95 | Y | fresh_context_or_stronger | `scripts/frontier_yt_explicit_systematic_budget.py` |
+| 31 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 119 | 13.41 | Y | fresh_context_or_stronger | - |
+| 32 | `pmns_selector_unique_amplitude_slot_note` | decoration | claim_type_backfill_reaudit | high | 112 | 9.32 | Y | fresh_context_or_stronger | `scripts/frontier_pmns_selector_unique_amplitude_slot.py` |
+| 33 | `g_bare_derivation_note` | positive_theorem | claim_type_backfill_reaudit | high | 112 | 8.82 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_derivation.py` |
+| 34 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | claim_type_backfill_reaudit | high | 54 | 11.28 | Y | fresh_context_or_stronger | `scripts/frontier_universal_theta_induced_edm_vanishing.py` |
+| 35 | `yt_qfp_insensitivity_support_note` | bounded_theorem | claim_type_backfill_reaudit | high | 53 | 8.76 | Y | fresh_context_or_stronger | `scripts/frontier_yt_qfp_insensitivity.py` |
+| 36 | `taste_scalar_isotropy_theorem_note` | bounded_theorem | claim_type_backfill_reaudit | high | 44 | 11.49 | Y | fresh_context_or_stronger | `scripts/frontier_taste_scalar_isotropy.py` |
+| 37 | `g_bare_rigidity_theorem_note` | positive_theorem | claim_type_backfill_reaudit | high | 37 | 7.75 | Y | fresh_context_or_stronger | `scripts/frontier_g_bare_rigidity_theorem.py` |
+| 38 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | positive_theorem | unaudited | high | 8 | 7.17 | Y | fresh_context_or_stronger | `scripts/axiom_first_lattice_noether_check.py` |
+| 39 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | positive_theorem | unaudited | high | 7 | 6.50 | Y | fresh_context_or_stronger | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
+| 40 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | unaudited | high | 247 | 10.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
+| 41 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | high | 246 | 8.95 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
+| 42 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | unaudited | high | 245 | 10.44 |  | fresh_context_or_stronger | `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py` |
+| 43 | `qcd_low_energy_running_bridge_note_2026-05-01` | bounded_theorem | unaudited | high | 239 | 8.41 |  | fresh_context_or_stronger | `scripts/frontier_qcd_low_energy_running_bridge.py` |
+| 44 | `neutrino_majorana_native_gaussian_no_go_note` | positive_theorem | unaudited | high | 184 | 10.03 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
+| 45 | `neutrino_majorana_finite_normal_grammar_no_go_note` | positive_theorem | unaudited | high | 183 | 10.52 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
+| 46 | `neutrino_majorana_pfaffian_extension_note` | positive_theorem | unaudited | high | 182 | 10.02 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
+| 47 | `neutrino_majorana_pfaffian_axiom_boundary_note` | no_go | unaudited | high | 181 | 8.01 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py` |
+| 48 | `neutrino_majorana_pfaffian_no_forcing_theorem_note` | positive_theorem | unaudited | high | 180 | 10.50 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py` |
+| 49 | `neutrino_majorana_current_atlas_nonrealization_note` | positive_theorem | unaudited | high | 180 | 9.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py` |
+| 50 | `neutrino_majorana_charge_two_primitive_reduction_note` | positive_theorem | unaudited | high | 179 | 8.99 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py` |
 
 Full queue lives in `data/audit_queue.json`.

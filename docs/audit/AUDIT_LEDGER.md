@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T11:20:45.684870+00:00
+**Generated:** 2026-05-03T11:30:37.209559+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,7 +19,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 148 |
+| **retained** | 147 |
 | **retained_no_go** | 100 |
 | **retained_bounded** | 220 |
 | _retained_pending_chain_ | 2 |
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 663 |
+| ~~audited_conditional~~ | 664 |
 | ~~audited_failed~~ | 4 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 438 |
-| `audited_conditional` | 663 |
+| `audited_clean` | 437 |
+| `audited_conditional` | 664 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
@@ -256,7 +256,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
-| `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-current | A | - |
 | `gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -823,6 +822,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
+| `gauge_vacuum_plaquette_perron_reduction_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-fresh-agent | B | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | F | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `geometry_lane_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -7860,14 +7860,14 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md)
 - **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-judge-20260430-phase-a-perron-reduction`  (codex-current; independence=judicial_review)
-- **load-bearing step:** Positivity improvement plus compact self-adjoint Perron-Jentzsch gives one positive Perron mode and large-derived-time convergence to its expectation.  _(class `A`)_
-- **chain closes:** True — The second audit's blocker is again the support tier, not a failed derivation. The note proves an operator-theoretic reduction to Perron/Jacobi data and explicitly leaves beta=6 data open; the first auditor's clean algebraic/operator-theorem reading is the one that matches the claim boundary.
-- **rationale:** The second audit's blocker is again the support tier, not a failed derivation. The note proves an operator-theoretic reduction to Perron/Jacobi data and explicitly leaves beta=6 data open; the first auditor's clean algebraic/operator-theorem reading is the one that matches the claim boundary.
-- **auditor confidence:** judicial
+- **claim_scope:** Finite-volume Perron-Jentzsch reduction of the Wilson transfer state to a unique positive Perron vector, its large-Lt trace limit, symmetry invariance, and equivalent Jacobi data for the plaquette source operator J, conditional on the exact Wilson transfer kernel and J-identification hypotheses.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `fresh-agent-euler-019ded94-43e7-70e0-8347-1a8746125df2`  (codex-fresh-agent; independence=judicial_review)
+- **load-bearing step:** For beta > 0, the kernel of T_(L_s,beta) is pointwise strictly positive, so compact self-adjoint Perron-Jentzsch gives a unique strictly positive Perron vector.  _(class `B`)_
+- **chain closes:** False — SECOND is correct under the PR291 rules. The note explicitly imports an exact transfer-operator / character-recurrence theorem already on main, including the Wilson transfer factorization, positivity/self-adjointness, strict kernel positivity, and source-operator identification J, but the audit row registers no one-hop dependencies and the note does not prove those premises self-contained. The runner only checks a finite truncated positive transfer proxy with deformation parameters, so it cannot substitute for missing authority about the exact finite Wilson transfer operator. The safe retained boundary is therefore a conditional Perron-Jentzsch and Jacobi-data reduction for any finite transfer operator satisfying the stated hypotheses.
+- **rationale:** SECOND is correct under the PR291 rules. The note explicitly imports an exact transfer-operator / character-recurrence theorem already on main, including the Wilson transfer factorization, positivity/self-adjointness, strict kernel positivity, and source-operator identification J, but the audit row registers no one-hop dependencies and the note does not prove those premises self-contained. The runner only checks a finite truncated positive transfer proxy with deformation parameters, so it cannot substitute for missing authority about the exact finite Wilson transfer operator. The safe retained boundary is therefore a conditional Perron-Jentzsch and Jacobi-data reduction for any finite transfer operator satisfying the stated hypotheses.
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_reduction_existence_theorem_note`
 
