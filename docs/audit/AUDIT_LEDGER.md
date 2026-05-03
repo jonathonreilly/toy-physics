@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:58:38.410655+00:00
+**Generated:** 2026-05-03T17:59:25.880976+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 754 |
+| unaudited | 753 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 533 |
+| ~~audited_conditional~~ | 534 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 312 |
-| `audited_conditional` | 533 |
+| `audited_conditional` | 534 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 800 |
+| `unaudited` | 799 |
 
 | claim_type | count |
 |---|---:|
@@ -629,6 +629,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-agent | A | - |
@@ -6189,6 +6190,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19.py`
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_2026_04_20.py`
 - **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_PRINCIPLE_THEOREM_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_PRINCIPLE_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the canonical Wilson factorized cone, the zero extension of a fixed first-sector retained packet is claimed to be the unique coefficientwise and Loewner-minimal nonnegative conjugation-symmetric extension and to minimize positive bulk-tail functionals.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-audit-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** Among all full nonnegative conjugation-symmetric extensions of rho_ret, the minimal-support zero extension is the unique least element in the coefficient order and therefore uniquely minimizes every positive bulk-tail functional; equivalently, inside the canonical factorized cone, it is also the unique Loewner-minimal positive extension of the retained Wilson object.  _(class `A`)_
+- **chain closes:** False — The coefficientwise least-element part is plausible algebra under the stated nonnegative-extension cone, but the universal Loewner-minimality and every-positive-bulk-tail-functional claims are not proved in the note or runner. The runner samples two positive tails and named functionals rather than deriving the arbitrary-tail PSD increment and a precise class of positive functionals.
+- **rationale:** Issue: The universal step from zero tail to unique Loewner-minimality and minimization of every positive bulk-tail functional is asserted, while the runner checks only two witness tails and a few example metrics. Why this blocks: finite witnesses do not establish the theorem for all full nonnegative conjugation-symmetric extensions or define the full class of positive bulk-tail functionals. Repair target: add an explicit proof and runner check that for arbitrary tail delta >= 0, T(rho0+delta)-T(rho0) has the required PSD factorization, and define the positive functionals whose monotonicity is being claimed. Claim boundary until fixed: the current evidence supports the zero extension as coefficientwise minimal and as PSD-increasing for the two sampled tails inside the implemented finite factorized cone, not the full universal minimal-bulk completion principle.
+- **auditor confidence:** medium
 
 ### `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19`
 
