@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:15:30.718074+00:00
+**Generated:** 2026-05-03T21:16:25.394319+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 194 |
+| **retained_bounded** | 195 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 692 |
+| unaudited | 691 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 357 |
+| `audited_clean` | 358 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 739 |
+| `unaudited` | 738 |
 
 | claim_type | count |
 |---|---:|
@@ -223,6 +223,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_trapping_frontier_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_grown_trapping_transport_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
+| `gate_b_v6_nearfield_comparator_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | A | - |
@@ -6417,6 +6418,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **chain closes:** False — No. The registered runner did not complete inside the 30-second leaf audit budget, so current executable closure is not established.
 - **rationale:** Issue: the primary runner timed out during the restricted leaf audit. Why this blocks: the audit cannot verify the load-bearing computation or replay surface from the current registered runner. Repair target: provide a frozen log or a faster/sliced runner that completes under the audit budget and checks the load-bearing step. Claim boundary until fixed: safe to cite as a bounded note whose executable closure is pending.
 - **auditor confidence:** medium
+
+### `gate_b_v6_nearfield_comparator_note`
+
+- **Note:** [`GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md`](../../docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite exact-vs-grown near-field comparator for h=0.5, layers=13, half-width=5, y_mass in {1.0,1.5,2.0}, strengths in {0.75,1.0,1.25}, grown row drift=0.3 restore=0.5, seeds {5,18,31,44}.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-gate-b-v6-nearfield`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** The v6 mixed result is not a case where the grown rule collapses while the exact grid stays clean; the ordered-lattice control is already worse on the closest bucket and the retained grown row is better there, though not universal across all seeds.  _(class `C`)_
+- **chain closes:** True — The runner completed and reproduces the note's finite counts and means: exact grid 6/9 TOWARD with y=1.0 at 0/3, grown row 33/36 TOWARD with y=1.0 at 9/12. Within the bounded scope, this supports the stated comparator conclusion without requiring upstream dependencies.
+- **rationale:** The note is narrowly bounded and the current runner directly computes the finite comparator rather than hard-coding the displayed deltas. The completed stdout matches the note's frozen result, including the closest-bucket seed split. Residual risk is limited to the interpretive wording around beam-optics/detector geometry; the clean scope is the finite exact-vs-grown control, not full Gate B or any universal near-field theorem.
+- **auditor confidence:** high
 
 ### `gauge_scalar_temporal_completion_theorem_note`
 
