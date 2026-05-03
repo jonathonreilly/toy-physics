@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T16:21:25.763889+00:00",
+  "generated_at": "2026-05-03T16:25:34.634151+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -6348,6 +6348,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_scalar_temporal_completion_theorem.py"
+    },
+    "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_scalar_temporal_observable_bridge_no_go.py"
     },
     "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02": {
       "assert_count": 1,
@@ -24556,6 +24568,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_scalar_temporal_observable_bridge_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 15,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py": {
       "assert_count": 1,
       "claims": [
@@ -37456,12 +37483,12 @@
     "dominant_class_distribution": {
       "A": 10,
       "B": 160,
-      "C": 550,
+      "C": 551,
       "D": 207,
       "none": 418
     },
-    "runners_classified": 1345,
-    "runners_with_C": 656,
+    "runners_classified": 1346,
+    "runners_with_C": 657,
     "runners_with_D": 334
   }
 }
