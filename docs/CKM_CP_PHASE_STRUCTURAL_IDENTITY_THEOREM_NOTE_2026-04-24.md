@@ -209,6 +209,6 @@ depend on `sympy`.
 | Third-row CKM magnitudes | standalone atlas-leading identities with finite-`lambda` guardrail in the third-row companion note |
 
 This is the same extraction pattern as
-[`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md):
+`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`:
 an implicit retained result is named, bounded, and regression-tested without
 expanding the parent theorem's scope.
