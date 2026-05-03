@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T00:45:33.627159+00:00
+**Generated:** 2026-05-03T00:49:24.012908+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 144 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 204 |
+| **retained_bounded** | 205 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 10 |
-| unaudited | 488 |
+| unaudited | 487 |
 | meta | 40 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -38,21 +38,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 413 |
+| `audited_clean` | 414 |
 | `audited_conditional` | 656 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 48 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 21 |
-| `unaudited` | 528 |
+| `unaudited` | 527 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 536 |
+| `bounded_theorem` | 537 |
 | `decoration` | 9 |
 | `meta` | 40 |
 | `no_go` | 158 |
-| `open_gate` | 97 |
+| `open_gate` | 96 |
 | `positive_theorem` | 862 |
 
 | criticality | count |
@@ -473,6 +473,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_3d_initial_ramp_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_3d_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_3d_readout_convention_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
+| `teleportation_adiabatic_convergence_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `teleportation_bell_measurement_circuit_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | B | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | A | - |
 | `teleportation_encoding_portability_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh | C | - |
@@ -16686,6 +16687,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** False — The harness-level statement closes only as a wrapper over named child scripts and their emitted gates. It does not close a bounded teleportation theorem because the acceptance gates are imported from preselected child artifacts, and strict-lane output still reports selector/scaling/hardware/nature-grade closure as conditional or on HOLD.
 - **rationale:** Issue: the runner does not independently derive teleportation acceptance criteria; it executes a curated list of child scripts with fixed arguments, parses their PASS/FAIL gates, and summarizes selected metrics. Why this blocks: a PASS is therefore a certificate aggregation over preselected probes, not a theorem that native preparation, durable records, taste-only hardware readout, Bell apparatus dynamics, scaling, or selector closure follows from retained inputs. Repair target: provide a retained theorem and runner that constructs the acceptance criteria and physical bridges directly, with selector/scaling/hardware gates proved rather than accepted as child-script premises. Claim boundary until fixed: the note may claim only bounded telemetry that the current selected harness probes passed and that no matter/object/FTL or hardware closure is established.
 - **auditor confidence:** high
+
+### `teleportation_adiabatic_convergence_robustness_note`
+
+- **Note:** [`TELEPORTATION_ADIABATIC_CONVERGENCE_ROBUSTNESS_NOTE.md`](../../docs/TELEPORTATION_ADIABATIC_CONVERGENCE_ROBUSTNESS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical diagnostic for the specified 2D 4x4 closed-system Poisson smoothstep candidate at T=40, steps=320, showing a converged ordinary logical teleportation resource under the stated ideal taste-qubit extraction/readout and limited controls.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-Kant-019deb4d-d5fd-7562-81b3-047825eae9c6`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The default 2D 4x4 smoothstep T=40 candidate remains a strong finite-time resource diagnostic after step-count convergence, method comparison, schedule comparison, small control checks, the G=0 null control, and Bob pre-message input-independence.  _(class `C`)_
+- **chain closes:** True — Within the stated candidate and ideal protocol-level readout assumptions, the supplied runner output matches the note's convergence, robustness, null-control, and input-independence claims. The chain closes only for this bounded diagnostic, not for physical preparation, scaling, hardware implementation, object transport, or faster-than-light signaling.
+- **rationale:** The note's actual claim is narrow and bounded: it reports finite-time numerical diagnostics for one small closed-system candidate, and the runner output directly supports the reported metrics and PASS rows. The source explicitly excludes preparation proof, scaling theorem, hardware readout theorem, matter/energy/object transfer, and faster-than-light signaling, so no broader physical bridge is being claimed.
+- **auditor confidence:** medium
 
 ### `teleportation_bell_measurement_circuit_note`
 
