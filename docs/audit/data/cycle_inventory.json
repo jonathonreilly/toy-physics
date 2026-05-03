@@ -209,7 +209,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -218,7 +218,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -246,7 +246,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -255,7 +255,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -287,7 +287,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -296,7 +296,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -305,7 +305,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -337,7 +337,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -346,7 +346,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -355,7 +355,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_joint_package_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B Grown-Geometry Joint Package Note",
@@ -387,7 +387,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -396,7 +396,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -405,7 +405,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_h025_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_FARFIELD_NOTE.md",
           "title": "Gate B h=0.25 Far-Field Note",
@@ -437,7 +437,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -446,7 +446,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -455,7 +455,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_h025_joint_package_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B h=0.25 Joint Package Note",
@@ -491,7 +491,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -500,7 +500,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -509,7 +509,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -518,7 +518,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_joint_package_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B Grown-Geometry Joint Package Note",
@@ -554,7 +554,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -563,7 +563,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -572,7 +572,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -581,7 +581,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_h025_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_DISTANCE_LAW_NOTE.md",
           "title": "Gate B h=0.25 Grown-Geometry Distance-Law Note",
@@ -617,7 +617,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -626,7 +626,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -635,7 +635,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -644,7 +644,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_h025_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_FARFIELD_NOTE.md",
           "title": "Gate B h=0.25 Far-Field Note",
@@ -680,7 +680,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -689,7 +689,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -698,7 +698,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -707,7 +707,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_h025_joint_package_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_H025_JOINT_PACKAGE_NOTE.md",
           "title": "Gate B h=0.25 Joint Package Note",
@@ -743,7 +743,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -752,7 +752,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -761,7 +761,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -770,7 +770,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_nonlabel_connectivity_v2_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
           "title": "Gate B Non-Label Connectivity V2 Note",
@@ -806,7 +806,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -815,7 +815,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -824,7 +824,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -833,7 +833,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_nonlabel_connectivity_v3_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
@@ -869,7 +869,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -878,7 +878,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -887,7 +887,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_nonlabel_connectivity_v3_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
@@ -896,7 +896,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_no_restore_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
           "title": "Gate B No-Restore Far-Field Note",
@@ -932,7 +932,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_weak_connectivity_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
@@ -941,7 +941,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -950,7 +950,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -959,7 +959,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -999,7 +999,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -1008,7 +1008,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -1017,7 +1017,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -1026,7 +1026,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_nonlabel_connectivity_v3_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
@@ -1035,7 +1035,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_no_restore_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NO_RESTORE_FARFIELD_NOTE.md",
           "title": "Gate B No-Restore Far-Field Note",
@@ -1075,7 +1075,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_weak_connectivity_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
@@ -1084,7 +1084,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -1093,7 +1093,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -1102,7 +1102,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -1111,7 +1111,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_nonlabel_connectivity_v2_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
           "title": "Gate B Non-Label Connectivity V2 Note",
@@ -1151,7 +1151,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_weak_connectivity_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
           "title": "Gate B Weak-Connectivity Note",
@@ -1160,7 +1160,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_farfield_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_FARFIELD_NOTE.md",
           "title": "Gate B Far-Field: Grown Geometry at h=0.5",
@@ -1169,7 +1169,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_grown_distance_law_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
           "title": "Gate B Grown-Geometry Distance-Law Note",
@@ -1178,7 +1178,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_dynamics_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_DYNAMICS_NOTE.md",
           "title": "Gate B: Evolving Network Dynamics \u2014 Current Status",
@@ -1187,7 +1187,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "gate_b_nonlabel_connectivity_v3_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
           "title": "Gate B Non-Label Connectivity V3 Note",
@@ -1215,7 +1215,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "third_grown_family_sign_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md",
           "title": "Third Grown Family Sign Note",
@@ -1224,7 +1224,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "third_grown_family_boundary_note",
-          "claim_type": null,
+          "claim_type": "positive_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md",
           "title": "Third Grown Family Boundary Note",
@@ -1483,7 +1483,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lensing_beta_sweep_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/LENSING_BETA_SWEEP_NOTE.md",
           "title": null,
@@ -2754,7 +2754,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "composite_source_additivity_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
           "title": "Composite-Source Additivity Note",
@@ -2763,7 +2763,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "composite_source_additivity_2d_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md",
           "title": "Composite-Source Additivity Cross-Family Note",
@@ -2791,7 +2791,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "newton_derivation_note",
-          "claim_type": null,
+          "claim_type": "open_gate",
           "effective_status": "unaudited",
           "note_path": "docs/NEWTON_DERIVATION_NOTE.md",
           "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)",
@@ -2800,7 +2800,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "composite_source_additivity_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
           "title": "Composite-Source Additivity Note",
@@ -3276,7 +3276,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "growing_graph_frontier_architecture_transfer_note",
-          "claim_type": null,
+          "claim_type": "positive_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md",
           "title": "Growing Graph Frontier Architecture Transfer Note",
@@ -3285,7 +3285,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "growing_graph_dynamic_limit_diagnostic_note",
-          "claim_type": null,
+          "claim_type": "no_go",
           "effective_status": "unaudited",
           "note_path": "docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md",
           "title": "Growing Graph Dynamic Limit Diagnostic Note",
@@ -4444,7 +4444,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lattice_field_strength_unification_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md",
           "title": "Lattice Field-Strength Unification Note",
@@ -4453,7 +4453,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "lattice_symmetry_unification_decision_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/LATTICE_SYMMETRY_UNIFICATION_DECISION_NOTE.md",
           "title": "Lattice Symmetry Unification Decision Note",
@@ -4481,7 +4481,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ordered_lattice_packet_reidentification_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md",
           "title": "Ordered-Lattice Packet Re-Identification Note",
@@ -4490,7 +4490,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ordered_lattice_quasi_persistent_relaunch_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
           "title": "Ordered-Lattice Quasi-Persistent Relaunch Note",
@@ -4518,7 +4518,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ordered_lattice_quasi_persistent_relaunch_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
           "title": "Ordered-Lattice Quasi-Persistent Relaunch Note",
@@ -4527,7 +4527,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ordered_lattice_quasi_persistent_relaunch_2d_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md",
           "title": "Ordered-Lattice Quasi-Persistent Relaunch 2D Note",
@@ -4559,7 +4559,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ordered_lattice_packet_reidentification_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md",
           "title": "Ordered-Lattice Packet Re-Identification Note",
@@ -4568,7 +4568,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ordered_lattice_quasi_persistent_relaunch_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
           "title": "Ordered-Lattice Quasi-Persistent Relaunch Note",
@@ -4577,7 +4577,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "ordered_lattice_quasi_persistent_relaunch_2d_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md",
           "title": "Ordered-Lattice Quasi-Persistent Relaunch 2D Note",
@@ -4840,7 +4840,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md",
           "title": "Directional-B Geometry-Normalized Holdout Transfer Mass5 Note",
@@ -4849,7 +4849,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_holdout_transfer_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_NOTE.md",
           "title": "Directional-B Geometry-Normalized Holdout Transfer Note",
@@ -4877,7 +4877,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md",
           "title": "Directional-B Geometry-Normalized Holdout Transfer Mass5 Note",
@@ -4886,7 +4886,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_overlap_map_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md",
           "title": "Directional-B Geometry-Normalized Overlap Map Note",
@@ -4914,7 +4914,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_overlap_map_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md",
           "title": "Directional-B Geometry-Normalized Overlap Map Note",
@@ -4923,7 +4923,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_overlap_subcritical_n12_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md",
           "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note",
@@ -4955,7 +4955,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_holdout_transfer_mass5_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md",
           "title": "Directional-B Geometry-Normalized Holdout Transfer Mass5 Note",
@@ -4964,7 +4964,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_overlap_map_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_MAP_NOTE.md",
           "title": "Directional-B Geometry-Normalized Overlap Map Note",
@@ -4973,7 +4973,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "directional_b_geometry_normalized_overlap_subcritical_n12_note",
-          "claim_type": null,
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md",
           "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note",
@@ -5057,7 +5057,7 @@
       "requires_lemma_extraction": false
     }
   ],
-  "generated_at": "2026-05-03T11:37:21.461316+00:00",
+  "generated_at": "2026-05-03T11:39:00.063918+00:00",
   "length_counts": {
     "2": 56,
     "3": 24,
@@ -5072,5 +5072,5 @@
     "length ascending",
     "claim_id list ascending"
   ],
-  "source_graph_generated_at": "2026-05-03T11:37:15.902561+00:00"
+  "source_graph_generated_at": "2026-05-03T11:38:54.270737+00:00"
 }
