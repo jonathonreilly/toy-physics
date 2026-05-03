@@ -1,5 +1,38 @@
 # Review History
 
+## Review-Loop Backpressure - Positivity-Improving Neutral-Scalar Rank-One Support
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: CONDITIONAL SUPPORT / PREMISE ABSENT / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- positivity-improving neutral-scalar transfer dynamics would be sufficient
+  for a unique lowest scalar pole and rank-one isolated-pole residues;
+- non-improving transfer dynamics can keep a degenerate rank-two neutral
+  residue matrix, so the premise is necessary;
+- current PR #230 does not prove the positivity-improving premise;
+- reflection positivity alone remains insufficient;
+- certified `O_H`, production `C_sH/C_HH` rows, W/Z response rows, and
+  retained-route authorization remain absent;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_positivity_improving_neutral_scalar_rank_one_support.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_positivity_improving_neutral_scalar_rank_one_support.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Assumption Import Default-Off Refresh
 
 Local review-loop disposition:

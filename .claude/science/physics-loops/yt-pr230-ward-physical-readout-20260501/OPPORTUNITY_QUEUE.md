@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-03 update: the microscopic rank-one route now has a sharper
+conditional support theorem.  Positivity-improving neutral-scalar transfer
+dynamics would give a unique lowest scalar pole by Perron-Frobenius, and then
+isolated-pole factorization would force rank-one Gram purity.  This does not
+close PR #230 because the current surface does not prove positivity improving
+in the neutral scalar sector; reflection positivity alone is already blocked,
+and certified `O_H` / production `C_sH/C_HH` / W/Z rows remain absent.  The
+next ranked closure items are now explicit: prove positivity improving for the
+neutral scalar sector, or provide direct rank-repair data through
+source-Higgs pole rows or same-source W/Z response rows with identity
+certificates.
+
 2026-05-03 update: the assumption/import stress runner has been refreshed for
 the current source-Higgs harness surface.  The harness can contain default-off
 finite-row `C_sH/C_HH` instrumentation behind a canonical-`O_H` certificate,

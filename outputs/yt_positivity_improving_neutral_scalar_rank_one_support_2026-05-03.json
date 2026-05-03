@@ -1,0 +1,90 @@
+{
+  "actual_current_surface_status": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "If a same-surface certificate proves positivity improving transfer matrix dynamics in the neutral scalar sector, with nonzero source and canonical-Higgs overlaps at the unique lowest isolated pole, then the neutral scalar pole residue is rank one and O_sp-Higgs Gram purity follows from Perron-Frobenius uniqueness plus isolated-pole factorization.",
+  "current_closure_gate_passed": false,
+  "exact_next_action": "Either prove the missing positivity-improving neutral-scalar transfer-matrix premise on the Cl(3)/Z3 substrate, or supply the non-source rank-repair data directly: certified O_H with production C_sH/C_HH pole rows, or same-source W/Z response rows with identity certificates.",
+  "fail_count": 0,
+  "parent_certificates": {
+    "canonical_higgs_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "isolated_pole_gram_factorization": "outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json",
+    "neutral_scalar_commutant_rank_no_go": "outputs/yt_neutral_scalar_commutant_rank_no_go_2026-05-02.json",
+    "neutral_scalar_dynamical_rank_one_closure": "outputs/yt_neutral_scalar_dynamical_rank_one_closure_attempt_2026-05-02.json",
+    "neutral_scalar_rank_one_purity_gate": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "orthogonal_neutral_decoupling_no_go": "outputs/yt_orthogonal_neutral_decoupling_no_go_2026-05-02.json",
+    "reflection_positivity_lsz_shortcut": "outputs/yt_reflection_positivity_lsz_shortcut_no_go_2026-05-02.json",
+    "retained_closure_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_higgs_gram_purity_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json"
+  },
+  "pass_count": 15,
+  "positivity_improving_certificate_present": false,
+  "positivity_improving_rank_one_theorem_passed": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The theorem is conditional support only; PR #230 lacks a positivity-improving neutral-scalar transfer-matrix certificate, certified O_H, and production C_sH/C_HH pole rows.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not infer positivity improving from reflection positivity alone",
+    "does not infer source-pole purity from symmetry labels, D17 support, or finite orthogonal mass gaps",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not manufacture O_H, C_sH/C_HH rows, or W/Z response rows"
+  ],
+  "witness": {
+    "non_improving_counterexample": {
+      "all_entries_strictly_positive": false,
+      "degenerate_lowest_states": 2,
+      "gram_determinant": 1.0,
+      "residue_matrix_at_degenerate_pole": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "transfer_matrix": [
+        [
+          0.75,
+          0.0
+        ],
+        [
+          0.0,
+          0.75
+        ]
+      ]
+    },
+    "positivity_improving_example": {
+      "all_entries_strictly_positive": true,
+      "gram_determinant": -2.7755575615628914e-17,
+      "leading_eigenvalue": 0.8860478042126638,
+      "perron_vector": [
+        0.7350192236723162,
+        0.678046267471583
+      ],
+      "perron_vector_strictly_positive": true,
+      "residue_matrix_at_lowest_pole": [
+        [
+          0.6889,
+          0.4233
+        ],
+        [
+          0.4233,
+          0.2601
+        ]
+      ],
+      "spectral_gap": 0.5020956084253276,
+      "subleading_eigenvalue": 0.3839521957873362,
+      "transfer_matrix": [
+        [
+          0.72,
+          0.18
+        ],
+        [
+          0.31,
+          0.55
+        ]
+      ]
+    }
+  }
+}

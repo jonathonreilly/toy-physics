@@ -1,5 +1,37 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 positivity-improving neutral-scalar rank-one support:
+
+- Added
+  `scripts/frontier_yt_positivity_improving_neutral_scalar_rank_one_support.py`,
+  `docs/YT_POSITIVITY_IMPROVING_NEUTRAL_SCALAR_RANK_ONE_SUPPORT_NOTE_2026-05-03.md`,
+  and
+  `outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json`.
+- The theorem records the strongest remaining microscopic rank-one route:
+  positivity-improving neutral-scalar transfer dynamics would give a unique
+  lowest scalar pole by Perron-Frobenius, and isolated-pole factorization would
+  then force the pole-residue Gram matrix to be rank one.
+- The runner also records the necessary counterexample: a non-improving
+  block-diagonal transfer matrix can keep two degenerate neutral scalar states
+  and a rank-two residue matrix.
+- Current surface remains open because no local certificate proves
+  positivity-improving dynamics in the neutral scalar sector; reflection
+  positivity alone is already blocked as insufficient; certified `O_H`,
+  production `C_sH/C_HH` rows, pole isolation/FV/IR control, and retained-route
+  authorization remain absent.
+- Verification: rank-one support `PASS=15 FAIL=0`; retained-route
+  `PASS=125 FAIL=0`; campaign status `PASS=151 FAIL=0`.
+- Background production support: chunks023-024 were launched with fixed seeds
+  `2026051023` and `2026051024`, no `--resume`, selected-mass scalar FH/LSZ,
+  and chunk-isolated output paths.  They are not evidence until complete and
+  postprocessed.
+
+Next exact action: either prove the missing positivity-improving
+neutral-scalar transfer-matrix premise on the Cl(3)/Z3 substrate, or supply a
+direct rank-repair input: certified `O_H` with production `C_sH/C_HH` pole
+rows, or same-source W/Z response rows with sector-overlap and canonical-Higgs
+identity certificates.  Continue polling chunks023-024 as background support.
+
 Latest checkpoint, 2026-05-03 assumption/import stress default-off refresh:
 
 - Updated `scripts/frontier_yt_pr230_assumption_import_stress.py`,

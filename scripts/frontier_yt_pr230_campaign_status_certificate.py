@@ -187,6 +187,9 @@ def main() -> int:
         "non_source_response_rank_repair_sufficiency": load(
             "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json"
         ),
+        "positivity_improving_neutral_scalar_rank_one": load(
+            "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -789,6 +792,20 @@ def main() -> int:
         )
         is False,
         statuses["non_source_response_rank_repair_sufficiency"],
+    )
+    report(
+        "positivity-improving-neutral-scalar-rank-one-conditional-support-not-closure",
+        "positivity-improving neutral-scalar rank-one theorem"
+        in str(statuses["positivity_improving_neutral_scalar_rank_one"])
+        and certificates["positivity_improving_neutral_scalar_rank_one"].get(
+            "positivity_improving_rank_one_theorem_passed"
+        )
+        is True
+        and certificates["positivity_improving_neutral_scalar_rank_one"].get(
+            "positivity_improving_certificate_present"
+        )
+        is False,
+        statuses["positivity_improving_neutral_scalar_rank_one"],
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

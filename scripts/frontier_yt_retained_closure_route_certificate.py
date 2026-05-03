@@ -127,6 +127,7 @@ def main() -> int:
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
+        "positivity_improving_neutral_scalar_rank_one": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -702,6 +703,25 @@ def main() -> int:
         )
         is True
         and certificates["non_source_response_rank_repair_sufficiency"].get(
+            "current_closure_gate_passed"
+        )
+        is False
+    )
+    positivity_improving_neutral_scalar_rank_one_conditional = (
+        "positivity-improving neutral-scalar rank-one theorem"
+        in certificates["positivity_improving_neutral_scalar_rank_one"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["positivity_improving_neutral_scalar_rank_one"].get("proposal_allowed") is False
+        and certificates["positivity_improving_neutral_scalar_rank_one"].get(
+            "positivity_improving_rank_one_theorem_passed"
+        )
+        is True
+        and certificates["positivity_improving_neutral_scalar_rank_one"].get(
+            "positivity_improving_certificate_present"
+        )
+        is False
+        and certificates["positivity_improving_neutral_scalar_rank_one"].get(
             "current_closure_gate_passed"
         )
         is False
@@ -1450,6 +1470,11 @@ def main() -> int:
         "non-source-response-rank-repair-sufficiency-not-closure",
         non_source_response_rank_repair_sufficiency_not_closure,
         certificates["non_source_response_rank_repair_sufficiency"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "positivity-improving-neutral-scalar-rank-one-conditional-support-not-closure",
+        positivity_improving_neutral_scalar_rank_one_conditional,
+        certificates["positivity_improving_neutral_scalar_rank_one"].get("actual_current_surface_status", ""),
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",
