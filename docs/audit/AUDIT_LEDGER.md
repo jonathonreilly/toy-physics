@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:42:51.868704+00:00
+**Generated:** 2026-05-03T15:45:20.743977+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 73 |
 | **retained_no_go** | 100 |
-| **retained_bounded** | 167 |
+| **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 15 |
-| unaudited | 774 |
+| unaudited | 773 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 26 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 311 |
+| `audited_clean` | 312 |
 | `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 26 |
 | `audited_renaming` | 21 |
-| `unaudited` | 820 |
+| `unaudited` | 819 |
 
 | claim_type | count |
 |---|---:|
@@ -307,6 +307,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `replay_environment_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | B | - |
+| `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | configured_numerical_proxy | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `s3_mass_matrix_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
@@ -10910,6 +10911,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **chain closes:** False — The artifact chain computes a nonzero delayed-vs-instantaneous phase difference for the implemented toy harness, but the retained/general discriminator claim is not backed by a fast assertion runner or a theorem excluding all instantaneous emulator models.
 - **rationale:** Issue: The source and frozen log show a delayed-source toy harness with nonzero frequency- and delay-dependent phase differences, but the canonical script has no PASS/FAIL assertion contract and the live audit run did not complete the full global-delay/family/seed sections before interruption after more than ten minutes. Why this blocks: a finite parameter sweep in one implemented propagation model does not by itself prove a retained, portable observable or rule out all instantaneous responses with memory, phase offsets, or fitted transfer functions. Repair target: add a fast deterministic runner with explicit assertions for the nulls, delay law, family/seed robustness, and global-delay fit residual, and add a theorem specifying the model class in which no instantaneous/static response can reproduce the first-harmonic delayed-response observable. Claim boundary until fixed: it is safe to claim that the frozen harness output and partial live run show a delayed-vs-instantaneous phase difference for the stated oscillating-source model and parameters; it is not safe to claim a retained general finite-propagation discriminator across physical response models.
 - **auditor confidence:** medium
+
+### `retarded_field_causality_probe_note`
+
+- **Note:** [`RETARDED_FIELD_CAUSALITY_PROBE_NOTE.md`](../../docs/RETARDED_FIELD_CAUSALITY_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the configured compact generated 3D DAG family and the runner-defined imposed field rules, finite propagation-speed scheduling changes the detector centroid shift relative to the instantaneous lane, while c = inf exactly recovers the instantaneous baseline in the current runner output.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-retarded-field-causality-fresh-auditor-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The runner defines the retarded field by adding a mass contribution at node i only when node_time[i] >= node_time[m] + r/c, then compares the detector centroid shift from this field against the instantaneous field using the same DAG family and mass selection.  _(class `configured_numerical_proxy`)_
+- **chain closes:** True — The bounded proxy claim closes: the runner explicitly constructs both instantaneous and retarded field schedules, computes the same centroid-shift observable for each, reproduces the c = inf reduction with zero displayed error, and reports nonzero finite-c deltas on the four-seed compact family. Closure does not extend beyond this imposed field-scheduling model.
+- **rationale:** Clean only under the source note's stated bounded scope. The load-bearing finite-c effect is not inferred narratively: current runner output matches the frozen table, with inst shift -6.968870e-02, c = inf ret shift -6.968870e-02, and finite-c deltas +4.688249e-02, +1.757306e-02, +6.968870e-02, +6.968870e-02. A hostile reviewer can reject any stronger causal-gravity or wave-theory interpretation, but the note itself confines the retained statement to a field-scheduling proxy on a compact generated DAG family.
+- **auditor confidence:** 0.82
 
 ### `retarded_field_compact_refinement_note`
 
