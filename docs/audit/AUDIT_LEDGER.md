@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T02:47:53.868284+00:00
+**Generated:** 2026-05-03T02:51:15.902382+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 149 |
 | **retained_no_go** | 99 |
-| **retained_bounded** | 217 |
+| **retained_bounded** | 218 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
 | unaudited | 454 |
@@ -29,7 +29,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 666 |
+| ~~audited_conditional~~ | 665 |
 | ~~audited_failed~~ | 6 |
 | `decoration_under_cpt_exact_note` | 1 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 435 |
-| `audited_conditional` | 666 |
+| `audited_clean` | 436 |
+| `audited_conditional` | 665 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 50 |
 | `audited_numerical_match` | 27 |
@@ -123,6 +123,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `background_independence_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | C | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `causal_field_portability_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -585,7 +586,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `born_rule_analysis_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | D | - |
-| `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `broad_gravity_derivation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `broad_surrogate_point_source_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `broken_graph_action_power_robustness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2249,17 +2249,14 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 - **Note:** [`BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md`](../../docs/BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md)
 - **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-current; independence=cross_family)
-- **load-bearing step:** `tau_3 = 0` is theorem-implied by the overlap algebra, so the GHZ count is  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (bmv_entanglement_note_2026-04-11=bounded, bmv_threebody_note_2026-04-11=support), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (bmv_entanglement_note_2026-04-11=bounded, bmv_threebody_note_2026-04-11=support). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared bounded tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `BMV_ENTANGLEMENT_NOTE_2026-04-11.md`
-  - `BMV_THREEBODY_NOTE_2026-04-11.md`
-- **auditor confidence:** high
+- **claim_scope:** Bounded robustness replay on an externally imposed fixed-adjacency two-branch staggered-lattice protocol: 2-body branch-entanglement delta_S remains positive across the stated sweeps, and the 3-body surface is W-type rather than GHZ-type on the stated configurations.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-aquinas-3rd-019debbe-8c91-7a01-a66d-f059d559c070`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The robustness runner recomputes the fixed-adjacency two-branch staggered-lattice protocol and reports 2-body delta_S > 0 in 60/60 audited configurations plus 3-body tau_3 = 0 with W/W-asym classification in 25/25 configurations.  _(class `C`)_
+- **chain closes:** True — The one-hop dependencies are now retained-grade and support the bounded 2-body branch-entanglement interpretation and corrected 3-body W-type interpretation. The current source note and runner output close the scoped robustness claim without relying on full BMV witness status or an external comparator.
+- **rationale:** The clean verdict applies only to the bounded numerical protocol theorem stated in the note. The load-bearing runner output gives positive 2-body delta_S across all audited sweeps and confirms the corrected 3-body W-type, non-GHZ interpretation with tau_3 = 0 and positive bipartite entropies. The prior dependency block is resolved because both cited one-hop dependencies now have retained-grade status. Plot generation failed due to missing matplotlib, but that does not affect the load-bearing numerical checks.
+- **auditor confidence:** medium
 
 ### `broad_gravity_derivation_note`
 
