@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T19:26:26.231729+00:00",
+  "generated_at": "2026-05-03T19:45:37.174906+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -312,6 +312,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/gravity_signed_sector_harness.py"
+    },
+    "architecture_note_directional_measure": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/architecture_directional_measure_table_runner_2026_05_03.py"
     },
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25": {
       "assert_count": 1,
@@ -17912,6 +17924,21 @@
       "assert_count": 0,
       "claims": [
         "alternative_coupled_field_probe_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/architecture_directional_measure_table_runner_2026_05_03.py": {
+      "assert_count": 1,
+      "claims": [
+        "architecture_note_directional_measure"
       ],
       "counts": {
         "A": 0,
@@ -37592,9 +37619,9 @@
       "B": 162,
       "C": 553,
       "D": 207,
-      "none": 417
+      "none": 418
     },
-    "runners_classified": 1349,
+    "runners_classified": 1350,
     "runners_with_C": 659,
     "runners_with_D": 335
   }

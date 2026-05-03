@@ -1,7 +1,74 @@
 # Architecture Note: Directional Path Measure
 
 **Status:** bounded - bounded or caveated result note
-**Date:** 2026-04-05
+**Date:** 2026-04-05 (originally); 2026-05-03 (audit-driven repair)
+**Runner:** [`scripts/architecture_directional_measure_table_runner_2026_05_03.py`](../scripts/architecture_directional_measure_table_runner_2026_05_03.py) (PASS=6/6)
+**Beta-derivation status:** [`docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md) — proves `β` cannot be derived from primitive axioms alone; β = 0.8 is observable-matched against the eikonal-slope criterion of [`BORN_SCATTERING_COMPARISON_NOTE.md`](BORN_SCATTERING_COMPARISON_NOTE.md) (closure route 3 of the no-go).
+
+## Audit-driven repair (2026-05-03)
+
+The 2026-05-03 audit (codex-fresh-auditor) flagged this row `audited_failed`
+for two reasons: (a) the empirical pass/fail table had no runner, no
+reproduced computation, and no cited retained dependency; (b) `β = 0.8`
+was empirically chosen with no derivation. This repair addresses (a)
+mechanically and (b) by citing the existing no-go theorem.
+
+**Mechanical repair (a)**:
+[`scripts/architecture_directional_measure_table_runner_2026_05_03.py`](../scripts/architecture_directional_measure_table_runner_2026_05_03.py)
+recomputes the table from the stated propagator on FIXED DAG fixtures
+(deterministic seeds) and reproduces every pass/fail row in the table:
+
+- T1 Born rule (additivity over disjoint detector groups, 2D fixture)
+- T2 Interference visibility V > 0.95 (2-slit, 2D fixture)
+- T3 k = 0 → real amplitude (no oscillating phase, 3D fixture)
+- T4 Gravity sign 6/8 attract over fixed seeds (note's table: 5/8)
+- T5 Gravity scaling R_angle(N) positive across N=8..20 with R(20)>R(8),
+  matching the canonical gravity-card protocol of `three_d_angle_weight.py`
+- T6 Beta-sweep monotonicity: weighted ⟨θ²⟩ decreases monotonically with β
+  (consistent with the BORN_SCATTERING_COMPARISON β-sweep that pinned 0.8)
+
+**Beta handling (b)**:
+[`docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md)
+proves a bounded no-go: the angular kernel `w(θ)` of the directional
+path-measure walk is NOT uniquely determined by the currently retained
+primitives ((1) Cl(3) trace structure, (2) action extremization on Z³,
+(3) causal-cone kinematics, (4) leading-order continuum-limit SO(3)
+isotropy). Seven distinct kernels — `{uniform, cos, cos², exp(-0.4 θ²),
+exp(-0.8 θ²), exp(-1.6 θ²), linear_falloff}` — all pass the four
+primitives but produce measurably different transverse-step moments.
+
+Closing the no-go positively requires adopting one of three additional
+axioms:
+
+1. **Higher-order isotropy** — demand the sub-leading continuum
+   dispersion is also rotationally isotropic (constrains 4th moment of
+   `w`).
+2. **Action-Lagrangian principle** — promote the angular weight to
+   action-derived via a continuum Lagrangian whose Euler-Lagrange
+   equations include the angular preference.
+3. **Direct observable matching** — pin `w` by demanding agreement
+   with a specific observable.
+
+The current β = 0.8 is **route 3**: pinned against the gravitational
+deflection eikonal slope per
+[`BORN_SCATTERING_COMPARISON_NOTE.md`](BORN_SCATTERING_COMPARISON_NOTE.md).
+The eikonal predicts slope -1.28 on b ∈ {3..6}; the lattice with
+β = 0.8 gives -1.43. The β-sweep (β ∈ [0.1, 20]) shows slope varies
+monotonically from -0.79 (β = 0.1, wide beam) to -1.93 (β = 20, narrow
+beam); β = 0.8 minimizes the eikonal-deviation among the standard test
+set. **No closed form for β has been derived** — see the no-go note's
+"unsafe wording" caveat against claiming derivation from first
+principles.
+
+The empirical `<θ²>` of the canonical DAG (xyz_range = 8, connect_radius = 3)
+is ≈ 0.84 rad²; Gaussian moment-matching would give β = 1/(2⟨θ²⟩) ≈ 0.595.
+That this differs from the gravity-card value 0.8 confirms β = 0.8 is
+observable-matched (route 3), not moment-matched.
+
+After this repair the row records: a runner that recomputes the table,
+a cited retained-claim-type dependency (the no-go) that explains why β
+is empirical, and a sharpened bounded statement (below) that does not
+overclaim derivation.
 
 ## Propagator
 
@@ -51,7 +118,14 @@ The role of this note is now sharper after the topology pivot:
 - Decoherence scaling is not addressed. This is expected: the directional weight modifies the unitary propagator, and decoherence is a non-unitary (record/environment) problem.
 - The 3D support is still a smoke package, not a full 3D Sorkin / three-slit theorem.
 - The raw b-dependence (deflection/readout increasing with impact parameter) is not fixed. A bounded geometry-normalized response-density diagnostic now decreases with b on the original dense random-DAG family, and the original `mass_nodes = 3` holdout-transfer replay says the same center-offset and nearest-edge densities still pass on the second dense-family holdout at both `N = 12` and `N = 25`. A widened-source holdout follow-on at `mass_nodes = 5` then sharpens the finite-source split instead of killing it: on the same holdout, `N = 25` loses the center-offset passes (`A/b`, `F/b`) while nearest-edge density (`A/edge`, `F/edge`) still decreases cleanly with actual `b`. The current bounded hierarchy is therefore sharper than before: center-offset density is the asymptotic leading term, nearest-edge density `b - h_mass` is the robust finite-source correction once the source width is widened, and support-gap is a secondary discrete packet-support correction. The reduced-variable picture is now two-layered: `lambda = h_mass / b` is the compact crossover control, while `mu = edge_b / h_mass = 1 / lambda - 1` is the cleaner signed overlap diagnostic. Tree-like controls keep large positive `mu`, while widened dense families force the finite-source correction once low-`b` corners cross into `mu <= 0`, even though pure `response / b` still survives on the bounded family once singular center-offset trials are excluded. The low-`b` onset cards now support a sharper mechanism claim: sparse target-band occupancy is the leading transferable overlap-onset signal, while coarse local spacing is a family-dependent refinement. Tree layers densify around the target plane, while dense random-DAG layers keep only about `1-2` nodes in that band and therefore have to stretch widened source windows across much larger `y` gaps; on the second dense-family holdout, the original gap/span clause softens but an occupancy floor still isolates the overlap rows cleanly. A combined occupancy bridge card now compresses that further: across the original and holdout dense families together, `target_fill <= 0.4` captures `23/24` overlap rows, while no overlap rows survive once `target_fill > 2/3`, so occupancy shortage is now the promoted coarse bridge variable and spacing stays secondary. The supply-load decomposition card first made the physical content explicit: raw target-band count or same-side target-plane share alone is too family-dependent, and source-window size alone is too crude, but the combined source load `mass_nodes / local_target_count >= 2.5` reproduces the bridge exactly. A new continuous-density bridge card then sharpened that into a smoother spacing law: estimating target-plane support from the fourth-nearest same-side node radius gives `expected_target_count_4nn = 4 / r4`, and the continuous load `mass_nodes / expected_target_count_4nn >= 2.7354` improves the combined dense-family bridge to `0.9167` accuracy while lifting both baseline dense families to `0.9000`. A frozen branching-tree control keeps that same 4-NN law safely on the non-overlap side without refit: tree `knn4_density_load` falls from `0.5938` to `0.1484` as depth grows while `mu` rises from `3` to `11`, so the tree family stays far below the overlap threshold because target-plane support densifies rather than starving. But a one-notch center-biased mid-layer dense sentinel now shows the fourth-neighbor stencil is the unstable piece under target-plane densification: on that holdout, the frozen 4-NN law falls to `0.8500` with six false negatives, while a bounded stencil-transfer diagnostic lifts the frozen 3-NN law to `0.9500` on the same sentinel without changing the old dense-reference thresholds. The original reference+tree still prefers 4-NN (`0.9206` vs `0.8889`), but on the current extended sample the frozen 3-NN law edges out 4-NN (`0.9126` vs `0.8932`) because most 4-NN misses are one-sided low-occupancy target bands where the fourth neighbor is the first sample to jump across the target-plane gap and `r4` overstates support. A bounded residual probe then pushed on the last two 3-NN misses directly and found the current limit: miss-local rescue clauses can close the midlayer sentinel, but only by degrading the old reference+tree control to `24/8/0/31`. So the portable statement is still occupancy-first. The 4-NN density law is the cleaner original dense-sample fit, 3-NN is the current best single frozen smooth law on the expanded sample, and no sampler-robust residual closure has landed yet.
-- β = 0.8 is empirically chosen. A derivation from the axioms or from the graph's intrinsic geometry is still needed.
+- β = 0.8 is **empirically chosen, not derived**. Per the
+  [no-go theorem on angular kernel underdetermination](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md)
+  the kernel `w(θ)` is not determined by primitive axioms; closing
+  this requires one of three additional axioms (higher-order
+  isotropy, action-Lagrangian principle, or direct observable
+  matching). β = 0.8 is observable-matched (route 3) against the
+  gravitational-deflection eikonal slope, not derived from first
+  principles.
 - The 2 R_c edge cases mean the weight slightly narrows the zero-field interference threshold at some geometries.
 
 ## Axiom connection
@@ -65,5 +139,10 @@ The role of this note is now sharper after the topology pivot:
 The propagator is no longer the bottleneck. The next frontier is:
 1. dynamic emergence of the topology that lets the retained non-unitary IF / CL route work
 2. `b`-dependence as a separate gravity-sector question, now narrowed to deriving the asymptotic `b` leading term, its `b - h_mass` finite-source correction, and promoting the current occupancy-first bridge into a sampler-robust continuous law without reopening a wider denominator search; the bounded clue is now stencil-local rather than denominator-wide, because the fourth-neighbor miss mode softens if the current expanded sample is read through the frozen 3-NN density law instead
-3. principled derivation of `beta` from graph geometry
+3. principled derivation of `beta` from graph geometry — currently
+   blocked by the
+   [angular-kernel underdetermination no-go](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md);
+   would require closing one of the no-go's three additional axiom
+   routes (higher-order isotropy, action-Lagrangian, or
+   observable-matching at the structural level)
 4. transfer of the joint gravity+decoherence story to dynamically generated or higher-dimensional graph families

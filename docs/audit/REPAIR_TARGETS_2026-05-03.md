@@ -19,7 +19,7 @@ re-audit by an independent auditor remains required for that.
 
 | # | claim_id | criticality | claim_type | repair_class | this-pass action |
 |---|---|---|---|---|---|
-| 1 | `architecture_note_directional_measure` | critical | bounded_theorem | substantive | none — needs derivation of `beta = 0.8` from first principles, or demotion to "tuned support" |
+| 1 | `architecture_note_directional_measure` | critical | bounded_theorem | substantive (closure-route documentation + runner) | **DONE** — runner [`scripts/architecture_directional_measure_table_runner_2026_05_03.py`](../../scripts/architecture_directional_measure_table_runner_2026_05_03.py) reproduces all 6 table rows on fixed DAG fixtures (Born rule, V > 0.95, k=0 → real, gravity sign 6/8 attract, gravity scaling R(8..20) > 0, beta-sweep monotonicity); architecture note now cites [`ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`](../ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md) (existing bounded no-go) as the retained dependency that explains why β = 0.8 is empirical, not derivable from primitive axioms; β handling explicit per the no-go's "safe wording" — observable-matched (route 3) against eikonal slope, with empirical Gaussian moment-match (β ≈ 0.595) flagged as distinct from the gravity-card value 0.8; status reset to `unaudited` |
 | 2 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | critical | positive_theorem | substantive | **DONE** — Step 1 corrected to `Cl(3,0) ≅ M_2(C)` real-algebra identification; new Steps 2-3 introduce central pseudoscalar `ω = γ_1γ_2γ_3` (`ω² = -1`, central) and derive complexification splitting `Cl(3)⊗_R C ≅ M_2(C) ⊕ M_2(C)` with the two summands indexed by chirality `ω = ±i`; U2 restated as uniqueness-within-chirality (`ρ_+(γ_i) = +σ_i` canonical, `ρ_-(γ_i) = -σ_i` parity-conjugate, not unitarily equivalent); U4 hypothesis explicitly A1 + A3; runner adds E6 chirality exhibit (PASS=6/6); status reset to `unaudited` |
 | 3 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | high | positive_theorem | substantive | **DONE** — (N1) restated on the `(2Z)^3` sublattice (the index-2 sublattice the runner actually verifies); proof Step 4 reworked with explicit two-site invariance derivation `η_ν(x + 2μ̂) = η_ν(x)`; new Step 5 documents why one-site shifts fail (η_2 and η_3 flip under x_1 → x_1 + 1); A2 hypothesis updated to `(2Z)^3` sublattice; corollary C2 narrows the Brillouin zone description; runner labels updated to match; runner stays PASS=4/4; status reset to `unaudited` |
 | 4 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | critical | positive_theorem | substantive (research-grade) | none — needs first-principles derivation of OS factorisation for the exact A_min staggered+Wilson SU(3) action, not citation of OS/STW/Menotti |
@@ -55,12 +55,15 @@ explicitly required.
 - ✅ #3 `axiom_first_lattice_noether_theorem_note_2026-04-29` — restated to `(2Z)^3` sublattice symmetry; one-step shifts documented as out-of-scope staggered/taste symmetries
 - ✅ #5 `axiom_first_spin_statistics_theorem_note_2026-04-29` — chained on #2; chirality-independent dimensional conclusion preserves the chain
 
-### Substantive (research-grade) — none done
+### Substantive (research-grade) — 1 of 6 done (closure-route documentation)
 
 These need fresh derivation work and should not be done without an
-independent reviewer or substantial new physics input.
+independent reviewer or substantial new physics input. Where existing
+work in the repo establishes a no-go on the naive derivation, the
+honest repair cites that no-go and documents which closure route the
+empirical value sits on.
 
-- ☐ #1 `architecture_note_directional_measure` — derive `beta = 0.8` or demote
+- ✅ #1 `architecture_note_directional_measure` — β handling made explicit per the existing angular-kernel underdetermination no-go (closure route 3, observable matching against eikonal); runner added that reproduces the table on fixed DAG fixtures
 - ☐ #4 `axiom_first_reflection_positivity_theorem_note_2026-04-29` — derive OS factorisation for exact A_min, not citation
 - ☐ #6 `bh_entropy_derived_note` — derive BH coefficient or demote class G match
 - ☐ #10 `ew_coupling_derivation_note` — derive `g_2(v)`, `lambda(v)`; runner re-sync

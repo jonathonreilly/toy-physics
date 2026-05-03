@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:26:28.451764+00:00
+**Generated:** 2026-05-03T19:45:38.380647+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,25 +24,25 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 174 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 726 |
+| unaudited | 728 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 546 |
-| ~~audited_failed~~ | 8 |
+| ~~audited_conditional~~ | 545 |
+| ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 331 |
-| `audited_conditional` | 546 |
+| `audited_conditional` | 545 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 52 |
+| `audited_failed` | 51 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 22 |
-| `unaudited` | 772 |
+| `unaudited` | 774 |
 
 | claim_type | count |
 |---|---:|
@@ -55,17 +55,17 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 115 |
+| `critical` | 117 |
 | `high` | 365 |
-| `medium` | 583 |
+| `medium` | 581 |
 | `leaf` | 697 |
 
 - **Retained pending chain closure:** 3
-- **Citation cycles detected:** 42
+- **Citation cycles detected:** 43
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1349
+- runners classified: 1350
 - runners with (C) first-principles compute hits: 659
 - runners with (D) external comparator hits: 335
 - decoration candidates (no C, no D): 114
@@ -76,12 +76,12 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 384 | 33.09 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 389 | 33.11 | `audited_clean` | **retained_bounded** |
 | 2 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 130 | 29.53 | `unaudited` | unaudited |
 | 3 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 131 | 29.04 | `unaudited` | unaudited |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 262 | 29.04 | `unaudited` | unaudited |
-| 5 | `minimal_axioms_2026-04-11` | meta | critical | 323 | 27.34 | `unaudited` | meta |
-| 6 | `native_gauge_closure_note` | bounded_theorem | critical | 374 | 27.05 | `audited_clean` | **retained_bounded** |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 328 | 27.36 | `unaudited` | meta |
+| 6 | `native_gauge_closure_note` | bounded_theorem | critical | 379 | 27.07 | `audited_clean` | **retained_bounded** |
 | 7 | `observable_principle_from_axiom_note` | positive_theorem | critical | 212 | 26.73 | `audited_conditional` | ~~audited_conditional~~ |
 | 8 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 85 | 24.93 | `unaudited` | unaudited |
 | 9 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 368 | 24.53 | `audited_clean` | open_gate |
@@ -90,8 +90,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 12 | `minimal_axioms_2026-05-03` | meta | critical | 368 | 23.53 | `unaudited` | meta |
 | 13 | `left_handed_charge_matching_note` | positive_theorem | critical | 310 | 23.28 | `unaudited` | unaudited |
 | 14 | `one_generation_matter_closure_note` | positive_theorem | critical | 244 | 21.94 | `unaudited` | unaudited |
-| 15 | `three_generation_structure_note` | bounded_theorem | critical | 206 | 21.69 | `unaudited` | unaudited |
-| 16 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 287 | 21.67 | `unaudited` | unaudited |
+| 15 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 292 | 21.70 | `unaudited` | unaudited |
+| 16 | `three_generation_structure_note` | bounded_theorem | critical | 206 | 21.69 | `unaudited` | unaudited |
 | 17 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 134 | 21.58 | `unaudited` | unaudited |
 | 18 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 126 | 20.99 | `audited_conditional` | ~~audited_conditional~~ |
 | 19 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | positive_theorem | critical | 105 | 19.73 | `audited_conditional` | ~~audited_conditional~~ |
@@ -99,8 +99,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `plaquette_self_consistency_note` | bounded_theorem | critical | 271 | 18.59 | `unaudited` | unaudited |
 | 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 72 | 17.69 | `unaudited` | unaudited |
 | 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 86 | 17.44 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `cpt_exact_note` | positive_theorem | critical | 293 | 17.20 | `unaudited` | unaudited |
-| 25 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 290 | 17.18 | `audited_conditional` | ~~audited_conditional~~ |
+| 24 | `cpt_exact_note` | positive_theorem | critical | 298 | 17.22 | `unaudited` | unaudited |
+| 25 | `emergent_lorentz_invariance_note` | bounded_theorem | critical | 295 | 17.21 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -536,7 +536,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dirac_weak_coupling_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dispersion_high_p_tiebreaker_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `dispersion_relation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
 | `distance_law_definitive_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unsupported_numerical_sweep_and_readout_bridge | - |
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -993,7 +992,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
-| `architecture_note_directional_measure` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | D | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `bh_entropy_derived_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-fresh-agent | G | - |
@@ -1366,19 +1364,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At mu2 = 0.001, the unscreened corrected periodic phase-map replay strengthens the boundary-law separation and changes the interpretation qualitatively.  _(class `C`)_
 - **chain closes:** True — Yes. The claim is a bounded companion replay on a fixed corrected harness, and the registered runner completed successfully for that finite phase-map check.
 - **rationale:** The note makes a bounded finite-harness claim, not a universal theorem. The current runner completed successfully and supports the replay surface classified as {'A': 0, 'B': 0, 'C': 6, 'D': 0, 'total_pass': 6}. Residual risk is generalization outside the stated mu2 and periodic-torus setup.
-- **auditor confidence:** high
-
-### `architecture_note_directional_measure`
-
-- **Note:** [`ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md`](../../docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded claim that the directional path weight exp(-beta theta^2), with beta = 0.8, prevents flat-measure CLT gravity saturation while preserving interference, Born-rule behavior, and k=0->0, and can serve as the retained unitary core.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-fresh-auditor-2026-05-03`  (codex-fresh-agent; independence=fresh_context)
-- **load-bearing step:** Empirical pass/fail table and narrative assertion that the beta = 0.8 directional continuation weight preserves quantum tests while improving gravity saturation behavior.  _(class `G`)_
-- **chain closes:** False — The packet defines the propagator and reports outcomes, but does not supply the computation or derivation that connects the definition to the claimed preservation and gravity behavior. The load-bearing evidence is therefore a numerical/tuned assertion rather than class A or class C closure.
-- **rationale:** Issue: The claim rests on listed empirical test outcomes and an empirically chosen beta = 0.8, but the packet provides no runner, no reproduced computation, no independent derivation, and no cited retained dependency that verifies the table. Why this blocks: Under the rubric, a clean bounded theorem needs algebraic closure or first-principles computation from accepted inputs; here the decisive support is numerical/tuned and uncheckable inside the restricted packet. The note also explicitly leaves decoherence, full 3D theorem status, raw b-dependence, R_c edge cases, and beta derivation unresolved, so the stated retained-core role is conditional on open empirical premises. Repair target: Provide a retained runner or proof artifact that independently recomputes the Born/I_3, interference/V, k=0, gravity saturation/scaling, R_c compatibility, and 3D smoke claims from fixed definitions, plus either a derivation of beta or a declared parameter-sweep robustness bound showing the conclusion is not tuned to beta = 0.8. Claim boundary until fixed: This can be cited only as an unaudited/tuned architecture hypothesis with reported numerical support, not as a closed bounded theorem that the directional measure preserves the quantum sector while fixing gravity saturation.
 - **auditor confidence:** high
 
 ### `architecture_portability_sweep_note`
@@ -3273,26 +3258,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **open / conditional deps cited:**
   - `unregistered_or_missing_primary_runner_or_frozen_log`
 - **auditor confidence:** high
-
-### `dispersion_relation_note`
-
-- **Note:** [`DISPERSION_RELATION_NOTE.md`](../../docs/DISPERSION_RELATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-28-dispersion_relation_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** On the actual Fam1 grown DAG, Schrödinger R^2=0.994 and Klein-Gordon R^2=0.992 are too close to distinguish, so neither relativistic nor non-relativistic dispersion is ruled out.  _(class `C`)_
-- **chain closes:** False — The source note supports the narrowed boundary that the grown-DAG dispersion is currently undetermined, with Schrödinger and Klein-Gordon fits too close to distinguish. The ledger has no runner_path for live verification, and the note itself leaves finer-H and broader-form discrimination open.
-- **rationale:** Issue: the note correctly retracts the decisive 2D non-relativistic claim, but the grown-DAG evidence is non-decisive and there is no ledger runner for a live audit of the artifact chain.
-Why this blocks: downstream lensing candidate retained-grade/promoted rows cannot use this as a settled dispersion law; both relativistic and non-relativistic comparisons remain possible on the actual geometry.
-Repair target: provide a live runner for the 3D grown-DAG dispersion tests with finer H, more p-values, and explicit model-selection thresholds that decisively separate candidate dispersion forms.
-Claim boundary until fixed: safe to claim the dispersion type is currently undetermined on the grown DAG, not a Schrödinger, Klein-Gordon, or lensing-explanation theorem.
-- **open / conditional deps cited:**
-  - `no_ledger_runner_for_live_dispersion_artifact_chain`
-  - `grown_DAG_Schrodinger_KG_discrimination_unresolved`
-  - `continuum_limit_m_eff_not_converged`
-- **auditor confidence:** medium
 
 ### `distance_law_3d_64_closure_note_2026-04-11`
 

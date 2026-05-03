@@ -7,7 +7,7 @@
     "open_gate": 90,
     "positive_theorem": 858
   },
-  "computed_at": "2026-05-03T19:26:27.138971+00:00",
+  "computed_at": "2026-05-03T19:45:37.774996+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -17,6 +17,10 @@
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
       "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+    ],
+    [
+      "angular_kernel_underdetermination_no_go_note",
+      "architecture_note_directional_measure"
     ],
     [
       "publication.ci3_z3.claims_table",
@@ -32,17 +36,13 @@
     [
       "publication.ci3_z3.derivation_atlas",
       "dm_wilson_direct_descendant_batch_authority_note_2026-05-03"
-    ],
-    [
-      "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.full_claim_ledger"
     ]
   ],
-  "cycles_detected": 42,
+  "cycles_detected": 43,
   "effective_status_counts": {
-    "audited_conditional": 546,
+    "audited_conditional": 545,
     "audited_decoration": 3,
-    "audited_failed": 8,
+    "audited_failed": 7,
     "audited_numerical_match": 29,
     "audited_renaming": 22,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
@@ -53,7 +53,7 @@
     "retained_bounded": 174,
     "retained_no_go": 105,
     "retained_pending_chain": 3,
-    "unaudited": 726
+    "unaudited": 728
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [

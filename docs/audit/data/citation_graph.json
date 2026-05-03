@@ -257,6 +257,14 @@
       "to": "gravity_signed_source_density_boundary_note"
     },
     {
+      "from": "architecture_note_directional_measure",
+      "to": "angular_kernel_underdetermination_no_go_note"
+    },
+    {
+      "from": "architecture_note_directional_measure",
+      "to": "born_scattering_comparison_note"
+    },
+    {
       "from": "area_law_coefficient_gap_note",
       "to": "bh_entropy_rt_ratio_widom_no_go_note"
     },
@@ -23089,7 +23097,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T19:26:20.296875+00:00",
+  "generated_at": "2026-05-03T19:45:32.345608+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24533,10 +24541,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "8c0467090453c2790d90f9ae0c558df9e48f22080a984d2f44d7b7afee84f0a9",
+      "deps": [
+        "angular_kernel_underdetermination_no_go_note",
+        "born_scattering_comparison_note"
+      ],
+      "note_hash": "20b9b5934ea53e55ac6a474dbb9445ffef50008d3d256af994306ab1fd5b8efd",
       "path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
-      "runner_path": null,
+      "runner_path": "scripts/architecture_directional_measure_table_runner_2026_05_03.py",
       "title": "Architecture Note: Directional Path Measure"
     },
     "architecture_options": {
@@ -50250,7 +50261,6 @@
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
-    "architecture_note_directional_measure",
     "architecture_options",
     "architecture_portability_sweep_note",
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25",
@@ -51240,10 +51250,10 @@
       "open_gate": 112,
       "positive_theorem": 629
     },
-    "edge_count": 5772,
+    "edge_count": 5774,
     "leaf_count": 598,
     "node_count": 1863,
-    "root_count": 1058,
-    "runners_with_path": 1423
+    "root_count": 1057,
+    "runners_with_path": 1424
   }
 }
