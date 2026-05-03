@@ -90,7 +90,7 @@ That means the transfer lesson is:
 
 For the synthesized transfer lesson, see:
 
-- `docs/GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
+- [`docs/GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md)
 
 ## What this does not claim
 
