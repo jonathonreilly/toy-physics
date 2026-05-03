@@ -184,7 +184,8 @@ and inserted-control harness, not a physical signed gravitational sector.
 ## Conditional Action Proposal
 
 That action has now been proposed explicitly in
-[`SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md`](SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md)
+`SIGNED_GRAVITY_APS_LOCKED_SOURCE_ACTION_PROPOSAL_NOTE.md`
+(downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_aps_locked_source_action_proposal.py`](../scripts/signed_gravity_aps_locked_source_action_proposal.py).
 

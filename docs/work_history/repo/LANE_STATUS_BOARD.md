@@ -8,8 +8,8 @@ audit phase
 Historical review map:
 
 - [`docs/repo/ACTIVE_REVIEW_QUEUE.md`](../../repo/ACTIVE_REVIEW_QUEUE.md)
-- [`review_feedback/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](./review_feedback/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
-- [`review_feedback/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md`](./review_feedback/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md)
+- `review_feedback/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
+- `review_feedback/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
 - [`docs/repo/CONTROLLED_VOCABULARY.md`](../../repo/CONTROLLED_VOCABULARY.md)
 
 ## Status Legend

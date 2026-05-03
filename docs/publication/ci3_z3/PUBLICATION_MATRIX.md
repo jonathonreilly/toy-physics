@@ -22,9 +22,9 @@ placement rather than audit-ratified status.
 
 Use this file together with:
 
-- [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
+- `QUANTITATIVE_SUMMARY_TABLE.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-- [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
+- `FULL_CLAIM_LEDGER.md` (sibling artifact; cross-reference only — not a one-hop dep of this note)
 
 Terminology rule:
 
