@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 59,
-    "high": 216,
+    "high": 215,
     "leaf": 201,
     "medium": 331
   },
-  "generated_at": "2026-05-03T16:55:27.171802+00:00",
+  "generated_at": "2026-05-03T17:00:05.605037+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -1700,27 +1700,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_taste_scalar_isotropy.py",
       "transitive_descendants": 54
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 11,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.115,
-      "note_path": "docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py",
-      "transitive_descendants": 48
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20895,6 +20874,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 115,
-  "total_pending": 807
+  "ready_count": 114,
+  "total_pending": 806
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T16:55:27.601684+00:00
+**Generated:** 2026-05-03T17:00:06.164584+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 72 |
+| **retained** | 73 |
 | **retained_no_go** | 100 |
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 778 |
+| unaudited | 777 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 308 |
+| `audited_clean` | 309 |
 | `audited_conditional` | 518 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 824 |
+| `unaudited` | 823 |
 
 | claim_type | count |
 |---|---:|
@@ -194,6 +194,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
+| `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5461,6 +5462,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** Since they agree on all retained premises but disagree on the package-level EW matching factor, the matching rule is underdetermined by those premises.  _(class `A`)_
 - **chain closes:** True — The two-completion witness closes: kappa_EW = 0 and kappa_EW = 1 share F_adj = 8/9, S = 1/9, the same CMT u0^2 scaling, and bounded OZI-class disconnected size, but yield K_EW = 9/8 and K_EW = 1. The retained-bounded Fierz dependency fixes only the channel fraction and explicitly does not fix the physical readout selector.
 - **rationale:** The no-go is a genuine underdetermination argument rather than a positive derivation of a new EW coefficient. The runner verifies the exact rational arithmetic, CMT cancellation, OZI boundedness for multiple kappa values, and the decisive fact that two completions agree on the supplied primitive data while disagreeing on K_EW. No supplied retained primitive excludes the full-trace completion or derives kappa_EW = 0, so the connected-trace selector remains an extra matching premise.
+- **auditor confidence:** high
+
+### `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26`
+
+- **Note:** [`EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`](../../docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact Standard Model one-Higgs-doublet, tree-level diagonalization of the electroweak gauge-boson mass matrix from SU(2)_L x U(1)_Y, Y_H = 1/2, a neutral vacuum, and the standard covariant derivative; includes Q = T3 + Y, e = g sin(theta_W) = g_Y cos(theta_W), M_W, M_Z, M_A = 0, and rho_tree = 1, but excludes derivations of g2, gY, v, lambda, radiative corrections, and precision pole masses.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-ew-higgs-gauge-mass-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** At the vacuum, |D_mu H_0|^2 gives the charged mass term g^2 v^2/8[(W_mu^1)^2 + (W_mu^2)^2] and the neutral mass matrix M_0^2 = v^2/4 [[g^2, -g g_Y], [-g g_Y, g_Y^2]], whose zero and massive eigenvectors are the photon and Z directions.  _(class `A`)_
+- **chain closes:** True — Within the explicitly stated SM one-doublet tree-level assumptions, the mass spectrum, Weinberg rotation, unbroken generator, electric coupling, and rho_tree identity follow by direct algebra from the Higgs kinetic term. The chain does not derive framework values of g2, gY, v, lambda, running couplings, radiative corrections, or pole masses.
+- **rationale:** The audited theorem is a self-contained algebraic diagonalization of the one-doublet electroweak Higgs kinetic term, not a numerical electroweak prediction. The Pauli action, charged and neutral mass matrices, Weinberg rotation, photon/Z eigenvectors, unbroken charge, electric coupling, GUT-normalized dictionary, rho_tree identity, and scalar Hessian checks all pass. The local primary runner exits nonzero on one stale status-string surface check, but that does not affect the load-bearing algebra or broaden the scoped theorem.
 - **auditor confidence:** high
 
 ### `field_equation_derivation_note`
