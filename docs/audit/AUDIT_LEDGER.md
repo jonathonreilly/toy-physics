@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T17:14:55.476271+00:00
+**Generated:** 2026-05-03T17:15:40.130413+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 168 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 772 |
+| unaudited | 771 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 27 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 520 |
+| ~~audited_conditional~~ | 521 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -37,12 +37,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 311 |
-| `audited_conditional` | 520 |
+| `audited_conditional` | 521 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 27 |
 | `audited_renaming` | 22 |
-| `unaudited` | 818 |
+| `unaudited` | 817 |
 
 | claim_type | count |
 |---|---:|
@@ -579,6 +579,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_z3_character_transfer_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_cp_orientation_parity_reduction_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `dm_pns_attack_cascade_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4913,6 +4914,23 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`
   - `DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`
+- **auditor confidence:** high
+
+### `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21`
+
+- **Note:** [`DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Constructs A_ord = diag(1,2,3) + (E12 + E23 + E31) and verifies that it has nonzero native current J_chi = 1 on the stated hw=1 response-family reconstruction, conditional on the graph-first frame, adjacent-chain projector algebra, native current definition, and last-mile reduction target.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-fresh-2026-05-03`  (codex-current; independence=fresh_context)
+- **load-bearing step:** The runner evaluates the native current exactly and finds J_chi(A_ord) = 1; it then reconstructs the same active law from the retained hw=1 response columns and verifies that the recovered current stays J_chi = 1.  _(class `A`)_
+- **chain closes:** False — The algebraic current calculation for the constructed A_ord closes in the runner, but the note's theorem explicitly assumes upstream graph-first frame support, adjacent-chain path algebra, the native current definition, and the last-mile reduction target. Those dependencies are load-bearing and are not available here as retained-grade audited inputs.
+- **rationale:** Issue: the nonzero-current computation is an algebraic check after A_ord and the hw=1 response-family/readout machinery are admitted from upstream assumptions. Why this blocks: the source note does not itself derive the graph-first carrier, adjacent-chain projector system, native J_chi readout, or last-mile reduction target, so the advertised positive current-activation theorem cannot be retained as an independently closed claim from the restricted packet. Repair target: make the cited graph-first support, adjacent-chain path algebra, native current definition, response-family reconstruction, and last-mile reduction theorem explicit retained-grade dependencies, or include their full audited statements in the source packet and show the runner constructs the readout without relying on unaudited bridges. Claim boundary until fixed: the note supports a conditional algebraic activation check that A_ord has J_chi = 1 under the stated upstream structures.
+- **open / conditional deps cited:**
+  - `PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md`
+  - `DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md`
+  - `DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`
 - **auditor confidence:** high
 
 ### `dm_pmns_ordered_chain_graded_current_delta_closure_theorem_note_2026-04-21`

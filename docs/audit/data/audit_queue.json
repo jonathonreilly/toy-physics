@@ -3,9 +3,9 @@
     "critical": 59,
     "high": 214,
     "leaf": 201,
-    "medium": 327
+    "medium": 326
   },
-  "generated_at": "2026-05-03T17:14:55.001677+00:00",
+  "generated_at": "2026-05-03T17:15:39.584806+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7555,27 +7555,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "transitive_descendants": 54
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 7.055,
-      "note_path": "docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_pmns_graph_first_ordered_chain_nonzero_current_closure_2026_04_21.py",
-      "transitive_descendants": 46
     },
     {
       "audit_independence_required": "any_non_self",
@@ -20767,6 +20746,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 110,
-  "total_pending": 801
+  "ready_count": 109,
+  "total_pending": 800
 }
