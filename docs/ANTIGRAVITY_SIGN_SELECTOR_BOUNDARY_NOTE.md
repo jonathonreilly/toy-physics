@@ -228,7 +228,8 @@ not be promoted as a physical signed-gravity sector.
 
 Two follow-up P0 notes now narrow the lane:
 
-- [`SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md`](SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md)
+- `SIGNED_GRAVITY_CHI_SELECTOR_THEOREM_OR_NOGO_NOTE.md` (sibling artifact;
+  cross-reference only — not a one-hop dep of this note)
   finds no local Pauli-string involution on the retained 8D taste cell that is
   both conserved on the massive parity-scalar surface and able to pin scalar
   source sign.

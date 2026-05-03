@@ -284,7 +284,8 @@ source-line origin theorem is found.
 ## Source-Line Origin Follow-Up
 
 The next pass sharpens that deeper origin target in
-[`SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md`](SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md)
+`SIGNED_GRAVITY_SOURCE_LINE_ORIGIN_TENSOR_LIFT_NOTE.md`
+(downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 with runner
 [`../scripts/signed_gravity_source_line_origin_tensor_lift_audit.py`](../scripts/signed_gravity_source_line_origin_tensor_lift_audit.py).
 
