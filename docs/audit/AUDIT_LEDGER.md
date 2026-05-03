@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:12:12.039594+00:00
+**Generated:** 2026-05-03T21:12:48.036039+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 106 |
-| **retained_bounded** | 192 |
+| **retained_bounded** | 193 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 17 |
-| unaudited | 694 |
+| unaudited | 693 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 355 |
+| `audited_clean` | 356 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 741 |
+| `unaudited` | 740 |
 
 | claim_type | count |
 |---|---:|
@@ -201,6 +201,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `equivalence_principle_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
+| `eta_188_structural_origin_partial_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | A | - |
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `evolving_network_prototype_v4_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `evolving_network_prototype_v5_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
@@ -5792,6 +5793,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** A uniform-field deflection sweep on the lattice produces force responses that scale near-linearly with both field strength and source strength, with exponents 1.008 and 0.998, while layer scaling is sub-quadratic at 1.14.  _(class `C`)_
 - **chain closes:** False — The source correctly disclaims a derivation of m_inertial = m_gravitational, but the bounded numerical scaffold itself is not reproducible from the audit packet because there is no registered runner, fit table, force observable definition, uncertainty model, or mass-extraction theorem. The safe content is a reported bounded scaffold, not an audited equivalence-principle or force-law result.
 - **rationale:** Issue: the note reports near-unity field/source exponents and sub-quadratic layer scaling, but provides no registered primary runner, fit data, force observable definition, uncertainty model, or theorem identifying the response coefficients with inertial and gravitational mass. Why this blocks: a hostile auditor cannot reproduce the bounded exponents or turn beam-deflection linearity into equality of masses from the current packet. Repair target: add a registered sweep runner with fit tables and uncertainties, define the lattice force observable, and derive the inertial-mass and gravitational-source normalization maps from retained inputs. Claim boundary until fixed: a bounded historical scaffold reports near-linear field/source response and explicitly does not establish a retained equivalence principle.
+- **auditor confidence:** high
+
+### `eta_188_structural_origin_partial_note_2026-05-03`
+
+- **Note:** [`ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md`](../../docs/ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the current framework transport implementation, eta/eta_obs decomposes algebraically into ABC = 516/53009, Y0^2, F_CP, kappa_axiom, and eta_obs, with the four cycle-09 near-fit candidates excluded as exact structural forms.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-eta-188-structural`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** eta/eta_obs = (516 / 53009) * Y0^2 * F_CP * kappa_axiom / eta_obs  _(class `A`)_
+- **chain closes:** True — The source note states a bounded decomposition rather than a full structural derivation of every factor. The runner completed with PASS=38 FAIL=0 and verifies the ABC rational cancellation, exact product reconstruction, candidate near-fit mismatch, and explicit isolation of Y0^2 as phenomenological.
+- **rationale:** The audited bounded claim closes as an algebraic decomposition of the existing transport chain: ABC reduces exactly to 516/53009, the reconstructed product matches the runner's eta/eta_obs value, and the four named near-fit candidates are not exact framework forms. The clean verdict is limited to this bounded scope and does not promote Y0^2, PMNS-chart constants, or the ODE transport functional to first-principles retained derivations beyond the note's admitted residual boundary.
 - **auditor confidence:** high
 
 ### `evolving_network_prototype_note`
