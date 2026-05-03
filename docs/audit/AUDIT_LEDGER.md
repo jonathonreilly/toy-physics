@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:45:44.360482+00:00
+**Generated:** 2026-05-03T19:46:32.847716+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 83 |
 | **retained_no_go** | 105 |
-| **retained_bounded** | 178 |
+| **retained_bounded** | 179 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 711 |
+| unaudited | 710 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 336 |
+| `audited_clean` | 337 |
 | `audited_conditional` | 548 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 757 |
+| `unaudited` | 756 |
 
 | claim_type | count |
 |---|---:|
@@ -108,6 +108,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
+| `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `action_power_scaling_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `action_uniqueness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
@@ -1168,6 +1169,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The transformation (c, G) -> (c/a, a*G) leaves the dynamics invariant because the self-consistent loop depends only on the product c*G; after the f/Phi and source-normalization conventions are stipulated, matching g_tt algebraically fixes the corresponding c.  _(class `A`)_
 - **chain closes:** True — The narrowed note does not claim to derive the physical f/Phi map or a convention-free value of c. Its load-bearing bounded claim is that c is degenerate before conventions and algebraically determined after named conventions; that closes from the displayed rescaling argument and metric matching. The current runner output supports the bounded claim by showing convergence across c, approximate c*phi invariance under fixed c*G rescaling, and explicit withdrawal of the null-ray/light-bending test. Stale top-level runner docstrings and unused comments still contain older unique-c language, but they are not used by the current note, current runner output, or ratified scope.
 - **rationale:** The narrowed note does not claim to derive the physical f/Phi map or a convention-free value of c. Its load-bearing bounded claim is that c is degenerate before conventions and algebraically determined after named conventions; that closes from the displayed rescaling argument and metric matching. The current runner output supports the bounded claim by showing convergence across c, approximate c*phi invariance under fixed c*G rescaling, and explicit withdrawal of the null-ray/light-bending test. Stale top-level runner docstrings and unused comments still contain older unique-c language, but they are not used by the current note, current runner output, or ratified scope.
+- **auditor confidence:** high
+
+### `action_power_3d_gravity_sign_closure_note`
+
+- **Note:** [`ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md`](../../docs/ACTION_POWER_3D_GRAVITY_SIGN_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite detector z-centroid sign sweep for the L=12, W=6, h=1.0 ordered 3D power-action close-slit barrier runner under the stated strength, connectivity, and jitter variations.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `fresh-agent-klein`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The field-strength, connectivity, and jitter sweeps report toward counts of 0/14, 0/3, and 0/8, so the current ordered-family barrier-sign lane is a bounded negative.  _(class `C`)_
+- **chain closes:** True — The completed runner output enumerates exactly the bounded variations named in the note, and every reported detector z-centroid shift is negative/AWAY. The note explicitly excludes topology-changing, continuum-limit, and other action-family claims.
+- **rationale:** The source note makes a bounded finite-sweep claim, not a universal no-go over all possible 3D gravity constructions. The runner output covers the stated field-strength, forward-connectivity, and geometric-jitter sweeps and agrees with the note's zero-toward summaries. The clean verdict is limited to this runner-defined ordered-family barrier-sign closure.
 - **auditor confidence:** high
 
 ### `action_power_scaling_sweep_note`
