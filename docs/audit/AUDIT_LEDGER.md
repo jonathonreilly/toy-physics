@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T19:39:23.887734+00:00
+**Generated:** 2026-05-03T19:44:34.590253+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 82 |
+| **retained** | 83 |
 | **retained_no_go** | 105 |
 | **retained_bounded** | 177 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 713 |
+| unaudited | 712 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 334 |
+| `audited_clean` | 335 |
 | `audited_conditional` | 548 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 759 |
+| `unaudited` | 758 |
 
 | claim_type | count |
 |---|---:|
@@ -284,6 +284,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | D | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
+| `mirror_2d_validation_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-agent | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
@@ -9611,6 +9612,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **open / conditional deps cited:**
   - `/Users/jonreilly/Projects/Physics/logs/2026-04-04-mesoscopic-surrogate-threshold-2d.txt`
 - **auditor confidence:** high
+
+### `mirror_2d_validation_note`
+
+- **Note:** [`MIRROR_2D_VALIDATION_NOTE.md`](../../docs/MIRROR_2D_VALIDATION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** For the fixed 2D mirror setup in the note, the cited validation script/log support the reported bounded MI, decoherence, d_TV, Born residual, and scripted positive gravity-read pocket, strongest at N=60, without promoting a mass or distance law.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-ising`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The exact 2D mirror family is Born-clean and retains a strong bounded joint coexistence pocket, with the strongest retained row at N = 60.  _(class `C`)_
+- **chain closes:** True — The cited script computes the metrics from the stated generator and parameters, and the cited completed log matches the note's table and N=60 random-baseline comparison. The clean scope is bounded to that finite validation pocket.
+- **rationale:** The load-bearing finite-compute claim closes from the directly cited source script and completed log; the note does not rely on missing long compute. The gravity-side scaling fits are explicitly not promoted as laws, so no unsupported gravity-law bridge is needed for the audited scope. Residual risk is ordinary rerun/environment drift, not an unclosed theorem step.
+- **auditor confidence:** medium
 
 ### `mirror_chokepoint_boundary_fit_note`
 
