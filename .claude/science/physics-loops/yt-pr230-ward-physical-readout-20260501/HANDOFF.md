@@ -1,5 +1,30 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 non-source response rank-repair sufficiency:
+
+- Added `scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py`,
+  `docs/YT_NON_SOURCE_RESPONSE_RANK_REPAIR_SUFFICIENCY_NOTE_2026-05-03.md`,
+  and
+  `outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json`.
+- The theorem records the exact positive repair after the `O_sp/O_H` identity
+  stretch blocked: source-only FH/LSZ has rank one in the neutral scalar
+  top-coupling space and leaves a null direction; pole-level O_sp-Higgs Gram
+  purity or an independent non-source response row with sector-overlap /
+  canonical-Higgs identity repairs the rank.
+- Generic W/Z slope data alone are explicitly not sufficient.  The W/Z route
+  still needs same-source mass-response rows plus sector-overlap and
+  canonical-Higgs identity certificates before the response ratio can close.
+- Current rows are absent: no certified `O_H/C_sH/C_HH` pole rows and no
+  same-source W/Z mass-response rows are present.
+- Runners: rank-repair theorem `PASS=17 FAIL=0`, retained-route
+  `PASS=122 FAIL=0`, campaign status `PASS=148 FAIL=0`.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: produce one rank-repair input: a certified same-surface
+canonical `O_H` with production `C_sH/C_HH` pole rows passing O_sp-Higgs Gram
+purity, or production same-source W/Z mass-response rows with sector-overlap
+and canonical-Higgs identity certificates.  PR #230 remains draft/open.
+
 Latest checkpoint, 2026-05-03 FH/LSZ chunks021-022 v2 multi-tau wave:
 
 - The active PR #230 worker completed chunks021-022 in the sibling worktree

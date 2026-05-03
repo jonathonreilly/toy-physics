@@ -125,6 +125,7 @@
     "neutral_scalar_top_coupling_tomography_gate": "open / neutral scalar top-coupling tomography gate not passed",
     "no_orthogonal_top_coupling_import": "exact negative boundary / no-orthogonal-top-coupling import audit",
     "no_orthogonal_top_coupling_selection_rule": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived",
+    "non_source_response_rank_repair_sufficiency": "exact-support / non-source response rank-repair sufficiency theorem; current rows absent",
     "nonzero_momentum": "bounded-support / nonzero-momentum correlator scout",
     "orthogonal_neutral_decoupling_no_go": "exact negative boundary / orthogonal neutral decoupling shortcut not derived",
     "osp_oh_identity_stretch": "exact negative boundary / O_sp-to-O_H identity not derived on current surface",
@@ -178,7 +179,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 147,
+  "pass_count": 148,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
@@ -197,6 +198,10 @@
     {
       "needed": "production dE/ds data plus scalar LSZ/canonical-Higgs normalization kappa_s and response matching",
       "route": "Feynman-Hellmann source-response measurement"
+    },
+    {
+      "needed": "certified O_H with C_sH/C_HH pole Gram purity, or same-source W/Z response rows with sector-overlap and canonical-Higgs identity",
+      "route": "non-source response rank repair"
     }
   ],
   "strict_non_claims": [

@@ -1,5 +1,29 @@
 # Claim Status Certificate
 
+Non-source response rank-repair sufficiency theorem:
+
+```text
+actual_current_surface_status: exact-support / non-source response rank-repair sufficiency theorem; current rows absent
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=122 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=148 FAIL=0
+```
+
+The theorem is positive exact support: it identifies the mathematical
+rank-repair inputs that would close the current source-only null direction.
+It is not closure because the current surface still lacks certified
+`O_H/C_sH/C_HH` pole rows and same-source W/Z mass-response rows with
+sector-overlap and canonical-Higgs identity certificates.  No retained or
+`proposed_retained` wording is authorized.
+
 FH/LSZ chunks021-022 v2 multi-tau target wave:
 
 ```text

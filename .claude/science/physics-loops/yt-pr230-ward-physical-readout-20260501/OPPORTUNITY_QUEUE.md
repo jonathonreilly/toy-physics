@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the non-source response rank-repair sufficiency theorem now
+pinpoints the positive closure inputs.  Source-only FH/LSZ remains rank one in
+the neutral-scalar top-coupling space.  The shortest high-value actions are
+therefore unchanged but sharper: provide a certified `O_H` plus production
+`C_sH/C_HH` pole rows passing O_sp-Higgs Gram purity, or provide production
+same-source W/Z mass-response rows with sector-overlap and canonical-Higgs
+identity certificates.  Generic W/Z slopes without those identity certificates
+are explicitly insufficient.  Continue source-only chunks only as background
+support.
+
 2026-05-03 update: chunks021-022 now extend the v2 FH/LSZ production-support
 set.  Ready L12 coverage is `22/63` chunks and `352/1000` saved
 configurations; v2 multi-tau rows are present for chunks017-022; target ESS

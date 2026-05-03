@@ -26,8 +26,21 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=147 FAIL=0
+# SUMMARY: PASS=148 FAIL=0
 ```
+
+## 2026-05-03 Non-Source Response Rank-Repair Update
+
+The campaign status certificate now consumes the non-source response
+rank-repair sufficiency theorem.  It records exact support for the positive
+route: source-only FH/LSZ is rank one, pole-level O_sp-Higgs Gram purity or an
+identity-certified independent non-source row repairs the rank, and generic
+W/Z slope data alone are not enough.
+
+The current campaign status remains open.  The required rank-repair rows are
+absent: no certified `O_H/C_sH/C_HH` pole rows and no same-source W/Z
+mass-response rows with sector-overlap and canonical-Higgs identity
+certificates.  No retained or `proposed_retained` closure is authorized.
 
 ## 2026-05-03 FH/LSZ Chunks021-022 V2 Production-Support Update
 

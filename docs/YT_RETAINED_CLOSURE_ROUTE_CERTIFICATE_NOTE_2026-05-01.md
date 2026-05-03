@@ -18,8 +18,21 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=121 FAIL=0
+# SUMMARY: PASS=122 FAIL=0
 ```
+
+## 2026-05-03 Non-Source Response Rank-Repair Update
+
+The retained-route certificate now consumes
+`outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json`.
+That certificate is exact support for the positive route: source-only FH/LSZ
+has a rank-one null direction, and closure needs O_sp-Higgs Gram purity,
+certified independent non-source response rows, or a rank-one theorem.
+
+Current closure remains open because certified `O_H/C_sH/C_HH` pole rows and
+same-source W/Z mass-response rows are absent.  Generic W/Z slopes without
+sector-overlap and canonical-Higgs identity certificates are not sufficient.
+No retained or `proposed_retained` closure is authorized.
 
 ## 2026-05-03 FH/LSZ Chunks021-022 V2 Production-Support Update
 

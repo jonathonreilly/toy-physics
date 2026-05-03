@@ -181,6 +181,9 @@ def main() -> int:
         "neutral_scalar_top_coupling_tomography_gate": load(
             "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json"
         ),
+        "non_source_response_rank_repair_sufficiency": load(
+            "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json"
+        ),
         "scalar_carrier_projector_closure": load(
             "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json"
         ),
@@ -758,6 +761,20 @@ def main() -> int:
         statuses["neutral_scalar_top_coupling_tomography_gate"],
     )
     report(
+        "non-source-response-rank-repair-sufficiency-not-closure",
+        "non-source response rank-repair sufficiency theorem"
+        in str(statuses["non_source_response_rank_repair_sufficiency"])
+        and certificates["non_source_response_rank_repair_sufficiency"].get(
+            "rank_repair_sufficiency_theorem_passed"
+        )
+        is True
+        and certificates["non_source_response_rank_repair_sufficiency"].get(
+            "current_closure_gate_passed"
+        )
+        is False,
+        statuses["non_source_response_rank_repair_sufficiency"],
+    )
+    report(
         "scalar-carrier-projector-closure-attempt-blocked",
         "scalar carrier-projector closure attempt blocked" in str(statuses["scalar_carrier_projector_closure"]),
         statuses["scalar_carrier_projector_closure"],
@@ -1290,6 +1307,10 @@ def main() -> int:
         {
             "route": "Feynman-Hellmann source-response measurement",
             "needed": "production dE/ds data plus scalar LSZ/canonical-Higgs normalization kappa_s and response matching",
+        },
+        {
+            "route": "non-source response rank repair",
+            "needed": "certified O_H with C_sH/C_HH pole Gram purity, or same-source W/Z response rows with sector-overlap and canonical-Higgs identity",
         },
     ]
 

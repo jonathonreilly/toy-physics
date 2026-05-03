@@ -13,11 +13,18 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-172-fh-lsz-chunks021-022-v2-wave
-blocks_completed: 172
-active_route: "FH/LSZ v2 production support while foreground closure remains O_H/C_sH/C_HH or W/Z response"
-active_hard_residual: "Chunks021-022 completed with selected-mass-only and normal-equation-cache FH/LSZ production support.  Ready L12 coverage is now 22/63 chunks and 352/1000 saved configurations; target ESS passes with limiting ESS 296.09790071733823 and autocorrelation ESS passes for target observables, but response stability remains open with relative_stdev=0.9050778118183592 and spread_ratio=5.920283844112204.  Response-window acceptance remains open because v2 multi-tau rows cover only chunks017-022, chunks001-016 lack v2 rows, multiple source radii and finite-source-linearity are absent, production response stability is still open, and source-Higgs/W/Z identity gates remain open.  Retained-route PASS=121 FAIL=0; campaign status PASS=147 FAIL=0.  No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-173-non-source-response-rank-repair-sufficiency
+blocks_completed: 173
+active_route: "non-source response rank-repair sufficiency theorem"
+active_hard_residual: "The rank-repair theorem now states the exact positive acceptance surface after O_sp/O_H identity failed: source-only FH/LSZ has rank one and leaves a neutral-scalar top-coupling null direction; pole-level O_sp-Higgs Gram purity or an independent non-source row with sector-overlap/canonical-Higgs identity repairs the rank.  Current closure remains open because no certified O_H/C_sH/C_HH pole rows and no same-source W/Z mass-response rows are present.  Rank-repair theorem PASS=17 FAIL=0, retained-route PASS=122 FAIL=0, campaign status PASS=148 FAIL=0.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py"
+  - "docs/YT_NON_SOURCE_RESPONSE_RANK_REPAIR_SUFFICIENCY_NOTE_2026-05-03.md"
+  - "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk021_2026-05-01.json"
   - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk022_2026-05-01.json"
   - "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk021/L12xT24/ensemble_measurement.json"

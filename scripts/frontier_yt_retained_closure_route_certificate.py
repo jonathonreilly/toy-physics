@@ -125,6 +125,7 @@ def main() -> int:
         "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
+        "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
         "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
         "kprime_closure": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
@@ -678,6 +679,21 @@ def main() -> int:
         .get("checks", {})
         .get("current_rank_insufficient")
         is True
+    )
+    non_source_response_rank_repair_sufficiency_not_closure = (
+        "non-source response rank-repair sufficiency theorem"
+        in certificates["non_source_response_rank_repair_sufficiency"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["non_source_response_rank_repair_sufficiency"].get("proposal_allowed") is False
+        and certificates["non_source_response_rank_repair_sufficiency"].get(
+            "rank_repair_sufficiency_theorem_passed"
+        )
+        is True
+        and certificates["non_source_response_rank_repair_sufficiency"].get(
+            "current_closure_gate_passed"
+        )
+        is False
     )
     scalar_carrier_projector_closure_blocked = (
         "scalar carrier-projector closure attempt blocked"
@@ -1406,6 +1422,11 @@ def main() -> int:
         "neutral-scalar-top-coupling-tomography-gate-blocks",
         neutral_scalar_top_coupling_tomography_gate_blocks,
         certificates["neutral_scalar_top_coupling_tomography_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "non-source-response-rank-repair-sufficiency-not-closure",
+        non_source_response_rank_repair_sufficiency_not_closure,
+        certificates["non_source_response_rank_repair_sufficiency"].get("actual_current_surface_status", ""),
     )
     report(
         "scalar-carrier-projector-closure-attempt-blocked",

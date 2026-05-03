@@ -1,5 +1,24 @@
 # No-Go Ledger
 
+## Non-source response rank-repair theorem is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_non_source_response_rank_repair_sufficiency.py
+# SUMMARY: PASS=17 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=122 FAIL=0
+```
+
+The theorem is exact support for the positive route, not current closure.  It
+proves source-only FH/LSZ has a rank-one null direction and identifies the
+rank-repair inputs: O_sp-Higgs Gram purity, a certified independent non-source
+row, or a dynamical rank-one theorem.  Current `O_H/C_sH/C_HH` pole rows and
+same-source W/Z mass-response rows are absent.  Do not treat the theorem,
+generic W/Z slope data, or the existing source-only rows as retained or
+`proposed_retained` evidence.
+
 ## FH/LSZ chunks021-022 v2 multi-tau wave is not closure
 
 Runners:
