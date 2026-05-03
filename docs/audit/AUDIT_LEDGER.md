@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T22:55:46.573990+00:00
+**Generated:** 2026-05-03T22:56:50.905515+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 109 |
-| **retained_bounded** | 207 |
+| **retained_bounded** | 208 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 669 |
+| unaudited | 668 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 376 |
+| `audited_clean` | 377 |
 | `audited_conditional` | 553 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 716 |
+| `unaudited` | 715 |
 
 | claim_type | count |
 |---|---:|
@@ -319,6 +319,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `newton_derivation_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-current | A | - |
 | `newtonian_distance_law_confirmed` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | B | - |
+| `nonlabel_grown_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `ollivier_einstein_proxy_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `packet_memory_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | claude-opus | C | - |
 | `persistent_inertial_object_probe_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -10550,6 +10551,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** The safe wording is that the widened W = 12, h = 0.25 replay gives a far-tail fit of b^(-1.17) on the tested z >= 5 window, is a strong finite-lattice replay, and is not a universal theorem.  _(class `B`)_
 - **chain closes:** True — The source note explicitly narrows the historical headline to the retained bounded wide-tail replay note. The completed replay log matches the dependency note's frozen values; the live short-budget run timed out just before completion and is not used as negative evidence.
 - **rationale:** The audited claim is the bounded finite-window replay statement, not the broader historical headline. The one-hop dependency is retained_bounded, and the completed runner log reports Born=4.82e-15, k=0=+0.000000, 9/9 TOWARD rows, peak-tail b^(-1.07) with R^2=0.990, and far-tail b^(-1.17) with R^2=0.997, matching the source and dependency notes. Residual risk is only asymptotic/generalization risk, which the source note explicitly excludes.
+- **auditor confidence:** high
+
+### `nonlabel_grown_basin_note`
+
+- **Note:** [`NONLABEL_GROWN_BASIN_NOTE.md`](../../docs/NONLABEL_GROWN_BASIN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For seed 0, fixed drift = 0.2, restore values 0.60, 0.70, and 0.80, the targeted grown-basin runner reports the bounded signed-source checks passing: exact zero-source baseline, exact neutral +1/-1 cancellation, opposite single-source signs, and near-linear +2 response.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-fresh-nonlabel-grown-basin`  (codex-fresh-agent; independence=fresh_context)
+- **load-bearing step:** The geometry-sector / non-label architecture survives the nearest restore neighborhood at fixed drift = 0.2, with zero-source and neutral controls exactly zero, sign orientation preserved, and charge response linear within the checked exponent.  _(class `C`)_
+- **chain closes:** True — The completed allowed log matches the note's frozen table and reports YES for all three restore rows, with passed rows 3/3. Within the scoped finite basin claim, the runner computes the controls and responses rather than merely restating the note's table.
+- **rationale:** The scoped claim is narrow and bounded to one seed, one drift value, and three restore values. The allowed completed log closes those finite checks: zero and neutral controls are exactly zero in the reported output, the +1 and -1 responses have opposite signs at each restore value, and the +2 response gives exponent approximately 1.000 for each row. This does not establish a broad non-label theorem beyond the tested basin, but it does close the current bounded basin claim.
 - **auditor confidence:** high
 
 ### `nonlinear_born_gravity_note`
