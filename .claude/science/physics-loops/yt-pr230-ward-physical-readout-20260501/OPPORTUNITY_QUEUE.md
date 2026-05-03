@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-03 update: the harness-side multi-tau serialization blocker is now
+removed for future chunks.  `fh_lsz_target_timeseries_v2_multitau` preserves
+legacy tau=1 rows and adds per-configuration multi-tau source-response rows,
+with smoke/certificate support only.  This does not pass the response-window
+acceptance gate for current production chunks, because those chunks predate v2
+rows and multiple source radii remain absent.  The production-support next
+move is to rerun future chunks with v2 plus multi-radius calibration.  The
+higher retained-positive route remains deriving/realizing same-surface
+`O_H/C_sH/C_HH`, a real W/Z response with sector-overlap identity, or a
+microscopic theorem excluding the orthogonal neutral top-coupling loophole.
+
 2026-05-03 update: response-window acceptance gate now exists and is not
 passed.  Stable chunk-level tau-window central values across tau windows 0-9
 are useful support, but the gate needs per-configuration multi-tau covariance

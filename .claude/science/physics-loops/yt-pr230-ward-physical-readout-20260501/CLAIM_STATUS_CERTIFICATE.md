@@ -1,5 +1,30 @@
 # Claim Status Certificate
 
+FH/LSZ multi-tau target-timeseries harness:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ multi-tau target time-series harness extension
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_multitau_target_timeseries_harness_certificate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=113 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=139 FAIL=0
+```
+
+The production harness now supports v2 per-configuration multi-tau
+source-response target rows for future response-window covariance gates while
+preserving legacy tau=1 target rows.  This is infrastructure support only: the
+smoke is reduced scope, current production chunks still lack v2 rows, multiple
+source radii remain absent, and canonical-Higgs/source-overlap identity remains
+open.  This authorizes no readout switch and no retained or
+`proposed_retained` wording.
+
 FH/LSZ response-window acceptance gate:
 
 ```text

@@ -54,6 +54,7 @@
     "fh_lsz_invariant_readout": "exact-support / Feynman-Hellmann scalar-LSZ invariant readout formula",
     "fh_lsz_joint_harness": "bounded-support / joint Feynman-Hellmann scalar-LSZ harness",
     "fh_lsz_joint_resource": "bounded-support / joint FH-LSZ production resource projection",
+    "fh_lsz_multitau_target_timeseries_harness": "bounded-support / FH-LSZ multi-tau target time-series harness extension",
     "fh_lsz_noise_subsample_diagnostics": "bounded-support / FH-LSZ noise-subsample diagnostics harness",
     "fh_lsz_numba_seed_independence": "exact negative boundary / FH-LSZ numba seed-independence audit",
     "fh_lsz_pole_fit_kinematics": "open / FH-LSZ scalar-pole kinematics gate blocks four-mode manifest as pole-fit evidence",
@@ -158,7 +159,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 138,
+  "pass_count": 139,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

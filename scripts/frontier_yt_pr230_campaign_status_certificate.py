@@ -279,6 +279,9 @@ def main() -> int:
         "fh_lsz_target_timeseries_harness": load(
             "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json"
         ),
+        "fh_lsz_multitau_target_timeseries_harness": load(
+            "outputs/yt_fh_lsz_multitau_target_timeseries_harness_certificate_2026-05-03.json"
+        ),
         "fh_lsz_selected_mass_normal_cache_speedup": load(
             "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json"
         ),
@@ -918,6 +921,12 @@ def main() -> int:
         "target time-series harness extension"
         in str(statuses["fh_lsz_target_timeseries_harness"]),
         statuses["fh_lsz_target_timeseries_harness"],
+    )
+    report(
+        "fh-lsz-multitau-target-timeseries-harness-support-not-evidence",
+        "multi-tau target time-series harness extension"
+        in str(statuses["fh_lsz_multitau_target_timeseries_harness"]),
+        statuses["fh_lsz_multitau_target_timeseries_harness"],
     )
     report(
         "fh-lsz-selected-mass-normal-cache-speedup-not-evidence",

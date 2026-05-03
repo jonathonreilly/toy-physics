@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=138 FAIL=0
+# SUMMARY: PASS=139 FAIL=0
 ```
 
 ## 2026-05-03 FH/LSZ Production-Support Update
@@ -64,6 +64,13 @@ The response-window acceptance gate now records stable chunk-level tau-window
 central values over tau windows 0-9, but the gate remains open because the
 current target rows lack per-configuration multi-tau covariance and the
 finite-source-linearity gate is not passed.
+
+The multi-tau target-timeseries harness extension now removes the harness-side
+serialization blocker for future chunks.  The new v2 smoke/certificate is
+`PASS=14 FAIL=0` and records per-configuration multi-tau source-response rows,
+but it is reduced-scope infrastructure support only.  Existing production
+chunks still predate the v2 rows, multiple source radii remain absent, and no
+response readout switch or retained/proposed-retained closure is authorized.
 
 The certificate consumes the PR-local route certificates for:
 

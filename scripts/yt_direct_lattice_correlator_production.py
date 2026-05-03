@@ -1197,30 +1197,57 @@ def fit_scalar_source_response(
         slope_err = float(math.sqrt(max(cov[0, 0], 0.0))) if cov.shape == (2, 2) else float("nan")
         fit_kind = "linear_dE_ds"
 
-    def effective_energy_tau1(corr: list[float]) -> float:
-        if len(corr) <= 2:
+    def effective_energy_at_tau(corr: list[float], tau: int) -> float:
+        if tau < 0 or len(corr) <= tau + 1:
             return float("nan")
-        c1 = float(corr[1])
-        c2 = float(corr[2])
-        if c1 <= 0.0 or c2 <= 0.0:
+        c0 = float(corr[tau])
+        c1 = float(corr[tau + 1])
+        if c0 <= 0.0 or c1 <= 0.0:
             return float("nan")
-        return float(math.log(c1 / c2))
+        return float(math.log(c0 / c1))
 
     common_count = min((len(rows) for rows in source_measurements.values()), default=0)
     source_keys = sorted(source_measurements)
     nonzero_radii = sorted({round(abs(float(s)), 12) for s in source_keys if abs(float(s)) > 1.0e-15})
+    max_tau = -1
+    if common_count > 0 and source_keys:
+        min_corr_len = min(
+            len(source_measurements[source_shift][cfg_index])
+            for source_shift in source_keys
+            for cfg_index in range(common_count)
+        )
+        max_tau = max(min_corr_len - 2, -1)
+    tau_windows = list(range(max_tau + 1))
     per_configuration_effective_energies = []
     per_configuration_slopes = []
+    per_configuration_multi_tau_effective_energies = []
+    per_configuration_multi_tau_slopes = []
     for cfg_index in range(common_count):
         energies_by_shift = {}
         for source_shift in source_keys:
             rows = source_measurements[source_shift]
-            energy = effective_energy_tau1(rows[cfg_index])
+            energy = effective_energy_at_tau(rows[cfg_index], 1)
             energies_by_shift[f"{float(source_shift):.12g}"] = energy
         per_configuration_effective_energies.append(
             {
                 "configuration_index": cfg_index,
                 "effective_energy_tau1_by_source_shift": energies_by_shift,
+            }
+        )
+        multi_tau_energies_by_tau: dict[str, dict[str, float]] = {}
+        for tau in tau_windows:
+            tau_energies_by_shift = {}
+            for source_shift in source_keys:
+                rows = source_measurements[source_shift]
+                energy = effective_energy_at_tau(rows[cfg_index], tau)
+                tau_energies_by_shift[f"{float(source_shift):.12g}"] = energy
+            multi_tau_energies_by_tau[str(tau)] = tau_energies_by_shift
+        per_configuration_multi_tau_effective_energies.append(
+            {
+                "configuration_index": cfg_index,
+                "tau_min": int(tau_windows[0]) if tau_windows else None,
+                "tau_max": int(tau_windows[-1]) if tau_windows else None,
+                "effective_energy_by_tau_and_source_shift": multi_tau_energies_by_tau,
             }
         )
         for radius in nonzero_radii:
@@ -1236,6 +1263,30 @@ def fit_scalar_source_response(
                         "finite": math.isfinite(slope_value),
                     }
                 )
+            multi_tau_slopes: dict[str, float] = {}
+            for tau in tau_windows:
+                tau_energies = multi_tau_energies_by_tau.get(str(tau), {})
+                tau_plus = tau_energies.get(f"{radius:.12g}")
+                tau_minus = tau_energies.get(f"{-radius:.12g}")
+                if isinstance(tau_plus, float) and isinstance(tau_minus, float):
+                    tau_slope = (
+                        float((tau_plus - tau_minus) / (2.0 * radius))
+                        if math.isfinite(tau_plus) and math.isfinite(tau_minus)
+                        else float("nan")
+                    )
+                    multi_tau_slopes[str(tau)] = tau_slope
+            per_configuration_multi_tau_slopes.append(
+                {
+                    "configuration_index": cfg_index,
+                    "source_radius": float(radius),
+                    "tau_min": int(tau_windows[0]) if tau_windows else None,
+                    "tau_max": int(tau_windows[-1]) if tau_windows else None,
+                    "slope_effective_energy_by_tau": multi_tau_slopes,
+                    "finite_tau_count": sum(
+                        1 for value in multi_tau_slopes.values() if math.isfinite(float(value))
+                    ),
+                }
+            )
 
     return {
         "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
@@ -1245,12 +1296,25 @@ def fit_scalar_source_response(
         "slope_dE_ds_lat": slope,
         "slope_dE_ds_lat_err": slope_err,
         "fit_kind": fit_kind,
+        "target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau",
         "target_timeseries_rule": (
             "diagnostic per-configuration tau=1 effective-energy slopes for "
             "autocorrelation/ESS gates; not a physical dE/dh readout"
         ),
+        "multi_tau_target_timeseries_rule": (
+            "diagnostic per-configuration adjacent-time effective-energy slopes "
+            "for response-window covariance gates; not a readout switch and not "
+            "a physical dE/dh observable"
+        ),
+        "multi_tau_window_range": {
+            "tau_min": int(tau_windows[0]) if tau_windows else None,
+            "tau_max": int(tau_windows[-1]) if tau_windows else None,
+            "tau_windows": [int(tau) for tau in tau_windows],
+        },
         "per_configuration_effective_energies": per_configuration_effective_energies,
         "per_configuration_slopes": per_configuration_slopes,
+        "per_configuration_multi_tau_effective_energies": per_configuration_multi_tau_effective_energies,
+        "per_configuration_multi_tau_slopes": per_configuration_multi_tau_slopes,
         "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization",
     }
 
@@ -1879,6 +1943,13 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 "selected_mass_only": bool(fh_lsz_policy.get("scalar_source_response_selected_mass_only", False)),
                 "selected_mass_parameter": fh_lsz_policy.get("selected_mass_parameter"),
                 "non_selected_masses_skipped": fh_lsz_policy.get("non_selected_masses_scalar_fh_lsz_skipped", []),
+                "target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau",
+                "multi_tau_response_serialization": bool(getattr(args, "scalar_source_shifts_parsed", [])),
+                "multi_tau_response_serialization_status": (
+                    "enabled_for_selected_mass_only"
+                    if getattr(args, "scalar_source_shifts_parsed", [])
+                    else "disabled_no_scalar_source_shifts"
+                ),
                 "physical_higgs_normalization": "not_derived",
                 "used_as_physical_yukawa_readout": False,
             },

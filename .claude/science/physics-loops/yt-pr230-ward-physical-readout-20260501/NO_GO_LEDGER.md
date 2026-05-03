@@ -1,5 +1,24 @@
 # No-Go Ledger
 
+## FH/LSZ multi-tau target rows are not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_multitau_target_timeseries_harness_certificate.py
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=113 FAIL=0
+```
+
+The harness now serializes v2 per-configuration multi-tau source-response
+target rows for future covariance tests, but this is not physics closure.  The
+smoke is reduced scope, current production chunks still predate v2 rows, and
+multiple source radii remain absent.  Multi-tau target rows also do not derive
+`kappa_s`, source-pole/canonical-Higgs identity, or scalar-pole/FV/IR
+model-class control.  Do not treat this as a response readout switch or as
+retained/proposed-retained evidence.
+
 ## FH/LSZ response-window acceptance gate is not passed
 
 Runners:

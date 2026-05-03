@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=112 FAIL=0
+# SUMMARY: PASS=113 FAIL=0
 ```
 
 ## 2026-05-03 FH/LSZ Production-Support Update
@@ -53,6 +53,14 @@ tau-window central values are stable across tau windows 0-9
 (`tau_window_mean_spread=1.00497773596142`), but per-configuration multi-tau
 covariance and multiple source radii are absent.  No production readout switch
 or retained/proposed-retained closure is authorized.
+
+The multi-tau target-timeseries harness certificate now passes as infrastructure
+support (`PASS=14 FAIL=0`).  Future chunks can serialize
+`fh_lsz_target_timeseries_v2_multitau` rows with per-configuration multi-tau
+effective energies and slopes while preserving the legacy tau=1 fields.  This
+does not update existing production chunks, does not supply multiple source
+radii, and does not derive `kappa_s` or canonical-Higgs/source-overlap
+identity.
 
 The runner verifies:
 

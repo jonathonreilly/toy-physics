@@ -1,5 +1,31 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ multi-tau target-timeseries harness:
+
+- Extended `scripts/yt_direct_lattice_correlator_production.py` so scalar
+  source-response output preserves legacy tau=1 target rows and also emits
+  versioned v2 multi-tau rows:
+  `per_configuration_multi_tau_effective_energies` and
+  `per_configuration_multi_tau_slopes`.
+- Added `scripts/frontier_yt_fh_lsz_multitau_target_timeseries_harness_certificate.py`
+  and `outputs/yt_fh_lsz_multitau_target_timeseries_harness_certificate_2026-05-03.json`.
+- Reduced smoke:
+  `outputs/yt_direct_lattice_correlator_multitau_target_timeseries_smoke_2026-05-03.json`;
+  schema certificate is `PASS=14 FAIL=0`.
+- Retained-route is now `PASS=113 FAIL=0`; campaign status is
+  `PASS=139 FAIL=0`.
+- This removes the harness-side multi-tau serialization blocker for future
+  response-window covariance checks, but the current production chunks still
+  predate v2 multi-tau rows and multiple source radii remain absent.  No
+  response readout switch, retained closure, or proposed-retained closure is
+  authorized.
+
+Next exact action: rerun future production chunks with the v2 multi-tau schema
+and perform multi-radius source-response calibration, or push the higher
+retained-positive identity routes: derive/measure same-surface
+`O_H/C_sH/C_HH`, real W/Z response rows with sector-overlap identity, or a
+microscopic theorem excluding orthogonal neutral top coupling.
+
 Latest checkpoint, 2026-05-03 FH/LSZ response-window acceptance gate:
 
 - Added `scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py` and

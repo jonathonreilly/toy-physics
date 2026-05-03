@@ -153,6 +153,7 @@ def main() -> int:
         "fh_lsz_response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
         "fh_lsz_target_timeseries_replacement_queue": "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json",
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
+        "fh_lsz_multitau_target_timeseries_harness": "outputs/yt_fh_lsz_multitau_target_timeseries_harness_certificate_2026-05-03.json",
         "fh_lsz_selected_mass_normal_cache_speedup": "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json",
         "fh_lsz_target_timeseries_higgs_identity_no_go": "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
@@ -926,6 +927,13 @@ def main() -> int:
         and certificates["fh_lsz_target_timeseries_harness"].get("proposal_allowed") is False
         and certificates["fh_lsz_target_timeseries_harness"].get("target_timeseries_harness_supported") is True
     )
+    multitau_target_timeseries_harness_support_not_evidence = (
+        "multi-tau target time-series harness extension"
+        in certificates["fh_lsz_multitau_target_timeseries_harness"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_multitau_target_timeseries_harness"].get("proposal_allowed") is False
+    )
     selected_mass_normal_cache_speedup_not_evidence = (
         "selected-mass normal-cache speedup"
         in certificates["fh_lsz_selected_mass_normal_cache_speedup"].get("actual_current_surface_status", "")
@@ -1474,6 +1482,13 @@ def main() -> int:
         "fh-lsz-target-timeseries-harness-support-not-evidence",
         target_timeseries_harness_support_not_evidence,
         certificates["fh_lsz_target_timeseries_harness"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-multitau-target-timeseries-harness-support-not-evidence",
+        multitau_target_timeseries_harness_support_not_evidence,
+        certificates["fh_lsz_multitau_target_timeseries_harness"].get(
+            "actual_current_surface_status", ""
+        ),
     )
     report(
         "fh-lsz-selected-mass-normal-cache-speedup-not-evidence",

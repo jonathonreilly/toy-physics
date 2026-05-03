@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Multi-Tau Target-Timeseries Harness
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED INFRASTRUCTURE SUPPORT / NO CLOSURE
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no repo-wide authority surfaces updated
+```
+
+Findings applied:
+
+- production harness emits `fh_lsz_target_timeseries_v2_multitau`;
+- legacy tau=1 target fields and scalar two-point `C_ss_timeseries` are
+  preserved;
+- reduced smoke has numba seed metadata and selected-mass/normal-cache
+  metadata;
+- multi-tau rows are support for future covariance gates only and do not
+  authorize a response-window readout switch.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_multitau_target_timeseries_harness_certificate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/yt_direct_lattice_correlator_production.py
+python3 scripts/yt_direct_lattice_correlator_production.py --volumes 2x4 --masses 0.45,0.75,1.05 --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes '0,0,0;1,0,0' --scalar-two-point-noises 2 --therm 0 --measurements 2 --separation 0 --ape-steps 0 --production-output-dir outputs/yt_direct_lattice_correlator_multitau_target_timeseries_smoke --seed 2026052301 --output outputs/yt_direct_lattice_correlator_multitau_target_timeseries_smoke_2026-05-03.json
+python3 scripts/frontier_yt_fh_lsz_multitau_target_timeseries_harness_certificate.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Response-Window Acceptance Gate
 
 Local review-loop disposition:

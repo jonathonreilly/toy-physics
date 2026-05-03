@@ -1,0 +1,626 @@
+{
+  "ensembles": [
+    {
+      "a_fm": 0.0931098696461825,
+      "ape_smearing": {
+        "alpha": 0.5,
+        "steps": 0
+      },
+      "boundary_conditions": {
+        "fermion_time": "antiperiodic",
+        "gauge_spatial": "periodic",
+        "gauge_time": "periodic"
+      },
+      "correlators": [
+        {
+          "mean": 0.49826989619377154,
+          "stderr": 0.0,
+          "tau": 0
+        },
+        {
+          "mean": 0.2214532871972318,
+          "stderr": 0.0,
+          "tau": 1
+        },
+        {
+          "mean": 0.0,
+          "stderr": 0.0,
+          "tau": 2
+        },
+        {
+          "mean": 0.2214532871972318,
+          "stderr": 0.0,
+          "tau": 3
+        }
+      ],
+      "dims": [
+        2,
+        2,
+        2,
+        4
+      ],
+      "effective_mass": [
+        {
+          "m_eff": 0.8109302162163288,
+          "tau": 0
+        }
+      ],
+      "fh_lsz_measurement_policy": {
+        "non_selected_masses_scalar_fh_lsz_skipped": [
+          0.45,
+          1.05
+        ],
+        "normal_equation_cache": {
+          "key": "mass/source-shift value",
+          "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+          "scope": "per saved gauge configuration and smeared measurement gauge"
+        },
+        "physical_higgs_normalization": "not_derived",
+        "policy": "selected_mass_only_for_scalar_fh_lsz",
+        "scalar_source_response_selected_mass_only": true,
+        "scalar_two_point_lsz_selected_mass_only": true,
+        "selected_mass_index": 1,
+        "selected_mass_parameter": 0.75,
+        "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+        "top_correlator_mass_scan_preserved": true,
+        "used_as_physical_yukawa_readout": false
+      },
+      "mass_fit": {
+        "chi2_dof": NaN,
+        "m_lat": NaN,
+        "m_lat_err": NaN,
+        "tau_max": 2,
+        "tau_min": 1
+      },
+      "mass_parameter_scan": [
+        {
+          "chi2_dof": NaN,
+          "m_bare_lat": 0.45,
+          "m_fit_lat": NaN,
+          "m_fit_lat_err": NaN,
+          "max_cg_residual": 1.1471433641634787e-16
+        },
+        {
+          "chi2_dof": NaN,
+          "m_bare_lat": 0.75,
+          "m_fit_lat": NaN,
+          "m_fit_lat_err": NaN,
+          "max_cg_residual": 1.0770745408287617e-16
+        },
+        {
+          "chi2_dof": NaN,
+          "m_bare_lat": 1.05,
+          "m_fit_lat": NaN,
+          "m_fit_lat_err": NaN,
+          "max_cg_residual": 0.0
+        }
+      ],
+      "measurement_separation_sweeps": 0,
+      "measurement_sweeps": 2,
+      "momentum_analysis": {
+        "energy_fits": {},
+        "kinetic_mass_fits": {}
+      },
+      "plaquette_history": [],
+      "plaquette_mean": 1.0,
+      "plaquette_measurements": [
+        1.0,
+        1.0
+      ],
+      "r0_over_a": 5.37,
+      "rng_seed_control": {
+        "base_seed": 2026052301,
+        "gauge_rng_seed": 2028089011,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2028089011,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2028089011
+      },
+      "runtime_seconds": 0.011698246002197266,
+      "scalar_source_response_analysis": {
+        "base_bare_mass_lat": 0.75,
+        "energy_fits": [
+          {
+            "chi2_dof": 0.0,
+            "correlator": [
+              {
+                "mean": 0.498967730893035,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.2277975396699393,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.2277975396699393,
+                "stderr": 0.0,
+                "tau": 3
+              }
+            ],
+            "effective_bare_mass_lat": 0.74,
+            "energy_lat": 0.7840841755520473,
+            "energy_lat_err": 0.0,
+            "source_shift_lat": -0.01,
+            "tau_max": 1,
+            "tau_min": 0
+          },
+          {
+            "chi2_dof": 0.0,
+            "correlator": [
+              {
+                "mean": 0.49826989619377154,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.2214532871972318,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.2214532871972318,
+                "stderr": 0.0,
+                "tau": 3
+              }
+            ],
+            "effective_bare_mass_lat": 0.75,
+            "energy_lat": 0.8109302162163288,
+            "energy_lat_err": 0.0,
+            "source_shift_lat": 0.0,
+            "tau_max": 1,
+            "tau_min": 0
+          },
+          {
+            "chi2_dof": 0.0,
+            "correlator": [
+              {
+                "mean": 0.4974071446956006,
+                "stderr": 0.0,
+                "tau": 0
+              },
+              {
+                "mean": 0.21529048852822044,
+                "stderr": 0.0,
+                "tau": 1
+              },
+              {
+                "mean": 0.0,
+                "stderr": 0.0,
+                "tau": 2
+              },
+              {
+                "mean": 0.21529048852822044,
+                "stderr": 0.0,
+                "tau": 3
+              }
+            ],
+            "effective_bare_mass_lat": 0.76,
+            "energy_lat": 0.8374206697163702,
+            "energy_lat_err": 0.0,
+            "source_shift_lat": 0.01,
+            "tau_max": 1,
+            "tau_min": 0
+          }
+        ],
+        "fit_kind": "linear_dE_ds",
+        "multi_tau_target_timeseries_rule": "diagnostic per-configuration adjacent-time effective-energy slopes for response-window covariance gates; not a readout switch and not a physical dE/dh observable",
+        "multi_tau_window_range": {
+          "tau_max": 2,
+          "tau_min": 0,
+          "tau_windows": [
+            0,
+            1,
+            2
+          ]
+        },
+        "per_configuration_effective_energies": [
+          {
+            "configuration_index": 0,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": NaN,
+              "0": NaN,
+              "0.01": NaN
+            }
+          },
+          {
+            "configuration_index": 1,
+            "effective_energy_tau1_by_source_shift": {
+              "-0.01": NaN,
+              "0": NaN,
+              "0.01": NaN
+            }
+          }
+        ],
+        "per_configuration_multi_tau_effective_energies": [
+          {
+            "configuration_index": 0,
+            "effective_energy_by_tau_and_source_shift": {
+              "0": {
+                "-0.01": 0.7840841755520473,
+                "0": 0.8109302162163288,
+                "0.01": 0.8374206697163702
+              },
+              "1": {
+                "-0.01": NaN,
+                "0": NaN,
+                "0.01": NaN
+              },
+              "2": {
+                "-0.01": NaN,
+                "0": NaN,
+                "0.01": NaN
+              }
+            },
+            "tau_max": 2,
+            "tau_min": 0
+          },
+          {
+            "configuration_index": 1,
+            "effective_energy_by_tau_and_source_shift": {
+              "0": {
+                "-0.01": 0.7840841755520473,
+                "0": 0.8109302162163288,
+                "0.01": 0.8374206697163702
+              },
+              "1": {
+                "-0.01": NaN,
+                "0": NaN,
+                "0.01": NaN
+              },
+              "2": {
+                "-0.01": NaN,
+                "0": NaN,
+                "0.01": NaN
+              }
+            },
+            "tau_max": 2,
+            "tau_min": 0
+          }
+        ],
+        "per_configuration_multi_tau_slopes": [
+          {
+            "configuration_index": 0,
+            "finite_tau_count": 1,
+            "slope_effective_energy_by_tau": {
+              "0": 2.6668247082161423,
+              "1": NaN,
+              "2": NaN
+            },
+            "source_radius": 0.01,
+            "tau_max": 2,
+            "tau_min": 0
+          },
+          {
+            "configuration_index": 1,
+            "finite_tau_count": 1,
+            "slope_effective_energy_by_tau": {
+              "0": 2.6668247082161423,
+              "1": NaN,
+              "2": NaN
+            },
+            "source_radius": 0.01,
+            "tau_max": 2,
+            "tau_min": 0
+          }
+        ],
+        "per_configuration_slopes": [
+          {
+            "configuration_index": 0,
+            "finite": false,
+            "slope_effective_energy_tau1": NaN,
+            "source_radius": 0.01
+          },
+          {
+            "configuration_index": 1,
+            "finite": false,
+            "slope_effective_energy_tau1": NaN,
+            "source_radius": 0.01
+          }
+        ],
+        "physical_higgs_normalization": "not_derived",
+        "slope_dE_ds_lat": 2.666824708216146,
+        "slope_dE_ds_lat_err": 7.071067811865475e-05,
+        "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+        "strict_limit": "dE/ds is not dE/dh until kappa_s is derived by scalar LSZ/canonical normalization",
+        "target_timeseries_rule": "diagnostic per-configuration tau=1 effective-energy slopes for autocorrelation/ESS gates; not a physical dE/dh readout",
+        "target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau"
+      },
+      "scalar_two_point_lsz_analysis": {
+        "estimator": "Z2 stochastic trace estimator; production evidence requires saved ensembles and controlled statistics",
+        "finite_difference_residue_proxy": {
+          "available": true,
+          "dGamma_dp_hat_sq": 2.6645352591003757e-15,
+          "finite_residue_proxy": 375299968947541.3,
+          "reference_modes": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        "measurement_object": "C_ss(q)=Tr[S V_q S V_-q], Gamma_ss(q)=1/C_ss(q)",
+        "mode_rows": {
+          "0,0,0": {
+            "C_ss_imag": -0.020761245674740476,
+            "C_ss_imag_config_stderr": 0.048442906574394436,
+            "C_ss_real": 0.05536332179930792,
+            "C_ss_real_config_stderr": 1.097135458930219e-17,
+            "C_ss_timeseries": [
+              {
+                "C_ss_imag": 0.02768166089965396,
+                "C_ss_real": 0.055363321799307925,
+                "Gamma_ss_imag": -7.225000000000004,
+                "Gamma_ss_real": 14.45000000000001,
+                "configuration_index": 0
+              },
+              {
+                "C_ss_imag": -0.06920415224913491,
+                "C_ss_real": 0.055363321799307905,
+                "Gamma_ss_imag": 8.810975609756104,
+                "Gamma_ss_real": 7.04878048780488,
+                "configuration_index": 1
+              }
+            ],
+            "Gamma_ss_imag": 5.938356164383568,
+            "Gamma_ss_real": 15.835616438356176,
+            "configuration_count": 2,
+            "momentum_mode": [
+              0,
+              0,
+              0
+            ],
+            "noise_subsample_stability": {
+              "C_ss_real_half_delta_over_stderr_max": 2.0,
+              "C_ss_real_noise_stderr_max": 1.097135458930219e-17,
+              "C_ss_real_noise_stderr_mean": 8.955124246604709e-18,
+              "available": true,
+              "configuration_count": 2,
+              "noise_vectors_per_configuration": 2
+            },
+            "p_hat_sq": 0.0
+          },
+          "1,0,0": {
+            "C_ss_imag": -0.02076124567474043,
+            "C_ss_imag_config_stderr": 0.04844290657439444,
+            "C_ss_real": 0.055363321799307905,
+            "C_ss_real_config_stderr": 0.0,
+            "C_ss_timeseries": [
+              {
+                "C_ss_imag": 0.027681660899654008,
+                "C_ss_real": 0.055363321799307905,
+                "Gamma_ss_imag": -7.225000000000016,
+                "Gamma_ss_real": 14.450000000000001,
+                "configuration_index": 0
+              },
+              {
+                "C_ss_imag": -0.06920415224913487,
+                "C_ss_real": 0.055363321799307905,
+                "Gamma_ss_imag": 8.810975609756106,
+                "Gamma_ss_real": 7.048780487804887,
+                "configuration_index": 1
+              }
+            ],
+            "Gamma_ss_imag": 5.93835616438356,
+            "Gamma_ss_real": 15.835616438356187,
+            "configuration_count": 2,
+            "momentum_mode": [
+              1,
+              0,
+              0
+            ],
+            "noise_subsample_stability": {
+              "C_ss_real_half_delta_over_stderr_max": 1.8973665961010278,
+              "C_ss_real_noise_stderr_max": 1.097135458930219e-17,
+              "C_ss_real_noise_stderr_mean": 1.097135458930219e-17,
+              "available": true,
+              "configuration_count": 2,
+              "noise_vectors_per_configuration": 2
+            },
+            "p_hat_sq": 4.0
+          }
+        },
+        "noise_subsample_stability": {
+          "C_ss_real_half_delta_over_stderr_max": 2.0,
+          "available": true,
+          "mode_count": 2,
+          "strict_limit": "Noise subsample stability is an estimator diagnostic only; it is not production evidence or scalar LSZ normalization without same-source production statistics and pole/FV/IR control."
+        },
+        "physical_higgs_normalization": "not_derived",
+        "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+        "strict_limit": "finite-mode stochastic C_ss(q) is not kappa_s until an isolated pole, dGamma/dp^2 at the pole, and canonical Higgs normalization are derived"
+      },
+      "selected_mass_parameter": 0.75,
+      "spatial_L": 2,
+      "thermalization_sweeps": 0,
+      "time_L": 4,
+      "update_algorithm": "Cabibbo-Marinari heatbath + polar overrelaxation",
+      "update_engine": "numba"
+    }
+  ],
+  "metadata": {
+    "action": "Cl3Z3_SU3_Wilson_staggered",
+    "authority": "staggered_top_correlator_mass_extraction",
+    "created_utc": "2026-05-03T18:51:23Z",
+    "evidence_scope": "reduced run is infrastructure evidence only",
+    "fh_lsz_measurement_policy": {
+      "non_selected_masses_scalar_fh_lsz_skipped": [
+        0.45,
+        1.05
+      ],
+      "normal_equation_cache": {
+        "key": "mass/source-shift value",
+        "reuse": "D, D^dagger, and D^dagger D are built once per needed mass/source per configuration and reused across point-source and stochastic RHS solves",
+        "scope": "per saved gauge configuration and smeared measurement gauge"
+      },
+      "physical_higgs_normalization": "not_derived",
+      "policy": "selected_mass_only_for_scalar_fh_lsz",
+      "scalar_source_response_selected_mass_only": true,
+      "scalar_two_point_lsz_selected_mass_only": true,
+      "selected_mass_index": 1,
+      "selected_mass_parameter": 0.75,
+      "strict_limit": "Selected-mass source-coordinate FH/LSZ target time series are performance/instrumentation support only; they are not physical y_t evidence until canonical-Higgs/source-overlap or W/Z response identity gates close.",
+      "top_correlator_mass_scan_preserved": true,
+      "used_as_physical_yukawa_readout": false
+    },
+    "g_bare": 1.0,
+    "phase": "reduced_scope",
+    "run_control": {
+      "engine": "numba",
+      "fh_lsz_selected_mass_only": true,
+      "fh_lsz_selected_mass_parameter": 0.75,
+      "masses": [
+        0.45,
+        0.75,
+        1.05
+      ],
+      "measurement_separation_sweeps": 0,
+      "measurement_sweeps": 2,
+      "momentum_modes": [],
+      "normal_equation_cache_enabled": true,
+      "overrelaxation_sweeps": 1,
+      "pilot_targets": false,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_multitau_target_timeseries_smoke",
+      "production_targets": false,
+      "scalar_source_shifts": [
+        -0.01,
+        0.0,
+        0.01
+      ],
+      "scalar_two_point_modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "scalar_two_point_noises": 2,
+      "seed": 2026052301,
+      "seed_control_version": "numba_gauge_seed_v1",
+      "thermalization_sweeps": 0,
+      "volumes": "2x4"
+    },
+    "running_bridge": "reduced_scope run uses no authoritative SM RGE; production certificate must supply 4/5-loop bridge",
+    "scalar_source_response": {
+      "enabled": true,
+      "multi_tau_response_serialization": true,
+      "multi_tau_response_serialization_status": "enabled_for_selected_mass_only",
+      "non_selected_masses_skipped": [
+        0.45,
+        1.05
+      ],
+      "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": true,
+      "selected_mass_parameter": 0.75,
+      "source_coordinate": "uniform additive lattice scalar source s entering the Dirac mass as m_bare + s",
+      "target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau",
+      "used_as_physical_yukawa_readout": false
+    },
+    "scalar_two_point_lsz": {
+      "enabled": true,
+      "measurement_object": "C_ss(q)=Tr[S V_q S V_-q] for the same additive scalar source",
+      "noise_vectors_per_configuration": 2,
+      "non_selected_masses_skipped": [
+        0.45,
+        1.05
+      ],
+      "physical_higgs_normalization": "not_derived",
+      "selected_mass_only": true,
+      "selected_mass_parameter": 0.75,
+      "used_as_physical_yukawa_readout": false
+    },
+    "scale_anchor": "Sommer r0 = 0.5 fm external anchor; r0/a reference used for reduced_scope run",
+    "source_higgs_cross_correlator": {
+      "canonical_higgs_operator_realization": "absent",
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "O_H or radial canonical-Higgs observable on the same Cl3/Z3 source surface",
+        "C_sH(q)=<O_s(q) O_H(-q)> pole rows",
+        "C_HH(q)=<O_H(q) O_H(-q)> pole rows",
+        "same-ensemble C_ss/C_sH/C_HH covariance"
+      ],
+      "strict_limit": "Current harness output is C_ss/source-response only.  It must not be treated as source-Higgs Gram purity or canonical-Higgs normalization evidence.",
+      "used_as_physical_yukawa_readout": false
+    },
+    "uses_composite_matrix_element_route": false,
+    "uses_coupling_definition_route": false,
+    "uses_prior_ward_chain": false,
+    "wz_mass_response": {
+      "enabled": false,
+      "implementation_status": "absent_guarded",
+      "required_measurement_objects": [
+        "same-source W/Z correlator mass fits",
+        "fitted dM_W/ds or dM_Z/ds under the same scalar source",
+        "covariance with dE_top/ds",
+        "sector-overlap and canonical-Higgs identity certificates"
+      ],
+      "strict_limit": "This QCD top-correlator harness does not measure W/Z mass response.  Static EW algebra or absent W/Z slopes must not be used as dM_W/ds evidence.",
+      "used_as_physical_yukawa_readout": false
+    }
+  },
+  "ratio_check": {
+    "g_s_lattice": null,
+    "g_s_source": "not_measured_reduced_scope",
+    "ratio": null,
+    "uncertainty": null,
+    "used_as_definition": false,
+    "y_t_lattice": NaN
+  },
+  "result": {
+    "m_t_pole_GeV": NaN,
+    "m_t_running_at_v_GeV": NaN,
+    "mass_uncertainties_GeV": {
+      "finite_spacing": NaN,
+      "finite_volume": NaN,
+      "heavy_mass_tuning": NaN,
+      "matching": NaN,
+      "running_bridge": NaN,
+      "scale_setting": NaN,
+      "statistical": NaN,
+      "v_input": 0.0001
+    },
+    "reduced_scope_delta_to_pdg_GeV": null,
+    "reduced_scope_delta_to_y_t_target": null,
+    "total_m_t_pole_uncertainty_GeV": 0.0001,
+    "total_y_t_uncertainty": 5.743707142679697e-07,
+    "uncertainties": {
+      "finite_spacing": null,
+      "finite_volume": null,
+      "heavy_mass_tuning": null,
+      "matching": null,
+      "running_bridge": null,
+      "scale_setting": null,
+      "statistical": null,
+      "v_input": 5.743707142679697e-07
+    },
+    "y_t_v": NaN
+  },
+  "v_input": {
+    "source": "existing electroweak VEV chain",
+    "treatment": "substrate_input_only",
+    "v_GeV": 246.21965
+  }
+}
