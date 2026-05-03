@@ -1,28 +1,44 @@
 name: audit-lane
 
-# Run the mechanical audit pipeline on every push to main, every PR, and a
-# daily cron. Auto-commits regenerated audit-data on main / cron runs so the
-# ledger and queue never silently drift from upstream content changes.
+# Run the mechanical audit pipeline on PRs that touch audit-relevant files,
+# plus a nightly cron pass on main. Public repo, free Actions minutes, but
+# we tighten triggers anyway because the repo has very high commit volume
+# (hundreds of pushes/day) and noisy workflow history is its own cost.
+#
+# Drift-catching coverage:
+#   - PRs: caught before merge (PASS gate, warning surface, no auto-commit)
+#   - main: caught within 24 hours by the nightly cron (auto-commits refresh)
+#   - manual: workflow_dispatch for urgent ad-hoc runs
+#
+# We deliberately do NOT trigger on every push to main, because:
+#   (a) the auto-commit-back-to-main creates a feedback loop concern, and
+#   (b) at hundreds of pushes/day the run count would be UI-noise excessive.
+# The nightly cron + the PR-pre-merge gate together still guarantee main
+# never drifts more than 24 hours and never merges drift through a PR.
 #
 # This workflow does NOT perform audits. Audit verdicts are minted only by
 # Codex GPT-5.5 (or another independent auditor) via apply_audit.py.
 
 on:
-  push:
-    branches:
-      - main
-      - audit-lane
   pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'docs/audit/scripts/**'
+      - 'scripts/**/*.py'
+      - 'docs/audit/templates/audit_workflow.yml'
+      - '.github/workflows/audit.yml'
   schedule:
-    - cron: "0 6 * * *"   # daily 06:00 UTC
-  workflow_dispatch:
+    - cron: "0 6 * * *"   # nightly 06:00 UTC pass on main
+  workflow_dispatch:        # manual ad-hoc
 
 permissions:
-  contents: write          # required for auto-commit on main / schedule
+  contents: write          # required for auto-commit on cron runs
 
 concurrency:
-  group: audit-lane-${{ github.ref }}
-  cancel-in-progress: false
+  # PR runs of the same branch supersede each other (only run latest);
+  # cron runs use a different group so they never get cancelled by PRs.
+  group: audit-lane-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   audit_pipeline:
@@ -66,8 +82,8 @@ jobs:
             git diff --stat docs/audit docs/publication/ci3_z3 || true
           fi
 
-      - name: Commit refreshed ledger / queue (main + cron only)
-        if: ${{ github.event_name == 'schedule' || (github.event_name == 'push' && github.ref == 'refs/heads/main') }}
+      - name: Commit refreshed ledger / queue (cron only)
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: |
           set -e
           if [[ -z "$(git status --porcelain docs/audit docs/publication/ci3_z3)" ]]; then
@@ -95,9 +111,9 @@ jobs:
             exit 0
           fi
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            msg="audit: scheduled pipeline refresh (automated)"
+            msg="audit: nightly pipeline refresh (automated) [skip ci]"
           else
-            msg="audit: refresh ledger + queue + effective-status views (automated)"
+            msg="audit: workflow_dispatch pipeline refresh (automated) [skip ci]"
           fi
           git commit -m "$msg"
           git push

@@ -39,15 +39,22 @@ After install (one-time), `.github/workflows/audit.yml` runs
 `bash docs/audit/scripts/run_pipeline.sh` plus
 `python3 docs/audit/scripts/render_publication_effective_status.py` on:
 
-- every push to `main` and `audit-lane`,
-- every pull request,
-- a daily cron at `06:00 UTC`,
+- every pull request that touches `docs/**/*.md`, `docs/audit/scripts/**`,
+  `scripts/**/*.py`, or the workflow file itself,
+- a nightly cron at `06:00 UTC` on `main`,
 - manual `workflow_dispatch`.
 
-On `main` pushes and scheduled runs the workflow auto-commits the regenerated
-audit-data and publication-facing effective-status views back to the branch
-(committed as `audit-bot`), so the publication surface can never silently
-drift from the audit ledger. PR runs surface a diff warning (no auto-commit).
+The trigger set is deliberately narrow because this repo has very high
+commit volume (hundreds of pushes per day). The nightly cron + the PR
+pre-merge gate together still guarantee that `main` never drifts more
+than 24 hours from the audit ledger, and never merges drift through a PR.
+
+On `schedule` and `workflow_dispatch` runs the workflow auto-commits the
+regenerated audit-data and publication-facing effective-status views back
+to `main` (as `audit-bot`, with `[skip ci]` to prevent feedback loops).
+PR runs surface a diff warning only (no auto-commit; PRs from forks would
+not have write permission anyway, and PR authors should commit the
+regenerated files themselves before requesting review).
 
 The full pipeline adds:
 
