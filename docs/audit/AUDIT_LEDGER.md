@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T13:33:48.946694+00:00
+**Generated:** 2026-05-03T13:39:31.801584+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,12 +24,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 169 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 732 |
+| unaudited | 731 |
 | meta | 42 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 25 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 523 |
+| ~~audited_conditional~~ | 524 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -38,12 +38,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 346 |
-| `audited_conditional` | 523 |
+| `audited_conditional` | 524 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 25 |
 | `audited_renaming` | 17 |
-| `unaudited` | 774 |
+| `unaudited` | 773 |
 
 | claim_type | count |
 |---|---:|
@@ -862,6 +862,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `s3_anomaly_spacetime_lift_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_cap_uniqueness_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `s3_general_r_derivation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `s3_time_bilinear_tensor_action_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `s3_time_tensor_build_memo` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -11492,6 +11493,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `Perelman`
   - `Moise`
   - `Kawamoto-Smit homogeneity premise`
+- **auditor confidence:** high
+
+### `s3_general_r_derivation_note`
+
+- **Note:** [`S3_GENERAL_R_DERIVATION_NOTE.md`](../../docs/S3_GENERAL_R_DERIVATION_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The general-R theorem that the cone-capped cubical ball M_R = B_R cup cone(partial B_R) is PL homeomorphic to S^3 for every R >= 2.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-fresh-independent-s3-general-r`  (codex-gpt-5; independence=fresh_context)
+- **load-bearing step:** M_R satisfies all hypotheses of the PL Poincare conjecture by Step 3; therefore M_R is PL homeomorphic to S^3 for every R >= 2.  _(class `C`)_
+- **chain closes:** False — The Perelman/Moise step would close if Step 3 were established for every R, but the note asserts rather than proves the all-R cubical-ball topology needed for Step 3. Finite runner checks do not discharge those universal premises.
+- **rationale:** Issue: Step 1 and Step 2 rely on unproved all-R geometric premises about the cubical ball B_R, especially that every boundary link in B_R is a PL disk, that partial B_R is PL S^2, and that B_R is contractible as a convex cubical body. Why this blocks: Perelman applies only after compact closed simply-connected PL 3-manifold hypotheses are actually established for every R; finite checks through bounded R values, a stale named runner path, and asserted convexity do not prove those hypotheses. Repair target: add a theorem, with proof or cited retained authority, that this particular inscribed cubical ball is a PL 3-ball for all R >= 2, or directly prove the required all-R link and pi_1 facts. Claim boundary until fixed: the note supports bounded computational evidence and a conditional theorem: if the all-R cubical-ball topology premises hold, then the Perelman/Moise conclusion follows.
 - **auditor confidence:** high
 
 ### `s3_mass_matrix_no_go_note`
