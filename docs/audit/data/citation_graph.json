@@ -22641,7 +22641,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T15:23:18.248203+00:00",
+  "generated_at": "2026-05-03T15:53:08.172461+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25004,17 +25004,6 @@
       "path": "docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_boundary_law_robustness.py",
       "title": "Boundary-Law Robustness Addendum"
-    },
-    "branch_cleanup_recommendation_2026-05-03": {
-      "claim_id": "branch_cleanup_recommendation_2026-05-03",
-      "claim_type_author_hint": "meta",
-      "claim_type_author_hint_raw": "meta",
-      "claim_type_seed_hint": "meta",
-      "deps": [],
-      "note_hash": "dec1c9546336488fb0444290e713b59b9cbaad2cea174e6f98a8d37ebf759816",
-      "path": "docs/BRANCH_CLEANUP_RECOMMENDATION_2026-05-03.md",
-      "runner_path": "scripts/inventory_remote_branches.py",
-      "title": "Branch / Worktree Cleanup Recommendation \u2014 2026-05-03"
     },
     "branch_entanglement_robustness_note_2026-04-11": {
       "claim_id": "branch_entanglement_robustness_note_2026-04-11",
@@ -31938,21 +31927,21 @@
         "gauge_vacuum_plaquette_framework_point_underdetermination_note",
         "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note"
       ],
-      "note_hash": "c04fa9177a600c4c1e1efc854138796195afa3bb121d67655b9b7fcd410171b5",
+      "note_hash": "b66bb2c03e10b4d3d53f631836169a7fb28fc415d9f5d3b605eda7f58ef021a0",
       "path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_no_go.py",
       "title": "Gauge-Scalar Temporal Observable Bridge No-Go Theorem"
     },
     "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02": {
       "claim_id": "gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
       "deps": [
         "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
         "gauge_scalar_temporal_completion_theorem_note"
       ],
-      "note_hash": "52db56fb471f5cab72b8a36bd5125e35d7cf6c1579070439389b63005910bc69",
+      "note_hash": "8350b8cb8411adfb551c9262be87307bd3e328c281923fbb4a26d28ac944849b",
       "path": "docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_gauge_scalar_temporal_observable_bridge_stretch.py",
       "title": "Gauge-Scalar Temporal Observable Bridge Stretch Attempt"
@@ -49575,7 +49564,6 @@
     "born_lane_comparison_note",
     "born_rule_analysis_2026-04-11",
     "bound_state_selection_note",
-    "branch_cleanup_recommendation_2026-05-03",
     "breakthrough_direction_memo_2026-04-10",
     "broad_gravity_derivation_note",
     "causal_escape_window_note",
@@ -50510,24 +50498,24 @@
   "stats": {
     "claim_type_author_hint_counts": {
       "bounded_theorem": 48,
-      "meta": 5,
+      "meta": 4,
       "no_go": 4,
-      "none": 1722,
-      "open_gate": 3,
+      "none": 1721,
+      "open_gate": 4,
       "positive_theorem": 68
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 548,
-      "meta": 5,
+      "meta": 4,
       "no_go": 110,
-      "none": 450,
-      "open_gate": 109,
+      "none": 449,
+      "open_gate": 110,
       "positive_theorem": 628
     },
     "edge_count": 5660,
-    "leaf_count": 615,
-    "node_count": 1850,
-    "root_count": 1054,
-    "runners_with_path": 1412
+    "leaf_count": 614,
+    "node_count": 1849,
+    "root_count": 1053,
+    "runners_with_path": 1411
   }
 }

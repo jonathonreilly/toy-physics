@@ -2,8 +2,8 @@
 """Formal no-go for the gauge-scalar temporal observable bridge.
 
 The runner constructs two completion witnesses that agree on A_min and on the
-current retained Wilson plaquette packet, but give different local-response
-readouts at beta=6.  That proves the retained packet does not entail the
+current Wilson plaquette packet, but give different local-response
+readouts at beta=6.  That proves the current packet does not entail the
 observable-level bridge <P>_full = R_O(beta_eff).
 """
 
@@ -137,13 +137,13 @@ def main() -> int:
     print("GAUGE-SCALAR TEMPORAL OBSERVABLE BRIDGE NO-GO")
     print("=" * 88)
     print()
-    print("Retained packet")
+    print("Current Wilson packet")
     print(f"  beta                                  = {packet.beta}")
     print(f"  g_bare                                = {packet.g_bare}")
     print(f"  kernel shape                          = {packet.kernel_shape}")
     print(f"  A_inf/A_2                             = {ratio:.15f}")
     print(f"  beta^5 onset coefficient              = {packet.beta5_onset}")
-    print(f"  retained-packet fingerprint           = {packet.fingerprint()}")
+    print(f"  current-packet fingerprint            = {packet.fingerprint()}")
     print()
     print("Completion witnesses at beta=6")
     print(f"  beta_eff^-(6)                         = {float(w_minus.beta6_completion):.15f}")
@@ -156,7 +156,7 @@ def main() -> int:
 
     check(
         "the theorem note declares no_go claim type",
-        "**Type:** no_go" in note_text,
+        "**Claim type:** no_go" in note_text,
         detail="audit seeding can classify the new note as a no-go",
     )
     check(
@@ -172,17 +172,17 @@ def main() -> int:
         detail=f"A_inf/A_2={ratio:.15f}",
     )
     check(
-        "the retained beta^5 onset coefficient is exactly 1/26244",
+        "the beta^5 onset coefficient is exactly 1/26244",
         beta5 == Fraction(1, 26244),
         detail=f"beta5={beta5}",
     )
     check(
-        "both witnesses have the same retained primitive fingerprint",
+        "both witnesses have the same cited primitive fingerprint",
         w_minus.packet.fingerprint() == w_plus.packet.fingerprint(),
         detail=w_minus.packet.fingerprint(),
     )
     check(
-        "the witnesses agree through the retained beta^5 onset and differ first by c beta^6",
+        "the witnesses agree through the beta^5 onset and differ first by c beta^6",
         delta_beta == C * BETA**6,
         detail=f"delta={delta_beta}",
     )
@@ -192,12 +192,12 @@ def main() -> int:
         detail=f"P interval=[{sample_ps[0]:.15f}, {sample_ps[-1]:.15f}]",
     )
     check(
-        "equal retained packet but distinct completion witnesses give distinct BRIDGE readouts",
+        "equal current packet but distinct completion witnesses give distinct BRIDGE readouts",
         delta_p > 1.0e-8,
         detail=f"delta R_O={delta_p:.15e}",
     )
     check(
-        "a retained-packet derivation would assign one value, contradicting the two readouts",
+        "a current-packet derivation would assign one value, contradicting the two readouts",
         w_minus.packet == w_plus.packet and p_minus != p_plus,
         detail="logical non-entailment by two-model witness",
     )
@@ -225,10 +225,10 @@ def main() -> int:
         bucket="SUPPORT",
     )
     check(
-        "the audit consequence retires the original open gate as retained_no_go",
-        "closure: retained_no_go" in note_text
+        "the audit consequence proposes no_go while leaving audit authority independent",
+        "closure_proposal: no_go" in note_text
         and "positive_bridge_status: not_derived" in note_text,
-        detail="negative closure, not positive bridge promotion",
+        detail="negative proposal, not positive bridge promotion or audit verdict",
         bucket="SUPPORT",
     )
 

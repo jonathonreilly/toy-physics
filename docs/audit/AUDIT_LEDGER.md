@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T15:23:21.512239+00:00
+**Generated:** 2026-05-03T15:53:16.827032+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -20,12 +20,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 75 |
-| **retained_no_go** | 102 |
+| **retained_no_go** | 100 |
 | **retained_bounded** | 167 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 14 |
-| unaudited | 775 |
-| meta | 44 |
+| unaudited | 777 |
+| meta | 43 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 24 |
 | ~~audited_renaming~~ | 19 |
@@ -36,21 +36,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 314 |
+| `audited_clean` | 312 |
 | `audited_conditional` | 514 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 24 |
 | `audited_renaming` | 19 |
-| `unaudited` | 819 |
+| `unaudited` | 820 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 585 |
 | `decoration` | 7 |
-| `meta` | 44 |
-| `no_go` | 162 |
-| `open_gate` | 87 |
+| `meta` | 43 |
+| `no_go` | 161 |
+| `open_gate` | 88 |
 | `positive_theorem` | 863 |
 
 | criticality | count |
@@ -58,16 +58,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 114 |
 | `high` | 358 |
 | `medium` | 566 |
-| `leaf` | 710 |
+| `leaf` | 709 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 45
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1340
+- runners classified: 1339
 - runners with (C) first-principles compute hits: 650
-- runners with (D) external comparator hits: 330
+- runners with (D) external comparator hits: 329
 - decoration candidates (no C, no D): 112
 
 ## Top 25 by load-bearing score (topology only)
@@ -212,8 +212,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_trapping_transport_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `gate_b_grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
-| `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
-| `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | B | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -5858,32 +5856,6 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
 - **load-bearing step:** the accepted Wilson local bosonic scalar gauge-source class has one exact temporal kernel shape on the minimal 3+1 block, differing only by overall normalization: K_O(omega) = 3w (3 + sin^2 omega)  _(class `A`)_
 - **chain closes:** True — Within the stated Wilson-source grammar, the six uniform plaquette orientations induce a_x=a_y=a_z=a_t=3w, and the APBC minimal cube sets the spatial sin^2 gaps to 1, giving K_O(omega)=3w(3+sin^2 omega). The normalization cancels in A_inf/A_2, and the exact endpoint ratio is 2/sqrt(3).
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
-- **auditor confidence:** high
-
-### `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03`
-
-- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Formal no-go for the observable bridge <P>_full = R_O(beta_eff): A_min plus the current retained Wilson plaquette primitive packet does not entail the bridge, because two admissible analytic completion witnesses agree on every retained premise and give distinct local-response readouts at beta=6. The result does not claim the physical Wilson integral is unknowable; it blocks closure without an exact spectral/effective-action/Perron/beta_eff primitive.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_no_go**  (reason: `self`)
-- **auditor:** `codex-fresh-gauge-scalar-observable-no-go-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Construct two completion witnesses beta_eff^-(beta)=beta+beta^5/26244 and beta_eff^+(beta)=beta+beta^5/26244+10^-7 beta^6 that share A_min and all retained Wilson primitive data but differ at beta=6; strict monotonicity of the local one-plaquette response gives R_O(beta_eff^-(6)) != R_O(beta_eff^+(6)), so no derivation factoring through the retained packet can prove BRIDGE.  _(class `A`)_
-- **chain closes:** True — All markdown dependencies of the no-go note are already retained-grade: the bounded temporal completion theorem, retained mixed-cumulant onset, retained transfer-operator recurrence, and retained underdetermination no-go notes. The runner verifies the two-witness non-entailment without fitted beta_eff, lattice/PDG plaquette input, or perturbative beta-function derivation.
-- **rationale:** Clean as a no-go theorem scoped to the current retained Wilson primitive packet. The proof is an independence/countermodel argument: the retained packet fixes the local response and beta^5 onset but not the nonperturbative beta-6 completion datum. Two admissible completions with the same retained fingerprint force different BRIDGE readouts, contradicting any retained-packet derivation. Residual risk is only scope creep: a future exact spectral measure, exact Perron vector, exact effective action, or independently retained beta_eff(6) would be a new primitive outside this no-go's packet, not a contradiction of this result.
-- **auditor confidence:** high
-
-### `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02`
-
-- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_STRETCH_NOTE_2026-05-02.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Retired gate wrapper for the observable bridge residual: the original stretch note now records that BRIDGE is closed negatively by the 2026-05-03 no-go theorem, with no positive derivation or promotion of <P>_full = R_O(beta_eff).
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_no_go**  (reason: `self`)
-- **auditor:** `codex-fresh-gauge-scalar-observable-gate-retirement-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The formal retirement section cites the new no-go theorem and states that two admissible completion witnesses agree on A_min plus the retained Wilson packet while giving different R_O(beta_eff) readouts; the old open gate is therefore retired as a negative result, not as a positive bridge theorem.  _(class `B`)_
-- **chain closes:** True — The gate wrapper now depends on the retained no-go theorem note and the already retained bounded temporal completion theorem. Once effective status is recomputed, both dependencies are retained-grade, so the former open_gate row exits the open-gate queue as retained_no_go.
-- **rationale:** Clean only as a retired no-go wrapper. The source still preserves the original stretch attempt and forbidden imports, but its new formal-retirement section delegates the actual impossibility proof to the new theorem note. It must not be cited as a positive derivation of the observable bridge.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_connected_hierarchy_theorem_note`

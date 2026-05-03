@@ -1,6 +1,7 @@
 # Gauge-Scalar Temporal Observable Bridge Stretch Attempt
 
 **Date:** 2026-05-02
+**Claim type:** open_gate
 **Status:** stretch-attempt note + named obstruction packet on the
 observable-level reduction residual flagged in the audit verdict for
 `gauge_scalar_temporal_completion_theorem_note` (current_status: support,
@@ -169,13 +170,13 @@ bare_retained_allowed: false
 
 ## 7. Formal retirement
 
-This open gate is now retired by
+This open gate now has a proposed no-go retirement in
 [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md).
 
 The retirement is a negative theorem, not a positive bridge derivation:
 
 ```yaml
-retirement_outcome: retained_no_go
+retirement_outcome_proposal: no_go
 retirement_reason: |
   The retained Wilson packet fixes the local source response and the temporal
   completion ratio, but it does not select the exact beta-6 nonperturbative
@@ -185,11 +186,12 @@ retirement_reason: |
   without adding an exact spectral/effective-action/beta_eff primitive.
 positive_bridge_promoted: false
 forbidden_imports_used: false
+audit_status_authority: independent audit lane only
 ```
 
 The parent temporal completion theorem remains retained only in its bounded
 kernel-level scope. The observable-level conditionality is permanent unless a
-future retained theorem supplies one of the explicitly named nonperturbative
+future theorem supplies one of the explicitly named nonperturbative
 objects outside the current retained packet.
 
 ## 8. Cross-references
