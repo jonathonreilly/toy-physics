@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T18:30:31.433439+00:00
+**Generated:** 2026-05-03T18:31:15.606589+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 81 |
 | **retained_no_go** | 103 |
-| **retained_bounded** | 170 |
+| **retained_bounded** | 171 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 732 |
+| unaudited | 731 |
 | meta | 46 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 29 |
@@ -36,22 +36,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 323 |
+| `audited_clean` | 324 |
 | `audited_conditional` | 542 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 29 |
 | `audited_renaming` | 23 |
-| `unaudited` | 778 |
+| `unaudited` | 777 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 593 |
+| `bounded_theorem` | 594 |
 | `decoration` | 8 |
 | `meta` | 46 |
 | `no_go` | 164 |
 | `open_gate` | 90 |
-| `positive_theorem` | 859 |
+| `positive_theorem` | 858 |
 
 | criticality | count |
 |---|---:|
@@ -330,6 +330,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `seventh_family_diagonal_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | claude-opus | C | - |
 | `signed_gravity_response_lane_status_note_2026-04-26` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
+| `signed_gravity_tensor_source_transport_retention_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `site_phase_cube_shift_intertwiner_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `sixth_family_complex_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
 | `sixth_family_sheared_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | B | - |
@@ -12285,6 +12286,19 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **load-bearing step:** The framework has a coherent conditional signed-response consequence harness and a sharp determinant-orientation support/no-go boundary, but it does not yet derive physical signed gravity.  _(class `C`)_
 - **chain closes:** True — The status note closes on its support/open surface: the runner verifies the conditional locked-sign algebra, finite local/taste-cell selector no-go, local signed-source primitive block, eta-neutral native boundary complex, hosted-but-unselected orientation line, and explicit nonclaim boundaries. The result is only a lane-status/no-go boundary, not a retained physical repulsive-gravity sector.
 - **rationale:** The support-tier status claim is deliberately bounded and the runner matches that bounded surface. It shows the locked source/response sign consequence works only when chi_g is supplied, local/taste-cell and local-source selector routes are blocked, determinant orientation is hosted but not canonically selected, and the physical signed-gravity sector remains unretained. Residual risk is downstream overstatement of this lane as antigravity or as a derived APS/Wald/Gauss/source-action bridge, both of which the note explicitly forbids.
+- **auditor confidence:** high
+
+### `signed_gravity_tensor_source_transport_retention_note`
+
+- **Note:** [`SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_NOTE.md`](../../docs/SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite linear/projective transport of the chi_eta tensor-source twist over the retained bounded tensor carrier, with nonlinear and physical signed-gravity claims excluded.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-current-fresh-context`  (codex-current; independence=fresh_context)
+- **load-bearing step:** On a gapped component, chi_eta is locally constant, so linear transport and projective pushforward commute with the twist.  _(class `A`)_
+- **chain closes:** True — Within the bounded finite/projective scope, the ordinary tensor carrier comes from tensor_source_map_eta_note, which is already audited_clean with effective_status retained_bounded. The remaining transport claim is algebraic: a locally constant sign local system commutes with linear maps and normalized projective pushforwards, while nonlinear closure is explicitly left outside the claim.
+- **rationale:** The current runner passes all six checks and matches the note's stated FINAL_TAG: SIGNED_GRAVITY_TENSOR_SOURCE_TRANSPORT_RETENTION_FINITE_CONDITIONAL. The dependency tensor_source_map_eta_note is retained-grade as a bounded theorem, so the carrier input is not an open dependency. The audited claim is clean only under the bounded scope stated here: finite carrier retention plus linear/projective twist transport, not global nonlinear GR or a physical signed-gravity effect.
 - **auditor confidence:** high
 
 ### `single_axiom_hilbert_note`
