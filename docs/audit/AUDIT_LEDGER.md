@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T21:21:11.571832+00:00
+**Generated:** 2026-05-03T21:24:44.347937+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,12 +19,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 84 |
+| **retained** | 85 |
 | **retained_no_go** | 106 |
 | **retained_bounded** | 198 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 687 |
+| unaudited | 686 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 30 |
@@ -36,13 +36,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 362 |
+| `audited_clean` | 363 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 30 |
 | `audited_renaming` | 22 |
-| `unaudited` | 734 |
+| `unaudited` | 733 |
 
 | claim_type | count |
 |---|---:|
@@ -232,6 +232,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-fresh-context | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-fresh-context | A | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | C | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
@@ -6695,6 +6696,19 @@ Claim boundary until fixed: safe to claim the dispersion type is currently undet
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md`
   - `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`
 - **auditor confidence:** medium
+
+### `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Given the displayed local Wilson three-sample coordinates and first symmetric retained positive cone coordinates, the adjoint-only repair has the unique minimal positive completion a^min = (a^loc_(0,0), a^loc_(1,0), 0) and completed sample triple Z^min = F a^min.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `fresh-agent-gauge-symmetric-three-sample`  (codex-fresh-context; independence=fresh_context)
+- **load-bearing step:** Among all adjoint-only repairs a = (a^loc_(0,0), a^loc_(1,0), a^loc_(1,1) + t), cone membership is equivalent to t >= -a^loc_(1,1), so t = -a^loc_(1,1) is the unique minimal adjoint-only positive repair.  _(class `A`)_
+- **chain closes:** True — The scoped result is an algebraic half-line cone-membership statement over the reconstructed coordinates: the first two coordinates are positive and the third becomes nonnegative exactly when t >= -a^loc_(1,1). The note explicitly excludes the broader beta = 6 boundary/PF realization, so that unclosed physical bridge is outside the audited scope.
+- **rationale:** The runner completed with PASS=10 FAIL=0 and reproduced the note's a^loc, r_min, and Z^min values to the stated tolerance. The load-bearing uniqueness claim is not a hidden physical identification; it is the direct coordinate-cone fact that along the adjoint-only family the third coordinate is a^loc_(1,1)+t and the cone condition is coordinatewise nonnegativity. Residual risk is limited to claims beyond this scoped first-sector adjoint-only completion candidate, which the note expressly lists as not closed.
+- **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_framework_point_underdetermination_note`
 
