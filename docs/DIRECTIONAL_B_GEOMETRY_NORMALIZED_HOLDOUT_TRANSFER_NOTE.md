@@ -101,7 +101,7 @@ Together they now say:
 
 That widened `mass_nodes = 5` follow-on has now landed as:
 
-- [`docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md)
+- `docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_HOLDOUT_TRANSFER_MASS5_NOTE.md` (downstream consumer in same lane; cross-reference only — not a one-hop dep of this note)
 
 The sharpened read is:
 
