@@ -13,11 +13,11 @@ if SCRIPT_DIR not in sys.path:
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
-from CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP import (
+from DISTANCE_LAW_PORTABILITY_COMPARE import (
     Family,
     _build_radial_shell_connectivity,
-    _measure_family,
 )
+from CONNECTIVITY_FAMILY_V2_ELLIPTICAL_SWEEP import _measure_family
 from gate_b_no_restore_farfield import grow
 
 
