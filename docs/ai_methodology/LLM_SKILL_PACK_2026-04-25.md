@@ -37,6 +37,7 @@ and follow.
 | `physics-loop` | Plan, launch, resume, and checkpoint long-running theoretical-physics loops on clean science block branches, targeting hard residuals with stretch attempts, stuck fan-out, and review PRs. | [`skills/physics-loop/SKILL.md`](./skills/physics-loop/SKILL.md) |
 | `physics-claim-reviewer` | Perform adversarial review of a candidate theorem, runner, or branch and classify findings into actionable dispositions. | [`skills/physics-claim-reviewer/SKILL.md`](./skills/physics-claim-reviewer/SKILL.md) |
 | `review-loop` | Run an iterative physics review loop across code/runners, claim boundaries, imported values, Nature-grade retention, and repo-governance surfaces. | [`skills/review-loop/SKILL.md`](./skills/review-loop/SKILL.md) |
+| `audit-loop` | Run adversarial claim audits from the repo audit queue, apply accepted verdicts through the audit ledger, verify, commit, and push one claim at a time. | [`skills/audit-loop/SKILL.md`](./skills/audit-loop/SKILL.md) |
 | `reviewer-backpressure-integrator` | Convert review pressure into narrow honest fixes, demotions, rejections, or selective landings. | [`skills/reviewer-backpressure-integrator/SKILL.md`](./skills/reviewer-backpressure-integrator/SKILL.md) |
 | `methodology-paper-synthesizer` | Turn raw prompt, repo-history, review, and landing evidence into methods-paper source material. | [`skills/methodology-paper-synthesizer/SKILL.md`](./skills/methodology-paper-synthesizer/SKILL.md) |
 
@@ -55,9 +56,12 @@ For a new AI-assisted theoretical-physics project:
 4. use `review-loop` when a branch needs repeated parallel pressure across
    runners, claim status, imported values, support-only demotions, and
    Nature-grade retention gates;
-5. use `reviewer-backpressure-integrator` to convert findings into repo-facing
+5. use `audit-loop` when a scoped claim is ready for an audit-ledger verdict,
+   including fresh-context clean audits, third-auditor conflict resolution, and
+   timeout-safe compute-required skips;
+6. use `reviewer-backpressure-integrator` to convert findings into repo-facing
    changes without burying useful negative results;
-6. use `methodology-paper-synthesizer` to preserve the process as reusable
+7. use `methodology-paper-synthesizer` to preserve the process as reusable
    evidence.
 
 These skills are intentionally repo-native and portable. A downstream user can

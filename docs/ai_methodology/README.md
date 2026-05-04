@@ -79,6 +79,7 @@ Use it to answer:
   [`skills/physics-loop/SKILL.md`](./skills/physics-loop/SKILL.md),
   [`skills/physics-claim-reviewer/SKILL.md`](./skills/physics-claim-reviewer/SKILL.md),
   [`skills/review-loop/SKILL.md`](./skills/review-loop/SKILL.md),
+  [`skills/audit-loop/SKILL.md`](./skills/audit-loop/SKILL.md),
   [`skills/reviewer-backpressure-integrator/SKILL.md`](./skills/reviewer-backpressure-integrator/SKILL.md),
   [`skills/methodology-paper-synthesizer/SKILL.md`](./skills/methodology-paper-synthesizer/SKILL.md)
 
