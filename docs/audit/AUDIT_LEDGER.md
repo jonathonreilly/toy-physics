@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-03T23:08:17.906498+00:00
+**Generated:** 2026-05-04T00:14:41.907116+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 209 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 678 |
+| unaudited | 677 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
 | ~~audited_conditional~~ | 551 |
-| ~~audited_failed~~ | 6 |
+| ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
@@ -39,10 +39,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 378 |
 | `audited_conditional` | 551 |
 | `audited_decoration` | 8 |
-| `audited_failed` | 50 |
+| `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 725 |
+| `unaudited` | 724 |
 
 | claim_type | count |
 |---|---:|
@@ -51,8 +51,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 47 |
 | `no_go` | 167 |
 | `open_gate` | 93 |
-| `positive_theorem` | 849 |
-| `unset` | 1 |
+| `positive_theorem` | 850 |
 
 | criticality | count |
 |---|---:|
@@ -1046,6 +1045,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-current | A | `strong_cp_theta_zero_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | fresh_context | codex-current | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
 | `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | B | - |
+| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5 | A | - |
 | `backreaction_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-current | C | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-current | A | - |
@@ -1732,6 +1732,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the fermion-sector identities close on the bounded runner surface, but the full-action CPT theorem imports a deferred SU(3) Wilson-plaquette operator lift and prior physical-Hilbert/partition-function consequences. Why this blocks: the ledger cannot retain the broader canonical action invariance or CPT-even Observable Principle discharge from a runner that explicitly excludes the gauge-sector algebraic lift. Repair target: construct the CPT action on SU(3) Wilson links/plaquettes and tie it to S_G, Z, H_phys, and CP-odd observables. Claim boundary until fixed: pure-staggered finite-block fermion-sector CPT identities are runner-backed, while full canonical action CPT remains conditional.
 - **open / conditional deps cited:**
   - `AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
+- **auditor confidence:** high
+
+### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Axiom-first proof that the canonical staggered-Dirac plus Wilson plaquette action at g_bare=1 is reflection-positive under temporal-link reflection, yielding a positive transfer matrix and vacuum-subtracted spectrum condition.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-03`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The two factorisations (7) and (10) commute because the gauge sector is integrated against a positive Haar measure and the fermion sector gives a real positive determinant on the canonical surface, proved in Step 3a by the claimed gamma5-Hermiticity plus paired-eigenvalue structure.  _(class `A`)_
+- **chain closes:** False — The determinant-positivity bridge does not close for the full staggered+Wilson operator: the note's paired-eigenvalue argument is established only for the pure Kogut-Susskind hop, while the mass and Wilson terms used in the theorem break the anticommutation needed for the +/-lambda pairing. The runner passes structural/free representatives but does not compute the full interacting SU(3) canonical determinant or transfer-matrix bridge.
+- **rationale:** Issue: Step 3a claims det(M) >= 0 for the full canonical staggered+Wilson operator from gamma5-Hermiticity plus staggered-chirality eigenvalue pairing, but the explicit anticommutation exhibit covers only M_KS and not M_KS + M_W + mI. Why this blocks: reflection positivity for the combined gauge+fermion action depends on a positive fermion measure on the canonical surface, so the theorem cannot be ratified from the current proof and runner. Repair target: prove determinant positivity or the required OS/STW/Menotti positivity hypothesis for the exact staggered+Wilson SU(3) canonical operator, and add a runner that constructs that bridge rather than checking free/representative exhibits. Claim boundary until fixed: the note may report passing structural RP exhibits and a proposed proof outline, but not an audited theorem for full canonical CL3-on-Z3 reflection positivity.
 - **auditor confidence:** high
 
 ### `axiom_reduction_note`

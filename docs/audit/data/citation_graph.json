@@ -12858,6 +12858,10 @@
     },
     {
       "from": "ai_methodology.llm_skill_pack_2026-04-25",
+      "to": "ai_methodology.skills.audit-loop.skill"
+    },
+    {
+      "from": "ai_methodology.llm_skill_pack_2026-04-25",
       "to": "ai_methodology.skills.reviewer-backpressure-integrator.skill"
     },
     {
@@ -12991,6 +12995,10 @@
     {
       "from": "ai_methodology.readme",
       "to": "ai_methodology.skills.review-loop.skill"
+    },
+    {
+      "from": "ai_methodology.readme",
+      "to": "ai_methodology.skills.audit-loop.skill"
     },
     {
       "from": "ai_methodology.readme",
@@ -23261,7 +23269,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T23:08:07.606886+00:00",
+  "generated_at": "2026-05-04T00:14:38.243712+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23473,10 +23481,11 @@
         "ai_methodology.skills.physics-loop.skill",
         "ai_methodology.skills.physics-claim-reviewer.skill",
         "ai_methodology.skills.review-loop.skill",
+        "ai_methodology.skills.audit-loop.skill",
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "8c0302b031f3c6c22f7a58be92d7c0b057b772a077aeb8a889d463c261228ac1",
+      "note_hash": "9be798b66a46ffcf8f176628c30fd79f211c9a0de75ba8bbffe8d7e83aa4e42d",
       "path": "docs/ai_methodology/LLM_SKILL_PACK_2026-04-25.md",
       "runner_path": null,
       "title": "AI Physics Methodology LLM Skill Pack"
@@ -24340,10 +24349,11 @@
         "ai_methodology.skills.physics-loop.skill",
         "ai_methodology.skills.physics-claim-reviewer.skill",
         "ai_methodology.skills.review-loop.skill",
+        "ai_methodology.skills.audit-loop.skill",
         "ai_methodology.skills.reviewer-backpressure-integrator.skill",
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
-      "note_hash": "468fdd91ffbe25f8bdb2fe2e9710a9040e25bd40e9f1130c3587646e54ae8f1a",
+      "note_hash": "15cdb05935f9d1b517ca04f5c535ff0250a6f8ed1f2dd09d66f7bf648f98b84a",
       "path": "docs/ai_methodology/README.md",
       "runner_path": null,
       "title": "AI Methodology Lane"
@@ -24369,6 +24379,28 @@
       "path": "docs/ai_methodology/skills/ai-physics-lane-builder/SKILL.md",
       "runner_path": null,
       "title": "AI Physics Lane Builder"
+    },
+    "ai_methodology.skills.audit-loop.references.nature-grade-rubric": {
+      "claim_id": "ai_methodology.skills.audit-loop.references.nature-grade-rubric",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "744119d2e5ed6b151fb428547feb1489d5d7bba08700f58051e2f3e4d3761ce8",
+      "path": "docs/ai_methodology/skills/audit-loop/references/nature-grade-rubric.md",
+      "runner_path": null,
+      "title": "Nature-Grade Audit Rubric"
+    },
+    "ai_methodology.skills.audit-loop.skill": {
+      "claim_id": "ai_methodology.skills.audit-loop.skill",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "30c3d7012e9407c4a00794d5c8e29da42107846886ce96eb0fda3fbc8d355f60",
+      "path": "docs/ai_methodology/skills/audit-loop/SKILL.md",
+      "runner_path": "scripts/audit_lint.py",
+      "title": "Audit Loop"
     },
     "ai_methodology.skills.methodology-paper-synthesizer.skill": {
       "claim_id": "ai_methodology.skills.methodology-paper-synthesizer.skill",
@@ -50540,6 +50572,8 @@
     "ai_methodology.raw.workflow_tooling",
     "ai_methodology.repo_trajectory_and_governance_evidence_2026-04-25",
     "ai_methodology.skills.ai-physics-lane-builder.skill",
+    "ai_methodology.skills.audit-loop.references.nature-grade-rubric",
+    "ai_methodology.skills.audit-loop.skill",
     "ai_methodology.skills.methodology-paper-synthesizer.skill",
     "ai_methodology.skills.physics-claim-reviewer.skill",
     "ai_methodology.skills.physics-loop.references.assumption-import-audit",
@@ -51527,7 +51561,7 @@
       "bounded_theorem": 57,
       "meta": 8,
       "no_go": 7,
-      "none": 1717,
+      "none": 1719,
       "open_gate": 7,
       "positive_theorem": 74
     },
@@ -51535,14 +51569,14 @@
       "bounded_theorem": 556,
       "meta": 8,
       "no_go": 112,
-      "none": 454,
+      "none": 456,
       "open_gate": 114,
       "positive_theorem": 626
     },
-    "edge_count": 5815,
-    "leaf_count": 599,
-    "node_count": 1870,
-    "root_count": 1055,
-    "runners_with_path": 1429
+    "edge_count": 5817,
+    "leaf_count": 600,
+    "node_count": 1872,
+    "root_count": 1057,
+    "runners_with_path": 1430
   }
 }
