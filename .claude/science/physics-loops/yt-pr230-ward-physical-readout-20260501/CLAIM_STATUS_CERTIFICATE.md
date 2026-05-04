@@ -1,5 +1,29 @@
 # Claim Status Certificate
 
+W/Z response row production attempt:
+
+```text
+actual_current_surface_status: exact negative boundary / WZ response row production attempt on current surface
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_wz_response_row_production_attempt.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=136 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=162 FAIL=0
+```
+
+The current PR230 surface cannot produce same-source W/Z measurement rows.
+The top production harness marks W/Z mass response `absent_guarded`, has no
+raw W/Z correlator mass-fit path, and emits no `gauge_mass_response_analysis`.
+The EW gauge-mass runner is static tree-level algebra after canonical `H` is
+supplied, not source-shift `dM_W/ds` evidence.  No future W/Z row file is
+written and no retained or `proposed_retained` wording is authorized.
+
 Schur row candidate extraction attempt:
 
 ```text

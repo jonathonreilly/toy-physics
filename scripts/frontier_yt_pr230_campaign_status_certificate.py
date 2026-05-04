@@ -242,6 +242,9 @@ def main() -> int:
         "wz_response_measurement_row_contract_gate": load(
             "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json"
         ),
+        "wz_response_row_production_attempt": load(
+            "outputs/yt_wz_response_row_production_attempt_2026-05-03.json"
+        ),
         "same_source_sector_overlap_identity": load(
             "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
         ),
@@ -1013,6 +1016,18 @@ def main() -> int:
         )
         is False,
         statuses["wz_response_measurement_row_contract_gate"],
+    )
+    report(
+        "wz-response-row-production-attempt-blocks-current-surface",
+        "WZ response row production attempt on current surface"
+        in str(statuses["wz_response_row_production_attempt"])
+        and certificates["wz_response_row_production_attempt"].get(
+            "production_attempt_closes_pr230"
+        )
+        is False
+        and certificates["wz_response_row_production_attempt"].get("measurement_rows_written")
+        is False,
+        statuses["wz_response_row_production_attempt"],
     )
     report(
         "same-source-sector-overlap-identity-blocks",

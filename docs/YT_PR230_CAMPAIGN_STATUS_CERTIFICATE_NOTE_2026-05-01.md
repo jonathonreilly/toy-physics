@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=161 FAIL=0
+# SUMMARY: PASS=162 FAIL=0
 ```
 
 ## 2026-05-03 Schur Row Candidate Extraction Attempt Update
@@ -57,6 +57,18 @@ The runner passes with `PASS=10 FAIL=0`, but the current row file is absent.
 This is a contract and guard, not evidence.  PR #230 still needs actual W/Z
 rows satisfying that contract, real Schur rows, certified source-Higgs pole
 rows, or honest production evidence.
+
+## 2026-05-03 W/Z Response Row Production Attempt Update
+
+The campaign status certificate now consumes the W/Z response row production
+attempt.  This tests the next concrete W/Z step after the contract gate: can
+the current PR #230 surface produce the required same-source W/Z rows now?
+
+The runner passes with `PASS=12 FAIL=0` and blocks the attempted production.
+The current top harness is QCD/top-only for this purpose, marks W/Z response
+absent-guarded, and has no raw W/Z correlator mass-fit path.  Static EW
+gauge-mass algebra remains rejected as `dM_W/ds` evidence.  No future W/Z row
+file is written.
 
 ## 2026-05-03 W/Z Response Repo Harness Import Audit Update
 

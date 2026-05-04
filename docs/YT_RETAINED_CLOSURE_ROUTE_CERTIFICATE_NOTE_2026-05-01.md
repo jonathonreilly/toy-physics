@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=135 FAIL=0
+# SUMMARY: PASS=136 FAIL=0
 ```
 
 ## 2026-05-03 Schur Row Candidate Extraction Attempt Update
@@ -47,6 +47,20 @@ identity certificates, and forbidden-import firewalls.
 The current W/Z measurement-row file is absent.  The gate is therefore schema
 and firewall support only; it authorizes no response readout switch and no
 retained or `proposed_retained` closure.
+
+## 2026-05-03 W/Z Response Row Production Attempt Update
+
+The retained-route certificate now consumes
+`outputs/yt_wz_response_row_production_attempt_2026-05-03.json`.  This is the
+execution check immediately after the W/Z row contract: try to produce the
+future same-source W/Z rows from the current repo surface.
+
+The attempt blocks.  The top production harness explicitly marks W/Z mass
+response `absent_guarded`, has no raw W/Z correlator mass-fit path, and emits
+no `gauge_mass_response_analysis`.  The EW gauge-mass runner is static
+tree-level algebra after canonical `H` is supplied, not a source-shift
+`dM_W/ds` measurement.  No W/Z measurement-row file is written and no retained
+or `proposed_retained` closure is authorized.
 
 ## 2026-05-03 W/Z Response Repo Harness Import Audit Update
 

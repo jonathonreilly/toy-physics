@@ -146,6 +146,7 @@ def main() -> int:
         "wz_response_harness_absence_guard": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json",
         "wz_response_repo_harness_import_audit": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
         "wz_response_measurement_row_contract_gate": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json",
+        "wz_response_row_production_attempt": "outputs/yt_wz_response_row_production_attempt_2026-05-03.json",
         "same_source_sector_overlap_identity": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
         "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
         "osp_oh_identity_stretch": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
@@ -895,6 +896,19 @@ def main() -> int:
         and certificates["wz_response_measurement_row_contract_gate"].get(
             "wz_measurement_row_contract_gate_passed"
         )
+        is False
+    )
+    wz_response_row_production_attempt_blocks_current_surface = (
+        "WZ response row production attempt on current surface"
+        in certificates["wz_response_row_production_attempt"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["wz_response_row_production_attempt"].get("proposal_allowed") is False
+        and certificates["wz_response_row_production_attempt"].get(
+            "production_attempt_closes_pr230"
+        )
+        is False
+        and certificates["wz_response_row_production_attempt"].get("measurement_rows_written")
         is False
     )
     same_source_sector_overlap_identity_blocks = (
@@ -1691,6 +1705,11 @@ def main() -> int:
         "wz-response-measurement-row-contract-not-evidence",
         wz_response_measurement_row_contract_not_evidence,
         certificates["wz_response_measurement_row_contract_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "wz-response-row-production-attempt-blocks-current-surface",
+        wz_response_row_production_attempt_blocks_current_surface,
+        certificates["wz_response_row_production_attempt"].get("actual_current_surface_status", ""),
     )
     report(
         "same-source-sector-overlap-identity-blocks",

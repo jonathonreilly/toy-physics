@@ -1,0 +1,41 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ response row production attempt on current surface",
+  "blocked_requirements": [
+    "same-source W/Z correlator mass fits by source shift",
+    "fitted dM_W/ds or dM_Z/ds with covariance against dE_top/ds",
+    "same-source sector-overlap identity",
+    "canonical-Higgs pole identity",
+    "retained-route gate or proposal gate"
+  ],
+  "current_surface_inputs": {
+    "ew_gauge_mass_runner": "scripts/frontier_ew_higgs_gauge_mass_diagonalization.py",
+    "parent_certificates": {
+      "mixed_scalar": "outputs/yt_fh_gauge_response_mixed_scalar_obstruction_2026-05-02.json",
+      "sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+      "wz_absence_guard": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json",
+      "wz_builder": "outputs/yt_fh_gauge_mass_response_certificate_builder_2026-05-03.json",
+      "wz_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+      "wz_manifest": "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json",
+      "wz_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+      "wz_repo_import_audit": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
+      "wz_row_contract": "outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json"
+    },
+    "production_harness": "scripts/yt_direct_lattice_correlator_production.py"
+  },
+  "exact_next_action": "Implement a genuine EW gauge/Higgs same-source correlator harness or return to certified O_H/C_sH/C_HH pole rows, Schur rows, or honest production evidence. Do not attempt to convert static EW algebra or QCD-only top chunks into W/Z response rows.",
+  "fail_count": 0,
+  "future_rows_path": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+  "measurement_rows_written": false,
+  "pass_count": 12,
+  "production_attempt_closes_pr230": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No raw W/Z correlator mass fits, sector-overlap identity, or canonical-Higgs identity are present.",
+  "raw_wz_correlator_path_present": false,
+  "strict_non_claims": [
+    "does not write or synthesize W/Z measurement rows",
+    "does not treat static EW gauge-mass algebra as dM_W/ds",
+    "does not use observed W/Z, observed top, observed y_t, or observed g2 selectors",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette, u0, c2=1, Z_match=1, or kappa_s=1"
+  ],
+  "verdict": "The current PR #230 surface cannot produce same-source W/Z measurement rows. The top production harness explicitly marks W/Z mass response absent; no raw W/Z correlator mass-fit path or gauge_mass_response_analysis output exists; the EW gauge-mass runner is static tree-level algebra after canonical H is supplied; and the builder/gate still see no measurement rows. The future row file is deliberately not written."
+}

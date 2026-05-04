@@ -1,5 +1,37 @@
 # Review History
 
+## Review-Loop Backpressure - W/Z Response Row Production Attempt
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: EXACT NEGATIVE BOUNDARY / CURRENT SURFACE CANNOT PRODUCE W/Z ROWS
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- the current top production harness was tested as a potential W/Z row source
+  and remains QCD/top-only for W/Z response;
+- W/Z mass response is `absent_guarded`, no raw W/Z correlator mass-fit path
+  exists, and no `gauge_mass_response_analysis` is emitted;
+- static EW gauge-mass algebra is rejected as source-shift `dM_W/ds`
+  evidence;
+- the future W/Z measurement-row file remains unwritten;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_wz_response_row_production_attempt.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_wz_response_row_production_attempt.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Schur Row Candidate Extraction Attempt
 
 Local review-loop disposition:

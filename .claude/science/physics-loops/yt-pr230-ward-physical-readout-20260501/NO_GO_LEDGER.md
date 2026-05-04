@@ -1,5 +1,24 @@
 # No-Go Ledger
 
+## W/Z response row production from current PR230 surface is blocked
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_wz_response_row_production_attempt.py
+# SUMMARY: PASS=12 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=136 FAIL=0
+```
+
+The current PR230 surface cannot produce the future same-source W/Z
+measurement rows.  The top production harness marks `wz_mass_response` as
+`absent_guarded`, lacks raw W/Z correlator mass fits, and emits no
+`gauge_mass_response_analysis`.  EW gauge-mass diagonalization is static
+tree-level algebra after canonical `H` is supplied, not a source-shift
+`dM_W/ds` measurement.  Do not convert current QCD chunks, static EW algebra,
+or the W/Z row contract's in-memory witness into W/Z response evidence.
+
 ## W/Z response measurement-row contract gate is not closure
 
 Runners:

@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 W/Z response row production attempt:
+
+- Added `scripts/frontier_yt_wz_response_row_production_attempt.py`,
+  `docs/YT_WZ_RESPONSE_ROW_PRODUCTION_ATTEMPT_NOTE_2026-05-03.md`, and
+  `outputs/yt_wz_response_row_production_attempt_2026-05-03.json`.
+- Result: exact negative boundary on the current surface.  The current top
+  production harness is QCD/top-only for W/Z response, marks
+  `wz_mass_response` as `absent_guarded`, has no raw W/Z correlator mass-fit
+  path, and emits no `gauge_mass_response_analysis`.
+- Static EW gauge-mass diagonalization remains object-level algebra after
+  canonical `H` is supplied; it is not source-shift `dM_W/ds` evidence.
+- Verification: W/Z row production attempt `PASS=12 FAIL=0`; retained-route
+  `PASS=136 FAIL=0`; campaign status `PASS=162 FAIL=0`.
+- Claim boundary: no W/Z measurement-row file is written and no retained or
+  `proposed_retained` wording is authorized.
+
+Next exact action: implement a genuine EW gauge/Higgs same-source correlator
+harness, produce certified `O_H/C_sH/C_HH` pole rows, produce genuine Schur
+`A/B/C` rows, or continue honest production evidence while chunks025-026 run.
+
 Latest checkpoint, 2026-05-03 Schur row candidate extraction attempt:
 
 - Added `scripts/frontier_yt_schur_row_candidate_extraction_attempt.py`,

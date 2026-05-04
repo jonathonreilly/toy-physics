@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the W/Z response row production attempt is now landed and
+wired into the retained-route/campaign gates.  It tries the next concrete W/Z
+step after the row contract and blocks honestly: the current top production
+harness is QCD/top-only for W/Z response, W/Z rows remain `absent_guarded`,
+no raw W/Z correlator mass-fit path or `gauge_mass_response_analysis` exists,
+and static EW gauge-mass algebra is still not `dM_W/ds`.  Do not spend more
+loop time attempting to convert current QCD chunks or EW algebra into W/Z
+measurement rows.  A positive W/Z route now requires a genuinely new EW
+gauge/Higgs same-source correlator harness with identity certificates.
+
 2026-05-03 update: the Schur row candidate extraction attempt is now landed
 and wired into the retained-route/campaign gates.  It tests the nearest
 finite-ladder, eigen-derivative, lambda-scan, and Feshbach artifacts against
