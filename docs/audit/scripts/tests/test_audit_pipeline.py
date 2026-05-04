@@ -351,6 +351,79 @@ class ComputeEffectiveStatusTest(unittest.TestCase):
             self.assertNotIn(stale, post)
 
 
+class ComputeAuditorReliabilityTest(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+        self.fx = CleanLedgerFixture(self.tmp_root)
+
+    def test_cross_confirmation_counts_actual_participants(self):
+        m = _import("compute_auditor_reliability")
+        _patch_repo_root(m, self.tmp_root)
+        self.fx.write_ledger(
+            {
+                "schema_version": 1,
+                "rows": {
+                    "confirmed_cross_family": {
+                        "claim_id": "confirmed_cross_family",
+                        "audit_status": "audited_clean",
+                        "auditor_family": "codex-gpt-5",
+                        "criticality": "leaf",
+                        "cross_confirmation": {
+                            "status": "confirmed",
+                            "first_audit": {
+                                "auditor_family": "codex-gpt-5.5",
+                                "verdict": "audited_clean",
+                            },
+                            "second_audit": {
+                                "auditor_family": "codex-gpt-5",
+                                "verdict": "audited_clean",
+                            },
+                        },
+                    },
+                    "third_pass_cross_family": {
+                        "claim_id": "third_pass_cross_family",
+                        "audit_status": "audited_conditional",
+                        "auditor_family": "codex-gpt-5",
+                        "criticality": "leaf",
+                        "cross_confirmation": {
+                            "status": "third_confirmed_second",
+                            "first_audit": {
+                                "auditor_family": "codex-gpt-5.5",
+                                "verdict": "audited_clean",
+                            },
+                            "second_audit": {
+                                "auditor_family": "codex-gpt-5",
+                                "verdict": "audited_conditional",
+                            },
+                            "third_audit": {
+                                "auditor_family": "codex-gpt-5",
+                                "verdict": "audited_conditional",
+                            },
+                        },
+                    },
+                },
+            }
+        )
+
+        self.assertEqual(m.main(), 0)
+        out = json.loads(
+            (self.fx.data_dir / "auditor_reliability.json").read_text(encoding="utf-8")
+        )
+        gpt5 = out["auditor_family_summary"]["codex-gpt-5"]
+        gpt55 = out["auditor_family_summary"]["codex-gpt-5.5"]
+
+        self.assertEqual(gpt5["cross_confirmation_pairs_seen"], 2)
+        self.assertEqual(gpt55["cross_confirmation_pairs_seen"], 2)
+        self.assertEqual(gpt5["cross_confirmation_pairs_agreed_first_try"], 1)
+        self.assertEqual(gpt55["cross_confirmation_pairs_agreed_first_try"], 1)
+        self.assertEqual(gpt55["bias_direction_breakdown"]["more_lenient"], 1)
+        self.assertEqual(out["totals"]["total_cross_confirmation_pairs"], 2)
+        self.assertEqual(out["totals"]["total_cross_confirmation_family_participations"], 4)
+        self.assertEqual(out["totals"]["overall_agreement_rate"], 0.5)
+
+
 class AuditLintTest(unittest.TestCase):
     def setUp(self):
         self._tmp = tempfile.TemporaryDirectory()
