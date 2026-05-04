@@ -31,6 +31,13 @@ A future certificate must provide:
 - nonempty `operator_id` and `operator_definition`;
 - `canonical_higgs_operator_identity_passed: true`;
 - nonempty identity and normalization certificate references;
+- identity and normalization references that are not the gate itself, static EW
+  algebra, `H_unit`, Ward, or harness-instrumentation shortcuts;
+- accepted `identity_certificate_kind` and `normalization_certificate_kind`
+  proof classes;
+- `canonical_higgs_operator_normalization_passed: true`;
+- `source_overlap_closure_mode` naming one accepted bridge route;
+- `forbidden_shortcut_audit_passed: true`;
 - a diagonal vertex kind supported by the harness;
 - `hunit_used_as_operator: false`;
 - `static_ew_algebra_used_as_operator: false`;

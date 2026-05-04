@@ -7,21 +7,26 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "scalar-LSZ pole/FV/IR/model-class control / O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-04T12:56:42Z"
-  block: 38
-  artifact: "full positive PR230 closure assembly gate"
-  status: "open; assembly gate rejects current surface and hypothetical chunk-only completion"
-  result: "added an executable assembly gate for combining chunk output with non-chunk closure bridges; assembly PASS=13 FAIL=0, retained-route PASS=161 FAIL=0, campaign PASS=187 FAIL=0"
-  claim_boundary: "no physical y_t readout; no retained/proposed-retained wording; chunks alone are insufficient; positive closure still needs scalar-LSZ model-class/FV/IR control plus one O_H/C_sH/C_HH, W/Z, Schur/K-prime, or neutral-rank-one bridge"
+  utc: "2026-05-04T13:03:35Z"
+  block: 39
+  artifact: "canonical-Higgs operator semantic firewall"
+  status: "bounded support/open; O_H gate hardened against future semantic spoof candidates"
+  result: "hardened canonical-Higgs operator certificate gate and added semantic firewall; O_H gate PASS=11 FAIL=0, semantic firewall PASS=10 FAIL=0, assembly PASS=14 FAIL=0, retained-route PASS=162 FAIL=0, campaign PASS=188 FAIL=0"
+  claim_boundary: "no O_H certificate; no C_sH/C_HH rows; no physical y_t readout; no retained/proposed-retained wording; future O_H candidates must now supply non-shortcut identity/normalization certificate kinds, source-overlap closure mode, and forbidden-shortcut audit"
   live_compute: "chunk work intentionally left to the other CLI worker; this checkpoint does not package polefit8x8 chunks013-018 or any other chunk artifacts"
   checkpoint_files:
-    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-    - docs/YT_PR230_FULL_POSITIVE_CLOSURE_ASSEMBLY_GATE_NOTE_2026-05-04.md
-    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
+    - scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py
+    - docs/YT_CANONICAL_HIGGS_OPERATOR_CERTIFICATE_GATE_NOTE_2026-05-03.md
+    - outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json
+    - scripts/frontier_yt_canonical_higgs_operator_semantic_firewall.py
+    - docs/YT_CANONICAL_HIGGS_OPERATOR_SEMANTIC_FIREWALL_NOTE_2026-05-04.md
+    - outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json
     - scripts/frontier_yt_retained_closure_route_certificate.py
     - scripts/frontier_yt_pr230_campaign_status_certificate.py
+    - scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
     - outputs/yt_retained_closure_route_certificate_2026-05-01.json
     - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+    - outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json
     - outputs/yt_fh_lsz_polefit8x8_wave_orchestrator_status_2026-05-04.json
     - docs/YT_FH_LSZ_POLEFIT8X8_CHUNKS007_012_CHECKPOINT_NOTE_2026-05-04.md
     - outputs/yt_pr230_fh_lsz_polefit8x8_L12_T24_chunk007_2026-05-04.json
@@ -50,7 +55,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 38
+block: 39
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md

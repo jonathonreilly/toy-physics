@@ -189,4 +189,8 @@ Open imports:
   completion, because production response still must be combined with
   scalar-LSZ model-class/FV/IR control, one accepted `O_sp/O_H` or physical
   response bridge, matching/running authority, and retained-route approval;
+- the canonical-Higgs operator semantic firewall is bounded support only: it
+  hardens the future `O_H` certificate gate against static EW algebra,
+  `H_unit`, Ward, observed-selector, and self-declared identity spoofs, but it
+  does not provide `O_H` or `C_sH/C_HH` rows;
 - independent audit after any proposed positive certificate.

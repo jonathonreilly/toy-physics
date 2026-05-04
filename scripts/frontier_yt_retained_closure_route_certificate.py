@@ -170,6 +170,7 @@ def main() -> int:
         "source_higgs_production_readiness_gate": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
         "canonical_higgs_operator_candidate_stress": "outputs/yt_canonical_higgs_operator_candidate_stress_2026-05-03.json",
         "canonical_higgs_operator_certificate_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+        "canonical_higgs_operator_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
         "canonical_higgs_operator_realization_gate": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
         "canonical_higgs_repo_authority_audit": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
         "sm_one_higgs_oh_import_boundary": "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json",
@@ -1135,6 +1136,11 @@ def main() -> int:
             "current_chunk_wave_can_supply_source_higgs_rows"
         )
         is False
+    )
+    canonical_higgs_operator_semantic_firewall_not_closure = (
+        "canonical-Higgs operator semantic firewall passed"
+        in certificates["canonical_higgs_operator_semantic_firewall"].get("actual_current_surface_status", "")
+        and certificates["canonical_higgs_operator_semantic_firewall"].get("proposal_allowed") is False
     )
     canonical_higgs_operator_realization_gate_blocks = (
         "canonical-Higgs operator realization gate not passed"
@@ -2105,6 +2111,11 @@ def main() -> int:
         "source-higgs-production-readiness-blocks-launch",
         source_higgs_production_readiness_blocks_launch,
         certificates["source_higgs_production_readiness_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "canonical-higgs-operator-semantic-firewall-not-closure",
+        canonical_higgs_operator_semantic_firewall_not_closure,
+        certificates["canonical_higgs_operator_semantic_firewall"].get("actual_current_surface_status", ""),
     )
     report(
         "canonical-higgs-operator-realization-gate-blocks",

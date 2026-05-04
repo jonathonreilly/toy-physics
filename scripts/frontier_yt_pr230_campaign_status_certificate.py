@@ -317,6 +317,9 @@ def main() -> int:
         "canonical_higgs_operator_certificate_gate": load(
             "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json"
         ),
+        "canonical_higgs_operator_semantic_firewall": load(
+            "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json"
+        ),
         "canonical_higgs_operator_realization_gate": load(
             "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json"
         ),
@@ -1306,6 +1309,13 @@ def main() -> int:
         and certificates["canonical_higgs_operator_certificate_gate"].get("candidate_present") is False
         and certificates["canonical_higgs_operator_certificate_gate"].get("candidate_valid") is False,
         statuses["canonical_higgs_operator_certificate_gate"],
+    )
+    report(
+        "canonical-higgs-operator-semantic-firewall-not-closure",
+        "canonical-Higgs operator semantic firewall passed"
+        in str(statuses["canonical_higgs_operator_semantic_firewall"])
+        and certificates["canonical_higgs_operator_semantic_firewall"].get("proposal_allowed") is False,
+        statuses["canonical_higgs_operator_semantic_firewall"],
     )
     report(
         "canonical-higgs-repo-authority-audit-blocks-hidden-oh",

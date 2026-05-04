@@ -44,6 +44,7 @@ PARENTS = {
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_higgs_semantic_firewall": "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
     "source_pole_purity": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
     "neutral_scalar_irreducibility": "outputs/yt_neutral_scalar_irreducibility_authority_audit_2026-05-04.json",
@@ -149,6 +150,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["source_higgs_readiness"],
                 PARENTS["source_higgs_gram"],
                 PARENTS["source_higgs_postprocess"],
+                PARENTS["canonical_higgs_semantic_firewall"],
             ],
         },
         "same_source_wz_response": {
@@ -245,6 +247,7 @@ def main() -> int:
     )
     source_overlap_blocks = (
         any_bridge_passes is False
+        and certs["canonical_higgs_semantic_firewall"].get("proposal_allowed") is False
         and certs["source_pole_mixing"].get("proposal_allowed") is False
         and certs["source_pole_purity"].get("proposal_allowed") is False
         and certs["canonical_higgs_operator"].get("proposal_allowed") is False
@@ -288,6 +291,12 @@ def main() -> int:
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report("polefit8x8-support-only", polefit_support_only, statuses["fh_lsz_polefit8x8_postprocessor"])
+    report(
+        "canonical-higgs-semantic-firewall-support-only",
+        "semantic firewall passed" in statuses["canonical_higgs_semantic_firewall"]
+        and certs["canonical_higgs_semantic_firewall"].get("proposal_allowed") is False,
+        statuses["canonical_higgs_semantic_firewall"],
+    )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")
     report("retained-route-still-open", retained_route_open, statuses["retained_route"])

@@ -1,0 +1,76 @@
+{
+  "actual_current_surface_status": "bounded-support / canonical-Higgs operator semantic firewall passed",
+  "bare_retained_allowed": false,
+  "current_gate_open": true,
+  "exact_next_action": "Any future O_H certificate must pass the hardened gate with a real identity certificate kind, normalization certificate kind, source-overlap closure mode, non-shortcut references, and forbidden-shortcut audit.  Then source-Higgs C_sH/C_HH production rows can be launched.",
+  "fail_count": 0,
+  "gate_has_stronger_schema": true,
+  "gate_output": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+  "pass_count": 10,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The firewall hardens a future O_H gate; it does not provide O_H, C_sH/C_HH rows, or retained y_t closure.",
+  "spoof_cases": [
+    {
+      "case": "reject-static-ew-reference",
+      "failed_checks": [
+        "identity_certificate_not_shortcut",
+        "normalization_certificate_not_shortcut"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-hunit-substitute",
+      "failed_checks": [
+        "identity_certificate_not_shortcut",
+        "normalization_certificate_not_shortcut",
+        "not_hunit_by_fiat"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-ward-identity-import",
+      "failed_checks": [
+        "identity_certificate_not_shortcut",
+        "normalization_certificate_not_shortcut",
+        "no_prior_ward_authority"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-self-declared-identity",
+      "failed_checks": [
+        "identity_certificate_not_shortcut",
+        "identity_certificate_kind_allowed",
+        "normalization_certificate_not_shortcut",
+        "normalization_certificate_kind_allowed",
+        "forbidden_shortcut_audit_passed"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-observed-target-selector",
+      "failed_checks": [
+        "identity_certificate_not_shortcut",
+        "normalization_certificate_not_shortcut",
+        "no_observed_target_selectors"
+      ],
+      "rejected": true
+    },
+    {
+      "case": "reject-candidate-authorized-proposal",
+      "failed_checks": [
+        "identity_certificate_not_shortcut",
+        "normalization_certificate_not_shortcut",
+        "no_claim_authorization"
+      ],
+      "rejected": true
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not provide a canonical-Higgs operator certificate",
+    "does not treat static EW algebra, H_unit, Ward, or observed selectors as O_H",
+    "does not use y_t_bare, alpha_LM, plaquette/u0, kappa_s=1, or cos(theta)=1"
+  ],
+  "verdict": "The canonical-Higgs O_H certificate gate now rejects semantic spoof candidates that would have tried to use static EW algebra, H_unit, Ward identity, observed selectors, self-declared identity classes, or candidate-local proposal authorization.  This is overclaim protection only; no O_H certificate is supplied."
+}

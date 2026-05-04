@@ -745,3 +745,20 @@ Findings checked:
   load-bearing proof inputs.
 - Aggregate retained-route and campaign certificates consume the gate and still
   report `proposal_allowed: false`.
+
+# 2026-05-04 Canonical-Higgs Operator Semantic Firewall Self-Review
+
+Disposition: pass as gate hardening, not as closure.
+
+Findings checked:
+
+- The hardened `O_H` gate now requires non-shortcut identity/normalization
+  references, accepted proof-class fields, source-overlap closure mode, and a
+  forbidden-shortcut audit flag.
+- The semantic firewall rejects static EW algebra, `H_unit`, Ward import,
+  self-declared identity classes, observed selectors, and candidate-local
+  proposal authorization.
+- The artifact supplies no `O_H`, no `C_sH/C_HH` rows, and no retained or
+  proposed_retained claim.
+- Aggregate retained-route, campaign, and full assembly gates remain open and
+  proposal-forbidden.

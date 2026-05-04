@@ -518,6 +518,47 @@ identity, same-surface Schur `A/B/C` rows plus the scalar-denominator bridge,
 or a neutral-sector irreducibility theorem.  The next non-chunk target should
 therefore be one of those routes, not more source-only shortcut tests.
 
+## 2026-05-04 Canonical-Higgs Operator Semantic Firewall
+
+The next non-chunk bridge is `O_H`.  I hardened the future
+canonical-Higgs operator certificate gate so a candidate cannot pass merely by
+setting identity booleans and pointing at static EW algebra, `H_unit`, Ward, or
+harness-instrumentation notes.
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py \
+  scripts/frontier_yt_canonical_higgs_operator_semantic_firewall.py \
+  scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_canonical_higgs_operator_certificate_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_canonical_higgs_operator_semantic_firewall.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=162 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=188 FAIL=0
+```
+
+Result: overclaim protection improved, closure unchanged.  The firewall
+rejects static EW references, `H_unit`, Ward import, self-declared identity
+classes, observed selectors, and candidate-local proposal authorization.  No
+same-surface `O_H` certificate or `C_sH/C_HH` rows are supplied.
+
+Next exact action on the non-chunk lane: either build a real same-surface EW
+gauge-Higgs/`O_H` surface, or pivot to scalar-LSZ model-class/FV/IR closure,
+Schur rows, W/Z rows, or a neutral-sector irreducibility theorem.
+
 ## 2026-05-04 Chunks032 and 034 Packaging
 
 Chunks032 and 034 landed and were packaged as bounded FH/LSZ production

@@ -8,6 +8,7 @@
     "canonical_higgs_operator_candidate_stress": "exact negative boundary / canonical-Higgs operator candidate stress rejects current substitutes",
     "canonical_higgs_operator_certificate_gate": "open / canonical-Higgs operator certificate absent",
     "canonical_higgs_operator_realization_gate": "open / canonical-Higgs operator realization gate not passed",
+    "canonical_higgs_operator_semantic_firewall": "bounded-support / canonical-Higgs operator semantic firewall passed",
     "canonical_higgs_repo_authority_audit": "exact negative boundary / repo-wide canonical-Higgs O_H authority audit",
     "canonical_scalar_import": "exact negative boundary / canonical scalar normalization import audit",
     "cl3_automorphism_source_identity": "exact negative boundary / Cl3 automorphism data not source-Higgs identity",
@@ -300,7 +301,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 187,
+  "pass_count": 188,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

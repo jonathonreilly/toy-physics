@@ -38,6 +38,37 @@ CERTS = {
     "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
 }
 
+ALLOWED_IDENTITY_CERTIFICATE_KINDS = {
+    "canonical_higgs_identity_theorem",
+    "source_higgs_gram_purity_certificate",
+    "same_source_wz_sector_overlap_certificate",
+    "neutral_scalar_rank_one_theorem",
+}
+ALLOWED_NORMALIZATION_CERTIFICATE_KINDS = {
+    "canonical_higgs_lsz_normalization",
+    "same_source_ew_gauge_higgs_action_certificate",
+    "source_higgs_pole_residue_normalization",
+}
+ALLOWED_SOURCE_OVERLAP_CLOSURE_MODES = {
+    "source_higgs_gram_purity",
+    "same_source_wz_response",
+    "schur_kprime_kernel_rows",
+    "neutral_scalar_rank_one",
+}
+FORBIDDEN_REFERENCE_FRAGMENTS = {
+    "YT_WARD_IDENTITY_DERIVATION_THEOREM",
+    "YT_HUNIT_CANONICAL_HIGGS_OPERATOR_CANDIDATE_GATE",
+    "EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM",
+    "SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM",
+    "YT_CANONICAL_HIGGS_OPERATOR_CERTIFICATE_GATE",
+    "YT_CANONICAL_HIGGS_OPERATOR_REALIZATION_GATE",
+    "YT_SOURCE_HIGGS_CROSS_CORRELATOR_HARNESS_EXTENSION",
+    "yt_hunit_canonical_higgs_operator_candidate_gate",
+    "yt_canonical_higgs_operator_certificate_gate",
+    "yt_canonical_higgs_operator_realization_gate",
+    "yt_ward_identity",
+}
+
 PASS_COUNT = 0
 FAIL_COUNT = 0
 
@@ -86,6 +117,13 @@ def path_reference_ok(value: Any) -> bool:
     return False
 
 
+def non_shortcut_reference_ok(value: Any) -> bool:
+    if not path_reference_ok(value):
+        return False
+    text = str(value)
+    return not any(fragment in text for fragment in FORBIDDEN_REFERENCE_FRAGMENTS)
+
+
 def validate_candidate(candidate: dict[str, Any]) -> dict[str, bool]:
     firewall = candidate.get("firewall", {}) if isinstance(candidate.get("firewall", {}), dict) else {}
     vertex = candidate.get("diagonal_vertex", {}) if isinstance(candidate.get("diagonal_vertex", {}), dict) else {}
@@ -98,7 +136,20 @@ def validate_candidate(candidate: dict[str, Any]) -> dict[str, bool]:
         "operator_definition_named": nonempty_string(candidate.get("operator_definition")),
         "canonical_identity_passed": candidate.get("canonical_higgs_operator_identity_passed") is True,
         "identity_certificate_reference": path_reference_ok(candidate.get("identity_certificate")),
+        "identity_certificate_not_shortcut": non_shortcut_reference_ok(candidate.get("identity_certificate")),
+        "identity_certificate_kind_allowed": candidate.get("identity_certificate_kind")
+        in ALLOWED_IDENTITY_CERTIFICATE_KINDS,
         "normalization_certificate_reference": path_reference_ok(candidate.get("normalization_certificate")),
+        "normalization_certificate_not_shortcut": non_shortcut_reference_ok(
+            candidate.get("normalization_certificate")
+        ),
+        "normalization_certificate_kind_allowed": candidate.get("normalization_certificate_kind")
+        in ALLOWED_NORMALIZATION_CERTIFICATE_KINDS,
+        "canonical_normalization_passed": candidate.get("canonical_higgs_operator_normalization_passed")
+        is True,
+        "source_overlap_closure_mode_allowed": candidate.get("source_overlap_closure_mode")
+        in ALLOWED_SOURCE_OVERLAP_CLOSURE_MODES,
+        "forbidden_shortcut_audit_passed": candidate.get("forbidden_shortcut_audit_passed") is True,
         "diagonal_vertex_kind_supported": vertex.get("kind")
         in {
             "site_color_diagonal_values",
@@ -236,6 +287,11 @@ def main() -> int:
             "operator_id and operator_definition are nonempty",
             "canonical_higgs_operator_identity_passed is true",
             "identity_certificate and normalization_certificate are nonempty references",
+            "identity and normalization certificate references are not gate/static-EW/H_unit/Ward shortcuts",
+            "identity_certificate_kind and normalization_certificate_kind are allowed proof classes",
+            "canonical_higgs_operator_normalization_passed is true",
+            "source_overlap_closure_mode is one of the accepted bridge routes",
+            "forbidden_shortcut_audit_passed is true",
             "diagonal_vertex.kind is supported by the production harness",
             "hunit_used_as_operator and static_ew_algebra_used_as_operator are false",
             "firewall flags reject observed targets, yt_ward, alpha_LM/plaquette, and H_unit matrix-element readout",

@@ -5,6 +5,11 @@
     "operator_id and operator_definition are nonempty",
     "canonical_higgs_operator_identity_passed is true",
     "identity_certificate and normalization_certificate are nonempty references",
+    "identity and normalization certificate references are not gate/static-EW/H_unit/Ward shortcuts",
+    "identity_certificate_kind and normalization_certificate_kind are allowed proof classes",
+    "canonical_higgs_operator_normalization_passed is true",
+    "source_overlap_closure_mode is one of the accepted bridge routes",
+    "forbidden_shortcut_audit_passed is true",
     "diagonal_vertex.kind is supported by the production harness",
     "hunit_used_as_operator and static_ew_algebra_used_as_operator are false",
     "firewall flags reject observed targets, yt_ward, alpha_LM/plaquette, and H_unit matrix-element readout"
