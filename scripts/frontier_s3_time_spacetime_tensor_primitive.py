@@ -211,7 +211,7 @@ def main() -> int:
     )
     record(
         "the candidate spacetime carrier remains distinct from an exact tensor observable",
-        "bounded spacetime tensor carrier candidate" in spacetime_text.lower()
+        "spacetime tensor carrier candidate" in spacetime_text.lower()
         and "Theta_R^(0)(q) \\otimes V_R(t)" in spacetime_text,
         "the current exact support-side tensor observable is still missing",
         status="BLOCKED",

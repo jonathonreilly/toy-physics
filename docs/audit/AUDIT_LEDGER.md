@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T12:37:29.494876+00:00
+**Generated:** 2026-05-04T13:49:25.886472+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,29 +21,29 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 84 |
 | **retained_no_go** | 109 |
-| **retained_bounded** | 203 |
+| **retained_bounded** | 202 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 18 |
-| unaudited | 724 |
+| unaudited | 732 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 2 |
 | ~~audited_numerical_match~~ | 29 |
-| ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 520 |
+| ~~audited_renaming~~ | 19 |
+| ~~audited_conditional~~ | 516 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 372 |
-| `audited_conditional` | 520 |
+| `audited_clean` | 371 |
+| `audited_conditional` | 516 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 29 |
-| `audited_renaming` | 21 |
-| `unaudited` | 771 |
+| `audited_renaming` | 19 |
+| `unaudited` | 779 |
 
 | claim_type | count |
 |---|---:|
@@ -52,14 +52,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 47 |
 | `no_go` | 167 |
 | `open_gate` | 94 |
-| `positive_theorem` | 853 |
+| `positive_theorem` | 854 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 117 |
 | `high` | 367 |
 | `medium` | 582 |
-| `leaf` | 699 |
+| `leaf` | 700 |
 
 - **Retained pending chain closure:** 5
 - **Citation cycles detected:** 43
@@ -409,7 +409,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_two_field_wave_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `structured_chokepoint_bridge_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | C | - |
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | D | - |
-| `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-context | A | - |
@@ -901,7 +900,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_bilinear_tensor_action_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `s3_time_tensor_build_memo` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `s3_time_tensorized_schur_primitive_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `s3_time_theta_to_slice_coupling_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `same_family_3d_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-current | B | - |
 | `scalar_selector_cycle13_meta_closure_status_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -965,11 +963,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_a1_invariant_section_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
-| `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_action_blocker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_quotient_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `up_sector_partition_revisit_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
@@ -1095,8 +1090,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
-| `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
-| `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `star_supported_bridge_class_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | definition_as_derivation | - |
 | `universal_qg_optional_textbook_comparison_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | judicial_review | codex-current | F | - |
@@ -11731,19 +11724,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `open theorem: identification with Einstein/Regge tensor dynamics law`
 - **auditor confidence:** 0.93
 
-### `s3_time_constructed_support_tensor_primitive_note`
-
-- **Note:** [`S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md`](../../docs/S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Constructed candidate primitive for future Route-2 comparisons: Xi_R^(0) := d Theta_R^(0) / d delta_A1 is introduced as a derivative of the bounded prototype on the microscopic support block A1 x {E_x, T1x}. Excludes any audited tensor-primitive theorem; row has no registered runner and no declared upstream authorities for the prototype, endpoint values, or claimed minimality/survival.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-s3-constructed`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** Define the bounded support-response tensor primitive candidate Xi_R^(0) := d Theta_R^(0) / d delta_A1 on the microscopic support block A1 x {E_x, T1x}.  _(class `E`)_
-- **chain closes:** False — The candidate primitive is a definitional derivative; without registered upstream authorities and a runner, the audit cannot promote it to an exact tensor-valued support observable.
-- **rationale:** Re-audit confirms the original renaming verdict: definitional naming of a comparison surface, not an audit-clean tensor primitive theorem. Scope narrowed from the migration backfill to the constructed candidate.
-- **auditor confidence:** high
-
 ### `s3_time_primitive_chain_note`
 
 - **Note:** [`S3_TIME_PRIMITIVE_CHAIN_NOTE.md`](../../docs/S3_TIME_PRIMITIVE_CHAIN_NOTE.md)
@@ -11773,36 +11753,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **open / conditional deps cited:**
   - `Route-2 exact carrier/readout/time theorem notes`
   - `readout triple equivalence checker`
-
-### `s3_time_tensor_primitive_prototype_note`
-
-- **Note:** [`S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md`](../../docs/S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded naming of the current tensor-prototype comparison surface: Theta_R^(0)(q) = (gamma_E(q), gamma_T(q)) on A1 x {E_x, T1x} is introduced as the first working prototype with reported endpoint values and an asserted affine dependence. Excludes any audited tensor primitive theorem or endpoint-coefficient law; row has no registered runner and no declared upstream tensor-frontier authorities.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-s3-prototype`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** Define the bounded Route-2 tensor prototype Theta_R^(0)(q) = (gamma_E(q), gamma_T(q)) on A1 x {E_x, T1x} as the first working comparison surface for the missing tensor primitive.  _(class `E`)_
-- **chain closes:** False — Prototype definition is useful staging; without a runner or declared upstream tensor-frontier authorities the chain does not derive the exact Route-2 tensor observable, certify endpoint values, or prove the affine support law.
-- **rationale:** Re-audit confirms the original renaming verdict: prototype naming, not derivation. Scope narrowed from the migration backfill to the bounded naming.
-- **auditor confidence:** high
-
-### `s3_time_tensorized_schur_primitive_note`
-
-- **Note:** [`S3_TIME_TENSORIZED_SCHUR_PRIMITIVE_NOTE.md`](../../docs/S3_TIME_TENSORIZED_SCHUR_PRIMITIVE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The proposed tensorized Schur/Dirichlet primitive is I_TS^(0)(f,a;j) = I_R(f;j) + 1/2 ||a - Theta_R^(0)(delta_A1(f))||^2, built around the exact scalar Schur action and a bounded two-channel tensor prototype.  _(class `B`)_
-- **chain closes:** False — The note defines a bounded candidate and explicitly avoids claiming an exact tensor carrier, but its exact scalar backbone, support scalar law, and bounded tensor prototype are imported without registered dependencies. There is also no runner for SPD/block-diagonal/action-centering or boundedness checks.
-- **rationale:** Issue: the primitive is built by combining several upstream exact/bounded ingredients that are not represented in the row's dependency list and are not checked by a primary runner. Why this blocks: the audit can see a plausible bounded definition, but cannot verify that the scalar Schur backbone, delta_A1 support law, or Theta_R^(0) prototype are valid current inputs for this row. Repair target: register the scalar Schur, route-2 background, support scalar, and tensor-prototype authorities, and add a runner for the candidate action's sanity conditions. Claim boundary until fixed: this is a bounded tensorized Schur/Dirichlet primitive proposal, not an audited tensor carrier or GR dynamics theorem.
-- **open / conditional deps cited:**
-  - `S3_GENERAL_R_DERIVATION_NOTE.md`
-  - `ANOMALY_FORCES_TIME_THEOREM.md`
-  - `OH_SCHUR_BOUNDARY_ACTION_NOTE.md`
-- **auditor confidence:** high
 
 ### `s3_time_theta_to_slice_coupling_note`
 
@@ -13486,19 +13436,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
 - **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
 - **auditor confidence:** high
 
-### `structured_mirror_reconciliation_note`
-
-- **Note:** [`STRUCTURED_MIRROR_RECONCILIATION_NOTE.md`](../../docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** The retained canonical linear structured-growth validator output is O(1e-1), so the structured-growth lane is not Born-clean under that canonical harness.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `fresh-agent-wigner`  (codex-fresh-agent; independence=fresh_context)
-- **load-bearing step:** The canonical validator reports Born |I3|/P values of 2.51e-01, 1.71e-01, and 1.71e-01, so the canonical structured-growth validator is not Born-clean.  _(class `C`)_
-- **chain closes:** True — The saved canonical validation log gives completed numerical outputs far above machine precision for all listed N. That closes the bounded negative claim without requiring a long run.
-- **rationale:** The bounded claim is conservative and directly supported by the cited saved validator output: the canonical structured-growth Born ratios are O(1e-1), not machine-clean. This audit does not certify any stronger structured-growth Born-clean result or the exact 2D mirror lane; it only certifies the canonical-harness negative result.
-- **auditor confidence:** medium
-
 ### `structureless_dag_gravity_harness_note`
 
 - **Note:** [`STRUCTURELESS_DAG_GRAVITY_HARNESS_NOTE.md`](../../docs/STRUCTURELESS_DAG_GRAVITY_HARNESS_NOTE.md)
@@ -14525,21 +14462,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the no-go rests on the unstated premise that the current invariant tensor atlas is exhausted by the listed SO(3)/SO(2), Pi_A1, weight-decomposition, and quotient-spectrum data, and the runner cannot reproduce the weight-decomposition dependency in the current checkout. Why this blocks: without that exhaustive selector theorem, a hostile reviewer can reject the universal no-canonical-section conclusion while accepting the multiplicity-two algebra. Repair target: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact. Claim boundary until fixed: conditional no-go for the displayed representation data only.
 - **auditor confidence:** high
 
-### `universal_gr_isotropic_glue_operator_note`
-
-- **Note:** [`UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`](../../docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The exact covariant quadratic glued operator is forced to be K_GR^iso(D) = M_D ⊗ Lambda_R with no remaining covariant quadratic freedom on the invariant background.  _(class `B`)_
-- **chain closes:** False — The note imports the supermetric normal form, slice generator, canonical block projectors, and Schur irreducibility, but it does not register those authorities or provide a runner/proof that the tensor product is uniquely forced and exhausts all covariant block freedoms.
-- **rationale:** Issue: the load-bearing no-remaining-covariant-freedom step is asserted rather than derived from registered inputs. Why this blocks: compatibility of M_D, Lambda_R, and canonical projectors does not by itself prove that K_GR^iso(D) = M_D ⊗ Lambda_R is the unique Einstein/Regge operator, especially on shift and shear sectors where normalization/sign and possible block couplings must be excluded. Repair target: register the exact inputs and add a theorem or runner constructing the allowed covariant quadratic operator space and proving only the stated tensor product remains. Claim boundary until fixed: this is support for the intended isotropic gluing route and candidate operator on the invariant background, not an audited closed Einstein/Regge glue-operator theorem.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
-- **auditor confidence:** high
-
 ### `universal_gr_lambda_bypass_note`
 
 - **Note:** [`UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md`](../../docs/UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md)
@@ -14566,21 +14488,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the load-bearing complement-frame ambiguity is asserted from an unregistered runner and unprovided upstream exact-stack inputs. Why this blocks: without the runner output or cited authorities, the audit cannot verify that the quotient kernel is held fixed while only the polarization frame changes. Repair target: register the frame-dependence runner and cite the exact scalar generator, 3+1 lift, and symmetric quotient-kernel authorities used as inputs. Claim boundary until fixed: the note may stand as an open route/obstruction inventory, not as an audited derivation of the polarization-bundle obstruction.
 - **auditor confidence:** high
 
-### `universal_gr_polarization_frame_bundle_blocker_note`
-
-- **Note:** [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`](../../docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded blocker note that the direct universal GR route is obstructed at curvature localization by the absence of a canonical covariant 3+1 polarization-frame/projector bundle splitting the symmetric Hessian kernel into lapse/shift/trace/shear channels before localization.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `fresh-universal-gr-frame-bundle-auditor`  (codex-fresh; independence=fresh_context)
-- **load-bearing step:** The exact-blocker conclusion depends on the asserted upstream exact stack plus a frame-comparison check showing localized curvature-channel coefficients move under valid 3+1 frame rotation, leaving only a frame orbit and no canonical Pi_curv splitting.  _(class `B`)_
-- **chain closes:** False — The source gives a coherent conditional blocker statement, but the chain does not close as retained-grade because the upstream exact stack is unregistered under deps=[] and the discovered candidate runner is not ledger-registered, reads an external absolute path, exits failing, and is absent from the generated runner classifier.
-- **rationale:** Issue: the claimed exact blocker relies on upstream stack pieces that are not registered as dependencies and on an unregistered candidate runner whose ROOT is hard-coded to /Users/jonreilly/Projects/Physics, whose output is PASS=10 FAIL=1, and whose claim/script pair has no generated runner-classifier entry. Why this blocks: a bounded theorem/blocker cannot be retained cleanly from deps=[] when the proof imports scalar generator, 3+1 lift, tensor candidate, quotient kernel, and frame-comparison evidence that are not ledger-closed for this claim; the stale absolute-path runner also fails the load-bearing curvature-localization obstruction check. Repair target: register the real runner for this claim, make it path-relative to the audit worktree, add the classifier entry, ensure it exits cleanly, and either register/ratify the upstream exact stack as dependencies or inline a self-contained proof of the blocker. Claim boundary until fixed: caveated diagnosis that the current stack has no canonical covariant 3+1 polarization-frame/projector bundle and no derived Pi_curv, not a clean retained bounded theorem or no-go obstruction.
-- **open / conditional deps cited:**
-  - `scripts/frontier_universal_gr_polarization_frame_bundle.py`
-- **auditor confidence:** high
-
 ### `universal_gr_positive_background_local_closure_note`
 
 - **Note:** [`UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md)
@@ -14594,21 +14501,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the local H_D sign correction is verified, but the load-bearing K_GR(D)=H_D tensor Lambda_R conclusion imports Lambda_R positive-definiteness from outside this note. Why this blocks: the runner checks H_D and the completion identity for the local dense operator, but it does not construct or verify the Lambda_R factor or an audit-clean tensor-product operator on the full claimed boundary-action family; the related isotropic-glue/slice surface is not clean here. Repair target: register and audit-clean the Lambda_R/slice-generator theorem, or extend the runner to build the full H_D tensor Lambda_R operator and verify the stationary-field completion there. Claim boundary until fixed: the corrected H_D negative-definite local calculation is strong support, but the universal GR boundary-action family remains conditional on the Lambda_R closure input.
 - **open / conditional deps cited:**
   - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_gr_supermetric_normal_form_note`
-
-- **Note:** [`UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md`](../../docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** On D = diag(a,b,b,b), the universal Hessian is B(h,k) = -Tr(D^-1 h D^-1 k), giving block weights -a^-2, -(ab)^-1, -b^-2, and -b^-2 with no cross-block leakage.  _(class `B`)_
-- **chain closes:** False — The formula is sign-consistent and properly scoped to local normal form, but this row does not register the upstream scalar generator, 3+1 lift, block-localization, or Schur-localization inputs, and it has no runner/proof artifact verifying the block weights.
-- **rationale:** Issue: the local supermetric normal form is asserted from an unregistered universal-route stack. Why this blocks: the note's formula is coherent, but an audit cannot verify from this row that the lifted invariant background, canonical projectors, and D^2W Hessian actually yield the stated no-leakage block weights. Repair target: register the upstream generator/lift/projector/localization authorities and add a runner or proof deriving B(h,k) and the four block coefficients on diag(a,b,b,b). Claim boundary until fixed: support for the local isotropic supermetric-normal-form route, with the final Einstein/Regge gluing correctly left open.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_tensor_action_blocker_note`

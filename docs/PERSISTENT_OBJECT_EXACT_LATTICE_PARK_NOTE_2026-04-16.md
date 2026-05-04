@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-16  
 **Status:** parked as a bounded beyond-pocket positive below closure
+**Primary runner:** [`scripts/persistent_object_compact_update_probe.py`](../scripts/persistent_object_compact_update_probe.py) (compact update obj_eff=3.59, broad obj_eff=4.86, pass=True)
 
 ## Why park here
 

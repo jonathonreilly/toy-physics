@@ -2,6 +2,7 @@
 
 **Status:** support - exact isotropic glue-operator step
 **Date:** 2026-04-14  
+**Primary runner:** [`scripts/frontier_universal_gr_isotropic_glue_operator.py`](../scripts/frontier_universal_gr_isotropic_glue_operator.py) (PASS=5/0)
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / exact gluing step
 

@@ -23269,7 +23269,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-04T12:37:28.930803+00:00",
+  "generated_at": "2026-05-04T13:49:25.412546+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -28417,6 +28417,17 @@
       "path": "docs/DIRECTIONAL_B_GEOMETRY_NORMALIZED_OVERLAP_SUBCRITICAL_N12_NOTE.md",
       "runner_path": "scripts/directional_b_geometry_normalized_overlap_map.py",
       "title": "Directional-B Geometry-Normalized Overlap Subcritical `N=12` Note"
+    },
+    "discrete_einstein_regge_lift_note": {
+      "claim_id": "discrete_einstein_regge_lift_note",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "f54acc6522c9bde706709c38500f62f2167ad35fdb2341c232191afe9aa1adde",
+      "path": "docs/DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md",
+      "runner_path": "scripts/frontier_discrete_einstein_regge_lift.py",
+      "title": "Discrete Einstein/Regge Lift on the Restricted Strong-Field Class"
     },
     "dispersion_high_p_tiebreaker_note": {
       "claim_id": "dispersion_high_p_tiebreaker_note",
@@ -39459,9 +39470,9 @@
         "persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16",
         "persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16"
       ],
-      "note_hash": "bbd539df2ccd1daa93bb34a9939e371f10a67e4fbfab7872e6e0486e7121ff74",
+      "note_hash": "8c38a1fbf89da8ea98a3e8895b626b09557ff2a4ddf2e89e569ea125937ec224",
       "path": "docs/PERSISTENT_OBJECT_EXACT_LATTICE_PARK_NOTE_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/persistent_object_compact_update_probe.py",
       "title": "Persistent Object Exact-Lattice Park Note"
     },
     "persistent_object_green_scout_note": {
@@ -44222,9 +44233,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "216afda747abab954d95dbfbf216dc51a37e43b94b63ee43b3f731779f09f07a",
+      "note_hash": "b550fa2dfc22404a18adb64dc9e14eb1aef99601d64b89ba98106e79e95fcaff",
       "path": "docs/S3_TIME_CONSTRUCTED_SUPPORT_TENSOR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_constructed_support_tensor_primitive.py",
       "title": "Constructed Route-2 Support Tensor Primitive: Response Jacobian of the Bounded Prototype"
     },
     "s3_time_primitive_chain_note": {
@@ -44248,9 +44259,9 @@
         "anomaly_forces_time_theorem",
         "oh_schur_boundary_action_note"
       ],
-      "note_hash": "abfab752b42535bc63f203b25dfd99c737815ad7a2ee913690126276424b83b0",
+      "note_hash": "21a28124149fa8cfc696b9621fd57546e8d1ba12cb980012b64891301692a3a8",
       "path": "docs/S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_spacetime_tensor_primitive.py",
       "title": "Route 2 Spacetime Tensor Primitive Candidate on `PL S^3 x R`"
     },
     "s3_time_tensor_build_memo": {
@@ -44270,9 +44281,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "fcc6017e5156f99bcea2d62a14c375c873052e18ec0ca03987567070cb52e9cc",
+      "note_hash": "f9499e9fa9ae0c029a97bb2003d3b80c7174fabed543c3df926fe2221fa903f9",
       "path": "docs/S3_TIME_TENSOR_PRIMITIVE_PROTOTYPE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_tensor_primitive_prototype.py",
       "title": "Route 2 Tensor Primitive Prototype on `A1 x {E_x, T1x}`"
     },
     "s3_time_tensorized_schur_primitive_note": {
@@ -44281,9 +44292,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "6f083d678265978299cd7e0639449711422a9f57a1bbdd21f41d1ffa481f6db1",
+      "note_hash": "73147d1111dcf37135283c20a21b57d74c33fc6c78329257da41cdf5e592dc6e",
       "path": "docs/S3_TIME_TENSORIZED_SCHUR_PRIMITIVE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_tensorized_schur_primitive.py",
       "title": "Route 2 Tensorized Schur/Dirichlet Primitive"
     },
     "s3_time_theta_to_slice_coupling_note": {
@@ -44307,9 +44318,9 @@
         "anomaly_forces_time_theorem",
         "oh_schur_boundary_action_note"
       ],
-      "note_hash": "f393985f2d7682ce6b418426f64f653d48ce2fdaff744a1e858ea2fe91a0925a",
+      "note_hash": "dbfa18ebcdf514ae0bc9d2ded2343fec047d456403cda03c8ff7b73048cb5f4d",
       "path": "docs/S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_time_transfer_matrix_bridge.py",
       "title": "`S^3` + Anomaly-Forced Time: Transfer-Matrix Bridge Candidate"
     },
     "same_family_3d_closure_note": {
@@ -46179,9 +46190,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "97494a1b6321b7fb8cfca9e7e92f1637691b7ff2768e3fbbbd36482e917b7552",
+      "note_hash": "4d43bb0f1b1762320f33cbdf5ea09c7cda290d253e1db65bce0875cef951fca9",
       "path": "docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_reconciliation.py",
       "title": "Structured Mirror Reconciliation Note"
     },
     "structureless_dag_gravity_harness_note": {
@@ -47515,9 +47526,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "c82a2886275748c4eb69dc28ebf5ce5a3d77f66e32cbe2c647ea790ec8205ed7",
+      "note_hash": "ef83f27a4635a6fafe892ce2a932fa9fc4b1cde22f47f071ba7fae0093e3fbc8",
       "path": "docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_isotropic_glue_operator.py",
       "title": "Universal GR Isotropic Glue Operator on `PL S^3 x R`"
     },
     "universal_gr_isotropic_schur_localization_note": {
@@ -47581,9 +47592,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "44ed83eaa94ee77bbe0e1b7a235b253190e3559ff4c49907d9617d3129648e58",
+      "note_hash": "6f21ea143851e35428dec289be869f3bd7f85fe05fa196df6ee27d182e94bfd1",
       "path": "docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_polarization_frame_bundle.py",
       "title": "Universal GR Polarization-Frame Bundle Blocker Note"
     },
     "universal_gr_positive_background_extension_note": {
@@ -47616,9 +47627,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "f91bf6570d524c0ae7d8cc0cb9f0f745fd48b74d26f5606e548743f2da33caa1",
+      "note_hash": "9dbfd4dc5c0e5874008ecd9a5f42ab49247f4c2d9f89c1662fce39a5f8e41535",
       "path": "docs/UNIVERSAL_GR_SUPERMETRIC_NORMAL_FORM_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_supermetric_normal_form.py",
       "title": "Universal GR Supermetric Normal Form on `PL S^3 x R`"
     },
     "universal_gr_tensor_action_blocker_note": {
@@ -50695,6 +50706,7 @@
     "dirac_v4_convergence_note",
     "dirac_weak_coupling_note",
     "directional_b_density_stencil_note",
+    "discrete_einstein_regge_lift_note",
     "dispersion_high_p_tiebreaker_note",
     "dispersion_relation_note",
     "distance_law_3d_64_closure_note_2026-04-11",
@@ -51561,7 +51573,7 @@
       "bounded_theorem": 57,
       "meta": 8,
       "no_go": 7,
-      "none": 1719,
+      "none": 1720,
       "open_gate": 7,
       "positive_theorem": 74
     },
@@ -51569,14 +51581,14 @@
       "bounded_theorem": 555,
       "meta": 8,
       "no_go": 112,
-      "none": 457,
+      "none": 458,
       "open_gate": 114,
       "positive_theorem": 626
     },
     "edge_count": 5817,
-    "leaf_count": 600,
-    "node_count": 1872,
-    "root_count": 1057,
-    "runners_with_path": 1502
+    "leaf_count": 601,
+    "node_count": 1873,
+    "root_count": 1058,
+    "runners_with_path": 1513
   }
 }

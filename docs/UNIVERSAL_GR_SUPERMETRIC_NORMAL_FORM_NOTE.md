@@ -2,6 +2,7 @@
 
 **Status:** support - exact supermetric normal form
 **Date:** 2026-04-14  
+**Primary runner:** [`scripts/frontier_universal_gr_supermetric_normal_form.py`](../scripts/frontier_universal_gr_supermetric_normal_form.py) (PASS=4/0)
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / post-localization theorem step
 

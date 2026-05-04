@@ -3,6 +3,7 @@
 **Status:** bounded - tensorized Schur/Dirichlet primitive candidate
 **Date:** 2026-04-14  
 **Purpose:** build the smallest tensorized Schur/Dirichlet boundary primitive
+**Primary runner:** [`scripts/frontier_s3_time_tensorized_schur_primitive.py`](../scripts/frontier_s3_time_tensorized_schur_primitive.py) (PASS=7/0, slow ~200s)
 compatible with the current exact scalar Schur backbone and the existing
 bounded two-channel tensor prototype
 

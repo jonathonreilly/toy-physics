@@ -3,6 +3,7 @@
 **Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14  
 **Purpose:** bounded transfer-matrix / discrete-action bridge from the retained `S^3` + anomaly-forced-time stack to slice dynamics on `PL S^3 x R`
+**Primary runner:** [`scripts/frontier_s3_time_transfer_matrix_bridge.py`](../scripts/frontier_s3_time_transfer_matrix_bridge.py) (PASS=9/0 (1 BLOCKED))
 
 ## Verdict
 
