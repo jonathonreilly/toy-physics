@@ -306,6 +306,33 @@ def render_prompt(row: dict, ledger_rows: dict[str, dict],
 
     runner_stdout = get_runner_stdout(runner_path, runner_timeout_sec, use_cache=use_cache)
 
+    # Read the runner source code so the auditor can inspect what the runner
+    # actually does, not just what it printed. Catches fake-pass runners
+    # (hard-coded PASS lines, trivial assertions) and lets the auditor
+    # validate class C/A/B/D against the actual code rather than trusting
+    # the static heuristic in classify_runner_passes.py.
+    runner_source = ""
+    if runner_path:
+        rp = REPO_ROOT / runner_path
+        if rp.exists():
+            try:
+                src = rp.read_text(encoding="utf-8", errors="replace")
+                MAX = 30_000
+                if len(src) > MAX:
+                    head = src[: MAX // 2]
+                    tail = src[-MAX // 2 :]
+                    runner_source = (
+                        f"{head}\n\n"
+                        f"... [truncated; runner is {len(src)} chars total] ...\n\n"
+                        f"{tail}"
+                    )
+                else:
+                    runner_source = src
+            except OSError as e:
+                runner_source = f"[could not read runner: {e}]"
+        else:
+            runner_source = f"[runner missing on disk: {runner_path}]"
+
     # Inline-substitute the {{...}} variables. We only replace the variables
     # actually appearing in the template; the FOREACH block uses cited_str.
     prompt = template
@@ -323,6 +350,30 @@ def render_prompt(row: dict, ledger_rows: dict[str, dict],
     )
     # Use a lambda so cited_str isn't interpreted as a re replacement template
     prompt = foreach_re.sub(lambda _m: cited_str, prompt)
+
+    # Inject the runner source code as a new "Section 3a" between current
+    # Section 3 (Runner output) and Section 4 (rubric). The canonical
+    # AUDIT_AGENT_PROMPT_TEMPLATE.md does not yet have a {{RUNNER_SOURCE}}
+    # variable — once it does, this block can be removed and the
+    # substitution moved to the .replace() chain above.
+    if runner_source:
+        runner_source_block = (
+            "\n\n### 3a. Runner source code\n\n"
+            f"Source of `{runner_path}` is included so you can verify the runner\n"
+            "actually computes what its stdout claims. A trivial runner that\n"
+            "prints PASS lines without computing anything should NOT pass as\n"
+            "class (C); the load-bearing-step class judgment must reflect the\n"
+            "code, not just the output.\n\n"
+            "```python\n"
+            f"{runner_source}\n"
+            "```\n"
+        )
+        sec4_match = re.search(r"\n### 4\. The audit rubric\b", prompt)
+        if sec4_match:
+            insert_at = sec4_match.start()
+            prompt = prompt[:insert_at] + runner_source_block + prompt[insert_at:]
+        else:
+            prompt += runner_source_block
 
     # Append a tightening footer so we get clean JSON back. We DELIBERATELY
     # do not suppress the COMPUTE_REQUIRED escape — the audit-lane policy
