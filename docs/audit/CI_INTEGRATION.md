@@ -2,8 +2,9 @@
 
 The audit lane has two integration surfaces: pre-commit (fast, mandatory)
 and CI (full, scheduled). Both call into `scripts/`; neither performs
-audits — those are done by Codex GPT-5.5 (or any independent auditor)
-via `AUDIT_AGENT_PROMPT_TEMPLATE.md`.
+audits — those are done by the current best full Codex GPT model at maximum
+reasoning (or any independent auditor) via
+`AUDIT_AGENT_PROMPT_TEMPLATE.md`.
 
 ## Pre-commit
 
@@ -103,31 +104,66 @@ jobs:
           path: docs/audit/data/audit_queue.json
 ```
 
-## Codex audit invocation (recommended pattern)
+## Codex audit invocation
 
-The pipeline does not invoke Codex itself. Recommended pattern: a
-separate workflow (manual trigger or scheduled) reads the top of
-`data/audit_queue.json`, constructs the prompt from
-`AUDIT_AGENT_PROMPT_TEMPLATE.md`, sends it to Codex, captures the JSON
-response, and pipes it through `apply_audit.py`. Steps:
+The audit pipeline does not invoke Codex itself; that is the auditor's
+loop. The implemented driver is
+[`scripts/codex_audit_runner.py`](../../scripts/codex_audit_runner.py),
+which uses Codex CLI in non-interactive mode (charged to the local
+ChatGPT subscription, no per-call API billing).
 
 ```bash
-# Pseudocode for the wrapper script (not yet implemented):
-top_n=10
-python3 docs/audit/scripts/build_audit_prompts.py --top "${top_n}" \
-    > /tmp/prompts.jsonl
+# Audit the top 5 ready-with-clean-deps rows from the queue; auto-propagate
+# downstream pipeline effects after each verdict applies:
+python3 scripts/codex_audit_runner.py --n 5
 
-while read -r prompt; do
-    response=$(call_codex_api "${prompt}")
-    echo "${response}" | python3 docs/audit/scripts/apply_audit.py
-done < /tmp/prompts.jsonl
+# Restrict to one criticality tier:
+python3 scripts/codex_audit_runner.py --n 10 --criticality critical
 
+# Skip running each row's primary runner (faster, but the auditor sees an
+# empty stdout block and may return chain_closes=false where it would
+# otherwise verify):
+python3 scripts/codex_audit_runner.py --n 20 --no-runner
+
+# Apply many verdicts in a batch without per-verdict propagation, then
+# refresh the pipeline once at the end:
+python3 scripts/codex_audit_runner.py --n 50 --no-propagate
 bash docs/audit/scripts/run_pipeline.sh
+
+# Dry-run: render prompts but do not call codex or apply_audit:
+python3 scripts/codex_audit_runner.py --n 5 --dry-run
 ```
 
-The Codex invocation itself depends on which transport you use; the
-audit lane is transport-agnostic — anything that returns the prompt
-template's JSON schema is acceptable.
+The runner enforces the audit lane's rules:
+
+- **Fresh-look metadata.** Every verdict it applies records the exact
+  selected `auditor_family`, for example `codex-gpt-5.6`; independence is set
+  per row: first-pass Claude/human-authored rows are `cross_family`, while
+  same-family second passes are `fresh_context`.
+- **Auto-updating model policy.** The runner selects the first full GPT model
+  with `xhigh` reasoning from Codex's local model cache, so a newer frontier
+  GPT is adopted automatically after Codex refreshes its cache. A stale
+  `CODEX_AUDIT_MODEL` value is reported and ignored when the cache exposes a
+  newer best model. If `CODEX_AUDIT_MODEL` names a newer GPT than the local
+  cache knows about, the runner uses it and records that exact family.
+  `CODEX_AUDIT_FORCE_MODEL` is the explicit break-glass override.
+- **Restricted inputs.** Each `codex exec` runs in an isolated empty
+  workdir under `/tmp/codex-audit-isolated/<run-id>/` with
+  `--skip-git-repo-check`, so Codex sees ONLY the prompt content (the
+  source note, its one-hop cited authorities, and the row's primary
+  runner stdout) and not the broader repo.
+- **Schema-validated.** Verdicts are JSON-parsed against the prompt
+  template's required fields (`verdict`, `claim_type`, `claim_scope`,
+  `load_bearing_step_class`, etc.) before being passed to
+  `apply_audit.py`. Malformed responses are logged and skipped.
+- **Auditable trail.** Every run writes a JSONL log to
+  `logs/codex-audit-runs/run-<utc>-<run-id>.jsonl` with per-row phase
+  (`applied`, `codex_failed`, `extract_failed`, `json_parse_failed`,
+  `validate_failed`, `apply_failed`).
+
+`apply_audit.py`'s built-in propagation slice runs after each successful
+write, so the pipeline stays consistent without a separate refresh step
+unless `--no-propagate` is used.
 
 ## Reading the artifacts
 

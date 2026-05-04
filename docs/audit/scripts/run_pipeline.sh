@@ -2,7 +2,8 @@
 # Run the full audit-lane pipeline end to end.
 #
 # This script is mechanical and deterministic. It does NOT perform any
-# audits — those are done by Codex GPT-5.5 (or any independent auditor)
+# audits — those are done by the current best Codex GPT model at maximum
+# reasoning (or any independent auditor)
 # using AUDIT_AGENT_PROMPT_TEMPLATE.md, with results applied via
 # scripts/apply_audit.py.
 #

@@ -1,7 +1,7 @@
 # Audit Agent Prompt Template
 
-**Status:** binding template for fresh-look audits run by Codex GPT-5.5 (or
-any independent auditor).
+**Status:** binding template for fresh-look audits run by the current best
+full Codex GPT model at maximum reasoning (or any independent auditor).
 
 The wrapping pipeline (`docs/audit/scripts/`) constructs the actual prompt
 by substituting variables marked `{{LIKE_THIS}}` below. The auditor sees
@@ -74,6 +74,41 @@ timeout, missing stdout, or compute-budget exhaustion, treat that prior result
 as requiring policy repair or fresh re-audit. Do not inherit the old terminal
 status as scientific evidence unless the current restricted packet also
 contains an independent substantive blocker.
+
+### 3a. Runner source code (if available)
+
+The runner's source code is included so you can verify the runner actually
+computes what its stdout claims. Stdout alone is not authoritative — a
+trivial runner that prints `PASS=10 FAIL=0` without computing anything must
+NOT pass as class `(C)` ("first-principles compute from the axiom"). The
+load-bearing-step class judgment in section 5 must reflect what the code
+does, not just what it prints.
+
+When the source is present, look for:
+
+- Hard-coded expected values (e.g., `assert result == 1.234567`) where the
+  note's load-bearing step claims a derivation — this should be class `(G)`
+  numerical-match or `(F)` renaming, not class `(C)`.
+- Imports of the contested premise as input (e.g., reading a fitted value
+  from another note and asserting equality) where the note claims first-
+  principles compute — this is class `(B)` cross-note input verification at
+  best.
+- Runners that produce no actual computation and just print constants —
+  these are class `(E)` definitions; the verdict is `audited_renaming`.
+- Class `(D)` external comparator checks (PDG / lattice QCD constants
+  embedded in the code) where the note claims framework-internal closure.
+
+Conversely, runner source that genuinely instantiates the framework's
+operators / lattice / Clifford algebra and computes a number not present
+in any input is consistent with class `(C)`.
+
+```python
+{{RUNNER_SOURCE}}
+```
+
+If the source is unavailable (`[runner missing on disk]` or similar),
+fall back to judging the load-bearing step from the note text alone, and
+include that limitation in `verdict_rationale`.
 
 ### 4. The audit rubric
 
@@ -181,9 +216,9 @@ caught downstream.
 
 ## Pipeline notes (not shown to the auditor)
 
-- The wrapping script substitutes the variables, sends the prompt to
-  Codex GPT-5.5 in a fresh session, captures the JSON response, and
-  validates it against the schema.
+- The wrapping script substitutes the variables, sends the prompt to the
+  current best full Codex GPT model in a fresh session, captures the JSON
+  response, and validates it against the schema.
 - If JSON parsing fails or required fields are missing, the response is
   logged as `audit_status = audit_in_progress` with `blocker:
   malformed_audit_response` and the audit is re-queued.
@@ -199,5 +234,6 @@ caught downstream.
   records whether the first audit, second audit, or neither should be
   ratified.
 - The auditor's session metadata (model version, session ID, timestamp)
-  is recorded in the audit row's `auditor` field; `auditor_family =
-  "codex-gpt-5.5"` is set automatically when this template is used.
+  is recorded in the audit row's `auditor` field; the exact
+  `auditor_family`, for example `codex-gpt-5.6`, is set automatically when
+  this template is used.

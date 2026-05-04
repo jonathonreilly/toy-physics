@@ -16,8 +16,9 @@ For each claim, the audit ledger records:
   (extracted from git blame on the note's load-bearing section, or from the
   note's own `Date` / `Branch` metadata when blame is ambiguous).
 - `auditor` — the agent / human / session that performed the audit.
-- `auditor_family` — the model family of the auditor (e.g., `codex-gpt-5.5`,
-  `claude-opus-4.x`, `human`). Used to enforce cross-family independence.
+- `auditor_family` — the model family of the auditor (e.g.,
+  `codex-gpt-5.5`, `codex-gpt-5.6`, `claude-opus-4.x`, `human`). Used to
+  enforce cross-family independence.
 
 `auditor` must not equal `author`. Strength tiers:
 
@@ -41,15 +42,26 @@ For each claim, the audit ledger records:
 
 The bulk of existing notes were produced by Claude via the autopilot
 lane (see `docs/ai_methodology/`). To satisfy `independence: cross_family`
-by construction, the audit lane uses **Codex GPT-5.5** as the designated
-independent auditor. Codex is a different model family from Claude, runs
-in a separate session with no autopilot context, and is invoked via the
-prompt template in `AUDIT_AGENT_PROMPT_TEMPLATE.md`.
+by construction, the audit lane uses the **best available full Codex GPT
+model at maximum reasoning** as the designated independent auditor. Codex is
+a different model family from Claude, runs in a separate session with no
+autopilot context, and is invoked via the prompt template in
+`AUDIT_AGENT_PROMPT_TEMPLATE.md`.
+
+`scripts/codex_audit_runner.py` auto-selects the first full GPT model with
+`xhigh` reasoning from Codex's local model cache. When Codex refreshes that
+cache with a newer frontier GPT, the runner adopts it automatically and
+records the exact selected family, for example `codex-gpt-5.6`, in the audit
+row. A stale `CODEX_AUDIT_MODEL` environment value is reported and ignored
+when the cache exposes a newer best model. If `CODEX_AUDIT_MODEL` names a
+newer GPT than the local cache knows about, the runner uses it and records
+that exact family. `CODEX_AUDIT_FORCE_MODEL` is a break-glass override and
+must be treated as an explicit policy exception.
 
 This does not preclude human auditors or other independent agents — those
 strengthen the audit when available and are recorded with their own
-`auditor_family` value. It establishes Codex GPT-5.5 as the baseline
-independent auditor that the mechanical pipeline routes work to.
+`auditor_family` value. It establishes the current best Codex GPT model as
+the baseline independent auditor that the mechanical pipeline routes work to.
 
 A claim audited only by Claude (any session, any version) records
 `independence: weak` and is not eligible to land `effective_status =
@@ -182,11 +194,11 @@ the same model context that generated the renaming has a measurable bias
 toward confirming it.
 
 In practice this means: a Claude-produced note (the dominant case in this
-repo) can be audited by Codex GPT-5.5 (or a human, or any non-Claude
-agent) to satisfy the standard cross-family rule. A Codex-produced note
-requires a distinct clean-room Codex session at `fresh_context` or a
-different-family/human auditor. A human-produced note requires any
-independent agent or another human.
+repo) can be audited by the current best Codex GPT model (or a human, or any
+non-Claude agent) to satisfy the standard cross-family rule. A Codex-produced
+note requires a distinct clean-room Codex session at `fresh_context` or a
+different-family/human auditor. A human-produced note requires any independent
+agent or another human.
 
 ## 6. Audit re-runs
 

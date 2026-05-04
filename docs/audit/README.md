@@ -113,11 +113,12 @@ disagreement.
    audit verdicts are not retained-grade dependencies.
 
 3. **No self-audit.** The auditor of a claim must not share identity with
-   the claim's author. Codex GPT-5.5 is the designated independent auditor
-   for this repo (see `FRESH_LOOK_REQUIREMENTS.md`); using a different
-   model family from the one that produced most existing notes satisfies
-   the cross-family condition, while same-family confirmation must be
-   recorded as `fresh_context` from a distinct restricted-input session.
+   the claim's author. The best available full Codex GPT model at maximum
+   reasoning is the designated independent auditor for this repo (see
+   `FRESH_LOOK_REQUIREMENTS.md`); using a different model family from the one
+   that produced most existing notes satisfies the cross-family condition,
+   while same-family confirmation must be recorded as `fresh_context` from a
+   distinct restricted-input session.
 
 4. **Decoration must be boxed.** Claims tagged `audited_decoration` cannot
    appear as separate retained rows in the publication-facing tables; they

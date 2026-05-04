@@ -23,7 +23,8 @@ and per-claim aggregations.
 
 Limits: this is static analysis, not execution. The output is suggestive,
 not authoritative. The real classification is set by the audit agent
-(Codex GPT-5.5) using the prompt template, with this file as a hint.
+(the current best Codex GPT model at maximum reasoning) using the prompt
+template, with this file as a hint.
 """
 from __future__ import annotations
 

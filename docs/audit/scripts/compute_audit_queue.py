@@ -2,7 +2,8 @@
 """Produce the next-up audit queue.
 
 Reads the ledger and writes a sorted list of claims awaiting audit. The
-queue is the input that an auditor (Codex GPT-5.5 by default) pulls from.
+queue is the input that an auditor (the current best Codex GPT model at
+maximum reasoning by default) pulls from.
 
 Sorting key (descending priority):
   1. criticality (critical -> high -> medium -> leaf)
@@ -143,7 +144,8 @@ def main() -> int:
         md_lines.append(f"- `{c}`: {queue['by_criticality'][c]}")
     md_lines.append("")
     md_lines.append(
-        "Auditor (Codex GPT-5.5 by default) should pull from the top of "
+        "Auditor (current best Codex GPT model at maximum reasoning by "
+        "default) should pull from the top of "
         "this list. Critical claims require cross-confirmation by a "
         "second independent clean-room auditor before `audited_clean` lands."
     )

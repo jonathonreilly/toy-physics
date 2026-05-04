@@ -17,7 +17,8 @@ name: audit-lane
 # never drifts more than 24 hours and never merges drift through a PR.
 #
 # This workflow does NOT perform audits. Audit verdicts are minted only by
-# Codex GPT-5.5 (or another independent auditor) via apply_audit.py.
+# Current best Codex GPT model at maximum reasoning (or another independent
+# auditor) via apply_audit.py.
 
 on:
   pull_request:
