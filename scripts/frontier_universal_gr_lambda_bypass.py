@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Sequence
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 OBSERVABLE = DOCS / "OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md"

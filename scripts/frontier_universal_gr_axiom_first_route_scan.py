@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 SURVEY = ROOT / "docs" / "FULL_GR_AXIOM_FIRST_PATHS_NOTE.md"
 OUTPUT = ROOT / "docs" / "UNIVERSAL_GR_AXIOM_FIRST_ROUTE_MEMO.md"
 

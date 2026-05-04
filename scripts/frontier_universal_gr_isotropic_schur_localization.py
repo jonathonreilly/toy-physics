@@ -24,7 +24,7 @@ from typing import Sequence
 import numpy as np
 
 
-ROOT = Path("/Users/jonreilly/Projects/Physics")
+ROOT = Path(__file__).resolve().parents[1]
 U = SourceFileLoader(
     "universal_conn",
     str(ROOT / "scripts" / "frontier_universal_gr_canonical_projector_connection.py"),
