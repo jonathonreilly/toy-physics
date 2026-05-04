@@ -44,7 +44,9 @@ current_result: >
   repo-wide W/Z harness audit, neutral-scalar dynamical rank-one attempt,
   source-overlap route selector, K-prime/scalar-denominator status, retained
   route certificate, and campaign status certificate.  They remain PASSing
-  as blockers/support boundaries, not closure.
+  as blockers/support boundaries, not closure.  Chunks029/030 were launched
+  on 2026-05-04 with fixed seeds 2026051029/2026051030 and isolated output
+  directories, with a monitor loop prepared to run their gates on completion.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
@@ -54,3 +56,5 @@ next_exact_action: >
   add a real new same-surface row/theorem: certified O_H/C_sH/C_HH pole
   residues, genuine same-source W/Z response rows, Schur A/B/C kernel rows,
   or a direct proof of the missing neutral-sector irreducibility premise.
+  Also monitor the newly launched chunks029/030 and postprocess them when
+  their output files land.

@@ -101,3 +101,41 @@ contract, but no same-surface Schur A/B/C rows exist.
 Live production sessions remain the immediate actionable path.  When
 chunks027/028 or the finite-source calibration output land, rerun their gates
 and then the aggregate retained/campaign certificates before updating the PR.
+
+## 2026-05-04 Chunk029-030 Launch
+
+With 10 CPU cores available, load near 4, and no duplicate chunk029/030
+outputs present, I launched the next seed-controlled L12 pair:
+
+```bash
+python3 scripts/yt_direct_lattice_correlator_production.py \
+  --volumes 12x24 --masses 0.45,0.75,1.05 \
+  --therm 1000 --measurements 16 --separation 20 \
+  --engine numba --production-targets \
+  --scalar-source-shifts=-0.01,0.0,0.01 \
+  --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' \
+  --scalar-two-point-noises 16 \
+  --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk029 \
+  --seed 2026051029 \
+  --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk029_2026-05-01.json
+
+python3 scripts/yt_direct_lattice_correlator_production.py \
+  --volumes 12x24 --masses 0.45,0.75,1.05 \
+  --therm 1000 --measurements 16 --separation 20 \
+  --engine numba --production-targets \
+  --scalar-source-shifts=-0.01,0.0,0.01 \
+  --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' \
+  --scalar-two-point-noises 16 \
+  --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk030 \
+  --seed 2026051030 \
+  --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk030_2026-05-01.json
+```
+
+Runtime PIDs at launch: chunk029 `81569`, chunk030 `81570`.  Monitor session
+`45782` watches both outputs and will run the chunk target-timeseries,
+multi-tau, combiner, ESS/autocorrelation, response-window, retained-route, and
+campaign-status gates when both files land.
+
+Claim boundary: these are production-support chunks only.  They do not
+authorize retained/proposed-retained closure without the downstream scalar
+LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
