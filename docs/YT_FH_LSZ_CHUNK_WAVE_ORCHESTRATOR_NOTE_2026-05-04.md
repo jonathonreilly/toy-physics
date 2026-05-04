@@ -24,6 +24,11 @@ outputs, launches missing chunks only when the global active-job count is below
 the cap, and can rerun the existing per-chunk and aggregate gates when outputs
 land.
 
+The aggregate gate list now includes the v2 target-response stability gate:
+`scripts/frontier_yt_fh_lsz_v2_target_response_stability.py`.  This keeps
+future chunk-wave status refreshes aligned with the current PR230 response-
+window evidence surface.
+
 ## Current Campaign State
 
 At launch, chunks029-034 were already running under their existing monitors.
@@ -54,3 +59,8 @@ slots open, the orchestrator will launch chunks035-040 and record status in
 its certificate. Retained closure remains blocked on a same-surface
 canonical-Higgs/source-overlap certificate, W/Z response identity, scalar-pole
 identity theorem, or complete production evidence passing the existing gates.
+
+Later live use advanced the active range to chunks041-046 after chunks035-040
+were packaged.  The orchestrator remains run-control only; completed chunks
+still require their local certificates and aggregate retained/campaign gates
+before they count as bounded production support.

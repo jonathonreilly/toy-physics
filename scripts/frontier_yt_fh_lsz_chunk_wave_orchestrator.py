@@ -45,6 +45,7 @@ GATE_COMMANDS = [
     ["python3", "scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_response_window_forensics.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py"],
+    ["python3", "scripts/frontier_yt_fh_lsz_v2_target_response_stability.py"],
     ["python3", "scripts/frontier_yt_retained_closure_route_certificate.py"],
     ["python3", "scripts/frontier_yt_pr230_campaign_status_certificate.py"],
 ]
