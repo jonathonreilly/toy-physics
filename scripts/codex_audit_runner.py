@@ -43,6 +43,12 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Shared SHA-pinned runner cache. The audit prompt's Section 3 (runner
+# stdout) is sourced from logs/runner-cache/<stem>.txt; cache freshness
+# is keyed on the runner's content SHA-256.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import runner_cache as rc
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 AUDIT_DIR = REPO_ROOT / "docs" / "audit"
 LEDGER_PATH = AUDIT_DIR / "data" / "audit_ledger.json"
@@ -327,52 +333,24 @@ def runner_timeout_for(runner_path: str, default_sec: int) -> int:
 
 
 def find_cached_runner_output(runner_path: str) -> str | None:
-    """Look for a recent log file from this runner. Returns its tail content
-    if found, else None. Most runners in this repo emit logs/<name>-*.txt.
-
-    The match requires the runner stem to be followed by '-', '.', or end
-    of name, so a runner stem `frontier_alpha_s` does NOT incorrectly pick
-    up logs for `frontier_alpha_s_extension`.
+    """Return cached runner stdout via the SHA-pinned cache layout
+    (`logs/runner-cache/<stem>.txt`). Returns None if no cache exists or
+    if the cache header's `runner_sha256` does not match the runner's
+    current SHA — a stale cache is treated as if absent. Refresh via
+    `python3 scripts/precompute_audit_runners.py`.
     """
     if not runner_path:
         return None
-    bn = Path(runner_path).stem  # strip .py
-    logs_dir = REPO_ROOT / "logs"
-    if not logs_dir.is_dir():
-        return None
-    # Match `<bn>-...`, `<bn>.txt`, or exactly `<bn>` (no false hits on
-    # `<bn>_extension` etc.).
-    candidates = []
-    try:
-        for p in logs_dir.iterdir():
-            if not p.is_file():
-                continue
-            name = p.name
-            if name == bn:
-                candidates.append(p)
-                continue
-            if name.startswith(bn + "-") or name.startswith(bn + "."):
-                candidates.append(p)
-    except OSError:
-        return None
-    if not candidates:
-        return None
-    # Most recent by mtime
-    latest = max(candidates, key=lambda p: p.stat().st_mtime)
-    age_sec = time.time() - latest.stat().st_mtime
-    try:
-        body = latest.read_text(encoding="utf-8", errors="replace")
-    except OSError:
-        return None
-    header = f"[cached runner output from {latest.name} (age {int(age_sec)}s)]\n"
-    return header + body[-6000:]
+    return rc.cache_excerpt_for_audit(runner_path)
 
 
 def get_runner_stdout(runner_path: str | None, default_timeout_sec: int,
                       use_cache: bool = True) -> str:
-    """Get runner output. Tries logs/<name>* cache first if use_cache=True;
-    falls back to running the runner with a per-runner timeout (override
-    map for known-heavy lanes; --runner-timeout-sec for everything else).
+    """Get runner output. Tries the SHA-pinned cache first if
+    use_cache=True; falls back to running the runner live (slow but
+    correct) with a per-runner timeout. The audit lane's pre-commit and
+    CI gates ensure caches stay fresh in normal operation; live fallback
+    only runs when the cache is missing for some reason.
     """
     if not runner_path:
         return ""

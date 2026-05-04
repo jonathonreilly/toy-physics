@@ -65,6 +65,22 @@ jobs:
             pip install -r requirements.txt
           fi
 
+      - name: Check runner cache freshness (PR only)
+        if: github.event_name == 'pull_request'
+        run: |
+          # Every runner under scripts/ must have a SHA-pinned cache at
+          # logs/runner-cache/<stem>.txt whose header sha matches the
+          # current runner. The audit lane consumes this cache; stale
+          # caches mean the auditor sees outdated evidence.
+          if ! python3 scripts/precompute_audit_runners.py --all --check-only; then
+            echo
+            echo "::error::Runner cache is stale for one or more runners."
+            echo "::error::Refresh locally with:"
+            echo "::error::  python3 scripts/precompute_audit_runners.py"
+            echo "::error::then commit logs/runner-cache/."
+            exit 1
+          fi
+
       - name: Run audit pipeline
         run: bash docs/audit/scripts/run_pipeline.sh
 
