@@ -2,13 +2,13 @@
   "actual_current_surface_status": "bounded-support / FH-LSZ common-window replacement response-stability passed",
   "bare_retained_allowed": false,
   "common_window_summary": {
-    "bootstrap_relative_half_width_68": 0.0007853851002698261,
+    "bootstrap_relative_half_width_68": 0.0007815124825239534,
     "common_window": {
       "tau_max": 12,
       "tau_min": 10
     },
-    "mean": 1.4256769178257236,
-    "relative_standard_error": 0.0008115884077021353
+    "mean": 1.4253595290811862,
+    "relative_standard_error": 0.0007994515596765027
   },
   "criteria": {
     "autocorrelation_ess_passed": true,
@@ -37,7 +37,7 @@
   "proposal_allowed": false,
   "proposal_allowed_reason": "Replacement response stability is support only; scalar LSZ and canonical-Higgs/source-overlap remain open.",
   "readout_switch_authorized": false,
-  "ready_chunk_count": 46,
+  "ready_chunk_count": 48,
   "ready_chunk_indices": [
     1,
     2,
@@ -84,7 +84,9 @@
     43,
     44,
     45,
-    46
+    46,
+    47,
+    48
   ],
   "replacement_response_stability_passed": true,
   "strict_non_claims": [

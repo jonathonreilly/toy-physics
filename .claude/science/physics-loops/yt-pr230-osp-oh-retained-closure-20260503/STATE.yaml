@@ -544,10 +544,17 @@ current_result: >
   detects the absent x8/x16 outputs and reports zero launch slots while the six
   current production chunks are still running, so the next calibration wave can
   start later without overcommitting the machine or mixing streams.
+  Chunks047 and 048 then landed and were packaged as bounded production
+  support.  The ready L12 set is now 48/63 chunks, 768/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  678.1515635297619, v2 target stability remains passed for chunks017-048,
+  response-window acceptance remains open, and retained/campaign aggregate
+  certificates still deny proposal authority with PASS=155 and PASS=181
+  respectively.  Chunks049-052 continue running under the wave orchestrator.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Monitor chunks047, 048, 049, 050, 051, and 052.  When outputs land, rerun
+  Monitor chunks049, 050, 051, and 052.  When outputs land, rerun
   their chunk gates plus aggregate retained and campaign certificates.  In
   parallel, attack scalar-LSZ pole/FV/IR/model-class control or
   canonical-Higgs/source-overlap closure.  The response-side common-window path

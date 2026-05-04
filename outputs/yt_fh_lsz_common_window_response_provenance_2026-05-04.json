@@ -1886,6 +1886,88 @@
       "original_windows_mixed": false,
       "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk046_2026-05-01.json",
       "seed": 2026051046
+    },
+    {
+      "chunk_index": 47,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.2267940726276363,
+          "energy_lat": 1.8320958422673357,
+          "energy_lat_err": 0.2979078005445202,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.16571827306378606,
+          "energy_lat": 1.8462777784161517,
+          "energy_lat_err": 0.3470897344072749,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.12131852918130254,
+          "energy_lat": 1.8603490173600221,
+          "energy_lat_err": 0.4039572402299192,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.4132201666231028,
+      "common_window_slope_dE_ds_lat_err": 24.717437283512464,
+      "original_fit_window_signature_tau_min": [
+        10,
+        10,
+        10
+      ],
+      "original_slope_dE_ds_lat": 1.4132201666231028,
+      "original_slope_dE_ds_lat_err": 24.717437283512464,
+      "original_windows_mixed": false,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk047_2026-05-01.json",
+      "seed": 2026051047
+    },
+    {
+      "chunk_index": 48,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.22679751472578585,
+          "energy_lat": 1.8349708584901236,
+          "energy_lat_err": 0.2920180350208009,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.16548340688465688,
+          "energy_lat": 1.8492503132474667,
+          "energy_lat_err": 0.3401865365758855,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.12097619627618189,
+          "energy_lat": 1.8634174554363199,
+          "energy_lat_err": 0.39587683000368284,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.4228990092905442,
+      "common_window_slope_dE_ds_lat_err": 24.225602434057432,
+      "original_fit_window_signature_tau_min": [
+        10,
+        10,
+        10
+      ],
+      "original_slope_dE_ds_lat": 1.4228990092905442,
+      "original_slope_dE_ds_lat_err": 24.225602434057432,
+      "original_windows_mixed": false,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk048_2026-05-01.json",
+      "seed": 2026051048
     }
   ],
   "common_window": {
@@ -1893,20 +1975,20 @@
     "tau_min": 10
   },
   "common_window_production_grade": false,
-  "common_window_relative_fit_error": 17.212298342178425,
+  "common_window_relative_fit_error": 17.214153288322148,
   "common_window_slope_summary": {
     "available": true,
     "max": 1.4461110127928816,
-    "mean": 1.4256769178257236,
-    "median": 1.4250809955622445,
+    "mean": 1.4253595290811862,
+    "median": 1.4241802591155581,
     "min": 1.4125650847943865,
-    "n": 46,
-    "relative_stdev": 0.005504460391515086,
+    "n": 48,
+    "relative_stdev": 0.005538762878199539,
     "spread_ratio": 1.0237482352916702,
-    "stdev": 0.007847582125269004
+    "stdev": 0.007894728447762851
   },
   "common_window_stability_passed": true,
-  "common_window_typical_fit_error": 24.53917644917375,
+  "common_window_typical_fit_error": 24.536357424574213,
   "exact_next_action": "Promote this into a predeclared common-window response gate or postprocessor, then require finite-source-linearity, scalar-pole model/FV/IR control, and canonical-Higgs identity before any physical y_t readout.",
   "fail_count": 0,
   "high_original_all_mixed_window": true,
@@ -1937,13 +2019,13 @@
   "original_slope_summary": {
     "available": true,
     "max": 7.3549193842802785,
-    "mean": 2.350646803066767,
-    "median": 1.4267039550831824,
+    "mean": 2.311789002437186,
+    "median": 1.4262445135616875,
     "min": 1.2392686775356556,
-    "n": 46,
-    "relative_stdev": 0.9039685737574564,
+    "n": 48,
+    "relative_stdev": 0.9030756407779459,
     "spread_ratio": 5.934886855129659,
-    "stdev": 2.12491083797579
+    "stdev": 2.08772033471937
   },
   "pass_count": 11,
   "proposal_allowed": false,
@@ -1995,7 +2077,9 @@
     43,
     44,
     45,
-    46
+    46,
+    47,
+    48
   ],
   "signature_summary": {
     "1/1/1": {
@@ -2058,10 +2142,12 @@
         39,
         43,
         44,
-        46
+        46,
+        47,
+        48
       ],
-      "n": 30,
-      "original_slope_mean": 1.4265637174293526
+      "n": 32,
+      "original_slope_mean": 1.4260322093373194
     },
     "10/10/2": {
       "chunk_indices": [

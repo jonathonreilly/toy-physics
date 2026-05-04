@@ -123,4 +123,9 @@ Open imports:
   certificate surface; the paired production outputs are absent, so x8 remains
   unaccepted and any future eight-mode pole-fit launch remains support only
   until the calibration gate passes;
+- FH/LSZ chunks047/048 are now packaged with the ready set as bounded
+  production support only; the 48/63 ready L12 state passes target-observable
+  ESS with limiting ESS `678.1515635297619` but still fails response-window
+  acceptance and does not provide scalar-LSZ or canonical-Higgs/source-overlap
+  closure;
 - independent audit after any proposed positive certificate.
