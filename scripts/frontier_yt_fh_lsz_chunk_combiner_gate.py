@@ -6,7 +6,7 @@ This runner turns the L12 chunked launch manifest into an auditable acceptance
 boundary.  It does not launch production and does not treat absent or partial
 chunks as evidence.  If chunks exist, it audits that each output has production
 phase metadata, same-source FH/LSZ observables, and run-control provenance
-before it even constructs a combined L12 summary.  L12 combination still cannot
+before it constructs a combined L12 summary.  L12 combination still cannot
 authorize retained closure by itself because L16/L24, isolated scalar pole
 derivative, and FV/IR/zero-mode control remain open.
 """
@@ -362,6 +362,8 @@ def combine_if_ready(audits: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "available": True,
         "combined_output_target": str(COMBINED_OUTPUT.relative_to(ROOT)),
+        "chunk_count": len(audits),
+        "saved_configurations": len(audits) * EXPECTED_CHUNK_MEASUREMENTS,
         "source_response": weighted_mean(source_values),
         "mode_rows": mode_rows,
         "finite_difference_residue_proxy": {
@@ -372,6 +374,41 @@ def combine_if_ready(audits: list[dict[str, Any]]) -> dict[str, Any]:
             "strict_limit": "finite L12 proxy is not kappa_s without isolated pole, FV/IR/zero-mode control, L16/L24, and retained-proposal gate",
         },
     }
+
+
+def write_combined_output(combined_summary: dict[str, Any], audits: list[dict[str, Any]]) -> None:
+    if not combined_summary.get("available"):
+        return
+    payload = {
+        "metadata": {
+            "phase": "combined_l12_chunk_summary",
+            "source": "frontier_yt_fh_lsz_chunk_combiner_gate.py",
+            "manifest": str(MANIFEST.relative_to(ROOT)),
+            "chunk_count": combined_summary.get("chunk_count"),
+            "saved_configurations": combined_summary.get("saved_configurations"),
+            "strict_limit": (
+                "Combined L12 rows are same-source FH/LSZ support only.  They "
+                "do not supply L16/L24 scaling, an isolated scalar pole "
+                "derivative, FV/IR/zero-mode control, canonical-Higgs/source "
+                "overlap, or retained-proposal authority."
+            ),
+        },
+        "chunk_indices": [int(row["chunk_index"]) for row in audits],
+        "source_response_summary": combined_summary.get("source_response", {}),
+        "combined_lsz_summary": {
+            "mode_rows": combined_summary.get("mode_rows", {}),
+            "finite_difference_residue_proxy": combined_summary.get(
+                "finite_difference_residue_proxy", {}
+            ),
+        },
+        "strict_non_claims": [
+            "not retained or proposed_retained y_t closure",
+            "does not set kappa_s, c2, or Z_match to one",
+            "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+            "does not treat L12-only finite-shell rows as an isolated scalar pole derivative",
+        ],
+    }
+    COMBINED_OUTPUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
 def main() -> int:
@@ -391,6 +428,7 @@ def main() -> int:
     output_dirs = [row["production_output_dir"] for row in chunks]
     chunk_dirs_isolated = len(output_dirs) == len(set(output_dirs)) == len(chunks)
     combined_summary = combine_if_ready(audits)
+    write_combined_output(combined_summary, audits)
     present_seed_control_ready = all(
         not any("seed" in issue.lower() for issue in row.get("issues", []))
         for row in present
@@ -415,7 +453,11 @@ def main() -> int:
         seed_gate_enforced,
         f"present={len(present)} ready_after_seed_gate={len(ready)}",
     )
-    report("current-chunk-set-incomplete", not all_ready, f"present={len(present)} ready={len(ready)} expected={len(chunks)}")
+    report(
+        "chunk-set-completeness-state-recorded",
+        True,
+        f"present={len(present)} ready={len(ready)} expected={len(chunks)} complete={all_ready}",
+    )
     report(
         "chunk-readiness-consistent-with-combiner",
         all_ready == bool(combined_summary.get("available")),
@@ -424,13 +466,29 @@ def main() -> int:
     report("no-forbidden-physical-readout-in-present-chunks", all(not row.get("issues") or "used_as_physical_yukawa_readout" not in " ".join(row.get("issues", [])) for row in present), f"present={len(present)}")
     report("l12-alone-not-retained-closure", True, "L16/L24 and pole derivative/FV/IR gates remain required")
 
-    chunk_sentence = (
-        "No current chunk outputs are ready."
-        if not ready
-        else f"{len(ready)} of {len(chunks)} L12 chunk outputs are ready; the set is still partial."
+    if not ready:
+        chunk_sentence = "No current chunk outputs are ready."
+    elif all_ready:
+        chunk_sentence = (
+            f"All {len(ready)} of {len(chunks)} L12 chunk outputs are ready; "
+            "a combined L12 support summary has been constructed."
+        )
+    else:
+        chunk_sentence = (
+            f"{len(ready)} of {len(chunks)} L12 chunk outputs are ready; the set is still partial."
+        )
+    actual_status = (
+        "bounded-support / FH-LSZ complete L12 chunk summary constructed"
+        if all_ready
+        else "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence"
+    )
+    proposal_reason = (
+        "The L12 chunk set is complete, but L12 alone is not closure and does not supply L16/L24 scaling, an isolated scalar pole derivative, FV/IR control, or canonical-Higgs/source-overlap authority."
+        if all_ready
+        else "The combiner is an acceptance boundary; the current chunk set is partial/non-independent and supplies no combined L12 output or scalar pole derivative."
     )
     result = {
-        "actual_current_surface_status": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
+        "actual_current_surface_status": actual_status,
         "verdict": (
             "The L12 chunked FH/LSZ path now has an auditable combiner gate. "
             f"{chunk_sentence}  Chunks must expose "
@@ -444,7 +502,7 @@ def main() -> int:
             "control, and the retained-proposal certificate remain open."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "The combiner is an acceptance boundary; the current chunk set is partial/non-independent and supplies no combined L12 output or scalar pole derivative.",
+        "proposal_allowed_reason": proposal_reason,
         "manifest": str(MANIFEST.relative_to(ROOT)),
         "combined_output_target": str(COMBINED_OUTPUT.relative_to(ROOT)),
         "chunk_summary": {

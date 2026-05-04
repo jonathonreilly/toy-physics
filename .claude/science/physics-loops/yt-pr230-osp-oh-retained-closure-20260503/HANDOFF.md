@@ -1397,3 +1397,37 @@ relative standard error `0.0007088133052504581`, but response-window
 acceptance is still not passed and the physical readout remains blocked by
 scalar-LSZ pole/FV/IR/model-class control plus canonical-Higgs/source-overlap
 closure.  Chunks061-063 remain live under the final wave monitor.
+
+## 2026-05-04 Combiner Complete-State Fix
+
+The L12 combiner was hardened before chunks061-063 completed.  The prior gate
+had a check named `current-chunk-set-incomplete` that would have failed once
+the run reached 63/63, even though 63/63 is the desired state.  The runner now
+records chunk-set completeness as state and passes for either partial audited
+support or complete audited support.
+
+It also writes the combined L12 support file when all chunks are ready:
+
+```text
+outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json
+```
+
+Verification at the current 60/63 state:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# pass
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=155 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=181 FAIL=0
+```
+
+This is engineering support only.  The combined L12 file, once written, is an
+input to the scalar-pole postprocessor and does not by itself provide L16/L24,
+FV/IR/model-class, canonical-Higgs/source-overlap, or physical `y_t` closure.

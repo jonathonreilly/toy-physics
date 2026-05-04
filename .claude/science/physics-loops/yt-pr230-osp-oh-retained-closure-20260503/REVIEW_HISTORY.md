@@ -578,3 +578,20 @@ Findings:
 - No retained/proposed-retained claim is authorized because scalar LSZ,
   canonical-Higgs/source-overlap, W/Z response, Schur-row, FV/IR/model-class,
   and retained-route gates remain open.
+
+## 2026-05-04 Combiner Complete-State Fix Self-Review
+
+Disposition: production acceptance-path fix; continue campaign.
+
+Findings:
+
+- The old combiner would have failed at the desired 63/63 state because it
+  treated "current chunk set is incomplete" as a pass condition.
+- The patched combiner records completeness as state and keeps proposal
+  authority false in both partial and complete L12 cases.
+- The patched combiner writes the combined L12 support summary only when all
+  expected chunks pass the run-control, seed-independence, source-response, and
+  scalar-LSZ audits.
+- The combined output is scoped to the downstream pole-fit postprocessor; it
+  does not authorize a physical readout or bypass L16/L24, FV/IR/model-class,
+  scalar-LSZ, or canonical-Higgs/source-overlap gates.
