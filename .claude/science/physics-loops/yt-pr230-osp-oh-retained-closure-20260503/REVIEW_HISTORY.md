@@ -195,6 +195,27 @@ Findings:
   canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
   gates remain open.
 
+## 2026-05-04 Common-Window Response Provenance Self-Review
+
+Disposition: bounded support / response-window provenance; continue campaign.
+
+Findings:
+
+- The runner loads only existing ready chunk outputs and response-window parent
+  certificates; it does not mutate production data.
+- Original fitted source-response slopes are unstable across the 46 ready
+  chunks, and the fit-window signatures split into multiple tau-min classes.
+- Every high original source-response slope (`dE/ds > 3`) occurs in a
+  mixed-window chunk.
+- Recomputing all source shifts with fixed `tau=10..12` gives a stable central
+  slope surface, but the typical fit uncertainty is still too large for a
+  production-grade physical readout.
+- The retained-route and campaign aggregate certificates include this as a
+  non-closure guard: `PASS=151 FAIL=0` and `PASS=177 FAIL=0`.
+- No retained/proposed-retained claim is authorized because this does not
+  derive scalar LSZ normalization, finite-source-linearity, pole/FV/IR control,
+  `O_sp = O_H`, source-Higgs overlap, or physical `y_t`.
+
 ## 2026-05-04 Schur/K-Prime Row Absence Refresh Self-Review
 
 Disposition: bounded support / exact negative boundary; continue campaign.

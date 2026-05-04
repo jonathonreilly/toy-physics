@@ -5,13 +5,21 @@ start_utc: "2026-05-03T20:32:11Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
-active_residual: "O_sp/O_H identity"
+active_residual: "response-window provenance / O_sp/O_H identity"
+latest_checkpoint:
+  utc: "2026-05-04T05:21:04Z"
+  block: 19
+  artifact: "FH/LSZ common-window response provenance"
+  status: "bounded-support / provenance only"
+  result: "original response instability is explained by mixed source-shift fit windows; fixed tau=10..12 stabilizes the central slope but uncertainty remains non-production-grade"
+  claim_boundary: "no readout switch, no retained/proposed-retained y_t closure, scalar-LSZ and canonical-Higgs gates remain open"
+  live_compute: "chunks047-052 running under chunk-wave orchestrator"
 lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 18
+block: 19
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -155,6 +163,9 @@ files_touched:
   - outputs/yt_fh_lsz_chunk042_multitau_target_timeseries_checkpoint_2026-05-03.json
   - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk047_2026-05-01.json"
   - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk048_2026-05-01.json"
+  - scripts/frontier_yt_fh_lsz_common_window_response_provenance.py
+  - docs/YT_FH_LSZ_COMMON_WINDOW_RESPONSE_PROVENANCE_NOTE_2026-05-04.md
+  - outputs/yt_fh_lsz_common_window_response_provenance_2026-05-04.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -472,15 +483,22 @@ current_result: >
   guard scanned 93 output/certificate files and found 0 complete Schur A/B/C
   row hits, so current FH/LSZ source rows remain blocked as scalar-denominator
   evidence.  Retained/campaign certificates still deny proposal authority with
-  PASS=150 and PASS=176 respectively.
+  PASS=150 and PASS=176 respectively.  A common-window response provenance
+  audit then showed that original dE/ds instability is driven by mixed
+  source-shift fit windows: fixed tau=10..12 stabilizes the central slope
+  surface, but the fit uncertainty is non-production-grade and no readout
+  switch is authorized.  Retained/campaign aggregate certificates now include
+  this non-closure guard with PASS=151 and PASS=177 respectively.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Monitor chunks047, 048, 049, 050, 051, and 052.
-  When outputs land, rerun their chunk gates plus aggregate retained and
-  campaign certificates.  While waiting, only take routes that can add a real new same-surface
-  row/theorem: a new EW gauge-Higgs/O_H certificate plus
-  C_sH/C_HH pole residues, a genuine same-source EW action plus W/Z correlator
-  mass-fit rows and response rows, Schur A/B/C kernel rows, or a direct proof
-  of the missing neutral-sector irreducibility premise.  Do not continue
-  source-only neutral-rank loops without a new authority candidate.
+  Monitor chunks047, 048, 049, 050, 051, and 052.  When outputs land, rerun
+  their chunk gates plus aggregate retained and campaign certificates.  In
+  parallel, promote the common tau=10..12 response-window provenance into a
+  predeclared gate/postprocessor without claiming a physical readout switch.
+  Only take routes that can add a real new same-surface row/theorem: a new EW
+  gauge-Higgs/O_H certificate plus C_sH/C_HH pole residues, a genuine
+  same-source EW action plus W/Z correlator mass-fit rows and response rows,
+  Schur A/B/C kernel rows, or a direct proof of the missing neutral-sector
+  irreducibility premise.  Do not continue source-only neutral-rank loops
+  without a new authority candidate.

@@ -1127,3 +1127,34 @@ Next exact action remains: monitor chunks047-052 and package whichever lands
 next.  For non-MC closure, only a real same-surface `O_H/C_sH/C_HH` pole row
 set, W/Z response row set with identity certificates, Schur `A/B/C` rows, or
 neutral-sector irreducibility theorem moves the claim.
+
+## 2026-05-04 Common-Window Response Provenance
+
+The response-window blocker has been narrowed.  The production fitter's
+per-source-shift effective-mass window choice is the source of the unstable
+`dE/ds` surface:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_common_window_response_provenance.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=151 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=177 FAIL=0
+```
+
+At 46 ready chunks, the original fitted slopes have relative stdev
+`0.9039685737574564`, and all high-slope chunks are mixed-window chunks.
+Recomputing every source shift on the common late window `tau=10..12`
+stabilizes the central slope surface: mean `1.4256769178257236`, relative
+stdev `0.005504460391515086`, spread ratio `1.0237482352916702`.
+
+This is provenance only.  The common-window uncertainty is
+non-production-grade (`relative_error=17.212298342178425`), so no physical
+readout switch is authorized.  The next response-window target is a
+predeclared common-window response gate/postprocessor plus finite-source
+linearity and pole/FV/IR controls; the broader retained blocker still requires
+same-surface `O_H/C_sH/C_HH`, W/Z rows, Schur rows, or a neutral-sector
+irreducibility theorem.

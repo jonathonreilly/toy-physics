@@ -380,6 +380,9 @@ def main() -> int:
         "fh_lsz_response_window_forensics": load(
             "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json"
         ),
+        "fh_lsz_common_window_response_provenance": load(
+            "outputs/yt_fh_lsz_common_window_response_provenance_2026-05-04.json"
+        ),
         "fh_lsz_v2_target_response_stability": load(
             "outputs/yt_fh_lsz_v2_target_response_stability_2026-05-04.json"
         ),
@@ -1436,6 +1439,12 @@ def main() -> int:
         "fh-lsz-response-window-forensics-not-closure",
         "response-window forensics" in str(statuses["fh_lsz_response_window_forensics"]),
         statuses["fh_lsz_response_window_forensics"],
+    )
+    report(
+        "fh-lsz-common-window-response-provenance-not-closure",
+        "common-window response provenance"
+        in str(statuses["fh_lsz_common_window_response_provenance"]),
+        statuses["fh_lsz_common_window_response_provenance"],
     )
     report(
         "fh-lsz-v2-target-response-stability-not-closure",

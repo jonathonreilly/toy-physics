@@ -97,4 +97,8 @@ Open imports:
   boundary on the current surface: no same-surface primitive-cone /
   positivity-improving neutral-sector certificate is already present, so the
   rank-one route remains conditional support only;
+- common-window response provenance is bounded support only: it explains the
+  fitted `dE/ds` instability as mixed source-shift fit-window selection and
+  shows a stable fixed `tau=10..12` central slope surface, but the uncertainty
+  is non-production-grade and no readout switch or y_t closure is authorized;
 - independent audit after any proposed positive certificate.
