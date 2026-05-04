@@ -2,6 +2,7 @@
 
 **Status:** support - structural or confirmatory support note
 **Date:** 2026-04-15  
+**Primary runner:** [`scripts/frontier_dm_neutrino_weak_vector_theorem.py`](../scripts/frontier_dm_neutrino_weak_vector_theorem.py) (PASS=14/0)
 **Branch:** `codex/dm-across-the-line`
 
 ---

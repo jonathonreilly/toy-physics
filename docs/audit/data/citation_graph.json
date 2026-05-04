@@ -23269,7 +23269,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-04T11:17:56.276488+00:00",
+  "generated_at": "2026-05-04T12:37:28.930803+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -27806,9 +27806,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c553bc87036074c0c9b7cbd3d885277bfce7f4d2fbd1f0056b5dd46ec50db354",
+      "note_hash": "e6a35fa0d93f83d92d5dc12d121e31192765b3d586634fa3ef617c4294a52c4a",
       "path": "docs/COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cosmological_constant.py",
       "title": "Cosmological Constant Vacuum-Energy Audit"
     },
     "cosmology_from_mass_spectrum_note": {
@@ -27867,9 +27867,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "79581ac4d7cf0bc5aea04c543537a32dd2ce1354a959eb4833d8c8e94fed22ce",
+      "note_hash": "c77c2d1d694c47b3e6aa9381d5c5b1af3189fabb16bebf6fde9989729e703e74",
       "path": "docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cosmology_scale_identification.py",
       "title": "Cosmology Scale Identification and Reduction"
     },
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25": {
@@ -30430,9 +30430,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "51c11b91609e462a2844b7b177ecf106ee354f825ddabc2a7992d7a387f29b32",
+      "note_hash": "d4a00d87cdabed24f29ff95a5a43401220e7c335b539fb27ccf455f76f0f8bb5",
       "path": "docs/DM_NEUTRINO_WEAK_VECTOR_THEOREM_NOTE_2026-04-15.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_neutrino_weak_vector_theorem.py",
       "title": "DM Neutrino Weak Vector Theorem"
     },
     "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14": {
@@ -35016,9 +35016,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "2d07a60263ffc0056f1997dd38babe7c3b2e4f0584bfddd42f288deedbc5784e",
+      "note_hash": "9bdbf5386158c0fef5a983a2dfb1aec153ee05914814b9a42e1868f335f6d49a",
       "path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_cl3_selector_gap.py",
       "title": "Koide Cl(3) \u2192 SM Embedding \u2014 Selector Gap Note"
     },
     "koide_closure_atlas_issues_flagged": {
@@ -35977,9 +35977,9 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "dfd4aafc5cb26893333c2b84eaec7ebf53daffb8bc409c68bbfc3f90cd0ba9f5",
+      "note_hash": "9a6c36a67f25f10cbe2c7aeb5b3c3654cd90048ed44d3b93215262d636e71d5e",
       "path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_z3_scalar_potential.py",
       "title": "Koide Z\u00b3 Scalar Potential \u2014 Lepton Mass Tower Note"
     },
     "koide_z3_scalar_potential_support_note_2026-04-19": {
@@ -35988,9 +35988,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "9d74877e44c4bec65fb907c1077e2b27732f8d4b2e113f863a63e0f525d33e6c",
+      "note_hash": "f3e7f63f21ea2cd33c510a406a6b3c2901fcbbc9c0dcaa1ebcc00b9b3568ee1e",
       "path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_koide_z3_scalar_potential.py",
       "title": "Koide Z\u00b3 Scalar Potential Support Note"
     },
     "kubo_continuum_limit_families_note": {
@@ -36529,9 +36529,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "839494cf59aa08eb5d2930066fe8a4c258b37bd577181543dadf7951300b3235",
+      "note_hash": "d44b6acab32f9d37da7448b02b1dc5fbff6f6a4091fc9a1aa7873c4e8ccfe94e",
       "path": "docs/LATTICE_DISTANCE_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_no_barrier_distance.py",
       "title": "Lattice Distance-Law Note"
     },
     "lattice_family_validation_note": {
@@ -36628,9 +36628,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "87716fca8b20da3f59e3f750b33dc5c8282a630cae8cf2b0cd760c015fcc3ce5",
+      "note_hash": "89571691f04873222700d63869b65226f30adada340b96cb8a13c2036bdc1d79",
       "path": "docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_deterministic_rescale.py",
       "title": "Lattice NN Deterministic Rescale Note"
     },
     "lattice_nn_distance_law_note": {
@@ -36705,9 +36705,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "611df22bcdbc3a47a14a44217bc40e4c2ee0ba743499288331b0e5e064d87a52",
+      "note_hash": "c77f7edf6f72316ccdcbff155ae6a1d1e66043d13d95725f32a7e8ba83ae1be8",
       "path": "docs/LATTICE_NN_RG_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_rg_gravity.py",
       "title": "NN Lattice RG-Style Gravity Note"
     },
     "lattice_nn_rg_reconciliation_note": {
@@ -37614,9 +37614,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a69fe1134adf919ef597c2f1508b31a8096b9e9a451a0e0de60be389f6792d55",
+      "note_hash": "4a97e1f3c90ecd0e9e57aafd7c0dfc8c40dd95fda35eea203077404c19793d8b",
       "path": "docs/MIRROR_2D_GRAVITY_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Exact 2D Mirror Gravity-Law Cleanup Note"
     },
     "mirror_2d_validation_note": {
@@ -37625,9 +37625,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "5a62ac64a86931d540a6fec682e4828599bb63301a9ef262a0f6175571ae492c",
+      "note_hash": "28393a00c96bd7bf276b8de35770d19b265b4d5ec9f50244d5245598a997b0d7",
       "path": "docs/MIRROR_2D_VALIDATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Exact 2D Mirror Validation Note"
     },
     "mirror_chokepoint_boundary_fit_note": {
@@ -38441,9 +38441,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "20116e4c0db6b864b3573327b9a4cfb360fcde194d143520c3626c74dbe098f0",
+      "note_hash": "c07d7d399db939eb18d93ba1fbcfe77291697fbda6460771b5f4031b8fb79b03",
       "path": "docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py",
       "title": "Neutrino Majorana Lower-Level Pairing No-Go"
     },
     "neutrino_majorana_nambu_quadratic_comparator_note": {
@@ -39374,9 +39374,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "4e7c7b7e4efc1157098a1eadf8b6fee256be19e8d4c5f2bcfd4742fe5d34da3d",
+      "note_hash": "c46f007fa02898fc9bd7b4fda4e460d9af7a180c6eccd9f4973e9b829704094e",
       "path": "docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/two_body_momentum_harness.py",
       "title": "Persistent Inertial-Response Readiness Note"
     },
     "persistent_object_adaptive_readout_note": {
@@ -40139,9 +40139,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "534df54467bb341951cd0d858a74d9d16c1c2eb5e29c02496610a2621a7bb60a",
+      "note_hash": "cd34b676ea5fd7bd50ca5b415f42c981fdc3118421ab7d6df44237b4c839ec7d",
       "path": "docs/PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_lower_level_end_to_end_closure.py",
       "title": "PMNS Lower-Level End-to-End Closure"
     },
     "pmns_minimal_branch_nonselection_note": {
@@ -44164,9 +44164,9 @@
       "claim_type_author_hint_raw": "Constructive computation (R=2..6) + theorem chain with standard mathematical citation (Perelman 2003)",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "c3d9c26c4c86b9ad615460614cc7b980ba202a85f456faaaa730c484f2c7797c",
+      "note_hash": "48e40fcc07bb904550e7f5010bcf46a0ca88aac97833a0a1dd9f3949092ac4c8",
       "path": "docs/S3_GENERAL_R_DERIVATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_s3_cap_uniqueness.py",
       "title": "S^3 Topology: General-R Derivation"
     },
     "s3_mass_matrix_no_go_note": {
@@ -45073,9 +45073,9 @@
         "complex_selectivity_compare_note",
         "complex_selectivity_predictor_note"
       ],
-      "note_hash": "dc9875ba0151442c5667a865c5ee427360cf3a5c33bbe3e4567de0816019d62d",
+      "note_hash": "fb4b8b2542b1bcdeecf468de3ffb796841496cd3cab809ae43482b980bccefb8",
       "path": "docs/SIGNED_GRAVITY_NON_CLAIM_GATE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lensing_sign_phase_diagram.py",
       "title": "Signed Gravity Non-Claim Gate Note"
     },
     "signed_gravity_nonlocal_boundary_chi_target_note": {
@@ -48772,9 +48772,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "9ed48adfd4c83a134da948bb3f02d620d8a43e3528b36ce91bc48ac9d5ceef41",
+      "note_hash": "d9d93a84944e69da2b3d4e4ef10e9941ece81769e2c0e938e4b7c3b2442ee428",
       "path": "docs/WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_test_mass_limit.py",
       "title": "Wilson Normalization / Comparison Reconciliation"
     },
     "wilson_test_mass_continuum_note_2026-04-11": {
@@ -48837,9 +48837,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ea890a9ecab337677464a0535255265be7cf7e9a23fd6355021fb520418d329a",
+      "note_hash": "25676dd0785d35d7c950b152399af3d4a73368bd84cd44a8862c7ab3652a93fe",
       "path": "docs/work_history/atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_atomic_helium_hartree_companion.py",
       "title": "Hydrogen / Helium Atomic Companion Note"
     },
     "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01": {
@@ -51577,6 +51577,6 @@
     "leaf_count": 600,
     "node_count": 1872,
     "root_count": 1057,
-    "runners_with_path": 1484
+    "runners_with_path": 1502
   }
 }

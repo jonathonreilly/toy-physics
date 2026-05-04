@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-25
 **Status:** mandatory non-claim gate for signed gravitational response wording
+**Primary runner:** [`scripts/lensing_sign_phase_diagram.py`](../scripts/lensing_sign_phase_diagram.py) (chi-product sign-flip diagnostic, 1/8 TOWARD at chi_product=+1, 5/8 AWAY at chi_product=-1)
 **Companion:** [`SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md`](SIGNED_GRAVITY_MECHANISM_SEPARATION_NOTE.md)
 
 This note defines the wording and promotion gate for the signed gravitational

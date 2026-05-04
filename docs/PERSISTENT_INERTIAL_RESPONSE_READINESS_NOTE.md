@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-04 (status line rephrased + claim narrowed 2026-04-28 per audit-lane verdict)
 **Status:** support / bounded readiness audit pointing to other notes; multiple cited authorities are unaudited / conditional / failed, so this readiness summary cannot itself be tier-ratified. No persistent-mass theorem is asserted by this note.
+**Primary runner:** [`scripts/two_body_momentum_harness.py`](../scripts/two_body_momentum_harness.py) (two-body momentum conservation: valley-linear < 1% violation, spent-delay >> 1% at unequal masses)
 
 ## Purpose
 

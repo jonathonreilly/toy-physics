@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-03  
 **Status:** review-safe exact 2D mirror pocket proposed_retained; no clean gravity law yet
+**Primary runner:** [`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py) (2D exact mirror linear propagator on three-slit Sorkin)
 
 This note freezes the exact 2D mirror validation lane built from the retained
 exact generator in:

@@ -3,6 +3,7 @@
 **Status:** CLOSED — derived for all R >= 2; two independent proof paths (computational + general)  
 **Type:** Constructive computation (R=2..6) + theorem chain with standard mathematical citation (Perelman 2003)  
 **Date:** 2026-04-13
+**Primary runner:** [`scripts/frontier_s3_cap_uniqueness.py`](../scripts/frontier_s3_cap_uniqueness.py) (all checks passed (companion to slow s3_general_r runner))
 
 ---
 

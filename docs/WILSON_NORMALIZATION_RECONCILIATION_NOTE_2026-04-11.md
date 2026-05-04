@@ -3,6 +3,7 @@
 **Date:** 2026-04-11  
 **Status:** support - methodological control note
 **Scope:** late-2026-04-11 Wilson Newton-strengthening batch
+**Primary runner:** [`scripts/frontier_test_mass_limit.py`](../scripts/frontier_test_mass_limit.py) (test-mass limit PASS: mass exp 1.002, distance exp -2.197)
 
 ## Purpose
 

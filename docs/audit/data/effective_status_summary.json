@@ -1,13 +1,13 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 598,
+    "bounded_theorem": 597,
     "decoration": 7,
     "meta": 47,
     "no_go": 167,
     "open_gate": 94,
-    "positive_theorem": 852
+    "positive_theorem": 853
   },
-  "computed_at": "2026-05-04T11:17:56.607139+00:00",
+  "computed_at": "2026-05-04T12:37:29.293415+00:00",
   "cycle_examples": [
     [
       "anomaly_forces_time_theorem",
@@ -41,22 +41,24 @@
   "cycles_detected": 43,
   "effective_status_counts": {
     "audit_in_progress": 1,
-    "audited_conditional": 530,
+    "audited_conditional": 520,
     "audited_decoration": 2,
-    "audited_numerical_match": 31,
+    "audited_numerical_match": 29,
     "audited_renaming": 21,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "meta": 47,
     "open_gate": 18,
-    "retained": 85,
-    "retained_bounded": 209,
+    "retained": 84,
+    "retained_bounded": 203,
     "retained_no_go": 109,
-    "retained_pending_chain": 3,
-    "unaudited": 707
+    "retained_pending_chain": 5,
+    "unaudited": 724
   },
-  "retained_pending_chain_count": 3,
+  "retained_pending_chain_count": 5,
   "retained_pending_chain_examples": [
+    "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
+    "lattice_nn_rg_alpha_sweep_note",
     "pmns_selector_unique_amplitude_slot_note",
     "three_generation_observable_count_corollary_note_2026-05-03",
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24"
