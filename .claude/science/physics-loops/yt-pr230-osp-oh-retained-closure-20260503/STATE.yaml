@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 3
+block: 4
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -43,6 +43,8 @@ files_touched:
   - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
   - outputs/yt_pr230_fh_lsz_finite_source_linearity_L12_T24_calib001_2026-05-02.json
   - outputs/yt_direct_lattice_correlator_production_fh_lsz_linearity/L12_T24_calib001/
+  - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk031_2026-05-01.json"
+  - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk032_2026-05-01.json"
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -68,6 +70,8 @@ commands_run:
   - "python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py # PASS=12 FAIL=0 after calibration, gate still open"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=140 FAIL=0 after calibration"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=166 FAIL=0 after calibration"
+  - "python3 scripts/yt_direct_lattice_correlator_production.py ... --seed 2026051031 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk031_2026-05-01.json # launched PID 3592"
+  - "python3 scripts/yt_direct_lattice_correlator_production.py ... --seed 2026051032 --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk032_2026-05-01.json # launched PID 3593"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -90,13 +94,15 @@ current_result: >
   passed its checkpoint with three symmetric source radii and zero-source
   intercept 1.4328344029594695 +/- 35.72880463605988.  This retires the
   awaiting-output state for that support checkpoint, but does not pass the
-  response-window acceptance gate or authorize retained closure.
+  response-window acceptance gate or authorize retained closure.  With CPU
+  headroom after calibration completion, chunks031/032 were launched with
+  fixed seeds 2026051031/2026051032 and monitor session 42070.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Monitor chunks029/030.  When outputs land, rerun their chunk gates plus
-  aggregate retained and campaign certificates.  While waiting, only take
-  routes that can add a real new same-surface row/theorem: certified
-  O_H/C_sH/C_HH pole residues, genuine same-source W/Z response rows, Schur
-  A/B/C kernel rows, or a direct proof of the missing neutral-sector
-  irreducibility premise.
+  Monitor chunks029/030 and chunks031/032.  When outputs land, rerun their
+  chunk gates plus aggregate retained and campaign certificates.  While
+  waiting, only take routes that can add a real new same-surface row/theorem:
+  certified O_H/C_sH/C_HH pole residues, genuine same-source W/Z response
+  rows, Schur A/B/C kernel rows, or a direct proof of the missing
+  neutral-sector irreducibility premise.

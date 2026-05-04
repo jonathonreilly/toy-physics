@@ -227,3 +227,42 @@ acceptance gate remains open, and retained closure is still unauthorized.
 
 Next exact action: keep monitoring chunks029/030 and package them when their
 outputs land.
+
+## 2026-05-04 Chunk031-032 Launch
+
+After the calibration job completed, the machine had 10 CPU cores, load near
+3-4, and chunks029/030 were each using one core with low memory.  I launched
+the next seed-controlled L12 pair:
+
+```bash
+python3 scripts/yt_direct_lattice_correlator_production.py \
+  --volumes 12x24 --masses 0.45,0.75,1.05 \
+  --therm 1000 --measurements 16 --separation 20 \
+  --engine numba --production-targets \
+  --scalar-source-shifts=-0.01,0.0,0.01 \
+  --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' \
+  --scalar-two-point-noises 16 \
+  --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk031 \
+  --seed 2026051031 \
+  --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk031_2026-05-01.json
+
+python3 scripts/yt_direct_lattice_correlator_production.py \
+  --volumes 12x24 --masses 0.45,0.75,1.05 \
+  --therm 1000 --measurements 16 --separation 20 \
+  --engine numba --production-targets \
+  --scalar-source-shifts=-0.01,0.0,0.01 \
+  --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' \
+  --scalar-two-point-noises 16 \
+  --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk032 \
+  --seed 2026051032 \
+  --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk032_2026-05-01.json
+```
+
+Runtime PIDs at launch: chunk031 `3592`, chunk032 `3593`.  Monitor session
+`42070` watches both outputs and will run the chunk target-timeseries,
+multi-tau, combiner, ESS/autocorrelation, response-window, retained-route, and
+campaign-status gates when both files land.
+
+Claim boundary: these are production-support chunks only.  They do not
+authorize retained/proposed-retained closure without the downstream scalar
+LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
