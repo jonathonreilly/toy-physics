@@ -1613,3 +1613,58 @@ Next exact action: continue monitoring session `34560`.  If runtime remains
 and chunks013+ land, rerun the combiner, postprocessor, retained-route, and
 campaign-status certificates, package the new coherent slice, and keep PR #230
 draft/open unless the retained-proposal certificate genuinely changes.
+
+## 2026-05-04 12-Hour Campaign Stop
+
+The requested 12-hour physics-loop window is exhausted.  PR #230 is updated and
+pushed through commit `bc67c52d7`, with the current coherent science checkpoint
+at polefit8x8 chunks001-012.
+
+Current packaged polefit8x8 state:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_chunk_combiner_gate.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=158 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=184 FAIL=0
+```
+
+The homogeneous polefit8x8 stream is 12/63 ready with 192 saved configurations,
+8 mode rows, 8 distinct momentum shells, and diagnostic finite-shell fit
+support.  Complete L12 production is still false, and scalar-pole model-class
+authority, L16/L24 scaling, FV/IR/zero-mode control, and canonical-Higgs/source
+overlap closure remain open.  No retained/proposed-retained wording is
+authorized.
+
+The foreground wave orchestrator session `34560` was stopped at the runtime
+boundary after poll 184.  The chunk013-018 production worker processes remain
+alive under PPID 1 and were not packaged in this stop checkpoint:
+
+- chunk013 PID `63148`, seed `2026051913`;
+- chunk014 PID `63149`, seed `2026051914`;
+- chunk015 PID `63156`, seed `2026051915`;
+- chunk016 PID `65660`, seed `2026051916`;
+- chunk017 PID `68899`, seed `2026051917`;
+- chunk018 PID `70147`, seed `2026051918`.
+
+Resume command for the next supervised wave, after packaging any root outputs
+that landed from chunks013-018:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py \
+  --start-index 13 \
+  --end-index 63 \
+  --max-concurrent 6 \
+  --global-max-production-jobs 6 \
+  --runtime-minutes 720 \
+  --poll-seconds 60 \
+  --launch \
+  --run-gates
+```

@@ -178,4 +178,7 @@ Open imports:
   ESS with limiting ESS `678.1515635297619` but still fails response-window
   acceptance and does not provide scalar-LSZ or canonical-Higgs/source-overlap
   closure;
+- the 12-hour polefit8x8 campaign stop leaves the homogeneous polefit8x8 stream
+  at 12/63 packaged chunks and 192 saved configurations; chunks013-018 remain
+  live worker processes and are not packaged evidence yet;
 - independent audit after any proposed positive certificate.

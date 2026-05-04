@@ -658,6 +658,26 @@ Findings:
 - No retained/proposed-retained claim is authorized; retained-route and
   campaign-status certificates remain pass-clean only as overclaim guards.
 
+## 2026-05-04 12-Hour Campaign Stop Self-Review
+
+Disposition: runtime exhausted; bounded campaign checkpoint only.
+
+Findings:
+
+- The coherent packaged polefit8x8 state remains chunks001 through 012, with
+  12/63 ready chunks and 192 saved configurations.
+- The combiner, postprocessor, retained-route certificate, and campaign-status
+  certificate remain pass-clean as guardrails: `PASS=6 FAIL=0`,
+  `PASS=5 FAIL=0`, `PASS=158 FAIL=0`, and `PASS=184 FAIL=0`.
+- The foreground wave orchestrator was stopped at poll 184 because the
+  12-hour campaign window was exhausted.
+- Chunks013 through 018 are still live worker processes under PPID 1 and are
+  not part of this packaged evidence state.
+- No retained/proposed-retained claim is authorized.  Complete homogeneous L12
+  production, L16/L24 scaling, FV/IR/zero-mode control, scalar-pole model-class
+  authority, canonical-Higgs/source-overlap closure, and independent audit
+  remain open.
+
 ## 2026-05-04 Source-Higgs Readiness Scan Fix Self-Review
 
 Disposition: gate hygiene; continue campaign.
