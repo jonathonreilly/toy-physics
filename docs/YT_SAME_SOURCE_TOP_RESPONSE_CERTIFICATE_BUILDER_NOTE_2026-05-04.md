@@ -51,6 +51,11 @@ identity gates on the same scalar source coordinate.  The future covariance
 certificate must supply matched top/W covariance rows from the same
 configuration set.
 
+The identity certificate is now assigned to
+`frontier_yt_same_source_top_response_identity_certificate_builder.py`.  Its
+current mode remains open until sector-overlap, canonical-Higgs pole identity,
+one accepted identity route, and retained-route authorization exist.
+
 ## Current Result
 
 Scout mode passes and writes only scout-named output:

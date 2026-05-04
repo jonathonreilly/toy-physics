@@ -1,0 +1,106 @@
+{
+  "actual_current_surface_status": "scout-pass / same-source top-response identity certificate schema",
+  "bare_retained_allowed": false,
+  "blocker_checks": {
+    "higgs_identity_blocked": true,
+    "neutral_rank_one_blocked": true,
+    "no_orthogonal_top_coupling_blocked": true,
+    "retained_route_not_authorized": true,
+    "sector_overlap_identity_blocked": true,
+    "source_higgs_gram_purity_blocked": true,
+    "source_pole_mixing_blocked": true,
+    "wz_response_identity_route_blocked": true
+  },
+  "exact_next_action": "Close one accepted identity route: source-Higgs Gram purity with C_sH/C_HH pole residues, a same-source W/Z response certificate with sector-overlap identity, a neutral-scalar rank-one theorem, or a direct canonical-Higgs pole identity.  Then rerun this builder to emit outputs/yt_same_source_top_response_identity_certificate_2026-05-04.json.",
+  "fail_count": 0,
+  "identity_certificate": {
+    "canonical_higgs_pole_identity_passed": true,
+    "certificate_kind": "same_source_top_response_identity",
+    "firewall": {
+      "used_H_unit_or_Ward_authority": false,
+      "used_alpha_lm_plaquette_or_u0": false,
+      "used_c2_or_zmatch_equal_one": false,
+      "used_kappa_or_cos_theta_by_fiat": false,
+      "used_observed_WZ_masses_as_selector": false,
+      "used_observed_top_or_yukawa_as_selector": false
+    },
+    "identity_route": "scout schema witness",
+    "phase": "scout",
+    "proposal_allowed": false,
+    "retained_route_or_proposal_gate_passed": true,
+    "same_source_coordinate": true,
+    "same_source_sector_overlap_identity_passed": true,
+    "source_coordinate": "same scalar source coordinate used by top FH/LSZ and W/Z response",
+    "strict_non_claims": [
+      "does not claim retained or proposed_retained y_t closure",
+      "does not set kappa_s=1, cos(theta)=1, or k_top/k_gauge=1 by fiat",
+      "does not use H_unit, yt_ward_identity, observed top/y_t/WZ selectors, alpha_LM, plaquette, or u0"
+    ]
+  },
+  "identity_certificate_output": "outputs/yt_same_source_top_response_identity_certificate_builder_scout_certificate_2026-05-04.json",
+  "identity_certificate_written": true,
+  "identity_evaluation": {
+    "accepted_identity_routes": {
+      "direct_higgs_pole_identity": false,
+      "neutral_scalar_rank_one_purity": false,
+      "same_source_wz_response": false,
+      "source_higgs_gram_purity": false
+    },
+    "any_identity_route": false,
+    "failed_positive_checks": [
+      "same_source_sector_overlap_identity_passed",
+      "canonical_higgs_pole_identity_passed",
+      "source_pole_canonical_identity_passed",
+      "no_orthogonal_top_coupling_or_measured_component_passed",
+      "source_higgs_gram_purity_passed",
+      "neutral_scalar_rank_one_purity_passed",
+      "same_source_wz_response_certificate_passed",
+      "retained_route_or_proposal_gate_passed"
+    ],
+    "identity_passed": false,
+    "positive_checks": {
+      "canonical_higgs_pole_identity_passed": false,
+      "neutral_scalar_rank_one_purity_passed": false,
+      "no_orthogonal_top_coupling_or_measured_component_passed": false,
+      "retained_route_or_proposal_gate_passed": false,
+      "same_source_sector_overlap_identity_passed": false,
+      "same_source_wz_response_certificate_passed": false,
+      "source_higgs_gram_purity_passed": false,
+      "source_pole_canonical_identity_passed": false
+    }
+  },
+  "mode": "scout",
+  "parent_certificates": {
+    "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
+    "higgs_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "neutral_scalar_rank_one_purity": "outputs/yt_neutral_scalar_rank_one_purity_gate_2026-05-02.json",
+    "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "same_source_wz_response": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
+    "source_pole_canonical_higgs_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json"
+  },
+  "parent_statuses": {
+    "fh_lsz_higgs_pole_identity": "open / FH-LSZ canonical-Higgs pole identity gate blocking",
+    "higgs_identity_latest_blocker": "open / latest Higgs-pole identity blocker certificate",
+    "neutral_scalar_rank_one_purity": "open / neutral scalar rank-one purity gate not passed",
+    "no_orthogonal_top_coupling_selection": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "same_source_wz_response": "open / same-source WZ response certificate gate not passed",
+    "source_higgs_gram_purity": "open / source-Higgs Gram purity gate not passed",
+    "source_pole_canonical_higgs_mixing": "exact negative boundary / source-pole canonical-Higgs mixing obstruction"
+  },
+  "pass_count": 5,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The builder emits the production identity certificate only after a sector-overlap identity, canonical-Higgs pole identity, one accepted identity route, and retained-route authorization exist.",
+  "same_source_top_response_identity_builder_passed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s=1, cos(theta)=1, k_top/k_gauge=1, c2=1, or Z_match=1",
+    "does not use H_unit, yt_ward_identity, observed top/y_t/WZ selectors, alpha_LM, plaquette, or u0",
+    "does not treat a same-source label as a sector-overlap or canonical-Higgs identity"
+  ],
+  "strict_same_source_top_response_identity_builder_passed": false
+}

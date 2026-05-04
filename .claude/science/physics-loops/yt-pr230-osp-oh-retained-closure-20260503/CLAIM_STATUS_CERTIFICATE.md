@@ -243,4 +243,9 @@ Open imports:
   existing common-window top source-response support and scout output, but it
   does not emit the production top-response certificate until a same-source
   identity certificate and matched top/W covariance certificate exist;
+- the same-source top-response identity certificate builder is open: it
+  validates the schema and current blockers, but it does not emit the
+  production identity certificate because sector-overlap identity,
+  canonical-Higgs pole identity, an accepted identity route, and retained-route
+  authorization are all absent;
 - independent audit after any proposed positive certificate.

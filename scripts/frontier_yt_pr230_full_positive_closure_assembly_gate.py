@@ -46,6 +46,7 @@ PARENTS = {
     "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
     "delta_perp_tomography_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
+    "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
     "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
     "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -173,6 +174,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "W/Z correlator mass-fit path absent",
                 "orthogonal-neutral top-coupling null or correction absent",
                 "strict delta_perp tomography correction rows absent",
+                "same-source top-response identity certificate absent",
                 "same-source top-response certificate absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
@@ -187,6 +189,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["same_source_w_response_orthogonal_correction"],
                 PARENTS["one_higgs_completeness_orthogonal_null"],
                 PARENTS["delta_perp_tomography_builder"],
+                PARENTS["same_source_top_response_identity_builder"],
                 PARENTS["same_source_top_response_builder"],
                 PARENTS["same_source_w_response_row_builder"],
                 PARENTS["same_source_w_lightweight_readout"],
@@ -380,6 +383,16 @@ def main() -> int:
         and certs["delta_perp_tomography_builder"].get("strict_delta_perp_tomography_gate_passed")
         is False,
         statuses["delta_perp_tomography_builder"],
+    )
+    report(
+        "same-source-top-response-identity-builder-open",
+        "same-source top-response identity" in statuses["same_source_top_response_identity_builder"]
+        and certs["same_source_top_response_identity_builder"].get("proposal_allowed") is False
+        and certs["same_source_top_response_identity_builder"].get(
+            "strict_same_source_top_response_identity_builder_passed"
+        )
+        is False,
+        statuses["same_source_top_response_identity_builder"],
     )
     report(
         "same-source-top-response-builder-open",

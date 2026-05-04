@@ -1,0 +1,24 @@
+{
+  "canonical_higgs_pole_identity_passed": true,
+  "certificate_kind": "same_source_top_response_identity",
+  "firewall": {
+    "used_H_unit_or_Ward_authority": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_c2_or_zmatch_equal_one": false,
+    "used_kappa_or_cos_theta_by_fiat": false,
+    "used_observed_WZ_masses_as_selector": false,
+    "used_observed_top_or_yukawa_as_selector": false
+  },
+  "identity_route": "scout schema witness",
+  "phase": "scout",
+  "proposal_allowed": false,
+  "retained_route_or_proposal_gate_passed": true,
+  "same_source_coordinate": true,
+  "same_source_sector_overlap_identity_passed": true,
+  "source_coordinate": "same scalar source coordinate used by top FH/LSZ and W/Z response",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s=1, cos(theta)=1, or k_top/k_gauge=1 by fiat",
+    "does not use H_unit, yt_ward_identity, observed top/y_t/WZ selectors, alpha_LM, plaquette, or u0"
+  ]
+}

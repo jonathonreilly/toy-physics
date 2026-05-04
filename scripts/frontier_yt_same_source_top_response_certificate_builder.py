@@ -33,6 +33,7 @@ PARENTS = {
     "pooled_response_estimator": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "higgs_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
 }
 
@@ -326,6 +327,7 @@ def main() -> int:
     report("common-window-response-support-present", response_validation["present"], parent_statuses["common_window_response_gate"])
     report("sector-overlap-currently-blocked", "sector-overlap identity obstruction" in parent_statuses["same_source_sector_overlap"], parent_statuses["same_source_sector_overlap"])
     report("higgs-identity-currently-blocked", "Higgs-pole identity blocker" in parent_statuses["higgs_identity_latest_blocker"], parent_statuses["higgs_identity_latest_blocker"])
+    report("top-response-identity-builder-currently-open", "same-source top-response identity" in parent_statuses["same_source_top_response_identity_builder"], parent_statuses["same_source_top_response_identity_builder"])
     if args.scout:
         report("scout-response-valid", response_validation["valid"], str(response_validation.get("failed_checks", [])))
         report("scout-identity-valid", identity_validation["valid"], str(identity_validation.get("failed_checks", [])))

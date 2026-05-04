@@ -287,6 +287,9 @@ def main() -> int:
         "delta_perp_tomography_correction_builder": load(
             "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json"
         ),
+        "same_source_top_response_identity_builder": load(
+            "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json"
+        ),
         "same_source_top_response_builder": load(
             "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json"
         ),
@@ -1320,6 +1323,18 @@ def main() -> int:
         )
         is False,
         statuses["same_source_top_response_builder"],
+    )
+    report(
+        "same-source-top-response-identity-builder-open",
+        "same-source top-response identity"
+        in str(statuses["same_source_top_response_identity_builder"])
+        and certificates["same_source_top_response_identity_builder"].get("proposal_allowed")
+        is False
+        and certificates["same_source_top_response_identity_builder"].get(
+            "strict_same_source_top_response_identity_builder_passed"
+        )
+        is False,
+        statuses["same_source_top_response_identity_builder"],
     )
     report(
         "same-source-w-response-row-builder-open",

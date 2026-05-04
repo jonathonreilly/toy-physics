@@ -161,6 +161,7 @@ def main() -> int:
         "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
         "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
         "delta_perp_tomography_correction_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
+        "same_source_top_response_identity_builder": "outputs/yt_same_source_top_response_identity_certificate_builder_2026-05-04.json",
         "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
         "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
         "same_source_w_response_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
@@ -1143,6 +1144,18 @@ def main() -> int:
         and certificates["same_source_top_response_builder"].get("proposal_allowed") is False
         and certificates["same_source_top_response_builder"].get(
             "strict_same_source_top_response_certificate_builder_passed"
+        )
+        is False
+    )
+    same_source_top_response_identity_builder_open = (
+        "same-source top-response identity"
+        in certificates["same_source_top_response_identity_builder"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["same_source_top_response_identity_builder"].get("proposal_allowed")
+        is False
+        and certificates["same_source_top_response_identity_builder"].get(
+            "strict_same_source_top_response_identity_builder_passed"
         )
         is False
     )
@@ -2219,6 +2232,11 @@ def main() -> int:
         certificates["same_source_top_response_builder"].get("actual_current_surface_status", ""),
     )
     report(
+        "same-source-top-response-identity-builder-open",
+        same_source_top_response_identity_builder_open,
+        certificates["same_source_top_response_identity_builder"].get("actual_current_surface_status", ""),
+    )
+    report(
         "wz-correlator-mass-fit-path-gate-blocks",
         wz_correlator_mass_fit_path_gate_blocks,
         certificates["wz_correlator_mass_fit_path_gate"].get("actual_current_surface_status", ""),
@@ -2858,6 +2876,10 @@ def main() -> int:
             "same-source top-response certificate from a closed identity "
             "certificate and matched top/W covariance rows; the current builder "
             "is open and does not emit the production top-response certificate.  "
+            "The identity certificate builder now exposes the first sub-blocker: "
+            "sector overlap, canonical-Higgs pole identity, an accepted purity/"
+            "WZ/rank-one identity route, and retained-route authorization are "
+            "all still absent.  "
             "Continue chunked production only with "
             "seed-controlled replacement chunks or scheduler handoff; do not "
             "treat historical chunk001/chunk002 as independent evidence.  "

@@ -249,6 +249,7 @@
     "same_source_scalar_two_point": "bounded-support / same-source scalar two-point LSZ measurement primitive",
     "same_source_sector_overlap_identity": "exact negative boundary / same-source sector-overlap identity obstruction",
     "same_source_top_response_builder": "open / same-source top-response identity or covariance inputs absent",
+    "same_source_top_response_identity_builder": "open / same-source top-response identity blockers remain",
     "same_source_w_response_decomposition": "exact-support / same-source W-response decomposition theorem; current rows absent",
     "same_source_w_response_lightweight_readout": "open / lightweight same-source W-response readout production rows absent",
     "same_source_w_response_orthogonal_correction": "open / same-source W-response orthogonal-correction gate not passed",
@@ -312,7 +313,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 199,
+  "pass_count": 200,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
