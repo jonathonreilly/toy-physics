@@ -178,6 +178,9 @@ def main() -> int:
         "isolated_pole_gram_factorization": load(
             "outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json"
         ),
+        "osp_oh_assumption_route_audit": load(
+            "outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json"
+        ),
         "complete_source_spectrum_identity_no_go": load(
             "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json"
         ),
@@ -823,6 +826,15 @@ def main() -> int:
         )
         is True,
         statuses["isolated_pole_gram_factorization"],
+    )
+    report(
+        "osp-oh-assumption-route-audit-blocks-overclaim",
+        "O_sp-to-O_H assumption-route audit complete"
+        in str(statuses["osp_oh_assumption_route_audit"])
+        and certificates["osp_oh_assumption_route_audit"].get("assumption_route_audit_passed")
+        is True
+        and certificates["osp_oh_assumption_route_audit"].get("proposal_allowed") is False,
+        statuses["osp_oh_assumption_route_audit"],
     )
     report(
         "complete-source-spectrum-identity-no-go-blocks",

@@ -49,4 +49,7 @@ Open imports:
 - source-Higgs production readiness is blocked by the missing same-surface
   `O_H` certificate; current chunks were source-Higgs absent-guarded and have
   no `C_sH/C_HH` rows;
+- the current O_sp/O_H assumption-route audit passes as overclaim protection
+  only; it verifies the forbidden-shortcut firewall and ranked remaining
+  routes, but adds no `O_H`, `C_sH/C_HH`, W/Z, Schur, or rank-one evidence;
 - independent audit after any proposed positive certificate.

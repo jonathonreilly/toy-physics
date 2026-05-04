@@ -1,0 +1,83 @@
+{
+  "actual_current_surface_status": "open / O_sp-to-O_H assumption-route audit complete; retained closure still blocked",
+  "assumption_route_audit_passed": true,
+  "bare_retained_allowed": false,
+  "exact_next_action": "Continue live FH/LSZ chunks.  For positive closure, supply one real missing premise: certified O_H with C_sH/C_HH pole residues, same-source W/Z mass-response rows with identity certificates, same-surface Schur A/B/C kernel rows, or a neutral-sector irreducibility theorem.",
+  "fail_count": 0,
+  "forbidden_closure_imports_checked": [
+    "used H_unit / Ward matrix-element readout",
+    "used observed m_t or y_t as a selector",
+    "set kappa_s=1 or cos(theta)=1",
+    "treated static EW algebra as O_H",
+    "promoted finite Schur support into A/B/C rows",
+    "imported gauge Perron/reflection positivity as neutral-sector irreducibility",
+    "used reduced pilots or source-Higgs guards as production evidence"
+  ],
+  "missing_assumption_terms": [],
+  "missing_certificates": [],
+  "missing_pack_files": [],
+  "missing_queue_terms": [],
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "isolated_pole_gram_factorization": "outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json",
+    "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "neutral_scalar_positivity": "outputs/yt_neutral_scalar_positivity_improving_direct_closure_attempt_2026-05-03.json",
+    "osp_oh_identity_stretch": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "schur_row_extraction": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
+    "source_functional_lsz": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_higgs_gram_contract": "outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
+    "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
+    "wz_response_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
+    "wz_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current loop has an explicit O_sp source-pole construction and exact support theorems, but still lacks a same-surface O_H identity or equivalent C_sH/C_HH, W/Z, Schur, or rank-one closure row.",
+  "route_matrix": [
+    {
+      "blocked_by": "missing certified O_H plus production C_sH/C_HH pole residues",
+      "current_status": "open / source-Higgs production launch blocked by missing O_H certificate",
+      "proposal_allowed": false,
+      "route": "source_higgs_gram_purity",
+      "support_available": "O_sp normalization and Gram-purity contract"
+    },
+    {
+      "blocked_by": "missing same-source EW action, W/Z correlator mass fits, and sector-overlap identity",
+      "current_status": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+      "proposal_allowed": false,
+      "route": "same_source_wz_response",
+      "support_available": "W/Z response gate and mass-fit path contract"
+    },
+    {
+      "blocked_by": "missing same-surface A/B/C neutral scalar kernel rows",
+      "current_status": "exact negative boundary / Schur row candidate extraction from finite ladder support",
+      "proposal_allowed": false,
+      "route": "schur_kprime_rows",
+      "support_available": "Schur sufficiency/contract layer"
+    },
+    {
+      "blocked_by": "missing neutral-sector irreducibility / positivity improvement",
+      "current_status": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
+      "proposal_allowed": false,
+      "route": "neutral_scalar_rank_one",
+      "support_available": "conditional Perron/rank-one support"
+    },
+    {
+      "blocked_by": "response-window acceptance and O_H/source-overlap closure",
+      "current_status": "bounded production support in progress",
+      "proposal_allowed": false,
+      "route": "fh_lsz_chunks",
+      "support_available": "34/63 L12 chunks ready before live chunks035-040 complete"
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not identify O_sp with O_H",
+    "does not set kappa_s=1 or cos(theta)=1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat contracts, guards, finite-ladder rows, or in-progress chunks as closure"
+  ]
+}

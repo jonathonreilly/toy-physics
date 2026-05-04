@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 10
+block: 11
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -91,6 +91,9 @@ files_touched:
   - outputs/yt_fh_lsz_chunk030_multitau_target_timeseries_checkpoint_2026-05-03.json
   - scripts/frontier_yt_retained_closure_route_certificate.py
   - scripts/frontier_yt_pr230_campaign_status_certificate.py
+  - scripts/frontier_yt_osp_oh_assumption_route_audit.py
+  - docs/YT_OSP_OH_ASSUMPTION_ROUTE_AUDIT_NOTE_2026-05-04.md
+  - outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -180,6 +183,10 @@ commands_run:
   - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 33 # PASS=14 FAIL=0"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=144 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=170 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_osp_oh_assumption_route_audit.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py # pass"
+  - "python3 scripts/frontier_yt_osp_oh_assumption_route_audit.py # PASS=18 FAIL=0"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=145 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=171 FAIL=0"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -255,7 +262,15 @@ current_result: >
   ESS 477.3528176804397, response-window acceptance remains open, and
   retained/campaign aggregate certificates pass with PASS=144 and PASS=170
   respectively.  The orchestrator filled the remaining wave slots; chunks035,
-  036, 037, 038, 039, and 040 are now running.
+  036, 037, 038, 039, and 040 are now running.  A current-loop O_sp/O_H
+  assumption-route audit was added and wired into both aggregate certificates.
+  It verifies that the loop pack names O_sp, O_H, kappa/cos overlap, W/Z rows,
+  Schur rows, rank-one irreducibility, and FH/LSZ production as distinct
+  imports; it rejects H_unit/Ward, observed selectors, static EW algebra,
+  finite Schur support, gauge Perron/reflection positivity, guards, and pilots
+  as closure shortcuts.  This is overclaim protection only, not a new theorem:
+  retained-route and campaign certificates still deny proposal authority with
+  PASS=145 and PASS=171 respectively.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >

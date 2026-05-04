@@ -218,6 +218,38 @@ For non-MC closure, the next positive route is still a same-surface `O_H`
 certificate, source-Higgs production rows, W/Z identity rows, Schur A/B/C
 rows, or neutral-sector irreducibility.
 
+## 2026-05-04 O_sp/O_H Assumption-Route Audit
+
+The current O_sp/O_H loop now has an executable assumption audit:
+
+```bash
+python3 -m py_compile \
+  scripts/frontier_yt_osp_oh_assumption_route_audit.py \
+  scripts/frontier_yt_retained_closure_route_certificate.py \
+  scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_osp_oh_assumption_route_audit.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=145 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=171 FAIL=0
+```
+
+Result: this closes a process gap, not the physics.  The audit verifies that
+the active loop pack separates `O_sp`, `O_H`, the overlap import, W/Z rows,
+Schur rows, rank-one irreducibility, and FH/LSZ production; it rejects H_unit,
+Ward readout, observed selectors, static EW algebra, finite Schur support,
+gauge Perron/reflection positivity, guards, and pilots as closure shortcuts.
+
+Current status remains open.  The exact next action is still to monitor
+chunks035-040 and, for positive retained closure, supply one real missing
+premise: certified `O_H/C_sH/C_HH`, W/Z response rows with identity
+certificates, Schur `A/B/C` rows, or neutral-sector irreducibility.
+
 ## 2026-05-04 W/Z Correlator Mass-Fit Path Gate
 
 The second W/Z implementation work unit was tested directly:

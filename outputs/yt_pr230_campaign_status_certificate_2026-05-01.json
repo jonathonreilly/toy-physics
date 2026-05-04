@@ -159,6 +159,7 @@
     "non_source_response_rank_repair_sufficiency": "exact-support / non-source response rank-repair sufficiency theorem; current rows absent",
     "nonzero_momentum": "bounded-support / nonzero-momentum correlator scout",
     "orthogonal_neutral_decoupling_no_go": "exact negative boundary / orthogonal neutral decoupling shortcut not derived",
+    "osp_oh_assumption_route_audit": "open / O_sp-to-O_H assumption-route audit complete; retained closure still blocked",
     "osp_oh_identity_stretch": "exact negative boundary / O_sp-to-O_H identity not derived on current surface",
     "positivity_improving_neutral_scalar_rank_one": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
     "production_resource": "bounded support / production resource projection",
@@ -225,7 +226,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 170,
+  "pass_count": 171,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [
