@@ -18,6 +18,13 @@ This stays narrow:
 
 from __future__ import annotations
 
+# Larger-family wavefield probe: zero-source reduction + 1/r control +
+# same-site control + finite-speed candidate + weak-field gate +
+# detector-line phase ramp computed on a larger exact lattice. The full
+# pass exceeds the 120 s default. Cap at 30 min for stable audit
+# evidence.
+AUDIT_TIMEOUT_SEC = 1800
+
 import cmath
 import math
 import os

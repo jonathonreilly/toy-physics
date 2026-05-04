@@ -14,6 +14,11 @@ frozen on current main without geometry-generic language.
 
 from __future__ import annotations
 
+# Source-resolved complex-action sweep + gamma reduction + Born proxy +
+# weak-field check on a multi-source grown row exceeds the 120 s
+# default. Cap at 30 min so the audit gets full evidence.
+AUDIT_TIMEOUT_SEC = 1800
+
 import cmath
 import math
 import os

@@ -326,34 +326,12 @@ def read_note_body(note_path: str) -> str | None:
     return p.read_text(encoding="utf-8", errors="replace")
 
 
-# Per-runner timeout overrides for known-heavy compute lanes. Anything not
-# matched falls through to --runner-timeout-sec (default 120s). Patterns are
-# substring matches against the runner basename. Long timeouts here trade
-# wall-clock for verdict completeness on lanes that genuinely need it.
-RUNNER_TIMEOUT_OVERRIDES: list[tuple[str, int]] = [
-    ("frontier_alpha_s", 900),
-    ("frontier_confinement", 900),
-    ("frontier_gauge_vacuum_plaquette_perron", 900),
-    ("frontier_gauge_vacuum_plaquette_reduction", 900),
-    ("frontier_gauge_vacuum_plaquette_spectral", 900),
-    ("frontier_gauge_vacuum_plaquette_susceptibility", 900),
-    ("frontier_yt_uv_to_ir", 900),
-    ("frontier_yt_p1_delta_r_master", 900),
-    ("frontier_higgs_mass_full", 900),
-    ("frontier_dm_neutrino_source_surface", 600),
-    ("frontier_ckm_atlas", 600),
-    ("frontier_self_consistent_field", 600),
-    ("frontier_emergent_lorentz", 600),
-]
-
+# Timeout resolution is shared with the precompute helper. It honors
+# `AUDIT_TIMEOUT_SEC = N` declared at the top of the runner, falling
+# back to a small legacy substring map and finally to default_sec.
 
 def runner_timeout_for(runner_path: str, default_sec: int) -> int:
-    """Return the timeout to use for a given runner."""
-    bn = Path(runner_path).name
-    for needle, override in RUNNER_TIMEOUT_OVERRIDES:
-        if needle in bn:
-            return override
-    return default_sec
+    return rc.runner_timeout_for(runner_path, default_sec=default_sec)
 
 
 def find_cached_runner_output(runner_path: str) -> str | None:

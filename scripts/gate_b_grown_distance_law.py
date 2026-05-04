@@ -13,6 +13,12 @@ the same retained family.
 
 from __future__ import annotations
 
+# Grown-geometry distance-law sweep over multiple drift rows; the
+# fixed-grid + grown-geometry passes plus the per-row tail fits exceed
+# the 120 s default. Cap at 30 min so the audit lane gets stable
+# evidence rather than COMPUTE_REQUIRED skips.
+AUDIT_TIMEOUT_SEC = 1800
+
 import cmath
 import math
 import random
