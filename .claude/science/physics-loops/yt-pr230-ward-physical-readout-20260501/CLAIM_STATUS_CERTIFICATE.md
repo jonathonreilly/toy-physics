@@ -14,10 +14,10 @@ python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
 # SUMMARY: PASS=8 FAIL=0
 
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=159 FAIL=0
+# SUMMARY: PASS=164 FAIL=0
 
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=185 FAIL=0
+# SUMMARY: PASS=190 FAIL=0
 ```
 
 The active chunks013-018 polefit8x8 workers are run control only.  Active

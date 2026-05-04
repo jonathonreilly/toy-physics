@@ -13,8 +13,8 @@ Latest checkpoint, 2026-05-04 polefit8x8 chunks013-018 guarded launch:
 - Refreshed the global guard: `PASS=8 FAIL=0`, active FH/LSZ workers `6`,
   `launch_guard_allows_new_workers=false`; further FH/LSZ launches are blocked
   while this wave runs.
-- Refreshed aggregate gates: retained-route `PASS=159 FAIL=0`; campaign status
-  `PASS=185 FAIL=0`.
+- Refreshed aggregate gates after rebasing over the non-chunk closure gates:
+  retained-route `PASS=164 FAIL=0`; campaign status `PASS=190 FAIL=0`.
 - Claim boundary: active workers, logs, output directories, and launch records
   are not evidence.  Count only root artifacts that pass the polefit8x8 chunk
   combiner/postprocessor and aggregate gates.  No retained or proposed-retained

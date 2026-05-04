@@ -10,7 +10,7 @@ python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index
 python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
 # SUMMARY: PASS=8 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=159 FAIL=0
+# SUMMARY: PASS=164 FAIL=0
 ```
 
 Active production workers, launch records, logs, and output directories are not

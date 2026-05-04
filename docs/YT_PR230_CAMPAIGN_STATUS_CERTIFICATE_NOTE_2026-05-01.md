@@ -26,7 +26,7 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=185 FAIL=0
+# SUMMARY: PASS=190 FAIL=0
 ```
 
 ## 2026-05-04 FH/LSZ Global Production Collision Guard Update
@@ -46,7 +46,7 @@ hygiene only, not physics closure.
 Latest checkpoint: the polefit8x8 orchestrator was run for chunks013-018 after
 a zero-worker dry run.  The refreshed guard records six active production
 workers at the global cap and blocks additional launch.  The campaign status
-runner still passes with `PASS=185 FAIL=0`; active workers, logs, output
+runner still passes with `PASS=190 FAIL=0`; active workers, logs, output
 directories, and launch records are not evidence until the expected artifacts
 land and pass the polefit8x8 chunk certificates.
 

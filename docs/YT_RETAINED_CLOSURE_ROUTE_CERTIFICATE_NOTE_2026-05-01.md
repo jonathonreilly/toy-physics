@@ -18,7 +18,7 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=159 FAIL=0
+# SUMMARY: PASS=164 FAIL=0
 ```
 
 ## 2026-05-04 FH/LSZ Global Production Collision Guard Update
@@ -41,7 +41,7 @@ authorize retained or `proposed_retained` closure.
 
 Latest checkpoint: after a guarded polefit8x8 chunks013-018 launch, the guard
 records six active FH/LSZ production workers, so `launch_guard_allows_new_workers`
-is false.  The retained-route runner still passes with `PASS=159 FAIL=0`; the
+is false.  The retained-route runner still passes with `PASS=164 FAIL=0`; the
 active workers and scheduler state are not evidence until chunk artifacts pass
 their certificates.
 
