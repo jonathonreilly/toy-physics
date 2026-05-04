@@ -140,6 +140,44 @@ Claim boundary: these are production-support chunks only.  They do not
 authorize retained/proposed-retained closure without the downstream scalar
 LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
 
+## 2026-05-04 Chunk033-034 Launch
+
+Load remained below the 10-core ceiling after chunks031/032 launched, so I
+started one more seed-controlled L12 pair:
+
+```bash
+python3 scripts/yt_direct_lattice_correlator_production.py \
+  --volumes 12x24 --masses 0.45,0.75,1.05 \
+  --therm 1000 --measurements 16 --separation 20 \
+  --engine numba --production-targets \
+  --scalar-source-shifts=-0.01,0.0,0.01 \
+  --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' \
+  --scalar-two-point-noises 16 \
+  --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk033 \
+  --seed 2026051033 \
+  --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk033_2026-05-01.json
+
+python3 scripts/yt_direct_lattice_correlator_production.py \
+  --volumes 12x24 --masses 0.45,0.75,1.05 \
+  --therm 1000 --measurements 16 --separation 20 \
+  --engine numba --production-targets \
+  --scalar-source-shifts=-0.01,0.0,0.01 \
+  --scalar-two-point-modes '0,0,0;1,0,0;0,1,0;0,0,1' \
+  --scalar-two-point-noises 16 \
+  --production-output-dir outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk034 \
+  --seed 2026051034 \
+  --output outputs/yt_pr230_fh_lsz_production_L12_T24_chunk034_2026-05-01.json
+```
+
+Runtime PIDs at launch: chunk033 `7011`, chunk034 `7012`.  Monitor session
+`6375` watches both outputs and will run the same local and aggregate gates
+when both files land.
+
+Claim boundary: production-support only.  Six chunks are now running
+concurrently across 029-034; no retained/proposed-retained claim is
+authorized until the downstream scalar LSZ, source-Higgs/WZ/rank-one, and
+retained-route gates pass.
+
 ## 2026-05-04 Chunk027-028 Packaging
 
 Chunks027/028 landed and were repackaged after rerunning the stale generic
