@@ -12,13 +12,13 @@
   "proposal_allowed": false,
   "proposal_allowed_reason": "No combined production same-source pole-fit data are present.",
   "readiness": {
-    "distinct_shells": 0,
+    "distinct_shells": 2,
     "fit_ready": false,
     "has_three_positive_shells": false,
-    "has_zero_shell": false,
-    "input_exists": false,
+    "has_zero_shell": true,
+    "input_exists": true,
     "isolated_negative_pole_ready": false,
-    "mode_rows": 0
+    "mode_rows": 4
   },
   "strict_non_claims": [
     "not production evidence until input exists and passes combiner/postprocess gates",

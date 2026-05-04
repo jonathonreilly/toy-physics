@@ -595,3 +595,24 @@ Findings:
 - The combined output is scoped to the downstream pole-fit postprocessor; it
   does not authorize a physical readout or bypass L16/L24, FV/IR/model-class,
   scalar-LSZ, or canonical-Higgs/source-overlap gates.
+
+## 2026-05-04 Complete L12 Four-Mode Support Self-Review
+
+Disposition: bounded production support; continue campaign.
+
+Findings:
+
+- Chunks061, 062, and 063 pass both generic and v2 multi-tau
+  target-timeseries checkpoints with zero fails.
+- The ready L12 set advances to 63/63 chunks and 1008/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  `895.2344666684801`.
+- The combined L12 support file is present and consumed by the pole-fit
+  postprocessor, but it has only 4 mode rows and 2 distinct momentum shells,
+  so the scalar-pole fit is not ready.
+- Response-window acceptance remains open because fitted response stability is
+  not production-grade and chunks001-016 still lack v2 rows; common-window
+  support remains non-readout support only.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, Schur-row, FV/IR/model-class,
+  L16/L24 scaling, and retained-route gates remain open.

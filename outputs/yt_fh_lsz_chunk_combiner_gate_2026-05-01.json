@@ -10,53 +10,97 @@
     "each chunk must contain same-source scalar C_ss(q) modes 0,100,010,001 with 16 noises",
     "the combined L12 summary remains non-retained until L16/L24 and isolated-pole/FV/IR gates pass"
   ],
-  "actual_current_surface_status": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
+  "actual_current_surface_status": "bounded-support / FH-LSZ complete L12 chunk summary constructed",
   "chunk_summary": {
-    "available_saved_configurations": 960,
+    "available_saved_configurations": 1008,
     "expected_chunks": 63,
-    "missing_chunks": 3,
-    "present_chunks": 60,
-    "ready_chunks": 60,
+    "missing_chunks": 0,
+    "present_chunks": 63,
+    "ready_chunks": 63,
     "target_saved_configurations": 1000
   },
   "combined_output_target": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json",
   "combined_summary": {
-    "available": false,
-    "reason": "not all expected chunks are ready for L12 combination"
+    "available": true,
+    "chunk_count": 63,
+    "combined_output_target": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunked_combined_2026-05-01.json",
+    "finite_difference_residue_proxy": {
+      "available": true,
+      "dGamma_dp_hat_sq": -0.7168380257823943,
+      "finite_residue_proxy": 1.3950152810442051,
+      "reference_modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "strict_limit": "finite L12 proxy is not kappa_s without isolated pole, FV/IR/zero-mode control, L16/L24, and retained-proposal gate"
+    },
+    "mode_rows": {
+      "0,0,0": {
+        "C_ss_real_weighted": 0.1223644106593326,
+        "C_ss_real_weighted_stderr": 1.2230563204013435e-05,
+        "Gamma_ss_real_proxy": 8.172310842766528,
+        "momentum_mode": [
+          0,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.0
+      },
+      "0,0,1": {
+        "C_ss_real_weighted": 0.1253095981533838,
+        "C_ss_real_weighted_stderr": 1.1967690058494115e-05,
+        "Gamma_ss_real_proxy": 7.980234672654215,
+        "momentum_mode": [
+          0,
+          0,
+          1
+        ],
+        "p_hat_sq": 0.26794919243112264
+      },
+      "0,1,0": {
+        "C_ss_real_weighted": 0.1253243905002935,
+        "C_ss_real_weighted_stderr": 1.2038029188056342e-05,
+        "Gamma_ss_real_proxy": 7.979292745873422,
+        "momentum_mode": [
+          0,
+          1,
+          0
+        ],
+        "p_hat_sq": 0.26794919243112264
+      },
+      "1,0,0": {
+        "C_ss_real_weighted": 0.12531738187657815,
+        "C_ss_real_weighted_stderr": 1.19489927253613e-05,
+        "Gamma_ss_real_proxy": 7.979739003683258,
+        "momentum_mode": [
+          1,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.26794919243112264
+      }
+    },
+    "saved_configurations": 1008,
+    "source_response": {
+      "mean": 1.2448751329919734,
+      "stderr": 0.035821721982903024
+    }
   },
   "fail_count": 0,
-  "first_blocking_issues": [
-    {
-      "chunk_index": 61,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk061_2026-05-01.json"
-    },
-    {
-      "chunk_index": 62,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk062_2026-05-01.json"
-    },
-    {
-      "chunk_index": 63,
-      "issues": [
-        "chunk output absent"
-      ],
-      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk063_2026-05-01.json"
-    }
-  ],
-  "first_missing_outputs": [
-    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk061_2026-05-01.json",
-    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk062_2026-05-01.json",
-    "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk063_2026-05-01.json"
-  ],
+  "first_blocking_issues": [],
+  "first_missing_outputs": [],
   "manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
   "pass_count": 9,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The combiner is an acceptance boundary; the current chunk set is partial/non-independent and supplies no combined L12 output or scalar pole derivative.",
+  "proposal_allowed_reason": "The L12 chunk set is complete, but L12 alone is not closure and does not supply L16/L24 scaling, an isolated scalar pole derivative, FV/IR control, or canonical-Higgs/source-overlap authority.",
   "seed_independence_gate": {
     "expected_seed_control_version": "numba_gauge_seed_v1",
     "present_chunks_pass_seed_independence_gate": true,
@@ -720,9 +764,42 @@
           "source_slope_dE_ds_lat": 1.415377399431247
         },
         "seed_related_issues": []
+      },
+      {
+        "chunk_index": 61,
+        "seed": 2026051061,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.947907409576109,
+          "plaquette_mean": 0.00235346043004,
+          "source_slope_dE_ds_lat": 1.245019375483558
+        },
+        "seed_related_issues": []
+      },
+      {
+        "chunk_index": 62,
+        "seed": 2026051062,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.846167167231215,
+          "plaquette_mean": 0.002291324727414,
+          "source_slope_dE_ds_lat": 1.434689329625398
+        },
+        "seed_related_issues": []
+      },
+      {
+        "chunk_index": 63,
+        "seed": 2026051063,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.845125136546812,
+          "plaquette_mean": 0.002266321291474,
+          "source_slope_dE_ds_lat": 1.441049723137174
+        },
+        "seed_related_issues": []
       }
     ],
-    "ready_chunks_after_seed_gate": 60
+    "ready_chunks_after_seed_gate": 63
   },
   "strict_non_claims": [
     "does not launch production",
@@ -731,5 +808,5 @@
     "does not set c2, Z_match, or kappa_s to one",
     "does not count chunks without auditable independent gauge seeding"
   ],
-  "verdict": "The L12 chunked FH/LSZ path now has an auditable combiner gate. 60 of 63 L12 chunk outputs are ready; the set is still partial.  Chunks must expose production phase, same-source dE/ds and C_ss(q), scalar-source non-readout metadata, run-control provenance, and numba gauge seed-control metadata before an L12 combined summary can be constructed.  Duplicate gauge signatures across distinct metadata seeds are rejected as non-independent evidence.  Even a complete L12 combination is not PR #230 closure because L16/L24 scaling, an isolated scalar pole inverse-derivative fit, FV/IR/zero-mode control, and the retained-proposal certificate remain open."
+  "verdict": "The L12 chunked FH/LSZ path now has an auditable combiner gate. All 63 of 63 L12 chunk outputs are ready; a combined L12 support summary has been constructed.  Chunks must expose production phase, same-source dE/ds and C_ss(q), scalar-source non-readout metadata, run-control provenance, and numba gauge seed-control metadata before an L12 combined summary can be constructed.  Duplicate gauge signatures across distinct metadata seeds are rejected as non-independent evidence.  Even a complete L12 combination is not PR #230 closure because L16/L24 scaling, an isolated scalar pole inverse-derivative fit, FV/IR/zero-mode control, and the retained-proposal certificate remain open."
 }

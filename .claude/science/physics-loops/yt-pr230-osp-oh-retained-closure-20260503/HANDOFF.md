@@ -1431,3 +1431,45 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 This is engineering support only.  The combined L12 file, once written, is an
 input to the scalar-pole postprocessor and does not by itself provide L16/L24,
 FV/IR/model-class, canonical-Higgs/source-overlap, or physical `y_t` closure.
+
+## 2026-05-04 Complete L12 Four-Mode Support Surface
+
+Chunks061, 062, and 063 completed the L12 production wave and were packaged
+with passing local and aggregate gates:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 61
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 62
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 63
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 61
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 62
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 63
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_pole_fit_postprocessor.py
+# SUMMARY: PASS=5 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=155 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=181 FAIL=0
+```
+
+The ready L12 set is now `63/63` chunks and `1008/1000` saved configurations.
+Target-observable ESS passes with limiting ESS `895.2344666684801`.  The
+combined L12 support file exists, but the pole-fit postprocessor reports
+`mode_rows=4`, `distinct_shells=2`, and `fit_ready=False`; the four-mode
+surface is not a scalar-pole derivative.  Response-window acceptance remains
+open, scalar-LSZ pole/FV/IR/model-class control remains open, and
+canonical-Higgs/source-overlap closure remains open.

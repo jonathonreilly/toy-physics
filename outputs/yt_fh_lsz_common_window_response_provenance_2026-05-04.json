@@ -2460,6 +2460,129 @@
       "original_windows_mixed": false,
       "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk060_2026-05-01.json",
       "seed": 2026051060
+    },
+    {
+      "chunk_index": 61,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.23951445431574167,
+          "energy_lat": 1.8281940370334269,
+          "energy_lat_err": 0.2956325124707539,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.17462460120665912,
+          "energy_lat": 1.8425407064969477,
+          "energy_lat_err": 0.3444188625000112,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.12755652121684086,
+          "energy_lat": 1.8567725730890743,
+          "energy_lat_err": 0.40082486450519283,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.429508811663437,
+      "common_window_slope_dE_ds_lat_err": 24.52707282875347,
+      "original_fit_window_signature_tau_min": [
+        1,
+        1,
+        1
+      ],
+      "original_slope_dE_ds_lat": 1.2450193754835581,
+      "original_slope_dE_ds_lat_err": 0.0987908397636767,
+      "original_windows_mixed": false,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk061_2026-05-01.json",
+      "seed": 2026051061
+    },
+    {
+      "chunk_index": 62,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.22345006540481135,
+          "energy_lat": 1.8317666340299184,
+          "energy_lat_err": 0.3007455573448919,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.16311042768589795,
+          "energy_lat": 1.846167167231215,
+          "energy_lat_err": 0.35035673469742584,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.11929753522631256,
+          "energy_lat": 1.8604483205153883,
+          "energy_lat_err": 0.4077144245181251,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.4346893296253975,
+      "common_window_slope_dE_ds_lat_err": 24.949835378730512,
+      "original_fit_window_signature_tau_min": [
+        10,
+        10,
+        10
+      ],
+      "original_slope_dE_ds_lat": 1.4346893296253975,
+      "original_slope_dE_ds_lat_err": 24.949835378730512,
+      "original_windows_mixed": false,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk062_2026-05-01.json",
+      "seed": 2026051062
+    },
+    {
+      "chunk_index": 63,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.22237046548187206,
+          "energy_lat": 1.830660527976761,
+          "energy_lat_err": 0.29920888284529856,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.1622706276737713,
+          "energy_lat": 1.8451251365468124,
+          "energy_lat_err": 0.34848076590675403,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.11864365432720034,
+          "energy_lat": 1.8594693382055993,
+          "energy_lat_err": 0.4054296294309069,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.4410497231371737,
+      "common_window_slope_dE_ds_lat_err": 24.815579188512853,
+      "original_fit_window_signature_tau_min": [
+        10,
+        10,
+        10
+      ],
+      "original_slope_dE_ds_lat": 1.4410497231371737,
+      "original_slope_dE_ds_lat_err": 24.815579188512853,
+      "original_windows_mixed": false,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk063_2026-05-01.json",
+      "seed": 2026051063
     }
   ],
   "common_window": {
@@ -2467,20 +2590,20 @@
     "tau_min": 10
   },
   "common_window_production_grade": false,
-  "common_window_relative_fit_error": 17.211488406226152,
+  "common_window_relative_fit_error": 17.213634976171676,
   "common_window_slope_summary": {
     "available": true,
     "max": 1.4461110127928816,
-    "mean": 1.424925815621466,
-    "median": 1.4241802591155581,
+    "mean": 1.4254094730430789,
+    "median": 1.425475648225018,
     "min": 1.4051480558663294,
-    "n": 60,
-    "relative_stdev": 0.005490444253610517,
+    "n": 63,
+    "relative_stdev": 0.00561579672777511,
     "spread_ratio": 1.0291520575042157,
-    "stdev": 0.007823475756200156
+    "stdev": 0.008004809854454967
   },
   "common_window_stability_passed": true,
-  "common_window_typical_fit_error": 24.525094155301204,
+  "common_window_typical_fit_error": 24.53647836054078,
   "exact_next_action": "Promote this into a predeclared common-window response gate or postprocessor, then require finite-source-linearity, scalar-pole model/FV/IR control, and canonical-Higgs identity before any physical y_t readout.",
   "fail_count": 0,
   "high_original_all_mixed_window": true,
@@ -2515,13 +2638,13 @@
   "original_slope_summary": {
     "available": true,
     "max": 7.3549193842802785,
-    "mean": 2.3239851494174943,
-    "median": 1.4267006767038177,
+    "mean": 2.2787280538618377,
+    "median": 1.4267349938298886,
     "min": 1.2392686775356556,
-    "n": 60,
-    "relative_stdev": 0.9015853947143765,
+    "n": 63,
+    "relative_stdev": 0.9014700698097433,
     "spread_ratio": 5.934886855129659,
-    "stdev": 2.095271068247921
+    "stdev": 2.0542051377922514
   },
   "pass_count": 11,
   "proposal_allowed": false,
@@ -2587,7 +2710,10 @@
     57,
     58,
     59,
-    60
+    60,
+    61,
+    62,
+    63
   ],
   "signature_summary": {
     "1/1/1": {
@@ -2595,10 +2721,11 @@
         6,
         13,
         28,
-        45
+        45,
+        61
       ],
-      "n": 4,
-      "original_slope_mean": 1.244766117623719
+      "n": 5,
+      "original_slope_mean": 1.2448167691956868
     },
     "10/1/1": {
       "chunk_indices": [
@@ -2663,10 +2790,12 @@
         56,
         57,
         59,
-        60
+        60,
+        62,
+        63
       ],
-      "n": 42,
-      "original_slope_mean": 1.4253122817034278
+      "n": 44,
+      "original_slope_mean": 1.4258830655524215
     },
     "10/10/2": {
       "chunk_indices": [

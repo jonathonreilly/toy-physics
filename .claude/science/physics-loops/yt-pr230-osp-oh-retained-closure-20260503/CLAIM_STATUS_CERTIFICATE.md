@@ -85,6 +85,11 @@ Open imports:
   ESS with limiting ESS `847.2344666684801` but still fails response-window
   acceptance and does not provide scalar-LSZ or canonical-Higgs/source-overlap
   closure;
+- FH/LSZ chunks061/062/063 are now packaged and the L12 four-mode support
+  surface is complete at 63/63 chunks and 1008/1000 saved configurations; the
+  complete L12 combiner summary exists, but the pole-fit postprocessor sees
+  only 2 distinct momentum shells and remains non-fit-ready, so this still
+  does not provide scalar-LSZ or canonical-Higgs/source-overlap closure;
 - the legacy-v2 backfill feasibility audit is an exact negative boundary:
   chunks001-016 contain aggregate correlators and tau=1 per-configuration rows
   but no raw per-configuration source-shift correlator time series, so v2

@@ -1,5 +1,5 @@
 {
-  "actual_current_surface_status": "bounded-support / FH-LSZ ready chunk-set production checkpoint",
+  "actual_current_surface_status": "bounded-support / FH-LSZ complete L12 ready chunk-set checkpoint",
   "chunk_rows": [
     {
       "artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk001/L12xT24/ensemble_measurement.json",
@@ -1440,14 +1440,86 @@
       },
       "slope_dE_ds_lat": 1.4153773994312473,
       "slope_dE_ds_lat_err": 24.650592816970537
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk061/L12xT24/ensemble_measurement.json",
+      "chunk_index": 61,
+      "issues": [],
+      "mode_keys": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk061_2026-05-01.json",
+      "ready": true,
+      "seed": 2026051061,
+      "seed_control": {
+        "base_seed": 2026051061,
+        "gauge_rng_seed": 2038271321,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2038271321,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2038271321
+      },
+      "slope_dE_ds_lat": 1.2450193754835581,
+      "slope_dE_ds_lat_err": 0.0987908397636767
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk062/L12xT24/ensemble_measurement.json",
+      "chunk_index": 62,
+      "issues": [],
+      "mode_keys": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk062_2026-05-01.json",
+      "ready": true,
+      "seed": 2026051062,
+      "seed_control": {
+        "base_seed": 2026051062,
+        "gauge_rng_seed": 2038271322,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2038271322,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2038271322
+      },
+      "slope_dE_ds_lat": 1.4346893296253975,
+      "slope_dE_ds_lat_err": 24.949835378730512
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk063/L12xT24/ensemble_measurement.json",
+      "chunk_index": 63,
+      "issues": [],
+      "mode_keys": [
+        "0,0,0",
+        "0,0,1",
+        "0,1,0",
+        "1,0,0"
+      ],
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk063_2026-05-01.json",
+      "ready": true,
+      "seed": 2026051063,
+      "seed_control": {
+        "base_seed": 2026051063,
+        "gauge_rng_seed": 2038271323,
+        "numba_gauge_seeded_before_thermalization": true,
+        "scalar_rng_seed": 2038271323,
+        "seed_control_version": "numba_gauge_seed_v1",
+        "volume_rng_seed": 2038271323
+      },
+      "slope_dE_ds_lat": 1.4410497231371737,
+      "slope_dE_ds_lat_err": 24.815579188512853
     }
   ],
   "chunk_summary": {
-    "available_saved_configurations": 960,
+    "available_saved_configurations": 1008,
     "expected_chunks": 63,
-    "missing_chunks": 3,
-    "present_chunks": 60,
-    "ready_chunks": 60,
+    "missing_chunks": 0,
+    "present_chunks": 63,
+    "ready_chunks": 63,
     "target_saved_configurations": 1000
   },
   "combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
@@ -1461,7 +1533,7 @@
   ],
   "pass_count": 8,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The ready chunk set is partial L12 production support only; no combined L12, L16/L24, pole derivative, model-class, FV/IR, or Higgs-identity certificate exists.",
+  "proposal_allowed_reason": "The L12 chunk set is complete, but L12 support does not supply L16/L24 scaling, an isolated scalar-pole derivative, model-class control, FV/IR control, or Higgs-identity authority.",
   "ready_chunk_indices": [
     1,
     2,
@@ -1522,7 +1594,10 @@
     57,
     58,
     59,
-    60
+    60,
+    61,
+    62,
+    63
   ],
   "seed_independence_gate": {
     "expected_seed_control_version": "numba_gauge_seed_v1",
@@ -2187,9 +2262,42 @@
           "source_slope_dE_ds_lat": 1.415377399431247
         },
         "seed_related_issues": []
+      },
+      {
+        "chunk_index": 61,
+        "seed": 2026051061,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.947907409576109,
+          "plaquette_mean": 0.00235346043004,
+          "source_slope_dE_ds_lat": 1.245019375483558
+        },
+        "seed_related_issues": []
+      },
+      {
+        "chunk_index": 62,
+        "seed": 2026051062,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.846167167231215,
+          "plaquette_mean": 0.002291324727414,
+          "source_slope_dE_ds_lat": 1.434689329625398
+        },
+        "seed_related_issues": []
+      },
+      {
+        "chunk_index": 63,
+        "seed": 2026051063,
+        "seed_independence_signature": {
+          "complete": true,
+          "mass_fit_m_lat": 1.845125136546812,
+          "plaquette_mean": 0.002266321291474,
+          "source_slope_dE_ds_lat": 1.441049723137174
+        },
+        "seed_related_issues": []
       }
     ],
-    "ready_chunks_after_seed_gate": 60
+    "ready_chunks_after_seed_gate": 63
   },
   "strict_non_claims": [
     "does not use partial L12 chunks as retained evidence",
@@ -2198,5 +2306,5 @@
     "does not treat source response as a physical Higgs readout",
     "does not bypass pole derivative, model-class, FV/IR, or canonical-Higgs identity gates"
   ],
-  "verdict": "Seed-controlled L12_T24 chunks[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60] are present and combiner-ready. They supply production-format same-source dE/ds and C_ss(q) support, but only 60 of 63 required L12 chunks are ready, no combined L12 output exists, and the scalar-pole derivative/model-class/FV/IR/canonical-Higgs identity gates remain open."
+  "verdict": "Seed-controlled L12_T24 chunks[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63] are present and combiner-ready. They supply production-format same-source dE/ds and C_ss(q) support, but all 63 of 63 required L12 chunks are ready and the combiner has written the combined L12 support summary.  The scalar-pole derivative/model-class/FV/IR/canonical-Higgs identity gates remain open."
 }

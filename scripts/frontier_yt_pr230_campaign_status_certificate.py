@@ -680,6 +680,7 @@ def main() -> int:
     report(
         "fh-lsz-chunk-combiner-gate-not-evidence",
         "chunk combiner gate" in str(statuses["fh_lsz_chunk_combiner_gate"])
+        or "complete L12 chunk summary" in str(statuses["fh_lsz_chunk_combiner_gate"])
         or "open" in str(statuses["fh_lsz_chunk_combiner_gate"]),
         statuses["fh_lsz_chunk_combiner_gate"],
     )
@@ -697,7 +698,9 @@ def main() -> int:
     )
     report(
         "fh-lsz-ready-chunk-set-checkpoint-not-closure",
-        "ready chunk-set production checkpoint" in str(statuses["fh_lsz_ready_chunk_set_checkpoint"]),
+        "ready chunk-set production checkpoint" in str(statuses["fh_lsz_ready_chunk_set_checkpoint"])
+        or "complete L12 ready chunk-set checkpoint"
+        in str(statuses["fh_lsz_ready_chunk_set_checkpoint"]),
         statuses["fh_lsz_ready_chunk_set_checkpoint"],
     )
     report(

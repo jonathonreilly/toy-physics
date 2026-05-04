@@ -7,19 +7,19 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "scalar-LSZ pole/FV/IR/model-class control / O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-04T09:24:00Z"
-  block: 30
-  artifact: "FH/LSZ combiner complete-state support path"
+  utc: "2026-05-04T09:58:00Z"
+  block: 31
+  artifact: "FH/LSZ complete L12 four-mode support checkpoint"
   status: "bounded production support only; retained/proposed-retained closure not authorized"
-  result: "patched the L12 combiner so 63/63 completeness is a passing audited state and writes the combined L12 support summary consumed by the pole-fit postprocessor; current 60/63 rerun remains PASS=9 FAIL=0, retained-route PASS=155 FAIL=0, campaign PASS=181 FAIL=0"
+  result: "packaged chunks061-063 and completed the L12 four-mode support surface at 63/63 chunks, 1008/1000 saved configurations, target ESS 895.2344666684801; combined L12 support file exists, pole-fit postprocessor sees only 2 shells and remains non-fit-ready; retained-route PASS=155 FAIL=0, campaign PASS=181 FAIL=0"
   claim_boundary: "no physical y_t readout; scalar-LSZ pole/FV/IR/model-class control, response-window acceptance, and canonical-Higgs/source-overlap gates remain open"
-  live_compute: "chunks061-063 running under the 61-63 launch monitor; 57-60 monitor has completed"
+  live_compute: "final 61-63 chunk monitor completed; no live L12 chunk jobs remain"
 lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 30
+block: 31
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md

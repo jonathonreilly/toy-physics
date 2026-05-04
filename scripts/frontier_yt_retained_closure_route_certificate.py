@@ -419,12 +419,15 @@ def main() -> int:
         )
         < 12.0
     )
+    chunk_combiner_status = certificates["fh_lsz_chunk_combiner_gate"].get(
+        "actual_current_surface_status", ""
+    )
     chunk_combiner_not_evidence = (
-        "chunk combiner gate"
-        in certificates["fh_lsz_chunk_combiner_gate"].get("actual_current_surface_status", "")
+        (
+            "chunk combiner gate" in chunk_combiner_status
+            or "complete L12 chunk summary" in chunk_combiner_status
+        )
         and certificates["fh_lsz_chunk_combiner_gate"].get("proposal_allowed") is False
-        and int(certificates["fh_lsz_chunk_combiner_gate"].get("chunk_summary", {}).get("ready_chunks", 0))
-        < int(certificates["fh_lsz_chunk_combiner_gate"].get("chunk_summary", {}).get("expected_chunks", 1))
     )
     chunk001_checkpoint_not_closure = (
         "chunk001" in certificates["fh_lsz_chunk001_checkpoint"].get("actual_current_surface_status", "")
@@ -438,16 +441,15 @@ def main() -> int:
         in certificates["fh_lsz_chunk002_checkpoint"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_chunk002_checkpoint"].get("proposal_allowed") is False
     )
+    ready_chunk_set_status = certificates["fh_lsz_ready_chunk_set_checkpoint"].get(
+        "actual_current_surface_status", ""
+    )
     ready_chunk_set_not_closure = (
-        "ready chunk-set production checkpoint"
-        in certificates["fh_lsz_ready_chunk_set_checkpoint"].get("actual_current_surface_status", "")
-        and certificates["fh_lsz_ready_chunk_set_checkpoint"].get("proposal_allowed") is False
-        and int(certificates["fh_lsz_ready_chunk_set_checkpoint"].get("chunk_summary", {}).get("ready_chunks", 0))
-        < int(
-            certificates["fh_lsz_ready_chunk_set_checkpoint"].get("chunk_summary", {}).get(
-                "expected_chunks", 1
-            )
+        (
+            "ready chunk-set production checkpoint" in ready_chunk_set_status
+            or "complete L12 ready chunk-set checkpoint" in ready_chunk_set_status
         )
+        and certificates["fh_lsz_ready_chunk_set_checkpoint"].get("proposal_allowed") is False
     )
     ready_chunk_response_not_closure = (
         "ready chunk response-stability diagnostic"

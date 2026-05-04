@@ -1,0 +1,151 @@
+{
+  "chunk_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "combined_lsz_summary": {
+    "finite_difference_residue_proxy": {
+      "available": true,
+      "dGamma_dp_hat_sq": -0.7168380257823943,
+      "finite_residue_proxy": 1.3950152810442051,
+      "reference_modes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "strict_limit": "finite L12 proxy is not kappa_s without isolated pole, FV/IR/zero-mode control, L16/L24, and retained-proposal gate"
+    },
+    "mode_rows": {
+      "0,0,0": {
+        "C_ss_real_weighted": 0.1223644106593326,
+        "C_ss_real_weighted_stderr": 1.2230563204013435e-05,
+        "Gamma_ss_real_proxy": 8.172310842766528,
+        "momentum_mode": [
+          0,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.0
+      },
+      "0,0,1": {
+        "C_ss_real_weighted": 0.1253095981533838,
+        "C_ss_real_weighted_stderr": 1.1967690058494115e-05,
+        "Gamma_ss_real_proxy": 7.980234672654215,
+        "momentum_mode": [
+          0,
+          0,
+          1
+        ],
+        "p_hat_sq": 0.26794919243112264
+      },
+      "0,1,0": {
+        "C_ss_real_weighted": 0.1253243905002935,
+        "C_ss_real_weighted_stderr": 1.2038029188056342e-05,
+        "Gamma_ss_real_proxy": 7.979292745873422,
+        "momentum_mode": [
+          0,
+          1,
+          0
+        ],
+        "p_hat_sq": 0.26794919243112264
+      },
+      "1,0,0": {
+        "C_ss_real_weighted": 0.12531738187657815,
+        "C_ss_real_weighted_stderr": 1.19489927253613e-05,
+        "Gamma_ss_real_proxy": 7.979739003683258,
+        "momentum_mode": [
+          1,
+          0,
+          0
+        ],
+        "p_hat_sq": 0.26794919243112264
+      }
+    }
+  },
+  "metadata": {
+    "chunk_count": 63,
+    "manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
+    "phase": "combined_l12_chunk_summary",
+    "saved_configurations": 1008,
+    "source": "frontier_yt_fh_lsz_chunk_combiner_gate.py",
+    "strict_limit": "Combined L12 rows are same-source FH/LSZ support only.  They do not supply L16/L24 scaling, an isolated scalar pole derivative, FV/IR/zero-mode control, canonical-Higgs/source overlap, or retained-proposal authority."
+  },
+  "source_response_summary": {
+    "mean": 1.2448751329919734,
+    "stderr": 0.035821721982903024
+  },
+  "strict_non_claims": [
+    "not retained or proposed_retained y_t closure",
+    "does not set kappa_s, c2, or Z_match to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not treat L12-only finite-shell rows as an isolated scalar pole derivative"
+  ]
+}

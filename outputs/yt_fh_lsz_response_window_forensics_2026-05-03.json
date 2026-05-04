@@ -780,117 +780,161 @@
       "tau1_target_rows": 16,
       "tau1_target_slope_mean": 1.2407841002319473,
       "tau1_target_slope_stderr": 0.008519762463178381
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.010017814751801746,
+      "chunk_index": 61,
+      "fit_minus_tau1_mean": 0.010017814751801746,
+      "fit_slope_dE_ds_lat": 1.2450193754835581,
+      "fit_slope_dE_ds_lat_err": 0.0987908397636767,
+      "fit_tau1_discrepancy_sigma": 0.10115636619498279,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk061_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2350015607317564,
+      "tau1_target_slope_stderr": 0.0069208307548361
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.19201011415272307,
+      "chunk_index": 62,
+      "fit_minus_tau1_mean": 0.19201011415272307,
+      "fit_slope_dE_ds_lat": 1.4346893296253975,
+      "fit_slope_dE_ds_lat_err": 24.949835378730512,
+      "fit_tau1_discrepancy_sigma": 0.0076958463185712615,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk062_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2426792154726745,
+      "tau1_target_slope_stderr": 0.009994072531699844
+    },
+    {
+      "absolute_fit_tau1_discrepancy": 0.19304744548624497,
+      "chunk_index": 63,
+      "fit_minus_tau1_mean": 0.19304744548624497,
+      "fit_slope_dE_ds_lat": 1.4410497231371737,
+      "fit_slope_dE_ds_lat_err": 24.815579188512853,
+      "fit_tau1_discrepancy_sigma": 0.007779283930837153,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk063_2026-05-01.json",
+      "phase": "production",
+      "tau1_target_rows": 16,
+      "tau1_target_slope_mean": 1.2480022776509287,
+      "tau1_target_slope_stderr": 0.0076072226348139265
     }
   ],
   "exact_next_action": "Add a predeclared FH response-window acceptance gate that compares multiple effective-mass tau windows, fit windows, and source radii with covariance, then rerun response stability.  In parallel, keep the scalar-pole/FV/IR/model-class and canonical-Higgs identity gates as separate blockers.",
   "fail_count": 0,
   "fit_slope_outliers": {
     "available": true,
-    "mad": 0.008080104972568836,
-    "median": 1.4267006767038177,
+    "mad": 0.008146886705129752,
+    "median": 1.4267349938298886,
     "outliers": [
       {
         "chunk_index": 2,
-        "robust_z": 434.3506797835596,
+        "robust_z": 430.7873753106726,
         "value": 6.629960999250584
       },
       {
         "chunk_index": 4,
-        "robust_z": 448.8487611430171,
+        "robust_z": 445.16661286794687,
         "value": 6.80363930805008
       },
       {
         "chunk_index": 6,
-        "robust_z": -15.391022787404964,
+        "robust_z": -15.267700553715366,
         "value": 1.2423254657958398
       },
       {
         "chunk_index": 13,
-        "robust_z": -15.09029540644625,
+        "robust_z": -14.9694382979334,
         "value": 1.2459279992373107
       },
       {
         "chunk_index": 14,
-        "robust_z": 439.8566991008702,
+        "robust_z": 436.24826063719223,
         "value": 6.6959198043875165
       },
       {
         "chunk_index": 20,
-        "robust_z": -15.345066644299648,
+        "robust_z": -15.222121122717322,
         "value": 1.2428759927942465
       },
       {
         "chunk_index": 22,
-        "robust_z": 494.8677686533927,
+        "robust_z": 490.80839295838774,
         "value": 7.3549193842802785
       },
       {
         "chunk_index": 23,
-        "robust_z": 448.6098107675855,
+        "robust_z": 444.9296212186697,
         "value": 6.800776826038631
       },
       {
         "chunk_index": 27,
-        "robust_z": -15.538260381384672,
+        "robust_z": -15.41373121037289,
         "value": 1.2405616478339947
       },
       {
         "chunk_index": 28,
-        "robust_z": -15.009264899847132,
+        "robust_z": -14.889072015327672,
         "value": 1.2468986960487285
       },
       {
         "chunk_index": 29,
-        "robust_z": 472.391146549104,
+        "robust_z": 468.5160164218318,
         "value": 7.085662948355276
       },
       {
         "chunk_index": 32,
-        "robust_z": -15.55368796899532,
+        "robust_z": -15.429032334824395,
         "value": 1.240376834598461
       },
       {
         "chunk_index": 40,
-        "robust_z": -15.64619319527638,
+        "robust_z": -15.520779276437263,
         "value": 1.2392686775356556
       },
       {
         "chunk_index": 41,
-        "robust_z": 477.87274476470395,
+        "robust_z": 473.9526808315142,
         "value": 7.151329203358232
       },
       {
         "chunk_index": 42,
-        "robust_z": 454.2618883272294,
+        "robust_z": 450.5353675175924,
         "value": 6.868485321212869
       },
       {
         "chunk_index": 45,
-        "robust_z": -15.258558416780328,
+        "robust_z": -15.13632202121431,
         "value": 1.2439123094129967
       },
       {
         "chunk_index": 54,
-        "robust_z": 470.34446501459166,
+        "robust_z": 466.4861119634987,
         "value": 7.061144932574286
       },
       {
         "chunk_index": 58,
-        "robust_z": 480.43360596189433,
+        "robust_z": 476.4925501143959,
         "value": 7.182006782740703
+      },
+      {
+        "chunk_index": 61,
+        "robust_z": -15.04466540542714,
+        "value": 1.2450193754835581
       }
     ]
   },
   "fit_slope_summary": {
     "available": true,
     "max": 7.3549193842802785,
-    "mean": 2.3239851494174943,
-    "median": 1.4267006767038177,
+    "mean": 2.2787280538618377,
+    "median": 1.4267349938298886,
     "min": 1.2392686775356556,
-    "n": 60,
-    "relative_stdev": 0.9015853947143765,
+    "n": 63,
+    "relative_stdev": 0.9014700698097433,
     "spread_ratio": 5.934886855129659,
-    "stdev": 2.095271068247921
+    "stdev": 2.0542051377922514
   },
   "pass_count": 10,
   "proposal_allowed": false,
@@ -956,7 +1000,10 @@
     57,
     58,
     59,
-    60
+    60,
+    61,
+    62,
+    63
   ],
   "response_window_forensics_passed": true,
   "strict_non_claims": [
@@ -968,20 +1015,20 @@
   ],
   "tau1_target_outliers": {
     "available": true,
-    "mad": 0.006479648267703864,
-    "median": 1.2449294064483047,
+    "mad": 0.00646178648802942,
+    "median": 1.2448715084165605,
     "outliers": []
   },
   "tau1_target_slope_summary": {
     "available": true,
     "max": 1.2595939633054922,
-    "mean": 1.2451934777152884,
-    "median": 1.2449294064483047,
+    "mean": 1.2450363764567092,
+    "median": 1.2448715084165605,
     "min": 1.2313499688634217,
-    "n": 60,
-    "relative_stdev": 0.006054861284519014,
+    "n": 63,
+    "relative_stdev": 0.006009053722259576,
     "spread_ratio": 1.0229374224682368,
-    "stdev": 0.00753947377995389
+    "stdev": 0.007481490472295763
   },
   "verdict": "The accepted target time series expose a stable tau=1 effective-energy response diagnostic across chunks001-016, while the current fitted dE/ds response-stability surface remains unstable.  This identifies a response-window/readout-selection blocker, not a replacement physical readout.  Switching from the production fit slope to the tau=1 target diagnostic would require a predeclared response-window acceptance gate with covariance, multiple tau windows, source-radius control, and the existing scalar-LSZ/canonical-Higgs gates."
 }

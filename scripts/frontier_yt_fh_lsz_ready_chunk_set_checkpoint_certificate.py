@@ -4,10 +4,10 @@ PR #230 FH/LSZ ready chunk-set production checkpoint certificate.
 
 This runner records the current seed-controlled L12_T24 FH/LSZ ready chunk set
 as bounded production support.  It derives the ready indices from the combiner
-gate instead of hardcoding a fixed checkpoint.  It deliberately treats the set
-as partial L12 evidence only: no retained or proposed-retained claim is allowed
-until the full L12 combination, L16/L24 scaling, scalar-pole derivative, FV/IR,
-and canonical-Higgs identity gates pass.
+gate instead of hardcoding a fixed checkpoint.  It treats both partial and
+complete L12 states as support only: no retained or proposed-retained claim is
+allowed until L16/L24 scaling, scalar-pole derivative, FV/IR, and
+canonical-Higgs identity gates pass.
 """
 
 from __future__ import annotations
@@ -168,6 +168,8 @@ def main() -> int:
     )
     ready_count = int(summary.get("ready_chunks", 0))
     expected_count = int(summary.get("expected_chunks", 1))
+    complete_l12 = ready_count == expected_count and expected_count > 0
+    combined_available = combiner.get("combined_summary", {}).get("available") is True
     chunk_rows = [audit_chunk(index) for index in ready_signature_indices]
     chunk_issues = {row["chunk_index"]: row["issues"] for row in chunk_rows if row["issues"]}
 
@@ -186,14 +188,14 @@ def main() -> int:
     )
     report("chunk-outputs-and-artifacts-ready", not chunk_issues, f"issues={chunk_issues}")
     report(
-        "combined-output-still-unavailable",
-        combiner.get("combined_summary", {}).get("available") is False,
+        "combined-output-state-consistent",
+        combined_available == complete_l12,
         str(combiner.get("combined_summary", {})),
     )
     report(
-        "l12-set-incomplete",
-        ready_count < expected_count,
-        f"ready={ready_count} expected={expected_count}",
+        "l12-set-completeness-state-recorded",
+        True,
+        f"ready={ready_count} expected={expected_count} complete={complete_l12}",
     )
     report(
         "no-physical-yukawa-readout",
@@ -203,24 +205,42 @@ def main() -> int:
     report(
         "does-not-authorize-retained-proposal",
         True,
-        f"{ready_count}/{expected_count} L12 chunks is partial production support only",
+        f"{ready_count}/{expected_count} L12 chunks is production support only",
     )
 
-    result = {
-        "actual_current_surface_status": "bounded-support / FH-LSZ ready chunk-set production checkpoint",
-        "verdict": (
-            f"Seed-controlled L12_T24 chunks{ready_signature_indices} are present and combiner-ready. "
-            "They supply production-format same-source dE/ds and C_ss(q) support, "
-            f"but only {ready_count} of {expected_count} required L12 chunks are ready, "
-            "no combined L12 output exists, and the scalar-pole derivative/model-class/"
-            "FV/IR/canonical-Higgs identity gates remain open."
-        ),
-        "proposal_allowed": False,
-        "proposal_allowed_reason": (
+    if complete_l12:
+        actual_status = "bounded-support / FH-LSZ complete L12 ready chunk-set checkpoint"
+        readiness_sentence = (
+            f"all {ready_count} of {expected_count} required L12 chunks are ready "
+            "and the combiner has written the combined L12 support summary"
+        )
+        proposal_reason = (
+            "The L12 chunk set is complete, but L12 support does not supply "
+            "L16/L24 scaling, an isolated scalar-pole derivative, model-class "
+            "control, FV/IR control, or Higgs-identity authority."
+        )
+    else:
+        actual_status = "bounded-support / FH-LSZ ready chunk-set production checkpoint"
+        readiness_sentence = (
+            f"only {ready_count} of {expected_count} required L12 chunks are ready "
+            "and no combined L12 output exists"
+        )
+        proposal_reason = (
             "The ready chunk set is partial L12 production support only; no combined "
             "L12, L16/L24, pole derivative, model-class, FV/IR, or Higgs-identity "
             "certificate exists."
+        )
+
+    result = {
+        "actual_current_surface_status": actual_status,
+        "verdict": (
+            f"Seed-controlled L12_T24 chunks{ready_signature_indices} are present and combiner-ready. "
+            "They supply production-format same-source dE/ds and C_ss(q) support, "
+            f"but {readiness_sentence}.  The scalar-pole derivative/model-class/"
+            "FV/IR/canonical-Higgs identity gates remain open."
         ),
+        "proposal_allowed": False,
+        "proposal_allowed_reason": proposal_reason,
         "combiner_gate": str(COMBINER.relative_to(ROOT)),
         "chunk_summary": summary,
         "seed_independence_gate": seed_gate,
