@@ -101,3 +101,20 @@ Findings:
   scalar LSZ, source-Higgs, W/Z, Schur, rank-one, retained-route, or campaign
   gates.
 - No retained/proposed-retained claim is authorized by orchestration.
+
+## 2026-05-04 W/Z Implementation Plan Self-Review
+
+Disposition: bounded implementation support; continue campaign.
+
+Findings:
+
+- The W/Z fallback route now has a concrete five-work-unit implementation
+  plan: same-source EW action, W/Z correlator mass fits, matched top/WZ
+  covariance, sector identity, and builder/gate integration.
+- The gate verifies that current PR230 still has no W/Z measurement rows and
+  that the QCD top harness only emits an absent guard.
+- Static EW gauge-mass algebra, generic W/Z slopes without identity
+  certificates, observed-value selectors, and H_unit/Ward shortcuts remain
+  rejected.
+- No retained/proposed-retained claim is authorized because the artifact writes
+  no W/Z rows and supplies no sector-overlap or canonical-Higgs identity.

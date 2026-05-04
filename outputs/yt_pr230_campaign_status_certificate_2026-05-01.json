@@ -203,13 +203,14 @@
     "taste_singlet_ladder_normalization": "exact negative boundary / taste-singlet normalization removes finite ladder crossings",
     "unit_projector_pole_threshold": "exact negative boundary / unit-projector finite-ladder pole-threshold obstruction",
     "wz_response_harness_absence_guard": "bounded-support / WZ response harness absence guard",
+    "wz_response_harness_implementation_plan": "bounded-support / WZ response harness implementation plan",
     "wz_response_measurement_row_contract_gate": "bounded-support / WZ response measurement-row contract gate",
     "wz_response_repo_harness_import_audit": "exact negative boundary / repo-wide WZ response harness import audit",
     "wz_response_row_production_attempt": "exact negative boundary / WZ response row production attempt on current surface",
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 166,
+  "pass_count": 167,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

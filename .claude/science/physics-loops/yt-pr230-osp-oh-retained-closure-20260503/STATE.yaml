@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 4
+block: 5
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -50,6 +50,11 @@ files_touched:
   - scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py
   - docs/YT_FH_LSZ_CHUNK_WAVE_ORCHESTRATOR_NOTE_2026-05-04.md
   - outputs/yt_fh_lsz_chunk_wave_orchestrator_status_2026-05-04.json
+  - scripts/frontier_yt_wz_response_harness_implementation_plan.py
+  - docs/YT_WZ_RESPONSE_HARNESS_IMPLEMENTATION_PLAN_NOTE_2026-05-04.md
+  - outputs/yt_wz_response_harness_implementation_plan_2026-05-04.json
+  - scripts/frontier_yt_retained_closure_route_certificate.py
+  - scripts/frontier_yt_pr230_campaign_status_certificate.py
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -82,6 +87,11 @@ commands_run:
   - "python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py # pass"
   - "python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py --start-index 35 --end-index 40 --max-concurrent 6 --runtime-minutes 1 --dry-run --run-gates # detected chunks029-034 running, chunks035-040 missing"
   - "python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py --start-index 35 --end-index 40 --max-concurrent 6 --runtime-minutes 720 --poll-seconds 60 --launch --run-gates # launched session 80241; first poll launched no chunks because six jobs already running"
+  - "python3 -m py_compile scripts/frontier_yt_wz_response_harness_implementation_plan.py # pass"
+  - "python3 scripts/frontier_yt_wz_response_harness_implementation_plan.py # PASS=15 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_retained_closure_route_certificate.py # pass"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=141 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=167 FAIL=0"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -111,7 +121,13 @@ current_result: >
   seeds 2026051033/2026051034 and monitor session 6375.  A chunk-wave
   orchestrator was added and launched for chunks035-040 with a global
   six-production-job cap; its first status certificate detected chunks029-034
-  running and launched no new chunks until slots open.
+  running and launched no new chunks until slots open.  The W/Z fallback route
+  now has a PASSing implementation-plan gate with five concrete work units
+  (same-source EW action, W/Z correlator mass fits, matched top/WZ covariance,
+  sector identity, and builder/gate integration).  This is bounded support
+  only: no W/Z measurement rows were written, and the retained/campaign
+  aggregate certificates still deny proposal authority with PASS=141 and
+  PASS=167 respectively.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >

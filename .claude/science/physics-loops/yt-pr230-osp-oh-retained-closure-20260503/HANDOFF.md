@@ -140,6 +140,37 @@ Claim boundary: these are production-support chunks only.  They do not
 authorize retained/proposed-retained closure without the downstream scalar
 LSZ, source-Higgs/WZ/rank-one, and retained-route gates.
 
+## 2026-05-04 W/Z Implementation Plan Gate
+
+The W/Z fallback route has been converted from "missing harness" into a
+concrete implementation packet:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_wz_response_harness_implementation_plan.py
+# pass
+
+python3 scripts/frontier_yt_wz_response_harness_implementation_plan.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=141 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=167 FAIL=0
+```
+
+The new gate records five required work units: same-source EW action,
+production W/Z correlator mass fits, matched top/WZ covariance,
+sector-overlap/canonical-Higgs identity certificates, and builder/gate
+integration.  It writes no W/Z measurement rows and keeps the route support
+only.  Current closure remains open because no same-source W/Z rows,
+sector-overlap identity, or canonical-Higgs identity certificate exists.
+
+Next exact action: keep monitoring chunks029/030, chunks031/032, and
+chunks033/034.  If foreground analytic work continues before outputs land,
+only pursue artifacts that supply real non-source rank-repair input rather
+than more source-only certificates.
+
 ## 2026-05-04 Chunk-Wave Orchestrator
 
 Added and dry-ran the L12 chunk-wave orchestrator:
