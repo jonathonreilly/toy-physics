@@ -540,6 +540,10 @@ current_result: >
   while preserving the claim boundary: x8 is not accepted until paired
   production calibration passes, and even accepted x8 remains launch support
   rather than scalar-LSZ or y_t closure.  Aggregates are PASS=155/PASS=181.
+  A paired variance-calibration orchestrator was then added and dry-run.  It
+  detects the absent x8/x16 outputs and reports zero launch slots while the six
+  current production chunks are still running, so the next calibration wave can
+  start later without overcommitting the machine or mixing streams.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >

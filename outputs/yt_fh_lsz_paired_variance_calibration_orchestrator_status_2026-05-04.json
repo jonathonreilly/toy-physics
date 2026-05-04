@@ -1,0 +1,26 @@
+{
+  "actual_current_surface_status": "bounded-support / paired x8/x16 variance calibration orchestration status",
+  "all_production_job_count": 6,
+  "available_launch_slots": 0,
+  "completed_labels": [],
+  "gate_runs": [],
+  "global_max_production_jobs": 6,
+  "launched": [],
+  "manifest": "outputs/yt_fh_lsz_variance_calibration_manifest_2026-05-01.json",
+  "missing_labels": [
+    "x16",
+    "x8"
+  ],
+  "missing_manifest_labels": [],
+  "newly_completed_labels": [],
+  "poll_count": 1,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Calibration orchestration is run control only; variance gates and physics gates decide evidence status.",
+  "running_labels": [],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat variance calibration as scalar LSZ normalization",
+    "does not mix eight-mode calibration with four-mode production chunks as one homogeneous ensemble",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}
