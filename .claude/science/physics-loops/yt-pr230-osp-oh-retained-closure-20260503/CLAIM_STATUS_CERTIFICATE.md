@@ -119,4 +119,8 @@ Open imports:
   now pass as bounded response-side support, but they do not authorize a
   physical readout switch or supply scalar-LSZ pole/FV/IR/model-class control
   or canonical-Higgs/source-overlap closure;
+- paired x8/x16 variance calibration gate is now wired into the PR230
+  certificate surface; the paired production outputs are absent, so x8 remains
+  unaccepted and any future eight-mode pole-fit launch remains support only
+  until the calibration gate passes;
 - independent audit after any proposed positive certificate.

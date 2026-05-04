@@ -35,6 +35,17 @@ running foreground chunk is four-mode/x16, and until it completes it is absent
 from the combiner surface; in either case it is not an eight-mode/x8 variance
 calibration.
 
+The consumable calibration contract is now the paired x8/x16 gate:
+
+```text
+scripts/frontier_yt_fh_lsz_paired_variance_calibration_gate.py
+outputs/yt_fh_lsz_paired_variance_calibration_gate_2026-05-04.json
+```
+
+The eight-mode variance gate reads that paired certificate.  If the paired
+gate later accepts x8, this gate will mark x8 as pole-fit launch support only;
+it still will not authorize retained/proposed-retained `y_t` wording.
+
 ## Claim Boundary
 
 ```text
@@ -58,5 +69,5 @@ combiner, pole-fit, FV/IR/zero-mode, and retained-proposal gates.
 ```bash
 python3 -m py_compile scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py
 python3 scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py
-# SUMMARY: PASS=10 FAIL=0
+# SUMMARY: PASS=11 FAIL=0
 ```

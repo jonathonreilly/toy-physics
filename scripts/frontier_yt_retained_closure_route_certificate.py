@@ -209,6 +209,7 @@ def main() -> int:
         "fh_lsz_eight_mode_noise_variance": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json",
         "fh_lsz_noise_subsample_diagnostics": "outputs/yt_fh_lsz_noise_subsample_diagnostics_certificate_2026-05-01.json",
         "fh_lsz_variance_calibration_manifest": "outputs/yt_fh_lsz_variance_calibration_manifest_2026-05-01.json",
+        "fh_lsz_paired_variance_calibration_gate": "outputs/yt_fh_lsz_paired_variance_calibration_gate_2026-05-04.json",
         "joint_resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
     }
     for path in sorted((ROOT / "outputs").glob(GENERIC_CHUNK_TARGET_PATTERN)):
@@ -1494,6 +1495,11 @@ def main() -> int:
         in certificates["fh_lsz_variance_calibration_manifest"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_variance_calibration_manifest"].get("proposal_allowed") is False
     )
+    paired_variance_calibration_gate_not_closure = (
+        "paired x8/x16 variance calibration"
+        in certificates["fh_lsz_paired_variance_calibration_gate"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_paired_variance_calibration_gate"].get("proposal_allowed") is False
+    )
     joint_resource_multiday = (
         float(certificates["joint_resource_projection"].get("projection", {}).get("joint_mass_scaled_hours", 0.0)) > 1000.0
         and certificates["joint_resource_projection"].get("proposal_allowed") is False
@@ -2256,6 +2262,11 @@ def main() -> int:
         "fh-lsz-variance-calibration-manifest-not-evidence",
         variance_calibration_manifest_not_evidence,
         certificates["fh_lsz_variance_calibration_manifest"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-paired-variance-calibration-gate-not-closure",
+        paired_variance_calibration_gate_not_closure,
+        certificates["fh_lsz_paired_variance_calibration_gate"].get("actual_current_surface_status", ""),
     )
     report(
         "joint-fh-lsz-resource-is-multiday",

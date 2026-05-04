@@ -429,6 +429,9 @@ def main() -> int:
         "fh_lsz_variance_calibration_manifest": load(
             "outputs/yt_fh_lsz_variance_calibration_manifest_2026-05-01.json"
         ),
+        "fh_lsz_paired_variance_calibration_gate": load(
+            "outputs/yt_fh_lsz_paired_variance_calibration_gate_2026-05-04.json"
+        ),
         "fh_lsz_invariant_readout": load("outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json"),
         "scalar_pole_determinant_gate": load("outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"),
         "scalar_ladder_eigen_derivative": load("outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json"),
@@ -1543,6 +1546,11 @@ def main() -> int:
         "variance calibration manifest" in str(statuses["fh_lsz_variance_calibration_manifest"])
         or "bounded-support" in str(statuses["fh_lsz_variance_calibration_manifest"]),
         statuses["fh_lsz_variance_calibration_manifest"],
+    )
+    report(
+        "fh-lsz-paired-variance-calibration-gate-not-closure",
+        "paired x8/x16 variance calibration" in str(statuses["fh_lsz_paired_variance_calibration_gate"]),
+        statuses["fh_lsz_paired_variance_calibration_gate"],
     )
     report(
         "fh-lsz-invariant-readout-still-needs-pole-data",

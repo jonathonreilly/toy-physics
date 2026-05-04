@@ -50,6 +50,8 @@ GATE_COMMANDS = [
     ["python3", "scripts/frontier_yt_fh_lsz_common_window_response_gate.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py"],
     ["python3", "scripts/frontier_yt_fh_lsz_v2_target_response_stability.py"],
+    ["python3", "scripts/frontier_yt_fh_lsz_paired_variance_calibration_gate.py"],
+    ["python3", "scripts/frontier_yt_fh_lsz_eight_mode_noise_variance_gate.py"],
     ["python3", "scripts/frontier_yt_retained_closure_route_certificate.py"],
     ["python3", "scripts/frontier_yt_pr230_campaign_status_certificate.py"],
 ]

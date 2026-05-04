@@ -27,6 +27,7 @@ EXPECTED_CALIBRATION = (
     / "outputs"
     / "yt_pr230_fh_lsz_production_L12_T24_eightmode_x8_variance_calibration_2026-05-01.json"
 )
+PAIRED_VARIANCE_GATE = ROOT / "outputs" / "yt_fh_lsz_paired_variance_calibration_gate_2026-05-04.json"
 OUTPUT = ROOT / "outputs" / "yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
 
 EXPECTED_EIGHT_MODE_KEYS = {
@@ -164,8 +165,10 @@ def main() -> int:
 
     mode_budget = load_json(MODE_BUDGET)
     combiner = load_json(COMBINER_GATE)
+    paired_gate = load_json(PAIRED_VARIANCE_GATE)
     x8_candidate = find_candidate(mode_budget, "pole_fit_eight_modes_x8_noise")
     inflation = math.sqrt(REFERENCE_NOISES / CANDIDATE_NOISES)
+    paired_gate_passed = paired_gate.get("variance_calibration_gate_passed") is True
 
     current_surfaces = [
         candidate_from_output("reduced_joint_smoke", JOINT_SMOKE),
@@ -210,38 +213,66 @@ def main() -> int:
         "; ".join(chunk001.get("issues", [])[:3]),
     )
     report(
-        "variance-gate-not-passed",
-        not ready_surfaces,
-        f"ready_calibration_surfaces={len(ready_surfaces)}",
+        "paired-variance-gate-state-recorded",
+        bool(paired_gate),
+        paired_gate.get("actual_current_surface_status", str(PAIRED_VARIANCE_GATE.relative_to(ROOT))),
+    )
+    report(
+        "variance-gate-state-recorded",
+        True,
+        f"legacy_ready_surfaces={len(ready_surfaces)} paired_gate_passed={paired_gate_passed}",
     )
     report("not-retained-closure", True, "variance gating is launch control, not a scalar LSZ theorem")
 
+    status = (
+        "bounded-support / FH-LSZ eight-mode noise variance gate passed for launch support"
+        if paired_gate_passed
+        else "open / FH-LSZ eight-mode noise variance gate not passed"
+    )
     result = {
-        "actual_current_surface_status": "open / FH-LSZ eight-mode noise variance gate not passed",
+        "actual_current_surface_status": status,
         "verdict": (
-            "The eight-mode/eight-noise L12 chunk shape is pole-fit-kinematics "
-            "ready and fits the current foreground estimate, but lowering the "
-            "stochastic scalar-LSZ noise count from 16 to 8 increases the "
-            f"noise-only standard error by sqrt(2) = {inflation:.6g}.  The "
-            "current repo surface has no same-source production calibration "
-            "showing that this inflation leaves C_ss(q), Gamma_ss(q), and the "
-            "pole-derivative fit stable.  The reduced smoke output is wrong "
-            "phase, wrong volume, two modes, two noises, and one configuration.  "
-            "The foreground chunk001 surface is absent or four-mode/x16 and is "
-            "not an eight-mode/x8 variance calibration.  Therefore the x8 "
-            "option remains planning support only; it is not production "
-            "evidence and cannot be used for a retained or proposed-retained "
-            "top-Yukawa claim."
+            (
+                "The paired x8/x16 variance calibration gate accepts the x8 "
+                "noise reduction as pole-fit launch support.  This remains "
+                "non-physical support only: it does not close scalar LSZ "
+                "normalization, model-class/FV/IR control, or the canonical "
+                "Higgs identity."
+            )
+            if paired_gate_passed
+            else (
+                "The eight-mode/eight-noise L12 chunk shape is pole-fit-kinematics "
+                "ready and fits the current foreground estimate, but lowering the "
+                "stochastic scalar-LSZ noise count from 16 to 8 increases the "
+                f"noise-only standard error by sqrt(2) = {inflation:.6g}.  The "
+                "current repo surface has no accepted same-source production "
+                "calibration showing that this inflation leaves C_ss(q), "
+                "Gamma_ss(q), and the pole-proxy rows stable.  The reduced "
+                "smoke output is wrong phase, wrong volume, two modes, two "
+                "noises, and one configuration.  The foreground chunk001 "
+                "surface is absent or four-mode/x16 and is not an eight-mode/x8 "
+                "variance calibration.  Therefore the x8 option remains "
+                "planning support only; it is not production evidence and "
+                "cannot be used for a retained or proposed-retained top-Yukawa "
+                "claim."
+            )
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "No production same-source eight-mode/x8 variance calibration or theorem is present.",
-        "variance_gate_passed": False,
+        "proposal_allowed_reason": (
+            "Variance calibration is launch support only and does not derive scalar LSZ normalization or physical y_t."
+            if paired_gate_passed
+            else "No accepted production same-source eight-mode/x8 variance calibration or theorem is present."
+        ),
+        "variance_gate_passed": paired_gate_passed,
         "eight_mode_x8_launch_allowed_as_retained_evidence": False,
+        "eight_mode_x8_launch_allowed_as_polefit_support": paired_gate_passed,
         "stochastic_standard_error_multiplier_vs_x16": inflation,
         "parent_certificates": {
             "mode_budget": str(MODE_BUDGET.relative_to(ROOT)),
             "chunk_combiner_gate": str(COMBINER_GATE.relative_to(ROOT)),
+            "paired_variance_calibration_gate": str(PAIRED_VARIANCE_GATE.relative_to(ROOT)),
         },
+        "paired_variance_calibration_gate": paired_gate,
         "candidate_from_mode_budget": x8_candidate,
         "current_surfaces": current_surfaces,
         "acceptance_requirements": [
@@ -263,12 +294,21 @@ def main() -> int:
             "does not use alpha_LM, plaquette, or u0 as proof input",
         ],
         "exact_next_action": (
-            "Keep the running four-mode/x16 chunk as non-evidence until the "
-            "combiner gate can inspect completed output.  For a pole-fit-ready "
-            "foreground campaign, either add a paired eight-mode x8/x16 "
-            "calibration chunk with noise-subsample diagnostics, or stay with "
-            "the x16 noise plan and schedule beyond the 12-hour foreground "
-            "window."
+            (
+                "The x8 eight-mode shape may be used for a separate pole-fit "
+                "support launch, while retaining model-class/FV/IR and O_H "
+                "identity gates.  Do not combine it with the four-mode chunk "
+                "ensemble as one homogeneous physical readout."
+            )
+            if paired_gate_passed
+            else (
+                "Keep the running four-mode/x16 chunk as non-evidence until the "
+                "combiner gate can inspect completed output.  For a pole-fit-ready "
+                "foreground campaign, either add a paired eight-mode x8/x16 "
+                "calibration chunk with noise-subsample diagnostics, or stay with "
+                "the x16 noise plan and schedule beyond the 12-hour foreground "
+                "window."
+            )
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

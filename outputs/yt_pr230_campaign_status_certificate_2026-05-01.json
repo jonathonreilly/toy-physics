@@ -127,6 +127,7 @@
     "fh_lsz_multitau_target_timeseries_harness": "bounded-support / FH-LSZ multi-tau target time-series harness extension",
     "fh_lsz_noise_subsample_diagnostics": "bounded-support / FH-LSZ noise-subsample diagnostics harness",
     "fh_lsz_numba_seed_independence": "exact negative boundary / FH-LSZ numba seed-independence audit",
+    "fh_lsz_paired_variance_calibration_gate": "open / paired x8/x16 variance calibration awaiting production outputs",
     "fh_lsz_pole_fit_kinematics": "open / FH-LSZ scalar-pole kinematics gate blocks four-mode manifest as pole-fit evidence",
     "fh_lsz_pole_fit_mode_budget": "bounded-support / FH-LSZ pole-fit mode-noise budget",
     "fh_lsz_pole_fit_model_class_gate": "open / FH-LSZ pole-fit model-class gate blocks finite-shell fit as evidence",
@@ -259,7 +260,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 180,
+  "pass_count": 181,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

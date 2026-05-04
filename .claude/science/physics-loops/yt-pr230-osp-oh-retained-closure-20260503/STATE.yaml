@@ -7,19 +7,19 @@ target_status: retained-positive-closure
 actual_current_surface_status: exact-negative-boundary
 active_residual: "scalar-LSZ pole/FV/IR/model-class control / O_sp-O_H identity"
 latest_checkpoint:
-  utc: "2026-05-04T05:43:35Z"
-  block: 23
-  artifact: "FH/LSZ common-window replacement response-stability gate"
-  status: "bounded-support / response-side common-window gate passed"
-  result: "replacement response-stability passed over all 46 ready chunks; common-window response gate passes as support with no readout switch"
-  claim_boundary: "no retained/proposed-retained y_t closure; scalar-LSZ pole/FV/IR/model-class control and canonical-Higgs/source-overlap gates remain open"
+  utc: "2026-05-04T06:13:00Z"
+  block: 24
+  artifact: "FH/LSZ paired x8/x16 variance calibration gate"
+  status: "open / paired x8/x16 variance calibration awaiting production outputs"
+  result: "added consumable paired x8/x16 calibration gate, wired it into the eight-mode variance gate and retained/campaign certificates; current paired outputs are absent"
+  claim_boundary: "no retained/proposed-retained y_t closure; x8 is not accepted until paired production calibration passes, and scalar-LSZ model-class/FV/IR plus canonical-Higgs/source-overlap gates remain open"
   live_compute: "chunks047-052 running under chunk-wave orchestrator"
 lock_status:
   repo_lock_attempted: true
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 23
+block: 24
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -532,6 +532,14 @@ current_result: >
   switch and no y_t proposal because scalar-LSZ pole/FV/IR/model-class control
   and canonical-Higgs/source-overlap closure remain open.  Aggregates are
   PASS=154/PASS=180.
+  The scalar-pole production-readiness path then gained a paired x8/x16
+  variance calibration gate.  It consumes the existing manifest, records that
+  both paired production outputs are absent, and is wired into the legacy
+  eight-mode variance gate plus retained/campaign aggregate certificates.
+  This fixes the output-contract mismatch for the next pole-fit support wave
+  while preserving the claim boundary: x8 is not accepted until paired
+  production calibration passes, and even accepted x8 remains launch support
+  rather than scalar-LSZ or y_t closure.  Aggregates are PASS=155/PASS=181.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
@@ -540,7 +548,10 @@ next_exact_action: >
   parallel, attack scalar-LSZ pole/FV/IR/model-class control or
   canonical-Higgs/source-overlap closure.  The response-side common-window path
   is support-passed, but no physical readout switch is authorized until those
-  remaining gates pass.
+  remaining gates pass.  For the scalar-pole route, the next compute target is
+  a separate paired x8/x16 eight-mode variance calibration; do not mix that
+  calibration with the current four-mode chunk ensemble as one homogeneous
+  physical readout.
   Only take routes that can add a real new same-surface row/theorem: a new EW
   gauge-Higgs/O_H certificate plus C_sH/C_HH pole residues, a genuine
   same-source EW action plus W/Z correlator mass-fit rows and response rows,

@@ -1,0 +1,56 @@
+{
+  "acceptance_requirements": [
+    "both manifest x8 and x16 outputs complete as production phase",
+    "run controls match except scalar_two_point_noises and artifact directory",
+    "both outputs expose exactly the eight pole-fit scalar-LSZ modes",
+    "each mode has at least 16 configurations and noise-subsample diagnostics",
+    "C_ss(q) and Gamma_ss(q) agree within the recorded z and relative-delta thresholds",
+    "accepted x8 is launch support only and does not close model-class, FV/IR, or O_H identity gates"
+  ],
+  "actual_current_surface_status": "open / paired x8/x16 variance calibration awaiting production outputs",
+  "comparison": {
+    "reason": "paired outputs absent, invalid, or run controls unmatched",
+    "stable": false
+  },
+  "eight_mode_x8_launch_allowed_as_retained_evidence": false,
+  "fail_count": 0,
+  "manifest": "outputs/yt_fh_lsz_variance_calibration_manifest_2026-05-01.json",
+  "pass_count": 8,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Variance calibration does not derive scalar LSZ normalization or physical y_t.",
+  "run_control_match": {
+    "matched": false,
+    "unexpected_differences": [
+      "outputs absent"
+    ]
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not set kappa_s, c2, Z_match, or cos(theta) to one",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not combine four-mode chunks with eight-mode calibration as one homogeneous ensemble"
+  ],
+  "validations": {
+    "x16": {
+      "exists": false,
+      "issues": [
+        "output absent"
+      ],
+      "label": "x16",
+      "path": "outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x16_2026-05-01.json",
+      "ready": false
+    },
+    "x8": {
+      "exists": false,
+      "issues": [
+        "output absent"
+      ],
+      "label": "x8",
+      "path": "outputs/yt_pr230_fh_lsz_variance_calibration_L12_T24_x8_2026-05-01.json",
+      "ready": false
+    }
+  },
+  "variance_calibration_gate_passed": false,
+  "verdict": "The paired x8/x16 calibration outputs are absent, so the x8 noise reduction remains unaccepted.",
+  "x8_noise_reduction_accepted_for_polefit_launch": false
+}
