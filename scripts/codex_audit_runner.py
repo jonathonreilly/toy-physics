@@ -192,16 +192,29 @@ def render_prompt(row: dict, ledger_rows: dict[str, dict],
     return prompt
 
 
-def run_codex(prompt: str, isolated_dir: Path, timeout_sec: int) -> tuple[bool, str, str]:
-    """Run `codex exec` in an isolated workdir. Returns (ok, stdout, stderr)."""
+def run_codex(prompt: str, isolated_dir: Path, timeout_sec: int,
+              reasoning_effort: str | None = None,
+              model: str | None = None) -> tuple[bool, str, str]:
+    """Run `codex exec` in an isolated workdir. Returns (ok, stdout, stderr).
+
+    reasoning_effort: low | medium | high | xhigh. Controls Codex internal
+    reasoning depth. Lower = cheaper rate-limit cost per call. Default of
+    None falls back to ~/.codex/config.toml (typically xhigh).
+    """
     isolated_dir.mkdir(parents=True, exist_ok=True)
+    cmd = ["codex", "exec", "--skip-git-repo-check"]
+    if reasoning_effort:
+        cmd += ["-c", f"model_reasoning_effort={reasoning_effort!r}"]
+    if model:
+        cmd += ["-c", f"model={model!r}"]
+    cmd.append(prompt)
     try:
         # --skip-git-repo-check lets us run outside a repo.
         # We deliberately do NOT pass --cd because in our smoke test that
         # combination hung; running from the isolated dir as cwd is enough
         # to keep codex from reading the surrounding repo.
         proc = subprocess.run(
-            ["codex", "exec", "--skip-git-repo-check", prompt],
+            cmd,
             cwd=isolated_dir,
             capture_output=True,
             text=True,
@@ -214,6 +227,75 @@ def run_codex(prompt: str, isolated_dir: Path, timeout_sec: int) -> tuple[bool, 
         return False, "", f"[codex timed out at {timeout_sec}s]"
     except FileNotFoundError:
         return False, "", "[codex CLI not on PATH; install or `codex login`]"
+
+
+# Files that the audit pipeline regenerates and that should be committed
+# alongside any verdict-write to keep main internally consistent.
+AUDIT_DATA_FILES = [
+    "docs/audit/AUDIT_LEDGER.md",
+    "docs/audit/AUDIT_QUEUE.md",
+    "docs/audit/data",
+    "docs/publication/ci3_z3/CLAIMS_TABLE_EFFECTIVE_STATUS.md",
+    "docs/publication/ci3_z3/DERIVATION_ATLAS_EFFECTIVE_STATUS.md",
+    "docs/publication/ci3_z3/PUBLICATION_MATRIX_EFFECTIVE_STATUS.md",
+    "docs/publication/ci3_z3/FULL_CLAIM_LEDGER_EFFECTIVE_STATUS.md",
+    "docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX_EFFECTIVE_STATUS.md",
+    "docs/publication/ci3_z3/RESULTS_INDEX_EFFECTIVE_STATUS.md",
+    "docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE_EFFECTIVE_STATUS.md",
+    "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP_EFFECTIVE_STATUS.md",
+    "docs/publication/ci3_z3/PUBLICATION_AUDIT_DIVERGENCE.md",
+]
+
+
+def git(*args: str, check: bool = True) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        ["git", *args],
+        cwd=REPO_ROOT, capture_output=True, text=True, check=check,
+    )
+
+
+def assert_main_and_clean() -> str | None:
+    """Return None if we're on main with a clean tree; else a reason string."""
+    branch = git("rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
+    if branch != "main":
+        return f"not on main (currently on {branch!r})"
+    # Allow audit-data files to be dirty (we'll commit them); fail on
+    # other dirty paths.
+    porcelain = git("status", "--porcelain").stdout
+    other_dirty = []
+    for line in porcelain.splitlines():
+        path = line[3:]
+        if not any(path == f or path.startswith(f + "/") or path.startswith(f) for f in AUDIT_DATA_FILES):
+            other_dirty.append(path)
+    if other_dirty:
+        return f"working tree dirty outside audit-data files: {other_dirty[:5]}"
+    return None
+
+
+def commit_and_push_to_main(message: str, max_attempts: int = 3) -> tuple[bool, str]:
+    """Stage audit-data files, commit, push to main with rebase-on-conflict retry."""
+    # Stage every audit-data path that exists
+    paths = [p for p in AUDIT_DATA_FILES if (REPO_ROOT / p).exists()]
+    add = git("add", *paths, check=False)
+    if add.returncode != 0:
+        return False, f"git add failed: {add.stderr.strip()[:200]}"
+    diff = git("diff", "--cached", "--quiet", check=False)
+    if diff.returncode == 0:
+        return True, "no audit-data changes to commit"
+    commit = git("commit", "-m", message, check=False)
+    if commit.returncode != 0:
+        return False, f"git commit failed: {(commit.stderr or commit.stdout).strip()[:200]}"
+    for attempt in range(1, max_attempts + 1):
+        push = git("push", "origin", "main", check=False)
+        if push.returncode == 0:
+            return True, f"pushed (attempt {attempt})"
+        # Try fetch + rebase
+        git("fetch", "origin", "main", check=False)
+        rebase = git("rebase", "origin/main", check=False)
+        if rebase.returncode != 0:
+            git("rebase", "--abort", check=False)
+            return False, f"push attempt {attempt} failed and rebase conflicted: {(push.stderr or push.stdout).strip()[:200]}"
+    return False, f"push failed after {max_attempts} attempts"
 
 
 CODEX_RESPONSE_RE = re.compile(
@@ -331,7 +413,22 @@ def main() -> int:
                    help="Pass --no-propagate to apply_audit; run the pipeline once at end.")
     p.add_argument("--no-runner", action="store_true",
                    help="Skip running each row's primary runner (faster; uses empty stdout).")
+    p.add_argument("--push-mode",
+                   choices=["per-verdict", "batch", "none"],
+                   default="batch",
+                   help="When to commit and push audit-data to main: "
+                        "'per-verdict' (commit+push after each apply), "
+                        "'batch' (one commit covering the whole run; default), "
+                        "'none' (no auto-commit; for testing).")
+    p.add_argument("--allow-non-main", action="store_true",
+                   help="Permit running from a branch other than main. "
+                        "Default refuses unless the runner can push to main "
+                        "directly. Use only for testing.")
     args = p.parse_args()
+
+    # Reasoning-effort policy: per repo audit-lane decision (2026-05-04),
+    # ALL audits run at xhigh. We do not expose a knob to lower it.
+    REASONING_EFFORT = "xhigh"
 
     auditor_name = args.auditor_name or f"codex-cli-batch-{datetime.now(timezone.utc).strftime('%Y%m%d-%H%M')}"
     LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -339,6 +436,22 @@ def main() -> int:
     run_log = LOG_DIR / f"run-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}-{run_id}.jsonl"
     print(f"Run log: {run_log}")
     print(f"Auditor: {auditor_name}  ({AUDITOR_FAMILY}, {AUDITOR_INDEPENDENCE})")
+
+    # Verify branch + cleanliness before any push-capable operation.
+    if args.push_mode != "none" and not args.dry_run:
+        reason = assert_main_and_clean()
+        if reason and not args.allow_non_main:
+            print(f"REFUSING to run with --push-mode={args.push_mode}: {reason}")
+            print("Either checkout main and clean the worktree, or pass --allow-non-main "
+                  "(local-only; verdicts will be applied but NOT pushed to main).")
+            return 2
+        if reason and args.allow_non_main:
+            print(f"WARNING: {reason}; --allow-non-main forces push-mode=none for safety.")
+            args.push_mode = "none"
+        else:
+            # Pull in any remote audit-bot commits before we start.
+            git("fetch", "origin", "main", check=False)
+            git("rebase", "origin/main", check=False)
 
     ledger_rows = load_ledger_rows()
     queue = load_queue(args.criticality)
@@ -348,6 +461,7 @@ def main() -> int:
         return 0
 
     print(f"Selected {len(targets)} rows from the queue.")
+    print(f"Push mode: {args.push_mode}  Reasoning: {REASONING_EFFORT}")
     print(f"Top of selection:")
     for r in targets[:5]:
         print(f"  - {r['claim_id']}  [{r.get('criticality')}, "
@@ -386,7 +500,10 @@ def main() -> int:
 
             isolated = ISOLATED_BASE / f"{run_id}-{i:03d}"
             t0 = time.time()
-            ok, stdout, stderr = run_codex(prompt, isolated, args.codex_timeout_sec)
+            ok, stdout, stderr = run_codex(
+                prompt, isolated, args.codex_timeout_sec,
+                reasoning_effort=REASONING_EFFORT,
+            )
             elapsed = time.time() - t0
 
             if not ok:
@@ -446,6 +563,23 @@ def main() -> int:
                         "claim_type": blob.get("claim_type"),
                         "lb_class": blob.get("load_bearing_step_class"),
                     }) + "\n")
+
+                # Per-verdict push mode: commit + push immediately
+                if args.push_mode == "per-verdict":
+                    msg = (
+                        f"audit: {cid} -> {blob.get('verdict')} "
+                        f"(codex-cli, xhigh, {auditor_name})"
+                    )
+                    pushed, push_msg = commit_and_push_to_main(msg)
+                    if pushed:
+                        print(f"    pushed to main: {push_msg}")
+                    else:
+                        print(f"    FAIL push: {push_msg}")
+                        with run_log.open("a", encoding="utf-8") as f:
+                            f.write(json.dumps({
+                                "claim_id": cid, "phase": "push_failed",
+                                "msg": push_msg
+                            }) + "\n")
             else:
                 print(f"  FAIL apply_audit: {msg[:300]}")
                 failed += 1
@@ -459,6 +593,20 @@ def main() -> int:
             iso = ISOLATED_BASE / f"{run_id}-{i:03d}"
             if iso.exists():
                 shutil.rmtree(iso, ignore_errors=True)
+
+    # Batch push mode: one commit covering the whole run
+    if args.push_mode == "batch" and applied > 0 and not args.dry_run:
+        crit = f" {args.criticality}" if args.criticality else ""
+        msg = (
+            f"audit: codex-cli batch {applied} verdict(s){crit} "
+            f"(xhigh, {auditor_name})"
+        )
+        pushed, push_msg = commit_and_push_to_main(msg)
+        if pushed:
+            print(f"\nBatch pushed to main: {push_msg}")
+        else:
+            print(f"\nBatch push FAILED: {push_msg}")
+            print("Local state has the verdicts; run `git push origin main` manually after resolving.")
 
     print(f"\nDone. applied={applied} failed={failed} skipped={skipped}  "
           f"(of {len(targets)} attempted)")
