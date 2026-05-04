@@ -23,31 +23,33 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 173 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 15 |
-| unaudited | 1157 |
+| unaudited | 1153 |
+| audit_in_progress | 1 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 4 |
-| ~~audited_renaming~~ | 6 |
-| ~~audited_conditional~~ | 231 |
+| ~~audited_renaming~~ | 7 |
+| ~~audited_conditional~~ | 233 |
 | `decoration_under_wide_lattice_h2t_distance_law_note` | 1 |
 
 | audit_status | count |
 |---|---:|
+| `audit_in_progress` | 1 |
 | `audited_clean` | 276 |
-| `audited_conditional` | 231 |
+| `audited_conditional` | 233 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 4 |
-| `audited_renaming` | 6 |
-| `unaudited` | 1203 |
+| `audited_renaming` | 7 |
+| `unaudited` | 1199 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 589 |
 | `decoration` | 1 |
-| `meta` | 46 |
+| `meta` | 47 |
 | `no_go` | 165 |
 | `open_gate` | 96 |
-| `positive_theorem` | 868 |
+| `positive_theorem` | 867 |
 
 | criticality | count |
 |---|---:|
@@ -103,6 +105,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -599,6 +602,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
+| `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -664,6 +669,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `hypercharge_identification_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5 | F | - |
 | `lattice_nn_light_cone_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
+| `universal_qg_optional_textbook_comparison_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | F | - |
 
 
@@ -8047,6 +8053,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** Issue: the no-go rests on the unstated premise that the current invariant tensor atlas is exhausted by the listed SO(3)/SO(2), Pi_A1, weight-decomposition, and quotient-spectrum data, and the runner cannot reproduce the weight-decomposition dependency in the current checkout. Why this blocks: without that exhaustive selector theorem, a hostile reviewer can reject the universal no-canonical-section conclusion while accepting the multiplicity-two algebra. Repair target: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact. Claim boundary until fixed: conditional no-go for the displayed representation data only.
 - **auditor confidence:** high
 
+### `universal_gr_isotropic_glue_operator_note`
+
+- **Note:** [`UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`](../../docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited whether the note derives the claimed unique exact isotropic quadratic glued Einstein/Regge operator K_GR^iso(D) = M_D tensor Lambda_R from the restricted packet.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-215947-6c64ef12-universal_gr_isotropic_g-005`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Because the local Hessian, Lambda_R, canonical block projectors, and Schur irreducibility are exact, there is no remaining covariant quadratic freedom, so K_GR^iso(D) = M_D tensor Lambda_R is forced.  _(class `E`)_
+- **chain closes:** False — The restricted packet provides no cited authorities, runner, axiom-level derivation, or proof of the asserted no-freedom/uniqueness gluing theorem. The note imports exactness of M_D, Lambda_R, canonical projectors, and Schur irreducibility as premises without closing them inside the packet.
+- **rationale:** The load-bearing step is presented as a uniqueness theorem, but in the restricted packet it functions as an introduced definition/assertion of the glued operator plus imported premises. With no cited authorities and no runner source/output, the claim does not derive from the axiom or from independent retained-grade inputs. The missing bridge is the actual proof that the listed exact structures force the tensor-product operator uniquely and exclude all other covariant quadratic terms.
+- **auditor confidence:** high
+
 ### `universal_gr_lambda_bypass_note`
 
 - **Note:** [`UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md`](../../docs/UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md)
@@ -8060,6 +8079,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** The clean result applies only to the bounded claim that the direct universal A1-anchored candidate avoids the phase-lift L_lambda family. The note discloses the remaining complement-frame and curvature-localization obstruction instead of using it as hidden closure. The current-checkout runner passes all 9 checks after redirecting its hardcoded external root, so the remaining risk is runner hygiene rather than the local lambda-bypass claim.
 - **auditor confidence:** medium
 
+### `universal_gr_lorentzian_global_atlas_closure_note`
+
+- **Note:** [`UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited whether the note establishes exact finite-atlas gluing of local Lorentzian Einstein/Regge stationary representatives on PL S^3 x R from the provided packet alone.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-215947-6c64ef12-universal_gr_lorentzian_-004`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Because each local Lorentzian operator is nondegenerate, local action densities agree exactly on overlaps, and the source/field pairing transforms compatibly, the local stationary solutions transform compatibly across the atlas into one global stationary section.  _(class `A`)_
+- **chain closes:** False — The congruence invariance of B_D is an algebraic identity, but the global theorem also imports unsupported premises: nondegeneracy of each K_GR(D), existence/compatibility of the finite atlas, compatible source/field pairing, and a bridge from overlap covariance to unique global stationary section.
+- **rationale:** No cited authorities or runner are provided, so the audit can only assess the note text. The displayed trace identity is a plausible class A algebraic covariance check, but the claimed unique global stationary section depends on additional global gluing and nondegeneracy assumptions not closed inside the restricted packet. The note is marked support and does not supply an independent retained-grade theorem establishing those premises.
+- **auditor confidence:** high
+
 ### `universal_gr_polarization_frame_bundle_attempt`
 
 - **Note:** [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md`](../../docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md)
@@ -8071,6 +8103,19 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** Two valid 3+1 polarization frames related by a spatial rotation yield different localized channel coefficients for the same kernel, with frame_delta = 6.767e-02, so the complement is not canonical.  _(class `C`)_
 - **chain closes:** False — The note's obstruction depends on a frame-dependence computation and on upstream exact-stack inputs, but the ledger has no registered runner and no cited one-hop authorities for those ingredients. The conclusion is therefore not auditable as a closed derivation from the provided inputs.
 - **rationale:** Issue: the load-bearing complement-frame ambiguity is asserted from an unregistered runner and unprovided upstream exact-stack inputs. Why this blocks: without the runner output or cited authorities, the audit cannot verify that the quotient kernel is held fixed while only the polarization frame changes. Repair target: register the frame-dependence runner and cite the exact scalar generator, 3+1 lift, and symmetric quotient-kernel authorities used as inputs. Claim boundary until fixed: the note may stand as an open route/obstruction inventory, not as an audited derivation of the polarization-bundle obstruction.
+- **auditor confidence:** high
+
+### `universal_qg_optional_textbook_comparison_note`
+
+- **Note:** [`UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md`](../../docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
+- **claim_type:** `meta`
+- **claim_scope:** Audited only the note's self-declared packaging/scope boundary, not the underlying canonical textbook continuum closure.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260504-215947-6c64ef12-universal_qg_optional_te-003`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** This note is packaging-only and is not a theorem, claim, or new authority surface.  _(class `E`)_
+- **chain closes:** True — The note's operative content is a scope definition limiting its use to optional comparison and denying theorem authority. No upstream scientific derivation is presented or needed for that meta boundary.
+- **rationale:** The load-bearing step is a definitional scope statement, not a first-principles computation or algebraic theorem. The note explicitly disclaims being a theorem, claim, or new authority surface, so the audit cannot ratify the seeded positive-theorem hint. With no cited authorities or runner, the only closed item is the packaging boundary itself.
 - **auditor confidence:** high
 
 ### `valley_linear_action_note`
