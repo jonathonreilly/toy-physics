@@ -1,5 +1,14 @@
 # Opportunity Queue
 
+2026-05-03 update: the canonical-Higgs operator certificate gate is now wired
+into retained-route and campaign-status aggregation.  This closes a status
+visibility gap, not the physics blocker: no `O_H` certificate candidate is
+present, and the gate rejects EW/Higgs/YT surfaces, `H_unit`, source-pole LSZ
+construction, and source-Higgs instrumentation as the missing canonical-Higgs
+identity.  Highest-value positive actions remain unchanged: derive/supply a
+real same-surface `O_H` certificate, produce source-Higgs pole rows, produce
+same-source W/Z rows, produce Schur rows, or continue honest production.
+
 2026-05-03 update: chunks025-026 are processed and wired into the production
 support certificates.  The ready L12 FH/LSZ set is now `26/63` chunks,
 `416/1000` saved configurations; target-observable ESS remains passed with

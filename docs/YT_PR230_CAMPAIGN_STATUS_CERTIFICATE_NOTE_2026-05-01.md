@@ -26,8 +26,22 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=163 FAIL=0
+# SUMMARY: PASS=164 FAIL=0
 ```
+
+## 2026-05-03 Canonical-Higgs Operator Certificate Gate Wiring Update
+
+The campaign status certificate now consumes the canonical-Higgs operator
+certificate gate.  This records the precise future acceptance schema for a
+same-surface `O_H` operator certificate: same Cl(3)/Z3 source surface,
+canonical identity and normalization certificate references, supported
+diagonal vertex, and forbidden-import firewalls.
+
+The current state remains open.  No candidate certificate is present, and the
+gate verifies that existing EW/Higgs/YT surfaces, `H_unit`, source-pole LSZ
+construction, and source-Higgs instrumentation are not the missing `O_H`
+identity.  PR #230 still needs a real `O_H` certificate, source-Higgs pole
+rows, same-source W/Z rows, genuine Schur rows, or honest production evidence.
 
 ## 2026-05-03 FH/LSZ Chunks025-026 V2 Production-Support Update
 

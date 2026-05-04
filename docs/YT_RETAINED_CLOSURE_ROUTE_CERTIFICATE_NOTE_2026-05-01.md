@@ -18,8 +18,22 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=137 FAIL=0
+# SUMMARY: PASS=138 FAIL=0
 ```
+
+## 2026-05-03 Canonical-Higgs Operator Certificate Gate Wiring Update
+
+The retained-route certificate now consumes
+`outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json`.
+This makes the exact future `O_H` operator-certificate schema part of the
+aggregate blocker surface instead of leaving it as a standalone gate.
+
+The gate passes as an open blocker: no
+`outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json` candidate is
+present, known EW/Higgs/YT surfaces are not valid `O_H` certificates, `H_unit`
+is still rejected, and source-Higgs rows remain instrumentation until a real
+same-surface canonical-Higgs operator certificate exists.  No retained or
+`proposed_retained` closure is authorized.
 
 ## 2026-05-03 FH/LSZ Chunks025-026 V2 Production-Support Update
 

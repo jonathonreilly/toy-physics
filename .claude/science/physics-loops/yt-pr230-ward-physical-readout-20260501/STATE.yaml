@@ -13,11 +13,15 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-191-fh-lsz-chunks025-026-multitau-wave
-blocks_completed: 191
-active_route: "FH/LSZ chunks025-026 v2 multi-tau production checkpoint"
-active_hard_residual: "Chunks025-026 completed and were processed as bounded production support. Generic target-timeseries checkpoints PASS=14 FAIL=0 for each chunk; v2 multi-tau checkpoints PASS=19 FAIL=0 for each chunk; retained-route PASS=137 FAIL=0; campaign status PASS=163 FAIL=0. The ready set is now 26/63 L12 chunks and 416/1000 saved configurations. Target-observable ESS passes with limiting ESS 355.8130499055201, but response stability still fails, response-window acceptance remains open, v2 rows cover only chunks017-026, finite-source-linearity and multiple source radii are absent, and canonical-Higgs/source-overlap identity remains open. No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-192-canonical-higgs-operator-certificate-gate-wiring
+blocks_completed: 192
+active_route: "canonical-Higgs operator certificate gate wiring"
+active_hard_residual: "The canonical-Higgs operator certificate gate is now consumed by retained-route and campaign-status aggregate certificates. Gate PASS=11 FAIL=0; retained-route PASS=138 FAIL=0; campaign status PASS=164 FAIL=0. This records the future same-surface O_H acceptance schema and blocks current EW/Higgs/YT surfaces, H_unit, source-pole LSZ construction, and source-Higgs instrumentation as the missing identity. No candidate O_H certificate is present, and no retained/proposed_retained closure is authorized. Chunks027-028 are running as background production support."
 files_touched:
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
   - "docs/YT_FH_LSZ_CHUNKS025_026_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-03.md"
   - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk025_2026-05-01.json"
   - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk026_2026-05-01.json"

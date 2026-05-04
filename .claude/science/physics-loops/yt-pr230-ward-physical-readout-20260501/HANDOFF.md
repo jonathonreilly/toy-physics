@@ -1,5 +1,22 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 canonical-Higgs operator certificate gate wiring:
+
+- Wired `outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json`
+  into the retained-route and campaign-status aggregate certificates.
+- Result: the aggregate surface now explicitly checks the future same-surface
+  `O_H` operator-certificate schema.  No candidate certificate is present, and
+  the gate rejects existing EW/Higgs/YT surfaces, `H_unit`, source-pole LSZ
+  construction, and source-Higgs instrumentation as the missing `O_H` identity.
+- Verification: canonical-Higgs operator certificate gate `PASS=11 FAIL=0`;
+  retained-route `PASS=138 FAIL=0`; campaign status `PASS=164 FAIL=0`.
+- Claim boundary: open blocker / schema gate only.  No retained or
+  `proposed_retained` wording is authorized.
+
+Next exact action: derive or supply a real same-surface `O_H` operator
+certificate, produce source-Higgs pole rows, produce same-source W/Z rows,
+produce Schur rows, or continue production chunks027-028 now running.
+
 Latest checkpoint, 2026-05-03 FH/LSZ chunks025-026 v2 multi-tau wave:
 
 - Processed completed chunks025-026 with fixed seeds `2026051025` and
