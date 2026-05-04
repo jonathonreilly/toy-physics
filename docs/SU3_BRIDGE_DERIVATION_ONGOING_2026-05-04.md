@@ -129,26 +129,77 @@ MC                                 | 0.593400     | 0×
 
 Closure stable across NMAX_perron 5-10.
 
-## 8. Most likely interpretation (current best)
+## 8. CRITICAL UPDATE: framework's existing no-go theorem rules out the closure
 
-Per the framework-native re-interpretation + the Schur tension finding:
+After reading the framework's source-sector docs in detail:
 
-**Working hypothesis**: the framework's source-sector formula T_src derivation gives K-tube ρ (interpretation B), and the (N²-1)/(4π) at g_bare=1 with framework-native 3D angular interpretation is the SD-derivable next-order correction.
+- `docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`
+- `docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
+- `docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md` (Theorem 3 NO-GO)
 
-This requires verification by reading the source-sector formula's derivation.
+**The framework already has a no-go theorem** (`docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md` Theorem 3):
+
+> "Closed-form derivation of `rho_(p,q)(6)` from those local inputs alone does not exist."
+>
+> "The canonical same-surface plaquette value `0.5934` lies inside the combined admissible span (reached for example near `k = 12` in family 3), but **no parameter choice is canonically picked out by the local input class**. The runner does not select a parameter to match `0.5934`; instead it sweeps the parameter and reports the resulting `P(6)` sequence as evidence of non-uniqueness."
+
+The framework explicitly identifies the **tube-power family** `ρ_k = (c_(p,q)(6)/c_(0,0)(6))^k` as one of three admissible parametric families, and explicitly states **no value of k is canonically picked out** by local inputs.
+
+**Implication for the campaign's "closure":**
+
+[PR #519](https://github.com/jonathonreilly/cl3-lattice-framework/pull/519)'s closure formula `ρ = (c/c₀₀)^(12 + 2/π)` IS in the tube-power family (with k = 12 + 2/π = 12.6366). Per the framework's own no-go, **this is NOT a closed-form derivation from local inputs** — it's a parameter choice that happens to match MC numerically.
+
+**The (N²-1)/(4π) interpretation was goal-seeked**, not derived:
+- I started from the empirical exact closure k = 12.6342
+- Identified (N²-1)/(4π) = 0.6366 as a 0.4% match
+- Constructed a "derivation" interpretation (1/(4π) = 3D solid angle)
+- But the framework's own no-go says NO closed form derivation exists from local inputs
+
+The user's caution was prescient: I goal-seeked using non-framework intuition. The framework's actual no-go forbids this.
+
+## 9. What CAN be natively derived
+
+Per the framework's reference solves and the Schur cube derivation:
+
+| Formulation | Source | P(6) | Status |
+|---|---|---:|---|
+| ρ = 1 (Reference A) | structural choice | 0.4524 | derived from local inputs only |
+| ρ = δ (Reference B) | structural choice | 0.4225 | derived from local inputs only |
+| **ρ_Schur = (c/c₀₀)¹² × d⁻¹⁶** | **cube geometry + Schur orthogonality** | **0.4291** | **rigorous L_s=2 cube derivation** ([PR #501](https://github.com/jonathonreilly/cl3-lattice-framework/pull/501) Block 5) |
+| K-tube + 2/π closure | numerical fit | 0.5934 | NOT derived (per framework's no-go) |
+
+**The framework's ACTUAL native L_s=2 cube prediction is P = 0.4291** (via Schur cube derivation, [PR #501](https://github.com/jonathonreilly/cl3-lattice-framework/pull/501) candidate ansatz).
+
+**The MC value 0.5934 is NOT derivable from L_s=2 cube** under any of the framework's existing primitives. The +2/π closure was an empirical fit inside the tube-power family, not a derivation.
+
+## 10. Honest path to native 0.5934
+
+To natively derive 0.5934:
+
+(i) **L_s ≥ 3 cube** with rigorous Schur (or full Wigner-Racah) computation. The framework's L_s=2 is too small to match the thermodynamic-limit MC. Multi-week computation. The L_s=3 PBC effort (PRs #506-510, all closed as wrong-geometry) attempted this; the L_s=3 APBC version is still open.
+
+(ii) **A new framework primitive** beyond local data (c_λ + intertwiners). Per the framework's no-go, no closed form derivation exists from current primitives.
+
+(iii) **Accept ρ_(p,q)(6) as an admitted observation** with the K-tube parameter k as a structural choice. This is an import (not a derivation). Per the no-new-axiom rule, this caps at bounded retained.
+
+The campaign's "closure" via k=12+2/π was option (iii) in disguise — a parameter choice presented as derivation. The framework's own no-go theorem makes this honest framing necessary.
 
 ## 9. Status and immediate next step
 
-**Current campaign status:**
-- ✓ Numerical closure ([PR #519](https://github.com/jonathonreilly/cl3-lattice-framework/pull/519))
-- ✓ (N²-1)/(4π) candidate identified ([PR #522](https://github.com/jonathonreilly/cl3-lattice-framework/pull/522))
-- ✓ β=6-specificity ([PR #521](https://github.com/jonathonreilly/cl3-lattice-framework/pull/521))
-- ✓ Search confirms candidate ([PR #526](https://github.com/jonathonreilly/cl3-lattice-framework/pull/526))
-- ✓ Schur tension identified ([PR #527](https://github.com/jonathonreilly/cl3-lattice-framework/pull/527))
-- ✓ Framework-native re-interpretation (this consolidated doc)
-- ⏳ **OPEN**: read framework's source-sector derivation to determine which interpretation (A/B/C) holds
+**REVISED campaign status (after reading framework source-sector docs):**
 
-**Immediate next step**: study the framework's existing source-sector formula derivation in detail and determine which ρ form (Schur or K-tube) it actually gives. This will resolve the tension and clarify whether (N²-1)/(4π) is derivable or empirical.
+The framework's existing **NO-GO theorem** (Theorem 3 in `docs/GAUGE_VACUUM_PLAQUETTE_TENSOR_TRANSFER_PERRON_SOLVE_NOTE.md`) explicitly forbids closed-form derivation of ρ_(p,q)(6) from local inputs. The campaign's k=12+2/π closure is INSIDE the tube-power family that the framework explicitly identifies as not closed by primitives.
+
+- ✓ Numerical match within ε_witness ([PR #519](https://github.com/jonathonreilly/cl3-lattice-framework/pull/519))
+- ✗ NOT a derivation (framework's no-go forbids it)
+- ✓ Framework's actual native L_s=2 prediction: **P = 0.4291** (via Schur cube, [PR #501](https://github.com/jonathonreilly/cl3-lattice-framework/pull/501) candidate)
+- ✗ MC value 0.5934 NOT derivable from L_s=2 cube primitives
+
+**Honest immediate verdict:**
+
+The campaign's "closure" was an empirical parameter fit, not a derivation. The framework's exact L_s=2 prediction is 0.4291 (Schur cube derivation). The MC value 0.5934 reflects finite-volume / thermodynamic-limit physics that L_s=2 cube doesn't capture.
+
+**Next genuine step**: tackle L_s ≥ 3 with rigorous Schur (or accept import). The L_s=3 APBC version of the cube derivation hasn't been done.
 
 ## 10. Historical PRs (consolidated into this doc going forward)
 
