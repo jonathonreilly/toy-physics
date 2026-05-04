@@ -128,6 +128,8 @@
     "fh_lsz_chunk055_target_timeseries_generic": "bounded-support / FH-LSZ chunk055 generic target-timeseries checkpoint",
     "fh_lsz_chunk056_multitau_target_timeseries": "bounded-support / FH-LSZ chunk056 v2 multi-tau target-timeseries checkpoint",
     "fh_lsz_chunk056_target_timeseries_generic": "bounded-support / FH-LSZ chunk056 generic target-timeseries checkpoint",
+    "fh_lsz_chunk057_multitau_target_timeseries": "bounded-support / FH-LSZ chunk057 v2 multi-tau target-timeseries checkpoint",
+    "fh_lsz_chunk057_target_timeseries_generic": "bounded-support / FH-LSZ chunk057 generic target-timeseries checkpoint",
     "fh_lsz_chunk_combiner_gate": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
     "fh_lsz_chunked_production_manifest": "bounded-support / FH-LSZ chunked production manifest",
     "fh_lsz_common_window_pooled_response_estimator": "bounded-support / FH-LSZ common-window pooled response estimator production-grade",

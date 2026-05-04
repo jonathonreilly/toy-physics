@@ -175,6 +175,8 @@
     "fh_lsz_chunk055_target_timeseries_generic": "outputs/yt_fh_lsz_chunk055_target_timeseries_generic_checkpoint_2026-05-02.json",
     "fh_lsz_chunk056_multitau_target_timeseries": "outputs/yt_fh_lsz_chunk056_multitau_target_timeseries_checkpoint_2026-05-03.json",
     "fh_lsz_chunk056_target_timeseries_generic": "outputs/yt_fh_lsz_chunk056_target_timeseries_generic_checkpoint_2026-05-02.json",
+    "fh_lsz_chunk057_multitau_target_timeseries": "outputs/yt_fh_lsz_chunk057_multitau_target_timeseries_checkpoint_2026-05-03.json",
+    "fh_lsz_chunk057_target_timeseries_generic": "outputs/yt_fh_lsz_chunk057_target_timeseries_generic_checkpoint_2026-05-02.json",
     "fh_lsz_chunk_combiner_gate": "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json",
     "fh_lsz_chunked_production_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
     "fh_lsz_common_window_pooled_response_estimator": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",

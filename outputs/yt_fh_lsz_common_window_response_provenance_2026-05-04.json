@@ -2296,6 +2296,47 @@
       "original_windows_mixed": false,
       "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk056_2026-05-01.json",
       "seed": 2026051056
+    },
+    {
+      "chunk_index": 57,
+      "common_window_energy_fits": [
+        {
+          "chi2_dof": 0.217247521363576,
+          "energy_lat": 1.8303805819605259,
+          "energy_lat_err": 0.3052598918954502,
+          "source_shift_lat": -0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.15869419857677092,
+          "energy_lat": 1.8447481701750803,
+          "energy_lat_err": 0.35552887428657737,
+          "source_shift_lat": 0.0,
+          "tau_max": 12,
+          "tau_min": 10
+        },
+        {
+          "chi2_dof": 0.11614593633607864,
+          "energy_lat": 1.859004069169714,
+          "energy_lat_err": 0.4136334548856992,
+          "source_shift_lat": 0.01,
+          "tau_max": 12,
+          "tau_min": 10
+        }
+      ],
+      "common_window_slope_dE_ds_lat": 1.431739487908995,
+      "common_window_slope_dE_ds_lat_err": 25.317588821158044,
+      "original_fit_window_signature_tau_min": [
+        10,
+        10,
+        10
+      ],
+      "original_slope_dE_ds_lat": 1.431739487908995,
+      "original_slope_dE_ds_lat_err": 25.317588821158044,
+      "original_windows_mixed": false,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk057_2026-05-01.json",
+      "seed": 2026051057
     }
   ],
   "common_window": {
@@ -2303,20 +2344,20 @@
     "tau_min": 10
   },
   "common_window_production_grade": false,
-  "common_window_relative_fit_error": 17.20300275420446,
+  "common_window_relative_fit_error": 17.21146559183898,
   "common_window_slope_summary": {
     "available": true,
     "max": 1.4461110127928816,
-    "mean": 1.4248300242966516,
-    "median": 1.4236317976392452,
+    "mean": 1.4249512429565174,
+    "median": 1.4236741753316455,
     "min": 1.4051480558663294,
-    "n": 56,
-    "relative_stdev": 0.00554095978762345,
+    "n": 57,
+    "relative_stdev": 0.005528231310922798,
     "spread_ratio": 1.0291520575042157,
-    "stdev": 0.00789492586882629
+    "stdev": 0.007877460077850578
   },
   "common_window_stability_passed": true,
-  "common_window_typical_fit_error": 24.511354832248504,
+  "common_window_typical_fit_error": 24.525499288194286,
   "exact_next_action": "Promote this into a predeclared common-window response gate or postprocessor, then require finite-source-linearity, scalar-pole model/FV/IR control, and canonical-Higgs identity before any physical y_t readout.",
   "fail_count": 0,
   "high_original_all_mixed_window": true,
@@ -2349,13 +2390,13 @@
   "original_slope_summary": {
     "available": true,
     "max": 7.3549193842802785,
-    "mean": 2.2853311678905306,
-    "median": 1.4262445135616875,
+    "mean": 2.2703558752592756,
+    "median": 1.4266663595777471,
     "min": 1.2392686775356556,
-    "n": 56,
-    "relative_stdev": 0.9004720441599772,
+    "n": 57,
+    "relative_stdev": 0.8996614607779676,
     "spread_ratio": 5.934886855129659,
-    "stdev": 2.057876828332894
+    "stdev": 2.042551683221601
   },
   "pass_count": 11,
   "proposal_allowed": false,
@@ -2417,7 +2458,8 @@
     53,
     54,
     55,
-    56
+    56,
+    57
   ],
   "signature_summary": {
     "1/1/1": {
@@ -2490,10 +2532,11 @@
         52,
         53,
         55,
-        56
+        56,
+        57
       ],
-      "n": 39,
-      "original_slope_mean": 1.4252451038744804
+      "n": 40,
+      "original_slope_mean": 1.4254074634753433
     },
     "10/10/2": {
       "chunk_indices": [

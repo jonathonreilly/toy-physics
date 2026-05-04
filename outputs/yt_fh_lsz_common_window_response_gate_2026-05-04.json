@@ -7,17 +7,17 @@
       "tau_max": 12,
       "tau_min": 10
     },
-    "common_window_relative_fit_error": 17.20300275420446,
+    "common_window_relative_fit_error": 17.21146559183898,
     "common_window_slope_summary": {
       "available": true,
       "max": 1.4461110127928816,
-      "mean": 1.4248300242966516,
-      "median": 1.4236317976392452,
+      "mean": 1.4249512429565174,
+      "median": 1.4236741753316455,
       "min": 1.4051480558663294,
-      "n": 56,
-      "relative_stdev": 0.00554095978762345,
+      "n": 57,
+      "relative_stdev": 0.005528231310922798,
       "spread_ratio": 1.0291520575042157,
-      "stdev": 0.00789492586882629
+      "stdev": 0.007877460077850578
     },
     "high_original_slope_chunk_indices": [
       2,
@@ -45,8 +45,8 @@
       42,
       54
     ],
-    "pooled_empirical_standard_error": 0.0010550038462545201,
-    "pooled_relative_standard_error": 0.0007404418971135232,
+    "pooled_empirical_standard_error": 0.001043395076460121,
+    "pooled_relative_standard_error": 0.0007322321248657349,
     "replacement_response_stability_passed": true
   },
   "exact_next_action": "Use this response-side support only as a parent for scalar-LSZ pole/FV/IR/model-class work and canonical-Higgs/source-overlap closure.  Do not request a physical y_t readout switch until those independent gates pass.",

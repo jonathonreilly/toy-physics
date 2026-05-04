@@ -1335,3 +1335,27 @@ jobs active, so chunks061-063 were launched immediately under a separate
 61-63 orchestrator.  Chunks057-063 are now all running.  The older overlapping
 53-63 orchestrator monitor was stopped to avoid duplicate 061-063 launches;
 the production jobs remain alive.
+
+## 2026-05-04 Chunk057 Packaging
+
+Chunk057 has completed and passed local plus aggregate gates:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 57
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 57
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=155 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=181 FAIL=0
+```
+
+The ready L12 set is now `57/63` chunks and `912/1000` saved configurations.
+Target-observable ESS passes with limiting ESS `799.2344666684801`.
+Response-window acceptance remains open; scalar-LSZ pole/FV/IR/model-class
+control and canonical-Higgs/source-overlap closure remain blocking. Chunks058-
+063 remain live.
