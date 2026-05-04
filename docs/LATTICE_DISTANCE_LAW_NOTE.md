@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-03  
 **Status:** proposed_retained ordered-lattice distance-law branch
+**Primary runner:** [`scripts/lattice_no_barrier_distance.py`](../scripts/lattice_no_barrier_distance.py) (far-field |delta| ~ 23.5 b^(-1.052), R^2=0.985)
 
 This note freezes the ordered-lattice distance-law result that reopens the
 gravity-distance question outside the current random-connected symmetry

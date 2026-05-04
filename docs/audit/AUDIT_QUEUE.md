@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Total pending:** 1181
-**Ready (all deps already at retained-grade or metadata tiers):** 321
+**Total pending:** 1182
+**Ready (all deps already at retained-grade or metadata tiers):** 322
 
 By criticality:
 - `critical`: 823
 - `high`: 24
-- `medium`: 130
+- `medium`: 131
 - `leaf`: 204
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
@@ -33,7 +33,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 16 | `source_resolved_wavefield_mechanism_note` | positive_theorem | unaudited | critical | 301 | 9.74 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/source_resolved_wavefield_mechanism.py` |
 | 17 | `claude_complex_action_carryover_note` | positive_theorem | unaudited | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/exact_lattice_complex_action_carryover.py` |
 | 18 | `electrostatics_card_note` | positive_theorem | unaudited | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/electrostatics_card.py` |
-| 19 | `second_grown_family_sign_note` | bounded_theorem | unaudited | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
+| 19 | `second_grown_family_sign_note` | bounded_theorem | unaudited | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/fixed_field_grown_transfer_scout.py` |
 | 20 | `third_grown_family_boundary_note` | positive_theorem | unaudited | critical | 301 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py` |
 | 21 | `electrostatics_superposition_proxy_note` | positive_theorem | unaudited | critical | 301 | 8.74 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/electrostatics_superposition_proxy.py` |
 | 22 | `diamond_sensor_protocol_note` | bounded_theorem | unaudited | critical | 300 | 9.73 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/diamond_sensor_protocol_probe.py` |

@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-03  
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** [`scripts/lattice_nn_deterministic_rescale.py`](../scripts/lattice_nn_deterministic_rescale.py) (deterministic geometric rescale schedule, Born-clean through h=0.0625)
 
 This note freezes the deterministic-rescale follow-up to the raw nearest-neighbor
 lattice continuum harness.

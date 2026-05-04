@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 37 |
 | **retained_no_go** | 94 |
-| **retained_bounded** | 173 |
+| **retained_bounded** | 172 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 15 |
-| unaudited | 1162 |
+| unaudited | 1163 |
 | meta | 46 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 6 |
@@ -32,13 +32,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 276 |
+| `audited_clean` | 275 |
 | `audited_conditional` | 229 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 6 |
-| `unaudited` | 1208 |
+| `unaudited` | 1209 |
 
 | claim_type | count |
 |---|---:|
@@ -166,7 +166,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `eigenvalue_anderson_phase_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `electric_sign_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
-| `equivalence_principle_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `eta_188_structural_origin_partial_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `evolving_network_prototype_v3_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `evolving_network_prototype_v4_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -3398,19 +3397,6 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** **Frozen-source control:** Poisson fields computed once from initial densities and  _(class `C`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 3 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
-- **auditor confidence:** high
-
-### `equivalence_principle_harness_note`
-
-- **Note:** [`EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`](../../docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** For the fixed 3D ordered-lattice family h=0.5, W=8, L=12, z_mass=5, the harness verifies centroid-shift invariance under global amplitude scaling and strong dependence on normalized packet shape for valley and spent_delay actions.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-current-fresh-context`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Global amplitude scaling cancels exactly in the centroid ratio, while normalized packet shape changes the response strongly on the tested family.  _(class `A`)_
-- **chain closes:** True — The bounded claim closes for the fixed harness because the current runner reproduces amplitude-invariant deltas for both actions and nonzero packet-shape spreads matching the note. The note explicitly does not claim a full persistent-pattern inertial-mass equivalence law.
-- **rationale:** The load-bearing statement is a bounded algebraic/numerical harness result: global scalar amplitude cancels in the centroid ratio under the linear propagation used by the fixed family, and packet-shape dependence is directly measured by the same runner. No open dependency is imported, and the note keeps the claim boundary narrow by excluding persistent-pattern inertial-mass closure. Residual risk is limited to the uninspected implementation behind the imported lattice propagator, not to an overclaim in this source note.
 - **auditor confidence:** high
 
 ### `eta_188_structural_origin_partial_note_2026-05-03`

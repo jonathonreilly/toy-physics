@@ -33834,7 +33834,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0bf777ec0bec4458088828592cec76f91c1b9f2cae9d4647268b807962060d05",
+      "note_hash": "b3738db785d525d941da7551394aac7985d118f13ff72e3c83ac1dc0968ef665",
       "path": "docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md",
       "runner_path": "scripts/equivalence_principle_harness.py",
       "title": "Equivalence Principle Harness Note"
@@ -33845,9 +33845,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c36fa4a8ff75e0d71527758ea25c5e8570f9ddc2307109b81077438f9536da94",
+      "note_hash": "5a4900d6c339bd3a2a75dd05349f3d225af107352762c5b113d6ee7f01fbd126",
       "path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/equivalence_principle_test.py",
       "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
     },
     "eta_188_structural_origin_partial_note_2026-05-03": {
@@ -36428,9 +36428,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1955e32190736ec8b0713dce07a7ba3a0b2c5cca56fd3e9b0803ff0ca132e5d3",
+      "note_hash": "4e40863ccf7bab6ffecfe88a81aef0323aa16e337a6024612038fe9184228131",
       "path": "docs/HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_higgs_mass_retention_analysis.py",
       "title": "Higgs Mass: Hierarchy Correction Analysis (Negative Result)"
     },
     "higgs_mass_retention_analysis_note_2026-04-18": {
@@ -38990,9 +38990,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "839494cf59aa08eb5d2930066fe8a4c258b37bd577181543dadf7951300b3235",
+      "note_hash": "d44b6acab32f9d37da7448b02b1dc5fbff6f6a4091fc9a1aa7873c4e8ccfe94e",
       "path": "docs/LATTICE_DISTANCE_LAW_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_no_barrier_distance.py",
       "title": "Lattice Distance-Law Note"
     },
     "lattice_family_validation_note": {
@@ -39089,9 +39089,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "87716fca8b20da3f59e3f750b33dc5c8282a630cae8cf2b0cd760c015fcc3ce5",
+      "note_hash": "2b7a36640b92264c5df6af9795de447c88d2b34a277906ace4fb192e65637e93",
       "path": "docs/LATTICE_NN_DETERMINISTIC_RESCALE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_deterministic_rescale.py",
       "title": "Lattice NN Deterministic Rescale Note"
     },
     "lattice_nn_distance_law_note": {
@@ -39166,9 +39166,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "611df22bcdbc3a47a14a44217bc40e4c2ee0ba743499288331b0e5e064d87a52",
+      "note_hash": "c77f7edf6f72316ccdcbff155ae6a1d1e66043d13d95725f32a7e8ba83ae1be8",
       "path": "docs/LATTICE_NN_RG_GRAVITY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/lattice_nn_rg_gravity.py",
       "title": "NN Lattice RG-Style Gravity Note"
     },
     "lattice_nn_rg_reconciliation_note": {
@@ -39996,9 +39996,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "919ba0bcb2682c6230c5677ed58de9426bd49ccbc79702a9672b9068d15ef965",
+      "note_hash": "b65b9d5dc3d5939f1e983c3272a6fa8bde44bc38b6f2dc605d4ea42647ec8aa7",
       "path": "docs/MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/mesoscopic_surrogate_threshold_2d.py",
       "title": "Mesoscopic Surrogate Threshold 2D Note"
     },
     "mesoscopic_surrogate_two_stage_2d_note": {
@@ -46674,9 +46674,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
       "deps": [],
-      "note_hash": "39edfe0f9b867e3519ad876638932aeab882213992e6eb1494834d360683d668",
+      "note_hash": "31b86538d85ce5b136ae72e6b898f1f5b322105c3606fd451b3d9ec846517d41",
       "path": "docs/RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_oh_schur_boundary_action.py",
       "title": "Restricted Strong-Field Closure on the Exact `O_h` Shell Class"
     },
     "retained_cross_lane_consistency_support_note_2026-04-22": {
@@ -47229,9 +47229,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ddc482ea329ae362fa57fc689c8a9b043c3bd7503bfc3b072d59282627a3d89f",
+      "note_hash": "1fba2b01afe948adc135d57d02672a193450041704673df88b327b1655faf352",
       "path": "docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/fixed_field_grown_transfer_scout.py",
       "title": "Second Grown Family Signed-Source Note"
     },
     "self_consistency_forces_poisson_note": {
@@ -48931,9 +48931,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "97494a1b6321b7fb8cfca9e7e92f1637691b7ff2768e3fbbbd36482e917b7552",
+      "note_hash": "ebf4396f2c6f5b76b89690dd2228c8a9624be34a67e585b6360a2c2744b2457a",
       "path": "docs/STRUCTURED_MIRROR_RECONCILIATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/structured_mirror_reconciliation.py",
       "title": "Structured Mirror Reconciliation Note"
     },
     "structureless_dag_gravity_harness_note": {
@@ -51607,9 +51607,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "9ed48adfd4c83a134da948bb3f02d620d8a43e3528b36ce91bc48ac9d5ceef41",
+      "note_hash": "a3c768fa4f3ce3bc3ad4835b449d74050da052c2656d15188abe0236039dbe02",
       "path": "docs/WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_test_mass_limit.py",
       "title": "Wilson Normalization / Comparison Reconciliation"
     },
     "wilson_test_mass_continuum_note_2026-04-11": {
@@ -54317,6 +54317,6 @@
     "leaf_count": 553,
     "node_count": 1875,
     "root_count": 901,
-    "runners_with_path": 1503
+    "runners_with_path": 1513
   }
 }

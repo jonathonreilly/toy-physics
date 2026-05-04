@@ -1,6 +1,7 @@
 # Second Grown Family Signed-Source Note
 
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** [`scripts/fixed_field_grown_transfer_scout.py`](../scripts/fixed_field_grown_transfer_scout.py) (fixed-field grown-geometry transfer scout, retained grown row preserves scalar sign response)
 This note records a genuinely different grown-family slice from the retained drift/restore neighborhood:
 
 - family: no-restore Gate B grown geometry

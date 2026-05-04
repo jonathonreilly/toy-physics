@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-05 (downgraded 2026-04-27 per review/audit handoff)
 **Status:** bounded scaffold lane — uniform-field beam deflection gives near-unity exponents. This is **not** a derivation of `m_inertial = m_gravitational`.
+**Primary runner:** [`scripts/equivalence_principle_test.py`](../scripts/equivalence_principle_test.py) (beam-level uniform-field test on lattice)
 
 ## What this note actually contains
 

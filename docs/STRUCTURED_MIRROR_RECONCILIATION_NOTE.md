@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-03  
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** [`scripts/structured_mirror_reconciliation.py`](../scripts/structured_mirror_reconciliation.py) (canonical structured-growth on joint-validator harness; harness-level discrepancy)
 
 This note freezes the comparison between the committed canonical structured
 mirror validator and the newer quick linear Born claims.

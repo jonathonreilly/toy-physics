@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-04  
 **Status:** bounded test-particle probe on the proposed_retained 3D ordered-lattice family
+**Primary runner:** [`scripts/equivalence_principle_harness.py`](../scripts/equivalence_principle_harness.py) (centroid-ratio amplitude-level EP, runner produces deflection table)
 
 ## Artifact chain
 

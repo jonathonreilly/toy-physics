@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-14
 **Status:** bounded - bounded or caveated result note
+**Primary runner:** [`scripts/frontier_higgs_mass_retention_analysis.py`](../scripts/frontier_higgs_mass_retention_analysis.py) (PASS=38/0)
 direction. No hierarchy correction chain reduces m_H from 140.3 toward 125.
 
 ---
