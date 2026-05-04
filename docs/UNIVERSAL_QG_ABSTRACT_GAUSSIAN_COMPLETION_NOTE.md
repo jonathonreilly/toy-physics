@@ -1,6 +1,7 @@
 # Universal QG Abstract Gaussian Completion on `PL S^3 x R`
 
 **Date:** 2026-04-15  
+**Primary runner:** [`scripts/frontier_universal_qg_abstract_gaussian_completion.py`](../scripts/frontier_universal_qg_abstract_gaussian_completion.py) (PASS=5/0)
 **Role:** direct-universal quantum-gravity / abstract continuum-object theorem
 
 ## Verdict

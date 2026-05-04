@@ -2,6 +2,7 @@
 
 **Status:** bounded - bounded or caveated result note
 **Date:** 2026-04-14  
+**Primary runner:** [`scripts/frontier_universal_gr_tensor_variational_candidate.py`](../scripts/frontier_universal_gr_tensor_variational_candidate.py) (PASS=6/0)
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / theorem step  
 **Purpose:** identify the first exact tensor-valued `3+1` variational candidate

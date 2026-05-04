@@ -3,6 +3,7 @@
 **Date:** 2026-04-14  
 **Branch:** `codex/review-active`  
 **Status:** exact new microscopic tensor primitive derived
+**Primary runner:** [`scripts/frontier_s3_time_bilinear_tensor_primitive.py`](../scripts/frontier_s3_time_bilinear_tensor_primitive.py) (PASS=4/0)
 
 ## Verdict
 

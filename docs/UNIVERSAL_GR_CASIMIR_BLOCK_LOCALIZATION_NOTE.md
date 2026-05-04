@@ -2,6 +2,7 @@
 
 **Status:** support - exact Casimir block-localization step
 **Date:** 2026-04-14  
+**Primary runner:** [`scripts/frontier_universal_gr_casimir_block_localization.py`](../scripts/frontier_universal_gr_casimir_block_localization.py) (PASS=5/0)
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / canonical block-localization theorem step
 

@@ -1,6 +1,7 @@
 # Universal QG Canonical Smooth Gravitational Weak/Measure Equivalence
 
 **Date:** 2026-04-15  
+**Primary runner:** [`scripts/frontier_universal_qg_canonical_smooth_gravitational_weak_measure.py`](../scripts/frontier_universal_qg_canonical_smooth_gravitational_weak_measure.py) (PASS=5/0)
 **Role:** direct-universal quantum-gravity / canonical smooth gravitational
 weak-form and Gaussian-measure theorem
 

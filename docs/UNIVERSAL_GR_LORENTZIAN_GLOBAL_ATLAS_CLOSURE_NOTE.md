@@ -2,6 +2,7 @@
 
 **Status:** support - structural or confirmatory support note
 **Date:** 2026-04-14  
+**Primary runner:** [`scripts/frontier_universal_gr_lorentzian_global_atlas_closure.py`](../scripts/frontier_universal_gr_lorentzian_global_atlas_closure.py) (PASS=5/0)
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / finite-atlas global theorem
 

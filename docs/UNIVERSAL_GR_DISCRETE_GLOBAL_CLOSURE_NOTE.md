@@ -1,6 +1,7 @@
 # Universal GR Discrete Global Closure on `PL S^3 x R`
 
 **Date:** 2026-04-14  
+**Primary runner:** [`scripts/frontier_universal_gr_discrete_global_closure.py`](../scripts/frontier_universal_gr_discrete_global_closure.py) (PASS=5/0)
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / capstone theorem
 

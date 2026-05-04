@@ -1,6 +1,7 @@
 # Universal QG Canonical Textbook Continuum Gravitational Closure
 
 **Date:** 2026-04-15  
+**Primary runner:** [`scripts/frontier_universal_qg_canonical_textbook_continuum_gr_closure.py`](../scripts/frontier_universal_qg_canonical_textbook_continuum_gr_closure.py) (PASS=5/0)
 **Role:** direct-universal quantum-gravity / canonical textbook continuum
 gravitational capstone
 

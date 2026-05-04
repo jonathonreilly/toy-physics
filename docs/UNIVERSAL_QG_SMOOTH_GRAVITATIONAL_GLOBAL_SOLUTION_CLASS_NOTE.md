@@ -1,6 +1,7 @@
 # Universal QG Smooth Gravitational Global Solution Class
 
 **Date:** 2026-04-15  
+**Primary runner:** [`scripts/frontier_universal_qg_smooth_gravitational_global_solution_class.py`](../scripts/frontier_universal_qg_smooth_gravitational_global_solution_class.py) (PASS=6/0)
 **Role:** direct-universal quantum-gravity / smooth global weak gravitational
 solution-class theorem
 

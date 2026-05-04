@@ -2,6 +2,7 @@
 
 **Status:** support - invariant nonlinear completion step
 **Date:** 2026-04-14  
+**Primary runner:** [`scripts/frontier_universal_gr_invariant_nonlinear_completion.py`](../scripts/frontier_universal_gr_invariant_nonlinear_completion.py) (PASS=5/0)
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / nonlinear invariant-family theorem step
 

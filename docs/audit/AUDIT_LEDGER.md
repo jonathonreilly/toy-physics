@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T01:19:17.448774+00:00
+**Generated:** 2026-05-04T01:26:20.165796+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -19,31 +19,31 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 86 |
+| **retained** | 85 |
 | **retained_no_go** | 109 |
 | **retained_bounded** | 209 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 689 |
+| unaudited | 707 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 2 |
 | ~~audited_numerical_match~~ | 31 |
-| ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 546 |
+| ~~audited_renaming~~ | 21 |
+| ~~audited_conditional~~ | 530 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 378 |
-| `audited_conditional` | 546 |
+| `audited_clean` | 377 |
+| `audited_conditional` | 530 |
 | `audited_decoration` | 7 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 31 |
-| `audited_renaming` | 22 |
-| `unaudited` | 736 |
+| `audited_renaming` | 21 |
+| `unaudited` | 754 |
 
 | claim_type | count |
 |---|---:|
@@ -462,7 +462,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_complement_canonical_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `universal_gr_constraint_action_stationarity_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
 | `universal_gr_lambda_bypass_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
-| `universal_gr_lorentzian_signature_extension_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `valley_linear_action_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `valley_linear_asymptotic_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-fresh-agent | C | - |
 | `valley_linear_mirror_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
@@ -866,7 +865,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `pmns_branch_conditioned_quadratic_sheet_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_c3_character_holonomy_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | C | - |
-| `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | unsupported_readout_bridge | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
 | `pmns_current_bank_value_selection_nogo_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | F | - |
@@ -979,29 +977,14 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | finite_configured_numerical_sweep_to_positive_theorem | - |
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_a1_invariant_section_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `universal_gr_casimir_block_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `universal_gr_discrete_global_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
-| `universal_gr_invariant_nonlinear_completion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_isotropic_glue_operator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
-| `universal_gr_lorentzian_global_atlas_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh | B | - |
 | `universal_gr_positive_background_local_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_action_blocker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `universal_gr_tensor_quotient_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
-| `universal_gr_tensor_variational_candidate_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | E | - |
-| `universal_qg_canonical_refinement_net_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `universal_qg_canonical_smooth_geometric_action_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `universal_qg_inverse_limit_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `universal_qg_pl_field_interface_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `universal_qg_pl_sobolev_interface_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `universal_qg_pl_weak_form_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
-| `universal_qg_projective_schur_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | A | - |
-| `universal_qg_uv_finite_partition_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `up_sector_partition_revisit_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `v_even_theorem_retention_stretch_attempt_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-fresh-context | B | - |
 | `vector_sector_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1129,7 +1112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | F | - |
-| `s3_time_bilinear_tensor_primitive_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | claude-opus | E | - |
 | `star_supported_bridge_class_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-current | definition_as_derivation | - |
@@ -10798,25 +10780,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `UNREGISTERED: retained hw=1 triplet / coordinate-cycle authority`
 - **auditor confidence:** high
 
-### `pmns_c3_nontrivial_current_boundary_note`
-
-- **Note:** [`PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md`](../../docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** The PMNS-side remaining sole-axiom source object is exactly one native complex nontrivial C3-character current J_chi, with J_chi(A_fwd)=u+i v and J_chi=0 on the listed retained routes.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-hostile-nature-pmns-c3-2026-05-03`  (codex-current; independence=fresh_context)
-- **load-bearing step:** The note defines J_chi(A) := (h_0 + omega h_1 + omega^2 h_2)/3 and then asserts that on the reduced graph-first PMNS family A_fwd(u,v,w), J_chi(A_fwd)=chi=u+i v, making this current the exact smallest remaining sole-axiom source object.  _(class `unsupported_readout_bridge`)_
-- **chain closes:** False — The algebraic projection is stated, but the source note does not prove from retained inputs that the h_j are the forced native C3 holonomy readouts for A_fwd, that this projection is the smallest remaining sole-axiom source object, or that the listed retained routes annihilate it.
-- **rationale:** Issue: The load-bearing step identifies the exact remaining PMNS source object with the nontrivial C3-character current J_chi and asserts J_chi(A_fwd)=u+i v plus J_chi=0 on all current sole-axiom retained routes without supplying the retained reduction theorem, holonomy readout construction, or annihilation proof in this no-dependency packet. Why this blocks: A hostile reviewer can accept the displayed definition as a Fourier-style current while still rejecting the theorem-level conclusion that this is the forced smallest remaining sole-axiom source object; that conclusion imports a retained PMNS reduction/readout bridge and route-annihilation facts not established here. Repair target: Add or cite retained theorem dependencies proving the native C3 holonomies h_0,h_1,h_2 for A_fwd, deriving the projection J_chi(A_fwd)=u+i v from those holonomies, proving minimality of one complex current, and proving J_chi=0 on the free, hw=1 source/transfer, and retained scalar routes; ideally add a runner that constructs these values rather than assuming the current. Claim boundary until fixed: The note can safely state a proposed C3-character current definition and the intended boundary target, but not a closed positive theorem that this current is exactly the smallest remaining sole-axiom PMNS source object.
-- **open / conditional deps cited:**
-  - `retained PMNS reduction to the native C3-character family`
-  - `construction of native C3-character holonomies h_0,h_1,h_2 for A_fwd`
-  - `proof that J_chi(A_fwd)=u+i v follows from those holonomies rather than definition/readout choice`
-  - `minimality proof that one complex current is the exact smallest remaining source object`
-  - `annihilation proof J_chi=0 on the free, hw=1 source/transfer, and retained scalar routes`
-- **auditor confidence:** 0.86
-
 ### `pmns_commutant_eigenoperator_selector_note`
 
 - **Note:** [`PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md`](../../docs/PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md)
@@ -12010,19 +11973,6 @@ Claim boundary until fixed: safe to claim exact microscopic Schur-complement sta
   - `missing authority: exact Route-2 kinematic scaffold`
   - `open theorem: identification with Einstein/Regge tensor dynamics law`
 - **auditor confidence:** 0.93
-
-### `s3_time_bilinear_tensor_primitive_note`
-
-- **Note:** [`S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`](../../docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Definitional naming of a candidate bilinear support carrier: K_R(q) = [[u_E(q), u_T(q)], [delta_A1(q) u_E(q), delta_A1(q) u_T(q)]] is introduced from named coordinates (delta_A1, u_E, u_T). Excludes any derivation that the named coordinates have the asserted exact microscopic status; row has no one-hop dependencies and no runner.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `claude-opus-4.7-1m:cluster2-narrow-2026-05-02-s3-bilinear`  (claude-opus; independence=fresh_context)
-- **load-bearing step:** Define the exact microscopic tensor carrier K_R(q) = [[u_E(q), u_T(q)], [delta_A1(q) u_E(q), delta_A1(q) u_T(q)]].  _(class `E`)_
-- **chain closes:** False — The bilinear carrier exists as a definition; the audit cannot promote a definition to a derived microscopic primitive without registered upstream authorities or a runner certifying the A1 decoupling and endpoint laws.
-- **rationale:** Re-audit confirms the original renaming verdict: a named candidate carrier, not an audited theorem. Scope narrowed from the migration backfill to the definitional naming.
-- **auditor confidence:** high
 
 ### `s3_time_constructed_support_tensor_primitive_note`
 
@@ -14753,21 +14703,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_BLOCKER_NOTE.md`
 - **auditor confidence:** high
 
-### `universal_gr_block_constraint_interpretation_note`
-
-- **Note:** [`UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md`](../../docs/UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The A1 core is identified as the Hamiltonian block and the j=1 complement block as the momentum block in the universal 3+1 decomposition.  _(class `B`)_
-- **chain closes:** False — The note imports a six-step universal stack and a canonical block-localization result, but the ledger row has no explicit dependencies or runner and the note itself leaves the operator-level Einstein/Regge constraint identification open.
-- **rationale:** Issue: the load-bearing Hamiltonian/momentum constraint interpretation depends on an unregistered universal-stack input and on the still-open identification of the block-localized universal Hessian with the Einstein/Regge constraint operator. Why this blocks: an exact lapse/shift/trace/shear block split does not by itself prove that the A1 and j=1 blocks are the physical GR constraint operators with the required normalization and sign conventions. Repair target: register the cited block-localization authorities and add a theorem/runner deriving the Einstein/Regge constraint-operator identification on the E ⊕ T1 complement. Claim boundary until fixed: the note may be used as support for a canonical universal block split and a provisional constraint-sector reading, not as a closed GR constraint derivation.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_BLOCK_CONSTRAINT_INTERPRETATION_NOTE.md`
-- **auditor confidence:** high
-
 ### `universal_gr_block_normalization_note`
 
 - **Note:** [`UNIVERSAL_GR_BLOCK_NORMALIZATION_NOTE.md`](../../docs/UNIVERSAL_GR_BLOCK_NORMALIZATION_NOTE.md)
@@ -14793,21 +14728,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** True — For the bounded claim actually made, the chain closes: the note claims only an invariant Pi_A1 section plus an associated SO(3) orbit bundle/natural orbit connection, and explicitly denies a distinguished Pi_curv.
 - **rationale:** The note is carefully bounded: it does not claim full curvature localization, a distinguished connection, or canonical Pi_curv. The load-bearing projector/orbit statement is an algebraic closure over the displayed 3+1 projector and residual spatial-rotation action, with no external comparator or tuned numerical match. Residual risk is runner hygiene: the unregistered script entry point fails as written because it tries to read a missing ROUTE2_POLARIZATION_COMMON_PRIMITIVE_NOTE.md, although the current-checkout algebra checks pass when those unused stale reads are bypassed.
 - **auditor confidence:** medium
-
-### `universal_gr_casimir_block_localization_note`
-
-- **Note:** [`UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md`](../../docs/UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** On the 8D complement of Pi_A1, the SO(3) Casimir has spectrum -2 with multiplicity 3 and -6 with multiplicity 5, canonically splitting the complement into shift and traceless-shear blocks.  _(class `B`)_
-- **chain closes:** False — The claimed Casimir spectrum and spectral projectors are the right kind of exact algebraic object, but this row has no registered dependencies or runner/proof artifact exposing the universal representation matrices and projector construction.
-- **rationale:** Issue: the exact Casimir spectrum, multiplicities, and spectral projectors are asserted from an unregistered universal stack with no executable or cited proof artifact in this ledger row. Why this blocks: the canonical lapse/shift/trace/shear localization depends on those projectors being computed from the stated universal SO(3) representation, not merely named. Repair target: register the upstream universal representation/quotient-kernel authority and add a runner or proof note that constructs Pi_A1, C, the -2/-6 eigenspaces, and the four orthogonal complete projectors. Claim boundary until fixed: the note remains support for the intended universal block-localization route, but not an audited closed theorem that canonical block localization is already established.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_CASIMIR_BLOCK_LOCALIZATION_NOTE.md`
-- **auditor confidence:** high
 
 ### `universal_gr_complement_canonical_note`
 
@@ -14835,19 +14755,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **rationale:** The claim is a support/no-go result about failure of action stationarity to resolve the complement-frame ambiguity, not a positive GR closure theorem. The source note's load-bearing step is an algebraic orbit-flatness argument, and the runner's current algebraic checks support that step. The single current-checkout runner failure is tied to a stale blocker-note text check, not to the load-bearing stationarity computation.
 - **auditor confidence:** high
 
-### `universal_gr_discrete_global_closure_note`
-
-- **Note:** [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Capstone claim that the direct-universal route yields a discrete-global Lorentzian Einstein/Regge stationary action family on PL S^3 x R via local Lorentzian charts, congruence-compatible overlaps, and finite-atlas patching.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-universal-gr-global-closure-2026-05-02`  (codex-current; independence=cross_family)
-- **load-bearing step:** Compatible local stationary representatives patch to a unique global stationary section on finite atlases of PL S^3 x R.  _(class `B`)_
-- **chain closes:** False — The note asserts the closure stack and finite-atlas patching step but provides no registered one-hop retained authorities or runner establishing those inputs in this audit row.
-- **rationale:** Issue: the global GR capstone depends on a named stack of local scalar/tensor/lapse/glue/Lorentzian/global-patching results that are not registered as one-hop retained-grade dependencies for this row. Why this blocks retained status: the source note is a status summary and does not itself derive finite-atlas stationary-section patching from retained inputs, and there is no runner to check the global bridge. Repair target: split or cite the exact local closure, overlap covariance, Lorentzian extension, and finite-atlas patching theorems as audited retained-grade dependencies, with a runner or proof artifact for the patching bridge. Claim boundary until fixed: cite this only as a conditional capstone contingent on the GR closure stack being audited and retained.
-- **auditor confidence:** high
-
 ### `universal_gr_invariant_frame_obstruction_note`
 
 - **Note:** [`UNIVERSAL_GR_INVARIANT_FRAME_OBSTRUCTION_NOTE.md`](../../docs/UNIVERSAL_GR_INVARIANT_FRAME_OBSTRUCTION_NOTE.md)
@@ -14859,21 +14766,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** The weight-1 complement sectors appear with multiplicity two, the quotient-kernel spectrum is frame-invariant, therefore no representation-theoretic invariant in the current atlas selects a unique universal complement frame.  _(class `A`)_
 - **chain closes:** False — The representation-theoretic implication is plausible, but the note does not exhibit an exhaustive current invariant atlas or a theorem that the listed invariant data are all available selectors. The supplied runner does not execute its checks in this checkout because it fails on a missing POLARIZATION_UNIVERSAL_WEIGHT_DECOMPOSITION_NOTE.md before PASS output.
 - **rationale:** Issue: the no-go rests on the unstated premise that the current invariant tensor atlas is exhausted by the listed SO(3)/SO(2), Pi_A1, weight-decomposition, and quotient-spectrum data, and the runner cannot reproduce the weight-decomposition dependency in the current checkout. Why this blocks: without that exhaustive selector theorem, a hostile reviewer can reject the universal no-canonical-section conclusion while accepting the multiplicity-two algebra. Repair target: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact. Claim boundary until fixed: conditional no-go for the displayed representation data only.
-- **auditor confidence:** high
-
-### `universal_gr_invariant_nonlinear_completion_note`
-
-- **Note:** [`UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md`](../../docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** For every positive invariant background D = diag(a,b,b,b), the exact Hessian weights give K_GR^iso(D) = M_D ⊗ Lambda_R and hence an exact nonlinear family of covariant quadratic boundary actions.  _(class `B`)_
-- **chain closes:** False — The algebraic form is plausible within the invariant family, but the note imports the all-orders observable generator, the positive slice generator, and the prior glue law without ledger dependencies, runner output, or proof artifact in this row.
-- **rationale:** Issue: the invariant-family nonlinear completion relies on unregistered upstream closure of W_iso(a,b), Lambda_R, and the isotropic glue law, and this row has no runner/proof artifact verifying the Hessian weights or strict-convexity identity across the positive family. Why this blocks: the conclusion is not just differentiating log a + 3 log b; it also asserts that the resulting family is the GR/Regge glue operator over the direct universal route. Repair target: register the cited observable/slice/glue authorities and add a runner that samples symbolic or exact positive (a,b), constructs M_D and Lambda_R, verifies positive definiteness and the completion identity, and records the scope as invariant-family only. Claim boundary until fixed: this remains support for an invariant-background nonlinear-completion route, not an audited closed nonlinear GR theorem.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md`
 - **auditor confidence:** high
 
 ### `universal_gr_isotropic_glue_operator_note`
@@ -14891,21 +14783,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`
 - **auditor confidence:** high
 
-### `universal_gr_isotropic_schur_localization_note`
-
-- **Note:** [`UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md`](../../docs/UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** For D = diag(a,b,b,b), the universal Hessian commutes with the lapse, shift, trace, and shear projectors and has exact block coefficients -a^-2, -(ab)^-1, -b^-2, and -b^-2 with all cross-block leakages zero.  _(class `B`)_
-- **chain closes:** False — The stated Schur-localization and coefficient formulas would be an exact algebraic closure if the universal representation, projectors, and Hessian computation were registered, but this row has no dependencies or runner/proof artifact exposing those inputs.
-- **rationale:** Issue: the vanishing leakage and closed-form Hessian coefficients are asserted from unregistered universal-route ingredients. Why this blocks: a hostile audit cannot verify that the fixed SO(3) background, canonical projectors, and D^2W Hessian actually produce the stated block form, nor can it check the sign/normalization convention that the note itself leaves for the final Einstein/Regge identification. Repair target: register the universal representation and projectors, and add a runner or proof that constructs H on diag(a,b,b,b), verifies all commutators/leakages, and derives the four coefficients. Claim boundary until fixed: support for the invariant-background Schur-localization route, not an audited closed localization theorem or GR operator match.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md`
-- **auditor confidence:** high
-
 ### `universal_gr_lambda_bypass_note`
 
 - **Note:** [`UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md`](../../docs/UNIVERSAL_GR_LAMBDA_BYPASS_NOTE.md)
@@ -14918,36 +14795,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **chain closes:** True — The chain closes for the limited support-level claim: the candidate action is syntactically lambda-free, and the note explicitly does not claim full GR closure.
 - **rationale:** The clean result applies only to the bounded claim that the direct universal A1-anchored candidate avoids the phase-lift L_lambda family. The note discloses the remaining complement-frame and curvature-localization obstruction instead of using it as hidden closure. The current-checkout runner passes all 9 checks after redirecting its hardcoded external root, so the remaining risk is runner hygiene rather than the local lambda-bypass claim.
 - **auditor confidence:** medium
-
-### `universal_gr_lorentzian_global_atlas_closure_note`
-
-- **Note:** [`UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-15`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Because each local Lorentzian operator K_GR(D) is nondegenerate, local action densities agree exactly on overlaps, and source/field pairings transform compatibly, the local stationary solutions transform compatibly across the atlas into one exact global stationary section.  _(class `A`)_
-- **chain closes:** False — The congruence invariance B_{D'}(S^T h S,S^T k S)=B_D(h,k) follows algebraically, but the note does not supply a runner, an explicit finite atlas/cocycle, nondegeneracy proof for all local K_GR(D), or a constructed source/field pairing that patches globally. The unique global stationary section is therefore conditional on missing atlas-gluing data.
-- **rationale:** Issue: the source proves or states a local congruence-covariance identity, but the theorem-level global stationary closure additionally assumes a compatible finite atlas, nondegenerate local operators on every chart, and source/field pairing compatibility without constructing or verifying them. Why this blocks: exact overlap invariance of a bilinear form is not yet a proof that a unique global Einstein/Regge stationary section exists on PL S^3 x R. Repair target: add a runner or proof artifact that builds the atlas transition data, verifies cocycle/overlap compatibility and K_GR nondegeneracy chart-by-chart, and solves the patched stationary system. Claim boundary until fixed: the local Hessian density B_D is congruence-invariant under invertible frame changes; global finite-atlas stationary closure remains conditional.
-- **open / conditional deps cited:**
-  - `finite_atlas_transition_cocycle`
-  - `chartwise_K_GR_nondegeneracy`
-  - `global_source_field_pairing_patch`
-- **auditor confidence:** high
-
-### `universal_gr_lorentzian_signature_extension_note`
-
-- **Note:** [`UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`](../../docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained**  (reason: `self`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-40`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** On the Lorentzian class, H_D is no longer positive definite; H_D remains exactly nondegenerate; therefore K_GR(D) remains exactly nondegenerate, so F_* = K_GR(D)^-1 J exists uniquely.  _(class `A`)_
-- **chain closes:** True — At support scope, the note only extends the local algebra from positive definite to nondegenerate Lorentzian backgrounds. Nondegeneracy is preserved by the stated congruence-covariant Hessian and tensoring with the positive slice generator, while the note explicitly withholds the stronger global solution-class claim.
-- **rationale:** Clean at the declared support boundary. The result is an algebraic signature-class extension: positivity is not needed for the local bilinear form to be defined or nondegenerate, only for convexity, and the note does not promote this to global Lorentzian GR closure. Residual risk is scope drift: downstream rows must not cite this as a global solution theorem or as physical Lorentzian-background selection.
-- **auditor confidence:** high
 
 ### `universal_gr_polarization_frame_bundle_attempt`
 
@@ -15038,76 +14885,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
   - `UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md`
 - **auditor confidence:** high
 
-### `universal_gr_tensor_variational_candidate_note`
-
-- **Note:** [`UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md`](../../docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:2026-05-01-universal_gr_tensor_variational_candidate_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Given an exact scalar source generator W[J] and a lifted background metric source g_*, define the tensor-valued variational candidate by S_GR^cand[h] := 1/2 D^2 W[g_*](h,h) on symmetric 3+1 metric perturbations.  _(class `E`)_
-- **chain closes:** False — The note defines a plausible Hessian candidate, but it has no runner and depends on undeclared upstream scalar-observable, 3+1 lift, and tensor-quotient uniqueness inputs, including an audited-conditional observable-principle row.
-- **rationale:** Issue: the load-bearing object S_GR^cand[h] is introduced by definition as the metric-source Hessian of W at g_*, while the row declares deps=[] and has no registered runner for the Hessian/quotient checks. The scalar observable principle it imports is audited_conditional, and the tensor quotient uniqueness and curvature-localization blocker surfaces are unaudited. Why this blocks: a clean tensor variational candidate theorem requires audited inputs for W[J], the exact 3+1 lift/background source g_*, and the claimed symmetric quotient uniqueness/nondegeneracy; otherwise the note establishes only a conditional definition of the next object in the route. Repair target: declare the observable-principle, 3+1 lift, tensor-quotient uniqueness, and curvature-localization boundary notes as dependencies, register a runner that classifies Hessian symmetry/quotient-rank checks, and keep the Einstein/Regge identification explicitly out of scope until supplied. Claim boundary until fixed: conditional definition of a Hessian variational candidate on the assumed lifted background; not an independently audited tensor-valued GR action or curvature-dynamics theorem.
-- **open / conditional deps cited:**
-  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
-  - `UNIVERSAL_GR_TENSOR_QUOTIENT_UNIQUENESS_NOTE.md`
-  - `UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_canonical_refinement_net_note`
-
-- **Note:** [`UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-16`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Once the barycentric-dyadic refinement maps are chosen geometrically, they induce canonical coarse/fine splittings, so the atlas-refinement pullback and Gaussian projective pushforward live on the same canonical discrete net.  _(class `B`)_
-- **chain closes:** False — The barycentric/dyadic directed index family is a plausible canonical net, but the claimed exact pullback/projective compatibility imports unaudited or conditional upstream results: global stationary atlas closure, UV-finite partition density, and Schur/projective pushforward. No runner or proof artifact constructs the refinement maps, coarse/fine splittings, cocycles, and pushforwards together on one finite net.
-- **rationale:** Issue: the note correctly names a natural barycentric-spatial/dyadic-temporal refinement family, but the stronger claim that the route now has exact refinement pullback plus Gaussian projective pushforward on that net depends on separate upstream closure theorems and an unverified canonical coarse/fine split. Why this blocks: a directed refinement index set is not yet a proved QG projective-system theorem. Repair target: register a proof/runner that builds A_(n,m), verifies transition cocycles and density invariance, constructs the induced coarse/fine splitting, and applies the Schur pushforward associatively. Claim boundary until fixed: the barycentric-dyadic atlas family is a natural candidate canonical geometric net; exact QG refinement/projective closure remains conditional.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
-  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
-  - `canonical_coarse_fine_refinement_splitting_runner`
-- **auditor confidence:** high
-
-### `universal_qg_canonical_smooth_geometric_action_note`
-
-- **Note:** [`UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md`](../../docs/UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-45`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The weak/Gaussian continuum bridge and the Lorentzian Einstein/Regge stationary action family are the convex and Lorentzian sectors of the same exact smooth geometric/action family.  _(class `B`)_
-- **chain closes:** False — The shared B_D and K_GR(D) formulas support a project-native comparison only after the smooth weak/measure equivalence, positive-background local closure, and Lorentzian global stationary closure are established. Those upstream bridge rows are conditional, unaudited support, or audited as renaming in the current ledger.
-- **rationale:** Issue: the capstone identifies the positive-background weak/Gaussian sector and Lorentzian Einstein/Regge stationary sector as one smooth geometric/action family, but the required upstream smooth weak/measure equivalence, positive-background closure, and Lorentzian global closure are not audit-clean. Why this blocks: using the same congruence-covariant bilinear formula is a useful organizing observation, but it does not prove the imported smooth-realization and global-stationary bridge claims. Repair target: ratify or repair the smooth weak/measure, positive-background, and Lorentzian global atlas/solution rows, then re-audit this capstone. Claim boundary until fixed: safe as a conditional project-native comparison frame, not as closed smooth geometric/action equivalence.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md`
-  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
-  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
-  - `UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_inverse_limit_closure_note`
-
-- **Note:** [`UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-41`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Because Schur pushforward is exact and associative, every coarser finite sector obtained from a finer one yields the same effective operator/source pair, independent of the path through intermediate refinements.  _(class `B`)_
-- **chain closes:** False — The projective-limit conclusion is exact only if the upstream finite Gaussian family, Schur/projective closure, and canonical barycentric-dyadic refinement/coarse-fine split are already established. In the current ledger those inputs are conditional or unaudited support, so the bounded inverse-limit row cannot close independently.
-- **rationale:** Issue: the inverse-limit closure imports the UV-finite partition family, exact Schur/projective coarse-graining, and canonical refinement-net compatibility rather than proving all of them in this note. Why this blocks: the UV partition and refinement-net rows are already audited_conditional, and the Schur/projective closure row is still unaudited support, so the projective consistency theorem cannot be ratified as closed. Repair target: audit/repair the UV partition, Schur-projective closure, and canonical refinement-net rows, including the canonical coarse/fine split and finite-sector pushforward maps. Claim boundary until fixed: safe as a bounded roadmap/conditional theorem for the project discrete inverse-limit object, not as a closed QG inverse-limit theorem.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
-  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-- **auditor confidence:** high
-
 ### `universal_qg_optional_textbook_comparison_note`
 
 - **Note:** [`UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md`](../../docs/UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
@@ -15119,95 +14896,6 @@ Claim boundary until fixed: safe to claim exact fermion-CW isotropy and the resu
 - **load-bearing step:** This note is packaging-only and is not a theorem, claim, or new authority surface.  _(class `E`)_
 - **chain closes:** False — The note defines a packaging boundary rather than deriving a result; its statement that the textbook continuum target is closed cites no one-hop authority in the ledger.
 - **rationale:** Re-audit confirms the original renaming verdict: packaging boundary, not authority. Scope narrowed to the packaging-only declaration.
-- **auditor confidence:** high
-
-### `universal_qg_pl_field_interface_note`
-
-- **Note:** [`UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`](../../docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-42`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Combining this with the exact abstract Gaussian completion theorem gives one exact project-native PL Gaussian completion.  _(class `B`)_
-- **chain closes:** False — The finite-element PL realization is standard once the canonical refinement net and abstract Gaussian inverse-limit object are granted. Those upstream objects are currently conditional or audited as renaming, so this support row cannot independently close the project-native PL Gaussian carrier claim.
-- **rationale:** Issue: the PL field-interface note relies on exact canonical refinement, inverse-limit Gaussian cylinder closure, and abstract Gaussian completion, but those are not audit-clean upstream inputs. Why this blocks: hat-basis prolongation can supply a PL carrier only after the directed refinement system and Gaussian limit object are established; it does not prove those inputs. Repair target: ratify or repair the refinement-net, inverse-limit, and abstract Gaussian completion rows, then re-audit the PL carrier identification. Claim boundary until fixed: safe as a conditional project-native finite-element interface, not as a closed continuum/QG carrier theorem.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-  - `UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_pl_sobolev_interface_note`
-
-- **Note:** [`UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md`](../../docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-43`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Each finite PL space lies canonically inside a project-native H^1-type field space on PL S^3 x R, and the directed PL ladder is already a nested first-order weak-field ladder.  _(class `B`)_
-- **chain closes:** False — The local finite-element Sobolev statement is standard after a PL field carrier and weak/Dirichlet form are fixed. The note imports those upstream closures, and the PL field interface is now conditional while the PL weak-form row is still unaudited support.
-- **rationale:** Issue: the Sobolev-interface note depends on an exact PL field carrier, PL weak/Dirichlet closure, abstract Gaussian completion, and canonical refinement net that are not all audit-clean. Why this blocks: finite PL functions do have piecewise gradients and finite energy, but that only gives the advertised project-native H^1-type Gaussian carrier after the imported directed field and weak-form systems are established. Repair target: ratify or repair the PL field interface, PL weak-form closure, refinement-net, and abstract Gaussian completion rows. Claim boundary until fixed: safe as a conditional finite-element Sobolev interface, not as a closed continuum/QG Sobolev theorem.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
-  - `UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_pl_weak_form_note`
-
-- **Note:** [`UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md`](../../docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-44`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** The stationary equation K u_* = J is equivalent to the exact weak problem a(u_*, v) = ell(v) for every test field v, and Schur reduction induces the exact coarse weak form again.  _(class `B`)_
-- **chain closes:** False — The equivalence between a symmetric positive operator equation and its finite-dimensional weak form is algebraic once K, the PL field ladder, and the Schur coarse-graining system are established. Those imported inputs are conditional, unaudited support, or audited as renaming in the current ledger.
-- **rationale:** Issue: the PL weak-form closure imports the UV-finite positive Gaussian operator, exact Schur/projective coarse-graining, canonical refinement net, abstract Gaussian completion, and PL field carrier rather than closing them here. Why this blocks: the weak equation is a valid finite-dimensional reformulation only after those systems are established; current upstream audit states include conditional, unaudited support, and renaming. Repair target: ratify or repair the UV partition, Schur/projective closure, refinement-net, abstract completion, and PL field-interface rows, then re-audit the weak-form theorem. Claim boundary until fixed: safe as a conditional project-native weak-form formulation, not as closed QG weak/Dirichlet closure.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
-  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-  - `UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md`
-  - `UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_projective_schur_closure_note`
-
-- **Note:** [`UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`](../../docs/UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:2026-05-01-universal_qg_projective_schur_closure_note`  (codex-current; independence=fresh_context)
-- **load-bearing step:** Because the positive-background route is symmetric positive definite, integrating out fine modes by Schur complement gives K_eff=A-BC^-1B^T and preserves the stationary and covariance sectors exactly.  _(class `A`)_
-- **chain closes:** False — The Schur-complement formulas are algebraically correct for a finite SPD Gaussian block operator. The note does not prove or register the upstream positive-background SPD action, UV-finite partition theorem, or canonical refinement-net inputs, so the projective closure is conditional on those premises.
-- **rationale:** Issue: the projective Schur closure assumes a finite SPD Gaussian gravity partition family and a positive-background local action, but those upstream inputs are not registered as dependencies and no runner checks the block identities. Why this blocks: Schur marginalization preserves the family only if the fine block C is invertible/SPD and the starting partition theorem is valid. Repair target: register and ratify the positive-background local closure, UV-finite partition, and canonical refinement-net notes, and add a finite block-Gaussian runner checking partition, stationary, covariance, and associativity identities. Claim boundary until fixed: conditional on an SPD finite Gaussian gravity block family, the Schur complement gives the stated exact projective coarse-graining algebra.
-- **open / conditional deps cited:**
-  - `UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`
-  - `UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md`
-- **auditor confidence:** high
-
-### `universal_qg_uv_finite_partition_note`
-
-- **Note:** [`UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md`](../../docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-high-ready-20260430-17`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** Because K_GR(D) is symmetric positive definite on the positive-background class, the finite-dimensional Gaussian partition Z_GR(D,J) exists, is finite, and has mean K_GR(D)^-1 J equal to the discrete GR stationary field.  _(class `B`)_
-- **chain closes:** False — The Gaussian formula is standard once a finite-dimensional SPD operator K_GR(D) is supplied, but this note does not itself prove or register the required SPD/local-GR closure, finite-atlas patching, or Schur/projective compatibility. With no runner and no ledger dependencies, the exact QG bridge claim remains conditional on those upstream structures.
-- **rationale:** Issue: the note turns a supplied finite-dimensional positive Gaussian action into a UV-finite partition family, but the supplied operator positivity, discrete GR stationary closure, atlas density patching, and Schur coarse-graining claims are imported rather than audited here. Why this blocks: finite Gaussian integration alone does not establish the route-level statement that the direct-universal QG partition reproduces exact discrete 3+1 Einstein/Regge gravity on PL S^3 x R. Repair target: register a runner/proof that constructs K_GR(D), verifies SPD/nondegeneracy over the stated positive-background class, computes the Gaussian mean/covariance, and checks finite-atlas density transformation plus Schur compatibility. Claim boundary until fixed: for any finite-dimensional SPD K_GR(D), the Euclidean Gaussian partition is finite and has mean K_GR(D)^-1 J; the project-level QG bridge remains conditional.
-- **open / conditional deps cited:**
-  - `local_GR_K_GR_positive_definite_closure`
-  - `UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md`
-  - `UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md`
-  - `finite_atlas_partition_density_patch_runner`
 - **auditor confidence:** high
 
 ### `universal_theta_induced_edm_vanishing_theorem_note_2026-04-24`

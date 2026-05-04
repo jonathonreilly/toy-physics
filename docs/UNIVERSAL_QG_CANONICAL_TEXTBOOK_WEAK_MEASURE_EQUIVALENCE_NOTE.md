@@ -1,6 +1,7 @@
 # Universal QG Canonical Textbook Weak/Measure Equivalence
 
 **Date:** 2026-04-15  
+**Primary runner:** [`scripts/frontier_universal_qg_canonical_textbook_weak_measure_equivalence.py`](../scripts/frontier_universal_qg_canonical_textbook_weak_measure_equivalence.py) (PASS=5/0)
 **Role:** direct-universal quantum-gravity / canonical textbook continuum
 weak-form and Gaussian-measure theorem
 
