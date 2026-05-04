@@ -195,6 +195,22 @@ Findings:
   canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
   gates remain open.
 
+## 2026-05-04 Schur/K-Prime Row Absence Refresh Self-Review
+
+Disposition: bounded support / exact negative boundary; continue campaign.
+
+Findings:
+
+- The Schur absence guard now scans the current 46-chunk production surface and
+  reports `93` scanned files with `0` complete Schur row hits.
+- The finite-source-only counterfamily remains active, so finite `C_ss`,
+  `dE_top/ds`, and source-slope rows cannot be reclassified as same-surface
+  Schur `A/B/C` kernel rows.
+- The Schur row candidate extraction attempt still finds no usable finite
+  ladder/Feshbach candidate and writes no future row file.
+- Retained-route and campaign-status aggregates remain `PASS=150 FAIL=0` and
+  `PASS=176 FAIL=0`, with proposal authority denied.
+
 ## 2026-05-04 Chunk031 Resume and Chunk033 Packaging Self-Review
 
 Disposition: bounded production support; continue campaign.

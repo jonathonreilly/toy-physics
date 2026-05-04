@@ -467,7 +467,12 @@ current_result: >
   passed for chunks017-046, response-window acceptance remains open, and
   retained/campaign aggregate certificates still deny proposal authority with
   PASS=150 and PASS=176 respectively.  Chunks047-052 are currently running
-  under the six-job cap.
+  under the six-job cap.  The scalar-denominator / Schur K-prime route was
+  then refreshed against the larger current production surface; the absence
+  guard scanned 93 output/certificate files and found 0 complete Schur A/B/C
+  row hits, so current FH/LSZ source rows remain blocked as scalar-denominator
+  evidence.  Retained/campaign certificates still deny proposal authority with
+  PASS=150 and PASS=176 respectively.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >

@@ -1098,3 +1098,32 @@ retained closure still unauthorized.
 
 Currently running: chunks047-052.  The next-range monitor launched chunk052
 when chunk045 exited, keeping the six-job cap full.
+
+## 2026-05-04 Schur/K-Prime Row Absence Refresh
+
+The scalar-denominator / Schur route was refreshed against the larger current
+production surface after chunks001-046 were packaged:
+
+```bash
+python3 scripts/frontier_yt_schur_kprime_row_absence_guard.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_schur_row_candidate_extraction_attempt.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=150 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=176 FAIL=0
+```
+
+The absence guard scanned `93` current output/certificate files and found no
+complete same-surface Schur `A/B/C` kernel rows.  This keeps the route as
+bounded support / exact negative boundary: current FH/LSZ `C_ss`, `dE_top/ds`,
+and source-slope rows cannot be promoted to `K'(pole)` evidence.
+
+Next exact action remains: monitor chunks047-052 and package whichever lands
+next.  For non-MC closure, only a real same-surface `O_H/C_sH/C_HH` pole row
+set, W/Z response row set with identity certificates, Schur `A/B/C` rows, or
+neutral-sector irreducibility theorem moves the claim.

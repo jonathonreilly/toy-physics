@@ -30,6 +30,10 @@ Open imports:
   neutral-sector irreducibility theorem is blocked on the current surface;
 - scalar denominator / K-prime route is exact support only; same-surface Schur
   A/B/C kernel rows and FV/IR pole-control certificates are absent;
+- the Schur/K-prime row absence guard has been refreshed against the current
+  46-chunk production surface; it scanned `93` current output/certificate
+  files and found `0` complete Schur row hits, so current FH/LSZ source rows
+  still cannot be promoted to scalar-denominator evidence;
 - finite-source-linearity calibration output is now present and passes the
   support checkpoint, but remains insufficient for `O_sp = O_H` or physical
   `y_t`;
