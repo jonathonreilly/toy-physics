@@ -152,6 +152,46 @@
       "contains_beta_lambda": false,
       "contains_h_unit": true,
       "contains_y_t_bare": false,
+      "path": "docs/YT_NEUTRAL_SCALAR_DYNAMICAL_RANK_ONE_CLOSURE_ATTEMPT_NOTE_2026-05-02.md",
+      "status": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
+      "title": "# Neutral Scalar Dynamical Rank-One Closure Attempt"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_NEUTRAL_SCALAR_POSITIVITY_IMPROVING_DIRECT_CLOSURE_ATTEMPT_NOTE_2026-05-03.md",
+      "status": "exact negative boundary / neutral-scalar positivity-improving direct theorem not derived",
+      "title": "# YT Neutral-Scalar Positivity-Improving Direct Closure Attempt"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_NO_ORTHOGONAL_TOP_COUPLING_SELECTION_RULE_NO_GO_NOTE_2026-05-02.md",
+      "status": "exact negative boundary / no-orthogonal-top-coupling selection rule not derived",
+      "title": "# PR #230 No-Orthogonal-Top-Coupling Selection-Rule No-Go"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_ORTHOGONAL_NEUTRAL_DECOUPLING_NO_GO_NOTE_2026-05-02.md",
+      "status": "exact negative boundary / orthogonal neutral decoupling shortcut not derived",
+      "title": "# Orthogonal Neutral Decoupling No-Go"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
+      "path": "docs/YT_OSP_OH_IDENTITY_STRETCH_ATTEMPT_NOTE_2026-05-03.md",
+      "status": "exact negative boundary / `O_sp`-to-`O_H` identity not derived on current surface",
+      "title": "# O_sp / O_H Identity Stretch Attempt"
+    },
+    {
+      "contains_beta_lambda": false,
+      "contains_h_unit": true,
+      "contains_y_t_bare": false,
       "path": "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
       "status": "proposed_retained **full staggered-PT 4D BZ quadrature** of the",
       "title": "# P1 BZ Quadrature Full Staggered-PT Note (4D Kawamoto\u2013Smit Quadrature)"
@@ -509,6 +549,6 @@
     }
   },
   "verdict": "Review of all docs/YT*.md notes plus the audit ledger found no existing retained top-Yukawa proof that the auditor missed.  The proof-looking zero-import/Ward/color-projection stack still routes through audited_renaming or audited_conditional nodes; the direct correlator route is cutoff-obstructed at the current scale; and the Planck selector remains conditional on beta_lambda(M_Pl)=0.",
-  "yt_doc_count": 103,
+  "yt_doc_count": 288,
   "yt_ledger_row_count": 95
 }
