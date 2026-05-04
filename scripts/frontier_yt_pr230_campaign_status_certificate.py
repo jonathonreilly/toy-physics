@@ -287,6 +287,9 @@ def main() -> int:
         "delta_perp_tomography_correction_builder": load(
             "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json"
         ),
+        "same_source_top_response_builder": load(
+            "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json"
+        ),
         "same_source_w_response_row_builder": load(
             "outputs/yt_same_source_w_response_row_builder_2026-05-04.json"
         ),
@@ -1308,6 +1311,17 @@ def main() -> int:
         statuses["delta_perp_tomography_correction_builder"],
     )
     report(
+        "same-source-top-response-builder-open",
+        "same-source top-response"
+        in str(statuses["same_source_top_response_builder"])
+        and certificates["same_source_top_response_builder"].get("proposal_allowed") is False
+        and certificates["same_source_top_response_builder"].get(
+            "strict_same_source_top_response_certificate_builder_passed"
+        )
+        is False,
+        statuses["same_source_top_response_builder"],
+    )
+    report(
         "same-source-w-response-row-builder-open",
         "same-source W-response row builder"
         in str(statuses["same_source_w_response_row_builder"])
@@ -1961,7 +1975,7 @@ def main() -> int:
         },
         {
             "route": "non-source response rank repair",
-            "needed": "certified O_H with C_sH/C_HH pole Gram purity, or same-source W/Z response rows with sector-overlap and canonical-Higgs identity",
+            "needed": "certified O_H with C_sH/C_HH pole Gram purity, or same-source top/W/Z response rows with matched covariance, sector-overlap, and canonical-Higgs identity",
         },
         {
             "route": "full positive closure assembly",

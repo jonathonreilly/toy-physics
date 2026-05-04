@@ -46,6 +46,7 @@ PARENTS = {
     "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
     "delta_perp_tomography_builder": "outputs/yt_delta_perp_tomography_correction_builder_2026-05-04.json",
+    "same_source_top_response_builder": "outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json",
     "same_source_w_response_row_builder": "outputs/yt_same_source_w_response_row_builder_2026-05-04.json",
     "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
@@ -172,6 +173,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "W/Z correlator mass-fit path absent",
                 "orthogonal-neutral top-coupling null or correction absent",
                 "strict delta_perp tomography correction rows absent",
+                "same-source top-response certificate absent",
                 "same-source W-response row builder strict inputs absent",
                 "lightweight same-source W readout production rows absent",
                 "W/Z mass-fit response-row builder strict inputs absent",
@@ -185,6 +187,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["same_source_w_response_orthogonal_correction"],
                 PARENTS["one_higgs_completeness_orthogonal_null"],
                 PARENTS["delta_perp_tomography_builder"],
+                PARENTS["same_source_top_response_builder"],
                 PARENTS["same_source_w_response_row_builder"],
                 PARENTS["same_source_w_lightweight_readout"],
                 PARENTS["wz_certificate_gate"],
@@ -379,6 +382,16 @@ def main() -> int:
         statuses["delta_perp_tomography_builder"],
     )
     report(
+        "same-source-top-response-builder-open",
+        "same-source top-response" in statuses["same_source_top_response_builder"]
+        and certs["same_source_top_response_builder"].get("proposal_allowed") is False
+        and certs["same_source_top_response_builder"].get(
+            "strict_same_source_top_response_certificate_builder_passed"
+        )
+        is False,
+        statuses["same_source_top_response_builder"],
+    )
+    report(
         "same-source-w-response-row-builder-open",
         "same-source W-response row builder" in statuses["same_source_w_response_row_builder"]
         and certs["same_source_w_response_row_builder"].get("proposal_allowed") is False
@@ -458,7 +471,8 @@ def main() -> int:
             "Keep the chunk worker on homogeneous production chunks.  In parallel, "
             "pursue one non-chunk bridge that can satisfy this gate: a real "
             "same-surface O_H certificate plus C_sH/C_HH pole rows, a same-source "
-            "EW action plus W/Z mass-response rows and sector-overlap identity, "
+            "EW action plus top/W/Z mass-response rows, matched covariance, and "
+            "sector-overlap identity, "
             "same-surface Schur A/B/C kernel rows with scalar denominator closure, "
             "or a neutral-sector irreducibility theorem.  Rerun this assembly "
             "gate before any retained-route proposal."

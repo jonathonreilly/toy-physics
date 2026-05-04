@@ -239,4 +239,8 @@ Open imports:
   observed selectors plus `H_unit`/Ward, `alpha_LM`/plaquette, and
   `kappa/c2/Z_match` shortcuts, but no certified physical input readout has
   been supplied;
+- the same-source top-response certificate builder is open: it validates the
+  existing common-window top source-response support and scout output, but it
+  does not emit the production top-response certificate until a same-source
+  identity certificate and matched top/W covariance certificate exist;
 - independent audit after any proposed positive certificate.

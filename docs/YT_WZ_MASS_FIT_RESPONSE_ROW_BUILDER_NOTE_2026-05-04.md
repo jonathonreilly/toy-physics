@@ -58,6 +58,11 @@ uncertainty, covariance against `dM_W/ds`, same-source coordinate metadata, and
 the same-source sector / canonical-Higgs / retained-route identity booleans
 required by the downstream W/Z response builder.
 
+The top-response certificate is now assigned to
+`frontier_yt_same_source_top_response_certificate_builder.py`, whose current
+mode remains open until the same-source identity and matched covariance
+certificates exist.
+
 The `g_2` certificate must be non-observed-selector provenance.  External
 observed `g_2`, W/Z masses, top mass, or `y_t` values are not accepted as proof
 selectors.

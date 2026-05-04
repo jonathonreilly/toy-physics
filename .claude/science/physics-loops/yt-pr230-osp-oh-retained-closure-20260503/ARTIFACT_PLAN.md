@@ -90,3 +90,20 @@ This reduces the first W-route strict input to three concrete future files:
 W/Z correlator mass-fit rows, matched same-source top-response certificate, and
 non-observed `g_2` certificate.  The final W/Z measurement-row file is still
 absent.
+
+Completed in the same-source top-response certificate continuation:
+
+- `scripts/frontier_yt_same_source_top_response_certificate_builder.py`
+- `docs/YT_SAME_SOURCE_TOP_RESPONSE_CERTIFICATE_BUILDER_NOTE_2026-05-04.md`
+- `outputs/yt_same_source_top_response_certificate_builder_2026-05-04.json`
+- `outputs/yt_same_source_top_response_certificate_builder_scout_2026-05-04.json`
+- `outputs/yt_same_source_top_response_certificate_builder_scout_certificate_2026-05-04.json`
+- refreshed W/Z implementation plan note, full assembly, retained-route, and
+  campaign certificates.
+
+This reduces the matched top-response input to two concrete future files:
+
+- `outputs/yt_same_source_top_response_identity_certificate_2026-05-04.json`;
+- `outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json`.
+
+The production top-response certificate remains absent on the current surface.

@@ -2109,3 +2109,43 @@ Strict mode remains blocked until:
 - `outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json`;
 - `outputs/yt_same_source_top_response_certificate_2026-05-04.json`;
 - `outputs/yt_electroweak_g2_certificate_2026-05-04.json`.
+
+## 2026-05-04 Same-Source Top-Response Certificate Builder
+
+This continuation adds the missing top-side certificate builder required by
+the W/Z mass-fit adapter.  It wraps the existing common-window top response
+only after future same-source identity and matched top/W covariance
+certificates validate.
+
+Verification:
+
+```bash
+python3 scripts/frontier_yt_same_source_top_response_certificate_builder.py --scout
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_same_source_top_response_certificate_builder.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_same_source_top_response_certificate_builder.py --strict \
+  --output /tmp/pr230_top_response_strict_status.json \
+  --top-response-output /tmp/pr230_top_response_strict_certificate.json
+# expected failure until identity and covariance inputs exist
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=24 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=173 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=199 FAIL=0
+```
+
+Result: open.  Scout mode writes only
+`outputs/yt_same_source_top_response_certificate_builder_scout_certificate_2026-05-04.json`.
+Current/default mode does not write
+`outputs/yt_same_source_top_response_certificate_2026-05-04.json`.  Strict mode
+remains blocked until:
+
+- `outputs/yt_same_source_top_response_identity_certificate_2026-05-04.json`;
+- `outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json`.

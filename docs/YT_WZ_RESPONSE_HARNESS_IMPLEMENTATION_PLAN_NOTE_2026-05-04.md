@@ -67,3 +67,13 @@ response certificate, and a non-observed `g_2` certificate, then emits the
 measurement-row file consumed by the existing W/Z response certificate builder.
 Scout mode writes only scout-named rows; strict mode remains blocked until the
 future production inputs exist.
+
+The matched top response certificate is now an explicit upstream contract:
+
+```text
+scripts/frontier_yt_same_source_top_response_certificate_builder.py
+```
+
+Current mode verifies the existing common-window top-response support but does
+not write `outputs/yt_same_source_top_response_certificate_2026-05-04.json`
+until the same-source identity and matched top/W covariance certificates exist.

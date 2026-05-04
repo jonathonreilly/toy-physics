@@ -1,0 +1,73 @@
+{
+  "actual_current_surface_status": "open / same-source top-response identity or covariance inputs absent",
+  "bare_retained_allowed": false,
+  "covariance_input": "outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json",
+  "covariance_validation": {
+    "failed_checks": [
+      "matched top/W covariance certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "exact_next_action": "Supply outputs/yt_same_source_top_response_identity_certificate_2026-05-04.json and outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json, rerun this builder in strict mode to write outputs/yt_same_source_top_response_certificate_2026-05-04.json, then rerun the W/Z mass-fit response-row builder.",
+  "fail_count": 0,
+  "identity_input": "outputs/yt_same_source_top_response_identity_certificate_2026-05-04.json",
+  "identity_validation": {
+    "failed_checks": [
+      "same-source top-response identity certificate absent"
+    ],
+    "present": false,
+    "valid": false
+  },
+  "mode": "current",
+  "parent_certificates": {
+    "common_window_response_gate": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
+    "higgs_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
+    "pooled_response_estimator": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",
+    "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
+    "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json"
+  },
+  "parent_statuses": {
+    "common_window_response_gate": "bounded-support / FH-LSZ common-window response gate passed as support",
+    "higgs_identity_latest_blocker": "open / latest Higgs-pole identity blocker certificate",
+    "pooled_response_estimator": "bounded-support / FH-LSZ common-window pooled response estimator production-grade",
+    "same_source_sector_overlap": "exact negative boundary / same-source sector-overlap identity obstruction",
+    "wz_mass_fit_response_row_builder": "open / WZ mass-fit response-row builder inputs absent"
+  },
+  "pass_count": 10,
+  "pooled_input": "outputs/yt_fh_lsz_common_window_pooled_response_estimator_2026-05-04.json",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The builder wraps response-side support only after identity and matched covariance certificates exist.  It does not authorize a physical y_t readout by itself.",
+  "response_input": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
+  "response_validation": {
+    "checks": {
+      "finite_slope_mean": true,
+      "pooled_response_production_grade": true,
+      "positive_empirical_standard_error": true,
+      "proposal_not_authorized": true,
+      "readout_switch_not_authorized": true,
+      "response_gate_passed_as_support": true
+    },
+    "failed_checks": [],
+    "present": true,
+    "slope_dE_top_ds": 1.4254094730430789,
+    "slope_error": 0.00100851124605938,
+    "source_shifts": [
+      -0.01,
+      0.0,
+      0.01
+    ],
+    "valid": true
+  },
+  "same_source_top_response_certificate_builder_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat source-only dE_top/ds as physical y_t evidence",
+    "does not set kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
+    "does not use H_unit, yt_ward_identity, observed top/y_t, alpha_LM, plaquette, or u0"
+  ],
+  "strict_same_source_top_response_certificate_builder_passed": false,
+  "top_response_certificate": {},
+  "top_response_certificate_output": "outputs/yt_same_source_top_response_certificate_2026-05-04.json",
+  "top_response_certificate_written": false
+}

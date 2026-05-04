@@ -1,0 +1,37 @@
+{
+  "certificate_kind": "same_source_top_response",
+  "firewall": {
+    "used_H_unit_or_Ward_authority": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_c2_or_zmatch_equal_one": false,
+    "used_observed_top_or_yukawa_as_selector": false
+  },
+  "identity_certificates": {
+    "canonical_higgs_pole_identity_passed": true,
+    "retained_route_or_proposal_gate_passed": true,
+    "same_source_sector_overlap_identity_passed": true
+  },
+  "matched_covariance": {
+    "certificate": "synthetic matched covariance",
+    "cov_dE_top_dM_W": 0.0007
+  },
+  "phase": "scout",
+  "proposal_allowed": false,
+  "same_source_coordinate": true,
+  "source_coordinate": "synthetic_same_source_s",
+  "source_shifts": [
+    -0.01,
+    0.0,
+    0.01
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat source-only dE_top/ds as physical y_t evidence",
+    "does not set kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
+    "does not use H_unit, yt_ward_identity, observed top/y_t, alpha_LM, plaquette, or u0"
+  ],
+  "top_response": {
+    "slope_dE_top_ds": 1.4254,
+    "slope_error": 0.0011
+  }
+}
