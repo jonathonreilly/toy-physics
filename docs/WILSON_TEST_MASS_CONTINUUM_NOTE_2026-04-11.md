@@ -1,8 +1,9 @@
 # Wilson Test-Mass / Continuum Companion
 
-**Date:** 2026-04-11  
+**Date:** 2026-04-11
 **Status:** bounded companion on the Wilson lane
 **Scope:** same-convention open-boundary Wilson runners only
+**Primary runner:** [`scripts/frontier_test_mass_limit.py`](../scripts/frontier_test_mass_limit.py) (mass exponent ≈ 1.00 PASS, distance exponent ≈ -2.20 PASS, 5/5 TOWARD)
 
 ## Purpose
 

@@ -23245,7 +23245,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-03T23:15:22.109465+00:00",
+  "generated_at": "2026-05-04T00:20:09.699200+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -38030,9 +38030,9 @@
         "pmns_branch_conditioned_quadratic_sheet_closure_note",
         "pmns_right_polar_section_note"
       ],
-      "note_hash": "331fd6e4095e9288384ab3d26477e4f1aed126ffbe8f81e3929e90f0f1c42ae1",
+      "note_hash": "7a7f9e74220a5299d5fed2e2e9b31cb80f08b636d68709d1dfdaeb50e6bce8c3",
       "path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_lepton_single_higgs_pmns_triviality.py",
       "title": "Neutrino Dirac / PMNS Retained Lane Packet (2026-04-16)"
     },
     "neutrino_dirac_two_higgs_canonical_reduction_note": {
@@ -38629,9 +38629,9 @@
         "neutrino_majorana_nur_character_boundary_note",
         "neutrino_majorana_nur_charge2_primitive_reduction_note"
       ],
-      "note_hash": "844c8a5505b55a2e126911d96b4c5731801fa7fcaeacc4b228f95ca3c042ec4a",
+      "note_hash": "0692aca2add9929012c1e8a191bd105f4d632525a9ea5854d65d67904e82a6ce",
       "path": "docs/NEUTRINO_MAJORANA_RETAINED_LANE_PACKET_2026-04-16.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_current_stack_zero_law.py",
       "title": "Neutrino Majorana Retained Lane Packet (2026-04-16)"
     },
     "neutrino_majorana_scalar_datum_transplant_obstruction_note": {
@@ -44710,9 +44710,9 @@
         "shapiro_static_discriminator_note",
         "shapiro_family_portability_note"
       ],
-      "note_hash": "fd6ecfa6b496196c87d78dc1d5e9efc2ae77ffcd4c396b1f8cc571647c0e2cdc",
+      "note_hash": "1c9825e6911a2d43f5850529fe97f0426488bf700f0a169f962a412b36fb18b0",
       "path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_phase_lag_probe.py",
       "title": "Shapiro QA Retest Note"
     },
     "shapiro_static_discriminator_note": {
@@ -48734,9 +48734,9 @@
         "staggered_newton_reproduction_note_2026-04-11",
         "staggered_newton_blocking_sensitivity_note_2026-04-11"
       ],
-      "note_hash": "81613dbe5e030ba4120383ffd9c62efd6ab73abfbfd07b38a44fe21d628f76b3",
+      "note_hash": "e4005a08bcc1bc690235fff6e1835c10d8ac839de3f0ae911c8b5a333997d107",
       "path": "docs/WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_test_mass_limit.py",
       "title": "Wilson Test-Mass / Continuum Companion"
     },
     "wilson_two_body_open_note_2026-04-11": {
@@ -49355,9 +49355,9 @@
         "yt_exact_interacting_bridge_transport_note",
         "yt_bridge_uv_class_uniqueness_note"
       ],
-      "note_hash": "09e8c3e9ec00280dc48f76ae29f0e9d4acc53f9287c7c99a624ca68dd091d472",
+      "note_hash": "e3417a0f4c37534790db968cb6efa93078eefb05924cdb993ecd877a2e06afd7",
       "path": "docs/YT_AXIOM_FIRST_MICROSCOPIC_BRIDGE_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py",
       "title": "Axiom-First Microscopic Bridge Theorem"
     },
     "yt_bottom_yukawa_retention_analysis_note_2026-04-18": {
@@ -51523,6 +51523,6 @@
     "leaf_count": 599,
     "node_count": 1870,
     "root_count": 1056,
-    "runners_with_path": 1437
+    "runners_with_path": 1442
   }
 }

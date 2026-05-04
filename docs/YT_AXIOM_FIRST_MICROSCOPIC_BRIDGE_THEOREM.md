@@ -4,6 +4,7 @@
 **Status:** current supporting theorem for the independent Schur-bridge
 cross-check path on the `y_t` lane; reduction theorem, not final UV-to-IR
 closure
+**Primary runner:** [`scripts/frontier_yt_constructive_uv_bridge.py`](../scripts/frontier_yt_constructive_uv_bridge.py) (4 PASS / 0 FAIL)
 
 ## Authority notice
 

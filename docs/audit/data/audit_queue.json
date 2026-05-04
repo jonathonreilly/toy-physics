@@ -5,7 +5,7 @@
     "leaf": 177,
     "medium": 242
   },
-  "generated_at": "2026-05-03T23:15:28.157042+00:00",
+  "generated_at": "2026-05-04T00:20:17.764856+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -8194,7 +8194,7 @@
       "note_path": "docs/NEUTRINO_MAJORANA_RETAINED_LANE_PACKET_2026-04-16.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_current_stack_zero_law.py",
       "transitive_descendants": 64
     },
     {
@@ -9201,7 +9201,7 @@
       "note_path": "docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_lepton_single_higgs_pmns_triviality.py",
       "transitive_descendants": 48
     },
     {
@@ -11250,7 +11250,7 @@
       "note_path": "docs/SHAPIRO_QA_RETEST_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/shapiro_phase_lag_probe.py",
       "transitive_descendants": 44
     },
     {
@@ -11432,7 +11432,7 @@
       "note_path": "docs/YT_AXIOM_FIRST_MICROSCOPIC_BRIDGE_THEOREM.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py",
       "transitive_descendants": 44
     },
     {
@@ -12021,7 +12021,7 @@
       "note_path": "docs/WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": null,
+      "runner_path": "scripts/frontier_test_mass_limit.py",
       "transitive_descendants": 21
     },
     {
