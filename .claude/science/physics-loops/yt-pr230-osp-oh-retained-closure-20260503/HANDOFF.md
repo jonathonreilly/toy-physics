@@ -1026,3 +1026,75 @@ python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py \
 Currently running: chunks043-048.  Next exact action: package whichever of
 chunks043-048 lands next, refresh all aggregate gates including v2, and launch
 the remaining chunks049-052 as slots open.
+
+## 2026-05-04 Chunks043-046 Packaging
+
+Chunks043, 044, 045, and 046 landed while the 041/042 package was being
+pushed.  Chunk043 and chunk045 initially had stale generic checkpoints against
+older aggregate ready sets, so the aggregate gates were rerun before
+regenerating the chunk-local checkpoints:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_v2_target_response_stability.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 43
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 43
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 44
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 44
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 45
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 45
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 46
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 46
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=150 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=176 FAIL=0
+```
+
+Current production state: 46/63 L12 chunks ready, 736/1000 saved
+configurations, target-observable ESS passed with limiting ESS
+`650.985890002029`, v2 target-response stability passed as bounded support
+over chunks017-046, response-window acceptance still open, and
+retained closure still unauthorized.
+
+Currently running: chunks047-052.  The next-range monitor launched chunk052
+when chunk045 exited, keeping the six-job cap full.

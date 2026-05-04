@@ -459,14 +459,22 @@ current_result: >
   campaign aggregate certificates still deny proposal authority with PASS=150
   and PASS=176 respectively.  A second patched orchestrator range launched
   chunks047-048 while chunks043-046 continue running, preserving the six-job
-  cap.
+  cap.  Chunks043, 044, 045, and 046 then landed and were packaged as bounded
+  production support after stale chunk043 and chunk045 generic checkpoints
+  were corrected by refreshing aggregate gates first.  The ready L12 set is
+  now 46/63 chunks, 736/1000 saved configurations; target-observable ESS
+  passes with limiting ESS 650.985890002029, v2 target stability remains
+  passed for chunks017-046, response-window acceptance remains open, and
+  retained/campaign aggregate certificates still deny proposal authority with
+  PASS=150 and PASS=176 respectively.  Chunks047-052 are currently running
+  under the six-job cap.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Monitor chunks043, 044, 045, 046, 047, and 048.
+  Monitor chunks047, 048, 049, 050, 051, and 052.
   When outputs land, rerun their chunk gates plus aggregate retained and
-  campaign certificates.  While waiting, only take routes that can add a
-  real new same-surface row/theorem: a new EW gauge-Higgs/O_H certificate plus
+  campaign certificates.  While waiting, only take routes that can add a real new same-surface
+  row/theorem: a new EW gauge-Higgs/O_H certificate plus
   C_sH/C_HH pole residues, a genuine same-source EW action plus W/Z correlator
   mass-fit rows and response rows, Schur A/B/C kernel rows, or a direct proof
   of the missing neutral-sector irreducibility premise.  Do not continue
