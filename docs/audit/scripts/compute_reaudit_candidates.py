@@ -16,6 +16,7 @@ Writes:
 """
 from __future__ import annotations
 
+import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,6 +25,15 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 LEDGER_PATH = DATA_DIR / "audit_ledger.json"
 CANDIDATES_JSON = DATA_DIR / "reaudit_candidates.json"
+
+
+def runner_hash(runner_path: str | None) -> str | None:
+    if not runner_path:
+        return None
+    p = REPO_ROOT / runner_path
+    if not p.exists():
+        return None
+    return hashlib.sha256(p.read_bytes()).hexdigest()
 
 CRITICALITY_RANK = {"critical": 3, "high": 2, "medium": 1, "leaf": 0}
 RATIFIED_DEP_STATUSES = {"retained", "retained_no_go", "retained_bounded"}
@@ -148,54 +158,99 @@ def main() -> int:
     rows = ledger.get("rows", {})
 
     candidates: list[dict] = []
+    runner_drift_candidates: list[dict] = []
     for cid, row in rows.items():
         if row.get("claim_type") not in ELIGIBLE_CLAIM_TYPES:
             continue
         if row.get("audit_status") not in ELIGIBLE_AUDIT_STATUSES:
             continue
-        if not current_deps_are_ratified(row, rows):
-            continue
-        improved = improved_ratified_deps(row, rows)
-        if not improved:
-            continue
-        candidates.append(candidate_entry(cid, row, rows, improved))
+
+        # Path 1 (existing): all current deps ratified AND audit-time
+        # snapshot had at least one non-ratified dep that has since flipped.
+        if current_deps_are_ratified(row, rows):
+            improved = improved_ratified_deps(row, rows)
+            if improved:
+                candidates.append(candidate_entry(cid, row, rows, improved))
+
+        # Path 2 (new): the audit cited runner_artifact_issue, and the
+        # runner file's hash has changed since audit time. Track this as a
+        # secondary candidate stream so the queue can surface it without
+        # confusing the existing dependency-ratification policy.
+        if row.get("audit_status") == "audited_conditional":
+            notes = row.get("notes_for_re_audit_if_any") or ""
+            head = notes.strip().split(":", 1)[0].strip().split()[0].lower() if notes.strip() else ""
+            if head == "runner_artifact_issue":
+                snap = row.get("audit_state_snapshot") or {}
+                snap_runner_hash = snap.get("runner_hash")
+                cur_runner_hash = runner_hash(row.get("runner_path"))
+                if (
+                    snap_runner_hash is not None
+                    and cur_runner_hash is not None
+                    and snap_runner_hash != cur_runner_hash
+                ):
+                    entry = candidate_entry(cid, row, rows, [])
+                    entry["candidate_reason"] = "runner_artifact_repaired_since_audit"
+                    entry["snap_runner_hash"] = snap_runner_hash
+                    entry["current_runner_hash"] = cur_runner_hash
+                    runner_drift_candidates.append(entry)
 
     candidates.sort(key=sort_key)
     for idx, entry in enumerate(candidates, 1):
         entry["generated_order"] = idx
+    runner_drift_candidates.sort(key=sort_key)
+    for idx, entry in enumerate(runner_drift_candidates, 1):
+        entry["generated_order"] = idx
 
     output = {
-        "policy": "reaudit_unblocked_by_ratified_dependencies_v1",
+        "policy": "reaudit_unblocked_v2_dep_or_runner_drift",
         "policy_summary": (
-            "Non-clean audited theorem/no-go/open-gate claims whose current "
-            "one-hop dependencies are all retained-grade and whose audit-time "
-            "dependency snapshot contains at least one dependency that has "
-            "since become retained-grade."
+            "Non-clean audited theorem/no-go/open-gate claims surfaced under "
+            "either of two policies: (a) all current one-hop deps are "
+            "retained-grade and at least one was non-retained at audit time; "
+            "(b) the audit cited runner_artifact_issue and the runner file "
+            "hash has changed since the audit_state_snapshot was taken."
         ),
         "eligible_claim_types": sorted(ELIGIBLE_CLAIM_TYPES),
         "eligible_audit_statuses": sorted(ELIGIBLE_AUDIT_STATUSES),
         "ratified_dependency_statuses": sorted(RATIFIED_DEP_STATUSES),
         "total_candidates": len(candidates),
+        "total_runner_drift_candidates": len(runner_drift_candidates),
         "by_criticality": {
             criticality: sum(1 for c in candidates if c["criticality"] == criticality)
             for criticality in ("critical", "high", "medium", "leaf")
         },
+        "by_criticality_runner_drift": {
+            criticality: sum(1 for c in runner_drift_candidates if c["criticality"] == criticality)
+            for criticality in ("critical", "high", "medium", "leaf")
+        },
         "candidates": candidates,
+        "runner_drift_candidates": runner_drift_candidates,
     }
 
     CANDIDATES_JSON.write_text(json.dumps(output, indent=2, sort_keys=True) + "\n")
 
     print(f"Wrote {CANDIDATES_JSON.relative_to(REPO_ROOT)}")
-    print(f"  total candidates: {output['total_candidates']}")
+    print(f"  total candidates (dep ratified): {output['total_candidates']}")
     print(f"  by criticality: {output['by_criticality']}")
+    print(f"  runner drift candidates: {output['total_runner_drift_candidates']}")
+    print(f"  by criticality (runner drift): {output['by_criticality_runner_drift']}")
     if candidates:
-        print("  top candidates:")
+        print("  top dep-ratified candidates:")
         for entry in candidates[:5]:
             print(
                 "    "
                 f"{entry['generated_order']}. {entry['claim_id']} "
                 f"({entry['criticality']}, after "
                 f"{','.join(entry['reraudit_after_claim_ids'])})"
+            )
+    if runner_drift_candidates:
+        print("  top runner-drift candidates:")
+        for entry in runner_drift_candidates[:5]:
+            print(
+                "    "
+                f"{entry['generated_order']}. {entry['claim_id']} "
+                f"({entry['criticality']}, runner drifted "
+                f"{entry['snap_runner_hash'][:8]}->{entry['current_runner_hash'][:8]})"
             )
     return 0
 

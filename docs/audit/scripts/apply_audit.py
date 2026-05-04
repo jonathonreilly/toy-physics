@@ -182,6 +182,16 @@ def judicial_summary_from_blob(judgment: dict) -> dict:
 
 def snapshot_audit_state(row: dict, rows: dict[str, dict]) -> dict:
     deps = sorted(row.get("deps", []))
+    runner_hash_value: str | None = None
+    runner_path = row.get("runner_path")
+    if runner_path:
+        rp = REPO_ROOT / runner_path
+        if rp.exists():
+            import hashlib as _hashlib
+            try:
+                runner_hash_value = _hashlib.sha256(rp.read_bytes()).hexdigest()
+            except OSError:
+                runner_hash_value = None
     return {
         "deps": deps,
         "dep_effective_status": {
@@ -191,6 +201,7 @@ def snapshot_audit_state(row: dict, rows: dict[str, dict]) -> dict:
         "criticality": row.get("criticality"),
         "load_bearing_score": row.get("load_bearing_score"),
         "transitive_descendants": row.get("transitive_descendants"),
+        "runner_hash": runner_hash_value,
     }
 
 

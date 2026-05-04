@@ -225,6 +225,18 @@ def main() -> int:
     new_rows, cycles = compute_effective(rows)
     ledger["rows"] = new_rows
 
+    # Defensive cleanup: drop any stale top-level timestamp keys left behind
+    # by older pipeline versions. The current pipeline does not write these.
+    # Without this, pre-existing keys round-trip through every save and fire
+    # PR drift gate noise even though no script is generating them.
+    for stale_key in (
+        "generated_at",
+        "effective_status_computed_at",
+        "invalidation_run_at",
+        "load_bearing_computed_at",
+    ):
+        ledger.pop(stale_key, None)
+
     LEDGER_PATH.write_text(json.dumps(ledger, indent=2, sort_keys=True) + "\n")
 
     summary = summarize(new_rows)

@@ -1,0 +1,8 @@
+# Top-level campaign / infrastructure notes that are kept as ledger metadata
+# instead of being dropped from the graph or treated as scientific claims.
+# seed_audit_ledger.py reads this file. One fnmatch glob per line. Lines
+# starting with `#` and blank lines are ignored.
+
+docs/AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_*.md
+docs/PHYSICAL_LATTICE_NECESSITY_DEP_DECLARATION_AUDIT_NOTE_*.md
+docs/SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_*.md

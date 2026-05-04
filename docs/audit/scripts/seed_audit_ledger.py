@@ -24,74 +24,37 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 GRAPH_PATH = DATA_DIR / "citation_graph.json"
 LEDGER_PATH = DATA_DIR / "audit_ledger.json"
+EXCLUDED_PATTERNS_FILE = DATA_DIR / "excluded_source_patterns.txt"
+NEVER_GATE_PATHS_FILE = DATA_DIR / "never_gate_source_paths.txt"
+META_PATTERNS_FILE = DATA_DIR / "meta_source_patterns.txt"
 
-# Source paths that are documentation or agent infrastructure, not
-# auditable claim notes. These are candidates for exclusion; rows are
-# only dropped when the safety checks below confirm they are unaudited
-# unknowns.
-EXCLUDED_SOURCE_PATTERNS = (
-    "docs/ai_methodology/*.md",
-    "docs/ai_methodology/raw/**",
-    "docs/ai_methodology/skills/**",
-    "docs/lanes/**",
-    "docs/publication/**",
-    "docs/repo/**",
-    "docs/work_history/**",
-    "docs/ARCHITECTURE_OPTIONS.md",
-    "docs/BRANCH_SUMMARY_DISTRACTED_NAPIER.md",
-    "docs/BREAKTHROUGH_DIRECTION_MEMO_2026-04-10.md",
-    "docs/CLAUDE_BRANCH_RETAINABILITY_NOTE.md",
-    "docs/INTEREST_MAP.md",
-    "docs/LITERATURE_POSITIONING_NOTE.md",
-    "docs/MOONSHOT_DIAMOND_SENSOR_BRAINSTORM_NOTE.md",
-    "docs/MOONSHOT_DIAMOND_SENSOR_TECH_NOTE.md",
-    "docs/MOONSHOT_FAILURE_AUDIT_NOTE.md",
-    "docs/MOONSHOT_FRONTIER_BRAINSTORM_NOTE.md",
-    "docs/MOONSHOT_FRONTIER_BRAINSTORM_V2_NOTE.md",
-    "docs/MOONSHOT_FRONTIER_PORTFOLIO_NOTE.md",
-    "docs/MOONSHOT_HONEST_REVIEW_2026-04-09.md",
-    "docs/MOONSHOT_MECHANISM_NEXT_NOTE.md",
-    "docs/MOONSHOT_SCIENCE_NEXT_NOTE.md",
-    "docs/MOONSHOT_SELF_GRAVITY_BRAINSTORM_NOTE.md",
-    "docs/MOONSHOT_TOP20_FRONTIERS.md",
-    "docs/NATURE_DISCOVERY_DIRECTIONS_2026-04-11.md",
-    "docs/NATURE_RANKED_DIRECTIONS_2026-04-11.md",
-    "docs/NEXT_CHUNK_RECOMMENDATION.md",
-    "docs/PAPER_OUTLINE_2026-04-12.md",
-    # Non-claim planning/session/status artifacts identified during
-    # unknown-row triage.
-    "docs/EXPERIMENT_BACKMATCH_QUERY_PACK_NOTE.md",
-    "docs/GRAPH_DIRAC_REQUIREMENTS_2026-04-10.md",
-    "docs/GRAVITY_DESIGN_BLUEPRINT.md",
-    "docs/KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md",
-    "docs/KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md",
-    "docs/PHYSICS_CRITIC_TRACKER.md",
-    "docs/PHYSICS_FIRST_ATTACK_PLAN.md",
-    "docs/PHYSICS_QA_TRACKER.md",
-    "docs/REOPENED_LANE_CHECKLIST.md",
-    "docs/REPO_SUBMISSION_CONSOLIDATION_PLAN_2026-04-12.md",
-    "docs/SCALING_TARGETS.md",
-    "docs/SESSION_SUMMARY_*.md",
-    "docs/SESSION_SYNTHESIS_*.md",
-    "docs/WRITING_VOICE_GUIDE_2026-04-25.md",
-    "docs/YT_RETENTION_LANDING_READINESS_2026-04-18.md",
-    "docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md",
-    ".claude/**",
-)
+
+def _load_pattern_file(path: Path) -> tuple[str, ...]:
+    """Read a pattern config file: one entry per line, # comments, blank lines OK."""
+    if not path.exists():
+        return ()
+    out: list[str] = []
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        out.append(line)
+    return tuple(out)
+
+
+# Source paths that are documentation or agent infrastructure, not auditable
+# claim notes (loaded from data/excluded_source_patterns.txt). Rows are only
+# dropped when the safety checks below confirm they are unaudited unknowns.
+EXCLUDED_SOURCE_PATTERNS = _load_pattern_file(EXCLUDED_PATTERNS_FILE)
 
 # Exact source paths that must remain in the ledger even if they match a
-# broad infrastructure pattern.
-NEVER_GATE_SOURCE_PATHS = {
-    "docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md",
-}
+# broad infrastructure pattern (loaded from data/never_gate_source_paths.txt).
+NEVER_GATE_SOURCE_PATHS = frozenset(_load_pattern_file(NEVER_GATE_PATHS_FILE))
 
-# Top-level campaign/infrastructure notes that are intentionally kept as
-# ledger metadata instead of dropped from the graph or treated as claims.
-META_SOURCE_PATTERNS = (
-    "docs/AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_*.md",
-    "docs/PHYSICAL_LATTICE_NECESSITY_DEP_DECLARATION_AUDIT_NOTE_*.md",
-    "docs/SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_*.md",
-)
+# Top-level campaign/infrastructure notes kept as ledger metadata instead of
+# dropped from the graph or treated as claims (loaded from
+# data/meta_source_patterns.txt).
+META_SOURCE_PATTERNS = _load_pattern_file(META_PATTERNS_FILE)
 
 CLAIM_TYPES = {
     "positive_theorem",
@@ -103,6 +66,9 @@ CLAIM_TYPES = {
 }
 
 # Default empty audit fields applied to a freshly seeded row.
+# audit_state_snapshot is included so that hash-drift archival also clears
+# the snapshot — otherwise stale snapshots survive into unaudited rows and
+# fire false lint warnings while invalidate_stale_audits skips them.
 EMPTY_AUDIT = {
     "audit_status": "unaudited",
     "audit_date": None,
@@ -124,6 +90,8 @@ EMPTY_AUDIT = {
     "claim_type_provenance": None,
     "claim_type_last_reviewed": None,
     "notes_for_re_audit_if_any": None,
+    "audit_state_snapshot": None,
+    "cross_confirmation": None,
 }
 
 # Audit fields that are preserved across re-seeds when the note hash is
@@ -232,9 +200,13 @@ def apply_claim_type_defaults(row: dict, node: dict, prior: dict | None) -> None
         if not row.get("claim_scope"):
             row["claim_scope"] = backfill_scope(row)
     elif provenance in {None, "author_hint", "backfilled", "backfilled_from_status", "backfilled_from_path", "migration_hint", "default_positive_theorem"}:
+        # Only rewrite when the recomputed defaults actually disagree with
+        # what's on the row. Repeated identical writes obscure the precedence
+        # rule and produce noise in audit-data diffs.
         claim_type, inferred_provenance = default_claim_type_for(node)
-        row["claim_type"] = claim_type
-        row["claim_type_provenance"] = inferred_provenance
+        if row.get("claim_type") != claim_type or row.get("claim_type_provenance") != inferred_provenance:
+            row["claim_type"] = claim_type
+            row["claim_type_provenance"] = inferred_provenance
 
 
 def load_json(path: Path, default):

@@ -66,4 +66,36 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 49 | `neutrino_majorana_finite_normal_grammar_no_go_note` | positive_theorem | unaudited | critical | 279 | 12.13 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
 | 50 | `neutrino_majorana_pfaffian_extension_note` | positive_theorem | unaudited | critical | 278 | 11.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |
 
+## Citation cycle break targets
+
+139 citation cycles in the graph. Each cycle permanently blocks every member from `retained` until one node is re-audited with explicit cycle-break instructions or a 'see also' edge is stripped. Top 25 below; full list in `data/audit_queue.json` under `cycle_break_targets`.
+
+| # | cycle_id | length | max_desc | primary break target | criticality | audit_status |
+|---:|---|---:|---:|---|---|---|
+| 1 | `cycle-0001` | 2 | 403 | `angular_kernel_underdetermination_no_go_note` | critical | unaudited |
+| 2 | `cycle-0002` | 7 | 403 | `anomaly_forces_time_theorem` | critical | unaudited |
+| 3 | `cycle-0003` | 2 | 256 | `yt_zero_import_authority_note` | critical | unaudited |
+| 4 | `cycle-0004` | 2 | 159 | `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18` | high | unaudited |
+| 5 | `cycle-0005` | 2 | 159 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | high | unaudited |
+| 6 | `cycle-0006` | 3 | 159 | `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18` | high | unaudited |
+| 7 | `cycle-0007` | 2 | 154 | `charged_lepton_koide_review_packet_2026-04-18` | critical | unaudited |
+| 8 | `cycle-0008` | 2 | 154 | `charged_lepton_koide_review_packet_2026-04-18` | critical | unaudited |
+| 9 | `cycle-0009` | 2 | 154 | `charged_lepton_koide_review_packet_2026-04-18` | critical | unaudited |
+| 10 | `cycle-0010` | 2 | 154 | `koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24` | high | unaudited |
+| 11 | `cycle-0011` | 2 | 154 | `koide_eigenvalue_q23_surface_theorem_note_2026-04-20` | high | unaudited |
+| 12 | `cycle-0012` | 2 | 154 | `koide_selected_line_cyclic_response_bridge_note_2026-04-18` | high | unaudited |
+| 13 | `cycle-0013` | 2 | 154 | `yt_p2_taste_staircase_transport_note_2026-04-17` | high | unaudited |
+| 14 | `cycle-0014` | 3 | 154 | `charged_lepton_mass_hierarchy_review_note_2026-04-17` | critical | unaudited |
+| 15 | `cycle-0015` | 3 | 154 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | high | unaudited |
+| 16 | `cycle-0016` | 3 | 154 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | high | unaudited |
+| 17 | `cycle-0017` | 3 | 154 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | high | unaudited |
+| 18 | `cycle-0018` | 3 | 154 | `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | high | unaudited |
+| 19 | `cycle-0019` | 3 | 154 | `yt_p2_taste_staircase_beta_functions_note_2026-04-17` | high | unaudited |
+| 20 | `cycle-0020` | 3 | 154 | `yt_p2_taste_staircase_transport_note_2026-04-17` | high | unaudited |
+| 21 | `cycle-0021` | 4 | 154 | `yt_p1_delta_3_bz_computation_note_2026-04-17` | high | unaudited |
+| 22 | `cycle-0022` | 4 | 154 | `yt_p1_i_s_revision_verification_note_2026-04-17` | high | unaudited |
+| 23 | `cycle-0023` | 4 | 154 | `yt_p1_i_s_revision_verification_note_2026-04-17` | high | unaudited |
+| 24 | `cycle-0024` | 5 | 154 | `yt_p1_color_factor_retention_note_2026-04-17` | high | unaudited |
+| 25 | `cycle-0025` | 5 | 154 | `yt_p1_delta_3_bz_computation_note_2026-04-17` | high | unaudited |
+
 Full queue lives in `data/audit_queue.json`.

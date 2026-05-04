@@ -1,0 +1,367 @@
+#!/usr/bin/env python3
+"""Smoke + behavior tests for the audit pipeline scripts.
+
+These are deliberately small, self-contained, and run without touching
+the live ledger. Each test patches the relevant module's REPO_ROOT to a
+temporary directory so the script reads/writes only the test fixture.
+
+Run via:
+  python3 -m unittest docs.audit.scripts.tests.test_audit_pipeline
+or:
+  python3 docs/audit/scripts/tests/test_audit_pipeline.py
+"""
+from __future__ import annotations
+
+import importlib
+import json
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[3]
+SCRIPTS_DIR = REPO_ROOT / "audit" / "scripts"
+sys.path.insert(0, str(SCRIPTS_DIR))
+
+
+def _import(module_name: str):
+    """Force a fresh import each test."""
+    if module_name in sys.modules:
+        del sys.modules[module_name]
+    return importlib.import_module(module_name)
+
+
+class CleanLedgerFixture:
+    """Build a minimal but valid audit_ledger.json + citation_graph.json
+    on a temporary REPO_ROOT for unit-style testing."""
+
+    def __init__(self, tmpdir: Path):
+        self.tmpdir = tmpdir
+        self.audit_dir = tmpdir / "docs" / "audit"
+        self.data_dir = self.audit_dir / "data"
+        self.data_dir.mkdir(parents=True, exist_ok=True)
+        (self.tmpdir / "docs").mkdir(parents=True, exist_ok=True)
+
+    def write_note(self, rel_path: str, body: str) -> Path:
+        path = self.tmpdir / rel_path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(body, encoding="utf-8")
+        return path
+
+    def write_runner(self, rel_path: str, body: str) -> Path:
+        path = self.tmpdir / rel_path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(body, encoding="utf-8")
+        return path
+
+    def write_ledger(self, ledger: dict) -> None:
+        (self.data_dir / "audit_ledger.json").write_text(
+            json.dumps(ledger, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+
+    def write_graph(self, graph: dict) -> None:
+        (self.data_dir / "citation_graph.json").write_text(
+            json.dumps(graph, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+
+    def read_ledger(self) -> dict:
+        return json.loads((self.data_dir / "audit_ledger.json").read_text(encoding="utf-8"))
+
+
+def _patch_repo_root(module, tmp_root: Path) -> None:
+    """Override the module-level REPO_ROOT-derived paths."""
+    module.REPO_ROOT = tmp_root
+    module.DATA_DIR = tmp_root / "docs" / "audit" / "data"
+    module.LEDGER_PATH = module.DATA_DIR / "audit_ledger.json"
+    if hasattr(module, "GRAPH_PATH"):
+        module.GRAPH_PATH = module.DATA_DIR / "citation_graph.json"
+    if hasattr(module, "SUMMARY_PATH"):
+        # Either compute_effective_status (effective_status_summary) or
+        # compute_load_bearing (load_bearing_summary). Set both files under
+        # tmp data dir; only the relevant one is written.
+        module.SUMMARY_PATH = module.DATA_DIR / "effective_status_summary.json"
+    if hasattr(module, "OUTPUT_PATH"):
+        module.OUTPUT_PATH = module.DATA_DIR / "auditor_reliability.json"
+
+
+class ApplyAuditTest(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+        self.fx = CleanLedgerFixture(self.tmp_root)
+
+    def _seed_one_row(self, cid: str, *, audit_status="unaudited",
+                      claim_type=None, deps=None,
+                      criticality="leaf", note_body="# test\n"):
+        path = f"docs/{cid.upper()}.md"
+        self.fx.write_note(path, note_body)
+        import hashlib
+        note_hash = hashlib.sha256(note_body.encode("utf-8")).hexdigest()
+        ledger = {
+            "schema_version": 1,
+            "rows": {
+                cid: {
+                    "claim_id": cid,
+                    "note_path": path,
+                    "note_hash": note_hash,
+                    "deps": list(deps or []),
+                    "audit_status": audit_status,
+                    "claim_type": claim_type,
+                    "criticality": criticality,
+                    "previous_audits": [],
+                }
+            },
+        }
+        self.fx.write_ledger(ledger)
+        return path, note_hash
+
+    def test_apply_clean_verdict_writes_snapshot_with_runner_hash(self):
+        m = _import("apply_audit")
+        _patch_repo_root(m, self.tmp_root)
+
+        runner_path = "scripts/test_runner.py"
+        runner_body = "print('PASS=1 FAIL=0')\n"
+        self.fx.write_runner(runner_path, runner_body)
+
+        path, note_hash = self._seed_one_row("test_clean_row", criticality="leaf")
+        # Add runner_path to ledger row
+        led = self.fx.read_ledger()
+        led["rows"]["test_clean_row"]["runner_path"] = runner_path
+        self.fx.write_ledger(led)
+
+        audit = {
+            "claim_id": "test_clean_row",
+            "verdict": "audited_clean",
+            "claim_type": "positive_theorem",
+            "claim_scope": "test scope",
+            "auditor": "test-auditor",
+            "auditor_family": "codex-gpt-5.5",
+            "independence": "cross_family",
+            "load_bearing_step_class": "C",
+            "load_bearing_step": "test step",
+            "chain_closes": True,
+            "chain_closure_explanation": "ok",
+            "verdict_rationale": "ok",
+        }
+        ok, msg = m.apply_one(led, audit)
+        self.assertTrue(ok, msg)
+        snap = led["rows"]["test_clean_row"].get("audit_state_snapshot")
+        self.assertIsNotNone(snap)
+        self.assertIn("runner_hash", snap)
+        # Runner hash matches actual file hash
+        import hashlib
+        expected = hashlib.sha256(runner_body.encode("utf-8")).hexdigest()
+        self.assertEqual(snap["runner_hash"], expected)
+
+    def test_weak_independence_blocks_audited_clean(self):
+        m = _import("apply_audit")
+        _patch_repo_root(m, self.tmp_root)
+        path, _ = self._seed_one_row("test_weak", criticality="medium")
+        led = self.fx.read_ledger()
+        audit = {
+            "claim_id": "test_weak",
+            "verdict": "audited_clean",
+            "claim_type": "positive_theorem",
+            "claim_scope": "test",
+            "auditor": "weak-auditor",
+            "auditor_family": "claude-opus",
+            "independence": "weak",
+            "load_bearing_step_class": "C",
+        }
+        ok, msg = m.apply_one(led, audit)
+        self.assertFalse(ok)
+        self.assertIn("weak", msg)
+
+
+class SeedLedgerTest(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+        self.fx = CleanLedgerFixture(self.tmp_root)
+
+    def test_archive_prior_audit_clears_audit_state_snapshot(self):
+        # Regression test for issue #3 in the audit-framework review:
+        # archive_prior_audit must clear audit_state_snapshot, not leave it
+        # in place where it would confuse invalidate_stale_audits + lint.
+        m = _import("seed_audit_ledger")
+        row_with_snapshot = {
+            "claim_id": "test",
+            "audit_status": "audited_clean",
+            "audit_state_snapshot": {"criticality": "high", "deps": []},
+            "previous_audits": [],
+        }
+        new_row = m.archive_prior_audit(dict(row_with_snapshot))
+        # Snapshot should be in EMPTY_AUDIT (now None), not preserved
+        self.assertIsNone(new_row.get("audit_state_snapshot"))
+        # Prior values archived
+        self.assertEqual(len(new_row["previous_audits"]), 1)
+
+
+class ComputeEffectiveStatusTest(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+        self.fx = CleanLedgerFixture(self.tmp_root)
+
+    def test_clean_positive_with_clean_dep_is_retained(self):
+        m = _import("compute_effective_status")
+        rows = {
+            "parent": {
+                "claim_id": "parent",
+                "deps": [],
+                "audit_status": "audited_clean",
+                "claim_type": "positive_theorem",
+            },
+            "child": {
+                "claim_id": "child",
+                "deps": ["parent"],
+                "audit_status": "audited_clean",
+                "claim_type": "positive_theorem",
+            },
+        }
+        new_rows, _cycles = m.compute_effective(rows)
+        self.assertEqual(new_rows["parent"]["effective_status"], "retained")
+        self.assertEqual(new_rows["child"]["effective_status"], "retained")
+
+    def test_clean_with_unaudited_dep_is_pending_chain(self):
+        m = _import("compute_effective_status")
+        rows = {
+            "parent": {
+                "claim_id": "parent",
+                "deps": [],
+                "audit_status": "unaudited",
+                "claim_type": "positive_theorem",
+            },
+            "child": {
+                "claim_id": "child",
+                "deps": ["parent"],
+                "audit_status": "audited_clean",
+                "claim_type": "positive_theorem",
+            },
+        }
+        new_rows, _cycles = m.compute_effective(rows)
+        self.assertEqual(new_rows["child"]["effective_status"], "retained_pending_chain")
+
+    def test_main_drops_stale_top_level_timestamp_keys(self):
+        m = _import("compute_effective_status")
+        _patch_repo_root(m, self.tmp_root)
+        ledger = {
+            "schema_version": 1,
+            "generated_at": "2026-01-01T00:00:00+00:00",
+            "effective_status_computed_at": "2026-01-01T00:00:00+00:00",
+            "load_bearing_computed_at": "2026-01-01T00:00:00+00:00",
+            "invalidation_run_at": "2026-01-01T00:00:00+00:00",
+            "rows": {},
+        }
+        self.fx.write_ledger(ledger)
+        m.main()
+        post = self.fx.read_ledger()
+        for stale in ("generated_at", "effective_status_computed_at",
+                      "load_bearing_computed_at", "invalidation_run_at"):
+            self.assertNotIn(stale, post)
+
+
+class AuditLintTest(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+        self.fx = CleanLedgerFixture(self.tmp_root)
+
+    def _write_minimal_ledger(self, rows: dict) -> None:
+        # Provide a synthetic citation_graph.json so the cycle scan does
+        # not blow up.
+        graph_nodes = {
+            cid: {"deps": list(row.get("deps") or [])}
+            for cid, row in rows.items()
+        }
+        self.fx.write_graph({"nodes": graph_nodes, "edges": []})
+        # Each row needs note_path that exists on disk + matching note_hash
+        import hashlib
+        for cid, row in rows.items():
+            np = row.get("note_path") or f"docs/{cid}.md"
+            row["note_path"] = np
+            body = row.get("_body", f"# {cid}\n")
+            row.pop("_body", None)
+            (self.tmp_root / np).parent.mkdir(parents=True, exist_ok=True)
+            (self.tmp_root / np).write_text(body, encoding="utf-8")
+            row["note_hash"] = hashlib.sha256(body.encode("utf-8")).hexdigest()
+            row.setdefault("deps", [])
+        self.fx.write_ledger({"schema_version": 1, "rows": rows})
+
+    def test_conditional_without_repair_class_warns(self):
+        m = _import("audit_lint")
+        _patch_repo_root(m, self.tmp_root)
+        rows = {
+            "test_cond": {
+                "claim_id": "test_cond",
+                "audit_status": "audited_conditional",
+                "claim_type": "positive_theorem",
+                "claim_scope": "real scope here",
+                "effective_status": "audited_conditional",
+                "notes_for_re_audit_if_any": "re-audit when X is closed",
+                "auditor_family": "codex-gpt-5.5",
+                "criticality": "leaf",
+            },
+        }
+        self._write_minimal_ledger(rows)
+        # Capture stdout
+        import io, contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = m.main()
+        out = buf.getvalue()
+        # Should pass (warnings only) but include a warning about repair-class
+        self.assertEqual(rc, 0)
+        self.assertIn("audited_conditional notes_for_re_audit_if_any", out)
+
+    def test_legacy_auditor_family_warns(self):
+        m = _import("audit_lint")
+        _patch_repo_root(m, self.tmp_root)
+        rows = {
+            "legacy": {
+                "claim_id": "legacy",
+                "audit_status": "audited_clean",
+                "claim_type": "positive_theorem",
+                "claim_scope": "real scope",
+                "effective_status": "retained",
+                "auditor_family": "codex-current",  # legacy
+                "auditor": "x",
+                "criticality": "leaf",
+                "load_bearing_step_class": "C",
+            },
+        }
+        self._write_minimal_ledger(rows)
+        import io, contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            m.main()
+        self.assertIn("legacy", buf.getvalue())
+        self.assertIn("codex-current", buf.getvalue())
+
+    def test_stale_top_level_timestamp_errors(self):
+        m = _import("audit_lint")
+        _patch_repo_root(m, self.tmp_root)
+        # Build empty rows ledger but with stale timestamp key
+        self.fx.write_graph({"nodes": {}, "edges": []})
+        ledger = {
+            "schema_version": 1,
+            "generated_at": "2026-01-01T00:00:00+00:00",
+            "rows": {},
+        }
+        self.fx.write_ledger(ledger)
+        import io, contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = m.main()
+        self.assertEqual(rc, 1)
+        self.assertIn("stale timestamp key", buf.getvalue())
+
+
+if __name__ == "__main__":
+    unittest.main()

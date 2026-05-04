@@ -28,6 +28,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 LEDGER_PATH = DATA_DIR / "audit_ledger.json"
+CYCLE_INVENTORY_PATH = DATA_DIR / "cycle_inventory.json"
 QUEUE_JSON = DATA_DIR / "audit_queue.json"
 QUEUE_MD = REPO_ROOT / "docs" / "audit" / "AUDIT_QUEUE.md"
 
@@ -65,6 +66,64 @@ def needs_audit(row: dict) -> tuple[bool, str]:
     if row.get("claim_type_provenance") == "backfilled_pending_reaudit":
         return True, "claim_type_backfill_reaudit"
     return False, "not_pending"
+
+
+def cycle_break_targets(rows: dict[str, dict]) -> list[dict]:
+    """Surface cycle-break repair targets from cycle_inventory.json.
+
+    A citation cycle in the graph forces every node in the cycle to
+    retained_pending_chain regardless of audit verdict. Each cycle needs
+    one auditor-designated 'see also' edge stripped (or one node promoted
+    via cycle_break_required). We surface, per cycle, the highest-impact
+    node — the one most worth re-auditing with explicit cycle-break
+    instructions in its prompt — so the queue carries an actionable repair
+    target for each cycle, not just the bare cycle list.
+    """
+    if not CYCLE_INVENTORY_PATH.exists():
+        return []
+    inventory = json.loads(CYCLE_INVENTORY_PATH.read_text(encoding="utf-8"))
+    cycles = inventory.get("cycles") or []
+    targets: list[dict] = []
+    for cycle in cycles:
+        nodes = cycle.get("nodes") or []
+        if not nodes:
+            continue
+        # Pick the node with the largest transitive_descendants — that's
+        # the highest-leverage cycle break. Tie: smallest claim_id (stable).
+        best = max(
+            nodes,
+            key=lambda n: (
+                rows.get(n["claim_id"], {}).get("transitive_descendants") or 0,
+                -ord(n["claim_id"][0]) if n.get("claim_id") else 0,
+            ),
+        )
+        cid = best["claim_id"]
+        row = rows.get(cid, {})
+        targets.append(
+            {
+                "cycle_id": cycle.get("cycle_id"),
+                "cycle_length": cycle.get("length"),
+                "max_transitive_descendants": cycle.get("max_transitive_descendants"),
+                "primary_break_target": cid,
+                "primary_break_target_audit_status": row.get("audit_status"),
+                "primary_break_target_criticality": row.get("criticality") or "leaf",
+                "all_cycle_nodes": [n["claim_id"] for n in nodes],
+                "repair_class": "cycle_break_required",
+                "instruction": (
+                    "Re-audit this node with the prompt instruction that "
+                    f"its co-cycle citations {sorted(set(n['claim_id'] for n in nodes if n['claim_id'] != cid))} "
+                    "are informational/'see also' references, not load-bearing "
+                    "dependencies. If the chain truly closes without those "
+                    "citations, return audited_clean and the runner_pipeline "
+                    "will strip the corresponding markdown links. Otherwise "
+                    "return audited_conditional with repair_class="
+                    "missing_dependency_edge naming the node that should be "
+                    "promoted upstream."
+                ),
+            }
+        )
+    targets.sort(key=lambda t: (-(t["max_transitive_descendants"] or 0), t["cycle_length"] or 0))
+    return targets
 
 
 def main() -> int:
@@ -119,6 +178,8 @@ def main() -> int:
         )
     )
 
+    cycle_targets = cycle_break_targets(rows)
+
     queue = {
         "total_pending": len(pending),
         "ready_count": sum(1 for e in pending if e["ready"]),
@@ -126,6 +187,8 @@ def main() -> int:
             c: sum(1 for e in pending if e["criticality"] == c)
             for c in ("critical", "high", "medium", "leaf")
         },
+        "cycle_break_targets": cycle_targets,
+        "cycle_break_target_count": len(cycle_targets),
         "queue": pending,
     }
     QUEUE_JSON.write_text(json.dumps(queue, indent=2, sort_keys=True) + "\n")
@@ -167,6 +230,27 @@ def main() -> int:
             f"{'`' + e['runner_path'] + '`' if e['runner_path'] else '-'} |"
         )
     md_lines.append("")
+    if cycle_targets:
+        md_lines.append("## Citation cycle break targets")
+        md_lines.append("")
+        md_lines.append(
+            f"{len(cycle_targets)} citation cycles in the graph. Each cycle "
+            "permanently blocks every member from `retained` until one node is "
+            "re-audited with explicit cycle-break instructions or a 'see also' "
+            "edge is stripped. Top 25 below; full list in "
+            "`data/audit_queue.json` under `cycle_break_targets`."
+        )
+        md_lines.append("")
+        md_lines.append("| # | cycle_id | length | max_desc | primary break target | criticality | audit_status |")
+        md_lines.append("|---:|---|---:|---:|---|---|---|")
+        for i, t in enumerate(cycle_targets[:25], 1):
+            md_lines.append(
+                f"| {i} | `{t['cycle_id']}` | {t['cycle_length']} | "
+                f"{t['max_transitive_descendants']} | `{t['primary_break_target']}` | "
+                f"{t['primary_break_target_criticality']} | "
+                f"{t['primary_break_target_audit_status'] or 'unaudited'} |"
+            )
+        md_lines.append("")
     md_lines.append("Full queue lives in `data/audit_queue.json`.")
     QUEUE_MD.write_text("\n".join(md_lines) + "\n")
 
@@ -175,6 +259,7 @@ def main() -> int:
     print(f"  total pending: {queue['total_pending']}")
     print(f"  ready: {queue['ready_count']}")
     print(f"  by criticality: {queue['by_criticality']}")
+    print(f"  cycle break targets: {queue['cycle_break_target_count']}")
     return 0
 
 
