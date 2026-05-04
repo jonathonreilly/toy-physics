@@ -169,3 +169,14 @@ primitive or explicitly extend the retained stack.
 ```bash
 python3 scripts/frontier_neutrino_majorana_current_stack_exhaustion.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [neutrino_majorana_charge_two_primitive_reduction_note](NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md)
+- [neutrino_majorana_unique_source_slot_note](NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md)
+- [neutrino_majorana_local_pfaffian_uniqueness_note](NEUTRINO_MAJORANA_LOCAL_PFAFFIAN_UNIQUENESS_NOTE.md)
+- [neutrino_majorana_z3_nonactivation_theorem_note](NEUTRINO_MAJORANA_Z3_NONACTIVATION_THEOREM_NOTE.md)
+- [neutrino_majorana_observable_principle_obstruction_note](NEUTRINO_MAJORANA_OBSERVABLE_PRINCIPLE_OBSTRUCTION_NOTE.md)
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)

@@ -2,109 +2,84 @@
   "auditor_family_summary": {
     "claude-opus": {
       "audits_with_runner_class": {
-        "A": 1,
         "B": 1,
         "C": 5,
-        "E": 1,
-        "F": 3,
-        "G": 12
+        "F": 2,
+        "G": 2
       },
       "criticality_counts": {
-        "high": 4,
         "leaf": 8,
-        "medium": 11
+        "medium": 2
       },
-      "cross_confirmation_outcomes": {
-        "confirmed": 3
-      },
+      "cross_confirmation_outcomes": {},
       "judicial_third_pass_count": 0,
       "overturned_by_third": 0,
       "ratified_by_third": 0,
       "third_pass_overturn_rate": 0.0,
-      "total_audits": 23,
-      "verdict_changed_after_re_audit": 3,
+      "total_audits": 10,
+      "verdict_changed_after_re_audit": 2,
       "verdict_counts": {
-        "audited_clean": 7,
-        "audited_numerical_match": 12,
-        "audited_renaming": 4
+        "audited_clean": 6,
+        "audited_numerical_match": 2,
+        "audited_renaming": 2
       },
       "weak_clean_attempts_blocked": 0
     },
     "codex-gpt-5": {
       "audits_with_runner_class": {
-        "A": 152,
-        "B": 226,
-        "C": 329,
-        "D": 23,
-        "E": 8,
-        "F": 15,
-        "G": 9,
-        "configured_finite_lattice_numerical_replay": 1,
-        "configured_numerical_proxy": 1,
-        "configured_numerical_proxy_for_physical_mechanism": 1,
-        "configured_numerical_proxy_not_theorem": 1,
+        "A": 85,
+        "B": 182,
+        "C": 264,
+        "D": 18,
+        "E": 3,
+        "F": 10,
+        "G": 3,
         "configured_numerical_proxy_to_surrogate_theorem_bridge": 1,
-        "configured_numerical_sweep_to_basin_inference": 1,
-        "configured_numerical_sweep_to_retained_basin": 1,
-        "configured_proxy_physical_bridge": 1,
-        "configured_proxy_threshold_without_retained_bridge": 1,
-        "definition_as_derivation": 2,
-        "finite_configured_numerical_sweep_to_positive_theorem": 1,
-        "implicit_bridge_to_configured_identity": 1,
-        "unratified_physical_bridge_and_definition_as_closure": 1,
-        "unratified_physical_bridge_configured_numerical_proxy": 1,
-        "unratified_physical_observable_bridge": 1,
-        "unretained_selector_law_support_statement": 1,
-        "unsupported_finite_sweep_and_readout_bridge": 1,
-        "unsupported_numerical_sweep_and_readout_bridge": 1,
-        "unsupported_readout_bridge": 1
+        "unsupported_numerical_sweep_and_readout_bridge": 1
       },
       "criticality_counts": {
-        "critical": 65,
-        "high": 93,
-        "leaf": 418,
-        "medium": 206
+        "critical": 72,
+        "high": 8,
+        "leaf": 416,
+        "medium": 71
       },
       "cross_confirmation_outcomes": {
-        "confirmed": 27,
+        "confirmed": 23,
         "third_confirmed_first": 6,
-        "third_confirmed_second": 9
+        "third_confirmed_second": 5
       },
-      "judicial_third_pass_count": 15,
-      "overturned_by_third": 11,
-      "ratified_by_third": 11,
-      "third_pass_overturn_rate": 0.5,
-      "total_audits": 782,
-      "verdict_changed_after_re_audit": 147,
+      "judicial_third_pass_count": 11,
+      "overturned_by_third": 9,
+      "ratified_by_third": 7,
+      "third_pass_overturn_rate": 0.562,
+      "total_audits": 567,
+      "verdict_changed_after_re_audit": 90,
       "verdict_counts": {
-        "audited_clean": 350,
-        "audited_conditional": 351,
-        "audited_decoration": 9,
+        "audited_clean": 276,
+        "audited_conditional": 233,
+        "audited_decoration": 1,
         "audited_failed": 51,
-        "audited_numerical_match": 11,
-        "audited_renaming": 10
+        "audited_numerical_match": 2,
+        "audited_renaming": 4
       },
       "weak_clean_attempts_blocked": 0
     },
     "codex-gpt-5.5": {
       "audits_with_runner_class": {
-        "A": 8,
-        "B": 8,
+        "A": 1,
         "G": 2
       },
       "criticality_counts": {
-        "critical": 4,
-        "high": 14
+        "critical": 3
       },
       "cross_confirmation_outcomes": {},
       "judicial_third_pass_count": 0,
-      "overturned_by_third": 4,
+      "overturned_by_third": 2,
       "ratified_by_third": 4,
-      "third_pass_overturn_rate": 0.5,
-      "total_audits": 18,
-      "verdict_changed_after_re_audit": 1,
+      "third_pass_overturn_rate": 0.333,
+      "total_audits": 3,
       "verdict_counts": {
-        "audited_conditional": 17,
+        "audited_conditional": 2,
         "audited_numerical_match": 1
       },
       "weak_clean_attempts_blocked": 0
@@ -112,26 +87,26 @@
   },
   "family_pair_disagreements": [
     {
-      "count": 7,
+      "count": 5,
       "loser": "codex-gpt-5",
-      "winner": "codex-gpt-5"
-    },
-    {
-      "count": 4,
-      "loser": "codex-gpt-5.5",
       "winner": "codex-gpt-5"
     },
     {
       "count": 4,
       "loser": "codex-gpt-5",
       "winner": "codex-gpt-5.5"
+    },
+    {
+      "count": 2,
+      "loser": "codex-gpt-5.5",
+      "winner": "codex-gpt-5"
     }
   ],
   "policy": "auditor_reliability_v1",
   "policy_summary": "Per-auditor-family verdict and cross-confirmation aggregate. Informational only \u2014 humans set audit-lane policy. Surfaced fields: total_audits, verdict_counts, cross_confirmation_outcomes, overturned_by_third (third auditor sided with other side), ratified_by_third, third_pass_overturn_rate.",
   "totals": {
     "auditor_families_observed": 3,
-    "total_audits_recorded": 823,
-    "total_third_pass_decisions": 30
+    "total_audits_recorded": 580,
+    "total_third_pass_decisions": 22
   }
 }

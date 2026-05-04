@@ -9281,6 +9281,30 @@
       "to": "observable_principle_from_axiom_note"
     },
     {
+      "from": "neutrino_majorana_current_stack_exhaustion_note",
+      "to": "neutrino_majorana_charge_two_primitive_reduction_note"
+    },
+    {
+      "from": "neutrino_majorana_current_stack_exhaustion_note",
+      "to": "neutrino_majorana_unique_source_slot_note"
+    },
+    {
+      "from": "neutrino_majorana_current_stack_exhaustion_note",
+      "to": "neutrino_majorana_local_pfaffian_uniqueness_note"
+    },
+    {
+      "from": "neutrino_majorana_current_stack_exhaustion_note",
+      "to": "neutrino_majorana_z3_nonactivation_theorem_note"
+    },
+    {
+      "from": "neutrino_majorana_current_stack_exhaustion_note",
+      "to": "neutrino_majorana_observable_principle_obstruction_note"
+    },
+    {
+      "from": "neutrino_majorana_current_stack_exhaustion_note",
+      "to": "publication.ci3_z3.derivation_atlas"
+    },
+    {
       "from": "neutrino_majorana_current_stack_zero_law_note",
       "to": "neutrino_majorana_canonical_local_block_note"
     },
@@ -40787,8 +40811,15 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "37bbf4a563add79288f60d5b90b0a20050ac5d7bcf4977e6cc0177ac2aab6262",
+      "deps": [
+        "neutrino_majorana_charge_two_primitive_reduction_note",
+        "neutrino_majorana_unique_source_slot_note",
+        "neutrino_majorana_local_pfaffian_uniqueness_note",
+        "neutrino_majorana_z3_nonactivation_theorem_note",
+        "neutrino_majorana_observable_principle_obstruction_note",
+        "publication.ci3_z3.derivation_atlas"
+      ],
+      "note_hash": "82ce97ee471615dd41c6effd4677187bb14db5b18e8bcf7ffa02ff890324d77d",
       "path": "docs/NEUTRINO_MAJORANA_CURRENT_STACK_EXHAUSTION_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_current_stack_exhaustion.py",
       "title": "Majorana Current-Stack Exhaustion"
@@ -53873,7 +53904,6 @@
     "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29",
     "neutrino_lane4_theorem_plan_note_2026-04-28",
     "neutrino_lane4_workstream_closeout_note_2026-04-28",
-    "neutrino_majorana_current_stack_exhaustion_note",
     "neutrino_majorana_lower_level_pairing_nogo_note",
     "neutrino_majorana_nur_character_boundary_note",
     "neutrino_majorana_nur_charge2_primitive_reduction_note",
@@ -54227,10 +54257,10 @@
       "open_gate": 114,
       "positive_theorem": 626
     },
-    "edge_count": 6348,
-    "leaf_count": 551,
+    "edge_count": 6354,
+    "leaf_count": 550,
     "node_count": 1872,
-    "root_count": 900,
+    "root_count": 899,
     "runners_with_path": 1430
   }
 }
