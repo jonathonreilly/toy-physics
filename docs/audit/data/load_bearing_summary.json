@@ -19,7 +19,7 @@
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 33.951,
+      "load_bearing_score": 32.951,
       "transitive_descendants": 494
     },
     {
@@ -61,7 +61,7 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 27.422,
+      "load_bearing_score": 26.422,
       "transitive_descendants": 484
     },
     {

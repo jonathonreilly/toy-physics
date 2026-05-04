@@ -218,6 +218,73 @@ class SeedLedgerTest(unittest.TestCase):
         # Prior values archived
         self.assertEqual(len(new_row["previous_audits"]), 1)
 
+    def test_existing_unaudited_row_clears_stale_audit_residue(self):
+        m = _import("seed_audit_ledger")
+        _patch_repo_root(m, self.tmp_root)
+        body = "# test\nClaim type: no_go\n"
+        self.fx.write_note("docs/test.md", body)
+        import hashlib
+        note_hash = hashlib.sha256(body.encode("utf-8")).hexdigest()
+        self.fx.write_graph(
+            {
+                "nodes": {
+                    "test": {
+                        "path": "docs/test.md",
+                        "title": "test",
+                        "runner_path": None,
+                        "deps": [],
+                        "note_hash": note_hash,
+                        "claim_type_seed_hint": "no_go",
+                        "claim_type_author_hint": None,
+                        "claim_type_author_hint_raw": None,
+                    }
+                }
+            }
+        )
+        self.fx.write_ledger(
+            {
+                "schema_version": 1,
+                "rows": {
+                    "test": {
+                        "claim_id": "test",
+                        "note_path": "docs/test.md",
+                        "title": "test",
+                        "runner_path": None,
+                        "deps": [],
+                        "note_hash": note_hash,
+                        "previous_audits": [{"verdict": "old"}],
+                        "audit_status": "unaudited",
+                        "auditor": "stale-auditor",
+                        "auditor_family": "codex-gpt-5",
+                        "independence": "fresh_context",
+                        "load_bearing_step": "stale step",
+                        "chain_closes": True,
+                        "audit_state_snapshot": {"criticality": "medium"},
+                        "cross_confirmation": {"status": "confirmed"},
+                        "claim_type": "positive_theorem",
+                        "claim_type_provenance": "audited",
+                        "claim_scope": "stale scope",
+                    }
+                },
+            }
+        )
+
+        seeded = m.seed()
+        row = seeded["rows"]["test"]
+
+        self.assertEqual(row["audit_status"], "unaudited")
+        self.assertIsNone(row["auditor"])
+        self.assertIsNone(row["auditor_family"])
+        self.assertIsNone(row["independence"])
+        self.assertIsNone(row["load_bearing_step"])
+        self.assertIsNone(row["chain_closes"])
+        self.assertIsNone(row["audit_state_snapshot"])
+        self.assertIsNone(row["cross_confirmation"])
+        self.assertEqual(row["claim_type"], "no_go")
+        self.assertEqual(row["claim_type_provenance"], "migration_hint")
+        self.assertIsNone(row["claim_scope"])
+        self.assertEqual(row["previous_audits"], [{"verdict": "old"}])
+
 
 class ComputeEffectiveStatusTest(unittest.TestCase):
     def setUp(self):

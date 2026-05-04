@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 178 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 15 |
-| unaudited | 1138 |
-| meta | 47 |
+| unaudited | 1139 |
+| meta | 46 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 6 |
 | ~~audited_conditional~~ | 235 |
@@ -43,13 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 514 |
+| `bounded_theorem` | 591 |
 | `decoration` | 1 |
-| `meta` | 47 |
-| `no_go` | 147 |
-| `open_gate` | 90 |
-| `positive_theorem` | 745 |
-| `unset` | 221 |
+| `meta` | 46 |
+| `no_go` | 165 |
+| `open_gate` | 96 |
+| `positive_theorem` | 866 |
 
 | criticality | count |
 |---|---:|
@@ -74,15 +73,15 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 494 | 33.95 | `audited_clean` | **retained_bounded** |
+| 1 | `graph_first_su3_integration_note` | bounded_theorem | critical | 494 | 32.95 | `audited_clean` | **retained_bounded** |
 | 2 | `minimal_axioms_2026-04-11` | meta | critical | 446 | 32.80 | `unaudited` | meta |
 | 3 | `observable_principle_from_axiom_note` | positive_theorem | critical | 303 | 32.75 | `audited_conditional` | ~~audited_conditional~~ |
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 360 | 31.00 | `unaudited` | unaudited |
 | 5 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 338 | 30.91 | `unaudited` | unaudited |
 | 6 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 339 | 30.41 | `unaudited` | unaudited |
 | 7 | `yt_ward_identity_derivation_theorem` | open_gate | critical | 276 | 29.11 | `unaudited` | unaudited |
-| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 484 | 27.42 | `audited_clean` | **retained_bounded** |
-| 9 | `yt_ew_color_projection_theorem` | - | critical | 324 | 26.34 | `unaudited` | unaudited |
+| 8 | `native_gauge_closure_note` | bounded_theorem | critical | 484 | 26.42 | `audited_clean` | **retained_bounded** |
+| 9 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 324 | 26.34 | `unaudited` | unaudited |
 | 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 527 | 25.54 | `audited_clean` | open_gate |
 | 11 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 322 | 25.34 | `audited_conditional` | ~~audited_conditional~~ |
 | 12 | `minimal_axioms_2026-05-03` | meta | critical | 537 | 25.07 | `unaudited` | meta |

@@ -99,6 +99,14 @@ EMPTY_AUDIT = {
 AUDIT_FIELDS = list(EMPTY_AUDIT.keys())
 
 
+def reset_unaudited_audit_fields(row: dict) -> None:
+    """Clear stale audit-owned residue from rows already back in the queue."""
+    if row.get("audit_status") != "unaudited":
+        return
+    for k, v in EMPTY_AUDIT.items():
+        row[k] = v if not isinstance(v, (list, dict)) else (list(v) if isinstance(v, list) else dict(v))
+
+
 def is_excluded_source_path(path: str) -> bool:
     return any(fnmatchcase(path, pattern) for pattern in EXCLUDED_SOURCE_PATTERNS)
 
@@ -296,6 +304,7 @@ def seed() -> dict:
                 re_audit_required += 1
             else:
                 preserved += 1
+            reset_unaudited_audit_fields(row)
             apply_claim_type_defaults(row, node, prior)
         out_rows[cid] = row
 
