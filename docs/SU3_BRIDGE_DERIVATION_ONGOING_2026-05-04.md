@@ -172,6 +172,53 @@ Per the framework's reference solves and the Schur cube derivation:
 
 **The MC value 0.5934 is NOT derivable from L_s=2 cube** under any of the framework's existing primitives. The +2/π closure was an empirical fit inside the tube-power family, not a derivation.
 
+## 10a. DEEP REVIEW + Counterfactual Pass on the no-gos
+
+Per user direction "do a deep review on those no gos, they could be WRONG" + "we may very well have missed something here":
+
+### No-go 1: "ρ_(p,q)(6) not closed by local inputs" (Theorem 3 in PERRON_SOLVE doc)
+
+**Argument**: 3 specific 1-parameter families enumerated (decay, one-plaquette, tube-power); each gives different P; therefore "no parameter choice canonically picked out by local input class".
+
+**Counterfactual exercise on assumptions:**
+
+| Assumption | Counterfactual | Status |
+|---|---|---|
+| A. ρ_(p,q)(6) is well-defined | What if ρ depends on which plaquette is marked? | Probably not — symmetry forbids |
+| B. "Local inputs" = c_λ + intertwiners only | What if cube graph topology IS a local input? | **This expands derivability scope** |
+| C. The 3 enumerated families are exhaustive | What if other families exist that DO close? | **Schur cube derivation is 0-parameter, not in any family** |
+| D. Failing for these families ⇒ failing for all derivations | False inference | **Logic flaw: 1-param failure ≠ 0-param failure** |
+| E. L_s=2 APBC is the framework's correct cube | What if L_s ≥ 3 is the right block? | Open |
+| F. T_src structure is correct | What if there's a different decomposition? | Framework's existing theorems chain looks tight |
+
+**Critical insight from counterfactuals**: the no-go has narrower scope than presented. It rules out 1-parameter families but doesn't rule out 0-parameter derivations like Schur cube. **The framework's actual no-go is "no 1-parameter local closure" not "no closure"**.
+
+### No-go 2: constant-lift obstruction
+
+**Argument**: a_(1,1) ≠ a_(1,0)² so the constant-lift ansatz fails.
+
+**Counterfactual**: what if a different ansatz (e.g., Schur cube) doesn't have this constant-lift property? It doesn't — Schur is geometric, not constant-lift. **No-go applies only to constant-lift ansatz, not other derivations**.
+
+### No-go 3: framework-point underdetermination
+
+**Argument**: framework primitives (exact jet + analyticity + monotonicity) don't fix β_eff(6) or analytic P(6).
+
+**Counterfactual**: what if the cube-geometry derivation (Schur) is a SEPARATE primitive class not covered by jet/analyticity/monotonicity? **It is — cube geometry is a different framework input**. So no-go 3 doesn't apply to the Schur derivation.
+
+### Conclusion of deep review
+
+**Key finding**: the framework's no-gos have NARROWER scope than the campaign treated them. They rule out specific routes (1-parameter families, constant-lift, jet-based analytic) but DON'T rule out the Schur cube derivation (0-parameter, geometric).
+
+**However**: the Schur L_s=2 cube derivation gives P = 0.4291, NOT 0.5934. So even with no-gos narrowed, the L_s=2 framework prediction doesn't match MC.
+
+**What we may have missed**: the L_s ≥ 3 APBC cube Schur derivation. It hasn't been done. The L_s=3 PBC attempts (PRs #506-#510, all closed as wrong-geometry) didn't address APBC. **The L_s=3 APBC Schur derivation is the genuine open piece** — it might give a P value much closer to (or matching) MC 0.5934.
+
+If L_s=3 APBC Schur gives ~0.59: **the framework natively derives MC value**, and the no-gos are correctly narrow-scope.
+
+If L_s=3 APBC Schur still gives ~0.43: framework's prediction is genuinely below MC, suggesting either (a) higher L needed (L=4, L=∞) or (b) structural mismatch with MC.
+
+**The L_s=3 APBC Schur derivation is the next concrete computation that could close this question.**
+
 ## 10. Honest path to native 0.5934
 
 To natively derive 0.5934:
