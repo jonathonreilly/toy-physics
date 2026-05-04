@@ -96,49 +96,61 @@ def add_auditor_metadata(verdict_blob: dict, auditor_name: str,
 def determine_audit_role(led_row: dict) -> tuple[str, str | None]:
     """Decide what role this audit attempt plays for the given row.
 
+    The runner only audits rows that genuinely need an audit. Re-auditing
+    already-clean / already-conditional / already-failed / already-confirmed
+    rows is a waste of subscription messages and produces churn — all
+    existing audits in this repo were already done at xhigh, so re-doing
+    them adds no quality. We skip them.
+
     Returns (role, reason_or_independence):
-      - ("skip", "<reason>")            row should be skipped
-      - ("first", "cross_family")       first-pass; Codex on Claude-authored
-                                        notes is cross-family
-      - ("first", "fresh_context")      first-pass on a Codex-authored note
-                                        (rare; same-family fresh-context)
-      - ("second", "fresh_context")     second-pass on a row whose first
-                                        audit was also Codex (same family)
-      - ("second", "cross_family")      second-pass on a row whose first
-                                        audit was a different model family
-                                        (e.g., Claude or human)
+      - ("skip", "<reason>")              row should be skipped
+      - ("first", "cross_family")         row is unaudited; Codex on a
+                                          Claude/human-authored note is
+                                          cross-family
+      - ("second", "fresh_context")       row is awaiting cross-confirmation
+                                          and the first auditor was Codex
+                                          (same model family)
+      - ("second", "cross_family")        row is awaiting cross-confirmation
+                                          and the first auditor was a
+                                          different family (Claude / human)
 
-    apply_audit.py validates these constraints; we precompute here so the
-    auditor metadata sent into apply_audit is always correct on the first
-    try, avoiding spurious "rejected: same-family second audit requires
-    fresh_context" errors. Disagreement / judicial-review cases are
-    skipped — the operator runs those manually.
+    apply_audit.py validates the independence rule; we precompute here so
+    the metadata is always correct on the first try.
     """
+    audit_status = led_row.get("audit_status") or "unknown"
     blocker = led_row.get("blocker") or ""
-    if blocker in SKIP_BLOCKERS:
-        return "skip", f"blocker={blocker} (judicial review needed; manual)"
-
     cc = led_row.get("cross_confirmation") or {}
     if not isinstance(cc, dict):
         cc = {}
     cc_status = cc.get("status")
+
+    # Skip rows that need judicial / human resolution.
+    if blocker in SKIP_BLOCKERS:
+        return "skip", f"blocker={blocker} (judicial review needed; manual)"
     if cc_status in {"disagreement", "three_way_disagreement", "disagreement_irresolvable"}:
-        return "skip", f"cross_confirmation.status={cc_status} (judicial review)"
+        return "skip", f"cross_confirmation.status={cc_status} (judicial review needed; manual)"
 
-    first_audit = cc.get("first_audit") or {}
-    first_family = first_audit.get("auditor_family") if isinstance(first_audit, dict) else None
-
-    if not first_audit:
-        # No prior audit recorded. This is a first-pass.
-        # Codex auditing Claude/anyone-else's note is cross-family by default.
+    # First-pass: row has never been audited.
+    if audit_status == "unaudited":
         return "first", "cross_family"
 
-    # A prior audit exists -> this is a second-pass.
-    if first_family == AUDITOR_FAMILY:
-        # Same model family -> apply_audit requires fresh_context.
-        return "second", "fresh_context"
-    # Different family from the first auditor -> we (Codex) are cross-family.
-    return "second", "cross_family"
+    # Second-pass on a critical-row first audit that is awaiting cross-confirmation.
+    if audit_status == "audit_in_progress" and cc_status == "awaiting_second":
+        first_audit = cc.get("first_audit") or {}
+        first_family = first_audit.get("auditor_family") if isinstance(first_audit, dict) else None
+        if first_family == AUDITOR_FAMILY:
+            return "second", "fresh_context"
+        return "second", "cross_family"
+
+    # Anything else — already at a terminal verdict (audited_clean,
+    # audited_conditional, audited_failed, audited_renaming,
+    # audited_decoration, audited_numerical_match), or already in a
+    # confirmed cross_confirmation state, or in some other in-progress
+    # state we don't auto-handle — SKIP. Re-auditing settled rows wastes
+    # subscription messages without adding quality (existing audits were
+    # already done at xhigh).
+    cc_note = f" cc.status={cc_status}" if cc_status else ""
+    return "skip", f"already at audit_status={audit_status}{cc_note}; not re-auditing"
 
 
 def load_queue(criticality_filter: str | None = None) -> list[dict]:
