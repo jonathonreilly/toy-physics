@@ -77,3 +77,12 @@ project-native bridge. It is only:
 
 That is an external comparison problem, not a missing internal theorem on the
 project route.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_qg_canonical_smooth_gravitational_weak_measure_note](UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
+- [universal_gr_positive_background_local_closure_note](UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md)
+- [universal_gr_lorentzian_global_atlas_closure_note](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
+- [universal_gr_lorentzian_signature_extension_note](UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md)

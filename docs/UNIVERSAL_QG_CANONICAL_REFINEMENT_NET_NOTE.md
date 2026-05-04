@@ -125,3 +125,11 @@ route is now organized on the right canonical geometric net.
 
 That is the last missing discrete structural ingredient the earlier
 continuum-bridge reduction had identified.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_gr_lorentzian_global_atlas_closure_note](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
+- [universal_qg_uv_finite_partition_note](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- [universal_qg_projective_schur_closure_note](UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)

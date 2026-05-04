@@ -115,3 +115,9 @@ Across all tested families in the sweep, the force battery remained intact:
 - force stayed TOWARD
 - `F∝M`, achromatic force, equivalence, and robustness remained retained
 
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_graph_portability_note](STAGGERED_GRAPH_PORTABILITY_NOTE.md)
+- [staggered_layered_gauge_engineering_note](STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md)

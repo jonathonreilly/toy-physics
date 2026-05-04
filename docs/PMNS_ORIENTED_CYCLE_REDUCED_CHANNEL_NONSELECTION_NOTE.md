@@ -110,3 +110,9 @@ cycle channel.
 ```bash
 python3 scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_oriented_cycle_channel_value_law_note](PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md)

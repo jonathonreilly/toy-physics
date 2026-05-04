@@ -174,3 +174,11 @@ See `RETARDATION_DISCRIMINATOR_NOTE.md` for the full retained result.
 | GRAVITOMAGNETIC_NOTE.md | Velocity-dependent correction |
 | CAUSAL_FIELD_CANONICAL_CHAIN_NOTE.md | Full chain hierarchy |
 | RETARDATION_DISCRIMINATOR_NOTE.md | Oscillating-source retardation result |
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [shapiro_delay_note](SHAPIRO_DELAY_NOTE.md)
+- [shapiro_family_portability_note](SHAPIRO_FAMILY_PORTABILITY_NOTE.md)
+- [retardation_discriminator_note](RETARDATION_DISCRIMINATOR_NOTE.md)

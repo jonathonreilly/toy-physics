@@ -76,3 +76,13 @@ Any further positive closure would require:
 ```bash
 python3 scripts/frontier_neutrino_sole_axiom_full_closure_boundary.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_current_bank_value_selection_nogo_note](PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md)
+- [pmns_lower_level_end_to_end_closure_note](PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md)
+- [pmns_oriented_cycle_channel_value_law_note](PMNS_ORIENTED_CYCLE_CHANNEL_VALUE_LAW_NOTE.md)
+- [pmns_uniform_scalar_deformation_boundary_note](PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md)
+- [neutrino_majorana_lower_level_pairing_nogo_note](NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md)

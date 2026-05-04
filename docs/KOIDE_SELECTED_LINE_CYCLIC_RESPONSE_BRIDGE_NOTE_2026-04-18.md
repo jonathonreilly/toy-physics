@@ -217,3 +217,10 @@ actual-route Berry theorem has not yet been promoted to main.
 ```bash
 PYTHONPATH=scripts python3 scripts/frontier_koide_selected_line_cyclic_response_bridge.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_berry_phase_theorem_note_2026-04-19](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
+- [koide_brannen_phase_reduction_theorem_note_2026-04-20](KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md)

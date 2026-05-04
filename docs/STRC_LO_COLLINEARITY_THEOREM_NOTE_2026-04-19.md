@@ -355,3 +355,13 @@ T_p = Pi_5 |p><e_1| = sin_d |e_5><e_1|.
 
 With `d = a_d e_1`, the mixed occupancy is exactly `a_d sin_d e_5`, and the
 up-sector amplitude is the forced residual of the one-dimensional `5` budget.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [ckm_atlas_axiom_closure_note](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [scalar_tensor_ray_magnitude_bridge_note_2026-04-19](SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md)
+- [quark_projector_parameter_audit_note_2026-04-19](QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md)
+- [quark_jts_affine_physical_carrier_theorem_note_2026-04-19](QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md)
+- [quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19](QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md)

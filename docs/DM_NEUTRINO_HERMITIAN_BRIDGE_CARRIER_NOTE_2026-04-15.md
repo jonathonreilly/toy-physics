@@ -107,3 +107,12 @@ theorem.
 ```bash
 python3 scripts/frontier_dm_neutrino_hermitian_bridge_carrier.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16](DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md)
+- [pmns_active_four_real_source_from_transport_note](PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md)
+- [dm_neutrino_dirac_bridge_theorem_note_2026-04-15](DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
+- [dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18](DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md)

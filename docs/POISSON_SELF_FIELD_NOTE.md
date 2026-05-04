@@ -54,3 +54,9 @@ wave equation across layers, which is the next step.
 - Longitudinal profile: still imposed as 1/(dx+0.1)
 - Static (no time evolution); dynamical field is the next milestone
 - Connection to causal cone / retardation requires time-dependent generalization
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [gate_b_poisson_self_gravity_note](GATE_B_POISSON_SELF_GRAVITY_NOTE.md)

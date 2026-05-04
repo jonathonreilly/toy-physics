@@ -85,3 +85,11 @@ reparameterized support surface:
 So the `M2` escape hatch is no longer a live closure candidate by itself. The
 remaining charged-lepton gap stays where the current branch already located it:
 one microscopic selector law on the selected line.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_selected_line_cyclic_response_bridge_note_2026-04-18](KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md)
+- [koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18](KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md)
+- [koide_scale_selector_reparameterization_theorem_note_2026-04-20](KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md)

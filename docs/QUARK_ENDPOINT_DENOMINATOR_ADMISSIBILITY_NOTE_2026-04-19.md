@@ -241,3 +241,9 @@ python3 scripts/frontier_quark_endpoint_denominator_admissibility.py
 Current expected result on this branch:
 
 - `frontier_quark_endpoint_denominator_admissibility.py`: `PASS=11 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [quark_endpoint_readout_constraints_note_2026-04-19](QUARK_ENDPOINT_READOUT_CONSTRAINTS_NOTE_2026-04-19.md)

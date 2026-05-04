@@ -59,3 +59,11 @@ Gate replay:
 
 **targeted positive for sixth-family tail survival; third-family miss remains
 consistent with the breakpoint classifier**
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [sixth_family_sheared_note](SIXTH_FAMILY_SHEARED_NOTE.md)
+- [sixth_family_sheared_boundary_note](SIXTH_FAMILY_SHEARED_BOUNDARY_NOTE.md)
+- [distance_law_breakpoint_note](DISTANCE_LAW_BREAKPOINT_NOTE.md)

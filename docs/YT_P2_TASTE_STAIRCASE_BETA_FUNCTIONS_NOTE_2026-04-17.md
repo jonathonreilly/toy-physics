@@ -617,3 +617,15 @@ beta functions with `n_taste` replacement do not close P2, and the
 POSITIVE identification that the missing factor is exactly the prior
 v-matching coefficient `M = 1.973`. Both the prior taste-staircase
 and v-matching notes remain canonical.**
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_p2_taste_staircase_transport_note_2026-04-17](YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md)
+- [yt_p2_v_matching_theorem_note_2026-04-17](YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md)
+- [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+- [yt_boundary_theorem](YT_BOUNDARY_THEOREM.md)
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [yt_zero_import_chain_note](YT_ZERO_IMPORT_CHAIN_NOTE.md)
+- [yt_qfp_insensitivity_support_note](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)

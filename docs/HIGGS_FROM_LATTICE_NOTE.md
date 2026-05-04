@@ -28,3 +28,9 @@ What remains true on the current package:
 
 This note is part of the support stack for the bounded Higgs lane. It is not a
 standalone promotion surface.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [higgs_mass_derived_note](HIGGS_MASS_DERIVED_NOTE.md)

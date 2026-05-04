@@ -116,3 +116,13 @@ It is a reduction theorem only.
 ```bash
 python3 scripts/frontier_pmns_selector_nonuniversal_support_reduction.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
+- [lepton_shared_higgs_universality_collapse_note](LEPTON_SHARED_HIGGS_UNIVERSALITY_COLLAPSE_NOTE.md)
+- [lepton_shared_higgs_universality_underdetermination_note](LEPTON_SHARED_HIGGS_UNIVERSALITY_UNDERDETERMINATION_NOTE.md)
+- [pmns_selector_sector_odd_reduction_note](PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md)
+- [universal_gr_a1_invariant_section_note](UNIVERSAL_GR_A1_INVARIANT_SECTION_NOTE.md)

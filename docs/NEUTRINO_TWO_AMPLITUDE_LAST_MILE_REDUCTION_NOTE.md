@@ -54,3 +54,13 @@ place.
 ```bash
 python3 scripts/frontier_neutrino_two_amplitude_last_mile.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_c3_nontrivial_current_boundary_note](PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md)
+- [pmns_sole_axiom_hw1_source_transfer_boundary_note](PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
+- [pmns_uniform_scalar_deformation_boundary_note](PMNS_UNIFORM_SCALAR_DEFORMATION_BOUNDARY_NOTE.md)
+- [neutrino_majorana_nur_character_boundary_note](NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md)
+- [neutrino_majorana_nur_charge2_primitive_reduction_note](NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md)

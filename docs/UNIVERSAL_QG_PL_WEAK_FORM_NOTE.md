@@ -108,3 +108,13 @@ This note still does **not** prove:
 
 It does prove that the exact discrete route already determines its own
 project-native PL weak Gaussian / Dirichlet system.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_qg_uv_finite_partition_note](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- [universal_qg_projective_schur_closure_note](UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
+- [universal_qg_canonical_refinement_net_note](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- [universal_qg_abstract_gaussian_completion_note](UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+- [universal_qg_pl_field_interface_note](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)

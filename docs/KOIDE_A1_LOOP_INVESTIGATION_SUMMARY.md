@@ -278,3 +278,15 @@ equal to 1/2 in the retained framework. Closure remains open.
 The /loop is being stopped. All work is committed and pushed to
 the April 22 support batch.
 Review should start from `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_a1_derivation_status_note](KOIDE_A1_DERIVATION_STATUS_NOTE.md)
+- [cl3_sm_embedding_theorem](CL3_SM_EMBEDDING_THEOREM.md)
+- [charged_lepton_koide_cone_algebraic_equivalence_note](CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md)
+- [structural_no_go_survey_note](STRUCTURAL_NO_GO_SURVEY_NOTE.md)
+- [higher_order_structural_theorems_note](HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md)
+- [koide_circulant_character_derivation_note_2026-04-18](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md)
+- [charged_lepton_koide_review_packet_2026-04-18](CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)

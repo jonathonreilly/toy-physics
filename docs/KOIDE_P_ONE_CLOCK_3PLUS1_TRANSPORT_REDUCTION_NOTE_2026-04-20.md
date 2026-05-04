@@ -236,3 +236,12 @@ extra Wilson/lattice phase datum on that ambient.
 ```bash
 PYTHONPATH=scripts python3 scripts/frontier_koide_p_one_clock_3plus1_transport_reduction_2026_04_20.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_berry_phase_theorem_note_2026-04-19](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
+- [koide_selected_line_cyclic_response_bridge_note_2026-04-18](KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md)
+- [koide_selected_line_local_radian_bridge_no_go_note_2026-04-20](KOIDE_SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
+- [anomaly_forces_time_theorem](ANOMALY_FORCES_TIME_THEOREM.md)

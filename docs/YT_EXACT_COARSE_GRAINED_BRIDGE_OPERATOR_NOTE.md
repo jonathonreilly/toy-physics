@@ -151,3 +151,13 @@ Use this note when the question is:
 - why exact coarse-graining is now part of the bridge theorem
 - why the proxy family is now secondary
 - how the current normal form follows from the axioms plus the bridge stack
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_bridge_uv_class_uniqueness_note](YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md)
+- [yt_bridge_hessian_selector_note](YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+- [yt_bridge_higher_order_corrections_note](YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
+- [yt_bridge_nonlocal_corrections_note](YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md)
+- [yt_bridge_endpoint_shift_bound_note](YT_BRIDGE_ENDPOINT_SHIFT_BOUND_NOTE.md)

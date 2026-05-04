@@ -50,3 +50,11 @@ and clean.
 This is the dedicated executable objection pack for the current second-order
 `Q` support route. It is useful support infrastructure, but it does not by
 itself discharge the remaining physical/source-law bridge.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [hierarchy_bosonic_bilinear_selector_note](HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md)
+- [charged_lepton_mass_hierarchy_review_note_2026-04-17](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)

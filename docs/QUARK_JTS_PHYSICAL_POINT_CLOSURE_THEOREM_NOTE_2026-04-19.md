@@ -374,3 +374,10 @@ Expected: PASS=N, FAIL=0.
   — establishes the bridge interval; physical-point JTS selects kappa = 1.
 - `docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md`
   — synthesis note; quark gate status updates to triple-derived.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19](QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md)
+- [quark_issr1_bicac_forcing_theorem_note_2026-04-19](QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md)

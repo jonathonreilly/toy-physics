@@ -352,3 +352,10 @@ PASS=13
 FAIL=0
 VERDICT: JTS DERIVED; ISSR1 CLOSED
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [quark_jts_affine_physical_carrier_theorem_note_2026-04-19](QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md)
+- [quark_jts_residue_note_2026-04-19](QUARK_JTS_RESIDUE_NOTE_2026-04-19.md)

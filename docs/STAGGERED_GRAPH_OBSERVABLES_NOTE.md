@@ -53,3 +53,10 @@ should not replace the retained force/current rows on graph families.
 - If the graph has cycles, gauge/current is a retained row.
 - If the graph is DAG-compatible, gauge/current is `N/A`.
 - Centroid-based gravity diagnostics remain secondary on non-cubic graphs.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_graph_portability_note](STAGGERED_GRAPH_PORTABILITY_NOTE.md)
+- [staggered_graph_gauge_closure_results_2026-04-10](STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md)

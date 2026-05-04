@@ -141,3 +141,13 @@ python3 scripts/frontier_quark_up_amplitude_provenance_audit.py
 Current expected result on this branch:
 
 - `frontier_quark_up_amplitude_provenance_audit.py`: `PASS=12 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [ckm_atlas_axiom_closure_note](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [tensor_support_center_excess_law_note](TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md)
+- [s3_time_bilinear_tensor_primitive_note](S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
+- [quark_up_amplitude_candidate_scan_note_2026-04-19](QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md)
+- [quark_up_amplitude_native_expression_scan_note_2026-04-19](QUARK_UP_AMPLITUDE_NATIVE_EXPRESSION_SCAN_NOTE_2026-04-19.md)

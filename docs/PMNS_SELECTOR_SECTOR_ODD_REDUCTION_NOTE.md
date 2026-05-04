@@ -92,3 +92,11 @@ It is a reduction theorem only.
 ```bash
 python3 scripts/frontier_pmns_sector_odd_bridge_reduction.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
+- [pmns_sector_exchange_nonforcing_note](PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md)
+- [pmns_scalar_bridge_nonrealization_note](PMNS_SCALAR_BRIDGE_NONREALIZATION_NOTE.md)

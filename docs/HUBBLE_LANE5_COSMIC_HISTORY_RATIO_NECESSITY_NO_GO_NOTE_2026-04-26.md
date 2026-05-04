@@ -248,3 +248,14 @@ A runner is not authored for this cycle: the no-go is a structural
 case-analysis on `A_min` and the retained cosmology stack, not a
 numerical claim. The proof's case structure (§2-§4) is verified by
 inspection rather than by sympy/numpy.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [minimal_axioms_2026-04-11](MINIMAL_AXIOMS_2026-04-11.md)
+- [cosmology_open_number_reduction_theorem_note_2026-04-26](COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md)
+- [omega_lambda_derivation_note](OMEGA_LAMBDA_DERIVATION_NOTE.md)
+- [cosmology_scale_identification_and_reduction_note](COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
+- [omega_lambda_matter_bridge_theorem_note_2026-04-22](OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
+- [planck_scale_lane_status_note_2026-04-23](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)

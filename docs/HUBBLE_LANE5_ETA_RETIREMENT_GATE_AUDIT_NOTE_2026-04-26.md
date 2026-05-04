@@ -228,3 +228,15 @@ target the right object.
 
 A runner is not authored: the audit is a structural review of existing
 retained material; no new symbolic or numerical claim is introduced.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_leptogenesis_transport_status_note_2026-04-16](DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)
+- [dm_leptogenesis_pmns_reduced_surface_selector_support_note_2026-04-16](DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md)
+- [dm_leptogenesis_pmns_reduction_exhaustion_theorem_note_2026-04-16](DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md)
+- [dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16](DM_LEPTOGENESIS_PMNS_MICROSCOPIC_D_LAST_MILE_NOTE_2026-04-16.md)
+- [omega_lambda_derivation_note](OMEGA_LAMBDA_DERIVATION_NOTE.md)
+- [r_base_group_theory_derivation_theorem_note_2026-04-24](R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
+- [hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26](HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md)

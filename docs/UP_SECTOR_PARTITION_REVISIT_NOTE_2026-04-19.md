@@ -206,3 +206,12 @@ PYTHONPATH=scripts python3 scripts/frontier_up_sector_partition_revisit.py
 Current expected result on this branch:
 
 - `frontier_up_sector_partition_revisit.py`: `PASS=12 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [quark_mass_ratio_full_solve_note_2026-04-18](QUARK_MASS_RATIO_FULL_SOLVE_NOTE_2026-04-18.md)
+- [quark_projector_parameter_audit_note_2026-04-19](QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md)
+- [quark_projector_ray_phase_completion_note_2026-04-18](QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md)
+- [up_type_mass_ratio_ckm_inversion_note](UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md)

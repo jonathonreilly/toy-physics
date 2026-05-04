@@ -65,3 +65,11 @@ It only asks whether the current generated-family support recovery has:
 Treat this as the basin-level check for the generated-family rescue attempt.
 The strongest useful outcome is a small retained positive basin; that is what
 the frozen grid now shows.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [source_resolved_generated_support_recovery_note](SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md)
+- [source_resolved_generated_family_probe_note](SOURCE_RESOLVED_GENERATED_FAMILY_PROBE_NOTE.md)
+- [source_resolved_generated_support_mass_scaling_note](SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md)

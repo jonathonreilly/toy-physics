@@ -242,3 +242,16 @@ contraction, but leaves global PDE existence unclaimed. It also shows raw
 graph Hodge APS boundaries are eta-neutral, opposite-sector preparation is
 boundary-data/defect preparation unless a physical channel is derived, and
 pair softening is fixed-`N` bounded but not thermodynamically stable.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_qg_canonical_refinement_net_note](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- [universal_qg_projective_schur_closure_note](UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)
+- [universal_qg_inverse_limit_closure_note](UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+- [universal_qg_pl_weak_form_note](UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+- [universal_qg_pl_sobolev_interface_note](UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+- [universal_qg_smooth_gravitational_global_solution_class_note](UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md)
+- [universal_qg_canonical_textbook_continuum_gr_closure_note](UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
+- [tensor_source_map_eta_note](TENSOR_SOURCE_MAP_ETA_NOTE.md)

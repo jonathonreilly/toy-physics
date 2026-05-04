@@ -575,3 +575,12 @@ The runner verifies:
 - no modification of the master obstruction theorem, the Ward-identity
   theorem, or the packaged `δ_PT` note;
 - structural preservation of the prior symbolic `I_1 = I_S` reduction.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_p1_i_s_lattice_pt_citation_note_2026-04-17](YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md)
+- [uv_gauge_to_yukawa_bridge_sc_vs_pert_note](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md)
+- [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+- [yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)

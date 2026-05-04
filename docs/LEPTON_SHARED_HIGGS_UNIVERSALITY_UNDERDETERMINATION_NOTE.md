@@ -128,3 +128,10 @@ It is a current-stack theorem only.
 ```bash
 python3 scripts/frontier_lepton_shared_higgs_universality_underdetermination.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
+- [gauge_matter_closure_gates_2026-04-12](GAUGE_MATTER_CLOSURE_GATES_2026-04-12.md)

@@ -102,3 +102,12 @@ factor. The live remaining gap is the even response law, not `c_odd`.
 ```bash
 python3 scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_selector_unique_amplitude_slot_note](PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md)
+- [pmns_selector_sign_to_branch_reduction_note](PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md)
+- [dm_neutrino_triplet_character_source_theorem_note_2026-04-15](DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md)
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)

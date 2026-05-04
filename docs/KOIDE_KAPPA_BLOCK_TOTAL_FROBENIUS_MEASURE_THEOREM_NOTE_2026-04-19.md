@@ -319,3 +319,10 @@ No hard-coded True; all PASSes keyed to substantive computations.
   symbolically on d = 2..6.
 - Numerical verification uses PDG charged-lepton masses as an input to
   check consistency, not to derive the operator-side law.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_moment_ratio_uniformity_theorem_note_2026-04-19](KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md)
+- [koide_mru_weight_class_obstruction_theorem_note_2026-04-19](KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)

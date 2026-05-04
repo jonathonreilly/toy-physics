@@ -103,3 +103,11 @@ It is a theorem only about the **current** retained scalar observable bank.
 ```bash
 python3 scripts/frontier_pmns_scalar_bridge_nonrealization.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [pmns_sector_exchange_nonforcing_note](PMNS_SECTOR_EXCHANGE_NONFORCING_NOTE.md)
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)

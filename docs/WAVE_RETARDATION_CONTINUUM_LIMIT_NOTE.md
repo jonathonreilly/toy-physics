@@ -536,3 +536,9 @@ Promoting from bounded conditional to retained would require:
    geometry.
 4. Adding a direct discrete static solve or an analytic discrete
    Green-function comparator for the implemented lattice operator.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [wave_retardation_lab_prediction_note](WAVE_RETARDATION_LAB_PREDICTION_NOTE.md)

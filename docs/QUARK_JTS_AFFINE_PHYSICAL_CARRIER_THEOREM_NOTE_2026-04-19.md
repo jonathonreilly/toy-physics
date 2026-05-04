@@ -209,3 +209,12 @@ Pi(psi_phys) = Pi(p)
 
 is supplied independently by exact `1(+)5` channel completeness. So ISSR1 is
 fully closed on the retained packet.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [cl3_sm_embedding_theorem](CL3_SM_EMBEDDING_THEOREM.md)
+- [cl3_color_automorphism_theorem](CL3_COLOR_AUTOMORPHISM_THEOREM.md)
+- [ckm_atlas_axiom_closure_note](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [quark_projector_parameter_audit_note_2026-04-19](QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md)

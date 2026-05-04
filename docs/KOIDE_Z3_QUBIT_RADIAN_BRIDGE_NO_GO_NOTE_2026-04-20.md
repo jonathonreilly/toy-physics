@@ -181,3 +181,15 @@ form is (a), (b), or (c).
 - KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md (candidate input (a))
 - KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md (candidate input (c))
 - SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md (stack context)
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_q_delta_linking_relation_theorem_note_2026-04-20](KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md)
+- [koide_berry_phase_theorem_note_2026-04-19](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
+- [koide_berry_bundle_obstruction_theorem_note_2026-04-19](KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)
+- [koide_circulant_character_derivation_note_2026-04-18](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md)
+- [koide_cyclic_wilson_descendant_law_note_2026-04-18](KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md)
+- [koide_circulant_wilson_target_note_2026-04-18](KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md)
+- [scalar_selector_cycle1_science_review_note_2026-04-19](SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md)

@@ -91,3 +91,12 @@ This note still does **not** prove:
 
 It does prove that the exact discrete route already determines its own
 project-native first-order weak-field carrier.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_qg_pl_field_interface_note](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+- [universal_qg_pl_weak_form_note](UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+- [universal_qg_canonical_refinement_net_note](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- [universal_qg_abstract_gaussian_completion_note](UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)

@@ -152,3 +152,9 @@ PYTHONPATH=scripts python3 scripts/frontier_abcc_cp_phase_no_go_theorem.py
 ```
 
 Expected: `PASS = 20, FAIL = 0`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [sigma_hier_uniqueness_theorem_note_2026-04-19](SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md)

@@ -212,3 +212,12 @@ quartic flavor Higgs potential into the Cl(3)/Z³ EW-scalar lane.
 - Koide & Nishiura, hep-ph/0509214 — S_3 flavor Higgs quartic potential
 - Brannen (2006), hep-ph/0505220 — original Brannen form
 - Koide (1983), original Koide relation papers
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [structural_no_go_survey_note](STRUCTURAL_NO_GO_SURVEY_NOTE.md)
+- [higher_order_structural_theorems_note](HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md)
+- [charged_lepton_koide_cone_algebraic_equivalence_note](CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md)
+- [hw1_second_order_return_shape_theorem_note](HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md)

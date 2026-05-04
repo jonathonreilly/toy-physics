@@ -38,3 +38,9 @@ less regular, and more cycle-rich than the baseline portability families?
 This is a stress checkpoint, not a new canonical card. It strengthens the
 portability claim, but it does not replace the canonical force-based staggered
 card or the full-suite baseline.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_graph_portability_note](STAGGERED_GRAPH_PORTABILITY_NOTE.md)

@@ -47,3 +47,9 @@ Where does the retained staggered battery fail when we deliberately inject:
 This is a boundary map, not a replacement for the canonical force-based
 staggered card. Its job is to say where the retained transport law stops being
 portable.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_graph_portability_note](STAGGERED_GRAPH_PORTABILITY_NOTE.md)

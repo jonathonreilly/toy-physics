@@ -118,3 +118,11 @@ It is:
 - the remaining gap is no longer vague:
   it is the theorem identifying the selected-line Berry phase with that
   descended anomaly object, with the correct normalization.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [site_phase_cube_shift_intertwiner_note](SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md)
+- [koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24](KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md)
+- [koide_brannen_phase_reduction_theorem_note_2026-04-20](KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md)

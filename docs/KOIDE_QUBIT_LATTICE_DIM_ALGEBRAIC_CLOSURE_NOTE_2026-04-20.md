@@ -808,3 +808,16 @@ The strongest chain recorded here is:
   (4×4 route reduction)
 - `docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md`
   (I3 closure tracing SELECTOR to retained chain)
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [anomaly_forces_time_theorem](ANOMALY_FORCES_TIME_THEOREM.md)
+- [hypercharge_identification_note](HYPERCHARGE_IDENTIFICATION_NOTE.md)
+- [koide_selected_line_provenance_note_2026-04-20](KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md)
+- [koide_brannen_phase_reduction_theorem_note_2026-04-20](KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md)
+- [koide_berry_phase_theorem_note_2026-04-19](KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
+- [koide_z3_qubit_radian_bridge_no_go_note_2026-04-20](KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
+- [koide_c3_singlet_extension_reduction_theorem_note_2026-04-20](KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md)
+- [charged_lepton_koide_review_packet_2026-04-18](CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)

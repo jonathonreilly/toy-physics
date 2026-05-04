@@ -556,3 +556,10 @@ on the standard continuum-limit step).
 cd /Users/jonBridger/Toy\ Physics
 python3 scripts/frontier_broad_gravity.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [gravity_clean_derivation_note](GRAVITY_CLEAN_DERIVATION_NOTE.md)
+- [gravity_full_self_consistency_note](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)

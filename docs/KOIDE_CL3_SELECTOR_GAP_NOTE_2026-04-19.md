@@ -130,4 +130,12 @@ The one-clock semigroup (gamma_orbit note) provides a positive witness: `H_* = H
 This note sharpens the charged-lepton support stack already on `main`.
 It does **not** upgrade the authoritative bounded charged-lepton package, and it
 does **not** promote the exploratory `Q = 2/3`-surface or
-scale-selector near-miss probes into 
+scale-selector near-miss probes into
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19](KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
+- [charged_lepton_mass_hierarchy_review_note_2026-04-17](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)
+- [charged_lepton_koide_review_packet_2026-04-18](CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)

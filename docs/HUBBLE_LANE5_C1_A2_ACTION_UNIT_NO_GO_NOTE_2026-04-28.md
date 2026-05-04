@@ -262,3 +262,14 @@ The result counts as a stretch attempt with a named structural
 obstruction per the Deep Work Rules no-churn exception: an honest
 first-principles attempt with a sharp coupled-obstruction is valid
 progress even without closure.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28](HUBBLE_LANE5_C1_A1_GRASSMANN_NO_GO_NOTE_2026-04-28.md)
+- [planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25](PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md)
+- [planck_source_unit_normalization_support_theorem_note_2026-04-25](PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md)
+- [planck_target3_clifford_phase_bridge_theorem_note_2026-04-25](PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
+- [g_bare_structural_normalization_theorem_note_2026-04-18](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
+- [minimal_axioms_2026-04-11](MINIMAL_AXIOMS_2026-04-11.md)

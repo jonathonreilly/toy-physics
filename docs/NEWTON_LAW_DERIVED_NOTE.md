@@ -110,3 +110,10 @@ higher precision in:
 - `scripts/frontier_dm_coulomb_from_lattice.py` (Green's function theorem + numerics)
 
 This note synthesizes those results into a single derivation chain.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [gravity_clean_derivation_note](GRAVITY_CLEAN_DERIVATION_NOTE.md)
+- [gravity_full_self_consistency_note](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)

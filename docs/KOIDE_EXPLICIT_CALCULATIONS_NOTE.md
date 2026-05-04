@@ -218,3 +218,11 @@ python3 scripts/frontier_koide_radian_bridge_numerical_verification.py          
 - Retained: `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18`
 - Retained companions: the April 21 Koide support package plus the April 22
   A1/APS/Yukawa support notes on the canonical package surface
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18](YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md)
+- [koide_brannen_geometry_dirac_support_note_2026-04-22](KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md)
+- [koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24](KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md)

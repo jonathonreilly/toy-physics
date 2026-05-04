@@ -107,3 +107,12 @@ It is a class-space uniqueness theorem only.
 ```bash
 python3 scripts/frontier_pmns_selector_class_space_uniqueness.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
+- [pmns_selector_sector_odd_reduction_note](PMNS_SELECTOR_SECTOR_ODD_REDUCTION_NOTE.md)
+- [pmns_selector_nonuniversal_support_reduction_note](PMNS_SELECTOR_NONUNIVERSAL_SUPPORT_REDUCTION_NOTE.md)
+- [neutrino_majorana_unique_source_slot_note](NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md)

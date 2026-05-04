@@ -129,3 +129,9 @@ Current direct-universal route:
 
 This is the furthest disciplined gravity claim the current branch can
 honestly support, with the operator polarity now stated correctly.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_gr_isotropic_glue_operator_note](UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)

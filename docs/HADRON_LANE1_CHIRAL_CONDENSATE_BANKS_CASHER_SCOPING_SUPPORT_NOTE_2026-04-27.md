@@ -286,3 +286,13 @@ that could open it.
 A runner is not authored: the audit is structural review of
 existing framework content; no new symbolic or numerical content
 is introduced.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [g_bare_dynamical_fixation_obstruction_note_2026-04-18](G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md)
+- [confinement_string_tension_note](CONFINEMENT_STRING_TENSION_NOTE.md)
+- [minimal_axioms_2026-04-11](MINIMAL_AXIOMS_2026-04-11.md)
+- [hadron_mass_lane1_theorem_plan_support_note_2026-04-27](HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md)
+- [hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27](HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md)

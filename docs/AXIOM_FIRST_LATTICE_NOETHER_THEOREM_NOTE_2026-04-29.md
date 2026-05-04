@@ -415,3 +415,9 @@ distinction is now load-bearing in the theorem statement.
   - `docs/AXIOM_FIRST_CPT_THEOREM_STRETCH_NOTE_2026-04-29.md`
 - assumption / derivation ledger, cited for package context:
   `docs/ASSUMPTION_DERIVATION_LEDGER.md`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [minimal_axioms_2026-05-03](MINIMAL_AXIOMS_2026-05-03.md)

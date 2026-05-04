@@ -216,3 +216,10 @@ The blocker list is now sharper:
   pulse schedule;
 - detector irreversibility has an independent-fragment theorem, but no material
   hardware construction.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [teleportation_native_record_apparatus_note](TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md)
+- [teleportation_taste_readout_operator_model_note](TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md)

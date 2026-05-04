@@ -253,3 +253,10 @@ STRC" layer reduces to
 **Reviewer-bar per-lane:** all four gates closed; zero named residues;
 zero new axioms added this cycle. All four closures ride only on
 retained Cl(3)/Z³ framework ingredients.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_mru_demotion_note_2026-04-20](KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md)
+- [dm_sigma_hier_closure_packet_note_2026-04-20](DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md)

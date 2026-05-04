@@ -334,3 +334,15 @@ roadmap so subsequent cycles target the right object.
 
 A runner is not authored: the plan is editorial / structural; no
 new symbolic or numerical content is introduced.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26](lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md)
+- [lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26](lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md)
+- [confinement_string_tension_note](CONFINEMENT_STRING_TENSION_NOTE.md)
+- [alpha_s_derived_note](ALPHA_S_DERIVED_NOTE.md)
+- [graph_first_su3_integration_note](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+- [quark_mass_ratio_review_packet_2026-04-18](QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md)
+- [minimal_axioms_2026-04-11](MINIMAL_AXIOMS_2026-04-11.md)

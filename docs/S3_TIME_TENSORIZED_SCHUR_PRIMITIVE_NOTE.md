@@ -177,3 +177,11 @@ Route-2 frontier is:
 
 It is bounded, not exact, but it is the cleanest new tensor extension of the
 Schur/Dirichlet machinery that the current atlas supports.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [s3_general_r_derivation_note](S3_GENERAL_R_DERIVATION_NOTE.md)
+- [anomaly_forces_time_theorem](ANOMALY_FORCES_TIME_THEOREM.md)
+- [oh_schur_boundary_action_note](OH_SCHUR_BOUNDARY_ACTION_NOTE.md)

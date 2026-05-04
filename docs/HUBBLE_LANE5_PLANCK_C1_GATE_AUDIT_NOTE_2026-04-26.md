@@ -271,3 +271,13 @@ symmetric pair with Cycle 4's `(C2)` gate audit.
 
 A runner is not authored: the audit is a structural review of existing
 retained material; no new symbolic or numerical claim is introduced.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [planck_scale_lane_status_note_2026-04-23](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+- [planck_scale_conditional_completion_note_2026-04-24](PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)
+- [planck_target3_clifford_phase_bridge_theorem_note_2026-04-25](PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
+- [area_law_native_car_semantics_tightening_note_2026-04-25](AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
+- [planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25](PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md)

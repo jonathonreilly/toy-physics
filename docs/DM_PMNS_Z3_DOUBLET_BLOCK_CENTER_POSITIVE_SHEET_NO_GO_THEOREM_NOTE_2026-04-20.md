@@ -224,3 +224,10 @@ Expected:
 ```text
 PASS=12 FAIL=0
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_pmns_ne_seed_surface_exact_source_manifold_theorem_note_2026-04-20](DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md)
+- [dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20](DM_PMNS_LOCAL_SELECTOR_FAMILY_NO_GO_THEOREM_NOTE_2026-04-20.md)

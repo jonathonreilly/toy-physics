@@ -301,3 +301,15 @@ exception:
 
 > An honest first-principles attempt with named obstructions is valid
 > progress even without closure.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [neutrino_majorana_current_stack_zero_law_note](NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md)
+- [neutrino_mass_reduction_to_dirac_note](NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md)
+- [neutrino_majorana_finite_normal_grammar_no_go_note](NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md)
+- [neutrino_majorana_current_atlas_nonrealization_note](NEUTRINO_MAJORANA_CURRENT_ATLAS_NONREALIZATION_NOTE.md)
+- [neutrino_majorana_pfaffian_no_forcing_theorem_note](NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md)
+- [neutrino_majorana_native_gaussian_no_go_note](NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md)
+- [neutrino_majorana_lower_level_pairing_nogo_note](NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md)

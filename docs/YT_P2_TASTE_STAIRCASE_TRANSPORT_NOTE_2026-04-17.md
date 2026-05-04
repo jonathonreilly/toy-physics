@@ -467,3 +467,14 @@ Runner output logs to
 **No new axioms. No new canonical-surface choices. One new structural
 observation (per-rung Ward preservation) and one minimal distribution
 prescription (uniform u_0^{-1/32}).**
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [yt_boundary_theorem](YT_BOUNDARY_THEOREM.md)
+- [yt_zero_import_chain_note](YT_ZERO_IMPORT_CHAIN_NOTE.md)
+- [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+- [yt_qfp_insensitivity_support_note](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+- [yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)

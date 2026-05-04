@@ -169,3 +169,11 @@ PYTHONPATH=scripts python3 scripts/frontier_dm_wilson_direct_descendant_transpor
 Expected:
 
 - `PASS=12 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19](DM_WILSON_DIRECT_DESCENDANT_CANONICAL_TRANSPORT_COLUMN_FIBER_THEOREM_NOTE_2026-04-19.md)
+- [dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19](DM_WILSON_DIRECT_DESCENDANT_LOCAL_SCHUR_BRANCH_DISCRIMINANT_THEOREM_NOTE_2026-04-19.md)
+- [dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19](DM_WILSON_DIRECT_DESCENDANT_LOCAL_OBSERVABLE_COORDINATE_THEOREM_NOTE_2026-04-19.md)

@@ -155,3 +155,9 @@ The remaining blockers are now more precise:
 
 The lane remains planning / conditional theory, not unconditional nature-grade
 closure.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [teleportation_native_record_apparatus_note](TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md)

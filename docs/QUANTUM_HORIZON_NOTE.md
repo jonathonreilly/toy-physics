@@ -71,3 +71,9 @@ Treat this as a useful overclaim-killer:
 
 - the retained absorbing proxy still has a real trapping threshold
 - but it does **not** currently support a strong `k`-dependent horizon law
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [minimal_absorbing_horizon_probe_note](MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md)

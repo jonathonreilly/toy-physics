@@ -251,3 +251,13 @@ flagship lane or Lane 5 gate audits. It produces the loop's Phase-1
 roadmap focused on 4F-α (structural functional form retention).
 
 A runner is not authored.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [cosmology_open_number_reduction_theorem_note_2026-04-26](COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md)
+- [hubble_lane5_two_gate_dependency_firewall_note_2026-04-27](HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md)
+- [n_eff_from_three_generations_theorem_note_2026-04-24](N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
+- [matter_radiation_equality_structural_identity_theorem_note_2026-04-24](MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+- [charged_lepton_y_tau_m3_premise_self_correction_note_2026-04-28](CHARGED_LEPTON_Y_TAU_M3_PREMISE_SELF_CORRECTION_NOTE_2026-04-28.md)

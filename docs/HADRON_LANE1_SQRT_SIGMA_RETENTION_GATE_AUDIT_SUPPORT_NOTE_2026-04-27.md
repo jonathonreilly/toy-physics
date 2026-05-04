@@ -268,3 +268,12 @@ the retention promotion must close.
 A runner is not authored: the audit is structural review of an
 existing bounded derivation; no new symbolic or numerical content
 is introduced.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [confinement_string_tension_note](CONFINEMENT_STRING_TENSION_NOTE.md)
+- [alpha_s_derived_note](ALPHA_S_DERIVED_NOTE.md)
+- [hadron_mass_lane1_theorem_plan_support_note_2026-04-27](HADRON_MASS_LANE1_THEOREM_PLAN_SUPPORT_NOTE_2026-04-27.md)
+- [minimal_axioms_2026-04-11](MINIMAL_AXIOMS_2026-04-11.md)

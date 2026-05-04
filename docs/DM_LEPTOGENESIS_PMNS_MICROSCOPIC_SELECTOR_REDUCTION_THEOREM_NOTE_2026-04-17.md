@@ -81,3 +81,13 @@ The remaining review-branch blocker is exactly:
 
 That is the precise object still separating constructive existence from
 constructive selection on the current branch.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16](DM_LEPTOGENESIS_NE_CHARGED_SOURCE_RESPONSE_REDUCTION_NOTE_2026-04-16.md)
+- [dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16](DM_LEPTOGENESIS_PMNS_SELECTOR_BANK_CP_SHEET_BLINDNESS_THEOREM_NOTE_2026-04-16.md)
+- [dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_FULL_CLOSURE_BOUNDARY_NOTE_2026-04-16.md)
+- [dm_leptogenesis_pmns_even_response_sole_axiom_boundary_note_2026-04-16](DM_LEPTOGENESIS_PMNS_EVEN_RESPONSE_SOLE_AXIOM_BOUNDARY_NOTE_2026-04-16.md)
+- [dm_leptogenesis_pmns_oriented_phase_sheet_selector_theorem_note_2026-04-16](DM_LEPTOGENESIS_PMNS_ORIENTED_PHASE_SHEET_SELECTOR_THEOREM_NOTE_2026-04-16.md)

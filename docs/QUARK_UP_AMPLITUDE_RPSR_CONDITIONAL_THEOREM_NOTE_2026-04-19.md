@@ -295,3 +295,12 @@ separate STRC observable-principle postulate in this lane.
 
 Runner status: PASS=9 FAIL=0 (this runner) plus PASS=6 FAIL=0 in the
 companion `frontier_quark_projector_parameter_audit.py`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [ckm_atlas_axiom_closure_note](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [quark_projector_parameter_audit_note_2026-04-19](QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md)
+- [scalar_tensor_ray_magnitude_bridge_note_2026-04-19](SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md)
+- [strc_lo_collinearity_theorem_note_2026-04-19](STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md)

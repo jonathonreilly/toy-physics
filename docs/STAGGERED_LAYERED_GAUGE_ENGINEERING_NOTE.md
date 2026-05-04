@@ -57,3 +57,8 @@ transport law, without falling back to 1D helpers or proxy rows?
   transport law itself.
 - Force remains the primary gravity observable; current is the gauge observable.
 
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_graph_portability_note](STAGGERED_GRAPH_PORTABILITY_NOTE.md)

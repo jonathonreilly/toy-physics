@@ -128,3 +128,10 @@ canonical geometric refinement/coarsening theorem on the actual `PL S^3 x R`
 atlas family has now also been discharged, so the remaining stronger bridge is
 an inverse-limit / continuum-interpretation theorem for that exact discrete
 projective family.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_gr_lorentzian_global_atlas_closure_note](UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md)
+- [universal_qg_projective_schur_closure_note](UNIVERSAL_QG_PROJECTIVE_SCHUR_CLOSURE_NOTE.md)

@@ -93,3 +93,12 @@ The remaining target is narrower now:
 
 So the remaining gap is no longer generic bridge shape or generic localization.
 It is the invariant-selection rule inside the UV-localized class.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_constructive_uv_bridge_note](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+- [yt_bridge_action_invariant_note](YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+- [yt_ew_coupling_bridge_note](YT_EW_COUPLING_BRIDGE_NOTE.md)
+- [yt_exact_interacting_bridge_transport_note](YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md)

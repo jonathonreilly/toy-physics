@@ -307,3 +307,10 @@ from the hierarchy theorem. N_c cancels. The 8/9 does not enter.
 - `HIGGS_MASS_DERIVED_NOTE.md` -- CW analysis and honest status
 - `frontier_higgs_mass_corrected_yt.py` -- corrected-`y_t` Higgs support route
 - `frontier_higgs_buttazzo_calibration.py` -- full-3-loop boundary support
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_ew_color_projection_theorem](YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [higgs_mass_derived_note](HIGGS_MASS_DERIVED_NOTE.md)

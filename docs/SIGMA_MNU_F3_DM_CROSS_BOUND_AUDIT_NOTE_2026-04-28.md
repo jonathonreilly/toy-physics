@@ -238,3 +238,11 @@ The audit observes that the framework's current-bank `Ω_DM` interval,
 while honest as a structural prediction, is in mild tension with
 observation; tightening or loosening either bound requires
 research-level work beyond a single audit cycle.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17](DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md)
+- [cosmology_open_number_reduction_theorem_note_2026-04-26](COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md)
+- [hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28](HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md)

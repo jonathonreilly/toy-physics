@@ -298,3 +298,12 @@ the apparent multiplicity of candidate primitives.
 - Route 2 intake (W[J]): `KOIDE_OBSERVABLE_PRINCIPLE_CYCLIC_SOURCE_LAW_NOTE_2026-04-18.md`
 - Route 3 intake (matrix-unit): `KOIDE_MATRIX_UNIT_SOURCE_LAW_CYCLIC_PROJECTION_NOTE_2026-04-18.md`
 - Dedicated consolidation verifier: `scripts/frontier_koide_one_scalar_obstruction_triangulation.py`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [three_generation_observable_theorem_note](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
+- [hw1_second_order_return_shape_theorem_note](HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md)
+- [koide_circulant_character_derivation_note_2026-04-18](KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md)

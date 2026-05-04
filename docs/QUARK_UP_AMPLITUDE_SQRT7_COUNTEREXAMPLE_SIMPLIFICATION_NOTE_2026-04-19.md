@@ -210,3 +210,11 @@ Current expected result on this branch:
 
 - `frontier_quark_up_amplitude_sqrt7_counterexample_simplification.py`:
   `PASS=7 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [quark_up_amplitude_candidate_scan_note_2026-04-19](QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md)
+- [quark_up_amplitude_provenance_audit_note_2026-04-19](QUARK_UP_AMPLITUDE_PROVENANCE_AUDIT_NOTE_2026-04-19.md)
+- [quark_projector_parameter_audit_note_2026-04-19](QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md)

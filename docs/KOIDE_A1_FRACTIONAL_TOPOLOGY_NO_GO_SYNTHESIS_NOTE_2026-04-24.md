@@ -271,3 +271,12 @@ reports its individual obstruction class on the closeout line.
   Topology 3 Suppl. 1, 3–38. (ABSS η-invariant on `L(3,1)`.)
 - Niu, Q.; Thouless, D. J.; Wu, Y.-S. (1985), *Quantized Hall conductance
   as a topological invariant*, Phys. Rev. B 31, 3372.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24](KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md)
+- [koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24](KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md)
+- [koide_z3_qubit_radian_bridge_no_go_note_2026-04-20](KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
+- [koide_berry_bundle_obstruction_theorem_note_2026-04-19](KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)

@@ -44,3 +44,10 @@ from the frozen run, not inferred from the portability probes.
 - Treat gauge/current as a separate native observable on cycle-bearing graphs.
 - Treat DAG-compatible graphs as `N/A` for gauge/current.
 - Do not promote proxy gauge rows into this lane.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_graph_gauge_closure_results_2026-04-10](STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md)
+- [staggered_graph_portability_note](STAGGERED_GRAPH_PORTABILITY_NOTE.md)

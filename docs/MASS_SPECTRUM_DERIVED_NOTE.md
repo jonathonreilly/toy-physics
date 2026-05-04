@@ -303,3 +303,14 @@ Expected result on `main`:
   DM-gate support, but not yet a retained theorem);
 - that the framework delivers `H_0` or age-of-universe observables
   from this attack.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [down_type_mass_ratio_ckm_dual_note](DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
+- [up_type_mass_ratio_ckm_inversion_note](UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md)
+- [charged_lepton_mass_hierarchy_review_note_2026-04-17](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)
+- [neutrino_mass_derived_note](NEUTRINO_MASS_DERIVED_NOTE.md)
+- [cosmology_from_mass_spectrum_note](COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md)
+- [quark_mass_ratio_review_packet_2026-04-18](QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md)

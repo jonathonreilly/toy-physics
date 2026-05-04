@@ -121,3 +121,13 @@ So this is a source-amplitude theorem, not yet the final `eta` closure note.
 ```bash
 python3 scripts/frontier_dm_neutrino_source_amplitude_theorem.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [hierarchy_bosonic_bilinear_selector_note](HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md)
+- [s3_time_bilinear_tensor_primitive_note](S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
+- [dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15](DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md)
+- [dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15](DM_NEUTRINO_CODD_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+- [dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15](DM_NEUTRINO_VEVEN_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)

@@ -175,3 +175,11 @@ This ratio has a geometric interpretation: `4π` is the full solid angle and `�
 | Physical m_* ≈ -1.161 NOT at V_eff minimum | Confirmed — honest gap |
 | Slot values at m_* reproduce PDG masses to < 0.05% | Confirmed numerically |
 | Transport gap factor ≈ 4π/√6 | Observation only |
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_selected_slice_frozen_bank_decomposition_note_2026-04-18](KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md)
+- [dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md)
+- [dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16](DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)

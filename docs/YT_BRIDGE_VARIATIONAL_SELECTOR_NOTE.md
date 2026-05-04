@@ -75,3 +75,12 @@ So the branch is still not fully unbounded.
 
 But the residual gap has been compressed again, from a weighted moment rule to
 the microscopic origin of one concrete variational selector.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_bridge_moment_closure_note](YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+- [yt_bridge_hessian_selector_note](YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+- [yt_constructive_uv_bridge_note](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+- [yt_exact_interacting_bridge_transport_note](YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md)

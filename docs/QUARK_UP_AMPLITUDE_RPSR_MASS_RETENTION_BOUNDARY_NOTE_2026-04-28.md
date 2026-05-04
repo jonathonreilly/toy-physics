@@ -154,3 +154,9 @@ TOTAL: PASS=50, FAIL=0
 VERDICT: RPSR is exact up-amplitude support, not retained up-quark mass
 closure without a new readout theorem.
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19](QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md)

@@ -105,3 +105,10 @@ At this point the remaining gap is no longer mathematical. It is only whether
 one accepts that standard effective-action / bosonic-bilinear identification as
 the correct physical object. On the framework’s own exact minimal block, that
 identification now picks the normalization uniquely.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [hierarchy_spatial_bc_and_u0_scaling_note](HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md)
+- [higgs_mass_hierarchy_correction_note](HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md)

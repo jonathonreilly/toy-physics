@@ -1,14 +1,25 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 599,
+    "bounded_theorem": 574,
     "decoration": 9,
     "meta": 47,
-    "no_go": 167,
-    "open_gate": 94,
-    "positive_theorem": 849
+    "no_go": 162,
+    "open_gate": 87,
+    "positive_theorem": 817,
+    "unset": 69
   },
-  "computed_at": "2026-05-04T11:15:47.486601+00:00",
+  "computed_at": "2026-05-04T12:32:51.411647+00:00",
   "cycle_examples": [
+    [
+      "abcc_cp_phase_no_go_theorem_note_2026-04-19",
+      "sigma_hier_uniqueness_theorem_note_2026-04-19"
+    ],
+    [
+      "sigma_hier_uniqueness_theorem_note_2026-04-19",
+      "dm_sigma_hier_closure_packet_note_2026-04-20",
+      "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
+      "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
+    ],
     [
       "anomaly_forces_time_theorem",
       "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
@@ -23,42 +34,34 @@
       "architecture_note_directional_measure"
     ],
     [
-      "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas"
-    ],
-    [
-      "publication.ci3_z3.claims_table",
-      "publication.ci3_z3.derivation_validation_map",
-      "publication.ci3_z3.derivation_atlas",
-      "publication.ci3_z3.publication_matrix"
-    ],
-    [
-      "publication.ci3_z3.derivation_atlas",
-      "dm_wilson_direct_descendant_batch_authority_note_2026-05-03"
+      "yt_zero_import_authority_note",
+      "yt_explicit_systematic_budget_note"
     ]
   ],
-  "cycles_detected": 43,
+  "cycles_detected": 136,
   "effective_status_counts": {
-    "audited_conditional": 557,
+    "audited_conditional": 365,
     "audited_decoration": 3,
     "audited_failed": 7,
-    "audited_numerical_match": 31,
-    "audited_renaming": 22,
+    "audited_numerical_match": 23,
+    "audited_renaming": 14,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 47,
-    "open_gate": 18,
-    "retained": 86,
-    "retained_bounded": 213,
-    "retained_no_go": 109,
-    "retained_pending_chain": 3,
-    "unaudited": 666
+    "open_gate": 17,
+    "retained": 72,
+    "retained_bounded": 204,
+    "retained_no_go": 108,
+    "retained_pending_chain": 6,
+    "unaudited": 896
   },
-  "retained_pending_chain_count": 3,
+  "retained_pending_chain_count": 6,
   "retained_pending_chain_examples": [
     "pmns_selector_unique_amplitude_slot_note",
+    "source_resolved_exact_green_h025_pocket_note",
+    "source_resolved_exact_green_scaling_note",
+    "source_resolved_green_robustness_note",
     "three_generation_observable_count_corollary_note_2026-05-03",
     "universal_theta_induced_edm_vanishing_theorem_note_2026-04-24"
   ]

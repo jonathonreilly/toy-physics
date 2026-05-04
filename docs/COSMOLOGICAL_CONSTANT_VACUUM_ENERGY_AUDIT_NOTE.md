@@ -64,3 +64,9 @@ Unsafe statement:
 
 > the framework derives the observed cosmological constant from vacuum-energy
 > finiteness alone.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [cosmological_constant_result_2026-04-12](COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)

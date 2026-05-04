@@ -109,3 +109,12 @@ The Shapiro phase lag is the canonical lab-facing prediction because:
   static proxy. The strongest retained claim is: the causal cone naturally
   produces a specific spatial field shape that gives specific phase and
   escape observables, but a carefully matched static field can reproduce them.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [shapiro_delay_note](SHAPIRO_DELAY_NOTE.md)
+- [shapiro_static_discriminator_note](SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md)
+- [gravitomagnetic_note](GRAVITOMAGNETIC_NOTE.md)
+- [causal_escape_window_note](CAUSAL_ESCAPE_WINDOW_NOTE.md)

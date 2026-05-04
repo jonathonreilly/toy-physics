@@ -369,3 +369,9 @@ for the STRC-LO derivation.
 Not applicable: the derived theorem already exists in
 `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`. This note is
 preserved only as route-history support.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [strc_lo_collinearity_theorem_note_2026-04-19](STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md)

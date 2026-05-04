@@ -190,3 +190,10 @@ Hermitian patch and isolates the truly remaining datum.
 ```bash
 python3 scripts/frontier_pmns_right_polar_section.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_branch_conditioned_quadratic_sheet_closure_note](PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md)
+- [pmns_right_conjugacy_invariant_no_go_note](PMNS_RIGHT_CONJUGACY_INVARIANT_NO_GO_NOTE.md)

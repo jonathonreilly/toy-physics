@@ -132,3 +132,11 @@ So the remaining gap is not algebraic compatibility. And it is no longer the
 construction of the geometric refinement net itself. It is the stronger
 inverse-limit / continuum-interpretation theorem beyond that now-closed
 discrete net.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [universal_gr_positive_background_local_closure_note](UNIVERSAL_GR_POSITIVE_BACKGROUND_LOCAL_CLOSURE_NOTE.md)
+- [universal_qg_uv_finite_partition_note](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- [universal_qg_canonical_refinement_net_note](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)

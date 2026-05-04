@@ -126,3 +126,10 @@ The lane now has a single end-to-end protocol audit using Poisson-derived
 encoded resources. The audit passes on the default positive Poisson cases and
 fails the `G=0` null control as expected. Preparation/readout remains the main
 open physical bridge.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [teleportation_resource_fidelity_note](TELEPORTATION_RESOURCE_FIDELITY_NOTE.md)
+- [teleportation_protocol_note](TELEPORTATION_PROTOCOL_NOTE.md)

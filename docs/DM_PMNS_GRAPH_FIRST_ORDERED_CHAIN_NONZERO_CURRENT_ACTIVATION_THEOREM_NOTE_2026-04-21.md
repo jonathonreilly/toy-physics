@@ -301,3 +301,11 @@ Land result:
 ```text
 SUMMARY: PASS=17 FAIL=0
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_graph_first_cycle_frame_support_note](PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md)
+- [dm_wilson_to_dweh_local_chain_path_algebra_target_note_2026-04-18](DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md)
+- [dm_pmns_native_current_last_mile_reduction_theorem_note_2026-04-21](DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md)

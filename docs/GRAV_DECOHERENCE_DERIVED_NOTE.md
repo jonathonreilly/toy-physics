@@ -104,3 +104,10 @@ The script runs 7 numerical checks, all passing:
 - Lattice correction negligible (~ 10^{-58})
 - gamma_BMV = 0.253 Hz
 - Phi_BMV = 12.4 rad
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [newton_law_derived_note](NEWTON_LAW_DERIVED_NOTE.md)
+- [gravity_full_self_consistency_note](GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)

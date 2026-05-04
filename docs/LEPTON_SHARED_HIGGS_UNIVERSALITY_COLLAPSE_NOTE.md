@@ -111,3 +111,11 @@ It is a conditional exact theorem only.
 ```bash
 python3 scripts/frontier_lepton_shared_higgs_universality_collapse.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [lepton_single_higgs_pmns_triviality_note](LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
+- [neutrino_dirac_two_higgs_canonical_reduction_note](NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)
+- [charged_lepton_two_higgs_canonical_reduction_note](CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)

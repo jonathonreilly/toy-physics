@@ -77,3 +77,12 @@ The current direct-universal route is:
 - blocked at the curvature-localization level
 
 That is the sharpest disciplined statement available on the current atlas.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- [s3_time_spacetime_tensor_primitive_note](S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md)
+- [universal_gr_tensor_variational_candidate_note](UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md)
+- [universal_gr_tensor_action_blocker_note](UNIVERSAL_GR_TENSOR_ACTION_BLOCKER_NOTE.md)

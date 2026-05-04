@@ -208,3 +208,9 @@ the final explanation.
 > derivation. The right next move is a layer-weighted reduction of
 > the actual detector-centroid observable, or a long-path numerical
 > test framed as a heuristic check rather than a proof."
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [lensing_long_path_test_note](LENSING_LONG_PATH_TEST_NOTE.md)

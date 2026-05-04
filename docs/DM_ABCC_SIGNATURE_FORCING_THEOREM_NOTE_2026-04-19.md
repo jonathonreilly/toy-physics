@@ -371,3 +371,9 @@ physical input. The assumptions audit (this cycle) confirms no
 Cl(3)/Z³ derivation of this sign input is possible.
 
 **Status: RETAINED THEOREM.** PASS=54 FAIL=0.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19](DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)

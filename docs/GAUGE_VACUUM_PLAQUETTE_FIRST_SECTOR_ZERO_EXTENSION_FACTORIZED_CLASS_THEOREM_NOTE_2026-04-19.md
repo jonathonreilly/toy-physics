@@ -59,3 +59,10 @@ PYTHONPATH=scripts python3 scripts/frontier_gauge_vacuum_plaquette_first_sector_
 Expected summary:
 
 - `PASS=6 FAIL=0`
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note](GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
+- [gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md)

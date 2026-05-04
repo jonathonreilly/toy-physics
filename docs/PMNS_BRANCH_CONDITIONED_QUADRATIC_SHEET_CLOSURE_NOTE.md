@@ -198,3 +198,12 @@ post-selector coefficient algebra as far as the current bank honestly allows.
 ```bash
 python3 scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_selector_sign_to_branch_reduction_note](PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md)
+- [neutrino_dirac_two_higgs_canonical_reduction_note](NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)
+- [charged_lepton_two_higgs_canonical_reduction_note](CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)
+- [neutrino_two_amplitude_last_mile_reduction_note](NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md)

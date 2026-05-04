@@ -94,3 +94,11 @@ Treat this as a real bounded positive:
 - the wavefield is distinguishable from the same-site control by a finite
   phase lag and a much larger detector response, making it the strongest
   exact-lattice propagating-field step yet
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [source_resolved_propagating_green_pocket_note](SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md)
+- [source_resolved_exact_green_pocket_note](SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md)
+- [minimal_source_driven_field_probe_note](MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)

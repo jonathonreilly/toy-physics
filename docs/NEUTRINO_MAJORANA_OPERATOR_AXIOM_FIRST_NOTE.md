@@ -209,3 +209,9 @@ That is a clean structural question, and the answer is exact.
 ```bash
 python3 scripts/frontier_neutrino_majorana_operator.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [anomaly_forces_time_theorem](ANOMALY_FORCES_TIME_THEOREM.md)

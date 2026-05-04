@@ -235,3 +235,13 @@ Run the external static-energy bridge scout as the next block:
 
 If that table is clean, a retained-with-explicit-budget interim
 statement may become plausible. If not, B2 remains a compute-lane target.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27](HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md)
+- [confinement_string_tension_note](CONFINEMENT_STRING_TENSION_NOTE.md)
+- [alpha_s_derived_note](ALPHA_S_DERIVED_NOTE.md)
+- [minimal_axioms_2026-04-11](MINIMAL_AXIOMS_2026-04-11.md)
+- [lanes.open_science.01_hadron_mass_program_open_lane_2026-04-26](lanes/open_science/01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md)

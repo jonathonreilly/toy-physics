@@ -96,3 +96,11 @@ closure route:
 So the `M1` escape hatch is also closed as a genuine derivation route. The
 remaining charged-lepton gap is still one microscopic selector law, not a
 hidden scale identity.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_selected_line_cyclic_response_bridge_note_2026-04-18](KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md)
+- [koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18](KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md)
+- [koide_eigenvalue_q23_surface_theorem_note_2026-04-20](KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md)

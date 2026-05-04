@@ -79,3 +79,11 @@ It identifies the extension class only.
 python3 scripts/frontier_dm_neutrino_odd_mixed_bridge_extension.py
 ```
 
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15](DM_NEUTRINO_ODD_CIRCULANT_Z2_SLOT_THEOREM_NOTE_2026-04-15.md)
+- [dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15](DM_NEUTRINO_ODD_CIRCULANT_CURRENT_STACK_ZERO_LAW_NOTE_2026-04-15.md)
+- [dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15](DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM_NOTE_2026-04-15.md)
+- [dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15](DM_NEUTRINO_TWO_HIGGS_CONTINUITY_SHEET_THEOREM_NOTE_2026-04-15.md)

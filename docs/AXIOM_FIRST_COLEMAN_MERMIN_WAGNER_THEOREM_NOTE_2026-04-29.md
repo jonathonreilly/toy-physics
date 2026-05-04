@@ -209,3 +209,9 @@ versus convergence in `d = 3, 4`.
 - standard external references for the technique (cited as theorem-grade
   lattice / statistical-mechanics literature; we do not import any
   numerical input): Mermin–Wagner 1966; Hohenberg 1967; Coleman 1973.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [axiom_reduction_note](AXIOM_REDUCTION_NOTE.md)

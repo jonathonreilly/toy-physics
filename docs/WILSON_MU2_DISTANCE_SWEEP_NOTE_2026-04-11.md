@@ -87,3 +87,10 @@ masses vary.
 
 So this note should still be cited only as a distance-law calibration, not as
 a retained Wilson Newton claim.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [wilson_two_body_open_note_2026-04-11](WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md)
+- [wilson_two_body_open_refined_note_2026-04-11](WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md)

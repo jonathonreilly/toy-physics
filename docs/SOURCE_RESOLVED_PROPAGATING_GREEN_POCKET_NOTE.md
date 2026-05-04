@@ -67,3 +67,10 @@ What it is **not**:
 - a genuine transverse transport or finite-speed field model
 - a horizon / black-hole result
 - a claim that the generated geometry sector is closed
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [minimal_source_driven_field_probe_note](MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
+- [source_resolved_exact_green_pocket_note](SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md)

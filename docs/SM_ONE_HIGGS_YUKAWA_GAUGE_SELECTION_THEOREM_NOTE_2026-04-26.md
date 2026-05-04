@@ -362,3 +362,10 @@ outside this renormalizable one-Higgs Dirac classification.
 - Neutrino and charged-lepton texture notes may cite this theorem as the
   exact one-Higgs gauge-selection boundary, but their numerical textures and
   normalizations remain separate work.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [standard_model_hypercharge_uniqueness_theorem_note_2026-04-24](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
+- [ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26](EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md)
