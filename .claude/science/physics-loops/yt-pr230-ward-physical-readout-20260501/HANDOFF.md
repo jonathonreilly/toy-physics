@@ -1,5 +1,23 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 Schur row candidate extraction attempt:
+
+- Added `scripts/frontier_yt_schur_row_candidate_extraction_attempt.py`,
+  `docs/YT_SCHUR_ROW_CANDIDATE_EXTRACTION_ATTEMPT_NOTE_2026-05-03.md`, and
+  `outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json`.
+- Result: exact negative boundary.  The finite scalar-ladder scan,
+  eigen-derivative toy matrix, total-momentum derivative scout, and Feshbach
+  response boundary cannot be converted into the required same-surface
+  `A/B/C` Schur rows.
+- Verification: Schur extraction attempt `PASS=13 FAIL=0`; retained-route
+  `PASS=135 FAIL=0`; campaign status `PASS=161 FAIL=0`.
+- Claim boundary: no row file is written and no retained or
+  `proposed_retained` wording is authorized.
+
+Next exact action: produce genuine same-surface neutral scalar Schur rows from
+a theorem or measurement, produce contract-satisfying W/Z rows, or pivot to
+certified `O_H/C_sH/C_HH` pole rows while the production chunks continue.
+
 Latest checkpoint, 2026-05-03 W/Z response measurement-row contract gate:
 
 - Added `scripts/frontier_yt_wz_response_measurement_row_contract_gate.py`,

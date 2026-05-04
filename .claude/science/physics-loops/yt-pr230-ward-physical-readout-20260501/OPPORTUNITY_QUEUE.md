@@ -1,5 +1,15 @@
 # Opportunity Queue
 
+2026-05-03 update: the Schur row candidate extraction attempt is now landed
+and wired into the retained-route/campaign gates.  It tests the nearest
+finite-ladder, eigen-derivative, lambda-scan, and Feshbach artifacts against
+the new Schur row contract and blocks importing them as `A/B/C` rows.  The
+current finite supports lack the same-surface source/orthogonal neutral
+partition, block derivatives, pole-control, and firewall metadata required by
+the gate.  The positive Schur route therefore needs a genuinely new
+same-surface neutral scalar kernel theorem or measurement, not another
+reinterpretation of finite lambda scans.
+
 2026-05-03 update: the same-source W/Z physical-response lane now has an
 executable measurement-row contract gate.  Future rows must be production
 source-shift W/Z correlator mass fits with top/WZ covariance, retained `g2`

@@ -166,6 +166,7 @@
     "schur_complement_kprime_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
     "schur_kernel_row_contract_gate": "open / Schur kernel row contract gate not passed; current rows absent",
     "schur_kprime_row_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "schur_row_candidate_extraction_attempt": "exact negative boundary / Schur row candidate extraction from finite ladder support",
     "short_distance_ope_lsz_no_go": "exact negative boundary / short-distance OPE not scalar LSZ closure",
     "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
     "source_higgs_cross_correlator_certificate_builder": "open / source-Higgs cross-correlator rows absent",
@@ -195,7 +196,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 160,
+  "pass_count": 161,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

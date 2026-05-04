@@ -1,0 +1,102 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Schur row candidate extraction from finite ladder support",
+  "bare_retained_allowed": false,
+  "candidate_extraction_closes_pr230": false,
+  "candidate_rows_written": false,
+  "candidate_surfaces": [
+    {
+      "id": "eigen_derivative_gate_M0_at_pole",
+      "missing_or_blocking": [
+        "M0 is not certified as the same-surface source/orthogonal neutral kernel partition",
+        "does not provide A_prime/B_prime/C_prime block derivatives",
+        "lambda_prime examples are not block Schur rows",
+        "no FV/IR/zero-mode pole-control certificate for the matrix rows"
+      ],
+      "path": "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json",
+      "positive_reuse": "finite 2x2 toy pole matrix and eigen-derivative examples",
+      "signals": {
+        "finite_matrix": true,
+        "has_lambda_prime_examples": true,
+        "matrix_shape": [
+          2,
+          2
+        ]
+      },
+      "usable_as_schur_rows": false
+    },
+    {
+      "id": "total_momentum_derivative_scout_scan",
+      "missing_or_blocking": [
+        "derivative rows are prescription-sensitive finite scouts",
+        "do not identify A/B/C source and orthogonal kernel blocks",
+        "do not include source-orthogonal covariance rows",
+        "do not pass the scalar-kernel row contract gate"
+      ],
+      "path": "outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json",
+      "positive_reuse": "finite d lambda_max / d p_hat^2 proxy rows",
+      "signals": {
+        "has_finite_derivatives": true,
+        "scan_rows": 108
+      },
+      "usable_as_schur_rows": false
+    },
+    {
+      "id": "ladder_kernel_scout_lambda_scan",
+      "missing_or_blocking": [
+        "lambda crossing is not a Schur block partition",
+        "no pole derivative rows A_prime/B_prime/C_prime",
+        "depends on simplified projector, mass, and IR regulator",
+        "does not certify same-surface neutral scalar source coordinate"
+      ],
+      "path": "outputs/yt_scalar_ladder_kernel_scout_2026-05-01.json",
+      "positive_reuse": "finite lambda_max crossing scout",
+      "signals": {
+        "has_crossing_examples": true,
+        "scan_rows": 24
+      },
+      "usable_as_schur_rows": false
+    },
+    {
+      "id": "feshbach_response_boundary",
+      "missing_or_blocking": [
+        "operator response preservation is not a microscopic scalar kernel row",
+        "does not compute A/B/C or precontracted C^{-1} rows",
+        "does not prove the source operator is canonical Higgs"
+      ],
+      "path": "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json",
+      "positive_reuse": "exact projection covariance for already defined operators",
+      "signals": {
+        "preserves_ratios": true,
+        "response_rows": 3
+      },
+      "usable_as_schur_rows": false
+    }
+  ],
+  "exact_negative_boundary_passed": true,
+  "exact_next_action": "Produce genuine same-surface Schur kernel rows from a neutral scalar kernel theorem/measurement, or pivot to certified O_H/C_sH/C_HH pole rows or same-source W/Z response rows.",
+  "fail_count": 0,
+  "finite_ladder_candidate_usable": false,
+  "future_rows_path": "outputs/yt_schur_scalar_kernel_rows_2026-05-03.json",
+  "future_rows_path_present": false,
+  "parent_certificates": {
+    "eigen_derivative_gate": "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json",
+    "feshbach_response_boundary": "outputs/yt_feshbach_operator_response_boundary_2026-05-01.json",
+    "ladder_kernel_scout": "outputs/yt_scalar_ladder_kernel_scout_2026-05-01.json",
+    "schur_complement_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "schur_kernel_row_contract_gate": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+    "schur_kprime_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "total_momentum_derivative_scout": "outputs/yt_scalar_ladder_total_momentum_derivative_scout_2026-05-01.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Nearest finite-ladder, eigen-derivative, and Feshbach support artifacts do not supply same-surface A/B/C or precontracted Schur kernel rows with partition, pole-control, and firewall certificates.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not write outputs/yt_schur_scalar_kernel_rows_2026-05-03.json",
+    "does not infer A/B/C Schur rows from lambda scans, M0 toy rows, or Feshbach responses",
+    "does not set kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "usable_candidates": []
+}

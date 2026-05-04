@@ -212,6 +212,9 @@ def main() -> int:
         "schur_kernel_row_contract_gate": load(
             "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json"
         ),
+        "schur_row_candidate_extraction_attempt": load(
+            "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json"
+        ),
         "fh_lsz_higgs_pole_identity": load(
             "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json"
         ),
@@ -927,6 +930,21 @@ def main() -> int:
         )
         is False,
         statuses["schur_kernel_row_contract_gate"],
+    )
+    report(
+        "schur-row-candidate-extraction-blocks-finite-support-import",
+        "Schur row candidate extraction" in str(statuses["schur_row_candidate_extraction_attempt"])
+        and certificates["schur_row_candidate_extraction_attempt"].get(
+            "candidate_extraction_closes_pr230"
+        )
+        is False
+        and certificates["schur_row_candidate_extraction_attempt"].get(
+            "finite_ladder_candidate_usable"
+        )
+        is False
+        and certificates["schur_row_candidate_extraction_attempt"].get("exact_negative_boundary_passed")
+        is True,
+        statuses["schur_row_candidate_extraction_attempt"],
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",

@@ -26,8 +26,37 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=159 FAIL=0
+# SUMMARY: PASS=161 FAIL=0
 ```
+
+## 2026-05-03 Schur Row Candidate Extraction Attempt Update
+
+The campaign status certificate now consumes the Schur row candidate
+extraction attempt.  This closes the "maybe the finite ladder/Feshbach support
+already contains the `A/B/C` row file" branch of the Schur queue.
+
+The runner passes with `PASS=13 FAIL=0` and blocks that import.  Current
+finite-ladder, eigen-derivative, lambda-scan, and Feshbach support artifacts
+do not supply the required same-surface neutral scalar kernel partition,
+block derivatives, pole-control, or firewall-certified Schur rows.  The future
+row file remains unwritten.
+
+The retained boundary is unchanged.  PR #230 still needs real Schur kernel
+rows, certified `O_H/C_sH/C_HH` pole rows, same-source W/Z response rows, or
+honest production evidence.
+
+## 2026-05-03 W/Z Response Measurement-Row Contract Gate Update
+
+The campaign status certificate now consumes the same-source W/Z
+measurement-row contract gate.  This narrows the fallback physical-response
+route to production source-shift W/Z correlator mass fits with top/W/Z
+covariance, retained `g2` provenance, sector-overlap and canonical-Higgs
+identity certificates, and explicit forbidden-import firewalls.
+
+The runner passes with `PASS=10 FAIL=0`, but the current row file is absent.
+This is a contract and guard, not evidence.  PR #230 still needs actual W/Z
+rows satisfying that contract, real Schur rows, certified source-Higgs pole
+rows, or honest production evidence.
 
 ## 2026-05-03 W/Z Response Repo Harness Import Audit Update
 

@@ -18,8 +18,35 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=133 FAIL=0
+# SUMMARY: PASS=135 FAIL=0
 ```
+
+## 2026-05-03 Schur Row Candidate Extraction Attempt Update
+
+The retained-route certificate now consumes
+`outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json`.
+This checks whether the nearest finite scalar-ladder, eigen-derivative, and
+Feshbach support artifacts can be converted into the Schur `A/B/C` row file
+required by the `K'(pole)` route.
+
+The extraction blocks.  The finite toy matrix, lambda-derivative scouts, lambda
+crossing scans, and Feshbach response rows are useful support, but they do not
+provide a same-surface source/orthogonal neutral kernel partition with
+`A/B/C` and pole-derivative rows.  No future row file is written and no
+retained or `proposed_retained` closure is authorized.
+
+## 2026-05-03 W/Z Response Measurement-Row Contract Gate Update
+
+The retained-route certificate also consumes
+`outputs/yt_wz_response_measurement_row_contract_gate_2026-05-03.json`.
+This makes the fallback same-source W/Z response input contract executable:
+future rows must be production source-shift correlator mass fits with top/W/Z
+covariance, retained `g2` provenance, sector-overlap and canonical-Higgs
+identity certificates, and forbidden-import firewalls.
+
+The current W/Z measurement-row file is absent.  The gate is therefore schema
+and firewall support only; it authorizes no response readout switch and no
+retained or `proposed_retained` closure.
 
 ## 2026-05-03 W/Z Response Repo Harness Import Audit Update
 

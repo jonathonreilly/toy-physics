@@ -136,6 +136,7 @@ def main() -> int:
         "schur_kprime_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
         "legacy_schur_bridge_import_audit": "outputs/yt_legacy_schur_bridge_import_audit_2026-05-03.json",
         "schur_kernel_row_contract_gate": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+        "schur_row_candidate_extraction_attempt": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json",
         "fh_lsz_higgs_pole_identity": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
         "fh_gauge_normalized_response": "outputs/yt_fh_gauge_normalized_response_route_2026-05-02.json",
         "fh_gauge_mass_response_observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
@@ -805,6 +806,18 @@ def main() -> int:
         and certificates["schur_kernel_row_contract_gate"].get("proposal_allowed") is False
         and certificates["schur_kernel_row_contract_gate"].get("schur_kernel_row_contract_gate_passed") is False
         and certificates["schur_kernel_row_contract_gate"].get("current_closure_gate_passed") is False
+    )
+    schur_row_candidate_extraction_blocks_finite_support_import = (
+        "Schur row candidate extraction"
+        in certificates["schur_row_candidate_extraction_attempt"].get("actual_current_surface_status", "")
+        and certificates["schur_row_candidate_extraction_attempt"].get("proposal_allowed") is False
+        and certificates["schur_row_candidate_extraction_attempt"].get("candidate_extraction_closes_pr230")
+        is False
+        and certificates["schur_row_candidate_extraction_attempt"].get("finite_ladder_candidate_usable")
+        is False
+        and certificates["schur_row_candidate_extraction_attempt"].get("candidate_rows_written") is False
+        and certificates["schur_row_candidate_extraction_attempt"].get("exact_negative_boundary_passed")
+        is True
     )
     higgs_pole_identity_gate_blocks = (
         "canonical-Higgs pole identity gate blocking"
@@ -1628,6 +1641,11 @@ def main() -> int:
         "schur-kernel-row-contract-gate-not-passed",
         schur_kernel_row_contract_gate_not_passed,
         certificates["schur_kernel_row_contract_gate"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "schur-row-candidate-extraction-blocks-finite-support-import",
+        schur_row_candidate_extraction_blocks_finite_support_import,
+        certificates["schur_row_candidate_extraction_attempt"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-higgs-pole-identity-gate-blocks",
