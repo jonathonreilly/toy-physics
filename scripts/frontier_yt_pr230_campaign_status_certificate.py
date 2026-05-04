@@ -284,6 +284,9 @@ def main() -> int:
         "one_higgs_completeness_orthogonal_null": load(
             "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json"
         ),
+        "same_source_w_response_lightweight_readout": load(
+            "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json"
+        ),
         "wz_correlator_mass_fit_path_gate": load(
             "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
         ),
@@ -1272,6 +1275,17 @@ def main() -> int:
         )
         is False,
         statuses["one_higgs_completeness_orthogonal_null"],
+    )
+    report(
+        "same-source-w-response-lightweight-readout-open",
+        "lightweight same-source W-response readout"
+        in str(statuses["same_source_w_response_lightweight_readout"])
+        and certificates["same_source_w_response_lightweight_readout"].get("proposal_allowed") is False
+        and certificates["same_source_w_response_lightweight_readout"].get(
+            "strict_lightweight_readout_gate_passed"
+        )
+        is False,
+        statuses["same_source_w_response_lightweight_readout"],
     )
     report(
         "wz-correlator-mass-fit-path-gate-blocks",

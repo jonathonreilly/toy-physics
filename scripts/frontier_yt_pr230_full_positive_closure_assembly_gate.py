@@ -45,6 +45,7 @@ PARENTS = {
     "same_source_w_response_decomposition": "outputs/yt_same_source_w_response_decomposition_theorem_2026-05-04.json",
     "same_source_w_response_orthogonal_correction": "outputs/yt_same_source_w_response_orthogonal_correction_gate_2026-05-04.json",
     "one_higgs_completeness_orthogonal_null": "outputs/yt_one_higgs_completeness_orthogonal_null_gate_2026-05-04.json",
+    "same_source_w_lightweight_readout": "outputs/yt_same_source_w_response_lightweight_readout_harness_2026-05-04.json",
     "wz_certificate_gate": "outputs/yt_same_source_wz_response_certificate_gate_2026-05-02.json",
     "wz_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
@@ -161,11 +162,13 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
         },
         "same_source_wz_response": {
             "passes_current_surface": truth(certs["wz_same_source_action"], "same_source_ew_action_ready")
-            and truth(certs["wz_certificate_gate"], "same_source_wz_response_certificate_gate_passed"),
+            and truth(certs["wz_certificate_gate"], "same_source_wz_response_certificate_gate_passed")
+            and truth(certs["same_source_w_lightweight_readout"], "strict_lightweight_readout_gate_passed"),
             "blocked_by": [
                 "same-source EW action certificate absent",
                 "W/Z correlator mass-fit path absent",
                 "orthogonal-neutral top-coupling null or correction absent",
+                "lightweight same-source W readout production rows absent",
                 "sector-overlap identity not derived",
                 "canonical-Higgs identity not derived",
             ],
@@ -175,6 +178,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["same_source_w_response_decomposition"],
                 PARENTS["same_source_w_response_orthogonal_correction"],
                 PARENTS["one_higgs_completeness_orthogonal_null"],
+                PARENTS["same_source_w_lightweight_readout"],
                 PARENTS["wz_certificate_gate"],
                 PARENTS["wz_mass_fit_path"],
                 PARENTS["same_source_sector_overlap"],
@@ -356,6 +360,14 @@ def main() -> int:
         )
         is False,
         statuses["one_higgs_completeness_orthogonal_null"],
+    )
+    report(
+        "lightweight-w-readout-harness-currently-open",
+        "lightweight same-source W-response readout" in statuses["same_source_w_lightweight_readout"]
+        and certs["same_source_w_lightweight_readout"].get("proposal_allowed") is False
+        and certs["same_source_w_lightweight_readout"].get("strict_lightweight_readout_gate_passed")
+        is False,
+        statuses["same_source_w_lightweight_readout"],
     )
     report("scalar-lsz-model-fv-ir-blocked", scalar_lsz_blocks, "model-class/FV/IR/threshold controls still block retained use")
     report("source-overlap-bridge-absent", source_overlap_blocks, f"route_passes={any_bridge_passes}")
