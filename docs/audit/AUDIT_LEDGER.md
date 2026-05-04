@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T10:31:34.350919+00:00
+**Generated:** 2026-05-04T10:34:05.658211+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,10 +21,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 86 |
 | **retained_no_go** | 109 |
-| **retained_bounded** | 209 |
+| **retained_bounded** | 210 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 673 |
+| unaudited | 672 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 378 |
+| `audited_clean` | 379 |
 | `audited_conditional` | 554 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 720 |
+| `unaudited` | 719 |
 
 | claim_type | count |
 |---|---:|
@@ -213,6 +213,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-current | A | - |
 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-current | A | - |
 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-current | A | - |
+| `fifth_family_radial_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-current | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-fresh-agent | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -5940,6 +5941,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py_import_error_missing__field_from_sources`
   - `FIFTH_FAMILY_RADIAL_NOTE.md_unaudited_base_family`
   - `live_runner_output_not_reproducible`
+- **auditor confidence:** high
+
+### `fifth_family_radial_boundary_note`
+
+- **Note:** [`FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md`](../../docs/FIFTH_FAMILY_RADIAL_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded deterministic runner observation that the fifth-family radial-shell slice has a local sign-orientation boundary at drift 0.20 seed 0 while zero and neutral rows remain exactly cancelling.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-04`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** The interior test row at drift 0.20, seed 0 keeps zero-source baseline exact and neutral cancellation exact, but flips sign orientation with plus < 0 and minus > 0.  _(class `C`)_
+- **chain closes:** True — The primary runner executes on current main and reproduces the exact claimed row: plus=-2.028e-06, minus=+2.028e-06, zero=0, neutral=0, with nearby rows reported as ok. The clean verdict is limited to this bounded boundary observation, not a derivation of the family from retained inputs.
+- **rationale:** The bounded claim closes because the note's exact numerical boundary statement is reproduced by the current runner without stale-import failure: the target row shows the sign-orientation miss, while zero and neutral remain exact. Residual risk is scope, not execution: the note itself says there is no independent derivation of zero/neutral exactness or sign flip from retained inputs. This audit ratifies only the narrow deterministic boundary observation and the safe read that broader fifth-family claims remain overstated without a wider basin or independent radial variant.
 - **auditor confidence:** high
 
 ### `fifth_family_radial_fm_transfer_note`
