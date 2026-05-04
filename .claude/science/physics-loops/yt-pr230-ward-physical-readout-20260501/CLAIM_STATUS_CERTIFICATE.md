@@ -1,5 +1,31 @@
 # Claim Status Certificate
 
+FH/LSZ global production collision guard:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ global production collision guard current state recorded
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=159 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=185 FAIL=0
+```
+
+The guard records global FH/LSZ production occupancy and launch provenance.
+It blocks new launches from this worktree while active workers occupy the hard
+cap or the conservative local resource threshold, and otherwise records that a
+new launch is allowed by the guard.  It does not create `dE/ds`, `C_ss`, W/Z
+response, Schur `A/B/C`, or `O_H/C_sH/C_HH` evidence, and it does not derive
+`kappa_s`.  Rebased completed chunk025/chunk026 artifacts count only through
+their own certificates.  No retained or `proposed_retained` wording is
+authorized.
+
 Canonical-Higgs operator certificate gate wiring:
 
 ```text

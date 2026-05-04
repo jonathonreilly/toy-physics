@@ -6,18 +6,33 @@ runtime_budget_requested: "12h"
 campaign_started_at_utc: "2026-05-01T16:00:07Z"
 checkpoint_interval: "30m"
 deep_block: "90m"
-date: "2026-05-03"
+date: "2026-05-04"
 worktree: "/Users/jonBridger/CI3Z2-pr230-status-20260503"
 branch: "claude/yt-direct-lattice-correlator-2026-04-30"
 repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-192-canonical-higgs-operator-certificate-gate-wiring
-blocks_completed: 192
-active_route: "canonical-Higgs operator certificate gate wiring"
-active_hard_residual: "The canonical-Higgs operator certificate gate is now consumed by retained-route and campaign-status aggregate certificates. Gate PASS=11 FAIL=0; retained-route PASS=138 FAIL=0; campaign status PASS=164 FAIL=0. This records the future same-surface O_H acceptance schema and blocks current EW/Higgs/YT surfaces, H_unit, source-pole LSZ construction, and source-Higgs instrumentation as the missing identity. No candidate O_H certificate is present, and no retained/proposed_retained closure is authorized. Chunks027-028 are running as background production support."
+current_phase: campaign-block-193-fh-lsz-global-production-collision-guard
+blocks_completed: 193
+active_route: "FH/LSZ global production collision guard"
+active_hard_residual: "The global FH/LSZ launch surface is now executable and rebased after the canonical-Higgs operator certificate gate wiring.  The guard records active production workers in other worktrees, compares them with the global cap of 6 and conservative local resource threshold of 4, and records whether new local launches are allowed.  Earlier failed chunk025/chunk026 foreground sessions and relative-path detached submissions are not evidence; the rebased branch's completed chunk025/chunk026 artifacts count only through their own certificates.  Guard PASS=8 FAIL=0; retained-route PASS=159 FAIL=0; campaign status PASS=185 FAIL=0.  No retained/proposed_retained closure is authorized."
 files_touched:
+  - "scripts/frontier_yt_fh_lsz_global_production_collision_guard.py"
+  - "docs/YT_FH_LSZ_GLOBAL_PRODUCTION_COLLISION_GUARD_NOTE_2026-05-04.md"
+  - "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json"
+  - "scripts/frontier_yt_retained_closure_route_certificate.py"
+  - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  - "docs/YT_RETAINED_CLOSURE_ROUTE_CERTIFICATE_NOTE_2026-05-01.md"
+  - "docs/YT_PR230_CAMPAIGN_STATUS_CERTIFICATE_NOTE_2026-05-01.md"
+  - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
+  - "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "scripts/frontier_yt_retained_closure_route_certificate.py"
   - "scripts/frontier_yt_pr230_campaign_status_certificate.py"
   - "outputs/yt_retained_closure_route_certificate_2026-05-01.json"
@@ -960,6 +975,7 @@ no_go_routes_inherited:
   - "beta_lambda(M_Pl)=0 Planck selector: current-surface no-go"
   - "Ward decomposition without physical readout map: audited_renaming"
 claim_state_movement:
+  - "added an FH/LSZ global production collision guard: active production workers in other worktrees are checked against the global cap and conservative local resource threshold before future local launches; failed foreground sessions and scheduler return codes are not evidence, and rebased chunk025/chunk026 artifacts count only through their own certificates"
   - "added Schur-complement K-prime sufficiency: future A/B/C scalar-kernel rows and pole derivatives are enough to compute D_eff'(pole), but current rows are absent"
   - "attempted direct neutral-scalar positivity improvement from current Cl(3)/Z3 support and blocked it: reflection positivity, positive semidefinite transfer, and gauge heat-kernel positivity do not prove neutral-sector irreducibility / primitive-cone positivity improvement"
   - "audited the gauge-vacuum Perron theorem as a possible neutral-scalar rank-one import and blocked it: the gauge theorem is scoped to plaquette-source J, and a same-gauge counterfamily changes the neutral residue rank from one to two"
@@ -1130,13 +1146,13 @@ claim_state_movement:
   - "audited and blocked extracting Schur rows from finite ladder/Feshbach support: current finite scalar-ladder scans, eigen-derivative toy rows, total-momentum derivative scouts, and Feshbach response rows are not same-surface A/B/C rows; runner PASS=13 FAIL=0, retained-route PASS=134 FAIL=0, campaign PASS=160 FAIL=0"
   - "attempted W/Z response row production from the current PR230 surface: top harness is QCD/top-only for W/Z response, W/Z rows remain absent_guarded, static EW algebra is not dM_W/ds, no row file is written; runner PASS=12 FAIL=0, retained-route PASS=136 FAIL=0, campaign PASS=162 FAIL=0"
   - "audited and blocked importing SM one-Higgs gauge selection as the O_H identity: support runner now passes, but monomial selection assumes canonical H after supplied, leaves Yukawa entries free, and does not derive O_sp=O_H or no-orthogonal-top-coupling; runner PASS=11 FAIL=0, retained-route PASS=137 FAIL=0, campaign PASS=163 FAIL=0"
-actual_current_surface_status: "exact negative boundary plus open closure / SM one-Higgs gauge selection is not PR230 O_H identity"
-conditional_surface_status: "If real same-source W/Z mass-response rows with covariance and sector-overlap/canonical-Higgs identity certificates are supplied, the gauge-normalized response route can be evaluated. If same-surface A/B/C scalar-kernel rows and pole derivatives are supplied, the Schur-complement formula computes D_eff'(pole). If certified canonical O_H and same-pole production C_ss/C_sH/C_HH residues are supplied, the isolated-pole Gram condition can be evaluated. Current production evidence remains conditional on response-window/readout acceptance, finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity."
+actual_current_surface_status: "bounded support plus open closure / FH-LSZ global production collision guard current state recorded"
+conditional_surface_status: "If the guard is rerun immediately before launch and global FH/LSZ occupancy remains below the conservative local resource threshold, future chunks can be launched only with repo-cwd or absolute-path provenance and counted only after their artifacts pass chunk certificates. If real same-source W/Z mass-response rows with covariance and sector-overlap/canonical-Higgs identity certificates are supplied, the gauge-normalized response route can be evaluated. If same-surface A/B/C scalar-kernel rows and pole derivatives are supplied, the Schur-complement formula computes D_eff'(pole). If certified canonical O_H and same-pole production C_ss/C_sH/C_HH residues are supplied, the isolated-pole Gram condition can be evaluated. Current production evidence remains conditional on response-window/readout acceptance, finite-source-linearity or response-bound control, scalar LSZ pole derivative, FV/IR/model-class gates, and canonical-Higgs identity."
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
 proposal_allowed_reason: "Open imports remain; review-loop pass for retained proposal is absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-next_exact_action: "Commit/push/PR-update this checkpoint, keep polling chunks025-026 until completion, and pursue the next closure input: certified O_H plus production C_sH/C_HH pole rows, a rank-one neutral-scalar theorem, a genuine EW gauge/Higgs same-source correlator harness, genuine same-source Schur A/B/C scalar-kernel rows by theorem/measurement, or honest production evidence. Do not treat the Schur sufficiency theorem by itself, Schur contract gate, Schur extraction no-import audit, W/Z row production attempt, SM one-Higgs monomial selection, direct positivity attempt, gauge-vacuum Perron theorem, positivity-improving conditional theorem, isolated-pole Gram theorem, reduced smokes, multi-tau smoke rows, plaquette ESS, target-observable ESS, tau-window central stability, chunks017-024 v2 rows, chunks025-026 in-flight thermalization, source-coordinate target statistics, target-timeseries replacement commands, complete source-only C_ss(p), rank-one source-only response matrices, D17 carrier support, symmetry-only commutant rank arguments, finite orthogonal neutral-pole assumptions, finite/heavy orthogonal mass gaps, source-only pole purity, the source-Higgs absence guard, the W/Z response absence guard, guard-only source_higgs_cross_correlator metadata, generic chunk target-series support, automatic generic checkpoint discovery, 24/63 L12 chunks, missing C_sH/C_HH authority, missing O_H realization, missing W/Z response rows, C_sH manifest support, H_unit-as-O_H substitution, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
+next_exact_action: "Commit/push/PR-update this checkpoint, rerun the guard immediately before any further FH/LSZ chunk launch, and pursue the next closure input: certified O_H plus production C_sH/C_HH pole rows, a rank-one neutral-scalar theorem, a genuine EW gauge/Higgs same-source correlator harness, genuine same-source Schur A/B/C scalar-kernel rows by theorem/measurement, or honest production evidence. Do not treat the Schur sufficiency theorem by itself, Schur contract gate, Schur extraction no-import audit, W/Z row production attempt, SM one-Higgs monomial selection, direct positivity attempt, gauge-vacuum Perron theorem, positivity-improving conditional theorem, isolated-pole Gram theorem, reduced smokes, multi-tau smoke rows, plaquette ESS, target-observable ESS, tau-window central stability, chunks017-026 v2 rows, failed foreground sessions, scheduler return codes, source-coordinate target statistics, target-timeseries replacement commands, complete source-only C_ss(p), rank-one source-only response matrices, D17 carrier support, symmetry-only commutant rank arguments, finite orthogonal neutral-pole assumptions, finite/heavy orthogonal mass gaps, source-only pole purity, the source-Higgs absence guard, the W/Z response absence guard, guard-only source_higgs_cross_correlator metadata, generic chunk target-series support, automatic generic checkpoint discovery, 26/63 L12 chunks, missing C_sH/C_HH authority, missing O_H realization, missing W/Z response rows, C_sH manifest support, H_unit-as-O_H substitution, no-orthogonal-top-coupling assumptions, single-radius finite source slopes, unlaunched finite-source-linearity calibration manifests, static EW W/Z algebra, slope-only W/Z response schemas, Hessian/radial curvature, reflection positivity, W/Z response manifests, finite plateaus, OPE coefficients, or generic gap language as retained/proposed-retained evidence."
 stop_condition: "12h runtime exhausted, unsafe worktree/lock conflict, or refreshed opportunity queue proves all viable targets blocked after stretch attempt and fan-out."

@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-04 update: the FH/LSZ global production collision guard is now
+landed and wired into the retained-route/campaign gates.  It records active
+production workers in other worktrees and blocks new local FH/LSZ launches
+when global occupancy is at the hard cap or already above the conservative
+local resource threshold.  Earlier failed/empty chunk025/chunk026 attempts are
+not evidence; rebased completed chunk025/chunk026 artifacts count only through
+their own certificates.  This does not change the closure ranking:
+highest-value foreground actions remain contract-satisfying same-source W/Z
+response rows, Schur `A/B/C` rows, certified `O_H/C_sH/C_HH` pole rows, a
+rank-one neutral-scalar theorem, or honest production evidence.
+
 2026-05-03 update: the canonical-Higgs operator certificate gate is now wired
 into retained-route and campaign-status aggregation.  This closes a status
 visibility gap, not the physics blocker: no `O_H` certificate candidate is

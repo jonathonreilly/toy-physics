@@ -1,5 +1,36 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Global Production Collision Guard
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / LAUNCH HYGIENE ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- global FH/LSZ worker occupancy is now executable launch metadata;
+- active workers in other worktrees are checked against the hard cap and
+  conservative local resource threshold before any future launch;
+- failed foreground sessions and scheduler return codes are not evidence;
+- rebased completed chunk025/chunk026 artifacts count only through their own
+  production/checkpoint certificates;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_global_production_collision_guard.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - Canonical-Higgs Operator Certificate Gate Wiring
 
 Local review-loop disposition:

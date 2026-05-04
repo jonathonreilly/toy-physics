@@ -153,6 +153,7 @@
     "fh_lsz_finite_source_linearity_calibration": "bounded-support / FH-LSZ finite-source-linearity calibration checkpoint",
     "fh_lsz_finite_source_linearity_gate": "bounded-support / FH-LSZ finite-source-linearity gate passed as response support",
     "fh_lsz_finite_volume_pole_saturation": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
+    "fh_lsz_global_production_collision_guard": "bounded-support / FH-LSZ global production collision guard current state recorded",
     "fh_lsz_higgs_pole_identity": "open / FH-LSZ canonical-Higgs pole identity gate blocking",
     "fh_lsz_invariant_readout": "exact-support / Feynman-Hellmann scalar-LSZ invariant readout formula",
     "fh_lsz_joint_harness": "bounded-support / joint Feynman-Hellmann scalar-LSZ harness",
@@ -297,7 +298,7 @@
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
   "fail_count": 0,
-  "pass_count": 184,
+  "pass_count": 185,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

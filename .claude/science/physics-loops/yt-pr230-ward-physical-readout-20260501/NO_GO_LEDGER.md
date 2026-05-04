@@ -1,5 +1,26 @@
 # No-Go Ledger
 
+## FH/LSZ global production collision guard is not closure
+
+Runners:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=159 FAIL=0
+```
+
+The guard records global production occupancy and launch hygiene only.  Active
+workers in other worktrees may put the machine at the hard cap or above the
+conservative local resource threshold; the guard records the current launch
+decision.  Even when the guard allows a future launch, failed foreground
+sessions and scheduler submission success are not physics evidence.  Rebased
+completed chunk025/chunk026 artifacts count only through their own chunk
+certificates.  Do not treat the guard as scalar LSZ normalization,
+canonical-Higgs identity, W/Z response evidence, retained closure, or
+`proposed_retained` evidence.
+
 ## SM one-Higgs gauge selection is not the PR230 O_H identity
 
 Runners:

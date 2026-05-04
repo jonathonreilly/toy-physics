@@ -203,6 +203,7 @@ def main() -> int:
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
         "fh_lsz_multitau_target_timeseries_harness": "outputs/yt_fh_lsz_multitau_target_timeseries_harness_certificate_2026-05-03.json",
         "fh_lsz_selected_mass_normal_cache_speedup": "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json",
+        "fh_lsz_global_production_collision_guard": "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json",
         "fh_lsz_target_timeseries_higgs_identity_no_go": "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
         "fh_lsz_pole_fit_mode_budget": "outputs/yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json",
@@ -1462,6 +1463,12 @@ def main() -> int:
         in certificates["fh_lsz_selected_mass_normal_cache_speedup"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_selected_mass_normal_cache_speedup"].get("proposal_allowed") is False
     )
+    global_production_collision_guard_not_evidence = (
+        "FH-LSZ global production collision guard"
+        in certificates["fh_lsz_global_production_collision_guard"].get("actual_current_surface_status", "")
+        and certificates["fh_lsz_global_production_collision_guard"].get("proposal_allowed") is False
+        and certificates["fh_lsz_global_production_collision_guard"].get("global_cap") == 6
+    )
     target_timeseries_higgs_identity_no_go_blocks = (
         "target time series not canonical-Higgs identity"
         in certificates["fh_lsz_target_timeseries_higgs_identity_no_go"].get(
@@ -2255,6 +2262,11 @@ def main() -> int:
         "fh-lsz-selected-mass-normal-cache-speedup-not-evidence",
         selected_mass_normal_cache_speedup_not_evidence,
         certificates["fh_lsz_selected_mass_normal_cache_speedup"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-global-production-collision-guard-not-evidence",
+        global_production_collision_guard_not_evidence,
+        certificates["fh_lsz_global_production_collision_guard"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-target-timeseries-higgs-identity-no-go-blocks",

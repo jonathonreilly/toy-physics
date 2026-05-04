@@ -26,8 +26,24 @@ still remains.
 
 ```text
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=166 FAIL=0
+# SUMMARY: PASS=185 FAIL=0
 ```
+
+## 2026-05-04 FH/LSZ Global Production Collision Guard Update
+
+The campaign status certificate now consumes the FH/LSZ global production
+collision guard.  The guard records current global FH/LSZ production occupancy
+from the process table and compares it with the configured cap of six
+production workers and a conservative local resource threshold of four before
+any new chunk launch.
+
+The earlier chunk025/chunk026 foreground attempts and relative-path detached
+submissions are not campaign evidence.  After rebasing onto the updated PR
+branch, completed chunk025/chunk026 artifacts are present and are counted only
+through their production and checkpoint certificates.  The guard remains launch
+hygiene only, not physics closure.
+
+No retained or `proposed_retained` y_t closure is authorized.
 
 ## 2026-05-03 Source-Higgs Gram-Purity Contract Witness Update
 

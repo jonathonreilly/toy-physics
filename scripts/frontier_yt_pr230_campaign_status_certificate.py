@@ -413,6 +413,9 @@ def main() -> int:
         "fh_lsz_selected_mass_normal_cache_speedup": load(
             "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json"
         ),
+        "fh_lsz_global_production_collision_guard": load(
+            "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json"
+        ),
         "fh_lsz_target_timeseries_higgs_identity_no_go": load(
             "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json"
         ),
@@ -1522,6 +1525,13 @@ def main() -> int:
         "selected-mass normal-cache speedup"
         in str(statuses["fh_lsz_selected_mass_normal_cache_speedup"]),
         statuses["fh_lsz_selected_mass_normal_cache_speedup"],
+    )
+    report(
+        "fh-lsz-global-production-collision-guard-not-evidence",
+        "FH-LSZ global production collision guard"
+        in str(statuses["fh_lsz_global_production_collision_guard"])
+        and certificates["fh_lsz_global_production_collision_guard"].get("proposal_allowed") is False,
+        statuses["fh_lsz_global_production_collision_guard"],
     )
     report(
         "fh-lsz-target-timeseries-higgs-identity-no-go-blocks",

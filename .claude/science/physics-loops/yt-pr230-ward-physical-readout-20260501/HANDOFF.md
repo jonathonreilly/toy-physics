@@ -1,5 +1,28 @@
 # Handoff
 
+Latest checkpoint, 2026-05-04 FH/LSZ global production collision guard:
+
+- Added `scripts/frontier_yt_fh_lsz_global_production_collision_guard.py`,
+  `docs/YT_FH_LSZ_GLOBAL_PRODUCTION_COLLISION_GUARD_NOTE_2026-05-04.md`,
+  and `outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json`.
+- The guard records active FH/LSZ production workers in other worktrees and
+  compares them with the hard cap of six and conservative local resource
+  threshold of four before any future local launch.
+- Earlier failed chunk025/chunk026 foreground sessions and relative-path
+  detached submissions are not evidence.  After rebasing, completed
+  chunk025/chunk026 artifacts are present and count only through their own
+  production/checkpoint certificates.
+- Verification: guard `PASS=8 FAIL=0`; retained-route `PASS=159 FAIL=0`;
+  campaign status `PASS=185 FAIL=0`.
+- No retained or proposed-retained closure is authorized.
+
+Next exact action: rerun the guard immediately before launching more chunks,
+then use repo-cwd or absolute-path detached commands and count only artifacts
+that pass chunk certificates.  The positive closure queue remains real
+same-source W/Z response rows, Schur `A/B/C` rows, certified
+`O_H/C_sH/C_HH` pole rows, a rank-one neutral-scalar theorem, or honest
+production evidence.
+
 Latest checkpoint, 2026-05-03 canonical-Higgs operator certificate gate wiring:
 
 - Wired `outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json`

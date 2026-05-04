@@ -18,8 +18,26 @@ Ward theorem.  The remaining closure routes are now sharply separated.
 
 ```text
 PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificate.py
-# SUMMARY: PASS=140 FAIL=0
+# SUMMARY: PASS=159 FAIL=0
 ```
+
+## 2026-05-04 FH/LSZ Global Production Collision Guard Update
+
+The retained-route certificate now consumes
+`outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json`.
+This records the global FH/LSZ production-worker surface before launching more
+chunks.
+
+The guard records active FH/LSZ production workers in other worktrees, compares
+them with the global cap of six and the conservative local resource threshold
+of four, and records whether new local workers are allowed.  Earlier failed
+chunk025/chunk026 foreground sessions and scheduler submission return codes are
+not evidence; the rebased branch's completed chunk025/chunk026 artifacts are
+counted only through their own production and checkpoint certificates.
+
+This is infrastructure support only.  It does not derive `kappa_s`, does not
+identify the source pole with the canonical Higgs radial mode, and does not
+authorize retained or `proposed_retained` closure.
 
 ## 2026-05-03 Source-Higgs Gram-Purity Contract Witness Update
 

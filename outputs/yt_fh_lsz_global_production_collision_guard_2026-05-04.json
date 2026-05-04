@@ -1,0 +1,70 @@
+{
+  "active_orchestrator_count": 0,
+  "active_production_worker_count": 0,
+  "actual_current_surface_status": "bounded-support / FH-LSZ global production collision guard current state recorded",
+  "fail_count": 0,
+  "global_cap": 6,
+  "global_cap_allows_new_workers": true,
+  "guard_blocks_launch": false,
+  "launch_guard_allows_new_workers": true,
+  "launch_requirements": [
+    "do not launch new FH/LSZ production workers when active global workers are at or above the cap",
+    "do not launch new local workers when active global workers already meet the conservative local resource threshold",
+    "use a repo cwd wrapper or absolute script/output paths for detached launchctl jobs",
+    "do not count empty output directories as production evidence",
+    "do not count foreground sessions that exit before writing certificates as production evidence",
+    "do not count scheduler submission success unless the output artifact passes its chunk certificate"
+  ],
+  "local_resource_safe_worker_threshold": 4,
+  "pass_count": 8,
+  "process_snapshot": {
+    "active_orchestrators": [],
+    "active_production_workers": [],
+    "ps_returncode": 0,
+    "ps_stderr": ""
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A production collision guard does not derive kappa_s, a canonical-Higgs/source-overlap theorem, or a same-source W/Z physical response readout.",
+  "resource_pressure_blocks_local_launch": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not derive kappa_s",
+    "does not set kappa_s = 1",
+    "does not use H_unit or yt_ward_identity",
+    "does not use alpha_LM, plaquette/u0, observed m_t, or observed y_t as proof authority",
+    "does not treat source-only FH/LSZ as a physical y_t readout"
+  ],
+  "target_chunk_attempts": [
+    {
+      "chunk": "025",
+      "counts_as_evidence_through_guard": false,
+      "empty_dir_counts_as_evidence": false,
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk025_2026-05-01.json",
+      "output_artifact_present": true,
+      "output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk025",
+      "output_dir_entries": [
+        "L12xT24"
+      ],
+      "output_dir_present": true,
+      "output_present": true,
+      "requires_chunk_certificate_for_evidence": true
+    },
+    {
+      "chunk": "026",
+      "counts_as_evidence_through_guard": false,
+      "empty_dir_counts_as_evidence": false,
+      "output": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk026_2026-05-01.json",
+      "output_artifact_present": true,
+      "output_dir": "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk026",
+      "output_dir_entries": [
+        "L12xT24"
+      ],
+      "output_dir_present": true,
+      "output_present": true,
+      "requires_chunk_certificate_for_evidence": true
+    }
+  ],
+  "target_chunk_output_present_count": 2,
+  "target_chunks_evidence_count": 0,
+  "verdict": "The guard records current global FH/LSZ production occupancy and the corresponding launch decision.  It preserves the claim firewall: process rows, empty directories, and scheduler launch return codes are provenance signals only, not y_t evidence."
+}
