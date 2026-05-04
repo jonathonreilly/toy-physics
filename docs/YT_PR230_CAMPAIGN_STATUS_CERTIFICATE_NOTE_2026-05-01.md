@@ -43,6 +43,13 @@ branch, completed chunk025/chunk026 artifacts are present and are counted only
 through their production and checkpoint certificates.  The guard remains launch
 hygiene only, not physics closure.
 
+Latest checkpoint: the polefit8x8 orchestrator was run for chunks013-018 after
+a zero-worker dry run.  The refreshed guard records six active production
+workers at the global cap and blocks additional launch.  The campaign status
+runner still passes with `PASS=185 FAIL=0`; active workers, logs, output
+directories, and launch records are not evidence until the expected artifacts
+land and pass the polefit8x8 chunk certificates.
+
 No retained or `proposed_retained` y_t closure is authorized.
 
 ## 2026-05-03 Source-Higgs Gram-Purity Contract Witness Update

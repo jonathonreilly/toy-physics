@@ -1,5 +1,31 @@
 # Handoff
 
+Latest checkpoint, 2026-05-04 polefit8x8 chunks013-018 guarded launch:
+
+- Hardened `scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py` to
+  use the same `ps -axo pid,ppid,etime,%cpu,command` process-table shape as
+  the global collision guard.
+- Dry run before launch: 12 completed polefit8x8 chunks, zero active
+  production workers, 51 missing chunks.
+- Launched polefit8x8 chunks013-018 from the repo cwd with fixed seeds
+  2026051913-2026051918, x8 scalar-two-point noise, eight modes, and isolated
+  output directories.
+- Refreshed the global guard: `PASS=8 FAIL=0`, active FH/LSZ workers `6`,
+  `launch_guard_allows_new_workers=false`; further FH/LSZ launches are blocked
+  while this wave runs.
+- Refreshed aggregate gates: retained-route `PASS=159 FAIL=0`; campaign status
+  `PASS=185 FAIL=0`.
+- Claim boundary: active workers, logs, output directories, and launch records
+  are not evidence.  Count only root artifacts that pass the polefit8x8 chunk
+  combiner/postprocessor and aggregate gates.  No retained or proposed-retained
+  closure is authorized.
+
+Next exact action: do not launch chunks019-024 until a fresh guard reports
+available capacity.  When chunks013-018 finish, package only passing artifacts,
+rerun polefit8x8 combiner/postprocessor plus retained-route and campaign
+status, then update PR #230.  If they fail, checkpoint the failure without
+counting the run as evidence.
+
 Latest checkpoint, 2026-05-04 FH/LSZ global production collision guard:
 
 - Added `scripts/frontier_yt_fh_lsz_global_production_collision_guard.py`,

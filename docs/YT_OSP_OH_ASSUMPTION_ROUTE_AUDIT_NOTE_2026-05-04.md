@@ -1,6 +1,6 @@
 # PR #230 O_sp/O_H Assumption-Route Audit Note
 
-**Status:** open / assumption-route audit complete; retained closure still blocked
+**Status:** open / assumption-route audit complete; closure remains blocked
 
 ## Purpose
 

@@ -39,6 +39,12 @@ This is infrastructure support only.  It does not derive `kappa_s`, does not
 identify the source pole with the canonical Higgs radial mode, and does not
 authorize retained or `proposed_retained` closure.
 
+Latest checkpoint: after a guarded polefit8x8 chunks013-018 launch, the guard
+records six active FH/LSZ production workers, so `launch_guard_allows_new_workers`
+is false.  The retained-route runner still passes with `PASS=159 FAIL=0`; the
+active workers and scheduler state are not evidence until chunk artifacts pass
+their certificates.
+
 ## 2026-05-03 Source-Higgs Gram-Purity Contract Witness Update
 
 The retained-route certificate now consumes

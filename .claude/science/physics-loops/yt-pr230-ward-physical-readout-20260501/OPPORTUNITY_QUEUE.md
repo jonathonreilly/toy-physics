@@ -1,5 +1,16 @@
 # Opportunity Queue
 
+2026-05-04 update: polefit8x8 chunks013-018 are now active under the global
+collision guard.  A pre-launch dry run saw 12 completed chunks and zero active
+workers; after launch, the guard records six active FH/LSZ production workers
+and blocks further launch at the global cap.  This is run-control support
+only, not evidence.  Highest-value next action is to package chunks013-018
+only if root artifacts land and pass the polefit8x8 certificates; otherwise
+checkpoint the failure.  Do not launch chunks019-024 until a fresh guard opens
+capacity.  The closure ranking is unchanged: certified same-source
+`O_H/C_sH/C_HH` pole rows, same-source W/Z response rows, genuine Schur
+`A/B/C` rows, a rank-one neutral-scalar theorem, or honest production evidence.
+
 2026-05-04 update: the FH/LSZ global production collision guard is now
 landed and wired into the retained-route/campaign gates.  It records active
 production workers in other worktrees and blocks new local FH/LSZ launches

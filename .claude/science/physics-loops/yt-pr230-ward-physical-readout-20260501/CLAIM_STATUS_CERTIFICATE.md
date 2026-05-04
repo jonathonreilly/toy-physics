@@ -1,5 +1,32 @@
 # Claim Status Certificate
 
+FH/LSZ polefit8x8 chunks013-018 guarded launch:
+
+```text
+actual_current_surface_status: bounded-support / polefit8x8 production wave active
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 13 --end-index 18 --max-concurrent 6 --global-max-production-jobs 6 --runtime-minutes 1 --poll-seconds 60 --launch
+# poll=2 completed=0 running=[13, 14, 15, 16, 17, 18] missing=0 all_jobs=6 launched_total=6
+
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=159 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=185 FAIL=0
+```
+
+The active chunks013-018 polefit8x8 workers are run control only.  Active
+workers, logs, output directories, and launch records are not physics evidence;
+only root artifacts that pass polefit8x8 chunk/postprocess certificates may
+be counted.  The refreshed guard records six active workers at the global cap
+and blocks further FH/LSZ launch.  No retained or `proposed_retained` wording
+is authorized.
+
 FH/LSZ global production collision guard:
 
 ```text

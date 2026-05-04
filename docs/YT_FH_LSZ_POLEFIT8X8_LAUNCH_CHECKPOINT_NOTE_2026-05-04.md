@@ -1,6 +1,6 @@
 # FH/LSZ Eight-Mode/x8 Pole-Fit Launch Checkpoint
 
-Status: bounded-support / production run-control checkpoint, not retained or proposed_retained.
+Status: bounded-support / production run-control checkpoint; no closure authority.
 
 This note records the next PR230 physics-loop target after completing the
 four-mode L12 FH/LSZ support surface.  The completed four-mode stream has

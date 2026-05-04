@@ -1,5 +1,39 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Polefit8x8 Chunks013-018 Guarded Launch
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED SUPPORT / ACTIVE RUN CONTROL ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- the polefit8x8 orchestrator now uses the same process-table shape as the
+  global collision guard;
+- chunks013-018 were launched only after a zero-active-worker dry run;
+- the refreshed guard records six active workers and blocks further launch at
+  the global cap;
+- active workers, logs, output directories, and launch records are not
+  evidence;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 1 --end-index 63 --dry-run
+python3 scripts/frontier_yt_fh_lsz_polefit8x8_wave_orchestrator.py --start-index 13 --end-index 18 --max-concurrent 6 --global-max-production-jobs 6 --runtime-minutes 1 --poll-seconds 60 --launch
+python3 scripts/frontier_yt_fh_lsz_global_production_collision_guard.py
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - FH/LSZ Global Production Collision Guard
 
 Local review-loop disposition:

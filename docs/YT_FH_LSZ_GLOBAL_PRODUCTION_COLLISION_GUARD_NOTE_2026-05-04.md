@@ -20,6 +20,19 @@ and records whether launching new workers is allowed.
 
 ## Current Checkpoint
 
+Latest update: the polefit8x8 wave orchestrator was hardened to use the same
+process-table shape as this guard.  A dry run showed 12 completed polefit8x8
+chunks, zero active workers, and 51 missing chunks.  After the guard allowed
+launch, chunks013-018 were started from the repository cwd with fixed seeds
+2026051913-2026051918 and isolated output directories.
+
+The refreshed guard now records six active polefit8x8 production workers,
+which is exactly the global cap.  It therefore blocks any additional FH/LSZ
+production launch until workers finish and their artifacts can be checked.
+The active chunk013-018 workers are run control only: no root polefit8x8
+outputs are counted as evidence until the chunk combiner and downstream
+certificates pass.
+
 The earlier attempted interactive chunk025/chunk026 runs in this worktree
 wrote no output certificates; those failed sessions are not evidence.  After
 rebasing onto the updated PR branch, completed chunk025/chunk026 artifacts are

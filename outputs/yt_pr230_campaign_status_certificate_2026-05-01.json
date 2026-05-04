@@ -154,7 +154,7 @@
     "fh_lsz_finite_source_linearity_calibration": "bounded-support / FH-LSZ finite-source-linearity calibration checkpoint",
     "fh_lsz_finite_source_linearity_gate": "bounded-support / FH-LSZ finite-source-linearity gate passed as response support",
     "fh_lsz_finite_volume_pole_saturation": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
-    "fh_lsz_global_production_collision_guard": "bounded-support / FH-LSZ global production collision guard current state recorded",
+    "fh_lsz_global_production_collision_guard": "bounded-support / FH-LSZ global production collision guard blocks new launch",
     "fh_lsz_higgs_pole_identity": "open / FH-LSZ canonical-Higgs pole identity gate blocking",
     "fh_lsz_invariant_readout": "exact-support / Feynman-Hellmann scalar-LSZ invariant readout formula",
     "fh_lsz_joint_harness": "bounded-support / joint Feynman-Hellmann scalar-LSZ harness",

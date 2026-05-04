@@ -62,8 +62,7 @@ def output_is_complete(path: Path) -> bool:
 
 def production_jobs() -> list[dict[str, Any]]:
     result = subprocess.run(
-        ["ps", "-Ao", "pid=,command="],
-        cwd=ROOT,
+        ["ps", "-axo", "pid,ppid,etime,%cpu,command"],
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.DEVNULL,
@@ -75,12 +74,12 @@ def production_jobs() -> list[dict[str, Any]]:
     for line in result.stdout.splitlines():
         if "yt_direct_lattice_correlator_production.py" not in line:
             continue
-        parts = line.strip().split(maxsplit=1)
+        parts = line.strip().split(maxsplit=4)
         try:
             pid = int(parts[0])
         except (IndexError, ValueError):
             pid = -1
-        jobs.append({"pid": pid, "command": parts[1] if len(parts) > 1 else line.strip()})
+        jobs.append({"pid": pid, "command": parts[4] if len(parts) > 4 else line.strip()})
     return jobs
 
 
