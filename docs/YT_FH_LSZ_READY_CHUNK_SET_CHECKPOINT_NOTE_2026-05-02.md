@@ -6,18 +6,18 @@
 
 ## Result
 
-The ready-set checkpoint is now dynamic: it derives `ready_chunk_indices` from
+The ready-set checkpoint is dynamic: it derives `ready_chunk_indices` from
 the combiner gate rather than hardcoding a fixed chunk range.  It also accepts
 non-contiguous ready sets, because chunk completion order need not be
-sequential.  After the chunk013-016 target-ESS wave, the seed-controlled
-`L12_T24` FH/LSZ ready set contains chunks001-016:
+sequential.  After the chunks025-026 v2 multi-tau wave, the seed-controlled
+`L12_T24` FH/LSZ ready set contains chunks001-026:
 
 ```text
-ready_chunk_indices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-present_chunks = 16
-ready_chunks = 16
+ready_chunk_indices = [1, 2, 3, ..., 24, 25, 26]
+present_chunks = 26
+ready_chunks = 26
 expected_chunks = 63
-available_saved_configurations = 256
+available_saved_configurations = 416
 target_saved_configurations = 1000
 ```
 

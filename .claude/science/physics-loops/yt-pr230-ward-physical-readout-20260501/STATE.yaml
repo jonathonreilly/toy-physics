@@ -13,11 +13,27 @@ repo_lock:
   default_lock_status: "tooling-error: default path /Users/jonreilly permission denied"
   workspace_lock_status: "acquired"
   workspace_lock_path: "logs/physics_worker_lock.json"
-current_phase: campaign-block-190-sm-one-higgs-oh-import-boundary
-blocks_completed: 190
-active_route: "SM one-Higgs gauge-selection import boundary for O_H"
-active_hard_residual: "The W/Z response row production attempt is preserved, and the SM one-Higgs gauge-selection shortcut has now been tested as an O_H import. Runner PASS=11 FAIL=0; support runner TOTAL PASS=43 FAIL=0; retained-route PASS=137 FAIL=0; campaign status PASS=163 FAIL=0. SM one-Higgs gauge selection proves the allowed one-doublet Yukawa monomial pattern after canonical H is supplied and leaves Yukawa entries free; it does not identify the PR230 source pole with O_H, provide C_sH/C_HH residues, or remove the orthogonal neutral scalar top-coupling blocker. Positive closure still requires certified O_H/C_sH/C_HH pole rows, a rank-one neutral-scalar theorem, same-source W/Z response, genuine Schur rows, or honest production evidence. No retained/proposed_retained closure is authorized."
+current_phase: campaign-block-191-fh-lsz-chunks025-026-multitau-wave
+blocks_completed: 191
+active_route: "FH/LSZ chunks025-026 v2 multi-tau production checkpoint"
+active_hard_residual: "Chunks025-026 completed and were processed as bounded production support. Generic target-timeseries checkpoints PASS=14 FAIL=0 for each chunk; v2 multi-tau checkpoints PASS=19 FAIL=0 for each chunk; retained-route PASS=137 FAIL=0; campaign status PASS=163 FAIL=0. The ready set is now 26/63 L12 chunks and 416/1000 saved configurations. Target-observable ESS passes with limiting ESS 355.8130499055201, but response stability still fails, response-window acceptance remains open, v2 rows cover only chunks017-026, finite-source-linearity and multiple source radii are absent, and canonical-Higgs/source-overlap identity remains open. No retained/proposed_retained closure is authorized."
 files_touched:
+  - "docs/YT_FH_LSZ_CHUNKS025_026_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-03.md"
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk025_2026-05-01.json"
+  - "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk026_2026-05-01.json"
+  - "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk025/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk026/L12xT24/ensemble_measurement.json"
+  - "outputs/yt_fh_lsz_chunk025_target_timeseries_generic_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_chunk026_target_timeseries_generic_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_chunk025_multitau_target_timeseries_checkpoint_2026-05-03.json"
+  - "outputs/yt_fh_lsz_chunk026_multitau_target_timeseries_checkpoint_2026-05-03.json"
+  - "outputs/yt_fh_lsz_chunk_combiner_gate_2026-05-01.json"
+  - "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json"
+  - "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json"
+  - "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json"
+  - "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json"
+  - "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json"
+  - "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json"
   - "scripts/frontier_yt_sm_one_higgs_oh_import_boundary.py"
   - "scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py"
   - "docs/YT_SM_ONE_HIGGS_OH_IMPORT_BOUNDARY_NOTE_2026-05-03.md"

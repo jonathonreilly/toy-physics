@@ -1,5 +1,37 @@
 # Claim Status Certificate
 
+FH/LSZ chunks025-026 v2 multi-tau production checkpoint:
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ chunks025-026 v2 multi-tau target wave
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 25
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 26
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 25
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 26
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=137 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=163 FAIL=0
+```
+
+Chunks025-026 extend the ready set to `26/63` L12 chunks and `416/1000` saved
+configurations.  Target-observable ESS remains passed, but response stability,
+finite-source-linearity, scalar-pole control, FV/IR scaling, and
+canonical-Higgs/source-overlap identity are still open.  No retained or
+`proposed_retained` wording is authorized.
+
 SM one-Higgs to O_H import boundary:
 
 ```text

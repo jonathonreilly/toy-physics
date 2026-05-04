@@ -1080,6 +1080,128 @@
         "8": 1.2418350473559436,
         "9": 1.251949536116015
       }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 25,
+      "multi_tau_target_summary": {
+        "chunk_index": 25,
+        "expected_rows": 16,
+        "finite_multi_tau_slope_values": 368,
+        "multi_tau_target_rows_present": true,
+        "row_count": 16,
+        "schema_version": "fh_lsz_target_timeseries_v2_multitau",
+        "tau_keys": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ]
+      },
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk025_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.23278027133229,
+        "1": 1.23405659161141,
+        "2": 1.2464082749227945,
+        "3": 1.2468463204240887,
+        "4": 1.2421844071852761,
+        "5": 1.244124764130894,
+        "6": 1.2408346019345706,
+        "7": 1.2502800969084849,
+        "8": 1.2490941328547112,
+        "9": 1.2569168657343366
+      }
+    },
+    {
+      "available_tau_windows": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "chunk_index": 26,
+      "multi_tau_target_summary": {
+        "chunk_index": 26,
+        "expected_rows": 16,
+        "finite_multi_tau_slope_values": 368,
+        "multi_tau_target_rows_present": true,
+        "row_count": 16,
+        "schema_version": "fh_lsz_target_timeseries_v2_multitau",
+        "tau_keys": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ]
+      },
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk026_2026-05-01.json",
+      "tau_window_slopes": {
+        "0": 1.2345298240795999,
+        "1": 1.2462025583665493,
+        "2": 1.2520786322608224,
+        "3": 1.24384092805212,
+        "4": 1.2485327512757771,
+        "5": 1.2431387328152743,
+        "6": 1.2557883877039044,
+        "7": 1.2472655608204097,
+        "8": 1.239149682934515,
+        "9": 1.2447135613273153
+      }
     }
   ],
   "exact_next_action": "Complete v2 multi-tau production rows for the full ready set and run a multi-radius source-response calibration, or continue the non-source-only canonical-Higgs identity routes.",
@@ -1110,7 +1232,9 @@
     21,
     22,
     23,
-    24
+    24,
+    25,
+    26
   ],
   "multi_tau_target_rows": [
     {
@@ -1520,6 +1644,72 @@
         "21",
         "22"
       ]
+    },
+    {
+      "chunk_index": 25,
+      "expected_rows": 16,
+      "finite_multi_tau_slope_values": 368,
+      "multi_tau_target_rows_present": true,
+      "row_count": 16,
+      "schema_version": "fh_lsz_target_timeseries_v2_multitau",
+      "tau_keys": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+      ]
+    },
+    {
+      "chunk_index": 26,
+      "expected_rows": 16,
+      "finite_multi_tau_slope_values": 368,
+      "multi_tau_target_rows_present": true,
+      "row_count": 16,
+      "schema_version": "fh_lsz_target_timeseries_v2_multitau",
+      "tau_keys": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+      ]
     }
   ],
   "multi_tau_target_timeseries_schema_version": "fh_lsz_target_timeseries_v2_multitau",
@@ -1553,7 +1743,9 @@
     21,
     22,
     23,
-    24
+    24,
+    25,
+    26
   ],
   "response_stability_passed": false,
   "response_window_acceptance_gate_passed": false,
@@ -1577,117 +1769,117 @@
     "does not set kappa_s = 1 or identify the source pole with canonical Higgs",
     "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, or u0"
   ],
-  "tau_window_mean_spread_ratio": 1.0040317875521179,
+  "tau_window_mean_spread_ratio": 1.0038467237679904,
   "tau_window_summaries": {
     "0": {
       "available": true,
       "max": 1.2595947656486084,
-      "mean": 1.2449764172298539,
+      "mean": 1.2441055426510916,
       "min": 1.2252495316390388,
-      "n": 24,
-      "relative_stdev": 0.007385722718652582,
+      "n": 26,
+      "relative_stdev": 0.007510661330644513,
       "spread_ratio": 1.0280312157831437,
       "stable_by_rule": true,
-      "stdev": 0.009195050608921227
+      "stdev": 0.009344055390430062
     },
     "1": {
       "available": true,
       "max": 1.2600494005788554,
-      "mean": 1.24674515226625,
+      "mean": 1.24623626170646,
       "min": 1.2317402681361944,
-      "n": 24,
-      "relative_stdev": 0.0061978688314157995,
+      "n": 26,
+      "relative_stdev": 0.006272961898677158,
       "spread_ratio": 1.0229830372319457,
       "stable_by_rule": true,
-      "stdev": 0.007727162919949736
+      "stdev": 0.007817592586434479
     },
     "2": {
       "available": true,
       "max": 1.2604738655169978,
-      "mean": 1.2444751845105633,
+      "mean": 1.2448419744398898,
       "min": 1.2291256640039716,
-      "n": 24,
-      "relative_stdev": 0.005682564455489441,
+      "n": 26,
+      "relative_stdev": 0.005584726216153919,
       "spread_ratio": 1.0255044723506195,
       "stable_by_rule": true,
-      "stdev": 0.00707181044923839
+      "stdev": 0.0069521016096232595
     },
     "3": {
       "available": true,
       "max": 1.2593131242699118,
-      "mean": 1.2462792320758664,
+      "mean": 1.2462072622421925,
       "min": 1.234680465468263,
-      "n": 24,
-      "relative_stdev": 0.005084187374742192,
+      "n": 26,
+      "relative_stdev": 0.004893029089008501,
       "spread_ratio": 1.0199506345897411,
       "stable_by_rule": true,
-      "stdev": 0.006336317137123514
+      "stdev": 0.0060977283850846935
     },
     "4": {
       "available": true,
       "max": 1.2600521352965743,
-      "mean": 1.2454403204847253,
+      "mean": 1.2454340326959408,
       "min": 1.2370516746829097,
-      "n": 24,
-      "relative_stdev": 0.004927375083752852,
+      "n": 26,
+      "relative_stdev": 0.004780888523742234,
       "spread_ratio": 1.0185929667162532,
       "stable_by_rule": true,
-      "stdev": 0.006136751603457603
+      "stdev": 0.005954281273994034
     },
     "5": {
       "available": true,
       "max": 1.2562148890248537,
-      "mean": 1.2450888445010373,
+      "mean": 1.2449767601911947,
       "min": 1.2350789940591245,
-      "n": 24,
-      "relative_stdev": 0.003813615947511995,
+      "n": 26,
+      "relative_stdev": 0.003673728597665758,
       "spread_ratio": 1.0171129903976954,
       "stable_by_rule": true,
-      "stdev": 0.004748290673458438
+      "stdev": 0.004573706727343656
     },
     "6": {
       "available": true,
-      "max": 1.2539956769985205,
-      "mean": 1.244691512197217,
+      "max": 1.2557883877039044,
+      "mean": 1.244969972398911,
       "min": 1.2354992086168526,
-      "n": 24,
-      "relative_stdev": 0.004104467054433292,
-      "spread_ratio": 1.0149708459970401,
+      "n": 26,
+      "relative_stdev": 0.0043591036671249625,
+      "spread_ratio": 1.0164218470926951,
       "stable_by_rule": true,
-      "stdev": 0.005108795304746231
+      "stdev": 0.005426953172144556
     },
     "7": {
       "available": true,
       "max": 1.2557105626260667,
-      "mean": 1.2433998851850698,
+      "mean": 1.2438131885450219,
       "min": 1.2284472866817997,
-      "n": 24,
-      "relative_stdev": 0.005623722929724064,
+      "n": 26,
+      "relative_stdev": 0.005529220752369502,
       "spread_ratio": 1.022193281095446,
       "stable_by_rule": true,
-      "stdev": 0.006992536445131545
+      "stdev": 0.006877317694174015
     },
     "8": {
       "available": true,
       "max": 1.2541002493852482,
-      "mean": 1.2447610030343823,
+      "mean": 1.2447118418697847,
       "min": 1.232317086618695,
-      "n": 24,
-      "relative_stdev": 0.005103575308929335,
+      "n": 26,
+      "relative_stdev": 0.005026004431721031,
       "spread_ratio": 1.0176765890882218,
       "stable_by_rule": true,
-      "stdev": 0.006352731520604387
+      "stdev": 0.006255927233453185
     },
     "9": {
       "available": true,
-      "max": 1.2552598569153806,
-      "mean": 1.2484130093644639,
+      "max": 1.2569168657343366,
+      "mean": 1.248597794300338,
       "min": 1.233783950646128,
-      "n": 24,
-      "relative_stdev": 0.004030708428056752,
-      "spread_ratio": 1.0174065372288283,
+      "n": 26,
+      "relative_stdev": 0.004138389228497156,
+      "spread_ratio": 1.0187495671961806,
       "stable_by_rule": true,
-      "stdev": 0.005031988838541038
+      "stdev": 0.005167183662657827
     }
   },
   "verdict": "The current chunks give stable chunk-level symmetric source-shift effective-mass slopes across tau windows 0-9, so the forensics diagnostic is reproducible beyond tau=1.  The acceptance gate still does not pass: per-configuration multi-tau target rows are not yet complete for the full ready set, the finite-source-linearity gate is not passed, and the production fitted-slope response-stability gate remains open."

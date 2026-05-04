@@ -1,5 +1,37 @@
 # Handoff
 
+Latest checkpoint, 2026-05-03 FH/LSZ chunks025-026 v2 multi-tau wave:
+
+- Processed completed chunks025-026 with fixed seeds `2026051025` and
+  `2026051026`, no `--resume`, selected-mass scalar FH/LSZ, v2 multi-tau
+  target rows, and isolated output directories.
+- Added
+  `docs/YT_FH_LSZ_CHUNKS025_026_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-03.md`.
+- Added chunk-local generic target-timeseries and v2 multi-tau checkpoint
+  certificates for chunks025-026.
+- Refreshed the combiner, ready-set, target-observable ESS,
+  autocorrelation/ESS, response-stability, response-window forensics,
+  response-window acceptance, retained-route, and campaign-status certificates.
+- Result: the ready set is now `26/63` L12 chunks and `416/1000` saved
+  configurations.  Target-observable ESS passes with limiting ESS
+  `355.8130499055201`; response stability still fails
+  (`relative_stdev=0.8963361077055534`, `spread_ratio=5.920283844112204`);
+  response-window acceptance remains open because v2 rows cover only
+  chunks017-026, finite-source-linearity is absent, multiple source radii are
+  absent, and canonical-Higgs/source-overlap identity remains open.
+- Verification: generic chunk checkpoints `PASS=14 FAIL=0` for chunks025-026;
+  v2 multi-tau checkpoints `PASS=19 FAIL=0` for chunks025-026; retained-route
+  `PASS=137 FAIL=0`; campaign status `PASS=163 FAIL=0`.
+- Claim boundary: bounded production support only.  No retained or
+  `proposed_retained` wording is authorized.
+
+Next exact action: continue v2 production chunks, backfill v2 rows for
+chunks001-016 only if multi-tau covariance is prioritized, run multi-radius
+source-response calibration if finite-source-linearity is prioritized, or
+return to non-source-only closure work: certified `O_H/C_sH/C_HH` rows,
+same-source W/Z response rows, genuine Schur rows, or a rank-one neutral-scalar
+theorem.
+
 Latest checkpoint, 2026-05-03 SM one-Higgs to O_H import boundary:
 
 - Added `scripts/frontier_yt_sm_one_higgs_oh_import_boundary.py`,

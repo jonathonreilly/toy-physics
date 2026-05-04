@@ -29,6 +29,22 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=163 FAIL=0
 ```
 
+## 2026-05-03 FH/LSZ Chunks025-026 V2 Production-Support Update
+
+The campaign now includes v2 multi-tau target rows for chunks025 and 026,
+produced with fixed seeds `2026051025` and `2026051026`, selected-mass-only
+scalar FH/LSZ rows, no `--resume`, and isolated output directories.
+Chunk-local generic target-timeseries checkpoints are `PASS=14 FAIL=0` for
+each chunk; v2 multi-tau checkpoints are `PASS=19 FAIL=0` for each chunk.
+
+The campaign status remains open.  The ready L12 set is `26/63` chunks and
+`416/1000` saved configurations; target-observable ESS remains passed with
+limiting ESS `355.8130499055201`; response stability still fails; and the
+response-window acceptance gate is still open because v2 rows cover only
+chunks017-026, chunks001-016 lack v2 rows, multiple source radii and
+finite-source-linearity are absent, and canonical-Higgs/source-overlap identity
+is not supplied.
+
 ## 2026-05-03 SM One-Higgs To O_H Import Boundary Update
 
 The campaign status certificate now consumes the SM one-Higgs to O_H import

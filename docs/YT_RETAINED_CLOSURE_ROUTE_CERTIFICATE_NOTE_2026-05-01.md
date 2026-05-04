@@ -21,6 +21,20 @@ PYTHONPATH=scripts python3 scripts/frontier_yt_retained_closure_route_certificat
 # SUMMARY: PASS=137 FAIL=0
 ```
 
+## 2026-05-03 FH/LSZ Chunks025-026 V2 Production-Support Update
+
+The retained-route certificate now sees generic target-timeseries checkpoints
+for 26 chunks and v2 multi-tau checkpoints for 10 chunks.  Chunks025-026 were
+processed with fixed seeds `2026051025` and `2026051026`, no `--resume`,
+selected-mass scalar FH/LSZ rows, and v2 multi-tau target rows.
+
+The production surface remains bounded support: the L12 ready set is `26/63`
+chunks (`416/1000` saved configurations), target-observable ESS passes with
+limiting ESS `355.8130499055201`, but response stability still fails and the
+response-window acceptance gate remains open.  No scalar-pole,
+finite-source-linearity, W/Z, Schur, or canonical-Higgs/source-overlap closure
+is supplied.
+
 ## 2026-05-03 SM One-Higgs To O_H Import Boundary Update
 
 The retained-route certificate now consumes

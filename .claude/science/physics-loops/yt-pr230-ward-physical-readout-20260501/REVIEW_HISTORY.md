@@ -1,5 +1,48 @@
 # Review History
 
+## Review-Loop Backpressure - FH/LSZ Chunks025-026 V2 Multi-Tau Wave
+
+Local review-loop disposition:
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: BOUNDED PRODUCTION SUPPORT ONLY
+Imports / Support: DISCLOSED
+Nature Retention: OPEN
+Repo Governance: PASS for PR230-local loop pack; no publication/claims surfaces updated
+```
+
+Findings applied:
+
+- chunks025-026 completed with production run control, fixed seeds, no
+  `--resume`, selected-mass FH/LSZ rows, scalar `C_ss` rows, and v2 multi-tau
+  target time-series rows;
+- the ready set is now `26/63` L12 chunks and `416/1000` saved configurations;
+- target-observable ESS remains passed with limiting ESS
+  `355.8130499055201`;
+- response stability still fails and response-window acceptance remains open;
+- no source-Higgs, W/Z, Schur, scalar-pole, finite-source-linearity, or
+  canonical-Higgs identity closure is supplied;
+- retained/proposed-retained wording remains barred.
+
+Checks:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 25
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 26
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 25
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 26
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+```
+
 ## Review-Loop Backpressure - SM One-Higgs To O_H Import Boundary
 
 Local review-loop disposition:

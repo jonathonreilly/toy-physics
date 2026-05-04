@@ -6,7 +6,7 @@
 
 ## Purpose
 
-The target-observable ESS gate now passes for chunks001-016, but the ready
+The target-observable ESS gate now passes for chunks001-026, but the ready
 chunk response-stability diagnostic still fails on the fitted `dE/ds` central
 values.  This runner compares that fitted response surface with the serialized
 per-configuration tau=1 effective-energy response target series.
@@ -21,21 +21,21 @@ python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
 The fitted-slope surface remains unstable:
 
 ```text
-n = 16
-mean = 2.394872441560054
-relative_stdev = 0.8943920916391181
-spread_ratio = 5.476535332624479
-median = 1.4280799416149008
+n = 26
+mean = 2.4505744350486798
+relative_stdev = 0.8963361077055534
+spread_ratio = 5.920283844112204
+median = 1.4287544738947873
 ```
 
 The tau=1 target diagnostic is stable across the same chunks:
 
 ```text
-n = 16
-mean = 1.248274943839869
-relative_stdev = 0.006010378980783995
+n = 26
+mean = 1.245795387237233
+relative_stdev = 0.006279954340116946
 spread_ratio = 1.0229374224682368
-median = 1.2482671382627446
+median = 1.245909205954382
 ```
 
 This identifies a response-window/readout-selection blocker.  It does not

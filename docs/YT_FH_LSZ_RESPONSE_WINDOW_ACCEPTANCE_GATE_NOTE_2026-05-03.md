@@ -23,13 +23,13 @@ effective-mass slopes across tau windows 0-9:
 
 ```text
 stable_tau_windows = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-tau_window_mean_spread = 1.00497773596142
+tau_window_mean_spread = 1.0038467237679904
 ```
 
 The acceptance gate still does not pass:
 
-- per-configuration multi-tau covariance is absent;
-- target serialization currently records tau=1 slopes only;
+- per-configuration multi-tau covariance is incomplete;
+- v2 multi-tau rows cover chunks017-026, while chunks001-016 still lack v2 rows;
 - the finite-source-linearity gate is not passed, so only one source radius is
   available;
 - the fitted-slope response-stability gate remains open.

@@ -24,14 +24,14 @@ An initial target-observable ESS check on chunks001-012 had limiting ESS
 launched chunks013-016 with fixed seeds, no `--resume`, distinct
 production-output directories, and concurrency capped at four workers.
 
-After chunks013-016 completed:
+After chunks025-026 completed:
 
 ```text
 python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
 # SUMMARY: PASS=8 FAIL=0
 
-ready_chunk_indices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-limiting_target_ess = 210.7849819291294
+ready_chunk_indices = [1, 2, 3, ..., 24, 25, 26]
+limiting_target_ess = 355.8130499055201
 minimum_target_ess_per_volume = 200.0
 limiting_target_ess_observable = source_slope_tau1
 ```
@@ -50,7 +50,7 @@ It does not set `kappa_s = 1`, does not treat `dE/ds` as physical `dE/dh`, and
 does not use `H_unit`, Ward authority, observed top mass, observed `y_t`,
 `alpha_LM`, plaquette, or `u0` as proof input.
 
-The ready set is still only `16/63` L12 chunks and `256/1000` saved
+The ready set is still only `26/63` L12 chunks and `416/1000` saved
 configurations.  Response stability still fails, the scalar-pole
 derivative/model-class/FV/IR gates remain open, and the source pole is not
 identified with the canonical Higgs radial mode.

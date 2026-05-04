@@ -1,5 +1,17 @@
 # Opportunity Queue
 
+2026-05-03 update: chunks025-026 are processed and wired into the production
+support certificates.  The ready L12 FH/LSZ set is now `26/63` chunks,
+`416/1000` saved configurations; target-observable ESS remains passed with
+limiting ESS `355.8130499055201`; v2 multi-tau rows cover chunks017-026.
+This is still bounded support only.  Response stability fails, response-window
+acceptance remains open, chunks001-016 lack v2 rows, finite-source-linearity
+and multiple source radii are absent, and no canonical-Higgs/source-overlap,
+W/Z, Schur, or scalar-pole identity is supplied.  Highest-value next actions:
+continue v2 chunks, backfill old v2 rows only if covariance is prioritized,
+run multi-radius source-response calibration, or return to non-source-only
+identity work (`O_H/C_sH/C_HH`, W/Z rows, Schur rows, rank-one neutral scalar).
+
 2026-05-03 update: the SM one-Higgs to O_H import boundary is now landed and
 wired into the retained-route/campaign gates.  The support runner passes after
 status-wording hygiene, but this closes the import as a positive PR230 O_H
