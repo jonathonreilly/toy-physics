@@ -216,6 +216,26 @@ Findings:
   derive scalar LSZ normalization, finite-source-linearity, pole/FV/IR control,
   `O_sp = O_H`, source-Higgs overlap, or physical `y_t`.
 
+## 2026-05-04 Common-Window Response Gate Self-Review
+
+Disposition: open response-gate contract; continue campaign.
+
+Findings:
+
+- The gate formalizes the criteria for any future fixed-window response
+  readout and wires that criterion into retained-route and campaign aggregate
+  certificates.
+- The current common-window central slope is stable, but the fixed-window
+  uncertainty is non-production-grade.
+- The current finite-source-linearity gate, response-window acceptance gate,
+  fitted-response stability gate, scalar-LSZ gate, and canonical-Higgs/source-
+  overlap gates remain open.
+- The gate reports `PASS=12 FAIL=0` because it records the open state
+  honestly; retained-route and campaign aggregate certificates report
+  `PASS=152 FAIL=0` and `PASS=178 FAIL=0`.
+- No retained/proposed-retained claim is authorized and no physical readout
+  switch is authorized.
+
 ## 2026-05-04 Schur/K-Prime Row Absence Refresh Self-Review
 
 Disposition: bounded support / exact negative boundary; continue campaign.

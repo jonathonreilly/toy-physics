@@ -1,0 +1,83 @@
+{
+  "actual_current_surface_status": "open / FH-LSZ common-window response gate not passed",
+  "bare_retained_allowed": false,
+  "common_window_response_gate_passed": false,
+  "common_window_summary": {
+    "common_window": {
+      "tau_max": 12,
+      "tau_min": 10
+    },
+    "common_window_relative_fit_error": 17.212298342178425,
+    "common_window_slope_summary": {
+      "available": true,
+      "max": 1.4461110127928816,
+      "mean": 1.4256769178257236,
+      "median": 1.4250809955622445,
+      "min": 1.4125650847943865,
+      "n": 46,
+      "relative_stdev": 0.005504460391515086,
+      "spread_ratio": 1.0237482352916702,
+      "stdev": 0.007847582125269004
+    },
+    "high_original_slope_chunk_indices": [
+      2,
+      4,
+      14,
+      22,
+      23,
+      29,
+      41,
+      42
+    ],
+    "mixed_window_chunk_indices": [
+      2,
+      4,
+      14,
+      20,
+      22,
+      23,
+      27,
+      29,
+      32,
+      40,
+      41,
+      42
+    ]
+  },
+  "exact_next_action": "If pursuing this route, improve the fixed-window estimator until the common-window response is production-grade, then pass finite-source-linearity and response-window acceptance before any readout-switch request.  This still remains downstream of scalar LSZ and canonical-Higgs/source-overlap closure.",
+  "fail_count": 0,
+  "open_blockers": [
+    "common_window_production_grade",
+    "response_window_acceptance_gate_passed",
+    "finite_source_linearity_gate_passed",
+    "fitted_response_stability_passed"
+  ],
+  "parent_certificates": {
+    "common_window_response_provenance": "outputs/yt_fh_lsz_common_window_response_provenance_2026-05-04.json",
+    "finite_source_linearity_gate": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
+    "fitted_response_stability": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
+    "response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
+    "v2_target_response_stability": "outputs/yt_fh_lsz_v2_target_response_stability_2026-05-04.json"
+  },
+  "pass_count": 12,
+  "predeclared_criteria": {
+    "common_window_production_grade": false,
+    "common_window_stability_passed": true,
+    "finite_source_linearity_gate_passed": false,
+    "fitted_response_stability_passed": false,
+    "response_window_acceptance_gate_passed": false,
+    "scalar_lsz_and_canonical_higgs_closure_required_separately": true,
+    "v2_target_response_stability_support_passed": true
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The common-window gate is an evidence-quality contract only; it does not supply scalar LSZ normalization or O_sp/O_H identity.",
+  "readout_switch_authorized": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not replace the production response readout",
+    "does not treat fixed-window central stability as scalar LSZ normalization",
+    "does not set kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ],
+  "verdict": "The common-window provenance result is now formalized as a predeclared gate.  On the current surface the fixed-window central slope is stable, but it is not production-grade and the response-window, finite-source-linearity, fitted-response stability, scalar-LSZ, and canonical-Higgs/source-overlap gates remain open.  No physical readout switch is authorized."
+}

@@ -383,6 +383,9 @@ def main() -> int:
         "fh_lsz_common_window_response_provenance": load(
             "outputs/yt_fh_lsz_common_window_response_provenance_2026-05-04.json"
         ),
+        "fh_lsz_common_window_response_gate": load(
+            "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json"
+        ),
         "fh_lsz_v2_target_response_stability": load(
             "outputs/yt_fh_lsz_v2_target_response_stability_2026-05-04.json"
         ),
@@ -1445,6 +1448,12 @@ def main() -> int:
         "common-window response provenance"
         in str(statuses["fh_lsz_common_window_response_provenance"]),
         statuses["fh_lsz_common_window_response_provenance"],
+    )
+    report(
+        "fh-lsz-common-window-response-gate-blocks",
+        "common-window response gate not passed"
+        in str(statuses["fh_lsz_common_window_response_gate"]),
+        statuses["fh_lsz_common_window_response_gate"],
     )
     report(
         "fh-lsz-v2-target-response-stability-not-closure",

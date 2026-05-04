@@ -193,6 +193,7 @@ def main() -> int:
         "fh_lsz_autocorrelation_ess_gate": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
         "fh_lsz_response_window_forensics": "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json",
         "fh_lsz_common_window_response_provenance": "outputs/yt_fh_lsz_common_window_response_provenance_2026-05-04.json",
+        "fh_lsz_common_window_response_gate": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
         "fh_lsz_v2_target_response_stability": "outputs/yt_fh_lsz_v2_target_response_stability_2026-05-04.json",
         "fh_lsz_response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
         "fh_lsz_legacy_v2_backfill_feasibility": "outputs/yt_fh_lsz_legacy_v2_backfill_feasibility_2026-05-04.json",
@@ -1361,6 +1362,22 @@ def main() -> int:
         )
         is False
     )
+    common_window_response_gate_blocks = (
+        "common-window response gate not passed"
+        in certificates["fh_lsz_common_window_response_gate"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["fh_lsz_common_window_response_gate"].get("proposal_allowed")
+        is False
+        and certificates["fh_lsz_common_window_response_gate"].get(
+            "common_window_response_gate_passed"
+        )
+        is False
+        and certificates["fh_lsz_common_window_response_gate"].get(
+            "readout_switch_authorized"
+        )
+        is False
+    )
     v2_target_response_stability_not_closure = (
         "v2 target-response stability passed"
         in certificates["fh_lsz_v2_target_response_stability"].get("actual_current_surface_status", "")
@@ -2124,6 +2141,13 @@ def main() -> int:
         "fh-lsz-common-window-response-provenance-not-closure",
         common_window_response_provenance_not_closure,
         certificates["fh_lsz_common_window_response_provenance"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
+        "fh-lsz-common-window-response-gate-blocks",
+        common_window_response_gate_blocks,
+        certificates["fh_lsz_common_window_response_gate"].get(
             "actual_current_surface_status", ""
         ),
     )

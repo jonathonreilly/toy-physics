@@ -101,4 +101,9 @@ Open imports:
   fitted `dE/ds` instability as mixed source-shift fit-window selection and
   shows a stable fixed `tau=10..12` central slope surface, but the uncertainty
   is non-production-grade and no readout switch or y_t closure is authorized;
+- common-window response gate is open: it formalizes the future criteria for a
+  fixed-window readout but currently blocks because production-grade
+  uncertainty, finite-source-linearity, response-window acceptance,
+  fitted-response stability, scalar-LSZ, and canonical-Higgs/source-overlap
+  gates remain open;
 - independent audit after any proposed positive certificate.
