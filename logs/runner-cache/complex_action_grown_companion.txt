@@ -1,11 +1,45 @@
 ===== runner cache v1 =====
 runner: scripts/complex_action_grown_companion.py
-runner_sha256: 83cb887c58ccd33005fcd2db0a7d1166e2ba89aa3acc03eba622684278a5f035
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: 59b8ff8d1a7f6c26f078f3501bb728d3b2bf0b80fff94b9212ae98ed8a9c6295
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 187.94
+status: ok
 ----- stdout -----
+============================================================================================
+GROWN-GEOMETRY COMPLEX-ACTION COMPANION
+  narrow target: exact gamma=0 reduction, linearity proxy, weak-field sanity
+  claim surface stays on the retained grown row only
+============================================================================================
+drift=0.2, restore=0.7, h=0.5, W=8, NL=25, s=0.1
+
+  running gamma=0.00 ...
+BORN PROXY (seed=0)
+  |I3|/P = 1.647e-15
+
+EXACT REDUCTION (seed=0)
+  gamma=0 delta: +2.460475e-01
+  match: exact within machine precision
+
+  running gamma=0.05 ...
+  running gamma=0.10 ...
+  running gamma=0.20 ...
+  running gamma=0.50 ...
+  running gamma=1.00 ...
+  gamma  toward      avg_delta   avg_escape      F~M
+--------------------------------------------------------------
+   0.00       2/2  +2.606923e-01       2.0077    1.000
+   0.05       2/2  +1.823141e-01       1.7063    1.000
+   0.10       2/2  +1.042271e-01       1.4522    1.000
+   0.20       0/2  -4.931754e-02       1.0558    1.000
+   0.50       0/2  -4.760660e-01       0.4156    1.000
+   1.00       0/2  -1.074474e+00       0.0935    1.000
+
+SAFE READ
+  This companion is exact-lattice-like only in the grown-geometry sense:
+  exact gamma=0 reduction is retained on the retained grown row.
+  If the Born proxy or weak-field F~M is too weak, that should be stated
+  explicitly rather than promoted.
 
 ----- stderr -----
 
