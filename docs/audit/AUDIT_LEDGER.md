@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-04T00:19:30.926450+00:00
+**Generated:** 2026-05-04T00:21:39.030644+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -24,13 +24,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 209 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 18 |
-| unaudited | 675 |
+| unaudited | 674 |
 | audit_in_progress | 1 |
 | meta | 47 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 31 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 552 |
+| ~~audited_conditional~~ | 553 |
 | ~~audited_failed~~ | 7 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | 1 |
@@ -39,12 +39,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 378 |
-| `audited_conditional` | 552 |
+| `audited_conditional` | 553 |
 | `audited_decoration` | 8 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 31 |
 | `audited_renaming` | 22 |
-| `unaudited` | 722 |
+| `unaudited` | 721 |
 
 | claim_type | count |
 |---|---:|
@@ -745,6 +745,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_from_lattice_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `higgs_mass_derived_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | G | - |
+| `higgs_mass_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | F | - |
 | `higgs_mass_hierarchy_correction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higgs_mechanism_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-current | B | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -7591,6 +7592,25 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
   - `TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md`
   - `HIGGS_MECHANISM_NOTE.md`
   - `HIGGS_FROM_LATTICE_NOTE.md`
+- **auditor confidence:** high
+
+### `higgs_mass_from_axiom_note`
+
+- **Note:** [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](../../docs/HIGGS_MASS_FROM_AXIOM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded tree-level mean-field Higgs route giving m_H_tree = v/(2 u_0) = 140.3 GeV with N_c cancellation, explicitly not the physical post-EWSB Higgs mass.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-03`  (codex-gpt-5; independence=cross_family)
+- **load-bearing step:** Identify the per-channel symmetric-point curvature (4/u_0^2)/N_taste with (m_H_tree/v)^2, giving m_H_tree = v/(2 u_0) = 140.3 GeV.  _(class `F`)_
+- **chain closes:** False — The primary runner verifies the algebra of the stated tree-level formula, but it hard-codes the imported canonical inputs v, u_0, and N_taste and does not derive the curvature-to-Higgs readout map from the allowed packet. The source note itself states that the readout is a mean-field proxy and that physical Higgs mass closure requires separate CW/RGE/taste-breaking chains.
+- **rationale:** Issue: the audited row has no one-hop retained dependencies for the taste degeneracy theorem, hierarchy/VEV input, plaquette mean-field value u_0, or the curvature-to-Higgs readout map, and the runner verifies only the algebra after those inputs are fixed. Why this blocks: the bounded tree-level number is a transparent auxiliary estimate, but it is not an axiom-derived theorem from the restricted packet. Repair target: include retained dependency rows for u_0, v, N_taste and a theorem deriving the tree-level readout map, or scope the row explicitly as a calculator over imported inputs. Claim boundary until fixed: m_H_tree = v/(2u_0) = 140.3 GeV with N_c cancellation is a bounded mean-field support formula, not an audited axiom-first Higgs-mass derivation.
+- **open / conditional deps cited:**
+  - `TASTE_POLYNOMIAL_NOTE.md`
+  - `DM_AMGM_SATURATION_NOTE.md`
+  - `HIERARCHY_THEOREM.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `HIGGS_MASS_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mass_hierarchy_correction_note`
