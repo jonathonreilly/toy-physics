@@ -331,3 +331,30 @@ Findings:
 - No retained/proposed-retained claim is authorized because scalar LSZ,
   canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
   gates remain open.
+
+## 2026-05-04 Chunks041-042 Packaging Self-Review
+
+Disposition: bounded production support; continue campaign.
+
+Findings:
+
+- The orchestrator gate list was patched so future aggregate gate runs include
+  the v2 target-response stability certificate before retained/campaign
+  aggregation.
+- Chunks041 and 042 pass both generic and v2 multi-tau target-timeseries
+  checkpoints with zero fails after the generic checkpoints are rerun against
+  the refreshed 42-chunk ready set.
+- The ready L12 set advances to 42/63 chunks and 672/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  `593.8640255444543`.
+- V2 target-response stability remains bounded support over chunks017-042 for
+  positive tau windows `0..9`.
+- Response-window acceptance remains open because response stability is not
+  production-grade, chunks001-016 still lack v2 rows, finite-source-linearity
+  does not close the response window, and canonical-Higgs/source-overlap
+  evidence is still absent.
+- Chunks047 and 048 were launched under a separate next-range orchestrator
+  status file to keep the six-job cap full while chunks043-046 continue.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
+  gates remain open.

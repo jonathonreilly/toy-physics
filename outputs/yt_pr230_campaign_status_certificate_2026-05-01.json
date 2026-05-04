@@ -96,6 +96,12 @@
     "fh_lsz_chunk039_target_timeseries_generic": "bounded-support / FH-LSZ chunk039 generic target-timeseries checkpoint",
     "fh_lsz_chunk040_multitau_target_timeseries": "bounded-support / FH-LSZ chunk040 v2 multi-tau target-timeseries checkpoint",
     "fh_lsz_chunk040_target_timeseries_generic": "bounded-support / FH-LSZ chunk040 generic target-timeseries checkpoint",
+    "fh_lsz_chunk041_multitau_target_timeseries": "bounded-support / FH-LSZ chunk041 v2 multi-tau target-timeseries checkpoint",
+    "fh_lsz_chunk041_target_timeseries_generic": "bounded-support / FH-LSZ chunk041 generic target-timeseries checkpoint",
+    "fh_lsz_chunk042_multitau_target_timeseries": "bounded-support / FH-LSZ chunk042 v2 multi-tau target-timeseries checkpoint",
+    "fh_lsz_chunk042_target_timeseries_generic": "bounded-support / FH-LSZ chunk042 generic target-timeseries checkpoint",
+    "fh_lsz_chunk043_multitau_target_timeseries": "bounded-support / FH-LSZ chunk043 v2 multi-tau target-timeseries checkpoint",
+    "fh_lsz_chunk043_target_timeseries_generic": "bounded-support / FH-LSZ chunk043 generic target-timeseries checkpoint",
     "fh_lsz_chunk_combiner_gate": "open / FH-LSZ chunk combiner gate blocks partial or non-independent evidence",
     "fh_lsz_chunked_production_manifest": "bounded-support / FH-LSZ chunked production manifest",
     "fh_lsz_eight_mode_noise_variance": "open / FH-LSZ eight-mode noise variance gate not passed",
@@ -242,8 +248,8 @@
     "wz_same_source_ew_action_gate": "exact negative boundary / same-source EW action not defined on PR230 surface",
     "zero_mode_prescription_import": "exact negative boundary / zero-mode prescription import audit"
   },
-  "fail_count": 0,
-  "pass_count": 176,
+  "fail_count": 1,
+  "pass_count": 175,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
   "remaining_routes": [

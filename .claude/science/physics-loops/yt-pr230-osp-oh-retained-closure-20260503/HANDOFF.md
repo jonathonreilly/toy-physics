@@ -948,3 +948,81 @@ The chunk-wave orchestrator filled the remaining range slots and launched
 chunks041-046.  Next exact action: monitor chunks041-046.  When any output
 lands, rerun the chunk-local gates, FH/LSZ aggregate gates, retained-route
 certificate, and campaign-status certificate before packaging.
+
+## 2026-05-04 Chunks041-042 Packaging And Next Range Launch
+
+The chunk-wave orchestrator gate list was refreshed to include the v2
+target-response stability runner before retained-route and campaign-status
+aggregation:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py
+# pass
+```
+
+Chunks041 and 042 then landed and were packaged:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 41
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 42
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 41
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 42
+# SUMMARY: PASS=19 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_v2_target_response_stability.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=150 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=176 FAIL=0
+```
+
+Current production state: 42/63 L12 chunks ready, 672/1000 saved
+configurations, target-observable ESS passed with limiting ESS
+`593.8640255444543`, v2 target-response stability passed as bounded support
+over chunks017-042, response-window acceptance still open, and retained
+closure still unauthorized.
+
+To keep the CPU full after chunks041/042 freed two slots, I launched the next
+range monitor with an isolated status file:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_chunk_wave_orchestrator.py \
+  --start-index 47 --end-index 52 --max-concurrent 6 \
+  --runtime-minutes 720 --poll-seconds 60 --launch --run-gates \
+  --status-output outputs/yt_fh_lsz_chunk_wave_orchestrator_status_47_52_2026-05-04.json
+# launched chunks047-048
+```
+
+Currently running: chunks043-048.  Next exact action: package whichever of
+chunks043-048 lands next, refresh all aggregate gates including v2, and launch
+the remaining chunks049-052 as slots open.

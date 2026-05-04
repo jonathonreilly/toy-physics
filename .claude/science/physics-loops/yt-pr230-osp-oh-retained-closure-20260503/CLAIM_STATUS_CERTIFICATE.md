@@ -54,15 +54,19 @@ Open imports:
   production support only; the 40/63 ready L12 state passes target-observable
   ESS with limiting ESS `564.3761930946672` but still fails response-window
   acceptance and does not provide canonical-Higgs/source-overlap closure;
-- chunks041/042/043/044/045/046 are now launched under the chunk-wave
-  orchestrator; this is run-control only until their output certificates land
+- FH/LSZ chunks041/042 are now packaged with the ready set as bounded
+  production support only; the 42/63 ready L12 state passes target-observable
+  ESS with limiting ESS `593.8640255444543` but still fails response-window
+  acceptance and does not provide canonical-Higgs/source-overlap closure;
+- chunks043/044/045/046/047/048 are now running under chunk-wave
+  orchestrators; this is run-control only until their output certificates land
   and local/aggregate gates pass;
 - the legacy-v2 backfill feasibility audit is an exact negative boundary:
   chunks001-016 contain aggregate correlators and tau=1 per-configuration rows
   but no raw per-configuration source-shift correlator time series, so v2
   multi-tau covariance rows cannot be honestly backfilled from saved artifacts;
 - the v2 target-response stability gate passes as bounded support over the
-  honest v2 population chunks017-040 for positive tau windows `0..9`, but it
+  honest v2 population chunks017-042 for positive tau windows `0..9`, but it
   does not authorize a readout switch, scalar LSZ closure, canonical-Higgs
   identity, or retained/proposed-retained wording;
 - source-Higgs production readiness is blocked by the missing same-surface
