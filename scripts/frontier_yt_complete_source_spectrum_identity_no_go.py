@@ -26,7 +26,9 @@ PARENTS = {
     "source_pole_purity_cross_correlator": "outputs/yt_source_pole_purity_cross_correlator_gate_2026-05-02.json",
     "source_higgs_gram_purity": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "source_higgs_harness_absence": "outputs/yt_source_higgs_harness_absence_guard_2026-05-02.json",
+    "source_higgs_harness_extension": "outputs/yt_source_higgs_cross_correlator_harness_extension_2026-05-03.json",
     "wz_response_harness_absence": "outputs/yt_wz_response_harness_absence_guard_2026-05-02.json",
+    "wz_response_repo_harness_import": "outputs/yt_wz_response_repo_harness_import_audit_2026-05-03.json",
     "no_orthogonal_top_coupling_selection": "outputs/yt_no_orthogonal_top_coupling_selection_rule_no_go_2026-05-02.json",
 }
 
@@ -146,9 +148,19 @@ def main() -> int:
         and "source-Higgs Gram purity gate not passed" in status(parents["source_higgs_gram_purity"])
         and parents["source_higgs_gram_purity"].get("source_higgs_gram_purity_gate_passed") is False
     )
-    harness_guards_absent = (
-        "source-Higgs harness absence guard" in status(parents["source_higgs_harness_absence"])
-        and "WZ response harness absence guard" in status(parents["wz_response_harness_absence"])
+    source_higgs_support_only = (
+        "source-Higgs harness default-off guard" in status(parents["source_higgs_harness_absence"])
+        and parents["source_higgs_harness_absence"].get("proposal_allowed") is False
+        and "source-Higgs cross-correlator harness extension"
+        in status(parents["source_higgs_harness_extension"])
+        and parents["source_higgs_harness_extension"].get("proposal_allowed") is False
+    )
+    wz_support_only = (
+        "WZ response harness absence guard" in status(parents["wz_response_harness_absence"])
+        and parents["wz_response_harness_absence"].get("proposal_allowed") is False
+        and "repo-wide WZ response harness import audit"
+        in status(parents["wz_response_repo_harness_import"])
+        and parents["wz_response_repo_harness_import"].get("repo_wz_response_harness_found") is False
     )
     no_selection_rule = (
         "no-orthogonal-top-coupling selection rule not derived"
@@ -165,7 +177,16 @@ def main() -> int:
     report("higgs-identity-gate-blocked", higgs_identity_blocked, status(parents["fh_lsz_higgs_pole_identity"]))
     report("mixing-obstruction-present", mixing_blocked, status(parents["source_pole_canonical_higgs_mixing"]))
     report("purity-data-still-absent", purity_data_absent, "C_sH/C_HH purity rows absent")
-    report("source-higgs-and-wz-guards-absent", harness_guards_absent, "no O_H/C_sH/C_HH or W/Z response rows")
+    report(
+        "source-higgs-instrumentation-support-only",
+        source_higgs_support_only,
+        "default-off source-Higgs instrumentation is not O_H/C_sH/C_HH evidence",
+    )
+    report(
+        "wz-harness-support-only",
+        wz_support_only,
+        "no same-source W/Z response harness or rows",
+    )
     report("no-orthogonal-top-coupling-not-derived", no_selection_rule, status(parents["no_orthogonal_top_coupling_selection"]))
     report("complete-source-spectrum-held-fixed", checks["source_spectrum_identical_across_rows"], "all C_ss(q2) samples identical")
     report("same-source-top-response-held-fixed", checks["same_source_top_response_identical"], "dE_top/ds identical")

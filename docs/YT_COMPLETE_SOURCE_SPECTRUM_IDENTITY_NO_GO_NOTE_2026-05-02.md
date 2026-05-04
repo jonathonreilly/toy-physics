@@ -23,11 +23,18 @@ and keeps every sampled value of the complete source spectrum and the
 same-source top response fixed while varying `y_h` by a factor greater than
 four through finite positive `y_chi`.
 
+The 2026-05-04 refresh also updates the parent-state checks for the newer
+PR230 source-Higgs instrumentation.  The harness now has default-off
+`C_ss/C_sH/C_HH` instrumentation, but it remains support-only because no
+accepted canonical-Higgs operator certificate or production pole-residue rows
+exist.  The W/Z side remains an absence/import-audit boundary with no
+same-source W/Z response rows.
+
 ## Runner
 
 ```bash
 python3 scripts/frontier_yt_complete_source_spectrum_identity_no_go.py
-# SUMMARY: PASS=14 FAIL=0
+# SUMMARY: PASS=15 FAIL=0
 ```
 
 Certificate:

@@ -86,3 +86,18 @@ Findings:
 - No retained/proposed-retained claim is authorized because finite source
   linearity does not identify the scalar source with canonical `O_H` and does
   not supply scalar LSZ pole control.
+
+## 2026-05-04 Chunk-Wave Orchestrator Self-Review
+
+Disposition: production run-control support; continue campaign.
+
+Findings:
+
+- The orchestrator detects active production jobs across the full chunk set
+  before launching any future range, avoiding accidental oversubscription.
+- The first live status correctly records chunks029-034 as running and holds
+  chunks035-040 until slots open.
+- The status certificate is not production evidence and does not affect the
+  scalar LSZ, source-Higgs, W/Z, Schur, rank-one, retained-route, or campaign
+  gates.
+- No retained/proposed-retained claim is authorized by orchestration.
