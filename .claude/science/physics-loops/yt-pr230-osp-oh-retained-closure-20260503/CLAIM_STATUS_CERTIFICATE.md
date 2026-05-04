@@ -133,6 +133,11 @@ Open imports:
 - the eight-mode noise variance gate now passes as launch support by consuming
   the paired x8/x16 calibration certificate; this is not production pole data
   and does not authorize retained/proposed-retained wording;
+- the pole-fit mode/noise budget now consumes the passed variance gate and
+  accepts eight-mode/x8 only as a separate future pole-fit launch support
+  shape; it remains non-evidence until production completion, scalar-pole
+  FV/IR/model-class control, canonical-Higgs/source-overlap closure, and
+  retained-proposal gates pass;
 - FH/LSZ chunks047/048 are now packaged with the ready set as bounded
   production support only; the 48/63 ready L12 state passes target-observable
   ESS with limiting ESS `678.1515635297619` but still fails response-window

@@ -521,3 +521,21 @@ Findings:
 - No retained/proposed-retained claim is authorized because scalar LSZ,
   canonical-Higgs/source-overlap, W/Z response, Schur-row, FV/IR/model-class,
   and retained-route gates remain open.
+
+## 2026-05-04 Pole-Fit Budget Refresh Self-Review
+
+Disposition: launch support only; continue campaign.
+
+Findings:
+
+- The pole-fit mode/noise budget now consumes the passed eight-mode variance
+  gate instead of treating x8 as still awaiting variance acceptance.
+- The eight-mode/x8 recommendation is still explicitly scoped to a separate
+  future pole-fit stream and cannot be combined with the current four-mode
+  chunks as one homogeneous ensemble.
+- The update adds no physical `y_t` readout and does not alter the retained
+  route: retained-route remains `PASS=155 FAIL=0`, campaign remains
+  `PASS=181 FAIL=0`, with proposal wording still blocked.
+- Launching chunks061-063 uses spare CPU to complete the L12 support surface
+  sooner, but those chunks are not evidence until root outputs and local plus
+  aggregate gates pass.

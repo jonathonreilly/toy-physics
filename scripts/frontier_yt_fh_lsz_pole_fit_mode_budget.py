@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "outputs" / "yt_fh_lsz_joint_resource_projection_2026-05-01.json"
 CHUNK_MANIFEST = ROOT / "outputs" / "yt_fh_lsz_chunked_production_manifest_2026-05-01.json"
 KINEMATICS_GATE = ROOT / "outputs" / "yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json"
+VARIANCE_GATE = ROOT / "outputs" / "yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
 OUTPUT = ROOT / "outputs" / "yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"
 
 POINT_SOURCES_PER_MASS = 3
@@ -119,6 +120,7 @@ def main() -> int:
     resource = load_json(RESOURCE)
     chunk_manifest = load_json(CHUNK_MANIFEST)
     kinematics = load_json(KINEMATICS_GATE)
+    variance_gate = load_json(VARIANCE_GATE)
     current_chunk_hours = float(
         chunk_manifest.get("chunk_policy", {}).get("estimated_l12_chunk_hours", float("nan"))
     )
@@ -128,9 +130,16 @@ def main() -> int:
     current = candidate("current_four_modes_x16_noise", CURRENT_MODES, 16, current_chunk_hours, current_solve_factor)
     pole_fit_same_noise = candidate("pole_fit_eight_modes_x16_noise", POLE_FIT_MODES, 16, current_chunk_hours, current_solve_factor)
     pole_fit_half_noise = candidate("pole_fit_eight_modes_x8_noise", POLE_FIT_MODES, 8, current_chunk_hours, current_solve_factor)
+    x8_variance_gate_passed = variance_gate.get("variance_gate_passed") is True
+    x8_launch_support_accepted = (
+        pole_fit_half_noise["pole_fit_kinematics_ready"] is True
+        and pole_fit_half_noise["fits_12h_foreground"] is True
+        and x8_variance_gate_passed
+    )
 
     report("resource-loaded", bool(resource), str(RESOURCE.relative_to(ROOT)))
     report("chunk-manifest-loaded", bool(chunk_manifest), str(CHUNK_MANIFEST.relative_to(ROOT)))
+    report("variance-gate-loaded", bool(variance_gate), str(VARIANCE_GATE.relative_to(ROOT)))
     report(
         "current-four-mode-plan-not-pole-ready",
         current["pole_fit_kinematics_ready"] is False
@@ -152,7 +161,16 @@ def main() -> int:
         pole_fit_half_noise["fits_12h_foreground"] is True,
         f"hours={pole_fit_half_noise['estimated_l12_chunk_hours']:.6g}",
     )
-    report("lower-noise-requires-variance-gate", True, "x8 noise is planning only until variance is audited")
+    report(
+        "lower-noise-variance-gate-state-recorded",
+        x8_variance_gate_passed,
+        "x8 accepted as launch support only" if x8_variance_gate_passed else "x8 still needs variance acceptance",
+    )
+    report(
+        "x8-launch-support-accepted-not-evidence",
+        x8_launch_support_accepted,
+        "eight-mode/x8 may be launched as a separate support stream",
+    )
     report("not-retained-closure", True, "mode/noise budget is not production data or scalar LSZ theorem")
 
     result = {
@@ -166,9 +184,11 @@ def main() -> int:
             "The same eight modes with eight noises keep the solve-budget "
             "factor equal to the current four-mode/sixteen-noise plan and are "
             f"estimated at {pole_fit_half_noise['estimated_l12_chunk_hours']:.6g} "
-            "hours.  This is a constructive launch option, not evidence: lower "
-            "noise needs a variance gate, production completion, FV/IR control, "
-            "and retained-proposal certification."
+            "hours.  The eight-mode/x8 setting now also passes the variance "
+            "gate as launch support only.  This is a constructive launch "
+            "option, not evidence: production completion, pole/model-class "
+            "control, FV/IR control, canonical-Higgs/source-overlap closure, "
+            "and retained-proposal certification remain required."
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": "A mode/noise budget is launch planning only and does not provide production pole data.",
@@ -176,15 +196,21 @@ def main() -> int:
             "resource_projection": str(RESOURCE.relative_to(ROOT)),
             "chunk_manifest": str(CHUNK_MANIFEST.relative_to(ROOT)),
             "kinematics_gate": str(KINEMATICS_GATE.relative_to(ROOT)),
+            "variance_gate": str(VARIANCE_GATE.relative_to(ROOT)),
         },
         "candidates": [current, pole_fit_same_noise, pole_fit_half_noise],
+        "x8_variance_gate_passed": x8_variance_gate_passed,
+        "x8_launch_support_accepted": x8_launch_support_accepted,
         "recommended_next_launch_if_variance_accepted": pole_fit_half_noise["command_fragment"],
+        "recommended_next_launch_if_launch_support_accepted": (
+            pole_fit_half_noise["command_fragment"] if x8_launch_support_accepted else None
+        ),
         "acceptance_requirements": [
-            "run a variance/noise gate before lowering scalar noises from 16 to 8",
+            "variance/noise gate has passed only as launch support, not physics evidence",
             "use the same source coordinate and run-control provenance as the FH response",
             "do not combine four-mode and eight-mode chunks as one homogeneous pole-fit ensemble",
             "fit an isolated pole derivative only after enough completed production chunks exist",
-            "retain FV/IR/zero-mode and retained-proposal gates",
+            "retain FV/IR/zero-mode, model-class, canonical-Higgs/source-overlap, and retained-proposal gates",
         ],
         "strict_non_claims": [
             "not production evidence",

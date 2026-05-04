@@ -32,9 +32,12 @@ current four-mode/sixteen-noise plan:
 eight modes x8 noises: 11.3186 hours
 ```
 
-This is a constructive launch option, not evidence.  Lowering the noise count
-requires a variance gate, and future eight-mode chunks must not be combined as
-a homogeneous pole-fit ensemble with the already-running four-mode chunk.
+This is a constructive launch option, not evidence.  The paired x8/x16
+variance calibration now passes and accepts the eight-mode/x8 setting as
+launch support only.  Future eight-mode chunks must not be combined as a
+homogeneous pole-fit ensemble with the four-mode chunk set, and the result
+still needs production completion, pole/model-class control, FV/IR control,
+canonical-Higgs/source-overlap closure, and retained-proposal certification.
 
 ## Claim Boundary
 
@@ -51,5 +54,5 @@ retained-proposal gates.
 ```bash
 python3 -m py_compile scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py
 python3 scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py
-# SUMMARY: PASS=8 FAIL=0
+# SUMMARY: PASS=10 FAIL=0
 ```

@@ -1309,3 +1309,29 @@ closure, not production pole data, and not physical `y_t` evidence.
 Currently running: chunks057-060.  Continue monitoring the 53-63 wave
 orchestrator; it should launch chunks061-063 as slots free.  Package completed
 root outputs only after local and aggregate gates pass.
+
+## 2026-05-04 Pole-Fit Budget Refresh And Final L12 Wave Acceleration
+
+The passed paired variance gate has been wired back into the pole-fit
+mode/noise budget:
+
+```bash
+python3 scripts/frontier_yt_fh_lsz_pole_fit_mode_budget.py
+# SUMMARY: PASS=10 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=155 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=181 FAIL=0
+```
+
+The eight-mode/x8 shape is accepted only as a separate future pole-fit launch
+support shape.  It is still not production pole evidence and cannot be mixed
+as one homogeneous ensemble with the current four-mode chunks.
+
+Compute action: the host showed 10 logical CPUs and load around 5.4 with four
+jobs active, so chunks061-063 were launched immediately under a separate
+61-63 orchestrator.  Chunks057-063 are now all running.  The older overlapping
+53-63 orchestrator monitor was stopped to avoid duplicate 061-063 launches;
+the production jobs remain alive.

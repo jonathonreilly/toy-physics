@@ -1,10 +1,10 @@
 {
   "acceptance_requirements": [
-    "run a variance/noise gate before lowering scalar noises from 16 to 8",
+    "variance/noise gate has passed only as launch support, not physics evidence",
     "use the same source coordinate and run-control provenance as the FH response",
     "do not combine four-mode and eight-mode chunks as one homogeneous pole-fit ensemble",
     "fit an isolated pole derivative only after enough completed production chunks exist",
-    "retain FV/IR/zero-mode and retained-proposal gates"
+    "retain FV/IR/zero-mode, model-class, canonical-Higgs/source-overlap, and retained-proposal gates"
   ],
   "actual_current_surface_status": "bounded-support / FH-LSZ pole-fit mode-noise budget",
   "candidates": [
@@ -191,11 +191,16 @@
   "parent_certificates": {
     "chunk_manifest": "outputs/yt_fh_lsz_chunked_production_manifest_2026-05-01.json",
     "kinematics_gate": "outputs/yt_fh_lsz_pole_fit_kinematics_gate_2026-05-01.json",
-    "resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json"
+    "resource_projection": "outputs/yt_fh_lsz_joint_resource_projection_2026-05-01.json",
+    "variance_gate": "outputs/yt_fh_lsz_eight_mode_noise_variance_gate_2026-05-01.json"
   },
-  "pass_count": 8,
+  "pass_count": 10,
   "proposal_allowed": false,
   "proposal_allowed_reason": "A mode/noise budget is launch planning only and does not provide production pole data.",
+  "recommended_next_launch_if_launch_support_accepted": {
+    "scalar_two_point_modes": "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
+    "scalar_two_point_noises": 8
+  },
   "recommended_next_launch_if_variance_accepted": {
     "scalar_two_point_modes": "0,0,0;1,0,0;1,1,0;1,1,1;2,0,0;2,1,0;2,1,1;2,2,0",
     "scalar_two_point_noises": 8
@@ -206,5 +211,7 @@
     "does not set kappa_s, c2, or Z_match to one",
     "does not use observed top mass, observed y_t, H_unit, yt_ward_identity, alpha_LM, plaquette, or u0"
   ],
-  "verdict": "A pole-fit-ready L12 scalar-LSZ mode set can stay within the current foreground chunk estimate only by trading noise vectors for momentum shells.  Eight modes with sixteen noises are estimated at 21.45 hours for a 16-configuration L12 chunk, above the 12-hour window.  The same eight modes with eight noises keep the solve-budget factor equal to the current four-mode/sixteen-noise plan and are estimated at 11.3186 hours.  This is a constructive launch option, not evidence: lower noise needs a variance gate, production completion, FV/IR control, and retained-proposal certification."
+  "verdict": "A pole-fit-ready L12 scalar-LSZ mode set can stay within the current foreground chunk estimate only by trading noise vectors for momentum shells.  Eight modes with sixteen noises are estimated at 21.45 hours for a 16-configuration L12 chunk, above the 12-hour window.  The same eight modes with eight noises keep the solve-budget factor equal to the current four-mode/sixteen-noise plan and are estimated at 11.3186 hours.  The eight-mode/x8 setting now also passes the variance gate as launch support only.  This is a constructive launch option, not evidence: production completion, pole/model-class control, FV/IR control, canonical-Higgs/source-overlap closure, and retained-proposal certification remain required.",
+  "x8_launch_support_accepted": true,
+  "x8_variance_gate_passed": true
 }
