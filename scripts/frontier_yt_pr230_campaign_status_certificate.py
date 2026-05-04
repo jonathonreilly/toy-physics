@@ -380,6 +380,9 @@ def main() -> int:
         "fh_lsz_response_window_forensics": load(
             "outputs/yt_fh_lsz_response_window_forensics_2026-05-03.json"
         ),
+        "fh_lsz_v2_target_response_stability": load(
+            "outputs/yt_fh_lsz_v2_target_response_stability_2026-05-04.json"
+        ),
         "fh_lsz_response_window_acceptance_gate": load(
             "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json"
         ),
@@ -1433,6 +1436,11 @@ def main() -> int:
         "fh-lsz-response-window-forensics-not-closure",
         "response-window forensics" in str(statuses["fh_lsz_response_window_forensics"]),
         statuses["fh_lsz_response_window_forensics"],
+    )
+    report(
+        "fh-lsz-v2-target-response-stability-not-closure",
+        "v2 target-response stability passed" in str(statuses["fh_lsz_v2_target_response_stability"]),
+        statuses["fh_lsz_v2_target_response_stability"],
     )
     report(
         "fh-lsz-response-window-acceptance-gate-blocks",

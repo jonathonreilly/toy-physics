@@ -876,6 +876,102 @@
         "source_response_target_timeseries": true
       },
       "target_timeseries_complete": true
+    },
+    {
+      "chunk_index": 37,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk037_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 965.388664226681,
+        "n": 1000,
+        "rho_first_lags": [
+          0.01780214443179968,
+          0.00012397022847767612,
+          -0.002047422435289383
+        ],
+        "tau_int_initial_positive": 0.5179261146602774,
+        "window_lag": 3
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
+      },
+      "target_timeseries_complete": true
+    },
+    {
+      "chunk_index": 38,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk038_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 962.1124092194046,
+        "n": 1000,
+        "rho_first_lags": [
+          0.01968979425768697,
+          -0.001863003812530364
+        ],
+        "tau_int_initial_positive": 0.519689794257687,
+        "window_lag": 2
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
+      },
+      "target_timeseries_complete": true
+    },
+    {
+      "chunk_index": 39,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk039_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 961.155721048712,
+        "n": 1000,
+        "rho_first_lags": [
+          0.0189858305352499,
+          0.0012212379452378954,
+          -0.001539587042693718
+        ],
+        "tau_int_initial_positive": 0.5202070684804878,
+        "window_lag": 3
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
+      },
+      "target_timeseries_complete": true
+    },
+    {
+      "chunk_index": 40,
+      "path": "outputs/yt_pr230_fh_lsz_production_L12_T24_chunk040_2026-05-01.json",
+      "phase": "production",
+      "plaquette_history_count": 1000,
+      "plaquette_tail_count": 1000,
+      "plaquette_tau_int": {
+        "available": true,
+        "ess_initial_positive": 959.7373162412878,
+        "n": 1000,
+        "rho_first_lags": [
+          0.01941747065228634,
+          0.0010594243846872363,
+          0.0004989923633397751,
+          -0.00033004041153789944
+        ],
+        "tau_int_initial_positive": 0.5209758874003133,
+        "window_lag": 4
+      },
+      "target_timeseries": {
+        "scalar_lsz_target_timeseries": true,
+        "source_response_target_timeseries": true
+      },
+      "target_timeseries_complete": true
     }
   ],
   "exact_next_action": "Target-observable ESS is accepted for the current ready set; response stability, scalar-pole derivative/model-class/FV/IR, and canonical-Higgs identity remain open.",
@@ -928,7 +1024,11 @@
     33,
     34,
     35,
-    36
+    36,
+    37,
+    38,
+    39,
+    40
   ],
   "ready_count_reaches_threshold": true,
   "strict_non_claims": [
@@ -941,12 +1041,12 @@
   "target_observable_ess_certificate": "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json",
   "target_observable_ess_summary": {
     "additional_chunks_estimate_at_current_rate": 0,
-    "limiting_target_ess": 505.20155779504177,
+    "limiting_target_ess": 564.3761930946672,
     "minimum_target_ess_per_volume": 200.0,
     "target_observable_ess_gate_passed": true
   },
   "target_timeseries_summary": {
-    "complete_count": 36,
+    "complete_count": 40,
     "complete_for_all_ready_chunks": true,
     "complete_indices": [
       1,
@@ -984,10 +1084,14 @@
       33,
       34,
       35,
-      36
+      36,
+      37,
+      38,
+      39,
+      40
     ],
     "incomplete_indices": [],
-    "ready_count": 36
+    "ready_count": 40
   },
-  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Target-series coverage state: complete=chunk001, chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010, chunk011, chunk012, chunk013, chunk014, chunk015, chunk016, chunk017, chunk018, chunk019, chunk020, chunk021, chunk022, chunk023, chunk024, chunk025, chunk026, chunk027, chunk028, chunk029, chunk030, chunk031, chunk032, chunk033, chunk034, chunk035, chunk036; incomplete=none.  The load-bearing FH/LSZ target effective sample size is accepted only when the target-observable ESS certificate reaches the configured threshold; plaquette ESS is diagnostic only."
+  "verdict": "The current ready chunks include plaquette histories, so a diagnostic plaquette autocorrelation can be estimated.  Target-series coverage state: complete=chunk001, chunk002, chunk003, chunk004, chunk005, chunk006, chunk007, chunk008, chunk009, chunk010, chunk011, chunk012, chunk013, chunk014, chunk015, chunk016, chunk017, chunk018, chunk019, chunk020, chunk021, chunk022, chunk023, chunk024, chunk025, chunk026, chunk027, chunk028, chunk029, chunk030, chunk031, chunk032, chunk033, chunk034, chunk035, chunk036, chunk037, chunk038, chunk039, chunk040; incomplete=none.  The load-bearing FH/LSZ target effective sample size is accepted only when the target-observable ESS certificate reaches the configured threshold; plaquette ESS is diagnostic only."
 }

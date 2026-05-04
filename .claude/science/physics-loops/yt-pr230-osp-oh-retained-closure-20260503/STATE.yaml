@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 16
+block: 17
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -120,6 +120,30 @@ files_touched:
   - outputs/yt_fh_lsz_legacy_v2_backfill_feasibility_2026-05-04.json
   - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk041_2026-05-01.json"
   - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk042_2026-05-01.json"
+  - scripts/frontier_yt_fh_lsz_v2_target_response_stability.py
+  - docs/YT_FH_LSZ_V2_TARGET_RESPONSE_STABILITY_NOTE_2026-05-04.md
+  - outputs/yt_fh_lsz_v2_target_response_stability_2026-05-04.json
+  - docs/YT_FH_LSZ_CHUNKS037_040_MULTITAU_TARGET_WAVE_CHECKPOINT_NOTE_2026-05-04.md
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk037_2026-05-01.json
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk038_2026-05-01.json
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk039_2026-05-01.json
+  - outputs/yt_pr230_fh_lsz_production_L12_T24_chunk040_2026-05-01.json
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk037/
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk038/
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk039/
+  - outputs/yt_direct_lattice_correlator_production_fh_lsz_chunks/L12_T24_chunk040/
+  - outputs/yt_fh_lsz_chunk037_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk038_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk039_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk040_target_timeseries_generic_checkpoint_2026-05-02.json
+  - outputs/yt_fh_lsz_chunk037_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - outputs/yt_fh_lsz_chunk038_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - outputs/yt_fh_lsz_chunk039_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - outputs/yt_fh_lsz_chunk040_multitau_target_timeseries_checkpoint_2026-05-03.json
+  - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk043_2026-05-01.json"
+  - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk044_2026-05-01.json"
+  - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk045_2026-05-01.json"
+  - "launched outputs/yt_pr230_fh_lsz_production_L12_T24_chunk046_2026-05-01.json"
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -254,6 +278,26 @@ commands_run:
   - "python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py # PASS=12 FAIL=0, gate still open"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=148 FAIL=0 after chunk035"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=174 FAIL=0 after chunk035"
+  - "python3 -m py_compile scripts/frontier_yt_fh_lsz_v2_target_response_stability.py # pass"
+  - "python3 scripts/frontier_yt_fh_lsz_v2_target_response_stability.py # PASS=10 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 37 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 38 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 39 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_target_timeseries_checkpoint.py --chunk-index 40 # PASS=14 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 37 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 38 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 39 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_multitau_target_timeseries_checkpoint.py --chunk-index 40 # PASS=19 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py # PASS=9 FAIL=0, 40/63 ready"
+  - "python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py # PASS=8 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py # PASS=8 FAIL=0, limiting ESS 564.3761930946672"
+  - "python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py # PASS=6 FAIL=0, stability still open"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_forensics.py # PASS=10 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py # PASS=11 FAIL=0"
+  - "python3 scripts/frontier_yt_fh_lsz_response_window_acceptance_gate.py # PASS=12 FAIL=0, gate still open"
+  - "python3 scripts/frontier_yt_fh_lsz_v2_target_response_stability.py # PASS=10 FAIL=0, chunks017-040"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=150 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=176 FAIL=0"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -368,11 +412,22 @@ current_result: >
   chunks, 576/1000 saved configurations; target-observable ESS passes with
   limiting ESS 505.20155779504177, response-window acceptance remains open, and
   retained/campaign aggregate certificates still deny proposal authority with
-  PASS=148 and PASS=174 respectively.
+  PASS=148 and PASS=174 respectively.  The legacy-v2 backfill audit then
+  ruled out honest reconstruction of chunks001-016 from saved aggregate
+  artifacts, so chunks017+ remain the honest v2 population.  Chunks037-040
+  landed and were packaged with clean generic and v2 multi-tau target
+  certificates.  The ready L12 set is now 40/63 chunks, 640/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  564.3761930946672, the v2 target-response stability support gate passes for
+  positive tau windows 0-9 over chunks017-040, response-window acceptance
+  remains open, and retained/campaign aggregate certificates still deny
+  proposal authority with PASS=150 and PASS=176 respectively.  The chunk-wave
+  orchestrator has launched chunks041-046 and they are running under the
+  six-job cap.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >
-  Monitor chunks037, 038, 039, and 040.
+  Monitor chunks041, 042, 043, 044, 045, and 046.
   When outputs land, rerun their chunk gates plus aggregate retained and
   campaign certificates.  While waiting, only take routes that can add a
   real new same-surface row/theorem: a new EW gauge-Higgs/O_H certificate plus

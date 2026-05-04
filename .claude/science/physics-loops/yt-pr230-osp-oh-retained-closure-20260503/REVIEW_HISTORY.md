@@ -305,3 +305,29 @@ Findings:
   launched and chunks037-040 continue running.
 - No retained/proposed-retained claim is authorized; this is run-control and
   evidence-quality hygiene only.
+
+## 2026-05-04 V2 Stability And Chunks037-040 Packaging Self-Review
+
+Disposition: bounded production support; continue campaign.
+
+Findings:
+
+- The v2 target-response stability gate uses only chunks with real v2
+  multi-tau target-timeseries rows and keeps the legacy-v2 backfill no-go in
+  force.
+- Positive tau windows `0..9` pass as bounded support over chunks017-040, but
+  the gate explicitly forbids a readout switch or retained/proposed-retained
+  y_t claim.
+- Chunks037-040 pass both generic and v2 multi-tau target-timeseries
+  checkpoints with zero fails after chunk040's stale partial checkpoint was
+  replaced by checks against its completed root output.
+- The ready L12 set advances to 40/63 chunks and 640/1000 saved
+  configurations; target-observable ESS passes with limiting ESS
+  `564.3761930946672`.
+- Response-window acceptance remains open because response stability is not
+  production-grade, chunks001-016 still lack v2 rows, finite-source-linearity
+  does not close the response window, and canonical-Higgs/source-overlap
+  evidence is still absent.
+- No retained/proposed-retained claim is authorized because scalar LSZ,
+  canonical-Higgs/source-overlap, W/Z response, Schur-row, and retained-route
+  gates remain open.
