@@ -1,0 +1,75 @@
+{
+  "actual_current_surface_status": "bounded-support / O_sp/O_H literature bridge; no current-surface closure import",
+  "bare_retained_allowed": false,
+  "exact_next_action": "If taking the literature route, implement a same-surface FMS-inspired O_H operator certificate and use the existing source-Higgs builder/postprocessor with GEVP-style pole-residue rows.  Otherwise continue chunk production.",
+  "fail_count": 0,
+  "literature_bridge_passed": true,
+  "methodology_shape": "Future positive attempt should build a same-surface gauge-invariant canonical-Higgs operator certificate, then measure a C_ss/C_sH/C_HH correlator matrix with GEVP or isolated-pole residue analysis.",
+  "parent_certificates": {
+    "canonical_higgs_repo_authority_audit": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+    "osp_oh_assumption_route_audit": "outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "source_higgs_production_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "wz_correlator_mass_fit_path": "outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The literature suggests a future FMS-style gauge-invariant O_H operator plus GEVP/Gram-pole extraction path, but it does not supply a same-surface Cl(3)/Z3 O_sp=O_H theorem or measurement.",
+  "source_rows": [
+    {
+      "id": "fms_bound_state_spectrum",
+      "pr230_boundary": "Does not identify the PR230 scalar source O_s or O_sp with the required gauge-invariant Higgs operator.",
+      "route_action": "Use as design context for a future same-surface O_H certificate, not as proof input.",
+      "title": "Analytical relations for the bound state spectrum of gauge theories with a Brout-Englert-Higgs mechanism",
+      "url": "https://arxiv.org/abs/1912.08680",
+      "useful_shape": "FMS-style gauge-invariant composite Higgs operators can be related to gauge-fixed Higgs objects after the gauge-Higgs system is supplied."
+    },
+    {
+      "id": "fms_higgs_resonance",
+      "pr230_boundary": "Pole-structure matching in an EW gauge-Higgs theory does not supply PR230 C_sH/C_HH rows or O_sp/O_H overlap.",
+      "route_action": "If pursued, implement a gauge-invariant O_H candidate and validate it through the O_H certificate and Gram-purity gates.",
+      "title": "Gauge-invariant description of the Higgs resonance and its phenomenological implications",
+      "url": "https://arxiv.org/abs/2009.06671",
+      "useful_shape": "A gauge-invariant bound-state Higgs description can share pole structure with the elementary Higgs in the FMS expansion."
+    },
+    {
+      "id": "weak_higgs_lattice_2026",
+      "pr230_boundary": "This is external lattice methodology and has no authority to define the Cl(3)/Z3 source coordinate as canonical Higgs.",
+      "route_action": "Use as methodology context for future EW/Higgs lattice rows, not as a retained closure import.",
+      "title": "Weak and Higgs physics from the lattice",
+      "url": "https://arxiv.org/abs/2603.12882",
+      "useful_shape": "Recent lattice Higgs work treats weak/Higgs physics through gauge-invariant FMS-connected observables."
+    },
+    {
+      "id": "gevp_lattice_matrix_elements",
+      "pr230_boundary": "GEVP supplies an extraction method only after a valid O_H operator family and C_sH/C_HH rows exist.",
+      "route_action": "Future source-Higgs production should prefer an operator matrix/GEVP pole-residue analysis over one-row assertions.",
+      "title": "On the generalized eigenvalue method for energies and matrix elements in lattice field theory",
+      "url": "https://arxiv.org/abs/0902.1265",
+      "useful_shape": "Operator correlation matrices and GEVP analysis are standard tools for isolating states and matrix elements."
+    },
+    {
+      "id": "feynman_hellmann_lattice_transition",
+      "pr230_boundary": "It justifies the source-response measurement pattern, not the source-to-canonical-Higgs identity.",
+      "route_action": "Keep FH/LSZ chunks as production support; do not promote source-only response to physical y_t.",
+      "title": "Feynman-Hellmann approach to transition matrix elements and quasi-degenerate energy states",
+      "url": "https://arxiv.org/abs/2305.05491",
+      "useful_shape": "Adding a perturbing operator to the action and reading energy shifts is a standard lattice route to matrix elements."
+    },
+    {
+      "id": "nielsen_pole_mass",
+      "pr230_boundary": "Gauge independence of a pole is not a scalar-source overlap theorem and does not certify O_H.",
+      "route_action": "Use Nielsen/BRST material only as a guardrail for future EW pole definitions.",
+      "title": "On the gauge independence of the fermion pole mass",
+      "url": "https://arxiv.org/abs/1308.5127",
+      "useful_shape": "Nielsen-identity methods can protect pole-mass statements under gauge variation in appropriate settings."
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not import external literature as PR230 proof authority",
+    "does not identify O_sp with O_H",
+    "does not treat FMS pole-structure statements as source-Higgs Gram purity",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

@@ -218,6 +218,34 @@ For non-MC closure, the next positive route is still a same-surface `O_H`
 certificate, source-Higgs production rows, W/Z identity rows, Schur A/B/C
 rows, or neutral-sector irreducibility.
 
+## 2026-05-04 O_sp/O_H Literature Bridge
+
+I ran the targeted literature bridge for the current source-pole to
+canonical-Higgs blocker.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_osp_oh_literature_bridge.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# pass
+
+python3 scripts/frontier_yt_osp_oh_literature_bridge.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=146 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=172 FAIL=0
+```
+
+Result: bounded support only.  The literature suggests a future
+FMS-inspired same-surface `O_H` certificate plus GEVP/Gram-pole extraction
+shape, but no literature source is current-surface authority for
+`O_sp = O_H`.  The exact next implementation route, if pursued, is to build
+the same-surface `O_H` certificate and real `C_ss/C_sH/C_HH` rows, then run
+the existing source-Higgs builder and postprocessor.
+
 ## 2026-05-04 O_sp/O_H Assumption-Route Audit
 
 The current O_sp/O_H loop now has an executable assumption audit:

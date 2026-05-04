@@ -181,6 +181,9 @@ def main() -> int:
         "osp_oh_assumption_route_audit": load(
             "outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json"
         ),
+        "osp_oh_literature_bridge": load(
+            "outputs/yt_osp_oh_literature_bridge_2026-05-04.json"
+        ),
         "complete_source_spectrum_identity_no_go": load(
             "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json"
         ),
@@ -835,6 +838,13 @@ def main() -> int:
         is True
         and certificates["osp_oh_assumption_route_audit"].get("proposal_allowed") is False,
         statuses["osp_oh_assumption_route_audit"],
+    )
+    report(
+        "osp-oh-literature-bridge-context-not-closure",
+        "O_sp/O_H literature bridge" in str(statuses["osp_oh_literature_bridge"])
+        and certificates["osp_oh_literature_bridge"].get("literature_bridge_passed") is True
+        and certificates["osp_oh_literature_bridge"].get("proposal_allowed") is False,
+        statuses["osp_oh_literature_bridge"],
     )
     report(
         "complete-source-spectrum-identity-no-go-blocks",

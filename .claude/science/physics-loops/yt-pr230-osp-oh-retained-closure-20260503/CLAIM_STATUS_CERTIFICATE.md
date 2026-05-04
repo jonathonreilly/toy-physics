@@ -52,4 +52,7 @@ Open imports:
 - the current O_sp/O_H assumption-route audit passes as overclaim protection
   only; it verifies the forbidden-shortcut firewall and ranked remaining
   routes, but adds no `O_H`, `C_sH/C_HH`, W/Z, Schur, or rank-one evidence;
+- the literature bridge is bounded support only; FMS/GEVP/FH/Nielsen sources
+  suggest a future operator-certificate and extraction shape but are not
+  current-surface authority for `O_sp = O_H`;
 - independent audit after any proposed positive certificate.

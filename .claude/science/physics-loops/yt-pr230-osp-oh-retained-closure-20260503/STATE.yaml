@@ -11,7 +11,7 @@ lock_status:
   repo_lock_result: "failed: scripts/automation_lock.py status returned permission denied on /Users/jonreilly"
   fallback_lock_mode: "branch-local loop pack"
 cycle: 1
-block: 11
+block: 12
 files_touched:
   - scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py
   - docs/YT_SOURCE_HIGGS_GRAM_PURITY_CONTRACT_WITNESS_NOTE_2026-05-03.md
@@ -94,6 +94,9 @@ files_touched:
   - scripts/frontier_yt_osp_oh_assumption_route_audit.py
   - docs/YT_OSP_OH_ASSUMPTION_ROUTE_AUDIT_NOTE_2026-05-04.md
   - outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json
+  - scripts/frontier_yt_osp_oh_literature_bridge.py
+  - docs/YT_OSP_OH_LITERATURE_BRIDGE_NOTE_2026-05-04.md
+  - outputs/yt_osp_oh_literature_bridge_2026-05-04.json
   - .claude/science/physics-loops/yt-pr230-osp-oh-retained-closure-20260503/
 commands_run:
   - "python3 -m py_compile scripts/frontier_yt_source_higgs_gram_purity_contract_witness.py # pass"
@@ -187,6 +190,10 @@ commands_run:
   - "python3 scripts/frontier_yt_osp_oh_assumption_route_audit.py # PASS=18 FAIL=0"
   - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=145 FAIL=0"
   - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=171 FAIL=0"
+  - "python3 -m py_compile scripts/frontier_yt_osp_oh_literature_bridge.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_campaign_status_certificate.py # pass"
+  - "python3 scripts/frontier_yt_osp_oh_literature_bridge.py # PASS=13 FAIL=0"
+  - "python3 scripts/frontier_yt_retained_closure_route_certificate.py # PASS=146 FAIL=0"
+  - "python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=172 FAIL=0"
 current_result: >
   O_sp is derived and unit-normalized, but the current PR230 surface does not
   derive O_sp = O_H.  A counterfamily holds Res(C_sp,sp)=1 and same-source top
@@ -270,7 +277,13 @@ current_result: >
   finite Schur support, gauge Perron/reflection positivity, guards, and pilots
   as closure shortcuts.  This is overclaim protection only, not a new theorem:
   retained-route and campaign certificates still deny proposal authority with
-  PASS=145 and PASS=171 respectively.
+  PASS=145 and PASS=171 respectively.  The literature bridge queue item was
+  also retired as bounded support only.  FMS/gauge-invariant Higgs sources
+  suggest a future same-surface O_H certificate shape; GEVP/Feynman-Hellmann
+  sources suggest the correlator-matrix extraction shape; Nielsen-identity
+  material is only a pole/gauge guardrail.  No external source is imported as
+  current-surface proof.  Aggregate retained/campaign certificates now include
+  this bridge and still deny proposal authority with PASS=146 and PASS=172.
 proposal_allowed: false
 proposal_allowed_reason: "O_sp/O_H overlap remains open; no independent non-source row or rank-one theorem has passed."
 next_exact_action: >

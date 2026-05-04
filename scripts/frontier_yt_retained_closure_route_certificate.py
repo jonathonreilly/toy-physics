@@ -125,6 +125,7 @@ def main() -> int:
         "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
         "isolated_pole_gram_factorization": "outputs/yt_isolated_pole_gram_factorization_theorem_2026-05-03.json",
         "osp_oh_assumption_route_audit": "outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json",
+        "osp_oh_literature_bridge": "outputs/yt_osp_oh_literature_bridge_2026-05-04.json",
         "complete_source_spectrum_identity_no_go": "outputs/yt_complete_source_spectrum_identity_no_go_2026-05-02.json",
         "neutral_scalar_top_coupling_tomography_gate": "outputs/yt_neutral_scalar_top_coupling_tomography_gate_2026-05-02.json",
         "non_source_response_rank_repair_sufficiency": "outputs/yt_non_source_response_rank_repair_sufficiency_2026-05-03.json",
@@ -685,6 +686,13 @@ def main() -> int:
         and certificates["osp_oh_assumption_route_audit"].get("proposal_allowed") is False
         and certificates["osp_oh_assumption_route_audit"].get("assumption_route_audit_passed")
         is True
+    )
+    osp_oh_literature_bridge_not_closure = (
+        "O_sp/O_H literature bridge" in certificates["osp_oh_literature_bridge"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["osp_oh_literature_bridge"].get("proposal_allowed") is False
+        and certificates["osp_oh_literature_bridge"].get("literature_bridge_passed") is True
     )
     complete_source_spectrum_identity_no_go_blocks = (
         "complete source spectrum not canonical-Higgs closure"
@@ -1695,6 +1703,11 @@ def main() -> int:
         "osp-oh-assumption-route-audit-blocks-overclaim",
         osp_oh_assumption_route_audit_blocks,
         certificates["osp_oh_assumption_route_audit"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "osp-oh-literature-bridge-context-not-closure",
+        osp_oh_literature_bridge_not_closure,
+        certificates["osp_oh_literature_bridge"].get("actual_current_surface_status", ""),
     )
     report(
         "complete-source-spectrum-identity-no-go-blocks",
